@@ -69,11 +69,6 @@
   width: 2rem;
   height: 2rem;
   object-fit: contain;
-
-  @media (min-width: breakpoints.$breakpoint-m) {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
 }
 
 .childrenAndUserContainer {
