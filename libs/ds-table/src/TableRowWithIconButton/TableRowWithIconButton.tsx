@@ -95,7 +95,7 @@ export const RowWithLeftSideExpandButton = forwardRef<
         <TableDataCell
           className={`${styles.buttonCell} ${
             context?.variant === 'compact' ? styles.buttonCell_compact : ''
-          } ${isExpanded && hideIconButton ? styles.buttonCell_expanded : ''}`}
+          } ${isExpanded && hideIconButton ? styles.buttonCell_expanded : ''}`.trim()}
         >
           <IconButton
             ref={buttonRef}
@@ -113,7 +113,7 @@ export const RowWithLeftSideExpandButton = forwardRef<
               ref={expandableWrapperRef}
               className={`${styles.expandableContent} ${
                 classNames?.expandedContent ?? ''
-              }`}
+              }`.trim()}
             >
               {expandableContent}
             </div>
@@ -188,7 +188,7 @@ export const RowWithRightSideExpandButton = forwardRef<
         <tr
           ref={rowRef}
           id={id}
-          className={`${isExpanded && !shouldInsertExpandAreaMarkers ? styles.row_noBorder : ''} ${className}`}
+          className={`${isExpanded && !shouldInsertExpandAreaMarkers ? styles.row_noBorder : ''} ${className ?? ''}`.trim()}
           lang={lang}
           data-testid={dataTestId}
         >
@@ -196,7 +196,7 @@ export const RowWithRightSideExpandButton = forwardRef<
           <TableDataCell
             className={`${styles.buttonCell} ${
               context?.variant === 'compact' ? styles.buttonCell_compact : ''
-            }`}
+            }`.trim()}
             alignment={'right'}
           >
             <IconButton
@@ -213,7 +213,9 @@ export const RowWithRightSideExpandButton = forwardRef<
           </TableDataCell>
         </tr>
         {isExpanded && !shouldInsertExpandAreaMarkers && (
-          <tr className={`${styles.expandedRowRight} ${className}`}>
+          <tr
+            className={`${styles.expandedRowRight} ${className ?? ''}`.trim()}
+          >
             <td colSpan={rowLength}>
               <div className={classNames?.expandedContent}>
                 {expandableContent}

@@ -63,13 +63,13 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     const captionVariantClassName = styles[`tableCaption_${variant}`];
     const concatenatedClassName = `${styles.table} ${
       hasFullWidth ? styles.table_fullWidth : ''
-    } ${variantClassName} ${className}`;
+    } ${variantClassName} ${className ?? ''}`.trim();
     const captionClassName = `${styles.tableCaption} ${
       showCaption ? '' : styles.hidden
-    } ${captionVariantClassName}`;
+    } ${captionVariantClassName}`.trim();
     const wrapperClassName = `${isTableScrollable ? styles.wrapper : ''} ${
       shouldFadeLeft ? styles.wrapper_fadeLeft : ''
-    }`;
+    }`.trim();
 
     /**
      * Når tabellen har scrollbar vises en fade-effekt for å indikere at

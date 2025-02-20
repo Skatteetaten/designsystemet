@@ -219,7 +219,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
 
     return (
       <div
-        className={`${className} ${classNames?.container ?? ''}`.trim()}
+        className={`${className ?? ''} ${classNames?.container ?? ''}`.trim()}
         lang={lang}
       >
         <LabelWithHelp

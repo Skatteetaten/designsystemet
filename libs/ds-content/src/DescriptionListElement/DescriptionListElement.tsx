@@ -26,7 +26,7 @@ export const DescriptionListElement = forwardRef<
         <dt
           ref={ref}
           id={id}
-          className={`${styles.term} ${className}`.trim()}
+          className={`${styles.term} ${className ?? ''}`.trim()}
           lang={lang}
           data-testid={dataTestId}
         >

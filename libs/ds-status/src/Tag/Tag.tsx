@@ -32,7 +32,7 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>(
         id={id}
         lang={lang}
         data-testid={dataTestId}
-        className={`${styles.tag} ${variantClassName} ${sizeClassName} ${className}`}
+        className={`${styles.tag} ${variantClassName} ${sizeClassName} ${className ?? ''}`.trim()}
         tabIndex={canBeManuallyFocused ? -1 : undefined}
       >
         {svgPath && (

@@ -35,10 +35,11 @@ export const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
       : `${styles.icon_down}`;
     const concatenatedIconClassName = `${styles.icon} ${iconVariantClassName} ${
       color ? styles[`icon_${color}`] : ''
-    }`;
+    }`.trim();
 
     const spacingClassName = hasSpacing ? styles.linkGroup_hasSpacing : '';
-    const concatenatedClassName = `${styles.linkGroup} ${spacingClassName} ${className} `;
+    const concatenatedClassName =
+      `${styles.linkGroup} ${spacingClassName} ${className ?? ''}`.trim();
 
     const links = Children.toArray(children);
 

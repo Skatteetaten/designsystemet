@@ -19,19 +19,19 @@ exports[`Tester/Card/Content WithChildrenRigthContent smoke-test 1`] = `
   <div class="_card_nrlm6_5"
        data-color="white"
   >
-    <div class="_cardContent_48t19_1 ">
+    <div class="_cardContent_48t19_1">
       <div>
-        <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8  ">
-          <li class="_element_1b7zf_1 ">
+        <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8">
+          <li class="_element_1b7zf_1">
             første element
           </li>
-          <li class="_element_1b7zf_1 ">
+          <li class="_element_1b7zf_1">
             andre element
           </li>
         </ul>
       </div>
-      <div class="_rightContent_48t19_51 ">
-        <div class="_tag_1ciua_1 _tag_ochre_1ciua_22 _tag_medium_1ciua_34 ">
+      <div class="_rightContent_48t19_51">
+        <div class="_tag_1ciua_1 _tag_ochre_1ciua_22 _tag_medium_1ciua_34">
           <div class="_iconWrapper_1ciua_12"
                aria-hidden="true"
           >
@@ -55,7 +55,7 @@ exports[`Tester/Card/Content WithChildrenRigthContent smoke-test 1`] = `
 
 exports[`Tester/Card/Content WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardContent_48t19_1 ">
+  <div class="_cardContent_48t19_1">
     <div class="dummyClassname">
       Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
     </div>
@@ -68,7 +68,7 @@ exports[`Tester/Card/Content WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/Card/Content WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardContent_48t19_1 "
+  <div class="_cardContent_48t19_1"
        id="dummyIdForwardedFromRef"
   >
     <div>

@@ -6,7 +6,7 @@ exports[`Tester/Breadcrumbs/Item WithAriaCurrent play-test 1`] = `
     <li class="_breadcrumbsItem_1ojdc_1"
         aria-current="page"
     >
-      <a class="_link_z7jba_1  "
+      <a class="_link_z7jba_1"
          href="#"
       >
         Bedrift og organisasjon
@@ -24,7 +24,7 @@ exports[`Tester/Breadcrumbs/Item WithAttributes play-test 1`] = `
         lang="nb"
         data-testid="123ID"
     >
-      <a class="_link_z7jba_1  "
+      <a class="_link_z7jba_1"
          href="#"
       >
         Bedrift og organisasjon
@@ -40,7 +40,7 @@ exports[`Tester/Breadcrumbs/Item WithRef play-test 1`] = `
     <li class="_breadcrumbsItem_1ojdc_1"
         id="dummyIdForwardedFromRef"
     >
-      <a class="_link_z7jba_1  "
+      <a class="_link_z7jba_1"
          href="#"
       >
         Bedrift og organisasjon

@@ -50,7 +50,7 @@ export const TableHeaderCell = forwardRef<
       isSortable ? styles.headerCell_noPadding : variantClassName
     } ${
       scope === 'row' ? styles.headerCell_row : ''
-    } ${alignmentClassName} ${className}`;
+    } ${alignmentClassName} ${className ?? ''}`.trim();
 
     const handleOnSort = (): void => {
       let direction: sortDirection = 'ascending';
@@ -104,7 +104,7 @@ export const TableHeaderCell = forwardRef<
       >
         {isSortable ? (
           <button
-            className={`${styles.headerCellSortButton} ${variantClassName}`}
+            className={`${styles.headerCellSortButton} ${variantClassName}`.trim()}
             type={'button'}
             onClick={handleOnSort}
           >

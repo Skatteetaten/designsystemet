@@ -76,7 +76,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
         <div className={styles.footer}>
           <div className={styles.footerContainer}>
             <div
-              className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
+              className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`.trim()}
             >
               <div>
                 <Heading as={'h2'} level={3} hasSpacing>

@@ -2,7 +2,7 @@
 
 exports[`Tester/Popover/Trigger WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1vm3o_1 _button_medium_1vm3o_49 _button_outlined_1vm3o_116 "
+  <button class="_button_1vm3o_1 _button_medium_1vm3o_49 _button_outlined_1vm3o_116"
           data-brightness="default"
           type="button"
           aria-describedby="araiDescId"
@@ -54,7 +54,7 @@ exports[`Tester/Popover/Trigger WithAttributes play-test 1`] = `
 
 exports[`Tester/Popover/Trigger WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1vm3o_1 _button_medium_1vm3o_49 _button_outlined_1vm3o_116 "
+  <button class="_button_1vm3o_1 _button_medium_1vm3o_49 _button_outlined_1vm3o_116"
           data-brightness="default"
           type="button"
           aria-expanded="true"
@@ -78,7 +78,7 @@ exports[`Tester/Popover/Trigger WithEventHandlers play-test 1`] = `
 
 exports[`Tester/Popover/Trigger WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1vm3o_1 _button_medium_1vm3o_49 _button_outlined_1vm3o_116 "
+  <button class="_button_1vm3o_1 _button_medium_1vm3o_49 _button_outlined_1vm3o_116"
           data-brightness="default"
           type="button"
           aria-expanded="false"

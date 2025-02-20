@@ -24,7 +24,7 @@ export const Blockquote = forwardRef<HTMLQuoteElement, BlockquoteProps>(
       <blockquote
         ref={ref}
         id={id}
-        className={`${styles.blockquote} ${spacingClassName} ${className}`}
+        className={`${styles.blockquote} ${spacingClassName} ${className ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         tabIndex={canBeManuallyFocused ? -1 : undefined}

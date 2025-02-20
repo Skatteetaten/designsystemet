@@ -44,11 +44,11 @@ export const ScrollToTopButton = forwardRef<
 
     const buttonClassname = `${styles.scrollToTopButton} ${
       visible ? styles.scrollToTopButton_visible : ''
-    } ${classNames?.button ?? ''}`;
+    } ${classNames?.button ?? ''}`.trim();
 
-    const concatenatedClassName = `${styles.container} ${className} ${
+    const concatenatedClassName = `${styles.container} ${className ?? ''} ${
       classNames?.container ?? ''
-    }`;
+    }`.trim();
 
     return (
       <div className={concatenatedClassName}>
@@ -70,19 +70,19 @@ export const ScrollToTopButton = forwardRef<
           <div
             className={`${styles.scrollToTopButtonIconContainer} ${
               classNames?.iconContainer ?? ''
-            }`}
+            }`.trim()}
           >
             <MoveUpIcon
               size={'large'}
               className={`${styles.scrollToTopButtonIconContainerIcon} ${
                 classNames?.icon ?? ''
-              }`}
+              }`.trim()}
             />
           </div>
           <div
             className={`${styles.scrollToTopButtonLabel} ${
               classNames?.label ?? ''
-            }`}
+            }`.trim()}
           >
             {children ? children : t('scrolltotopbutton.Title')}
           </div>

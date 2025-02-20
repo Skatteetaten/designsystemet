@@ -19,7 +19,7 @@ export const Separator = forwardRef<HTMLDivElement, BaseProps>(
       <div
         ref={ref}
         id={id}
-        className={`${styles.separator} ${className}`.trim()}
+        className={`${styles.separator} ${className ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
       >

@@ -46,7 +46,7 @@ export const CardAlert = forwardRef<HTMLDivElement, CardAlertProps>(
       <div
         ref={ref}
         id={id}
-        className={`${styles.cardAlert} ${className}`}
+        className={`${styles.cardAlert} ${className ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         data-variant={variant}

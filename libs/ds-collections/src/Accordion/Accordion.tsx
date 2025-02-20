@@ -28,7 +28,8 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
     ref
   ) => {
     const colorClassName = color !== 'none' ? styles[`accordion_${color}`] : '';
-    const concatenatedClassNames = `${colorClassName} ${className}`.trim();
+    const concatenatedClassNames =
+      `${colorClassName} ${className ?? ''}`.trim();
 
     return (
       <AccordionContext.Provider value={{ size, iconPosition }}>

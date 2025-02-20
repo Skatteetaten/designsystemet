@@ -24,14 +24,16 @@ export const CardHeader = forwardRef<HTMLDivElement, CardContentProps>(
       <div
         ref={ref}
         id={id}
-        className={`${className} ${styles.cardHeader}`}
+        className={`${styles.cardHeader} ${className ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         data-spacing={spacingVertical}
       >
         {children}
         {rightContent && (
-          <div className={`${styles.rightContent} ${classNames?.rightContent}`}>
+          <div
+            className={`${styles.rightContent} ${classNames?.rightContent ?? ''}`.trim()}
+          >
             {rightContent}
           </div>
         )}

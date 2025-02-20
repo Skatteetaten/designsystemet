@@ -202,7 +202,7 @@ export const TopBannerExternal = forwardRef<
                       >
                         <nav
                           aria-label={t('topbanner.NavAriaLabel')}
-                          className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
+                          className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`.trim()}
                         >
                           <div className={styles.column}>{firstColumn}</div>
                           {secondColumn && (

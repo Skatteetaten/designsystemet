@@ -10,7 +10,7 @@ exports[`Tester/Tabs/List WithAttributes smoke-test 1`] = `
          tabindex="-1"
     >
       <button id="ds-tab-id-:r0:-tab1"
-              class="_tab_1dx22_1   _tab_active_1dx22_27  "
+              class="_tab_1dx22_1   _tab_active_1dx22_27"
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -19,7 +19,7 @@ exports[`Tester/Tabs/List WithAttributes smoke-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r0:-tab2"
-              class="_tab_1dx22_1     "
+              class="_tab_1dx22_1"
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -29,14 +29,14 @@ exports[`Tester/Tabs/List WithAttributes smoke-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r0:-tab1"
-         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4"
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab1"
     >
       Tabs.Panel Panel
     </div>
     <div id="ds-tab-panel-:r0:-tab2"
-         class="_panel_1bj6c_1  "
+         class="_panel_1bj6c_1"
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab2"
          hidden

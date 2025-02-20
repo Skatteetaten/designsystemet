@@ -45,7 +45,7 @@ export const BreadcrumbsItem = forwardRef<HTMLLIElement, BreadcrumbsItemProps>(
     }, [itemCount, showLastItemAsCurrentPage]);
 
     const concatenatedClassNames =
-      `${styles.breadcrumbsItem} ${className}`.trim();
+      `${styles.breadcrumbsItem} ${className ?? ''}`.trim();
 
     const displayAsCurrentPage = isLastItem && showLastItemAsCurrentPage;
 

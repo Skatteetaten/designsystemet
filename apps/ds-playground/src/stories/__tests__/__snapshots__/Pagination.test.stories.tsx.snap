@@ -11,7 +11,7 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
     >
       Viser 1–10 av 15
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li>
         <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_1xa21_1"
                 type="button"
@@ -66,7 +66,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li>
         <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_1xa21_1"
                 type="button"
@@ -121,7 +121,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_1vm3o_1 _button_medium_1vm3o_49  "
+        <button class="_button_1vm3o_1 _button_medium_1vm3o_49"
                 data-brightness="default"
                 type="button"
         >
@@ -156,7 +156,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
     >
       Viser 21–30 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
         <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
                 data-brightness="default"
@@ -278,7 +278,7 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li>
         <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_1xa21_1"
                 type="button"
@@ -367,7 +367,7 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
     >
       Viser 6–10 av 30
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
         <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
                 data-brightness="default"
@@ -466,7 +466,7 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li>
         <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_1xa21_1"
                 type="button"
@@ -644,7 +644,7 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
     >
       Viser 9–12 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
         <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
                 data-brightness="default"
@@ -761,20 +761,20 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
 
 exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8 _list_hasSpacing_1xbs1_11 ">
-    <li class="_element_1b7zf_1 ">
+  <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8 _list_hasSpacing_1xbs1_11">
+    <li class="_element_1b7zf_1">
       1 Donald Duck
     </li>
-    <li class="_element_1b7zf_1 ">
+    <li class="_element_1b7zf_1">
       2 Robbie Wiliams
     </li>
-    <li class="_element_1b7zf_1 ">
+    <li class="_element_1b7zf_1">
       3 Minnie Mouse
     </li>
-    <li class="_element_1b7zf_1 ">
+    <li class="_element_1b7zf_1">
       4 Katy Perry
     </li>
-    <li class="_element_1b7zf_1 ">
+    <li class="_element_1b7zf_1">
       5 Langbein
     </li>
   </ul>
@@ -787,7 +787,7 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
     >
       Viser 1–5 av 42
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li>
         <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_1xa21_1"
                 type="button"
@@ -876,7 +876,7 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
     >
       Viser 61–70 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
         <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
                 data-brightness="default"
@@ -965,7 +965,7 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li>
         <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_1xa21_1"
                 type="button"
@@ -1055,7 +1055,7 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li>
         <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_1xa21_1"
                 type="button"
@@ -1144,7 +1144,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
     >
       Viser 11–20 av 70
     </div>
-    <ul class="_paginationList_1frpa_20 ">
+    <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
         <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
                 data-brightness="default"

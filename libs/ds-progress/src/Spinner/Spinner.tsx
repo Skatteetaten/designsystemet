@@ -53,9 +53,9 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
 
     const concatenatedClassnames = `${
       styles.spinner
-    } ${colorClassname} ${positionClassname} ${sizeClassname} ${className} ${
+    } ${colorClassname} ${positionClassname} ${sizeClassname} ${className ?? ''} ${
       classNames?.container ?? ''
-    }`;
+    }`.trim();
     const isInPercentageMode = percentComplete !== undefined;
     const spinnerLabel = t('spinner.LoadingLabel');
 
@@ -88,7 +88,7 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
           <div
             className={`${styles.spinnerAnimation} ${
               classNames?.animation ?? ''
-            }`}
+            }`.trim()}
           />
           <span
             id={titleId}
@@ -96,7 +96,7 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
               hideTitle ? styles.srOnly : ''
             } ${
               titlePosition === 'bottom' ? styles.spinnerTitle_centerText : ''
-            } ${classNames?.title ?? ''}`}
+            } ${classNames?.title ?? ''}`.trim()}
           >
             {isInPercentageMode && `${spinnerLabel} (${percentComplete} %)`}
             {!isInPercentageMode && isRendered && (children ?? spinnerLabel)}

@@ -2,7 +2,7 @@
 
 exports[`Tester/InlineButton Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1   "
+  <button class="_button_12a0b_1"
           data-brightness="default"
           type="button"
   >
@@ -15,7 +15,7 @@ exports[`Tester/InlineButton Defaults play-test 1`] = `
 
 exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1   "
+  <button class="_button_12a0b_1"
           data-brightness="default"
           accesskey="j"
           type="button"
@@ -29,7 +29,7 @@ exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 
 exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1   "
+  <button class="_button_12a0b_1"
           data-brightness="default"
           type="button"
           aria-describedby="testid1234"
@@ -60,7 +60,7 @@ exports[`Tester/InlineButton WithAttributes play-test 1`] = `
 
 exports[`Tester/InlineButton WithBrightness smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
           data-brightness="light"
           type="button"
   >
@@ -82,7 +82,7 @@ exports[`Tester/InlineButton WithBrightness smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
           data-brightness="default"
           type="button"
   >
@@ -104,7 +104,7 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1   "
+  <button class="_button_12a0b_1"
           data-brightness="default"
           disabled
           type="button"
@@ -118,7 +118,7 @@ exports[`Tester/InlineButton WithDisabled play-test 1`] = `
 
 exports[`Tester/InlineButton WithDisabledAndBrightness smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
           data-brightness="light"
           disabled
           type="button"
@@ -141,7 +141,7 @@ exports[`Tester/InlineButton WithDisabledAndBrightness smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
           data-brightness="default"
           disabled
           type="button"
@@ -164,7 +164,7 @@ exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1   "
+  <button class="_button_12a0b_1"
           data-brightness="default"
           type="button"
   >
@@ -177,7 +177,7 @@ exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
 
 exports[`Tester/InlineButton WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
           data-brightness="default"
           type="button"
   >
@@ -199,7 +199,7 @@ exports[`Tester/InlineButton WithIcon play-test 1`] = `
 
 exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 "
+  <button class="_button_12a0b_1  _button_withIconRight_12a0b_8"
           data-brightness="default"
           type="button"
   >
@@ -221,7 +221,7 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1   "
+  <button class="_button_12a0b_1"
           data-brightness="default"
           type="button"
   >
@@ -234,7 +234,7 @@ exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 "
+  <button class="_button_12a0b_1  _button_withIconRight_12a0b_8"
           data-brightness="default"
           type="button"
   >
@@ -256,7 +256,7 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1   "
+  <button class="_button_12a0b_1"
           data-brightness="default"
           type="button"
           id="dummyIdForwardedFromRef"
@@ -296,7 +296,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
         Legg til rapport
       </span>
     </button>
-    <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 "
+    <button class="_button_12a0b_1  _button_withIconRight_12a0b_8"
             data-brightness="default"
             type="button"
     >
@@ -324,12 +324,12 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_12a0b_13 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_12a0b_13"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:r8:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -353,18 +353,18 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_12a0b_13 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_12a0b_13"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:ra:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
       </div>
     </button>
-    <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 "
+    <button class="_button_12a0b_1  _button_withIconRight_12a0b_8"
             data-brightness="default"
             type="button"
     >
@@ -382,12 +382,12 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       </svg>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_12a0b_13 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_12a0b_13"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:rc:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -399,7 +399,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithType play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1   "
+  <button class="_button_12a0b_1"
           data-brightness="default"
           type="submit"
   >

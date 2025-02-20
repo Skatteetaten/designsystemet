@@ -50,7 +50,7 @@ export const FontTokenExamplesGenerator = ({
             <p
               className={`fontTokenExample ${fontClassName} ${
                 hasLineHeight ? 'fontTokenExample_lineheight' : ''
-              }`}
+              }`.trim()}
             >
               <strong>{`${tokens[index]}: ${
                 fontTokens[tokens[index]]

@@ -37,7 +37,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
     const uniqueInputId = `radioInputId-${useId()}`;
     const inputId = externalId ?? uniqueInputId;
 
-    const concatenatedClassName = `${styles.radio} ${className}`.trim();
+    const concatenatedClassName = `${styles.radio} ${className ?? ''}`.trim();
     const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
       context?.errorId ?? ''
     }`.trim();

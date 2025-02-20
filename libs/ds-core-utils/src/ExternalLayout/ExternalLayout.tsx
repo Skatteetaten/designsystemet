@@ -16,7 +16,7 @@ export const ExternalLayout: (props: BaseProps) => JSX.Element = ({
     <div
       id={id}
       data-testid={dataTestId}
-      className={`${styles.layout} ${className}`}
+      className={`${styles.layout} ${className ?? ''}`.trim()}
     >
       <style>{storyBookCSSOverride}</style>
       <p>

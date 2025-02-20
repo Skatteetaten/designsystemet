@@ -32,7 +32,7 @@ export const TopBannerButton = forwardRef<
     const variantClassName = variant ? styles[`button_${variant}`] : '';
     const concatenatedClassName = `${
       styles.button
-    } ${variantClassName} ${className} ${classNames?.container ?? ''}`.trim();
+    } ${variantClassName} ${className ?? ''} ${classNames?.container ?? ''}`.trim();
 
     return (
       <button
@@ -52,7 +52,9 @@ export const TopBannerButton = forwardRef<
             <span className={styles.iconWrapper}>
               <Icon svgPath={svgPath} className={styles.icon} title={title} />
             </span>
-            <span className={`${styles.buttonText} ${classNames?.text ?? ''}`}>
+            <span
+              className={`${styles.buttonText} ${classNames?.text ?? ''}`.trim()}
+            >
               {children}
             </span>
           </>

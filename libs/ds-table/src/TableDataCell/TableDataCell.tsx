@@ -40,7 +40,7 @@ export const TableDataCell = forwardRef<
       styles.dataCell
     } ${variantClassName} ${alignmentClassName} ${
       rowSpan ? styles.dataCell_rowspan : ''
-    } ${className}`;
+    } ${className ?? ''}`.trim();
 
     return (
       <Tag
@@ -51,7 +51,7 @@ export const TableDataCell = forwardRef<
         data-testid={dataTestId}
         colSpan={colSpan}
         rowSpan={rowSpan}
-        scope={scope ?? Tag === 'th' ? 'row' : undefined}
+        scope={(scope ?? Tag === 'th') ? 'row' : undefined}
       >
         {children}
       </Tag>

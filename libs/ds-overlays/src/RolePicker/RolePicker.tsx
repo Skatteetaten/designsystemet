@@ -109,7 +109,8 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
       }
     };
 
-    const concatenatedClassName = `${styles.container} ${className}`.trim();
+    const concatenatedClassName =
+      `${styles.container} ${className ?? ''}`.trim();
 
     const noValidBusinesses =
       !me && !people && (!businesses || businesses.total === 0);

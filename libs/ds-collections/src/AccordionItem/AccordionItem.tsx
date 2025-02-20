@@ -61,7 +61,7 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
 
     const headerClassNames = `${styles.header} ${
       iconPosition === 'left' ? styles.header_iconLeft : ''
-    } ${size !== 'small' ? styles[`header_${size}`] : ''} ${className} ${
+    } ${size !== 'small' ? styles[`header_${size}`] : ''} ${className ?? ''} ${
       classNames?.container ?? ''
     }`.trim();
 

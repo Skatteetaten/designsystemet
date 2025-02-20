@@ -41,7 +41,7 @@ export const ChipsRemovable = forwardRef<
     useImperativeHandle(ref, () => chipRef.current as HTMLButtonElement);
 
     const concatenatedClassName =
-      `${styles.removableChip} ${size === 'small' ? styles.removableChip_small : ''} ${className}`.trim();
+      `${styles.removableChip} ${size === 'small' ? styles.removableChip_small : ''} ${className ?? ''}`.trim();
 
     const handleOnClose = (): void => {
       if (chipRef.current) {

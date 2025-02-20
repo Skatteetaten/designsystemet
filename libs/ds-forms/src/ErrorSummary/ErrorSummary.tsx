@@ -62,7 +62,7 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
         aria-atomic
       >
         {showErrorSummary && (
-          <div className={`${styles.errorSummary} ${className}`}>
+          <div className={`${styles.errorSummary} ${className ?? ''}`.trim()}>
             <div className={styles.iconContainer}>
               <Icon
                 svgPath={WarningSVGpath}
@@ -88,7 +88,7 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
               )}
               {content && (
                 <div
-                  className={`${styles.content} ${contentWithoutChildrenClassName}`}
+                  className={`${styles.content} ${contentWithoutChildrenClassName}`.trim()}
                 >
                   {content}
                 </div>

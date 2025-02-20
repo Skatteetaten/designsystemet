@@ -58,7 +58,7 @@ export const TabsList = forwardRef<HTMLDivElement, TabsListProps>(
       <div
         ref={ref}
         id={id}
-        className={`${styles.tabList} ${multilineClassName} ${className}`}
+        className={`${styles.tabList} ${multilineClassName} ${className ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         role={'tablist'}

@@ -28,7 +28,7 @@ export const List = forwardRef<AnyHTMLListElement, ListProps>(
       <Tag
         ref={ref as (instance: AnyHTMLListElement | null) => void}
         id={id}
-        className={`${styles.list} ${bulletClassName} ${spacingClassName} ${className}`}
+        className={`${styles.list} ${bulletClassName} ${spacingClassName} ${className ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         tabIndex={canBeManuallyFocused ? -1 : undefined}

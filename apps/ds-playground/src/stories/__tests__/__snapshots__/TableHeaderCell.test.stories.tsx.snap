@@ -23,7 +23,7 @@ exports[`Tester/Table/HeaderCell WithChildren play-test 1`] = `
   <table>
     <thead>
       <tr class>
-        <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 ">
+        <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51">
           columnheader
         </th>
       </tr>
@@ -37,7 +37,7 @@ exports[`Tester/Table/HeaderCell WithRef play-test 1`] = `
   <table>
     <thead>
       <tr class>
-        <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
+        <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
             id="dummyIdForwardedFromRef"
         >
           cake

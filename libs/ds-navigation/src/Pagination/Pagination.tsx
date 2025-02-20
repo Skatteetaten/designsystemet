@@ -98,11 +98,11 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
     }
     const pageSummary = `${
       hidePageSummary ? styles.pagination_summaryhide : ''
-    }`;
+    }`.trim();
     const paginationCss = `${styles.pagination} ${className ?? ''}`.trim();
     const listCss = `${styles.paginationList} ${
       hidePageSummary ? styles.paginationList_summaryhidden : ''
-    }`;
+    }`.trim();
     return (
       <nav
         ref={ref}

@@ -34,7 +34,7 @@ export const LabelWithHelp = forwardRef<HTMLLabelElement, LabelWithHelpProps>(
     const hideLabelClassName = hideLabel ? styles.srOnly : '';
     const concatenatedClassName = `${
       styles.label
-    } ${requiredMarkClassName} ${hideLabelClassName} ${className} ${
+    } ${requiredMarkClassName} ${hideLabelClassName} ${className ?? ''} ${
       classNames?.label ?? ''
     }`.trim();
 

@@ -62,21 +62,21 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     } else if (renderIcon) {
       panelGraphicClassName = `${styles.panel_graphicIcon} ${
         hideGraphicMobile ? styles.panel_graphicIconHide : ''
-      }`;
+      }`.trim();
     }
     const panelPaddingResponsiveClassName = hasResponsivePadding
       ? styles.panelResponsive
       : '';
 
-    const panelCustomClassNames = classNames?.padding;
+    const panelCustomClassNames = classNames?.padding ?? '';
     const panelClassName =
-      `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelPaddingResponsiveClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${panelCustomClassNames} ${className}`.trim();
+      `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelPaddingResponsiveClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${panelCustomClassNames} ${className ?? ''}`.trim();
 
     const graphicClassName = `${styles.panelGraphic} ${
       hideGraphicMobile ? styles.panelGraphicHide : ''
     }`.trim();
     const iconClassName = `${renderIcon ? graphicClassName : ''}`.trim();
-    const articleClassName = `${styles.panelArticle}`.trim();
+
     const panelHeadingRef = useRef<HTMLHeadingElement>(null);
     useImperativeHandle(
       headingRef,
@@ -91,7 +91,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
         data-testid={dataTestId}
       >
         {!renderIcon && imageSource && (
-          <div className={`${graphicClassName}`}>
+          <div className={graphicClassName}>
             <img
               src={imageSource}
               alt={imageSourceAltText ?? ''}
@@ -102,7 +102,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
         {!imageSource && renderIcon && (
           <div className={iconClassName}>{renderIcon?.()}</div>
         )}
-        <div className={articleClassName}>
+        <div className={styles.panelArticle}>
           {title && (
             <Heading
               ref={panelHeadingRef}

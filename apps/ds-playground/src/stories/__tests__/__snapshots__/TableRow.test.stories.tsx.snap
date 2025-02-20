@@ -2,8 +2,8 @@
 
 exports[`Tester/Table/Row WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <div class=" ">
-    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
       <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         testtabell
       </caption>
@@ -14,12 +14,12 @@ exports[`Tester/Table/Row WithAttributes play-test 1`] = `
             data-testid="123ID"
         >
           <th id="Id123"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
             3,000
           </td>
         </tr>
@@ -31,8 +31,8 @@ exports[`Tester/Table/Row WithAttributes play-test 1`] = `
 
 exports[`Tester/Table/Row WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class=" ">
-    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
       <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         testtabell
       </caption>
@@ -41,12 +41,12 @@ exports[`Tester/Table/Row WithRef play-test 1`] = `
             id="dummyIdForwardedFromRef"
         >
           <th id="Id123"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
             3,000
           </td>
         </tr>

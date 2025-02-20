@@ -2,7 +2,7 @@
 
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -21,7 +21,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -40,7 +40,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
 
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -59,7 +59,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -101,7 +101,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -120,7 +120,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -232,7 +232,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -251,7 +251,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -289,7 +289,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -308,7 +308,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -327,7 +327,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -346,7 +346,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -370,7 +370,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
       </div>
     </div>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -389,7 +389,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -408,7 +408,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -427,7 +427,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -446,7 +446,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -487,7 +487,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
 
 exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 "
+  <header class="_topBanner_192u7_57"
           id="dummyIdForwardedFromRef"
   >
     <a href="main"
@@ -508,7 +508,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >
@@ -527,7 +527,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class="_topBanner_192u7_57">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
        data-skip-link="ds-skip-link"
@@ -546,7 +546,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
       </span>
     </a>
     <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
+      <div class="_contentContainer_192u7_98">
         <a class="_logo_192u7_66"
            href="#"
         >

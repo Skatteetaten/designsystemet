@@ -24,7 +24,7 @@ export const SkatteetatenLogo = forwardRef<HTMLImageElement, BaseProps>(
       <img
         ref={ref}
         id={id}
-        className={`${styles.logo} ${className}`.trim()}
+        className={`${styles.logo} ${className ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         src={logo}

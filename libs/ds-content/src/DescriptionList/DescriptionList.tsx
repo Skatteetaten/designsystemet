@@ -64,7 +64,7 @@ export const DescriptionList = forwardRef<
       descriptionWeight === 'bold' ? styles.descriptionListDescriptionBold : '';
 
     const descriptionListClassname =
-      `${styles.descriptionList} ${variantClassName} ${spacingClassName} ${sizeClassName} ${termClassName} ${descriptionClassName} ${className}`.trim();
+      `${styles.descriptionList} ${variantClassName} ${spacingClassName} ${sizeClassName} ${termClassName} ${descriptionClassName} ${className ?? ''}`.trim();
 
     return (
       <dl

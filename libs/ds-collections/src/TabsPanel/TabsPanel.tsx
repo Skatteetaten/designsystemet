@@ -23,7 +23,7 @@ export const TabsPanel = forwardRef<HTMLDivElement, TabsPanelProps>(
     const { activeTab, baseId } = useContext(TabsContext);
     const panelClassName = `${styles.panel} ${
       activeTab === value ? styles.panel_active : ''
-    }`;
+    }`.trim();
 
     if (!valueRegex.test(value)) {
       throw new Error(
@@ -35,7 +35,7 @@ export const TabsPanel = forwardRef<HTMLDivElement, TabsPanelProps>(
       <div
         ref={ref}
         id={`ds-tab-panel-${baseId}-${value}`}
-        className={`${panelClassName} ${className}`}
+        className={`${panelClassName} ${className ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         role={'tabpanel'}
