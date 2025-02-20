@@ -111,6 +111,16 @@ const TemplateWithMultipleTiles: StoryFn<typeof NavigationTile> = (args) => (
   </nav>
 );
 
+const TemplateWithMultipleTilesWitoutGap: StoryFn<typeof NavigationTile> = (
+  args
+) => (
+  <nav>
+    <NavigationTile {...args} />
+    <NavigationTile {...args} />
+    <NavigationTile {...args} />
+  </nav>
+);
+
 const defaultArgs: NavigationTileProps = {
   title: defaultTitle,
   href: '#storybook-root',
@@ -449,5 +459,19 @@ export const WithSpinner = {
     viewport: {
       defaultViewport: '--mobile',
     },
+  },
+} satisfies Story;
+
+export const WithMultitpleTilesWithoutGap = {
+  render: TemplateWithMultipleTilesWitoutGap,
+  name: 'With Multiple Tiles Without Gap',
+  args: {
+    ...defaultArgs,
+    description: 'Eksempel på undertittel. Denne kan være litt lengre.',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = canvas.getAllByRole('link')[0];
+    link.focus();
   },
 } satisfies Story;

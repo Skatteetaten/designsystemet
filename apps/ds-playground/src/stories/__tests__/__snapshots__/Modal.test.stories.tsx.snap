@@ -77,7 +77,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                 </span>
                 Bokmål
                 <span class="_srOnly_azp4i_133">
-                  Meny
+                  &nbsp;Meny
                 </span>
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
@@ -246,7 +246,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                 </span>
                 Bokmål
                 <span class="_srOnly_azp4i_133">
-                  Meny
+                  &nbsp;Meny
                 </span>
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
