@@ -172,11 +172,11 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
   >
     <ol class="_breadcrumbsList_17e64_1 ">
       <li class="_expandButtonWrapper_17e64_12">
-        <button class="_button_1vm3o_1 _button_small_1vm3o_41  "
+        <button class="_button_1hc5e_1 _button_small_1hc5e_42  "
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r4:"
