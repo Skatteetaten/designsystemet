@@ -58,7 +58,7 @@ export const TopBannerInternalActionMenu = forwardRef<
       onOpenChange: (open) => {
         setOpen(open);
       },
-      placement: 'top-start',
+      placement: 'bottom-start',
       whileElementsMounted: autoUpdate,
       middleware: [
         offset({ mainAxis: floatingOffset, alignmentAxis: -32 }),
