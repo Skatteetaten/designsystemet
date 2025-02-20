@@ -2,15 +2,13 @@ import { JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { IconButton, InlineButton, LinkGroup } from '@skatteetaten/ds-buttons';
+import { InlineButton, LinkGroup } from '@skatteetaten/ds-buttons';
 import { SearchField } from '@skatteetaten/ds-forms';
 import { AddSVGpath } from '@skatteetaten/ds-icons';
 import {
   EditSVGpath,
   FileSVGpath,
   HelpFilledSVGpath,
-  MenuSVGpath,
-  PersonSVGpath,
 } from '@skatteetaten/ds-icons';
 import {
   TopBannerInternal,
@@ -18,6 +16,7 @@ import {
 } from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
+import demoLogo from '../../assets/demo-logo-white.svg';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -111,35 +110,58 @@ export const Examples: Story = {
           </TopBannerInternal.ActionMenu>
         </TopBannerInternal>
         <TopBannerInternal
-          classNames={{ childrenContainer: 'maxWidthInFlexbox' }}
+          className={'bottomSpacingXL'}
           title={'Global Skatt'}
           logoAltText={'Forside Global Skatt'}
           logoHref={'/home'}
-          children={
-            <>
-              <SearchField
-                className={'maxWidthInFlexbox'}
-                classNames={{ searchContainer: 'noMargin' }}
-                label={'Søk etter sak, virksomhet, dokument'}
-                placeholder={'Søk etter sak, virksomhet, dokument...'}
-              />
-              <IconButton
-                className={'whiteIcon'}
-                svgPath={HelpFilledSVGpath}
-                title={'Hjelp'}
-              />
-              <IconButton
-                className={'whiteIcon'}
-                svgPath={PersonSVGpath}
-                title={'Bruker'}
-              />
-              <IconButton
-                className={'whiteIcon'}
-                svgPath={MenuSVGpath}
-                title={'Meny'}
-              />
-            </>
-          }
+        >
+          <SearchField
+            classNames={{ searchContainer: 'noMargin' }}
+            label={'Søk etter sak, virksomhet, dokument'}
+            placeholder={'Søk etter sak, virksomhet, dokument...'}
+          />
+          <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
+            <InlineButton
+              className={'bottomSpacingXS'}
+              svgPath={AddSVGpath}
+              onClick={() => {
+                menuRef?.current?.close?.();
+              }}
+            >
+              {'Legg til RF-skjema ørtifemten'}
+            </InlineButton>
+            <LinkGroup>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'Denne tingen her'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'En annen ting'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'Den tredje tingen'}
+              </LinkGroup.Link>
+            </LinkGroup>
+          </TopBannerInternal.ActionMenu>
+        </TopBannerInternal>
+        <TopBannerInternal
+          className={'blueBackground'}
+          classNames={{ logo: 'demoLogo' }}
+          title={'SIRO'}
+          logo={demoLogo}
+          logoAltText={'Forside Politiet'}
+          logoHref={'/home'}
         ></TopBannerInternal>
       </>
     );

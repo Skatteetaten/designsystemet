@@ -14,6 +14,7 @@ import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import customLogo from '../../assets/custom-mobile-logo.svg';
+import demoLogo from '../../assets/demo-logo-white.svg';
 
 const meta = {
   component: TopBannerInternal,
@@ -23,6 +24,7 @@ const meta = {
     key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
+    classNames: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
@@ -249,6 +251,16 @@ export const WithCustomLogo = {
   },
   args: {
     logo: customLogo,
+  },
+} satisfies Story;
+
+export const WithPoliceLogo = {
+  name: 'With Police Logo (A5)',
+  args: {
+    logo: demoLogo,
+    className: 'blueBackground',
+    classNames: { logo: 'demoLogo' },
+    title: 'SIRO',
   },
 } satisfies Story;
 

@@ -2735,10 +2735,11 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rbp:"
@@ -2773,16 +2774,16 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"

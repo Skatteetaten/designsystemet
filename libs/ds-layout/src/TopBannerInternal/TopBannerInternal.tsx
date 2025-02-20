@@ -73,7 +73,7 @@ export const TopBannerInternal = forwardRef<
               onClick={onLogoClick}
             >
               <img
-                className={styles.logoImage}
+                className={`${styles.logoImage} ${classNames?.logo}`}
                 src={logo ?? defaultLogo}
                 alt={''}
                 aria-hidden
@@ -84,7 +84,7 @@ export const TopBannerInternal = forwardRef<
           </div>
           {showChildrenAndUserContainer && (
             <div
-              className={`${styles.childrenAndUserContainer} ${classNames?.childrenContainer}`}
+              className={`${styles.childrenAndUserContainer} ${classNames?.childrenAndUserContainer}`}
             >
               {children}
               {user && (
