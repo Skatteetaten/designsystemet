@@ -34,7 +34,9 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
     const legendId = uniqueLegendId;
 
     if (legend === '') {
-      throw new Error('Empty string is not a valid legend.');
+      console.error(
+        'Fieldset - Empty legend is not recommended. Set hideLegend to false if legend prop exists but is an empty string https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element'
+      );
     }
 
     let requiredMarkClassName = '';
