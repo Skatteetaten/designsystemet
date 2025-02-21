@@ -64,8 +64,7 @@ export const Chips = forwardRef<HTMLUListElement, ChipsProps>(
       []
     );
 
-    const concatenatedClassname =
-      `${styles.chipsList} ${className ?? ''}`.trim();
+    const concatenatedClassname = `${styles.chipsList} ${className}`.trim();
 
     const childrenAsArray = Children.toArray(children);
 

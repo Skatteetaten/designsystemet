@@ -168,7 +168,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       <dialog
         ref={modalRef}
         id={id}
-        className={`${styles.modal} ${hideOutlineClassName} ${className ?? ''} ${
+        className={`${styles.modal} ${hideOutlineClassName} ${className} ${
           classNames?.container ?? ''
         }`.trim()}
         lang={lang}

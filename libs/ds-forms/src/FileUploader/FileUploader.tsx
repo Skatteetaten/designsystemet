@@ -165,7 +165,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
 
       setFilesPendingDelete((prevState) => ({ ...prevState, [key]: false }));
     };
-    const concatenatedClassnames = `${styles.container} ${className ?? ''} ${
+    const concatenatedClassnames = `${styles.container} ${className} ${
       classNames?.container ?? ''
     }`.trim();
 

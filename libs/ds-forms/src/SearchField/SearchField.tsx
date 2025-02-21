@@ -161,7 +161,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
     } ${isExtraLarge ? styles.searchButton_extraLarge : ''}`.trim();
     const containerClassName = `${styles.topContainer} ${
       isLarge ? styles.topContainer_large : ''
-    } ${isExtraLarge ? styles.topContainer_extraLarge : ''} ${className ?? ''} ${
+    } ${isExtraLarge ? styles.topContainer_extraLarge : ''} ${className} ${
       classNames?.container ?? ''
     }`.trim();
 

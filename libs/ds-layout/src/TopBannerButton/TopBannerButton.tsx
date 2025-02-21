@@ -32,7 +32,7 @@ export const TopBannerButton = forwardRef<
     const variantClassName = variant ? styles[`button_${variant}`] : '';
     const concatenatedClassName = `${
       styles.button
-    } ${variantClassName} ${className ?? ''} ${classNames?.container ?? ''}`.trim();
+    } ${variantClassName} ${className} ${classNames?.container ?? ''}`.trim();
 
     return (
       <button

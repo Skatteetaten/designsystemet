@@ -70,7 +70,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
 
     const panelCustomClassNames = classNames?.padding ?? '';
     const panelClassName =
-      `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelPaddingResponsiveClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${panelCustomClassNames} ${className ?? ''}`.trim();
+      `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelPaddingResponsiveClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${panelCustomClassNames} ${className}`.trim();
 
     const graphicClassName = `${styles.panelGraphic} ${
       hideGraphicMobile ? styles.panelGraphicHide : ''

@@ -91,7 +91,7 @@ export const NavigationTile = forwardRef<
 
     const concatenatedClassName = `${styles.navigationTile} ${
       styles[`navigationTile_${size}`]
-    } ${className ?? ''} ${classNames?.container ?? ''}`.trim();
+    } ${className} ${classNames?.container ?? ''}`.trim();
 
     return (
       <a

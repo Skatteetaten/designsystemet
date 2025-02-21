@@ -33,7 +33,7 @@ export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
     ref
   ): JSX.Element => {
     const concatenatedClassName =
-      `${styles.toggleChip} ${size === 'small' ? styles.toggleChip_small : ''} ${showCheckmark ? styles.toggleChip_withCheckmark : ''} ${className ?? ''}`.trim();
+      `${styles.toggleChip} ${size === 'small' ? styles.toggleChip_small : ''} ${showCheckmark ? styles.toggleChip_withCheckmark : ''} ${className}`.trim();
 
     return (
       <button

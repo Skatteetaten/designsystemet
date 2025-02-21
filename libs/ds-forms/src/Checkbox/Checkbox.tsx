@@ -66,7 +66,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 
     return (
       <div
-        className={`${styles.container} ${spacingBottomClassName} ${className ?? ''}`.trim()}
+        className={`${styles.container} ${spacingBottomClassName} ${className}`.trim()}
         lang={lang}
       >
         <input

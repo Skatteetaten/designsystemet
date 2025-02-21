@@ -29,7 +29,7 @@ export const ErrorMessage = forwardRef<HTMLDivElement, ErrorMessageProps>(
         aria-atomic
       >
         {showError && (
-          <div className={`${styles.errorMessage} ${className ?? ''}`.trim()}>
+          <div className={`${styles.errorMessage} ${className}`.trim()}>
             <Icon
               svgPath={WarningSVGpath}
               size={'small'}

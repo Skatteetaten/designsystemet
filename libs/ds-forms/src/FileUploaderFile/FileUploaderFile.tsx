@@ -43,7 +43,7 @@ export const FileUploaderFile = forwardRef<
       <li
         ref={ref}
         id={id}
-        className={`${styles.fileListItem} ${className ?? ''}`.trim()}
+        className={`${styles.fileListItem} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
       >

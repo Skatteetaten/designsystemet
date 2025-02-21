@@ -40,7 +40,7 @@ export const TableDataCell = forwardRef<
       styles.dataCell
     } ${variantClassName} ${alignmentClassName} ${
       rowSpan ? styles.dataCell_rowspan : ''
-    } ${className ?? ''}`.trim();
+    } ${className}`.trim();
 
     return (
       <Tag

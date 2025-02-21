@@ -206,7 +206,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
     return (
       <div
-        className={`${className ?? ''} ${classNames?.container ?? ''}`.trim()}
+        className={`${className} ${classNames?.container ?? ''}`.trim()}
         lang={lang}
       >
         <LabelWithHelp

@@ -68,7 +68,7 @@ export const PopoverContent = forwardRef<HTMLDivElement, PopoverContentProps>(
         id={id}
         lang={lang}
         data-testid={dataTestId}
-        className={`${styles.popover} ${colorClassName} ${className ?? ''}`.trim()}
+        className={`${styles.popover} ${colorClassName} ${className}`.trim()}
       >
         <div className={styles.popoverContent}>
           <div className={styles.popoverContentWrapper}>{children}</div>

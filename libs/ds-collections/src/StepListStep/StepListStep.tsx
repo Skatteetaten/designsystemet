@@ -73,7 +73,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
           ]
         : ['', ''];
     const concatenatedClassName =
-      `${styles.step} ${stepVariantClassName} ${className ?? ''}`.trim();
+      `${styles.step} ${stepVariantClassName} ${className}`.trim();
 
     const getCircleContent = (): JSX.Element | number => {
       if (svgPath) {

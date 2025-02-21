@@ -70,7 +70,7 @@ export const TableEditableRow = forwardRef<
     const isExpanded = id === context?.rowInEditModeId;
     const concatenatedClassNames = `${
       isExpanded ? styles.editableRow_expanded : ''
-    } ${className ?? ''}`.trim();
+    } ${className}`.trim();
 
     const closeEditableContent = (): void => {
       context?.setRowInEditModeId(undefined);

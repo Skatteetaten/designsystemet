@@ -43,7 +43,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     };
 
     const concatenatedClassName =
-      `${styles.link} ${getColor()} ${className ?? ''}`.trim();
+      `${styles.link} ${getColor()} ${className}`.trim();
 
     return (
       <a

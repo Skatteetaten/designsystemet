@@ -63,7 +63,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     const captionVariantClassName = styles[`tableCaption_${variant}`];
     const concatenatedClassName = `${styles.table} ${
       hasFullWidth ? styles.table_fullWidth : ''
-    } ${variantClassName} ${className ?? ''}`.trim();
+    } ${variantClassName} ${className}`.trim();
     const captionClassName = `${styles.tableCaption} ${
       showCaption ? '' : styles.hidden
     } ${captionVariantClassName}`.trim();

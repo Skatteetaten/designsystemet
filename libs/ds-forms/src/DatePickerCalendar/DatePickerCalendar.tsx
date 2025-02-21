@@ -271,8 +271,7 @@ export const DatePickerCalendar = forwardRef<
       [selectedYear, selectedMonthIndex, minDate, maxDate, disabledDates]
     );
 
-    const concatenatedClassName =
-      `${styles.calendar} ${className ?? ''}`.trim();
+    const concatenatedClassName = `${styles.calendar} ${className}`.trim();
 
     return (
       <div

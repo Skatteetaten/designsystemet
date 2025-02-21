@@ -61,7 +61,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
     };
 
     const concatenatedClassName =
-      `${styles.alert} ${variantClassName} ${backgroundBrightness === 'light' ? styles.alert_light : ''} ${className ?? ''}`.trim();
+      `${styles.alert} ${variantClassName} ${backgroundBrightness === 'light' ? styles.alert_light : ''} ${className}`.trim();
 
     return (
       <div

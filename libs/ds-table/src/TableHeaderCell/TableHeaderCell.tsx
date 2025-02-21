@@ -50,7 +50,7 @@ export const TableHeaderCell = forwardRef<
       isSortable ? styles.headerCell_noPadding : variantClassName
     } ${
       scope === 'row' ? styles.headerCell_row : ''
-    } ${alignmentClassName} ${className ?? ''}`.trim();
+    } ${alignmentClassName} ${className}`.trim();
 
     const handleOnSort = (): void => {
       let direction: sortDirection = 'ascending';

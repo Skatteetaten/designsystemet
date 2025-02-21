@@ -46,7 +46,7 @@ export const ScrollToTopButton = forwardRef<
       visible ? styles.scrollToTopButton_visible : ''
     } ${classNames?.button ?? ''}`.trim();
 
-    const concatenatedClassName = `${styles.container} ${className ?? ''} ${
+    const concatenatedClassName = `${styles.container} ${className} ${
       classNames?.container ?? ''
     }`.trim();
 

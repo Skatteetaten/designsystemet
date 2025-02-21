@@ -17,7 +17,7 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
       <div
         id={id}
         data-testid={dataTestId}
-        className={`${styles.layout} ${className ?? ''}`.trim()}
+        className={`${styles.layout} ${className}`.trim()}
       >
         <style>{storyBookCSSOverride}</style>
         <div className={styles.aside}>

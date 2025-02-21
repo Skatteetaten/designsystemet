@@ -24,7 +24,7 @@ export const CardHeader = forwardRef<HTMLDivElement, CardContentProps>(
       <div
         ref={ref}
         id={id}
-        className={`${styles.cardHeader} ${className ?? ''}`.trim()}
+        className={`${styles.cardHeader} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         data-spacing={spacingVertical}

@@ -30,7 +30,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       <svg
         ref={ref}
         id={id}
-        className={`${styles[variant]} ${sizeClassName} ${className ?? ''}`.trim()}
+        className={`${styles[variant]} ${sizeClassName} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         viewBox={variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48'}

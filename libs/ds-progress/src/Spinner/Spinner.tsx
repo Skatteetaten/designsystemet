@@ -53,7 +53,7 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
 
     const concatenatedClassnames = `${
       styles.spinner
-    } ${colorClassname} ${positionClassname} ${sizeClassname} ${className ?? ''} ${
+    } ${colorClassname} ${positionClassname} ${sizeClassname} ${className} ${
       classNames?.container ?? ''
     }`.trim();
     const isInPercentageMode = percentComplete !== undefined;

@@ -43,7 +43,7 @@ export const TopBannerInternal = forwardRef<
         id={id}
         lang={lang}
         data-testid={dataTestId}
-        className={`${styles.topBanner} ${className ?? ''}`.trim()}
+        className={`${styles.topBanner} ${className}`.trim()}
       >
         <TopBannerSkipLink
           className={styles.skipLink}

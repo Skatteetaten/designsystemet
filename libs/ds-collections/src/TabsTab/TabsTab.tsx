@@ -69,7 +69,7 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
       <button
         ref={ref}
         id={`ds-tab-id-${baseId}-${value}`}
-        className={`${tabClassName} ${variantClassName} ${borderClassName} ${activeClassName} ${withIconClassName} ${className ?? ''}`.trim()}
+        className={`${tabClassName} ${variantClassName} ${borderClassName} ${activeClassName} ${withIconClassName} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         role={'tab'}

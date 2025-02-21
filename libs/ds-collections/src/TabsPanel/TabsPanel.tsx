@@ -35,7 +35,7 @@ export const TabsPanel = forwardRef<HTMLDivElement, TabsPanelProps>(
       <div
         ref={ref}
         id={`ds-tab-panel-${baseId}-${value}`}
-        className={`${panelClassName} ${className ?? ''}`.trim()}
+        className={`${panelClassName} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         role={'tabpanel'}

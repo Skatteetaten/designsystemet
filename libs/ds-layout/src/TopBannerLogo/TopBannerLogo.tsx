@@ -53,7 +53,7 @@ export const TopBannerLogo = forwardRef<LogoRefHandle, TopBannerLogoProps>(
 
     const asClassName = Tag !== 'div' ? styles.logoAsLink : '';
     const concatenatedClassName =
-      `${styles.logoContainer} ${asClassName} ${className ?? ''}`.trim();
+      `${styles.logoContainer} ${asClassName} ${className}`.trim();
 
     return (
       <Tag
