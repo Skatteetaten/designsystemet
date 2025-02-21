@@ -15,6 +15,10 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 };
 
 export interface TopBannerInternalProps extends BaseProps {
+  classNames?: {
+    logo?: string;
+    childrenAndUserContainer?: string;
+  };
   /** Overskrift eller navn på løsning. Merk at dette ikke gir heading-element i topbanner */
   title?: string;
   /** Valgfri undertittel */
@@ -36,7 +40,10 @@ export interface TopBannerInternalProps extends BaseProps {
   skipLink?: SkipLink;
   /** Url på logo. Skal settes til hjem-siden/arbeidslisten i løsningen.  */
   logoHref: string;
-  /** Alt-text på logo. Skal gi beskjed om hvor lenken sender deg. F.eks Forside [navn på løsning] */
+  /**
+   * Alt-text på logo. Skal gi beskjed om hvor lenken sender deg. F.eks Forside [navn på løsning].
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Erstattes av "title".
+   */
   logoAltText: string;
   /** Overskriver default logo. */
   logo?: string;

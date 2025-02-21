@@ -2,9 +2,9 @@
 
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -20,18 +20,20 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
-        </span>
       </div>
     </div>
   </header>
@@ -40,9 +42,9 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
 
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -58,18 +60,20 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
-        </span>
       </div>
     </div>
   </header>
@@ -81,10 +85,10 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
   <header id="htmlId"
           lang="nb"
           data-testid="123ID"
-          class="_topBanner_192u7_57 dummyClassname"
+          class="dummyClassname"
   >
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -100,18 +104,20 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
-        </span>
       </div>
     </div>
   </header>
@@ -120,9 +126,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -138,89 +144,84 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 _contentContainer_withChildren_192u7_117">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
-        </a>
-        <span class="_titleWrapper_192u7_10">
           <span>
             Saksbehandlingsløsning med en overskrift som er lang
           </span>
-          <span>
-            En sekundær overskrift som også er lang
-          </span>
+        </a>
+        <span>
+          En sekundær overskrift som også er lang
         </span>
-        <div class="_childrenContainer_192u7_1">
-          <div class="_alignRight_192u7_5">
-            <a class="_link_z7jba_1 _link_white_z7jba_1 marginL"
-               href="/hjelp"
-            >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
-              >
-                <path d="M11 18h2v-2h-2v2Zm1-16C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-14a4 4 0 0 0-4 4h2a2 2 0 1 1 4 0c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5a4 4 0 0 0-4-4Z">
-                </path>
-              </svg>
-              Hjelp
-            </a>
-            <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  marginL"
-                    data-brightness="light"
-                    type="button"
-            >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
-              >
-                <path d="M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z">
-                </path>
-              </svg>
-              <span class>
-                Tilpass løsningen
-              </span>
-            </button>
-            <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  marginL"
-                    data-brightness="light"
-                    type="button"
-            >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
-              >
-                <path d="M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z">
-                </path>
-              </svg>
-              <span class>
-                Meld feil
-              </span>
-            </button>
-          </div>
-        </div>
-        <div class="_nameContainer_192u7_128">
-          <div>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
-                 viewbox="0 0 24 24"
-                 focusable="false"
-                 aria-hidden="true"
-                 role="img"
-            >
-              <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
-              </path>
-            </svg>
-          </div>
-          <span class="_nameContainerName_192u7_147">
+      </div>
+      <div class="_childrenAndUserContainer_jw5qf_63">
+        <a class="_link_z7jba_1 _link_white_z7jba_1 "
+           href="/hjelp"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M11 18h2v-2h-2v2Zm1-16C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-14a4 4 0 0 0-4 4h2a2 2 0 1 1 4 0c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5a4 4 0 0 0-4-4Z">
+            </path>
+          </svg>
+          Hjelp
+        </a>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z">
+            </path>
+          </svg>
+          <span class>
+            Tilpass løsningen
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z">
+            </path>
+          </svg>
+          <span class>
+            Meld feil
+          </span>
+        </button>
+        <div class="_userContainer_jw5qf_70">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_jw5qf_86"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+            </path>
+          </svg>
+          <span class="_userContainerName_jw5qf_90">
             Johansen, Krystall Pepsi
           </span>
         </div>
@@ -232,9 +233,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -250,18 +251,20 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
-        </span>
       </div>
     </div>
   </header>
@@ -270,9 +273,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 dummyCustomTheme">
+  <header class="dummyCustomTheme">
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -288,18 +291,20 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
-        </span>
       </div>
     </div>
   </header>
@@ -308,9 +313,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -326,18 +331,20 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
-        </span>
       </div>
     </div>
   </header>
@@ -346,9 +353,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -364,23 +371,25 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_constructionBand_192u7_27">
-      <div class="_constructionBandTitle_192u7_32">
+    <div class="_constructionBand_jw5qf_1">
+      <div class="_constructionBandTitle_jw5qf_5">
         demo
       </div>
     </div>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
-        </span>
       </div>
     </div>
   </header>
@@ -389,9 +398,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -407,29 +416,31 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
-        </span>
       </div>
     </div>
   </header>
 </div>
 `;
 
-exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerInternal WithLongConstructionText smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -445,38 +456,133 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_constructionBand_jw5qf_1">
+      <div class="_constructionBandTitle_jw5qf_5">
+        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      </div>
+    </div>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            MVA
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenMobile smoke-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <img class="_logoImage_jw5qf_57"
+               src="[REMOVED]"
+               alt
+               aria-hidden="true"
+          >
           <span>
-            kakeportalen kakeportalen kakeportalen kakeportalen
+            MVA
           </span>
-          <span>
-            kaka er en løgnkaka er en løgnkaka er en løgnkaka er en løgn
-          </span>
+        </a>
+        <span>
+          FOLK OG TRUBADURSERVICE WOODIE GUTHRIE 999 999 999
         </span>
-        <div class="_nameContainer_192u7_128">
-          <div>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
-                 viewbox="0 0 24 24"
-                 focusable="false"
-                 aria-hidden="true"
-                 role="img"
-            >
-              <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
-              </path>
-            </svg>
-          </div>
-          <span class="_nameContainerName_192u7_147">
-            Sandra Saksbehandler
+      </div>
+      <div class="_childrenAndUserContainer_jw5qf_63">
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 1 0-4 0H8a4 4 0 0 1 8 0 3.2 3.2 0 0 1-.93 2.25ZM13 19h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12a10 10 0 0 0 20 0c0-5.53-4.5-10-10-10Z">
+            </path>
+          </svg>
+          <span class>
+            Hjelp
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M13 9h5.5L13 3.5V9ZM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2Zm9 16v-2H6v2h9Zm3-4v-2H6v2h12Z">
+            </path>
+          </svg>
+          <span class>
+            Dokumentasjon
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+            </path>
+          </svg>
+          <span class>
+            Opprett RF-Ørtiatten
+          </span>
+        </button>
+        <div class="_userContainer_jw5qf_70">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_jw5qf_86"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+            </path>
+          </svg>
+          <span class="_userContainerName_jw5qf_90">
+            Etternavnesen Fornavn
           </span>
         </div>
       </div>
@@ -485,13 +591,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
 </div>
 `;
 
-exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndThreeChildrenBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 "
-          id="dummyIdForwardedFromRef"
-  >
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -507,18 +611,511 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
+          <span>
+            Oppdragsregister saksbehandling
+          </span>
         </a>
-        <span class="_titleWrapper_192u7_10">
+        <span>
+          Arbeidsliste for ulike scenarier som er lange
         </span>
+      </div>
+      <div class="_childrenAndUserContainer_jw5qf_63">
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 1 0-4 0H8a4 4 0 0 1 8 0 3.2 3.2 0 0 1-.93 2.25ZM13 19h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12a10 10 0 0 0 20 0c0-5.53-4.5-10-10-10Z">
+            </path>
+          </svg>
+          <span class>
+            Hjelp
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M13 9h5.5L13 3.5V9ZM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2Zm9 16v-2H6v2h9Zm3-4v-2H6v2h12Z">
+            </path>
+          </svg>
+          <span class>
+            Dokumentasjon
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+            </path>
+          </svg>
+          <span class>
+            Opprett RF-Ørtiatten
+          </span>
+        </button>
+        <div class="_userContainer_jw5qf_70">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_jw5qf_86"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+            </path>
+          </svg>
+          <span class="_userContainerName_jw5qf_90">
+            Winnifred-Jonathan Hastings
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <img class="_logoImage_jw5qf_57"
+               src="[REMOVED]"
+               alt
+               aria-hidden="true"
+          >
+          <span>
+            kakeportalen kakeportalen kakeportalen kakeportalen
+          </span>
+        </a>
+        <span>
+          kaka er en løgnkaka er en løgnkaka er en løgnkaka er en løgn
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <img class="_logoImage_jw5qf_57"
+               src="[REMOVED]"
+               alt
+               aria-hidden="true"
+          >
+          <span>
+            MVA
+          </span>
+        </a>
+        <span>
+          Arbeidsliste
+        </span>
+      </div>
+      <div class="_childrenAndUserContainer_jw5qf_63">
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 1 0-4 0H8a4 4 0 0 1 8 0 3.2 3.2 0 0 1-.93 2.25ZM13 19h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12a10 10 0 0 0 20 0c0-5.53-4.5-10-10-10Z">
+            </path>
+          </svg>
+          <span class>
+            Hjelp
+          </span>
+        </button>
+        <div class="_userContainer_jw5qf_70">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_jw5qf_86"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+            </path>
+          </svg>
+          <span class="_userContainerName_jw5qf_90">
+            Etternavnesen Fornavn
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerInternal WithPoliceLogo smoke-test 1`] = `
+<div data-test-block="true">
+  <header class="blueBackground">
+    <a href="main"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <img class="_logoImage_jw5qf_57 demoLogo"
+               src="[REMOVED]"
+               alt
+               aria-hidden="true"
+          >
+          <span>
+            SIRO
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
+<div data-test-block="true">
+  <header class
+          id="dummyIdForwardedFromRef"
+  >
+    <a href="main"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <img class="_logoImage_jw5qf_57"
+               src="[REMOVED]"
+               alt
+               aria-hidden="true"
+          >
+          <span>
+            MVA
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <img class="_logoImage_jw5qf_57"
+               src="[REMOVED]"
+               alt
+               aria-hidden="true"
+          >
+          <span>
+            MVA
+          </span>
+        </a>
+        <span>
+          Arbeidsliste
+        </span>
+      </div>
+      <div class="_childrenAndUserContainer_jw5qf_63">
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 1 0-4 0H8a4 4 0 0 1 8 0 3.2 3.2 0 0 1-.93 2.25ZM13 19h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12a10 10 0 0 0 20 0c0-5.53-4.5-10-10-10Z">
+            </path>
+          </svg>
+          <span class>
+            Hjelp
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M13 9h5.5L13 3.5V9ZM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2Zm9 16v-2H6v2h9Zm3-4v-2H6v2h12Z">
+            </path>
+          </svg>
+          <span class>
+            Dokumentasjon
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+            </path>
+          </svg>
+          <span class>
+            Opprett RF-Ørtiatten
+          </span>
+        </button>
+        <div class="_userContainer_jw5qf_70">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_jw5qf_86"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+            </path>
+          </svg>
+          <span class="_userContainerName_jw5qf_90">
+            Etternavnesen Fornavn
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <img class="_logoImage_jw5qf_57"
+               src="[REMOVED]"
+               alt
+               aria-hidden="true"
+          >
+          <span>
+            MVA
+          </span>
+        </a>
+        <span>
+          Arbeidsliste
+        </span>
+      </div>
+      <div class="_childrenAndUserContainer_jw5qf_63">
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 1 0-4 0H8a4 4 0 0 1 8 0 3.2 3.2 0 0 1-.93 2.25ZM13 19h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12a10 10 0 0 0 20 0c0-5.53-4.5-10-10-10Z">
+            </path>
+          </svg>
+          <span class>
+            Hjelp
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M13 9h5.5L13 3.5V9ZM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2Zm9 16v-2H6v2h9Zm3-4v-2H6v2h12Z">
+            </path>
+          </svg>
+          <span class>
+            Dokumentasjon
+          </span>
+        </button>
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+                data-brightness="light"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+            </path>
+          </svg>
+          <span class>
+            Opprett RF-Ørtiatten
+          </span>
+        </button>
+        <div class="_userContainer_jw5qf_70">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_jw5qf_86"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+            </path>
+          </svg>
+          <span class="_userContainerName_jw5qf_90">
+            Etternavnesen Fornavn
+          </span>
+        </div>
       </div>
     </div>
   </header>
@@ -527,9 +1124,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_192u7_57 ">
+  <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
@@ -545,37 +1142,36 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_192u7_90">
-      <div class="_contentContainer_192u7_98 ">
-        <a class="_logo_192u7_66"
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
            href="#"
         >
-          <img class="_logoImage_192u7_73"
+          <img class="_logoImage_jw5qf_57"
                src="[REMOVED]"
-               alt="til startsiden kakeportalen"
+               alt
+               aria-hidden="true"
           >
-        </a>
-        <span class="_titleWrapper_192u7_10">
           <span>
             kakeportalen
           </span>
-          <span>
-            kaka er en løgn
-          </span>
+        </a>
+        <span>
+          kaka er en løgn
         </span>
-        <div class="_nameContainer_192u7_128">
-          <div>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
-                 viewbox="0 0 24 24"
-                 focusable="false"
-                 aria-hidden="true"
-                 role="img"
-            >
-              <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
-              </path>
-            </svg>
-          </div>
-          <span class="_nameContainerName_192u7_147">
+      </div>
+      <div class="_childrenAndUserContainer_jw5qf_63">
+        <div class="_userContainer_jw5qf_70">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_jw5qf_86"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+            </path>
+          </svg>
+          <span class="_userContainerName_jw5qf_90">
             Sandra Saksbehandler
           </span>
         </div>
