@@ -133,13 +133,13 @@ exports[`Tester/Fieldset WithHelpTextSvgPathAndTitle play-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:ra:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rb:"
@@ -175,13 +175,13 @@ exports[`Tester/Fieldset WithHelpToggleEvent smoke-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:re:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rf:"
@@ -217,13 +217,13 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27 _srOnly_10ldw_59"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27 _srOnly_10ldw_59"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r6:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r7:"
