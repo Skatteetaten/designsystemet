@@ -42,7 +42,7 @@ export interface TopBannerInternalProps extends BaseProps {
   logoHref: string;
   /**
    * Alt-text på logo. Skal gi beskjed om hvor lenken sender deg. F.eks Forside [navn på løsning].
-   * Deprecated: Prop skal fjernes ved lansering av neste major versjon. Erstattes av "title".
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Erstattes av "title".
    */
   logoAltText: string;
   /** Overskriver default logo. */
