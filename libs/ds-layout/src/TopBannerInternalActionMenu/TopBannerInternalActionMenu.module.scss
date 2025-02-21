@@ -13,6 +13,7 @@
 }
 
 .menu {
+  z-index: 100;
   padding: var(--spacing-s);
   border: 1px solid var(--palette-graphite-70);
   background-color: var(--palette-graphite-0);
