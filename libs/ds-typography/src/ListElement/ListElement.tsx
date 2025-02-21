@@ -21,7 +21,7 @@ export const ListElement = forwardRef<HTMLLIElement, ListElementProps>(
       <li
         ref={ref}
         id={id}
-        className={`${styles.element} ${className}`}
+        className={`${styles.element} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
       >

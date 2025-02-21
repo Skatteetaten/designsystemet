@@ -17,7 +17,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Meny
       </span>
     </button>
@@ -35,7 +35,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Logg ut
       </span>
     </button>
@@ -53,7 +53,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Logg in
       </span>
     </button>
@@ -78,7 +78,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smok
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Meny
       </span>
     </button>
@@ -96,7 +96,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smok
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Logg ut
       </span>
     </button>
@@ -114,7 +114,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smok
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Logg in
       </span>
     </button>
@@ -138,7 +138,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) Defaults play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Meny
     </span>
   </button>
@@ -161,7 +161,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) DefaultsOnMobileScreen smoke-
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Meny
     </span>
   </button>
@@ -184,7 +184,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) VariantFilledOnMobileScreen s
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Logg inn
     </span>
   </button>
@@ -207,7 +207,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) VariantOutlineOnMobileScreen 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Logg ut
     </span>
   </button>
@@ -233,7 +233,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithAttributes play-test 1`] 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Meny
     </span>
   </button>
@@ -279,7 +279,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithEventHandlers play-test 1
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Blitt klikket på
     </span>
   </button>
@@ -303,7 +303,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithRef play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Meny
     </span>
   </button>
@@ -330,7 +330,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithTitle play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Knotten, Gudleik
     </span>
   </button>
@@ -353,7 +353,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantFilled smoke-test 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Logg inn
     </span>
   </button>
@@ -376,7 +376,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantOutline smoke-test
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Logg ut
     </span>
   </button>

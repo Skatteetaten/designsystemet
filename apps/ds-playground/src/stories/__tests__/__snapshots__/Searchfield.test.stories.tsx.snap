@@ -11,7 +11,7 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:rh:-srFocus"
               class="_srOnly_hryzl_180"
@@ -66,7 +66,7 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r2s:-srFocus"
               class="_srOnly_hryzl_180"
@@ -122,7 +122,7 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r2o:-srFocus"
               class="_srOnly_hryzl_180"
@@ -233,7 +233,7 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="htmlid-srFocus"
               class="_srOnly_hryzl_180"
@@ -290,7 +290,7 @@ exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r2g:-srFocus"
               class="_srOnly_hryzl_180"
@@ -333,7 +333,7 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r2b:-srFocus"
               class="_srOnly_hryzl_180"
@@ -461,7 +461,7 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r1o:-srFocus"
               class="_srOnly_hryzl_180"
@@ -537,7 +537,7 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
     <div class="_description_10ldw_17">
       En liten beskrivelse tekst
     </div>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r1t:-srFocus"
               class="_srOnly_hryzl_180"
@@ -592,7 +592,7 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r1f:-srFocus"
               class="_srOnly_hryzl_180"
@@ -650,7 +650,7 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r3j:-srFocus"
               class="_srOnly_hryzl_180"
@@ -669,7 +669,7 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
              aria-live="assertive"
              aria-atomic="true"
         >
-          <div class="_errorMessage_1kdf4_15 ">
+          <div class="_errorMessage_1kdf4_15">
             <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
                  viewbox="0 0 24 24"
                  focusable="false"
@@ -720,7 +720,7 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
     >
       Søk har blitt aktivert med enter
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r2j:-srFocus"
               class="_srOnly_hryzl_180"
@@ -818,7 +818,7 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r21:-srFocus"
               class="_srOnly_hryzl_180"
@@ -893,7 +893,7 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r30:-srFocus"
               class="_srOnly_hryzl_180"
@@ -971,7 +971,7 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
     <div class="_description_10ldw_17">
       Med en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG beskrivelse?
     </div>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:rc:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1026,7 +1026,7 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r27:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1083,7 +1083,7 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r0:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1139,7 +1139,7 @@ exports[`Tester/SearchField WithRequired play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r3b:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1195,7 +1195,7 @@ exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r3f:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1251,7 +1251,7 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r1j:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1324,7 +1324,7 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r1a:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1397,7 +1397,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:rl:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1447,7 +1447,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:rp:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1497,7 +1497,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:rt:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1552,7 +1552,7 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r11:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1590,7 +1590,7 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r14:-srFocus"
               class="_srOnly_hryzl_180"
@@ -1628,7 +1628,7 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_hryzl_5 ">
+    <div class="_searchContainer_hryzl_5">
       <div class="_inputWrapper_hryzl_42">
         <span id="searchField-:r17:-srFocus"
               class="_srOnly_hryzl_180"

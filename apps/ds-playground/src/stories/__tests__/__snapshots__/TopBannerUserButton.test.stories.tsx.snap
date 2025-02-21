@@ -20,7 +20,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) Defaults play-test 1`] = 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Meg selv
     </span>
   </button>
@@ -48,7 +48,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Meg selv
       </span>
     </button>
@@ -123,7 +123,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAttributes play-test 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Meg selv
     </span>
   </button>
@@ -151,7 +151,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-tes
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Meg selv
       </span>
     </button>
@@ -224,7 +224,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-tes
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Meg selv
       </span>
     </button>
@@ -297,7 +297,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Meg selv
       </span>
     </button>
@@ -370,7 +370,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-te
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27 ">
+      <span class="_buttonText_197zg_27">
         Meg selv
       </span>
     </button>
@@ -443,7 +443,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithRef play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 ">
+    <span class="_buttonText_197zg_27">
       Meg selv
     </span>
   </button>

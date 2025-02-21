@@ -4,7 +4,7 @@ exports[`Tester/OpenClose Compact smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18 "
+      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18"
               aria-expanded="false"
               type="button"
       >
@@ -30,7 +30,7 @@ exports[`Tester/OpenClose CompactAndIsExpanded smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18 "
+      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18"
               aria-expanded="true"
               type="button"
       >
@@ -48,7 +48,7 @@ exports[`Tester/OpenClose CompactAndIsExpanded smoke-test 1`] = `
         </span>
       </button>
     </div>
-    <div class="_content_y76ob_70 _content_compact_y76ob_75 ">
+    <div class="_content_y76ob_70 _content_compact_y76ob_75">
       En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for dine merkostnader til kost, losji og reiser til og fra pendlerboligen.
     </div>
   </div>
@@ -111,7 +111,7 @@ exports[`Tester/OpenClose CompactWithUnderline smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18 "
+      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18"
               aria-expanded="false"
               type="button"
       >
@@ -137,11 +137,11 @@ exports[`Tester/OpenClose Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -167,7 +167,7 @@ exports[`Tester/OpenClose IconRightContent smoke-test 1`] = `
               aria-expanded="true"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -195,11 +195,11 @@ exports[`Tester/OpenClose InContext smoke-test 1`] = `
   </div>
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -221,11 +221,11 @@ exports[`Tester/OpenClose IsExpanded play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="true"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -239,7 +239,7 @@ exports[`Tester/OpenClose IsExpanded play-test 1`] = `
         </span>
       </button>
     </div>
-    <div class="_content_y76ob_70  ">
+    <div class="_content_y76ob_70">
       En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for dine merkostnader til kost, losji og reiser til og fra pendlerboligen.
     </div>
   </div>
@@ -251,13 +251,13 @@ exports[`Tester/OpenClose WithAttributes play-test 1`] = `
   <div class="dummyClassname">
     <div class="_tag_y76ob_1">
       <button id="htmlId"
-              class="_openClose_y76ob_5  "
+              class="_openClose_y76ob_5"
               lang="nb"
               data-testid="123ID"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -279,11 +279,11 @@ exports[`Tester/OpenClose WithChangingTitle play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="true"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -297,7 +297,7 @@ exports[`Tester/OpenClose WithChangingTitle play-test 1`] = `
         </span>
       </button>
     </div>
-    <div class="_content_y76ob_70  ">
+    <div class="_content_y76ob_70">
       En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for dine merkostnader til kost, losji og reiser til og fra pendlerboligen.
     </div>
   </div>
@@ -312,7 +312,7 @@ exports[`Tester/OpenClose WithIconRight smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -338,7 +338,7 @@ exports[`Tester/OpenClose WithIconRightAndNoUnderline smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -347,7 +347,7 @@ exports[`Tester/OpenClose WithIconRightAndNoUnderline smoke-test 1`] = `
           <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
           </path>
         </svg>
-        <span class="_title_y76ob_57  ">
+        <span class="_title_y76ob_57">
           Er jeg pendler?
         </span>
       </button>
@@ -360,11 +360,11 @@ exports[`Tester/OpenClose WithIsOnClickOnlyFiredOnOpen play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -386,11 +386,11 @@ exports[`Tester/OpenClose WithLongTitle smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -412,11 +412,11 @@ exports[`Tester/OpenClose WithOnClick play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -438,12 +438,12 @@ exports[`Tester/OpenClose WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
               id="dummyIdForwardedFromRef"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -465,11 +465,11 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <h1 class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -486,11 +486,11 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
   </div>
   <div class>
     <h2 class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -507,11 +507,11 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
   </div>
   <div class>
     <h3 class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -528,11 +528,11 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
   </div>
   <div class>
     <h4 class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -549,11 +549,11 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
   </div>
   <div class>
     <h5 class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -570,11 +570,11 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
   </div>
   <div class>
     <h6 class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -596,11 +596,11 @@ exports[`Tester/OpenClose WithoutUnderline smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="_tag_y76ob_1">
-      <button class="_openClose_y76ob_5  "
+      <button class="_openClose_y76ob_5"
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -609,7 +609,7 @@ exports[`Tester/OpenClose WithoutUnderline smoke-test 1`] = `
           <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
           </path>
         </svg>
-        <span class="_title_y76ob_57  ">
+        <span class="_title_y76ob_57">
           Er jeg pendler?
         </span>
       </button>

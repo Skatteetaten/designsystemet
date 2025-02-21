@@ -15,7 +15,7 @@ exports[`Tester/Breadcrumbs/Link WithAttributes play-test 1`] = `
 
 exports[`Tester/Breadcrumbs/Link WithRef play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_z7jba_1  "
+  <a class="_link_z7jba_1"
      href="#storybook-root"
      id="dummyIdForwardedFromRef"
   >

@@ -28,7 +28,7 @@ exports[`Tester/TopBanner/TopBannerInternalActionMenu WithAttributes play-test 1
 
 exports[`Tester/TopBanner/TopBannerInternalActionMenu WithImperativeActions play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
           data-brightness="light"
           type="button"
           aria-expanded="false"
@@ -59,7 +59,7 @@ exports[`Tester/TopBanner/TopBannerInternalActionMenu WithImperativeActions play
 
 exports[`Tester/TopBanner/TopBannerInternalActionMenu WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
           data-brightness="light"
           type="button"
           id="dummyIdForwardedFromRef"

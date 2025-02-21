@@ -2,55 +2,55 @@
 
 exports[`Tester/Card/Card AllColors smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_card_nrlm6_5  bottomSpacingXL"
+  <div class="_card_nrlm6_5 bottomSpacingXL"
        data-color="ochre"
   >
-    <div class="_cardContent_48t19_1 ">
+    <div class="_cardContent_48t19_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
-  <div class="_card_nrlm6_5  bottomSpacingXL"
+  <div class="_card_nrlm6_5 bottomSpacingXL"
        data-color="forest"
   >
-    <div class="_cardContent_48t19_1 ">
+    <div class="_cardContent_48t19_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
-  <div class="_card_nrlm6_5  bottomSpacingXL"
+  <div class="_card_nrlm6_5 bottomSpacingXL"
        data-color="burgundy"
   >
-    <div class="_cardContent_48t19_1 ">
+    <div class="_cardContent_48t19_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
-  <div class="_card_nrlm6_5  bottomSpacingXL"
+  <div class="_card_nrlm6_5 bottomSpacingXL"
        data-color="denim"
   >
-    <div class="_cardContent_48t19_1 ">
+    <div class="_cardContent_48t19_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
-  <div class="_card_nrlm6_5  bottomSpacingXL"
+  <div class="_card_nrlm6_5 bottomSpacingXL"
        data-color="graphite"
   >
-    <div class="_cardContent_48t19_1 ">
+    <div class="_cardContent_48t19_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
-  <div class="_card_nrlm6_5  bottomSpacingXL"
+  <div class="_card_nrlm6_5 bottomSpacingXL"
        data-color="white"
   >
-    <div class="_cardContent_48t19_1 ">
+    <div class="_cardContent_48t19_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
@@ -83,7 +83,7 @@ exports[`Tester/Card/Card WithAriaLabelledBy play-test 1`] = `
 exports[`Tester/Card/Card WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="_card_nrlm6_5  dummyClassname"
+       class="_card_nrlm6_5 dummyClassname"
        lang="en"
        data-testid="123ID"
        data-color="white"

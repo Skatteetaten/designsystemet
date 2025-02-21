@@ -46,7 +46,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       <button
         ref={ref}
         id={id}
-        className={`${styles.button} ${sizeClassName} ${outlineClassName} ${className}`}
+        className={`${styles.button} ${sizeClassName} ${outlineClassName} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         data-brightness={brightness}

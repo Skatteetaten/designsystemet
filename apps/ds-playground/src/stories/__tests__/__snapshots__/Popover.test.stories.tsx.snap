@@ -3,7 +3,7 @@
 exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
 <div data-test-block="true">
   <div class="flex gapS centerContent">
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 "
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114"
             data-brightness="default"
             type="button"
             aria-expanded="true"
@@ -55,7 +55,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       >
       </div>
     </div>
-    <button class="_button_1hc5e_1 _button_small_1hc5e_42 _button_outlined_1hc5e_114 "
+    <button class="_button_1hc5e_1 _button_small_1hc5e_42 _button_outlined_1hc5e_114"
             data-brightness="default"
             type="button"
             aria-expanded="true"
@@ -107,7 +107,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       >
       </div>
     </div>
-    <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114 "
+    <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114"
             data-brightness="default"
             type="button"
             aria-expanded="true"
@@ -159,7 +159,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       >
       </div>
     </div>
-    <button class="_button_1hc5e_1 _button_large_1hc5e_60 _button_outlined_1hc5e_114 "
+    <button class="_button_1hc5e_1 _button_large_1hc5e_60 _button_outlined_1hc5e_114"
             data-brightness="default"
             type="button"
             aria-expanded="true"
@@ -217,7 +217,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
 
 exports[`Tester/Popover/Popover Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114 "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114"
           data-brightness="default"
           type="button"
           aria-expanded="false"

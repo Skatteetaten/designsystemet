@@ -163,7 +163,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
         </span>
       </div>
       <div class="_childrenAndUserContainer_jw5qf_63">
-        <a class="_link_z7jba_1 _link_white_z7jba_1 "
+        <a class="_link_z7jba_1 _link_white_z7jba_1"
            href="/hjelp"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
@@ -177,7 +177,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
           </svg>
           Hjelp
         </a>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -194,7 +194,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             Tilpass løsningen
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -520,7 +520,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
         </span>
       </div>
       <div class="_childrenAndUserContainer_jw5qf_63">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -537,7 +537,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
             Hjelp
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -554,7 +554,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -630,7 +630,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
         </span>
       </div>
       <div class="_childrenAndUserContainer_jw5qf_63">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -647,7 +647,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
             Hjelp
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -664,7 +664,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -783,7 +783,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
         </span>
       </div>
       <div class="_childrenAndUserContainer_jw5qf_63">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -941,7 +941,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
         </span>
       </div>
       <div class="_childrenAndUserContainer_jw5qf_63">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -958,7 +958,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
             Hjelp
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -975,7 +975,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -1051,7 +1051,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
         </span>
       </div>
       <div class="_childrenAndUserContainer_jw5qf_63">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -1068,7 +1068,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
             Hjelp
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >
@@ -1085,7 +1085,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
                 data-brightness="light"
                 type="button"
         >

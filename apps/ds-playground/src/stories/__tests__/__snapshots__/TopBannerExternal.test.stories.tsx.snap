@@ -51,11 +51,11 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -161,7 +161,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -267,7 +267,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -373,7 +373,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -479,7 +479,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -585,7 +585,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -695,7 +695,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -820,7 +820,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
             </div>
           </div>
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -926,7 +926,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -1047,13 +1047,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
             <div class="_mainMenu_18mb7_55">
               <nav aria-label="Temaoversikt"
-                   class="_columns_18mb7_63  "
+                   class="_columns_18mb7_63"
               >
                 <div class="_column_18mb7_63">
                   <div class="dummyClassNamePinkBackground">
@@ -1062,7 +1062,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -1138,12 +1138,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1154,7 +1154,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1170,7 +1170,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1186,7 +1186,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1273,13 +1273,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
             <div class="_mainMenu_18mb7_55">
               <nav aria-label="Temaoversikt"
-                   class="_columns_18mb7_63  "
+                   class="_columns_18mb7_63"
               >
                 <div class="_column_18mb7_63">
                   <div class="dummyClassNamePinkBackground">
@@ -1288,7 +1288,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -1364,12 +1364,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1380,7 +1380,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1396,7 +1396,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1412,7 +1412,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1499,13 +1499,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
             <div class="_mainMenu_18mb7_55">
               <nav aria-label="Temaoversikt"
-                   class="_columns_18mb7_63  "
+                   class="_columns_18mb7_63"
               >
                 <div class="_column_18mb7_63">
                   <div class="dummyClassNamePinkBackground">
@@ -1514,7 +1514,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -1590,12 +1590,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1606,7 +1606,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1622,7 +1622,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1638,7 +1638,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1712,7 +1712,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -1833,7 +1833,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
@@ -1858,7 +1858,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -1936,10 +1936,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1950,7 +1950,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1966,7 +1966,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1982,7 +1982,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -2079,7 +2079,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
@@ -2104,7 +2104,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -2182,10 +2182,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2196,7 +2196,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -2212,7 +2212,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -2228,7 +2228,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -2325,7 +2325,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
@@ -2350,7 +2350,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -2428,10 +2428,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2442,7 +2442,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -2458,7 +2458,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -2474,7 +2474,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -2571,7 +2571,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
@@ -2591,7 +2591,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -2669,10 +2669,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22  _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2683,7 +2683,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -2699,7 +2699,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -2715,7 +2715,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -2807,7 +2807,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
@@ -2827,7 +2827,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -2905,10 +2905,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22  _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2919,7 +2919,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -2935,7 +2935,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -2951,7 +2951,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -3043,7 +3043,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27 ">
+              <span class="_buttonText_197zg_27">
                 Meny
               </span>
             </button>
@@ -3063,7 +3063,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                 </div>
               </nav>
             </div>
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -3141,10 +3141,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22  _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -3155,7 +3155,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -3171,7 +3171,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -3187,7 +3187,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"

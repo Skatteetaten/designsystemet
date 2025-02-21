@@ -62,7 +62,8 @@ export const BreadcrumbsList = forwardRef<
 
     const childrenAsArray = React.Children.toArray(children);
 
-    const concatenatedClassNames = `${styles.breadcrumbsList} ${className}`;
+    const concatenatedClassNames =
+      `${styles.breadcrumbsList} ${className}`.trim();
 
     return (
       <BreadcrumbsListContext.Provider

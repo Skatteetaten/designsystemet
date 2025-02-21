@@ -28,7 +28,7 @@ export const TopBannerLangPickerButton = forwardRef<
   ): JSX.Element => {
     const concatenatedClassNames = `${
       ariaCurrent ? styles.buttonCurrent : ''
-    } ${styles.button} ${className}`;
+    } ${styles.button} ${className}`.trim();
 
     const refInternal = useRef<HTMLButtonElement>(null);
     useImperativeHandle(ref, () => refInternal?.current as HTMLButtonElement);

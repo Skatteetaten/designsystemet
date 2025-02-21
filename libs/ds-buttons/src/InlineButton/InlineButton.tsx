@@ -46,7 +46,8 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
     const withIconRightClassName = hasIconRight
       ? styles.button_withIconRight
       : '';
-    const concatenatedClassName = `${styles.button} ${withIconLeftClassName} ${withIconRightClassName} ${className}`;
+    const concatenatedClassName =
+      `${styles.button} ${withIconLeftClassName} ${withIconRightClassName} ${className}`.trim();
     const hideClassName = hasSpinner ? styles.hide : '';
 
     return (

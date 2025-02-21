@@ -6,7 +6,7 @@ exports[`Tester/ScrollToTopButton Defaults play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -29,12 +29,12 @@ exports[`Tester/ScrollToTopButton Defaults play-test 1`] = `
           (uses --semantic-responsive-container)
         </p>
       </div>
-      <div class="_container_gchs5_1  ">
-        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27 "
+      <div class="_container_gchs5_1">
+        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27"
                 type="button"
         >
-          <div class="_scrollToTopButtonIconContainer_gchs5_48 ">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56 "
+          <div class="_scrollToTopButtonIconContainer_gchs5_48">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -44,7 +44,7 @@ exports[`Tester/ScrollToTopButton Defaults play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div class="_scrollToTopButtonLabel_gchs5_70 ">
+          <div class="_scrollToTopButtonLabel_gchs5_70">
             Til toppen
           </div>
         </button>
@@ -60,7 +60,7 @@ exports[`Tester/ScrollToTopButton WithAttributes play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -83,15 +83,15 @@ exports[`Tester/ScrollToTopButton WithAttributes play-test 1`] = `
           (uses --semantic-responsive-container)
         </p>
       </div>
-      <div class="_container_gchs5_1 dummyClassname ">
+      <div class="_container_gchs5_1 dummyClassname">
         <button id="htmlId"
-                class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27 "
+                class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27"
                 lang="nb"
                 type="button"
                 data-testid="123ID"
         >
-          <div class="_scrollToTopButtonIconContainer_gchs5_48 ">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56 "
+          <div class="_scrollToTopButtonIconContainer_gchs5_48">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -101,7 +101,7 @@ exports[`Tester/ScrollToTopButton WithAttributes play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div class="_scrollToTopButtonLabel_gchs5_70 ">
+          <div class="_scrollToTopButtonLabel_gchs5_70">
             Til toppen
           </div>
         </button>
@@ -117,7 +117,7 @@ exports[`Tester/ScrollToTopButton WithChildren play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -140,12 +140,12 @@ exports[`Tester/ScrollToTopButton WithChildren play-test 1`] = `
           (uses --semantic-responsive-container)
         </p>
       </div>
-      <div class="_container_gchs5_1  ">
-        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27 "
+      <div class="_container_gchs5_1">
+        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27"
                 type="button"
         >
-          <div class="_scrollToTopButtonIconContainer_gchs5_48 ">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56 "
+          <div class="_scrollToTopButtonIconContainer_gchs5_48">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -155,7 +155,7 @@ exports[`Tester/ScrollToTopButton WithChildren play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div class="_scrollToTopButtonLabel_gchs5_70 ">
+          <div class="_scrollToTopButtonLabel_gchs5_70">
             dummy string
           </div>
         </button>
@@ -171,7 +171,7 @@ exports[`Tester/ScrollToTopButton WithCustomClassNames play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -225,7 +225,7 @@ exports[`Tester/ScrollToTopButton WithMobileScreen smoke-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -248,12 +248,12 @@ exports[`Tester/ScrollToTopButton WithMobileScreen smoke-test 1`] = `
           (uses --semantic-responsive-container)
         </p>
       </div>
-      <div class="_container_gchs5_1  ">
-        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27 "
+      <div class="_container_gchs5_1">
+        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27"
                 type="button"
         >
-          <div class="_scrollToTopButtonIconContainer_gchs5_48 ">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56 "
+          <div class="_scrollToTopButtonIconContainer_gchs5_48">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -263,7 +263,7 @@ exports[`Tester/ScrollToTopButton WithMobileScreen smoke-test 1`] = `
               </path>
             </svg>
           </div>
-          <div class="_scrollToTopButtonLabel_gchs5_70 ">
+          <div class="_scrollToTopButtonLabel_gchs5_70">
             Til toppen
           </div>
         </button>
@@ -282,7 +282,7 @@ exports[`Tester/ScrollToTopButton WithNotScrollToMain play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -305,12 +305,12 @@ exports[`Tester/ScrollToTopButton WithNotScrollToMain play-test 1`] = `
           (uses --semantic-responsive-container)
         </p>
       </div>
-      <div class="_container_gchs5_1  ">
-        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27 "
+      <div class="_container_gchs5_1">
+        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27"
                 type="button"
         >
-          <div class="_scrollToTopButtonIconContainer_gchs5_48 ">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56 "
+          <div class="_scrollToTopButtonIconContainer_gchs5_48">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -320,7 +320,7 @@ exports[`Tester/ScrollToTopButton WithNotScrollToMain play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div class="_scrollToTopButtonLabel_gchs5_70 ">
+          <div class="_scrollToTopButtonLabel_gchs5_70">
             Til toppen
           </div>
         </button>
@@ -336,7 +336,7 @@ exports[`Tester/ScrollToTopButton WithRef play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -359,13 +359,13 @@ exports[`Tester/ScrollToTopButton WithRef play-test 1`] = `
           (uses --semantic-responsive-container)
         </p>
       </div>
-      <div class="_container_gchs5_1  ">
-        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27 "
+      <div class="_container_gchs5_1">
+        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27"
                 type="button"
                 id="dummyIdForwardedFromRef"
         >
-          <div class="_scrollToTopButtonIconContainer_gchs5_48 ">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56 "
+          <div class="_scrollToTopButtonIconContainer_gchs5_48">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -375,7 +375,7 @@ exports[`Tester/ScrollToTopButton WithRef play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div class="_scrollToTopButtonLabel_gchs5_70 ">
+          <div class="_scrollToTopButtonLabel_gchs5_70">
             Til toppen
           </div>
         </button>
@@ -398,7 +398,7 @@ exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -421,12 +421,12 @@ exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
           (uses --semantic-responsive-container)
         </p>
       </div>
-      <div class="_container_gchs5_1  ">
-        <button class="_scrollToTopButton_gchs5_6  "
+      <div class="_container_gchs5_1">
+        <button class="_scrollToTopButton_gchs5_6"
                 type="button"
         >
-          <div class="_scrollToTopButtonIconContainer_gchs5_48 ">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56 "
+          <div class="_scrollToTopButtonIconContainer_gchs5_48">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -436,7 +436,7 @@ exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
               </path>
             </svg>
           </div>
-          <div class="_scrollToTopButtonLabel_gchs5_70 ">
+          <div class="_scrollToTopButtonLabel_gchs5_70">
             Til toppen
           </div>
         </button>
@@ -452,7 +452,7 @@ exports[`Tester/ScrollToTopButton WithWideScreen smoke-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1 ">
+      <div class="_layout_179rg_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -475,12 +475,12 @@ exports[`Tester/ScrollToTopButton WithWideScreen smoke-test 1`] = `
           (uses --semantic-responsive-container)
         </p>
       </div>
-      <div class="_container_gchs5_1  ">
-        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27 "
+      <div class="_container_gchs5_1">
+        <button class="_scrollToTopButton_gchs5_6 _scrollToTopButton_visible_gchs5_27"
                 type="button"
         >
-          <div class="_scrollToTopButtonIconContainer_gchs5_48 ">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56 "
+          <div class="_scrollToTopButtonIconContainer_gchs5_48">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -490,7 +490,7 @@ exports[`Tester/ScrollToTopButton WithWideScreen smoke-test 1`] = `
               </path>
             </svg>
           </div>
-          <div class="_scrollToTopButtonLabel_gchs5_70 ">
+          <div class="_scrollToTopButtonLabel_gchs5_70">
             Til toppen
           </div>
         </button>

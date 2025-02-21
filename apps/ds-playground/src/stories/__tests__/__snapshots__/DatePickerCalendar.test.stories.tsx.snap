@@ -2,7 +2,7 @@
 
 exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 ">
+  <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
       <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
@@ -1100,7 +1100,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
 
 exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 ">
+  <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
       <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
@@ -1647,7 +1647,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
 
 exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 ">
+  <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
       <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
@@ -2195,7 +2195,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
 
 exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 ">
+  <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
       <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
@@ -2753,7 +2753,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
 
 exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 ">
+  <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
       <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
@@ -3320,7 +3320,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
 
 exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWithinTheRange play-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 ">
+  <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
       <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
@@ -3887,7 +3887,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
 
 exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 ">
+  <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
       <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
@@ -4448,7 +4448,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
 
 exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 "
+  <div class="_calendar_feosd_5"
        id="dummyIdForwardedFromRef"
   >
     <div class="_calendarNavigation_feosd_18">
@@ -4997,7 +4997,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
 
 exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
 <div data-test-block="true">
-  <div class="_calendar_feosd_5 ">
+  <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
       <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"

@@ -2,7 +2,7 @@
 
 exports[`Tester/IconButton Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           type="button"
   >
@@ -25,7 +25,7 @@ exports[`Tester/IconButton Defaults play-test 1`] = `
 
 exports[`Tester/IconButton WithAccesskey play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           accesskey="a"
           type="button"
@@ -49,7 +49,7 @@ exports[`Tester/IconButton WithAccesskey play-test 1`] = `
 
 exports[`Tester/IconButton WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           type="button"
           aria-describedby="araiDescId"
@@ -73,7 +73,7 @@ exports[`Tester/IconButton WithAriaDescribedby play-test 1`] = `
 
 exports[`Tester/IconButton WithAriaExpanded play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           type="button"
           aria-expanded="true"
@@ -123,7 +123,7 @@ exports[`Tester/IconButton WithAttributes play-test 1`] = `
 
 exports[`Tester/IconButton WithBrightness smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="light"
           type="button"
   >
@@ -146,7 +146,7 @@ exports[`Tester/IconButton WithBrightness smoke-test 1`] = `
 
 exports[`Tester/IconButton WithBrightnessAndDisabled smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114 "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114"
           data-brightness="light"
           disabled
           type="button"
@@ -170,7 +170,7 @@ exports[`Tester/IconButton WithBrightnessAndDisabled smoke-test 1`] = `
 
 exports[`Tester/IconButton WithBrightnessAndOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114 "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114"
           data-brightness="light"
           type="button"
   >
@@ -193,18 +193,18 @@ exports[`Tester/IconButton WithBrightnessAndOutline smoke-test 1`] = `
 
 exports[`Tester/IconButton WithBrightnessAndSpinner smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="light"
           type="button"
   >
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_1hc5e_30 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_1hc5e_30"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:r14:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
@@ -215,7 +215,7 @@ exports[`Tester/IconButton WithBrightnessAndSpinner smoke-test 1`] = `
 
 exports[`Tester/IconButton WithCustomSVGPath smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           type="button"
   >
@@ -238,7 +238,7 @@ exports[`Tester/IconButton WithCustomSVGPath smoke-test 1`] = `
 
 exports[`Tester/IconButton WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           disabled
           type="button"
@@ -262,7 +262,7 @@ exports[`Tester/IconButton WithDisabled play-test 1`] = `
 
 exports[`Tester/IconButton WithDisabledAndOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114 "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114"
           data-brightness="default"
           disabled
           type="button"
@@ -286,7 +286,7 @@ exports[`Tester/IconButton WithDisabledAndOutline smoke-test 1`] = `
 
 exports[`Tester/IconButton WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           type="button"
   >
@@ -309,7 +309,7 @@ exports[`Tester/IconButton WithEventHandlers play-test 1`] = `
 
 exports[`Tester/IconButton WithOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114 "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50 _button_outlined_1hc5e_114"
           data-brightness="default"
           type="button"
   >
@@ -332,7 +332,7 @@ exports[`Tester/IconButton WithOutline smoke-test 1`] = `
 
 exports[`Tester/IconButton WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           type="button"
           id="dummyIdForwardedFromRef"
@@ -356,7 +356,7 @@ exports[`Tester/IconButton WithRef play-test 1`] = `
 
 exports[`Tester/IconButton WithSizeExtraSmall smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34  "
+  <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34"
           data-brightness="default"
           type="button"
   >
@@ -379,7 +379,7 @@ exports[`Tester/IconButton WithSizeExtraSmall smoke-test 1`] = `
 
 exports[`Tester/IconButton WithSizeExtraSmallAndOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 "
+  <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114"
           data-brightness="default"
           type="button"
   >
@@ -402,7 +402,7 @@ exports[`Tester/IconButton WithSizeExtraSmallAndOutline smoke-test 1`] = `
 
 exports[`Tester/IconButton WithSizeLarge smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_large_1hc5e_60  "
+  <button class="_button_1hc5e_1 _button_large_1hc5e_60"
           data-brightness="default"
           type="button"
   >
@@ -425,7 +425,7 @@ exports[`Tester/IconButton WithSizeLarge smoke-test 1`] = `
 
 exports[`Tester/IconButton WithSizeLargeAndOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_large_1hc5e_60 _button_outlined_1hc5e_114 "
+  <button class="_button_1hc5e_1 _button_large_1hc5e_60 _button_outlined_1hc5e_114"
           data-brightness="default"
           type="button"
   >
@@ -448,7 +448,7 @@ exports[`Tester/IconButton WithSizeLargeAndOutline smoke-test 1`] = `
 
 exports[`Tester/IconButton WithSizeSmall smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_small_1hc5e_42  "
+  <button class="_button_1hc5e_1 _button_small_1hc5e_42"
           data-brightness="default"
           type="button"
   >
@@ -471,7 +471,7 @@ exports[`Tester/IconButton WithSizeSmall smoke-test 1`] = `
 
 exports[`Tester/IconButton WithSizeSmallAndOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_small_1hc5e_42 _button_outlined_1hc5e_114 "
+  <button class="_button_1hc5e_1 _button_small_1hc5e_42 _button_outlined_1hc5e_114"
           data-brightness="default"
           type="button"
   >
@@ -549,7 +549,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <button class="_button_1hc5e_1 _button_large_1hc5e_60 _button_outlined_1hc5e_114 "
+    <button class="_button_1hc5e_1 _button_large_1hc5e_60 _button_outlined_1hc5e_114"
             data-brightness="default"
             type="button"
     >
@@ -575,12 +575,12 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
     >
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1hc5e_30 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1hc5e_30"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:rm:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -592,12 +592,12 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
     >
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1hc5e_30 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1hc5e_30"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:rn:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -609,29 +609,29 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
     >
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_1hc5e_30 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_1hc5e_30"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:ro:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
       </div>
     </button>
-    <button class="_button_1hc5e_1 _button_large_1hc5e_60 _button_outlined_1hc5e_114 "
+    <button class="_button_1hc5e_1 _button_large_1hc5e_60 _button_outlined_1hc5e_114"
             data-brightness="default"
             type="button"
     >
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28 _spinner_1hc5e_30 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28 _spinner_1hc5e_30"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:rp:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -693,7 +693,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <button class="_button_1hc5e_1 _button_large_1hc5e_60  "
+    <button class="_button_1hc5e_1 _button_large_1hc5e_60"
             data-brightness="default"
             type="button"
     >
@@ -718,12 +718,12 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
   >
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1hc5e_30 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1hc5e_30"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:ru:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
@@ -735,12 +735,12 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
   >
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1hc5e_30 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1hc5e_30"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:rv:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
@@ -752,29 +752,29 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
   >
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_1hc5e_30 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_1hc5e_30"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:r10:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
     </div>
   </button>
-  <button class="_button_1hc5e_1 _button_large_1hc5e_60  "
+  <button class="_button_1hc5e_1 _button_large_1hc5e_60"
           data-brightness="default"
           type="button"
   >
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28 _spinner_1hc5e_30 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28 _spinner_1hc5e_30"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:r11:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
@@ -785,7 +785,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
 
 exports[`Tester/IconButton WithType play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1hc5e_1 _button_medium_1hc5e_50  "
+  <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
           data-brightness="default"
           type="submit"
   >

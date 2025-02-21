@@ -51,7 +51,7 @@ export const Button = forwardRef<
       : '';
     const concatenatedClassName = `${styles.button} ${
       styles[`button_${variant}`]
-    } ${withIconClassName} ${withIconRightClassName} ${className}`;
+    } ${withIconClassName} ${withIconRightClassName} ${className}`.trim();
     const hideClassName = hasSpinner ? styles.hide : '';
     const getSpinnerColor = (): SpinnerColor => {
       if (disabled) {

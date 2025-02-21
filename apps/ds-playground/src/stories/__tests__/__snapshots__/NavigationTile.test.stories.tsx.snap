@@ -2,7 +2,7 @@
 
 exports[`Tester/NavigationTile Defaults play-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
@@ -25,7 +25,7 @@ exports[`Tester/NavigationTile Defaults play-test 1`] = `
 
 exports[`Tester/NavigationTile WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
      aria-describedby="htmlId"
   >
@@ -50,7 +50,7 @@ exports[`Tester/NavigationTile WithAriaDescribedby play-test 1`] = `
 exports[`Tester/NavigationTile WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <a id="htmlId"
-     class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101 dummyClassname undefined"
+     class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101 dummyClassname"
      lang="nb"
      data-testid="123ID"
      href="#storybook-root"
@@ -101,7 +101,7 @@ exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
@@ -118,7 +118,7 @@ exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_description_ous0n_41 false  undefined">
+    <div class="_description_ous0n_41 false">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -127,7 +127,7 @@ exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithExternalIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
@@ -151,7 +151,7 @@ exports[`Tester/NavigationTile WithExternalIcon play-test 1`] = `
 
 exports[`Tester/NavigationTile WithHiddenArrowIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
@@ -165,7 +165,7 @@ exports[`Tester/NavigationTile WithHiddenArrowIcon smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
@@ -198,7 +198,7 @@ exports[`Tester/NavigationTile WithIcon play-test 1`] = `
 exports[`Tester/NavigationTile WithMultitpleTilesWithoutGap play-test 1`] = `
 <div data-test-block="true">
   <nav>
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -215,11 +215,11 @@ exports[`Tester/NavigationTile WithMultitpleTilesWithoutGap play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_description_ous0n_41 false  undefined">
+      <div class="_description_ous0n_41 false">
         Eksempel på undertittel. Denne kan være litt lengre.
       </div>
     </a>
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -236,11 +236,11 @@ exports[`Tester/NavigationTile WithMultitpleTilesWithoutGap play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_description_ous0n_41 false  undefined">
+      <div class="_description_ous0n_41 false">
         Eksempel på undertittel. Denne kan være litt lengre.
       </div>
     </a>
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -257,7 +257,7 @@ exports[`Tester/NavigationTile WithMultitpleTilesWithoutGap play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_description_ous0n_41 false  undefined">
+      <div class="_description_ous0n_41 false">
         Eksempel på undertittel. Denne kan være litt lengre.
       </div>
     </a>
@@ -267,7 +267,7 @@ exports[`Tester/NavigationTile WithMultitpleTilesWithoutGap play-test 1`] = `
 
 exports[`Tester/NavigationTile WithOnClick play-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
@@ -290,7 +290,7 @@ exports[`Tester/NavigationTile WithOnClick play-test 1`] = `
 
 exports[`Tester/NavigationTile WithRef play-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
      id="dummyIdForwardedFromRef"
   >
@@ -314,7 +314,7 @@ exports[`Tester/NavigationTile WithRef play-test 1`] = `
 
 exports[`Tester/NavigationTile WithSizeExtraLarge smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_extraLarge_ous0n_93  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_extraLarge_ous0n_93"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
@@ -331,7 +331,7 @@ exports[`Tester/NavigationTile WithSizeExtraLarge smoke-test 1`] = `
         Skatt
       </h2>
     </div>
-    <div class="_description_ous0n_41 _description_extraLarge_ous0n_49  undefined">
+    <div class="_description_ous0n_41 _description_extraLarge_ous0n_49">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -340,7 +340,7 @@ exports[`Tester/NavigationTile WithSizeExtraLarge smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
@@ -357,7 +357,7 @@ exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_description_ous0n_41 false  undefined">
+    <div class="_description_ous0n_41 false">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -366,14 +366,14 @@ exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
       <h2 class="_title_ous0n_24  undefined">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 "
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -383,7 +383,7 @@ exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_description_ous0n_41 false  undefined">
+    <div class="_description_ous0n_41 false">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -392,18 +392,18 @@ exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithSpinner smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_extraLarge_ous0n_93 bottomSpacingXL undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_extraLarge_ous0n_93 bottomSpacingXL"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28 _spinner_ous0n_11 _spinner_extraLarge_ous0n_14 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28 _spinner_ous0n_11 _spinner_extraLarge_ous0n_14"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:rm:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -412,22 +412,22 @@ exports[`Tester/NavigationTile WithSpinner smoke-test 1`] = `
         Skatt
       </h2>
     </div>
-    <div class="_description_ous0n_41 _description_extraLarge_ous0n_49  undefined">
+    <div class="_description_ous0n_41 _description_extraLarge_ous0n_49">
       Eksempel på undertittel. Denne kan være litt lengre.
     </div>
   </a>
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101 bottomSpacingXL undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101 bottomSpacingXL"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_ous0n_11  "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_ous0n_11"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:rn:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -445,22 +445,22 @@ exports[`Tester/NavigationTile WithSpinner smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53 undefined">
+    <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
       Eksempel på undertittel. Denne kan være litt lengre.
     </div>
   </a>
-  <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_ous0n_11  "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25 _spinner_ous0n_11"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:rp:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -468,7 +468,7 @@ exports[`Tester/NavigationTile WithSpinner smoke-test 1`] = `
       <h2 class="_title_ous0n_24  undefined">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 "
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -478,7 +478,7 @@ exports[`Tester/NavigationTile WithSpinner smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53 undefined">
+    <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
       Eksempel på undertittel. Denne kan være litt lengre.
     </div>
   </a>
@@ -487,7 +487,7 @@ exports[`Tester/NavigationTile WithSpinner smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithTarget play-test 1`] = `
 <div data-test-block="true">
-  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+  <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
      href="#storybook-root"
      rel="noreferrer"
      target="_blank"
@@ -513,7 +513,7 @@ exports[`Tester/NavigationTile WithTarget play-test 1`] = `
 exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
 <div data-test-block="true">
   <nav class="flex gapS">
-    <a class="_navigationTile_ous0n_57 _navigationTile_extraLarge_ous0n_93  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_extraLarge_ous0n_93"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -531,7 +531,7 @@ exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
         </h2>
       </div>
     </a>
-    <a class="_navigationTile_ous0n_57 _navigationTile_extraLarge_ous0n_93  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_extraLarge_ous0n_93"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -556,7 +556,7 @@ exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
 exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
 <div data-test-block="true">
   <nav class="flex flexColumn gapXs">
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -574,7 +574,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -592,7 +592,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -610,7 +610,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -628,7 +628,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
@@ -646,7 +646,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101  undefined"
+    <a class="_navigationTile_ous0n_57 _navigationTile_large_ous0n_101"
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">

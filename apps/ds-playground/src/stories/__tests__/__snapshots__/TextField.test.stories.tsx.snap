@@ -120,7 +120,7 @@ exports[`Tester/TextField WithControlledValueAndAutoSizeTextArea play-test 1`] =
     >
     </div>
   </div>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -369,7 +369,7 @@ exports[`Tester/TextField WithErrorMessage play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15 ">
+      <div class="_errorMessage_1kdf4_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
              viewbox="0 0 24 24"
              focusable="false"
@@ -737,7 +737,7 @@ exports[`Tester/TextField WithRows play-test 1`] = `
 
 exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">

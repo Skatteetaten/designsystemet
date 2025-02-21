@@ -24,7 +24,7 @@ export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
       <div
         ref={ref}
         id={id}
-        className={`${styles.cardContent} ${className}`}
+        className={`${styles.cardContent} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         data-spacing={spacingVertical}
@@ -32,7 +32,7 @@ export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
         <div className={classNames?.children}>{children}</div>
         {rightContent && (
           <div
-            className={`${styles.rightContent} ${classNames?.rightContent ?? ''}`}
+            className={`${styles.rightContent} ${classNames?.rightContent ?? ''}`.trim()}
           >
             {rightContent}
           </div>

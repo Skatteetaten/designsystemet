@@ -2,7 +2,7 @@
 
 exports[`Tester/ErrorSummary/Error Defaults play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_z7jba_1  "
+  <a class="_link_z7jba_1"
      href="#referenceId_1"
   >
     Husk å fylle ut type varer
@@ -25,7 +25,7 @@ exports[`Tester/ErrorSummary/Error WithAttributes play-test 1`] = `
 
 exports[`Tester/ErrorSummary/Error WithRef play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_z7jba_1  "
+  <a class="_link_z7jba_1"
      href="#referenceId_1"
      id="dummyIdForwardedFromRef"
   >

@@ -119,7 +119,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         <div
           className={`${styles.selectContainer} ${
             classNames?.selectContainer ?? ''
-          }`}
+          }`.trim()}
         >
           <select
             ref={selectRef}

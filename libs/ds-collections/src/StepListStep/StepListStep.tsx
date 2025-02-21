@@ -72,7 +72,8 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
             }`,
           ]
         : ['', ''];
-    const concatenatedClassName = `${styles.step} ${stepVariantClassName} ${className}`;
+    const concatenatedClassName =
+      `${styles.step} ${stepVariantClassName} ${className}`.trim();
 
     const getCircleContent = (): JSX.Element | number => {
       if (svgPath) {
@@ -112,13 +113,15 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
             ['neutralResult', 'positiveResult'].includes(variant)
               ? styles.stepSideWrapper_result
               : ''
-          }`}
+          }`.trim()}
           id={id ? `${id}-focus-target` : undefined}
           tabIndex={-1}
           aria-current={variant !== 'passive' ? 'step' : undefined}
         >
           <span className={circleClassName}>{getCircleContent()}</span>
-          <div className={`${styles.stepLine} ${stepLineVariantClassName}`} />
+          <div
+            className={`${styles.stepLine} ${stepLineVariantClassName}`.trim()}
+          />
         </div>
         <Heading
           id={titleId}
@@ -144,7 +147,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
           className={`${styles.stepContent} ${
             onEdit ? '' : styles.stepContent_noButton
           } ${stepContentVariantClassName}
-          `}
+          `.trim()}
         >
           <div>{children}</div>
           {onEdit && (

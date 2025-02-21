@@ -11,12 +11,12 @@ exports[`Tester/Footer Defaults play-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -27,7 +27,7 @@ exports[`Tester/Footer Defaults play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -43,7 +43,7 @@ exports[`Tester/Footer Defaults play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -59,7 +59,7 @@ exports[`Tester/Footer Defaults play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -107,12 +107,12 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -123,7 +123,7 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -139,7 +139,7 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -155,7 +155,7 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -199,12 +199,12 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -215,7 +215,7 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -231,7 +231,7 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -247,7 +247,7 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -280,7 +280,7 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
             >
           </div>
           <div class>
-            <svg class="_themeIcon_6zbcy_22 _themeIcon_medium_6zbcy_29 "
+            <svg class="_themeIcon_6zbcy_22 _themeIcon_medium_6zbcy_29"
                  viewbox="0 0 48 48"
                  focusable="false"
                  aria-hidden="true"
@@ -308,12 +308,12 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -324,7 +324,7 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#root"
                 >
                   Kontakt oss
@@ -340,7 +340,7 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#root"
                 >
                   Sikkerhet og personvern
@@ -356,7 +356,7 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#root"
                    rel="noreferrer"
                    target="_blank"
@@ -400,12 +400,12 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -416,7 +416,7 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -432,7 +432,7 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -448,7 +448,7 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -486,12 +486,12 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -502,7 +502,7 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -518,7 +518,7 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -534,7 +534,7 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -570,7 +570,7 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
             </a>
           </li>
           <li class="_linkList_15okz_63">
-            <a class="_link_z7jba_1 _link_white_z7jba_1 "
+            <a class="_link_z7jba_1 _link_white_z7jba_1"
                href="#"
             >
               Skjema og tjenester
@@ -587,21 +587,21 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
             </a>
           </li>
           <li class="_linkList_15okz_63">
-            <a class="_link_z7jba_1 _link_white_z7jba_1 "
+            <a class="_link_z7jba_1 _link_white_z7jba_1"
                href="#"
             >
               RSS
             </a>
           </li>
           <li class="_linkList_15okz_63">
-            <a class="_link_z7jba_1 _link_white_z7jba_1 "
+            <a class="_link_z7jba_1 _link_white_z7jba_1"
                href="#"
             >
               Tips oss
             </a>
           </li>
           <li class="_linkList_15okz_63">
-            <a class="_link_z7jba_1 _link_white_z7jba_1 "
+            <a class="_link_z7jba_1 _link_white_z7jba_1"
                href="#"
             >
               Koronatiltak
@@ -625,12 +625,12 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -641,7 +641,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -657,7 +657,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -673,7 +673,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -692,7 +692,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -703,7 +703,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -719,7 +719,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -735,7 +735,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -751,14 +751,14 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
@@ -786,12 +786,12 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -802,7 +802,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -818,7 +818,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -834,7 +834,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -853,7 +853,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -864,7 +864,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -880,7 +880,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -896,7 +896,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -912,14 +912,14 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
@@ -947,12 +947,12 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -963,7 +963,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -979,7 +979,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -995,7 +995,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1014,7 +1014,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1025,7 +1025,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -1041,7 +1041,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -1057,7 +1057,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -1073,14 +1073,14 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
@@ -1110,12 +1110,12 @@ exports[`Tester/Footer WithRef play-test 1`] = `
     </div>
     <div class="_footer_15okz_11">
       <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  ">
+        <div class="_columns_15okz_22">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1126,7 +1126,7 @@ exports[`Tester/Footer WithRef play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1142,7 +1142,7 @@ exports[`Tester/Footer WithRef play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1158,7 +1158,7 @@ exports[`Tester/Footer WithRef play-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1204,10 +1204,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1218,7 +1218,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1234,7 +1234,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1250,7 +1250,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1269,7 +1269,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1280,7 +1280,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -1296,7 +1296,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -1312,7 +1312,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -1328,25 +1328,25 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Følg oss
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Du kan kontakte oss i sosiale medier.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1357,7 +1357,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se alle Skatteetatens kontoer
@@ -1366,13 +1366,13 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
             </ul>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Presse
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Pressemeldinger, pressekontaker og annen informasjon for journalister.
             </p>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1383,20 +1383,20 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se vårt presserom
                 </a>
               </li>
             </ul>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Bruke data fra Skatteetaten
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Skatteetaten deler data som andre virksomheter og etater kan gjenbruke for å fornkle og effektivisere eksisterende og nye digitale tjenester.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1407,7 +1407,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Hvordan få tilgang til data
@@ -1441,10 +1441,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1455,7 +1455,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1471,7 +1471,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1487,7 +1487,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1506,7 +1506,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1517,7 +1517,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -1533,7 +1533,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -1549,7 +1549,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -1565,25 +1565,25 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Følg oss
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Du kan kontakte oss i sosiale medier.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1594,7 +1594,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se alle Skatteetatens kontoer
@@ -1603,13 +1603,13 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
             </ul>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Presse
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Pressemeldinger, pressekontaker og annen informasjon for journalister.
             </p>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1620,20 +1620,20 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se vårt presserom
                 </a>
               </li>
             </ul>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Bruke data fra Skatteetaten
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Skatteetaten deler data som andre virksomheter og etater kan gjenbruke for å fornkle og effektivisere eksisterende og nye digitale tjenester.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1644,7 +1644,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Hvordan få tilgang til data
@@ -1678,10 +1678,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1692,7 +1692,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1708,7 +1708,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1724,7 +1724,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1743,7 +1743,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1754,7 +1754,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -1770,7 +1770,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -1786,7 +1786,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -1802,25 +1802,25 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Følg oss
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Du kan kontakte oss i sosiale medier.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1831,7 +1831,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se alle Skatteetatens kontoer
@@ -1840,13 +1840,13 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
             </ul>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Presse
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Pressemeldinger, pressekontaker og annen informasjon for journalister.
             </p>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1857,20 +1857,20 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se vårt presserom
                 </a>
               </li>
             </ul>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Bruke data fra Skatteetaten
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Skatteetaten deler data som andre virksomheter og etater kan gjenbruke for å fornkle og effektivisere eksisterende og nye digitale tjenester.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1881,7 +1881,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Hvordan få tilgang til data
@@ -1915,10 +1915,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1929,7 +1929,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -1945,7 +1945,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -1961,7 +1961,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -1980,7 +1980,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -1991,7 +1991,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -2007,7 +2007,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -2023,7 +2023,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -2039,25 +2039,25 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Følg oss
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Du kan kontakte oss i sosiale medier.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2068,7 +2068,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se alle Skatteetatens kontoer
@@ -2077,13 +2077,13 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
             </ul>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Presse
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Pressemeldinger, pressekontaker og annen informasjon for journalister.
             </p>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2094,20 +2094,20 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se vårt presserom
                 </a>
               </li>
             </ul>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Bruke data fra Skatteetaten
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Skatteetaten deler data som andre virksomheter og etater kan gjenbruke for å fornkle og effektivisere eksisterende og nye digitale tjenester.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2118,7 +2118,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Hvordan få tilgang til data
@@ -2152,10 +2152,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22  _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2166,7 +2166,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -2182,7 +2182,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -2198,7 +2198,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -2217,7 +2217,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2228,7 +2228,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -2244,7 +2244,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -2260,7 +2260,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -2276,25 +2276,25 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Følg oss
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Du kan kontakte oss i sosiale medier.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2305,7 +2305,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se alle Skatteetatens kontoer
@@ -2339,10 +2339,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22  _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2353,7 +2353,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -2369,7 +2369,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -2385,7 +2385,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -2404,7 +2404,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2415,7 +2415,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -2431,7 +2431,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -2447,7 +2447,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -2463,25 +2463,25 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Følg oss
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Du kan kontakte oss i sosiale medier.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2492,7 +2492,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se alle Skatteetatens kontoer
@@ -2526,10 +2526,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
       <div class="_footerContainer_15okz_17">
         <div class="_columns_15okz_22  _columnsTwo_15okz_29">
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
             </h2>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2540,7 +2540,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
                 >
                   Kontakt oss
@@ -2556,7 +2556,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
                 >
                   Sikkerhet og personvern
@@ -2572,7 +2572,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://uustatus.no/"
                    rel="noreferrer"
                    target="_blank"
@@ -2591,7 +2591,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                 </a>
               </li>
             </ul>
-            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5  ">
+            <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2602,7 +2602,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Jobb i Skatteetaten
@@ -2618,7 +2618,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Om oss
@@ -2634,7 +2634,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Analyse og rapporter
@@ -2650,25 +2650,25 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Forskning
                 </a>
               </li>
             </ul>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Legg inn en lang setning for å sjekke om kolonnebredden stemmer
             </p>
           </div>
           <div>
-            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Følg oss
             </h2>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
               Du kan kontakte oss i sosiale medier.
             </p>
-            <ul class="_linkGroup_w23nb_1   ">
+            <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
@@ -2679,7 +2679,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
                   </path>
                 </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1 "
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#"
                 >
                   Se alle Skatteetatens kontoer

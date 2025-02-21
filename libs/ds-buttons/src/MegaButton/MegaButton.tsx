@@ -49,7 +49,7 @@ export const MegaButton = forwardRef<
           ) => void
         }
         id={id}
-        className={`${styles.button} ${className}`}
+        className={`${styles.button} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         href={href}

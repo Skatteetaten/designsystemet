@@ -2,9 +2,9 @@
 
 exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 ">
-    <li class="_step_t28i0_1 _step_active_t28i0_50 ">
-      <div class="_stepSideWrapper_t28i0_143 "
+  <ol class="_stepList_bc059_1">
+    <li class="_step_t28i0_1 _step_active_t28i0_50">
+      <div class="_stepSideWrapper_t28i0_143"
            tabindex="-1"
            aria-current="step"
       >
@@ -12,7 +12,7 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
         _stepCircle_active_t28i0_221">
           1
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-:rb:"
@@ -20,8 +20,7 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
       >
         tittel
       </h3>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
@@ -29,7 +28,7 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
       <div class="_nextLine_t28i0_281">
       </div>
       <span class="_buttonWrapper_t28i0_277">
-        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
                 disabled
                 type="button"
         >
@@ -45,9 +44,9 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
 
 exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 ">
-    <li class="_step_t28i0_1 _step_active_t28i0_50 ">
-      <div class="_stepSideWrapper_t28i0_143 "
+  <ol class="_stepList_bc059_1">
+    <li class="_step_t28i0_1 _step_active_t28i0_50">
+      <div class="_stepSideWrapper_t28i0_143"
            tabindex="-1"
            aria-current="step"
       >
@@ -55,7 +54,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
         _stepCircle_active_t28i0_221">
           1
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-:r9:"
@@ -63,8 +62,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
       >
         tittel
       </h3>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
@@ -72,7 +70,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
       <div class="_nextLine_t28i0_281">
       </div>
       <span class="_buttonWrapper_t28i0_277">
-        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
                 type="button"
         >
           <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
@@ -80,12 +78,12 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
           </span>
           <div aria-live="polite"
                aria-atomic="true"
-               class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+               class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
           >
-            <div class="_spinnerAnimation_wnf1f_40 ">
+            <div class="_spinnerAnimation_wnf1f_40">
             </div>
             <span id="title-:ra:"
-                  class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+                  class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
             >
               Laster inn
             </span>
@@ -99,13 +97,13 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
 
 exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 ">
+  <ol class="_stepList_bc059_1">
     <li id="htmlid"
         class="_step_t28i0_1 _step_passive_t28i0_55 dummyClassname"
         lang="nb"
         data-testid="123ID"
     >
-      <div class="_stepSideWrapper_t28i0_143 "
+      <div class="_stepSideWrapper_t28i0_143"
            id="htmlid-focus-target"
            tabindex="-1"
       >
@@ -113,7 +111,7 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
         _stepCircle_passive_t28i0_218">
           1
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-htmlid"
@@ -121,8 +119,7 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
       >
         title
       </h3>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
         <div>
         </div>
       </div>
@@ -133,9 +130,9 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
 
 exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 ">
-    <li class="_step_t28i0_1 _step_active_t28i0_50 ">
-      <div class="_stepSideWrapper_t28i0_143 "
+  <ol class="_stepList_bc059_1">
+    <li class="_step_t28i0_1 _step_active_t28i0_50">
+      <div class="_stepSideWrapper_t28i0_143"
            tabindex="-1"
            aria-current="step"
       >
@@ -143,7 +140,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         _stepCircle_active_t28i0_221">
           1
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-:r7:"
@@ -151,8 +148,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
       >
         tittel
       </h3>
-      <div class="_stepContent_t28i0_86  
-          ">
+      <div class="_stepContent_t28i0_86">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
@@ -182,8 +178,8 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
 
 exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 ">
-    <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+  <ol class="_stepList_bc059_1">
+    <li class="_step_t28i0_1 _step_neutralResult_t28i0_60">
       <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
            tabindex="-1"
            aria-current="step"
@@ -212,8 +208,7 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
       >
         jeg er en tittel
       </h3>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 _stepContent_fullWidth_t28i0_134
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 _stepContent_fullWidth_t28i0_134">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
@@ -225,9 +220,9 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
 
 exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 ">
-    <li class="_step_t28i0_1 _step_active_t28i0_50 ">
-      <div class="_stepSideWrapper_t28i0_143 "
+  <ol class="_stepList_bc059_1">
+    <li class="_step_t28i0_1 _step_active_t28i0_50">
+      <div class="_stepSideWrapper_t28i0_143"
            tabindex="-1"
            aria-current="step"
       >
@@ -247,7 +242,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
             </path>
           </svg>
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h2 id="steptitle-:r2:"
@@ -255,8 +250,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
       >
         jeg er en tittel
       </h2>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
@@ -268,18 +262,18 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
 
 exports[`Tester/StepList/Step WithRef play-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 ">
-    <li class="_step_t28i0_1 _step_passive_t28i0_55 "
+  <ol class="_stepList_bc059_1">
+    <li class="_step_t28i0_1 _step_passive_t28i0_55"
         id="dummyIdForwardedFromRef"
     >
-      <div class="_stepSideWrapper_t28i0_143 "
+      <div class="_stepSideWrapper_t28i0_143"
            tabindex="-1"
       >
         <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
           1
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-:r0:"
@@ -287,8 +281,7 @@ exports[`Tester/StepList/Step WithRef play-test 1`] = `
       >
         title
       </h3>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
         <div>
         </div>
       </div>

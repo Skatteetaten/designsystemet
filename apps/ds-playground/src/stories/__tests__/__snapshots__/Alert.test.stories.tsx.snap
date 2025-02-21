@@ -612,10 +612,10 @@ exports[`Tester/Alert WithMarkup smoke-test 1`] = `
         </svg>
       </span>
       <span class="_content_1npdh_17">
-        <h1 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
+        <h1 class="_heading_12p5o_1 _heading_level4_12p5o_43">
           Avvist av kortutsteder
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
           Ta kontakt med kortutsteder for
           <a href="#storybook-root">
             mer informasjon

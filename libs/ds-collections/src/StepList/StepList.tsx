@@ -27,7 +27,7 @@ export const StepList = forwardRef<HTMLOListElement, StepListProps>(
       <ol
         ref={ref}
         id={id}
-        className={`${styles.stepList} ${className}`}
+        className={`${styles.stepList} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
       >

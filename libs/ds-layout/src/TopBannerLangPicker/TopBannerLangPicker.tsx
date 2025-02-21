@@ -153,7 +153,7 @@ export const TopBannerLangPicker = forwardRef<
       <div
         ref={ref}
         id={id}
-        className={`${className} ${styles.container}`}
+        className={`${styles.container} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
       >

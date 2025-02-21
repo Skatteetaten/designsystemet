@@ -189,7 +189,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
         <div
           className={`${styles.searchContainer} ${
             classNames?.searchContainer ?? ''
-          }`}
+          }`.trim()}
         >
           <div className={styles.inputWrapper}>
             <span id={srFocusId} className={styles.srOnly}>
@@ -210,7 +210,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
               value={value}
               autoComplete={autoComplete}
               required={required}
-              aria-describedby={`${errorMessage ? `${errorId} ` : ''}${srFocusId}`}
+              aria-describedby={`${errorMessage ? `${errorId} ` : ''}${srFocusId}`.trim()}
               aria-invalid={!!errorMessage || undefined}
               aria-owns={shouldShowResults ? resultsId : undefined}
               type={'search'}
