@@ -25,6 +25,7 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
+    classNames: { table: { category: category.props } },
     skipLink: { table: { category: category.props } },
     title: { table: { category: category.props } },
     description: { table: { category: category.props } },

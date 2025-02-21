@@ -10,10 +10,6 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    id: { table: { category: category.props } },
-    className: { table: { category: category.props } },
-    lang: { table: { category: category.props } },
-    'data-testid': { table: { category: category.props } },
     menuActionsRef: { table: { category: category.props } },
   },
   args: {
