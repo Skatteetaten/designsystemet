@@ -3,13 +3,20 @@ import { JSX, useRef } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { InlineButton, LinkGroup } from '@skatteetaten/ds-buttons';
+import { SearchField } from '@skatteetaten/ds-forms';
 import { AddSVGpath } from '@skatteetaten/ds-icons';
+import {
+  EditSVGpath,
+  FileSVGpath,
+  HelpFilledSVGpath,
+} from '@skatteetaten/ds-icons';
 import {
   TopBannerInternal,
   ActionMenuActionsRef,
 } from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
+import demoLogo from '../../assets/demo-logo-white.svg';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -18,6 +25,7 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
+    classNames: { table: { category: category.props } },
     skipLink: { table: { category: category.props } },
     title: { table: { category: category.props } },
     description: { table: { category: category.props } },
@@ -49,48 +57,114 @@ export const Examples: Story = {
     const menuRef = useRef<ActionMenuActionsRef>(null);
 
     return (
-      <TopBannerInternal
-        title={'Kakeportalen'}
-        description={'Kaka er en løgn'}
-        logoAltText={'Forside kakeportalen.'}
-        logoHref={'/home'}
-        user={'Sturle "Stuten" Trestubbe, Team Rocket'}
-      >
-        <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
-          <InlineButton
-            className={'bottomSpacingXS'}
-            svgPath={AddSVGpath}
-            onClick={() => {
-              menuRef?.current?.close?.();
-            }}
-          >
-            {'Legg til RF-skjema ørtifemten'}
+      <>
+        <TopBannerInternal
+          className={'bottomSpacingXL'}
+          title={'MVA'}
+          description={'Arbeidsliste'}
+          logoAltText={'Forside MVA'}
+          logoHref={'/home'}
+          user={'Etternavnesen Fornavn'}
+        >
+          <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
+            {'Hjelp'}
           </InlineButton>
-          <LinkGroup>
-            <LinkGroup.Link
-              href={'#'}
-              isExternal
-              onClick={() => menuRef?.current?.close?.()}
+          <InlineButton svgPath={FileSVGpath} brightness={'light'}>
+            {'Dokumentasjon'}
+          </InlineButton>
+          <InlineButton svgPath={EditSVGpath} brightness={'light'}>
+            {'Opprett RF-Ørtiatten'}
+          </InlineButton>
+          <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
+            <InlineButton
+              className={'bottomSpacingXS'}
+              svgPath={AddSVGpath}
+              onClick={() => {
+                menuRef?.current?.close?.();
+              }}
             >
-              {'Denne tingen her'}
-            </LinkGroup.Link>
-            <LinkGroup.Link
-              href={'#'}
-              isExternal
-              onClick={() => menuRef?.current?.close?.()}
+              {'Legg til RF-skjema ørtifemten'}
+            </InlineButton>
+            <LinkGroup>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'Denne tingen her'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'En annen ting'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'Den tredje tingen'}
+              </LinkGroup.Link>
+            </LinkGroup>
+          </TopBannerInternal.ActionMenu>
+        </TopBannerInternal>
+        <TopBannerInternal
+          className={'bottomSpacingXL'}
+          title={'Global Skatt'}
+          logoAltText={'Forside Global Skatt'}
+          logoHref={'/home'}
+        >
+          <SearchField
+            classNames={{ searchContainer: 'noMargin' }}
+            label={'Søk etter sak, virksomhet, dokument'}
+            placeholder={'Søk etter sak, virksomhet, dokument...'}
+          />
+          <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
+            <InlineButton
+              className={'bottomSpacingXS'}
+              svgPath={AddSVGpath}
+              onClick={() => {
+                menuRef?.current?.close?.();
+              }}
             >
-              {'En annen ting'}
-            </LinkGroup.Link>
-            <LinkGroup.Link
-              href={'#'}
-              isExternal
-              onClick={() => menuRef?.current?.close?.()}
-            >
-              {'Den tredje tingen'}
-            </LinkGroup.Link>
-          </LinkGroup>
-        </TopBannerInternal.ActionMenu>
-      </TopBannerInternal>
+              {'Legg til RF-skjema ørtifemten'}
+            </InlineButton>
+            <LinkGroup>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'Denne tingen her'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'En annen ting'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'Den tredje tingen'}
+              </LinkGroup.Link>
+            </LinkGroup>
+          </TopBannerInternal.ActionMenu>
+        </TopBannerInternal>
+        <TopBannerInternal
+          className={'blueBackground'}
+          classNames={{ logo: 'demoLogo' }}
+          title={'SIRO'}
+          logo={demoLogo}
+          logoAltText={'Forside Politiet'}
+          logoHref={'/home'}
+        ></TopBannerInternal>
+      </>
     );
   },
 } satisfies Story;
