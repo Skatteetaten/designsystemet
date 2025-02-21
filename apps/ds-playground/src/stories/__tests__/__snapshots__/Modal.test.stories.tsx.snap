@@ -4,11 +4,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -173,11 +173,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"

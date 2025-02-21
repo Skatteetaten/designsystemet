@@ -4,11 +4,11 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -129,11 +129,11 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -235,11 +235,11 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -341,11 +341,11 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -447,11 +447,11 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -553,11 +553,11 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -663,11 +663,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
           class="dummyClassname"
   >
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -769,11 +769,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -894,11 +894,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1000,11 +1000,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1226,11 +1226,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1452,11 +1452,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1680,11 +1680,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
           id="dummyIdForwardedFromRef"
   >
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1786,11 +1786,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2032,11 +2032,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2278,11 +2278,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2524,11 +2524,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2760,11 +2760,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2996,11 +2996,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
