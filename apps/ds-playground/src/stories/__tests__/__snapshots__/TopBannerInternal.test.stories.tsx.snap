@@ -4,11 +4,11 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -44,11 +44,11 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -88,11 +88,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
           class="dummyClassname"
   >
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -128,11 +128,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -235,11 +235,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -275,11 +275,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 <div data-test-block="true">
   <header class="dummyCustomTheme">
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -315,11 +315,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -355,11 +355,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -400,11 +400,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -440,11 +440,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongConstructionText smoke-test 
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -485,11 +485,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -595,11 +595,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -705,11 +705,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -748,11 +748,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -824,11 +824,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithPoliceLogo smoke-test 1`] = `
 <div data-test-block="true">
   <header class="blueBackground">
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -866,11 +866,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
           id="dummyIdForwardedFromRef"
   >
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -906,11 +906,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1016,11 +1016,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1126,11 +1126,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
