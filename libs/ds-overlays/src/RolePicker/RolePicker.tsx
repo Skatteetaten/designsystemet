@@ -112,7 +112,7 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
     const concatenatedClassName = `${styles.container} ${className}`.trim();
 
     const noValidBusinesses =
-      !me && !people && (!businesses || businesses.total === 0);
+      !me && !people && businesses && businesses.total === 0;
 
     let internalTitle = title ? title : t('rolepicker.Heading');
 
