@@ -21,11 +21,11 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _cardAlertCloseButton_1kr4p_51"
+        <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r7:"
@@ -64,11 +64,11 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _cardAlertCloseButton_1kr4p_51"
+        <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r9:"
@@ -107,11 +107,11 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _cardAlertCloseButton_1kr4p_51"
+        <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:rb:"
@@ -159,11 +159,11 @@ exports[`Tester/Card/Alert WithAttributes play-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _cardAlertCloseButton_1kr4p_51"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -209,11 +209,11 @@ exports[`Tester/Card/Alert WithRef play-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _cardAlertCloseButton_1kr4p_51"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -253,11 +253,11 @@ exports[`Tester/Card/Alert WithSvgPath smoke-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _cardAlertCloseButton_1kr4p_51"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"

@@ -1,13 +1,15 @@
+import { useRef } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
 
+import { InlineButton } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ActionMenuActionsRef,
   TopBannerInternal,
 } from '@skatteetaten/ds-layout';
-import { useRef } from 'react';
-import { InlineButton } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+
 import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {

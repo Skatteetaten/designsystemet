@@ -222,13 +222,13 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
     >
       Type virksomhet
     </div>
-    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3q:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3r:"
@@ -729,13 +729,13 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
     >
       Type virksomhet
     </div>
-    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r2s:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2t:"
@@ -753,11 +753,11 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
       <span class="_helpBoxText_10ldw_44">
         Vi trenger å vite din type virksomhet.
       </span>
-      <button class="_button_1vm3o_1 _button_small_1vm3o_41  _helpBoxCloseButton_10ldw_51"
+      <button class="_button_1hc5e_1 _button_small_1hc5e_42  _helpBoxCloseButton_10ldw_51"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r31:"
@@ -840,13 +840,13 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
     >
       Type virksomhet
     </div>
-    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3j:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3k:"

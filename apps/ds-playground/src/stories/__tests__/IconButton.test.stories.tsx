@@ -525,6 +525,29 @@ export const WithBrightnessAndOutline = {
   },
 } satisfies Story;
 
+export const WithBrightnessAndSpinner = {
+  name: 'With Brightness And Spinner (A5)',
+  args: {
+    ...defaultArgs,
+    brightness: 'light',
+    hasSpinner: true,
+  },
+  argTypes: {
+    brightness: { table: { disable: false } },
+    hasSpinner: { table: { disable: false } },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'themePrimary',
+    },
+    imageSnapshot: {
+      hover: `${wrapper} > button`,
+      focus: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+  },
+} satisfies Story;
+
 export const WithBrightnessAndDisabled = {
   name: 'With Brightness And Disabled (A5)',
   args: {
