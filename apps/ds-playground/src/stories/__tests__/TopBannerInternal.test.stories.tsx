@@ -476,10 +476,9 @@ export const WithHideLogoOnMobile = {
     const link = await canvas.findByRole('link', {
       name: 'MVA',
     });
-    await waitFor(() => {
-      const logo = link.querySelector('img');
-      expect(logo).not.toBeInTheDocument();
-    });
+    await expect(link).toBeInTheDocument();
+    const logo = link.querySelector('img');
+    await expect(logo).not.toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -501,9 +500,8 @@ export const WithHideLogoOnDesktop = {
     const link = await canvas.findByRole('link', {
       name: 'MVA',
     });
-    await waitFor(() => {
-      const logo = link.querySelector('img');
-      expect(logo).toBeInTheDocument();
-    });
+    await expect(link).toBeInTheDocument();
+    const logo = link.querySelector('img');
+    await expect(logo).toBeInTheDocument();
   },
 } satisfies Story;
