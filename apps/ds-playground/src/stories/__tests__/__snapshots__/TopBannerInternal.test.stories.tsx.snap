@@ -396,6 +396,81 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnDesktop play-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <img class="_logoImage_jw5qf_57"
+               src="[REMOVED]"
+               alt
+               aria-hidden="true"
+          >
+          <span>
+            MVA
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnMobile play-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_topBanner_jw5qf_27">
+      <div class="_titleAndDescriptionContainer_jw5qf_37">
+        <a class="_logoAndTitleLink_jw5qf_44"
+           href="#"
+        >
+          <span>
+            MVA
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
 exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 <div data-test-block="true">
   <header class>
