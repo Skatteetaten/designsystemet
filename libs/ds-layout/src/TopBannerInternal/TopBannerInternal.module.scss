@@ -30,7 +30,7 @@
 .skipLink {
   @media (min-width: breakpoints.$breakpoint-m) {
     --skip-link-content-max-width: none;
-    --skip-link-content-margin: 0 var(--spacing-m);
+    --skip-link-content-margin: 0 var(--spacing-xl);
   }
 }
 
@@ -42,6 +42,10 @@
   background-color: var(--theme-primary);
   color: var(--palette-graphite-0);
   gap: var(--spacing-m);
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    padding: var(--spacing-s) var(--spacing-xl);
+  }
 }
 
 .titleAndDescriptionContainer {
