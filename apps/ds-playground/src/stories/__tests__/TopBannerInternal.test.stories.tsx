@@ -473,26 +473,6 @@ export const WithHideLogoOnMobile = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const logo = canvas.getByRole('img');
-    await expect(logo).not.toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const WithHideLogoOnMobile = {
-  name: 'With Hide Logo on Mobile',
-  argTypes: {
-    hideLogoOnMobile: { table: { disable: false } },
-  },
-  args: {
-    hideLogoOnMobile: true,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-xs',
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
     const link = await canvas.findByRole('link', {
       name: 'MVA',
     });
