@@ -6,6 +6,7 @@ exports[`Tester/Checkbox Defaults play-test 1`] = `
     <input id="checkboxInputId-:r4:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:r4:"
            class="_label_1k24j_29"
@@ -34,8 +35,9 @@ exports[`Tester/Checkbox WithAriaDescribedby play-test 1`] = `
   <div class="_container_1k24j_5">
     <input id="checkboxInputId-:r18:"
            class="_input_1k24j_17"
-           aria-describedby="testID"
            type="checkbox"
+           aria-describedby="testID"
+           value
     >
     <label for="checkboxInputId-:r18:"
            class="_label_1k24j_29"
@@ -69,6 +71,7 @@ exports[`Tester/Checkbox WithAttributes play-test 1`] = `
            data-testid="123ID"
            form="123form"
            type="checkbox"
+           value
     >
     <label for="htmlid"
            class="_label_1k24j_29"
@@ -98,6 +101,7 @@ exports[`Tester/Checkbox WithChecked play-test 1`] = `
     <input id="checkboxInputId-:ri:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
            checked
     >
     <label for="checkboxInputId-:ri:"
@@ -128,6 +132,7 @@ exports[`Tester/Checkbox WithCheckedAndRequired play-test 1`] = `
     <input id="checkboxInputId-:r16:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
            checked
     >
     <label for="checkboxInputId-:r16:"
@@ -157,9 +162,10 @@ exports[`Tester/Checkbox WithCustomClassNames play-test 1`] = `
   <div class="_container_1k24j_5">
     <input id="checkboxInputId-:r1i:"
            class="_input_1k24j_17"
+           type="checkbox"
            aria-describedby="checkboxErrorId-:r1j:"
            aria-invalid="true"
-           type="checkbox"
+           value
     >
     <label for="checkboxInputId-:r1i:"
            class="_label_1k24j_29  dummyClassname"
@@ -203,6 +209,7 @@ exports[`Tester/Checkbox WithDefaultChecked play-test 1`] = `
     <input id="checkboxInputId-:r1c:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
            checked
     >
     <label for="checkboxInputId-:r1c:"
@@ -233,6 +240,7 @@ exports[`Tester/Checkbox WithDescription play-test 1`] = `
     <input id="checkboxInputId-:r6:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:r6:"
            class="_label_1k24j_29"
@@ -266,6 +274,7 @@ exports[`Tester/Checkbox WithDescriptionAndDisabled smoke-test 1`] = `
            class="_input_1k24j_17"
            disabled
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:ra:"
            class="_label_1k24j_29"
@@ -298,6 +307,7 @@ exports[`Tester/Checkbox WithDescriptionAndLongText smoke-test 1`] = `
     <input id="checkboxInputId-:r8:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:r8:"
            class="_label_1k24j_29"
@@ -331,6 +341,7 @@ exports[`Tester/Checkbox WithDisabled play-test 1`] = `
            class="_input_1k24j_17"
            disabled
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:rk:"
            class="_label_1k24j_29"
@@ -361,6 +372,7 @@ exports[`Tester/Checkbox WithDisabledAndChecked play-test 1`] = `
            class="_input_1k24j_17"
            disabled
            type="checkbox"
+           value
            checked
     >
     <label for="checkboxInputId-:rm:"
@@ -393,6 +405,7 @@ exports[`Tester/Checkbox WithDisabledAndRequired play-test 1`] = `
            disabled
            required
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:r11:"
            class="_label_1k24j_29"
@@ -421,9 +434,10 @@ exports[`Tester/Checkbox WithError play-test 1`] = `
   <div class="_container_1k24j_5">
     <input id="checkboxInputId-:ru:"
            class="_input_1k24j_17"
+           type="checkbox"
            aria-describedby="checkboxErrorId-:rv:"
            aria-invalid="true"
-           type="checkbox"
+           value
     >
     <label for="checkboxInputId-:ru:"
            class="_label_1k24j_29"
@@ -467,9 +481,10 @@ exports[`Tester/Checkbox WithErrorAndRequired play-test 1`] = `
     <input id="checkboxInputId-:r13:"
            class="_input_1k24j_17"
            required
+           type="checkbox"
            aria-describedby="checkboxErrorId-:r14:"
            aria-invalid="true"
-           type="checkbox"
+           value
     >
     <label for="checkboxInputId-:r13:"
            class="_label_1k24j_29 _label_error_1k24j_36"
@@ -513,6 +528,7 @@ exports[`Tester/Checkbox WithEventHandlers play-test 1`] = `
     <input id="checkboxInputId-:r1g:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:r1g:"
            class="_label_1k24j_29"
@@ -542,6 +558,7 @@ exports[`Tester/Checkbox WithHideLabel play-test 1`] = `
     <input id="checkboxInputId-:rg:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:rg:"
            class="_label_1k24j_29"
@@ -571,6 +588,7 @@ exports[`Tester/Checkbox WithLongText smoke-test 1`] = `
     <input id="checkboxInputId-:rc:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:rc:"
            class="_label_1k24j_29"
@@ -600,6 +618,7 @@ exports[`Tester/Checkbox WithLongTextAndBreaking smoke-test 1`] = `
     <input id="checkboxInputId-:re:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:re:"
            class="_label_1k24j_29"
@@ -628,8 +647,9 @@ exports[`Tester/Checkbox WithName play-test 1`] = `
   <div class="_container_1k24j_5">
     <input id="checkboxInputId-:r1e:"
            class="_input_1k24j_17"
-           type="checkbox"
            name="test_name_checkbox"
+           type="checkbox"
+           value
     >
     <label for="checkboxInputId-:r1e:"
            class="_label_1k24j_29"
@@ -659,6 +679,7 @@ exports[`Tester/Checkbox WithRef play-test 1`] = `
     <input id="checkboxInputId-:r0:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
            name="dummyNameForwardedFromRef"
     >
     <label for="checkboxInputId-:r0:"
@@ -690,6 +711,7 @@ exports[`Tester/Checkbox WithRequired play-test 1`] = `
            class="_input_1k24j_17"
            required
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:ro:"
            class="_label_1k24j_29"
@@ -719,6 +741,7 @@ exports[`Tester/Checkbox WithRequiredAndChecked play-test 1`] = `
     <input id="checkboxInputId-:rs:"
            class="_input_1k24j_17"
            type="checkbox"
+           value
            checked
     >
     <label for="checkboxInputId-:rs:"
@@ -750,6 +773,7 @@ exports[`Tester/Checkbox WithRequiredAndMark play-test 1`] = `
            class="_input_1k24j_17"
            required
            type="checkbox"
+           value
     >
     <label for="checkboxInputId-:rq:"
            class="_label_1k24j_29"

@@ -213,7 +213,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     const autosizeTextarea = autosize ? styles.textbox_autosize : '';
     const textboxClassName = `${styles.textbox} ${
       isLarge ? styles.textbox_large : ''
-    } ${multilineTextboxClassName} ${autosizeTextarea} ${
+    } ${multilineTextboxClassName} ${autosizeTextarea} ${label && !hideLabel ? styles.textboxMarginTop : ''} ${
       classNames?.textbox ?? ''
     }`.trim();
 

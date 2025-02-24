@@ -7,7 +7,10 @@
   padding: var(--spacing-xs) var(--spacing-s);
   border: none;
   border-radius: 0;
-  margin-top: var(--spacing-xs);
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
 
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;

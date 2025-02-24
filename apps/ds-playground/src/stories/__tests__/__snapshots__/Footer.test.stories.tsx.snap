@@ -275,8 +275,8 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
           >
           <div class>
             <img class="logoHeight"
-                 alt="Skatteetaten logo"
                  src="[REMOVED]"
+                 alt="Skatteetaten logo"
             >
           </div>
           <div class>

@@ -3,7 +3,7 @@
 exports[`Tester/SearchField Defaults play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:rh:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:rh:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -11,18 +11,19 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:rh:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:rh:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:rh:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:ri:"
              aria-live="assertive"
@@ -30,12 +31,12 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rk:"
@@ -57,7 +58,7 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
 exports[`Tester/SearchField WithAccesskey play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r2s:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r2s:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -65,19 +66,20 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r2s:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r2s:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                accesskey="j"
                autocomplete="off"
                aria-describedby="searchField-:r2s:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r2t:"
              aria-live="assertive"
@@ -85,12 +87,12 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2v:"
@@ -112,7 +114,7 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
 exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r2o:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r2o:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -120,18 +122,19 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r2o:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r2o:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r2o:-srFocus"
                type="search"
+               value
                aria-owns="searchField-:r2o:-results"
         >
         <div id="searchFieldErrorId-:r2p:"
@@ -140,13 +143,13 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           5 forslag vises.
         </span>
         <div>
           <ul id="searchField-:r2o:-results"
-              class="_searchResultContainer_1avkg_170"
+              class="_searchResultContainer_y8tn3_172"
               role="listbox"
               aria-labelledby="searchField-:r2o:-label"
           >
@@ -198,8 +201,8 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
           </ul>
         </div>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2r:"
@@ -221,7 +224,7 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
 exports[`Tester/SearchField WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlid"
-       class="_topContainer_1avkg_11   dummyClassname"
+       class="_topContainer_y8tn3_13   dummyClassname"
        lang="nb"
   >
     <label id="htmlid-label"
@@ -230,20 +233,21 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="htmlid-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="htmlid-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                data-testid="123ID"
                form="123form"
                autocomplete="off"
                aria-describedby="htmlid-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r5:"
              aria-live="assertive"
@@ -251,12 +255,12 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -278,7 +282,7 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
 exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r2g:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r2g:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -286,18 +290,19 @@ exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r2g:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r2g:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r2g:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r2h:"
              aria-live="assertive"
@@ -305,11 +310,11 @@ exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
+      <button class="_searchButton_y8tn3_100">
         search test
       </button>
     </div>
@@ -320,7 +325,7 @@ exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
 exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r2b:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r2b:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -328,15 +333,15 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r2b:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r2b:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r2b:-srFocus"
                type="search"
@@ -348,10 +353,10 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
-        <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34  _clearButton_1avkg_35"
+        <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34  _clearButton_y8tn3_37"
                 data-brightness="default"
                 type="reset"
         >
@@ -370,8 +375,8 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2f:"
@@ -393,7 +398,7 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
 exports[`Tester/SearchField WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r8:"
-       class="_topContainer_1avkg_11    dummyClassname"
+       class="_topContainer_y8tn3_13    dummyClassname"
   >
     <label id="searchField-:r8:-label"
            class="_label_348na_5    dummyClassname"
@@ -401,18 +406,20 @@ exports[`Tester/SearchField WithCustomClassNames play-test 1`] = `
     >
       Leter du etter en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG gjenstand?
     </label>
-    <div class="_searchContainer_1avkg_5 dummyClassnameFormContainer">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9
+dummyClassnameFormContainer">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r8:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r8:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r8:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r9:"
              aria-live="assertive"
@@ -420,12 +427,12 @@ exports[`Tester/SearchField WithCustomClassNames play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -447,7 +454,7 @@ exports[`Tester/SearchField WithCustomClassNames play-test 1`] = `
 exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r1o:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r1o:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -455,15 +462,15 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r1o:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r1o:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r1o:-srFocus"
                type="search"
@@ -475,10 +482,10 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
-        <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34  _clearButton_1avkg_35"
+        <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34  _clearButton_y8tn3_37"
                 data-brightness="default"
                 type="reset"
         >
@@ -497,8 +504,8 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1s:"
@@ -520,7 +527,7 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
 exports[`Tester/SearchField WithDescription play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r1t:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r1t:-label"
            class="_label_348na_5"
@@ -531,18 +538,19 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
     <div class="_description_10ldw_17">
       En liten beskrivelse tekst
     </div>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r1t:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r1t:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r1t:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r1u:"
              aria-live="assertive"
@@ -550,12 +558,12 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r20:"
@@ -577,7 +585,7 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
 exports[`Tester/SearchField WithDisabled play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r1f:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r1f:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -585,15 +593,15 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r1f:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r1f:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                disabled
                autocomplete="off"
                aria-describedby="searchField-:r1f:-srFocus"
@@ -606,14 +614,14 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98"
+      <button class="_searchButton_y8tn3_100"
               disabled
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1i:"
@@ -635,7 +643,7 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
 exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r3j:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r3j:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -643,19 +651,20 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r3j:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r3j:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchFieldErrorId-:r3k: searchField-:r3j:-srFocus"
                aria-invalid="true"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r3k:"
              aria-live="assertive"
@@ -677,12 +686,12 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
           </div>
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3n:"
@@ -704,7 +713,7 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
 exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r2j:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r2j:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -712,18 +721,19 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
     >
       Søk har blitt aktivert med enter
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r2j:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r2j:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r2j:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r2k:"
              aria-live="assertive"
@@ -731,12 +741,12 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2m:"
@@ -758,7 +768,7 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
 exports[`Tester/SearchField WithHelpText play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r21:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r21:-label"
            class="_label_348na_5"
@@ -809,18 +819,19 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r21:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r21:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r21:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r22:"
              aria-live="assertive"
@@ -828,12 +839,12 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r25:"
@@ -855,7 +866,7 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
 exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r30:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r30:-label"
            class="_label_348na_5"
@@ -883,18 +894,19 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r30:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r30:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r30:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r31:"
              aria-live="assertive"
@@ -902,12 +914,12 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r34:"
@@ -929,7 +941,7 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
 exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:rc:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:rc:-label"
            class="_label_348na_5"
@@ -960,18 +972,19 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
     <div class="_description_10ldw_17">
       Med en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG beskrivelse?
     </div>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:rc:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:rc:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:rc:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:rd:"
              aria-live="assertive"
@@ -979,12 +992,12 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rg:"
@@ -1006,7 +1019,7 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
 exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r27:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r27:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -1014,20 +1027,21 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r27:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r27:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
+               name="test_name"
                placeholder="skattekort"
                autocomplete="off"
                aria-describedby="searchField-:r27:-srFocus"
                type="search"
-               name="test_name"
+               value
         >
         <div id="searchFieldErrorId-:r28:"
              aria-live="assertive"
@@ -1035,12 +1049,12 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2a:"
@@ -1062,7 +1076,7 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
 exports[`Tester/SearchField WithRef play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r0:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r0:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -1070,18 +1084,19 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r0:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r0:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r0:-srFocus"
                type="search"
+               value
                name="dummyNameForwardedFromRef"
         >
         <div id="searchFieldErrorId-:r1:"
@@ -1090,12 +1105,12 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -1117,7 +1132,7 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
 exports[`Tester/SearchField WithRequired play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r3b:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r3b:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -1125,19 +1140,20 @@ exports[`Tester/SearchField WithRequired play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r3b:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r3b:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                required
                aria-describedby="searchField-:r3b:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r3c:"
              aria-live="assertive"
@@ -1145,12 +1161,12 @@ exports[`Tester/SearchField WithRequired play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3e:"
@@ -1172,7 +1188,7 @@ exports[`Tester/SearchField WithRequired play-test 1`] = `
 exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r3f:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r3f:-label"
            class="_label_348na_5 _label_required_348na_12"
@@ -1180,19 +1196,20 @@ exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r3f:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r3f:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                required
                aria-describedby="searchField-:r3f:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r3g:"
              aria-live="assertive"
@@ -1200,12 +1217,12 @@ exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3i:"
@@ -1227,7 +1244,7 @@ exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
 exports[`Tester/SearchField WithValue play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r1j:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r1j:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -1235,15 +1252,15 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r1j:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r1j:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r1j:-srFocus"
                type="search"
@@ -1255,10 +1272,10 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
-        <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34  _clearButton_1avkg_35"
+        <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34  _clearButton_y8tn3_37"
                 data-brightness="default"
                 type="reset"
         >
@@ -1277,8 +1294,8 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1n:"
@@ -1300,7 +1317,7 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
 exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r1a:"
-       class="_topContainer_1avkg_11 _topContainer_large_1avkg_20"
+       class="_topContainer_y8tn3_13 _topContainer_large_y8tn3_22"
   >
     <label id="searchField-:r1a:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -1308,15 +1325,15 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r1a:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r1a:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r1a:-srFocus"
                type="search"
@@ -1328,10 +1345,10 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
-        <button class="_button_1hc5e_1 _button_small_1hc5e_42  _clearButton_1avkg_35"
+        <button class="_button_1hc5e_1 _button_small_1hc5e_42  _clearButton_y8tn3_37"
                 data-brightness="default"
                 type="reset"
         >
@@ -1350,8 +1367,8 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_1avkg_98 _searchButton_large_1avkg_121">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100 _searchButton_large_y8tn3_123">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1e:"
@@ -1373,7 +1390,7 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
 exports[`Tester/SearchField WithVariants smoke-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:rl:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:rl:-label"
            class="_label_348na_5"
@@ -1381,18 +1398,19 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:rl:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:rl:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:rl:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:rm:"
              aria-live="assertive"
@@ -1400,12 +1418,12 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ro:"
@@ -1422,7 +1440,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
     </div>
   </div>
   <div id="searchField-:rp:"
-       class="_topContainer_1avkg_11 _topContainer_large_1avkg_20"
+       class="_topContainer_y8tn3_13 _topContainer_large_y8tn3_22"
   >
     <label id="searchField-:rp:-label"
            class="_label_348na_5"
@@ -1430,18 +1448,19 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:rp:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:rp:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:rp:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:rq:"
              aria-live="assertive"
@@ -1449,12 +1468,12 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98 _searchButton_large_1avkg_121">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100 _searchButton_large_y8tn3_123">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rs:"
@@ -1471,7 +1490,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
     </div>
   </div>
   <div id="searchField-:rt:"
-       class="_topContainer_1avkg_11  _topContainer_extraLarge_1avkg_26"
+       class="_topContainer_y8tn3_13  _topContainer_extraLarge_y8tn3_28"
   >
     <label id="searchField-:rt:-label"
            class="_label_348na_5"
@@ -1479,18 +1498,19 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5 _searchContainerMarginTop_y8tn3_9">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:rt:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:rt:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:rt:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:ru:"
              aria-live="assertive"
@@ -1498,12 +1518,12 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98  _searchButton_extraLarge_1avkg_129">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1avkg_117"
+      <button class="_searchButton_y8tn3_100  _searchButton_extraLarge_y8tn3_131">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y8tn3_119"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r10:"
@@ -1525,7 +1545,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
 exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r11:"
-       class="_topContainer_1avkg_11"
+       class="_topContainer_y8tn3_13"
   >
     <label id="searchField-:r11:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -1533,18 +1553,19 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r11:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r11:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r11:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r12:"
              aria-live="assertive"
@@ -1552,17 +1573,17 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98">
+      <button class="_searchButton_y8tn3_100">
         Søk
       </button>
     </div>
   </div>
   <div id="searchField-:r14:"
-       class="_topContainer_1avkg_11 _topContainer_large_1avkg_20"
+       class="_topContainer_y8tn3_13 _topContainer_large_y8tn3_22"
   >
     <label id="searchField-:r14:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -1570,18 +1591,19 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r14:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r14:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r14:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r15:"
              aria-live="assertive"
@@ -1589,17 +1611,17 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98 _searchButton_large_1avkg_121">
+      <button class="_searchButton_y8tn3_100 _searchButton_large_y8tn3_123">
         Søk
       </button>
     </div>
   </div>
   <div id="searchField-:r17:"
-       class="_topContainer_1avkg_11  _topContainer_extraLarge_1avkg_26"
+       class="_topContainer_y8tn3_13  _topContainer_extraLarge_y8tn3_28"
   >
     <label id="searchField-:r17:-label"
            class="_label_348na_5  _srOnly_348na_18"
@@ -1607,18 +1629,19 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_searchContainer_1avkg_5">
-      <div class="_inputWrapper_1avkg_42">
+    <div class="_searchContainer_y8tn3_5">
+      <div class="_inputWrapper_y8tn3_44">
         <span id="searchField-:r17:-srFocus"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r17:-input"
-               class="_input_1avkg_42"
+               class="_input_y8tn3_44"
                autocomplete="off"
                aria-describedby="searchField-:r17:-srFocus"
                type="search"
+               value
         >
         <div id="searchFieldErrorId-:r18:"
              aria-live="assertive"
@@ -1626,11 +1649,11 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         >
         </div>
         <span aria-live="assertive"
-              class="_srOnly_1avkg_183"
+              class="_srOnly_y8tn3_185"
         >
         </span>
       </div>
-      <button class="_searchButton_1avkg_98  _searchButton_extraLarge_1avkg_129">
+      <button class="_searchButton_y8tn3_100  _searchButton_extraLarge_y8tn3_131">
         Søk
       </button>
     </div>

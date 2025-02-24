@@ -104,9 +104,9 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -294,6 +294,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                   <input id="checkboxInputId-:rd:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:rd:"
                          class="_label_1k24j_29"
@@ -318,6 +319,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                   <input id="checkboxInputId-:rf:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:rf:"
@@ -729,9 +731,9 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -1098,9 +1100,9 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -1288,6 +1290,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   <input id="checkboxInputId-:r1b:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r1b:"
                          class="_label_1k24j_29"
@@ -1312,6 +1315,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   <input id="checkboxInputId-:r1d:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:r1d:"
@@ -1724,9 +1728,9 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -1751,6 +1755,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   <input id="checkboxInputId-:r66:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r66:"
                          class="_label_1k24j_29"
@@ -1775,6 +1780,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   <input id="checkboxInputId-:r68:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:r68:"
@@ -2190,9 +2196,9 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -2380,6 +2386,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   <input id="checkboxInputId-:r5g:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r5g:"
                          class="_label_1k24j_29"
@@ -2404,6 +2411,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   <input id="checkboxInputId-:r5i:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:r5i:"
@@ -2780,9 +2788,9 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -2806,6 +2814,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                 <input id="checkboxInputId-:rbr:"
                        class="_input_1k24j_17"
                        type="checkbox"
+                       value
                        checked
                 >
                 <label for="checkboxInputId-:rbr:"
@@ -3424,9 +3433,9 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -3614,6 +3623,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   <input id="checkboxInputId-:r8t:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r8t:"
                          class="_label_1k24j_29"
@@ -3638,6 +3648,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   <input id="checkboxInputId-:r8v:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:r8v:"
@@ -4106,6 +4117,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                   <input id="checkboxInputId-:rb6:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:rb6:"
@@ -4388,6 +4400,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                   <input id="checkboxInputId-:rbj:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:rbj:"
                          class="_label_1k24j_29"
@@ -4591,9 +4604,9 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -4618,6 +4631,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   <input id="checkboxInputId-:r7c:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r7c:"
                          class="_label_1k24j_29"
@@ -4642,6 +4656,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   <input id="checkboxInputId-:r7e:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:r7e:"
@@ -5053,9 +5068,9 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -5419,9 +5434,9 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -5609,6 +5624,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                   <input id="checkboxInputId-:r39:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r39:"
                          class="_label_1k24j_29"
@@ -5633,6 +5649,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                   <input id="checkboxInputId-:r3b:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:r3b:"
@@ -6228,9 +6245,9 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -6255,6 +6272,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                   <input id="checkboxInputId-:r1v:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:r1v:"
@@ -6280,6 +6298,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                   <input id="checkboxInputId-:r21:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r21:"
                          class="_label_1k24j_29"
@@ -6901,9 +6920,9 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -7091,6 +7110,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   <input id="checkboxInputId-:ra1:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:ra1:"
                          class="_label_1k24j_29"
@@ -7115,6 +7135,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   <input id="checkboxInputId-:ra3:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:ra3:"
@@ -7509,9 +7530,9 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
                          class="_input_1egyv_41"
+                         name="filter"
                          type="search"
                          value
-                         name="filter"
                   >
                   <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
@@ -7699,6 +7720,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   <input id="checkboxInputId-:r4i:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r4i:"
                          class="_label_1k24j_29"
@@ -7723,6 +7745,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   <input id="checkboxInputId-:r4k:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                          checked
                   >
                   <label for="checkboxInputId-:r4k:"
@@ -8281,6 +8304,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                   <input id="checkboxInputId-:r89:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r89:"
                          class="_label_1k24j_29"
@@ -8305,6 +8329,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                   <input id="checkboxInputId-:r8b:"
                          class="_input_1k24j_17"
                          type="checkbox"
+                         value
                   >
                   <label for="checkboxInputId-:r8b:"
                          class="_label_1k24j_29"

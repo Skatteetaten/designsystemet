@@ -328,9 +328,9 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
 <div data-test-block="true">
   <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
-      <img alt
+      <img src="[REMOVED]"
+           alt
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -341,9 +341,9 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
   </div>
   <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
-      <img alt
+      <img src="[REMOVED]"
+           alt
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -359,9 +359,9 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
 <div data-test-block="true">
   <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
-      <img alt
+      <img src="[REMOVED]"
+           alt
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -372,9 +372,9 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
   </div>
   <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
-      <img alt
+      <img src="[REMOVED]"
+           alt
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -516,9 +516,9 @@ exports[`Tester/Panel WithImage play-test 1`] = `
 <div data-test-block="true">
   <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50">
-      <img alt
+      <img src="[REMOVED]"
+           alt
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -529,9 +529,9 @@ exports[`Tester/Panel WithImage play-test 1`] = `
   </div>
   <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50">
-      <img alt
+      <img src="[REMOVED]"
+           alt
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -547,9 +547,9 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
 <div data-test-block="true">
   <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50">
-      <img alt
+      <img src="[REMOVED]"
+           alt
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -560,9 +560,9 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
   </div>
   <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50">
-      <img alt
+      <img src="[REMOVED]"
+           alt
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -578,9 +578,9 @@ exports[`Tester/Panel WithImageSourceAltText play-test 1`] = `
 <div data-test-block="true">
   <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50">
-      <img alt="Bonde med ku"
+      <img src="[REMOVED]"
+           alt="Bonde med ku"
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">
@@ -591,9 +591,9 @@ exports[`Tester/Panel WithImageSourceAltText play-test 1`] = `
   </div>
   <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32">
     <div class="_panelGraphic_1h73c_50">
-      <img alt="Bonde med ku"
+      <img src="[REMOVED]"
+           alt="Bonde med ku"
            class="_panelImage_1h73c_76"
-           src="[REMOVED]"
       >
     </div>
     <div class="_panelArticle_1h73c_70">

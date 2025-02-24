@@ -3,7 +3,10 @@
 .searchContainer {
   position: relative;
   display: flex;
-  margin-top: var(--spacing-xs);
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
 }
 
 .topContainer {

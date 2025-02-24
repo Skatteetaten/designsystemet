@@ -1,5 +1,6 @@
 declare const classNames: {
   readonly selectContainer: 'selectContainer';
+  readonly selectContainerMarginTop: 'selectContainerMarginTop';
   readonly select: 'select';
   readonly select_large: 'select_large';
   readonly selectIcon: 'selectIcon';

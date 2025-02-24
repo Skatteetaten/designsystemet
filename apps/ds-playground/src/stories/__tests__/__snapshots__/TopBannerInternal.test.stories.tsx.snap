@@ -26,9 +26,9 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -66,9 +66,9 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -110,9 +110,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -150,9 +150,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             Saksbehandlingsløsning med en overskrift som er lang
@@ -257,9 +257,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -297,9 +297,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -337,9 +337,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -382,9 +382,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -422,9 +422,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnDesktop play-test 1`] 
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -497,9 +497,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -542,9 +542,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongConstructionText smoke-test 
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -582,9 +582,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -692,9 +692,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             Oppdragsregister saksbehandling
@@ -802,9 +802,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             kakeportalen kakeportalen kakeportalen kakeportalen
@@ -845,9 +845,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -921,9 +921,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithPoliceLogo smoke-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62 demoLogo"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             SIRO
@@ -963,9 +963,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -1003,9 +1003,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -1113,9 +1113,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             MVA
@@ -1223,9 +1223,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
            href="#"
         >
           <img class="_logoImage_zgnk6_62"
+               src="[REMOVED]"
                alt
                aria-hidden="true"
-               src="[REMOVED]"
           >
           <span>
             kakeportalen

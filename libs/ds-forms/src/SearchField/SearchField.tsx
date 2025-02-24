@@ -187,9 +187,8 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
           {label}
         </LabelWithHelp>
         <div
-          className={`${styles.searchContainer} ${
-            classNames?.searchContainer ?? ''
-          }`.trim()}
+          className={`${styles.searchContainer} ${label && !hideLabel ? styles.searchContainerMarginTop : ''}
+${classNames?.searchContainer ?? ''}`.trim()}
         >
           <div className={styles.inputWrapper}>
             <span id={srFocusId} className={styles.srOnly}>
