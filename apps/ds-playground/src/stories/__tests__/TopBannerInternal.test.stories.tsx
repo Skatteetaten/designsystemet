@@ -478,6 +478,30 @@ export const WithHideLogoOnMobile = {
   },
 } satisfies Story;
 
+export const WithHideLogoOnMobile = {
+  name: 'With Hide Logo on Mobile',
+  argTypes: {
+    hideLogoOnMobile: { table: { disable: false } },
+  },
+  args: {
+    hideLogoOnMobile: true,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-xs',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = await canvas.findByRole('link', {
+      name: 'MVA',
+    });
+    await expect(link).toBeInTheDocument();
+    const logo = link.querySelector('img');
+    await expect(logo).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
 export const WithHideLogoOnDesktop = {
   name: 'With Hide Logo on Desktop',
   argTypes: {
@@ -493,7 +517,11 @@ export const WithHideLogoOnDesktop = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const logo = canvas.getByRole('img');
+    const link = await canvas.findByRole('link', {
+      name: 'MVA',
+    });
+    await expect(link).toBeInTheDocument();
+    const logo = link.querySelector('img');
     await expect(logo).toBeInTheDocument();
   },
 } satisfies Story;
