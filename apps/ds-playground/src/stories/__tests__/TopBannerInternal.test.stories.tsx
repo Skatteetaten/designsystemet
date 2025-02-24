@@ -40,6 +40,7 @@ const meta = {
     isUnderConstruction: { table: { disable: true } },
     constructionBandTitle: { table: { disable: true } },
     logo: { table: { disable: true } },
+    hideLogoOnMobile: { table: { disable: true } },
     logoHref: { table: { disable: true } },
     logoAltText: { table: { disable: true } },
     // Events
@@ -454,5 +455,45 @@ export const WithLongTitleAndLongDescriptionAndThreeChildrenBreakpointM = {
     viewport: {
       defaultViewport: '--breakpoint-m',
     },
+  },
+} satisfies Story;
+
+export const WithHideLogoOnMobile = {
+  name: 'With Hide Logo on Mobile',
+  argTypes: {
+    hideLogoOnMobile: { table: { disable: false } },
+  },
+  args: {
+    hideLogoOnMobile: true,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-xs',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const logo = canvas.getByRole('img');
+    await expect(logo).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHideLogoOnDesktop = {
+  name: 'With Hide Logo on Desktop',
+  argTypes: {
+    hideLogoOnMobile: { table: { disable: false } },
+  },
+  args: {
+    hideLogoOnMobile: true,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-s',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const logo = canvas.getByRole('img');
+    await expect(logo).toBeInTheDocument();
   },
 } satisfies Story;

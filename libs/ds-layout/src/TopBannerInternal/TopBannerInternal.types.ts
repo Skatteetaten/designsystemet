@@ -49,6 +49,8 @@ export interface TopBannerInternalProps extends BaseProps {
   logo?: string;
   /** Kalles ved klikk på logo */
   onLogoClick?: MouseEventHandler<HTMLAnchorElement>;
+  /** Skjuler logo på mobilvisning. */
+  hideLogoOnMobile?: boolean;
 }
 
 export interface TopBannerInternalComponent
