@@ -16,7 +16,11 @@ export interface ModalProps extends BaseProps {
   };
   /** Innhold */
   children: ReactNode;
-  /** Definerer stilen til Modal */
+  /*
+   * Definerer stilen til Modal
+   * variant 'important' skal fases ut i neste major versjon.
+   * Bruk 'outline' i stedet.
+   * */
   variant?: ModalVariant;
   /** Padding rundt Modal */
   padding?: ModalPadding;
