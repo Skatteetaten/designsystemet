@@ -1,3 +1,5 @@
+import type { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import { TopBannerInternal } from '@skatteetaten/ds-layout';

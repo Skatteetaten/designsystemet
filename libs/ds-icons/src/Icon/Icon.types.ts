@@ -7,7 +7,7 @@ export type IconVariant = (typeof iconVariantArr)[number];
 
 export interface IconComponentCommonProps extends BaseProps {
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath: ReactElement;
+  svgPath: ReactElement<SVGPathElement>;
 }
 
 export type IconDiscriminatedTitleProps =

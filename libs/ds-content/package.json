@@ -13,12 +13,12 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "peerDependencies": {
-    "react": "^18",
+    "react": "^19",
     "@skatteetaten/ds-core-utils": "1.6.0",
     "@skatteetaten/ds-typography": "1.6.0",
     "@skatteetaten/ds-icons": "1.6.0",
-    "react-i18next": "^14",
-    "i18next": "^23",
+    "react-i18next": "^15",
+    "i18next": "^24",
     "@skatteetaten/ds-buttons": "1.6.0",
     "@skatteetaten/ds-progress": "1.6.0"
   },

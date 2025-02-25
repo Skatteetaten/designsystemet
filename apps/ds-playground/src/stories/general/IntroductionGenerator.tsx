@@ -1,3 +1,5 @@
+import type { JSX } from 'react';
+
 import { Link } from '@skatteetaten/ds-buttons';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 

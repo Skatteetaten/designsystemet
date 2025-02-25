@@ -59,7 +59,7 @@ const editableContent = (): ReactNode => (
 
 const ExpandEditSortTable = (
   args: TableProps & RefAttributes<HTMLTableElement>
-): ReactElement => {
+): ReactElement<HTMLTableElement> => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });

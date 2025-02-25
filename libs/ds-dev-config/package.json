@@ -12,7 +12,7 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "peerDependencies": {
-    "react": "^18",
+    "react": "^19",
     "@nx/eslint-plugin": "15.0.0"
   },
   "executors": "executors.json",

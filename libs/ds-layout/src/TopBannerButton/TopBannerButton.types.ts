@@ -35,7 +35,7 @@ export interface TopBannerButtonProps
   /** Innhold eller tekst på knapp. */
   children: ReactNode;
   /** HTML-path node. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Hvis svgPath er meningsbærende, må ha en beskrivende tekst. */
   title?: string;
   /** Definerer stilen til TopBannerButton. */
