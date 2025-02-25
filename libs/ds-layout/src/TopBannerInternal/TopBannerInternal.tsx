@@ -15,6 +15,7 @@ import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopB
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 
 import styles from './TopBannerInternal.module.scss';
+import { getTopBannerInternalHideLogoOnMobileDefault } from './defaults';
 
 export const TopBannerInternal = forwardRef<
   HTMLElement,
@@ -38,10 +39,13 @@ export const TopBannerInternal = forwardRef<
       constructionBandTitle,
       onLogoClick,
       isUnderConstruction,
+      hideLogoOnMobile = getTopBannerInternalHideLogoOnMobileDefault(),
     },
     ref
   ): JSX.Element => {
     const isDesktop = useMediaQuery('(min-width: 1024px)');
+    const isMobile = !useMediaQuery('(min-width: 640px)');
+    const shouldHideLogo = isMobile && hideLogoOnMobile;
     const showChildrenAndUserContainer = children || (user && isDesktop);
     return (
       <header
@@ -72,12 +76,14 @@ export const TopBannerInternal = forwardRef<
               href={logoHref}
               onClick={onLogoClick}
             >
-              <img
-                className={`${styles.logoImage} ${classNames?.logo ?? ''}`.trim()}
-                src={logo ?? defaultLogo}
-                alt={''}
-                aria-hidden
-              />
+              {!shouldHideLogo && (
+                <img
+                  className={`${styles.logoImage} ${classNames?.logo ?? ''}`.trim()}
+                  src={logo ?? defaultLogo}
+                  alt={''}
+                  aria-hidden
+                />
+              )}
               {title && <span>{title}</span>}
             </a>
             {description && <span>{description}</span>}
@@ -104,3 +110,4 @@ export const TopBannerInternal = forwardRef<
 TopBannerInternal.displayName = 'TopBannerInternal';
 TopBannerInternal.ActionMenu = TopBannerInternalActionMenu;
 TopBannerInternal.ActionMenu.displayName = 'TopBannerInternal.ActionMenu';
+export { getTopBannerInternalHideLogoOnMobileDefault };
