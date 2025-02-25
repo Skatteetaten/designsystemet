@@ -400,7 +400,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnDesktop play-test 1`] 
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
@@ -416,12 +416,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnDesktop play-test 1`] 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_jw5qf_27">
-      <div class="_titleAndDescriptionContainer_jw5qf_37">
-        <a class="_logoAndTitleLink_jw5qf_44"
+    <div class="_topBanner_zgnk6_27">
+      <div class="_titleAndDescriptionContainer_zgnk6_42">
+        <a class="_logoAndTitleLink_zgnk6_49"
            href="#"
         >
-          <img class="_logoImage_jw5qf_57"
+          <img class="_logoImage_zgnk6_62"
                src="[REMOVED]"
                alt
                aria-hidden="true"
@@ -440,7 +440,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnMobile play-test 1`] =
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_jw5qf_21"
+       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
@@ -456,9 +456,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnMobile play-test 1`] =
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_jw5qf_27">
-      <div class="_titleAndDescriptionContainer_jw5qf_37">
-        <a class="_logoAndTitleLink_jw5qf_44"
+    <div class="_topBanner_zgnk6_27">
+      <div class="_titleAndDescriptionContainer_zgnk6_42">
+        <a class="_logoAndTitleLink_zgnk6_49"
            href="#"
         >
           <span>
