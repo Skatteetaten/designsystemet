@@ -20,7 +20,8 @@
     "@skatteetaten/ds-core-utils": "1.6.0",
     "@skatteetaten/ds-typography": "1.6.0",
     "@skatteetaten/ds-icons": "1.6.0",
-    "@skatteetaten/ds-progress": "1.6.0"
+    "@skatteetaten/ds-progress": "1.6.0",
+    "@floating-ui/react": "0.26.28"
   },
   "scripts": {},
   "dependencies": {},
