@@ -6,6 +6,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { PersonIcon } from '@skatteetaten/ds-icons';
 
+import { getTopBannerInternalHideLogoOnMobileDefault } from './defaults';
 import defaultLogo from './logo-sak.svg';
 import {
   TopBannerInternalComponent,
@@ -15,7 +16,6 @@ import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopB
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 
 import styles from './TopBannerInternal.module.scss';
-import { getTopBannerInternalHideLogoOnMobileDefault } from './defaults';
 
 export const TopBannerInternal = forwardRef<
   HTMLElement,
