@@ -5,9 +5,9 @@ exports[`Tester/Breadcrumbs/Breadcrumbs Defaults smoke-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_17e64_1 ">
+    <ol class="_breadcrumbsList_17e64_1">
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Bedrift og organisasjon
@@ -19,7 +19,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs Defaults smoke-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter
@@ -31,7 +31,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs Defaults smoke-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -59,9 +59,9 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_17e64_1 ">
+    <ol class="_breadcrumbsList_17e64_1">
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Bedrift og organisasjon
@@ -73,7 +73,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter
@@ -85,7 +85,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -116,9 +116,9 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
        data-testid="123ID"
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_17e64_1 ">
+    <ol class="_breadcrumbsList_17e64_1">
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Bedrift og organisasjon
@@ -130,7 +130,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter
@@ -142,7 +142,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -170,12 +170,13 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_17e64_1 ">
+    <ol class="_breadcrumbsList_17e64_1">
       <li class="_expandButtonWrapper_17e64_12">
-        <button class="_button_g87u5_1 _button_small_g87u5_37  "
+        <button class="_button_1hc5e_1 _button_small_1hc5e_42"
+                data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r4:"
@@ -194,7 +195,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -222,9 +223,9 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = 
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_17e64_1 ">
+    <ol class="_breadcrumbsList_17e64_1">
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Bedrift og organisasjon
@@ -236,7 +237,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = 
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter
@@ -248,7 +249,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = 
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -276,9 +277,9 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithNavigation smoke-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_17e64_1 ">
+    <ol class="_breadcrumbsList_17e64_1">
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Bedrift og organisasjon
@@ -290,7 +291,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithNavigation smoke-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter
@@ -302,7 +303,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithNavigation smoke-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -331,9 +332,9 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithRef play-test 1`] = `
        aria-label="Du er her:"
        id="dummyIdForwardedFromRef"
   >
-    <ol class="_breadcrumbsList_17e64_1 ">
+    <ol class="_breadcrumbsList_17e64_1">
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Bedrift og organisasjon
@@ -345,7 +346,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithRef play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter
@@ -357,7 +358,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithRef play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -385,9 +386,9 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_17e64_1 ">
+    <ol class="_breadcrumbsList_17e64_1">
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Bedrift og organisasjon
@@ -399,7 +400,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter
@@ -411,7 +412,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_1ojdc_1">
-        <a class="_link_z7jba_1  "
+        <a class="_link_z7jba_1"
            href="#"
         >
           Avgifter på bil og kjøretøy

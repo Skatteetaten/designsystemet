@@ -52,7 +52,9 @@ export const TopBannerButton = forwardRef<
             <span className={styles.iconWrapper}>
               <Icon svgPath={svgPath} className={styles.icon} title={title} />
             </span>
-            <span className={`${styles.buttonText} ${classNames?.text ?? ''}`}>
+            <span
+              className={`${styles.buttonText} ${classNames?.text ?? ''}`.trim()}
+            >
               {children}
             </span>
           </>

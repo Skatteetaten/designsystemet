@@ -120,7 +120,7 @@ exports[`Tester/TextField WithControlledValueAndAutoSizeTextArea play-test 1`] =
     >
     </div>
   </div>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -139,12 +139,13 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
     >
       Navn
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="labelId-:r8:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r9:"
@@ -368,7 +369,7 @@ exports[`Tester/TextField WithErrorMessage play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15 ">
+      <div class="_errorMessage_1kdf4_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
              viewbox="0 0 24 24"
              focusable="false"
@@ -419,12 +420,13 @@ exports[`Tester/TextField WithHelpText play-test 1`] = `
     >
       Navn
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="labelId-:r2d:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2e:"
@@ -461,12 +463,13 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
     >
       Navn
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="labelId-:r2i:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2j:"
@@ -506,12 +509,13 @@ exports[`Tester/TextField WithHelpToggleEvent smoke-test 1`] = `
     >
       Navn
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="labelId-:r2q:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2r:"
@@ -733,7 +737,7 @@ exports[`Tester/TextField WithRows play-test 1`] = `
 
 exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -747,10 +751,11 @@ exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2t:"

@@ -1,19 +1,14 @@
 declare const classNames: {
-  readonly childrenContainer: 'childrenContainer';
-  readonly alignRight: 'alignRight';
-  readonly titleWrapper: 'titleWrapper';
-  readonly logoImage: 'logoImage';
-  readonly topContainer: 'topContainer';
-  readonly contentContainer: 'contentContainer';
-  readonly contentContainer_withChildren: 'contentContainer_withChildren';
-  readonly nameContainer: 'nameContainer';
-  readonly skipLink: 'skipLink';
   readonly constructionBand: 'constructionBand';
   readonly constructionBandTitle: 'constructionBandTitle';
+  readonly skipLink: 'skipLink';
   readonly topBanner: 'topBanner';
-  readonly link: 'link';
-  readonly logo: 'logo';
-  readonly nameContainerName: 'nameContainerName';
-  readonly nameContainerIcon: 'nameContainerIcon';
+  readonly userContainer: 'userContainer';
+  readonly titleAndDescriptionContainer: 'titleAndDescriptionContainer';
+  readonly logoAndTitleLink: 'logoAndTitleLink';
+  readonly logoImage: 'logoImage';
+  readonly childrenAndUserContainer: 'childrenAndUserContainer';
+  readonly userContainerIcon: 'userContainerIcon';
+  readonly userContainerName: 'userContainerName';
 };
 export default classNames;

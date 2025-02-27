@@ -220,6 +220,12 @@ const preview = {
   parameters,
   globalTypes,
   argTypes,
+  //workaround for https://github.com/storybookjs/storybook/issues/30385
+  initialGlobals: {
+    a11y: {
+      manual: true,
+    },
+  },
   tags: ['autodocs'],
 } satisfies Preview;
 export default preview;

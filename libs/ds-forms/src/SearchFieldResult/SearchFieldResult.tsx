@@ -41,7 +41,7 @@ const SearchFieldResult = forwardRef<HTMLLIElement, SearchFieldResultProps>(
           onClick?.();
         }}
       >
-        <span className={styles.searchResultTitle}>{title}</span>
+        <div className={styles.searchResultTitle}>{title}</div>
         {children}
       </li>
     );

@@ -8,7 +8,12 @@ import {
   RefAttributes,
 } from 'react';
 
-import { BaseProps, Prettify, sizeArr } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  FormRequiredProps,
+  Prettify,
+  sizeArr,
+} from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import { SearchFieldResultProps } from '../SearchFieldResult/SearchFieldResult.types';
@@ -49,6 +54,7 @@ interface SearchFieldCommonProps
   classNames?: Prettify<
     {
       container?: string;
+      errorMessage?: string;
       textbox?: string;
       searchContainer?: string;
     } & LabelWithHelpProps['classNames']
@@ -61,6 +67,8 @@ interface SearchFieldCommonProps
   label: string;
   /** Tilleggstekst */
   description?: LabelWithHelpProps['description'];
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
   /** Overskriver default hjelpeikon */
@@ -87,7 +95,7 @@ interface SearchFieldCommonProps
   hasSearchButtonIcon?: boolean;
 }
 
-export type SearchFieldProps = SearchFieldCommonProps;
+export type SearchFieldProps = SearchFieldCommonProps & FormRequiredProps;
 
 export interface SearchFieldComponent
   extends ForwardRefExoticComponent<

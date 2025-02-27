@@ -30,7 +30,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     },
     ref
   ): JSX.Element => {
-    const cardClassName = `${styles.card}  ${className}`.trim();
+    const cardClassName = `${styles.card} ${className}`.trim();
 
     const Tag = ariaLabelledBy ? 'section' : 'div';
     return (

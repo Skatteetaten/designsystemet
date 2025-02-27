@@ -8,7 +8,10 @@ import {
 import { Icon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import { getInlineButtonPositionDefault } from './defaults';
+import {
+  getInlineButtonBrightnessDefault,
+  getInlineButtonPositionDefault,
+} from './defaults';
 import { InlineButtonProps } from './InlineButton.types';
 
 import styles from './InlineButton.module.scss';
@@ -28,6 +31,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
       form,
       type = getCommonButtonTypeDefault(),
       ariaDescribedby,
+      brightness = getInlineButtonBrightnessDefault(),
       hasSpinner,
       onBlur,
       onClick,
@@ -42,7 +46,8 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
     const withIconRightClassName = hasIconRight
       ? styles.button_withIconRight
       : '';
-    const concatenatedClassName = `${styles.button} ${withIconLeftClassName} ${withIconRightClassName} ${className}`;
+    const concatenatedClassName =
+      `${styles.button} ${withIconLeftClassName} ${withIconRightClassName} ${className}`.trim();
     const hideClassName = hasSpinner ? styles.hide : '';
 
     return (
@@ -52,6 +57,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         className={concatenatedClassName}
         lang={lang}
         data-testid={dataTestId}
+        data-brightness={brightness}
         accessKey={accessKey}
         form={form}
         disabled={disabled}
@@ -91,4 +97,4 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
 
 InlineButton.displayName = 'InlineButton';
 
-export { getInlineButtonPositionDefault };
+export { getInlineButtonPositionDefault, getInlineButtonBrightnessDefault };

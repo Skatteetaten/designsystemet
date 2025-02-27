@@ -153,7 +153,7 @@ export const TopBannerLangPicker = forwardRef<
       <div
         ref={ref}
         id={id}
-        className={`${className} ${styles.container}`}
+        className={`${styles.container} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
       >
@@ -182,7 +182,9 @@ export const TopBannerLangPicker = forwardRef<
             />
           </span>
           {languages[selectedLang]?.displayName ?? languages['nb'].displayName}
-          <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
+          <span className={styles.srOnly}>
+            &nbsp;{t('topbannerbutton.Menu')}
+          </span>
           <Icon
             svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
             className={styles.arrowDesktop}

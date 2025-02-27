@@ -66,7 +66,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 
     return (
       <div
-        className={`${styles.container} ${spacingBottomClassName} ${className}`}
+        className={`${styles.container} ${spacingBottomClassName} ${className}`.trim()}
         lang={lang}
       >
         <input
@@ -92,13 +92,20 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           htmlFor={inputIdInternal}
           className={`${styles.label} ${labelErrorClassName} ${
             classNames?.label ?? ''
-          }`}
+          }`.trim()}
         >
-          <span className={`${styles.labelCheckbox} ${checkboxErrorClassName}`}>
+          <span
+            className={`${styles.labelCheckbox} ${checkboxErrorClassName}`.trim()}
+          >
             <span className={styles.labelCheckboxCheck}></span>
           </span>
-          <span className={`${styles.labelContent} ${hideLabelClassName}`}>
-            <span className={labelRequiredClassName}>{children}</span>
+          <span
+            className={`${styles.labelContent} ${hideLabelClassName}`.trim()}
+          >
+            <span className={labelRequiredClassName}>
+              {children}
+              {description && <>&nbsp;</>}
+            </span>
             {description && (
               <span className={styles.labelContentDescription}>
                 {description}

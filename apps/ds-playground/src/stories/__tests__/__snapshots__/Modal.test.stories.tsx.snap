@@ -4,11 +4,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -36,7 +36,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -77,7 +77,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                 </span>
                 Bokmål
                 <span class="_srOnly_azp4i_133">
-                  Meny
+                  &nbsp;Meny
                 </span>
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
@@ -103,7 +103,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
       </div>
     </div>
   </header>
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes. 
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
   </p>
@@ -113,10 +113,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r19:"
@@ -136,7 +137,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -147,7 +148,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -172,11 +173,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1qmlj_1"
+       class="_skipLink_1vv50_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1qmlj_21">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+      <span class="_skipLinkContent_1vv50_22">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -204,7 +205,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_azp4i_5">
+            <div class="_container_azp4i_5">
               <div class>
               </div>
               <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -245,7 +246,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                 </span>
                 Bokmål
                 <span class="_srOnly_azp4i_133">
-                  Meny
+                  &nbsp;Meny
                 </span>
                 <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
@@ -271,7 +272,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
       </div>
     </div>
   </header>
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
         Modalen åpnes ved å laste siden på nytt.
   </p>
@@ -281,10 +282,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1e:"
@@ -304,7 +306,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Modalinnhold
         </p>
       </div>
@@ -322,10 +324,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
 
 exports[`Tester/Modal ClickCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -338,10 +340,11 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rl:"
@@ -361,7 +364,7 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -372,7 +375,7 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -388,10 +391,10 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
 
 exports[`Tester/Modal Defaults play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -405,10 +408,11 @@ exports[`Tester/Modal Defaults play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -428,7 +432,7 @@ exports[`Tester/Modal Defaults play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -439,7 +443,7 @@ exports[`Tester/Modal Defaults play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -455,10 +459,10 @@ exports[`Tester/Modal Defaults play-test 1`] = `
 
 exports[`Tester/Modal VariantImportant play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -472,10 +476,11 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -499,7 +504,7 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -510,7 +515,7 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -532,10 +537,10 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
 
 exports[`Tester/Modal VariantPlain play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -549,10 +554,11 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -572,7 +578,7 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -583,7 +589,7 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -599,10 +605,10 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
 
 exports[`Tester/Modal WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -619,10 +625,11 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -642,7 +649,7 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -653,7 +660,7 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -669,10 +676,10 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
 
 exports[`Tester/Modal WithAutoClose play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -685,10 +692,11 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rn:"
@@ -708,7 +716,7 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -719,7 +727,7 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -735,10 +743,10 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
 
 exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -752,10 +760,11 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rp:"
@@ -775,7 +784,7 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -786,7 +795,7 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -802,10 +811,10 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
 
 exports[`Tester/Modal WithHideTitle play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -819,10 +828,11 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rr:"
@@ -842,7 +852,7 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -853,7 +863,7 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -869,10 +879,10 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
 
 exports[`Tester/Modal WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -886,10 +896,11 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -905,7 +916,7 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <div>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -920,7 +931,7 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -931,7 +942,7 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -947,10 +958,10 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
 
 exports[`Tester/Modal WithImage play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -964,10 +975,11 @@ exports[`Tester/Modal WithImage play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -991,7 +1003,7 @@ exports[`Tester/Modal WithImage play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -1002,7 +1014,7 @@ exports[`Tester/Modal WithImage play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -1018,10 +1030,10 @@ exports[`Tester/Modal WithImage play-test 1`] = `
 
 exports[`Tester/Modal WithPadding play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -1035,10 +1047,11 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rh:"
@@ -1058,7 +1071,7 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -1069,7 +1082,7 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -1092,7 +1105,7 @@ exports[`Tester/Modal WithShadowDom play-test 1`] = `
 
 exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -1106,10 +1119,11 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rv:"
@@ -1129,7 +1143,7 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
       </div>
@@ -1140,7 +1154,7 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
 
 exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -1154,10 +1168,11 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r11:"
@@ -1203,10 +1218,10 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
 
 exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -1220,10 +1235,11 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:re:"
@@ -1243,7 +1259,7 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -1254,7 +1270,7 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -1270,10 +1286,10 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
 
 exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -1287,10 +1303,11 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rj:"
@@ -1319,10 +1336,10 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
 
 exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -1342,7 +1359,7 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -1353,7 +1370,7 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">

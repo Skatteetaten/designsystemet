@@ -4,11 +4,12 @@ import {
   useEffect,
   useImperativeHandle,
   useRef,
+  useState,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
 import { getIconButtonSize } from './utils';
@@ -25,7 +26,7 @@ export const RowWithLeftSideExpandButton = forwardRef<
   (
     {
       id,
-      className,
+      className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
       onExpandClick,
@@ -94,7 +95,7 @@ export const RowWithLeftSideExpandButton = forwardRef<
         <TableDataCell
           className={`${styles.buttonCell} ${
             context?.variant === 'compact' ? styles.buttonCell_compact : ''
-          } ${isExpanded && hideIconButton ? styles.buttonCell_expanded : ''}`}
+          } ${isExpanded && hideIconButton ? styles.buttonCell_expanded : ''}`.trim()}
         >
           <IconButton
             ref={buttonRef}
@@ -112,7 +113,7 @@ export const RowWithLeftSideExpandButton = forwardRef<
               ref={expandableWrapperRef}
               className={`${styles.expandableContent} ${
                 classNames?.expandedContent ?? ''
-              }`}
+              }`.trim()}
             >
               {expandableContent}
             </div>
@@ -132,7 +133,7 @@ export const RowWithRightSideExpandButton = forwardRef<
   (
     {
       id,
-      className,
+      className = getCommonClassNameDefault(),
       classNames,
       lang,
       'data-testid': dataTestId,
@@ -160,6 +161,7 @@ export const RowWithRightSideExpandButton = forwardRef<
       rowRef,
     }));
     const { t } = useTranslation('ds_tables', { i18n: dsI18n });
+    const [rowLength, setRowLength] = useState<number>(999);
 
     const isExpandableContentRows = (): boolean => {
       if (Array.isArray(expandableContent)) {
@@ -174,6 +176,11 @@ export const RowWithRightSideExpandButton = forwardRef<
       }
     };
 
+    const handleClick = (): void => {
+      setRowLength(rowRef?.current?.cells.length ?? 999);
+      onExpandClick();
+    };
+
     const shouldInsertExpandAreaMarkers = isExpandableContentRows();
 
     return (
@@ -181,7 +188,7 @@ export const RowWithRightSideExpandButton = forwardRef<
         <tr
           ref={rowRef}
           id={id}
-          className={`${isExpanded && !shouldInsertExpandAreaMarkers ? styles.row_noBorder : ''} ${className}`}
+          className={`${isExpanded && !shouldInsertExpandAreaMarkers ? styles.row_noBorder : ''} ${className}`.trim()}
           lang={lang}
           data-testid={dataTestId}
         >
@@ -189,7 +196,7 @@ export const RowWithRightSideExpandButton = forwardRef<
           <TableDataCell
             className={`${styles.buttonCell} ${
               context?.variant === 'compact' ? styles.buttonCell_compact : ''
-            }`}
+            }`.trim()}
             alignment={'right'}
           >
             <IconButton
@@ -201,13 +208,13 @@ export const RowWithRightSideExpandButton = forwardRef<
               ariaDescribedby={expandButtonAriaDescribedby}
               ariaExpanded={isExpanded}
               disabled={isExpandButtonDisabled}
-              onClick={onExpandClick}
+              onClick={handleClick}
             />
           </TableDataCell>
         </tr>
         {isExpanded && !shouldInsertExpandAreaMarkers && (
-          <tr className={`${styles.expandedRowRight} ${className}`}>
-            <td colSpan={rowRef?.current?.cells.length ?? 999}>
+          <tr className={`${styles.expandedRowRight} ${className}`.trim()}>
+            <td colSpan={rowLength}>
               <div className={classNames?.expandedContent}>
                 {expandableContent}
               </div>
@@ -217,15 +224,11 @@ export const RowWithRightSideExpandButton = forwardRef<
         {isExpanded && shouldInsertExpandAreaMarkers && (
           <>
             <tr className={styles.srOnly} lang={lang} data-testid={dataTestId}>
-              <td colSpan={rowRef?.current?.cells.length ?? 999}>
-                {t('table.ExpandAreaStart')}
-              </td>
+              <td colSpan={rowLength}>{t('table.ExpandAreaStart')}</td>
             </tr>
             {expandableContent}
             <tr className={styles.srOnly}>
-              <td colSpan={rowRef?.current?.cells.length ?? 999}>
-                {t('table.ExpandAreaEnd')}
-              </td>
+              <td colSpan={rowLength}>{t('table.ExpandAreaEnd')}</td>
             </tr>
           </>
         )}

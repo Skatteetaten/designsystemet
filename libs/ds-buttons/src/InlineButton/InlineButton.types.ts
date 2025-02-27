@@ -5,7 +5,7 @@ import {
   ReactElement,
 } from 'react';
 
-import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Brightness, Position } from '@skatteetaten/ds-core-utils';
 
 export type ButtonIconPosition = Extract<Position, 'left' | 'right'>;
 
@@ -23,6 +23,8 @@ interface InlineButtonPropsHTMLAttributes extends InlineButtonHTMLAttributes {
   onFocus?: FocusEventHandler<HTMLButtonElement>;
 }
 
+export type InlineButtonBrightness = Extract<Brightness, 'light' | 'default'>;
+
 export interface InlineButtonProps
   extends InlineButtonPropsHTMLAttributes,
     BaseProps {
@@ -36,4 +38,6 @@ export interface InlineButtonProps
   hasSpinner?: boolean;
   /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
   spinnerTitle?: string;
+  /** Justerer farge slik at komponenten kan brukes på mørk bakgrunn. */
+  brightness?: InlineButtonBrightness;
 }

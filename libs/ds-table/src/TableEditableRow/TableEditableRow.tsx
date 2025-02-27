@@ -70,7 +70,14 @@ export const TableEditableRow = forwardRef<
     const isExpanded = id === context?.rowInEditModeId;
     const concatenatedClassNames = `${
       isExpanded ? styles.editableRow_expanded : ''
-    } ${className}`;
+    } ${className}`.trim();
+
+    const closeEditableContent = (): void => {
+      context?.setRowInEditModeId(undefined);
+      setTimeout(() => {
+        rowWithButtonRef.current?.focusButton();
+      }, 0);
+    };
 
     if (editButtonPosition === 'left') {
       return (
@@ -91,12 +98,8 @@ export const TableEditableRow = forwardRef<
               <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
                 {t('tablerow.EditData')}
               </span>
-              {editableContent?.(() => {
-                context?.setRowInEditModeId(undefined);
-                setTimeout(() => {
-                  rowWithButtonRef.current?.focusButton();
-                }, 0);
-              })}
+              {/* eslint-disable-next-line react-compiler/react-compiler */}
+              {editableContent?.(closeEditableContent)}
             </>
           }
           context={context}
@@ -133,12 +136,8 @@ export const TableEditableRow = forwardRef<
               <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
                 {t('tablerow.EditData')}
               </span>
-              {editableContent?.(() => {
-                context?.setRowInEditModeId(undefined);
-                setTimeout(() => {
-                  rowWithButtonRef.current?.focusButton();
-                }, 0);
-              })}
+              {/* eslint-disable-next-line react-compiler/react-compiler */}
+              {editableContent?.(closeEditableContent)}
             </div>
           </>
         }

@@ -73,11 +73,11 @@ export const NavigationTile = forwardRef<
 
     const iconClassNames = `${styles.icon} ${
       size !== 'medium' ? styles[`icon_${size}`] : ''
-    }`;
+    }`.trim();
 
     const spinnerClassNames = `${styles.spinner} ${
       size === 'extraLarge' ? styles[`spinner_${size}`] : ''
-    }`;
+    }`.trim();
 
     const titleClassNames = `${styles.title} ${
       size !== 'medium' ? styles[`title_${size}`] : ''
@@ -86,12 +86,12 @@ export const NavigationTile = forwardRef<
     const descriptionClassNames = `${styles.description} ${
       size === 'extraLarge' && styles.description_extraLarge
     } ${size !== 'extraLarge' && (svgPath || hasSpinner) ? styles.descriptionIndented : ''} ${
-      classNames?.description
+      classNames?.description ?? ''
     }`.trim();
 
     const concatenatedClassName = `${styles.navigationTile} ${
       styles[`navigationTile_${size}`]
-    } ${className} ${classNames?.container}`.trim();
+    } ${className} ${classNames?.container ?? ''}`.trim();
 
     return (
       <a

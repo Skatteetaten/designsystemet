@@ -1,7 +1,7 @@
 import { forwardRef, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import {
   getDefaultPageSize,
@@ -49,7 +49,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
   (
     {
       id,
-      className,
+      className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
       currentPage: externalCurrentPage,
@@ -98,11 +98,11 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
     }
     const pageSummary = `${
       hidePageSummary ? styles.pagination_summaryhide : ''
-    }`;
-    const paginationCss = `${styles.pagination} ${className ?? ''}`.trim();
+    }`.trim();
+    const paginationCss = `${styles.pagination} ${className}`.trim();
     const listCss = `${styles.paginationList} ${
       hidePageSummary ? styles.paginationList_summaryhidden : ''
-    }`;
+    }`.trim();
     return (
       <nav
         ref={ref}

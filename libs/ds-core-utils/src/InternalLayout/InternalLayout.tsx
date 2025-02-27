@@ -17,15 +17,15 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
       <div
         id={id}
         data-testid={dataTestId}
-        className={`${styles.layout} ${className}`}
+        className={`${styles.layout} ${className}`.trim()}
       >
         <style>{storyBookCSSOverride}</style>
-        <div className={`${styles.aside}`}>
+        <div className={styles.aside}>
           <p>
             <strong>{'Aside area'}</strong>
           </p>
         </div>
-        <div className={`${styles.main}`}>
+        <div className={styles.main}>
           <p>
             <strong>{'Main area'}</strong>
           </p>

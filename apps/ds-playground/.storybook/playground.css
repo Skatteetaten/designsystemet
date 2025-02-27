@@ -69,6 +69,10 @@ code {
   margin-bottom: var(--spacing-xl);
 }
 
+.bottomSpacingXS {
+  margin-bottom: var(--spacing-xs);
+}
+
 .errorMessageContainer {
   border: 2px solid var(--palette-forest-50);
   width: 250px;
@@ -276,4 +280,18 @@ a.resetLinkStyling {
 
 .flexWrap {
   flex-wrap: wrap;
+}
+
+.noMargin {
+  margin: 0 !important;
+}
+
+.blueBackground {
+  --theme-primary: var(--palette-denim-100);
+}
+
+.demoLogo {
+  width: auto !important;
+  padding-right: var(--spacing-xs);
+  border-right: 1px solid var(--palette-graphite-0);
 }

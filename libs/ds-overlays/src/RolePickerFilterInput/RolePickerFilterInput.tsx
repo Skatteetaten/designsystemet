@@ -35,16 +35,16 @@ export const RolePickerFilterInput = forwardRef<
         <label className={styles.label} htmlFor={'filterInputId'}>
           {label}
         </label>
-        <span className={styles.srOnly} id={'liveSearchId'}>
+        <div className={styles.srOnly} id={'liveSearchId'}>
           {t('rolepicker.SearchResultDescription')}
-        </span>
-        <span
+        </div>
+        <div
           className={styles.srOnly}
           aria-live={'assertive'}
           aria-atomic={'true'}
         >
-          {value ? <span>{liveRegionContent}</span> : null}
-        </span>
+          {value ? <div>{liveRegionContent}</div> : null}
+        </div>
 
         <div className={styles.inputWrapper}>
           <input

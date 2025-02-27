@@ -98,5 +98,13 @@
   },
   "defaultProject": "ds-playground",
   "useInferencePlugins": false,
-  "defaultBase": "origin/master"
+  "defaultBase": "origin/master",
+  "plugins": [
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    }
+  ]
 }

@@ -38,7 +38,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
       <Tag
         ref={ref}
         id={id}
-        className={`${styles.heading} ${levelClassName} ${spacingClassName} ${className}`}
+        className={`${styles.heading} ${levelClassName} ${spacingClassName} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         tabIndex={canBeManuallyFocused ? -1 : undefined}

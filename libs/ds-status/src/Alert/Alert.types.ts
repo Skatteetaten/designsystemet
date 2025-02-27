@@ -1,12 +1,15 @@
 import { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react';
 
-import { BaseProps, Status } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Brightness, Status } from '@skatteetaten/ds-core-utils';
 
 interface AlertHTMLAttributes {
   ariaLive?: ComponentPropsWithoutRef<'div'>['aria-live'];
 }
 
-export type AlertBackgroundBrightness = 'default' | 'light';
+export type AlertBackgroundBrightness = Extract<
+  Brightness,
+  'light' | 'default'
+>;
 
 type AlertShow =
   | {

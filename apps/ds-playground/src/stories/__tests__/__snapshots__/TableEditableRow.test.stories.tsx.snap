@@ -2,22 +2,23 @@
 
 exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <div class=" ">
-    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
       <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         testtabell
       </caption>
       <tbody>
         <tr id="htmlId"
-            class=" dummyClassname"
+            class="dummyClassname"
             lang="nb"
             data-testid="123ID"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+                    data-brightness="default"
                     type="button"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r7:"
@@ -32,12 +33,12 @@ exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
               </svg>
             </button>
           </td>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
             3,000
           </td>
         </tr>
@@ -49,20 +50,21 @@ exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
 
 exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class=" ">
-    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
       <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         testtabell
       </caption>
       <tbody>
         <tr id="dummyIdForwardedFromRef"
-            class=" "
+            class
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+                    data-brightness="default"
                     type="button"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1:"
@@ -77,12 +79,12 @@ exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
               </svg>
             </button>
           </td>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
             3,000
           </td>
         </tr>

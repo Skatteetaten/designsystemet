@@ -2,7 +2,7 @@
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangButton play-test 1`] = `
 <div data-test-block="true">
-  <div class=" _container_azp4i_5">
+  <div class="_container_azp4i_5">
     <div class>
     </div>
     <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -51,7 +51,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
       </span>
       English
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -71,7 +71,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class=" _container_azp4i_5">
+  <div class="_container_azp4i_5">
     <div class="_overlay_azp4i_10">
     </div>
     <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -112,7 +112,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
       </span>
       Bokmål
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -129,7 +129,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
     <div class="_menu_azp4i_17">
       <ul class="_list_azp4i_111">
         <li class="_listItem_azp4i_126">
-          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
                   lang="nb"
                   aria-current="true"
           >
@@ -156,7 +156,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
             <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -168,7 +168,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
           </button>
         </li>
         <li class="_listItem_azp4i_126">
-          <button class=" _button_1qb8h_1 "
+          <button class="_button_1qb8h_1"
                   lang="nn"
                   aria-current="false"
           >
@@ -198,7 +198,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
           </button>
         </li>
         <li class="_listItem_azp4i_126">
-          <button class=" _button_1qb8h_1 "
+          <button class="_button_1qb8h_1"
                   lang="en"
                   aria-current="false"
           >
@@ -236,7 +236,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
           </button>
         </li>
         <li class="_listItem_azp4i_126">
-          <button class=" _button_1qb8h_1 "
+          <button class="_button_1qb8h_1"
                   lang="se"
                   aria-current="false"
           >
@@ -294,7 +294,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlid"
-       class="dummyClassname _container_azp4i_5"
+       class="_container_azp4i_5 dummyClassname"
        lang="nb"
        data-testid="123ID"
   >
@@ -338,7 +338,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
       </span>
       Bokmål
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -358,7 +358,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] = `
 <div data-test-block="true">
-  <div class=" _container_azp4i_5">
+  <div class="_container_azp4i_5">
     <div class="_overlay_azp4i_10">
     </div>
     <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -407,7 +407,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
       </span>
       English
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -424,7 +424,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
     <div class="_menu_azp4i_17">
       <ul class="_list_azp4i_111">
         <li class="_listItem_azp4i_126">
-          <button class=" _button_1qb8h_1 "
+          <button class="_button_1qb8h_1"
                   lang="nb"
                   aria-current="false"
           >
@@ -454,7 +454,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
           </button>
         </li>
         <li class="_listItem_azp4i_126">
-          <button class=" _button_1qb8h_1 "
+          <button class="_button_1qb8h_1"
                   lang="nn"
                   aria-current="false"
           >
@@ -484,7 +484,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
           </button>
         </li>
         <li class="_listItem_azp4i_126">
-          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
                   lang="en"
                   aria-current="true"
           >
@@ -519,7 +519,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
             <span class="_buttonText_1qb8h_21">
               English
             </span>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -531,7 +531,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
           </button>
         </li>
         <li class="_listItem_azp4i_126">
-          <button class=" _button_1qb8h_1 "
+          <button class="_button_1qb8h_1"
                   lang="se"
                   aria-current="false"
           >
@@ -588,7 +588,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class=" _container_azp4i_5"
+  <div class="_container_azp4i_5"
        id="dummyIdForwardedFromRef"
   >
     <div class>
@@ -631,7 +631,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
       </span>
       Bokmål
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -651,7 +651,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`] = `
 <div data-test-block="true">
-  <div class=" _container_azp4i_5">
+  <div class="_container_azp4i_5">
     <div class="_overlay_azp4i_10">
     </div>
     <button class="_button_197zg_1  _menuButton_azp4i_17"
@@ -692,7 +692,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
       </span>
       Bokmål
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -709,7 +709,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
     <div class="_menu_azp4i_17">
       <ul class="_list_azp4i_111">
         <li class="_listItem_azp4i_126">
-          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
                   lang="nb"
                   aria-current="true"
           >
@@ -736,7 +736,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
             <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -748,7 +748,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
           </button>
         </li>
         <li class="_listItem_azp4i_126">
-          <button class=" _button_1qb8h_1 "
+          <button class="_button_1qb8h_1"
                   lang="nn"
                   aria-current="false"
           >
@@ -778,7 +778,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
           </button>
         </li>
         <li class="_listItem_azp4i_126">
-          <button class=" _button_1qb8h_1 "
+          <button class="_button_1qb8h_1"
                   lang="en"
                   aria-current="false"
           >

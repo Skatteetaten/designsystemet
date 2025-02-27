@@ -30,7 +30,7 @@ export const TableSum = forwardRef<HTMLTableRowElement, TableSumProps>(
 
     const concatenatedClassName = `${styles.sum} ${
       hasTopSeparator ? styles.sum_topSeparator : ''
-    }`;
+    }`.trim();
     return (
       <tfoot id={id} className={className} lang={lang} data-testid={dataTestId}>
         <TableRow ref={ref}>

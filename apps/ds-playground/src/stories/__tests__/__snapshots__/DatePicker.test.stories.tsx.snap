@@ -9,7 +9,7 @@ exports[`Tester/DatePicker/DatePicker Defaults play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:re:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -55,7 +55,7 @@ exports[`Tester/DatePicker/DatePicker WithAttributes play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="htmlid"
              class="_input_13xkq_9"
              data-testid="123ID"
@@ -100,7 +100,7 @@ exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-te
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r1t:"
              class="_input_13xkq_9"
              autocomplete="given-name"
@@ -205,7 +205,7 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r28:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -252,7 +252,7 @@ exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
     <div class="_description_10ldw_17">
       En liten beskrivelse tekst
     </div>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r1f:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -296,7 +296,7 @@ exports[`Tester/DatePicker/DatePicker WithDisabled play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:rm:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -342,7 +342,7 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r1a:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -374,7 +374,7 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15 ">
+      <div class="_errorMessage_1kdf4_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
              viewbox="0 0 24 24"
              focusable="false"
@@ -402,12 +402,13 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="labelId-:r1k:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r1l:"
@@ -425,10 +426,11 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
       <span class="_helpBoxText_10ldw_44">
         Hjelpetekst
       </span>
-      <button class="_button_g87u5_1 _button_small_g87u5_37  _helpBoxCloseButton_10ldw_51"
+      <button class="_button_1hc5e_1 _button_small_1hc5e_42  _helpBoxCloseButton_10ldw_51"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1n:"
@@ -443,7 +445,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r1j:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -487,12 +489,13 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
     >
       Fødselsdato
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="labelId-:r65:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r66:"
@@ -506,7 +509,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r64:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -550,7 +553,7 @@ exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r1p:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -594,7 +597,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r2l:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -626,12 +629,13 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
     >
     </div>
     <div class="_calendarContainer_13xkq_130">
-      <div class="_calendar_feosd_5 ">
+      <div class="_calendar_feosd_5">
         <div class="_calendarNavigation_feosd_18">
-          <button class="_button_g87u5_1 _button_medium_g87u5_45  _calendarNavigationArrowIcon_feosd_33"
+          <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+                  data-brightness="default"
                   type="button"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r2o:"
@@ -754,10 +758,11 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               </div>
             </div>
           </div>
-          <button class="_button_g87u5_1 _button_medium_g87u5_45  _calendarNavigationArrowIcon_feosd_33"
+          <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+                  data-brightness="default"
                   type="button"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r30:"
@@ -1180,7 +1185,7 @@ exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r21:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -1223,7 +1228,7 @@ exports[`Tester/DatePicker/DatePicker WithReadOnly play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r25:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -1250,7 +1255,7 @@ exports[`Tester/DatePicker/DatePicker WithRef play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r1:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -1295,7 +1300,7 @@ exports[`Tester/DatePicker/DatePicker WithRequired play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:ru:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -1340,7 +1345,7 @@ exports[`Tester/DatePicker/DatePicker WithRequiredAndMark smoke-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:r12:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -1385,7 +1390,7 @@ exports[`Tester/DatePicker/DatePicker WithValue play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:rq:"
              class="_input_13xkq_9"
              autocomplete="off"
@@ -1429,7 +1434,7 @@ exports[`Tester/DatePicker/DatePicker WithVariantLarge smoke-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="_dateContainer_13xkq_1 ">
+    <div class="_dateContainer_13xkq_1">
       <input id="datepickerInputId-:ri:"
              class="_input_13xkq_9 _input_large_13xkq_36"
              autocomplete="off"

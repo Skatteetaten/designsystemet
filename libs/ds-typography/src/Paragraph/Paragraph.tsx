@@ -31,7 +31,7 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
     }
     const concatenatedClassName = `${styles.paragraph} ${
       styles[`paragraph_${variant}`]
-    } ${spacingClassName} ${className}`;
+    } ${spacingClassName} ${className}`.trim();
     return (
       <p
         ref={ref}

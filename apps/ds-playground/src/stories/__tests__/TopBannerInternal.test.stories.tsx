@@ -1,15 +1,20 @@
-import { JSX } from 'react';
-
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, fn, within } from '@storybook/test';
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { HelpOutlineSVGpath, SettingsSVGpath } from '@skatteetaten/ds-icons';
+import {
+  EditSVGpath,
+  FileSVGpath,
+  HelpFilledSVGpath,
+  HelpOutlineSVGpath,
+  SettingsSVGpath,
+} from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import customLogo from '../../assets/custom-mobile-logo.svg';
+import demoLogo from '../../assets/demo-logo-white.svg';
 
 const meta = {
   component: TopBannerInternal,
@@ -19,6 +24,7 @@ const meta = {
     key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
+    classNames: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
@@ -34,12 +40,14 @@ const meta = {
     isUnderConstruction: { table: { disable: true } },
     constructionBandTitle: { table: { disable: true } },
     logo: { table: { disable: true } },
+    hideLogoOnMobile: { table: { disable: true } },
     logoHref: { table: { disable: true } },
     logoAltText: { table: { disable: true } },
     // Events
     onLogoClick: { table: { disable: true } },
   },
   args: {
+    title: 'MVA',
     logoHref: '#',
     logoAltText: 'til startsiden kakeportalen',
   },
@@ -51,6 +59,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const skipLinkText = dsI18n.t('ds_layout:topbanner.SkipLinkText');
+const defaultChildren = (
+  <>
+    <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
+      {'Hjelp'}
+    </InlineButton>
+    <InlineButton svgPath={FileSVGpath} brightness={'light'}>
+      {'Dokumentasjon'}
+    </InlineButton>
+    <InlineButton svgPath={EditSVGpath} brightness={'light'}>
+      {'Opprett RF-Ørtiatten'}
+    </InlineButton>
+  </>
+);
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -119,18 +140,13 @@ export const WithChildren = {
   args: {
     children: (
       <>
-        <Link
-          className={'marginL'}
-          svgPath={HelpOutlineSVGpath}
-          href={'/hjelp'}
-          color={'white'}
-        >
+        <Link svgPath={HelpOutlineSVGpath} href={'/hjelp'} color={'white'}>
           {'Hjelp'}
         </Link>
-        <InlineButton className={'marginL'} svgPath={SettingsSVGpath}>
+        <InlineButton svgPath={SettingsSVGpath} brightness={'light'}>
           {'Tilpass løsningen'}
         </InlineButton>
-        <InlineButton className={'marginL'} svgPath={SettingsSVGpath}>
+        <InlineButton svgPath={SettingsSVGpath} brightness={'light'}>
           {'Meld feil'}
         </InlineButton>
       </>
@@ -141,9 +157,6 @@ export const WithChildren = {
   },
   argTypes: {
     children: { table: { disable: false } },
-  },
-  parameters: {
-    a11y: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -185,7 +198,7 @@ export const SkipLinkFocusedBreakpointL = {
 } satisfies Story;
 
 export const WithTitleDescriptionUser = {
-  name: 'With Title description (A4)',
+  name: 'With Title And Description And User (A4)',
   args: {
     title: 'kakeportalen',
     description: 'kaka er en løgn',
@@ -214,7 +227,7 @@ export const WithTitleDescriptionUser = {
 } satisfies Story;
 
 export const WithLongTitleDescriptionMobile = {
-  name: 'With Long Title description Username (A2, A4, A7)',
+  name: 'With Long Title And Long Description Mobile (A2, A4, A7)',
   argTypes: {
     title: { table: { disable: false } },
     description: { table: { disable: false } },
@@ -242,6 +255,16 @@ export const WithCustomLogo = {
   },
 } satisfies Story;
 
+export const WithPoliceLogo = {
+  name: 'With Police Logo (A5)',
+  args: {
+    logo: demoLogo,
+    className: 'blueBackground',
+    classNames: { logo: 'demoLogo' },
+    title: 'SIRO',
+  },
+} satisfies Story;
+
 export const WithDemoMode = {
   name: 'With Demo Mode (A8)',
   argTypes: {
@@ -259,8 +282,20 @@ export const WithDemoMode = {
   },
 } satisfies Story;
 
+export const WithLongConstructionText = {
+  name: 'With Long Construction Text',
+  argTypes: {
+    isUnderConstruction: { table: { disable: false } },
+    constructionBandTitle: { table: { disable: false } },
+  },
+  args: {
+    isUnderConstruction: true,
+    constructionBandTitle: loremIpsum,
+  },
+} satisfies Story;
+
 export const WithLogoClick = {
-  name: 'With onClickLogo LogoAltText LogoHref (A6)',
+  name: 'With onLogoClick (A6)',
   argTypes: {
     isUnderConstruction: { table: { disable: false } },
     constructionBandTitle: { table: { disable: false } },
@@ -273,10 +308,10 @@ export const WithLogoClick = {
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-    const logo = canvas.getByAltText('til startsiden kakeportalen');
-    await fireEvent.click(logo);
+    const link = canvas.getByText('MVA');
+    await fireEvent.click(link);
 
-    await expect(logo).toBeInTheDocument();
+    await expect(link).toBeInTheDocument();
     await expect(args.onLogoClick).toHaveBeenCalledOnce();
   },
 } satisfies Story;
@@ -292,5 +327,181 @@ export const WithCustomTheme = {
   args: {
     className: 'dummyCustomTheme',
   },
-  render: (args): JSX.Element => <TopBannerInternal {...args} />,
+} satisfies Story;
+
+export const WithOneChildMobile = {
+  args: {
+    title: 'MVA',
+    description: 'Arbeidsliste',
+    user: 'Etternavnesen Fornavn',
+    children: (
+      <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
+        {'Hjelp'}
+      </InlineButton>
+    ),
+  },
+  argTypes: {
+    title: {
+      table: { disable: false },
+    },
+    description: {
+      table: { disable: false },
+    },
+    user: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
+
+export const WithLongDescriptionAndThreeChildrenMobile = {
+  args: {
+    title: 'MVA',
+    description: 'FOLK OG TRUBADURSERVICE WOODIE GUTHRIE 999 999 999',
+    user: 'Etternavnesen Fornavn',
+    children: defaultChildren,
+  },
+  argTypes: {
+    title: {
+      table: { disable: false },
+    },
+    description: {
+      table: { disable: false },
+    },
+    user: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
+
+export const WithThreeChildrenBreakpointS = {
+  args: {
+    title: 'MVA',
+    description: 'Arbeidsliste',
+    user: 'Etternavnesen Fornavn',
+    children: defaultChildren,
+  },
+  argTypes: {
+    title: {
+      table: { disable: false },
+    },
+    description: {
+      table: { disable: false },
+    },
+    user: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-s',
+    },
+  },
+} satisfies Story;
+
+export const WithThreeChildrenBreakpointM = {
+  args: {
+    title: 'MVA',
+    description: 'Arbeidsliste',
+    user: 'Etternavnesen Fornavn',
+    children: defaultChildren,
+  },
+  argTypes: {
+    title: {
+      table: { disable: false },
+    },
+    description: {
+      table: { disable: false },
+    },
+    user: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-m',
+    },
+  },
+} satisfies Story;
+
+export const WithLongTitleAndLongDescriptionAndThreeChildrenBreakpointM = {
+  args: {
+    title: 'Oppdragsregister saksbehandling',
+    description: 'Arbeidsliste for ulike scenarier som er lange',
+    user: 'Winnifred-Jonathan Hastings',
+    children: defaultChildren,
+  },
+  argTypes: {
+    title: {
+      table: { disable: false },
+    },
+    description: {
+      table: { disable: false },
+    },
+    user: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-m',
+    },
+  },
+} satisfies Story;
+
+export const WithHideLogoOnMobile = {
+  name: 'With Hide Logo on Mobile',
+  argTypes: {
+    hideLogoOnMobile: { table: { disable: false } },
+  },
+  args: {
+    hideLogoOnMobile: true,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-xs',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = await canvas.findByRole('link', {
+      name: 'MVA',
+    });
+    await expect(link).toBeInTheDocument();
+    const logo = link.querySelector('img');
+    await expect(logo).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHideLogoOnDesktop = {
+  name: 'With Hide Logo on Desktop',
+  argTypes: {
+    hideLogoOnMobile: { table: { disable: false } },
+  },
+  args: {
+    hideLogoOnMobile: true,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-s',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = await canvas.findByRole('link', {
+      name: 'MVA',
+    });
+    await expect(link).toBeInTheDocument();
+    const logo = link.querySelector('img');
+    await expect(logo).toBeInTheDocument();
+  },
 } satisfies Story;

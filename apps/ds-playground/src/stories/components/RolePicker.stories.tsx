@@ -17,6 +17,7 @@ import {
   OnEntitySelectHandler,
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
+  getRolePickerShowDeceasedPeopleDefault,
 } from '@skatteetaten/ds-overlays';
 
 import { category } from '../../../.storybook/helpers';
@@ -139,13 +140,13 @@ const people: Paginated<Person> = {
       name: 'Bønne elegant',
       personId: '188495 74503',
       type: 'Person',
-      isDeleted: false,
+      isDeleted: true,
     },
     {
       name: 'Lomme filosofisk',
       personId: '088896 74513',
       type: 'Person',
-      isDeleted: false,
+      isDeleted: true,
     },
     {
       name: 'Adelsmann varm',
@@ -244,6 +245,14 @@ const meta = {
         category: category.props,
         defaultValue: {
           summary: getRolePickerShowSubunitsDefault().toString(),
+        },
+      },
+    },
+    showDeceasedPeople: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getRolePickerShowDeceasedPeopleDefault().toString(),
         },
       },
     },

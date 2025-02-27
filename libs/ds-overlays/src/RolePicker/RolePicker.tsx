@@ -15,6 +15,7 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   getRolePickerHideCloseButtonDefault,
+  getRolePickerShowDeceasedPeopleDefault,
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
 } from './defaults';
@@ -48,6 +49,7 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
       hideCloseButton = getRolePickerHideCloseButtonDefault(),
       showInactiveBusinesses = getRolePickerShowInactiveBusinessesDefault(),
       showSubunits = getRolePickerShowSubunitsDefault(),
+      showDeceasedPeople = getRolePickerShowDeceasedPeopleDefault(),
       onClose,
       onEntitySelect,
       onLogout,
@@ -110,7 +112,7 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
     const concatenatedClassName = `${styles.container} ${className}`.trim();
 
     const noValidBusinesses =
-      !me && !people && (!businesses || businesses.total === 0);
+      !me && !people && businesses && businesses.total === 0;
 
     let internalTitle = title ? title : t('rolepicker.Heading');
 
@@ -186,6 +188,7 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
                 <RolePickerPeopleList
                   people={people}
                   filterQuery={deferredFilter}
+                  showDeceasedPeople={showDeceasedPeople}
                 />
               ) : null}
               {businesses && businesses.total > 0 ? (
@@ -251,4 +254,5 @@ export {
   getRolePickerHideCloseButtonDefault,
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
+  getRolePickerShowDeceasedPeopleDefault,
 };

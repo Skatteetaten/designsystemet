@@ -14,16 +14,16 @@ exports[`Tester/StepList/StepList WithAttributes play-test 1`] = `
 exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
 <div data-test-block="true">
   <div>
-    <ol class="_stepList_bc059_1 ">
-      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+    <ol class="_stepList_bc059_1">
+      <li class="_step_t28i0_1 _step_passive_t28i0_55">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
         >
           <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
             1
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:ro:"
@@ -31,16 +31,16 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           besvart
         </h3>
-        <div class="_stepContent_t28i0_86  
-          ">
+        <div class="_stepContent_t28i0_86">
           <div>
             brødtekst
           </div>
-          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
+          <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _stepEditButton_t28i0_46"
+                  data-brightness="default"
                   type="button"
                   aria-describedby="steptitle-:ro:"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -55,15 +55,15 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </button>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
         >
           <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
             2
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rq:"
@@ -71,15 +71,14 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           besvart 2
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
           <div>
             brødtekst
           </div>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_active_t28i0_50 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+      <li class="_step_t28i0_1 _step_active_t28i0_50">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
              aria-current="step"
         >
@@ -87,7 +86,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         _stepCircle_active_t28i0_221">
             3
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rr:"
@@ -95,8 +94,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           aktivt
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
           </div>
@@ -104,7 +102,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         <div class="_nextLine_t28i0_281">
         </div>
         <span class="_buttonWrapper_t28i0_277">
-          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -113,7 +111,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </button>
         </span>
       </li>
-      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60 ">
+      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60">
         <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
@@ -142,33 +140,32 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           positivt resultat
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106">
           <div>
-            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
+            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43">
               Virksomheten skal registreres som særavgiftspliktig.
             </h3>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               For å bli registrert må du sende en søknad til Skatteetaten.Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
             </p>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Du må gjøre følgende:
             </p>
-            <ol class="_list_1xbs1_1   ">
-              <li class="_element_1b7zf_1 ">
+            <ol class="_list_1xbs1_1">
+              <li class="_element_1b7zf_1">
                 Du må bestemme hvilken organisasjonsform som passer best.
               </li>
-              <li class="_element_1b7zf_1 ">
+              <li class="_element_1b7zf_1">
                 Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
               </li>
-              <li class="_element_1b7zf_1 ">
+              <li class="_element_1b7zf_1">
                 Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
               </li>
             </ol>
           </div>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60">
         <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
@@ -197,16 +194,15 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           neutralt resultat
         </h3>
-        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118   _resultIntro_t28i0_256">
           <div class="_panelArticle_1h73c_70">
-            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Intro til steget
             </h3>
             innhold
           </div>
         </div>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106">
           <div>
             more brødtekst
           </div>
@@ -220,16 +216,16 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
 exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
 <div data-test-block="true">
   <div>
-    <ol class="_stepList_bc059_1 ">
-      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+    <ol class="_stepList_bc059_1">
+      <li class="_step_t28i0_1 _step_passive_t28i0_55">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
         >
           <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
             1
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:r8:"
@@ -237,16 +233,16 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           besvart
         </h3>
-        <div class="_stepContent_t28i0_86  
-          ">
+        <div class="_stepContent_t28i0_86">
           <div>
             brødtekst
           </div>
-          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
+          <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _stepEditButton_t28i0_46"
+                  data-brightness="default"
                   type="button"
                   aria-describedby="steptitle-:r8:"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -261,15 +257,15 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </button>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
         >
           <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
             2
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:ra:"
@@ -277,15 +273,14 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           besvart 2
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
           <div>
             brødtekst
           </div>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_active_t28i0_50 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+      <li class="_step_t28i0_1 _step_active_t28i0_50">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
              aria-current="step"
         >
@@ -293,7 +288,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         _stepCircle_active_t28i0_221">
             3
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rb:"
@@ -301,8 +296,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           aktivt
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
           </div>
@@ -310,7 +304,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         <div class="_nextLine_t28i0_281">
         </div>
         <span class="_buttonWrapper_t28i0_277">
-          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -319,7 +313,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </button>
         </span>
       </li>
-      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60 ">
+      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60">
         <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
@@ -348,33 +342,32 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           positivt resultat
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106">
           <div>
-            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
+            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43">
               Virksomheten skal registreres som særavgiftspliktig.
             </h3>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               For å bli registrert må du sende en søknad til Skatteetaten.Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
             </p>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Du må gjøre følgende:
             </p>
-            <ol class="_list_1xbs1_1   ">
-              <li class="_element_1b7zf_1 ">
+            <ol class="_list_1xbs1_1">
+              <li class="_element_1b7zf_1">
                 Du må bestemme hvilken organisasjonsform som passer best.
               </li>
-              <li class="_element_1b7zf_1 ">
+              <li class="_element_1b7zf_1">
                 Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
               </li>
-              <li class="_element_1b7zf_1 ">
+              <li class="_element_1b7zf_1">
                 Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
               </li>
             </ol>
           </div>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60">
         <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
@@ -403,16 +396,15 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           neutralt resultat
         </h3>
-        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118   _resultIntro_t28i0_256">
           <div class="_panelArticle_1h73c_70">
-            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Intro til steget
             </h3>
             innhold
           </div>
         </div>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106">
           <div>
             more brødtekst
           </div>
@@ -426,16 +418,16 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
 exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
 <div data-test-block="true">
   <div>
-    <ol class="_stepList_bc059_1 ">
-      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+    <ol class="_stepList_bc059_1">
+      <li class="_step_t28i0_1 _step_passive_t28i0_55">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
         >
           <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
             1
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rg:"
@@ -443,16 +435,16 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           besvart
         </h3>
-        <div class="_stepContent_t28i0_86  
-          ">
+        <div class="_stepContent_t28i0_86">
           <div>
             brødtekst
           </div>
-          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
+          <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _stepEditButton_t28i0_46"
+                  data-brightness="default"
                   type="button"
                   aria-describedby="steptitle-:rg:"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -467,15 +459,15 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </button>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
         >
           <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
             2
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:ri:"
@@ -483,15 +475,14 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           besvart 2
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
           <div>
             brødtekst
           </div>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_active_t28i0_50 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+      <li class="_step_t28i0_1 _step_active_t28i0_50">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
              aria-current="step"
         >
@@ -499,7 +490,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         _stepCircle_active_t28i0_221">
             3
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rj:"
@@ -507,8 +498,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           aktivt
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
           </div>
@@ -516,7 +506,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         <div class="_nextLine_t28i0_281">
         </div>
         <span class="_buttonWrapper_t28i0_277">
-          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -525,7 +515,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </button>
         </span>
       </li>
-      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60 ">
+      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60">
         <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
@@ -554,33 +544,32 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           positivt resultat
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106">
           <div>
-            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
+            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43">
               Virksomheten skal registreres som særavgiftspliktig.
             </h3>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               For å bli registrert må du sende en søknad til Skatteetaten.Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
             </p>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Du må gjøre følgende:
             </p>
-            <ol class="_list_1xbs1_1   ">
-              <li class="_element_1b7zf_1 ">
+            <ol class="_list_1xbs1_1">
+              <li class="_element_1b7zf_1">
                 Du må bestemme hvilken organisasjonsform som passer best.
               </li>
-              <li class="_element_1b7zf_1 ">
+              <li class="_element_1b7zf_1">
                 Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
               </li>
-              <li class="_element_1b7zf_1 ">
+              <li class="_element_1b7zf_1">
                 Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
               </li>
             </ol>
           </div>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60">
         <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
@@ -609,16 +598,15 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           neutralt resultat
         </h3>
-        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118   _resultIntro_t28i0_256">
           <div class="_panelArticle_1h73c_70">
-            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Intro til steget
             </h3>
             innhold
           </div>
         </div>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106">
           <div>
             more brødtekst
           </div>
@@ -631,11 +619,11 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
 
 exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 ">
+  <ol class="_stepList_bc059_1">
     <li id=":r10:-1"
-        class="_step_t28i0_1 _step_passive_t28i0_55 "
+        class="_step_t28i0_1 _step_passive_t28i0_55"
     >
-      <div class="_stepSideWrapper_t28i0_143 "
+      <div class="_stepSideWrapper_t28i0_143"
            id=":r10:-1-focus-target"
            tabindex="-1"
       >
@@ -643,7 +631,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         _stepCircle_passive_t28i0_218">
           1
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-:r10:-1"
@@ -651,17 +639,16 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         Hva holder du på med?
       </h3>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
         <div>
           Varer og tjenester
         </div>
       </div>
     </li>
     <li id=":r10:-2"
-        class="_step_t28i0_1 _step_passive_t28i0_55 "
+        class="_step_t28i0_1 _step_passive_t28i0_55"
     >
-      <div class="_stepSideWrapper_t28i0_143 "
+      <div class="_stepSideWrapper_t28i0_143"
            id=":r10:-2-focus-target"
            tabindex="-1"
       >
@@ -669,7 +656,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         _stepCircle_passive_t28i0_218">
           2
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-:r10:-2"
@@ -677,17 +664,16 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         Hva gjør du?
       </h3>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
         <div>
           Selger
         </div>
       </div>
     </li>
     <li id=":r10:-3"
-        class="_step_t28i0_1 _step_passive_t28i0_55 "
+        class="_step_t28i0_1 _step_passive_t28i0_55"
     >
-      <div class="_stepSideWrapper_t28i0_143 "
+      <div class="_stepSideWrapper_t28i0_143"
            id=":r10:-3-focus-target"
            tabindex="-1"
       >
@@ -695,7 +681,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         _stepCircle_passive_t28i0_218">
           3
         </span>
-        <div class="_stepLine_t28i0_1 ">
+        <div class="_stepLine_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-:r10:-3"
@@ -703,8 +689,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         Salg av varer og tjenester
       </h3>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
         <div>
           <div>
             ja
@@ -713,7 +698,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       </div>
     </li>
     <li id=":r10:-4"
-        class="_step_t28i0_1 _step_positiveResult_t28i0_60 "
+        class="_step_t28i0_1 _step_positiveResult_t28i0_60"
     >
       <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
            id=":r10:-4-focus-target"
@@ -744,20 +729,19 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         Vårt veiledende svar
       </h3>
-      <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_forest_1h73c_84 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
+      <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_forest_1h73c_84 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118   _resultIntro_t28i0_256">
         <div class="_panelArticle_1h73c_70">
-          <h4 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+          <h4 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
             Virksomheten skal registreres som særavgiftspliktig.
           </h4>
-          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
             brødtekst
           </p>
         </div>
       </div>
-      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
-          ">
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106">
         <div>
-          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
             brødtekst
           </p>
         </div>
@@ -769,7 +753,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
 
 exports[`Tester/StepList/StepList WithRef play-test 1`] = `
 <div data-test-block="true">
-  <ol class="_stepList_bc059_1 "
+  <ol class="_stepList_bc059_1"
       data-testid="123ID"
       id="dummyIdForwardedFromRef"
   >
@@ -780,16 +764,16 @@ exports[`Tester/StepList/StepList WithRef play-test 1`] = `
 exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
 <div data-test-block="true">
   <div>
-    <ol class="_stepList_bc059_1 ">
-      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+    <ol class="_stepList_bc059_1">
+      <li class="_step_t28i0_1 _step_passive_t28i0_55">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
         >
           <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
             1
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:r0:"
@@ -797,16 +781,16 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           besvart
         </h3>
-        <div class="_stepContent_t28i0_86  
-          ">
+        <div class="_stepContent_t28i0_86">
           <div>
             brødtekst
           </div>
-          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
+          <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _stepEditButton_t28i0_46"
+                  data-brightness="default"
                   type="button"
                   aria-describedby="steptitle-:r0:"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -821,15 +805,15 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </button>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
         >
           <span class="_stepCircle_t28i0_196
         _stepCircle_passive_t28i0_218">
             2
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:r2:"
@@ -837,15 +821,14 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           besvart 2
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
           <div>
             brødtekst
           </div>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_active_t28i0_50 ">
-        <div class="_stepSideWrapper_t28i0_143 "
+      <li class="_step_t28i0_1 _step_active_t28i0_50">
+        <div class="_stepSideWrapper_t28i0_143"
              tabindex="-1"
              aria-current="step"
         >
@@ -853,7 +836,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         _stepCircle_active_t28i0_221">
             3
           </span>
-          <div class="_stepLine_t28i0_1 ">
+          <div class="_stepLine_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:r3:"
@@ -861,8 +844,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           aktivt
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
           </div>
@@ -870,7 +852,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         <div class="_nextLine_t28i0_281">
         </div>
         <span class="_buttonWrapper_t28i0_277">
-          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
                   type="button"
           >
             <span class="_buttonText_6ybyo_69">
@@ -879,7 +861,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </button>
         </span>
       </li>
-      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60 ">
+      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60">
         <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
@@ -908,33 +890,32 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           positivt resultat
         </h3>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106">
           <div>
-            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
+            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43">
               Virksomheten skal registreres som særavgiftspliktig.
             </h3>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               For å bli registrert må du sende en søknad til Skatteetaten.Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
             </p>
-            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
               Du må gjøre følgende:
             </p>
-            <ol class="_list_1xbs1_1   ">
-              <li class="_element_1b7zf_1 ">
+            <ol class="_list_1xbs1_1">
+              <li class="_element_1b7zf_1">
                 Du må bestemme hvilken organisasjonsform som passer best.
               </li>
-              <li class="_element_1b7zf_1 ">
+              <li class="_element_1b7zf_1">
                 Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
               </li>
-              <li class="_element_1b7zf_1 ">
+              <li class="_element_1b7zf_1">
                 Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
               </li>
             </ol>
           </div>
         </div>
       </li>
-      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60">
         <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
@@ -963,16 +944,15 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           neutralt resultat
         </h3>
-        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118   _resultIntro_t28i0_256">
           <div class="_panelArticle_1h73c_70">
-            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Intro til steget
             </h3>
             innhold
           </div>
         </div>
-        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 
-          ">
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106">
           <div>
             more brødtekst
           </div>

@@ -1,5 +1,6 @@
 import {
   getRolePickerHideCloseButtonDefault,
+  getRolePickerShowDeceasedPeopleDefault,
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
 } from '../defaults';
@@ -17,6 +18,11 @@ describe('RolePicker defaults', () => {
 
   it('Når getRolePickerShowInactiveBusinessesDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getRolePickerShowInactiveBusinessesDefault();
+    expect(renderDefault).toBe(false);
+  });
+
+  it('Når getRolePickerShowDeceasedPeopleDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getRolePickerShowDeceasedPeopleDefault();
     expect(renderDefault).toBe(false);
   });
 });

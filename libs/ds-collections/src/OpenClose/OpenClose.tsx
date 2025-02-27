@@ -58,16 +58,17 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
       ? styles.openClose_hasIconRight
       : '';
     const compactClassName = isCompact ? styles.openClose_compact : '';
-    const openCloseClassName = `${styles.openClose} ${compactClassName} ${iconRightClassName}`;
+    const openCloseClassName =
+      `${styles.openClose} ${compactClassName} ${iconRightClassName}`.trim();
     const iconClassName = `${styles.icon} ${styles.icon_active} ${
       isExpanded ? styles.icon_open : styles.icon_closed
-    } ${isCompact ? styles.icon_compact : ''}`;
+    } ${isCompact ? styles.icon_compact : ''}`.trim();
     const titleClassName = `${styles.title} ${
       isCompact ? styles.title_compact : ''
-    } ${showUnderline ? styles.title_underline : ''}`;
+    } ${showUnderline ? styles.title_underline : ''}`.trim();
     const contentClassName = `${styles.content} ${
       isCompact ? styles.content_compact : ''
-    } ${hasIconRight ? styles.content_hasIconRight : ''}`;
+    } ${hasIconRight ? styles.content_hasIconRight : ''}`.trim();
 
     return (
       <div className={className}>

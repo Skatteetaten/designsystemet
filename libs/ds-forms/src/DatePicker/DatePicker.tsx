@@ -225,7 +225,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         <div
           className={`${styles.dateContainer} ${
             classNames?.dateContainer ?? ''
-          }`}
+          }`.trim()}
         >
           <input
             ref={inputRef}
@@ -264,7 +264,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         <ErrorMessage
           id={errorId}
           showError={!!errorMessage}
-          className={classNames?.errorMessage ?? ''}
+          className={classNames?.errorMessage}
         >
           {errorMessage}
         </ErrorMessage>

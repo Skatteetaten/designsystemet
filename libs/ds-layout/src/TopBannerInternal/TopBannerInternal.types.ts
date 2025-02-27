@@ -1,7 +1,13 @@
-import { MouseEventHandler, ReactNode } from 'react';
+import {
+  ForwardRefExoticComponent,
+  MouseEventHandler,
+  ReactNode,
+  RefAttributes,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
 type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
@@ -9,6 +15,10 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 };
 
 export interface TopBannerInternalProps extends BaseProps {
+  classNames?: {
+    logo?: string;
+    childrenAndUserContainer?: string;
+  };
   /** Overskrift eller navn på løsning. Merk at dette ikke gir heading-element i topbanner */
   title?: string;
   /** Valgfri undertittel */
@@ -30,10 +40,22 @@ export interface TopBannerInternalProps extends BaseProps {
   skipLink?: SkipLink;
   /** Url på logo. Skal settes til hjem-siden/arbeidslisten i løsningen.  */
   logoHref: string;
-  /** Alt-text på logo. Skal gi beskjed om hvor lenken sender deg. F.eks Forside [navn på løsning] */
+  /**
+   * Alt-text på logo. Skal gi beskjed om hvor lenken sender deg. F.eks Forside [navn på løsning].
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Erstattes av "title".
+   */
   logoAltText: string;
   /** Overskriver default logo. */
   logo?: string;
   /** Kalles ved klikk på logo */
   onLogoClick?: MouseEventHandler<HTMLAnchorElement>;
+  /** Skjuler logo på mobilvisning. */
+  hideLogoOnMobile?: boolean;
+}
+
+export interface TopBannerInternalComponent
+  extends ForwardRefExoticComponent<
+    TopBannerInternalProps & RefAttributes<HTMLElement>
+  > {
+  ActionMenu: typeof TopBannerInternalActionMenu;
 }

@@ -167,9 +167,10 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
     };
     const concatenatedClassnames = `${styles.container} ${className} ${
       classNames?.container ?? ''
-    }`;
+    }`.trim();
 
-    const ariaDescribedBy = `${errorMessage ? errorId : ''} ${acceptedFileFormats ? fileformatsId : ''}`;
+    const ariaDescribedBy =
+      `${errorMessage ? errorId : ''} ${acceptedFileFormats ? fileformatsId : ''}`.trim();
 
     return (
       <div
@@ -201,7 +202,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
           id={id}
           className={`${styles.dropZone} ${
             errorMessage ? styles.dropZone_error : ''
-          } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`}
+          } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`.trim()}
           disabled={isUploading}
           aria-describedby={
             ariaDescribedBy.trim() !== '' ? ariaDescribedBy : undefined

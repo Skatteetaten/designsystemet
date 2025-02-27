@@ -16,7 +16,12 @@ export interface ModalProps extends BaseProps {
   };
   /** Innhold */
   children: ReactNode;
-  /** Definerer stilen til Modal */
+  /**
+   * Definerer stilen til Modal.
+   *
+   * **Deprecated:** Variant 'important' skal fases ut i neste major versjon.
+   * Bruk 'outline' i stedet.
+   */
   variant?: ModalVariant;
   /** Padding rundt Modal */
   padding?: ModalPadding;
@@ -38,7 +43,7 @@ export interface ModalProps extends BaseProps {
   renderIcon?: () => ReactElement<IconProps>;
   /**
    * Modal i shadowndom.
-   * Deprecated: Prop skal fjernes ved lansering av neste major versjon.
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon.
    */
   shadowRootNode?: Document | ShadowRoot;
   /** Callback når modalen lukkes */

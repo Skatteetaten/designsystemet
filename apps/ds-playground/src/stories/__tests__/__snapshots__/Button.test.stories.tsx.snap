@@ -2,7 +2,7 @@
 
 exports[`Tester/Button Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -14,7 +14,7 @@ exports[`Tester/Button Defaults play-test 1`] = `
 
 exports[`Tester/Button VariantDanger play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_danger_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_danger_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -26,7 +26,7 @@ exports[`Tester/Button VariantDanger play-test 1`] = `
 
 exports[`Tester/Button VariantSecondary play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_secondary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_secondary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -38,7 +38,7 @@ exports[`Tester/Button VariantSecondary play-test 1`] = `
 
 exports[`Tester/Button VariantTertiary play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -50,7 +50,7 @@ exports[`Tester/Button VariantTertiary play-test 1`] = `
 
 exports[`Tester/Button WithAccesskey play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           accesskey="j"
           type="button"
   >
@@ -63,7 +63,7 @@ exports[`Tester/Button WithAccesskey play-test 1`] = `
 
 exports[`Tester/Button WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
           aria-describedby="testid1234"
   >
@@ -92,7 +92,7 @@ exports[`Tester/Button WithAttributes play-test 1`] = `
 
 exports[`Tester/Button WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           disabled
           type="button"
   >
@@ -105,7 +105,7 @@ exports[`Tester/Button WithDisabled play-test 1`] = `
 
 exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47  "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47"
           disabled
           type="button"
   >
@@ -129,7 +129,7 @@ exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
 
 exports[`Tester/Button WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -141,7 +141,7 @@ exports[`Tester/Button WithEventHandlers play-test 1`] = `
 
 exports[`Tester/Button WithExternalIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="_button_6ybyo_1 _button_primary_6ybyo_1  _button_withIconRight_6ybyo_51 "
+  <a class="_button_6ybyo_1 _button_primary_6ybyo_1  _button_withIconRight_6ybyo_51"
      href="#"
      role="button"
   >
@@ -166,7 +166,7 @@ exports[`Tester/Button WithExternalIcon play-test 1`] = `
 
 exports[`Tester/Button WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47  "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47"
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25">
@@ -189,7 +189,7 @@ exports[`Tester/Button WithIcon play-test 1`] = `
 
 exports[`Tester/Button WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -201,7 +201,7 @@ exports[`Tester/Button WithLongText smoke-test 1`] = `
 
 exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47  "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47"
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25">
@@ -224,7 +224,7 @@ exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
 
 exports[`Tester/Button WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
           id="dummyIdForwardedFromRef"
   >
@@ -259,7 +259,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         Klikk her
       </span>
     </button>
-    <button class="_button_6ybyo_1 _button_danger_6ybyo_1   "
+    <button class="_button_6ybyo_1 _button_danger_6ybyo_1"
             type="button"
     >
       <span class="_buttonText_6ybyo_69">
@@ -276,12 +276,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+           class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:r3:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -295,12 +295,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:r4:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -314,18 +314,18 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:r5:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
       </div>
     </button>
-    <button class="_button_6ybyo_1 _button_danger_6ybyo_1   "
+    <button class="_button_6ybyo_1 _button_danger_6ybyo_1"
             type="button"
     >
       <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
@@ -333,12 +333,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+           class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_wnf1f_40">
         </div>
         <span id="title-:r6:"
-              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
         >
           Laster inn
         </span>
@@ -400,7 +400,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         Klikk her
       </span>
     </button>
-    <button class="_button_6ybyo_1 _button_danger_6ybyo_1 _button_withIcon_6ybyo_47  "
+    <button class="_button_6ybyo_1 _button_danger_6ybyo_1 _button_withIcon_6ybyo_47"
             type="button"
     >
       <span class="_iconWrapper_6ybyo_25">
@@ -438,12 +438,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+         class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:rc:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
@@ -468,12 +468,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:re:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
@@ -498,18 +498,18 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:rg:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
     </div>
   </button>
-  <button class="_button_6ybyo_1 _button_danger_6ybyo_1 _button_withIcon_6ybyo_47  "
+  <button class="_button_6ybyo_1 _button_danger_6ybyo_1 _button_withIcon_6ybyo_47"
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
@@ -528,12 +528,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+         class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153"
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_wnf1f_40">
       </div>
       <span id="title-:ri:"
-            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66"
       >
         Laster inn
       </span>
@@ -544,7 +544,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
 
 exports[`Tester/Button WithType play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="submit"
   >
     <span class="_buttonText_6ybyo_69">

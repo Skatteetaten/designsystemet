@@ -133,12 +133,13 @@ exports[`Tester/Fieldset WithHelpTextSvgPathAndTitle play-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="legendId-:ra:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rb:"
@@ -174,12 +175,13 @@ exports[`Tester/Fieldset WithHelpToggleEvent smoke-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="legendId-:re:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rf:"
@@ -215,12 +217,13 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27 _srOnly_10ldw_59"
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27 _srOnly_10ldw_59"
+            data-brightness="default"
             type="button"
             aria-describedby="legendId-:r6:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r7:"
@@ -320,10 +323,10 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
     <legend id="legendId-:r5:"
             class="_srOnly_s6jvz_39"
     >
-      <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34  ">
+      <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34">
         Dette er en Heading i legend
       </h1>
-      <p class="_paragraph_1kzt5_1 _paragraph_ingress_1kzt5_20  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_ingress_1kzt5_20">
         <em>
           Dette er en italic Paragraph med ingress variant i legend
         </em>
@@ -332,10 +335,10 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
     <div class="_legend_s6jvz_15 _legendWithMarkup_required_s6jvz_23"
          aria-hidden="true"
     >
-      <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34  ">
+      <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34">
         Dette er en Heading i legend
       </h1>
-      <p class="_paragraph_1kzt5_1 _paragraph_ingress_1kzt5_20  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_ingress_1kzt5_20">
         <em>
           Dette er en italic Paragraph med ingress variant i legend
         </em>

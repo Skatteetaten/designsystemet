@@ -18,13 +18,14 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
           </path>
         </svg>
-        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardAlertCloseButton_1kr4p_51"
+        <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
+                data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r7:"
@@ -39,7 +40,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1 ">
+      <div class="_cardContent_48t19_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
@@ -60,13 +61,14 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
           </path>
         </svg>
-        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardAlertCloseButton_1kr4p_51"
+        <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
+                data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r9:"
@@ -81,7 +83,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1 ">
+      <div class="_cardContent_48t19_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
@@ -102,13 +104,14 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardAlertCloseButton_1kr4p_51"
+        <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
+                data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:rb:"
@@ -123,7 +126,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1 ">
+      <div class="_cardContent_48t19_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
@@ -153,13 +156,14 @@ exports[`Tester/Card/Alert WithAttributes play-test 1`] = `
         <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
         </path>
       </svg>
-      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardAlertCloseButton_1kr4p_51"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -188,7 +192,7 @@ exports[`Tester/Card/Alert WithOnClose play-test 1`] = `
 
 exports[`Tester/Card/Alert WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardAlert_1kr4p_1 "
+  <div class="_cardAlert_1kr4p_1"
        data-variant="neutral"
        id="dummyIdForwardedFromRef"
   >
@@ -202,13 +206,14 @@ exports[`Tester/Card/Alert WithRef play-test 1`] = `
         <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
         </path>
       </svg>
-      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardAlertCloseButton_1kr4p_51"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -232,7 +237,7 @@ exports[`Tester/Card/Alert WithRef play-test 1`] = `
 
 exports[`Tester/Card/Alert WithSvgPath smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardAlert_1kr4p_1 "
+  <div class="_cardAlert_1kr4p_1"
        data-variant="neutral"
   >
     <div class="_cardAlertHeadingContainer_1kr4p_58">
@@ -245,13 +250,14 @@ exports[`Tester/Card/Alert WithSvgPath smoke-test 1`] = `
         <path d="M11.52 4.656a7.61 7.61 0 0 1 1.682.18l-2.788 9.301 8.614-3.568c.15.61.223 1.235.22 1.863a7.723 7.723 0 0 1-7.728 7.728c-4.272 0-7.776-3.456-7.776-7.728S7.2 4.656 11.52 4.656Zm4.058-.789-.074-.027c2.01.7 3.623 2.234 4.475 4.17l-6.442 2.669 2.041-6.812Z">
         </path>
       </svg>
-      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardAlertCloseButton_1kr4p_51"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cardAlertCloseButton_1kr4p_51"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"

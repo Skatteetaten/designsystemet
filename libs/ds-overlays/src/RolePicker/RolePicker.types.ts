@@ -46,10 +46,12 @@ export interface RolePickerProps
   people?: Paginated<Person>;
   /** En paginert liste over virksomheter. */
   businesses?: Paginated<Business>;
-  /** Om avviklede virksomheter skal vises. */
+  /** Om avviklede virksomheter skal vises som standard når rollevelger åpnes. */
   showInactiveBusinesses?: boolean;
-  /** Om underenheter av virksomheter skal vises. */
+  /** Om underenheter av virksomheter skal vises som standard når rollevelger åpnes. */
   showSubunits?: boolean;
+  /** Om avdøde personer skal vises som standard når rollevelger åpnes. */
+  showDeceasedPeople?: boolean;
   /** Tilbakekallingsfunksjon for å håndtere valg av virksomhet/person. */
   onEntitySelect?: OnEntitySelectHandler;
   /** Tilbakekallingsfunksjon for å håndtere utlogging. */
