@@ -19,7 +19,6 @@ import {
 import { category } from '../../../.storybook/helpers';
 import demoLogo from '../../assets/demo-logo-white.svg';
 import { exampleParameters } from '../utils/stories.utils';
-import { getAccordionBackgroundColorDefault } from '@skatteetaten/ds-collections';
 
 const meta = {
   component: TopBannerInternal,
