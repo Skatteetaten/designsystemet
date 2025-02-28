@@ -104,9 +104,9 @@ exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-te
       <input id="datepickerInputId-:r1t:"
              class="_input_13xkq_9"
              autocomplete="given-name"
-             name="test_name"
              placeholder="placeholdertekst"
              value
+             name="test_name"
       >
       <button type="button"
               class="_calendarButton_13xkq_13"

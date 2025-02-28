@@ -23,7 +23,6 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:rh:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:ri:"
              aria-live="assertive"
@@ -79,7 +78,6 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r2s:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r2t:"
              aria-live="assertive"
@@ -134,7 +132,6 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r2o:-srFocus"
                type="search"
-               value
                aria-owns="searchField-:r2o:-results"
         >
         <div id="searchFieldErrorId-:r2p:"
@@ -247,7 +244,6 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
                autocomplete="off"
                aria-describedby="htmlid-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r5:"
              aria-live="assertive"
@@ -302,7 +298,6 @@ exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r2g:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r2h:"
              aria-live="assertive"
@@ -419,7 +414,6 @@ dummyClassnameFormContainer">
                autocomplete="off"
                aria-describedby="searchField-:r8:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r9:"
              aria-live="assertive"
@@ -550,7 +544,6 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r1t:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r1u:"
              aria-live="assertive"
@@ -664,7 +657,6 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
                aria-describedby="searchFieldErrorId-:r3k: searchField-:r3j:-srFocus"
                aria-invalid="true"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r3k:"
              aria-live="assertive"
@@ -733,7 +725,6 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r2j:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r2k:"
              aria-live="assertive"
@@ -831,7 +822,6 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r21:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r22:"
              aria-live="assertive"
@@ -906,7 +896,6 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r30:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r31:"
              aria-live="assertive"
@@ -984,7 +973,6 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:rc:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:rd:"
              aria-live="assertive"
@@ -1036,12 +1024,11 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
         </span>
         <input id="searchField-:r27:-input"
                class="_input_y8tn3_44"
-               name="test_name"
                placeholder="skattekort"
                autocomplete="off"
                aria-describedby="searchField-:r27:-srFocus"
                type="search"
-               value
+               name="test_name"
         >
         <div id="searchFieldErrorId-:r28:"
              aria-live="assertive"
@@ -1096,7 +1083,6 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r0:-srFocus"
                type="search"
-               value
                name="dummyNameForwardedFromRef"
         >
         <div id="searchFieldErrorId-:r1:"
@@ -1153,7 +1139,6 @@ exports[`Tester/SearchField WithRequired play-test 1`] = `
                required
                aria-describedby="searchField-:r3b:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r3c:"
              aria-live="assertive"
@@ -1209,7 +1194,6 @@ exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
                required
                aria-describedby="searchField-:r3f:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r3g:"
              aria-live="assertive"
@@ -1410,7 +1394,6 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:rl:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:rm:"
              aria-live="assertive"
@@ -1460,7 +1443,6 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:rp:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:rq:"
              aria-live="assertive"
@@ -1510,7 +1492,6 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:rt:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:ru:"
              aria-live="assertive"
@@ -1565,7 +1546,6 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r11:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r12:"
              aria-live="assertive"
@@ -1603,7 +1583,6 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r14:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r15:"
              aria-live="assertive"
@@ -1641,7 +1620,6 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
                autocomplete="off"
                aria-describedby="searchField-:r17:-srFocus"
                type="search"
-               value
         >
         <div id="searchFieldErrorId-:r18:"
              aria-live="assertive"

@@ -811,7 +811,6 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                    class="_textbox_3tcss_5"
                    autocomplete="off"
                    placeholder="Søk"
-                   value
             >
             <div id="textFieldErrorId-:ra:"
                  aria-live="assertive"

@@ -19,8 +19,8 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
           <input id="radioInputId-:rf:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rd:"
                  value="foretak"
+                 name="radioInputName-:rd:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rf:"
@@ -33,8 +33,8 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
           <input id="radioInputId-:rg:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rd:"
                  value="selskap"
+                 name="radioInputName-:rd:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rg:"
@@ -47,8 +47,8 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
           <input id="radioInputId-:rh:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rd:"
                  value="annet"
+                 name="radioInputName-:rd:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rh:"
@@ -87,8 +87,8 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
           <input id="radioInputId-:rl:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rj:"
                  value="foretak"
+                 name="radioInputName-:rj:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rl:"
@@ -101,8 +101,8 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
           <input id="radioInputId-:rm:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rj:"
                  value="selskap"
+                 name="radioInputName-:rj:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rm:"
@@ -115,8 +115,8 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
           <input id="radioInputId-:rn:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rj:"
                  value="annet"
+                 name="radioInputName-:rj:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rn:"
@@ -160,8 +160,8 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
           <input id="radioInputId-:r9:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r7:"
                  value="foretak"
+                 name="radioInputName-:r7:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r9:"
@@ -174,8 +174,8 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
           <input id="radioInputId-:ra:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r7:"
                  value="selskap"
+                 name="radioInputName-:r7:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:ra:"
@@ -188,8 +188,8 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
           <input id="radioInputId-:rb:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r7:"
                  value="annet"
+                 name="radioInputName-:r7:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rb:"
@@ -250,11 +250,11 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3s:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r3p:"
                  aria-describedby="radioErrorId-:r3o:"
                  aria-invalid="true"
+                 type="radio"
                  value="foretak"
+                 name="radioInputName-:r3p:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3s:"
@@ -266,11 +266,11 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3t:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r3p:"
                  aria-describedby="radioErrorId-:r3o:"
                  aria-invalid="true"
+                 type="radio"
                  value="selskap"
+                 name="radioInputName-:r3p:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3t:"
@@ -282,11 +282,11 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3u:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r3p:"
                  aria-describedby="radioErrorId-:r3o:"
                  aria-invalid="true"
+                 type="radio"
                  value="annet"
+                 name="radioInputName-:r3p:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3u:"
@@ -339,8 +339,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
           <input id="radioInputId-:r17:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r15:"
                  value="foretak"
+                 name="radioInputName-:r15:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r17:"
@@ -353,8 +353,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
           <input id="radioInputId-:r18:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r15:"
                  value="selskap"
+                 name="radioInputName-:r15:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r18:"
@@ -367,9 +367,9 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
           <input id="radioInputId-:r19:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r15:"
                  value="annet"
                  checked
+                 name="radioInputName-:r15:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r19:"
@@ -411,8 +411,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
           <input id="radioInputId-:r35:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r33:"
                  value="foretak"
+                 name="radioInputName-:r33:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r35:"
@@ -425,8 +425,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
           <input id="radioInputId-:r36:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r33:"
                  value="selskap"
+                 name="radioInputName-:r33:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r36:"
@@ -439,8 +439,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
           <input id="radioInputId-:r37:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r33:"
                  value="annet"
+                 name="radioInputName-:r33:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r37:"
@@ -481,8 +481,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
           <input id="radioInputId-:r1d:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r1b:"
                  value="foretak"
+                 name="radioInputName-:r1b:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1d:"
@@ -495,8 +495,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
           <input id="radioInputId-:r1e:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r1b:"
                  value="selskap"
+                 name="radioInputName-:r1b:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1e:"
@@ -509,9 +509,9 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
           <input id="radioInputId-:r1f:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r1b:"
                  value="annet"
                  checked
+                 name="radioInputName-:r1b:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1f:"
@@ -549,11 +549,11 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r2h:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r2f:"
                  aria-describedby="radioErrorId-:r2e:"
                  aria-invalid="true"
+                 type="radio"
                  value="foretak"
+                 name="radioInputName-:r2f:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2h:"
@@ -565,11 +565,11 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r2i:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r2f:"
                  aria-describedby="radioErrorId-:r2e:"
                  aria-invalid="true"
+                 type="radio"
                  value="selskap"
+                 name="radioInputName-:r2f:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2i:"
@@ -581,12 +581,12 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r2j:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r2f:"
                  aria-describedby="radioErrorId-:r2e:"
                  aria-invalid="true"
+                 type="radio"
                  value="annet"
                  checked
+                 name="radioInputName-:r2f:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2j:"
@@ -638,11 +638,10 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndAriaDescribedby play-te
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r2o:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r2m:"
                  aria-describedby="konsumentId radioErrorId-:r2l:"
                  aria-invalid="true"
-                 value
+                 type="radio"
+                 name="radioInputName-:r2m:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2o:"
@@ -695,8 +694,8 @@ exports[`Tester/RadioGroup/RadioGroup WithEventHandlers play-test 1`] = `
           <input id="radioInputId-:r3b:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r39:"
                  value="selskap"
+                 name="radioInputName-:r39:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3b:"
@@ -778,8 +777,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
           <input id="radioInputId-:r2u:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r2r:"
                  value="foretak"
+                 name="radioInputName-:r2r:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2u:"
@@ -792,8 +791,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
           <input id="radioInputId-:r2v:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r2r:"
                  value="selskap"
+                 name="radioInputName-:r2r:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2v:"
@@ -806,8 +805,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
           <input id="radioInputId-:r30:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r2r:"
                  value="annet"
+                 name="radioInputName-:r2r:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r30:"
@@ -866,8 +865,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
           <input id="radioInputId-:r3l:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3i:"
                  value="foretak"
+                 name="radioInputName-:r3i:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3l:"
@@ -880,8 +879,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
           <input id="radioInputId-:r3m:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3i:"
                  value="selskap"
+                 name="radioInputName-:r3i:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3m:"
@@ -894,8 +893,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
           <input id="radioInputId-:r3n:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3i:"
                  value="annet"
+                 name="radioInputName-:r3i:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3n:"
@@ -934,8 +933,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
           <input id="radioInputId-:rr:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rp:"
                  value="foretak"
+                 name="radioInputName-:rp:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rr:"
@@ -948,8 +947,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
           <input id="radioInputId-:rs:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rp:"
                  value="selskap"
+                 name="radioInputName-:rp:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rs:"
@@ -962,8 +961,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
           <input id="radioInputId-:rt:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rp:"
                  value="annet"
+                 name="radioInputName-:rp:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rt:"
@@ -1002,8 +1001,8 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
           <input id="radioInputId-:r25:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="nameFraKonsument"
                  value="foretak"
+                 name="nameFraKonsument"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r25:"
@@ -1016,8 +1015,8 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
           <input id="radioInputId-:r26:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="nameFraKonsument"
                  value="selskap"
+                 name="nameFraKonsument"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r26:"
@@ -1030,8 +1029,8 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
           <input id="radioInputId-:r27:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="nameFraKonsument"
                  value="annet"
+                 name="nameFraKonsument"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r27:"
@@ -1079,8 +1078,8 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
           <input id="radioInputId-:r3:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r1:"
                  value="foretak"
+                 name="radioInputName-:r1:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3:"
@@ -1093,8 +1092,8 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
           <input id="radioInputId-:r4:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r1:"
                  value="selskap"
+                 name="radioInputName-:r1:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r4:"
@@ -1107,8 +1106,8 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
           <input id="radioInputId-:r5:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r1:"
                  value="annet"
+                 name="radioInputName-:r1:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r5:"
@@ -1146,10 +1145,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1j:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1h:"
                  required
+                 type="radio"
                  value="foretak"
+                 name="radioInputName-:r1h:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1j:"
@@ -1161,10 +1160,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1k:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1h:"
                  required
+                 type="radio"
                  value="selskap"
+                 name="radioInputName-:r1h:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1k:"
@@ -1176,10 +1175,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1l:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1h:"
                  required
+                 type="radio"
                  value="annet"
+                 name="radioInputName-:r1h:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1l:"
@@ -1217,10 +1216,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1p:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1n:"
                  required
+                 type="radio"
                  value="foretak"
+                 name="radioInputName-:r1n:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1p:"
@@ -1232,10 +1231,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1q:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1n:"
                  required
+                 type="radio"
                  value="selskap"
+                 name="radioInputName-:r1n:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1q:"
@@ -1247,10 +1246,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1r:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1n:"
                  required
+                 type="radio"
                  value="annet"
+                 name="radioInputName-:r1n:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1r:"
@@ -1298,10 +1297,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1v:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1t:"
                  required
+                 type="radio"
                  value="foretak"
+                 name="radioInputName-:r1t:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1v:"
@@ -1313,10 +1312,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r20:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1t:"
                  required
+                 type="radio"
                  value="selskap"
+                 name="radioInputName-:r1t:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r20:"
@@ -1328,10 +1327,10 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r21:"
                  class="_radioInput_1ybg2_5"
-                 type="radio"
-                 name="radioInputName-:r1t:"
                  required
+                 type="radio"
                  value="annet"
+                 name="radioInputName-:r1t:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r21:"
@@ -1370,8 +1369,8 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
           <input id="radioInputId-:r11:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rv:"
                  value="foretak"
+                 name="radioInputName-:rv:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r11:"
@@ -1384,8 +1383,8 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
           <input id="radioInputId-:r12:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rv:"
                  value="selskap"
+                 name="radioInputName-:rv:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r12:"
@@ -1398,9 +1397,9 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
           <input id="radioInputId-:r13:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rv:"
                  value="annet"
                  checked
+                 name="radioInputName-:rv:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r13:"
@@ -1439,8 +1438,8 @@ exports[`Tester/RadioGroup/RadioGroup WithoutErrorMessage play-test 1`] = `
           <input id="radioInputId-:r2b:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r29:"
                  value="foretak"
+                 name="radioInputName-:r29:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2b:"
@@ -1453,8 +1452,8 @@ exports[`Tester/RadioGroup/RadioGroup WithoutErrorMessage play-test 1`] = `
           <input id="radioInputId-:r2c:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r29:"
                  value="selskap"
+                 name="radioInputName-:r29:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2c:"
@@ -1467,8 +1466,8 @@ exports[`Tester/RadioGroup/RadioGroup WithoutErrorMessage play-test 1`] = `
           <input id="radioInputId-:r2d:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r29:"
                  value="annet"
+                 name="radioInputName-:r29:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2d:"

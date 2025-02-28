@@ -496,8 +496,8 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <img class="_logo_1juh7_1 _modalLogo_125nh_26"
-             src="[REMOVED]"
              alt="Skatteetaten logo"
+             src="[REMOVED]"
         >
         <h1 id="modalHeadingId-:r6:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
@@ -993,9 +993,9 @@ exports[`Tester/Modal WithImage play-test 1`] = `
           </path>
         </svg>
       </button>
-      <img src="[REMOVED]"
-           alt="Image alt tekst"
+      <img alt="Image alt tekst"
            class="_modalIllustration_125nh_35"
+           src="[REMOVED]"
       >
       <div class="_modalPaddingL_125nh_51 _modalNoPaddingTop_125nh_57">
         <h1 id="modalHeadingId-:r8:"
@@ -1202,7 +1202,6 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
           <input id="textFieldTextboxId-:r13:"
                  class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
                  autocomplete="off"
-                 value
           >
           <div id="textFieldErrorId-:r12:"
                aria-live="assertive"

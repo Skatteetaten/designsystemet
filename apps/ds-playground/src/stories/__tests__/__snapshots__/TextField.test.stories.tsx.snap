@@ -12,7 +12,6 @@ exports[`Tester/TextField Defaults play-test 1`] = `
     <input id="textFieldTextboxId-:rc:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:rb:"
          aria-live="assertive"
@@ -62,7 +61,6 @@ exports[`Tester/TextField WithAttributes play-test 1`] = `
            data-testid="123ID"
            autocomplete="off"
            form="formid123"
-           value
     >
     <div id="textFieldErrorId-:r3:"
          aria-live="assertive"
@@ -86,9 +84,8 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="given-name"
            inputmode="text"
-           name="test_name"
            placeholder="Kari Nordmann"
-           value
+           name="test_name"
     >
     <div id="textFieldErrorId-:r13:"
          aria-live="assertive"
@@ -167,7 +164,6 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
            autocomplete="off"
            aria-describedby="textFieldErrorId-:r6:"
            aria-invalid="true"
-           value
     >
     <div id="textFieldErrorId-:r6:"
          aria-live="assertive"
@@ -205,7 +201,6 @@ exports[`Tester/TextField WithDataList play-test 1`] = `
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            list="browsers"
-           value
     >
     <div id="textFieldErrorId-:r31:"
          aria-live="assertive"
@@ -314,7 +309,6 @@ exports[`Tester/TextField WithDescription play-test 1`] = `
     <input id="textFieldTextboxId-:r20:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r1v:"
          aria-live="assertive"
@@ -363,7 +357,6 @@ exports[`Tester/TextField WithErrorMessage play-test 1`] = `
            autocomplete="off"
            aria-describedby="textFieldErrorId-:r1r:"
            aria-invalid="true"
-           value
     >
     <div id="textFieldErrorId-:r1r:"
          aria-live="assertive"
@@ -400,7 +393,6 @@ exports[`Tester/TextField WithEventHandlers play-test 1`] = `
     <input id="textFieldTextboxId-:r2m:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r2l:"
          aria-live="assertive"
@@ -443,7 +435,6 @@ exports[`Tester/TextField WithHelpText play-test 1`] = `
     <input id="textFieldTextboxId-:r2c:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r2b:"
          aria-live="assertive"
@@ -489,7 +480,6 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
     <input id="textFieldTextboxId-:r2h:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r2g:"
          aria-live="assertive"
@@ -532,7 +522,6 @@ exports[`Tester/TextField WithHelpToggleEvent smoke-test 1`] = `
     <input id="textFieldTextboxId-:r2p:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r2o:"
          aria-live="assertive"
@@ -555,7 +544,6 @@ exports[`Tester/TextField WithHideLabel play-test 1`] = `
     <input id="textFieldTextboxId-:r23:"
            class="_textbox_3tcss_5"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r22:"
          aria-live="assertive"
@@ -580,7 +568,6 @@ exports[`Tester/TextField WithMinAndMaxLength play-test 1`] = `
            autocomplete="off"
            maxlength="50"
            minlength="10"
-           value
     >
     <div id="textFieldErrorId-:r1f:"
          aria-live="assertive"
@@ -604,7 +591,6 @@ exports[`Tester/TextField WithPattern play-test 1`] = `
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            pattern="[a-z]"
-           value
     >
     <div id="textFieldErrorId-:r1i:"
          aria-live="assertive"
@@ -651,7 +637,6 @@ exports[`Tester/TextField WithRef play-test 1`] = `
     <input id="textFieldTextboxId-:r1:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
            name="dummyNameForwardedFromRef"
     >
     <div id="textFieldErrorId-:r0:"
@@ -676,7 +661,6 @@ exports[`Tester/TextField WithRequired play-test 1`] = `
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            required
-           value
     >
     <div id="textFieldErrorId-:r19:"
          aria-live="assertive"
@@ -700,7 +684,6 @@ exports[`Tester/TextField WithRequiredAndMark smoke-test 1`] = `
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            required
-           value
     >
     <div id="textFieldErrorId-:r1c:"
          aria-live="assertive"
@@ -812,7 +795,6 @@ exports[`Tester/TextField WithThousandSeparator play-test 1`] = `
     <input id="textFieldTextboxId-:r26:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r25:"
          aria-live="assertive"
@@ -835,7 +817,6 @@ exports[`Tester/TextField WithThousandSeparatorAndNegativeValue play-test 1`] = 
     <input id="textFieldTextboxId-:r29:"
            class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r28:"
          aria-live="assertive"
@@ -881,7 +862,6 @@ exports[`Tester/TextField WithVariantLarge smoke-test 1`] = `
     <input id="textFieldTextboxId-:rf:"
            class="_textbox_3tcss_5 _textbox_large_3tcss_24   _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:re:"
          aria-live="assertive"

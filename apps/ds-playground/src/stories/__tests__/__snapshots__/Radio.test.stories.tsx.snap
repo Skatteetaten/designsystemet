@@ -20,7 +20,6 @@ exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
                  class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:r9:"
-                 value
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rb:"
@@ -58,10 +57,9 @@ exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rv:"
                  class="_radioInput_1ybg2_5"
+                 aria-describedby="htmlId"
                  type="radio"
                  name="radioInputName-:rt:"
-                 aria-describedby="htmlId"
-                 value
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rv:"
@@ -105,7 +103,6 @@ exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
                  form="formid123"
                  type="radio"
                  name="radioInputName-:r5:"
-                 value
           >
           <label class="_radioLabel_1ybg2_87"
                  for="htmlId"
@@ -145,7 +142,6 @@ exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
                  class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:rd:"
-                 value
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rf:"
@@ -188,7 +184,6 @@ exports[`Tester/RadioGroup/Radio WithEventHandlers play-test 1`] = `
                  class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:r11:"
-                 value
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r13:"
@@ -228,7 +223,6 @@ exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
                  class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:rh:"
-                 value
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rj:"
@@ -271,7 +265,6 @@ exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
                  class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:rl:"
-                 value
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rn:"
@@ -314,7 +307,6 @@ exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
                  class="_radioInput_1ybg2_5"
                  type="radio"
                  name="dummyIdForwardedFromRef"
-                 value
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3:"
@@ -353,8 +345,8 @@ exports[`Tester/RadioGroup/Radio WithValue play-test 1`] = `
           <input id="radioInputId-:rr:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:rp:"
                  value="person"
+                 name="radioInputName-:rp:"
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rr:"

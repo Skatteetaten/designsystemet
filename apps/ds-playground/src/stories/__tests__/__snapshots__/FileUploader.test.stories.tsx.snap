@@ -25,8 +25,8 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="undefined-input"
-               type="file"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -76,8 +76,8 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="123ID-input"
-               type="file"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -125,8 +125,8 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="undefined-input"
-               type="file"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -214,10 +214,10 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
           Legg til fil(er)
         </label>
         <input data-testid="undefined-input"
-               type="file"
                accept=".java, .cpp, .py"
                multiple
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -314,8 +314,8 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="testid123-input"
-               type="file"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -449,8 +449,8 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="undefined-input"
-               type="file"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -500,8 +500,8 @@ exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
         >
         </label>
         <input data-testid="undefined-input"
-               type="file"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -550,8 +550,8 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="undefined-input"
-               type="file"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -599,9 +599,9 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
           Trykk eller dra og slipp filer her
         </label>
         <input data-testid="undefined-input"
-               type="file"
                accept="image/png"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -721,9 +721,9 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="undefined-input"
-               type="file"
                accept=".java, .cpp, .py"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -912,9 +912,9 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="undefined-input"
-               type="file"
                accept=".java, .cpp, .py"
                hidden
+               type="file"
         >
       </div>
     </button>
@@ -1134,9 +1134,9 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
           Legg til fil
         </label>
         <input data-testid="undefined-input"
-               type="file"
                accept=".pdf, .jpeg"
                hidden
+               type="file"
         >
       </div>
     </button>
