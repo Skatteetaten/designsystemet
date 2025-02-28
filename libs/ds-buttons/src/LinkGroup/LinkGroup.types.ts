@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
@@ -8,6 +8,7 @@ export const linkGroupVariantArr = ['list', 'anchors'] as const;
 export type LinkGroupVariant = (typeof linkGroupVariantArr)[number];
 
 export interface LinkGroupComponentCommonProps extends BaseProps {
+  ref?: Ref<HTMLUListElement>;
   /** Margin under lenkegruppen */
   hasSpacing?: boolean;
   /** Farge på ikoner og lenker */
@@ -20,11 +21,8 @@ export interface LinkGroupComponentCommonProps extends BaseProps {
 
 export type LinkGroupProps = LinkGroupComponentCommonProps;
 
-export interface LinkGroupComponent
-  extends ForwardRefExoticComponent<
-    LinkGroupProps & RefAttributes<HTMLUListElement>
-  > {
-  Link: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>;
+export interface LinkGroupComponent extends React.FC<LinkGroupProps> {
+  Link: React.FC<LinkProps>;
 }
 
 export interface LinkContextProps {

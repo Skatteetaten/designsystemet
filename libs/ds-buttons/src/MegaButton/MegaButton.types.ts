@@ -2,6 +2,7 @@ import {
   ComponentPropsWithoutRef,
   FocusEventHandler,
   MouseEventHandler,
+  Ref,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -22,6 +23,7 @@ interface MegaButtonPropsHTMLAttributes extends MegaButtonHTMLAttributes {
 
 export type MegaButtonDiscriminatedProp =
   | {
+      ref?: Ref<HTMLAnchorElement>;
       /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
       href: string;
       disabled?: never;
@@ -34,6 +36,7 @@ export type MegaButtonDiscriminatedProp =
       spinnerTitle?: never;
     }
   | ({
+      ref?: Ref<HTMLButtonElement>;
       /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
       href?: never;
       disabled?: boolean;

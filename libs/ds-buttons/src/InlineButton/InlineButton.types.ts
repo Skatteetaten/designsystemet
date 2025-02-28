@@ -3,6 +3,7 @@ import {
   FocusEventHandler,
   MouseEventHandler,
   ReactElement,
+  Ref,
 } from 'react';
 
 import { BaseProps, Brightness, Position } from '@skatteetaten/ds-core-utils';
@@ -28,6 +29,7 @@ export type InlineButtonBrightness = Extract<Brightness, 'light' | 'default'>;
 export interface InlineButtonProps
   extends InlineButtonPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   /** Tekst på knapp. */
   children: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
