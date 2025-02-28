@@ -1,5 +1,6 @@
 declare const classNames: {
   readonly searchContainer: 'searchContainer';
+  readonly searchContainerMarginTop: 'searchContainerMarginTop';
   readonly topContainer: 'topContainer';
   readonly topContainer_large: 'topContainer_large';
   readonly topContainer_extraLarge: 'topContainer_extraLarge';

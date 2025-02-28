@@ -1200,7 +1200,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
             Navn
           </label>
           <input id="textFieldTextboxId-:r13:"
-                 class="_textbox_1b2vd_5"
+                 class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
                  autocomplete="off"
           >
           <div id="textFieldErrorId-:r12:"

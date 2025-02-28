@@ -15,7 +15,6 @@
   padding: var(--spacing-m);
   border: 3px var(--semantic-interactive-main) dashed;
   border-radius: 0.5rem;
-  margin-top: var(--spacing-xs);
   margin-bottom: var(--spacing-s);
   background: var(--palette-denim-5);
   color: var(--semantic-interactive-main);
@@ -23,6 +22,10 @@
   font-weight: var(--font-weight-medium);
   line-height: var(--semantic-line-height-buttons);
   text-align: center;
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
 
   &_error:not(:focus, :hover) {
     border: 3px var(--semantic-danger-foreground) solid;
