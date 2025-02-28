@@ -61,8 +61,8 @@ export interface PaginationComponent
 }
 
 export type PaginationListProps = {
-  firstPageRef?: RefObject<HTMLButtonElement>;
-  lastPageRef?: RefObject<HTMLButtonElement>;
+  firstPageRef?: RefObject<HTMLButtonElement | null>;
+  lastPageRef?: RefObject<HTMLButtonElement | null>;
   lastPage: number;
   currentPage: number;
   sibling: number;

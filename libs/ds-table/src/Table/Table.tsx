@@ -44,7 +44,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     ref
   ): JSX.Element => {
     const wrapperRef = useRef<HTMLDivElement>(null);
-    const srTimeoutId = useRef<NodeJS.Timeout>();
+    const srTimeoutId = useRef<NodeJS.Timeout | undefined>(undefined);
 
     const [isTableScrollable, setIsTableScrollable] = useState<boolean>(false);
     const [shouldShowSRText, setShouldShowSRText] = useState<boolean>(false);

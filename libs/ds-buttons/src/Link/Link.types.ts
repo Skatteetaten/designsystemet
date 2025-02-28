@@ -30,7 +30,7 @@ export interface LinkComponentCommonProps
   /** Farge på ikon og tekst */
   color?: LinkColor;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Lenketekst. */
   children: string;
 }

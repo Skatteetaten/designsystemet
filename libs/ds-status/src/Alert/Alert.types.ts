@@ -31,7 +31,7 @@ export type AlertProps = AlertHTMLAttributes &
     /** Brightness på bakgrunnsfarge. 'light' bør brukes når Alert ligger på fargede bakgrunner. */
     backgroundBrightness?: AlertBackgroundBrightness;
     /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-    svgPath?: ReactElement;
+    svgPath?: ReactElement<SVGPathElement>;
     /** Definerer stilen */
     variant: Status;
     /** Callback til lukk-knapp  */

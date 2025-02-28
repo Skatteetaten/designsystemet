@@ -15,7 +15,7 @@ export interface CardAlertCommonProps extends BaseProps {
   /** Definerer stilen til komponenten. */
   variant?: CardAlertVariant;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Innholdet i komponenten. */
   children: ReactNode;
   /** Om innholdet skal vises */

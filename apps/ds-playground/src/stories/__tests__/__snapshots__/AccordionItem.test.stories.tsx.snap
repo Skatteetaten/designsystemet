@@ -347,7 +347,6 @@ exports[`Tester/Accordion/Item WithPersistedState play-test 1`] = `
         <input id="checkboxInputId-:ri:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:ri:"
                class="_label_1k24j_29"

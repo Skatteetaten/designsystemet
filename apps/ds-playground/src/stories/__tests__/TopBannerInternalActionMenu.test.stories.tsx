@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, type JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, userEvent, within } from '@storybook/test';

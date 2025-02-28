@@ -15,7 +15,7 @@ import { getButtonVariantDefault } from './defaults';
 import styles from './Button.module.scss';
 
 export const Button = forwardRef<
-  HTMLButtonElement | HTMLAnchorElement,
+  HTMLButtonElement | HTMLAnchorElement | null,
   ButtonProps
 >(
   (
