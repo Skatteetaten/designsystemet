@@ -164,6 +164,12 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     const headingNoPaddingClassName =
       padding === 'mega' ? styles.modalHeadingNoPadding : '';
 
+    if (variant === 'important') {
+      console.warn(
+        'Modal: Varianten "important" er deprekert og vil bli fjernet i neste major versjon.'
+      );
+    }
+
     return (
       <dialog
         ref={modalRef}

@@ -70,9 +70,9 @@ const getFirstOrLastRef = ({
 }: {
   paging: string | number;
   lastPage: number;
-  firstPageRef: RefObject<HTMLButtonElement> | undefined;
-  lastPageRef: RefObject<HTMLButtonElement> | undefined;
-}): RefObject<HTMLButtonElement> | undefined => {
+  firstPageRef: RefObject<HTMLButtonElement | null> | undefined;
+  lastPageRef: RefObject<HTMLButtonElement | null> | undefined;
+}): RefObject<HTMLButtonElement | null> | undefined => {
   if (paging === 1) return firstPageRef;
   else if (paging === lastPage) return lastPageRef;
   return undefined;

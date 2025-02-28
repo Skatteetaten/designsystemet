@@ -18,7 +18,7 @@ export const textFieldAsArr = ['input', 'textarea'] as const;
 export type TextFieldAs = (typeof textFieldAsArr)[number];
 
 export type TextboxRefHandle = {
-  textboxRef: RefObject<HTMLTextAreaElement | HTMLInputElement>;
+  textboxRef: RefObject<HTMLTextAreaElement | HTMLInputElement | null>;
 };
 
 type RequiredTextFieldHTMLAttributes = Pick<

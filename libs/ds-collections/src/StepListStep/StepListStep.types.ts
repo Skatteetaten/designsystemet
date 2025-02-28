@@ -29,7 +29,7 @@ export interface StepListStepProps extends BaseProps {
   /** Angir nummer på steget. */
   stepNumber: number;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Dersom steget har et ikon som vises i stedet for stegnummer må det gjøres en vundering på om ikonet er meningsbærende og trenger en alternativ tekst.*/
   svgTitle?: string;
   /** Tittel på steget.*/

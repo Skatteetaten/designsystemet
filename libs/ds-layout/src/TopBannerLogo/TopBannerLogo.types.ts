@@ -6,7 +6,7 @@ export const logoAsArr = ['a', 'div'] as const;
 export type LogoAs = (typeof logoAsArr)[number];
 
 export type LogoRefHandle = {
-  logoRef: RefObject<HTMLAnchorElement | HTMLDivElement>;
+  logoRef: RefObject<HTMLAnchorElement | HTMLDivElement | null>;
 };
 
 type TopBannerLogoDiscrimatedProps =

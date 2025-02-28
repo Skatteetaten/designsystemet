@@ -104,9 +104,9 @@ exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-te
       <input id="datepickerInputId-:r1t:"
              class="_input_13xkq_9"
              autocomplete="given-name"
-             name="test_name"
              placeholder="placeholdertekst"
              value
+             name="test_name"
       >
       <button type="button"
               class="_calendarButton_13xkq_13"
@@ -657,9 +657,9 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               >
                 Velg måned
               </label>
-              <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
+              <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
                 <select id="selectId-:r2q:"
-                        class="_select_tyi6s_1"
+                        class="_select_vbsz7_1"
                 >
                   <option class
                           value="0"
@@ -722,7 +722,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                     Desember
                   </option>
                 </select>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -746,7 +746,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 Årstall
               </label>
               <input id="textFieldTextboxId-:r2u:"
-                     class="_textbox_1b2vd_5"
+                     class="_textbox_3tcss_5"
                      autocomplete="off"
                      inputmode="numeric"
                      value="2024"

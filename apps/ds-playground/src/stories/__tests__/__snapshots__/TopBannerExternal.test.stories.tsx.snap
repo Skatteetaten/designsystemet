@@ -808,10 +808,9 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
               Søk
             </label>
             <input id="textFieldTextboxId-:rb:"
-                   class="_textbox_1b2vd_5"
+                   class="_textbox_3tcss_5"
                    autocomplete="off"
                    placeholder="Søk"
-                   value
             >
             <div id="textFieldErrorId-:ra:"
                  aria-live="assertive"

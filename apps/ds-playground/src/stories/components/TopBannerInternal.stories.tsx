@@ -13,6 +13,7 @@ import {
 import {
   TopBannerInternal,
   ActionMenuActionsRef,
+  getTopBannerInternalHideLogoOnMobileDefault,
 } from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
@@ -34,6 +35,14 @@ const meta = {
     constructionBandTitle: { table: { category: category.props } },
     logoHref: { table: { category: category.props } },
     logo: { table: { category: category.props } },
+    hideLogoOnMobile: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getTopBannerInternalHideLogoOnMobileDefault().toString(),
+        },
+      },
+    },
     logoAltText: { table: { category: category.props } },
     // Event
     onLogoClick: { table: { category: category.event } },

@@ -1,4 +1,4 @@
-import React, {
+import {
   ChangeEvent,
   forwardRef,
   useId,
@@ -117,7 +117,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           {label}
         </LabelWithHelp>
         <div
-          className={`${styles.selectContainer} ${
+          className={`${styles.selectContainer} ${label && !hideLabel ? styles.selectContainerMarginTop : ''} ${
             classNames?.selectContainer ?? ''
           }`.trim()}
         >

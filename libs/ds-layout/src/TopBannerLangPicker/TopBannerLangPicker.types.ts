@@ -27,7 +27,7 @@ export interface TopBannerLangPickerProps extends BaseProps {
   openMenu: TopBannerMenu;
   /** Setter hvilken meny som er åpen*/
   setOpenMenu: Dispatch<SetStateAction<TopBannerMenu>>;
-  menuButtonRef?: RefObject<HTMLButtonElement>;
+  menuButtonRef?: RefObject<HTMLButtonElement | null>;
   additionalLanguages?: AdditionalLanguages;
 }
 

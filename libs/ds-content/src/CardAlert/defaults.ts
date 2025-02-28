@@ -12,7 +12,7 @@ import { CardAlertVariant } from './CardAlert.types';
 export const getCardAlertVariantDefault = (): CardAlertVariant => 'warning';
 export const getCardAlertSvgPathDefault = (
   variant: CardAlertVariant
-): ReactElement => {
+): ReactElement<SVGPathElement> => {
   switch (variant) {
     case 'warning':
       return ErrorSVGpath;

@@ -10,9 +10,8 @@ exports[`Tester/TextField Defaults play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:rc:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:rb:"
          aria-live="assertive"
@@ -33,7 +32,7 @@ exports[`Tester/TextField WithAs play-test 1`] = `
       Navn
     </label>
     <textarea id="textFieldTextboxId-:ri:"
-              class="_textbox_1b2vd_5  _textbox_multiline_1b2vd_31"
+              class="_textbox_3tcss_5  _textbox_multiline_3tcss_33  _textboxMarginTop_3tcss_21"
               autocomplete="off"
     >
     </textarea>
@@ -58,11 +57,10 @@ exports[`Tester/TextField WithAttributes play-test 1`] = `
       Navn
     </label>
     <input id="htmlid"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            data-testid="123ID"
            autocomplete="off"
            form="formid123"
-           value
     >
     <div id="textFieldErrorId-:r3:"
          aria-live="assertive"
@@ -83,12 +81,11 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
       Navn
     </label>
     <input id="textFieldTextboxId-:r14:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="given-name"
            inputmode="text"
-           name="test_name"
            placeholder="Kari Nordmann"
-           value
+           name="test_name"
     >
     <div id="textFieldErrorId-:r13:"
          aria-live="assertive"
@@ -109,7 +106,7 @@ exports[`Tester/TextField WithControlledValueAndAutoSizeTextArea play-test 1`] =
       Navn
     </label>
     <textarea id="textFieldTextboxId-:r35:"
-              class="_textbox_1b2vd_5  _textbox_multiline_1b2vd_31 _textbox_autosize_1b2vd_35"
+              class="_textbox_3tcss_5  _textbox_multiline_3tcss_33 _textbox_autosize_3tcss_37 _textboxMarginTop_3tcss_21"
               autocomplete="off"
               style="height: 64px;"
     >
@@ -163,11 +160,10 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
       beskrivelse
     </div>
     <input id="textFieldTextboxId-:r7:"
-           class="_textbox_1b2vd_5    dummyClassname"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21 dummyClassname"
            autocomplete="off"
            aria-describedby="textFieldErrorId-:r6:"
            aria-invalid="true"
-           value
     >
     <div id="textFieldErrorId-:r6:"
          aria-live="assertive"
@@ -202,10 +198,9 @@ exports[`Tester/TextField WithDataList play-test 1`] = `
       nettlesere
     </label>
     <input id="textFieldTextboxId-:r32:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            list="browsers"
-           value
     >
     <div id="textFieldErrorId-:r31:"
          aria-live="assertive"
@@ -238,7 +233,7 @@ exports[`Tester/TextField WithDefaultValue play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:rr:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            value="Kari Nordmann"
     >
@@ -261,7 +256,7 @@ exports[`Tester/TextField WithDefaultValueAndAutoSizeTextArea play-test 1`] = `
       Navn
     </label>
     <textarea id="textFieldTextboxId-:r11:"
-              class="_textbox_1b2vd_5  _textbox_multiline_1b2vd_31 _textbox_autosize_1b2vd_35"
+              class="_textbox_3tcss_5  _textbox_multiline_3tcss_33 _textbox_autosize_3tcss_37 _textboxMarginTop_3tcss_21"
               autocomplete="off"
               style="height: 88px;"
     >
@@ -286,7 +281,7 @@ exports[`Tester/TextField WithDefaultValueAndThousandSeparator play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:ru:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            value="10 000"
     >
@@ -312,9 +307,8 @@ exports[`Tester/TextField WithDescription play-test 1`] = `
       En liten beskrivelse tekst
     </div>
     <input id="textFieldTextboxId-:r20:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r1v:"
          aria-live="assertive"
@@ -335,7 +329,7 @@ exports[`Tester/TextField WithDisabled play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:rl:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            disabled
            value="Kari Nordmann"
@@ -359,11 +353,10 @@ exports[`Tester/TextField WithErrorMessage play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1s:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            aria-describedby="textFieldErrorId-:r1r:"
            aria-invalid="true"
-           value
     >
     <div id="textFieldErrorId-:r1r:"
          aria-live="assertive"
@@ -398,9 +391,8 @@ exports[`Tester/TextField WithEventHandlers play-test 1`] = `
       TextField har blitt blurret
     </label>
     <input id="textFieldTextboxId-:r2m:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r2l:"
          aria-live="assertive"
@@ -441,9 +433,8 @@ exports[`Tester/TextField WithHelpText play-test 1`] = `
       </svg>
     </button>
     <input id="textFieldTextboxId-:r2c:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r2b:"
          aria-live="assertive"
@@ -487,9 +478,8 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
       En liten beskrivelse tekst
     </div>
     <input id="textFieldTextboxId-:r2h:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r2g:"
          aria-live="assertive"
@@ -530,9 +520,8 @@ exports[`Tester/TextField WithHelpToggleEvent smoke-test 1`] = `
       </svg>
     </button>
     <input id="textFieldTextboxId-:r2p:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r2o:"
          aria-live="assertive"
@@ -553,9 +542,8 @@ exports[`Tester/TextField WithHideLabel play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r23:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r22:"
          aria-live="assertive"
@@ -576,11 +564,10 @@ exports[`Tester/TextField WithMinAndMaxLength play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1g:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            maxlength="50"
            minlength="10"
-           value
     >
     <div id="textFieldErrorId-:r1f:"
          aria-live="assertive"
@@ -601,10 +588,9 @@ exports[`Tester/TextField WithPattern play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1j:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            pattern="[a-z]"
-           value
     >
     <div id="textFieldErrorId-:r1i:"
          aria-live="assertive"
@@ -625,7 +611,7 @@ exports[`Tester/TextField WithReadOnly play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r17:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            readonly
            value="Kari Nordmann"
@@ -649,9 +635,8 @@ exports[`Tester/TextField WithRef play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
            name="dummyNameForwardedFromRef"
     >
     <div id="textFieldErrorId-:r0:"
@@ -673,10 +658,9 @@ exports[`Tester/TextField WithRequired play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1a:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            required
-           value
     >
     <div id="textFieldErrorId-:r19:"
          aria-live="assertive"
@@ -697,10 +681,9 @@ exports[`Tester/TextField WithRequiredAndMark smoke-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1d:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            required
-           value
     >
     <div id="textFieldErrorId-:r1c:"
          aria-live="assertive"
@@ -721,7 +704,7 @@ exports[`Tester/TextField WithRows play-test 1`] = `
       Navn
     </label>
     <textarea id="textFieldTextboxId-:r1m:"
-              class="_textbox_1b2vd_5  _textbox_multiline_1b2vd_31"
+              class="_textbox_3tcss_5  _textbox_multiline_3tcss_33  _textboxMarginTop_3tcss_21"
               autocomplete="off"
               rows="4"
     >
@@ -783,7 +766,7 @@ exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
             Navn
           </label>
           <textarea id="textFieldTextboxId-:r2v:"
-                    class="_textbox_1b2vd_5  _textbox_multiline_1b2vd_31 _textbox_autosize_1b2vd_35"
+                    class="_textbox_3tcss_5  _textbox_multiline_3tcss_33 _textbox_autosize_3tcss_37 _textboxMarginTop_3tcss_21"
                     autocomplete="off"
                     style="height: 0px;"
           >
@@ -810,9 +793,8 @@ exports[`Tester/TextField WithThousandSeparator play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r26:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r25:"
          aria-live="assertive"
@@ -833,9 +815,8 @@ exports[`Tester/TextField WithThousandSeparatorAndNegativeValue play-test 1`] = 
       Navn
     </label>
     <input id="textFieldTextboxId-:r29:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:r28:"
          aria-live="assertive"
@@ -856,7 +837,7 @@ exports[`Tester/TextField WithValue play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:ro:"
-           class="_textbox_1b2vd_5"
+           class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
            autocomplete="off"
            value="Kari Nordmann"
     >
@@ -879,9 +860,8 @@ exports[`Tester/TextField WithVariantLarge smoke-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:rf:"
-           class="_textbox_1b2vd_5 _textbox_large_1b2vd_22"
+           class="_textbox_3tcss_5 _textbox_large_3tcss_24   _textboxMarginTop_3tcss_21"
            autocomplete="off"
-           value
     >
     <div id="textFieldErrorId-:re:"
          aria-live="assertive"

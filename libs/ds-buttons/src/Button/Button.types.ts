@@ -56,7 +56,7 @@ export interface ButtonCommonProps
   /** Tekst på knapp. */
   children: string;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Definerer stilen til knappen. */
   variant?: ButtonVariant;
   /** Om knappen skal inneholde Spinner. */

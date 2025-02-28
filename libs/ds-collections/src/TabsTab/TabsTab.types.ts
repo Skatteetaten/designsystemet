@@ -6,7 +6,7 @@ export interface TabsTabProps extends BaseProps {
   /** Innhold i en tab */
   children: string;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Verdien som lenker sammen Tabs.Tab og Tabs.Panel */
   value: string;
   /** Callback som kalles ved klikk på Tab. */

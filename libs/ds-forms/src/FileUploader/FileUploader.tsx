@@ -200,7 +200,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
           ref={buttonRef}
           type={'button'}
           id={id}
-          className={`${styles.dropZone} ${
+          className={`${styles.dropZone} ${label && !hideLabel ? styles.dropZoneMarginTop : ''} ${
             errorMessage ? styles.dropZone_error : ''
           } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`.trim()}
           disabled={isUploading}
