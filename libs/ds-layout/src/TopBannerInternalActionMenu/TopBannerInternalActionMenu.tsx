@@ -1,11 +1,4 @@
-import {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-  type JSX,
-} from 'react';
+import { useEffect, useImperativeHandle, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -32,110 +25,103 @@ import styles from './TopBannerInternalActionMenu.module.scss';
 /* eslint-disable react-compiler/react-compiler */
 
 /* eslint-disable react/forbid-dom-props */
-export const TopBannerInternalActionMenu = forwardRef<
-  HTMLButtonElement,
-  TopBannerInternalActionMenuProps
->(
-  (
-    {
-      id,
-      className = getCommonClassNameDefault(),
-      lang,
-      'data-testid': dataTestId,
-      menuActionsRef,
-      children,
+export const TopBannerInternalActionMenu = ({
+  ref,
+  id,
+  className = getCommonClassNameDefault(),
+  lang,
+  'data-testid': dataTestId,
+  menuActionsRef,
+  children,
+}: TopBannerInternalActionMenuProps): JSX.Element => {
+  const arrowRef = useRef<HTMLDivElement>(null);
+  const arrowLen = arrowRef.current?.offsetWidth ?? 0;
+  // +6 for at pilen skal ligge på utsiden av outline på knappen
+  const floatingOffset = Math.sqrt(2 * arrowLen ** 2) / 2 + 6;
+
+  const [isOpen, setOpen] = useState<boolean>(false);
+
+  const floatingData = useFloating<HTMLButtonElement>({
+    open: isOpen,
+    onOpenChange: (open) => {
+      setOpen(open);
     },
-    ref
-  ): JSX.Element => {
-    const arrowRef = useRef<HTMLDivElement>(null);
-    const arrowLen = arrowRef.current?.offsetWidth ?? 0;
-    // +6 for at pilen skal ligge på utsiden av outline på knappen
-    const floatingOffset = Math.sqrt(2 * arrowLen ** 2) / 2 + 6;
+    placement: 'bottom-start',
+    whileElementsMounted: autoUpdate,
+    middleware: [
+      offset({ mainAxis: floatingOffset, alignmentAxis: -32 }),
+      flip(),
+      shift(),
+      arrow({ element: arrowRef }),
+    ],
+  });
 
-    const [isOpen, setOpen] = useState<boolean>(false);
+  const dismiss = useDismiss(floatingData.context, {
+    ancestorScroll: true,
+  });
+  const interactions = useInteractions([dismiss]);
+  const { refs, floatingStyles, middlewareData } = floatingData;
+  const { getFloatingProps, getReferenceProps } = interactions;
 
-    const floatingData = useFloating<HTMLButtonElement>({
-      open: isOpen,
-      onOpenChange: (open) => {
-        setOpen(open);
-      },
-      placement: 'bottom-start',
-      whileElementsMounted: autoUpdate,
-      middleware: [
-        offset({ mainAxis: floatingOffset, alignmentAxis: -32 }),
-        flip(),
-        shift(),
-        arrow({ element: arrowRef }),
-      ],
-    });
+  const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
-    const dismiss = useDismiss(floatingData.context, {
-      ancestorScroll: true,
-    });
-    const interactions = useInteractions([dismiss]);
-    const { refs, floatingStyles, middlewareData } = floatingData;
-    const { getFloatingProps, getReferenceProps } = interactions;
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const mergedButtonRef = useMergeRefs([refs.setReference, buttonRef, ref]);
 
-    const { t } = useTranslation('ds_layout', { i18n: dsI18n });
+  useImperativeHandle(menuActionsRef, () => ({
+    open: (): void => setOpen(true),
+    close: (): void => setOpen(false),
+  }));
 
-    const buttonRef = useRef<HTMLButtonElement>(null);
-    const mergedButtonRef = useMergeRefs([refs.setReference, buttonRef, ref]);
-
-    useImperativeHandle(menuActionsRef, () => ({
-      open: (): void => setOpen(true),
-      close: (): void => setOpen(false),
-    }));
-
-    useEffect(() => {
-      if (buttonRef.current) {
-        buttonRef.current.ariaExpanded = isOpen.toString();
-      }
-    }, [isOpen]);
-    return (
-      <>
-        <InlineButton
-          id={id}
-          className={className}
-          lang={lang}
-          data-testid={dataTestId}
-          {...getReferenceProps()}
-          ref={mergedButtonRef}
-          svgPath={MenuSVGpath}
-          brightness={'light'}
-          onClick={() => {
-            setOpen(!isOpen);
-          }}
+  useEffect(() => {
+    if (buttonRef.current) {
+      buttonRef.current.ariaExpanded = isOpen.toString();
+    }
+  }, [isOpen]);
+  return (
+    <>
+      <InlineButton
+        id={id}
+        className={className}
+        lang={lang}
+        data-testid={dataTestId}
+        {...getReferenceProps()}
+        ref={mergedButtonRef}
+        svgPath={MenuSVGpath}
+        brightness={'light'}
+        onClick={() => {
+          setOpen(!isOpen);
+        }}
+      >
+        {t('topbannerbutton.Menu')}
+      </InlineButton>
+      {isOpen && (
+        <FloatingFocusManager
+          returnFocus={buttonRef}
+          context={floatingData.context}
+          modal={false}
+          // -1 her for å hindre at fokusManager overstyrer fokus vekk fra knappen når menyen åpnes
+          initialFocus={-1}
         >
-          {t('topbannerbutton.Menu')}
-        </InlineButton>
-        {isOpen && (
-          <FloatingFocusManager
-            returnFocus={buttonRef}
-            context={floatingData.context}
-            modal={false}
-            // -1 her for å hindre at fokusManager overstyrer fokus vekk fra knappen når menyen åpnes
-            initialFocus={-1}
+          <div
+            className={styles.menu}
+            {...getFloatingProps()}
+            ref={refs.setFloating}
+            style={floatingStyles}
           >
-            <div
-              className={styles.menu}
-              {...getFloatingProps()}
-              ref={refs.setFloating}
-              style={floatingStyles}
-            >
-              {children}
+            {children}
 
-              <div
-                ref={arrowRef}
-                style={{
-                  left: middlewareData.arrow?.x,
-                  top: `-${(arrowRef.current?.offsetWidth ?? 0) / 2}px`,
-                }}
-                className={`${styles.arrow}`.trim()}
-              ></div>
-            </div>
-          </FloatingFocusManager>
-        )}
-      </>
-    );
-  }
-);
+            <div
+              ref={arrowRef}
+              style={{
+                left: middlewareData.arrow?.x,
+                top: `-${(arrowRef.current?.offsetWidth ?? 0) / 2}px`,
+              }}
+              className={`${styles.arrow}`.trim()}
+            ></div>
+          </div>
+        </FloatingFocusManager>
+      )}
+    </>
+  );
+};

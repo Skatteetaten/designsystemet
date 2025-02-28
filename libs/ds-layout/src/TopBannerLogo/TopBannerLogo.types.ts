@@ -1,4 +1,4 @@
-import { RefObject } from 'react';
+import { Ref, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -47,4 +47,7 @@ type TopBannerLogoDiscrimatedProps =
       as?: Extract<LogoAs, 'div'>;
     };
 
-export type TopBannerLogoProps = TopBannerLogoDiscrimatedProps & BaseProps;
+export type TopBannerLogoProps = TopBannerLogoDiscrimatedProps &
+  BaseProps & {
+    ref?: Ref<LogoRefHandle>;
+  };

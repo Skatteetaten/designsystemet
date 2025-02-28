@@ -1,4 +1,4 @@
-import { forwardRef, ReactNode, useContext, useMemo, JSX } from 'react';
+import { ReactNode, useContext, useMemo, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -41,33 +41,29 @@ const TabRenderComponent = ({
   }
 };
 
-export const TabsList = forwardRef<HTMLDivElement, TabsListProps>(
-  (
-    {
-      id,
-      className = getCommonClassNameDefault(),
-      lang,
-      'data-testid': dataTestId,
-      children,
-    },
-    ref
-  ): JSX.Element => {
-    const { isMultiline, ...context } = useContext(TabsContext);
-    const multilineClassName = isMultiline ? styles.tabList_multiline : '';
-    return (
-      <div
-        ref={ref}
-        id={id}
-        className={`${styles.tabList} ${multilineClassName} ${className}`.trim()}
-        lang={lang}
-        data-testid={dataTestId}
-        role={'tablist'}
-        tabIndex={-1}
-      >
-        <TabRenderComponent context={context}>{children}</TabRenderComponent>
-      </div>
-    );
-  }
-) as TabsListComponent;
+export const TabsList = (({
+  ref,
+  id,
+  className = getCommonClassNameDefault(),
+  lang,
+  'data-testid': dataTestId,
+  children,
+}: TabsListProps): JSX.Element => {
+  const { isMultiline, ...context } = useContext(TabsContext);
+  const multilineClassName = isMultiline ? styles.tabList_multiline : '';
+  return (
+    <div
+      ref={ref}
+      id={id}
+      className={`${styles.tabList} ${multilineClassName} ${className}`.trim()}
+      lang={lang}
+      data-testid={dataTestId}
+      role={'tablist'}
+      tabIndex={-1}
+    >
+      <TabRenderComponent context={context}>{children}</TabRenderComponent>
+    </div>
+  );
+}) as TabsListComponent;
 
 TabsList.displayName = 'TabsList';

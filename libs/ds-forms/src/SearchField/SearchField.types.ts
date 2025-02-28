@@ -2,10 +2,9 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
-  ForwardRefExoticComponent,
   KeyboardEventHandler,
   MouseEventHandler,
-  RefAttributes,
+  Ref,
 } from 'react';
 
 import {
@@ -16,7 +15,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
-import { SearchFieldResultProps } from '../SearchFieldResult/SearchFieldResult.types';
+import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
 
 export const searchArrSize = [sizeArr[2], sizeArr[3], sizeArr[4]] as const;
 export type SearchSize = (typeof searchArrSize)[number];
@@ -51,6 +50,7 @@ export interface SearchResult {
 interface SearchFieldCommonProps
   extends SearchFieldPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
       container?: string;
@@ -97,11 +97,6 @@ interface SearchFieldCommonProps
 
 export type SearchFieldProps = SearchFieldCommonProps & FormRequiredProps;
 
-export interface SearchFieldComponent
-  extends ForwardRefExoticComponent<
-    SearchFieldProps & RefAttributes<HTMLInputElement>
-  > {
-  Result: ForwardRefExoticComponent<
-    SearchFieldResultProps & RefAttributes<HTMLLIElement>
-  >;
+export interface SearchFieldComponent extends React.FC<SearchFieldProps> {
+  Result: typeof SearchFieldResult;
 }

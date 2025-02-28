@@ -1,10 +1,4 @@
-import {
-  ForwardRefExoticComponent,
-  ReactNode,
-  SetStateAction,
-  Dispatch,
-  RefAttributes,
-} from 'react';
+import { Dispatch, ReactNode, Ref, SetStateAction } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -36,6 +30,7 @@ type TabsDiscriminatedValueProps =
     };
 
 interface TabsCommonProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er controlled */
   value?: string;
   /**
@@ -57,8 +52,7 @@ interface TabsCommonProps extends BaseProps {
 
 export type TabsProps = TabsCommonProps & TabsDiscriminatedValueProps;
 
-export interface TabsComponent
-  extends ForwardRefExoticComponent<TabsProps & RefAttributes<HTMLDivElement>> {
+export interface TabsComponent extends React.FC<TabsProps> {
   List: typeof TabsList;
   Panel: typeof TabsPanel;
   Tab: typeof TabsTab;

@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ReactElement, ReactNode, Ref } from 'react';
 
 import { BaseProps, Brightness, Status } from '@skatteetaten/ds-core-utils';
 
@@ -28,6 +28,7 @@ type AlertShow =
 export type AlertProps = AlertHTMLAttributes &
   BaseProps &
   AlertShow & {
+    ref?: Ref<HTMLDivElement>;
     /** Brightness på bakgrunnsfarge. 'light' bør brukes når Alert ligger på fargede bakgrunner. */
     backgroundBrightness?: AlertBackgroundBrightness;
     /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */

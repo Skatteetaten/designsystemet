@@ -1,13 +1,14 @@
-import { ForwardRefExoticComponent, RefAttributes, JSX } from 'react';
+import React, { JSX, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { ListElementProps } from '../ListElement/ListElement.types';
+import { ListElement } from '../ListElement/ListElement';
 
 export const listAsArr = ['ul', 'ol'] as const;
 export type ListAs = (typeof listAsArr)[number];
 
 export interface ListProps extends BaseProps {
+  ref?: Ref<AnyHTMLListElement>;
   /** HTML-tag for listen */
   as?: ListAs;
   /** Margin under listen */
@@ -18,13 +19,8 @@ export interface ListProps extends BaseProps {
   canBeManuallyFocused?: boolean;
 }
 
-export interface ListComponent
-  extends ForwardRefExoticComponent<
-    ListProps & RefAttributes<AnyHTMLListElement>
-  > {
-  Element: ForwardRefExoticComponent<
-    ListElementProps & RefAttributes<HTMLLIElement>
-  >;
+export interface ListComponent extends React.FC<ListProps> {
+  Element: typeof ListElement;
 }
 
 export type AnyHTMLListElement = HTMLOListElement | HTMLUListElement;

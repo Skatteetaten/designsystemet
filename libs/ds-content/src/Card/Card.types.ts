@@ -1,16 +1,10 @@
-import {
-  ComponentPropsWithoutRef,
-  ForwardRefExoticComponent,
-  ReactNode,
-  RefAttributes,
-} from 'react';
+import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, colorNamesArr, Spacing } from '@skatteetaten/ds-core-utils';
 
-import { CardActions } from '../CardActions/CardActions';
-import { CardAlert } from '../CardAlert/CardAlert';
-import { CardContent } from '../CardContent/CardContent';
-import { CardHeader } from '../CardHeader/CardHeader';
+import { CardActionsProps } from '../CardActions/CardActions.types';
+import { CardAlertProps } from '../CardAlert/CardAlert.types';
+import { CardContentProps } from '../CardContent/CardContent.types';
 
 export type CardColor = Extract<
   (typeof colorNamesArr)[number],
@@ -35,6 +29,7 @@ export const cardColorArr: CardColor[] = [
 ];
 
 export interface CardComponentCommonProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Innholdet i komponenten. */
   children: ReactNode;
   /** Farge på border og bakgrunn. */
@@ -46,10 +41,9 @@ export interface CardComponentCommonProps extends BaseProps {
 
 export type CardProps = CardComponentCommonProps;
 
-export interface CardComponent
-  extends ForwardRefExoticComponent<CardProps & RefAttributes<HTMLDivElement>> {
-  Alert: typeof CardAlert;
-  Actions: typeof CardActions;
-  Content: typeof CardContent;
-  Header: typeof CardHeader;
+export interface CardComponent extends React.FC<CardProps> {
+  Alert: React.FC<CardAlertProps>;
+  Actions: React.FC<CardActionsProps>;
+  Content: React.FC<CardContentProps>;
+  Header: React.FC<CardContentProps>;
 }

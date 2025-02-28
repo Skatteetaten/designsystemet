@@ -1,13 +1,8 @@
-import {
-  ForwardRefExoticComponent,
-  MouseEventHandler,
-  ReactNode,
-  RefAttributes,
-} from 'react';
+import { MouseEventHandler, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
+import { TopBannerInternalActionMenuProps } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
 type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
@@ -15,6 +10,7 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 };
 
 export interface TopBannerInternalProps extends BaseProps {
+  ref?: Ref<HTMLElement>;
   classNames?: {
     logo?: string;
     childrenAndUserContainer?: string;
@@ -54,8 +50,6 @@ export interface TopBannerInternalProps extends BaseProps {
 }
 
 export interface TopBannerInternalComponent
-  extends ForwardRefExoticComponent<
-    TopBannerInternalProps & RefAttributes<HTMLElement>
-  > {
-  ActionMenu: typeof TopBannerInternalActionMenu;
+  extends React.FC<TopBannerInternalProps> {
+  ActionMenu: React.FC<TopBannerInternalActionMenuProps>;
 }

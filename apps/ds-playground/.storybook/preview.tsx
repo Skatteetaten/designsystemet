@@ -121,9 +121,8 @@ const argTypes = {
   },
   ref: {
     control: { disable: true },
-    description: 'React ref sendt gjennom React.forwardref',
+    description: 'React ref',
     table: {
-      type: { summary: 'React.ForwardedRef' },
       category: category.baseProps,
     },
   },

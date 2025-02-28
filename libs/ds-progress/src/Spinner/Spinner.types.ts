@@ -1,3 +1,5 @@
+import { Ref } from 'react';
+
 import { BaseProps, sizeArr } from '@skatteetaten/ds-core-utils';
 
 export const spinnerSizeArr = [sizeArr[1], sizeArr[2], sizeArr[3]] as const;
@@ -9,6 +11,7 @@ export const spinnerPositionArr = ['right', 'bottom'] as const;
 export type SpinnerTitlePostion = (typeof spinnerPositionArr)[number];
 
 export interface SpinnerProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Farge på spinneren */
   color?: SpinnerColor;
   /** Posisjon på ledeteksten */

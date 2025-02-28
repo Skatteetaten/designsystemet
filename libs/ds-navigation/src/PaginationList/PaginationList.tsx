@@ -1,7 +1,12 @@
-import { ReactNode, RefObject, JSX } from 'react';
+import { ReactNode, RefObject, JSX, Ref } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Button, IconButton, InlineButton } from '@skatteetaten/ds-buttons';
+import {
+  Button,
+  ButtonProps,
+  IconButton,
+  InlineButton,
+} from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ChevronLeftSVGpath,
@@ -70,9 +75,9 @@ const getFirstOrLastRef = ({
 }: {
   paging: string | number;
   lastPage: number;
-  firstPageRef: RefObject<HTMLButtonElement | null> | undefined;
-  lastPageRef: RefObject<HTMLButtonElement | null> | undefined;
-}): RefObject<HTMLButtonElement | null> | undefined => {
+  firstPageRef: Ref<HTMLButtonElement> | undefined;
+  lastPageRef: Ref<HTMLButtonElement> | undefined;
+}): Ref<HTMLButtonElement> | undefined => {
   if (paging === 1) return firstPageRef;
   else if (paging === lastPage) return lastPageRef;
   return undefined;

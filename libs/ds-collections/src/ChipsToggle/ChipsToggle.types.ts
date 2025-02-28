@@ -1,8 +1,11 @@
+import { Ref } from 'react';
+
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { ChipCommonProps } from '../Chips/Chips.types';
 
 export interface ChipsToggleProps extends ChipCommonProps, BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   /** Angir om et avmerkingsikon (checkmark) skal vises i chipen. */
   showCheckmark?: boolean;
   /**

@@ -2,9 +2,8 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
-  ForwardRefExoticComponent,
-  RefAttributes,
   JSX,
+  Ref,
 } from 'react';
 
 import {
@@ -15,6 +14,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
+import { SelectOption } from '../SelectOption/SelectOption';
 import { SelectOptionProps } from '../SelectOption/SelectOption.types';
 
 type RequiredSelectHTMLAttributes = Pick<
@@ -37,6 +37,7 @@ interface SelectPropsHTMLAttributes extends SelectHTMLAttributes {
 }
 
 interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
+  ref?: Ref<HTMLSelectElement>;
   classNames?: Prettify<
     {
       container?: string;
@@ -73,11 +74,6 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
 
 export type SelectProps = SelectCommonProps & FormRequiredProps;
 
-export interface SelectComponent
-  extends ForwardRefExoticComponent<
-    SelectProps & RefAttributes<HTMLSelectElement>
-  > {
-  Option: ForwardRefExoticComponent<
-    SelectOptionProps & RefAttributes<HTMLOptionElement>
-  >;
+export interface SelectComponent extends React.FC<SelectProps> {
+  Option: typeof SelectOption;
 }

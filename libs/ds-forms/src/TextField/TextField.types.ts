@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  Ref,
   RefObject,
 } from 'react';
 
@@ -48,6 +49,7 @@ interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
 export interface TextFieldCommonProps
   extends TextFieldPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<TextboxRefHandle>;
   classNames?: Prettify<
     {
       container?: string;

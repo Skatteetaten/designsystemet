@@ -1,4 +1,4 @@
-import { ComponentType, forwardRef, Ref, useRef, JSX } from 'react';
+import { ComponentType, Ref, useRef, JSX } from 'react';
 
 import { ExampleComponentProps } from './ExampleComponent';
 
@@ -53,12 +53,15 @@ const ExampleComponentWithoutRef = whateverHOC(
 );
 
 // Dette er komponeneten som eksporteres, da den har fått forwardref på seg i lik linje som de andre
-export const ExampleComponentHOC = forwardRef<
-  HTMLButtonElement,
-  ExampleComponentProps
->(function MyExampleComponent(props, ref) {
+// TODO: trenger vi dette mer?
+export const ExampleComponentHOC = function MyExampleComponent({
+  ref,
+  ...props
+}: ExampleComponentProps & {
+  ref: React.RefObject<HTMLButtonElement>;
+}): JSX.Element {
   return <ExampleComponentWithoutRef {...props} incomingRef={ref} />;
-});
+};
 
 // Eksempel på hvordan man bruker komponenten
 export const UsageOfMyComponent = (): JSX.Element => {

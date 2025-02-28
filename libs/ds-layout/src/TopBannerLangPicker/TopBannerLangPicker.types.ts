@@ -1,9 +1,8 @@
 import {
   Dispatch,
-  ForwardRefExoticComponent,
   FunctionComponent,
   MouseEventHandler,
-  RefAttributes,
+  Ref,
   RefObject,
   SetStateAction,
 } from 'react';
@@ -12,11 +11,12 @@ import { BaseProps, Languages } from '@skatteetaten/ds-core-utils';
 
 import { LanguageItem } from './utils';
 import { TopBannerMenu } from '../TopBannerExternal/TopBannerExternal.types';
-import { TopBannerLangPickerButtonProps } from '../TopBannerLangPickerButton/TopBannerLangPickerButton.types';
+import { TopBannerLangPickerButton } from '../TopBannerLangPickerButton/TopBannerLangPickerButton';
 
 type AdditionalLanguages = Array<LanguageItem & { flag: FunctionComponent }>;
 
 export interface TopBannerLangPickerProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Hvilket språk som skal være forhåndsvalgt. */
   defaultLocale?: Languages | string;
   /** Callback når et språk trykkes på. */
@@ -32,10 +32,6 @@ export interface TopBannerLangPickerProps extends BaseProps {
 }
 
 export interface TopBannerLangPickerComponent
-  extends ForwardRefExoticComponent<
-    TopBannerLangPickerProps & RefAttributes<HTMLDivElement>
-  > {
-  Button: ForwardRefExoticComponent<
-    TopBannerLangPickerButtonProps & RefAttributes<HTMLButtonElement>
-  >;
+  extends React.FC<TopBannerLangPickerProps> {
+  Button: typeof TopBannerLangPickerButton;
 }

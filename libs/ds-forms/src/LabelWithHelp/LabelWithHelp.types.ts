@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -12,6 +12,7 @@ type RequiredLabelHTMLAttributes = Pick<
 export interface LabelWithHelpProps
   extends RequiredLabelHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLLabelElement>;
   classNames?: {
     label?: string;
   } & HelpProps['classNames'];

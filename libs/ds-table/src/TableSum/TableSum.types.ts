@@ -1,4 +1,4 @@
-import { HTMLProps, ReactNode } from 'react';
+import { HTMLProps, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -11,6 +11,7 @@ type RequiredSumHTMLAttributes = Pick<
 type SumHTMLAttributes = Partial<RequiredSumHTMLAttributes>;
 
 export interface TableSumProps extends SumHTMLAttributes, BaseProps {
+  ref?: Ref<HTMLTableRowElement>;
   /** Overskriver default tekst i raden*/
   sumText?: string;
   /** Tekstjustering for tekst i sumrad*/

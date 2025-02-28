@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
@@ -23,6 +23,7 @@ export type AccordionSize = Extract<
 
 export type IconPosition = Extract<Position, 'left' | 'right'>;
 export interface AccordionProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Bakgrunnsfarge */
   color?: AccordionColor;
   /** Størrelse */
@@ -33,13 +34,8 @@ export interface AccordionProps extends BaseProps {
   children?: ReactNode;
 }
 
-export interface AccordionComponent
-  extends ForwardRefExoticComponent<
-    AccordionProps & RefAttributes<HTMLDivElement>
-  > {
-  Item: ForwardRefExoticComponent<
-    AccordionItemProps & RefAttributes<HTMLButtonElement>
-  >;
+export interface AccordionComponent extends React.FC<AccordionProps> {
+  Item: React.FC<AccordionItemProps>;
 }
 
 export type AccordionContextProps = Exclude<
