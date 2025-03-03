@@ -2,9 +2,8 @@ import { MouseEventHandler, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { TopBannerInternalActionMenuProps } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu.types';
-import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
+import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
 type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
   text: TopBannerSkipLinkProps['children'];

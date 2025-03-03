@@ -2,7 +2,6 @@ import { Ref } from 'react';
 
 import { TFunction } from 'i18next';
 
-import { ButtonProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { PaginationList } from '../PaginationList/PaginationList';

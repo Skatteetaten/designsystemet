@@ -1,12 +1,7 @@
-import { ReactNode, RefObject, JSX, Ref } from 'react';
+import { JSX, ReactNode, Ref } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  Button,
-  ButtonProps,
-  IconButton,
-  InlineButton,
-} from '@skatteetaten/ds-buttons';
+import { Button, IconButton, InlineButton } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ChevronLeftSVGpath,

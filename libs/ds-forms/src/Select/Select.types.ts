@@ -15,7 +15,6 @@ import {
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import { SelectOption } from '../SelectOption/SelectOption';
-import { SelectOptionProps } from '../SelectOption/SelectOption.types';
 
 type RequiredSelectHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'select'>,

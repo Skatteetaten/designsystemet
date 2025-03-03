@@ -1,21 +1,20 @@
 import {
   isValidElement,
+  JSX,
   useEffect,
   useImperativeHandle,
   useRef,
   useState,
-  JSX,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import { ExpandableRowProps } from './TableRowWithIconButton.types';
-import { getIconButtonSize } from './utils';
-import { RowWithExpandButtonHandle } from '../Table/Table.types';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 import { TableRow } from '../TableRow/TableRow';
+import { ExpandableRowProps } from './TableRowWithIconButton.types';
+import { getIconButtonSize } from './utils';
 
 import styles from './TableRowWithIconButton.module.scss';
 

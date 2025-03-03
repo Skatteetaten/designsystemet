@@ -10,15 +10,15 @@ import {
 
 import {
   dsI18n,
+  getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
-  getCommonAutoCompleteDefault,
   Languages,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
 import { getTextFieldAsDefault } from './defaults';
-import { TextboxRefHandle, TextFieldProps } from './TextField.types';
+import { TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 

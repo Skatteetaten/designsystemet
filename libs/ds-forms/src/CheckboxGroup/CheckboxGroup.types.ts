@@ -1,15 +1,8 @@
-import {
-  ComponentPropsWithoutRef,
-  ForwardRefExoticComponent,
-  RefAttributes,
-  ReactNode,
-  Ref,
-} from 'react';
+import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { Checkbox } from '../Checkbox/Checkbox';
-import { CheckboxProps } from '../Checkbox/Checkbox.types';
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 
 type RequiredCheckboxGroupHTMLAttributes = Pick<

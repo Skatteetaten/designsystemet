@@ -1,4 +1,4 @@
-import { useEffect, useImperativeHandle, useRef, useState, JSX } from 'react';
+import { JSX, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -11,7 +11,6 @@ import {
 
 import {
   TopBannerExternalProps,
-  TopBannerExternalHandle,
   TopBannerMenu,
 } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
