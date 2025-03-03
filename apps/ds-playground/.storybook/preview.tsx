@@ -113,12 +113,6 @@ const parameters = {
 };
 
 const argTypes = {
-  key: {
-    control: { disable: true },
-    description:
-      'Spesielt string attributt som brukes for å iterere gjennom elementer',
-    table: { type: { summary: 'string' }, category: category.baseProps },
-  },
   ref: {
     control: { disable: true },
     description: 'React ref',
