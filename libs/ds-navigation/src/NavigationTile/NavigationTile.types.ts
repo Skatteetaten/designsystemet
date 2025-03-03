@@ -22,6 +22,7 @@ export type NavigationTileSize = Extract<
 export interface NavigationTileComponentCommonProps
   extends NavigationTilePropsHTMLAttributes,
     BaseProps {
+  ref?: React.Ref<HTMLAnchorElement>;
   classNames?: {
     container?: string;
     title?: string;

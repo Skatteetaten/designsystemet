@@ -10,7 +10,6 @@ const meta = {
   title: 'Tester/Card/Actions',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },

@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
@@ -7,7 +7,7 @@ import {
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
 
-import { AccordionItemProps } from '../AccordionItem/AccordionItem.types';
+import { AccordionItem } from '../AccordionItem/AccordionItem';
 
 export type AccordionColor =
   | Extract<
@@ -23,6 +23,7 @@ export type AccordionSize = Extract<
 
 export type IconPosition = Extract<Position, 'left' | 'right'>;
 export interface AccordionProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Bakgrunnsfarge */
   color?: AccordionColor;
   /** Størrelse */
@@ -33,13 +34,8 @@ export interface AccordionProps extends BaseProps {
   children?: ReactNode;
 }
 
-export interface AccordionComponent
-  extends ForwardRefExoticComponent<
-    AccordionProps & RefAttributes<HTMLDivElement>
-  > {
-  Item: ForwardRefExoticComponent<
-    AccordionItemProps & RefAttributes<HTMLButtonElement>
-  >;
+export interface AccordionComponent extends React.FC<AccordionProps> {
+  Item: typeof AccordionItem;
 }
 
 export type AccordionContextProps = Exclude<

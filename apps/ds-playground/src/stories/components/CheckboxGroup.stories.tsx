@@ -10,9 +10,6 @@ import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-CheckboxGroup.Checkbox = { ...CheckboxGroup.Checkbox };
 CheckboxGroup.Checkbox.displayName = 'CheckboxGroup.Checkbox';
 
 const meta = {

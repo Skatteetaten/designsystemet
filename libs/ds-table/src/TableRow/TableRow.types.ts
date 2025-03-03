@@ -1,10 +1,11 @@
-import { ReactNode } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
 
 type ExpandButtonPosition = Extract<Position, 'left' | 'right'>;
 
 export interface TableRowProps extends BaseProps {
+  ref?: Ref<HTMLTableRowElement>;
   /** Overstyring av standard title for expandButton */
   expandButtonTitle?: string;
   /** Posisjonen til ikonet: 'left', 'right'. */

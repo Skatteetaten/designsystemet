@@ -1,11 +1,15 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode, RefObject } from 'react';
 
 import { IconButtonProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { TableContextProps } from '../Table/Table.types';
+import {
+  RowWithExpandButtonHandle,
+  TableContextProps,
+} from '../Table/Table.types';
 
 export interface ExpandableRowProps extends BaseProps {
+  ref?: RefObject<RowWithExpandButtonHandle>;
   expandButtonTitle: string;
   expandableContent: ReactNode;
   context: TableContextProps | null;

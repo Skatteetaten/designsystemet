@@ -9,7 +9,6 @@ const meta = {
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
-    key: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },

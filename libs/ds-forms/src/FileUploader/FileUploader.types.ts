@@ -1,10 +1,4 @@
-import {
-  ComponentPropsWithoutRef,
-  ForwardRefExoticComponent,
-  MouseEvent,
-  ReactNode,
-  RefAttributes,
-} from 'react';
+import { ComponentPropsWithoutRef, MouseEvent, ReactNode, Ref } from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
@@ -30,6 +24,7 @@ export type UploadResult = {
 export interface FileUploaderCommonProps
   extends FileUploaderHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLDivElement>;
   classNames?: Prettify<
     {
       errorMessage?: string;
@@ -126,9 +121,6 @@ export interface UploadedFile {
 
 export type FileUploaderProps = FileUploaderCommonProps;
 
-export interface FileUploaderComponent
-  extends ForwardRefExoticComponent<
-    FileUploaderProps & RefAttributes<HTMLDivElement>
-  > {
+export interface FileUploaderComponent extends React.FC<FileUploaderProps> {
   useFileUploader: typeof useFileUploader;
 }

@@ -3,6 +3,7 @@ import {
   FocusEventHandler,
   MouseEventHandler,
   ReactElement,
+  Ref,
 } from 'react';
 
 import { BaseProps, Brightness, Size } from '@skatteetaten/ds-core-utils';
@@ -27,6 +28,7 @@ export type IconButtonBrightness = Extract<Brightness, 'light' | 'default'>;
 export interface IconButtonProps
   extends IconButtonPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   /** Om knappen har en ramme/sirkel. */
   isOutlined?: boolean;
   /** Størrelse på knappen. */

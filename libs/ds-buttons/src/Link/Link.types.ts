@@ -3,6 +3,7 @@ import {
   HTMLProps,
   MouseEventHandler,
   ReactElement,
+  Ref,
 } from 'react';
 
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
@@ -25,6 +26,7 @@ interface LinkPropsHTMLAttributes extends LinkHTMLAttributes {
 export interface LinkComponentCommonProps
   extends LinkPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLAnchorElement>;
   /** Viser ikon etter lenketeksten som indikerer at lenken er til en side på et annet domene. */
   isExternal?: boolean;
   /** Farge på ikon og tekst */

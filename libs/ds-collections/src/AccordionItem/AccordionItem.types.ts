@@ -1,8 +1,9 @@
-import { MouseEventHandler, ReactElement, ReactNode } from 'react';
+import { MouseEventHandler, ReactElement, ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
 export interface AccordionItemProps extends BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   classNames?: {
     container?: string;
     title?: string;

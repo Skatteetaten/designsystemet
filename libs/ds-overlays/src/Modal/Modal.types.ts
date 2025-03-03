@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { IconProps } from '@skatteetaten/ds-icons';
@@ -10,6 +10,7 @@ export const modalVariantArr = ['outline', 'plain', 'important'] as const;
 export type ModalVariant = (typeof modalVariantArr)[number];
 
 export interface ModalProps extends BaseProps {
+  ref?: Ref<HTMLDialogElement>;
   classNames?: {
     container?: string;
     image?: string;

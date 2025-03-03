@@ -1,10 +1,9 @@
 import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
-  ForwardRefExoticComponent,
-  RefAttributes,
-  ReactNode,
   FocusEventHandler,
+  ReactNode,
+  Ref,
 } from 'react';
 
 import {
@@ -14,7 +13,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
-import { RadioProps } from '../Radio/Radio.types';
+import { Radio } from '../Radio/Radio';
 
 export const radioGroupVariantArr = ['standard', 'horizontal'] as const;
 export type RadioGroupVariant = (typeof radioGroupVariantArr)[number];
@@ -49,6 +48,7 @@ interface RadioGroupComponentCommonProps
   extends InputPropsHTMLAttributes,
     RequiredFieldsetHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
     { errorMessage?: string } & FieldsetProps['classNames']
   >;
@@ -96,11 +96,6 @@ export type RadioGroupProps = RadioGroupComponentCommonProps &
   FormRequiredProps &
   RadioGroupDiscriminatedCheckedProps;
 
-export interface RadioGroupComponent
-  extends ForwardRefExoticComponent<
-    RadioGroupProps & RefAttributes<HTMLFieldSetElement>
-  > {
-  Radio: ForwardRefExoticComponent<
-    RadioProps & RefAttributes<HTMLInputElement>
-  >;
+export interface RadioGroupComponent extends React.FC<RadioGroupProps> {
+  Radio: typeof Radio;
 }

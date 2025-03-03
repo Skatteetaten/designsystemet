@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, Ref } from 'react';
 
 import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
 
@@ -6,6 +6,7 @@ export const iconVariantArr = ['systemIcon', 'themeIcon'] as const;
 export type IconVariant = (typeof iconVariantArr)[number];
 
 export interface IconComponentCommonProps extends BaseProps {
+  ref?: Ref<SVGSVGElement>;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath: ReactElement<SVGPathElement>;
 }

@@ -1,4 +1,4 @@
-import { ReactNode, RefObject, JSX } from 'react';
+import { JSX, ReactNode, Ref } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button, IconButton, InlineButton } from '@skatteetaten/ds-buttons';
@@ -70,9 +70,9 @@ const getFirstOrLastRef = ({
 }: {
   paging: string | number;
   lastPage: number;
-  firstPageRef: RefObject<HTMLButtonElement | null> | undefined;
-  lastPageRef: RefObject<HTMLButtonElement | null> | undefined;
-}): RefObject<HTMLButtonElement | null> | undefined => {
+  firstPageRef: Ref<HTMLButtonElement> | undefined;
+  lastPageRef: Ref<HTMLButtonElement> | undefined;
+}): Ref<HTMLButtonElement> | undefined => {
   if (paging === 1) return firstPageRef;
   else if (paging === lastPage) return lastPageRef;
   return undefined;

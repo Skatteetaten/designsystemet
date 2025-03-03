@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode } from 'react';
+import { MouseEventHandler, ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
@@ -10,6 +10,7 @@ import {
 type IconPosition = Extract<Position, 'left' | 'right'>;
 
 export interface OpenCloseProps extends BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   /** Posisjonen til ikonet */
   iconPosition?: IconPosition;
   /** Tekst på knappen */

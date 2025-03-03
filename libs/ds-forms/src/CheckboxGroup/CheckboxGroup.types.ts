@@ -1,13 +1,8 @@
-import {
-  ComponentPropsWithoutRef,
-  ForwardRefExoticComponent,
-  RefAttributes,
-  ReactNode,
-} from 'react';
+import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
-import { CheckboxProps } from '../Checkbox/Checkbox.types';
+import { Checkbox } from '../Checkbox/Checkbox';
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 
 type RequiredCheckboxGroupHTMLAttributes = Pick<
@@ -20,6 +15,7 @@ type CheckboxGroupHTMLAttributes = Partial<RequiredCheckboxGroupHTMLAttributes>;
 interface CheckboxGroupCommonProps
   extends CheckboxGroupHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
     { errorMessage?: string } & FieldsetProps['classNames']
   >;
@@ -49,13 +45,8 @@ interface CheckboxGroupCommonProps
 
 export type CheckboxGroupProps = CheckboxGroupCommonProps;
 
-export interface CheckboxGroupComponent
-  extends ForwardRefExoticComponent<
-    CheckboxGroupProps & RefAttributes<HTMLFieldSetElement>
-  > {
-  Checkbox: ForwardRefExoticComponent<
-    CheckboxProps & RefAttributes<HTMLInputElement>
-  >;
+export interface CheckboxGroupComponent extends React.FC<CheckboxGroupProps> {
+  Checkbox: typeof Checkbox;
 }
 
 export interface CheckboxContextProps {

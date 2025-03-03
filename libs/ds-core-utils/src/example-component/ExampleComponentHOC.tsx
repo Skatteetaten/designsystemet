@@ -1,4 +1,4 @@
-import { ComponentType, forwardRef, Ref, useRef, JSX } from 'react';
+import { ComponentType, Ref, useRef, JSX } from 'react';
 
 import { ExampleComponentProps } from './ExampleComponent';
 
@@ -7,7 +7,7 @@ export interface WhateverHOCProps {
 }
 
 export interface IncomingRefProp {
-  incomingRef: Ref<HTMLButtonElement>;
+  incomingRef: Ref<HTMLButtonElement> | undefined;
 }
 
 const whateverHOC = <T extends WhateverHOCProps>(
@@ -52,13 +52,13 @@ const ExampleComponentWithoutRef = whateverHOC(
   }
 );
 
-// Dette er komponeneten som eksporteres, da den har fått forwardref på seg i lik linje som de andre
-export const ExampleComponentHOC = forwardRef<
-  HTMLButtonElement,
-  ExampleComponentProps
->(function MyExampleComponent(props, ref) {
+// Dette er komponeneten som eksporteres
+export const ExampleComponentHOC = function MyExampleComponent({
+  ref,
+  ...props
+}: ExampleComponentProps): JSX.Element {
   return <ExampleComponentWithoutRef {...props} incomingRef={ref} />;
-});
+};
 
 // Eksempel på hvordan man bruker komponenten
 export const UsageOfMyComponent = (): JSX.Element => {

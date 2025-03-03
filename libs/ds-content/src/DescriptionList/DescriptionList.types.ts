@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import { BaseProps, Size, Weight } from '@skatteetaten/ds-core-utils';
 
@@ -10,6 +10,7 @@ export type Orientation = 'vertical' | 'horizontal';
 export type DescriptionListWeight = Extract<Weight, 'regular' | 'bold'>;
 
 export interface DescriptionListCommonProps extends BaseProps {
+  ref?: Ref<HTMLDListElement>;
   /** Liste med DescriptionList.Element */
   children?: ReactNode;
   /** Margin under DescriptionList. */
@@ -31,8 +32,6 @@ export interface DescriptionListCommonProps extends BaseProps {
 export type DescriptionListProps = DescriptionListCommonProps;
 
 export interface DescriptionListComponent
-  extends ForwardRefExoticComponent<
-    DescriptionListProps & RefAttributes<HTMLDListElement>
-  > {
+  extends React.FC<DescriptionListProps> {
   Element: typeof DescriptionListElement;
 }

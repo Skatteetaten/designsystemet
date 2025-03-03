@@ -1,4 +1,4 @@
-import { HTMLAttributes, forwardRef, useRef, JSX } from 'react';
+import { HTMLAttributes, Ref, useRef, JSX } from 'react';
 
 import { BaseProps } from '../base-props.types';
 
@@ -11,6 +11,7 @@ type ExampleComponentPropsHTMLAttributes = Pick<
 
 export interface ExampleComponentCustomProps
   extends ExampleComponentPropsHTMLAttributes {
+  ref?: Ref<HTMLButtonElement | HTMLDivElement>;
   as?: 'button' | 'div';
   children?: string;
 }
@@ -18,37 +19,28 @@ export interface ExampleComponentCustomProps
 // Her samler jeg interfacet med BaseProps som er et set med properties som alle komponentene våre skal tilby
 type ExampleComponentProps = ExampleComponentCustomProps & BaseProps;
 
-export const ExampleComponentDynamicHtmlTag = forwardRef<
-  HTMLButtonElement | HTMLDivElement,
-  ExampleComponentProps
->(
-  (
-    {
-      as: Root = 'button',
-      id,
-      className,
-      'data-testid': dataTestId = `testid-${id}`,
-      onClick,
-      children,
-    },
-    ref
-  ): JSX.Element => {
-    return (
-      <Root
-        ref={
-          ref as (instance: HTMLButtonElement | HTMLDivElement | null) => void
-        }
-        data-testid={dataTestId}
-        className={className}
-        onClick={onClick}
-      >
-        <span>
-          <span>{children}</span>
-        </span>
-      </Root>
-    );
-  }
-);
+export const ExampleComponentDynamicHtmlTag = ({
+  ref,
+  as: Root = 'button',
+  id,
+  className,
+  'data-testid': dataTestId = `testid-${id}`,
+  onClick,
+  children,
+}: ExampleComponentProps): JSX.Element => {
+  return (
+    <Root
+      ref={ref as (instance: HTMLButtonElement | HTMLDivElement | null) => void}
+      data-testid={dataTestId}
+      className={className}
+      onClick={onClick}
+    >
+      <span>
+        <span>{children}</span>
+      </span>
+    </Root>
+  );
+};
 
 ExampleComponentDynamicHtmlTag.displayName = 'ExampleComponentDynamicHtmlTag';
 

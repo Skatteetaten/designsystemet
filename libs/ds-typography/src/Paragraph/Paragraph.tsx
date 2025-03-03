@@ -1,4 +1,4 @@
-import { forwardRef, JSX } from 'react';
+import { JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -7,45 +7,41 @@ import { ParagraphProps } from './Paragraph.types';
 
 import styles from './Paragraph.module.scss';
 
-export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
-  (
-    {
-      id,
-      className = getCommonClassNameDefault(),
-      lang,
-      'data-testid': dataTestId,
-      variant = getParagraphVariantDefault(),
-      canBeManuallyFocused,
-      hasSpacing,
-      children,
-    },
-    ref
-  ): JSX.Element => {
-    let spacingClassName = '';
-    if (hasSpacing) {
-      if (variant === 'standard') {
-        spacingClassName = styles.paragraph_hasSpacingLarge;
-      } else if (variant === 'ingress') {
-        spacingClassName = styles.paragraph_hasSpacingExtraLarge;
-      }
+export const Paragraph = ({
+  ref,
+  id,
+  className = getCommonClassNameDefault(),
+  lang,
+  'data-testid': dataTestId,
+  variant = getParagraphVariantDefault(),
+  canBeManuallyFocused,
+  hasSpacing,
+  children,
+}: ParagraphProps): JSX.Element => {
+  let spacingClassName = '';
+  if (hasSpacing) {
+    if (variant === 'standard') {
+      spacingClassName = styles.paragraph_hasSpacingLarge;
+    } else if (variant === 'ingress') {
+      spacingClassName = styles.paragraph_hasSpacingExtraLarge;
     }
-    const concatenatedClassName = `${styles.paragraph} ${
-      styles[`paragraph_${variant}`]
-    } ${spacingClassName} ${className}`.trim();
-    return (
-      <p
-        ref={ref}
-        id={id}
-        className={concatenatedClassName}
-        lang={lang}
-        data-testid={dataTestId}
-        tabIndex={canBeManuallyFocused ? -1 : undefined}
-      >
-        {children}
-      </p>
-    );
   }
-);
+  const concatenatedClassName = `${styles.paragraph} ${
+    styles[`paragraph_${variant}`]
+  } ${spacingClassName} ${className}`.trim();
+  return (
+    <p
+      ref={ref}
+      id={id}
+      className={concatenatedClassName}
+      lang={lang}
+      data-testid={dataTestId}
+      tabIndex={canBeManuallyFocused ? -1 : undefined}
+    >
+      {children}
+    </p>
+  );
+};
 
 Paragraph.displayName = 'Paragraph';
 

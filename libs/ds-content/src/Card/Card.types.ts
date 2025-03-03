@@ -1,9 +1,4 @@
-import {
-  ComponentPropsWithoutRef,
-  ForwardRefExoticComponent,
-  ReactNode,
-  RefAttributes,
-} from 'react';
+import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, colorNamesArr, Spacing } from '@skatteetaten/ds-core-utils';
 
@@ -35,6 +30,7 @@ export const cardColorArr: CardColor[] = [
 ];
 
 export interface CardComponentCommonProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Innholdet i komponenten. */
   children: ReactNode;
   /** Farge på border og bakgrunn. */
@@ -46,8 +42,7 @@ export interface CardComponentCommonProps extends BaseProps {
 
 export type CardProps = CardComponentCommonProps;
 
-export interface CardComponent
-  extends ForwardRefExoticComponent<CardProps & RefAttributes<HTMLDivElement>> {
+export interface CardComponent extends React.FC<CardProps> {
   Alert: typeof CardAlert;
   Actions: typeof CardActions;
   Content: typeof CardContent;

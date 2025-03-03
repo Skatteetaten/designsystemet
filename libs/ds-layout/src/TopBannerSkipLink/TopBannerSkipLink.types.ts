@@ -1,6 +1,9 @@
+import { Ref } from 'react';
+
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export interface TopBannerSkipLinkProps extends BaseProps {
+  ref?: Ref<HTMLAnchorElement>;
   /** Overskriver default lenketekst */
   children?: string;
   /** Overskriver default target verdi som focus skal settes til når skipLink trykkes på */

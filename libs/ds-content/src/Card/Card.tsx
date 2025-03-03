@@ -1,4 +1,4 @@
-import { forwardRef, JSX } from 'react';
+import { JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -16,39 +16,35 @@ import { CardHeader } from '../CardHeader/CardHeader';
 
 import styles from './Card.module.scss';
 
-export const Card = forwardRef<HTMLDivElement, CardProps>(
-  (
-    {
-      id,
-      className = getCommonClassNameDefault(),
-      lang,
-      'data-testid': dataTestId,
-      color = getCardColorDefault(),
-      ariaLabelledBy,
-      spacing,
-      children,
-    },
-    ref
-  ): JSX.Element => {
-    const cardClassName = `${styles.card} ${className}`.trim();
+export const Card = (({
+  ref,
+  id,
+  className = getCommonClassNameDefault(),
+  lang,
+  'data-testid': dataTestId,
+  color = getCardColorDefault(),
+  ariaLabelledBy,
+  spacing,
+  children,
+}: CardProps): JSX.Element => {
+  const cardClassName = `${styles.card} ${className}`.trim();
 
-    const Tag = ariaLabelledBy ? 'section' : 'div';
-    return (
-      <Tag
-        ref={ref}
-        id={id}
-        className={cardClassName}
-        lang={lang}
-        data-testid={dataTestId}
-        data-color={color}
-        aria-labelledby={ariaLabelledBy}
-        data-spacing={spacing}
-      >
-        {children}
-      </Tag>
-    );
-  }
-) as CardComponent;
+  const Tag = ariaLabelledBy ? 'section' : 'div';
+  return (
+    <Tag
+      ref={ref}
+      id={id}
+      className={cardClassName}
+      lang={lang}
+      data-testid={dataTestId}
+      data-color={color}
+      aria-labelledby={ariaLabelledBy}
+      data-spacing={spacing}
+    >
+      {children}
+    </Tag>
+  );
+}) as CardComponent;
 
 Card.displayName = 'Card';
 

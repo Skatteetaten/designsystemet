@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode, Ref } from 'react';
 
 import { ButtonProps } from '@skatteetaten/ds-buttons';
 import { PanelProps } from '@skatteetaten/ds-content';
@@ -20,6 +20,7 @@ export const stepVariantArr = [
 export type StepVariant = (typeof stepVariantArr)[number];
 
 export interface StepListStepProps extends BaseProps {
+  ref?: Ref<HTMLLIElement>;
   /** Overskriver default tekst på edit-knapp*/
   editButtonText?: string;
   /** Overskriver default tekst på next-knapp*/

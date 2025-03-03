@@ -3,6 +3,7 @@ import {
   FocusEventHandler,
   MouseEventHandler,
   ReactElement,
+  Ref,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -31,6 +32,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 }
 
 interface ButtonAsLink {
+  ref?: Ref<HTMLAnchorElement>;
   /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
   href: string;
   disabled?: never | false;
@@ -41,6 +43,7 @@ interface ButtonAsLink {
 }
 
 type ButtonAsButton = {
+  ref?: Ref<HTMLButtonElement>;
   /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
   href?: never;
   disabled?: boolean;

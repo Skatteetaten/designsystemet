@@ -1,14 +1,18 @@
-import { forwardRef, PropsWithChildren } from 'react';
+import { PropsWithChildren, JSX } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-export const TableHeader = forwardRef<
-  HTMLTableSectionElement,
-  BaseProps & PropsWithChildren
->(({ children, ...baseProps }, ref) => (
+export const TableHeader = ({
+  ref,
+  children,
+  ...baseProps
+}: BaseProps &
+  PropsWithChildren & {
+    ref?: React.Ref<HTMLTableSectionElement>;
+  }): JSX.Element => (
   <thead ref={ref} {...baseProps}>
     {children}
   </thead>
-));
+);
 
 TableHeader.displayName = 'TableHeader';
