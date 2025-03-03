@@ -4,6 +4,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { TopBannerInternalActionMenuProps } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
+import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
 
 type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
   text: TopBannerSkipLinkProps['children'];
@@ -51,5 +52,5 @@ export interface TopBannerInternalProps extends BaseProps {
 
 export interface TopBannerInternalComponent
   extends React.FC<TopBannerInternalProps> {
-  ActionMenu: React.FC<TopBannerInternalActionMenuProps>;
+  ActionMenu: typeof TopBannerInternalActionMenu;
 }

@@ -7,7 +7,7 @@ export interface WhateverHOCProps {
 }
 
 export interface IncomingRefProp {
-  incomingRef: Ref<HTMLButtonElement>;
+  incomingRef: Ref<HTMLButtonElement> | undefined;
 }
 
 const whateverHOC = <T extends WhateverHOCProps>(
@@ -52,14 +52,11 @@ const ExampleComponentWithoutRef = whateverHOC(
   }
 );
 
-// Dette er komponeneten som eksporteres, da den har fått forwardref på seg i lik linje som de andre
-// TODO: trenger vi dette mer?
+// Dette er komponeneten som eksporteres
 export const ExampleComponentHOC = function MyExampleComponent({
   ref,
   ...props
-}: ExampleComponentProps & {
-  ref: React.RefObject<HTMLButtonElement>;
-}): JSX.Element {
+}: ExampleComponentProps): JSX.Element {
   return <ExampleComponentWithoutRef {...props} incomingRef={ref} />;
 };
 

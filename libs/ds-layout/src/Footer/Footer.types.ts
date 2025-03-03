@@ -1,6 +1,6 @@
 import { JSX, ReactNode, Ref } from 'react';
 
-import { Link, LinkProps } from '@skatteetaten/ds-buttons';
+import { LinkProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { FooterLink } from '../FooterLink/FooterLink';

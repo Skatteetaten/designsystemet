@@ -125,3 +125,5 @@ export const TopBannerInternalActionMenu = ({
     </>
   );
 };
+
+TopBannerInternalActionMenu.displayName = 'TopBannerInternalActionMenu';

@@ -2,7 +2,7 @@ import { ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { StepListStepProps } from '../StepListStep/StepListStep.types';
+import { StepListStep } from '../StepListStep/StepListStep';
 
 export interface StepListProps extends BaseProps {
   ref?: Ref<HTMLOListElement>;
@@ -11,5 +11,5 @@ export interface StepListProps extends BaseProps {
 }
 
 export interface StepListComponent extends React.FC<StepListProps> {
-  Step: React.FC<StepListStepProps>;
+  Step: typeof StepListStep;
 }

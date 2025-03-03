@@ -2,9 +2,10 @@ import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, colorNamesArr, Spacing } from '@skatteetaten/ds-core-utils';
 
-import { CardActionsProps } from '../CardActions/CardActions.types';
-import { CardAlertProps } from '../CardAlert/CardAlert.types';
-import { CardContentProps } from '../CardContent/CardContent.types';
+import { CardActions } from '../CardActions/CardActions';
+import { CardAlert } from '../CardAlert/CardAlert';
+import { CardContent } from '../CardContent/CardContent';
+import { CardHeader } from '../CardHeader/CardHeader';
 
 export type CardColor = Extract<
   (typeof colorNamesArr)[number],
@@ -42,8 +43,8 @@ export interface CardComponentCommonProps extends BaseProps {
 export type CardProps = CardComponentCommonProps;
 
 export interface CardComponent extends React.FC<CardProps> {
-  Alert: React.FC<CardAlertProps>;
-  Actions: React.FC<CardActionsProps>;
-  Content: React.FC<CardContentProps>;
-  Header: React.FC<CardContentProps>;
+  Alert: typeof CardAlert;
+  Actions: typeof CardActions;
+  Content: typeof CardContent;
+  Header: typeof CardHeader;
 }

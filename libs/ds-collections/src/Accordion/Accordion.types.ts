@@ -7,7 +7,7 @@ import {
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
 
-import { AccordionItemProps } from '../AccordionItem/AccordionItem.types';
+import { AccordionItem } from '../AccordionItem/AccordionItem';
 
 export type AccordionColor =
   | Extract<
@@ -35,7 +35,7 @@ export interface AccordionProps extends BaseProps {
 }
 
 export interface AccordionComponent extends React.FC<AccordionProps> {
-  Item: React.FC<AccordionItemProps>;
+  Item: typeof AccordionItem;
 }
 
 export type AccordionContextProps = Exclude<
