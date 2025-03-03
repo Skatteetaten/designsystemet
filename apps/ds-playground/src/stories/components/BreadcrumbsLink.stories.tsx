@@ -6,9 +6,6 @@ import { BreadcrumbsLinkProps, Breadcrumbs } from '@skatteetaten/ds-navigation';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-Breadcrumbs.Link = { ...Breadcrumbs.Link };
 Breadcrumbs.Link.displayName = 'Breadcrumbs.Link';
 
 const meta = {

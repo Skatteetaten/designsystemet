@@ -12,9 +12,6 @@ import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-RadioGroup.Radio = { ...RadioGroup.Radio };
 RadioGroup.Radio.displayName = 'RadioGroup.Radio';
 
 const meta = {

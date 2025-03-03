@@ -4,14 +4,7 @@ import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
 import { category } from '../../../.storybook/helpers';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-Breadcrumbs.Item = { ...Breadcrumbs.Item };
 Breadcrumbs.Item.displayName = 'Breadcrumbs.Item';
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-Breadcrumbs.Link = { ...Breadcrumbs.Link };
 Breadcrumbs.Link.displayName = 'Breadcrumbs.Link';
 
 const meta = {
