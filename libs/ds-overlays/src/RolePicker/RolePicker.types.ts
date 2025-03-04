@@ -47,6 +47,8 @@ export interface RolePickerProps
   people?: Paginated<Person>;
   /** En paginert liste over virksomheter. */
   businesses?: Paginated<Business>;
+  /**  Minimum antall enheter som kreves for at søkefelt skal være synlig. Default: 10. */
+  minEntitiesForSearchVisibility?: boolean;
   /** Om avviklede virksomheter skal vises som standard når rollevelger åpnes. */
   showInactiveBusinesses?: boolean;
   /** Om underenheter av virksomheter skal vises som standard når rollevelger åpnes. */

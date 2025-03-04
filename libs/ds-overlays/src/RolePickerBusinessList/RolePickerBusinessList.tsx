@@ -44,6 +44,11 @@ export const RolePickerBusinessList = ({
     navRef.current?.querySelectorAll('a')[visibleLinks - 1].focus();
   };
 
+  const handleShowLess = (): void => {
+    setShowAll(false);
+    navRef.current?.querySelectorAll('a')[0].focus();
+  };
+
   const handleEntityClicked = async (entity: Business): Promise<void> => {
     ctx?.setLoadingEntityId(entity.organizationNumber);
     ctx?.onEntitySelect?.(entity).then((res) => {
@@ -145,8 +150,8 @@ export const RolePickerBusinessList = ({
     return businesses.list.filter((item) => !item.isDeleted).length;
   }, [businesses.list, businesses.total, showInactiveBusinesses, showSubUnits]);
 
-  const displayShowAllButton =
-    !showAll && !filterQuery && businesses.list?.length > MAX_INITIAL_ITEMS;
+  const displayToggleAllButton =
+    !filterQuery && businesses.list?.length > MAX_INITIAL_ITEMS;
 
   return (
     <div>
@@ -270,12 +275,18 @@ export const RolePickerBusinessList = ({
           })}
         </ul>
       </nav>
-      {displayShowAllButton ? (
+      {displayToggleAllButton ? (
         <div className={styles.showAllButtonWrapper}>
-          <Button
-            variant={'tertiary'}
-            onClick={handleShowAll}
-          >{`${t('rolepicker.ShowAll')} ${t('rolepicker.Businesses')} (${getShowAllCount()})`}</Button>
+          {showAll ? (
+            <Button variant={'tertiary'} onClick={handleShowLess}>
+              {'Vis færre'}
+            </Button>
+          ) : (
+            <Button
+              variant={'tertiary'}
+              onClick={handleShowAll}
+            >{`${t('rolepicker.ShowAll')} ${t('rolepicker.Businesses')} (${getShowAllCount()})`}</Button>
+          )}
         </div>
       ) : null}
     </div>
