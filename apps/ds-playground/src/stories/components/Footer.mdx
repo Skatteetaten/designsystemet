@@ -1,5 +1,7 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Canvas, Primary, Controls, ArgTypes } from '@storybook/blocks';
 import * as FooterStories from './Footer.stories';
+import * as FooterLink from './FooterLink.stories';
+import * as FooterLogo from './FooterLogo.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
 
@@ -21,6 +23,14 @@ import { Footer } from '@skatteetaten/ds-layout';
 ```
 
 <Controls />
+
+## `Footer.Link`
+
+<ArgTypes of={FooterLink} />
+
+## `Footer.Logo`
+
+<ArgTypes of={FooterLogo} />
 
 ## Examples
 

@@ -28,7 +28,7 @@ import styles from './DescriptionListStory.module.scss';
 
 const meta = {
   component: DescriptionList,
-  title: 'Komponenter/DescriptionList/DescriptionList',
+  title: 'Komponenter/DescriptionList',
   argTypes: {
     // Props
     children: {
