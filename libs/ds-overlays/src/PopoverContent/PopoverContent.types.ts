@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -15,6 +15,7 @@ export const popoverColorArr = ['forest', 'ochre', 'white'] as const;
 export type PopoverColor = (typeof popoverColorArr)[number];
 
 export interface PopoverContentProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Tekst */
   children: ReactNode;
 }

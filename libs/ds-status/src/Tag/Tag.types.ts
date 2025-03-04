@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, Ref } from 'react';
 
 import { BaseProps, Size, colorNamesArr } from '@skatteetaten/ds-core-utils';
 
@@ -10,6 +10,7 @@ export type TagColor = Extract<
 >;
 
 export interface TagProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Tekst for meldingen */
   children: string;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */

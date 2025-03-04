@@ -9,9 +9,6 @@ import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-LinkGroup.Link = { ...LinkGroup.Link };
 LinkGroup.Link.displayName = 'LinkGroup.Link';
 
 const meta = {

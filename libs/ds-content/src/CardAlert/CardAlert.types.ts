@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs, Status } from '@skatteetaten/ds-core-utils';
 
@@ -8,6 +8,7 @@ export type CardAlertVariant = Extract<
 >;
 
 export interface CardAlertCommonProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Overskrift. */
   title: string;
   /** Heading-element h1-h6. */

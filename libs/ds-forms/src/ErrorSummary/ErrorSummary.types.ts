@@ -1,10 +1,11 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
-import { ErrorProps } from '../ErrorSummaryError/ErrorSummaryError.types';
+import { ErrorSummaryError } from '../ErrorSummaryError/ErrorSummaryError';
 
 export interface ErrorSummaryProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Liste med feil */
   children?: ReactNode;
   /** Valgfritt innhold */
@@ -19,13 +20,8 @@ export interface ErrorSummaryProps extends BaseProps {
   titleAs?: HeadingAs;
 }
 
-export interface ErrorSummaryComponent
-  extends ForwardRefExoticComponent<
-    ErrorSummaryProps & RefAttributes<HTMLDivElement>
-  > {
-  Error: ForwardRefExoticComponent<
-    ErrorProps & RefAttributes<HTMLAnchorElement>
-  >;
+export interface ErrorSummaryComponent extends React.FC<ErrorSummaryProps> {
+  Error: typeof ErrorSummaryError;
 }
 
 export interface ErrorSummaryContextProps {

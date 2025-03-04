@@ -1,27 +1,19 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import { ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { BreadcrumbsItemProps } from '../BreadcrumbsItem/BreadcrumbsItem.types';
-import { BreadcrumbsLinkProps } from '../BreadcrumbsLink/BreadcrumbsLink.types';
-import { BreadcrumbsListProps } from '../BreadcrumbsList/BreadcrumbsList.types';
+import { BreadcrumbsItem } from '../BreadcrumbsItem/BreadcrumbsItem';
+import { BreadcrumbsLink } from '../BreadcrumbsLink/BreadcrumbsLink';
+import { BreadcrumbsList } from '../BreadcrumbsList/BreadcrumbsList';
 
 export interface BreadcrumbsProps extends BaseProps {
+  ref?: React.Ref<HTMLElement>;
   /** Breadcrumbs.List */
   children?: ReactNode;
 }
 
-export interface BreadcrumbsComponent
-  extends ForwardRefExoticComponent<
-    BreadcrumbsProps & RefAttributes<HTMLElement>
-  > {
-  List: ForwardRefExoticComponent<
-    BreadcrumbsListProps & RefAttributes<HTMLOListElement>
-  >;
-  Item: ForwardRefExoticComponent<
-    BreadcrumbsItemProps & RefAttributes<HTMLLIElement>
-  >;
-  Link: ForwardRefExoticComponent<
-    BreadcrumbsLinkProps & RefAttributes<HTMLAnchorElement | HTMLSpanElement>
-  >;
+export interface BreadcrumbsComponent extends React.FC<BreadcrumbsProps> {
+  List: typeof BreadcrumbsList;
+  Item: typeof BreadcrumbsItem;
+  Link: typeof BreadcrumbsLink;
 }

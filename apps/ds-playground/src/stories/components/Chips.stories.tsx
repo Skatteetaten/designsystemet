@@ -8,14 +8,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-Chips.Toggle = { ...Chips.Toggle };
 Chips.Toggle.displayName = 'Chips.Toggle';
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-Chips.Removable = { ...Chips.Removable };
 Chips.Removable.displayName = 'Chips.Removable';
 
 const meta = {

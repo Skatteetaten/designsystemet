@@ -36,6 +36,7 @@ export type CSSVariables = CSSProperties & {
 };
 
 export interface PanelComponentCommonProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /**
    * Lar heading i komponenten være fokuserbar.
    * Sørger for at tabIndex: -1

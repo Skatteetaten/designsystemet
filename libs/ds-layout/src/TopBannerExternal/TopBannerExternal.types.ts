@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode, RefObject } from 'react';
+import { MouseEventHandler, ReactNode, Ref, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -23,6 +23,7 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 };
 
 export interface TopBannerExternalProps extends BaseProps {
+  ref?: Ref<TopBannerExternalHandle>;
   /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. Hvis språk som sendes inn ikke finnes blant standardspråkene eller i additionalLanguages så vil den falle tilbake på bokmål som standard. */
   defaultLocale?: TopBannerLangPickerProps['defaultLocale'];
   /** Callback når et språk trykkes på i språkvelgeren. */

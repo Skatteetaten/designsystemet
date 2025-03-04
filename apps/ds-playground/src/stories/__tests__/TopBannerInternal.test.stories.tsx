@@ -21,7 +21,6 @@ const meta = {
   title: 'Tester/TopBanner/TopBannerInternal',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     classNames: { table: { disable: true } },

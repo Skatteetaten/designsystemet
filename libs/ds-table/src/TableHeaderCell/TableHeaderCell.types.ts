@@ -1,4 +1,4 @@
-import { HTMLProps, ReactNode } from 'react';
+import { HTMLProps, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -14,6 +14,7 @@ type TableHeaderCellHTMLAttributes =
 export interface TableHeaderCellCommonProps
   extends TableHeaderCellHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLTableCellElement>;
   /** Tekstjustering */
   alignment?: TextAlignment;
   /** HTML-element for cellen*/

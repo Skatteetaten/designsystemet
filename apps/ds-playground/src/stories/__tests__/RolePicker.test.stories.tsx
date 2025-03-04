@@ -249,7 +249,6 @@ const meta = {
   title: 'Tester/RolePicker',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },

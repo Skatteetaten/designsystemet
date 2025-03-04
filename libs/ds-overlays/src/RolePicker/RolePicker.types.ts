@@ -38,6 +38,7 @@ export interface RolePickerProps
         'dismissOnEsc' | 'dismissOnOutsideClick' | 'hideCloseButton' | 'onClose'
       >
     > {
+  ref?: React.Ref<HTMLDialogElement>;
   /** Egendefinert tittel på modal. */
   title?: string;
   /** Den nåværende brukeren representert som et Person-objekt. */

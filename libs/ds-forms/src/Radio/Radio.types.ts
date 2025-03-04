@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -14,6 +14,7 @@ interface InputPropsHTMLAttributes extends InputHTMLAttributes {
 }
 
 export interface RadioProps extends InputPropsHTMLAttributes, BaseProps {
+  ref?: Ref<HTMLInputElement>;
   /** Ledetekst til radioknapp. */
   children: string;
   /** Tilleggstekst til ledeteksten. */

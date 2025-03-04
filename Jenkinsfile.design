@@ -33,7 +33,7 @@ def overrides = [
     iqOrganizationName           : 'Team Designsystem',
     sonarQube                    : true,
     npmInstallCommand            : "ci",
-    nodeVersion                  : "20",
+    nodeVersion                  : "22",
     disableAllReports            : env.BRANCH_NAME.startsWith('disable-reports/'),
     lineCoverageReport           : false,
     publishToNpm                 : true,

@@ -1,7 +1,8 @@
-import { Position } from '@skatteetaten/ds-core-utils';
+import {
+  ButtonIconPosition,
+  InlineButtonBrightness,
+} from './InlineButton.types';
 
-import { InlineButtonBrightness } from './InlineButton.types';
-
-export const getInlineButtonPositionDefault = (): Position => 'left';
+export const getInlineButtonPositionDefault = (): ButtonIconPosition => 'left';
 export const getInlineButtonBrightnessDefault = (): InlineButtonBrightness =>
   'default';

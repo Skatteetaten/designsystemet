@@ -1,4 +1,4 @@
-import { forwardRef, JSX, useEffect, useRef, useState } from 'react';
+import { JSX, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
@@ -9,10 +9,12 @@ import { RolePickerFilterInputProps } from './RolePickerFilterInput.types';
 
 import styles from './RolePickerFilterInput.module.scss';
 
-export const RolePickerFilterInput = forwardRef<
-  HTMLInputElement,
-  RolePickerFilterInputProps
->(({ label, value, onChange, onClear }, ref): JSX.Element => {
+export const RolePickerFilterInput = ({
+  label,
+  value,
+  onChange,
+  onClear,
+}: RolePickerFilterInputProps): JSX.Element => {
   const { t: formsT } = useTranslation('ds_forms', { i18n: dsI18n });
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
   const inputRef = useRef<HTMLInputElement>(null);
@@ -83,6 +85,6 @@ export const RolePickerFilterInput = forwardRef<
       </div>
     </div>
   );
-});
+};
 
 RolePickerFilterInput.displayName = 'RolePickerFilterInput';

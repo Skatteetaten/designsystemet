@@ -3,6 +3,7 @@ import {
   KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
+  Ref,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -23,6 +24,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 export interface TopBannerLangPickerButtonProps
   extends ButtonPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   /**  Om komponenten skal være i fokus. */
   focus?: boolean;
   /** Flagg som samsvarer med språket. */
