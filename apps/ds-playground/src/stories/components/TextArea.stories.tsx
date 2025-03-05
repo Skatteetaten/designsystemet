@@ -87,7 +87,7 @@ const meta = {
     onHelpToggle: { table: { category: category.event } },
   },
   args: {
-    label: 'Navn',
+    label: 'Andre opplysninger',
   },
 } satisfies Meta<typeof TextArea>;
 
