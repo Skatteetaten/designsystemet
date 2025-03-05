@@ -12,6 +12,7 @@ import {
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { RolePickerBusinessListProps } from './RolePickerBusinessList.types';
+import { getBusinessTitle } from './utils';
 import { Business } from '../RolePicker/RolePicker.types';
 import { RolePickerContext } from '../RolePickerContext/RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
@@ -187,7 +188,7 @@ export const RolePickerBusinessList = ({
                 <li key={item.organizationNumber}>
                   <RolePickerRow
                     id={item.organizationNumber}
-                    title={`${item.name} ${item.unitType} ${item.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
+                    title={getBusinessTitle(item)}
                     description={
                       <>
                         {t('rolepicker.BusinessDescriptionPrefix')}{' '}
@@ -218,7 +219,7 @@ export const RolePickerBusinessList = ({
                         >
                           <RolePickerRow
                             id={sub.organizationNumber}
-                            title={`${sub.name} ${sub.unitType} ${sub.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
+                            title={getBusinessTitle(sub)}
                             titleAs={'h4'}
                             description={
                               <>
@@ -254,7 +255,7 @@ export const RolePickerBusinessList = ({
                 <li key={item.organizationNumber}>
                   <RolePickerRow
                     id={item.organizationNumber}
-                    title={`${item.name} ${item.unitType} ${item.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
+                    title={getBusinessTitle(item)}
                     description={`${t('rolepicker.BusinessDescriptionPrefix')} ${item.organizationNumber}`}
                     svgPath={item.isDeleted ? BriefcaseOffSVGpath : svgPath}
                     onClick={() => {

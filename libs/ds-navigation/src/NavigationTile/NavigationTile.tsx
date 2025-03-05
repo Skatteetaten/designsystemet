@@ -75,7 +75,7 @@ export const NavigationTile = ({
 
   const titleClassNames = `${styles.title} ${
     size !== 'medium' ? styles[`title_${size}`] : ''
-  } ${classNames?.title}`.trim();
+  } ${classNames?.title ?? ''}`.trim();
 
   const descriptionClassNames = `${styles.description} ${
     size === 'extraLarge' && styles.description_extraLarge
