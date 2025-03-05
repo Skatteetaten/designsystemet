@@ -1,0 +1,722 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/TextArea Defaults play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rd:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:rc:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:rc:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:rb:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div class="dummyClassname"
+       lang="nb"
+  >
+    <label id="labelId-:r5:"
+           class="_label_348na_5"
+           for="htmlid"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="htmlid"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              data-testid="123ID"
+              autocomplete="off"
+              form="formid123"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r3:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithAutoCompleteInputModeNameAndPlaceholder play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rs:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:rr:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:rr:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="given-name"
+              inputmode="text"
+              name="test_name"
+              placeholder="Kari Nordmann"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:rq:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithAutoSizeInModal play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Vis modal
+    </span>
+  </button>
+  <dialog class="_modal_125nh_5"
+          aria-labelledby="modalHeadingId-:r2a:"
+          open
+  >
+    <div tabindex="-1"
+         class="_modalContainer_125nh_23"
+    >
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+              data-brightness="default"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r2b:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r2b:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_125nh_51">
+        <h1 id="modalHeadingId-:r2a:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+        >
+          Modal med textarea
+        </h1>
+        <div class>
+          <label id="labelId-:r2e:"
+                 class="_label_348na_5"
+                 for="textAreaTextboxId-:r2d:"
+          >
+            Andre opplysninger
+          </label>
+          <textarea id="textAreaTextboxId-:r2d:"
+                    class="_textarea_4jmeo_5  _textarea_autosize_4jmeo_31 _textareaMarginTop_4jmeo_22"
+                    autocomplete="off"
+                    style="height: 0px;"
+          >
+          </textarea>
+          <div id="textAreaErrorId-:r2c:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/TextArea WithControlledValueAndAutoSize play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r2h:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r2g:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:r2g:"
+              class="_textarea_4jmeo_5  _textarea_autosize_4jmeo_31 _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              style="height: 64px;"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r2f:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Nullstill
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <div class="dummyClassname">
+    <label id="labelId-:r8:"
+           class="_label_348na_5    dummyClassname"
+           for="textAreaTextboxId-:r7:"
+    >
+      Andre opplysninger
+    </label>
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
+            type="button"
+            aria-describedby="labelId-:r8:"
+            aria-expanded="false"
+    >
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r9:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r9:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="_description_10ldw_17   dummyClassname">
+      beskrivelse
+    </div>
+    <textarea id="textAreaTextboxId-:r7:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22 dummyClassname"
+              autocomplete="off"
+              aria-describedby="textAreaErrorId-:r6:"
+              aria-invalid="true"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r6:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+      <div class="_errorMessage_1kdf4_15 dummyClassname">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+          </path>
+        </svg>
+        <p class="_errorMessageText_1kdf4_30">
+          Opplysninger er obligatorisk
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithDefaultValue play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rm:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:rl:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:rl:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+    >
+      Kari Nordmann
+    </textarea>
+    <div id="textAreaErrorId-:rk:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithDefaultValueAndAutoSize play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rp:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:ro:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:ro:"
+              class="_textarea_4jmeo_5  _textarea_autosize_4jmeo_31 _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              style="height: 88px;"
+    >
+      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+    </textarea>
+    <div id="textAreaErrorId-:rn:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithDescription play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r1l:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r1k:"
+    >
+      Andre opplysninger
+    </label>
+    <div class="_description_10ldw_17">
+      En liten beskrivelse tekst
+    </div>
+    <textarea id="textAreaTextboxId-:r1k:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r1j:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithDisabled play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rg:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:rf:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:rf:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              disabled
+    >
+      Kari Nordmann
+    </textarea>
+    <div id="textAreaErrorId-:re:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r1h:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r1g:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:r1g:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              aria-describedby="textAreaErrorId-:r1f:"
+              aria-invalid="true"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r1f:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+      <div class="_errorMessage_1kdf4_15">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+          </path>
+        </svg>
+        <p class="_errorMessageText_1kdf4_30">
+          Opplysninger er obligatorisk
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithEventHandlers play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r25:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r24:"
+    >
+      TextArea har blitt blurret
+    </label>
+    <textarea id="textAreaTextboxId-:r24:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r23:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithHelpText play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r1r:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r1q:"
+    >
+      Andre opplysninger
+    </label>
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
+            type="button"
+            aria-describedby="labelId-:r1r:"
+            aria-expanded="false"
+    >
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r1s:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r1s:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <textarea id="textAreaTextboxId-:r1q:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r1p:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithHelpTextAndDescription smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r20:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r1v:"
+    >
+      Andre opplysninger
+    </label>
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
+            type="button"
+            aria-describedby="labelId-:r20:"
+            aria-expanded="false"
+    >
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r21:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r21:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="_description_10ldw_17">
+      En liten beskrivelse tekst
+    </div>
+    <textarea id="textAreaTextboxId-:r1v:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r1u:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithHelpToggleEvent smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r28:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r27:"
+    >
+      Andre opplysninger
+    </label>
+    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+            data-brightness="default"
+            type="button"
+            aria-describedby="labelId-:r28:"
+            aria-expanded="false"
+    >
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r29:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r29:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <textarea id="textAreaTextboxId-:r27:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r26:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithHideLabel play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r1o:"
+           class="_label_348na_5  _srOnly_348na_18"
+           for="textAreaTextboxId-:r1n:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:r1n:"
+              class="_textarea_4jmeo_5"
+              autocomplete="off"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r1m:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithMinAndMaxLength play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r18:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r17:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:r17:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              maxlength="50"
+              minlength="10"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r16:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithReadOnly play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rv:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:ru:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:ru:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              readonly
+    >
+      Kari Nordmann
+    </textarea>
+    <div id="textAreaErrorId-:rt:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r2:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r1:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:r1:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              name="dummyNameForwardedFromRef"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r0:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithRequired play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r12:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r11:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:r11:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              required
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r10:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithRequiredAndMark smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r15:"
+           class="_label_348na_5 _label_required_348na_12"
+           for="textAreaTextboxId-:r14:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:r14:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              required
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r13:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithRows play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r1b:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:r1a:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:r1a:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+              rows="4"
+    >
+    </textarea>
+    <div id="textAreaErrorId-:r19:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextArea WithValue play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rj:"
+           class="_label_348na_5"
+           for="textAreaTextboxId-:ri:"
+    >
+      Andre opplysninger
+    </label>
+    <textarea id="textAreaTextboxId-:ri:"
+              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              autocomplete="off"
+    >
+      Kari Nordmann
+    </textarea>
+    <div id="textAreaErrorId-:rh:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
