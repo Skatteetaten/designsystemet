@@ -431,7 +431,7 @@ const TemplateModalWithStateChangeAndFocusedInput: StoryFn<typeof Modal> = (
         {showInput ? (
           <TextField
             ref={(node) => {
-              node?.textboxRef.current?.focus();
+              node?.focus();
             }}
             label={'Navn'}
           />
@@ -547,7 +547,7 @@ const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
       <TopBannerExternal />
       <Paragraph
         hasSpacing
-      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes. 
+      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes.
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.`}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>
@@ -642,7 +642,7 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
       <TopBannerExternal />
       <Paragraph
         hasSpacing
-      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen.
         Modalen åpnes ved å laste siden på nytt. `}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>

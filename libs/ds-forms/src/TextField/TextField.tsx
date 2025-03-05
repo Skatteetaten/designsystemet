@@ -4,7 +4,6 @@ import {
   ModifierKey,
   useId,
   useImperativeHandle,
-  useLayoutEffect,
   useRef,
 } from 'react';
 
@@ -17,7 +16,6 @@ import {
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
-import { getTextFieldAsDefault } from './defaults';
 import { TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -31,8 +29,6 @@ export const TextField = ({
   classNames,
   lang,
   'data-testid': dataTestId,
-  as: Tag = getTextFieldAsDefault(),
-  autosize,
   description,
   errorMessage,
   helpSvgPath,
@@ -54,7 +50,6 @@ export const TextField = ({
   placeholder,
   readOnly,
   required,
-  rows,
   value,
   hideLabel,
   showRequiredMark,
@@ -68,24 +63,8 @@ export const TextField = ({
   const generatedId = `textFieldTextboxId-${useId()}`;
   const textboxId = externalId ?? generatedId;
 
-  const textboxRef = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
-  useImperativeHandle(ref, () => ({
-    textboxRef: textboxRef,
-  }));
-
-  useLayoutEffect(() => {
-    if (autosize) {
-      resizeTextArea();
-    }
-  }, [autosize, value]);
-
-  const resizeTextArea = (): void => {
-    const textArea = textboxRef.current as HTMLTextAreaElement;
-    textArea.style.height = 'inherit';
-    const { scrollHeight } = textArea;
-    const includeBorderAndMore = textArea.offsetHeight - textArea.clientHeight;
-    textArea.style.height = `${scrollHeight + includeBorderAndMore}px`;
-  };
+  const textboxRef = useRef<HTMLInputElement>(null);
+  useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
   const separator = dsI18n.language === Languages.Engelsk ? ',' : ' ';
   const addSpacesOrCommas = (value: string): string =>
@@ -97,9 +76,7 @@ export const TextField = ({
     return isNegative ? `-${numberOnly}` : numberOnly;
   };
 
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
-  ): void => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
     if (!thousandSeparator) return;
 
     const input = e.currentTarget;
@@ -153,9 +130,7 @@ export const TextField = ({
     }
   };
 
-  const handleChange = (
-    e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-  ): void => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     if (thousandSeparator) {
       const input = e.target as HTMLInputElement;
       const cursorPosition = input.selectionStart || 0;
@@ -183,9 +158,6 @@ export const TextField = ({
       input.setSelectionRange(newPosition, newPosition);
     }
 
-    if (autosize && defaultValue !== undefined) {
-      resizeTextArea();
-    }
     onChange?.(e);
   };
 
@@ -199,12 +171,10 @@ export const TextField = ({
   }
 
   const isLarge = variant === 'large';
-  const multilineTextboxClassName =
-    Tag === 'textarea' ? styles.textbox_multiline : '';
-  const autosizeTextarea = autosize ? styles.textbox_autosize : '';
+
   const textboxClassName = `${styles.textbox} ${
     isLarge ? styles.textbox_large : ''
-  } ${multilineTextboxClassName} ${autosizeTextarea} ${label && !hideLabel ? styles.textboxMarginTop : ''} ${
+  } ${label && !hideLabel ? styles.textboxMarginTop : ''} ${
     classNames?.textbox ?? ''
   }`.trim();
 
@@ -226,7 +196,7 @@ export const TextField = ({
       >
         {label}
       </LabelWithHelp>
-      <Tag
+      <input
         ref={textboxRef}
         id={textboxId}
         className={textboxClassName}
@@ -244,7 +214,6 @@ export const TextField = ({
         placeholder={placeholder}
         readOnly={readOnly}
         required={required}
-        rows={rows}
         value={value}
         aria-describedby={errorMessage ? errorId : undefined}
         aria-invalid={!!errorMessage || undefined}
@@ -265,5 +234,3 @@ export const TextField = ({
 };
 
 TextField.displayName = 'TextField';
-
-export { getTextFieldAsDefault };

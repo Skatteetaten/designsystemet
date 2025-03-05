@@ -3,7 +3,6 @@ import {
   ComponentPropsWithoutRef,
   FocusEventHandler,
   Ref,
-  RefObject,
 } from 'react';
 
 import {
@@ -15,20 +14,14 @@ import {
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
-export const textFieldAsArr = ['input', 'textarea'] as const;
-export type TextFieldAs = (typeof textFieldAsArr)[number];
-
-export type TextboxRefHandle = {
-  textboxRef: RefObject<HTMLTextAreaElement | HTMLInputElement | null>;
-};
-
 type RequiredTextFieldHTMLAttributes = Pick<
-  ComponentPropsWithoutRef<'input' | 'textarea'>,
+  ComponentPropsWithoutRef<'input'>,
   | 'autoComplete'
   | 'defaultValue'
   | 'disabled'
   | 'form'
   | 'inputMode'
+  | 'list'
   | 'maxLength'
   | 'minLength'
   | 'name'
@@ -36,20 +29,21 @@ type RequiredTextFieldHTMLAttributes = Pick<
   | 'readOnly'
   | 'required'
   | 'value'
+  | 'pattern'
 >;
 
 type TextFieldHTMLAttributes = Partial<RequiredTextFieldHTMLAttributes>;
 
 interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
-  onBlur?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
-  onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
-  onFocus?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  onBlur?: FocusEventHandler<HTMLInputElement>;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onFocus?: FocusEventHandler<HTMLInputElement>;
 }
 
 export interface TextFieldCommonProps
   extends TextFieldPropsHTMLAttributes,
     BaseProps {
-  ref?: Ref<TextboxRefHandle>;
+  ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
       container?: string;
@@ -73,31 +67,10 @@ export interface TextFieldCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Definerer stilen til TextField */
   variant?: FormSize;
+  /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
+  thousandSeparator?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
-type TextFieldDiscriminatedProps =
-  | ({
-      /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
-      thousandSeparator?: boolean;
-      /** HTML-tag for TextField: input eller textarea. */
-      as?: Extract<TextFieldAs, 'input'>;
-      /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
-      autosize?: never;
-      rows?: never;
-    } & Pick<ComponentPropsWithoutRef<'input'>, 'pattern' | 'list'>)
-  | ({
-      /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
-      thousandSeparator?: never;
-      pattern?: never;
-      list?: never;
-      /** HTML-tag for TextField: input eller textarea. */
-      as: Extract<TextFieldAs, 'textarea'>;
-      /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
-      autosize?: boolean;
-    } & Pick<ComponentPropsWithoutRef<'textarea'>, 'rows'>);
-
-export type TextFieldProps = TextFieldCommonProps &
-  FormRequiredProps &
-  TextFieldDiscriminatedProps;
+export type TextFieldProps = TextFieldCommonProps & FormRequiredProps;

@@ -34,17 +34,6 @@
     display: none;
   }
 
-  &_multiline {
-    padding: var(--spacing-s);
-    overflow-y: auto;
-  }
-
-  &_autosize {
-    overflow: hidden;
-    min-height: calc(2lh + calc(var(--spacing-s) * 2));
-    resize: none;
-  }
-
   &::placeholder {
     color: var(--palette-graphite-50);
   }

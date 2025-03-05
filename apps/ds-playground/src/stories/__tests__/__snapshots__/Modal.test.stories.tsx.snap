@@ -104,7 +104,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
     </div>
   </header>
   <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
-    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes. 
+    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes.
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
   </p>
   <dialog class="_modal_i27cp_5"
@@ -274,7 +274,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
     </div>
   </header>
   <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
-    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen.
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_i27cp_5"
@@ -1135,8 +1135,13 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
           >
             Navn
           </label>
+<<<<<<< HEAD
           <input id="textFieldTextboxId-:r11:"
                  class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
+=======
+          <input id="textFieldTextboxId-:r13:"
+                 class="_textbox_1hi30_5  _textboxMarginTop_1hi30_21"
+>>>>>>> 7b4ddc74 (fjern textarea fra TextField)
                  autocomplete="off"
           >
           <div id="textFieldErrorId-:r10:"
