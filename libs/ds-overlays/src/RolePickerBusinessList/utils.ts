@@ -1,0 +1,17 @@
+export const unitTypesToHide = [
+  'AS',
+  'DA',
+  'ANS',
+  'ASA',
+  'SE',
+  'BA',
+  'SA',
+  'SCE',
+  'STI',
+  'IKS',
+  'KF',
+  'FKF',
+  'RHF',
+  'HF',
+  'NUF',
+];
