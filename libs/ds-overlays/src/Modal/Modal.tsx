@@ -10,12 +10,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import {
-  Separator,
-  SkatteetatenLogo,
-  dsI18n,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -147,30 +142,23 @@ export const Modal = ({
   };
 
   const hideTitleClassName = hideTitle ? styles.srOnly : '';
-  const hideOutlineClassName =
-    variant === 'plain' || variant === 'important' ? styles.modalNoBorder : '';
   const paddingClassName =
     styles[`modalPadding${padding.toUpperCase() as Uppercase<ModalPadding>}`];
   const noPaddingTop = imageSource ? styles.modalNoPaddingTop : '';
   const headingNoPaddingClassName =
     padding === 'mega' ? styles.modalHeadingNoPadding : '';
 
-  if (variant === 'important') {
-    console.warn(
-      'Modal: Varianten "important" er deprekert og vil bli fjernet i neste major versjon.'
-    );
-  }
-
   return (
     <dialog
       ref={modalRef}
       id={id}
-      className={`${styles.modal} ${hideOutlineClassName} ${className} ${
+      className={`${styles.modal} ${className} ${
         classNames?.container ?? ''
       }`.trim()}
       lang={lang}
       data-testid={dataTestId}
       aria-labelledby={headingId}
+      data-variant={variant}
       autoFocus
       /* Må bruke onCancel i kombinasjon med onKeyDown siden to trykk på esc lukker modalen i chrome (https://issues.chromium.org/issues/41491338) */
       onCancel={(e) => !dismissOnEsc && e.preventDefault()}
@@ -209,9 +197,6 @@ export const Modal = ({
           />
         )}
         <div className={`${paddingClassName} ${noPaddingTop}`.trim()}>
-          {variant === 'important' && (
-            <SkatteetatenLogo className={styles.modalLogo} />
-          )}
           {renderIcon && <div>{renderIcon?.()}</div>}
           <Heading
             className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
@@ -224,7 +209,6 @@ export const Modal = ({
           </Heading>
           {children}
         </div>
-        {variant === 'important' && <Separator />}
       </div>
     </dialog>
   );

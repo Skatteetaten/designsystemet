@@ -164,22 +164,6 @@ export const VariantPlain = {
   },
 } satisfies Story;
 
-export const VariantImportant = {
-  render: TemplateModal,
-  name: 'Variant Important (A1)',
-  args: {
-    variant: 'important',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await userEvent.click(button);
-  },
-} satisfies Story;
-
 export const WithImage = {
   render: TemplateModal,
   name: 'With Image (A1)',

@@ -1,11 +1,9 @@
 declare const classNames: {
   readonly modal: 'modal';
   readonly modalContainer: 'modalContainer';
-  readonly modalLogo: 'modalLogo';
   readonly modalHeading: 'modalHeading';
   readonly modalHeadingNoPadding: 'modalHeadingNoPadding';
   readonly modalIllustration: 'modalIllustration';
-  readonly modalNoBorder: 'modalNoBorder';
   readonly modalPaddingNONE: 'modalPaddingNONE';
   readonly modalPaddingS: 'modalPaddingS';
   readonly modalPaddingM: 'modalPaddingM';
