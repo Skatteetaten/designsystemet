@@ -25,20 +25,20 @@ export const RolePickerPeopleList = ({
   showDeceasedPeople: showDeceasedPeopleExternal,
 }: RolePickerPeopleListProps): JSX.Element | null => {
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
-  const [showAll, setShowAll] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [showDeceasedPeople, setShowDeceasedPeople] = useState(
     showDeceasedPeopleExternal
   );
   const ctx = useContext(RolePickerContext);
   const navRef = useRef<HTMLElement>(null);
 
-  const handleShowAll = (): void => {
-    setShowAll(true);
+  const handleExpand = (): void => {
+    setIsExpanded(true);
     navRef.current?.querySelectorAll('a')[MAX_INIITAL_ITEMS - 1].focus();
   };
 
-  const handleShowLess = (): void => {
-    setShowAll(false);
+  const handleCollapse = (): void => {
+    setIsExpanded(false);
     navRef.current?.querySelectorAll('a')[0].focus();
   };
 
@@ -68,11 +68,11 @@ export const RolePickerPeopleList = ({
           f.personId.includes(filterQuery.toLowerCase())
       );
     }
-    if (showAll) {
+    if (isExpanded) {
       return items;
     }
     return items.slice(0, MAX_INIITAL_ITEMS);
-  }, [people.list, showDeceasedPeople, filterQuery, showAll]);
+  }, [people.list, showDeceasedPeople, filterQuery, isExpanded]);
 
   const getShowAllCount = useCallback((): number => {
     return showDeceasedPeople
@@ -119,14 +119,14 @@ export const RolePickerPeopleList = ({
       </nav>
       {displayToggleAllButton ? (
         <div className={styles.showAllButtonWrapper}>
-          {showAll ? (
-            <Button variant={'tertiary'} onClick={handleShowLess}>
-              {'Vis færre'}
+          {isExpanded ? (
+            <Button variant={'tertiary'} onClick={handleCollapse}>
+              {'Vis færre personer'}
             </Button>
           ) : (
             <Button
               variant={'tertiary'}
-              onClick={handleShowAll}
+              onClick={handleExpand}
             >{`${t('rolepicker.ShowAll')} ${t('rolepicker.People')} (${getShowAllCount()})`}</Button>
           )}
         </div>
