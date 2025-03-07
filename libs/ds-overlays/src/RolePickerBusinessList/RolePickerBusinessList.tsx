@@ -14,6 +14,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 import { RolePickerBusinessListProps } from './RolePickerBusinessList.types';
 import { getBusinessTitle } from './utils';
 import { Business } from '../RolePicker/RolePicker.types';
+import { formatOrganisationNumber } from '../RolePicker/utils';
 import { RolePickerContext } from '../RolePickerContext/RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
 
@@ -192,7 +193,7 @@ export const RolePickerBusinessList = ({
                     description={
                       <>
                         {t('rolepicker.BusinessDescriptionPrefix')}{' '}
-                        {item.organizationNumber}{' '}
+                        {formatOrganisationNumber(item.organizationNumber)}{' '}
                         <em>
                           {'('}
                           {t('rolepicker.MainBusiness')}
@@ -224,7 +225,9 @@ export const RolePickerBusinessList = ({
                             description={
                               <>
                                 {t('rolepicker.BusinessDescriptionPrefix')}{' '}
-                                {sub.organizationNumber}{' '}
+                                {formatOrganisationNumber(
+                                  sub.organizationNumber
+                                )}{' '}
                                 <em>
                                   {'('}
                                   {t('rolepicker.SubUnit')}
@@ -256,7 +259,7 @@ export const RolePickerBusinessList = ({
                   <RolePickerRow
                     id={item.organizationNumber}
                     title={getBusinessTitle(item)}
-                    description={`${t('rolepicker.BusinessDescriptionPrefix')} ${item.organizationNumber}`}
+                    description={`${t('rolepicker.BusinessDescriptionPrefix')} ${formatOrganisationNumber(item.organizationNumber)}`}
                     svgPath={item.isDeleted ? BriefcaseOffSVGpath : svgPath}
                     onClick={() => {
                       handleEntityClicked(item);

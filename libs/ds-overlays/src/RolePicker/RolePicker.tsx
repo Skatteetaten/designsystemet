@@ -20,6 +20,7 @@ import {
   getRolePickerShowSubunitsDefault,
 } from './defaults';
 import { RolePickerProps } from './RolePicker.types';
+import { formatNationalIdentityNumber } from './utils';
 import {
   getModalDismissOnEscDefault,
   getModalDismissOnOutsideClickDefault,
@@ -148,7 +149,7 @@ export const RolePicker = ({
               <RolePickerRow
                 id={me.personId}
                 title={t('rolepicker.MeHeading')}
-                description={`${t('rolepicker.PeopleDescriptionPrefix')} ${me.personId}`}
+                description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(me.personId)}`}
                 svgPath={FavoriteSVGpath}
                 titleAs={'h2'}
                 onClick={() => {

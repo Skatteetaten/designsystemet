@@ -9,6 +9,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 import { RolePickerPeopleListProps } from './RolePickerPeopleList.types';
 import { Person } from '../RolePicker/RolePicker.types';
+import { formatNationalIdentityNumber } from '../RolePicker/utils';
 import { RolePickerContext } from '../RolePickerContext/RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
 
@@ -100,7 +101,7 @@ export const RolePickerPeopleList = ({
                 <RolePickerRow
                   id={item.personId}
                   title={`${item.name}${item.isDeleted ? ` (${t('rolepicker.Deceased')})` : ''}`}
-                  description={`${t('rolepicker.PeopleDescriptionPrefix')} ${item.personId}`}
+                  description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(item.personId)}`}
                   svgPath={PersonSVGpath}
                   onClick={() => handleEntityClicked(item)}
                 />

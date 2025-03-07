@@ -29,7 +29,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const me: Person = {
   name: 'Ola Nordmann',
-  personId: '101010 12345',
+  personId: '10101012345',
   type: 'Person',
 };
 
@@ -132,25 +132,25 @@ const people: Paginated<Person> = {
   list: [
     {
       name: 'Antikvitet presis',
-      personId: '138899 99726',
+      personId: '13889999726',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
-      personId: '188495 74503',
+      personId: '18849574503',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lomme filosofisk',
-      personId: '088896 74513',
+      personId: '08889674513',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Adelsmann varm',
-      personId: '148924 49911',
+      personId: '14892449911',
       type: 'Person',
       isDeleted: false,
     },
