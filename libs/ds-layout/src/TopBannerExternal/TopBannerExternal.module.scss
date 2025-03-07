@@ -54,6 +54,7 @@
 /* pga skiplink så er det ikke mulig å sette position på header */
 .containerForMainMenu {
   position: relative;
+  background-color: var(--semantic-page-background);
 }
 
 .mainMenu {

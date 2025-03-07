@@ -20,8 +20,8 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_18mb7_51">
-      <div class="_topContainer_18mb7_2">
+    <div class="_containerForMainMenu_629ec_51">
+      <div class="_topContainer_629ec_2">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -34,8 +34,8 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_18mb7_17">
-          <div class="_content_18mb7_17">
+        <div class="_contentContainer_629ec_17">
+          <div class="_content_629ec_17">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -95,10 +95,10 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_18mb7_28">
-        <div class="_separatorRight_18mb7_41">
+      <div class="_separator_629ec_28">
+        <div class="_separatorRight_629ec_41">
         </div>
-        <div class="_separatorLeft_18mb7_33">
+        <div class="_separatorLeft_629ec_33">
         </div>
       </div>
     </div>
@@ -190,8 +190,8 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_18mb7_51">
-      <div class="_topContainer_18mb7_2">
+    <div class="_containerForMainMenu_629ec_51">
+      <div class="_topContainer_629ec_2">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -204,8 +204,8 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_18mb7_17">
-          <div class="_content_18mb7_17">
+        <div class="_contentContainer_629ec_17">
+          <div class="_content_629ec_17">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -265,10 +265,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_18mb7_28">
-        <div class="_separatorRight_18mb7_41">
+      <div class="_separator_629ec_28">
+        <div class="_separatorRight_629ec_41">
         </div>
-        <div class="_separatorLeft_18mb7_33">
+        <div class="_separatorLeft_629ec_33">
         </div>
       </div>
     </div>
