@@ -6,7 +6,7 @@ import { IconProps } from '@skatteetaten/ds-icons';
 export const modalPaddingArr = ['none', 's', 'm', 'l', 'mega'] as const;
 export type ModalPadding = (typeof modalPaddingArr)[number];
 
-export const modalVariantArr = ['outline', 'plain', 'important'] as const;
+export const modalVariantArr = ['outline', 'plain'] as const;
 export type ModalVariant = (typeof modalVariantArr)[number];
 
 export interface ModalProps extends BaseProps {
@@ -19,9 +19,6 @@ export interface ModalProps extends BaseProps {
   children: ReactNode;
   /**
    * Definerer stilen til Modal.
-   *
-   * **Deprecated:** Variant 'important' skal fases ut i neste major versjon.
-   * Bruk 'outline' i stedet.
    */
   variant?: ModalVariant;
   /** Padding rundt Modal */

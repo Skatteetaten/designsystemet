@@ -727,14 +727,15 @@ exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
       Vis modal
     </span>
   </button>
-  <dialog class="_modal_125nh_5"
+  <dialog class="_modal_i27cp_5"
           aria-labelledby="modalHeadingId-:r2s:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -752,9 +753,9 @@ exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r2s:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Modal med textarea
         </h1>

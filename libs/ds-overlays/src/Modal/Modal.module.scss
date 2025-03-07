@@ -25,10 +25,6 @@
     outline: none;
   }
 
-  &Logo {
-    margin-bottom: var(--spacing-m);
-  }
-
   &Heading {
     padding-right: var(--spacing-xl);
 
@@ -42,7 +38,7 @@
     margin-bottom: var(--spacing-m);
   }
 
-  &NoBorder {
+  &[data-variant='plain'] {
     border: none;
   }
 

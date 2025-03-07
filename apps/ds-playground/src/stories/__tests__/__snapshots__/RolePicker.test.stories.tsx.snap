@@ -9,13 +9,14 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r0:"
+          data-variant="outline"
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -33,9 +34,9 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r0:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -634,13 +635,14 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:ra2:"
+          data-variant="outline"
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -658,9 +660,9 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:ra2:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -1000,16 +1002,17 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
     </span>
   </button>
   <dialog id="htmlId"
-          class="_modal_125nh_5  _container_90jan_17 dummyClassname"
+          class="_modal_i27cp_5 _container_90jan_17 dummyClassname"
           lang="en"
           data-testid="123ID"
           aria-labelledby="modalHeadingId-:ru:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -1027,9 +1030,9 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:ru:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -1628,14 +1631,15 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r5h:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -1653,9 +1657,9 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r5h:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -2094,14 +2098,15 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r4j:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -2119,9 +2124,9 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r4j:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Custom title
         </h1>
@@ -2720,14 +2725,15 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:rb8:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -2745,9 +2751,9 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:rb8:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -3294,14 +3300,15 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r80:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -3319,9 +3326,9 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r80:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -3954,14 +3961,15 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r92:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -3979,9 +3987,9 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r92:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Du kan ikke bruke dette skjemaet
         </h1>
@@ -4020,14 +4028,15 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:rai:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -4045,9 +4054,9 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:rai:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -4302,14 +4311,15 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:rc4:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -4327,9 +4337,9 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:rc4:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -4682,14 +4692,15 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:rav:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -4707,9 +4718,9 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:rav:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -4876,13 +4887,14 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r6n:"
+          data-variant="outline"
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -4900,9 +4912,9 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r6n:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -5338,13 +5350,14 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r67:"
+          data-variant="outline"
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -5362,9 +5375,9 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r67:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -5703,14 +5716,15 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r2k:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -5728,9 +5742,9 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r2k:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -6396,14 +6410,15 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r1s:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -6421,9 +6436,9 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r1s:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -6882,13 +6897,14 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r94:"
+          data-variant="outline"
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -6906,9 +6922,9 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r94:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -7507,16 +7523,17 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r3m:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r3m:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>
@@ -8108,14 +8125,15 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_90jan_17"
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r7d:"
+          data-variant="outline"
           open
   >
     <div tabindex="-1"
-         class="_modalContainer_125nh_23"
+         class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_125nh_61"
+      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
@@ -8133,9 +8151,9 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="_modalPaddingL_125nh_51">
+      <div class="_modalPaddingL_i27cp_48">
         <h1 id="modalHeadingId-:r7d:"
-            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Hvem ønsker du å representere?
         </h1>

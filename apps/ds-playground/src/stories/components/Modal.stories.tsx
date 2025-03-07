@@ -156,44 +156,6 @@ export const Samtykkemodal: Story = {
 } satisfies Story;
 Samtykkemodal.parameters = exampleParameters;
 
-export const ViktigMelding: Story = {
-  render: (_args): JSX.Element => {
-    const refModalImportant = useRef<HTMLDialogElement>(null);
-
-    return (
-      <>
-        <Button
-          variant={'tertiary'}
-          svgPath={InfoOutlineSVGpath}
-          onClick={(): void => refModalImportant.current?.showModal()}
-        >
-          {'Viktig driftsmelding'}
-        </Button>
-        <Modal
-          ref={refModalImportant}
-          variant={'important'}
-          title={'Viktig melding!'}
-        >
-          <Paragraph hasSpacing>
-            {
-              'Løsningen er ikke kommet i drift ennå eller tatt ned for vedlikehold.'
-            }
-          </Paragraph>
-          <div className={'modalLink'}>
-            <Link
-              href={'#'}
-              onClick={(): void => refModalImportant.current?.close()}
-            >
-              {'Les mer på skatteetaten.no'}
-            </Link>
-          </div>
-        </Modal>
-      </>
-    );
-  },
-} satisfies Story;
-ViktigMelding.parameters = exampleParameters;
-
 export const Ventevarsel: Story = {
   render: function Render(_args): JSX.Element {
     const refModalWait = useRef<HTMLDialogElement>(null);
