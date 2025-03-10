@@ -788,9 +788,9 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
       </svg>
     </button>
     <div class="_helpBox_10ldw_31">
-      <span class="_helpBoxText_10ldw_44">
+      <div class="_helpBoxText_10ldw_44">
         Hjelpetekst
-      </span>
+      </div>
       <button class="_button_1hc5e_1 _button_small_1hc5e_42  _helpBoxCloseButton_10ldw_51"
               data-brightness="default"
               type="button"
