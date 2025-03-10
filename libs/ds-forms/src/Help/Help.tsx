@@ -63,7 +63,7 @@ export const Help = ({
             className ?? ''
           } ${classNames?.helpText ?? ''}`.trim()}
         >
-          <span className={styles.helpBoxText}>{helpText}</span>
+          <div className={styles.helpBoxText}>{helpText}</div>
           <IconButton
             className={styles.helpBoxCloseButton}
             size={'small'}
