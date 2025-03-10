@@ -1135,13 +1135,8 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
           >
             Navn
           </label>
-<<<<<<< HEAD
           <input id="textFieldTextboxId-:r11:"
-                 class="_textbox_3tcss_5    _textboxMarginTop_3tcss_21"
-=======
-          <input id="textFieldTextboxId-:r13:"
                  class="_textbox_1hi30_5  _textboxMarginTop_1hi30_21"
->>>>>>> 7b4ddc74 (fjern textarea fra TextField)
                  autocomplete="off"
           >
           <div id="textFieldErrorId-:r10:"
