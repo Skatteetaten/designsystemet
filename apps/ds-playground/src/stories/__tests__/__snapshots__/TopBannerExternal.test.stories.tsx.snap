@@ -36,12 +36,12 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -51,14 +51,14 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -164,7 +164,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -270,7 +270,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -376,7 +376,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -482,7 +482,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -588,7 +588,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -698,7 +698,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -822,7 +822,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -928,7 +928,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1031,12 +1031,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1046,7 +1046,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -1064,7 +1064,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1257,12 +1257,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1272,7 +1272,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -1290,7 +1290,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1483,12 +1483,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1498,7 +1498,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -1516,7 +1516,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1714,7 +1714,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1817,12 +1817,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1832,7 +1832,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -1860,7 +1860,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -2063,12 +2063,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2078,7 +2078,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -2106,7 +2106,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -2309,12 +2309,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2324,7 +2324,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -2352,7 +2352,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -2555,12 +2555,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2570,7 +2570,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -2593,7 +2593,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -2791,12 +2791,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2806,7 +2806,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -2829,7 +2829,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -3027,12 +3027,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_197zg_1"
+            <button class="_button_ac38m_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_197zg_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+              <span class="_iconWrapper_ac38m_18">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3042,7 +3042,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_197zg_27">
+              <span class="_buttonText_ac38m_27">
                 Meny
               </span>
             </button>
@@ -3065,7 +3065,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_ac38m_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
