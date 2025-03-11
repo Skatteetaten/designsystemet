@@ -105,11 +105,11 @@ const businesses: Paginated<Business> = {
       unitType: 'ASA',
     },
     {
-      name: 'Meta ANS',
+      name: 'Meta',
       organizationNumber: '212843218',
       isDeleted: false,
       type: 'Organization',
-      unitType: 'ANS',
+      unitType: 'ApS',
     },
   ],
 };

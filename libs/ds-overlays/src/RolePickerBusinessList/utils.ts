@@ -23,7 +23,7 @@ const unitTypesToHide = [
 export const getBusinessTitle = (business: Business): string => {
   let title = business.name;
   if (!unitTypesToHide.includes(business.unitType)) {
-    title += ` (${business.unitType})`;
+    title += ` ${business.unitType}`;
   }
 
   if (business.isDeleted) {
