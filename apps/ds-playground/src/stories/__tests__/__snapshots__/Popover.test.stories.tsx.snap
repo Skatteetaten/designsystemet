@@ -8,7 +8,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
             type="button"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3:"
@@ -35,7 +35,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r4:"
@@ -51,7 +51,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
         </button>
       </div>
       <div class="_popoverArrow_12pml_43 _popoverArrow_top_12pml_52"
-           style="bottom: -13px; left: 85px;"
+           style="bottom: -13px; left: 83px;"
       >
       </div>
     </div>
@@ -60,7 +60,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
             type="button"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r6:"
@@ -87,7 +87,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r7:"
@@ -103,7 +103,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
         </button>
       </div>
       <div class="_popoverArrow_12pml_43 _popoverArrow_bottom_12pml_56"
-           style="top: -13px; left: 117px;"
+           style="top: -13px; left: 119px;"
       >
       </div>
     </div>
@@ -112,7 +112,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
             type="button"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r9:"
@@ -139,7 +139,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:ra:"
@@ -155,7 +155,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
         </button>
       </div>
       <div class="_popoverArrow_12pml_43 _popoverArrow_top_12pml_52"
-           style="bottom: -13px; left: 392px;"
+           style="bottom: -13px; left: 396px;"
       >
       </div>
     </div>
@@ -164,7 +164,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
             type="button"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rc:"
@@ -191,7 +191,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:rd:"
@@ -207,7 +207,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
         </button>
       </div>
       <div class="_popoverArrow_12pml_43 _popoverArrow_bottom_12pml_56"
-           style="top: -13px; left: 438px;"
+           style="top: -13px; left: 442px;"
       >
       </div>
     </div>
@@ -222,7 +222,7 @@ exports[`Tester/Popover/Popover Defaults play-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r1:"

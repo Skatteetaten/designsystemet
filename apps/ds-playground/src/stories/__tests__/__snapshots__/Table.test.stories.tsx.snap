@@ -288,7 +288,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rs:"
@@ -314,7 +314,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rt:"
@@ -339,7 +339,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ru:"
@@ -365,7 +365,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rv:"
@@ -397,7 +397,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r11:"
@@ -438,7 +438,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r13:"
@@ -492,7 +492,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r15:"
@@ -532,7 +532,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r16:"
@@ -604,7 +604,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rb:"
@@ -630,7 +630,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rc:"
@@ -655,7 +655,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rd:"
@@ -681,7 +681,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:re:"
@@ -712,7 +712,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rg:"
@@ -752,7 +752,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ri:"
@@ -792,7 +792,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rk:"
@@ -832,7 +832,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rl:"
@@ -981,7 +981,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1i:"
@@ -1007,7 +1007,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1j:"
@@ -1032,7 +1032,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1k:"
@@ -1058,7 +1058,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1l:"
@@ -1089,7 +1089,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1n:"
@@ -1129,7 +1129,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1p:"
@@ -1169,7 +1169,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1r:"
@@ -1209,7 +1209,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1s:"
@@ -1568,7 +1568,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r0:"
@@ -1594,7 +1594,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1:"
@@ -1619,7 +1619,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r2:"
@@ -1645,7 +1645,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r3:"
@@ -1676,7 +1676,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r5:"
@@ -1716,7 +1716,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r7:"
@@ -1756,7 +1756,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r9:"
@@ -1796,7 +1796,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ra:"
@@ -1868,7 +1868,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r17:"
@@ -1894,7 +1894,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r18:"
@@ -1919,7 +1919,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r19:"
@@ -1945,7 +1945,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1a:"
@@ -1976,7 +1976,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1c:"
@@ -2016,7 +2016,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1e:"
@@ -2056,7 +2056,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1g:"
@@ -2096,7 +2096,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1h:"

@@ -8,7 +8,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -39,7 +39,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_58gke_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -65,7 +65,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -79,7 +79,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -118,7 +118,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r17:"
@@ -178,7 +178,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -209,7 +209,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_azp4i_17"
+              <button class="_button_58gke_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -235,7 +235,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -249,7 +249,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -288,7 +288,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1c:"
@@ -347,7 +347,7 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rj:"
@@ -416,7 +416,7 @@ exports[`Tester/Modal Defaults play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -485,7 +485,7 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -557,7 +557,7 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -625,7 +625,7 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rl:"
@@ -694,7 +694,7 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rn:"
@@ -763,7 +763,7 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rp:"
@@ -832,7 +832,7 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -848,7 +848,7 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
       </button>
       <div class="_modalPaddingL_i27cp_48">
         <div>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_extraLarge_dry7n_20"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -912,7 +912,7 @@ exports[`Tester/Modal WithImage play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -985,7 +985,7 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rf:"
@@ -1058,7 +1058,7 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rt:"
@@ -1108,7 +1108,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rv:"
@@ -1175,7 +1175,7 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rc:"
@@ -1244,7 +1244,7 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rh:"

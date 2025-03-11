@@ -152,12 +152,12 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _stepEditButton_t28i0_46"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _stepEditButton_t28i0_46"
                 data-brightness="default"
                 type="button"
                 aria-describedby="steptitle-:r7:"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -186,7 +186,7 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
       >
         <span class="_stepCircle_t28i0_196
       _stepCircle_neutralResult_t28i0_235">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _stepCircleIcon_t28i0_244"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r6:"
@@ -228,7 +228,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
       >
         <span class="_stepCircle_t28i0_196
       _stepCircle_active_t28i0_221">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _stepCircleIcon_t28i0_244"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r3:"

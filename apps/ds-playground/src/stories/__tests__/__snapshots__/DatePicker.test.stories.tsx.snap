@@ -20,7 +20,7 @@ exports[`Tester/DatePicker/DatePicker Defaults play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rg:"
@@ -67,7 +67,7 @@ exports[`Tester/DatePicker/DatePicker WithAttributes play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -112,7 +112,7 @@ exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-te
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1v:"
@@ -158,7 +158,7 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -177,8 +177,8 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15 dummyClassname">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+      <div class="_errorMessage_vog41_15 dummyClassname">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -187,7 +187,7 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1kdf4_30">
+        <p class="_errorMessageText_vog41_29">
           Fødselsdato er obligatorisk
         </p>
       </div>
@@ -216,7 +216,7 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2a:"
@@ -263,7 +263,7 @@ exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1h:"
@@ -309,7 +309,7 @@ exports[`Tester/DatePicker/DatePicker WithDisabled play-test 1`] = `
               disabled
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ro:"
@@ -355,7 +355,7 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1c:"
@@ -374,8 +374,8 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+      <div class="_errorMessage_vog41_15">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -384,7 +384,7 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1kdf4_30">
+        <p class="_errorMessageText_vog41_29">
           Fødselsdato er obligatorisk
         </p>
       </div>
@@ -408,7 +408,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
             aria-describedby="labelId-:r1k:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r1l:"
@@ -430,7 +430,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1n:"
@@ -456,7 +456,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1m:"
@@ -495,7 +495,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
             aria-describedby="labelId-:r65:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r66:"
@@ -520,7 +520,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r67:"
@@ -564,7 +564,7 @@ exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1r:"
@@ -608,7 +608,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="true"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2n:"
@@ -635,7 +635,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                   data-brightness="default"
                   type="button"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r2o:"
@@ -722,7 +722,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                     Desember
                   </option>
                 </select>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_vbsz7_52"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -762,7 +762,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                   data-brightness="default"
                   type="button"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r30:"
@@ -1195,7 +1195,7 @@ exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r23:"
@@ -1267,7 +1267,7 @@ exports[`Tester/DatePicker/DatePicker WithRef play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -1312,7 +1312,7 @@ exports[`Tester/DatePicker/DatePicker WithRequired play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r10:"
@@ -1357,7 +1357,7 @@ exports[`Tester/DatePicker/DatePicker WithRequiredAndMark smoke-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r14:"
@@ -1401,7 +1401,7 @@ exports[`Tester/DatePicker/DatePicker WithValue play-test 1`] = `
               class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rs:"
@@ -1445,7 +1445,7 @@ exports[`Tester/DatePicker/DatePicker WithVariantLarge smoke-test 1`] = `
               class="_calendarButton_13xkq_13 _calendarButton_large_13xkq_91"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rk:"

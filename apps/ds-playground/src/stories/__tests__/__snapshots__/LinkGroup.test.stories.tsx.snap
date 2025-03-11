@@ -4,7 +4,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="_linkGroup_w23nb_1">
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -20,7 +20,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -36,7 +36,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -59,7 +59,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="_linkGroup_w23nb_1">
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_down_w23nb_29"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_down_w23nb_29"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -75,7 +75,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_down_w23nb_29"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_down_w23nb_29"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -91,7 +91,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_down_w23nb_29"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_down_w23nb_29"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -118,7 +118,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
       data-testid="123ID"
   >
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -134,7 +134,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -150,7 +150,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -173,7 +173,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="_linkGroup_w23nb_1">
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -189,7 +189,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -205,7 +205,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -228,7 +228,7 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="_linkGroup_w23nb_1">
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -241,7 +241,7 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
          href="#storybook-root"
       >
         Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke og får et hengende innrykk.
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-label="Til et annet nettsted"
@@ -254,7 +254,7 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -266,7 +266,7 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
       <a class="_link_z7jba_1"
          href="#storybook-root"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -288,7 +288,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
       id="dummyIdForwardedFromRef"
   >
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -304,7 +304,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -320,7 +320,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -343,7 +343,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -359,7 +359,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -375,7 +375,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -393,7 +393,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
   </ul>
   <ul class="_linkGroup_w23nb_1 _linkGroup_hasSpacing_w23nb_5">
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -409,7 +409,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -425,7 +425,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
       </a>
     </li>
     <li class="_linkGroupItem_w23nb_8">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"

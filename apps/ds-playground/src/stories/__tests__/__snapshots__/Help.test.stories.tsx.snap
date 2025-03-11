@@ -7,7 +7,7 @@ exports[`Tester/Help (intern) ClickCloseButton play-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:ra:"
@@ -31,7 +31,7 @@ exports[`Tester/Help (intern) ClickHelpButton play-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r8:"
@@ -69,7 +69,7 @@ exports[`Tester/Help (intern) WithHelpSvgPathTitleHelpSvgAndTargetId play-test 1
           aria-describedby="storybook-root"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r6:"
@@ -93,7 +93,7 @@ exports[`Tester/Help (intern) WithHelpTextAndDescription smoke-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r2:"
@@ -120,7 +120,7 @@ exports[`Tester/Help (intern) WithHelpToggleEvent smoke-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rc:"
@@ -144,7 +144,7 @@ exports[`Tester/Help (intern) WithHelptext play-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r0:"
@@ -168,7 +168,7 @@ exports[`Tester/Help (intern) WithHideHelp play-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r7:"
@@ -195,7 +195,7 @@ exports[`Tester/Help (intern) WithLongHelpTextAndDescription smoke-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r4:"

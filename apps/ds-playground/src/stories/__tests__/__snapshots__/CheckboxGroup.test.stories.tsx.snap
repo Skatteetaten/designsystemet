@@ -376,7 +376,7 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
             aria-describedby="legendId-:r3d:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3e:"
@@ -461,8 +461,8 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_1kdf4_15 _errorMessage_1e92u_5 dummyClassname">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+        <div class="_errorMessage_vog41_15 _errorMessage_1e92u_5 dummyClassname">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -471,7 +471,7 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_1kdf4_30">
+          <p class="_errorMessageText_vog41_29">
             Velg minst ett av alternativene
           </p>
         </div>
@@ -813,8 +813,8 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_1kdf4_15 _errorMessage_1e92u_5">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+        <div class="_errorMessage_vog41_15 _errorMessage_1e92u_5">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -823,7 +823,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_1kdf4_30">
+          <p class="_errorMessageText_vog41_29">
             Velg minst ett av alternativene
           </p>
         </div>
@@ -852,7 +852,7 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
             aria-describedby="legendId-:r34:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r35:"
@@ -953,7 +953,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
             aria-describedby="legendId-:r2i:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2j:"
@@ -975,7 +975,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2q:"

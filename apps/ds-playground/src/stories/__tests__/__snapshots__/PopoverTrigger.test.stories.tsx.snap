@@ -8,7 +8,7 @@ exports[`Tester/Popover/Trigger WithAriaDescribedby play-test 1`] = `
           aria-describedby="araiDescId"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r5:"
@@ -35,7 +35,7 @@ exports[`Tester/Popover/Trigger WithAttributes play-test 1`] = `
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r3:"
@@ -59,7 +59,7 @@ exports[`Tester/Popover/Trigger WithEventHandlers play-test 1`] = `
           type="button"
           aria-expanded="true"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r7:"
@@ -84,7 +84,7 @@ exports[`Tester/Popover/Trigger WithRef play-test 1`] = `
           aria-expanded="false"
           id="dummyIdForwardedFromRef"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r1:"
