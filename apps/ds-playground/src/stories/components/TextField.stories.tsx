@@ -54,7 +54,7 @@ const meta = {
         defaultValue: { summary: 'HelpSimpleSVGpath' },
       },
     },
-    helpText: { table: { category: category.props } },
+    helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     label: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
@@ -104,7 +104,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     label: 'Navn',

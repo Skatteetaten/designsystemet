@@ -14,7 +14,7 @@ const meta = {
   title: 'Komponenter/FileUploader',
   argTypes: {
     // Props
-    classNames: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
     acceptedFileFormatsDisplay: { table: { category: category.props } },
     description: { table: { category: category.props } },
     fileIconTitle: { table: { category: category.props } },
@@ -45,8 +45,8 @@ const meta = {
         defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
       },
     },
-    uploadedFiles: { table: { category: category.props } },
-    uploadResult: { table: { category: category.props } },
+    uploadedFiles: { control: false, table: { category: category.props } },
+    uploadResult: { control: false, table: { category: category.props } },
     // HTML
     multiple: { table: { category: category.htmlAttribute } },
     children: { table: { category: category.props } },
@@ -55,7 +55,7 @@ const meta = {
     onFileDelete: { table: { category: category.event } },
     onFileDownload: { table: { category: category.event } },
     onFileChange: { table: { category: category.event } },
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { control: false, table: { category: category.event } },
   },
   args: {
     helpText: 'Hjelpetekst',

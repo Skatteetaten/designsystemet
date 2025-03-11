@@ -4,6 +4,7 @@ import { Tabs } from '@skatteetaten/ds-collections';
 import { BriefcaseSVGpath } from '@skatteetaten/ds-icons';
 
 import { category } from '../../../.storybook/helpers';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: Tabs.Tab,
@@ -12,6 +13,8 @@ const meta = {
     // Props
     children: { control: 'text', table: { category: category.props } },
     svgPath: {
+      control: 'select',
+      options: Object.keys(SystemSVGPaths),
       table: { category: category.props },
     },
     value: { control: 'text', table: { category: category.props } },

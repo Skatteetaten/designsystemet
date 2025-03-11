@@ -24,6 +24,7 @@ const meta = {
       },
     },
     nextButtonProps: {
+      control: false,
       table: {
         category: category.props,
       },

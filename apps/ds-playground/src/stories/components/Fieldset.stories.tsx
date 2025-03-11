@@ -15,11 +15,11 @@ const meta = {
   title: 'Komponenter/Fieldset',
   argTypes: {
     // Props
-    classNames: { table: { category: category.props } },
-    children: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     description: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpText: { table: { category: category.props } },
+    helpText: { control: 'text', table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,

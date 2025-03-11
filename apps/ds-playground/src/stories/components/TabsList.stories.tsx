@@ -9,7 +9,7 @@ const meta = {
   title: 'Komponenter/Tabs/List',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
   },
   args: {
     children: [

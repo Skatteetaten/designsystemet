@@ -17,8 +17,8 @@ const meta = {
   title: 'Komponenter/CheckboxGroup',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
-    classNames: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     helpSvgPath: {
@@ -43,7 +43,7 @@ const meta = {
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     // Events
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { control: false, table: { category: category.event } },
   },
   args: {
     children: [

@@ -27,6 +27,7 @@ const meta = {
       table: { category: category.props },
     },
     classNames: {
+      control: false,
       table: { category: category.props },
     },
     rightContent: {

@@ -178,17 +178,20 @@ const meta = {
       },
     },
     children: { control: 'text', table: { category: category.props } },
-    skipLink: { table: { category: category.props } },
+    skipLink: { control: false, table: { category: category.props } },
     logo: {
       table: { category: category.props },
       control: 'select',
       options: ['', customLogo, skeLogo],
     },
-    user: { table: { category: category.props } },
+    user: { control: false, table: { category: category.props } },
     firstColumn: { control: 'text', table: { category: category.props } },
     secondColumn: { control: 'text', table: { category: category.props } },
     thirdColumn: { control: 'text', table: { category: category.props } },
-    additionalLanguages: { table: { category: category.props } },
+    additionalLanguages: {
+      control: false,
+      table: { category: category.props },
+    },
     // Events
     onLogInClick: {
       ...htmlEventDescription,

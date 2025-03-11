@@ -24,10 +24,10 @@ const meta = {
   title: 'Komponenter/SearchField',
   argTypes: {
     // Props
-    classNames: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
     clearButtonTitle: { table: { category: category.props } },
     searchButtonTitle: { table: { category: category.props } },
-    results: { table: { category: category.props } },
+    results: { control: false, table: { category: category.props } },
     hasSearchButtonIcon: {
       table: {
         category: category.props,
@@ -36,7 +36,7 @@ const meta = {
         },
       },
     },
-    defaultValue: { table: { category: category.props } },
+    defaultValue: { control: 'text', table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     label: { table: { category: category.props } },
@@ -48,7 +48,7 @@ const meta = {
         defaultValue: { summary: 'HelpSimpleSVGpath' },
       },
     },
-    helpText: { table: { category: category.props } },
+    helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
@@ -95,7 +95,7 @@ const meta = {
     onChange: { ...htmlEventDescription },
     onClear: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { control: false, table: { category: category.event } },
     onResultClick: { ...htmlEventDescription },
     onSearch: { ...htmlEventDescription },
     onSearchClick: { ...htmlEventDescription },
