@@ -2,14 +2,10 @@ import { useRef, JSX, useEffect, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Button, Link } from '@skatteetaten/ds-buttons';
+import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import {
-  InfoOutlineSVGpath,
-  UpdateSVGpath,
-  WarningOutlineIcon,
-} from '@skatteetaten/ds-icons';
+import { UpdateSVGpath, WarningOutlineIcon } from '@skatteetaten/ds-icons';
 import {
   Modal,
   getModalDismissOnEscDefault,
@@ -33,7 +29,7 @@ const meta = {
   argTypes: {
     // Props
     children: {
-      control: { disable: true },
+      control: 'text',
       table: { category: category.props },
     },
     classNames: {

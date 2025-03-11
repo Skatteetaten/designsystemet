@@ -16,7 +16,7 @@ const meta = {
         defaultValue: { summary: getChipDefaultSize() },
       },
     },
-    children: { control: false, table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
     // HTML
     disabled: {
       table: {

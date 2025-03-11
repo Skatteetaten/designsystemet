@@ -14,7 +14,7 @@ const meta = {
   title: 'Komponenter/Accordion/Item',
   argTypes: {
     // Props
-    children: { control: false, table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
     classNames: {
       control: { disable: true },
       table: { category: category.props },

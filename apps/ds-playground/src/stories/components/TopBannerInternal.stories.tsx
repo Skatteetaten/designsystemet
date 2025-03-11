@@ -26,8 +26,8 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    classNames: { table: { category: category.props } },
-    skipLink: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
+    skipLink: { control: false, table: { category: category.props } },
     title: { table: { category: category.props } },
     description: { table: { category: category.props } },
     user: { table: { category: category.props } },
@@ -45,7 +45,7 @@ const meta = {
     },
     logoAltText: { table: { category: category.props } },
     // Event
-    onLogoClick: { table: { category: category.event } },
+    onLogoClick: { control: false, table: { category: category.event } },
   },
   args: {
     logoHref: '/start',

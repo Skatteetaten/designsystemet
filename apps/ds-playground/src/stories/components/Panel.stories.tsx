@@ -44,7 +44,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
-    classNames: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
     color: {
       options: panelColorArr,
       control: 'inline-radio',
