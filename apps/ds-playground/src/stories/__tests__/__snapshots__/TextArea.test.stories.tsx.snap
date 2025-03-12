@@ -93,11 +93,11 @@ exports[`Tester/TextArea WithAutoSizeInModal play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2b:"
@@ -182,13 +182,13 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
     >
       Andre opplysninger
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r8:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r9:"
@@ -216,8 +216,8 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15 dummyClassname">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+      <div class="_errorMessage_vog41_15 dummyClassname">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -226,7 +226,7 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1kdf4_30">
+        <p class="_errorMessageText_vog41_29">
           Opplysninger er obligatorisk
         </p>
       </div>
@@ -355,8 +355,8 @@ exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+      <div class="_errorMessage_vog41_15">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -365,7 +365,7 @@ exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1kdf4_30">
+        <p class="_errorMessageText_vog41_29">
           Opplysninger er obligatorisk
         </p>
       </div>
@@ -406,13 +406,13 @@ exports[`Tester/TextArea WithHelpText play-test 1`] = `
     >
       Andre opplysninger
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r1r:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r1s:"
@@ -449,13 +449,13 @@ exports[`Tester/TextArea WithHelpTextAndDescription smoke-test 1`] = `
     >
       Andre opplysninger
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r20:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r21:"
@@ -495,13 +495,13 @@ exports[`Tester/TextArea WithHelpToggleEvent smoke-test 1`] = `
     >
       Andre opplysninger
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r28:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r29:"

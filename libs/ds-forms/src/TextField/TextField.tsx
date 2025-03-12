@@ -170,13 +170,10 @@ export const TextField = ({
     defaultValue = addSpacesOrCommas(removeNonNumeric(defaultValue.toString()));
   }
 
-  const isLarge = variant === 'large';
-
-  const textboxClassName = `${styles.textbox} ${
-    isLarge ? styles.textbox_large : ''
-  } ${label && !hideLabel ? styles.textboxMarginTop : ''} ${
-    classNames?.textbox ?? ''
-  }`.trim();
+  const textboxClassName =
+    `${styles.textbox} $ ${label && !hideLabel ? styles.textboxMarginTop : ''} ${
+      classNames?.textbox ?? ''
+    }`.trim();
 
   return (
     <div
@@ -201,6 +198,7 @@ export const TextField = ({
         id={textboxId}
         className={textboxClassName}
         data-testid={dataTestId}
+        data-variant={variant}
         autoComplete={autoComplete}
         defaultValue={defaultValue}
         disabled={disabled}

@@ -746,7 +746,8 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 Årstall
               </label>
               <input id="textFieldTextboxId-:r2u:"
-                     class="_textbox_1hi30_5"
+                     class="_textbox_xcec6_5 $"
+                     data-variant="medium"
                      autocomplete="off"
                      inputmode="numeric"
                      value="2024"

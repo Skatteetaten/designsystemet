@@ -22,7 +22,7 @@
   line-height: var(--semantic-line-height-input);
   outline-offset: 0;
 
-  &_large {
+  &[data-variant='large'] {
     padding: var(--spacing-s);
   }
 
