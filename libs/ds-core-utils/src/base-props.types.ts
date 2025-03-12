@@ -53,7 +53,13 @@ export type Position = (typeof positionArr)[number];
 export const linkColorArr = ['white'] as const;
 export type LinkColor = (typeof linkColorArr)[number];
 
-export const statusArr = ['success', 'neutral', 'warning', 'danger'] as const;
+export const statusArr = [
+  'success',
+  'info',
+  'warning',
+  'error',
+  'danger',
+] as const;
 export type Status = (typeof statusArr)[number];
 
 export const headingAsArr = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;

@@ -116,7 +116,7 @@ export const WithSvgPath = {
   },
 } satisfies Story;
 
-const variantsArr: CardAlertVariant[] = ['neutral', 'warning', 'danger'];
+const variantsArr: CardAlertVariant[] = ['info', 'warning', 'danger'];
 const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
   <Card>
     {variantsArr.map((variant, index) => {
