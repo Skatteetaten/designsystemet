@@ -20,6 +20,7 @@
   .iconWrapper {
     display: flex;
     align-items: center;
+    pointer-events: none;
   }
 
   .icon {
@@ -30,6 +31,7 @@
 
   &Text {
     overflow: hidden;
+    pointer-events: none;
     white-space: nowrap;
   }
 

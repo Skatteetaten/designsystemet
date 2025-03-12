@@ -3,11 +3,11 @@
 exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="_button_197zg_1"
+    <button class="_button_1dpuv_1"
             type="button"
     >
-      <span class="_iconWrapper_197zg_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -17,15 +17,15 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27">
+      <span class="_buttonText_1dpuv_28">
         Meny
       </span>
     </button>
-    <button class="_button_197zg_1 _button_outline_197zg_89"
+    <button class="_button_1dpuv_1 _button_outline_1dpuv_91"
             type="button"
     >
-      <span class="_iconWrapper_197zg_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -35,15 +35,15 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27">
+      <span class="_buttonText_1dpuv_28">
         Logg ut
       </span>
     </button>
-    <button class="_button_197zg_1 _button_filled_197zg_31"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33"
             type="button"
     >
-      <span class="_iconWrapper_197zg_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -53,7 +53,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27">
+      <span class="_buttonText_1dpuv_28">
         Logg in
       </span>
     </button>
@@ -64,11 +64,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke
 exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="_button_197zg_1"
+    <button class="_button_1dpuv_1"
             type="button"
     >
-      <span class="_iconWrapper_197zg_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -78,15 +78,15 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smok
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27">
+      <span class="_buttonText_1dpuv_28">
         Meny
       </span>
     </button>
-    <button class="_button_197zg_1 _button_outline_197zg_89"
+    <button class="_button_1dpuv_1 _button_outline_1dpuv_91"
             type="button"
     >
-      <span class="_iconWrapper_197zg_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -96,15 +96,15 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smok
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27">
+      <span class="_buttonText_1dpuv_28">
         Logg ut
       </span>
     </button>
-    <button class="_button_197zg_1 _button_filled_197zg_31"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33"
             type="button"
     >
-      <span class="_iconWrapper_197zg_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -114,7 +114,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smok
           </path>
         </svg>
       </span>
-      <span class="_buttonText_197zg_27">
+      <span class="_buttonText_1dpuv_28">
         Logg in
       </span>
     </button>
@@ -124,11 +124,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smok
 
 exports[`Tester/TopBanner/TopBannerButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1"
+  <button class="_button_1dpuv_1"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -138,7 +138,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) Defaults play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Meny
     </span>
   </button>
@@ -147,11 +147,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) Defaults play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerButton (intern) DefaultsOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1"
+  <button class="_button_1dpuv_1"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -161,7 +161,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) DefaultsOnMobileScreen smoke-
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Meny
     </span>
   </button>
@@ -170,11 +170,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) DefaultsOnMobileScreen smoke-
 
 exports[`Tester/TopBanner/TopBannerButton (intern) VariantFilledOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1 _button_filled_197zg_31"
+  <button class="_button_1dpuv_1 _button_filled_1dpuv_33"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -184,7 +184,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) VariantFilledOnMobileScreen s
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Logg inn
     </span>
   </button>
@@ -193,11 +193,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) VariantFilledOnMobileScreen s
 
 exports[`Tester/TopBanner/TopBannerButton (intern) VariantOutlineOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1 _button_outline_197zg_89"
+  <button class="_button_1dpuv_1 _button_outline_1dpuv_91"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -207,7 +207,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) VariantOutlineOnMobileScreen 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Logg ut
     </span>
   </button>
@@ -217,13 +217,13 @@ exports[`Tester/TopBanner/TopBannerButton (intern) VariantOutlineOnMobileScreen 
 exports[`Tester/TopBanner/TopBannerButton (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlid"
-          class="_button_197zg_1  dummyClassname"
+          class="_button_1dpuv_1  dummyClassname"
           lang="nb"
           data-testid="123ID"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -233,7 +233,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithAttributes play-test 1`] 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Meny
     </span>
   </button>
@@ -242,11 +242,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithAttributes play-test 1`] 
 
 exports[`Tester/TopBanner/TopBannerButton (intern) WithClassNames play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1   dummyClassname"
+  <button class="_button_1dpuv_1   dummyClassname"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -256,7 +256,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithClassNames play-test 1`] 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27 dummyClassname">
+    <span class="_buttonText_1dpuv_28 dummyClassname">
       Meny
     </span>
   </button>
@@ -265,11 +265,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithClassNames play-test 1`] 
 
 exports[`Tester/TopBanner/TopBannerButton (intern) WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1"
+  <button class="_button_1dpuv_1"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -279,7 +279,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithEventHandlers play-test 1
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Blitt klikket på
     </span>
   </button>
@@ -288,12 +288,12 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithEventHandlers play-test 1
 
 exports[`Tester/TopBanner/TopBannerButton (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1"
+  <button class="_button_1dpuv_1"
           type="button"
           id="dummyIdForwardedFromRef"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -303,7 +303,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithRef play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Meny
     </span>
   </button>
@@ -312,11 +312,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithRef play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerButton (intern) WithTitle play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1 _button_filled_197zg_31"
+  <button class="_button_1dpuv_1 _button_filled_1dpuv_33"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r6:"
@@ -330,7 +330,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithTitle play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Knotten, Gudleik
     </span>
   </button>
@@ -339,11 +339,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithTitle play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantFilled smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1 _button_filled_197zg_31"
+  <button class="_button_1dpuv_1 _button_filled_1dpuv_33"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -353,7 +353,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantFilled smoke-test 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Logg inn
     </span>
   </button>
@@ -362,11 +362,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantFilled smoke-test 
 
 exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_197zg_1 _button_outline_197zg_89"
+  <button class="_button_1dpuv_1 _button_outline_1dpuv_91"
           type="button"
   >
-    <span class="_iconWrapper_197zg_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -376,7 +376,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantOutline smoke-test
         </path>
       </svg>
     </span>
-    <span class="_buttonText_197zg_27">
+    <span class="_buttonText_1dpuv_28">
       Logg ut
     </span>
   </button>

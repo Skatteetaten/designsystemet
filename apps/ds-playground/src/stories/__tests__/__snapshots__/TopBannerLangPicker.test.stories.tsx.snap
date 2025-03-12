@@ -5,7 +5,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
   <div class="_container_azp4i_5">
     <div class>
     </div>
-    <button class="_button_197zg_1  _menuButton_azp4i_17"
+    <button class="_button_1dpuv_1  _menuButton_azp4i_17"
             lang="en"
             aria-expanded="false"
             type="button"
@@ -74,7 +74,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
   <div class="_container_azp4i_5">
     <div class="_overlay_azp4i_10">
     </div>
-    <button class="_button_197zg_1  _menuButton_azp4i_17"
+    <button class="_button_1dpuv_1  _menuButton_azp4i_17"
             lang="nb"
             aria-expanded="true"
             type="button"
@@ -300,7 +300,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
   >
     <div class>
     </div>
-    <button class="_button_197zg_1  _menuButton_azp4i_17"
+    <button class="_button_1dpuv_1  _menuButton_azp4i_17"
             lang="nb"
             aria-expanded="false"
             type="button"
@@ -361,7 +361,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
   <div class="_container_azp4i_5">
     <div class="_overlay_azp4i_10">
     </div>
-    <button class="_button_197zg_1  _menuButton_azp4i_17"
+    <button class="_button_1dpuv_1  _menuButton_azp4i_17"
             lang="en"
             aria-expanded="true"
             type="button"
@@ -593,7 +593,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
   >
     <div class>
     </div>
-    <button class="_button_197zg_1  _menuButton_azp4i_17"
+    <button class="_button_1dpuv_1  _menuButton_azp4i_17"
             lang="nb"
             aria-expanded="false"
             type="button"
@@ -654,7 +654,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
   <div class="_container_azp4i_5">
     <div class="_overlay_azp4i_10">
     </div>
-    <button class="_button_197zg_1  _menuButton_azp4i_17"
+    <button class="_button_1dpuv_1  _menuButton_azp4i_17"
             lang="nb"
             aria-expanded="true"
             type="button"
