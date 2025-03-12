@@ -13,7 +13,7 @@ const meta = {
   component: Breadcrumbs,
   title: 'Komponenter/Breadcrumbs/Breadcrumbs',
   argTypes: {
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
   },
   args: {
     children: (

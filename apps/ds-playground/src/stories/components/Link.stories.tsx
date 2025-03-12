@@ -27,11 +27,14 @@ const meta = {
       table: { category: category.props },
     },
     // HTML
-    download: { table: { category: category.htmlAttribute } },
+    download: {
+      control: 'boolean',
+      table: { category: category.htmlAttribute },
+    },
     href: { table: { category: category.htmlAttribute } },
     target: { table: { category: category.htmlAttribute } },
     // Aria
-    ariaCurrent: { table: { category: category.aria } },
+    ariaCurrent: { control: 'text', table: { category: category.aria } },
     ariaDescribedby: { table: { category: category.aria } },
     // Events
     onClick: { ...htmlEventDescription },

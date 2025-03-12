@@ -16,7 +16,7 @@ const meta = {
   title: 'Komponenter/LinkGroup',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     color: {
       options: [undefined, ...linkColorArr],
       control: 'inline-radio',

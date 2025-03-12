@@ -10,7 +10,7 @@ export default {
   title: 'Komponenter/Popover/Content',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
   },
 } satisfies Meta<typeof Popover.Content>;
 

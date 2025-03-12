@@ -29,7 +29,7 @@ const meta = {
   argTypes: {
     // Props
     children: {
-      control: { disable: true },
+      control: 'text',
       table: { category: category.props },
     },
     classNames: {
