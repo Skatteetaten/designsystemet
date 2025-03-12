@@ -50,7 +50,7 @@ const meta = {
     children:
       'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
     showAlert: true,
-    variant: 'neutral',
+    variant: 'warning',
   },
 } satisfies Meta<typeof Alert>;
 
@@ -63,17 +63,23 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Alert variant={'success'} className={'bottomSpacingXL'} showAlert>
-          {'Filen ble lastet opp'}
-        </Alert>
-        <Alert variant={'neutral'} className={'bottomSpacingXL'} showAlert>
+        <Alert variant={'info'} className={'bottomSpacingXL'} showAlert>
           {
             'Disse feltene er låst for redigering fordi du har fått et varsel fra oss'
           }
         </Alert>
+        <Alert variant={'success'} className={'bottomSpacingXL'} showAlert>
+          {'Filen ble lastet opp'}
+        </Alert>
+
         <Alert variant={'warning'} className={'bottomSpacingXL'} showAlert>
           {
             'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.'
+          }
+        </Alert>
+        <Alert variant={'error'} className={'bottomSpacingXL'} showAlert>
+          {
+            'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.'
           }
         </Alert>
         <Alert variant={'danger'} showAlert>

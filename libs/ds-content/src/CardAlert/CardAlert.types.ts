@@ -2,10 +2,7 @@ import { ReactElement, ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs, Status } from '@skatteetaten/ds-core-utils';
 
-export type CardAlertVariant = Extract<
-  Status,
-  'neutral' | 'warning' | 'danger'
->;
+export type CardAlertVariant = Extract<Status, 'info' | 'warning' | 'danger'>;
 
 export interface CardAlertCommonProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;

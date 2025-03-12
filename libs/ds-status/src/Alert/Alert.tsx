@@ -31,7 +31,6 @@ export const Alert = ({
   children,
   onClose,
 }: AlertProps): JSX.Element => {
-  const variantClassName = styles[`alert_${variant}`];
   const { t } = useTranslation('ds_status', { i18n: dsI18n });
 
   let svg;
@@ -39,7 +38,7 @@ export const Alert = ({
     svg = svgPath;
   } else if (variant === 'success') {
     svg = CompletedSVGpath;
-  } else if (variant === 'neutral') {
+  } else if (variant === 'info') {
     svg = InfoSquareSVGpath;
   } else if (variant === 'warning') {
     svg = WarningSVGpath;
@@ -57,8 +56,7 @@ export const Alert = ({
     }
   };
 
-  const concatenatedClassName =
-    `${styles.alert} ${variantClassName} ${backgroundBrightness === 'light' ? styles.alert_light : ''} ${className}`.trim();
+  const concatenatedClassName = `${styles.alert} ${className}`.trim();
 
   return (
     <div
@@ -70,7 +68,11 @@ export const Alert = ({
       aria-atomic
     >
       {showAlert && children && (
-        <div className={concatenatedClassName}>
+        <div
+          className={concatenatedClassName}
+          data-variant={variant}
+          data-brightness={backgroundBrightness}
+        >
           <span className={styles.iconWrapper}>
             <Icon size={'large'} svgPath={svg} className={styles.icon} />
           </span>

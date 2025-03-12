@@ -3368,22 +3368,25 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
               <div aria-live="polite"
                    aria-atomic="true"
               >
-                <div class="_alert_1npdh_1 _alert_neutral_1npdh_55">
-                  <span class="_iconWrapper_1npdh_8">
-                    <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1npdh_8"
+                <div class="_alert_lurqs_1"
+                     data-variant="warning"
+                     data-brightness="default"
+                >
+                  <span class="_iconWrapper_lurqs_8">
+                    <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
                          viewbox="0 0 24 24"
                          focusable="false"
                          aria-hidden="true"
                          role="img"
                     >
-                      <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
+                      <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
                       </path>
                     </svg>
                   </span>
-                  <span class="_content_1npdh_17">
+                  <span class="_content_lurqs_17">
                     Du har ikke tilgang til skjemaet på vegne av denne personen. Kontakt personen hvis du trenger tilgang.
                   </span>
-                  <button class="_button_1hc5e_1 _button_small_1hc5e_42  _closeButton_1npdh_31"
+                  <button class="_button_1hc5e_1 _button_small_1hc5e_42  _closeButton_lurqs_31"
                           data-brightness="default"
                           type="button"
                   >
