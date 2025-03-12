@@ -473,13 +473,13 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
     >
       Ledetekst
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r24:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r25:"
@@ -497,11 +497,11 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
       <div class="_helpBoxText_10ldw_44">
         Hjelpetekst
       </div>
-      <button class="_button_1hc5e_1 _button_small_1hc5e_42  _helpBoxCloseButton_10ldw_51"
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_10ldw_51"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r27:"
@@ -563,13 +563,13 @@ exports[`Tester/Select/Select WithHelpToggleEvent smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r2e:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2f:"

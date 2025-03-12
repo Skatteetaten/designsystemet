@@ -14,11 +14,11 @@ exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
             data-testid="123ID"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r7:"
@@ -60,11 +60,11 @@ exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
             class
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1:"

@@ -391,13 +391,13 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     disabled
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r11:"
@@ -432,13 +432,13 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  _buttonCell_expanded_1rqke_14">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _hideIcon_1rqke_38"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _hideIcon_1rqke_38"
                     data-brightness="default"
                     disabled
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r13:"
@@ -486,13 +486,13 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     disabled
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r15:"
@@ -526,13 +526,13 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r16:"
@@ -707,12 +707,12 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rg:"
@@ -747,12 +747,12 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ri:"
@@ -787,12 +787,12 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rk:"
@@ -826,13 +826,13 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rl:"
@@ -1084,12 +1084,12 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1n:"
@@ -1124,12 +1124,12 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1p:"
@@ -1164,12 +1164,12 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1r:"
@@ -1203,13 +1203,13 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1s:"
@@ -1671,12 +1671,12 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
-            <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34"
+            <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r5:"
@@ -1711,12 +1711,12 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
-            <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34"
+            <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r7:"
@@ -1751,12 +1751,12 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
-            <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34"
+            <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r9:"
@@ -1790,13 +1790,13 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
-            <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34"
+            <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ra:"
@@ -1971,12 +1971,12 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_large_1hc5e_60"
+            <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1c:"
@@ -2011,12 +2011,12 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_large_1hc5e_60"
+            <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1e:"
@@ -2051,12 +2051,12 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_large_1hc5e_60"
+            <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1g:"
@@ -2090,13 +2090,13 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_1hc5e_1 _button_large_1hc5e_60"
+            <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1h:"

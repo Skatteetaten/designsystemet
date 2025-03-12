@@ -253,6 +253,7 @@ export const DatePicker = ({
             <CalendarIcon
               className={styles.icon}
               title={t('datepicker.ChooseDate')}
+              size={isLarge ? 'large' : 'medium'}
             />
           </button>
         )}

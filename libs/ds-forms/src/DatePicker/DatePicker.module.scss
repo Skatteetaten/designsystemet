@@ -106,11 +106,6 @@
 
   &_large {
     padding: var(--spacing-s);
-
-    & .icon {
-      width: var(--size-large);
-      height: var(--size-large);
-    }
   }
 
   &:focus,

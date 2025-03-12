@@ -57,7 +57,12 @@ export const IconButton = ({
       onFocus={onFocus}
     >
       {!hasSpinner && (
-        <Icon className={styles.icon} svgPath={svgPath} title={title} />
+        <Icon
+          className={styles.icon}
+          size={size === 'extraSmall' ? 'small' : size}
+          svgPath={svgPath}
+          title={title}
+        />
       )}
       {hasSpinner && (
         <Spinner

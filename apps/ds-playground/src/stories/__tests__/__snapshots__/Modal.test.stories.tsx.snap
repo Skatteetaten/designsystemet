@@ -114,11 +114,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r17:"
@@ -284,11 +284,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1c:"
@@ -343,11 +343,11 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rj:"
@@ -412,11 +412,11 @@ exports[`Tester/Modal Defaults play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -481,11 +481,11 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -553,11 +553,11 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -621,11 +621,11 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rl:"
@@ -690,11 +690,11 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rn:"
@@ -759,11 +759,11 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rp:"
@@ -828,11 +828,11 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -908,11 +908,11 @@ exports[`Tester/Modal WithImage play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -981,11 +981,11 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rf:"
@@ -1054,11 +1054,11 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rt:"
@@ -1104,11 +1104,11 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rv:"
@@ -1171,11 +1171,11 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rc:"
@@ -1240,11 +1240,11 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rh:"

@@ -16,11 +16,11 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -642,11 +642,11 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ra3:"
@@ -1012,11 +1012,11 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rv:"
@@ -1639,11 +1639,11 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5i:"
@@ -2106,11 +2106,11 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r4k:"
@@ -2733,11 +2733,11 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb9:"
@@ -3308,11 +3308,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r81:"
@@ -3383,11 +3383,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   <span class="_content_1npdh_17">
                     Du har ikke tilgang til skjemaet på vegne av denne personen. Kontakt personen hvis du trenger tilgang.
                   </span>
-                  <button class="_button_1hc5e_1 _button_small_1hc5e_42  _closeButton_1npdh_31"
+                  <button class="_button_19ayz_1 _button_small_19ayz_38  _closeButton_1npdh_31"
                           data-brightness="default"
                           type="button"
                   >
-                    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+                    <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                          viewbox="0 0 24 24"
                          focusable="false"
                          aria-labelledby="svgtitle-:r91:"
@@ -3969,11 +3969,11 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r93:"
@@ -4036,11 +4036,11 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:raj:"
@@ -4319,11 +4319,11 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rc5:"
@@ -4700,11 +4700,11 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb0:"
@@ -4894,11 +4894,11 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r6o:"
@@ -5357,11 +5357,11 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r68:"
@@ -5724,11 +5724,11 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2l:"
@@ -6418,11 +6418,11 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1t:"
@@ -6904,11 +6904,11 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r95:"
@@ -8133,11 +8133,11 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7e:"

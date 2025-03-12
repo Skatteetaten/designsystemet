@@ -462,11 +462,11 @@ exports[`Tester/Alert WithCloseButton smoke-test 1`] = `
       <span class="_content_1npdh_17">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="_button_1hc5e_1 _button_small_1hc5e_42  _closeButton_1npdh_31"
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _closeButton_1npdh_31"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ro:"
