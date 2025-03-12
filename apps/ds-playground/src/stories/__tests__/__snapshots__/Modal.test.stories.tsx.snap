@@ -39,7 +39,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_ac38m_1  _menuButton_azp4i_17"
+              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -209,7 +209,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_ac38m_1  _menuButton_azp4i_17"
+              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"

@@ -2,11 +2,11 @@
 
 exports[`Tester/TopBanner/TopBannerUserButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_ac38m_1 _button_filled_ac38m_31"
+  <button class="_button_1dpuv_1 _button_filled_1dpuv_33"
           type="button"
   >
-    <span class="_iconWrapper_ac38m_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2:"
@@ -20,7 +20,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) Defaults play-test 1`] = 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_ac38m_27">
+    <span class="_buttonText_1dpuv_28">
       Meg selv
     </span>
   </button>
@@ -30,11 +30,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) Defaults play-test 1`] = 
 exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -48,15 +48,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27">
+      <span class="_buttonText_1dpuv_28">
         Meg selv
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r4:"
@@ -70,15 +70,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -92,7 +92,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         Navn på virksomhet
       </span>
     </button>
@@ -103,13 +103,13 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`
 exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlid"
-          class="_button_ac38m_1 _button_filled_ac38m_31 dummyClassname"
+          class="_button_1dpuv_1 _button_filled_1dpuv_33 dummyClassname"
           lang="nb"
           data-testid="123ID"
           type="button"
   >
-    <span class="_iconWrapper_ac38m_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r1:"
@@ -123,7 +123,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAttributes play-test 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_ac38m_27">
+    <span class="_buttonText_1dpuv_28">
       Meg selv
     </span>
   </button>
@@ -133,11 +133,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAttributes play-test 
 exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rf:"
@@ -151,15 +151,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-tes
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27">
+      <span class="_buttonText_1dpuv_28">
         Meg selv
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rg:"
@@ -173,15 +173,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-tes
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rh:"
@@ -195,7 +195,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-tes
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         Navn på virksomhet
       </span>
     </button>
@@ -206,11 +206,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-tes
 exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rc:"
@@ -224,15 +224,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-tes
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27">
+      <span class="_buttonText_1dpuv_28">
         Meg selv
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rd:"
@@ -246,15 +246,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-tes
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:re:"
@@ -268,7 +268,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-tes
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         Navn på virksomhet
       </span>
     </button>
@@ -279,11 +279,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-tes
 exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -297,15 +297,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27">
+      <span class="_buttonText_1dpuv_28">
         Meg selv
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ra:"
@@ -319,15 +319,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -341,7 +341,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         Navn på virksomhet
       </span>
     </button>
@@ -352,11 +352,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
 exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r6:"
@@ -370,15 +370,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-te
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27">
+      <span class="_buttonText_1dpuv_28">
         Meg selv
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -392,15 +392,15 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-te
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="_button_ac38m_1 _button_filled_ac38m_31 bottomSpacingXL _usernameButton_wslqw_1"
+    <button class="_button_1dpuv_1 _button_filled_1dpuv_33 bottomSpacingXL _usernameButton_wslqw_1"
             type="button"
     >
-      <span class="_iconWrapper_ac38m_18">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+      <span class="_iconWrapper_1dpuv_18">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r8:"
@@ -414,7 +414,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-te
           </path>
         </svg>
       </span>
-      <span class="_buttonText_ac38m_27 _usernameText_wslqw_19">
+      <span class="_buttonText_1dpuv_28 _usernameText_wslqw_19">
         Navn på virksomhet
       </span>
     </button>
@@ -424,12 +424,12 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-te
 
 exports[`Tester/TopBanner/TopBannerUserButton (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_ac38m_1 _button_filled_ac38m_31"
+  <button class="_button_1dpuv_1 _button_filled_1dpuv_33"
           type="button"
           id="dummyIdForwardedFromRef"
   >
-    <span class="_iconWrapper_ac38m_18">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_ac38m_18"
+    <span class="_iconWrapper_1dpuv_18">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r0:"
@@ -443,7 +443,7 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithRef play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_ac38m_27">
+    <span class="_buttonText_1dpuv_28">
       Meg selv
     </span>
   </button>

@@ -20,6 +20,7 @@
   .iconWrapper {
     display: flex;
     align-items: center;
+    pointer-events: none;
   }
 
   .icon {
@@ -30,6 +31,7 @@
 
   &Text {
     overflow: hidden;
+    pointer-events: none;
     white-space: nowrap;
   }
 
@@ -48,12 +50,6 @@
   &:focus {
     border-color: var(--semantic-interactive-main);
     outline: none;
-
-    &::before {
-      position: absolute;
-      content: '';
-      inset: 0;
-    }
   }
 
   &:active {
