@@ -516,3 +516,43 @@ export const WithHelpToggleEvent = {
     },
   },
 } satisfies Story;
+
+export const WithLongInput = {
+  args: {
+    label: 'Ledetekst',
+    className: 'textField150',
+    defaultValue: valueOption1,
+    children: [
+      <Select.Option key={'option_1'} value={valueOption1}>
+        {'Long input tekst'}
+      </Select.Option>,
+      <Select.Option key={'option_2'} value={valueOption2}>
+        {'Very very very long inputtext'}
+      </Select.Option>,
+    ],
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+    defaultValue: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithLongPlaceholder = {
+  args: {
+    label: 'Ledetekst',
+    className: 'textField150',
+    placeholder: 'Long placeholder text',
+    children: [
+      <Select.Option key={'option_1'} value={valueOption1}>
+        {'Long input tekst'}
+      </Select.Option>,
+      <Select.Option key={'option_2'} value={valueOption2}>
+        {'Very very very long inputtext'}
+      </Select.Option>,
+    ],
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+    placeholder: { table: { disable: false } },
+  },
+} satisfies Story;

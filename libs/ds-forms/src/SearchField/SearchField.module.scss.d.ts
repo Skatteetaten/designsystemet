@@ -7,6 +7,7 @@ declare const classNames: {
   readonly clearButton: 'clearButton';
   readonly inputWrapper: 'inputWrapper';
   readonly input: 'input';
+  readonly inputWithValue: 'inputWithValue';
   readonly searchButton: 'searchButton';
   readonly icon: 'icon';
   readonly searchButton_large: 'searchButton_large';

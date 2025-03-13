@@ -699,3 +699,27 @@ export const WithErrorMessage = {
     await expect(textbox).toHaveAttribute('aria-describedby');
   },
 } satisfies Story;
+
+export const WithLongPlaceholder = {
+  args: {
+    ...defaultArgs,
+    placeholder: 'En lang placeholder som ikke skal synes bak reset-ikonet',
+  },
+  argTypes: {
+    placeholder: {
+      table: { disable: false },
+    },
+  },
+} satisfies Story;
+
+export const WithLongInput = {
+  args: {
+    ...defaultArgs,
+    defaultValue: 'En lang value som ikke skal synes bak reset-ikonet',
+  },
+  argTypes: {
+    defaultValue: {
+      table: { disable: false },
+    },
+  },
+} satisfies Story;

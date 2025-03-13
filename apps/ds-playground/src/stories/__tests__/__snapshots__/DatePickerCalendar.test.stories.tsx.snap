@@ -30,9 +30,9 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:rk:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -95,7 +95,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -119,7 +119,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:ro:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -581,9 +581,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:rb:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -646,7 +646,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -670,7 +670,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:rf:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -1128,9 +1128,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r21:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -1193,7 +1193,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1217,7 +1217,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
             Årstall
           </label>
           <input id="textFieldTextboxId-:r25:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -1675,9 +1675,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r2s:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -1740,7 +1740,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1764,7 +1764,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
             Årstall
           </label>
           <input id="textFieldTextboxId-:r30:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -2223,9 +2223,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r2j:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -2288,7 +2288,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2312,7 +2312,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
             Årstall
           </label>
           <input id="textFieldTextboxId-:r2n:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -2781,9 +2781,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r1f:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -2846,7 +2846,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2870,7 +2870,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:r1j:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -3348,9 +3348,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r1o:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -3413,7 +3413,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -3437,7 +3437,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
             Årstall
           </label>
           <input id="textFieldTextboxId-:r1s:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -3915,9 +3915,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r16:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -3980,7 +3980,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4004,7 +4004,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:r1a:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -4478,9 +4478,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r2:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -4543,7 +4543,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4567,7 +4567,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:r6:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -5025,9 +5025,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_vbsz7_1  _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
             <select id="selectId-:rt:"
-                    class="_select_vbsz7_1"
+                    class="_select_1q368_1"
             >
               <option class
                       value="0"
@@ -5090,7 +5090,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -5114,7 +5114,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:r11:"
-                 class="_textbox_3tcss_5"
+                 class="_textbox_oxc8m_5"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"

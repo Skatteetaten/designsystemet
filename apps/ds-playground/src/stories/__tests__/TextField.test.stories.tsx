@@ -845,3 +845,14 @@ export const WithControlledValueAndAutoSizeTextArea = {
     });
   },
 } satisfies Story;
+
+export const WithLongInput = {
+  args: {
+    label: 'Ledetekst',
+    className: 'textField150',
+    defaultValue: 'Dette er en lang tekst som skal vises i tekstfeltet',
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+  },
+} satisfies Story;
