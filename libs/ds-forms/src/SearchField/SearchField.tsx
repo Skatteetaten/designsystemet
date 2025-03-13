@@ -299,6 +299,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
               <SearchIcon
                 className={styles.icon}
                 title={searchButtonTitle ?? t('searchfield.ButtonTitle')}
+                size={isLarge || isExtraLarge ? 'large' : 'medium'}
               />
             ) : (
               (searchButtonTitle ?? t('searchfield.ButtonTitle'))

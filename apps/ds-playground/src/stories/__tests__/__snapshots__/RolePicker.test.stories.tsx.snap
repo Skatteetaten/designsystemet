@@ -16,11 +16,11 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -47,7 +47,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -59,7 +59,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -109,7 +109,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -135,7 +135,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -147,7 +147,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Antikvitet presis
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -173,7 +173,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -185,7 +185,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -211,7 +211,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -223,7 +223,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -249,7 +249,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -261,7 +261,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -349,7 +349,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -361,7 +361,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -390,7 +390,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -402,7 +402,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -433,7 +433,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -445,7 +445,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -471,7 +471,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -483,7 +483,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -509,7 +509,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -521,7 +521,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -547,7 +547,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -559,7 +559,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -597,7 +597,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -642,11 +642,11 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ra3:"
@@ -673,7 +673,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -685,7 +685,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -735,7 +735,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -761,7 +761,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -773,7 +773,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Organization 0
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -799,7 +799,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -811,7 +811,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Organization 1
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -837,7 +837,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -849,7 +849,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Organization 2
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -875,7 +875,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -887,7 +887,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Organization 3
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -913,7 +913,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -925,7 +925,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Organization 4
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -963,7 +963,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1012,11 +1012,11 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rv:"
@@ -1043,7 +1043,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1055,7 +1055,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1105,7 +1105,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1131,7 +1131,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1143,7 +1143,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Antikvitet presis
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1169,7 +1169,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1181,7 +1181,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1207,7 +1207,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1219,7 +1219,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1245,7 +1245,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1257,7 +1257,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1345,7 +1345,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1357,7 +1357,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1386,7 +1386,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -1398,7 +1398,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -1429,7 +1429,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1441,7 +1441,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1467,7 +1467,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1479,7 +1479,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1505,7 +1505,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1517,7 +1517,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1543,7 +1543,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1555,7 +1555,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1593,7 +1593,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1639,11 +1639,11 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5i:"
@@ -1670,7 +1670,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1682,7 +1682,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1732,7 +1732,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1809,7 +1809,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1821,7 +1821,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1850,7 +1850,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -1862,7 +1862,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -1893,7 +1893,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1905,7 +1905,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1931,7 +1931,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1943,7 +1943,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1969,7 +1969,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -1981,7 +1981,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2007,7 +2007,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2019,7 +2019,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2060,7 +2060,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2106,11 +2106,11 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r4k:"
@@ -2137,7 +2137,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2149,7 +2149,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2199,7 +2199,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2225,7 +2225,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2237,7 +2237,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Antikvitet presis
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2263,7 +2263,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2275,7 +2275,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2301,7 +2301,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2313,7 +2313,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2339,7 +2339,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2351,7 +2351,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2439,7 +2439,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2451,7 +2451,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2480,7 +2480,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -2492,7 +2492,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -2523,7 +2523,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2535,7 +2535,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2561,7 +2561,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2573,7 +2573,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2599,7 +2599,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2611,7 +2611,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2637,7 +2637,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2649,7 +2649,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2687,7 +2687,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2733,11 +2733,11 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb9:"
@@ -2790,7 +2790,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2841,7 +2841,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2853,7 +2853,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Frisk Elefant (Avdød)
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2879,7 +2879,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2891,7 +2891,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Melankolsk Aldrende Ape
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2917,7 +2917,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2929,7 +2929,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant (Avdød)
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2955,7 +2955,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2967,7 +2967,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -2993,7 +2993,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3005,7 +3005,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm (Avdød)
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3031,7 +3031,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3043,7 +3043,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Kari Nordmann
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3069,7 +3069,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3081,7 +3081,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Per Hansen (Avdød)
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3107,7 +3107,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3119,7 +3119,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lise Olsen
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3145,7 +3145,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3157,7 +3157,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Nina Johansen (Avdød)
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3183,7 +3183,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3195,7 +3195,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Ole Pettersen
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3221,7 +3221,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3233,7 +3233,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Eva Nilsen (Avdød)
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3262,7 +3262,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3308,11 +3308,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r81:"
@@ -3339,7 +3339,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -3351,7 +3351,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -3373,7 +3373,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                      data-brightness="default"
                 >
                   <span class="_iconWrapper_lurqs_8">
-                    <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+                    <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
                          viewbox="0 0 24 24"
                          focusable="false"
                          aria-hidden="true"
@@ -3386,11 +3386,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   <span class="_content_lurqs_17">
                     Du har ikke tilgang til skjemaet på vegne av denne personen. Kontakt personen hvis du trenger tilgang.
                   </span>
-                  <button class="_button_1hc5e_1 _button_small_1hc5e_42  _closeButton_lurqs_31"
+                  <button class="_button_19ayz_1 _button_small_19ayz_38  _closeButton_lurqs_31"
                           data-brightness="default"
                           type="button"
                   >
-                    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+                    <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                          viewbox="0 0 24 24"
                          focusable="false"
                          aria-labelledby="svgtitle-:r91:"
@@ -3438,7 +3438,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -3464,7 +3464,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3476,7 +3476,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Antikvitet presis
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3502,7 +3502,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3514,7 +3514,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3540,7 +3540,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3552,7 +3552,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3578,7 +3578,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3590,7 +3590,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3678,7 +3678,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3690,7 +3690,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3719,7 +3719,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -3731,7 +3731,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -3762,7 +3762,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3774,7 +3774,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3800,7 +3800,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3812,7 +3812,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3838,7 +3838,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3850,7 +3850,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3876,7 +3876,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3888,7 +3888,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -3926,7 +3926,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3972,11 +3972,11 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r93:"
@@ -4039,11 +4039,11 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:raj:"
@@ -4070,7 +4070,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -4082,7 +4082,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -4148,7 +4148,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4160,7 +4160,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4189,7 +4189,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -4201,7 +4201,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Snapchat AS
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -4230,7 +4230,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -4242,7 +4242,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Statoil AS
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -4276,7 +4276,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -4322,11 +4322,11 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rc5:"
@@ -4379,7 +4379,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -4455,7 +4455,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4467,7 +4467,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4493,7 +4493,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4505,7 +4505,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4531,7 +4531,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4543,7 +4543,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4569,7 +4569,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4581,7 +4581,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4607,7 +4607,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4619,7 +4619,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4657,7 +4657,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -4703,11 +4703,11 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb0:"
@@ -4734,7 +4734,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -4746,7 +4746,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -4811,7 +4811,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4823,7 +4823,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -4852,7 +4852,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -4897,11 +4897,11 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r6o:"
@@ -4928,7 +4928,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -4940,7 +4940,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -4990,7 +4990,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -5067,7 +5067,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5079,7 +5079,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5108,7 +5108,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -5120,7 +5120,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -5151,7 +5151,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5163,7 +5163,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5189,7 +5189,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5201,7 +5201,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5227,7 +5227,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5239,7 +5239,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5265,7 +5265,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5277,7 +5277,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5315,7 +5315,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -5360,11 +5360,11 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r68:"
@@ -5391,7 +5391,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -5403,7 +5403,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -5453,7 +5453,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -5479,7 +5479,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5491,7 +5491,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Frisk Elefant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5517,7 +5517,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5529,7 +5529,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Melankolsk Aldrende Ape
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5555,7 +5555,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5567,7 +5567,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5593,7 +5593,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5605,7 +5605,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5631,7 +5631,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5643,7 +5643,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5681,7 +5681,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -5727,11 +5727,11 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2l:"
@@ -5758,7 +5758,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -5770,7 +5770,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -5820,7 +5820,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -5846,7 +5846,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5858,7 +5858,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Antikvitet presis
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5884,7 +5884,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5896,7 +5896,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5922,7 +5922,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5934,7 +5934,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5960,7 +5960,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -5972,7 +5972,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6060,7 +6060,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6072,7 +6072,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6101,7 +6101,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -6113,7 +6113,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -6144,7 +6144,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6156,7 +6156,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6182,7 +6182,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6194,7 +6194,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6220,7 +6220,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6232,7 +6232,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6258,7 +6258,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6270,7 +6270,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6296,7 +6296,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6308,7 +6308,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Amazon ASA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6334,7 +6334,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6346,7 +6346,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Meta ApS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6375,7 +6375,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -6421,11 +6421,11 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1t:"
@@ -6478,7 +6478,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -6555,7 +6555,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6567,7 +6567,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6593,7 +6593,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6605,7 +6605,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Instagram AS (Avviklet)
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6631,7 +6631,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6643,7 +6643,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6669,7 +6669,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6681,7 +6681,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6707,7 +6707,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6719,7 +6719,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6745,7 +6745,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6757,7 +6757,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6783,7 +6783,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6795,7 +6795,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Amazon ASA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6821,7 +6821,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6833,7 +6833,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Meta ApS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -6862,7 +6862,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -6907,11 +6907,11 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r95:"
@@ -6938,7 +6938,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -6950,7 +6950,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -7000,7 +7000,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -7026,7 +7026,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7038,7 +7038,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Antikvitet presis
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7064,7 +7064,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7076,7 +7076,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7102,7 +7102,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7114,7 +7114,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7140,7 +7140,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7152,7 +7152,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7240,7 +7240,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7252,7 +7252,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7281,7 +7281,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -7293,7 +7293,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -7324,7 +7324,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7336,7 +7336,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7362,7 +7362,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7374,7 +7374,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7400,7 +7400,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7412,7 +7412,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7438,7 +7438,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7450,7 +7450,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7488,7 +7488,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -7547,7 +7547,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -7559,7 +7559,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -7609,7 +7609,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          value
                          name="filter"
                   >
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _filterIcon_1egyv_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _filterIcon_1egyv_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -7635,7 +7635,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7647,7 +7647,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Antikvitet presis
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7673,7 +7673,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7685,7 +7685,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7711,7 +7711,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7723,7 +7723,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7749,7 +7749,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7761,7 +7761,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7849,7 +7849,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7861,7 +7861,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Costco AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7890,7 +7890,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                              href="#"
                           >
                             <div class="_header_ous0n_19">
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -7902,7 +7902,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                               <h4 class="_title_ous0n_24">
                                 Google ASA
                               </h4>
-                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                    viewbox="0 0 24 24"
                                    focusable="false"
                                    aria-hidden="true"
@@ -7933,7 +7933,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7945,7 +7945,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7971,7 +7971,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -7983,7 +7983,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Toshiba AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8009,7 +8009,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8021,7 +8021,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Hitachi AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8047,7 +8047,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8059,7 +8059,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Vanguard AS
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8097,7 +8097,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -8136,11 +8136,11 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7e:"
@@ -8167,7 +8167,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                  href="#"
               >
                 <div class="_header_ous0n_19">
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -8179,7 +8179,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                   <h2 class="_title_ous0n_24">
                     Meg selv
                   </h2>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -8218,7 +8218,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8230,7 +8230,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Antikvitet presis
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8256,7 +8256,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8268,7 +8268,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Bønne elegant
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8294,7 +8294,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8306,7 +8306,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Lomme filosofisk
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8332,7 +8332,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8344,7 +8344,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Adelsmann varm
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8431,7 +8431,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                          href="#"
                       >
                         <div class="_header_ous0n_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8443,7 +8443,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                           <h3 class="_title_ous0n_24">
                             Samsung DA
                           </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
                                viewbox="0 0 24 24"
                                focusable="false"
                                aria-hidden="true"
@@ -8472,7 +8472,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                     type="button"
             >
               <span class="_iconWrapper_6ybyo_25">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"

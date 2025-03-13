@@ -2,7 +2,7 @@
 
 exports[`Tester/MegaButton AsLink smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_button_1kngy_1"
+  <a class="_button_cezwo_1"
      href="https://www.skatteetaten.no"
      role="button"
   >
@@ -15,7 +15,7 @@ exports[`Tester/MegaButton AsLink smoke-test 1`] = `
 
 exports[`Tester/MegaButton AsLinkEmptyString smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_button_1kngy_1"
+  <a class="_button_cezwo_1"
      href
   >
     <span class>
@@ -27,14 +27,14 @@ exports[`Tester/MegaButton AsLinkEmptyString smoke-test 1`] = `
 
 exports[`Tester/MegaButton AsLinkExternal play-test 1`] = `
 <div data-test-block="true">
-  <a class="_button_1kngy_1"
+  <a class="_button_cezwo_1"
      href="https://www.skatteetaten.no"
      role="button"
   >
     <span class>
       Klikk her
     </span>
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1kngy_34"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_cezwo_34"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -50,7 +50,7 @@ exports[`Tester/MegaButton AsLinkExternal play-test 1`] = `
 
 exports[`Tester/MegaButton Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           type="button"
   >
     <span class>
@@ -62,7 +62,7 @@ exports[`Tester/MegaButton Defaults play-test 1`] = `
 
 exports[`Tester/MegaButton WithAccesskey play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           accesskey="j"
           type="button"
   >
@@ -75,7 +75,7 @@ exports[`Tester/MegaButton WithAccesskey play-test 1`] = `
 
 exports[`Tester/MegaButton WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           type="button"
           aria-describedby="testid1234"
   >
@@ -89,7 +89,7 @@ exports[`Tester/MegaButton WithAriaDescribedby play-test 1`] = `
 exports[`Tester/MegaButton WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlId"
-          class="_button_1kngy_1 dummyClassname"
+          class="_button_cezwo_1 dummyClassname"
           lang="nb"
           data-testid="123ID"
           type="button"
@@ -103,7 +103,7 @@ exports[`Tester/MegaButton WithAttributes play-test 1`] = `
 
 exports[`Tester/MegaButton WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           disabled
           type="button"
   >
@@ -116,7 +116,7 @@ exports[`Tester/MegaButton WithDisabled play-test 1`] = `
 
 exports[`Tester/MegaButton WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           type="button"
   >
     <span class>
@@ -128,14 +128,14 @@ exports[`Tester/MegaButton WithEventHandlers play-test 1`] = `
 
 exports[`Tester/MegaButton WithExternalIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="_button_1kngy_1"
+  <a class="_button_cezwo_1"
      href="#"
      role="button"
   >
     <span class>
       Klikk her
     </span>
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1kngy_34"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_cezwo_34"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -151,7 +151,7 @@ exports[`Tester/MegaButton WithExternalIcon play-test 1`] = `
 
 exports[`Tester/MegaButton WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           type="button"
   >
     <span class>
@@ -163,7 +163,7 @@ exports[`Tester/MegaButton WithLongText smoke-test 1`] = `
 
 exports[`Tester/MegaButton WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           type="button"
   >
     <span class>
@@ -175,14 +175,14 @@ exports[`Tester/MegaButton WithLongTextAndBreaking smoke-test 1`] = `
 
 exports[`Tester/MegaButton WithLongTextAndExternalIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_button_1kngy_1"
+  <a class="_button_cezwo_1"
      href="#"
      role="button"
   >
     <span class>
       Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje
     </span>
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1kngy_34"
+    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_cezwo_34"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -198,7 +198,7 @@ exports[`Tester/MegaButton WithLongTextAndExternalIcon smoke-test 1`] = `
 
 exports[`Tester/MegaButton WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           type="button"
           id="dummyIdForwardedFromRef"
   >
@@ -212,7 +212,7 @@ exports[`Tester/MegaButton WithRef play-test 1`] = `
 exports[`Tester/MegaButton WithSpinner smoke-test 1`] = `
 <div data-test-block="true">
   <div class="bottomSpacingXL">
-    <button class="_button_1kngy_1"
+    <button class="_button_cezwo_1"
             type="button"
     >
       <span class>
@@ -220,15 +220,15 @@ exports[`Tester/MegaButton WithSpinner smoke-test 1`] = `
       </span>
     </button>
   </div>
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           type="button"
   >
-    <span class="_hide_1kngy_70">
+    <span class="_hide_cezwo_68">
       Klikk her
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28 _spinner_1kngy_74"
+         class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28 _spinner_cezwo_72"
     >
       <div class="_spinnerAnimation_wnf1f_40">
       </div>
@@ -244,7 +244,7 @@ exports[`Tester/MegaButton WithSpinner smoke-test 1`] = `
 
 exports[`Tester/MegaButton WithType play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1kngy_1"
+  <button class="_button_cezwo_1"
           type="submit"
   >
     <span class>

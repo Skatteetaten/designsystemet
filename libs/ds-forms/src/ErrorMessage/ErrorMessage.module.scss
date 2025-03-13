@@ -26,7 +26,6 @@
 
   &Icon {
     height: calc(var(--font-size-s) * var(--semantic-line-height-default));
-    flex-shrink: 0;
     fill: var(--semantic-danger-foreground);
   }
 

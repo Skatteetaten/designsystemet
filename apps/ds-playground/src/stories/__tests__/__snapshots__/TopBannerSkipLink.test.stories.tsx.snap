@@ -7,7 +7,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) ClickSkipLink play-test 1`]
      data-skip-link="ds-skip-link"
   >
     <span class="_skipLinkContent_1vv50_22">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -34,7 +34,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) Defaults play-test 1`] = `
      data-skip-link="ds-skip-link"
   >
     <span class="_skipLinkContent_1vv50_22">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -59,7 +59,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) WithAttributes play-test 1`
      data-skip-link="ds-skip-link"
   >
     <span class="_skipLinkContent_1vv50_22">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -82,7 +82,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) WithRef play-test 1`] = `
      id="dummyIdForwardedFromRef"
   >
     <span class="_skipLinkContent_1vv50_22">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -111,7 +111,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) WithTargetAndChildren play-
      data-skip-link="ds-skip-link"
   >
     <span class="_skipLinkContent_1vv50_22">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"

@@ -34,7 +34,7 @@ export const Tag = ({
     >
       {svgPath && (
         <div className={styles.iconWrapper} aria-hidden>
-          <Icon className={styles.icon} svgPath={svgPath} />
+          <Icon className={styles.icon} svgPath={svgPath} size={'small'} />
         </div>
       )}
       {children}
