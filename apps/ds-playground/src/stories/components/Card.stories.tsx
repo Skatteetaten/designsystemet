@@ -214,7 +214,7 @@ export const AlertExample: Story = {
       <div className={'flex flexWrap gapS'}>
         <Card className={'cardWidth'}>
           <Card.Alert
-            variant={'neutral'}
+            variant={'info'}
             title={'Informasjon'}
             titleAs={'h3'}
             onClose={(): void => headingRef?.current?.focus()}
