@@ -46,7 +46,13 @@ export const StepListStep = ({
   const titleId = `steptitle-${id ?? generatedId}`;
 
   useEffect(() => {
-    if (shouldAutoFocusWhenActive && innerRef.current && variant === 'active') {
+    if (
+      shouldAutoFocusWhenActive &&
+      innerRef.current &&
+      (variant === 'active' ||
+        variant === 'positiveResult' ||
+        variant === 'neutralResult')
+    ) {
       innerRef.current.focus();
     }
   }, [variant, shouldAutoFocusWhenActive]);
