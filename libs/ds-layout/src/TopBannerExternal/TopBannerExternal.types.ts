@@ -68,7 +68,8 @@ export interface TopBannerExternalProps extends BaseProps {
   additionalLanguages?: TopBannerLangPickerProps['additionalLanguages'];
 }
 
-export interface TopBannerExternalHandle extends RefObject<HTMLHeadElement> {
+export interface TopBannerExternalHandle
+  extends RefObject<HTMLHeadElement | null> {
   /* Åpner menyen */
   openMenu: () => void;
   /* Lukker menyen */
