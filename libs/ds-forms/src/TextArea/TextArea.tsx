@@ -75,7 +75,7 @@ export const TextArea = ({
   };
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    if (autosize && defaultValue !== undefined) {
+    if (autosize && value === undefined) {
       resizeTextArea();
     }
     onChange?.(e);
