@@ -37,7 +37,6 @@ export const TextArea = ({
   defaultValue,
   disabled,
   form,
-  inputMode,
   maxLength,
   minLength,
   name,
@@ -115,7 +114,6 @@ export const TextArea = ({
         defaultValue={defaultValue}
         disabled={disabled}
         form={form}
-        inputMode={inputMode}
         maxLength={maxLength}
         minLength={minLength}
         name={name}

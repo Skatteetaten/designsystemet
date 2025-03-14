@@ -50,7 +50,7 @@ exports[`Tester/TextArea WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TextArea WithAutoCompleteInputModeNameAndPlaceholder play-test 1`] = `
+exports[`Tester/TextArea WithAutoCompleteNameAndPlaceholder play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rs:"
@@ -62,7 +62,6 @@ exports[`Tester/TextArea WithAutoCompleteInputModeNameAndPlaceholder play-test 1
     <textarea id="textAreaTextboxId-:rr:"
               class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
               autocomplete="given-name"
-              inputmode="text"
               name="test_name"
               placeholder="Kari Nordmann"
     >

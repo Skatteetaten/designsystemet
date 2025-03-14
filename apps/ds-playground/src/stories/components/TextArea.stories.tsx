@@ -62,10 +62,6 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
     form: { table: { category: category.htmlAttribute } },
-    inputMode: {
-      control: 'inline-radio',
-      table: { category: category.htmlAttribute },
-    },
     maxLength: { table: { category: category.htmlAttribute } },
     minLength: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },

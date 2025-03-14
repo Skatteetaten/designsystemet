@@ -60,7 +60,6 @@ const meta = {
     },
     disabled: { table: { disable: true, category: category.htmlAttribute } },
     form: { table: { disable: true, category: category.htmlAttribute } },
-    inputMode: { table: { disable: true, category: category.htmlAttribute } },
     name: { table: { disable: true, category: category.htmlAttribute } },
     maxLength: { table: { disable: true, category: category.htmlAttribute } },
     minLength: { table: { disable: true, category: category.htmlAttribute } },
@@ -294,18 +293,16 @@ export const WithDefaultValueAndAutoSize = {
   },
 } satisfies Story;
 
-export const WithAutoCompleteInputModeNameAndPlaceholder = {
-  name: 'With AutoComplete InputMode Name And Placeholder (A3, A6, B1)',
+export const WithAutoCompleteNameAndPlaceholder = {
+  name: 'With AutoComplete Name And Placeholder (A3, A6, B1)',
   args: {
     ...defaultArgs,
     autoComplete: 'given-name',
-    inputMode: 'text',
     name: 'test_name',
     placeholder: valueText,
   },
   argTypes: {
     autoComplete: { table: { disable: false } },
-    inputMode: { table: { disable: false } },
     name: { table: { disable: false } },
     placeholder: { table: { disable: false } },
   },
@@ -313,7 +310,6 @@ export const WithAutoCompleteInputModeNameAndPlaceholder = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toHaveAttribute('autocomplete', 'given-name');
-    await expect(textbox).toHaveAttribute('inputmode', 'text');
     await expect(textbox).toHaveAttribute('name', 'test_name');
     await expect(textbox).toHaveAttribute('placeholder', valueText);
   },
