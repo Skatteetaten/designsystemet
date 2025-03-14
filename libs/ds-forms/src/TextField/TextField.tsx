@@ -1,11 +1,4 @@
-import {
-  ChangeEvent,
-  JSX,
-  ModifierKey,
-  useId,
-  useImperativeHandle,
-  useRef,
-} from 'react';
+import { ChangeEvent, JSX, ModifierKey, useId } from 'react';
 
 import {
   dsI18n,
@@ -62,9 +55,6 @@ export const TextField = ({
   const errorId = `textFieldErrorId-${useId()}`;
   const generatedId = `textFieldTextboxId-${useId()}`;
   const textboxId = externalId ?? generatedId;
-
-  const textboxRef = useRef<HTMLInputElement>(null);
-  useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
   const separator = dsI18n.language === Languages.Engelsk ? ',' : ' ';
   const addSpacesOrCommas = (value: string): string =>
@@ -194,7 +184,7 @@ export const TextField = ({
         {label}
       </LabelWithHelp>
       <input
-        ref={textboxRef}
+        ref={ref}
         id={textboxId}
         className={textboxClassName}
         data-testid={dataTestId}
