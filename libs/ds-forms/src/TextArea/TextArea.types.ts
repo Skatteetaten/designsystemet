@@ -8,42 +8,39 @@ import {
 import {
   BaseProps,
   FormRequiredProps,
-  FormSize,
   Prettify,
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
-type RequiredTextFieldHTMLAttributes = Pick<
-  ComponentPropsWithoutRef<'input'>,
+type RequiredTextAreaHTMLAttributes = Pick<
+  ComponentPropsWithoutRef<'textarea'>,
   | 'autoComplete'
   | 'defaultValue'
   | 'disabled'
   | 'form'
-  | 'inputMode'
-  | 'list'
   | 'maxLength'
   | 'minLength'
   | 'name'
   | 'placeholder'
   | 'readOnly'
   | 'required'
+  | 'rows'
   | 'value'
-  | 'pattern'
 >;
 
-type TextFieldHTMLAttributes = Partial<RequiredTextFieldHTMLAttributes>;
+type TextAreaHTMLAttributes = Partial<RequiredTextAreaHTMLAttributes>;
 
-interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
-  onBlur?: FocusEventHandler<HTMLInputElement>;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
-  onFocus?: FocusEventHandler<HTMLInputElement>;
+interface TextAreaPropsHTMLAttributes extends TextAreaHTMLAttributes {
+  onBlur?: FocusEventHandler<HTMLTextAreaElement>;
+  onChange?: ChangeEventHandler<HTMLTextAreaElement>;
+  onFocus?: FocusEventHandler<HTMLTextAreaElement>;
 }
 
-export interface TextFieldCommonProps
-  extends TextFieldPropsHTMLAttributes,
+export interface TextAreaCommonProps
+  extends TextAreaPropsHTMLAttributes,
     BaseProps {
-  ref?: Ref<HTMLInputElement>;
+  ref?: Ref<HTMLTextAreaElement>;
   classNames?: Prettify<
     {
       container?: string;
@@ -55,7 +52,7 @@ export interface TextFieldCommonProps
   errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
-  /** Input eller textarea ledetekst */
+  /** Ledetekst */
   label: string;
   /** Tilleggstekst */
   description?: LabelWithHelpProps['description'];
@@ -65,12 +62,10 @@ export interface TextFieldCommonProps
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Definerer stilen til TextField */
-  variant?: FormSize;
-  /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
-  thousandSeparator?: boolean;
+  /** Høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
+  autosize?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
-export type TextFieldProps = TextFieldCommonProps & FormRequiredProps;
+export type TextAreaProps = TextAreaCommonProps & FormRequiredProps;
