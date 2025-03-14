@@ -9,7 +9,7 @@ exports[`Tester/NavigationTile Defaults play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -33,7 +33,7 @@ exports[`Tester/NavigationTile WithAriaDescribedby play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -59,7 +59,7 @@ exports[`Tester/NavigationTile WithAttributes play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -82,7 +82,7 @@ exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34 dummyClassname">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -108,7 +108,7 @@ exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -134,7 +134,7 @@ exports[`Tester/NavigationTile WithExternalIcon play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-label="Til et annet nettsted"
@@ -169,7 +169,7 @@ exports[`Tester/NavigationTile WithIcon play-test 1`] = `
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -181,7 +181,7 @@ exports[`Tester/NavigationTile WithIcon play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -205,7 +205,7 @@ exports[`Tester/NavigationTile WithMultitpleTilesWithoutGap play-test 1`] = `
         <h2 class="_title_ous0n_24 _title_large_ous0n_34">
           Skatt
         </h2>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -226,7 +226,7 @@ exports[`Tester/NavigationTile WithMultitpleTilesWithoutGap play-test 1`] = `
         <h2 class="_title_ous0n_24 _title_large_ous0n_34">
           Skatt
         </h2>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -247,7 +247,7 @@ exports[`Tester/NavigationTile WithMultitpleTilesWithoutGap play-test 1`] = `
         <h2 class="_title_ous0n_24 _title_large_ous0n_34">
           Skatt
         </h2>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -274,7 +274,7 @@ exports[`Tester/NavigationTile WithOnClick play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Ny tittel
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -298,7 +298,7 @@ exports[`Tester/NavigationTile WithRef play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -318,7 +318,7 @@ exports[`Tester/NavigationTile WithSizeExtraLarge smoke-test 1`] = `
      href="#storybook-root"
   >
     <div class="_header_ous0n_19">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 _icon_ous0n_1 _icon_extraLarge_ous0n_7"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_extraLarge_dry7n_20 _icon_ous0n_1 _icon_extraLarge_ous0n_7"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -347,7 +347,7 @@ exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -373,7 +373,7 @@ exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
       <h2 class="_title_ous0n_24">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -435,7 +435,7 @@ exports[`Tester/NavigationTile WithSpinner smoke-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -468,7 +468,7 @@ exports[`Tester/NavigationTile WithSpinner smoke-test 1`] = `
       <h2 class="_title_ous0n_24">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -496,7 +496,7 @@ exports[`Tester/NavigationTile WithTarget play-test 1`] = `
       <h2 class="_title_ous0n_24 _title_large_ous0n_34">
         Skatt
       </h2>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -517,7 +517,7 @@ exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 _icon_ous0n_1 _icon_extraLarge_ous0n_7"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_extraLarge_dry7n_20 _icon_ous0n_1 _icon_extraLarge_ous0n_7"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -535,7 +535,7 @@ exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
        href="#storybook-root"
     >
       <div class="_header_ous0n_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 _icon_ous0n_1 _icon_extraLarge_ous0n_7"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_extraLarge_dry7n_20 _icon_ous0n_1 _icon_extraLarge_ous0n_7"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -563,7 +563,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         <h1 class="_title_ous0n_24 _title_large_ous0n_34">
           Heading h1
         </h1>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -581,7 +581,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         <h2 class="_title_ous0n_24 _title_large_ous0n_34">
           Heading h2
         </h2>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -599,7 +599,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         <h3 class="_title_ous0n_24 _title_large_ous0n_34">
           Heading h3
         </h3>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -617,7 +617,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         <h4 class="_title_ous0n_24 _title_large_ous0n_34">
           Heading h4
         </h4>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -635,7 +635,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         <h5 class="_title_ous0n_24 _title_large_ous0n_34">
           Heading h5
         </h5>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -653,7 +653,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         <h6 class="_title_ous0n_24 _title_large_ous0n_34">
           Heading h6
         </h6>
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ous0n_1 _icon_large_ous0n_4"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1 _icon_large_ous0n_4"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"

@@ -10,7 +10,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
          data-brightness="light"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -33,7 +33,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
          data-brightness="light"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -56,7 +56,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
          data-brightness="light"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -79,7 +79,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
          data-brightness="light"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -102,7 +102,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
          data-brightness="light"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -130,7 +130,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -153,7 +153,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -176,7 +176,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -199,7 +199,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -222,7 +222,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -250,7 +250,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -273,7 +273,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -296,7 +296,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -319,7 +319,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -342,7 +342,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -379,7 +379,7 @@ exports[`Tester/Alert DefaultsWithMessage play-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -407,7 +407,7 @@ exports[`Tester/Alert VariantDanger play-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -435,7 +435,7 @@ exports[`Tester/Alert VariantInfo play-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -463,7 +463,7 @@ exports[`Tester/Alert VariantSuccess play-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -491,7 +491,7 @@ exports[`Tester/Alert VariantWarning play-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -519,7 +519,7 @@ exports[`Tester/Alert WithAriaLiveOff play-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -550,7 +550,7 @@ exports[`Tester/Alert WithAttributes play-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -578,7 +578,7 @@ exports[`Tester/Alert WithCloseButton smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -591,11 +591,11 @@ exports[`Tester/Alert WithCloseButton smoke-test 1`] = `
       <span class="_content_lurqs_17">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="_button_1hc5e_1 _button_small_1hc5e_42  _closeButton_lurqs_31"
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _closeButton_lurqs_31"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rr:"
@@ -633,7 +633,7 @@ exports[`Tester/Alert WithCustomIcon smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -661,7 +661,7 @@ exports[`Tester/Alert WithCustomSVGPath smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -689,7 +689,7 @@ exports[`Tester/Alert WithLongText smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -717,7 +717,7 @@ exports[`Tester/Alert WithLongTextAndBreaking smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -745,7 +745,7 @@ exports[`Tester/Alert WithMarkup smoke-test 1`] = `
          data-brightness="default"
     >
       <span class="_iconWrapper_lurqs_8">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"

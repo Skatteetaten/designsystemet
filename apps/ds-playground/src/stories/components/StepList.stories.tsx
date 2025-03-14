@@ -3,7 +3,8 @@ import { useId, useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { OpenClose, StepList } from '@skatteetaten/ds-collections';
-import { ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
+import { Card } from '@skatteetaten/ds-content';
+import { Checkbox, ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
 import { List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -61,7 +62,7 @@ export const Examples: Story = {
             //slik at ikke første steg stjeler fokus ved initiell lasting av siden
             shouldAutoFocusWhenActive={false}
             onEdit={
-              activeStep > 1 && activeStep < 4
+              activeStep > 1 && activeStep < 5
                 ? (): void => setActiveStep(1)
                 : undefined
             }
@@ -78,7 +79,7 @@ export const Examples: Story = {
             title={'Hva gjør du?'}
             stepNumber={2}
             onEdit={
-              activeStep > 2 && activeStep < 4
+              activeStep > 2 && activeStep < 5
                 ? (): void => setActiveStep(2)
                 : undefined
             }
@@ -94,6 +95,11 @@ export const Examples: Story = {
             variant={activeStep === 3 ? 'active' : 'passive'}
             title={'Salg av varer og tjenester'}
             stepNumber={3}
+            onEdit={
+              activeStep > 3 && activeStep < 5
+                ? (): void => setActiveStep(2)
+                : undefined
+            }
             onNext={(): void => {
               if (step3) {
                 onNext();
@@ -147,12 +153,43 @@ export const Examples: Story = {
           </StepList.Step>
         )}
 
-        {activeStep >= 4 && step3 === 'ja' && (
+        {activeStep >= 4 && (
           <StepList.Step
             id={`${stepId}-4`}
+            variant={activeStep === 4 ? 'active' : 'passive'}
+            title={'Oppsummering før innsending'}
+            stepNumber={4}
+            onNext={onNext}
+          >
+            {activeStep === 4 ? (
+              <Card color={'ochre'} className={'topSpacingS'}>
+                <Card.Content>
+                  <List>
+                    <List.Element>
+                      {'Du jobber med varer og tjenester'}
+                    </List.Element>
+                    <List.Element>{'Du selger'}</List.Element>
+                    <List.Element>
+                      {'Du selger for egen regning og risiko'}
+                    </List.Element>
+                  </List>
+                  <Checkbox>
+                    {'Jeg bekrefter at opplysningene ovenfor stemmer'}
+                  </Checkbox>
+                </Card.Content>
+              </Card>
+            ) : (
+              <div>{'Oppsummering'}</div>
+            )}
+          </StepList.Step>
+        )}
+
+        {activeStep >= 5 && step3 === 'ja' && (
+          <StepList.Step
+            id={`${stepId}-5`}
             title={'Vårt veiledende svar'}
             variant={'positiveResult'}
-            stepNumber={4}
+            stepNumber={5}
             introTitle={'Virksomheten skal registreres som særavgiftspliktig.'}
             introTitleAs={'h4'}
             introContent={
@@ -187,12 +224,12 @@ export const Examples: Story = {
           </StepList.Step>
         )}
 
-        {activeStep >= 4 && step3 === 'nei' && (
+        {activeStep >= 5 && step3 === 'nei' && (
           <StepList.Step
-            id={`${stepId}-4`}
+            id={`${stepId}-5`}
             title={'neutralt resultat'}
             variant={'neutralResult'}
-            stepNumber={4}
+            stepNumber={5}
           >
             {'more brødtekst'}
           </StepList.Step>

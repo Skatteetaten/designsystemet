@@ -4,11 +4,11 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ri:"
@@ -95,7 +95,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -119,7 +119,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:ro:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -131,11 +132,11 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rq:"
@@ -555,11 +556,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
        data-testid="123ID"
   >
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -646,7 +647,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -670,7 +671,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:rf:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -682,11 +684,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rh:"
@@ -1102,11 +1104,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
 <div data-test-block="true">
   <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1v:"
@@ -1193,7 +1195,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1217,7 +1219,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
             Årstall
           </label>
           <input id="textFieldTextboxId-:r25:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -1229,11 +1232,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r27:"
@@ -1649,11 +1652,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
 <div data-test-block="true">
   <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2q:"
@@ -1740,7 +1743,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1764,7 +1767,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
             Årstall
           </label>
           <input id="textFieldTextboxId-:r30:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -1776,11 +1780,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r32:"
@@ -2197,11 +2201,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
 <div data-test-block="true">
   <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2h:"
@@ -2288,7 +2292,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2312,7 +2316,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
             Årstall
           </label>
           <input id="textFieldTextboxId-:r2n:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -2324,11 +2329,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2p:"
@@ -2755,11 +2760,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
 <div data-test-block="true">
   <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1d:"
@@ -2846,7 +2851,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2870,7 +2875,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:r1j:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -2882,11 +2888,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1l:"
@@ -3322,11 +3328,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
 <div data-test-block="true">
   <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1m:"
@@ -3413,7 +3419,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -3437,7 +3443,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
             Årstall
           </label>
           <input id="textFieldTextboxId-:r1s:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -3449,11 +3456,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1u:"
@@ -3889,11 +3896,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
 <div data-test-block="true">
   <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r14:"
@@ -3980,7 +3987,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4004,7 +4011,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:r1a:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -4016,11 +4024,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1c:"
@@ -4452,11 +4460,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
        id="dummyIdForwardedFromRef"
   >
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r0:"
@@ -4543,7 +4551,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4567,7 +4575,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:r6:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -4579,11 +4588,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r8:"
@@ -4999,11 +5008,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
 <div data-test-block="true">
   <div class="_calendar_feosd_5">
     <div class="_calendarNavigation_feosd_18">
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rr:"
@@ -5090,7 +5099,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1q368_55"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -5114,7 +5123,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
             Årstall
           </label>
           <input id="textFieldTextboxId-:r11:"
-                 class="_textbox_oxc8m_5"
+                 class="_textbox_1kevi_5 $"
+                 data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
@@ -5126,11 +5136,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
           </div>
         </div>
       </div>
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _calendarNavigationArrowIcon_feosd_33"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _calendarNavigationArrowIcon_feosd_33"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r13:"

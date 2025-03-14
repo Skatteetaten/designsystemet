@@ -14,7 +14,7 @@ import {
 import {
   DatePicker,
   getDatePickerDateFormat,
-  TextField,
+  TextArea,
 } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -174,11 +174,7 @@ export const Examples: Story = {
           onSelectDate={handleSelect}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <TextField
-          className={'textField300'}
-          label={'Andre opplysninger'}
-          as={'textarea'}
-        />
+        <TextArea className={'textField300'} label={'Andre opplysninger'} />
       </>
     );
   },

@@ -25,7 +25,7 @@
     margin-top: var(--spacing-xs);
   }
 
-  &_large {
+  &[data-variant='large'] {
     padding: var(--spacing-s);
   }
 
@@ -35,17 +35,6 @@
 
   input::-webkit-textfield-decoration-container {
     display: none;
-  }
-
-  &_multiline {
-    padding: var(--spacing-s);
-    overflow-y: auto;
-  }
-
-  &_autosize {
-    overflow: hidden;
-    min-height: calc(2lh + calc(var(--spacing-s) * 2));
-    resize: none;
   }
 
   &::placeholder {

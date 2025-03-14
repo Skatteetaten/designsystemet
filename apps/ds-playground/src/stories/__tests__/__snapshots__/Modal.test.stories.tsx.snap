@@ -8,7 +8,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -39,7 +39,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -65,7 +65,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -79,7 +79,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -104,7 +104,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
     </div>
   </header>
   <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
-    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes. 
+    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes.
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
   </p>
   <dialog class="_modal_i27cp_5"
@@ -114,11 +114,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r17:"
@@ -178,7 +178,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -209,7 +209,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -235,7 +235,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -249,7 +249,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -274,7 +274,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
     </div>
   </header>
   <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
-    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen.
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_i27cp_5"
@@ -284,11 +284,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1c:"
@@ -343,11 +343,11 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rj:"
@@ -412,11 +412,11 @@ exports[`Tester/Modal Defaults play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -481,11 +481,11 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -553,11 +553,11 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -621,11 +621,11 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rl:"
@@ -690,11 +690,11 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rn:"
@@ -759,11 +759,11 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rp:"
@@ -828,11 +828,11 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -848,7 +848,7 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
       </button>
       <div class="_modalPaddingL_i27cp_48">
         <div>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_extraLarge_dry7n_20"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -908,11 +908,11 @@ exports[`Tester/Modal WithImage play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -981,11 +981,11 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rf:"
@@ -1054,11 +1054,11 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rt:"
@@ -1104,11 +1104,11 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rv:"
@@ -1136,7 +1136,8 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
             Navn
           </label>
           <input id="textFieldTextboxId-:r11:"
-                 class="_textbox_oxc8m_5    _textboxMarginTop_oxc8m_24"
+                 class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
+                 data-variant="medium"
                  autocomplete="off"
           >
           <div id="textFieldErrorId-:r10:"
@@ -1171,11 +1172,11 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rc:"
@@ -1240,11 +1241,11 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
     >
-      <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _closeButton_i27cp_58"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rh:"

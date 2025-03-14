@@ -48,7 +48,6 @@
 
   & .icon {
     height: calc(var(--font-size-m) * var(--semantic-line-height-buttons));
-    flex-shrink: 0;
     fill: var(--inline-button-foreground-color);
   }
 

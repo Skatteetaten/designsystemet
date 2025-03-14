@@ -8,7 +8,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -36,12 +36,12 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -51,14 +51,14 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -84,7 +84,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -98,7 +98,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -133,7 +133,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -164,7 +164,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -190,7 +190,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -204,7 +204,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -239,7 +239,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -270,7 +270,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -296,7 +296,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -310,7 +310,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -345,7 +345,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -376,7 +376,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -402,7 +402,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -416,7 +416,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -451,7 +451,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -482,7 +482,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -508,7 +508,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -522,7 +522,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -557,7 +557,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -588,7 +588,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -614,7 +614,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -628,7 +628,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -667,7 +667,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -698,7 +698,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -724,7 +724,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -738,7 +738,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -773,7 +773,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -808,7 +808,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
               Søk
             </label>
             <input id="textFieldTextboxId-:rb:"
-                   class="_textbox_oxc8m_5"
+                   class="_textbox_1kevi_5 $"
+                   data-variant="medium"
                    autocomplete="off"
                    placeholder="Søk"
             >
@@ -822,7 +823,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -848,7 +849,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -862,7 +863,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -897,7 +898,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -928,7 +929,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -954,7 +955,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -968,7 +969,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1003,7 +1004,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1031,12 +1032,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1046,7 +1047,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -1064,7 +1065,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1090,7 +1091,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1104,7 +1105,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1144,7 +1145,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1160,7 +1161,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1176,7 +1177,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1191,7 +1192,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"
@@ -1229,7 +1230,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1257,12 +1258,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1272,7 +1273,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -1290,7 +1291,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1316,7 +1317,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1330,7 +1331,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1370,7 +1371,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1386,7 +1387,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1402,7 +1403,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1417,7 +1418,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"
@@ -1455,7 +1456,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1483,12 +1484,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1498,7 +1499,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -1516,7 +1517,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1542,7 +1543,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1556,7 +1557,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1596,7 +1597,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1612,7 +1613,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1628,7 +1629,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1643,7 +1644,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"
@@ -1683,7 +1684,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1714,7 +1715,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1740,7 +1741,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1754,7 +1755,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1789,7 +1790,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1817,12 +1818,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1832,7 +1833,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -1860,7 +1861,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -1886,7 +1887,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1900,7 +1901,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1940,7 +1941,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1956,7 +1957,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1972,7 +1973,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1987,7 +1988,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"
@@ -2035,7 +2036,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2063,12 +2064,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2078,7 +2079,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -2106,7 +2107,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -2132,7 +2133,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2146,7 +2147,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2186,7 +2187,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2202,7 +2203,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2218,7 +2219,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2233,7 +2234,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"
@@ -2281,7 +2282,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2309,12 +2310,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2324,7 +2325,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -2352,7 +2353,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -2378,7 +2379,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2392,7 +2393,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2432,7 +2433,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2448,7 +2449,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2464,7 +2465,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2479,7 +2480,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"
@@ -2527,7 +2528,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2555,12 +2556,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2570,7 +2571,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -2593,7 +2594,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -2619,7 +2620,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2633,7 +2634,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2673,7 +2674,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2689,7 +2690,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2705,7 +2706,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2720,7 +2721,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"
@@ -2763,7 +2764,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -2791,12 +2792,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2806,7 +2807,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -2829,7 +2830,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -2855,7 +2856,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2869,7 +2870,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2909,7 +2910,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2925,7 +2926,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2941,7 +2942,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2956,7 +2957,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"
@@ -2999,7 +3000,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
        data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -3027,12 +3028,12 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
         </a>
         <div class="_contentContainer_629ec_17">
           <div class="_content_629ec_17">
-            <button class="_button_1dpuv_1"
+            <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1dpuv_18">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dpuv_18"
+              <span class="_iconWrapper_1hyk0_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3042,7 +3043,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1dpuv_28">
+              <span class="_buttonText_1hyk0_27">
                 Meny
               </span>
             </button>
@@ -3065,7 +3066,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
             <div class="_container_azp4i_5">
               <div class>
               </div>
-              <button class="_button_1dpuv_1  _menuButton_azp4i_17"
+              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
@@ -3091,7 +3092,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -3105,7 +3106,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                 <span class="_srOnly_azp4i_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3145,7 +3146,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
             </h2>
             <ul class="_linkGroup_w23nb_1">
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3161,7 +3162,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3177,7 +3178,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3192,7 +3193,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                    target="_blank"
                 >
                   Tilgjengelighetserklæring
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-label="Til et annet nettsted"

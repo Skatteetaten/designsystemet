@@ -32,14 +32,14 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -121,11 +121,11 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_1hc5e_1 _button_medium_1hc5e_50"
+        <button class="_button_19ayz_1 _button_medium_19ayz_42"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r3:"
@@ -158,11 +158,11 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -241,14 +241,14 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -333,14 +333,14 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -369,11 +369,11 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -432,14 +432,14 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -521,14 +521,14 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -610,14 +610,14 @@ exports[`Tester/Pagination WithHiddenPageSummary play-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -646,11 +646,11 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -736,14 +736,14 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -842,14 +842,14 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -878,11 +878,11 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1020,14 +1020,14 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1110,14 +1110,14 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1146,11 +1146,11 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20">
       <li class="_element_leftArrow_1xa21_31">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _button_1xa21_1"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1229,14 +1229,14 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li class="_element_rightArrow_1xa21_34">
-        <button class="_button_12a0b_1  _button_withIconRight_12a0b_8 _button_1xa21_1"
+        <button class="_button_r1hjf_1  _button_withIconRight_r1hjf_8 _button_1xa21_1"
                 data-brightness="default"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"

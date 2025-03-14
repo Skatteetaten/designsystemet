@@ -10,7 +10,7 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
             class="_dropZone_9gibq_14"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -61,7 +61,7 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
             class="_dropZone_9gibq_14"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -110,7 +110,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
             aria-describedby=":r2l:-fileuploader-error"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -134,8 +134,8 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15 dummyClassname">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+      <div class="_errorMessage_vog41_15 dummyClassname">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -144,7 +144,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1kdf4_30">
+        <p class="_errorMessageText_vog41_29">
           feil
         </p>
       </div>
@@ -171,13 +171,13 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
     >
       Hemmelig kode
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r13:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r14:"
@@ -199,7 +199,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
             aria-describedby=":r12:-fileuploader-error :r11:-accepted-formats"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -233,8 +233,8 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+      <div class="_errorMessage_vog41_15">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -243,7 +243,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1kdf4_30">
+        <p class="_errorMessageText_vog41_29">
           Du må laste opp en fil
         </p>
       </div>
@@ -272,13 +272,13 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
     >
       Dokumentasjon og grunnlag
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r28:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r29:"
@@ -299,7 +299,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
             class="_dropZone_9gibq_14 _dropZoneMarginTop_9gibq_28"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -339,7 +339,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
                href="#"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -350,7 +350,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
               </svg>
               file.txt
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r2d:"
@@ -365,12 +365,12 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":r2b:-file-file.txt"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r2e:"
@@ -407,13 +407,13 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
     >
       Last opp filer
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r2h:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2i:"
@@ -434,7 +434,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
             class="_dropZone_9gibq_14 _dropZoneMarginTop_9gibq_28"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -535,7 +535,7 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
             class="_dropZone_9gibq_14"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -584,7 +584,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
             aria-describedby=":r1v:-accepted-formats"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -629,7 +629,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
         <div class="_fileListContainer_pqqzl_43">
           <span class="_fileListGrid_pqqzl_30">
             <span class="_fileListText_pqqzl_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r23:"
@@ -647,7 +647,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
               >
                 document.pdf
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r24:"
@@ -663,12 +663,12 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":r22:-file-document.pdf"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r25:"
@@ -706,7 +706,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             aria-describedby=":r17:-accepted-formats"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -748,7 +748,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
            data-brightness="default"
       >
         <span class="_iconWrapper_lurqs_8">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -774,7 +774,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                href="https://www.skatteetaten.no/person/"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -785,7 +785,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               </svg>
               dokumentasjon.pdf
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r1d:"
@@ -800,12 +800,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":r1b:-file-dokumentasjon.pdf"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1e:"
@@ -828,7 +828,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         <div class="_fileListContainer_pqqzl_43">
           <span class="_fileListGrid_pqqzl_30">
             <span class="_fileListText_pqqzl_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1g:"
@@ -846,7 +846,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               >
                 grunnlag.jpg
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1h:"
@@ -862,12 +862,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":r1f:-file-grunnlag.jpg"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1i:"
@@ -900,7 +900,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             aria-describedby=":r1j:-accepted-formats"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -942,7 +942,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
            data-brightness="default"
       >
         <span class="_iconWrapper_lurqs_8">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lurqs_8"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_lurqs_8"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -968,7 +968,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                href="https://www.skatteetaten.no/person/"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -979,7 +979,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               </svg>
               dokumentasjon.pdf
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r1p:"
@@ -994,12 +994,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":r1n:-file-dokumentasjon.pdf"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1q:"
@@ -1022,7 +1022,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         <div class="_fileListContainer_pqqzl_43">
           <span class="_fileListGrid_pqqzl_30">
             <span class="_fileListText_pqqzl_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1s:"
@@ -1040,7 +1040,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               >
                 grunnlag.jpg
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1t:"
@@ -1056,12 +1056,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":r1r:-file-grunnlag.jpg"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1u:"
@@ -1097,13 +1097,13 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
     >
       Dokumentasjon og grunnlag
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:rb:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rc:"
@@ -1125,7 +1125,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             aria-describedby=":r9:-accepted-formats"
     >
       <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_9gibq_10"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1174,7 +1174,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                href="https://www.skatteetaten.no/person/"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -1185,7 +1185,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               </svg>
               dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rg:"
@@ -1200,12 +1200,12 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":re:-file-dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rh:"
@@ -1228,7 +1228,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         <div class="_fileListContainer_pqqzl_43">
           <span class="_fileListGrid_pqqzl_30">
             <span class="_fileListText_pqqzl_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rj:"
@@ -1246,7 +1246,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               >
                 grunnlag.jpg
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rk:"
@@ -1262,12 +1262,12 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":ri:-file-grunnlag.jpg"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rl:"
@@ -1290,7 +1290,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         <div class="_fileListContainer_pqqzl_43">
           <span class="_fileListGrid_pqqzl_30">
             <span class="_fileListText_pqqzl_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rn:"
@@ -1308,7 +1308,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               >
                 Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ro:"
@@ -1324,12 +1324,12 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":rm:-file-Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rp:"
@@ -1356,7 +1356,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                href="http://localhost:4400/designsystem_illustrasjon.png"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -1367,7 +1367,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               </svg>
               test.png
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
+            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rs:"
@@ -1382,12 +1382,12 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_1hc5e_1 _button_medium_1hc5e_50  _cancelIcon_pqqzl_9"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _cancelIcon_pqqzl_9"
                     data-brightness="default"
                     type="button"
                     aria-describedby=":rq:-file-test.png"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rt:"
