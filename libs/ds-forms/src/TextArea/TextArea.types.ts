@@ -19,7 +19,6 @@ type RequiredTextAreaHTMLAttributes = Pick<
   | 'defaultValue'
   | 'disabled'
   | 'form'
-  | 'inputMode'
   | 'maxLength'
   | 'minLength'
   | 'name'
