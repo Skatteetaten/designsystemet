@@ -11,5 +11,6 @@ declare const classNames: {
   readonly containerForMainMenu: 'containerForMainMenu';
   readonly columns: 'columns';
   readonly column: 'column';
+  readonly srOnly: 'srOnly';
 };
 export default classNames;

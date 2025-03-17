@@ -547,7 +547,7 @@ const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
       <TopBannerExternal />
       <Paragraph
         hasSpacing
-      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes.
+      >{`Denne testen skal sjekke om fokus blir satt på skjult div-element når modalen lukkes.
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.`}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>
@@ -588,7 +588,7 @@ export const AutoOpen = {
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
     await step(
-      'Fokus skal settes på skiplink a-elementet når modalen lukkes etter programatisk åpnet modal',
+      'Fokus skal settes på skjult div-element når modalen lukkes etter programatisk åpnet modal',
       async () => {
         const openmodal = await canvas.findByRole('dialog', { hidden: false });
 
@@ -597,16 +597,18 @@ export const AutoOpen = {
           name: 'Avbryt',
         });
         await userEvent.click(button);
-        const skiplink = document.querySelector('a[data-skip-link]');
+        const focusedElement = document.querySelector(
+          '#topbanner-focus-target'
+        );
         await waitFor(() => {
-          expect(skiplink).toHaveFocus();
+          expect(focusedElement).toHaveFocus();
         });
         const closedmodal = await canvas.findByRole('dialog', { hidden: true });
         await expect(closedmodal).not.toBeVisible();
       }
     );
     await step(
-      'Fokus skal IKKE settes på skiplink hvis bruker-interaksjon har åpnet modal',
+      'Fokus skal IKKE settes på div-element hvis bruker-interaksjon har åpnet modal',
       async () => {
         const openButton = within(canvasElement).getByRole('button', {
           name: 'Åpne modal ref.current.showModal',
@@ -619,13 +621,15 @@ export const AutoOpen = {
           name: 'Avbryt',
         });
         await userEvent.click(button);
-        const skiplink = document.querySelector('a[data-skip-link]');
+        const focusedElement = document.querySelector(
+          '#topbanner-focus-target'
+        );
         const closedmodal = await canvas.findByRole('dialog', {
           hidden: true,
         });
         await expect(closedmodal).not.toBeVisible();
         await waitFor(() => {
-          expect(skiplink).not.toHaveFocus();
+          expect(focusedElement).not.toHaveFocus();
         });
       }
     );
@@ -642,7 +646,7 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
       <TopBannerExternal />
       <Paragraph
         hasSpacing
-      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen.
+      >{`Denne testen skal sjekke om fokus blir satt på skjult div-element når modalen lukkes etter at bruker har trykket på Escape-knappen.
         Modalen åpnes ved å laste siden på nytt. `}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
@@ -674,5 +678,48 @@ export const AutoOpenAndCloseOnEscape = {
     await userEvent.keyboard('{Escape}');
     const closedmodal = await canvas.findByRole('dialog', { hidden: true });
     await expect(closedmodal).not.toBeVisible();
+  },
+} satisfies Story;
+
+const TemplateWithAutoOpenAndCloseOnUserInput: StoryFn<typeof Modal> = (
+  args
+) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    ref.current?.showModal();
+  }, []);
+  return (
+    <>
+      <TopBannerExternal />
+      <Paragraph
+        hasSpacing
+      >{`Denne testen skal sjekke om fokus blir satt på skjult div-element når modalen lukkes etter at bruker har trykket på Escape-knappen.
+        Modalen åpnes ved å laste siden på nytt. `}</Paragraph>
+      <Modal {...args} ref={ref}>
+        <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
+        <Button onClick={() => ref.current?.close()}>{'Lukk modal'}</Button>
+      </Modal>
+      <Button
+        className={'marginRightM'}
+        onClick={() => ref.current?.showModal()}
+      >
+        {'Åpne med klikk'}
+      </Button>
+    </>
+  );
+};
+
+export const AutoOpenAndCloseOnUserInput = {
+  render: TemplateWithAutoOpenAndCloseOnUserInput,
+  name: 'With Auto Open and Close on User Input',
+  args: {
+    variant: 'outline',
+    dismissOnEsc: false,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  argTypes: {
+    dismissOnEsc: { table: { disable: false } },
   },
 } satisfies Story;

@@ -10,5 +10,6 @@ declare const classNames: {
   readonly childrenAndUserContainer: 'childrenAndUserContainer';
   readonly userContainerIcon: 'userContainerIcon';
   readonly userContainerName: 'userContainerName';
+  readonly srOnly: 'srOnly';
 };
 export default classNames;
