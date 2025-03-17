@@ -309,7 +309,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
-    value: valueText,
+    value: 'En lang tekst som ikke skal synes bak reset-ikonet',
   },
   argTypes: {
     disabled: { table: { disable: false } },

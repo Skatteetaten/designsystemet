@@ -193,7 +193,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
           <input
             ref={inputRef}
             id={inputId}
-            className={`${styles.input} ${classNames?.textbox ?? ''} ${showClearButton ? styles.inputWithValue : ''}`.trim()}
+            className={`${styles.input} ${classNames?.textbox ?? ''} ${showClearButton && !disabled ? styles.inputWithValue : ''}`.trim()}
             data-testid={dataTestId}
             accessKey={accessKey}
             defaultValue={defaultValue}

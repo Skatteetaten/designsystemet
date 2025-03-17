@@ -594,12 +594,12 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
         <input id="searchField-:r1f:-input"
-               class="_input_2ptm8_47  _inputWithValue_2ptm8_74"
+               class="_input_2ptm8_47"
                disabled
                autocomplete="off"
                aria-describedby="searchField-:r1f:-srFocus"
                type="search"
-               value="skattekort"
+               value="En lang tekst som ikke skal synes bak reset-ikonet"
         >
         <div id="searchFieldErrorId-:r1g:"
              aria-live="assertive"
