@@ -22,7 +22,8 @@
     "@skatteetaten/ds-typography": "1.6.0",
     "@skatteetaten/ds-progress": "1.6.0",
     "@skatteetaten/ds-status": "1.6.0",
-    "date-fns": "^4"
+    "date-fns": "^4",
+    "@skatteetaten/ds-content": "1.6.0"
   },
   "scripts": {}
 }

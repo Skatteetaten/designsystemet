@@ -4,6 +4,10 @@ declare const classNames: {
   readonly cancelIcon: 'cancelIcon';
   readonly fileSpinner: 'fileSpinner';
   readonly spinner: 'spinner';
+  readonly fileNameContainer: 'fileNameContainer';
+  readonly fileContentContainer: 'fileContentContainer';
+  readonly iconWrapper: 'iconWrapper';
+  readonly cardWithAnimatedBorder: 'cardWithAnimatedBorder';
   readonly fileList: 'fileList';
   readonly fileListItem: 'fileListItem';
   readonly fileListGrid: 'fileListGrid';
@@ -13,5 +17,6 @@ declare const classNames: {
   readonly fileListLink: 'fileListLink';
   readonly fileListFile: 'fileListFile';
   readonly fileListFileError: 'fileListFileError';
+  readonly hasLink: 'hasLink';
 };
 export default classNames;
