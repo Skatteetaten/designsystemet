@@ -5,6 +5,7 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 export default {
   title: 'Designtokens/Containers',
+  parameters: { controls: { disable: true } },
 };
 
 export const Containers: StoryObj = {
@@ -17,7 +18,7 @@ export const Containers: StoryObj = {
         </li>
         <li>
           <span className={'designtokenName'}>{'--container-s: '}</span>
-          {'560px'}
+          {'576px'}
         </li>
         <li>
           <span className={'designtokenName'}>{'--container-m: '}</span>
@@ -25,17 +26,27 @@ export const Containers: StoryObj = {
         </li>
         <li>
           <span className={'designtokenName'}>{'--container-l: '}</span>
-          {'1160px'}
+          {'1152px'}
+        </li>
+        <li>
+          <span className={'designtokenName'}>{'--container-xl: '}</span>
+          {'1536px'}
         </li>
         <li>
           <span className={'designtokenName'}>{'--container-aside: '}</span>
-          {'380px'}
+          {'384px'}
+        </li>
+        <li>
+          <span className={'designtokenName'}>
+            {'--container-aside-narrow: '}
+          </span>
+          {'288px'}
         </li>
         <li>
           <span className={'designtokenName'}>
             {'--container-wide-content: '}
           </span>
-          {'760px'}
+          {'768px'}
         </li>
       </ul>
       <Paragraph>
@@ -101,7 +112,7 @@ export const Containers: StoryObj = {
             </Table.DataCell>
           </Table.Row>
           <Table.Row>
-            <Table.DataCell rowSpan={4} className={'rowRightBorder'}>
+            <Table.DataCell rowSpan={5} className={'rowRightBorder'}>
               <strong>{'Internal'}</strong>
             </Table.DataCell>
             <Table.DataCell className={'rowRightBorder'}>
@@ -109,11 +120,21 @@ export const Containers: StoryObj = {
                 {'--semantic-responsive-internal-container-display'}
               </strong>
             </Table.DataCell>
+            <Table.DataCell colSpan={5} className={'rowRightBorder'}>
+              {'flex'}
+            </Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell className={'rowRightBorder'}>
+              <strong>
+                {'--semantic-responsive-internal-container-flex-direction'}
+              </strong>
+            </Table.DataCell>
             <Table.DataCell colSpan={3} className={'rowRightBorder'}>
-              {'block'}
+              {'column'}
             </Table.DataCell>
             <Table.DataCell colSpan={2} className={'rowRightBorder'}>
-              {'grid'}
+              {'row'}
             </Table.DataCell>
           </Table.Row>
           <Table.Row>
@@ -123,10 +144,10 @@ export const Containers: StoryObj = {
               </strong>
             </Table.DataCell>
             <Table.DataCell colSpan={3} className={'rowRightBorder'}>
-              {'0 var(--spacing-m)'}
+              {'var(--spacing-m)'}
             </Table.DataCell>
             <Table.DataCell colSpan={2} className={'rowRightBorder'}>
-              {'0 var(--spacing-xl)'}
+              {'var(--spacing-xl)'}
             </Table.DataCell>
           </Table.Row>
           <Table.Row>
@@ -136,7 +157,10 @@ export const Containers: StoryObj = {
             <Table.DataCell colSpan={3} className={'rowRightBorder'}>
               {'var(--container-xs)'}
             </Table.DataCell>
-            <Table.DataCell colSpan={2} className={'rowRightBorder'}>
+            <Table.DataCell className={'rowRightBorder'}>
+              {'var(--container-aside-narrow)'}
+            </Table.DataCell>
+            <Table.DataCell className={'rowRightBorder'}>
               {'var(--container-aside)'}
             </Table.DataCell>
           </Table.Row>

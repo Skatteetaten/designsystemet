@@ -17,46 +17,53 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
       <div
         id={id}
         data-testid={dataTestId}
-        className={`${styles.layout} ${className}`.trim()}
+        className={`${styles.wrapper} ${className}`.trim()}
       >
         <style>{storyBookCSSOverride}</style>
-        <div className={styles.aside}>
-          <p>
+        <aside className={styles.aside}>
+          <p className={styles.asideContent}>
             <strong>{'Aside area'}</strong>
           </p>
-        </div>
-        <div className={styles.main}>
-          <p>
+        </aside>
+        <main className={styles.main}>
+          <p className={styles.mainContent}>
             <strong>{'Main area'}</strong>
           </p>
-          <article className={styles.article}>
-            <p>
-              <strong>{'Responsive article'}</strong>
-              <br />
-              {'(uses --semantic-responsive-article)'}
-            </p>
-          </article>
-          <section className={styles.wideContent}>
-            <p>
-              <strong>{'Responsive wide-content'}</strong>
-              <br />
-              {'(uses --semantic-responsive-wide-content)'}
-            </p>
-          </section>
-          <p>{'...'}</p>
-        </div>
+        </main>
       </div>
       <p>
         {
-          'The wrapper uses css-grid and manages the dimensions of aside and main, and the gaps between them. It uses:'
+          'The wrapper uses flexbox and manages the organization of aside and main, and the gaps between them. It uses:'
         }
       </p>
       <p>
-        {'--semantic-responsive-internal-container-display'}
+        {'.wrapper {'}
         <br />
-        {'--semantic-responsive-internal-container-padding'}
+        {'display: var(--semantic-responsive-internal-container-display);'}
         <br />
-        {'--semantic-responsive-internal-aside'}
+        {
+          'flex-direction: var(--semantic-responsive-internal-container-flex-direction);'
+        }
+        <br />
+        {'gap: var(--semantic-responsive-internal-container-padding);'}
+        <br />
+        {'padding: var(--semantic-responsive-internal-container-padding);'}
+        <br />
+        {'}'}
+      </p>
+      <p>
+        {'.aside {'}
+        <br />
+        {'flex: 0 0 var(--semantic-responsive-internal-aside);'}
+        <br />
+        {'}'}
+      </p>
+      <p>
+        {'.main {'}
+        <br />
+        {'flex: 1;'}
+        <br />
+        {'}'}
       </p>
     </>
   );
