@@ -5,7 +5,6 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 export default {
   title: 'Designtokens/Containers',
-  parameters: { controls: { disable: true } },
 };
 
 export const Containers: StoryObj = {
