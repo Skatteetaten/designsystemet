@@ -69,7 +69,7 @@
     "@swc/helpers": "0.5.15",
     "core-js": "3.39.0",
     "core-js-pure": "3.39.0",
-    "date-fns": "3.6.0",
+    "date-fns": "4.1.0",
     "i18next": "24.2.2",
     "react": "19.0.0 ",
     "react-dom": "19.0.0",
