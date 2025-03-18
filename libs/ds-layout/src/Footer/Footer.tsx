@@ -34,6 +34,7 @@ export const Footer = (({
   titleSecondColumn,
   titleThirdColumn,
   hideLogo,
+  hideDefaultLinks,
   children,
 }: FooterProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
@@ -75,32 +76,48 @@ export const Footer = (({
           <div
             className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`.trim()}
           >
-            <div>
-              <Heading as={'h2'} level={3} hasSpacing>
-                {titleFirstColumn}
-              </Heading>
-              <LinkGroup color={'white'}>
-                <LinkGroup.Link href={contactUsURL ?? t('shared.ContactUsURL')}>
-                  {t('shared.ContactUs')}
-                </LinkGroup.Link>
-                <LinkGroup.Link
-                  href={securityURL ?? t('shared.SecurityAndPrivacyURL')}
-                >
-                  {t('shared.SecurityAndPrivacy')}
-                </LinkGroup.Link>
-                <LinkGroup.Link
-                  href={
-                    accessibilityURL ?? t('shared.AccessibilityStatementURL')
-                  }
-                  target={'_blank'}
-                  isExternal
-                >
-                  {t('shared.AccessibilityStatement')}
-                </LinkGroup.Link>
-                {linksFirstColumn}
-              </LinkGroup>
-              {firstColumn}
-            </div>
+            {(!hideDefaultLinks || firstColumn || titleFirstColumn) && (
+              <div>
+                {titleFirstColumn && (
+                  <Heading as={'h2'} level={3} hasSpacing>
+                    {titleFirstColumn}
+                  </Heading>
+                )}
+                {(!hideDefaultLinks || linksFirstColumn) && (
+                  <LinkGroup color={'white'}>
+                    {!hideDefaultLinks && [
+                      <LinkGroup.Link
+                        key={'contactUs'}
+                        target={'_blank'}
+                        href={contactUsURL ?? t('shared.ContactUsURL')}
+                      >
+                        {t('shared.ContactUs')}
+                      </LinkGroup.Link>,
+                      <LinkGroup.Link
+                        key={'securityAndPrivacy'}
+                        href={securityURL ?? t('shared.SecurityAndPrivacyURL')}
+                        target={'_blank'}
+                      >
+                        {t('shared.SecurityAndPrivacy')}
+                      </LinkGroup.Link>,
+                      <LinkGroup.Link
+                        key={'accessibilityStatement'}
+                        href={
+                          accessibilityURL ??
+                          t('shared.AccessibilityStatementURL')
+                        }
+                        target={'_blank'}
+                        isExternal
+                      >
+                        {t('shared.AccessibilityStatement')}
+                      </LinkGroup.Link>,
+                    ]}
+                    {linksFirstColumn}
+                  </LinkGroup>
+                )}
+                {firstColumn}
+              </div>
+            )}
             {secondColumn && (
               <div>
                 {titleSecondColumn && (

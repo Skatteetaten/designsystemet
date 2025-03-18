@@ -17,7 +17,7 @@ export interface FooterProps extends BaseProps {
   /** Om logo til Skatteetaten skal skjules */
   hideLogo?: boolean;
   /** Tittel til første kolonne */
-  titleFirstColumn: string;
+  titleFirstColumn?: string;
   /** Tittel til andre kolonne */
   titleSecondColumn?: string;
   /** Tittel til tredje kolonne */
@@ -28,6 +28,8 @@ export interface FooterProps extends BaseProps {
   secondColumn?: ReactNode;
   /** Innhold i tredje kolonne */
   thirdColumn?: ReactNode;
+  /** Om standard lenker skal skjules */
+  hideDefaultLinks?: boolean;
   /**
    * Footer.LinkFirstColumn, Footer.Logo eller Footer.Link:
    * Footer.LinkFirstColumn blir plassert under de første tre lenkene i første kolonne.
