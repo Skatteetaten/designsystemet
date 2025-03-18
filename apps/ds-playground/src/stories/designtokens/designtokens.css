@@ -83,3 +83,7 @@
 .layoutContainer {
   background-color: var(--palette-burgundy-10);
 }
+
+.rowRightBorder {
+  border-right: 1px solid var(--semantic-divider-30);
+}

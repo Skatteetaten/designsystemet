@@ -54,7 +54,7 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
       <p>
         {'--semantic-responsive-internal-container-display'}
         <br />
-        {'--semantic-responsive-internal-container-padding)'}
+        {'--semantic-responsive-internal-container-padding'}
         <br />
         {'--semantic-responsive-internal-aside'}
       </p>
