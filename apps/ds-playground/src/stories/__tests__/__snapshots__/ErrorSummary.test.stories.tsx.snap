@@ -354,7 +354,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
       År
     </label>
     <input id="input_aar"
-           class="_textbox_xcec6_5 $ _textboxMarginTop_xcec6_21"
+           class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
            data-variant="medium"
            autocomplete="off"
            required
@@ -445,7 +445,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
       År
     </label>
     <input id="input_aar"
-           class="_textbox_xcec6_5 $ _textboxMarginTop_xcec6_21"
+           class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
            data-variant="medium"
            autocomplete="off"
            required

@@ -309,7 +309,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
-    value: valueText,
+    value: 'En lang tekst som ikke skal synes bak reset-ikonet',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -697,5 +697,29 @@ export const WithErrorMessage = {
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(textbox).toHaveAttribute('aria-invalid', 'true');
     await expect(textbox).toHaveAttribute('aria-describedby');
+  },
+} satisfies Story;
+
+export const WithLongPlaceholder = {
+  args: {
+    ...defaultArgs,
+    placeholder: 'En lang placeholder som ikke skal synes bak reset-ikonet',
+  },
+  argTypes: {
+    placeholder: {
+      table: { disable: false },
+    },
+  },
+} satisfies Story;
+
+export const WithLongInput = {
+  args: {
+    ...defaultArgs,
+    defaultValue: 'En lang value som ikke skal synes bak reset-ikonet',
+  },
+  argTypes: {
+    defaultValue: {
+      table: { disable: false },
+    },
   },
 } satisfies Story;

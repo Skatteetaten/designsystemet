@@ -808,7 +808,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
               Søk
             </label>
             <input id="textFieldTextboxId-:rb:"
-                   class="_textbox_xcec6_5 $"
+                   class="_textbox_1kevi_5 $"
                    data-variant="medium"
                    autocomplete="off"
                    placeholder="Søk"
