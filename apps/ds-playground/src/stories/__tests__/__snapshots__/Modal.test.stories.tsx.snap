@@ -4,11 +4,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1vv50_1"
+       class="_skipLink_nmfvk_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -20,8 +20,8 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_629ec_51">
-      <div class="_topContainer_629ec_2">
+    <div class="_containerForMainMenu_zdc8r_51">
+      <div class="_topContainer_zdc8r_2">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -34,8 +34,8 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_629ec_17">
-          <div class="_content_629ec_17">
+        <div class="_contentContainer_zdc8r_17">
+          <div class="_content_zdc8r_17">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -95,10 +95,10 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_629ec_28">
-        <div class="_separatorRight_629ec_41">
+      <div class="_separator_zdc8r_28">
+        <div class="_separatorRight_zdc8r_41">
         </div>
-        <div class="_separatorLeft_629ec_33">
+        <div class="_separatorLeft_zdc8r_33">
         </div>
       </div>
     </div>
@@ -174,11 +174,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <a href="main"
-       class="_skipLink_1vv50_1"
+       class="_skipLink_nmfvk_1"
        data-skip-link="ds-skip-link"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1vv50_45"
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -190,8 +190,8 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_629ec_51">
-      <div class="_topContainer_629ec_2">
+    <div class="_containerForMainMenu_zdc8r_51">
+      <div class="_topContainer_zdc8r_2">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -204,8 +204,8 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_629ec_17">
-          <div class="_content_629ec_17">
+        <div class="_contentContainer_zdc8r_17">
+          <div class="_content_zdc8r_17">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -265,10 +265,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_629ec_28">
-        <div class="_separatorRight_629ec_41">
+      <div class="_separator_zdc8r_28">
+        <div class="_separatorRight_zdc8r_41">
         </div>
-        <div class="_separatorLeft_629ec_33">
+        <div class="_separatorLeft_zdc8r_33">
         </div>
       </div>
     </div>

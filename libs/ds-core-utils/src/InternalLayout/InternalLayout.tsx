@@ -31,12 +31,12 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
           </p>
         </main>
       </div>
-      <p>
+      <p className={styles.paragraph}>
         {
-          'The wrapper uses flexbox and manages the organization of aside and main, and the gaps between them. It uses:'
+          'Wrapperen bruker flexbox og håndterer organiseringen av aside og main, samt avstanden mellom dem. Den bruker:'
         }
       </p>
-      <p>
+      <p className={styles.paragraph}>
         {'.wrapper {'}
         <br />
         {'display: var(--semantic-responsive-internal-container-display);'}
@@ -45,20 +45,20 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
           'flex-direction: var(--semantic-responsive-internal-container-flex-direction);'
         }
         <br />
-        {'gap: var(--semantic-responsive-internal-container-padding);'}
+        {'gap: var(--semantic-responsive-internal-container-spacing);'}
         <br />
-        {'padding: var(--semantic-responsive-internal-container-padding);'}
+        {'padding: var(--semantic-responsive-internal-container-spacing);'}
         <br />
         {'}'}
       </p>
-      <p>
+      <p className={styles.paragraph}>
         {'.aside {'}
         <br />
         {'flex: 0 0 var(--semantic-responsive-internal-aside);'}
         <br />
         {'}'}
       </p>
-      <p>
+      <p className={styles.paragraph}>
         {'.main {'}
         <br />
         {'flex: 1;'}

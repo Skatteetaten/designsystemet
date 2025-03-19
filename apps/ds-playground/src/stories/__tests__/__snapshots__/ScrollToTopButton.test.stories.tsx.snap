@@ -6,7 +6,7 @@ exports[`Tester/ScrollToTopButton Defaults play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -15,7 +15,7 @@ exports[`Tester/ScrollToTopButton Defaults play-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article
@@ -60,7 +60,7 @@ exports[`Tester/ScrollToTopButton WithAttributes play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -69,7 +69,7 @@ exports[`Tester/ScrollToTopButton WithAttributes play-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article
@@ -117,7 +117,7 @@ exports[`Tester/ScrollToTopButton WithChildren play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -126,7 +126,7 @@ exports[`Tester/ScrollToTopButton WithChildren play-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article
@@ -171,7 +171,7 @@ exports[`Tester/ScrollToTopButton WithCustomClassNames play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -180,7 +180,7 @@ exports[`Tester/ScrollToTopButton WithCustomClassNames play-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article
@@ -225,7 +225,7 @@ exports[`Tester/ScrollToTopButton WithMobileScreen smoke-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -234,7 +234,7 @@ exports[`Tester/ScrollToTopButton WithMobileScreen smoke-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article
@@ -282,7 +282,7 @@ exports[`Tester/ScrollToTopButton WithNotScrollToMain play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -291,7 +291,7 @@ exports[`Tester/ScrollToTopButton WithNotScrollToMain play-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article
@@ -336,7 +336,7 @@ exports[`Tester/ScrollToTopButton WithRef play-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -345,7 +345,7 @@ exports[`Tester/ScrollToTopButton WithRef play-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article
@@ -398,7 +398,7 @@ exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -407,7 +407,7 @@ exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article
@@ -452,7 +452,7 @@ exports[`Tester/ScrollToTopButton WithWideScreen smoke-test 1`] = `
     <main class="scrollToTopContainer"
           tabindex="-1"
     >
-      <div class="_layout_179rg_1">
+      <div class="_layout_13ypw_1">
         <style>
           div.css-1gh4yjl { max-width: none}
         </style>
@@ -461,7 +461,7 @@ exports[`Tester/ScrollToTopButton WithWideScreen smoke-test 1`] = `
             Responsive container
           </strong>
         </p>
-        <article class="_article_179rg_12">
+        <article class="_article_13ypw_12">
           <p>
             <strong>
               Responsive article

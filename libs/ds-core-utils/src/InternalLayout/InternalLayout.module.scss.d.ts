@@ -4,5 +4,6 @@ declare const classNames: {
   readonly asideContent: 'asideContent';
   readonly main: 'main';
   readonly mainContent: 'mainContent';
+  readonly paragraph: 'paragraph';
 };
 export default classNames;

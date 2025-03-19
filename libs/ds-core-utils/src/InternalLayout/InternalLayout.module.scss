@@ -1,9 +1,9 @@
 .wrapper {
   display: var(--semantic-responsive-internal-container-display);
   flex-direction: var(--semantic-responsive-internal-container-flex-direction);
-  padding: var(--semantic-responsive-internal-container-padding);
+  padding: var(--semantic-responsive-internal-container-spacing);
   background-color: var(--palette-forest-10);
-  gap: var(--semantic-responsive-internal-container-padding);
+  gap: var(--semantic-responsive-internal-container-spacing);
 }
 
 .aside {
@@ -31,4 +31,8 @@
     background-color: var(--palette-burgundy-100);
     color: var(--palette-graphite-0) !important;
   }
+}
+
+.paragraph {
+  margin-left: var(--semantic-responsive-internal-container-spacing) !important;
 }
