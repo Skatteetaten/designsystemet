@@ -27,6 +27,7 @@ export const TextArea = ({
   lang,
   'data-testid': dataTestId,
   autosize,
+  autoCorrect,
   description,
   errorMessage,
   helpSvgPath,
@@ -44,6 +45,7 @@ export const TextArea = ({
   readOnly,
   required,
   rows,
+  spellCheck,
   value,
   hideLabel,
   showRequiredMark,
@@ -111,6 +113,7 @@ export const TextArea = ({
         className={textboxClassName}
         data-testid={dataTestId}
         autoComplete={autoComplete}
+        autoCorrect={autoCorrect}
         defaultValue={defaultValue}
         disabled={disabled}
         form={form}
@@ -121,6 +124,7 @@ export const TextArea = ({
         readOnly={readOnly}
         required={required}
         rows={rows}
+        spellCheck={spellCheck}
         value={value}
         aria-describedby={errorMessage ? errorId : undefined}
         aria-invalid={!!errorMessage || undefined}
