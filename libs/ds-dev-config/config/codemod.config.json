@@ -1,6 +1,0 @@
-{
-  "codemods": {
-    "2.0/textarea": "./src/codemods/transforms/2.0/textarea.js",
-    "2.0/alert": "./src/codemods/transforms/2.0/alert.js"
-  }
-}
