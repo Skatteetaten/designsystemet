@@ -824,6 +824,33 @@ exports[`Tester/Icon Gallery SystemIcons smoke-test 1`] = `
        aria-hidden="true"
        role="img"
   >
+    <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 6.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm-4.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z">
+    </path>
+  </svg>
+  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15"
+       viewbox="0 0 24 24"
+       focusable="false"
+       aria-hidden="true"
+       role="img"
+  >
+    <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a10 10 0 0 1 0-20Zm0 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm-5.5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm11 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z">
+    </path>
+  </svg>
+  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15"
+       viewbox="0 0 24 24"
+       focusable="false"
+       aria-hidden="true"
+       role="img"
+  >
+    <path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z">
+    </path>
+  </svg>
+  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15"
+       viewbox="0 0 24 24"
+       focusable="false"
+       aria-hidden="true"
+       role="img"
+  >
     <path d="M11 9h2V7h-2v2Zm1 11c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm-1 15h2v-6h-2v6Z">
     </path>
   </svg>
@@ -1338,33 +1365,6 @@ exports[`Tester/Icon Gallery SystemIcons smoke-test 1`] = `
        role="img"
   >
     <path d="M9 16v-6H5l7-7 7 7h-4v6H9Zm-4 4v-2h14v2H5Z">
-    </path>
-  </svg>
-  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15"
-       viewbox="0 0 24 24"
-       focusable="false"
-       aria-hidden="true"
-       role="img"
-  >
-    <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 6.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm-4.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z">
-    </path>
-  </svg>
-  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15"
-       viewbox="0 0 24 24"
-       focusable="false"
-       aria-hidden="true"
-       role="img"
-  >
-    <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a10 10 0 0 1 0-20Zm0 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm-5.5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm11 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z">
-    </path>
-  </svg>
-  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15"
-       viewbox="0 0 24 24"
-       focusable="false"
-       aria-hidden="true"
-       role="img"
-  >
-    <path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z">
     </path>
   </svg>
   <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15"
