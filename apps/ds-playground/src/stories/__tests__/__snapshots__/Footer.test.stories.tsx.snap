@@ -3,15 +3,15 @@
 exports[`Tester/Footer Defaults play-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -80,8 +80,8 @@ exports[`Tester/Footer Defaults play-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -99,15 +99,15 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
           data-testid="123ID"
           class="dummyClassname"
   >
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -176,8 +176,8 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -191,15 +191,15 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
 exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -268,8 +268,8 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -300,15 +300,15 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
 exports[`Tester/Footer WithCustomURL play-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -377,8 +377,8 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -392,15 +392,15 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
 exports[`Tester/Footer WithHideLogo play-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -478,15 +478,15 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
 exports[`Tester/Footer WithLinks play-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -555,21 +555,21 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
         </div>
-        <ul class="_linkContainer_15okz_54">
-          <li class="_linkList_15okz_63">
+        <ul class="_linkContainer_3j5r6_54">
+          <li class="_linkList_3j5r6_63">
             <a class="_link_z7jba_1 _link_white_z7jba_1 dummyClassname"
                href="#"
             >
               Satser
             </a>
           </li>
-          <li class="_linkList_15okz_63">
+          <li class="_linkList_3j5r6_63">
             <a class="_link_z7jba_1 _link_white_z7jba_1"
                href="#"
             >
@@ -586,21 +586,21 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
               </svg>
             </a>
           </li>
-          <li class="_linkList_15okz_63">
+          <li class="_linkList_3j5r6_63">
             <a class="_link_z7jba_1 _link_white_z7jba_1"
                href="#"
             >
               RSS
             </a>
           </li>
-          <li class="_linkList_15okz_63">
+          <li class="_linkList_3j5r6_63">
             <a class="_link_z7jba_1 _link_white_z7jba_1"
                href="#"
             >
               Tips oss
             </a>
           </li>
-          <li class="_linkList_15okz_63">
+          <li class="_linkList_3j5r6_63">
             <a class="_link_z7jba_1 _link_white_z7jba_1"
                href="#"
             >
@@ -617,15 +617,15 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
 exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -763,8 +763,8 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
             </p>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -778,15 +778,15 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
 exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -924,8 +924,8 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
             </p>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -939,15 +939,15 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
 exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -1085,8 +1085,8 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
             </p>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -1102,15 +1102,15 @@ exports[`Tester/Footer WithRef play-test 1`] = `
   <footer class
           id="dummyIdForwardedFromRef"
   >
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -1179,8 +1179,8 @@ exports[`Tester/Footer WithRef play-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -1194,15 +1194,15 @@ exports[`Tester/Footer WithRef play-test 1`] = `
 exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22 _columnsThree_3j5r6_29 _columnsTwo_3j5r6_29">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -1416,8 +1416,8 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -1431,15 +1431,15 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
 exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22 _columnsThree_3j5r6_29 _columnsTwo_3j5r6_29">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -1653,8 +1653,8 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -1668,15 +1668,15 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
 exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22 _columnsThree_3j5r6_29 _columnsTwo_3j5r6_29">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -1890,8 +1890,8 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -1905,15 +1905,15 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
 exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22 _columnsThree_15okz_29 _columnsTwo_15okz_29">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22 _columnsThree_3j5r6_29 _columnsTwo_3j5r6_29">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -2127,8 +2127,8 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -2142,15 +2142,15 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
 exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  _columnsTwo_15okz_29">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22  _columnsTwo_3j5r6_29">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -2314,8 +2314,8 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -2329,15 +2329,15 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
 exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  _columnsTwo_15okz_29">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22  _columnsTwo_3j5r6_29">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -2501,8 +2501,8 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
@@ -2516,15 +2516,15 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
 exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="_separator_11id6_1 _separator_15okz_1">
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
       <div class="_separatorLeft_11id6_5">
       </div>
       <div class="_separatorRight_11id6_13">
       </div>
     </div>
-    <div class="_footer_15okz_11">
-      <div class="_footerContainer_15okz_17">
-        <div class="_columns_15okz_22  _columnsTwo_15okz_29">
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22  _columnsTwo_3j5r6_29">
           <div>
             <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
               Om Skatteetaten
@@ -2688,8 +2688,8 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
             </ul>
           </div>
         </div>
-        <div class="_logoContainer_15okz_42">
-          <img class="_skatteetatenLogo_15okz_48"
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
                alt="Skatteetaten logo"
                src="[REMOVED]"
           >
