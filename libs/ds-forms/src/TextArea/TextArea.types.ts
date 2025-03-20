@@ -16,6 +16,7 @@ import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 type RequiredTextAreaHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'textarea'>,
   | 'autoComplete'
+  | 'autoCorrect'
   | 'defaultValue'
   | 'disabled'
   | 'form'
@@ -26,6 +27,7 @@ type RequiredTextAreaHTMLAttributes = Pick<
   | 'readOnly'
   | 'required'
   | 'rows'
+  | 'spellCheck'
   | 'value'
 >;
 

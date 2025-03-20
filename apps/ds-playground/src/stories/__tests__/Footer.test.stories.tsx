@@ -25,6 +25,7 @@ const meta = {
     securityURL: { table: { disable: true } },
     accessibilityURL: { table: { disable: true } },
     hideLogo: { table: { disable: true } },
+    hideDefaultLinks: { table: { disable: true } },
     titleFirstColumn: { table: { disable: true } },
     titleSecondColumn: { table: { disable: true } },
     titleThirdColumn: { table: { disable: true } },
@@ -200,6 +201,47 @@ export const WithCustomURL = {
     for (const link of links) {
       await expect(link).toHaveAttribute('href', '#root');
     }
+  },
+} satisfies Story;
+
+export const WithHideDefaultLinks = {
+  name: 'With HideDefaultLinks (A4)',
+  args: {
+    ...defaultArgs,
+    hideDefaultLinks: true,
+    children: (
+      <Footer.LinkFirstColumn href={'#'}>{'skattekart'}</Footer.LinkFirstColumn>
+    ),
+  },
+  argTypes: {
+    hideDefaultLinks: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(
+      canvas.queryByRole('link', {
+        name: dsI18n.t('Shared:shared.ContactUs'),
+      })
+    ).not.toBeInTheDocument();
+    await expect(
+      canvas.queryByRole('link', {
+        name: dsI18n.t('Shared:shared.SecurityAndPrivacy'),
+      })
+    ).not.toBeInTheDocument();
+    await expect(
+      canvas.queryByRole('link', {
+        name: dsI18n.t('Shared:shared.AccessibilityStatementURL'),
+      })
+    ).not.toBeInTheDocument();
+    await expect(
+      canvas.getByRole('link', {
+        name: 'skattekart',
+      })
+    ).toBeInTheDocument();
   },
 } satisfies Story;
 

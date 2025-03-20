@@ -41,14 +41,13 @@ const meta = {
     logo: { table: { disable: true } },
     hideLogoOnMobile: { table: { disable: true } },
     logoHref: { table: { disable: true } },
-    logoAltText: { table: { disable: true } },
+
     // Events
     onLogoClick: { table: { disable: true } },
   },
   args: {
     title: 'MVA',
     logoHref: '#',
-    logoAltText: 'til startsiden kakeportalen',
   },
   parameters: {
     layout: 'fullscreen',

@@ -58,6 +58,9 @@ const meta = {
       table: { disable: true, category: category.htmlAttribute },
       type: 'string',
     },
+    autoCorrect: {
+      table: { disable: true, category: category.htmlAttribute },
+    },
     disabled: { table: { disable: true, category: category.htmlAttribute } },
     form: { table: { disable: true, category: category.htmlAttribute } },
     name: { table: { disable: true, category: category.htmlAttribute } },
@@ -67,6 +70,9 @@ const meta = {
     readOnly: { table: { disable: true, category: category.htmlAttribute } },
     required: { table: { disable: true, category: category.htmlAttribute } },
     rows: { table: { disable: true, category: category.htmlAttribute } },
+    spellCheck: {
+      table: { disable: true, category: category.htmlAttribute },
+    },
     value: { table: { disable: true, category: category.htmlAttribute } },
     // Events
     onBlur: { table: { disable: true, category: category.event } },
@@ -191,7 +197,6 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
-    console.log(textbox);
     await expect(textbox).toBeInTheDocument();
     await expect(textbox).toBeEnabled();
     await expect(textbox).toHaveAttribute('id');
@@ -208,7 +213,7 @@ export const Defaults = {
 } satisfies Story;
 
 export const WithDisabled = {
-  name: 'With Disabled (B1, B8)',
+  name: 'With Disabled (B5)',
   args: {
     ...defaultArgs,
     disabled: true,
@@ -293,13 +298,15 @@ export const WithDefaultValueAndAutoSize = {
   },
 } satisfies Story;
 
-export const WithAutoCompleteNameAndPlaceholder = {
-  name: 'With AutoComplete Name And Placeholder (A3, A6, B1)',
+export const WithAutoCompleteNameFormAutoCorrectSpellcheckAndPlaceholder = {
+  name: 'With AutoComplete Name Form AutoCorrect Spellcheck And Placeholder (A2, B1)',
   args: {
     ...defaultArgs,
     autoComplete: 'given-name',
     name: 'test_name',
     placeholder: valueText,
+    spellCheck: true,
+    autoCorrect: 'on',
   },
   argTypes: {
     autoComplete: { table: { disable: false } },
@@ -312,11 +319,13 @@ export const WithAutoCompleteNameAndPlaceholder = {
     await expect(textbox).toHaveAttribute('autocomplete', 'given-name');
     await expect(textbox).toHaveAttribute('name', 'test_name');
     await expect(textbox).toHaveAttribute('placeholder', valueText);
+    await expect(textbox).toHaveAttribute('spellCheck', 'true');
+    await expect(textbox).toHaveAttribute('autoCorrect', 'on');
   },
 } satisfies Story;
 
 export const WithReadOnly = {
-  name: 'With ReadOnly (B1, B6)',
+  name: 'With ReadOnly (B4)',
   args: {
     ...defaultArgs,
     value: valueText,
@@ -333,7 +342,7 @@ export const WithReadOnly = {
 } satisfies Story;
 
 export const WithRequired = {
-  name: 'With Required (B4)',
+  name: 'With Required (B3)',
   args: {
     ...defaultArgs,
     required: true,
@@ -365,7 +374,7 @@ export const WithRequiredAndMark = {
 } satisfies Story;
 
 export const WithMinAndMaxLength = {
-  name: 'With MinLength And MaxLength (A5, B1)',
+  name: 'With MinLength And MaxLength (A4)',
   args: {
     ...defaultArgs,
     maxLength: 50,
@@ -557,7 +566,7 @@ const EventHandlersTemplate: StoryFn<typeof TextArea> = (args) => {
 
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
-  name: 'With EventHandlers (A4)',
+  name: 'With EventHandlers (A3)',
   args: {
     ...defaultArgs,
     onFocus: fn(),

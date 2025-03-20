@@ -57,6 +57,13 @@ const meta = {
       type: 'string',
       description: getAutoCompletePropDescription(),
     },
+    autoCorrect: {
+      table: {
+        category: category.htmlAttribute,
+        type: { summary: 'string' },
+      },
+      type: 'string',
+    },
     disabled: {
       control: 'boolean',
       table: { category: category.htmlAttribute },
@@ -72,6 +79,7 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
     rows: { table: { category: category.htmlAttribute } },
+    spellCheck: { table: { category: category.htmlAttribute } },
     value: {
       control: 'text',
       table: { category: category.htmlAttribute },

@@ -43,13 +43,12 @@ const meta = {
         },
       },
     },
-    logoAltText: { table: { category: category.props } },
     // Event
     onLogoClick: { control: false, table: { category: category.event } },
   },
   args: {
     logoHref: '/start',
-    logoAltText: 'til startsiden kakeportalen',
+    title: 'Default Title',
   },
   parameters: {
     layout: 'fullscreen',
@@ -71,7 +70,6 @@ export const Examples: Story = {
           className={'bottomSpacingXL'}
           title={'MVA'}
           description={'Arbeidsliste'}
-          logoAltText={'Forside MVA'}
           logoHref={'/home'}
           user={'Etternavnesen Fornavn'}
         >
@@ -122,7 +120,6 @@ export const Examples: Story = {
         <TopBannerInternal
           className={'bottomSpacingXL'}
           title={'Global Skatt'}
-          logoAltText={'Forside Global Skatt'}
           logoHref={'/home'}
         >
           <SearchField
@@ -170,7 +167,6 @@ export const Examples: Story = {
           classNames={{ logo: 'demoLogo' }}
           title={'SIRO'}
           logo={demoLogo}
-          logoAltText={'Forside Politiet'}
           logoHref={'/home'}
         ></TopBannerInternal>
       </>
