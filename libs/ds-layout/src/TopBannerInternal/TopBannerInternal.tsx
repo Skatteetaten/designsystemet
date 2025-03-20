@@ -26,7 +26,6 @@ export const TopBannerInternal = (({
   'data-testid': dataTestId,
   logo,
   logoHref,
-  logoAltText,
   skipLink,
   user,
   children,
