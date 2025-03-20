@@ -29,8 +29,10 @@ exports[`Tester/Footer Defaults play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -45,8 +47,10 @@ exports[`Tester/Footer Defaults play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -64,7 +68,7 @@ exports[`Tester/Footer Defaults play-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -125,8 +129,10 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -141,8 +147,10 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -160,7 +168,7 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -217,8 +225,10 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -233,8 +243,10 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -252,7 +264,7 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -326,24 +338,10 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="#root"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
-                </a>
-              </li>
-              <li class="_linkGroupItem_w23nb_8">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
-                  </path>
-                </svg>
-                <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="#root"
-                >
-                  Sikkerhet og personvern
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -361,7 +359,25 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Sikkerhet og personvern (åpnes i ny fane)
+                </a>
+              </li>
+              <li class="_linkGroupItem_w23nb_8">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                  </path>
+                </svg>
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
+                   href="#root"
+                   rel="noreferrer"
+                   target="_blank"
+                >
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -372,6 +388,54 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
                     <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
                     </path>
                   </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="_logoContainer_3j5r6_42">
+          <img class="_skatteetatenLogo_3j5r6_48"
+               alt="Skatteetaten logo"
+               src="[REMOVED]"
+          >
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`Tester/Footer WithHideDefaultLinks play-test 1`] = `
+<div data-test-block="true">
+  <footer class>
+    <div class="_separator_11id6_1 _separator_3j5r6_1">
+      <div class="_separatorLeft_11id6_5">
+      </div>
+      <div class="_separatorRight_11id6_13">
+      </div>
+    </div>
+    <div class="_footer_3j5r6_11">
+      <div class="_footerContainer_3j5r6_17">
+        <div class="_columns_3j5r6_22">
+          <div>
+            <h2 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54">
+              Om Skatteetaten
+            </h2>
+            <ul class="_linkGroup_w23nb_1">
+              <li class="_linkGroupItem_w23nb_8">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26 _icon_white_w23nb_23"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                  </path>
+                </svg>
+                <a class="_link_z7jba_1 _link_white_z7jba_1"
+                   href="#"
+                >
+                  skattekart
                 </a>
               </li>
             </ul>
@@ -418,8 +482,10 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -434,8 +500,10 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -453,7 +521,7 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -504,8 +572,10 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -520,8 +590,10 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -539,7 +611,7 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -643,8 +715,10 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -659,8 +733,10 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -678,7 +754,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -804,8 +880,10 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -820,8 +898,10 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -839,7 +919,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -965,8 +1045,10 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -981,8 +1063,10 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1000,7 +1084,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -1128,8 +1212,10 @@ exports[`Tester/Footer WithRef play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1144,8 +1230,10 @@ exports[`Tester/Footer WithRef play-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1163,7 +1251,7 @@ exports[`Tester/Footer WithRef play-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -1220,8 +1308,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1236,8 +1326,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1255,7 +1347,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -1457,8 +1549,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1473,8 +1567,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1492,7 +1588,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -1694,8 +1790,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1710,8 +1808,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1729,7 +1829,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -1931,8 +2031,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1947,8 +2049,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -1966,7 +2070,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -2168,8 +2272,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -2184,8 +2290,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -2203,7 +2311,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -2355,8 +2463,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -2371,8 +2481,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -2390,7 +2502,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
@@ -2542,8 +2654,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/kontakt/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Kontakt oss
+                  Kontakt oss (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -2558,8 +2672,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
                    href="https://www.skatteetaten.no/om-skatteetaten/sikkerhet/"
+                   rel="noreferrer"
+                   target="_blank"
                 >
-                  Sikkerhet og personvern
+                  Sikkerhet og personvern (åpnes i ny fane)
                 </a>
               </li>
               <li class="_linkGroupItem_w23nb_8">
@@ -2577,7 +2693,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                    rel="noreferrer"
                    target="_blank"
                 >
-                  Tilgjengelighetserklæring
+                  Tilgjengelighetserklæring (åpnes i ny fane)
                   <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
                        viewbox="0 0 24 24"
                        focusable="false"
