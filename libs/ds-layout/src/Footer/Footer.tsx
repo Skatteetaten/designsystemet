@@ -76,7 +76,7 @@ export const Footer = (({
           <div
             className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`.trim()}
           >
-            {(!hideDefaultLinks || firstColumn || titleFirstColumn) && (
+            {(!hideDefaultLinks || firstColumn || titleFirstColumn || linksFirstColumn) && (
               <div>
                 {titleFirstColumn && (
                   <Heading as={'h2'} level={3} hasSpacing>
