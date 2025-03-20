@@ -91,14 +91,14 @@ export const Footer = (({
                         target={'_blank'}
                         href={contactUsURL ?? t('shared.ContactUsURL')}
                       >
-                        {t('shared.ContactUs')}
+                        {`${t('shared.ContactUs')} (${t('shared.NewTab')})`}
                       </LinkGroup.Link>,
                       <LinkGroup.Link
                         key={'securityAndPrivacy'}
                         href={securityURL ?? t('shared.SecurityAndPrivacyURL')}
                         target={'_blank'}
                       >
-                        {t('shared.SecurityAndPrivacy')}
+                        {`${t('shared.SecurityAndPrivacy')} (${t('shared.NewTab')})`}
                       </LinkGroup.Link>,
                       <LinkGroup.Link
                         key={'accessibilityStatement'}
@@ -109,7 +109,7 @@ export const Footer = (({
                         target={'_blank'}
                         isExternal
                       >
-                        {t('shared.AccessibilityStatement')}
+                        {`${t('shared.AccessibilityStatement')} (${t('shared.NewTab')})`}
                       </LinkGroup.Link>,
                     ]}
                     {linksFirstColumn}

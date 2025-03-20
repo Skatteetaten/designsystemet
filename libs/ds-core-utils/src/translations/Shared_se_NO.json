@@ -1,13 +1,14 @@
 {
-  "shared.AccessibilityStatement": "Almmusjulggaštus (Raba ođđa leavggas)",
+  "shared.AccessibilityStatement": "Almmusjulggaštus",
   "shared.AccessibilityStatementURL": "https://uustatus.no/",
   "shared.ChooseValue": "Vállje",
   "shared.Close": "Govčča",
-  "shared.ContactUs": "Válde oktavuođa minguin (Raba ođđa leavggas)",
+  "shared.ContactUs": "Válde oktavuođa minguin",
   "shared.ContactUsURL": "https://www.skatteetaten.no/kontakt/",
   "shared.Help": "Veahkki",
+  "shared.NewTab": "Raba ođđa leavggas",
   "shared.RequiredField": "Fertet deavddit",
-  "shared.SecurityAndPrivacy": "Sihkarvuohta ja persovdnasuodjaleapmi (Raba ođđa leavggas)",
+  "shared.SecurityAndPrivacy": "Sihkarvuohta ja persovdnasuodjaleapmi",
   "shared.SecurityAndPrivacyURL": "https://www.skatteetaten.no/om-skatteetaten/sikkerhet/",
   "shared.SkeLogoImageText": "Vearroetáhta dovdomearka"
 }
