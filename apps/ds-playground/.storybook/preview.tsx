@@ -78,6 +78,9 @@ const DSViewports = {
 
 const parameters = {
   docs: { controls: { sort: 'requiredFirst' } },
+  actions: {
+    disable: true,
+  },
   controls: {
     sort: 'requiredFirst',
     hideNoControlsWarning: true,
@@ -86,7 +89,7 @@ const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Generelt', 'Designtokens', 'Komponenter', 'Tester'],
+      order: ['Generelt', 'Designtokens', 'Sidetyper', 'Komponenter', 'Tester'],
     },
   },
   backgrounds: {
@@ -209,7 +212,6 @@ const preview = {
     mockDate,
     SpacingUpdater,
   ],
-
   parameters,
   globalTypes,
   argTypes,
