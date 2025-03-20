@@ -44,7 +44,6 @@ export const Arbeidsliste = (): JSX.Element => (
     <TopBannerInternal
       title={'MVA-sak'}
       logoHref={'/'}
-      logoAltText={'Til startsiden designsystemet test app'}
       user={'Etternavnesen Fornavn'}
     >
       <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
