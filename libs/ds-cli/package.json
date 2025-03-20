@@ -16,6 +16,6 @@
   "devDependencies": {},
   "type": "module",
   "bin": {
-    "codemod": "./src/codemods/index.js"
+    "codemods": "./src/codemods/index.js"
   }
 }
