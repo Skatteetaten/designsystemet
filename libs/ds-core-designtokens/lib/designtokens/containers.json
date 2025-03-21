@@ -26,8 +26,7 @@
     ":root,\n  :host": {
       "--semantic-responsive-container": "var(--container-s)",
       "--semantic-responsive-container-spacing": "0",
-      "--semantic-responsive-article": "var(--container-s)",
-      "--semantic-responsive-wide-content": "var(--container-wide-content)"
+      "--semantic-responsive-article": "var(--container-s)"
     }
   },
   "@media (width >= 1024px)": {
@@ -35,7 +34,8 @@
       "--semantic-responsive-container": "var(--container-m)",
       "--semantic-responsive-internal-container-flex-direction": "row",
       "--semantic-responsive-internal-container-spacing": "var(--spacing-xl)",
-      "--semantic-responsive-internal-aside": "var(--container-aside-narrow)"
+      "--semantic-responsive-internal-aside": "var(--container-aside-narrow)",
+      "--semantic-responsive-wide-content": "var(--container-wide-content)"
     }
   },
   "@media (width >= 1366px)": {
