@@ -63,6 +63,7 @@ exports[`Tester/TextArea WithAutoCompleteNameFormAutoCorrectSpellcheckAndPlaceho
               class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
               autocomplete="given-name"
               autocorrect="on"
+              form="form_name"
               name="test_name"
               placeholder="Kari Nordmann"
               spellcheck="true"
