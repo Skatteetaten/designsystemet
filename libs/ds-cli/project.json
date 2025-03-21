@@ -24,7 +24,7 @@
           },
           {
             "glob": "*",
-            "input": "libs/ds-cli/src/codemods",
+            "input": "libs/ds-cli/src/codemods/",
             "output": "src/codemods"
           },
           {

@@ -15,7 +15,5 @@
   "dependencies": {},
   "devDependencies": {},
   "type": "module",
-  "bin": {
-    "codemods": "./src/codemods/index.js"
-  }
+  "bin": "./index.esm.js"
 }
