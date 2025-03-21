@@ -16,7 +16,6 @@ import {
   ChevronLeftSVGpath,
   CompanySVGpath,
   CopySVGpath,
-  DescriptionSVGpath,
   HelpFilledSVGpath,
   SettingsSVGpath,
   PercentSVGpath,
@@ -42,7 +41,7 @@ export default {
 export const Arbeidsliste = (): JSX.Element => (
   <>
     <TopBannerInternal
-      title={'MVA-sak'}
+      title={'Navn på system'}
       logoHref={'/'}
       user={'Etternavnesen Fornavn'}
     >
@@ -65,7 +64,7 @@ export const Arbeidsliste = (): JSX.Element => (
         </Breadcrumbs.Item>
         <Breadcrumbs.Item>
           <Breadcrumbs.Link href={'#'}>
-            {'Vurdere levert MVA-melding'}
+            {'Tittel på arbeidsoppgave'}
           </Breadcrumbs.Link>
         </Breadcrumbs.Item>
       </Breadcrumbs.List>
@@ -120,14 +119,11 @@ export const Arbeidsliste = (): JSX.Element => (
               svgPath={ArrowForwardSVGpath}
               isExternal
             >
-              {'Se virksomheten i VIS'}
+              {'Se detaljer om virksomheten'}
             </Link>
           </Accordion.Item>
-          <Accordion.Item title={'Mva-registret (0)'} svgPath={PercentSVGpath}>
+          <Accordion.Item title={'Register'} svgPath={PercentSVGpath}>
             <em>{'Ingenting her'}</em>
-          </Accordion.Item>
-          <Accordion.Item title={'Notater'} svgPath={DescriptionSVGpath}>
-            <em>{'Notater her'}</em>
           </Accordion.Item>
           <Accordion.Item title={'Saker'} svgPath={BookOpenSVGpath}>
             <em>{'Saker her'}</em>
@@ -137,7 +133,7 @@ export const Arbeidsliste = (): JSX.Element => (
       <main className={styles.main}>
         <Heading as={'h1'} level={2} hasSpacing>
           <span className={styles.topHeading}>{'Arbeidsoppgave'}</span>
-          {'Mva-melding - Vurdere levert mva-melding'}
+          {'Tittel på arbeidsoppgave'}
         </Heading>
         <ul className={styles.listRow} aria-label={'Oppgaver'}>
           <li>
@@ -158,6 +154,7 @@ export const Arbeidsliste = (): JSX.Element => (
         </ul>
 
         <DescriptionList
+          className={styles.wideContent}
           descriptionDirection={'vertical'}
           variant={'horizontal'}
           termWeight={'regular'}
@@ -185,16 +182,16 @@ export const Arbeidsliste = (): JSX.Element => (
             />
           </DescriptionList.Element>
         </DescriptionList>
-        <Paragraph hasSpacing>
+        <Paragraph className={styles.wideContent} hasSpacing>
           {
             'Kort introduksjon av arbeidsoppgaven som forteller hva som er utgangspunktet og målet til arbeidsoppgaven. Kort introduksjon av arbeidsoppgaven som forteller hva som er utgangspunktet og målet til arbeidsoppgaven.'
           }
         </Paragraph>
         <div className={styles.tagRow}>
           <Tag color={'forest'}>{'[Årsak til arbeidsoppgave]'}</Tag>
-          <Tag color={'forest'}>{'[Annen årsak'}</Tag>
-          <Tag color={'forest'}>{'[Andre årsaker'}</Tag>
-          <Tag color={'forest'}>{'[Annen årsak'}</Tag>
+          <Tag color={'forest'}>{'[Annen årsak]'}</Tag>
+          <Tag color={'forest'}>{'[Andre årsaker]'}</Tag>
+          <Tag color={'forest'}>{'[Annen årsak]'}</Tag>
         </div>
 
         <Accordion className={styles.marginBottomL}>
@@ -202,73 +199,53 @@ export const Arbeidsliste = (): JSX.Element => (
             <Card color={'graphite'} className={styles.card}>
               <Card.Content className={styles.cardContent}>
                 <Heading as={'h2'} level={4}>
-                  {'Klagen gjelder følgende vedtak'}
+                  {'Oversikt over arbeidsoppgaven'}
                 </Heading>
                 <Table caption={'Oversikt over arbeidsoppgaven'} hasFullWidth>
                   <Table.Header>
                     <Table.Row>
                       <Table.HeaderCell>{'Tittel'}</Table.HeaderCell>
                       <Table.HeaderCell>{'Periode'}</Table.HeaderCell>
-                      <Table.HeaderCell>
-                        {'Påklagd saksnummer'}
-                      </Table.HeaderCell>
-                      <Table.HeaderCell>{'Vedtaksdato'}</Table.HeaderCell>
-                      <Table.HeaderCell>{'Klagefrist'}</Table.HeaderCell>
+                      <Table.HeaderCell>{'Saksnummer'}</Table.HeaderCell>
+                      <Table.HeaderCell>{'Dato'}</Table.HeaderCell>
+                      <Table.HeaderCell>{'Frist'}</Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
                     <Table.Row>
-                      <Table.DataCell>{'Vedtak om tvangsmulkt'}</Table.DataCell>
-                      <Table.DataCell>
-                        {'Mars-apr-2023 alminnelig'}
-                      </Table.DataCell>
-                      <Table.DataCell>{'P-2024/00000351'}</Table.DataCell>
+                      <Table.DataCell>{'Tittel på oppgaven'}</Table.DataCell>
+                      <Table.DataCell>{'Mars-apr-2023'}</Table.DataCell>
+                      <Table.DataCell>{'00000111'}</Table.DataCell>
                       <Table.DataCell>{'22.08.2024'}</Table.DataCell>
-                      <Table.DataCell>{'Påklaget etter frist'}</Table.DataCell>
+                      <Table.DataCell>{'Oppgave etter fristen'}</Table.DataCell>
                     </Table.Row>
                     <Table.Row>
-                      <Table.DataCell>{'Vedtak om noe annet'}</Table.DataCell>
-                      <Table.DataCell>
-                        {'Mars-apr-2024 alminnelig'}
-                      </Table.DataCell>
-                      <Table.DataCell>{'P-2024/00000352'}</Table.DataCell>
+                      <Table.DataCell>{'Tittel på noe annet'}</Table.DataCell>
+                      <Table.DataCell>{'Mars-apr-2024'}</Table.DataCell>
+                      <Table.DataCell>{'00000222'}</Table.DataCell>
                       <Table.DataCell>{'23.08.2024'}</Table.DataCell>
-                      <Table.DataCell>
-                        {'Påklaget etter fristen'}
-                      </Table.DataCell>
+                      <Table.DataCell>{'Oppgave før fristen'}</Table.DataCell>
                     </Table.Row>
                     <Table.Row>
-                      <Table.DataCell>{'Vedtak om tvang'}</Table.DataCell>
-                      <Table.DataCell>
-                        {'Jun-jul-2023 alminnelig'}
-                      </Table.DataCell>
-                      <Table.DataCell>{'P-2024/00000353'}</Table.DataCell>
+                      <Table.DataCell>{'Tittel'}</Table.DataCell>
+                      <Table.DataCell>{'Jun-jul-2023'}</Table.DataCell>
+                      <Table.DataCell>{'00000333'}</Table.DataCell>
                       <Table.DataCell>{'24.08.2024'}</Table.DataCell>
-                      <Table.DataCell>{'Påklaget før fristen'}</Table.DataCell>
+                      <Table.DataCell>{'Ingen frist'}</Table.DataCell>
                     </Table.Row>
                   </Table.Body>
                 </Table>
               </Card.Content>
             </Card>
           </Accordion.Item>
-          <Accordion.Item
-            title={
-              'Levert MVA-melding som vurderes for mai-juni 2024, alminnelig'
-            }
-            svgPath={PercentSVGpath}
-          >
+          <Accordion.Item title={'Leverte meldinger'}>
             <em>{'Ingenting her'}</em>
           </Accordion.Item>
-          <Accordion.Item title={'Versjonshistorikk og terminsammendrag'}>
+          <Accordion.Item title={'Versjonshistorikk og sammendrag'}>
             <em>{'Historikk her'}</em>
           </Accordion.Item>
-          <Accordion.Item
-            title={'Meldinger fra Skatteetaten og tilbakemeldinger'}
-          >
+          <Accordion.Item title={'Meldinger og tilbakemeldinger'}>
             <em>{'Meldinger her'}</em>
-          </Accordion.Item>
-          <Accordion.Item title={'Kommentarer'}>
-            <em>{'Kommentarer her'}</em>
           </Accordion.Item>
         </Accordion>
         <Heading as={'h2'} level={3} hasSpacing>

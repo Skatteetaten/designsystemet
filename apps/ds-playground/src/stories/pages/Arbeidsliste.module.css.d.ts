@@ -11,5 +11,6 @@ declare const classNames: {
   readonly marginBottomL: 'marginBottomL';
   readonly card: 'card';
   readonly cardContent: 'cardContent';
+  readonly wideContent: 'wideContent';
 };
 export default classNames;

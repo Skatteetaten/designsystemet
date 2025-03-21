@@ -62,3 +62,7 @@
   flex-grow: 1;
   overflow-x: auto;
 }
+
+.wideContent {
+  width: var(--semantic-responsive-wide-content);
+}
