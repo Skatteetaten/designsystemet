@@ -26,10 +26,10 @@ import { Tag } from '@skatteetaten/ds-status';
 import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './Arbeidsliste.module.css';
+import styles from './Saksvisning.module.css';
 
 export default {
-  title: 'Sidetyper/Intern/Arbeidsliste',
+  title: 'Sidetyper/Intern/Saksvisning',
   parameters: {
     layout: 'fullscreen',
     controls: {
@@ -38,7 +38,7 @@ export default {
   },
 };
 
-export const Arbeidsliste = (): JSX.Element => (
+export const Saksvisning = (): JSX.Element => (
   <>
     <TopBannerInternal
       title={'Navn på system'}
@@ -55,7 +55,7 @@ export const Arbeidsliste = (): JSX.Element => (
     <Breadcrumbs className={styles.breadcrumbs}>
       <Breadcrumbs.List>
         <Breadcrumbs.Item>
-          <Breadcrumbs.Link href={'#'}>{'Arbeidsliste'}</Breadcrumbs.Link>
+          <Breadcrumbs.Link href={'#'}>{'Saksvisning'}</Breadcrumbs.Link>
         </Breadcrumbs.Item>
         <Breadcrumbs.Item>
           <Breadcrumbs.Link href={'#'}>
