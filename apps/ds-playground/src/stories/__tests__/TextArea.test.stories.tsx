@@ -304,20 +304,25 @@ export const WithAutoCompleteNameFormAutoCorrectSpellcheckAndPlaceholder = {
     ...defaultArgs,
     autoComplete: 'given-name',
     name: 'test_name',
+    form: 'form_name',
     placeholder: valueText,
     spellCheck: true,
     autoCorrect: 'on',
   },
   argTypes: {
     autoComplete: { table: { disable: false } },
+    autoCorrect: { table: { disable: false } },
     name: { table: { disable: false } },
+    form: { table: { disable: false } },
     placeholder: { table: { disable: false } },
+    spellCheck: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toHaveAttribute('autocomplete', 'given-name');
     await expect(textbox).toHaveAttribute('name', 'test_name');
+    await expect(textbox).toHaveAttribute('form', 'form_name');
     await expect(textbox).toHaveAttribute('placeholder', valueText);
     await expect(textbox).toHaveAttribute('spellCheck', 'true');
     await expect(textbox).toHaveAttribute('autoCorrect', 'on');
