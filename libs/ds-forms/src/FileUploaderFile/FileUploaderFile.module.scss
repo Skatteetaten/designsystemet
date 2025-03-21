@@ -25,7 +25,6 @@
   overflow: hidden;
   max-width: 100%;
   flex: 1;
-  text-overflow: ellipsis;
   white-space: normal;
   word-break: break-all;
   word-wrap: break-word;
@@ -45,9 +44,7 @@
 
 .cardWithAnimatedBorder {
   position: relative;
-  overflow: visible;
   animation: card-background-animation 1.5s ease-out forwards;
-  background-color: transparent;
 
   &::before {
     position: absolute;
@@ -78,17 +75,11 @@
   }
 
   20% {
-    background-color: rgba(
-      var(--semantic-success-background-rgb, 0, 128, 0),
-      0.05
-    );
+    background-color: var(--semantic-success-background);
   }
 
   70% {
-    background-color: rgba(
-      var(--semantic-success-background-rgb, 0, 128, 0),
-      0.07
-    );
+    background-color: var(--semantic-success-background);
   }
 
   100% {
@@ -107,7 +98,7 @@
   20% {
     box-shadow:
       inset 0 0 0 1px var(--semantic-success-foreground),
-      0 0 0 1px var(--semantic-success-background-rgb);
+      0 0 0 1px var(--semantic-success-background);
     opacity: 1;
   }
 

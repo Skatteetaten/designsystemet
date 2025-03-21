@@ -84,7 +84,6 @@ export const FileUploaderFile = ({
               <Link
                 id={`${id}-file-${children}`}
                 href={href}
-                className={'resetLinkStyling'}
                 download
                 onClick={onClick}
               >
