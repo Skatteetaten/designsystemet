@@ -138,10 +138,10 @@ export const Containers: StoryObj = {
               <Table.DataCell className={'rowRightBorder'}>
                 {'var(--container-xs)'}
               </Table.DataCell>
-              <Table.DataCell className={'rowRightBorder'}>
+              <Table.DataCell colSpan={2} className={'rowRightBorder'}>
                 {'var(--container-s)'}
               </Table.DataCell>
-              <Table.DataCell colSpan={3} className={'rowRightBorder'}>
+              <Table.DataCell colSpan={2} className={'rowRightBorder'}>
                 {'var(--container-wide-content)'}
               </Table.DataCell>
             </Table.Row>
