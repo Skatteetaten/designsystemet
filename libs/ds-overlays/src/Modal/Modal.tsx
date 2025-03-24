@@ -50,7 +50,10 @@ export const Modal = ({
 
   const statusFlagRef = useRef({
     mouseDownCaptured: false,
+    hasUserInteractionBeforeOpen: false,
+    isOpenedAtLeastOnce: false,
   });
+
   const modalRef = useRef<HTMLDialogElement>(null);
   useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
 
@@ -61,10 +64,25 @@ export const Modal = ({
     if (dialog) {
       const originalMethod = dialog.showModal;
       dialog.showModal = function showModal(...args): void {
-        setIsAutoOpened(document.activeElement?.nodeName === 'BODY');
+        statusFlagRef.current.isOpenedAtLeastOnce = true;
+        setIsAutoOpened(!statusFlagRef.current.hasUserInteractionBeforeOpen);
         originalMethod.apply(dialog, args);
       };
     }
+
+    const handleUserInteraction = (): void => {
+      if (!statusFlagRef.current.isOpenedAtLeastOnce) {
+        statusFlagRef.current.hasUserInteractionBeforeOpen = true;
+      }
+    };
+
+    document.addEventListener('mousedown', handleUserInteraction);
+    document.addEventListener('keydown', handleUserInteraction);
+
+    return (): void => {
+      document.removeEventListener('mousedown', handleUserInteraction);
+      document.removeEventListener('keydown', handleUserInteraction);
+    };
   }, []);
 
   useEffect(() => {
@@ -72,6 +90,7 @@ export const Modal = ({
     const handleClose = (): void => {
       if (isAutoOpened) {
         setIsAutoOpened(false);
+        statusFlagRef.current.hasUserInteractionBeforeOpen = true;
         //TODO skjult div kan ligge i shadowDom. Da kan vi ikke finne den med querySelector
         // Denne modalen kan også eksistere i en shadowDom. ;-)
         const elementToFocus: HTMLDivElement | null = document.querySelector(
