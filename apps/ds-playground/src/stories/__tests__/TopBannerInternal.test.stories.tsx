@@ -127,8 +127,7 @@ export const WithDefaults = {
     const header = canvas.getByRole('banner');
     await expect(header.tagName).toBe('HEADER');
 
-    await expect(header.firstChild).toHaveAttribute('href');
-    const skipLink = canvas.getByText(skipLinkText);
+    const skipLink = canvas.getByRole('link', { name: skipLinkText });
     await expect(skipLink).toBeInTheDocument();
   },
 } satisfies Story;

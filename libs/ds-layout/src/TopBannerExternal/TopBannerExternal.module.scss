@@ -1,4 +1,5 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/styles';
 
 .topContainer {
   display: flex;
@@ -94,4 +95,8 @@
   .column {
     overflow-wrap: anywhere;
   }
+}
+
+.srOnly {
+  @include styles.sr-only;
 }

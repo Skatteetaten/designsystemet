@@ -3,9 +3,13 @@
 exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -20,8 +24,8 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -34,8 +38,8 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="false"
                     type="button"
@@ -114,10 +118,10 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -128,9 +132,13 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
 exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -145,8 +153,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -159,8 +167,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -220,10 +228,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -234,9 +242,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
 exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -251,8 +263,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -265,8 +277,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -326,10 +338,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -340,9 +352,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
 exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -357,8 +373,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -371,8 +387,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -432,10 +448,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -446,9 +462,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
 exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -463,8 +483,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -477,8 +497,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -538,10 +558,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -552,9 +572,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
 exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -569,8 +593,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -583,8 +607,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -644,10 +668,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -662,9 +686,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
           data-testid="123ID"
           class="dummyClassname"
   >
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -679,8 +707,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -693,8 +721,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -754,10 +782,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -768,9 +796,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -785,8 +817,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -799,7 +831,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
           <div class>
             <label id="labelId-:rc:"
                    class="_label_348na_5  _srOnly_348na_18"
@@ -819,7 +851,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
             >
             </div>
           </div>
-          <div class="_content_zdc8r_17">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -879,10 +911,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -893,9 +925,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -910,8 +946,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -924,8 +960,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -985,10 +1021,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -999,9 +1035,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -1016,8 +1056,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -1030,8 +1070,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -1051,11 +1091,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64"
+                   class="_columns_r8gmx_68"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
@@ -1121,10 +1161,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -1229,9 +1269,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -1246,8 +1290,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -1260,8 +1304,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -1281,11 +1325,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64"
+                   class="_columns_r8gmx_68"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
@@ -1351,10 +1395,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -1459,9 +1503,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
 exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -1476,8 +1524,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -1490,8 +1538,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -1511,11 +1559,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64"
+                   class="_columns_r8gmx_68"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
@@ -1581,10 +1629,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -1691,9 +1739,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
   <header class
           id="dummyIdForwardedFromRef"
   >
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -1708,8 +1760,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -1722,8 +1774,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <div class="_container_azp4i_5">
               <div class>
               </div>
@@ -1783,10 +1835,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -1797,9 +1849,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -1814,8 +1870,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -1828,8 +1884,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -1849,21 +1905,21 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64 _columnsThree_zdc8r_75 _columnsTwo_zdc8r_75"
+                   class="_columns_r8gmx_68 _columnsThree_r8gmx_79 _columnsTwo_r8gmx_79"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Third column with pink background
                   </div>
@@ -1929,10 +1985,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -2047,9 +2103,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -2064,8 +2124,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -2078,8 +2138,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -2099,21 +2159,21 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64 _columnsThree_zdc8r_75 _columnsTwo_zdc8r_75"
+                   class="_columns_r8gmx_68 _columnsThree_r8gmx_79 _columnsTwo_r8gmx_79"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Third column with pink background
                   </div>
@@ -2179,10 +2239,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -2297,9 +2357,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
 exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -2314,8 +2378,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -2328,8 +2392,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -2349,21 +2413,21 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64 _columnsThree_zdc8r_75 _columnsTwo_zdc8r_75"
+                   class="_columns_r8gmx_68 _columnsThree_r8gmx_79 _columnsTwo_r8gmx_79"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Third column with pink background
                   </div>
@@ -2429,10 +2493,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -2547,9 +2611,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
 exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -2564,8 +2632,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -2578,8 +2646,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -2599,16 +2667,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64  _columnsTwo_zdc8r_75"
+                   class="_columns_r8gmx_68  _columnsTwo_r8gmx_79"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
@@ -2674,10 +2742,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -2787,9 +2855,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -2804,8 +2876,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -2818,8 +2890,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -2839,16 +2911,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64  _columnsTwo_zdc8r_75"
+                   class="_columns_r8gmx_68  _columnsTwo_r8gmx_79"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
@@ -2914,10 +2986,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>
@@ -3027,9 +3099,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
 exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test 1`] = `
 <div data-test-block="true">
   <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_r8gmx_95"
+         tabindex="-1"
+    >
+    </div>
     <a href="main"
        class="_skipLink_nmfvk_1"
-       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_nmfvk_22">
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
@@ -3044,8 +3120,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_zdc8r_51">
-      <div class="_topContainer_zdc8r_2">
+    <div class="_containerForMainMenu_r8gmx_55">
+      <div class="_topContainer_r8gmx_6">
         <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
            href="https://www.skatteetaten.no/"
         >
@@ -3058,8 +3134,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_zdc8r_17">
-          <div class="_content_zdc8r_17">
+        <div class="_contentContainer_r8gmx_21">
+          <div class="_content_r8gmx_21">
             <button class="_button_1hyk0_1"
                     aria-expanded="true"
                     type="button"
@@ -3079,16 +3155,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_zdc8r_56">
+            <div class="_mainMenu_r8gmx_60">
               <nav aria-label="Temaoversikt"
-                   class="_columns_zdc8r_64  _columnsTwo_zdc8r_75"
+                   class="_columns_r8gmx_68  _columnsTwo_r8gmx_79"
               >
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_zdc8r_64">
+                <div class="_column_r8gmx_68">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
@@ -3154,10 +3230,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
           </div>
         </div>
       </div>
-      <div class="_separator_zdc8r_28">
-        <div class="_separatorRight_zdc8r_41">
+      <div class="_separator_r8gmx_32">
+        <div class="_separatorRight_r8gmx_45">
         </div>
-        <div class="_separatorLeft_zdc8r_33">
+        <div class="_separatorLeft_r8gmx_37">
         </div>
       </div>
     </div>

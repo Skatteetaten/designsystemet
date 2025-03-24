@@ -142,6 +142,11 @@ export const TopBannerExternal = ({
       data-testid={dataTestId}
       className={className}
     >
+      <div
+        id={'topbanner-focus-target'}
+        className={styles.srOnly}
+        tabIndex={-1}
+      ></div>
       <TopBannerSkipLink
         target={skipLink?.target}
         shadowRootNode={skipLink?.shadowRootNode}

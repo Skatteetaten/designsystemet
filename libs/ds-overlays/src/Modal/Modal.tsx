@@ -72,12 +72,13 @@ export const Modal = ({
     const handleClose = (): void => {
       if (isAutoOpened) {
         setIsAutoOpened(false);
-        //TODO skiplink kan ligge i shadowDom. Da kan vi ikke finne den med querySelector
+        //TODO skjult div kan ligge i shadowDom. Da kan vi ikke finne den med querySelector
         // Denne modalen kan også eksistere i en shadowDom. ;-)
-        const skipLink: HTMLAnchorElement | null =
-          document.querySelector('a[data-skip-link]');
-        if (skipLink) {
-          skipLink?.focus();
+        const elementToFocus: HTMLDivElement | null = document.querySelector(
+          '#topbanner-focus-target'
+        );
+        if (elementToFocus) {
+          elementToFocus?.focus();
         } else {
           const prevTabIndex = document.body.tabIndex;
           document.body.tabIndex = -1;

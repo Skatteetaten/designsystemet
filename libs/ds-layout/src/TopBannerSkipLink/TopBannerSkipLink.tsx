@@ -41,7 +41,6 @@ export const TopBannerSkipLink = ({
       className={`${styles.skipLink} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
-      data-skip-link={'ds-skip-link'}
       onClick={handleClick}
     >
       <span className={styles.skipLinkContent}>
