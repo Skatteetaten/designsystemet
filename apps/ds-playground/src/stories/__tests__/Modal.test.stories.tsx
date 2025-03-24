@@ -588,7 +588,7 @@ export const AutoOpen = {
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
     await step(
-      'Fokus skal settes på skjult div-element når modalen lukkes etter programatisk åpnet modal',
+      'Fokus skal settes på skjult div-element når modalen lukkes etter programatisk åpnet modal.',
       async () => {
         const openmodal = await canvas.findByRole('dialog', { hidden: false });
 
