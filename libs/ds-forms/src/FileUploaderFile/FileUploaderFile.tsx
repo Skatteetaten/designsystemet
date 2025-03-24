@@ -26,7 +26,6 @@ export const FileUploaderFile = ({
   'data-testid': dataTestId,
   fileIconTitle,
   href,
-  successIconTitle,
   showSpinner,
   onClick,
   onClickDelete,
