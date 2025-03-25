@@ -55,7 +55,7 @@ export const FileUploaderFile = ({
             ) : (
               <IconButton
                 svgPath={CancelSVGpath}
-                size={'small'}
+                size={'extraSmall'}
                 title={t('fileuploader.DeleteLabel')}
                 ariaDescribedby={`${id}-file-${children}`}
                 onClick={onClickDelete}

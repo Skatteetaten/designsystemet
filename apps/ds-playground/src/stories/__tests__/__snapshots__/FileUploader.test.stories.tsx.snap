@@ -364,7 +364,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r22:-file-file.txt"
@@ -654,7 +654,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r1q:-file-document.pdf"
@@ -791,7 +791,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r17:-file-dokumentasjon.pdf"
@@ -845,7 +845,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r1a:-file-grunnlag.jpg"
@@ -977,7 +977,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r1h:-file-dokumentasjon.pdf"
@@ -1031,7 +1031,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r1k:-file-grunnlag.jpg"
@@ -1175,7 +1175,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":re:-file-dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf"
@@ -1229,7 +1229,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":rh:-file-grunnlag.jpg"
@@ -1283,7 +1283,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":rk:-file-Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg"
@@ -1341,7 +1341,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               </div>
             </div>
             <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_small_19ayz_38"
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":rn:-file-test.png"
