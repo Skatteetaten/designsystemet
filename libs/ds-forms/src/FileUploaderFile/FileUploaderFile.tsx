@@ -4,14 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { IconButton, Link } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import {
-  CancelSVGpath,
-  CheckIcon,
-  DescriptionIcon,
-  FileIcon,
-  FileOutlineIcon,
-  FileOutlineSVGpath,
-} from '@skatteetaten/ds-icons';
+import { CancelSVGpath, DescriptionIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
 import { FileUploaderFileProps } from './FileUploaderFile.types';
