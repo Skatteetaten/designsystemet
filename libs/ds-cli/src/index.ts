@@ -3,10 +3,9 @@ import chalk from 'chalk';
 
 import { execSync } from 'child_process';
 import fs from 'fs';
-import { dirname, join } from 'path';
-import { fileURLToPath } from 'url';
 
 import { helpCommand } from './help';
+import { getMigrationPath, getMigrationString } from './migrations';
 
 run();
 
@@ -17,25 +16,33 @@ async function run(): Promise<void> {
   }
 
   if (process.argv[2] === 'codemod') {
+    if (process.argv[3] === '--list' || process.argv[3] === '-l') {
+      console.info('Available codemods:');
+      console.info(getMigrationString());
+      return;
+    }
+
     if (process.argv[3] === '--help' || !process.argv[3]) {
       console.info(
         `Usage: npx @skatteetaten/ds-cli ${chalk.green('codemod')} ${chalk.gray('<migration_name> <path>')}
   Options:
   ${chalk.green('--dry, -d')}      Run without making any changes
   ${chalk.green('--exclude, -e')}  Exclude files or folders
+  ${chalk.green('--list, -l')}  List available codemods
 `
       );
 
       return;
     }
     // run codemod
-    const __dirname = dirname(fileURLToPath(import.meta.url));
-
     const [, , , codemodName, ...restArgs] = process.argv;
-    const transformPath = join(
-      __dirname,
-      `src/codemods/transforms/${codemodName}.js`
-    );
+
+    const transformPath = getMigrationPath(codemodName);
+
+    if (!transformPath) {
+      console.error(`Codemod "${codemodName}" not found in configuration.`);
+      process.exit(1);
+    }
 
     if (fs.existsSync(transformPath)) {
       const args = [

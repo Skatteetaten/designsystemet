@@ -1,0 +1,12 @@
+import { TextField } from '@skatteetaten/ds-forms';
+
+export default function Component() {
+  return (
+    <TextField
+      as={'input'}
+      label={'Label'}
+      placeholder={'Placeholder'}
+      helperText={'Helper text'}
+    />
+  );
+}

@@ -230,6 +230,5 @@ export default function (file, api) {
       }
     });
   }
-
   return root.toSource();
 }
