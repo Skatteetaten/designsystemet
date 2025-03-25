@@ -1,0 +1,68 @@
+.wrapperInternalLayout {
+  display: var(--semantic-responsive-internal-container-display);
+  flex-direction: var(--semantic-responsive-internal-container-flex-direction);
+  padding: var(--semantic-responsive-internal-container-spacing);
+  gap: var(--semantic-responsive-internal-container-spacing);
+}
+
+.aside {
+  flex: 0 0 var(--semantic-responsive-internal-aside);
+}
+
+.main {
+  flex: 1;
+}
+
+.topHeading {
+  display: block;
+  font-size: initial;
+  font-weight: initial;
+}
+
+.block {
+  display: block;
+}
+
+.breadcrumbs {
+  padding: var(--semantic-responsive-internal-container-spacing);
+  padding-top: var(--spacing-s);
+  padding-bottom: var(--spacing-s);
+  background-color: var(--palette-graphite-5);
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.listRow {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 0 var(--spacing-l);
+  gap: var(--spacing-m);
+  list-style-type: none;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-l);
+  gap: var(--spacing-m);
+}
+
+.marginBottomL {
+  margin-bottom: var(--spacing-l);
+}
+
+.card {
+  max-width: 100%;
+}
+
+.cardContent > div {
+  flex-grow: 1;
+  overflow-x: auto;
+}
+
+.wideContent {
+  width: var(--semantic-responsive-wide-content);
+}

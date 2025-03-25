@@ -58,7 +58,7 @@ export const Containers: StoryObj = {
             </Table.Row>
             <Table.Row>
               <Table.DataCell className={'rowRightBorder'}>
-                <strong>{'--semantic-responsive-container-padding'}</strong>
+                <strong>{'--semantic-responsive-container-spacing'}</strong>
               </Table.DataCell>
               <Table.DataCell colSpan={2} className={'rowRightBorder'}>
                 {'0 var(--spacing-m)'}
@@ -107,7 +107,7 @@ export const Containers: StoryObj = {
             <Table.Row>
               <Table.DataCell className={'rowRightBorder'}>
                 <strong>
-                  {'--semantic-responsive-internal-container-padding'}
+                  {'--semantic-responsive-internal-container-spacing'}
                 </strong>
               </Table.DataCell>
               <Table.DataCell colSpan={3} className={'rowRightBorder'}>
