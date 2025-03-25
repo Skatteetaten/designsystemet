@@ -226,13 +226,6 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             }}
             onFocus={onFocus}
           />
-          <ErrorMessage
-            id={errorId}
-            showError={!!errorMessage}
-            className={classNames?.errorMessage}
-          >
-            {errorMessage}
-          </ErrorMessage>
           <span aria-live={'assertive'} className={styles.srOnly}>
             {shouldShowResults &&
               t('searchfield.NumberOfResults', {
@@ -307,6 +300,13 @@ ${classNames?.searchContainer ?? ''}`.trim()}
           </button>
         )}
       </div>
+      <ErrorMessage
+        id={errorId}
+        showError={!!errorMessage}
+        className={classNames?.errorMessage}
+      >
+        {errorMessage}
+      </ErrorMessage>
     </div>
   );
 }) as SearchFieldComponent;
