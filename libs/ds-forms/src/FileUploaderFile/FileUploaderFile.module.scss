@@ -1,33 +1,26 @@
 .fileSpinner {
-  margin-left: var(--spacing-s);
+  height: calc(var(--semantic-line-height-default) * var(--size-small));
+  margin-right: var(--spacing-xs);
 }
 
-.spinner {
-  display: inline-flex;
-  margin-left: var(--spacing-s);
+.fileDeleteButton {
+  margin-top: var(--spacing-xs);
+}
+
+.fileContentRight {
+  height: calc(var(--semantic-line-height-default) * var(--size-small));
 }
 
 .fileNameContainer {
-  display: inline-block;
-  overflow: hidden;
-  max-width: 100%;
   flex: 1;
   line-height: var(--semantic-line-height-default);
-  white-space: normal;
   word-break: break-all;
-  word-wrap: break-word;
 }
 
 .fileContentContainer {
   display: flex;
   width: 100%;
   gap: var(--spacing-xs);
-}
-
-.iconWrapper {
-  display: flex;
-  align-items: start;
-  align-self: start;
 }
 
 .cardWithAnimatedBorder {
@@ -128,10 +121,6 @@
 }
 
 .fileList {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
   &Item {
     overflow: visible;
     border-radius: 4px;
@@ -143,58 +132,12 @@
       opacity 0.3s ease;
   }
 
-  &Grid {
-    display: grid;
-    grid-template-areas: 'type check';
-  }
-
-  &Text {
-    padding: var(--spacing-s) 0;
-    grid-area: 'type';
-    white-space: nowrap;
-  }
-
   &Icon {
-    height: calc(var(--semantic-line-height-default) * var(--size-xs));
-    align-items: flex-start;
+    align-self: flex-start;
     margin: var(--spacing-xs);
-    fill: inherit;
-    grid-area: 'check';
   }
 
-  &Container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &Link {
-    white-space: inherit;
-    word-break: break-all;
-  }
-
-  &File {
-    padding-top: var(--spacing-s);
-    padding-bottom: var(--spacing-s);
-    color: var(--palette-graphite-70);
-    grid-area: 'type';
-    line-height: var(--semantic-line-height-article);
-    overflow-wrap: anywhere;
-    white-space: initial;
-
-    &Error {
-      // bredde på IconButton + litt luft
-      margin-right: calc(var(--size-medium) + var(--spacing-s));
-      margin-left: var(--spacing-l);
-    }
-  }
-}
-
-.hasLink {
-  .fileListIcon {
-    fill: var(--semantic-interactive-main);
-  }
-
-  .cardWithAnimatedBorder {
-    border-color: var(--semantic-interactive-main);
+  &:has(a) {
+    --file-item-border-icon-color: var(--semantic-interactive-main);
   }
 }

@@ -2,15 +2,15 @@
 
 exports[`Tester/FileUploader Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5">
+  <div class="_container_10i3l_5">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r6:"
-            class="_dropZone_9gibq_14"
+            class="_dropZone_10i3l_14"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -19,7 +19,7 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r6:"
         >
           Legg til fil
@@ -39,7 +39,7 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -50,7 +50,7 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
 
 exports[`Tester/FileUploader WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5 dummyClassname"
+  <div class="_container_10i3l_5 dummyClassname"
        lang="en"
        data-testid="123ID"
   >
@@ -58,10 +58,10 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
     </div>
     <button type="button"
             id="htmlId"
-            class="_dropZone_9gibq_14"
+            class="_dropZone_10i3l_14"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -70,7 +70,7 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for="htmlId"
         >
           Legg til fil
@@ -90,7 +90,7 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -101,16 +101,16 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
 
 exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5  dummyClassname">
+  <div class="_container_10i3l_5  dummyClassname">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r2a:"
-            class="_dropZone_9gibq_14  _dropZone_error_9gibq_31"
+            class="_dropZone_10i3l_14  _dropZone_error_10i3l_31"
             aria-describedby=":r2b:-fileuploader-error"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -119,7 +119,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r2a:"
         >
           Legg til fil
@@ -153,7 +153,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -164,7 +164,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/FileUploader WithError play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5">
+  <div class="_container_10i3l_5">
     <label id="labelId-:rv:"
            class="_label_348na_5"
            for=":rt:"
@@ -195,11 +195,11 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
     </div>
     <button type="button"
             id=":rt:"
-            class="_dropZone_9gibq_14 _dropZoneMarginTop_9gibq_28 _dropZone_error_9gibq_31"
+            class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28 _dropZone_error_10i3l_31"
             aria-describedby=":ru:-fileuploader-error :rt:-accepted-formats"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -208,7 +208,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":rt:"
         >
           Legg til fil(er)
@@ -222,10 +222,10 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
       </div>
     </button>
     <span id=":rt:-accepted-formats"
-          class="_fileInfo_9gibq_56"
+          class="_fileInfo_10i3l_56"
     >
       Filer du kan laste opp:
-      <span class="_fileFormatList_9gibq_73">
+      <span class="_fileFormatList_10i3l_73">
         .java, .cpp, .py
       </span>
     </span>
@@ -252,7 +252,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -263,7 +263,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
 
 exports[`Tester/FileUploader WithFileChange play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5"
+  <div class="_container_10i3l_5"
        data-testid="testid123"
   >
     <label id="labelId-:r1v:"
@@ -296,10 +296,10 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
     </div>
     <button type="button"
             id=":r1t:"
-            class="_dropZone_9gibq_14 _dropZoneMarginTop_9gibq_28"
+            class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -308,7 +308,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r1t:"
         >
           Legg til fil
@@ -328,32 +328,30 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <ul class="_fileList_9gibq_77">
+    <ul class="_fileList_10i3l_77">
       <li id=":r22:"
-          class="_fileListItem_18cwf_113 _hasLink_18cwf_159"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:r23:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:r23:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r23:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r23:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <a id=":r22:-file-file.txt"
                    class="_link_z7jba_1"
                    href="#"
@@ -363,8 +361,8 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r22:-file-file.txt"
@@ -388,7 +386,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -400,7 +398,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
 
 exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5">
+  <div class="_container_10i3l_5">
     <label id="labelId-:r27:"
            class="_label_348na_5"
            for=":r25:"
@@ -431,10 +429,10 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
     </div>
     <button type="button"
             id=":r25:"
-            class="_dropZone_9gibq_14 _dropZoneMarginTop_9gibq_28"
+            class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -443,7 +441,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r25:"
         >
           Legg til fil
@@ -463,7 +461,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -474,15 +472,15 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5">
+  <div class="_container_10i3l_5">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":rq:"
-            class="_dropZone_9gibq_14"
+            class="_dropZone_10i3l_14"
             disabled
     >
-      <div class="_removePointerEvents_9gibq_83">
+      <div class="_removePointerEvents_10i3l_83">
         <div aria-live="polite"
              aria-atomic="true"
              class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28"
@@ -490,12 +488,12 @@ exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
           <div class="_spinnerAnimation_wnf1f_40">
           </div>
           <span id="title-:rs:"
-                class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 _spinner_9gibq_91"
+                class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 _spinner_10i3l_91"
           >
             Opplasting pågår
           </span>
         </div>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":rq:"
         >
         </label>
@@ -514,7 +512,7 @@ exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -525,17 +523,17 @@ exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
 
 exports[`Tester/FileUploader WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5"
+  <div class="_container_10i3l_5"
        id="dummyIdForwardedFromRef"
   >
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r0:"
-            class="_dropZone_9gibq_14"
+            class="_dropZone_10i3l_14"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -544,7 +542,7 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r0:"
         >
           Legg til fil
@@ -564,7 +562,7 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -575,16 +573,16 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
 
 exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5">
+  <div class="_container_10i3l_5">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r1n:"
-            class="_dropZone_9gibq_14"
+            class="_dropZone_10i3l_14"
             aria-describedby=":r1n:-accepted-formats"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -593,7 +591,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r1n:"
         >
           Trykk eller dra og slipp filer her
@@ -606,10 +604,10 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
       </div>
     </button>
     <span id=":r1n:-accepted-formats"
-          class="_fileInfo_9gibq_56"
+          class="_fileInfo_10i3l_56"
     >
       Tillatte filformater:_
-      <span class="_fileFormatList_9gibq_73">
+      <span class="_fileFormatList_10i3l_73">
         bilder og dokumenter
       </span>
     </span>
@@ -622,39 +620,37 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <ul class="_fileList_9gibq_77">
+    <ul class="_fileList_10i3l_77">
       <li id=":r1q:"
-          class="_fileListItem_18cwf_113"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:r1r:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:r1r:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r1r:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r1r:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <span id=":r1q:-file-document.pdf">
                   document.pdf
                 </span>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r1q:-file-document.pdf"
@@ -678,7 +674,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -689,16 +685,16 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
 
 exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5 bottomSpacingXL">
+  <div class="_container_10i3l_5 bottomSpacingXL">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r13:"
-            class="_dropZone_9gibq_14"
+            class="_dropZone_10i3l_14"
             aria-describedby=":r13:-accepted-formats"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -707,7 +703,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r13:"
         >
           Legg til fil
@@ -720,10 +716,10 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
       </div>
     </button>
     <span id=":r13:-accepted-formats"
-          class="_fileInfo_9gibq_56"
+          class="_fileInfo_10i3l_56"
     >
       Filer du kan laste opp:
-      <span class="_fileFormatList_9gibq_73">
+      <span class="_fileFormatList_10i3l_73">
         .java, .cpp, .py
       </span>
     </span>
@@ -735,7 +731,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     <div aria-live="polite"
          aria-atomic="true"
     >
-      <div class="_alert_lurqs_1 _alert_9gibq_87"
+      <div class="_alert_lurqs_1 _alert_10i3l_87"
            data-variant="success"
            data-brightness="default"
       >
@@ -755,32 +751,30 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </span>
       </div>
     </div>
-    <ul class="_fileList_9gibq_77">
+    <ul class="_fileList_10i3l_77">
       <li id=":r17:"
-          class="_fileListItem_18cwf_113 _hasLink_18cwf_159"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:r18:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:r18:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r18:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r18:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <a id=":r17:-file-dokumentasjon.pdf"
                    class="_link_z7jba_1"
                    href="https://www.skatteetaten.no/person/"
@@ -790,8 +784,8 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r17:-file-dokumentasjon.pdf"
@@ -815,37 +809,35 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </div>
       </li>
       <li id=":r1a:"
-          class="_fileListItem_18cwf_113"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:r1b:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:r1b:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r1b:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r1b:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <span id=":r1a:-file-grunnlag.jpg">
                   grunnlag.jpg
                 </span>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r1a:-file-grunnlag.jpg"
@@ -869,22 +861,22 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
     </div>
   </div>
-  <div class="_container_9gibq_5">
+  <div class="_container_10i3l_5">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r1d:"
-            class="_dropZone_9gibq_14"
+            class="_dropZone_10i3l_14"
             aria-describedby=":r1d:-accepted-formats"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -893,7 +885,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r1d:"
         >
           Legg til fil
@@ -906,10 +898,10 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
       </div>
     </button>
     <span id=":r1d:-accepted-formats"
-          class="_fileInfo_9gibq_56"
+          class="_fileInfo_10i3l_56"
     >
       Filer du kan laste opp:
-      <span class="_fileFormatList_9gibq_73">
+      <span class="_fileFormatList_10i3l_73">
         .java, .cpp, .py
       </span>
     </span>
@@ -921,7 +913,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     <div aria-live="polite"
          aria-atomic="true"
     >
-      <div class="_alert_lurqs_1 _alert_9gibq_87"
+      <div class="_alert_lurqs_1 _alert_10i3l_87"
            data-variant="error"
            data-brightness="default"
       >
@@ -941,32 +933,30 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </span>
       </div>
     </div>
-    <ul class="_fileList_9gibq_77">
+    <ul class="_fileList_10i3l_77">
       <li id=":r1h:"
-          class="_fileListItem_18cwf_113 _hasLink_18cwf_159"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:r1i:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:r1i:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r1i:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r1i:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <a id=":r1h:-file-dokumentasjon.pdf"
                    class="_link_z7jba_1"
                    href="https://www.skatteetaten.no/person/"
@@ -976,8 +966,8 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r1h:-file-dokumentasjon.pdf"
@@ -1001,37 +991,35 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </div>
       </li>
       <li id=":r1k:"
-          class="_fileListItem_18cwf_113"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:r1l:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:r1l:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r1l:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r1l:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <span id=":r1k:-file-grunnlag.jpg">
                   grunnlag.jpg
                 </span>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":r1k:-file-grunnlag.jpg"
@@ -1055,7 +1043,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -1066,7 +1054,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
 
 exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_9gibq_5">
+  <div class="_container_10i3l_5">
     <label id="labelId-:rb:"
            class="_label_348na_5"
            for=":r9:"
@@ -1097,11 +1085,11 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
     </div>
     <button type="button"
             id=":r9:"
-            class="_dropZone_9gibq_14 _dropZoneMarginTop_9gibq_28"
+            class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28"
             aria-describedby=":r9:-accepted-formats"
     >
-      <div class="_removePointerEvents_9gibq_83">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_9gibq_10"
+      <div class="_removePointerEvents_10i3l_83">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1110,7 +1098,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_9gibq_97"
+        <label class="_innerLabel_10i3l_97"
                for=":r9:"
         >
           Legg til fil
@@ -1123,10 +1111,10 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
       </div>
     </button>
     <span id=":r9:-accepted-formats"
-          class="_fileInfo_9gibq_56"
+          class="_fileInfo_10i3l_56"
     >
       Filer du kan laste opp:
-      <span class="_fileFormatList_9gibq_73">
+      <span class="_fileFormatList_10i3l_73">
         .pdf, .jpeg
       </span>
     </span>
@@ -1139,32 +1127,30 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <ul class="_fileList_9gibq_77">
+    <ul class="_fileList_10i3l_77">
       <li id=":re:"
-          class="_fileListItem_18cwf_113 _hasLink_18cwf_159"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:rf:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:rf:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:rf:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:rf:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <a id=":re:-file-dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf"
                    class="_link_z7jba_1"
                    href="https://www.skatteetaten.no/person/"
@@ -1174,8 +1160,8 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":re:-file-dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf"
@@ -1199,37 +1185,35 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </div>
       </li>
       <li id=":rh:"
-          class="_fileListItem_18cwf_113"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:ri:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:ri:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:ri:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:ri:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <span id=":rh:-file-grunnlag.jpg">
                   grunnlag.jpg
                 </span>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":rh:-file-grunnlag.jpg"
@@ -1253,37 +1237,35 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </div>
       </li>
       <li id=":rk:"
-          class="_fileListItem_18cwf_113"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:rl:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:rl:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:rl:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:rl:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <span id=":rk:-file-Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg">
                   Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg
                 </span>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":rk:-file-Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg"
@@ -1307,30 +1289,28 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </div>
       </li>
       <li id=":rn:"
-          class="_fileListItem_18cwf_113 _hasLink_18cwf_159"
+          class="_fileListItem_10scv_101"
       >
-        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_18cwf_33"
+        <div class="_card_nrlm6_5 _cardWithAnimatedBorder_10scv_26"
              data-color="white"
              data-spacing="xxs"
         >
           <div class="_cardContent_48t19_1">
-            <div class="_fileContentContainer_18cwf_21">
-              <div class="_iconWrapper_18cwf_27">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_18cwf_130"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-labelledby="svgtitle-:ro:"
-                     aria-hidden="false"
-                     role="img"
-                >
-                  <title id="svgtitle-:ro:">
-                    Fil
-                  </title>
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
-                  </path>
-                </svg>
-              </div>
-              <div class="_fileNameContainer_18cwf_10">
+            <div class="_fileContentContainer_10scv_20">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _fileListIcon_10scv_109"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:ro:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:ro:">
+                  Fil
+                </title>
+                <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6Zm0 2h7v5h5v11H6V4Zm2 8v2h8v-2H8Zm0 4v2h5v-2H8Z">
+                </path>
+              </svg>
+              <div class="_fileNameContainer_10scv_14">
                 <a id=":rn:-file-test.png"
                    class="_link_z7jba_1"
                    href="http://localhost:4400/designsystem_illustrasjon.png"
@@ -1340,8 +1320,8 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_48t19_51">
-              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
+            <div class="_rightContent_48t19_51 _fileContentRight_10scv_10">
+              <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_10scv_6"
                       data-brightness="default"
                       type="button"
                       aria-describedby=":rn:-file-test.png"
@@ -1365,7 +1345,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_9gibq_61"
+    <div class="_srOnly_10i3l_61"
          aria-live="polite"
          aria-atomic="true"
     >

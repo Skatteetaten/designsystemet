@@ -5,7 +5,6 @@ import { IconButton, Link } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, DescriptionIcon } from '@skatteetaten/ds-icons';
-import { Spinner } from '@skatteetaten/ds-progress';
 
 import { FileUploaderFileProps } from './FileUploaderFile.types';
 
@@ -27,13 +26,12 @@ export const FileUploaderFile = ({
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const generatedId = useId();
   const id = externalId ?? generatedId;
-  const hasLink = !!href;
 
   return (
     <li
       ref={ref}
       id={id}
-      className={`${styles.fileListItem} ${hasLink ? styles.hasLink : ''} ${className}`.trim()}
+      className={`${styles.fileListItem} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
     >
@@ -41,36 +39,26 @@ export const FileUploaderFile = ({
         <Card.Content
           classNames={{
             children: styles.fileContentContainer,
+            rightContent: styles.fileContentRight,
           }}
           rightContent={
-            showSpinner ? (
-              <Spinner
-                className={styles.fileSpinner}
-                color={'blue'}
-                size={'medium'}
-                hideTitle
-              >
-                {t('fileuploader.DeleteInProgress')}
-              </Spinner>
-            ) : (
-              <IconButton
-                svgPath={CancelSVGpath}
-                size={'extraSmall'}
-                title={t('fileuploader.DeleteLabel')}
-                ariaDescribedby={`${id}-file-${children}`}
-                onClick={onClickDelete}
-              />
-            )
+            <IconButton
+              className={styles.fileDeleteButton}
+              svgPath={CancelSVGpath}
+              size={'extraSmall'}
+              title={t('fileuploader.DeleteLabel')}
+              spinnerTitle={t('fileuploader.DeleteInProgress')}
+              hasSpinner={showSpinner}
+              ariaDescribedby={`${id}-file-${children}`}
+              onClick={onClickDelete}
+            />
           }
         >
-          <div className={styles.iconWrapper}>
-            <DescriptionIcon
-              className={styles.fileListIcon}
-              size={'small'}
-              title={fileIconTitle ?? t('fileuploader.FileIconLabel')}
-            />
-          </div>
-
+          <DescriptionIcon
+            className={styles.fileListIcon}
+            size={'small'}
+            title={fileIconTitle ?? t('fileuploader.FileIconLabel')}
+          />
           <div className={styles.fileNameContainer}>
             {href ? (
               <Link
