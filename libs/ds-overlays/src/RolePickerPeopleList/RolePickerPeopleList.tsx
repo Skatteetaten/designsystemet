@@ -2,14 +2,16 @@ import { useCallback, useContext, useMemo, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  formatNationalIdentityNumber,
+} from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { RolePickerPeopleListProps } from './RolePickerPeopleList.types';
 import { Person } from '../RolePicker/RolePicker.types';
-import { formatNationalIdentityNumber } from '../RolePicker/utils';
 import { RolePickerContext } from '../RolePickerContext/RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
 

@@ -2,7 +2,7 @@ import { useCallback, useContext, useMemo, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import {
   BriefcaseSVGpath,
@@ -14,7 +14,6 @@ import { Heading } from '@skatteetaten/ds-typography';
 import { RolePickerBusinessListProps } from './RolePickerBusinessList.types';
 import { getBusinessTitle } from './utils';
 import { Business } from '../RolePicker/RolePicker.types';
-import { formatOrganisationNumber } from '../RolePicker/utils';
 import { RolePickerContext } from '../RolePickerContext/RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
 

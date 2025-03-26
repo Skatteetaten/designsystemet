@@ -9,7 +9,11 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  formatNationalIdentityNumber,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { FavoriteSVGpath, LogOutSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -20,7 +24,6 @@ import {
   getRolePickerShowSubunitsDefault,
 } from './defaults';
 import { RolePickerProps } from './RolePicker.types';
-import { formatNationalIdentityNumber } from './utils';
 import {
   getModalDismissOnEscDefault,
   getModalDismissOnOutsideClickDefault,
