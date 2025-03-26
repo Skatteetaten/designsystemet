@@ -2,7 +2,7 @@ import { useCallback, useContext, useMemo, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import {
   BriefcaseSVGpath,
@@ -192,7 +192,7 @@ export const RolePickerBusinessList = ({
                     description={
                       <>
                         {t('rolepicker.BusinessDescriptionPrefix')}{' '}
-                        {item.organizationNumber}{' '}
+                        {formatOrganisationNumber(item.organizationNumber)}{' '}
                         <em>
                           {'('}
                           {t('rolepicker.MainBusiness')}
@@ -224,7 +224,9 @@ export const RolePickerBusinessList = ({
                             description={
                               <>
                                 {t('rolepicker.BusinessDescriptionPrefix')}{' '}
-                                {sub.organizationNumber}{' '}
+                                {formatOrganisationNumber(
+                                  sub.organizationNumber
+                                )}{' '}
                                 <em>
                                   {'('}
                                   {t('rolepicker.SubUnit')}
@@ -256,7 +258,7 @@ export const RolePickerBusinessList = ({
                   <RolePickerRow
                     id={item.organizationNumber}
                     title={getBusinessTitle(item)}
-                    description={`${t('rolepicker.BusinessDescriptionPrefix')} ${item.organizationNumber}`}
+                    description={`${t('rolepicker.BusinessDescriptionPrefix')} ${formatOrganisationNumber(item.organizationNumber)}`}
                     svgPath={item.isDeleted ? BriefcaseOffSVGpath : svgPath}
                     onClick={() => {
                       handleEntityClicked(item);

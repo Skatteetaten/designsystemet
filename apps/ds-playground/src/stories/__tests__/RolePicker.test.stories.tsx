@@ -16,7 +16,7 @@ import {
 
 const me: Person = {
   name: 'Ola Nordmann',
-  personId: '101010 12345',
+  personId: '10101012345',
   type: 'Person',
 };
 
@@ -119,25 +119,25 @@ const people: Paginated<Person> = {
   list: [
     {
       name: 'Antikvitet presis',
-      personId: '138899 99726',
+      personId: '13889999726',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
-      personId: '188495 74503',
+      personId: '18849574503',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lomme filosofisk',
-      personId: '088896 74513',
+      personId: '08889674513',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Adelsmann varm',
-      personId: '148924 49911',
+      personId: '14892449911',
       type: 'Person',
       isDeleted: false,
     },
@@ -149,67 +149,67 @@ const people11: Paginated<Person> = {
   list: [
     {
       name: 'Frisk Elefant',
-      personId: '100908 12345',
+      personId: '10090812345',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Melankolsk Aldrende Ape',
-      personId: '138899 99726',
+      personId: '13889999726',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
-      personId: '188495 74503',
+      personId: '18849574503',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lomme filosofisk',
-      personId: '088896 74513',
+      personId: '08889674513',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Adelsmann varm',
-      personId: '148924 49911',
+      personId: '14892449911',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Kari Nordmann',
-      personId: '101010 54321',
+      personId: '10101054321',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Per Hansen',
-      personId: '202020 12345',
+      personId: '20202012345',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lise Olsen',
-      personId: '303030 67890',
+      personId: '30303067890',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Nina Johansen',
-      personId: '404040 11223',
+      personId: '40404011223',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Ole Pettersen',
-      personId: '505050 44556',
+      personId: '50505044556',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Eva Nilsen',
-      personId: '606060 77889',
+      personId: '60606077889',
       type: 'Person',
       isDeleted: false,
     },
