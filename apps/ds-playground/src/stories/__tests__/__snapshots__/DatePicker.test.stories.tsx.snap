@@ -661,62 +661,62 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 <select id="selectId-:r2q:"
                         class="_select_1q368_1"
                 >
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="0"
                   >
                     Januar
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="1"
                   >
                     Februar
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="2"
                   >
                     Mars
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="3"
                   >
                     April
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="4"
                   >
                     Mai
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="5"
                   >
                     Juni
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="6"
                   >
                     Juli
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="7"
                   >
                     August
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="8"
                   >
                     September
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="9"
                   >
                     Oktober
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="10"
                   >
                     November
                   </option>
-                  <option class
+                  <option class="_option_idcf7_1"
                           value="11"
                   >
                     Desember

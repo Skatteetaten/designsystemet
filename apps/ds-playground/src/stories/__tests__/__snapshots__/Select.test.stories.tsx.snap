@@ -17,12 +17,12 @@ exports[`Tester/Select/Select Defaults play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -68,12 +68,12 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -117,12 +117,12 @@ exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] =
         <option value>
           Velg fra listen noe gøy
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -166,12 +166,12 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -226,12 +226,12 @@ exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
                 selected
         >
@@ -277,12 +277,12 @@ exports[`Tester/Select/Select WithDescription play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -324,12 +324,12 @@ exports[`Tester/Select/Select WithDisabled play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -373,12 +373,12 @@ exports[`Tester/Select/Select WithErrorMessage play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -434,12 +434,12 @@ exports[`Tester/Select/Select WithEventHandlers play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -524,12 +524,12 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -591,12 +591,12 @@ exports[`Tester/Select/Select WithHelpToggleEvent smoke-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -638,12 +638,12 @@ exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -681,12 +681,12 @@ exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
       <select id="selectId-:r1a:"
               class="_select_1q368_1"
       >
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -727,13 +727,13 @@ exports[`Tester/Select/Select WithLongInput smoke-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
                 selected
         >
           Long input tekst
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Very very very long inputtext
@@ -775,12 +775,12 @@ exports[`Tester/Select/Select WithLongPlaceholder smoke-test 1`] = `
         <option value>
           Long placeholder text
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Long input tekst
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Very very very long inputtext
@@ -823,12 +823,12 @@ exports[`Tester/Select/Select WithRef play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -871,12 +871,12 @@ exports[`Tester/Select/Select WithRequired play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -919,12 +919,12 @@ exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -965,12 +965,12 @@ exports[`Tester/Select/Select WithValue play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -1012,12 +1012,12 @@ exports[`Tester/Select/Select WithVariantLarge smoke-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
@@ -1055,7 +1055,7 @@ exports[`Tester/Select/Select WithVariantLargeAndLongText smoke-test 1`] = `
       <select id="selectId-:rm:"
               class="_select_1q368_1 _select_large_1q368_29"
       >
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           En lang tekst som ikke skal synes bak åpne ikonet
