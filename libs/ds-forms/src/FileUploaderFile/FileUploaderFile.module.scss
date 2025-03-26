@@ -4,7 +4,7 @@
 }
 
 .fileDeleteButton {
-  margin-top: var(--spacing-xs);
+  margin-top: var(--spacing-xxs);
 }
 
 .fileContentRight {
@@ -24,7 +24,10 @@
 }
 
 .cardWithAnimatedBorder {
+  --file-item-border-icon-color: var(--semantic-page-foreground);
+
   position: relative;
+  border-color: var(--file-item-border-icon-color);
   animation: card-background-animation 1.5s ease-out forwards;
 
   &::before {
@@ -47,6 +50,10 @@
     content: '';
     inset: -2px;
     pointer-events: none;
+  }
+
+  &:has(a) {
+    --file-item-border-icon-color: var(--semantic-interactive-main);
   }
 }
 
@@ -135,9 +142,6 @@
   &Icon {
     align-self: flex-start;
     margin: var(--spacing-xs);
-  }
-
-  &:has(a) {
-    --file-item-border-icon-color: var(--semantic-interactive-main);
+    fill: var(--file-item-border-icon-color);
   }
 }

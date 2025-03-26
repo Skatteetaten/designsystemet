@@ -7,6 +7,5 @@ declare const classNames: {
   readonly cardWithAnimatedBorder: 'cardWithAnimatedBorder';
   readonly fileListItem: 'fileListItem';
   readonly fileListIcon: 'fileListIcon';
-  readonly fileList: 'fileList';
 };
 export default classNames;
