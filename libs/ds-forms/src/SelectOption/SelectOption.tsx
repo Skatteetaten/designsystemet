@@ -4,6 +4,8 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { SelectOptionProps } from './SelectOption.types';
 
+import styles from './SelectOption.module.scss';
+
 export const SelectOption = ({
   ref,
   id: externalId,
@@ -18,7 +20,7 @@ export const SelectOption = ({
       ref={ref}
       lang={lang}
       id={externalId}
-      className={className}
+      className={`${styles.option} ${className}`.trim()}
       data-testid={dataTestId}
       value={value}
     >
