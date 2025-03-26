@@ -1,5 +1,4 @@
-// alert-variant-codemod.js
-module.exports = function (fileInfo, api) {
+export default function (fileInfo, api) {
   const j = api.jscodeshift;
   const root = j(fileInfo.source);
 
@@ -23,7 +22,7 @@ module.exports = function (fileInfo, api) {
       if (variantAttr) {
         // Check if value is 'neutral' (handling both string literals and expressions)
         if (
-          variantAttr.value.type === 'StringLiteral' &&
+          variantAttr.value.type === 'Literal' &&
           variantAttr.value.value === 'neutral'
         ) {
           // Direct string case: variant="neutral"
@@ -32,14 +31,11 @@ module.exports = function (fileInfo, api) {
           const expression = variantAttr.value.expression;
 
           // Handle string literal in expression: variant={'neutral'}
-          if (
-            expression.type === 'StringLiteral' &&
-            expression.value === 'neutral'
-          ) {
+          if (expression.type === 'Literal' && expression.value === 'neutral') {
             expression.value = 'info';
           }
         }
       }
     })
-    .toSource();
-};
+    .toSource({ quote: 'single' });
+}

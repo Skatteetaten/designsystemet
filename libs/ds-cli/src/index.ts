@@ -3,6 +3,7 @@ import chalk from 'chalk';
 
 import { execSync } from 'child_process';
 import fs from 'fs';
+import { dirname, join } from 'path';
 
 import { helpCommand } from './help';
 import { getMigrationPath, getMigrationString } from './migrations';
@@ -37,7 +38,15 @@ async function run(): Promise<void> {
     // run codemod
     const [, , , codemodName, ...restArgs] = process.argv;
 
-    const transformPath = getMigrationPath(codemodName);
+    const __dirname = dirname(new URL(import.meta.url).pathname);
+
+    const transformPath = join(
+      __dirname,
+      'src/codemods/transforms',
+      getMigrationPath(codemodName) ?? ''
+    );
+
+    console.log(transformPath);
 
     if (!transformPath) {
       console.error(`Codemod "${codemodName}" not found in configuration.`);

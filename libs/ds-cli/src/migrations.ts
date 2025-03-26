@@ -17,7 +17,7 @@ export const migrations: {
     {
       description: 'Alert: remove deprecated prop "important"',
       value: 'v2-alert',
-      path: 'v2.0.0/update-alert-important/update-alert-important.js',
+      path: 'v2.0.0/alert-remove-variant-neutral/alert-remove-variant-neutral.js',
     },
   ],
 };
