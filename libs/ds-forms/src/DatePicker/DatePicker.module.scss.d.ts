@@ -1,5 +1,6 @@
 declare const classNames: {
   readonly dateContainer: 'dateContainer';
+  readonly dateContainerMarginTop: 'dateContainerMarginTop';
   readonly input: 'input';
   readonly calendarButton: 'calendarButton';
   readonly input_large: 'input_large';

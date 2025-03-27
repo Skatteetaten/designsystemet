@@ -219,7 +219,7 @@ export const DatePicker = ({
         {label}
       </LabelWithHelp>
       <div
-        className={`${styles.dateContainer} ${
+        className={`${styles.dateContainer} ${label && !hideLabel ? styles.dateContainerMarginTop : ''} ${
           classNames?.dateContainer ?? ''
         }`.trim()}
       >
