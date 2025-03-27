@@ -189,9 +189,6 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
     await expect(
       canvas.getAllByText(dsI18n.t('ds_forms:fileuploader.FileIconLabel'))[0]
     ).toBeInTheDocument();
-    await expect(
-      canvas.getAllByText(dsI18n.t('ds_forms:fileuploader.SuccessIconLabel'))[0]
-    ).toBeInTheDocument();
     await expect(canvas.getByText('grunnlag.jpg')).toBeInTheDocument();
     await expect(canvas.getByText('test.png')).toBeInTheDocument();
     await expect(

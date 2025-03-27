@@ -74,7 +74,7 @@
 
 .fileList {
   padding: 0;
-  margin: 0;
+  margin: var(--spacing-m) 0 0;
   list-style: none;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .alert {
-  margin: var(--spacing-s) 0;
+  margin: var(--spacing-m) 0 0;
 }
 
 .spinner {
