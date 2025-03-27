@@ -17,16 +17,12 @@
     "--semantic-responsive-internal-aside": "var(--container-xs)",
     "--semantic-responsive-wide-content": "var(--container-xs)"
   },
-  "@media (width >= 480px)": {
-    ":root,\n  :host": {
-      "--semantic-responsive-wide-content": "var(--container-s)"
-    }
-  },
   "@media (width >= 640px)": {
     ":root,\n  :host": {
       "--semantic-responsive-container": "var(--container-s)",
       "--semantic-responsive-container-spacing": "0",
-      "--semantic-responsive-article": "var(--container-s)"
+      "--semantic-responsive-article": "var(--container-s)",
+      "--semantic-responsive-wide-content": "var(--container-s)"
     }
   },
   "@media (width >= 1024px)": {

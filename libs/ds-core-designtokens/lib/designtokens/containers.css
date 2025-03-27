@@ -22,14 +22,6 @@
   --semantic-responsive-wide-content: var(--container-xs);
 }
 
-/* breakpoint-xs */
-@media (width >= 480px) {
-  :root,
-  :host {
-    --semantic-responsive-wide-content: var(--container-s);
-  }
-}
-
 /* breakpoint-s */
 @media (width >= 640px) {
   :root,
@@ -37,6 +29,7 @@
     --semantic-responsive-container: var(--container-s);
     --semantic-responsive-container-spacing: 0;
     --semantic-responsive-article: var(--container-s);
+    --semantic-responsive-wide-content: var(--container-s);
   }
 }
 
