@@ -63,7 +63,9 @@ const generateTableRows = (
 export const Containers: StoryObj = {
   render: () => {
     const responsiveTokens = Object.fromEntries(
-      Object.entries(containersJson[':root,\n:host']).slice(8, 16)
+      Object.entries(containersJson[':root,\n:host']).filter(([key, _value]) =>
+        key.includes('responsive')
+      )
     );
     return (
       <>
