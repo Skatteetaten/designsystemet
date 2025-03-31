@@ -39,10 +39,7 @@ export interface ModalProps extends BaseProps {
   imageSourceAltText?: string;
   /** Icon-komponent som en funksjon som vises over overskriften */
   renderIcon?: () => ReactElement<IconProps>;
-  /**
-   * Modal i shadowndom.
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon.
-   */
+  /** Modal i shadowndom. */
   shadowRootNode?: Document | ShadowRoot;
   /** Callback når modalen lukkes */
   onClose?: () => void;

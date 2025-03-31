@@ -91,11 +91,9 @@ export const Modal = ({
       if (isAutoOpened) {
         setIsAutoOpened(false);
         statusFlagRef.current.hasUserInteractionBeforeOpen = true;
-        //TODO skjult div kan ligge i shadowDom. Da kan vi ikke finne den med querySelector
-        // Denne modalen kan også eksistere i en shadowDom. ;-)
-        const elementToFocus: HTMLDivElement | null = document.querySelector(
-          '#topbanner-focus-target'
-        );
+        const elementToFocus: HTMLDivElement | null = shadowRootNode
+          ? shadowRootNode.querySelector('#topbanner-focus-target')
+          : document.querySelector('#topbanner-focus-target');
         if (elementToFocus) {
           elementToFocus?.focus();
         } else {
