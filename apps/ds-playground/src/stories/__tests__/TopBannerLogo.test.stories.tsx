@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, fireEvent, fn, waitFor, within } from '@storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
@@ -9,7 +9,6 @@ import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerLogo/T
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   logoAsArr,
-  LogoRefHandle,
   TopBannerLogoProps,
 } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
 import customLogo from '../../assets/custom-logo.svg';
@@ -57,9 +56,9 @@ export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
     ...defaultArgs,
-    ref: (instance: LogoRefHandle | null): void => {
-      if (instance && instance.logoRef && instance.logoRef.current) {
-        instance.logoRef.current.id = 'dummyIdForwardedFromRef';
+    ref: (instance: HTMLAnchorElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
       }
     },
   },
@@ -194,5 +193,30 @@ export const WithBreakpointM = {
     viewport: {
       defaultViewport: '--breakpoint-m',
     },
+  },
+} satisfies Story;
+
+export const WithOnClick = {
+  name: 'With OnClick',
+  args: {
+    ...defaultArgs,
+    onClick: fn((e) => {
+      e.preventDefault();
+    }),
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const logo = canvas.getByRole('img', {
+      name: logoLinkText,
+    });
+    await fireEvent.click(logo);
+
+    await waitFor(() => expect(args.onClick).toHaveBeenCalledOnce());
   },
 } satisfies Story;
