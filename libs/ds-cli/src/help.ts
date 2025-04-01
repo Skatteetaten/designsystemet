@@ -4,7 +4,7 @@ export function helpCommand(): void {
   console.info('Skatteetatens Designsystem CLI');
   console.info(`
 📝 Documentation
-   - ${chalk.blueBright('https://github.io/skatteetaten/designsystemet')}
+   - ${chalk.blueBright('https://skatteetaten.github.io/designsystemet/?path=/docs/verktøy-kommandolinjeverktøy--docs')}
 
 💻 Commands:
    - ${chalk.cyan(

@@ -15,7 +15,7 @@ export const migrations: {
       path: 'v2.0.0/update-textarea/update-textarea.js',
     },
     {
-      description: 'Alert: remove deprecated prop "important"',
+      description: 'Alert: change variant "neutral" to "info"',
       value: 'v2-alert',
       path: 'v2.0.0/alert-remove-variant-neutral/alert-remove-variant-neutral.js',
     },
