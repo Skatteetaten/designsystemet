@@ -17,7 +17,7 @@ import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
 
 import styles from './RolePickerPeopleList.module.scss';
 
-const MAX_INIITAL_ITEMS = 5;
+const MAX_INITIAL_ITEMS = 5;
 
 export const RolePickerPeopleList = ({
   people,
@@ -34,7 +34,7 @@ export const RolePickerPeopleList = ({
 
   const handleExpand = (): void => {
     setIsExpanded(true);
-    navRef.current?.querySelectorAll('a')[MAX_INIITAL_ITEMS - 1].focus();
+    navRef.current?.querySelectorAll('a')[MAX_INITIAL_ITEMS - 1].focus();
   };
 
   const handleCollapse = (): void => {
@@ -71,7 +71,7 @@ export const RolePickerPeopleList = ({
     if (isExpanded) {
       return items;
     }
-    return items.slice(0, MAX_INIITAL_ITEMS);
+    return items.slice(0, MAX_INITIAL_ITEMS);
   }, [people.list, showDeceasedPeople, filterQuery, isExpanded]);
 
   const getShowAllCount = useCallback((): number => {
@@ -81,7 +81,7 @@ export const RolePickerPeopleList = ({
   }, [people.list, people.total, showDeceasedPeople]);
 
   const displayToggleAllButton =
-    !filterQuery && people.total > MAX_INIITAL_ITEMS;
+    !filterQuery && people.total > MAX_INITIAL_ITEMS;
 
   return (
     <div>
@@ -121,6 +121,7 @@ export const RolePickerPeopleList = ({
         <div className={styles.showAllButtonWrapper}>
           {isExpanded ? (
             <Button variant={'tertiary'} onClick={handleCollapse}>
+              {/* TODO Hent fra tekstlistekatalogen */}
               {'Vis færre personer'}
             </Button>
           ) : (

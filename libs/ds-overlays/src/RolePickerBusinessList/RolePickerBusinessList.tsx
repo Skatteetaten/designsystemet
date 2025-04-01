@@ -279,6 +279,7 @@ export const RolePickerBusinessList = ({
         <div className={styles.showAllButtonWrapper}>
           {isExpanded ? (
             <Button variant={'tertiary'} onClick={handleCollapse}>
+              {/* TODO Hent fra tekstlistekatalogen */}
               {'Vis færre virksomheder'}
             </Button>
           ) : (

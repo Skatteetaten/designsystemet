@@ -384,7 +384,17 @@ export const Defaults = {
       disable: true,
     },
   },
-};
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const searchInput = within(modal).queryByRole('searchbox');
+    expect(searchInput).toBeInTheDocument();
+  },
+} satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
@@ -416,7 +426,7 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const WithShowInactiveOrganizations = {
-  name: 'With Show Inactive Organizations (A11, B4)',
+  name: 'With Show Inactive Organizations And Show Less Button (A11, A18, B4)',
   args: {
     ...defaultArgs,
     people: undefined,
@@ -440,14 +450,17 @@ export const WithShowInactiveOrganizations = {
 
     expect(checkBox).toBeChecked();
 
-    const button = await within(modal).findByRole('button', {
+    const showMoreButton = await within(modal).findByRole('button', {
       name: /vis alle/i,
     });
 
-    await fireEvent.click(button);
+    await fireEvent.click(showMoreButton);
 
     const links = await within(modal).findAllByRole('link');
     expect(links.length).toEqual(args.businesses?.list.length);
+    expect(showMoreButton).toBeInTheDocument();
+    const showLessButton = await within(modal).findByText(/færre/i);
+    expect(showLessButton).toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -914,10 +927,10 @@ export const WithNoDoubleUnitTypes = {
 } satisfies Story;
 
 export const WithMinimumEntitiesForSearch = {
-  name: 'With Minimum Entities For Search',
+  name: 'With Minimum Entities For Search (A19)',
   args: {
     ...defaultArgs,
-    minimumEntitiesForSearch: 15, // Set a threshold for the search to appear
+    minimumEntitiesForSearch: 17, // Det finnes 16 personer/virksomheter i rollevelgeren, så søkefeltet vises ikke
   },
   render: DefaultTemplate,
   play: async ({ canvasElement }): Promise<void> => {
@@ -927,9 +940,7 @@ export const WithMinimumEntitiesForSearch = {
 
     const modal = await canvas.findByRole('dialog');
 
-    const searchInput = within(modal).queryByRole('textbox', {
-      name: /search/i,
-    });
+    const searchInput = within(modal).queryByRole('searchbox');
     expect(searchInput).not.toBeInTheDocument();
   },
 } satisfies Story;

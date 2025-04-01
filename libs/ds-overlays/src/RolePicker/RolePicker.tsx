@@ -175,6 +175,7 @@ export const RolePicker = ({
             {getRepresentationText()}
             {displaySearch ? (
               <RolePickerFilterInput
+                // TODO Update i tekstlistekatalogen
                 label={
                   people && businesses
                     ? t('rolepicker.SearchAll')
