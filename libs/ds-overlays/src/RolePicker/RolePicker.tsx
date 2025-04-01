@@ -19,7 +19,7 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   getRolePickerHideCloseButtonDefault,
-  getRolePickerSearchVisibilityLimitDefault,
+  getRolePickerMinimumEntitiesForSearchDefault,
   getRolePickerShowDeceasedPeopleDefault,
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
@@ -51,7 +51,7 @@ export const RolePicker = ({
   dismissOnEsc = getModalDismissOnEscDefault(),
   dismissOnOutsideClick = getModalDismissOnOutsideClickDefault(),
   hideCloseButton = getRolePickerHideCloseButtonDefault(),
-  searchVisibilityLimit = getRolePickerSearchVisibilityLimitDefault(),
+  minimumEntitiesForSearch = getRolePickerMinimumEntitiesForSearchDefault(),
   showInactiveBusinesses = getRolePickerShowInactiveBusinessesDefault(),
   showSubunits = getRolePickerShowSubunitsDefault(),
   showDeceasedPeople = getRolePickerShowDeceasedPeopleDefault(),
@@ -71,7 +71,8 @@ export const RolePicker = ({
   const deferredFilter = useDeferredValue(filter);
   const businessesCount = businesses ? businesses.total : 0;
   const peopleCount = people ? people.total : 0;
-  const displaySearch = businessesCount + peopleCount >= searchVisibilityLimit;
+  const displaySearch =
+    businessesCount + peopleCount >= minimumEntitiesForSearch;
 
   const modalRef = useRef<HTMLDialogElement>(null);
 
@@ -255,4 +256,5 @@ export {
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
   getRolePickerShowDeceasedPeopleDefault,
+  getRolePickerMinimumEntitiesForSearchDefault,
 };

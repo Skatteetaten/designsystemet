@@ -239,6 +239,10 @@ const meta = {
       table: { disable: true },
       control: 'object',
     },
+    minimumEntitiesForSearch: {
+      table: { disable: true },
+      control: 'number',
+    },
     title: {
       table: { disable: true },
       control: 'text',
@@ -267,7 +271,6 @@ const meta = {
       table: { disable: true },
       control: 'boolean',
     },
-
     onClose: {
       table: { disable: true },
     },
@@ -852,7 +855,7 @@ export const WithDeceasedPeople = {
       disable: true,
     },
   },
-  play: async ({ args, canvasElement }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
     await userEvent.click(openButton);
@@ -907,5 +910,26 @@ export const WithNoDoubleUnitTypes = {
       const unitType = words[words.length - 1];
       expect(titleText.endsWith(` ${unitType} ${unitType}`)).toBe(false);
     });
+  },
+} satisfies Story;
+
+export const WithMinimumEntitiesForSearch = {
+  name: 'With Minimum Entities For Search',
+  args: {
+    ...defaultArgs,
+    minimumEntitiesForSearch: 15, // Set a threshold for the search to appear
+  },
+  render: DefaultTemplate,
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const searchInput = within(modal).queryByRole('textbox', {
+      name: /search/i,
+    });
+    expect(searchInput).not.toBeInTheDocument();
   },
 } satisfies Story;

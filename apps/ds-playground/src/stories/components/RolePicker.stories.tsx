@@ -18,6 +18,7 @@ import {
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
   getRolePickerShowDeceasedPeopleDefault,
+  getRolePickerMinimumEntitiesForSearchDefault,
 } from '@skatteetaten/ds-overlays';
 
 import { category } from '../../../.storybook/helpers';
@@ -225,6 +226,14 @@ const meta = {
         category: category.props,
         defaultValue: {
           summary: getRolePickerHideCloseButtonDefault().toString(),
+        },
+      },
+    },
+    minimumEntitiesForSearch: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getRolePickerMinimumEntitiesForSearchDefault().toString(),
         },
       },
     },
