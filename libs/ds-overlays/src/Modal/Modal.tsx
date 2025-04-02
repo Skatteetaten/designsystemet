@@ -113,7 +113,7 @@ export const Modal = ({
         dialog.removeEventListener('close', handleClose);
       }
     };
-  }, [isAutoOpened]);
+  }, [isAutoOpened, shadowRootNode]);
 
   useEffect(() => {
     /**
