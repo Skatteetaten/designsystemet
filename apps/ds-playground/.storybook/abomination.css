@@ -1,0 +1,98 @@
+*:not(#global-nav__toggler .navbar__itemflex) {
+  p:has(div) div {
+    --note: '🚫 <div> element cannot be inside a <p> element';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  button:has(a) a {
+    --note: '🚫 <a> element cannot be inside a <button> element';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  a:has(button) button {
+    --note: '🚫 <button> element cannot be inside <a> element';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  a[onclick],
+  a[href*='javascript'] {
+    --note: '🚫 don‘t use <a> element to handle js events. Use event listeners instead.';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  ul:has(> :not(li)) > :not(li),
+  ul.list-bullets:has(> :not(li)) > :not(li) {
+    --note: '🚫 only <li> elements can be descendant of the <ul> element';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  table {
+    &:has(> :not(tr, thead, tbody, tfoot, caption))
+      > :not(tr, thead, tbody, tfoot, caption) {
+      --note: '🚫 only <tr>, <thead>, <tbody>, <tfoot> or <caption> elements can be descendants of the <table> element';
+      outline: 2px solid var(--semantic-danger-foreground);
+      margin: 2px;
+    }
+  }
+
+  table thead,
+  table tbody,
+  table tfoot {
+    &:has(> :not(tr)) > :not(tr) {
+      --note: '🚫 only the <tr> element can be descendant of <table>, <thead>, <tbody> or <tfoot> elements';
+      outline: 2px solid var(--semantic-danger-foreground);
+      margin: 2px;
+    }
+  }
+
+  tr {
+    &:has(> :not(th, td)) > :not(th, td) {
+      --note: '🚫 only <th> and <td> elements can be descendants of the <tr> element';
+      outline: 2px solid var(--semantic-danger-foreground);
+      margin: 2px;
+    }
+  }
+
+  tr.mb-table__row--clickable th,
+  tr.mb-table__row--clickable td {
+    &:has(a, button) {
+      --note: '🚫 nested clickable element(s) in a row with the mb-table__row--clickable class';
+      outline: 2px solid var(--semantic-danger-foreground);
+    }
+  }
+
+  table tbody > tr:has(th) > th:not([scope='row']) {
+    --note: '😢 <th> in <tbody> is missing scope="row"';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  label:not([for], :has(input), :has(textarea), :has(select)) {
+    --note: '😢 <label> is missing <for> attribute, or <input>, <textarea> or <select> child element';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  details:not(:has(> summary)) {
+    --note: '😢 <summary> is missing inside the <details> element';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  :not(fieldset) > legend {
+    --note: '🚫 <legend> is not a direct child of the <fieldset> element';
+    outline: 2px solid var(--semantic-danger-foreground);
+  }
+
+  &:hover::after {
+    content: var(--note);
+    background-color: white;
+    border: 2px solid var(--semantic-danger-foreground);
+    padding: 1rem;
+    position: fixed;
+    top: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow:
+      1px 4px 8px 0 rgba(0, 0, 0, 0.24),
+      1px 2px 4px 0 rgba(0, 0, 0, 0.24);
+    z-index: 9999;
+  }
+}
