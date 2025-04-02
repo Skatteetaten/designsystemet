@@ -11,6 +11,8 @@ import { getMigrationPath, getMigrationString } from './migrations';
 run();
 
 async function run(): Promise<void> {
+  const __dirname = dirname(new URL(import.meta.url).pathname);
+
   if (!process.argv[2] || process.argv[2] === 'help') {
     helpCommand();
     return;
@@ -38,15 +40,11 @@ async function run(): Promise<void> {
     // run codemod
     const [, , , codemodName, ...restArgs] = process.argv;
 
-    const __dirname = dirname(new URL(import.meta.url).pathname);
-
     const transformPath = join(
       __dirname,
       'src/codemods/transforms',
       getMigrationPath(codemodName) ?? ''
     );
-
-    console.log(transformPath);
 
     if (!transformPath) {
       console.error(`Codemod "${codemodName}" not found in configuration.`);
@@ -68,9 +66,8 @@ async function run(): Promise<void> {
   }
 
   if (process.argv[2] === '-v' || process.argv[2] === '--version') {
-    const pkg = JSON.parse(
-      fs.readFileSync('./package.json').toString()
-    ).version;
+    const packagePath = join(__dirname, 'package.json');
+    const pkg = JSON.parse(fs.readFileSync(packagePath).toString()).version;
     console.info(pkg);
     return;
   }

@@ -12,7 +12,7 @@ export const migrations: {
     {
       description: 'Update TextField to new TextArea component',
       value: 'v2-textarea',
-      path: 'v2.0.0/update-textarea/update-textarea.js',
+      path: 'v2.0.0/split-textfield-textarea/split-textfield-textarea.js',
     },
     {
       description: 'Alert: change variant "neutral" to "info"',
