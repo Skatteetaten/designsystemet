@@ -31,7 +31,7 @@ async function run(): Promise<void> {
   Options:
   ${chalk.green('--dry, -d')}      Run without making any changes
   ${chalk.green('--exclude, -e')}  Exclude files or folders
-  ${chalk.green('--list, -l')}  List available codemods
+  ${chalk.green('--list, -l')}     List available codemods
 `
       );
 
@@ -40,16 +40,19 @@ async function run(): Promise<void> {
     // run codemod
     const [, , , codemodName, ...restArgs] = process.argv;
 
+    const migrationPath = getMigrationPath(codemodName);
+
+    if (!migrationPath) {
+      console.error(`Codemod "${codemodName}" not found in configuration.`);
+      listMigrations();
+      process.exit(1);
+    }
+
     const transformPath = join(
       __dirname,
       'src/codemods/transforms',
-      getMigrationPath(codemodName) ?? ''
+      migrationPath
     );
-
-    if (!transformPath) {
-      console.error(`Codemod "${codemodName}" not found in configuration.`);
-      process.exit(1);
-    }
 
     if (fs.existsSync(transformPath)) {
       const args = [
@@ -60,6 +63,7 @@ async function run(): Promise<void> {
       execSync(`npx codemod ${args}`, { stdio: 'inherit' });
     } else {
       console.error(`Codemod "${codemodName}" not found in configuration.`);
+      listMigrations();
       process.exit(1);
     }
     return;
@@ -79,4 +83,9 @@ async function run(): Promise<void> {
       )} for all available commands.`
     )
   );
+}
+
+function listMigrations(): void {
+  console.info('Available codemods:');
+  console.info(getMigrationString());
 }
