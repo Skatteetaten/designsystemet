@@ -11,7 +11,7 @@ import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: Table.EditableRow,
-  title: 'komponenter/Table/EditableRow',
+  title: 'Komponenter/Table/EditableRow',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
