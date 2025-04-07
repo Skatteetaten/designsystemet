@@ -42,7 +42,6 @@ export const FileUploader = (({
   helpSvgPath,
   helpText,
   label,
-  successIconTitle,
   titleHelpSvg,
   uploadResult,
   uploadedFiles,
@@ -296,7 +295,6 @@ export const FileUploader = (({
               <FileUploaderFile
                 key={file.id ?? file.name}
                 href={file.href}
-                successIconTitle={successIconTitle}
                 fileIconTitle={fileIconTitle}
                 animate={isNewFile}
                 showSpinner={filesPendingDelete[file.id ?? file.name]}

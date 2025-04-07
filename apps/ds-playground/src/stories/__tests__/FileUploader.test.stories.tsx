@@ -60,7 +60,6 @@ const meta = {
     acceptedFileFormatsDescription: {
       table: { disable: true, category: category.props },
     },
-    successIconTitle: { table: { disable: true, category: category.props } },
     uploadResult: { table: { disable: true, category: category.props } },
     children: { table: { disable: true, category: category.props } },
     fileIconTitle: { table: { disable: true, category: category.props } },
@@ -275,7 +274,6 @@ export const WithTextOverrides: StoryObj<FileUploaderProps> = {
     acceptedFileFormatsDisplay: 'bilder og dokumenter',
     children: 'Trykk eller dra og slipp filer her',
     uploadedFiles: [{ name: 'document.pdf' }],
-    successIconTitle: 'lastet opp',
   },
 
   play: async ({ canvasElement }): Promise<void> => {

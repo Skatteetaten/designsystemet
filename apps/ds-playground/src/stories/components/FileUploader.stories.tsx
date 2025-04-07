@@ -38,7 +38,6 @@ const meta = {
     acceptedFileFormats: { table: { category: category.props } },
     shouldNormalizeFileName: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
-    successIconTitle: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,

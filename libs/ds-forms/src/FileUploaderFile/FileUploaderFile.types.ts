@@ -19,8 +19,6 @@ export interface FileUploaderFileProps extends BaseProps, LinkHTMLAttributes {
   animate?: boolean;
   /** Skal det vises spinner i stedet for hakeikon ved filen */
   showSpinner?: boolean;
-  /** Overskriver default tittel på ikonet som viser at opplasting av fil er vellykket*/
-  successIconTitle?: string;
   /** Filnavn */
   children: string;
 }
