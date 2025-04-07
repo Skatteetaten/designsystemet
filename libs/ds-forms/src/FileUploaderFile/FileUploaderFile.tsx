@@ -18,7 +18,7 @@ export const FileUploaderFile = ({
   'data-testid': dataTestId,
   fileIconTitle,
   href,
-  animate,
+  shouldAnimate,
   showSpinner,
   onClick,
   onClickDelete,
@@ -38,7 +38,7 @@ export const FileUploaderFile = ({
     >
       <Card
         spacing={'xxs'}
-        className={`${styles.fileCard} ${animate ? styles.fileCard_withAnimation : ''}`.trim()}
+        className={`${styles.fileCard} ${shouldAnimate ? styles.fileCard_withAnimation : ''}`.trim()}
       >
         <Card.Content
           classNames={{

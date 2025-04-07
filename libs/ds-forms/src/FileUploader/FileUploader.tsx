@@ -296,7 +296,7 @@ export const FileUploader = (({
                 key={file.id ?? file.name}
                 href={file.href}
                 fileIconTitle={fileIconTitle}
-                animate={isNewFile}
+                shouldAnimate={isNewFile}
                 showSpinner={filesPendingDelete[file.id ?? file.name]}
                 onClick={(event): void => {
                   onFileDownload?.(event, file);
