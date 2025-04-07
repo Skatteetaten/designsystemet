@@ -9,7 +9,6 @@ import {
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import { densityArr } from '@skatteetaten/ds-core-utils';
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -31,8 +30,6 @@ const meta = {
     caption: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...densityArr],
-      control: 'radio',
     },
     hasFullWidth: { table: { disable: true } },
     showCaption: { table: { disable: true } },
@@ -47,10 +44,6 @@ const meta = {
 } satisfies Meta<typeof Table>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs: TableProps = {
-  caption,
-};
 
 const editableContent = (): ReactNode => (
   <div className={'emptyExpandedTableRow'}></div>
@@ -195,7 +188,6 @@ const ExpandEditSortTable = (
                     </Heading>
                   </div>
                 }
-                expandButtonPosition={'left'}
                 isExpandable
               >
                 {content}
@@ -209,7 +201,6 @@ const ExpandEditSortTable = (
               id={id}
               data-testid={`row-${index}`}
               editButtonAriaDescribedby={id}
-              editButtonPosition={'left'}
               editableContent={editableContent}
             >
               {content}
@@ -269,7 +260,6 @@ export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLTableElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -294,7 +284,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -319,9 +308,7 @@ export const WithAttributes = {
 export const Defaults = {
   render: Template,
   name: 'Defaults (Table A1, A8, B1, B2, TableRow B1, A20)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText(caption)).toBeInTheDocument();
@@ -331,13 +318,20 @@ export const Defaults = {
 
 export const WithVariantCompact = {
   render: TemplateExpandEditSort,
-  name: 'Variant compact(Table A1, A3, TableHeader A2, TableRow A3, A17, A19, A20)',
+  name: 'Variant Compact (Table A1, A3, TableHeader A2, TableRow A3, A17, A19, A20)',
   args: {
-    ...defaultArgs,
     variant: 'compact',
   },
   argTypes: {
     variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      click: [
+        `${wrapper} [data-testid="row-0"] button`,
+        `${wrapper} [data-testid="row-expand-3"] button`,
+      ],
+    },
   },
 } satisfies Story;
 
@@ -383,7 +377,7 @@ const TemplateScroll: StoryFn<typeof Table> = (args) => {
 
 export const WithScrollbar = {
   render: TemplateScroll,
-  name: 'With scroll (A5)',
+  name: 'With Scroll (A5)',
   parameters: { a11y: { disable: true } },
 } satisfies Story;
 
@@ -429,7 +423,6 @@ export const WithFullWidthAndTextAlignment = {
   render: TemplateAlignment,
   name: 'With Full Width, text Alignment (Table A4, A10, TableHeader A1, TableRow A2)',
   args: {
-    ...defaultArgs,
     hasFullWidth: true,
   },
 } satisfies Story;
@@ -437,9 +430,7 @@ export const WithFullWidthAndTextAlignment = {
 export const WithExpandEditSort = {
   render: TemplateExpandEditSort,
   name: 'With Expand Edit Sort (Table A9, A11, A14, A15, TableHeader A4, A5, A6, A7, B2, TableRow B3, A14, A15, A19)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: {
       hover: [
@@ -465,7 +456,6 @@ export const WithDefaultRowInEditMode = {
   render: TemplateExpandEditSort,
   name: 'With Default Row In Edit Mode',
   args: {
-    ...defaultArgs,
     rowInEditModeId: '3vesy',
   },
 } satisfies Story;
@@ -473,9 +463,7 @@ export const WithDefaultRowInEditMode = {
 export const WithWideScreen = {
   render: TemplateExpandEditSort,
   name: 'With Wide screen (Table A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-m',
@@ -487,7 +475,6 @@ export const WithFullWidthExpandableEdit = {
   render: TemplateExpandEditSort,
   name: 'With FullWidth Edit Expand Sort',
   args: {
-    ...defaultArgs,
     hasFullWidth: true,
   },
 } satisfies Story;
@@ -495,7 +482,6 @@ export const WithFullWidthExpandableEdit = {
 export const WithCanBeManuallyFocused: Story = {
   render: Template,
   args: {
-    ...defaultArgs,
     canBeManuallyFocused: true,
   },
   argTypes: {
