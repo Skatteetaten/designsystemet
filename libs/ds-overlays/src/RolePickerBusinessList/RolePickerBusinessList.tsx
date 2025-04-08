@@ -2,7 +2,7 @@ import { useCallback, useContext, useMemo, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import {
   BriefcaseSVGpath,
@@ -12,6 +12,7 @@ import {
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { RolePickerBusinessListProps } from './RolePickerBusinessList.types';
+import { getBusinessTitle } from './utils';
 import { Business } from '../RolePicker/RolePicker.types';
 import { RolePickerContext } from '../RolePickerContext/RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
@@ -187,11 +188,11 @@ export const RolePickerBusinessList = ({
                 <li key={item.organizationNumber}>
                   <RolePickerRow
                     id={item.organizationNumber}
-                    title={`${item.name} ${item.unitType} ${item.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
+                    title={getBusinessTitle(item)}
                     description={
                       <>
                         {t('rolepicker.BusinessDescriptionPrefix')}{' '}
-                        {item.organizationNumber}{' '}
+                        {formatOrganisationNumber(item.organizationNumber)}{' '}
                         <em>
                           {'('}
                           {t('rolepicker.MainBusiness')}
@@ -218,12 +219,14 @@ export const RolePickerBusinessList = ({
                         >
                           <RolePickerRow
                             id={sub.organizationNumber}
-                            title={`${sub.name} ${sub.unitType} ${sub.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
+                            title={getBusinessTitle(sub)}
                             titleAs={'h4'}
                             description={
                               <>
                                 {t('rolepicker.BusinessDescriptionPrefix')}{' '}
-                                {sub.organizationNumber}{' '}
+                                {formatOrganisationNumber(
+                                  sub.organizationNumber
+                                )}{' '}
                                 <em>
                                   {'('}
                                   {t('rolepicker.SubUnit')}
@@ -254,8 +257,8 @@ export const RolePickerBusinessList = ({
                 <li key={item.organizationNumber}>
                   <RolePickerRow
                     id={item.organizationNumber}
-                    title={`${item.name} ${item.unitType} ${item.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
-                    description={`${t('rolepicker.BusinessDescriptionPrefix')} ${item.organizationNumber}`}
+                    title={getBusinessTitle(item)}
+                    description={`${t('rolepicker.BusinessDescriptionPrefix')} ${formatOrganisationNumber(item.organizationNumber)}`}
                     svgPath={item.isDeleted ? BriefcaseOffSVGpath : svgPath}
                     onClick={() => {
                       handleEntityClicked(item);

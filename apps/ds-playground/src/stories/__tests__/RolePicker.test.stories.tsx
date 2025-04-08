@@ -16,128 +16,100 @@ import {
 
 const me: Person = {
   name: 'Ola Nordmann',
-  personId: '101010 12345',
+  personId: '10101012345',
   type: 'Person',
 };
 
 const businesses: Paginated<Business> = {
-  total: 16,
+  total: 12,
   list: [
     {
-      name: 'Costco',
+      name: 'Costco AS',
       organizationNumber: '123456777',
       isDeleted: false,
       unitType: 'AS',
       type: 'Organization',
       subunits: [
         {
-          name: 'Google',
+          name: 'Google ASA',
           organizationNumber: '123456789',
           isDeleted: false,
           type: 'Organization',
-          unitType: 'AS',
+          unitType: 'ASA',
         },
         {
-          name: 'Facebook',
+          name: 'Facebook RHF',
           organizationNumber: '123456790',
           isDeleted: true,
           type: 'Organization',
-          unitType: 'AS',
+          unitType: 'RHF',
         },
       ],
     },
     {
-      name: 'Instagram',
+      name: 'Instagram AS',
       organizationNumber: '312843211',
       isDeleted: true,
       unitType: 'AS',
       type: 'Organization',
       subunits: [
         {
-          name: 'Snapchat',
+          name: 'Snapchat AS',
           organizationNumber: '123456623',
           isDeleted: true,
           type: 'Organization',
           unitType: 'AS',
         },
         {
-          name: 'Statoil',
+          name: 'Statoil ASA',
           organizationNumber: '312849218',
           isDeleted: false,
           type: 'Organization',
-          unitType: 'AS',
+          unitType: 'ASA',
         },
       ],
     },
     {
-      name: 'Samsung',
+      name: 'Samsung DA',
       organizationNumber: '312943218',
       isDeleted: false,
       type: 'Organization',
-      unitType: 'AS',
+      unitType: 'DA',
     },
     {
-      name: 'Toshiba',
+      name: 'Toshiba AS',
       organizationNumber: '312643218',
       isDeleted: false,
       type: 'Organization',
       unitType: 'AS',
     },
     {
-      name: 'Hitachi',
+      name: 'Hitachi AS',
       organizationNumber: '312743218',
       isDeleted: false,
       type: 'Organization',
       unitType: 'AS',
     },
     {
-      name: 'Vanguard',
+      name: 'Vanguard AS',
       organizationNumber: '332843218',
       isDeleted: false,
       type: 'Organization',
       unitType: 'AS',
     },
     {
-      name: 'Amazon',
+      name: 'Amazon ASA',
       organizationNumber: '112843218',
       isDeleted: false,
       type: 'Organization',
-      unitType: 'AS',
+      unitType: 'ASA',
     },
     {
       name: 'Meta',
       organizationNumber: '212843218',
       isDeleted: false,
       type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Apple',
-      organizationNumber: '412843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Microsoft',
-      organizationNumber: '512843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Netflix',
-      organizationNumber: '612843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Tesla',
-      organizationNumber: '712843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
+      unitType: 'ApS',
     },
   ],
 };
@@ -147,25 +119,25 @@ const people: Paginated<Person> = {
   list: [
     {
       name: 'Antikvitet presis',
-      personId: '138899 99726',
+      personId: '13889999726',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
-      personId: '188495 74503',
+      personId: '18849574503',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lomme filosofisk',
-      personId: '088896 74513',
+      personId: '08889674513',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Adelsmann varm',
-      personId: '148924 49911',
+      personId: '14892449911',
       type: 'Person',
       isDeleted: false,
     },
@@ -177,67 +149,67 @@ const people11: Paginated<Person> = {
   list: [
     {
       name: 'Frisk Elefant',
-      personId: '100908 12345',
+      personId: '10090812345',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Melankolsk Aldrende Ape',
-      personId: '138899 99726',
+      personId: '13889999726',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
-      personId: '188495 74503',
+      personId: '18849574503',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lomme filosofisk',
-      personId: '088896 74513',
+      personId: '08889674513',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Adelsmann varm',
-      personId: '148924 49911',
+      personId: '14892449911',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Kari Nordmann',
-      personId: '101010 54321',
+      personId: '10101054321',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Per Hansen',
-      personId: '202020 12345',
+      personId: '20202012345',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lise Olsen',
-      personId: '303030 67890',
+      personId: '30303067890',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Nina Johansen',
-      personId: '404040 11223',
+      personId: '40404011223',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Ole Pettersen',
-      personId: '505050 44556',
+      personId: '50505044556',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Eva Nilsen',
-      personId: '606060 77889',
+      personId: '60606077889',
       type: 'Person',
       isDeleted: false,
     },
@@ -761,21 +733,21 @@ export const WithNoDeletedBusinesses = {
       total: 3,
       list: [
         {
-          name: 'Samsung',
+          name: 'Samsung AS',
           organizationNumber: '312943218',
           isDeleted: false,
           type: 'Organization',
           unitType: 'AS',
           subunits: [
             {
-              name: 'Snapchat',
+              name: 'Snapchat AS',
               organizationNumber: '123456623',
               isDeleted: false,
               type: 'Organization',
               unitType: 'AS',
             },
             {
-              name: 'Statoil',
+              name: 'Statoil AS',
               organizationNumber: '312849218',
               isDeleted: false,
               type: 'Organization',
@@ -816,14 +788,14 @@ export const WithNoSubunits = {
       total: 2,
       list: [
         {
-          name: 'Samsung',
+          name: 'Samsung AS',
           organizationNumber: '312943218',
           isDeleted: false,
           type: 'Organization',
           unitType: 'AS',
         },
         {
-          name: 'Vanguard',
+          name: 'Vanguard AS',
           organizationNumber: '332843218',
           isDeleted: true,
           type: 'Organization',
@@ -900,5 +872,40 @@ export const WithDeceasedPeople = {
 
     const links = await within(modal).findAllByRole('link');
     expect(links.length).toEqual(people11?.list.length);
+  },
+} satisfies Story;
+
+export const WithNoDoubleUnitTypes = {
+  name: 'With No Double Unit Types',
+  args: {
+    ...defaultArgs,
+    showSubunits: false,
+    people: undefined,
+    me: undefined,
+  },
+  render: DefaultTemplate,
+  argTypes: {
+    me: { table: { disable: false } },
+    people: { table: { disable: false } },
+    businesses: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const titles = await within(modal).findAllByRole('heading', { level: 3 });
+
+    titles.forEach((title) => {
+      const titleText = title.textContent?.toUpperCase() || '';
+      const words = title.textContent?.split(' ') || [];
+      const unitType = words[words.length - 1];
+      expect(titleText.endsWith(` ${unitType} ${unitType}`)).toBe(false);
+    });
   },
 } satisfies Story;

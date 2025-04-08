@@ -1,4 +1,4 @@
-import { JSX, useImperativeHandle, useRef } from 'react';
+import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -29,13 +29,9 @@ export const TopBannerLogo = ({
   href = getTopBannerLogoHrefDefault(),
   mobileLogo,
   alt,
+  onClick,
 }: TopBannerLogoProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
-
-  const logoRef = useRef<HTMLAnchorElement & HTMLDivElement>(null);
-  useImperativeHandle(ref, () => ({
-    logoRef: logoRef,
-  }));
 
   const defaultLogo =
     dsI18n.language === Languages.Engelsk
@@ -54,12 +50,13 @@ export const TopBannerLogo = ({
 
   return (
     <Tag
-      ref={logoRef}
+      ref={ref as (instance: HTMLDivElement | HTMLAnchorElement | null) => void}
       id={id}
       className={concatenatedClassName}
       lang={lang}
       data-testid={dataTestId}
       href={Tag === 'div' ? undefined : href}
+      onClick={onClick}
     >
       <>
         <img

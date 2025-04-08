@@ -109,10 +109,7 @@ export const Examples: Story = {
               </Paragraph>
             }
           >
-            <ArbeidTrygdPensjonIcon
-              size={'extraLarge'}
-              className={'flexShrinkZero'}
-            />
+            <ArbeidTrygdPensjonIcon size={'extraLarge'} />
             <Heading as={'h3'} level={3}>
               {'Andre inntekter'}
             </Heading>
@@ -176,7 +173,7 @@ export const FileListExample: Story = {
             classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
-            <FileIcon className={'flexShrinkZero paddingXS'} size={'small'} />
+            <FileIcon className={'paddingXS'} size={'small'} />
             {'mine-hus-og-hoteller.zip'}
           </Card.Content>
         </Card>
@@ -186,10 +183,7 @@ export const FileListExample: Story = {
             classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
-            <FileIcon
-              className={'blueIcon flexShrinkZero paddingXS'}
-              size={'small'}
-            />
+            <FileIcon className={'blueIcon paddingXS'} size={'small'} />
             <Link className={'resetLinkStyling'} href={'#'}>
               {'mine-hus-og-hoteller.zip'}
             </Link>
@@ -201,10 +195,7 @@ export const FileListExample: Story = {
             classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
-            <WarningIcon
-              className={'dangerIcon flexShrinkZero paddingXS'}
-              size={'small'}
-            />
+            <WarningIcon className={'dangerIcon paddingXS'} size={'small'} />
             {'carlos-santana_smooth-featuring-rob-thomas.mp3'}
           </Card.Content>
         </Card>
@@ -223,7 +214,7 @@ export const AlertExample: Story = {
       <div className={'flex flexWrap gapS'}>
         <Card className={'cardWidth'}>
           <Card.Alert
-            variant={'neutral'}
+            variant={'info'}
             title={'Informasjon'}
             titleAs={'h3'}
             onClose={(): void => headingRef?.current?.focus()}

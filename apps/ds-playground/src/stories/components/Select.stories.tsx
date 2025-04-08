@@ -18,7 +18,7 @@ const meta = {
   title: 'Komponenter/Select/Select',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     classNames: { control: false, table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
@@ -38,7 +38,7 @@ const meta = {
         defaultValue: { summary: 'HelpSimpleSVGpath' },
       },
     },
-    helpText: { table: { category: category.props } },
+    helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
     variant: {
@@ -70,7 +70,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { control: false, table: { category: category.event } },
   },
   args: {
     label: 'Farge',

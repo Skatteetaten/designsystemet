@@ -2,7 +2,10 @@ import { useCallback, useContext, useMemo, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  formatNationalIdentityNumber,
+} from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -100,7 +103,7 @@ export const RolePickerPeopleList = ({
                 <RolePickerRow
                   id={item.personId}
                   title={`${item.name}${item.isDeleted ? ` (${t('rolepicker.Deceased')})` : ''}`}
-                  description={`${t('rolepicker.PeopleDescriptionPrefix')} ${item.personId}`}
+                  description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(item.personId)}`}
                   svgPath={PersonSVGpath}
                   onClick={() => handleEntityClicked(item)}
                 />

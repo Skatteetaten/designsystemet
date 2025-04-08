@@ -11,10 +11,10 @@ import { useTranslation } from 'react-i18next';
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import { TableDataCell } from '../TableDataCell/TableDataCell';
-import { TableRow } from '../TableRow/TableRow';
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
 import { getIconButtonSize } from './utils';
+import { Table } from '../Table/Table';
+import { TableDataCell } from '../TableDataCell/TableDataCell';
 
 import styles from './TableRowWithIconButton.module.scss';
 
@@ -152,11 +152,12 @@ export const RowWithRightSideExpandButton = ({
   const isExpandableContentRows = (): boolean => {
     if (Array.isArray(expandableContent)) {
       return !expandableContent?.some(
-        (element) => !isValidElement(element) || element.type !== TableRow
+        (element) => !isValidElement(element) || element.type !== Table.Row
       );
     } else {
       return (
-        isValidElement(expandableContent) && expandableContent.type === TableRow
+        isValidElement(expandableContent) &&
+        expandableContent.type === Table.Row
       );
     }
   };

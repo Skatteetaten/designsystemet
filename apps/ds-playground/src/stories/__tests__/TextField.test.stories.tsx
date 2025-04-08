@@ -1,19 +1,12 @@
-import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
+import { FocusEvent, ChangeEvent, useState, JSX } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
-import { Button } from '@skatteetaten/ds-buttons';
 import { formArrSize } from '@skatteetaten/ds-core-utils';
-import {
-  TextboxRefHandle,
-  TextField,
-  textFieldAsArr,
-} from '@skatteetaten/ds-forms';
-import { Modal } from '@skatteetaten/ds-overlays';
+import { TextField } from '@skatteetaten/ds-forms';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -37,17 +30,11 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    as: {
-      table: { disable: true, category: category.props },
-      options: [...textFieldAsArr],
-      control: 'inline-radio',
-    },
     variant: {
       table: { disable: true, category: category.props },
       options: [...formArrSize],
       control: 'inline-radio',
     },
-    autosize: { table: { disable: true, category: category.props } },
     classNames: {
       table: { disable: true, category: category.props },
     },
@@ -84,7 +71,6 @@ const meta = {
     placeholder: { table: { disable: true, category: category.htmlAttribute } },
     readOnly: { table: { disable: true, category: category.htmlAttribute } },
     required: { table: { disable: true, category: category.htmlAttribute } },
-    rows: { table: { disable: true, category: category.htmlAttribute } },
     value: { table: { disable: true, category: category.htmlAttribute } },
     // Events
     onBlur: { table: { disable: true, category: category.event } },
@@ -108,9 +94,9 @@ export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
     ...defaultArgs,
-    ref: (instance: TextboxRefHandle | null): void => {
-      if (instance && instance.textboxRef && instance.textboxRef.current) {
-        instance.textboxRef.current.name = 'dummyNameForwardedFromRef';
+    ref: (instance: HTMLInputElement | null): void => {
+      if (instance) {
+        instance.name = 'dummyNameForwardedFromRef';
       }
     },
   },
@@ -235,28 +221,6 @@ export const WithVariantLarge = {
   },
 } satisfies Story;
 
-export const WithAs = {
-  name: 'With As (A1, A2)',
-  args: {
-    ...defaultArgs,
-    as: 'textarea',
-  },
-  argTypes: {
-    as: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} textarea`,
-      focus: `${wrapper} textarea`,
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox.tagName).toBe('TEXTAREA');
-  },
-} satisfies Story;
-
 export const WithDisabled = {
   name: 'With Disabled (B1, B8)',
   args: {
@@ -318,38 +282,6 @@ export const WithDefaultValueAndThousandSeparator = {
     imageSnapshot: { disable: true },
   },
   play: verifyAttribute('value', '10 000'),
-} satisfies Story;
-
-export const WithDefaultValueAndAutoSizeTextArea = {
-  name: 'With DefaultValue and Autosize TextArea',
-  args: {
-    ...defaultArgs,
-    as: 'textarea',
-    defaultValue: loremIpsum,
-    autosize: true,
-  },
-  argTypes: {
-    defaultValue: { table: { disable: false } },
-    autosize: { table: { disable: false } },
-  },
-  parameters: {
-    parameters: {
-      viewport: {
-        defaultViewport: '--breakpoint-xs',
-      },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveValue(loremIpsum);
-    await expect(textbox.tagName).toBe('TEXTAREA');
-    const { scrollHeight } = textbox;
-    const includeBorderAndMore = textbox.offsetHeight - textbox.clientHeight;
-    await expect(textbox).toHaveStyle({
-      height: `${scrollHeight + includeBorderAndMore}px`,
-    });
-  },
 } satisfies Story;
 
 export const WithAutoCompleteInputModeNameAndPlaceholder = {
@@ -465,24 +397,6 @@ export const WithPattern = {
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toHaveAttribute('pattern');
     await expect(textbox.tagName).toBe('INPUT');
-  },
-} satisfies Story;
-
-export const WithRows = {
-  name: 'With Rows As Textarea (A5)',
-  args: {
-    ...defaultArgs,
-    as: 'textarea',
-    rows: 4,
-  },
-  argTypes: {
-    rows: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveAttribute('rows', '4');
-    await expect(textbox.tagName).toBe('TEXTAREA');
   },
 } satisfies Story;
 
@@ -724,52 +638,6 @@ export const WithHelpToggleEvent = {
   },
 } satisfies Story;
 
-const TextAreaInModalTemplate: StoryFn<typeof TextField> = (args) => {
-  const modalRef = useRef<HTMLDialogElement>(null);
-  return (
-    <>
-      <Button
-        onClick={() => {
-          modalRef.current?.show();
-        }}
-      >
-        {'Vis modal'}
-      </Button>
-      <Modal ref={modalRef} title={'Modal med textarea'}>
-        <TextField {...args} />
-      </Modal>
-    </>
-  );
-};
-
-export const WithTextAreaAutoSizeInModal = {
-  name: 'With textarea AutoSize in Modal',
-  render: TextAreaInModalTemplate,
-  args: {
-    ...defaultArgs,
-    as: 'textarea',
-    autosize: true,
-  },
-  argTypes: {
-    defaultValue: { table: { disable: false } },
-    autosize: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    const button = canvas.getByRole('button');
-    await userEvent.click(button);
-
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox.tagName).toBe('TEXTAREA');
-    await waitFor(() =>
-      expect(textbox).toHaveStyle({
-        height: '64px',
-      })
-    );
-  },
-} satisfies Story;
-
 export const WithDataList = {
   name: 'With  Datalist (A13, A14)',
   render: (): JSX.Element => (
@@ -789,7 +657,6 @@ export const WithDataList = {
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
-    autosize: { table: { disable: false } },
     list: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -800,48 +667,13 @@ export const WithDataList = {
   },
 } satisfies Story;
 
-export const WithControlledValueAndAutoSizeTextArea = {
-  name: 'With Controlled Value and Autosize TextArea',
-  render: function Render(args): JSX.Element {
-    const [, setArgs] = useArgs();
-    return (
-      <>
-        <TextField
-          onChange={(e) => setArgs({ value: e.target.value })}
-          {...args}
-        />
-        <Button onClick={() => setArgs({ value: '' })}>{'Nullstill'}</Button>
-      </>
-    );
-  },
+export const WithLongInput = {
   args: {
-    ...defaultArgs,
-    as: 'textarea',
-    autosize: true,
-    value: loremIpsum,
+    label: 'Ledetekst',
+    className: 'textField150',
+    defaultValue: 'Dette er en lang tekst som skal vises i tekstfeltet',
   },
   argTypes: {
-    value: { table: { disable: false } },
-    autosize: { table: { disable: false } },
-  },
-  parameters: {
-    parameters: {
-      viewport: {
-        defaultViewport: '--breakpoint-xs',
-      },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await waitFor(() => expect(textbox).toHaveValue(loremIpsum));
-    const resetButton = canvas.getByRole('button');
-    resetButton.click();
-
-    const { scrollHeight } = textbox;
-    const includeBorderAndMore = textbox.offsetHeight - textbox.clientHeight;
-    await expect(textbox).toHaveStyle({
-      height: `${scrollHeight + includeBorderAndMore}px`,
-    });
+    defaultValue: { table: { disable: false } },
   },
 } satisfies Story;

@@ -43,9 +43,7 @@ export const useFileUploader = <T,>(
   };
 
   const initialState: Array<UploadedFile> = initiallyUploadedFiles ?? [];
-  const [state, dispatch] = useReducer<
-    (state: Array<UploadedFile>, action: FileAction) => Array<UploadedFile>
-  >(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const [uploadResult, setUploadResult] = useState<UploadResultData<T>>();
   const [isUploading, setIsUploading] = useState<boolean>(false);

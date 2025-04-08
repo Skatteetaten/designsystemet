@@ -26,8 +26,8 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    classNames: { table: { category: category.props } },
-    skipLink: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
+    skipLink: { control: false, table: { category: category.props } },
     title: { table: { category: category.props } },
     description: { table: { category: category.props } },
     user: { table: { category: category.props } },
@@ -43,13 +43,12 @@ const meta = {
         },
       },
     },
-    logoAltText: { table: { category: category.props } },
     // Event
-    onLogoClick: { table: { category: category.event } },
+    onLogoClick: { control: false, table: { category: category.event } },
   },
   args: {
     logoHref: '/start',
-    logoAltText: 'til startsiden kakeportalen',
+    title: 'Default Title',
   },
   parameters: {
     layout: 'fullscreen',
@@ -71,7 +70,6 @@ export const Examples: Story = {
           className={'bottomSpacingXL'}
           title={'MVA'}
           description={'Arbeidsliste'}
-          logoAltText={'Forside MVA'}
           logoHref={'/home'}
           user={'Etternavnesen Fornavn'}
         >
@@ -122,7 +120,6 @@ export const Examples: Story = {
         <TopBannerInternal
           className={'bottomSpacingXL'}
           title={'Global Skatt'}
-          logoAltText={'Forside Global Skatt'}
           logoHref={'/home'}
         >
           <SearchField
@@ -170,7 +167,6 @@ export const Examples: Story = {
           classNames={{ logo: 'demoLogo' }}
           title={'SIRO'}
           logo={demoLogo}
-          logoAltText={'Forside Politiet'}
           logoHref={'/home'}
         ></TopBannerInternal>
       </>

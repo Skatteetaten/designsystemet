@@ -26,7 +26,6 @@ export const TopBannerInternal = (({
   'data-testid': dataTestId,
   logo,
   logoHref,
-  logoAltText,
   skipLink,
   user,
   children,
@@ -49,6 +48,11 @@ export const TopBannerInternal = (({
       data-testid={dataTestId}
       className={className}
     >
+      <div
+        id={'topbanner-focus-target'}
+        className={styles.srOnly}
+        tabIndex={-1}
+      ></div>
       <TopBannerSkipLink
         className={styles.skipLink}
         target={skipLink?.target}

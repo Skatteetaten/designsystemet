@@ -9,26 +9,26 @@ exports[`Tester/Select/Select Defaults play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:re:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -58,9 +58,9 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="htmlid"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               data-testid="123ID"
               form="form123"
               style="color: var(--palette-graphite-50);"
@@ -68,18 +68,18 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -107,9 +107,9 @@ exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] =
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r16:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               autocomplete="given-name"
               name="test_name"
               style="color: var(--palette-graphite-50);"
@@ -117,18 +117,18 @@ exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] =
         <option value>
           Velg fra listen noe gøy
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -156,9 +156,9 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6 dummyClassnameFormContainer">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6 dummyClassnameFormContainer">
       <select id="selectId-:r9:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               aria-describedby="selectErrorId-:r8:"
               aria-invalid="true"
               style="color: var(--palette-graphite-50);"
@@ -166,18 +166,18 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -191,8 +191,8 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15 dummyClassname">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+      <div class="_errorMessage_vog41_15 dummyClassname">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -201,7 +201,7 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1kdf4_30">
+        <p class="_errorMessageText_vog41_29">
           Ledetekst er obligatorisk
         </p>
       </div>
@@ -219,26 +219,26 @@ exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r12:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
                 selected
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -269,26 +269,26 @@ exports[`Tester/Select/Select WithDescription play-test 1`] = `
     <div class="_description_10ldw_17">
       En liten beskrivelse tekst
     </div>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r1r:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -316,26 +316,26 @@ exports[`Tester/Select/Select WithDisabled play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:rq:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               disabled
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -363,9 +363,9 @@ exports[`Tester/Select/Select WithErrorMessage play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r1m:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               aria-describedby="selectErrorId-:r1l:"
               aria-invalid="true"
               style="color: var(--palette-graphite-50);"
@@ -373,18 +373,18 @@ exports[`Tester/Select/Select WithErrorMessage play-test 1`] = `
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -398,8 +398,8 @@ exports[`Tester/Select/Select WithErrorMessage play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1kdf4_15">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+      <div class="_errorMessage_vog41_15">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -408,7 +408,7 @@ exports[`Tester/Select/Select WithErrorMessage play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1kdf4_30">
+        <p class="_errorMessageText_vog41_29">
           Ledetekst er obligatorisk
         </p>
       </div>
@@ -426,26 +426,26 @@ exports[`Tester/Select/Select WithEventHandlers play-test 1`] = `
     >
       Select har blitt blurret
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r29:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               style
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -473,13 +473,13 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
     >
       Ledetekst
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r24:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r25:"
@@ -494,14 +494,14 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
       </svg>
     </button>
     <div class="_helpBox_10ldw_31">
-      <span class="_helpBoxText_10ldw_44">
+      <div class="_helpBoxText_10ldw_44">
         Hjelpetekst
-      </span>
-      <button class="_button_1hc5e_1 _button_small_1hc5e_42  _helpBoxCloseButton_10ldw_51"
+      </div>
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_10ldw_51"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r27:"
@@ -516,26 +516,26 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r23:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -563,13 +563,13 @@ exports[`Tester/Select/Select WithHelpToggleEvent smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r2e:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2f:"
@@ -583,26 +583,26 @@ exports[`Tester/Select/Select WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r2d:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -630,26 +630,26 @@ exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1">
+    <div class="_selectContainer_1q368_1">
       <select id="selectId-:r1v:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -677,22 +677,22 @@ exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r1a:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
       >
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -711,6 +711,100 @@ exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Select/Select WithLongInput smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="textField150">
+    <label id="labelId-:r2j:"
+           class="_label_348na_5"
+           for="selectId-:r2i:"
+    >
+      Ledetekst
+    </label>
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
+      <select id="selectId-:r2i:"
+              class="_select_1q368_1"
+      >
+        <option value>
+          Velg
+        </option>
+        <option class="_option_idcf7_1"
+                value="option1"
+                selected
+        >
+          Long input tekst
+        </option>
+        <option class="_option_idcf7_1"
+                value="option2"
+        >
+          Very very very long inputtext
+        </option>
+      </select>
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r2h:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithLongPlaceholder smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="textField150">
+    <label id="labelId-:r2n:"
+           class="_label_348na_5"
+           for="selectId-:r2m:"
+    >
+      Ledetekst
+    </label>
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
+      <select id="selectId-:r2m:"
+              class="_select_1q368_1"
+              style="color: var(--palette-graphite-50);"
+      >
+        <option value>
+          Long placeholder text
+        </option>
+        <option class="_option_idcf7_1"
+                value="option1"
+        >
+          Long input tekst
+        </option>
+        <option class="_option_idcf7_1"
+                value="option2"
+        >
+          Very very very long inputtext
+        </option>
+      </select>
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r2l:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/Select/Select WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class>
@@ -720,27 +814,27 @@ exports[`Tester/Select/Select WithRef play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r1:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               name="dummyNameForwardedFromRef"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -768,27 +862,27 @@ exports[`Tester/Select/Select WithRequired play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r1e:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               required
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -816,27 +910,27 @@ exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:r1i:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
               required
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -864,25 +958,25 @@ exports[`Tester/Select/Select WithValue play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:ru:"
-              class="_select_vbsz7_1"
+              class="_select_1q368_1"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -910,26 +1004,26 @@ exports[`Tester/Select/Select WithVariantLarge smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:ri:"
-              class="_select_vbsz7_1 _select_large_vbsz7_26"
+              class="_select_1q368_1 _select_large_1q368_29"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
           Velg
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           Test 1
         </option>
-        <option class
+        <option class="_option_idcf7_1"
                 value="option2"
         >
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52 _selectIcon_large_vbsz7_60"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55 _selectIcon_large_1q368_63"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -957,17 +1051,17 @@ exports[`Tester/Select/Select WithVariantLargeAndLongText smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_vbsz7_1 _selectContainerMarginTop_vbsz7_6">
+    <div class="_selectContainer_1q368_1 _selectContainerMarginTop_1q368_6">
       <select id="selectId-:rm:"
-              class="_select_vbsz7_1 _select_large_vbsz7_26"
+              class="_select_1q368_1 _select_large_1q368_29"
       >
-        <option class
+        <option class="_option_idcf7_1"
                 value="option1"
         >
           En lang tekst som ikke skal synes bak åpne ikonet
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_vbsz7_52 _selectIcon_large_vbsz7_60"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55 _selectIcon_large_1q368_63"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"

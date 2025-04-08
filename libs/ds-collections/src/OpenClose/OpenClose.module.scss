@@ -46,7 +46,6 @@
 
 .icon {
   height: calc(var(--font-size-l) * var(--semantic-line-height-article));
-  flex-shrink: 0;
   fill: var(--semantic-interactive-main);
   transition: transform 0.14s linear;
 

@@ -219,7 +219,7 @@ export const DatePicker = ({
         {label}
       </LabelWithHelp>
       <div
-        className={`${styles.dateContainer} ${
+        className={`${styles.dateContainer} ${label && !hideLabel ? styles.dateContainerMarginTop : ''} ${
           classNames?.dateContainer ?? ''
         }`.trim()}
       >
@@ -253,6 +253,7 @@ export const DatePicker = ({
             <CalendarIcon
               className={styles.icon}
               title={t('datepicker.ChooseDate')}
+              size={isLarge ? 'large' : 'medium'}
             />
           </button>
         )}

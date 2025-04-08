@@ -19,7 +19,7 @@ const meta = {
   title: 'Komponenter/Tabs/Tabs',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     isMultiline: { table: { category: category.props } },

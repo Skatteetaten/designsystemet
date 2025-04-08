@@ -11,14 +11,9 @@
 
   .iconWrapper {
     display: flex;
-    width: var(--size-small);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    .icon {
-      width: var(--size-small);
-    }
   }
 
   &_ochre {
@@ -48,6 +43,7 @@
 
     .iconWrapper .icon {
       width: var(--size-extra-small);
+      min-width: var(--size-extra-small);
     }
   }
 }

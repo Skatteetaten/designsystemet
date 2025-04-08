@@ -20,16 +20,17 @@
   .iconWrapper {
     display: flex;
     align-items: center;
+    pointer-events: none;
   }
 
   .icon {
-    flex-shrink: 0;
     padding: var(--spacing-xs);
     fill: var(--semantic-interactive-main);
   }
 
   &Text {
     overflow: hidden;
+    pointer-events: none;
     white-space: nowrap;
   }
 

@@ -35,7 +35,7 @@ const getFlag = (
 ): ReactNode => {
   for (const language of additionalLanguages) {
     if (language.lang === lang) {
-      return language.flag({ className: styles.flagIconSvg });
+      return language.flag({ className: styles.flagIconSvg }) as ReactNode;
     }
   }
   switch (lang) {

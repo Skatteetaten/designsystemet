@@ -1,10 +1,11 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/styles';
 
 .topContainer {
   display: flex;
   max-width: var(--semantic-responsive-container);
   justify-content: space-between;
-  padding: var(--semantic-responsive-container-padding);
+  padding: var(--semantic-responsive-container-spacing);
   padding-top: var(--spacing-s);
   margin: auto;
   gap: var(--spacing-s);
@@ -54,6 +55,7 @@
 /* pga skiplink så er det ikke mulig å sette position på header */
 .containerForMainMenu {
   position: relative;
+  background-color: var(--semantic-page-background);
 }
 
 .mainMenu {
@@ -67,7 +69,7 @@
   .columns {
     display: grid;
     max-width: var(--semantic-responsive-container);
-    padding: var(--semantic-responsive-container-padding);
+    padding: var(--semantic-responsive-container-spacing);
     padding-top: var(--spacing-xl);
     padding-bottom: var(--spacing-xl);
     margin: auto;
@@ -93,4 +95,8 @@
   .column {
     overflow-wrap: anywhere;
   }
+}
+
+.srOnly {
+  @include styles.sr-only;
 }

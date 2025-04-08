@@ -4,7 +4,6 @@
   color: var(--semantic-page-foreground);
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans',
     'Nimbus Sans L', sans-serif;
-  font-size: var(--font-size-reference);
   font-weight: var(--semantic-font-weight-default);
   line-height: var(--semantic-line-height-default);
 

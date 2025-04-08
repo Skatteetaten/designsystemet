@@ -3,12 +3,16 @@
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -20,12 +24,12 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -43,12 +47,16 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -60,12 +68,12 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -87,12 +95,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
           data-testid="123ID"
           class="dummyClassname"
   >
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -104,12 +116,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -127,12 +139,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -144,12 +160,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -162,11 +178,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
           En sekundær overskrift som også er lang
         </span>
       </div>
-      <div class="_childrenAndUserContainer_zgnk6_68">
+      <div class="_childrenAndUserContainer_450zt_72">
         <a class="_link_z7jba_1 _link_white_z7jba_1"
            href="/hjelp"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -177,11 +193,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
           </svg>
           Hjelp
         </a>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -194,11 +210,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             Tilpass løsningen
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -211,8 +227,8 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             Meld feil
           </span>
         </button>
-        <div class="_userContainer_zgnk6_75">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_zgnk6_91"
+        <div class="_userContainer_450zt_79">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -221,7 +237,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
             </path>
           </svg>
-          <span class="_userContainerName_zgnk6_95">
+          <span class="_userContainerName_450zt_98">
             Johansen, Krystall Pepsi
           </span>
         </div>
@@ -234,12 +250,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -251,12 +271,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -274,12 +294,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 <div data-test-block="true">
   <header class="dummyCustomTheme">
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -291,12 +315,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -314,12 +338,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -331,12 +359,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -354,12 +382,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -371,17 +403,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_constructionBand_zgnk6_1">
-      <div class="_constructionBandTitle_zgnk6_5">
+    <div class="_constructionBand_450zt_5">
+      <div class="_constructionBandTitle_450zt_9">
         demo
       </div>
     </div>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -399,12 +431,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnDesktop play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -416,12 +452,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnDesktop play-test 1`] 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -439,12 +475,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnDesktop play-test 1`] 
 exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnMobile play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -456,9 +496,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnMobile play-test 1`] =
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
           <span>
@@ -474,12 +514,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnMobile play-test 1`] =
 exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -491,12 +535,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -514,12 +558,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerInternal WithLongConstructionText smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -531,17 +579,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongConstructionText smoke-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_constructionBand_zgnk6_1">
-      <div class="_constructionBandTitle_zgnk6_5">
+    <div class="_constructionBand_450zt_5">
+      <div class="_constructionBandTitle_450zt_9">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </div>
     </div>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -559,12 +607,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongConstructionText smoke-test 
 exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenMobile smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -576,12 +628,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -594,12 +646,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
           FOLK OG TRUBADURSERVICE WOODIE GUTHRIE 999 999 999
         </span>
       </div>
-      <div class="_childrenAndUserContainer_zgnk6_68">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+      <div class="_childrenAndUserContainer_450zt_72">
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -612,11 +664,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
             Hjelp
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -629,11 +681,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -646,8 +698,8 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
             Opprett RF-Ørtiatten
           </span>
         </button>
-        <div class="_userContainer_zgnk6_75">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_zgnk6_91"
+        <div class="_userContainer_450zt_79">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -656,7 +708,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
             <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
             </path>
           </svg>
-          <span class="_userContainerName_zgnk6_95">
+          <span class="_userContainerName_450zt_98">
             Etternavnesen Fornavn
           </span>
         </div>
@@ -669,12 +721,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
 exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndThreeChildrenBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -686,12 +742,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -704,12 +760,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
           Arbeidsliste for ulike scenarier som er lange
         </span>
       </div>
-      <div class="_childrenAndUserContainer_zgnk6_68">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+      <div class="_childrenAndUserContainer_450zt_72">
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -722,11 +778,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
             Hjelp
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -739,11 +795,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -756,8 +812,8 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
             Opprett RF-Ørtiatten
           </span>
         </button>
-        <div class="_userContainer_zgnk6_75">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_zgnk6_91"
+        <div class="_userContainer_450zt_79">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -766,7 +822,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
             <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
             </path>
           </svg>
-          <span class="_userContainerName_zgnk6_95">
+          <span class="_userContainerName_450zt_98">
             Winnifred-Jonathan Hastings
           </span>
         </div>
@@ -779,12 +835,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
 exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -796,12 +856,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -822,12 +882,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
 exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -839,12 +903,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -857,12 +921,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
           Arbeidsliste
         </span>
       </div>
-      <div class="_childrenAndUserContainer_zgnk6_68">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+      <div class="_childrenAndUserContainer_450zt_72">
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -875,8 +939,8 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
             Hjelp
           </span>
         </button>
-        <div class="_userContainer_zgnk6_75">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_zgnk6_91"
+        <div class="_userContainer_450zt_79">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -885,7 +949,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
             <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
             </path>
           </svg>
-          <span class="_userContainerName_zgnk6_95">
+          <span class="_userContainerName_450zt_98">
             Etternavnesen Fornavn
           </span>
         </div>
@@ -898,12 +962,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
 exports[`Tester/TopBanner/TopBannerInternal WithPoliceLogo smoke-test 1`] = `
 <div data-test-block="true">
   <header class="blueBackground">
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -915,12 +983,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithPoliceLogo smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62 demoLogo"
+          <img class="_logoImage_450zt_66 demoLogo"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -940,12 +1008,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
   <header class
           id="dummyIdForwardedFromRef"
   >
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -957,12 +1029,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -980,12 +1052,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -997,12 +1073,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -1015,12 +1091,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
           Arbeidsliste
         </span>
       </div>
-      <div class="_childrenAndUserContainer_zgnk6_68">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+      <div class="_childrenAndUserContainer_450zt_72">
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1033,11 +1109,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
             Hjelp
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1050,11 +1126,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1067,8 +1143,8 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
             Opprett RF-Ørtiatten
           </span>
         </button>
-        <div class="_userContainer_zgnk6_75">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_zgnk6_91"
+        <div class="_userContainer_450zt_79">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1077,7 +1153,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
             <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
             </path>
           </svg>
-          <span class="_userContainerName_zgnk6_95">
+          <span class="_userContainerName_450zt_98">
             Etternavnesen Fornavn
           </span>
         </div>
@@ -1090,12 +1166,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
 exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1107,12 +1187,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -1125,12 +1205,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
           Arbeidsliste
         </span>
       </div>
-      <div class="_childrenAndUserContainer_zgnk6_68">
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+      <div class="_childrenAndUserContainer_450zt_72">
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1143,11 +1223,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
             Hjelp
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1160,11 +1240,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8"
+        <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1177,8 +1257,8 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
             Opprett RF-Ørtiatten
           </span>
         </button>
-        <div class="_userContainer_zgnk6_75">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_zgnk6_91"
+        <div class="_userContainer_450zt_79">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1187,7 +1267,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
             <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
             </path>
           </svg>
-          <span class="_userContainerName_zgnk6_95">
+          <span class="_userContainerName_450zt_98">
             Etternavnesen Fornavn
           </span>
         </div>
@@ -1200,12 +1280,16 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
 exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1`] = `
 <div data-test-block="true">
   <header class>
-    <a href="main"
-       class="_skipLink_1vv50_1 _skipLink_zgnk6_21"
-       data-skip-link="ds-skip-link"
+    <div id="topbanner-focus-target"
+         class="_srOnly_450zt_104"
+         tabindex="-1"
     >
-      <span class="_skipLinkContent_1vv50_22">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vv50_45"
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1 _skipLink_450zt_25"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1217,12 +1301,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topBanner_zgnk6_27">
-      <div class="_titleAndDescriptionContainer_zgnk6_42">
-        <a class="_logoAndTitleLink_zgnk6_49"
+    <div class="_topBanner_450zt_31">
+      <div class="_titleAndDescriptionContainer_450zt_46">
+        <a class="_logoAndTitleLink_450zt_53"
            href="#"
         >
-          <img class="_logoImage_zgnk6_62"
+          <img class="_logoImage_450zt_66"
                alt
                aria-hidden="true"
                src="[REMOVED]"
@@ -1235,9 +1319,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
           kaka er en løgn
         </span>
       </div>
-      <div class="_childrenAndUserContainer_zgnk6_68">
-        <div class="_userContainer_zgnk6_75">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _userContainerIcon_zgnk6_91"
+      <div class="_childrenAndUserContainer_450zt_72">
+        <div class="_userContainer_450zt_79">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1246,7 +1330,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
             <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
             </path>
           </svg>
-          <span class="_userContainerName_zgnk6_95">
+          <span class="_userContainerName_450zt_98">
             Sandra Saksbehandler
           </span>
         </div>

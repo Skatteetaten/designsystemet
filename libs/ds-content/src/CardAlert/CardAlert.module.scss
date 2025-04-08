@@ -10,7 +10,7 @@
   margin-bottom: var(--spacing-m);
   background-color: var(--card-note-color);
 
-  &[data-variant='neutral'] {
+  &[data-variant='info'] {
     --card-note-color: var(--palette-denim-5);
     --card-note-border: var(--palette-denim-70);
   }
@@ -33,7 +33,6 @@
 
   .cardAlertIcon {
     height: calc(var(--font-size-m) * var(--semantic-line-height-article));
-    flex-shrink: 0;
   }
 
   &Arrow {

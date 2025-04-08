@@ -37,7 +37,7 @@ export function RolePickerRow({
         }}
       />
       <Alert
-        variant={'neutral'}
+        variant={'warning'}
         showAlert={hasError}
         onClose={() => ctx?.setError(undefined)}
       >

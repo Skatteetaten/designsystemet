@@ -1,0 +1,27 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as TextAreaStories from './TextArea.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+
+<Meta of={TextAreaStories} />
+
+# TextArea
+
+<VersionBadge packageName={'forms'} />
+
+<DocIntro
+  name="TextArea"
+  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textarea/"
+/>
+
+<Primary />
+
+```tsx
+import { TextArea } from '@skatteetaten/ds-forms';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={TextAreaStories.Examples} />

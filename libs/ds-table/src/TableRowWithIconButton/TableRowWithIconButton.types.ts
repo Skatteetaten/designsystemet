@@ -9,7 +9,7 @@ import {
 } from '../Table/Table.types';
 
 export interface ExpandableRowProps extends BaseProps {
-  ref?: RefObject<RowWithExpandButtonHandle>;
+  ref?: RefObject<RowWithExpandButtonHandle | null>;
   expandButtonTitle: string;
   expandableContent: ReactNode;
   context: TableContextProps | null;

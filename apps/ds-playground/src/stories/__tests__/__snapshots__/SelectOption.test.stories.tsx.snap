@@ -4,7 +4,7 @@ exports[`Tester/Select/Option WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <option lang="nb"
           id="htmlid"
-          class="dummyClassname"
+          class="_option_idcf7_1 dummyClassname"
           data-testid="123ID"
   >
     Option 1
@@ -14,7 +14,7 @@ exports[`Tester/Select/Option WithAttributes play-test 1`] = `
 
 exports[`Tester/Select/Option WithChildrenAndValue play-test 1`] = `
 <div data-test-block="true">
-  <option class
+  <option class="_option_idcf7_1"
           value="option1"
   >
     Option 1
@@ -24,7 +24,7 @@ exports[`Tester/Select/Option WithChildrenAndValue play-test 1`] = `
 
 exports[`Tester/Select/Option WithRef play-test 1`] = `
 <div data-test-block="true">
-  <option class
+  <option class="_option_idcf7_1"
           id="dummyIdForwardedFromRef"
   >
     Option 1

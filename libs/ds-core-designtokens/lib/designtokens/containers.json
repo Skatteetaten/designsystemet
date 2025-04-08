@@ -1,43 +1,43 @@
 {
   ":root,\n:host": {
     "--container-xs": "100%",
-    "--container-s": "560px",
+    "--container-s": "576px",
     "--container-m": "960px",
-    "--container-l": "1160px",
-    "--container-aside": "380px",
-    "--container-wide-content": "760px \n    ",
+    "--container-l": "1152px",
+    "--container-xl": "1536px",
+    "--container-aside": "384px",
+    "--container-aside-narrow": "288px",
+    "--container-wide-content": "768px \n    ",
     "--semantic-responsive-container": "var(--container-xs)",
-    "--semantic-responsive-container-padding": "0 var(--spacing-m)",
+    "--semantic-responsive-container-spacing": "0 var(--spacing-m)",
     "--semantic-responsive-article": "var(--container-xs)",
-    "--semantic-responsive-internal-container-display": "block",
-    "--semantic-responsive-internal-container-padding": "0 var(--spacing-m)",
+    "--semantic-responsive-internal-container-display": "flex",
+    "--semantic-responsive-internal-container-flex-direction": "column",
+    "--semantic-responsive-internal-container-spacing": "var(--spacing-m)",
     "--semantic-responsive-internal-aside": "var(--container-xs)",
     "--semantic-responsive-wide-content": "var(--container-xs)"
-  },
-  "@media (width >= 480px)": {
-    ":root,\n  :host": {
-      "--semantic-responsive-wide-content": "var(--container-s)"
-    }
   },
   "@media (width >= 640px)": {
     ":root,\n  :host": {
       "--semantic-responsive-container": "var(--container-s)",
-      "--semantic-responsive-container-padding": "0",
+      "--semantic-responsive-container-spacing": "0",
       "--semantic-responsive-article": "var(--container-s)",
-      "--semantic-responsive-wide-content": "var(--container-wide-content)"
+      "--semantic-responsive-wide-content": "var(--container-s)"
     }
   },
   "@media (width >= 1024px)": {
     ":root,\n  :host": {
       "--semantic-responsive-container": "var(--container-m)",
-      "--semantic-responsive-internal-container-display": "grid",
-      "--semantic-responsive-internal-container-padding": "0 var(--spacing-xl)",
-      "--semantic-responsive-internal-aside": "var(--container-aside)"
+      "--semantic-responsive-internal-container-flex-direction": "row",
+      "--semantic-responsive-internal-container-spacing": "var(--spacing-xl)",
+      "--semantic-responsive-internal-aside": "var(--container-aside-narrow)",
+      "--semantic-responsive-wide-content": "var(--container-wide-content)"
     }
   },
   "@media (width >= 1366px)": {
     ":root,\n  :host": {
-      "--semantic-responsive-container": "var(--container-l)"
+      "--semantic-responsive-container": "var(--container-l)",
+      "--semantic-responsive-internal-aside": "var(--container-aside)"
     }
   }
 }

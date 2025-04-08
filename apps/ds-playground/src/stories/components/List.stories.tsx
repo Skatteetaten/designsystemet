@@ -18,7 +18,7 @@ const meta = {
       },
     },
     canBeManuallyFocused: { table: { category: category.props } },
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     hasSpacing: {
       table: { category: category.props, defaultValue: { summary: 'false' } },
     },

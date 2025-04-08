@@ -7,7 +7,7 @@ import {
   getCommonClassNameDefault,
   useMediaQuery,
 } from '@skatteetaten/ds-core-utils';
-import { VerticalDotsSVGpath } from '@skatteetaten/ds-icons';
+import { HorizontalDotsSVGpath } from '@skatteetaten/ds-icons';
 
 import { BreadcrumbsListProps } from './BreadcrumbsList.types';
 import {
@@ -72,7 +72,7 @@ export const BreadcrumbsList = ({
               <IconButton
                 size={'small'}
                 title={t('breadcrumbs.ExpandAltText')}
-                svgPath={VerticalDotsSVGpath}
+                svgPath={HorizontalDotsSVGpath}
                 onClick={handleExpand}
               />
               <span aria-hidden={'true'}>{'/'}</span>

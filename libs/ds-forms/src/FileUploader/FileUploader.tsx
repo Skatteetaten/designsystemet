@@ -253,7 +253,7 @@ export const FileUploader = (({
       <Alert
         showAlert={!!uploadResult}
         className={styles.alert}
-        variant={uploadResult?.hasUploadFailed ? 'warning' : 'success'}
+        variant={uploadResult?.hasUploadFailed ? 'error' : 'success'}
       >
         {uploadResult?.statusMessage}
       </Alert>

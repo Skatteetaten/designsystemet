@@ -9,9 +9,11 @@ const meta = {
   argTypes: {
     // Props
     children: {
+      control: 'text',
       table: { category: category.props },
     },
     term: {
+      control: 'text',
       table: { category: category.props },
     },
   },

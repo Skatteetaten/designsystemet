@@ -193,7 +193,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
           <input
             ref={inputRef}
             id={inputId}
-            className={`${styles.input} ${classNames?.textbox ?? ''}`.trim()}
+            className={`${styles.input} ${classNames?.textbox ?? ''} ${showClearButton && !disabled ? styles.inputWithValue : ''}`.trim()}
             data-testid={dataTestId}
             accessKey={accessKey}
             defaultValue={defaultValue}
@@ -226,13 +226,6 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             }}
             onFocus={onFocus}
           />
-          <ErrorMessage
-            id={errorId}
-            showError={!!errorMessage}
-            className={classNames?.errorMessage}
-          >
-            {errorMessage}
-          </ErrorMessage>
           <span aria-live={'assertive'} className={styles.srOnly}>
             {shouldShowResults &&
               t('searchfield.NumberOfResults', {
@@ -299,6 +292,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
               <SearchIcon
                 className={styles.icon}
                 title={searchButtonTitle ?? t('searchfield.ButtonTitle')}
+                size={isLarge || isExtraLarge ? 'large' : 'medium'}
               />
             ) : (
               (searchButtonTitle ?? t('searchfield.ButtonTitle'))
@@ -306,6 +300,13 @@ ${classNames?.searchContainer ?? ''}`.trim()}
           </button>
         )}
       </div>
+      <ErrorMessage
+        id={errorId}
+        showError={!!errorMessage}
+        className={classNames?.errorMessage}
+      >
+        {errorMessage}
+      </ErrorMessage>
     </div>
   );
 }) as SearchFieldComponent;
