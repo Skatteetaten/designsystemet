@@ -4,7 +4,8 @@ declare const classNames: {
   readonly fileContentRight: 'fileContentRight';
   readonly fileNameContainer: 'fileNameContainer';
   readonly fileContentContainer: 'fileContentContainer';
-  readonly cardWithAnimatedBorder: 'cardWithAnimatedBorder';
+  readonly fileCard: 'fileCard';
+  readonly fileCard_withAnimation: 'fileCard_withAnimation';
   readonly fileListItem: 'fileListItem';
   readonly fileListIcon: 'fileListIcon';
 };

@@ -62,8 +62,6 @@ export interface FileUploaderCommonProps
   acceptedFileFormatsDescription?: string;
   /** Overskriver default tittel på fil-ikonet som brukes i listen med filer som er lastet opp */
   fileIconTitle?: string;
-  /** Overskriver default tittel på ikonet som viser at opplasting av fil er vellykket */
-  successIconTitle?: string;
   /**
    * Liste med opplastede filer som skal vises under filopplasteren.
    * Det er mulig å angi href dersom filen skal kunne lastes ned igjen.

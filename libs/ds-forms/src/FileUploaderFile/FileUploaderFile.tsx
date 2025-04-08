@@ -18,6 +18,7 @@ export const FileUploaderFile = ({
   'data-testid': dataTestId,
   fileIconTitle,
   href,
+  shouldAnimate,
   showSpinner,
   onClick,
   onClickDelete,
@@ -35,7 +36,10 @@ export const FileUploaderFile = ({
       lang={lang}
       data-testid={dataTestId}
     >
-      <Card spacing={'xxs'} className={styles.cardWithAnimatedBorder}>
+      <Card
+        spacing={'xxs'}
+        className={`${styles.fileCard} ${shouldAnimate ? styles.fileCard_withAnimation : ''}`.trim()}
+      >
         <Card.Content
           classNames={{
             children: styles.fileContentContainer,

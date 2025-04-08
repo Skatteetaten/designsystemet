@@ -23,37 +23,40 @@
   gap: var(--spacing-xs);
 }
 
-.cardWithAnimatedBorder {
+.fileCard {
   --file-item-border-icon-color: var(--semantic-page-foreground);
 
   position: relative;
   border-color: var(--file-item-border-icon-color);
-  animation: card-background-animation 1.5s ease-out forwards;
-
-  &::before {
-    position: absolute;
-    z-index: 1;
-    border-radius: 3px;
-    animation: card-border-highlight 1.5s ease-out forwards;
-    background-color: transparent;
-    content: '';
-    inset: 0;
-    pointer-events: none;
-  }
-
-  &::after {
-    position: absolute;
-    z-index: 0;
-    border-radius: 3px;
-    animation: card-outward-highlight 1.5s ease-out forwards;
-    background-color: transparent;
-    content: '';
-    inset: -2px;
-    pointer-events: none;
-  }
 
   &:has(a) {
     --file-item-border-icon-color: var(--semantic-interactive-main);
+  }
+
+  &_withAnimation {
+    animation: card-background-animation 1.5s ease-out forwards;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      border-radius: 3px;
+      animation: card-border-highlight 1.5s ease-out forwards;
+      background-color: transparent;
+      content: '';
+      inset: 0;
+      pointer-events: none;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 0;
+      border-radius: 3px;
+      animation: card-outward-highlight 1.5s ease-out forwards;
+      background-color: transparent;
+      content: '';
+      inset: -2px;
+      pointer-events: none;
+    }
   }
 }
 

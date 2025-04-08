@@ -15,10 +15,10 @@ export interface FileUploaderFileProps extends BaseProps, LinkHTMLAttributes {
   fileIconTitle?: string;
   /** Callback som kalles ved klikk på slett-knappen*/
   onClickDelete?: () => Promise<void>;
+  /** Skal filen animeres som ny fil i listen? */
+  shouldAnimate?: boolean;
   /** Skal det vises spinner i stedet for hakeikon ved filen */
   showSpinner?: boolean;
-  /** Overskriver default tittel på ikonet som viser at opplasting av fil er vellykket*/
-  successIconTitle?: string;
   /** Filnavn */
   children: string;
 }

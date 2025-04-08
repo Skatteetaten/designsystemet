@@ -1,4 +1,11 @@
-import { ChangeEvent, DragEvent, useId, useRef, useState } from 'react';
+import {
+  ChangeEvent,
+  DragEvent,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -35,7 +42,6 @@ export const FileUploader = (({
   helpSvgPath,
   helpText,
   label,
-  successIconTitle,
   titleHelpSvg,
   uploadResult,
   uploadedFiles,
@@ -61,6 +67,28 @@ export const FileUploader = (({
   const [filesPendingDelete, setFilesPendingDelete] = useState<
     Record<string, boolean>
   >({});
+
+  const [newFiles, setNewFiles] = useState<UploadedFile[]>([]);
+  const prevFilesRef = useRef<UploadedFile[] | undefined>(undefined);
+
+  useEffect(() => {
+    if (uploadedFiles) {
+      const newFiles = uploadedFiles.filter(
+        (file) =>
+          !prevFilesRef.current?.some((prevFile) => prevFile.id === file.id)
+      );
+
+      if (
+        newFiles.length > 0 &&
+        prevFilesRef.current &&
+        prevFilesRef.current.length > 0
+      ) {
+        setNewFiles(newFiles);
+      }
+
+      prevFilesRef.current = uploadedFiles;
+    }
+  }, [uploadedFiles]);
 
   const id = externalId ?? generatedId;
 
@@ -259,21 +287,26 @@ export const FileUploader = (({
       </Alert>
       {uploadedFiles && (
         <ul className={styles.fileList}>
-          {uploadedFiles?.map((file) => (
-            <FileUploaderFile
-              key={file.id ?? file.name}
-              href={file.href}
-              successIconTitle={successIconTitle}
-              fileIconTitle={fileIconTitle}
-              showSpinner={filesPendingDelete[file.id ?? file.name]}
-              onClick={(event): void => {
-                onFileDownload?.(event, file);
-              }}
-              onClickDelete={() => handleDeleteFile(file)}
-            >
-              {file.name}
-            </FileUploaderFile>
-          ))}
+          {uploadedFiles?.map((file) => {
+            const isNewFile = newFiles.some(
+              (newFile) => newFile.id === file.id
+            );
+            return (
+              <FileUploaderFile
+                key={file.id ?? file.name}
+                href={file.href}
+                fileIconTitle={fileIconTitle}
+                shouldAnimate={isNewFile}
+                showSpinner={filesPendingDelete[file.id ?? file.name]}
+                onClick={(event): void => {
+                  onFileDownload?.(event, file);
+                }}
+                onClickDelete={() => handleDeleteFile(file)}
+              >
+                {file.name}
+              </FileUploaderFile>
+            );
+          })}
         </ul>
       )}
       <div className={styles.srOnly} aria-live={'polite'} aria-atomic={'true'}>
