@@ -5,7 +5,6 @@ import { List } from '@skatteetaten/ds-typography';
 import { category } from '../../../.storybook/helpers';
 
 const meta = {
-  // TODO - Hide story from storybook
   component: List.Element,
   argTypes: {
     // Props
