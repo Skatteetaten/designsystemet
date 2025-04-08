@@ -64,7 +64,7 @@ exports[`Tester/Footer Defaults play-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -164,7 +164,7 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -260,7 +260,7 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -517,7 +517,7 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -607,7 +607,7 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -750,7 +750,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -915,7 +915,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -1080,7 +1080,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -1247,7 +1247,7 @@ exports[`Tester/Footer WithRef play-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -1343,7 +1343,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -1584,7 +1584,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -1825,7 +1825,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -2066,7 +2066,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -2307,7 +2307,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -2498,7 +2498,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
@@ -2689,7 +2689,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
                   </path>
                 </svg>
                 <a class="_link_z7jba_1 _link_white_z7jba_1"
-                   href="https://uustatus.no/"
+                   href="https://uustatus.no/nb"
                    rel="noreferrer"
                    target="_blank"
                 >
