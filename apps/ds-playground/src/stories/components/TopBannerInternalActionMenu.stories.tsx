@@ -8,7 +8,6 @@ import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: TopBannerInternal.ActionMenu,
-  title: 'Komponenter/TopBannerInternal/ActionMenu',
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },

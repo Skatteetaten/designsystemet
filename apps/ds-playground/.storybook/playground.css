@@ -278,10 +278,6 @@ a.resetLinkStyling {
   flex-wrap: wrap;
 }
 
-.noMargin {
-  margin: 0 !important;
-}
-
 .blueBackground {
   --theme-primary: var(--palette-denim-100);
 }

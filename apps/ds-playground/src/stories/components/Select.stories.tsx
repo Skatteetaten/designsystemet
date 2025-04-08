@@ -15,7 +15,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Select,
-  title: 'Komponenter/Select/Select',
+  title: 'Komponenter/Select',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
