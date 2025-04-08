@@ -19,6 +19,7 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   getRolePickerHideCloseButtonDefault,
+  getRolePickerMinimumEntitiesForSearchDefault,
   getRolePickerShowDeceasedPeopleDefault,
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
@@ -50,6 +51,7 @@ export const RolePicker = ({
   dismissOnEsc = getModalDismissOnEscDefault(),
   dismissOnOutsideClick = getModalDismissOnOutsideClickDefault(),
   hideCloseButton = getRolePickerHideCloseButtonDefault(),
+  minimumEntitiesForSearch = getRolePickerMinimumEntitiesForSearchDefault(),
   showInactiveBusinesses = getRolePickerShowInactiveBusinessesDefault(),
   showSubunits = getRolePickerShowSubunitsDefault(),
   showDeceasedPeople = getRolePickerShowDeceasedPeopleDefault(),
@@ -69,7 +71,8 @@ export const RolePicker = ({
   const deferredFilter = useDeferredValue(filter);
   const businessesCount = businesses ? businesses.total : 0;
   const peopleCount = people ? people.total : 0;
-  const displaySearch = businessesCount + peopleCount > 10;
+  const displaySearch =
+    businessesCount + peopleCount >= minimumEntitiesForSearch;
 
   const modalRef = useRef<HTMLDialogElement>(null);
 
@@ -172,13 +175,7 @@ export const RolePicker = ({
             {getRepresentationText()}
             {displaySearch ? (
               <RolePickerFilterInput
-                label={
-                  people && businesses
-                    ? t('rolepicker.SearchAll')
-                    : people
-                      ? t('rolepicker.SearchPeople')
-                      : t('rolepicker.SearchBusinesses')
-                }
+                label={t('rolepicker.SearchText')}
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
                 onClear={() => setFilter('')}
@@ -253,4 +250,5 @@ export {
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
   getRolePickerShowDeceasedPeopleDefault,
+  getRolePickerMinimumEntitiesForSearchDefault,
 };

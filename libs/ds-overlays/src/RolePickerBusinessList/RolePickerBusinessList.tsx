@@ -29,7 +29,7 @@ export const RolePickerBusinessList = ({
 }: RolePickerBusinessListProps): JSX.Element | null => {
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
   const ctx = useContext(RolePickerContext);
-  const [showAll, setShowAll] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [showInactiveBusinesses, setShowInactiveBusinesses] = useState(
     externalShowInactiveBusinesses
   );
@@ -37,11 +37,16 @@ export const RolePickerBusinessList = ({
 
   const navRef = useRef<HTMLElement>(null);
 
-  const handleShowAll = (): void => {
+  const handleExpand = (): void => {
     const visibleLinks = navRef.current?.querySelectorAll('a').length ?? 1;
 
-    setShowAll(true);
+    setIsExpanded(true);
     navRef.current?.querySelectorAll('a')[visibleLinks - 1].focus();
+  };
+
+  const handleCollapse = (): void => {
+    setIsExpanded(false);
+    navRef.current?.querySelectorAll('a')[0].focus();
   };
 
   const handleEntityClicked = async (entity: Business): Promise<void> => {
@@ -103,15 +108,15 @@ export const RolePickerBusinessList = ({
         return false;
       });
     } else {
-      items = showAll ? items : items.slice(0, MAX_INITIAL_ITEMS);
+      items = isExpanded ? items : items.slice(0, MAX_INITIAL_ITEMS);
     }
     return items;
   }, [
-    filterQuery,
     businesses.list,
-    showAll,
     showInactiveBusinesses,
+    filterQuery,
     showSubUnits,
+    isExpanded,
   ]);
 
   const hasInactiveItems = businesses.list.some(
@@ -145,8 +150,8 @@ export const RolePickerBusinessList = ({
     return businesses.list.filter((item) => !item.isDeleted).length;
   }, [businesses.list, businesses.total, showInactiveBusinesses, showSubUnits]);
 
-  const displayShowAllButton =
-    !showAll && !filterQuery && businesses.list?.length > MAX_INITIAL_ITEMS;
+  const displayExpandCollapseButton =
+    !filterQuery && businesses.list?.length > MAX_INITIAL_ITEMS;
 
   return (
     <div>
@@ -270,12 +275,18 @@ export const RolePickerBusinessList = ({
           })}
         </ul>
       </nav>
-      {displayShowAllButton ? (
+      {displayExpandCollapseButton ? (
         <div className={styles.showAllButtonWrapper}>
-          <Button
-            variant={'tertiary'}
-            onClick={handleShowAll}
-          >{`${t('rolepicker.ShowAll')} ${t('rolepicker.Businesses')} (${getShowAllCount()})`}</Button>
+          {isExpanded ? (
+            <Button variant={'tertiary'} onClick={handleCollapse}>
+              {t('rolepicker.ShowLess')}
+            </Button>
+          ) : (
+            <Button
+              variant={'tertiary'}
+              onClick={handleExpand}
+            >{`${t('rolepicker.ShowAll')} ${t('rolepicker.Businesses')} (${getShowAllCount()})`}</Button>
+          )}
         </div>
       ) : null}
     </div>

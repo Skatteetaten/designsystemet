@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/RolePicker Defaults smoke-test 1`] = `
+exports[`Tester/RolePicker Defaults play-test 1`] = `
 <div data-test-block="true">
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
@@ -12,6 +12,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
   <dialog class="_modal_i27cp_5 _container_90jan_17"
           aria-labelledby="modalHeadingId-:r0:"
           data-variant="outline"
+          open
   >
     <div tabindex="-1"
          class="_modalContainer_i27cp_23"
@@ -89,7 +90,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -715,7 +716,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -1085,7 +1086,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -1712,7 +1713,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -2179,7 +2180,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -2770,7 +2771,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -3255,6 +3256,15 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                   </li>
                 </ul>
               </nav>
+              <div class="_showAllButtonWrapper_10bzt_13">
+                <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
+                        type="button"
+                >
+                  <span class="_buttonText_6ybyo_69">
+                    Vis færre
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
           <div class="_rolePickerFooter_90jan_11">
@@ -3418,7 +3428,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -3664,6 +3674,596 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                     </span>
                   </label>
                   <div id="checkboxErrorId-:r8g:"
+                       aria-live="assertive"
+                       aria-atomic="true"
+                  >
+                  </div>
+                </div>
+              </div>
+              <nav aria-labelledby="businessesHeadingId">
+                <ul class="_businessList_3mzou_1">
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M20.89 8.51v9.99c0 .55-.45 1-1 1H4.66c0 1.1.89 1.5 2 1.5h14c.91 0 1.73-.53 1.73-1.5v-9c0-1.02-.51-1.87-1.5-1.99 M9 1.5h4c1.1 0 2 .9 2 2v2h3c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-9c0-1.11.89-2 2-2h3v-2c0-1.11.89-2 2-2m4 4v-2H9v2z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Costco AS
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Org. nr: 123&nbsp;456&nbsp;777
+                          <em>
+                            (Hovedenhet)
+                          </em>
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
+                        <div>
+                          <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                             href="#"
+                          >
+                            <div class="_header_ous0n_19">
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                                   viewbox="0 0 24 24"
+                                   focusable="false"
+                                   aria-hidden="true"
+                                   role="img"
+                              >
+                                <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                                </path>
+                              </svg>
+                              <h4 class="_title_ous0n_24">
+                                Google ASA
+                              </h4>
+                              <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                                   viewbox="0 0 24 24"
+                                   focusable="false"
+                                   aria-hidden="true"
+                                   role="img"
+                              >
+                                <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                                </path>
+                              </svg>
+                            </div>
+                            <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                              Org. nr: 123&nbsp;456&nbsp;789
+                              <em>
+                                (Underenhet)
+                              </em>
+                            </div>
+                          </a>
+                          <div aria-live="polite"
+                               aria-atomic="true"
+                          >
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Samsung DA
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Org. nr: 312&nbsp;943&nbsp;218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Toshiba AS
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Org. nr: 312&nbsp;643&nbsp;218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Hitachi AS
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Org. nr: 312&nbsp;743&nbsp;218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Vanguard AS
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Org. nr: 332&nbsp;843&nbsp;218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="_showAllButtonWrapper_3mzou_21">
+                <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
+                        type="button"
+                >
+                  <span class="_buttonText_6ybyo_69">
+                    Vis alle virksomheter (8)
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="_rolePickerFooter_90jan_11">
+            <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47"
+                    type="button"
+            >
+              <span class="_iconWrapper_6ybyo_25">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+                  </path>
+                </svg>
+              </span>
+              <span class="_buttonText_6ybyo_69">
+                Logg ut
+              </span>
+            </button>
+            <button class="_button_6ybyo_1 _button_secondary_6ybyo_1"
+                    type="button"
+            >
+              <span class="_buttonText_6ybyo_69">
+                Avbryt
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/RolePicker WithMinimumEntitiesForSearch play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Vis representasjonsvelger
+    </span>
+  </button>
+  <dialog class="_modal_i27cp_5 _container_90jan_17"
+          aria-labelledby="modalHeadingId-:rcm:"
+          data-variant="outline"
+          open
+  >
+    <div tabindex="-1"
+         class="_modalContainer_i27cp_23"
+    >
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
+              data-brightness="default"
+              type="button"
+      >
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rcn:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rcn:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_i27cp_48">
+        <h1 id="modalHeadingId-:rcm:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
+        >
+          Hvem ønsker du å representere?
+        </h1>
+        <div>
+          <div class="_rolePicker_90jan_5">
+            <div>
+              <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                 href="#"
+              >
+                <div class="_header_ous0n_19">
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
+                    </path>
+                  </svg>
+                  <h2 class="_title_ous0n_24">
+                    Meg selv
+                  </h2>
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                  Fødsels-/D-nummer 101010&nbsp;12345
+                </div>
+              </a>
+              <div aria-live="polite"
+                   aria-atomic="true"
+              >
+              </div>
+            </div>
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
+              Du kan representere
+              <strong>
+                4 personer og 12 virksomheter.
+              </strong>
+            </p>
+            <div>
+              <h2 id="otherPeopleHeadingId"
+                  class="_heading_12p5o_1 _heading_level3_12p5o_34"
+              >
+                Andre personer
+              </h2>
+              <nav aria-labelledby="otherPeopleHeadingId">
+                <ul class="_peopleList_10bzt_1">
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Antikvitet presis
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Fødsels-/D-nummer 138899&nbsp;99726
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Bønne elegant
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Fødsels-/D-nummer 188495&nbsp;74503
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Lomme filosofisk
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Fødsels-/D-nummer 088896&nbsp;74513
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_ous0n_57 _navigationTile_medium_ous0n_101"
+                         href="#"
+                      >
+                        <div class="_header_ous0n_19">
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_ous0n_24">
+                            Adelsmann varm
+                          </h3>
+                          <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_ous0n_1"
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_ous0n_41 false _descriptionIndented_ous0n_53">
+                          Fødsels-/D-nummer 148924&nbsp;49911
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <h2 id="businessesHeadingId"
+                  class="_heading_12p5o_1 _heading_level3_12p5o_34"
+              >
+                Virksomheter
+              </h2>
+              <div class="_checkboxGroup_3mzou_9">
+                <div class="_container_1k24j_5">
+                  <input id="checkboxInputId-:rd2:"
+                         class="_input_1k24j_17"
+                         type="checkbox"
+                  >
+                  <label for="checkboxInputId-:rd2:"
+                         class="_label_1k24j_29"
+                  >
+                    <span class="_labelCheckbox_1k24j_40">
+                      <span class="_labelCheckboxCheck_1k24j_50">
+                      </span>
+                    </span>
+                    <span class="_labelContent_1k24j_63">
+                      <span class>
+                        Vis avviklede virksomheter
+                      </span>
+                    </span>
+                  </label>
+                  <div id="checkboxErrorId-:rd3:"
+                       aria-live="assertive"
+                       aria-atomic="true"
+                  >
+                  </div>
+                </div>
+                <div class="_container_1k24j_5">
+                  <input id="checkboxInputId-:rd4:"
+                         class="_input_1k24j_17"
+                         type="checkbox"
+                         checked
+                  >
+                  <label for="checkboxInputId-:rd4:"
+                         class="_label_1k24j_29"
+                  >
+                    <span class="_labelCheckbox_1k24j_40">
+                      <span class="_labelCheckboxCheck_1k24j_50">
+                      </span>
+                    </span>
+                    <span class="_labelContent_1k24j_63">
+                      <span class>
+                        Vis underenheter
+                      </span>
+                    </span>
+                  </label>
+                  <div id="checkboxErrorId-:rd5:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -4359,7 +4959,7 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -4970,7 +5570,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -5433,7 +6033,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -5800,7 +6400,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -6368,6 +6968,15 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                   </li>
                 </ul>
               </nav>
+              <div class="_showAllButtonWrapper_3mzou_21">
+                <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
+                        type="button"
+                >
+                  <span class="_buttonText_6ybyo_69">
+                    Vis færre
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
           <div class="_rolePickerFooter_90jan_11">
@@ -6458,7 +7067,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -6855,6 +7464,15 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                   </li>
                 </ul>
               </nav>
+              <div class="_showAllButtonWrapper_3mzou_21">
+                <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1"
+                        type="button"
+                >
+                  <span class="_buttonText_6ybyo_69">
+                    Vis færre
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
           <div class="_rolePickerFooter_90jan_11">
@@ -6980,7 +7598,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"
@@ -7589,7 +8207,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 <label class="_label_1egyv_18"
                        for="filterInputId"
                 >
-                  Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
+                  Søk i listen
                 </label>
                 <div class="_srOnly_1egyv_82"
                      id="liveSearchId"

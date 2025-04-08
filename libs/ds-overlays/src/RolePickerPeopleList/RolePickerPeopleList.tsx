@@ -17,7 +17,7 @@ import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
 
 import styles from './RolePickerPeopleList.module.scss';
 
-const MAX_INIITAL_ITEMS = 5;
+const MAX_INITIAL_ITEMS = 5;
 
 export const RolePickerPeopleList = ({
   people,
@@ -25,16 +25,21 @@ export const RolePickerPeopleList = ({
   showDeceasedPeople: showDeceasedPeopleExternal,
 }: RolePickerPeopleListProps): JSX.Element | null => {
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
-  const [showAll, setShowAll] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [showDeceasedPeople, setShowDeceasedPeople] = useState(
     showDeceasedPeopleExternal
   );
   const ctx = useContext(RolePickerContext);
   const navRef = useRef<HTMLElement>(null);
 
-  const handleShowAll = (): void => {
-    setShowAll(true);
-    navRef.current?.querySelectorAll('a')[MAX_INIITAL_ITEMS - 1].focus();
+  const handleExpand = (): void => {
+    setIsExpanded(true);
+    navRef.current?.querySelectorAll('a')[MAX_INITIAL_ITEMS - 1].focus();
+  };
+
+  const handleCollapse = (): void => {
+    setIsExpanded(false);
+    navRef.current?.querySelectorAll('a')[0].focus();
   };
 
   const handleEntityClicked = async (entity: Person): Promise<void> => {
@@ -63,11 +68,11 @@ export const RolePickerPeopleList = ({
           f.personId.includes(filterQuery.toLowerCase())
       );
     }
-    if (showAll) {
+    if (isExpanded) {
       return items;
     }
-    return items.slice(0, MAX_INIITAL_ITEMS);
-  }, [people.list, showDeceasedPeople, filterQuery, showAll]);
+    return items.slice(0, MAX_INITIAL_ITEMS);
+  }, [people.list, showDeceasedPeople, filterQuery, isExpanded]);
 
   const getShowAllCount = useCallback((): number => {
     return showDeceasedPeople
@@ -75,8 +80,8 @@ export const RolePickerPeopleList = ({
       : people.list.filter((p) => !p.isDeleted).length;
   }, [people.list, people.total, showDeceasedPeople]);
 
-  const displayShowAllButton =
-    !showAll && !filterQuery && people.total > MAX_INIITAL_ITEMS;
+  const displayToggleAllButton =
+    !filterQuery && people.total > MAX_INITIAL_ITEMS;
 
   return (
     <div>
@@ -112,12 +117,18 @@ export const RolePickerPeopleList = ({
           })}
         </ul>
       </nav>
-      {displayShowAllButton ? (
+      {displayToggleAllButton ? (
         <div className={styles.showAllButtonWrapper}>
-          <Button
-            variant={'tertiary'}
-            onClick={handleShowAll}
-          >{`${t('rolepicker.ShowAll')} ${t('rolepicker.People')} (${getShowAllCount()})`}</Button>
+          {isExpanded ? (
+            <Button variant={'tertiary'} onClick={handleCollapse}>
+              {t('rolepicker.ShowLess')}
+            </Button>
+          ) : (
+            <Button
+              variant={'tertiary'}
+              onClick={handleExpand}
+            >{`${t('rolepicker.ShowAll')} ${t('rolepicker.People')} (${getShowAllCount()})`}</Button>
+          )}
         </div>
       ) : null}
     </div>

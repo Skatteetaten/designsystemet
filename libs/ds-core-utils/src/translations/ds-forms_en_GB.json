@@ -30,7 +30,7 @@
   "fileuploader.AddMultipleLabel": "Add file(s)",
   "fileuploader.AddSingleLabel": "Add file",
   "fileuploader.DeleteConfirmation": "The file has been removed",
-  "fileuploader.DeleteInProgress": "(Removing in progress)",
+  "fileuploader.DeleteInProgress": "Removing in progress",
   "fileuploader.DeleteLabel": "Delete file",
   "fileuploader.FileFormatError": "Can not upload {{filnavn}}. Please use an accepted file format.",
   "fileuploader.FileIconLabel": "File",

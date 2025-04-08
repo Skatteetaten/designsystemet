@@ -785,16 +785,16 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
           <thead>
             <tr>
               <th class="_calendarTableHeaderCell_feosd_73">
-                Man
+                Ma.
               </th>
               <th class="_calendarTableHeaderCell_feosd_73">
-                Tir
+                Ti.
               </th>
               <th class="_calendarTableHeaderCell_feosd_73">
-                Ons
+                On.
               </th>
               <th class="_calendarTableHeaderCell_feosd_73">
-                Tor
+                To.
               </th>
               <th class="_calendarTableHeaderCell_feosd_73">
                 Fre
@@ -803,7 +803,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 Lør
               </th>
               <th class="_calendarTableHeaderCell_feosd_73">
-                Søn
+                Sø.
               </th>
             </tr>
           </thead>

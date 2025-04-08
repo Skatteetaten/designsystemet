@@ -30,7 +30,7 @@
   "fileuploader.AddMultipleLabel": "Lasit fiilla/fiillaid",
   "fileuploader.AddSingleLabel": "Lasit fiilla",
   "fileuploader.DeleteConfirmation": "Fiila lea sihkkojuvvon",
-  "fileuploader.DeleteInProgress": "(Fjerning pågår)",
+  "fileuploader.DeleteInProgress": "Sihkkumin",
   "fileuploader.DeleteLabel": "Sihko fiilla",
   "fileuploader.FileFormatError": "{{filnavn}} ii sáhte lasihuvvot. Lasit fiilla rievttes formáhtas.",
   "fileuploader.FileIconLabel": "Fiilla",
