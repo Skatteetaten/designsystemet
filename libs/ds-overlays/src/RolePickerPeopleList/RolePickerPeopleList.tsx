@@ -121,8 +121,7 @@ export const RolePickerPeopleList = ({
         <div className={styles.showAllButtonWrapper}>
           {isExpanded ? (
             <Button variant={'tertiary'} onClick={handleCollapse}>
-              {/* TODO Hent fra tekstlistekatalogen */}
-              {'Vis færre personer'}
+              {t('rolepicker.ShowLess')}
             </Button>
           ) : (
             <Button

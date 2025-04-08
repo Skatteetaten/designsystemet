@@ -175,14 +175,7 @@ export const RolePicker = ({
             {getRepresentationText()}
             {displaySearch ? (
               <RolePickerFilterInput
-                // TODO Update i tekstlistekatalogen
-                label={
-                  people && businesses
-                    ? t('rolepicker.SearchAll')
-                    : people
-                      ? t('rolepicker.SearchPeople')
-                      : t('rolepicker.SearchBusinesses')
-                }
+                label={t('rolepicker.SearchText')}
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
                 onClear={() => setFilter('')}

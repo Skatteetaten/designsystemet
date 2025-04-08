@@ -158,16 +158,16 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -176,7 +176,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -710,16 +710,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -728,7 +728,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -1258,16 +1258,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -1276,7 +1276,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -1806,16 +1806,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -1824,7 +1824,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -2355,16 +2355,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -2373,7 +2373,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -2914,16 +2914,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -2932,7 +2932,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -3482,16 +3482,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -3500,7 +3500,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -4050,16 +4050,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -4068,7 +4068,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -4614,16 +4614,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -4632,7 +4632,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
@@ -5162,16 +5162,16 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
       <thead>
         <tr>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Man
+            Ma.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tir
+            Ti.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Ons
+            On.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Tor
+            To.
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
             Fre
@@ -5180,7 +5180,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
             Lør
           </th>
           <th class="_calendarTableHeaderCell_feosd_73">
-            Søn
+            Sø.
           </th>
         </tr>
       </thead>
