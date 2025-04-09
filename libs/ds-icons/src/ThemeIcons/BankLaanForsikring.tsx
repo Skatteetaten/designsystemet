@@ -18,7 +18,7 @@ export function BankLaanForsikringIcon(
     <Icon
       {...props}
       svgPath={BankLaanForsikringSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

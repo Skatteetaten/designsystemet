@@ -18,7 +18,7 @@ export function VarelagerFordringerIcon(
     <Icon
       {...props}
       svgPath={VarelagerFordringerSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

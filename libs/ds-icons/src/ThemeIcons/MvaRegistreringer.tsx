@@ -18,7 +18,7 @@ export function MvaRegistreringerIcon(
     <Icon
       {...props}
       svgPath={MvaRegistreringerSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

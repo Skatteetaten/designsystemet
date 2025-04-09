@@ -18,7 +18,7 @@ export function ArbeidTrygdPensjonIcon(
     <Icon
       {...props}
       svgPath={ArbeidTrygdPensjonSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

@@ -18,7 +18,7 @@ export function EiendelerEgenkapitalGjeldIcon(
     <Icon
       {...props}
       svgPath={EiendelerEgenkapitalGjeldSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

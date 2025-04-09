@@ -18,7 +18,7 @@ export function KredittfradragIcon(
     <Icon
       {...props}
       svgPath={KredittfradragSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

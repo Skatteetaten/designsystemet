@@ -16,7 +16,7 @@ export function AndreForholdIcon(props: IconPropsWithoutSvgPath): JSX.Element {
     <Icon
       {...props}
       svgPath={AndreForholdSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

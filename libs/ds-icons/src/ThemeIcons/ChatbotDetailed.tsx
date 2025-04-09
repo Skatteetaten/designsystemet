@@ -18,7 +18,7 @@ export function ChatbotDetailedIcon(
     <Icon
       {...props}
       svgPath={ChatbotDetailedSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );
