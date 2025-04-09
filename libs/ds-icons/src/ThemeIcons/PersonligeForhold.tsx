@@ -18,7 +18,7 @@ export function PersonligeForholdIcon(
     <Icon
       {...props}
       svgPath={PersonligeForholdSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

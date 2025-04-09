@@ -16,7 +16,7 @@ export function PersoninntektIcon(props: IconPropsWithoutSvgPath): JSX.Element {
     <Icon
       {...props}
       svgPath={PersoninntektSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );
