@@ -1,13 +1,11 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
-import * as BreakpointsStories from './breakpoints.stories';
+import { Meta } from '@storybook/blocks';
 import { VersionBadge } from '../utils/VersionBadge';
+import { TokensList } from './TokensList';
+
+<Meta title="Designtokens/Breakpoints" />
 
 # Breakpoints
 
 <VersionBadge packageName={'core-designtokens'} />
 
-<Meta of={BreakpointsStories} />
-
-<Canvas withSource="none">
-  <Story of={BreakpointsStories.Breakpoints} />
-</Canvas>
+<TokensList tokenType={'breakpoints'} />

@@ -1,16 +1,14 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks';
 import { SpacingTokenExamplesGenerator } from './SpacingTokenExamplesGenerator';
-import * as SpacingStories from './spacing.stories';
 import { VersionBadge } from '../utils/VersionBadge';
+import { TokensList } from './TokensList';
+
+<Meta title="Designtokens/Spacing" />
 
 # Spacing
 
 <VersionBadge packageName={'core-designtokens'} />
 
-<Meta of={SpacingStories} />
-
 <SpacingTokenExamplesGenerator />
 
-<Canvas withSource="none">
-  <Story of={SpacingStories.Spacing} />
-</Canvas>
+<TokensList tokenType={'spacing'} />

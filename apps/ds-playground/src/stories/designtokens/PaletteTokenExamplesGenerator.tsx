@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import { Fragment, JSX } from 'react';
 
 import { IconButton } from '@skatteetaten/ds-buttons';

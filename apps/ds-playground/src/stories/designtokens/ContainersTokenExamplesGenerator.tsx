@@ -1,16 +1,10 @@
 import { JSX } from 'react';
 
-import { StoryObj } from '@storybook/react';
-
 import containersJson from '@skatteetaten/ds-core-designtokens/designtokens/containers.json';
 import { Table } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { TokensList } from './TokensList';
-
-export default {
-  title: 'Designtokens/Containers',
-};
 
 interface Breakpoint {
   name: string;
@@ -60,52 +54,43 @@ const generateTableRows = (
     .slice(start, end);
 };
 
-export const Containers: StoryObj = {
-  render: () => {
-    const responsiveTokens = Object.fromEntries(
-      Object.entries(containersJson[':root,\n:host']).filter(([key, _value]) =>
-        key.includes('responsive')
-      )
-    );
-    return (
-      <>
-        <TokensList tokenType={'containers'} />
-        <Paragraph>
-          {'Når dynamiske container-tokens endres fra utgangspunktet (mobile):'}
-        </Paragraph>
-        <Table
-          caption={
-            'Når dynamiske container-tokens endres fra utgangspunktet (mobile)'
-          }
-          variant={'compact'}
-        >
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell colSpan={2}>{''}</Table.HeaderCell>
-              <Table.HeaderCell className={'noWrap'}>
-                {'Mobile/Breakpoint XS'}
+const responsiveTokens = Object.fromEntries(
+  Object.entries(containersJson[':root,\n:host']).filter(([key, _value]) =>
+    key.includes('responsive')
+  )
+);
+
+export const ContainersTokenExamplesGenerator = (): JSX.Element => {
+  return (
+    <>
+      <TokensList tokenType={'containers'} />
+      <Paragraph>
+        {'Når dynamiske container-tokens endres fra utgangspunktet (mobile):'}
+      </Paragraph>
+      <Table
+        caption={
+          'Når dynamiske container-tokens endres fra utgangspunktet (mobile)'
+        }
+        variant={'compact'}
+      >
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell colSpan={2}>{''}</Table.HeaderCell>
+            <Table.HeaderCell className={'noWrap'}>
+              {'Mobile/Breakpoint XS'}
+            </Table.HeaderCell>
+            {breakpoints.map((breakpoint) => (
+              <Table.HeaderCell key={breakpoint.name} className={'noWrap'}>
+                {breakpoint.name}
               </Table.HeaderCell>
-              {breakpoints.map((breakpoint) => (
-                <Table.HeaderCell key={breakpoint.name} className={'noWrap'}>
-                  {breakpoint.name}
-                </Table.HeaderCell>
-              ))}
-            </Table.Row>
-          </Table.Header>
-          <Table.Body>
-            {generateTableRows(responsiveTokens, breakpoints, 'External', 0, 3)}
-            {generateTableRows(responsiveTokens, breakpoints, 'Internal', 3, 8)}
-          </Table.Body>
-        </Table>
-      </>
-    );
-  },
-  parameters: {
-    previewTabs: {
-      canvas: {
-        hidden: true,
-      },
-    },
-    viewMode: 'docs',
-  },
+            ))}
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {generateTableRows(responsiveTokens, breakpoints, 'External', 0, 3)}
+          {generateTableRows(responsiveTokens, breakpoints, 'Internal', 3, 8)}
+        </Table.Body>
+      </Table>
+    </>
+  );
 };
