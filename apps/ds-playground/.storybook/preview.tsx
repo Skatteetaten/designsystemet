@@ -93,7 +93,14 @@ const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Generelt', 'Designtokens', 'Sidetyper', 'Komponenter', 'Tester'],
+      order: [
+        'Generelt',
+        'Designtokens',
+        'Sidetyper',
+        'Verktøy',
+        'Komponenter',
+        'Tester',
+      ],
     },
   },
   backgrounds: {
