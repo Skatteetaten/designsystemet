@@ -16,7 +16,7 @@ export function CarRecycleIcon(props: IconPropsWithoutSvgPath): JSX.Element {
     <Icon
       {...props}
       svgPath={CarRecycleSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

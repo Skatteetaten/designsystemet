@@ -16,7 +16,7 @@ export function UtgiftIcon(props: IconPropsWithoutSvgPath): JSX.Element {
     <Icon
       {...props}
       svgPath={UtgiftSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

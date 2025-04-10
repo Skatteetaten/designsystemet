@@ -18,7 +18,7 @@ export function BoligEiendelerIcon(
     <Icon
       {...props}
       svgPath={BoligEiendelerSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

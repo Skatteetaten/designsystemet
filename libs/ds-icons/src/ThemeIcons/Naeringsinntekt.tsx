@@ -18,7 +18,7 @@ export function NaeringsinntektIcon(
     <Icon
       {...props}
       svgPath={NaeringsinntektSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

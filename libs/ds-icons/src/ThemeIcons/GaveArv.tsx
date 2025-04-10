@@ -16,8 +16,8 @@ export function GaveArvIcon(props: IconPropsWithoutSvgPath): JSX.Element {
     <Icon
       {...props}
       svgPath={GaveArvSVGpath}
-      size={'medium'}
       variant={'themeIcon'}
+      size={props.size === 'large' ? props.size : 'medium'}
     />
   );
 }
