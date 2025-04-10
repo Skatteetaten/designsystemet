@@ -1,0 +1,2 @@
+const s=["ochre","forest","burgundy","denim","azure","graphite","white","black"],r=["extraSmall","small","medium","large","extraLarge"],a=[r[2],r[3]],e=["white"],t=["success","info","warning","error","danger"],n=["h1","h2","h3","h4","h5","h6"],o=["h2","h3","h4","h5","h6"],h=["standard","compact"];export{r as a,o as b,s as c,h as d,a as f,n as h,e as l,t as s};
+//# sourceMappingURL=base-props.types-B2QwU1g4.js.map

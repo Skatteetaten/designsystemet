@@ -1,6 +1,0 @@
-import{j as a}from"./jsx-runtime-BYYWji4R.js";import{d as c}from"./index-D9wdQ6Rv.js";import{e as r,T as l}from"./index-m1pPjkGf.js";import{c as e}from"./helpers-BRYKCfPN.js";import"./index-ClcD9ViR.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-BomPkCop.js";import"./index-DYo2YWtE.js";import"./index-C176R4Vg.js";const x={component:l.Sum,title:"Komponenter/Table/Sum",argTypes:{children:{control:"text",table:{category:e.props}},sumText:{table:{category:e.props,defaultValue:{summary:c.t("ds_tables:tablesum.Sum")}}},labelAlignment:{table:{category:e.props,defaultValue:{summary:r()}}},valueAlignment:{table:{category:e.props,defaultValue:{summary:r()}}},hasTopSeparator:{table:{category:e.props}},colSpan:{table:{category:e.htmlAttribute}}},args:{children:"1 000kr"}},t={decorators:[p=>a.jsx(l,{caption:"sum example",className:"width100",children:a.jsx(p,{})})]};var o,s,m;t.parameters={...t.parameters,docs:{...(o=t.parameters)==null?void 0:o.docs,source:{originalSource:`{
-  decorators: [(Story): JSX.Element => <Table caption={'sum example'} className={'width100'}>
-        <Story />
-      </Table>]
-} satisfies Story`,...(m=(s=t.parameters)==null?void 0:s.docs)==null?void 0:m.source}}};const T=["Preview"];export{t as Preview,T as __namedExportsOrder,x as default};
-//# sourceMappingURL=TableSum.stories-B7AeV_4r.js.map

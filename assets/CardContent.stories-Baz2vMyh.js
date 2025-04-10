@@ -1,6 +1,0 @@
-import{j as o}from"./jsx-runtime-BYYWji4R.js";import{C as t}from"./index-xt3MBfhK.js";import{c as r}from"./helpers-BRYKCfPN.js";import"./index-ClcD9ViR.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-D9wdQ6Rv.js";import"./index-DYo2YWtE.js";import"./index-BomPkCop.js";import"./index-C176R4Vg.js";import"./index--gfV2u6P.js";t.Content.displayName="Card.Content";const i="Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.",m={children:i},b={component:t.Content,title:"Komponenter/Card/Content",argTypes:{children:{control:"text",table:{category:r.props}},rightContent:{control:"text",table:{category:r.props}},spacingVertical:{table:{category:r.props}},classNames:{table:{category:r.props}}},args:{...m}},e={render:p=>o.jsx(t,{children:o.jsx(t.Content,{...p})})};var a,n,s;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
-  render: args => <Card>
-      <Card.Content {...args} />
-    </Card>
-} satisfies Story`,...(s=(n=e.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};const h=["Preview"];export{e as Preview,h as __namedExportsOrder,b as default};
-//# sourceMappingURL=CardContent.stories-Baz2vMyh.js.map
