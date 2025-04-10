@@ -1,7 +1,9 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks';
 import { ExternalLayout, InternalLayout } from '@skatteetaten/ds-core-utils';
 import { VersionBadge } from '../utils/VersionBadge';
-import ContainersStories from './containers.stories';
+import { ContainersTokenExamplesGenerator } from './ContainersTokenExamplesGenerator';
+
+<Meta title="Designtokens/Containers" />
 
 # Containers
 
@@ -19,8 +21,4 @@ import ContainersStories from './containers.stories';
   <InternalLayout />
 </div>
 
-<Meta of={ContainersStories} />
-
-<Canvas withSource="none">
-  <Story of={ContainersStories.Containers} />
-</Canvas>
+<ContainersTokenExamplesGenerator />

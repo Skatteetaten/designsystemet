@@ -1,16 +1,14 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks';
 import { SizesTokenExamplesGenerator } from './SizesTokenExamplesGenerator';
-import * as SizesStories from './sizes.stories';
 import { VersionBadge } from '../utils/VersionBadge';
+import { TokensList } from './TokensList';
+
+<Meta title="Designtokens/Sizes" />
 
 # Sizes
 
 <VersionBadge packageName={'core-designtokens'} />
 
-<Meta of={SizesStories} />
-
 <SizesTokenExamplesGenerator />
 
-<Canvas withSource="none">
-  <Story of={SizesStories.Sizes} />
-</Canvas>
+<TokensList tokenType={'sizes'} />
