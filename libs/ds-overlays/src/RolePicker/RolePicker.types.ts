@@ -38,6 +38,7 @@ export interface RolePickerProps
         'dismissOnEsc' | 'dismissOnOutsideClick' | 'hideCloseButton' | 'onClose'
       >
     > {
+  ref?: React.Ref<HTMLDialogElement>;
   /** Egendefinert tittel på modal. */
   title?: string;
   /** Den nåværende brukeren representert som et Person-objekt. */
@@ -46,6 +47,8 @@ export interface RolePickerProps
   people?: Paginated<Person>;
   /** En paginert liste over virksomheter. */
   businesses?: Paginated<Business>;
+  /**  Minimum antall personer/virksomheter som kreves for at søkefelt skal være synlig. Default: 11. */
+  minimumEntitiesForSearch?: number;
   /** Om avviklede virksomheter skal vises som standard når rollevelger åpnes. */
   showInactiveBusinesses?: boolean;
   /** Om underenheter av virksomheter skal vises som standard når rollevelger åpnes. */

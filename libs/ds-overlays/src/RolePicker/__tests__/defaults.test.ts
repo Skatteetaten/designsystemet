@@ -1,5 +1,6 @@
 import {
   getRolePickerHideCloseButtonDefault,
+  getRolePickerMinimumEntitiesForSearchDefault,
   getRolePickerShowDeceasedPeopleDefault,
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
@@ -24,5 +25,10 @@ describe('RolePicker defaults', () => {
   it('Når getRolePickerShowDeceasedPeopleDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getRolePickerShowDeceasedPeopleDefault();
     expect(renderDefault).toBe(false);
+  });
+
+  it('Når getRolePickerMinimumEntitiesForSearchDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getRolePickerMinimumEntitiesForSearchDefault();
+    expect(renderDefault).toBe(11);
   });
 });

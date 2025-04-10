@@ -2,8 +2,9 @@ import { ElementRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
 
-type EditButtonPosition = Extract<Position, 'left' | 'right'>;
+export type EditButtonPosition = Extract<Position, 'left' | 'right'>;
 export interface TableEditableRowProps extends BaseProps {
+  ref?: Ref<HTMLTableRowElement>;
   /**
    * Ref til redigeringsknappen. Kan brukes til å sette fokus i avanserte tabeller hvor den innebyggede
    * fokushåndteringen ikke er tilstrekkelig.

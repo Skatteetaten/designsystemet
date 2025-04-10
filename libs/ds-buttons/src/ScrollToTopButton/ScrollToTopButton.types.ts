@@ -1,6 +1,9 @@
+import { Ref } from 'react';
+
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export interface ScrollToTopButtonProps extends BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   classNames?: {
     container?: string;
     button?: string;

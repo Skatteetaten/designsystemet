@@ -2,14 +2,10 @@ import { useRef, JSX, useEffect, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Button, Link } from '@skatteetaten/ds-buttons';
+import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import {
-  InfoOutlineSVGpath,
-  UpdateSVGpath,
-  WarningOutlineIcon,
-} from '@skatteetaten/ds-icons';
+import { UpdateSVGpath, WarningOutlineIcon } from '@skatteetaten/ds-icons';
 import {
   Modal,
   getModalDismissOnEscDefault,
@@ -33,7 +29,7 @@ const meta = {
   argTypes: {
     // Props
     children: {
-      control: { disable: true },
+      control: 'text',
       table: { category: category.props },
     },
     classNames: {
@@ -155,44 +151,6 @@ export const Samtykkemodal: Story = {
   },
 } satisfies Story;
 Samtykkemodal.parameters = exampleParameters;
-
-export const ViktigMelding: Story = {
-  render: (_args): JSX.Element => {
-    const refModalImportant = useRef<HTMLDialogElement>(null);
-
-    return (
-      <>
-        <Button
-          variant={'tertiary'}
-          svgPath={InfoOutlineSVGpath}
-          onClick={(): void => refModalImportant.current?.showModal()}
-        >
-          {'Viktig driftsmelding'}
-        </Button>
-        <Modal
-          ref={refModalImportant}
-          variant={'important'}
-          title={'Viktig melding!'}
-        >
-          <Paragraph hasSpacing>
-            {
-              'Løsningen er ikke kommet i drift ennå eller tatt ned for vedlikehold.'
-            }
-          </Paragraph>
-          <div className={'modalLink'}>
-            <Link
-              href={'#'}
-              onClick={(): void => refModalImportant.current?.close()}
-            >
-              {'Les mer på skatteetaten.no'}
-            </Link>
-          </div>
-        </Modal>
-      </>
-    );
-  },
-} satisfies Story;
-ViktigMelding.parameters = exampleParameters;
 
 export const Ventevarsel: Story = {
   render: function Render(_args): JSX.Element {

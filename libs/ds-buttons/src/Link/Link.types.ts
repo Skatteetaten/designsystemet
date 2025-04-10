@@ -3,6 +3,7 @@ import {
   HTMLProps,
   MouseEventHandler,
   ReactElement,
+  Ref,
 } from 'react';
 
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
@@ -25,12 +26,13 @@ interface LinkPropsHTMLAttributes extends LinkHTMLAttributes {
 export interface LinkComponentCommonProps
   extends LinkPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLAnchorElement>;
   /** Viser ikon etter lenketeksten som indikerer at lenken er til en side på et annet domene. */
   isExternal?: boolean;
   /** Farge på ikon og tekst */
   color?: LinkColor;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Lenketekst. */
   children: string;
 }

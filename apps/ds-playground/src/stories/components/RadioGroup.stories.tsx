@@ -12,9 +12,6 @@ import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-RadioGroup.Radio = { ...RadioGroup.Radio };
 RadioGroup.Radio.displayName = 'RadioGroup.Radio';
 
 const meta = {
@@ -22,8 +19,8 @@ const meta = {
   title: 'Komponenter/RadioGroup/RadioGroup',
   argTypes: {
     // Props
-    classNames: { table: { category: category.props } },
-    children: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     helpSvgPath: {
@@ -34,13 +31,13 @@ const meta = {
         defaultValue: { summary: 'HelpSimpleSVGpath' },
       },
     },
-    helpText: { table: { category: category.props } },
+    helpText: { control: 'text', table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
     legend: {
       control: 'text',
       table: { category: category.props },
     },
-    shadowRootNode: { table: { category: category.props } },
+    shadowRootNode: { control: false, table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
@@ -67,7 +64,7 @@ const meta = {
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { control: false, table: { category: category.event } },
   },
   args: {
     legend: 'Type virksomhet',

@@ -59,7 +59,7 @@ exports[`Tester/Tabs/Tab WithBorder smoke-test 1`] = `
               aria-selected="true"
               aria-controls="ds-tab-panel-:ra:-tab1"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -77,7 +77,7 @@ exports[`Tester/Tabs/Tab WithBorder smoke-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:ra:-tab2"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -122,7 +122,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
               aria-selected="true"
               aria-controls="ds-tab-panel-:r2:-tab1"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -140,7 +140,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r2:-tab2"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -158,7 +158,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r2:-tab3"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -206,7 +206,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
               aria-selected="true"
               aria-controls="ds-tab-panel-:r6:-tab1"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -224,7 +224,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r6:-tab2"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -242,7 +242,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r6:-tab3"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"

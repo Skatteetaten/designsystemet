@@ -9,7 +9,7 @@ import {
   getCommonFormVariantDefault,
   getAutoCompletePropDescription,
 } from '@skatteetaten/ds-core-utils';
-import { TextField, getTextFieldAsDefault } from '@skatteetaten/ds-forms';
+import { TextField } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -20,13 +20,6 @@ const meta = {
   title: 'Komponenter/TextField',
   argTypes: {
     // Props
-    as: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTextFieldAsDefault() },
-      },
-    },
     variant: {
       options: [...formArrSize],
       control: 'inline-radio',
@@ -35,7 +28,6 @@ const meta = {
         defaultValue: { summary: getCommonFormVariantDefault() },
       },
     },
-    autosize: { table: { category: category.props } },
     classNames: {
       control: false,
       table: { category: category.props },
@@ -54,7 +46,7 @@ const meta = {
         defaultValue: { summary: 'HelpSimpleSVGpath' },
       },
     },
-    helpText: { table: { category: category.props } },
+    helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     label: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
@@ -94,7 +86,6 @@ const meta = {
       control: 'boolean',
       table: { category: category.htmlAttribute },
     },
-    rows: { table: { category: category.htmlAttribute } },
     value: {
       control: 'text',
       table: { category: category.htmlAttribute },
@@ -104,7 +95,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     label: 'Navn',
@@ -369,8 +360,6 @@ export const Examples: Story = {
     const [postaCodeInput, setPostaCodeInput] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
-    const [infoInput, setInfoInput] = useState('');
-
     return (
       <form noValidate>
         <TextField
@@ -385,7 +374,6 @@ export const Examples: Story = {
         />
         <TextField
           label={'Postnummer'}
-          as={'input'}
           name={'test'}
           className={'textField150'}
           errorMessage={errorMessage}
@@ -410,17 +398,7 @@ export const Examples: Story = {
             }
           }}
         />
-        <TextField
-          label={'Andre opplysninger'}
-          className={'textField300'}
-          as={'textarea'}
-          rows={4}
-          value={infoInput}
-          autosize
-          onChange={(e: ChangeEvent<HTMLTextAreaElement>): void =>
-            setInfoInput(e.target.value)
-          }
-        />
+
         <TextField label={'Nettleser'} list={'browsers'} />
         <datalist id={'browsers'}>
           <option value={'Edge'} />

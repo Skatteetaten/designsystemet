@@ -11,7 +11,6 @@ const meta = {
   title: 'Tester/Card/Alert',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },
@@ -117,7 +116,7 @@ export const WithSvgPath = {
   },
 } satisfies Story;
 
-const variantsArr: CardAlertVariant[] = ['neutral', 'warning', 'danger'];
+const variantsArr: CardAlertVariant[] = ['info', 'warning', 'danger'];
 const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
   <Card>
     {variantsArr.map((variant, index) => {

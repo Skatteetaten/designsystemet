@@ -3,6 +3,7 @@ import {
   FocusEventHandler,
   MouseEventHandler,
   ReactElement,
+  Ref,
 } from 'react';
 
 import { BaseProps, Brightness, Size } from '@skatteetaten/ds-core-utils';
@@ -27,12 +28,13 @@ export type IconButtonBrightness = Extract<Brightness, 'light' | 'default'>;
 export interface IconButtonProps
   extends IconButtonPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   /** Om knappen har en ramme/sirkel. */
   isOutlined?: boolean;
   /** Størrelse på knappen. */
   size?: Extract<Size, 'extraSmall' | 'small' | 'medium' | 'large'>;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath: ReactElement;
+  svgPath: ReactElement<SVGPathElement>;
   /** Om knappen skal inneholde Spinner. */
   hasSpinner?: boolean;
   /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */

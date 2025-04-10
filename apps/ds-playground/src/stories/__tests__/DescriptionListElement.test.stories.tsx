@@ -10,7 +10,6 @@ const meta = {
   title: 'Tester/DescriptionList/Element',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: {
       table: { disable: true },

@@ -1,16 +1,13 @@
-import {
-  ForwardRefExoticComponent,
-  ReactNode,
-  RefAttributes,
-  JSX,
-} from 'react';
+import { JSX, ReactNode, Ref } from 'react';
 
 import { LinkProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { FooterLogoProps } from '../FooterLogo/FooterLogo.types';
+import { FooterLink } from '../FooterLink/FooterLink';
+import { FooterLogo } from '../FooterLogo/FooterLogo';
 
 export interface FooterProps extends BaseProps {
+  ref?: Ref<HTMLElement>;
   /** URL til Kontakt oss */
   contactUsURL?: string;
   /** URL til Sikkerhet og personvern */
@@ -20,7 +17,7 @@ export interface FooterProps extends BaseProps {
   /** Om logo til Skatteetaten skal skjules */
   hideLogo?: boolean;
   /** Tittel til første kolonne */
-  titleFirstColumn: string;
+  titleFirstColumn?: string;
   /** Tittel til andre kolonne */
   titleSecondColumn?: string;
   /** Tittel til tredje kolonne */
@@ -31,6 +28,8 @@ export interface FooterProps extends BaseProps {
   secondColumn?: ReactNode;
   /** Innhold i tredje kolonne */
   thirdColumn?: ReactNode;
+  /** Om standard lenker skal skjules */
+  hideDefaultLinks?: boolean;
   /**
    * Footer.LinkFirstColumn, Footer.Logo eller Footer.Link:
    * Footer.LinkFirstColumn blir plassert under de første tre lenkene i første kolonne.
@@ -40,15 +39,8 @@ export interface FooterProps extends BaseProps {
   children?: JSX.Element | JSX.Element[];
 }
 
-export interface FooterComponent
-  extends ForwardRefExoticComponent<FooterProps & RefAttributes<HTMLElement>> {
-  Logo: ForwardRefExoticComponent<
-    FooterLogoProps & RefAttributes<HTMLDivElement>
-  >;
-  Link: ForwardRefExoticComponent<
-    Omit<LinkProps, 'color'> & RefAttributes<HTMLAnchorElement>
-  >;
-  LinkFirstColumn: ForwardRefExoticComponent<
-    Omit<LinkProps, 'color'> & RefAttributes<HTMLAnchorElement>
-  >;
+export interface FooterComponent extends React.FC<FooterProps> {
+  Logo: typeof FooterLogo;
+  Link: typeof FooterLink;
+  LinkFirstColumn: React.FC<Omit<LinkProps, 'color'>>;
 }

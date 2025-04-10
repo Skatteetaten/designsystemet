@@ -3,21 +3,25 @@
 
   &_small {
     width: var(--size-small);
+    min-width: var(--size-small);
     height: var(--size-small);
   }
 
   &_medium {
     width: var(--size-medium);
+    min-width: var(--size-medium);
     height: var(--size-medium);
   }
 
   &_large {
     width: var(--size-large);
+    min-width: var(--size-large);
     height: var(--size-large);
   }
 
   &_extraLarge {
     width: var(--size-extra-large);
+    min-width: var(--size-extra-large);
     height: var(--size-extra-large);
   }
 }
@@ -33,11 +37,13 @@
 
   &_medium {
     width: var(--size-extra-large);
+    min-width: var(--size-extra-large);
     height: var(--size-extra-large);
   }
 
   &_large {
     width: 3rem;
+    min-width: 3rem;
     height: 3rem;
   }
 }

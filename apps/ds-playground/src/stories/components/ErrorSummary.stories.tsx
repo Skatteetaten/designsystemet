@@ -18,7 +18,7 @@ const meta = {
   title: 'Komponenter/ErrorSummary/ErrorSummary',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     content: { control: 'text', table: { category: category.props } },
     shadowRootNode: {
       control: false,

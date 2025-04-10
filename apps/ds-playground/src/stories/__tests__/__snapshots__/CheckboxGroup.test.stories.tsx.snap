@@ -18,7 +18,6 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
         <input id="checkboxInputId-:ri:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:ri:"
                class="_label_1k24j_29"
@@ -38,7 +37,6 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
         <input id="checkboxInputId-:rk:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:rk:"
                class="_label_1k24j_29"
@@ -58,7 +56,6 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
         <input id="checkboxInputId-:rm:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:rm:"
                class="_label_1k24j_29"
@@ -116,7 +113,6 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
         <input id="checkboxInputId-:rq:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:rq:"
                class="_label_1k24j_29"
@@ -136,7 +132,6 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
         <input id="checkboxInputId-:rs:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:rs:"
                class="_label_1k24j_29"
@@ -156,7 +151,6 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
         <input id="checkboxInputId-:ru:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:ru:"
                class="_label_1k24j_29"
@@ -214,7 +208,6 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
         <input id="checkboxInputId-:r12:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r12:"
                class="_label_1k24j_29"
@@ -234,7 +227,6 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
         <input id="checkboxInputId-:r14:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r14:"
                class="_label_1k24j_29"
@@ -254,7 +246,6 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
         <input id="checkboxInputId-:r16:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r16:"
                class="_label_1k24j_29"
@@ -303,7 +294,6 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
         <input id="checkboxInputId-:ra:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:ra:"
                class="_label_1k24j_29"
@@ -323,7 +313,6 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
         <input id="checkboxInputId-:rc:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:rc:"
                class="_label_1k24j_29"
@@ -343,7 +332,6 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
         <input id="checkboxInputId-:re:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:re:"
                class="_label_1k24j_29"
@@ -382,13 +370,13 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3d:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3e:"
@@ -409,10 +397,9 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
       <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
         <input id="checkboxInputId-:r3f:"
                class="_input_1k24j_17"
-               type="checkbox"
                aria-describedby="checkboxGroupErrorId-:r3c:"
                aria-invalid="true"
-               value
+               type="checkbox"
         >
         <label for="checkboxInputId-:r3f:"
                class="_label_1k24j_29"
@@ -431,10 +418,9 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
       <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
         <input id="checkboxInputId-:r3h:"
                class="_input_1k24j_17"
-               type="checkbox"
                aria-describedby="checkboxGroupErrorId-:r3c:"
                aria-invalid="true"
-               value
+               type="checkbox"
         >
         <label for="checkboxInputId-:r3h:"
                class="_label_1k24j_29"
@@ -453,10 +439,9 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
       <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
         <input id="checkboxInputId-:r3j:"
                class="_input_1k24j_17"
-               type="checkbox"
                aria-describedby="checkboxGroupErrorId-:r3c:"
                aria-invalid="true"
-               value
+               type="checkbox"
         >
         <label for="checkboxInputId-:r3j:"
                class="_label_1k24j_29"
@@ -476,8 +461,8 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_1kdf4_15 _errorMessage_1e92u_5 dummyClassname">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+        <div class="_errorMessage_vog41_15 _errorMessage_1e92u_5 dummyClassname">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -486,7 +471,7 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_1kdf4_30">
+          <p class="_errorMessageText_vog41_29">
             Velg minst ett av alternativene
           </p>
         </div>
@@ -517,7 +502,6 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
         <input id="checkboxInputId-:r2t:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r2t:"
                class="_label_1k24j_29"
@@ -537,7 +521,6 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
         <input id="checkboxInputId-:r2v:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r2v:"
                class="_label_1k24j_29"
@@ -557,7 +540,6 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
         <input id="checkboxInputId-:r31:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r31:"
                class="_label_1k24j_29"
@@ -603,7 +585,6 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
         <input id="checkboxInputId-:r1i:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r1i:"
                class="_label_1k24j_29"
@@ -623,7 +604,6 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
         <input id="checkboxInputId-:r1k:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r1k:"
                class="_label_1k24j_29"
@@ -643,7 +623,6 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
         <input id="checkboxInputId-:r1m:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r1m:"
                class="_label_1k24j_29"
@@ -689,7 +668,6 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
         <input id="checkboxInputId-:r1q:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
                checked
         >
         <label for="checkboxInputId-:r1q:"
@@ -710,7 +688,6 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
         <input id="checkboxInputId-:r1s:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r1s:"
                class="_label_1k24j_29"
@@ -730,7 +707,6 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
         <input id="checkboxInputId-:r1u:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r1u:"
                class="_label_1k24j_29"
@@ -773,10 +749,9 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
       <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
         <input id="checkboxInputId-:r2a:"
                class="_input_1k24j_17"
-               type="checkbox"
                aria-describedby="checkboxGroupErrorId-:r28:"
                aria-invalid="true"
-               value
+               type="checkbox"
         >
         <label for="checkboxInputId-:r2a:"
                class="_label_1k24j_29"
@@ -795,10 +770,9 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
       <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
         <input id="checkboxInputId-:r2c:"
                class="_input_1k24j_17"
-               type="checkbox"
                aria-describedby="checkboxGroupErrorId-:r28:"
                aria-invalid="true"
-               value
+               type="checkbox"
         >
         <label for="checkboxInputId-:r2c:"
                class="_label_1k24j_29"
@@ -817,10 +791,9 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
       <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
         <input id="checkboxInputId-:r2e:"
                class="_input_1k24j_17"
-               type="checkbox"
                aria-describedby="checkboxGroupErrorId-:r28:"
                aria-invalid="true"
-               value
+               type="checkbox"
         >
         <label for="checkboxInputId-:r2e:"
                class="_label_1k24j_29"
@@ -840,8 +813,8 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_1kdf4_15 _errorMessage_1e92u_5">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+        <div class="_errorMessage_vog41_15 _errorMessage_1e92u_5">
+          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -850,7 +823,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_1kdf4_30">
+          <p class="_errorMessageText_vog41_29">
             Velg minst ett av alternativene
           </p>
         </div>
@@ -873,13 +846,13 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r34:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r35:"
@@ -898,7 +871,6 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
         <input id="checkboxInputId-:r36:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r36:"
                class="_label_1k24j_29"
@@ -918,7 +890,6 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
         <input id="checkboxInputId-:r38:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r38:"
                class="_label_1k24j_29"
@@ -938,7 +909,6 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
         <input id="checkboxInputId-:r3a:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r3a:"
                class="_label_1k24j_29"
@@ -977,13 +947,13 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_1hc5e_1 _button_extraSmall_1hc5e_34 _button_outlined_1hc5e_114 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r2i:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2j:"
@@ -998,14 +968,14 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
       </svg>
     </button>
     <div class="_helpBox_10ldw_31">
-      <span class="_helpBoxText_10ldw_44">
+      <div class="_helpBoxText_10ldw_44">
         Vi trenger å vite om du har barn.
-      </span>
-      <button class="_button_1hc5e_1 _button_small_1hc5e_42  _helpBoxCloseButton_10ldw_51"
+      </div>
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_10ldw_51"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1hc5e_26"
+        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2q:"
@@ -1025,7 +995,6 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         <input id="checkboxInputId-:r2k:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r2k:"
                class="_label_1k24j_29"
@@ -1045,7 +1014,6 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         <input id="checkboxInputId-:r2m:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r2m:"
                class="_label_1k24j_29"
@@ -1065,7 +1033,6 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         <input id="checkboxInputId-:r2o:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r2o:"
                class="_label_1k24j_29"
@@ -1109,7 +1076,6 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
         <input id="checkboxInputId-:r1a:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r1a:"
                class="_label_1k24j_29"
@@ -1129,7 +1095,6 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
         <input id="checkboxInputId-:r1c:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r1c:"
                class="_label_1k24j_29"
@@ -1149,7 +1114,6 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
         <input id="checkboxInputId-:r1e:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r1e:"
                class="_label_1k24j_29"
@@ -1195,7 +1159,6 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
         <input id="checkboxInputId-:r2:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r2:"
                class="_label_1k24j_29"
@@ -1215,7 +1178,6 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
         <input id="checkboxInputId-:r4:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r4:"
                class="_label_1k24j_29"
@@ -1235,7 +1197,6 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
         <input id="checkboxInputId-:r6:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r6:"
                class="_label_1k24j_29"
@@ -1279,7 +1240,6 @@ exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
         <input id="checkboxInputId-:r22:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r22:"
                class="_label_1k24j_29"
@@ -1299,7 +1259,6 @@ exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
         <input id="checkboxInputId-:r24:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r24:"
                class="_label_1k24j_29"
@@ -1319,7 +1278,6 @@ exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
         <input id="checkboxInputId-:r26:"
                class="_input_1k24j_17"
                type="checkbox"
-               value
         >
         <label for="checkboxInputId-:r26:"
                class="_label_1k24j_29"

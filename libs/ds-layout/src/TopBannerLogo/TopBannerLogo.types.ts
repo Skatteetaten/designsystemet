@@ -1,13 +1,9 @@
-import { RefObject } from 'react';
+import { MouseEventHandler, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export const logoAsArr = ['a', 'div'] as const;
 export type LogoAs = (typeof logoAsArr)[number];
-
-export type LogoRefHandle = {
-  logoRef: RefObject<HTMLAnchorElement | HTMLDivElement>;
-};
 
 type TopBannerLogoDiscrimatedProps =
   | {
@@ -47,4 +43,11 @@ type TopBannerLogoDiscrimatedProps =
       as?: Extract<LogoAs, 'div'>;
     };
 
-export type TopBannerLogoProps = TopBannerLogoDiscrimatedProps & BaseProps;
+interface TopBannerLogoCommonProps {
+  ref?: Ref<HTMLAnchorElement | HTMLDivElement | null>;
+  onClick?: MouseEventHandler<HTMLDivElement | HTMLAnchorElement>;
+}
+
+export type TopBannerLogoProps = TopBannerLogoDiscrimatedProps &
+  TopBannerLogoCommonProps &
+  BaseProps;

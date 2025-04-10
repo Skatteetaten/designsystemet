@@ -14,7 +14,6 @@ const meta = {
   title: 'Tester/FileUploader',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },
@@ -61,7 +60,6 @@ const meta = {
     acceptedFileFormatsDescription: {
       table: { disable: true, category: category.props },
     },
-    successIconTitle: { table: { disable: true, category: category.props } },
     uploadResult: { table: { disable: true, category: category.props } },
     children: { table: { disable: true, category: category.props } },
     fileIconTitle: { table: { disable: true, category: category.props } },
@@ -190,9 +188,6 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
     await expect(
       canvas.getAllByText(dsI18n.t('ds_forms:fileuploader.FileIconLabel'))[0]
     ).toBeInTheDocument();
-    await expect(
-      canvas.getAllByText(dsI18n.t('ds_forms:fileuploader.SuccessIconLabel'))[0]
-    ).toBeInTheDocument();
     await expect(canvas.getByText('grunnlag.jpg')).toBeInTheDocument();
     await expect(canvas.getByText('test.png')).toBeInTheDocument();
     await expect(
@@ -279,7 +274,6 @@ export const WithTextOverrides: StoryObj<FileUploaderProps> = {
     acceptedFileFormatsDisplay: 'bilder og dokumenter',
     children: 'Trykk eller dra og slipp filer her',
     uploadedFiles: [{ name: 'document.pdf' }],
-    successIconTitle: 'lastet opp',
   },
 
   play: async ({ canvasElement }): Promise<void> => {

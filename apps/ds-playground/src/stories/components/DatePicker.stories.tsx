@@ -14,7 +14,7 @@ import {
 import {
   DatePicker,
   getDatePickerDateFormat,
-  TextField,
+  TextArea,
 } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -26,7 +26,7 @@ const meta = {
   title: 'Komponenter/DatePicker',
   argTypes: {
     // Props
-    classNames: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
     value: { table: { category: category.props }, control: 'date' },
     description: { table: { category: category.props } },
     dateFormat: {
@@ -46,7 +46,7 @@ const meta = {
         defaultValue: { summary: 'HelpSimpleSVGpath' },
       },
     },
-    helpText: { table: { category: category.props } },
+    helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     initialPickerDate: { table: { category: category.props }, control: 'date' },
     minDate: { table: { category: category.props }, control: 'date' },
@@ -174,11 +174,7 @@ export const Examples: Story = {
           onSelectDate={handleSelect}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <TextField
-          className={'textField300'}
-          label={'Andre opplysninger'}
-          as={'textarea'}
-        />
+        <TextArea className={'textField300'} label={'Andre opplysninger'} />
       </>
     );
   },

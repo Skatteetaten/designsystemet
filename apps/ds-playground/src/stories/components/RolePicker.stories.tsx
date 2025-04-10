@@ -18,6 +18,7 @@ import {
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
   getRolePickerShowDeceasedPeopleDefault,
+  getRolePickerMinimumEntitiesForSearchDefault,
 } from '@skatteetaten/ds-overlays';
 
 import { category } from '../../../.storybook/helpers';
@@ -25,7 +26,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const me: Person = {
   name: 'Ola Nordmann',
-  personId: '101010 12345',
+  personId: '10101012345',
   type: 'Person',
 };
 
@@ -33,96 +34,92 @@ const businesses: Paginated<Business> = {
   total: 12,
   list: [
     {
-      name: 'Costco',
+      name: 'Costco AS',
       organizationNumber: '123456777',
       isDeleted: false,
       unitType: 'AS',
       type: 'Organization',
       subunits: [
         {
-          name: 'Google',
+          name: 'Google ASA',
           organizationNumber: '123456789',
           isDeleted: false,
           type: 'Organization',
-          unitType: 'AS',
+          unitType: 'ASA',
         },
         {
-          name: 'Facebook',
+          name: 'Facebook RHF',
           organizationNumber: '123456790',
           isDeleted: true,
           type: 'Organization',
-          unitType: 'AS',
+          unitType: 'RHF',
         },
       ],
     },
     {
-      name: 'Instagram',
+      name: 'Instagram AS',
       organizationNumber: '312843211',
       isDeleted: true,
       unitType: 'AS',
       type: 'Organization',
       subunits: [
         {
-          name: 'Snapchat',
+          name: 'Snapchat AS',
           organizationNumber: '123456623',
           isDeleted: true,
           type: 'Organization',
           unitType: 'AS',
         },
         {
-          name: 'Statoil',
+          name: 'Statoil ASA',
           organizationNumber: '312849218',
           isDeleted: false,
           type: 'Organization',
-          unitType: 'AS',
+          unitType: 'ASA',
         },
       ],
     },
     {
-      name: 'Samsung',
+      name: 'Samsung DA',
       organizationNumber: '312943218',
       isDeleted: false,
       type: 'Organization',
-      unitType: 'AS',
+      unitType: 'DA',
     },
-
     {
-      name: 'Toshiba',
+      name: 'Toshiba AS',
       organizationNumber: '312643218',
       isDeleted: false,
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
-      name: 'Hitachi',
+      name: 'Hitachi AS',
       organizationNumber: '312743218',
       isDeleted: false,
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
-      name: 'Vanguard',
+      name: 'Vanguard AS',
       organizationNumber: '332843218',
       isDeleted: false,
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
-      name: 'Amazon',
+      name: 'Amazon ASA',
       organizationNumber: '112843218',
       isDeleted: false,
       type: 'Organization',
-      unitType: 'AS',
+      unitType: 'ASA',
     },
     {
-      name: 'Meta',
+      name: 'Meta ANS',
       organizationNumber: '212843218',
       isDeleted: false,
       type: 'Organization',
-      unitType: 'AS',
+      unitType: 'ANS',
     },
   ],
 };
@@ -132,25 +129,25 @@ const people: Paginated<Person> = {
   list: [
     {
       name: 'Antikvitet presis',
-      personId: '138899 99726',
+      personId: '13889999726',
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
-      personId: '188495 74503',
+      personId: '18849574503',
       type: 'Person',
       isDeleted: true,
     },
     {
       name: 'Lomme filosofisk',
-      personId: '088896 74513',
+      personId: '08889674513',
       type: 'Person',
       isDeleted: true,
     },
     {
       name: 'Adelsmann varm',
-      personId: '148924 49911',
+      personId: '14892449911',
       type: 'Person',
       isDeleted: false,
     },
@@ -229,6 +226,14 @@ const meta = {
         category: category.props,
         defaultValue: {
           summary: getRolePickerHideCloseButtonDefault().toString(),
+        },
+      },
+    },
+    minimumEntitiesForSearch: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getRolePickerMinimumEntitiesForSearchDefault().toString(),
         },
       },
     },

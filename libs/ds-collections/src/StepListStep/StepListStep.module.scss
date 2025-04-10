@@ -268,11 +268,13 @@
 
     &Icon {
       width: var(--size-small);
+      min-width: var(--size-small);
       height: var(--size-small);
       fill: var(--step-circle-foreground);
 
       @media (min-width: breakpoints.$breakpoint-s) {
         width: var(--size-large);
+        min-width: var(--size-large);
         height: var(--size-large);
       }
     }

@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  Ref,
 } from 'react';
 
 import {
@@ -30,6 +31,7 @@ export interface DatePickerProps
   extends DatePickerPropsHTMLAttributes,
     BaseProps,
     FormRequiredProps {
+  ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
       container?: string;

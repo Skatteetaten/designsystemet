@@ -1,9 +1,4 @@
-import {
-  ForwardRefExoticComponent,
-  MouseEventHandler,
-  ReactNode,
-  RefAttributes,
-} from 'react';
+import { MouseEventHandler, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -15,12 +10,13 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 };
 
 export interface TopBannerInternalProps extends BaseProps {
+  ref?: Ref<HTMLElement>;
   classNames?: {
     logo?: string;
     childrenAndUserContainer?: string;
   };
   /** Overskrift eller navn på løsning. Merk at dette ikke gir heading-element i topbanner */
-  title?: string;
+  title: string;
   /** Valgfri undertittel */
   description?: string;
   /** Kan brukes til å tydeliggjøre at man er i testmiljø */
@@ -40,11 +36,7 @@ export interface TopBannerInternalProps extends BaseProps {
   skipLink?: SkipLink;
   /** Url på logo. Skal settes til hjem-siden/arbeidslisten i løsningen.  */
   logoHref: string;
-  /**
-   * Alt-text på logo. Skal gi beskjed om hvor lenken sender deg. F.eks Forside [navn på løsning].
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Erstattes av "title".
-   */
-  logoAltText: string;
+
   /** Overskriver default logo. */
   logo?: string;
   /** Kalles ved klikk på logo */
@@ -54,8 +46,6 @@ export interface TopBannerInternalProps extends BaseProps {
 }
 
 export interface TopBannerInternalComponent
-  extends ForwardRefExoticComponent<
-    TopBannerInternalProps & RefAttributes<HTMLElement>
-  > {
+  extends React.FC<TopBannerInternalProps> {
   ActionMenu: typeof TopBannerInternalActionMenu;
 }

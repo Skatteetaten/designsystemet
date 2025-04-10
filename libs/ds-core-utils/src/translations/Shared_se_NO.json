@@ -1,13 +1,15 @@
 {
   "shared.AccessibilityStatement": "Almmusjulggaštus",
-  "shared.AccessibilityStatementURL": "https://uustatus.no/",
+  "shared.AccessibilityStatementURL": "https://uustatus.no/nb",
   "shared.ChooseValue": "Vállje",
   "shared.Close": "Govčča",
   "shared.ContactUs": "Válde oktavuođa minguin",
   "shared.ContactUsURL": "https://www.skatteetaten.no/kontakt/",
   "shared.Help": "Veahkki",
+  "shared.NewTab": "rahppu ođđa leavggas",
   "shared.RequiredField": "Fertet deavddit",
   "shared.SecurityAndPrivacy": "Sihkarvuohta ja persovdnasuodjaleapmi",
   "shared.SecurityAndPrivacyURL": "https://www.skatteetaten.no/om-skatteetaten/sikkerhet/",
-  "shared.SkeLogoImageText": "Vearroetáhta dovdomearka"
+  "shared.SkeLogoImageText": "Vearroetáhta dovdomearka",
+  "shared.Yes": "Jo"
 }

@@ -39,30 +39,15 @@
   &_extraSmall {
     padding: var(--spacing-xxs) var(--spacing-xxs);
     border-width: 1px;
-
-    & .icon {
-      width: var(--size-small);
-      height: var(--size-small);
-    }
   }
 
   &_small {
     padding: var(--spacing-xs) var(--spacing-xs);
     border-width: 1px;
-
-    & .icon {
-      width: var(--size-small);
-      height: var(--size-small);
-    }
   }
 
   &_medium {
     padding: var(--spacing-xs) var(--spacing-xs);
-
-    & .icon {
-      width: var(--size-medium);
-      height: var(--size-medium);
-    }
 
     &:focus::before,
     &:active::before {
@@ -72,11 +57,6 @@
 
   &_large {
     padding: var(--spacing-s) var(--spacing-s);
-
-    & .icon {
-      width: var(--size-large);
-      height: var(--size-large);
-    }
 
     &:focus::before,
     &:active::before {

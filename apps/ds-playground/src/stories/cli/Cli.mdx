@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Verktøy/Kommandolinjeverktøy" />
+
+# Kommandolinjeverktøy
+
+`@skatteetaten/ds-cli` er et kommandolinjeverktøy for å håndtere kode-transformasjoner og andre oppgaver relatert til designsystemet. Dette verktøyet hjelper utviklere med å oppdatere og vedlikeholde kodebasen ved å tilby automatiserte transformasjoner for breaking changes.
+
+## Kommandoer
+
+### Codemod
+
+Bruk `codemod`-kommandoen for å utføre kode-transformasjoner.
+
+```bash
+npx @skatteetaten/ds-cli codemod <migration_name> <path>
+```
+
+#### Alternativer:
+
+- `--dry, -d`: Kjør uten å gjøre noen endringer.
+- `--exclude, -e`: Ekskluder filer eller mapper.
+- `--list, -l`: Vis tilgjengelige codemods.
+- `--help`: Vis hjelp for `codemod`-kommandoen.
+
+#### Eksempel:
+
+```bash
+npx @skatteetaten/ds-cli codemod v2-textarea ./src/web
+```
+
+### Hjelp
+
+For å få en oversikt over tilgjengelige kommandoer og alternativer, bruk `help`-kommandoen:
+
+```bash
+npx @skatteetaten/ds-cli help
+```
+
+### Versjon
+
+For å sjekke hvilken versjon av `ds-cli` du har installert, bruk `-v` eller `--version`:
+
+```bash
+npx @skatteetaten/ds-cli -v
+
+```

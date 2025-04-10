@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactNode, JSX } from 'react';
+import { ComponentPropsWithoutRef, ReactNode, JSX, Ref } from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
@@ -12,6 +12,7 @@ type RequiredFieldsetHTMLAttributes = Pick<
 export interface FieldsetProps
   extends RequiredFieldsetHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<{ legend?: string } & HelpProps['classNames']>;
   /** Innhold */
   children: JSX.Element | JSX.Element[];

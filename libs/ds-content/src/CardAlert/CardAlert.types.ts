@@ -1,13 +1,11 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs, Status } from '@skatteetaten/ds-core-utils';
 
-export type CardAlertVariant = Extract<
-  Status,
-  'neutral' | 'warning' | 'danger'
->;
+export type CardAlertVariant = Extract<Status, 'info' | 'warning' | 'danger'>;
 
 export interface CardAlertCommonProps extends BaseProps {
+  ref?: Ref<HTMLDivElement>;
   /** Overskrift. */
   title: string;
   /** Heading-element h1-h6. */
@@ -15,7 +13,7 @@ export interface CardAlertCommonProps extends BaseProps {
   /** Definerer stilen til komponenten. */
   variant?: CardAlertVariant;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Innholdet i komponenten. */
   children: ReactNode;
   /** Om innholdet skal vises */

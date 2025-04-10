@@ -1,4 +1,4 @@
-import { HTMLProps, ReactNode } from 'react';
+import { HTMLProps, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -13,6 +13,7 @@ type TableDataCellHTMLAttributes = Partial<RequiredTableDataCellHTMLAttributes>;
 export interface TableDataCellProps
   extends TableDataCellHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLTableCellElement>;
   /** Tekstjustering */
   alignment?: TextAlignment;
   /** HTML-element for cellen*/

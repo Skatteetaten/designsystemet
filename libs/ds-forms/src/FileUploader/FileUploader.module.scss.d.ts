@@ -2,6 +2,7 @@ declare const classNames: {
   readonly container: 'container';
   readonly icon: 'icon';
   readonly dropZone: 'dropZone';
+  readonly dropZoneMarginTop: 'dropZoneMarginTop';
   readonly dropZone_error: 'dropZone_error';
   readonly dropZone_dragging: 'dropZone_dragging';
   readonly fileInfo: 'fileInfo';

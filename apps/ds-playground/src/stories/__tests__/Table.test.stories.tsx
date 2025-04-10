@@ -21,7 +21,6 @@ const meta = {
   title: 'Tester/Table/Table',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },
@@ -59,7 +58,7 @@ const editableContent = (): ReactNode => (
 
 const ExpandEditSortTable = (
   args: TableProps & RefAttributes<HTMLTableElement>
-): ReactElement => {
+): ReactElement<HTMLTableElement> => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });

@@ -21,7 +21,6 @@ const meta = {
   title: 'Tester/TopBanner/TopBannerExternal',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },
@@ -126,8 +125,7 @@ export const WithDefaults = {
     const header = canvas.getByRole('banner');
     expect(header.tagName).toBe('HEADER');
 
-    expect(header.firstChild).toHaveAttribute('href');
-    const skipLink = canvas.getByText(skipLinkText);
+    const skipLink = canvas.getByRole('link', { name: skipLinkText });
     expect(skipLink).toBeInTheDocument();
 
     await expect(canvas.getByText(menuText)).toBeInTheDocument();

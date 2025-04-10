@@ -1,3 +1,5 @@
+import type { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
@@ -10,7 +12,7 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    menuActionsRef: { table: { category: category.props } },
+    menuActionsRef: { control: false, table: { category: category.props } },
   },
   args: {
     children: 'Menu Content',

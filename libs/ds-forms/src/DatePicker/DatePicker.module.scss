@@ -3,7 +3,10 @@
   display: flex;
   width: 100%;
   max-width: 164px;
-  margin-top: var(--spacing-xs);
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
 }
 
 .dateContainer:has(.input[aria-invalid='true']) {
@@ -106,11 +109,6 @@
 
   &_large {
     padding: var(--spacing-s);
-
-    & .icon {
-      width: var(--size-large);
-      height: var(--size-large);
-    }
   }
 
   &:focus,

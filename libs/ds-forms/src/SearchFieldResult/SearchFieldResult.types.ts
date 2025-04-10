@@ -3,6 +3,7 @@ import {
   ComponentPropsWithoutRef,
   Dispatch,
   FocusEventHandler,
+  Ref,
   SetStateAction,
 } from 'react';
 
@@ -26,6 +27,7 @@ interface SearchFieldPropsHTMLAttributes
 export interface SearchFieldResultProps
   extends SearchFieldPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLLIElement>;
   title?: string;
   hasFocus?: boolean;
   children: string;

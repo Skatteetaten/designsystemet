@@ -1,73 +1,150 @@
-.successIcon {
-  margin-left: var(--spacing-s);
-  fill: var(--semantic-success-foreground);
+.fileSpinner {
+  height: calc(var(--semantic-line-height-default) * var(--size-small));
+  margin-right: var(--spacing-xs);
+}
 
-  &LinkMargin {
-    margin-top: var(--spacing-s);
+.fileDeleteButton {
+  margin-top: var(--spacing-xxs);
+}
+
+.fileContentRight {
+  height: calc(var(--semantic-line-height-default) * var(--size-small));
+}
+
+.fileNameContainer {
+  flex: 1;
+  line-height: var(--semantic-line-height-default);
+  word-break: break-all;
+}
+
+.fileContentContainer {
+  display: flex;
+  width: 100%;
+  gap: var(--spacing-xs);
+}
+
+.fileCard {
+  --file-item-border-icon-color: var(--semantic-page-foreground);
+
+  position: relative;
+  border-color: var(--file-item-border-icon-color);
+
+  &:has(a) {
+    --file-item-border-icon-color: var(--semantic-interactive-main);
+  }
+
+  &_withAnimation {
+    animation: card-background-animation 1.5s ease-out forwards;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      border-radius: 3px;
+      animation: card-border-highlight 1.5s ease-out forwards;
+      background-color: transparent;
+      content: '';
+      inset: 0;
+      pointer-events: none;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 0;
+      border-radius: 3px;
+      animation: card-outward-highlight 1.5s ease-out forwards;
+      background-color: transparent;
+      content: '';
+      inset: -2px;
+      pointer-events: none;
+    }
   }
 }
 
-.cancelIcon {
-  margin-top: 3px;
+@keyframes card-background-animation {
+  0% {
+    background-color: transparent;
+  }
+
+  20% {
+    background-color: var(--semantic-success-background);
+  }
+
+  70% {
+    background-color: var(--semantic-success-background);
+  }
+
+  100% {
+    background-color: transparent;
+  }
 }
 
-.fileSpinner {
-  margin-left: var(--spacing-s);
+@keyframes card-border-highlight {
+  0% {
+    box-shadow:
+      inset 0 0 0 0 var(--semantic-success-foreground),
+      0 0 0 0 var(--semantic-success-background);
+    opacity: 1;
+  }
+
+  20% {
+    box-shadow:
+      inset 0 0 0 1px var(--semantic-success-foreground),
+      0 0 0 1px var(--semantic-success-background);
+    opacity: 1;
+  }
+
+  70% {
+    box-shadow:
+      inset 0 0 0 1px var(--semantic-success-foreground),
+      0 0 0 1px var(--semantic-success-foreground);
+    opacity: 1;
+  }
+
+  100% {
+    box-shadow:
+      inset 0 0 0 0 var(--semantic-success-foreground),
+      0 0 0 0 var(--semantic-success-foreground);
+    opacity: 0;
+  }
 }
 
-.spinner {
-  display: inline-flex;
-  margin-left: var(--spacing-s);
+@keyframes card-outward-highlight {
+  0% {
+    box-shadow: 0 0 0 0 var(--semantic-success-background);
+    opacity: 1;
+  }
+
+  20% {
+    box-shadow: 0 0 0 1px var(--semantic-success-background);
+    opacity: 1;
+  }
+
+  70% {
+    box-shadow: 0 0 20px 1px var(--semantic-success-background);
+    opacity: 1;
+  }
+
+  100% {
+    box-shadow: 0 0 20px 4 var(--semantic-success-background);
+    opacity: 0;
+  }
 }
 
 .fileList {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
   &Item {
+    overflow: visible;
+    border-radius: 4px;
     margin-bottom: var(--spacing-s);
-  }
-
-  &Grid {
-    display: grid;
-    grid-template-areas: 'type check';
-  }
-
-  &Text {
-    padding: var(--spacing-s) 0;
-    grid-area: 'type';
-    white-space: nowrap;
+    opacity: 1;
+    transform-origin: top center;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
 
   &Icon {
-    margin-right: var(--spacing-s);
-    grid-area: 'check';
-  }
-
-  &Container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &Link {
-    white-space: inherit;
-    word-break: break-all;
-  }
-
-  &File {
-    padding-top: var(--spacing-s);
-    padding-bottom: var(--spacing-s);
-    color: var(--palette-graphite-70);
-    grid-area: 'type';
-    line-height: var(--semantic-line-height-article);
-    overflow-wrap: anywhere;
-    white-space: initial;
-
-    &Error {
-      // bredde på IconButton + litt luft
-      margin-right: calc(var(--size-medium) + var(--spacing-s));
-      margin-left: var(--spacing-l);
-    }
+    align-self: flex-start;
+    margin: var(--spacing-xs);
+    fill: var(--file-item-border-icon-color);
   }
 }

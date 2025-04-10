@@ -17,7 +17,6 @@ const meta = {
   title: 'Tester/Alert',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },
@@ -175,12 +174,12 @@ export const VariantSuccess = {
   },
 } satisfies Story;
 
-export const VariantNeutral = {
+export const VariantInfo = {
   name: 'Variant Neutral (A1, A3)',
   args: {
     ...defaultArgs,
     showAlert: true,
-    variant: 'neutral',
+    variant: 'info',
   },
   argTypes: {
     variant: { table: { disable: false } },

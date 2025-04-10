@@ -10,9 +10,6 @@ import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-CheckboxGroup.Checkbox = { ...CheckboxGroup.Checkbox };
 CheckboxGroup.Checkbox.displayName = 'CheckboxGroup.Checkbox';
 
 const meta = {
@@ -20,8 +17,8 @@ const meta = {
   title: 'Komponenter/CheckboxGroup',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
-    classNames: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     helpSvgPath: {
@@ -46,7 +43,7 @@ const meta = {
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     // Events
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { control: false, table: { category: category.event } },
   },
   args: {
     children: [

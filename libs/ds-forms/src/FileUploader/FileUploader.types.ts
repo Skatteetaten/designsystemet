@@ -1,10 +1,4 @@
-import {
-  ComponentPropsWithoutRef,
-  ForwardRefExoticComponent,
-  MouseEvent,
-  ReactNode,
-  RefAttributes,
-} from 'react';
+import { ComponentPropsWithoutRef, MouseEvent, ReactNode, Ref } from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
@@ -30,6 +24,7 @@ export type UploadResult = {
 export interface FileUploaderCommonProps
   extends FileUploaderHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLDivElement>;
   classNames?: Prettify<
     {
       errorMessage?: string;
@@ -67,8 +62,6 @@ export interface FileUploaderCommonProps
   acceptedFileFormatsDescription?: string;
   /** Overskriver default tittel på fil-ikonet som brukes i listen med filer som er lastet opp */
   fileIconTitle?: string;
-  /** Overskriver default tittel på ikonet som viser at opplasting av fil er vellykket */
-  successIconTitle?: string;
   /**
    * Liste med opplastede filer som skal vises under filopplasteren.
    * Det er mulig å angi href dersom filen skal kunne lastes ned igjen.
@@ -126,9 +119,6 @@ export interface UploadedFile {
 
 export type FileUploaderProps = FileUploaderCommonProps;
 
-export interface FileUploaderComponent
-  extends ForwardRefExoticComponent<
-    FileUploaderProps & RefAttributes<HTMLDivElement>
-  > {
+export interface FileUploaderComponent extends React.FC<FileUploaderProps> {
   useFileUploader: typeof useFileUploader;
 }

@@ -1,20 +1,14 @@
-import {
-  Dispatch,
-  ForwardRefExoticComponent,
-  PropsWithChildren,
-  ReactNode,
-  RefAttributes,
-  RefObject,
-  SetStateAction,
-} from 'react';
+import { Dispatch, ReactNode, Ref, RefObject, SetStateAction } from 'react';
 
 import { BaseProps, Density, Position } from '@skatteetaten/ds-core-utils';
 
-import { TableDataCellProps } from '../TableDataCell/TableDataCell.types';
-import { TableEditableRowProps } from '../TableEditableRow/TableEditableRow.types';
-import { TableHeaderCellProps } from '../TableHeaderCell/TableHeaderCell.types';
-import { TableRowProps } from '../TableRow/TableRow.types';
-import { TableSumProps } from '../TableSum/TableSum.types';
+import { TableBody } from '../TableBody/TableBody';
+import { TableDataCell } from '../TableDataCell/TableDataCell';
+import { TableEditableRow } from '../TableEditableRow/TableEditableRow';
+import { TableHeader } from '../TableHeader/TableHeader';
+import { TableHeaderCell } from '../TableHeaderCell/TableHeaderCell';
+import { TableRow } from '../TableRow/TableRow';
+import { TableSum } from '../TableSum/TableSum';
 
 export const tableVariantArr = ['standard', 'compact'] as const;
 export type TableVariant = (typeof tableVariantArr)[number];
@@ -42,11 +36,12 @@ export interface TableContextProps {
 
 export type RowWithExpandButtonHandle = {
   focusButton: () => void;
-  rowRef: RefObject<HTMLTableRowElement>;
-  buttonRef: RefObject<HTMLButtonElement>;
+  rowRef: RefObject<HTMLTableRowElement | null>;
+  buttonRef: RefObject<HTMLButtonElement | null>;
 };
 
 export interface TableProps extends BaseProps {
+  ref?: Ref<HTMLTableElement>;
   /** Table caption  */
   caption: string;
   /** Definerer stilen til tabellen. */
@@ -67,29 +62,12 @@ export interface TableProps extends BaseProps {
   canBeManuallyFocused?: boolean;
 }
 
-export interface TableComponent
-  extends ForwardRefExoticComponent<
-    TableProps & RefAttributes<HTMLTableElement>
-  > {
-  Header: ForwardRefExoticComponent<
-    BaseProps & PropsWithChildren & RefAttributes<HTMLTableSectionElement>
-  >;
-  HeaderCell: ForwardRefExoticComponent<
-    TableHeaderCellProps & RefAttributes<HTMLTableCellElement>
-  >;
-  Row: ForwardRefExoticComponent<
-    TableRowProps & RefAttributes<HTMLTableRowElement>
-  >;
-  EditableRow: ForwardRefExoticComponent<
-    TableEditableRowProps & RefAttributes<HTMLTableRowElement>
-  >;
-  DataCell: ForwardRefExoticComponent<
-    TableDataCellProps & RefAttributes<HTMLTableCellElement>
-  >;
-  Body: ForwardRefExoticComponent<
-    BaseProps & PropsWithChildren & RefAttributes<HTMLTableSectionElement>
-  >;
-  Sum: ForwardRefExoticComponent<
-    TableSumProps & RefAttributes<HTMLTableRowElement>
-  >;
+export interface TableComponent extends React.FC<TableProps> {
+  Header: typeof TableHeader;
+  HeaderCell: typeof TableHeaderCell;
+  Row: typeof TableRow;
+  EditableRow: typeof TableEditableRow;
+  DataCell: typeof TableDataCell;
+  Body: typeof TableBody;
+  Sum: typeof TableSum;
 }

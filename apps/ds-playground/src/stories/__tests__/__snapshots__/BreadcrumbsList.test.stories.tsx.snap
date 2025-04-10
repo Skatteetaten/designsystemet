@@ -5,7 +5,7 @@ exports[`Tester/Breadcrumbs/List WithAttributes play-test 1`] = `
   <ol id="htmlId"
       lang="nb"
       data-testid="123ID"
-      class="_breadcrumbsList_17e64_1 dummyClassname"
+      class="_breadcrumbsList_rars9_1 dummyClassname"
   >
     <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_z7jba_1"
@@ -56,7 +56,7 @@ exports[`Tester/Breadcrumbs/List WithAttributes play-test 1`] = `
 
 exports[`Tester/Breadcrumbs/List WithRef play-test 1`] = `
 <div data-test-block="true">
-  <ol class="_breadcrumbsList_17e64_1"
+  <ol class="_breadcrumbsList_rars9_1"
       id="dummyIdForwardedFromRef"
   >
     <li class="_breadcrumbsItem_1ojdc_1">
@@ -108,7 +108,7 @@ exports[`Tester/Breadcrumbs/List WithRef play-test 1`] = `
 
 exports[`Tester/Breadcrumbs/List WithoutIsShowLastItemAsCurrentPage play-test 1`] = `
 <div data-test-block="true">
-  <ol class="_breadcrumbsList_17e64_1">
+  <ol class="_breadcrumbsList_rars9_1">
     <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_z7jba_1"
          href="#"

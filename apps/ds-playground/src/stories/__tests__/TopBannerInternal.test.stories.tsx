@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, within } from '@storybook/test';
+import { expect, fireEvent, fn, waitFor, within } from '@storybook/test';
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -21,7 +21,6 @@ const meta = {
   title: 'Tester/TopBanner/TopBannerInternal',
   argTypes: {
     // Baseprops
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     classNames: { table: { disable: true } },
@@ -42,14 +41,13 @@ const meta = {
     logo: { table: { disable: true } },
     hideLogoOnMobile: { table: { disable: true } },
     logoHref: { table: { disable: true } },
-    logoAltText: { table: { disable: true } },
+
     // Events
     onLogoClick: { table: { disable: true } },
   },
   args: {
     title: 'MVA',
     logoHref: '#',
-    logoAltText: 'til startsiden kakeportalen',
   },
   parameters: {
     layout: 'fullscreen',
@@ -129,8 +127,7 @@ export const WithDefaults = {
     const header = canvas.getByRole('banner');
     await expect(header.tagName).toBe('HEADER');
 
-    await expect(header.firstChild).toHaveAttribute('href');
-    const skipLink = canvas.getByText(skipLinkText);
+    const skipLink = canvas.getByRole('link', { name: skipLinkText });
     await expect(skipLink).toBeInTheDocument();
   },
 } satisfies Story;
@@ -477,8 +474,10 @@ export const WithHideLogoOnMobile = {
       name: 'MVA',
     });
     await expect(link).toBeInTheDocument();
-    const logo = link.querySelector('img');
-    await expect(logo).not.toBeInTheDocument();
+    await waitFor(() => {
+      const logo = link.querySelector('img');
+      expect(logo).not.toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
@@ -501,7 +500,10 @@ export const WithHideLogoOnDesktop = {
       name: 'MVA',
     });
     await expect(link).toBeInTheDocument();
-    const logo = link.querySelector('img');
-    await expect(logo).toBeInTheDocument();
+
+    await waitFor(() => {
+      const logo = link.querySelector('img');
+      expect(logo).toBeInTheDocument();
+    });
   },
 } satisfies Story;

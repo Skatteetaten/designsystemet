@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -9,6 +9,7 @@ interface BreadcrumbsItemHTMLAttributes {
 export interface BreadcrumbsItemProps
   extends BreadcrumbsItemHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLLIElement>;
   /** Breadcrumbs.Link */
   children: ReactNode;
 }

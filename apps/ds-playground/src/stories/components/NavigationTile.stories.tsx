@@ -26,6 +26,7 @@ const meta = {
     // Props
     title: { control: 'text', table: { category: category.props } },
     classNames: {
+      control: false,
       table: { category: category.props },
     },
     titleAs: {

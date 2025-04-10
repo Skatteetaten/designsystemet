@@ -3,6 +3,7 @@ import {
   FocusEventHandler,
   MouseEventHandler,
   ReactElement,
+  Ref,
 } from 'react';
 
 import { BaseProps, Brightness, Position } from '@skatteetaten/ds-core-utils';
@@ -28,12 +29,13 @@ export type InlineButtonBrightness = Extract<Brightness, 'light' | 'default'>;
 export interface InlineButtonProps
   extends InlineButtonPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   /** Tekst på knapp. */
   children: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   iconPosition?: ButtonIconPosition;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Om knappen skal inneholde Spinner. */
   hasSpinner?: boolean;
   /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */

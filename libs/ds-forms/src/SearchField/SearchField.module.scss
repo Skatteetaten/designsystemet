@@ -3,7 +3,10 @@
 .searchContainer {
   position: relative;
   display: flex;
-  margin-top: var(--spacing-xs);
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
 }
 
 .topContainer {
@@ -12,26 +15,29 @@
   --clear-button-top: 5px;
   --clear-button-right: var(--spacing-s);
   --search-result-padding: var(--spacing-xs) var(--spacing-s);
+  --input-padding: var(--spacing-xs) var(--spacing-s);
 
   // Calc = størrelse på knapp (+2px border) + spacing på begge sider
-  --input-padding: var(--spacing-xs)
+  --input-padding-with-value: var(--spacing-xs)
     calc(2 * var(--spacing-s) + var(--size-medium) + 2px) var(--spacing-xs)
     var(--spacing-s);
 
   &_large {
     --clear-button-top: var(--spacing-s);
+    --input-padding: var(--spacing-s);
 
     // Calc = størrelse på knapp (+2px border) + spacing på begge sider
-    --input-padding: var(--spacing-s)
+    --input-padding-with-value: var(--spacing-s)
       calc(2 * var(--spacing-s) + var(--size-large) + 2px) var(--spacing-s)
       var(--spacing-s);
   }
 
   &_extraLarge {
     --clear-button-top: var(--spacing-m);
+    --input-padding: var(--spacing-m);
 
     // Calc = størrelse på knapp (+2px border) + spacing på begge sider
-    --input-padding: var(--spacing-m)
+    --input-padding-with-value: var(--spacing-m)
       calc(2 * var(--spacing-m) + var(--size-large) + 2px) var(--spacing-m)
       var(--spacing-m);
     --clear-button-right: var(--spacing-m);
@@ -57,6 +63,7 @@
   }
 
   position: relative;
+  overflow: hidden;
   width: 100%;
   padding: var(--input-padding);
   border: none;
@@ -71,6 +78,12 @@
   line-height: var(--semantic-line-height-input);
   outline: none;
   outline-offset: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &WithValue {
+    padding: var(--input-padding-with-value);
+  }
 
   &::placeholder {
     color: var(--palette-graphite-50);
@@ -141,8 +154,6 @@
     padding: var(--spacing-s);
 
     & .icon {
-      width: var(--size-large);
-      height: var(--size-large);
       padding-top: 0;
     }
   }
@@ -151,8 +162,6 @@
     padding: var(--spacing-m);
 
     & .icon {
-      width: var(--size-large);
-      height: var(--size-large);
       padding-top: 0;
     }
   }

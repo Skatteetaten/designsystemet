@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, Ref } from 'react';
 
 import { BaseProps, FormRequiredProps } from '@skatteetaten/ds-core-utils';
 
@@ -24,6 +24,7 @@ export interface CheckboxProps
   extends CheckboxPropsHTMLAttributes,
     BaseProps,
     FormRequiredProps {
+  ref?: Ref<HTMLInputElement>;
   classNames?: { errorMessage?: string; label?: string };
   /** Ledetekst til checkboxen */
   children: string;

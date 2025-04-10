@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, RefAttributes, RefObject } from 'react';
+import { Ref } from 'react';
 
 import { TFunction } from 'i18next';
 
@@ -7,6 +7,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { PaginationList } from '../PaginationList/PaginationList';
 
 export interface PaginationCommonProps extends BaseProps {
+  ref?: Ref<HTMLElement>;
   /** Antall elementer pr side */
   pageSize?: number;
   /** Totalt antall elementer i liste */
@@ -53,16 +54,13 @@ type PaginationDiscriminatedProp =
 export type PaginationProps = PaginationCommonProps &
   PaginationDiscriminatedProp;
 
-export interface PaginationComponent
-  extends ForwardRefExoticComponent<
-    PaginationProps & RefAttributes<HTMLElement>
-  > {
+export interface PaginationComponent extends React.FC<PaginationProps> {
   List: typeof PaginationList;
 }
 
 export type PaginationListProps = {
-  firstPageRef?: RefObject<HTMLButtonElement>;
-  lastPageRef?: RefObject<HTMLButtonElement>;
+  firstPageRef?: Ref<HTMLButtonElement> | undefined;
+  lastPageRef?: Ref<HTMLButtonElement> | undefined;
   lastPage: number;
   currentPage: number;
   sibling: number;

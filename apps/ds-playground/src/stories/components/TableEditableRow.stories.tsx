@@ -11,13 +11,13 @@ import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: Table.EditableRow,
-  title: 'komponenter/Table/EditableRow',
+  title: 'Komponenter/Table/EditableRow',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
-    editButtonRef: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
+    editButtonRef: { control: false, table: { category: category.props } },
     editableContent: { table: { category: category.props } },
-    editableContentRef: { table: { category: category.props } },
+    editableContentRef: { control: false, table: { category: category.props } },
     editButtonPosition: {
       control: 'radio',
       table: {

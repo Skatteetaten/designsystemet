@@ -21,7 +21,6 @@ const meta = {
   argTypes: {
     // Baseprops
     // @ts-expect-error disable baseprops gir error fordi denne komponenten ikke støtter baseprops, men de skal disables alikevel
-    key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },

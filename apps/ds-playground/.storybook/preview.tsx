@@ -16,6 +16,10 @@ import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 import '../src/stories/designtokens/designtokens.css';
 
+if (process.env.NODE_ENV === 'development') {
+  import('./abomination.css');
+}
+
 const LanguageUpdater: Decorator = (Story, context) => {
   const [{ locale }, updateGlobals] = useGlobals();
   useEffect(() => {
@@ -78,6 +82,9 @@ const DSViewports = {
 
 const parameters = {
   docs: { controls: { sort: 'requiredFirst' } },
+  actions: {
+    disable: true,
+  },
   controls: {
     sort: 'requiredFirst',
     hideNoControlsWarning: true,
@@ -86,7 +93,14 @@ const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Generelt', 'Designtokens', 'Komponenter', 'Tester'],
+      order: [
+        'Generelt',
+        'Designtokens',
+        'Sidetyper',
+        'Verktøy',
+        'Komponenter',
+        'Tester',
+      ],
     },
   },
   backgrounds: {
@@ -113,17 +127,10 @@ const parameters = {
 };
 
 const argTypes = {
-  key: {
-    control: { disable: true },
-    description:
-      'Spesielt string attributt som brukes for å iterere gjennom elementer',
-    table: { type: { summary: 'string' }, category: category.baseProps },
-  },
   ref: {
     control: { disable: true },
-    description: 'React ref sendt gjennom React.forwardref',
+    description: 'React ref',
     table: {
-      type: { summary: 'React.ForwardedRef' },
       category: category.baseProps,
     },
   },
@@ -216,7 +223,6 @@ const preview = {
     mockDate,
     SpacingUpdater,
   ],
-
   parameters,
   globalTypes,
   argTypes,

@@ -22,6 +22,7 @@ export type NavigationTileSize = Extract<
 export interface NavigationTileComponentCommonProps
   extends NavigationTilePropsHTMLAttributes,
     BaseProps {
+  ref?: React.Ref<HTMLAnchorElement>;
   classNames?: {
     container?: string;
     title?: string;
@@ -38,7 +39,7 @@ export interface NavigationTileComponentCommonProps
   /** Størrelse på NavigationTile */
   size?: NavigationTileSize;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Skjuler pil-ikonet. Ikonet er alltid skjult dersom 'size' er 'extraLarge' eller dersom 'isExternal' er 'true' */
   hideArrowIcon?: boolean;
   /** Om NavigationTile skal inneholde spinner. Hvis svgPath også er satt, erstatter spinneren ikonet. */

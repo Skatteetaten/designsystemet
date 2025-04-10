@@ -25,7 +25,10 @@ export const TokensList = ({ tokenType }: TokensListProps): JSX.Element => {
       tokens = breakpointsJson;
       break;
     case 'containers':
-      tokens = containersJson[firstNode];
+      // de første 8 tokens har en fast verdi, resten er dynamiske og vises i tabellen
+      tokens = Object.fromEntries(
+        Object.entries(containersJson[firstNode]).slice(0, 8)
+      );
       break;
     case 'font':
       tokens = fontJson[firstNode];

@@ -14,5 +14,12 @@ export const ChatbotDetailedSVGpath = (
 export function ChatbotDetailedIcon(
   props: IconPropsWithoutSvgPath
 ): JSX.Element {
-  return <Icon {...props} svgPath={ChatbotDetailedSVGpath} />;
+  return (
+    <Icon
+      {...props}
+      svgPath={ChatbotDetailedSVGpath}
+      size={props.size === 'large' ? props.size : 'medium'}
+      variant={'themeIcon'}
+    />
+  );
 }

@@ -20,7 +20,7 @@ const meta = {
   title: 'Komponenter/Spinner',
   argTypes: {
     // Props
-    classNames: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
     children: {
       table: {
         category: category.props,

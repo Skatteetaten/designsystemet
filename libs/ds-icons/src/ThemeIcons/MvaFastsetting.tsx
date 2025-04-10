@@ -18,7 +18,7 @@ export function MvaFastsettingIcon(
     <Icon
       {...props}
       svgPath={MvaFastsettingSVGpath}
-      size={'medium'}
+      size={props.size === 'large' ? props.size : 'medium'}
       variant={'themeIcon'}
     />
   );

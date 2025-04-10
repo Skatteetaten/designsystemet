@@ -33,7 +33,7 @@ def overrides = [
     iqOrganizationName           : 'Team Designsystem',
     sonarQube                    : true,
     npmInstallCommand            : "ci",
-    nodeVersion                  : "20",
+    nodeVersion                  : "22",
     disableAllReports            : env.BRANCH_NAME.startsWith('disable-reports/'),
     lineCoverageReport           : false,
     publishToNpm                 : true,
@@ -53,7 +53,7 @@ def overrides = [
     ],
     preCompile                   : preCompile,
     npmPublishFolder             : './dist/libs',
-    versionStrategy              : [[branch: 'master', versionHint: '1', minorOnPrefixes: 'release/']],
+    versionStrategy              : [[branch: 'master', versionHint: '2', minorOnPrefixes: 'release/']],
     createBuildEnvs              : { props -> "STORYBOOK_BUILD_VERSION=${props.version}" },
 ]
 

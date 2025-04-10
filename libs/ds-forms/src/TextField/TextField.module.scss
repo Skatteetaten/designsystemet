@@ -2,12 +2,12 @@
 
 .textbox {
   display: block;
+  overflow: hidden;
   width: 100%;
   box-sizing: border-box;
   padding: var(--spacing-xs) var(--spacing-s);
   border: none;
   border-radius: 0;
-  margin-top: var(--spacing-xs);
 
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
@@ -18,8 +18,14 @@
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
   outline-offset: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-  &_large {
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
+
+  &[data-variant='large'] {
     padding: var(--spacing-s);
   }
 
@@ -29,17 +35,6 @@
 
   input::-webkit-textfield-decoration-container {
     display: none;
-  }
-
-  &_multiline {
-    padding: var(--spacing-s);
-    overflow-y: auto;
-  }
-
-  &_autosize {
-    overflow: hidden;
-    min-height: calc(2lh + calc(var(--spacing-s) * 2));
-    resize: none;
   }
 
   &::placeholder {

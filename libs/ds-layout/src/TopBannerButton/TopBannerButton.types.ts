@@ -5,6 +5,7 @@ import {
   MouseEventHandler,
   ReactElement,
   ReactNode,
+  Ref,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -28,6 +29,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 export interface TopBannerButtonProps
   extends ButtonPropsHTMLAttributes,
     BaseProps {
+  ref?: Ref<HTMLButtonElement>;
   classNames?: {
     container?: string;
     text?: string;
@@ -35,7 +37,7 @@ export interface TopBannerButtonProps
   /** Innhold eller tekst på knapp. */
   children: ReactNode;
   /** HTML-path node. */
-  svgPath?: ReactElement;
+  svgPath?: ReactElement<SVGPathElement>;
   /** Hvis svgPath er meningsbærende, må ha en beskrivende tekst. */
   title?: string;
   /** Definerer stilen til TopBannerButton. */
