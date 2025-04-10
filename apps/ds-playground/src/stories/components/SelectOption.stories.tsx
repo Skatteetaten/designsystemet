@@ -6,7 +6,6 @@ import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: Select.Option,
-  title: 'Komponenter/Select/Option',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

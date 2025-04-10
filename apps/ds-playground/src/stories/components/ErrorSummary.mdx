@@ -1,5 +1,6 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Canvas, Primary, Controls, ArgTypes } from '@storybook/blocks';
 import * as ErrorSummaryStories from './ErrorSummary.stories';
+import * as ErrorSummaryError from './ErrorSummaryError.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
 
@@ -21,6 +22,10 @@ import { ErrorSummary } from '@skatteetaten/ds-forms';
 ```
 
 <Controls />
+
+## `ErrorSummary.Error`
+
+<ArgTypes of={ErrorSummaryError} />
 
 ## Examples
 

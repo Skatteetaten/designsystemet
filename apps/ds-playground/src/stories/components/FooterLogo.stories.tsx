@@ -7,7 +7,6 @@ import logo from '../../assets/ske-logo-horizontal-white.png';
 
 const meta = {
   component: Footer.Logo,
-  title: 'Komponenter/Footer/Logo',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },

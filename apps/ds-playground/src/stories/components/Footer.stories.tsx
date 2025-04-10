@@ -15,7 +15,7 @@ Footer.Logo.displayName = 'Footer.Logo';
 
 const meta = {
   component: Footer,
-  title: 'Komponenter/Footer/Footer',
+  title: 'Komponenter/Footer',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },

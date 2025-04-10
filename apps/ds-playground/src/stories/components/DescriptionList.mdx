@@ -1,9 +1,10 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
-import * as DescriptionListSTories from './DescriptionList.stories';
+import { Meta, Canvas, Primary, Controls, ArgTypes } from '@storybook/blocks';
+import * as DescriptionListStories from './DescriptionList.stories';
+import * as DescriptionListElement from './DescriptionListElement.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
 
-<Meta of={DescriptionListSTories} />
+<Meta of={DescriptionListStories} />
 
 # DescriptionList
 
@@ -24,12 +25,16 @@ import { DescriptionList } from '@skatteetaten/ds-content';
 
 <Controls />
 
+## `DescriptionList.Element`
+
+<ArgTypes of={DescriptionListElement} />
+
 ## Examples
 
-<Canvas of={DescriptionListSTories.Examples} />
+<Canvas of={DescriptionListStories.Examples} />
 
 ## Example with fixed number of columns
 
 Bruk className og sett --description-list-columns til ønsket antall kolonner. Hvis du skal ha et fast antall kolonner må du selv påsse på at det er nok plass til å unngå horisontal scroll.
 
-<Canvas of={DescriptionListSTories.ExampleWithFixedColumns} />
+<Canvas of={DescriptionListStories.ExampleWithFixedColumns} />

@@ -7,7 +7,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: List,
-  title: 'Komponenter/List/List',
+  title: 'Komponenter/List',
   argTypes: {
     // Props
     as: {
@@ -19,7 +19,9 @@ const meta = {
     },
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
-    hasSpacing: { table: { category: category.props } },
+    hasSpacing: {
+      table: { category: category.props, defaultValue: { summary: 'false' } },
+    },
   },
   args: {
     children: [
