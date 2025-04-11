@@ -4,6 +4,8 @@ import { expect, fireEvent, fn, within } from '@storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
 
+import { wrapper } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: Table.Row,
   title: 'Tester/Table/Row',
@@ -176,5 +178,43 @@ export const WithExpandableExtraRows = {
     ).toBeInTheDocument();
     await expect(args.onExpand).toHaveBeenCalled();
     await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
+  },
+} satisfies Story;
+
+export const WithExpandableContent = {
+  render: Template,
+  name: 'With Expandable Content',
+  args: {
+    isExpandable: true,
+    expandableContent: 'Ekstra innhold',
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    expandableContent: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      click: `${wrapper} button`,
+    },
+  },
+} satisfies Story;
+
+export const WithExpandButtonPositionRight = {
+  render: Template,
+  name: 'With ExpandButtonPosition Right',
+  args: {
+    isExpandable: true,
+    expandButtonPosition: 'right',
+    expandableContent: 'Ekstra innhold',
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    expandButtonPosition: { table: { disable: false } },
+    expandableContent: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      click: `${wrapper} button`,
+    },
   },
 } satisfies Story;

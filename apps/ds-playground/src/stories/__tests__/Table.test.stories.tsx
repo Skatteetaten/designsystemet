@@ -9,7 +9,6 @@ import {
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import { densityArr } from '@skatteetaten/ds-core-utils';
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -31,8 +30,6 @@ const meta = {
     caption: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...densityArr],
-      control: 'radio',
     },
     hasFullWidth: { table: { disable: true } },
     showCaption: { table: { disable: true } },
@@ -48,13 +45,237 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs: TableProps = {
-  caption,
+const Template: StoryFn<typeof Table> = (args) => (
+  <Table {...args} variant={args.variant}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'Items'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'Expenditure'}</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.DataCell className={'rowSpanRight'} rowSpan={2}>
+          {'Edible'}
+        </Table.DataCell>
+        <Table.DataCell>{'Donuts'}</Table.DataCell>
+        <Table.DataCell>{'3,000'}</Table.DataCell>
+      </Table.Row>
+      <Table.Row>
+        <Table.DataCell>{'Cake'}</Table.DataCell>
+        <Table.DataCell>{'3,000'}</Table.DataCell>
+      </Table.Row>
+      <Table.Row>
+        <Table.DataCell rowSpan={2} className={'rowSpanRight'}>
+          {'Non-Edible'}
+        </Table.DataCell>
+        <Table.DataCell>{'Stationery'}</Table.DataCell>
+        <Table.DataCell>{'18,000'}</Table.DataCell>
+      </Table.Row>
+      <Table.Row>
+        <Table.DataCell>{'Batteries'}</Table.DataCell>
+        <Table.DataCell>{'9,000'}</Table.DataCell>
+      </Table.Row>
+    </Table.Body>
+    <Table.Sum colSpan={2}>{'32,000'}</Table.Sum>
+  </Table>
+);
+
+export const WithRef = {
+  render: Template,
+  name: 'With Ref (FA1)',
+  args: {
+    ref: (instance: HTMLTableElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
+  },
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const table = canvas.getByRole('table');
+    await expect(table).toBeInTheDocument();
+    await expect(table).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
+
+export const WithAttributes = {
+  render: Template,
+  name: 'With Attributes (FA2-5)',
+  args: {
+    id: 'htmlId',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const table = canvas.getByRole('table');
+    await expect(table).toHaveClass('dummyClassname');
+    await expect(table).toHaveAttribute('id', 'htmlId');
+    await expect(table).toHaveAttribute('lang', 'nb');
+    await expect(table).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const Defaults = {
+  render: Template,
+  name: 'Defaults (Table A1, A8, B1, B2, TableRow B1, A20)',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText(caption)).toBeInTheDocument();
+    await expect(canvas.getByRole('table')).toBeInTheDocument();
+  },
+} satisfies Story;
+
+const TemplateScroll: StoryFn<typeof Table> = (args) => {
+  const exampleTable = (
+    <Table {...args} variant={args.variant}>
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell scope={'col'}>{'Forename'}</Table.HeaderCell>
+          <Table.HeaderCell scope={'col'}>{'Surname'}</Table.HeaderCell>
+          <Table.HeaderCell scope={'col'}>{'email'}</Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        <Table.Row>
+          <Table.DataCell>{'Otto'}</Table.DataCell>
+          <Table.DataCell>{'Octavius'}</Table.DataCell>
+          <Table.DataCell>{'doc.ock@example.org'}</Table.DataCell>
+        </Table.Row>
+        <Table.Row>
+          <Table.DataCell>{'Norman'}</Table.DataCell>
+          <Table.DataCell>{'Osbourne'}</Table.DataCell>
+          <Table.DataCell>{'norman.osbourne@example.org'}</Table.DataCell>
+        </Table.Row>
+        <Table.Row>
+          <Table.DataCell>{'Curt'}</Table.DataCell>
+          <Table.DataCell>{'Connors'}</Table.DataCell>
+          <Table.DataCell>{'curt.connors@example.org'}</Table.DataCell>
+        </Table.Row>
+      </Table.Body>
+    </Table>
+  );
+
+  return (
+    <>
+      <p>{'Table med Scrollbar'}</p>
+      <div className={'scrollTableWrapper'}>{exampleTable}</div>
+      <div className={'scrollTableWrapperSuccess'}>{exampleTable}</div>
+      <div className={'scrollTableWrapperWarning'}>{exampleTable}</div>
+    </>
+  );
 };
 
-const editableContent = (): ReactNode => (
-  <div className={'emptyExpandedTableRow'}></div>
+export const WithScrollbar = {
+  render: TemplateScroll,
+  name: 'With Scroll (A5)',
+  parameters: { a11y: { disable: true } },
+} satisfies Story;
+
+const TemplateAlignment: StoryFn<typeof Table> = (args) => (
+  <Table {...args} variant={'standard'}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell alignment={'left'} scope={'col'}>
+          {'left'}
+        </Table.HeaderCell>
+        <Table.HeaderCell alignment={'center'} scope={'col'}>
+          {'center'}
+        </Table.HeaderCell>
+        <Table.HeaderCell alignment={'right'} scope={'col'}>
+          {'right'}
+        </Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'default'}</Table.HeaderCell>
+        <Table.HeaderCell alignment={'right'} scope={'col'}>
+          {'right'}
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.DataCell alignment={'left'}>{'left'}</Table.DataCell>
+        <Table.DataCell alignment={'center'}>{'center'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'right'}</Table.DataCell>
+        <Table.DataCell>{'default'}</Table.DataCell>
+        <Table.DataCell alignment={'left'}>{'left'}</Table.DataCell>
+      </Table.Row>
+      <Table.Row>
+        <Table.DataCell alignment={'left'}>{'left'}</Table.DataCell>
+        <Table.DataCell alignment={'center'}>{'center'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'right'}</Table.DataCell>
+        <Table.DataCell>{'default'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'right'}</Table.DataCell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
 );
+
+export const WithFullWidthAndTextAlignment = {
+  render: TemplateAlignment,
+  name: 'With Full Width And Text Alignment (Table A4, A10, TableHeader A1, TableRow A2)',
+  args: {
+    hasFullWidth: true,
+  },
+} satisfies Story;
+
+const editableContent = (): ReactNode => (
+  <div className={'emptyExpandedTableRow'}>{'Rediger innhold'}</div>
+);
+
+const data = [
+  {
+    id: 's5f0e',
+    rowData: {
+      month: 'Januar',
+      amount: 5426,
+      coverage: '100 %',
+      revenue: 1000,
+    },
+  },
+  {
+    id: '3vesy',
+    rowData: {
+      month: 'Februar',
+      amount: 5432,
+      coverage: '50 %',
+      revenue: 500,
+    },
+  },
+  {
+    id: '16prz',
+    rowData: {
+      month: 'Mars',
+      amount: 4899,
+      coverage: '20 %',
+      revenue: 2000,
+    },
+  },
+  {
+    id: '3xpjb',
+    isExpandable: true,
+    rowData: {
+      month: 'April',
+      amount: 2344,
+      coverage: '30 %',
+      revenue: 1055,
+    },
+  },
+];
 
 const ExpandEditSortTable = (
   args: TableProps & RefAttributes<HTMLTableElement>
@@ -63,46 +284,6 @@ const ExpandEditSortTable = (
     direction: 'none',
   });
   const redigerDataRef = useRef<HTMLHeadingElement>(null);
-
-  const data = [
-    {
-      id: 's5f0e',
-      rowData: {
-        month: 'Januar',
-        amount: 5426,
-        coverage: '100 %',
-        revenue: 1000,
-      },
-    },
-    {
-      id: '3vesy',
-      rowData: {
-        month: 'Februar',
-        amount: 5432,
-        coverage: '50 %',
-        revenue: 500,
-      },
-    },
-    {
-      id: '16prz',
-      rowData: {
-        month: 'Mars',
-        amount: 4899,
-        coverage: '20 %',
-        revenue: 2000,
-      },
-    },
-    {
-      id: '3xpjb',
-      isExpandable: true,
-      rowData: {
-        month: 'April',
-        amount: 2344,
-        coverage: '30 %',
-        revenue: 1055,
-      },
-    },
-  ];
 
   const sortedData = data.slice().sort((a, b) => {
     const sortKey = sortState.sortKey as keyof (typeof data)[0]['rowData'];
@@ -195,7 +376,6 @@ const ExpandEditSortTable = (
                     </Heading>
                   </div>
                 }
-                expandButtonPosition={'left'}
                 isExpandable
               >
                 {content}
@@ -209,7 +389,6 @@ const ExpandEditSortTable = (
               id={id}
               data-testid={`row-${index}`}
               editButtonAriaDescribedby={id}
-              editButtonPosition={'left'}
               editableContent={editableContent}
             >
               {content}
@@ -224,222 +403,128 @@ const ExpandEditSortTable = (
   );
 };
 
-const Template: StoryFn<typeof Table> = (args) => (
-  <Table {...args} variant={args.variant}>
-    <Table.Header>
-      <Table.Row>
-        <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
-        <Table.HeaderCell scope={'col'}>{'Items'}</Table.HeaderCell>
-        <Table.HeaderCell scope={'col'}>{'Expenditure'}</Table.HeaderCell>
-      </Table.Row>
-    </Table.Header>
-    <Table.Body>
-      <Table.Row>
-        <Table.DataCell className={'rowSpanRight'} rowSpan={2}>
-          {'Edible'}
-        </Table.DataCell>
-        <Table.DataCell>{'Donuts'}</Table.DataCell>
-        <Table.DataCell>{'3,000'}</Table.DataCell>
-      </Table.Row>
-      <Table.Row>
-        <Table.DataCell>{'Cake'}</Table.DataCell>
-        <Table.DataCell>{'3,000'}</Table.DataCell>
-      </Table.Row>
-      <Table.Row>
-        <Table.DataCell rowSpan={2} className={'rowSpanRight'}>
-          {'Non-Edible'}
-        </Table.DataCell>
-        <Table.DataCell>{'Stationery'}</Table.DataCell>
-        <Table.DataCell>{'18,000'}</Table.DataCell>
-      </Table.Row>
-      <Table.Row>
-        <Table.DataCell>{'Batteries'}</Table.DataCell>
-        <Table.DataCell>{'9,000'}</Table.DataCell>
-      </Table.Row>
-    </Table.Body>
-    <Table.Sum colSpan={2}>{'32,000'}</Table.Sum>
-  </Table>
-);
-
 const TemplateExpandEditSort: StoryFn<typeof Table> = (args) => (
   <ExpandEditSortTable {...args} />
 );
 
-export const WithRef = {
-  render: Template,
-  name: 'With Ref (FA1)',
-  args: {
-    ...defaultArgs,
-    ref: (instance: HTMLTableElement | null): void => {
-      if (instance) {
-        instance.id = 'dummyIdForwardedFromRef';
-      }
-    },
-  },
-  argTypes: {
-    ref: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const table = canvas.getByRole('table');
-    await expect(table).toBeInTheDocument();
-    await expect(table).toHaveAttribute('id', 'dummyIdForwardedFromRef');
-  },
-} satisfies Story;
+const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
+  <Table {...args} caption={'Månedoversikt'}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell scope={'col'}>{'Dekningsgrad'}</Table.HeaderCell>
+        <Table.HeaderCell alignment={'right'} scope={'col'}>
+          {'Beløp'}
+        </Table.HeaderCell>
+        <Table.HeaderCell alignment={'center'} scope={'col'}>
+          {'Måned'}
+        </Table.HeaderCell>
+        <Table.HeaderCell alignment={'right'} scope={'col'}>
+          {'Avkastning'}
+        </Table.HeaderCell>
+        <Table.HeaderCell as={'td'} />
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      {data.map(({ isExpandable, id, rowData }, index) => {
+        const content = (
+          <>
+            <Table.DataCell alignment={'left'} id={id}>
+              {rowData.coverage}
+            </Table.DataCell>
+            <Table.DataCell alignment={'right'}>
+              {rowData.amount}
+            </Table.DataCell>
+            <Table.DataCell alignment={'center'}>
+              {rowData.month}
+            </Table.DataCell>
+            <Table.DataCell alignment={'right'}>
+              {rowData.revenue}
+            </Table.DataCell>
+          </>
+        );
 
-export const WithAttributes = {
-  render: Template,
-  name: 'With Attributes (FA2-5)',
-  args: {
-    ...defaultArgs,
-    id: 'htmlId',
-    className: 'dummyClassname',
-    lang: 'nb',
-    'data-testid': '123ID',
-  },
-  argTypes: {
-    id: { table: { disable: false } },
-    className: { table: { disable: false } },
-    lang: { table: { disable: false } },
-    'data-testid': { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const table = canvas.getByRole('table');
-    await expect(table).toHaveClass('dummyClassname');
-    await expect(table).toHaveAttribute('id', 'htmlId');
-    await expect(table).toHaveAttribute('lang', 'nb');
-    await expect(table).toHaveAttribute('data-testid', '123ID');
-  },
-} satisfies Story;
+        if (isExpandable) {
+          return (
+            <Table.Row
+              key={id}
+              data-testid={`row-expand-${index}`}
+              expandButtonAriaDescribedby={id}
+              expandButtonPosition={'right'}
+              expandableContent={
+                <div className={'emptyExpandedTableRow'}>
+                  <Heading as={'h2'} level={2}>
+                    {'data'}
+                  </Heading>
+                </div>
+              }
+              isExpandable
+            >
+              {content}
+            </Table.Row>
+          );
+        }
 
-export const Defaults = {
-  render: Template,
-  name: 'Defaults (Table A1, A8, B1, B2, TableRow B1, A20)',
-  args: {
-    ...defaultArgs,
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByText(caption)).toBeInTheDocument();
-    await expect(canvas.getByRole('table')).toBeInTheDocument();
-  },
-} satisfies Story;
+        return (
+          <Table.EditableRow
+            key={index}
+            id={id}
+            data-testid={`row-${index}`}
+            editButtonAriaDescribedby={id}
+            editButtonPosition={'right'}
+            editableContent={editableContent}
+          >
+            {content}
+          </Table.EditableRow>
+        );
+      })}
+    </Table.Body>
+    <Table.Sum colSpan={4} hasTopSeparator>
+      {'4555'}
+    </Table.Sum>
+  </Table>
+);
 
 export const WithVariantCompact = {
   render: TemplateExpandEditSort,
-  name: 'Variant compact(Table A1, A3, TableHeader A2, TableRow A3, A17, A19, A20)',
+  name: 'Variant Compact (Table A1, A3, TableHeader A2, TableRow A3, A17, A19, A20)',
   args: {
-    ...defaultArgs,
     variant: 'compact',
   },
   argTypes: {
     variant: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: {
+      click: [
+        `${wrapper} [data-testid="row-0"] button`,
+        `${wrapper} [data-testid="row-expand-3"] button`,
+      ],
+    },
+  },
 } satisfies Story;
 
-const TemplateScroll: StoryFn<typeof Table> = (args) => {
-  const exampleTable = (
-    <Table {...args} variant={args.variant}>
-      <Table.Header>
-        <Table.Row>
-          <Table.HeaderCell scope={'col'}>{'Forename'}</Table.HeaderCell>
-          <Table.HeaderCell scope={'col'}>{'Surname'}</Table.HeaderCell>
-          <Table.HeaderCell scope={'col'}>{'email'}</Table.HeaderCell>
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        <Table.Row>
-          <Table.DataCell>{'Otto'}</Table.DataCell>
-          <Table.DataCell>{'Octavius'}</Table.DataCell>
-          <Table.DataCell>{'doc.ock@example.org'}</Table.DataCell>
-        </Table.Row>
-        <Table.Row>
-          <Table.DataCell>{'Norman'}</Table.DataCell>
-          <Table.DataCell>{'Osbourne'}</Table.DataCell>
-          <Table.DataCell>{'norman.osbourne@example.org'}</Table.DataCell>
-        </Table.Row>
-        <Table.Row>
-          <Table.DataCell>{'Curt'}</Table.DataCell>
-          <Table.DataCell>{'Connors'}</Table.DataCell>
-          <Table.DataCell>{'curt.connors@example.org'}</Table.DataCell>
-        </Table.Row>
-      </Table.Body>
-    </Table>
-  );
-
-  return (
-    <>
-      <p>{'Table med Scrollbar'}</p>
-      <div className={'scrollTableWrapper'}>{exampleTable}</div>
-      <div className={'scrollTableWrapperSuccess'}>{exampleTable}</div>
-      <div className={'scrollTableWrapperWarning'}>{exampleTable}</div>
-    </>
-  );
-};
-
-export const WithScrollbar = {
-  render: TemplateScroll,
-  name: 'With scroll (A5)',
-  parameters: { a11y: { disable: true } },
-} satisfies Story;
-
-const TemplateAlignment: StoryFn<typeof Table> = (args) => (
-  <Table {...args} variant={'standard'}>
-    <Table.Header>
-      <Table.Row>
-        <Table.HeaderCell alignment={'left'} scope={'col'}>
-          {'left'}
-        </Table.HeaderCell>
-        <Table.HeaderCell alignment={'center'} scope={'col'}>
-          {'center'}
-        </Table.HeaderCell>
-        <Table.HeaderCell alignment={'right'} scope={'col'}>
-          {'right'}
-        </Table.HeaderCell>
-        <Table.HeaderCell scope={'col'}>{'default'}</Table.HeaderCell>
-        <Table.HeaderCell alignment={'right'} scope={'col'}>
-          {'right'}
-        </Table.HeaderCell>
-      </Table.Row>
-    </Table.Header>
-    <Table.Body>
-      <Table.Row>
-        <Table.DataCell alignment={'left'}>{'left'}</Table.DataCell>
-        <Table.DataCell alignment={'center'}>{'center'}</Table.DataCell>
-        <Table.DataCell alignment={'right'}>{'right'}</Table.DataCell>
-        <Table.DataCell>{'default'}</Table.DataCell>
-        <Table.DataCell alignment={'left'}>{'left'}</Table.DataCell>
-      </Table.Row>
-      <Table.Row>
-        <Table.DataCell alignment={'left'}>{'left'}</Table.DataCell>
-        <Table.DataCell alignment={'center'}>{'center'}</Table.DataCell>
-        <Table.DataCell alignment={'right'}>{'right'}</Table.DataCell>
-        <Table.DataCell>{'default'}</Table.DataCell>
-        <Table.DataCell alignment={'right'}>{'right'}</Table.DataCell>
-      </Table.Row>
-    </Table.Body>
-  </Table>
-);
-
-export const WithFullWidthAndTextAlignment = {
-  render: TemplateAlignment,
-  name: 'With Full Width, text Alignment (Table A4, A10, TableHeader A1, TableRow A2)',
+export const WithVariantCompactAndRightButtonPosition = {
+  render: TemplateWithRightButtonPosition,
+  name: 'Variant Compact And Right Button Position',
   args: {
-    ...defaultArgs,
-    hasFullWidth: true,
+    variant: 'compact',
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      click: [
+        `${wrapper} [data-testid="row-0"] button`,
+        `${wrapper} [data-testid="row-expand-3"] button`,
+      ],
+    },
   },
 } satisfies Story;
 
 export const WithExpandEditSort = {
   render: TemplateExpandEditSort,
   name: 'With Expand Edit Sort (Table A9, A11, A14, A15, TableHeader A4, A5, A6, A7, B2, TableRow B3, A14, A15, A19)',
-  args: {
-    ...defaultArgs,
-  },
   parameters: {
     imageSnapshot: {
       hover: [
@@ -465,7 +550,6 @@ export const WithDefaultRowInEditMode = {
   render: TemplateExpandEditSort,
   name: 'With Default Row In Edit Mode',
   args: {
-    ...defaultArgs,
     rowInEditModeId: '3vesy',
   },
 } satisfies Story;
@@ -473,9 +557,6 @@ export const WithDefaultRowInEditMode = {
 export const WithWideScreen = {
   render: TemplateExpandEditSort,
   name: 'With Wide screen (Table A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-m',
@@ -487,15 +568,27 @@ export const WithFullWidthExpandableEdit = {
   render: TemplateExpandEditSort,
   name: 'With FullWidth Edit Expand Sort',
   args: {
-    ...defaultArgs,
     hasFullWidth: true,
+  },
+  argTypes: {
+    hasFullWidth: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithFullWidthAndRightButtonPosition = {
+  render: TemplateWithRightButtonPosition,
+  name: 'With FullWidth And Right Button Position',
+  args: {
+    hasFullWidth: true,
+  },
+  argTypes: {
+    hasFullWidth: { table: { disable: false } },
   },
 } satisfies Story;
 
 export const WithCanBeManuallyFocused: Story = {
   render: Template,
   args: {
-    ...defaultArgs,
     canBeManuallyFocused: true,
   },
   argTypes: {
