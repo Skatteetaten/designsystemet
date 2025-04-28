@@ -57,11 +57,11 @@ export interface TopBannerExternalProps extends BaseProps {
    */
   skipLink?: SkipLink;
   /**
-   * logo.logo Overskriver default logo. Må også angi logo for mobilvisning, alt-tekst og url.
-   * logo.mobileLogo  Overskriver default logo for mobilvisning.
-   * logo.alt Overskriver default alt-tekst for logo kun dersom logo og mobileLogo også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.
-   * logo.href  Overskriver default URL.
-   * logo.as HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. Hvis default logo endres til å ikke være en lenke, så blir logoAltText automatisk tilpasset.
+   * logo.logo: Overskriver default logo. Må også angi alt-tekst og url.
+   * **Deprecated logo.mobileLogo:**  Overskriver default logo for mobilvisning.
+   * logo.alt: Overskriver default alt-tekst for logo, kun dersom logo også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.
+   * logo.href:  Overskriver default URL.
+   * logo.as: HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. Hvis default logo endres til å ikke være en lenke, så blir logoAltText automatisk tilpasset.
    */
   logo?: TopBannerLogoProps;
   /** Legger til flere alternativer i språkvelgeren. */
