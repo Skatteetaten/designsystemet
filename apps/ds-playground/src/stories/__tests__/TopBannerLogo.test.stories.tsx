@@ -172,30 +172,6 @@ export const WithLogoMobileLogoAltAndHref = {
   },
 } satisfies Story;
 
-export const WithMobileScreen = {
-  name: 'With Small Screen',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--mobile',
-    },
-  },
-} satisfies Story;
-
-export const WithBreakpointM = {
-  name: 'With Breakpoint-m',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-  },
-} satisfies Story;
-
 export const WithOnClick = {
   name: 'With OnClick',
   args: {
