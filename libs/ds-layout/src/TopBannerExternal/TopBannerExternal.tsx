@@ -160,6 +160,40 @@ export const TopBannerExternal = ({
             {children}
 
             <div className={styles.content}>
+              <TopBannerLangPicker
+                ref={languagePickerRef}
+                defaultLocale={defaultLocale}
+                showSami={showSami}
+                openMenu={openMenu}
+                setOpenMenu={setOpenMenu}
+                menuButtonRef={languagePickerButtonRef}
+                additionalLanguages={additionalLanguages}
+                onLanguageClick={onLanguageClick}
+              />
+
+              {onLogOutClick && user && (
+                <>
+                  <TopBannerUserButton user={user} onClick={onUserClick} />
+                  <TopBannerButton
+                    svgPath={LogOutSVGpath}
+                    variant={'outline'}
+                    onClick={onLogOutClick}
+                  >
+                    {t('topbannerbutton.Logout')}
+                  </TopBannerButton>
+                </>
+              )}
+
+              {onLogInClick && !user && (
+                <TopBannerButton
+                  svgPath={LockOutlineSVGpath}
+                  variant={'filled'}
+                  onClick={onLogInClick}
+                >
+                  {t('topbannerbutton.Login')}
+                </TopBannerButton>
+              )}
+
               {showMenu && (
                 <>
                   <TopBannerButton
@@ -204,40 +238,6 @@ export const TopBannerExternal = ({
                     </div>
                   )}
                 </>
-              )}
-
-              <TopBannerLangPicker
-                ref={languagePickerRef}
-                defaultLocale={defaultLocale}
-                showSami={showSami}
-                openMenu={openMenu}
-                setOpenMenu={setOpenMenu}
-                menuButtonRef={languagePickerButtonRef}
-                additionalLanguages={additionalLanguages}
-                onLanguageClick={onLanguageClick}
-              />
-
-              {onLogOutClick && user && (
-                <>
-                  <TopBannerUserButton user={user} onClick={onUserClick} />
-                  <TopBannerButton
-                    svgPath={LogOutSVGpath}
-                    variant={'outline'}
-                    onClick={onLogOutClick}
-                  >
-                    {t('topbannerbutton.Logout')}
-                  </TopBannerButton>
-                </>
-              )}
-
-              {onLogInClick && !user && (
-                <TopBannerButton
-                  svgPath={LockOutlineSVGpath}
-                  variant={'filled'}
-                  onClick={onLogInClick}
-                >
-                  {t('topbannerbutton.Login')}
-                </TopBannerButton>
               )}
             </div>
           </div>
