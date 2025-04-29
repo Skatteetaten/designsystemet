@@ -20,10 +20,12 @@ const meta = {
     expandButtonAriaDescribedby: { table: { category: category.aria } },
     expandButtonTitle: { table: { category: category.props } },
     expandButtonPosition: {
+      //options: [...positionArr],
       control: 'inline-radio',
       table: {
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
         category: category.props,
+        //type: { summary: positionArr },
       },
     },
     expandableContent: {
