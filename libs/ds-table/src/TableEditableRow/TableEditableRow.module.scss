@@ -7,22 +7,6 @@
     background: var(--palette-ochre-10);
   }
 
-  &_expandedWithBorder {
-    --table-cell-border-bottom: solid 1px var(--palette-ochre-50);
-
-    background: var(--palette-ochre-10);
-  }
-
-  &Cell {
-    position: relative;
-    padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
-    background: var(--palette-ochre-5);
-  }
-
-  &ButtonCell {
-    padding: var(--spacing-xs);
-  }
-
   &Triangle {
     position: absolute;
     top: -1px;
@@ -45,10 +29,6 @@
       content: '';
     }
   }
-}
-
-.expandedRow {
-  border-bottom: solid 1px var(--semantic-divider-30);
 }
 
 .expandableContent {
