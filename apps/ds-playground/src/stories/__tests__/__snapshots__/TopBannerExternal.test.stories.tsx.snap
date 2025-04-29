@@ -4,7 +4,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -24,28 +24,24 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -55,24 +51,24 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -88,7 +84,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -99,10 +95,10 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -112,16 +108,16 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -133,7 +129,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -153,36 +149,32 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -198,7 +190,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -209,10 +201,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -222,16 +214,16 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -243,7 +235,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -263,36 +255,32 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -308,7 +296,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -319,10 +307,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -332,16 +320,16 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -353,7 +341,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -373,36 +361,32 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -418,7 +402,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -429,10 +413,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -442,16 +426,16 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -463,7 +447,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -483,36 +467,32 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -528,7 +508,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -539,10 +519,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -552,16 +532,16 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -573,7 +553,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -593,36 +573,32 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -638,7 +614,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -649,10 +625,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -662,16 +638,16 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -687,7 +663,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
           class="dummyClassname"
   >
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -707,36 +683,32 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -752,7 +724,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -763,10 +735,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -776,16 +748,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -797,7 +769,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -817,21 +789,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
+        <div class="_contentContainer_64p0f_22">
           <div class>
             <label id="labelId-:rc:"
                    class="_label_348na_5  _srOnly_348na_18"
@@ -851,21 +819,21 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
             >
             </div>
           </div>
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -881,7 +849,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -892,10 +860,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -905,16 +873,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -926,7 +894,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -946,36 +914,32 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -991,7 +955,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1002,10 +966,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1015,16 +979,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -1036,7 +1000,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -1056,28 +1020,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1087,35 +1047,35 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68"
+                   class="_columns_64p0f_71"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -1131,7 +1091,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1142,10 +1102,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1155,16 +1115,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -1270,7 +1230,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -1290,28 +1250,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1321,35 +1277,35 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68"
+                   class="_columns_64p0f_71"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -1365,7 +1321,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1376,10 +1332,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1389,16 +1345,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -1504,7 +1460,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -1524,28 +1480,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1555,35 +1507,35 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68"
+                   class="_columns_64p0f_71"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -1599,7 +1551,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1610,10 +1562,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1623,16 +1575,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -1740,7 +1692,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
           id="dummyIdForwardedFromRef"
   >
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -1760,36 +1712,32 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -1805,7 +1753,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1816,10 +1764,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1829,16 +1777,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -1850,7 +1798,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -1870,28 +1818,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1901,45 +1845,45 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68 _columnsThree_r8gmx_79 _columnsTwo_r8gmx_79"
+                   class="_columns_64p0f_71 _columnsThree_64p0f_82 _columnsTwo_64p0f_82"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Third column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -1955,7 +1899,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1966,10 +1910,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1979,16 +1923,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -2104,7 +2048,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -2124,28 +2068,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2155,45 +2095,45 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68 _columnsThree_r8gmx_79 _columnsTwo_r8gmx_79"
+                   class="_columns_64p0f_71 _columnsThree_64p0f_82 _columnsTwo_64p0f_82"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Third column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -2209,7 +2149,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2220,10 +2160,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2233,16 +2173,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -2358,7 +2298,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -2378,28 +2318,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2409,45 +2345,45 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68 _columnsThree_r8gmx_79 _columnsTwo_r8gmx_79"
+                   class="_columns_64p0f_71 _columnsThree_64p0f_82 _columnsTwo_64p0f_82"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Third column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -2463,7 +2399,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2474,10 +2410,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2487,16 +2423,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -2612,7 +2548,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -2632,28 +2568,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2663,40 +2595,40 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68  _columnsTwo_r8gmx_79"
+                   class="_columns_64p0f_71  _columnsTwo_64p0f_82"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -2712,7 +2644,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2723,10 +2655,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2736,16 +2668,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -2856,7 +2788,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -2876,28 +2808,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2907,40 +2835,40 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68  _columnsTwo_r8gmx_79"
+                   class="_columns_64p0f_71  _columnsTwo_64p0f_82"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -2956,7 +2884,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2967,10 +2895,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2980,16 +2908,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
@@ -3100,7 +3028,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_64p0f_98"
          tabindex="-1"
     >
     </div>
@@ -3120,28 +3048,24 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_64p0f_58">
+      <div class="_topContainer_64p0f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <button class="_button_1hyk0_1"
+        <div class="_contentContainer_64p0f_22">
+          <div class="_content_64p0f_22">
+            <button class="_button_2n6jz_1"
                     aria-expanded="true"
                     type="button"
             >
-              <span class="_iconWrapper_1hyk0_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1hyk0_18"
+              <span class="_iconWrapper_2n6jz_18">
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3151,40 +3075,40 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_1hyk0_27">
+              <span class="_buttonText_2n6jz_27">
                 Meny
               </span>
             </button>
-            <div class="_mainMenu_r8gmx_60">
+            <div class="_mainMenu_64p0f_63">
               <nav aria-label="Temaoversikt"
-                   class="_columns_r8gmx_68  _columnsTwo_r8gmx_79"
+                   class="_columns_64p0f_71  _columnsTwo_64p0f_82"
               >
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     First column with pink background
                   </div>
                 </div>
-                <div class="_column_r8gmx_68">
+                <div class="_column_64p0f_71">
                   <div class="dummyClassNamePinkBackground">
                     Second column with pink background
                   </div>
                 </div>
               </nav>
             </div>
-            <div class="_container_azp4i_5">
+            <div class="_container_72xc2_5">
               <div class>
               </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
+              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
+                <span class="_iconWrapper_72xc2_20">
+                  <span class="_flagIcon_72xc2_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
+                         class="_flagIconSvg_72xc2_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                             style="fill: rgb(255, 255, 255);"
@@ -3200,7 +3124,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
+                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -3211,10 +3135,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_azp4i_133">
+                <span class="_srOnly_72xc2_133">
                   &nbsp;Meny
                 </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3224,16 +3148,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_azp4i_67">
+              <div class="_menuArrow_72xc2_67">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_64p0f_35">
+        <div class="_separatorRight_64p0f_48">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_64p0f_40">
         </div>
       </div>
     </div>
