@@ -138,6 +138,9 @@ export const Defaults = {
     svgPath: { table: { disable: false } },
   },
   parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-m',
+    },
     imageSnapshot: {
       focus: `${wrapper} > button`,
       hover: `${wrapper} > button`,
@@ -167,6 +170,9 @@ export const WithVariantOutline = {
     variant: { table: { disable: false } },
   },
   parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-m',
+    },
     imageSnapshot: {
       focus: `${wrapper} > button`,
       hover: `${wrapper} > button`,
@@ -187,6 +193,9 @@ export const WithVariantFilled = {
     variant: { table: { disable: false } },
   },
   parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-m',
+    },
     imageSnapshot: {
       focus: `${wrapper} > button`,
       hover: `${wrapper} > button`,
@@ -312,10 +321,10 @@ export const AllVariantOnMobileScreen = {
 
 export const AllVariantOnBreakpointS = {
   render: TemplateWithAllVariant,
-  name: 'All Variants On Breakpoint-s (LoginButton A1, A2)',
+  name: 'All Variants On Breakpoint-m (LoginButton A1, A2)',
   parameters: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      defaultViewport: '--breakpoint-m',
     },
   },
 } satisfies Story;

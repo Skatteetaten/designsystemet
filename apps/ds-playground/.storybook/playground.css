@@ -69,6 +69,10 @@ code {
   margin-bottom: var(--spacing-xl);
 }
 
+.bottomSpacingL {
+  margin-bottom: var(--spacing-l);
+}
+
 .bottomSpacingXS {
   margin-bottom: var(--spacing-xs);
 }
