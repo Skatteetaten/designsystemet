@@ -1,3 +1,5 @@
+/* saksvisning */
+
 .wrapperInternalLayout {
   display: var(--semantic-responsive-internal-container-display);
   flex-direction: var(--semantic-responsive-internal-container-flex-direction);
@@ -65,4 +67,56 @@
 
 .wideContent {
   width: var(--semantic-responsive-wide-content);
+}
+
+/* skjema med steg */
+
+.mainExternal {
+  width: var(--semantic-responsive-container);
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+}
+
+.miniNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-m) 0;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  margin: auto;
+}
+
+.marginTopM {
+  margin-top: var(--spacing-m);
+}
+
+.marginRightM {
+  margin-right: var(--spacing-m);
+}
+
+.flex {
+  display: flex;
+}
+
+.adress {
+  width: 338px;
+}
+
+.postalCode {
+  width: 109px;
+}
+
+.city {
+  width: 320px;
+}
+
+.phone {
+  width: 193px;
+}
+
+.preLine {
+  white-space: pre-line;
 }

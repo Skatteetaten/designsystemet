@@ -12,5 +12,16 @@ declare const classNames: {
   readonly card: 'card';
   readonly cardContent: 'cardContent';
   readonly wideContent: 'wideContent';
+  readonly mainExternal: 'mainExternal';
+  readonly miniNav: 'miniNav';
+  readonly article: 'article';
+  readonly marginTopM: 'marginTopM';
+  readonly marginRightM: 'marginRightM';
+  readonly flex: 'flex';
+  readonly adress: 'adress';
+  readonly postalCode: 'postalCode';
+  readonly city: 'city';
+  readonly phone: 'phone';
+  readonly preLine: 'preLine';
 };
 export default classNames;

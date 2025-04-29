@@ -26,7 +26,7 @@ import { Tag } from '@skatteetaten/ds-status';
 import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './Saksvisning.module.css';
+import styles from './pages.module.css';
 
 export default {
   title: 'Sidetyper/Intern/Saksvisning',
