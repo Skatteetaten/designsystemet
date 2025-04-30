@@ -43,7 +43,7 @@ export const TableRow = ({
   const testRef = useRef<RowWithExpandButtonHandle>(null);
   useImperativeHandle(
     ref,
-    () => testRef?.current?.rowRef?.current as HTMLTableRowElement
+    () => testRef.current?.rowRef?.current as HTMLTableRowElement
   );
 
   const [isExpandedInternal, setIsExpandedInternal] = useState(false);
