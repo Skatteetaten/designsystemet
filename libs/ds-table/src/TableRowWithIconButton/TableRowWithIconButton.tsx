@@ -128,6 +128,7 @@ export const RowWithRightSideExpandButton = ({
   context,
   expandButtonTitle,
   expandableContent,
+  iconButtonAriaExpanded,
   svgPath,
   expandButtonAriaDescribedby,
   isDesktop,
@@ -192,7 +193,7 @@ export const RowWithRightSideExpandButton = ({
             title={expandButtonTitle}
             size={getIconButtonSize(isDesktop, context?.variant)}
             ariaDescribedby={expandButtonAriaDescribedby}
-            ariaExpanded={isExpanded}
+            ariaExpanded={iconButtonAriaExpanded}
             disabled={isExpandButtonDisabled}
             onClick={handleClick}
           />
