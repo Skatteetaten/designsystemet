@@ -41,10 +41,9 @@ export const TableRow = ({
   children,
 }: TableRowProps): JSX.Element => {
   const testRef = useRef<RowWithExpandButtonHandle>(null);
-  const rowRef = useRef<HTMLTableRowElement>(null);
   useImperativeHandle(
     ref,
-    () => testRef?.current?.rowRef?.current as HTMLTableRowElement
+    () => testRef.current?.rowRef?.current as HTMLTableRowElement
   );
 
   const [isExpandedInternal, setIsExpandedInternal] = useState(false);
@@ -70,27 +69,11 @@ export const TableRow = ({
   const buttonTitle = expandButtonTitle ?? t('tablerow.Expandable');
 
   const svgPath = isExpanded ? ChevronUpSVGpath : ChevronDownSVGpath;
-  const isExpandButtonDisabled = false;
 
-  const expandableRowProps = {
-    id,
-    className,
-    lang,
-    'data-testid': dataTestId,
-    rowRef,
-    context,
-    expandButtonTitle: buttonTitle,
-    expandableContent,
-    t,
-    svgPath,
-    expandButtonAriaDescribedby,
-    isDesktop,
-    isExpanded,
-    iconButtonAriaExpanded: isExpanded,
-    isExpandButtonDisabled,
-    onExpandClick,
-    children,
-  };
+  const Tag =
+    expandButtonPosition === 'left'
+      ? RowWithLeftSideExpandButton
+      : RowWithRightSideExpandButton;
 
   if (!isExpandable) {
     return (
@@ -104,13 +87,28 @@ export const TableRow = ({
         {children}
       </tr>
     );
-  }
-  if (expandButtonPosition === 'left') {
+  } else {
     return (
-      <RowWithLeftSideExpandButton ref={testRef} {...expandableRowProps} />
+      <Tag
+        ref={testRef}
+        id={id}
+        className={className}
+        lang={lang}
+        data-testid={dataTestId}
+        isExpanded={isExpanded}
+        iconButtonAriaExpanded={isExpanded}
+        expandButtonTitle={buttonTitle}
+        expandButtonAriaDescribedby={expandButtonAriaDescribedby}
+        expandableContent={expandableContent}
+        context={context}
+        svgPath={svgPath}
+        isDesktop={isDesktop}
+        onExpandClick={onExpandClick}
+      >
+        {children}
+      </Tag>
     );
   }
-  return <RowWithRightSideExpandButton ref={testRef} {...expandableRowProps} />;
 };
 
 TableRow.displayName = 'TableRow';
