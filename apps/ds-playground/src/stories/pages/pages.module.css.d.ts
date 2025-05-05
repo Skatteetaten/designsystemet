@@ -16,6 +16,7 @@ declare const classNames: {
   readonly miniNav: 'miniNav';
   readonly article: 'article';
   readonly marginTopM: 'marginTopM';
+  readonly marginTopL: 'marginTopL';
   readonly marginRightM: 'marginRightM';
   readonly flex: 'flex';
   readonly adress: 'adress';
