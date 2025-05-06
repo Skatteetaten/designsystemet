@@ -12,5 +12,16 @@ declare const classNames: {
   readonly card: 'card';
   readonly cardContent: 'cardContent';
   readonly wideContent: 'wideContent';
+  readonly mainExternal: 'mainExternal';
+  readonly miniNav: 'miniNav';
+  readonly article: 'article';
+  readonly marginTopM: 'marginTopM';
+  readonly marginRightM: 'marginRightM';
+  readonly checkIconContainer: 'checkIconContainer';
+  readonly checkIcon: 'checkIcon';
+  readonly panel: 'panel';
+  readonly stepList: 'stepList';
+  readonly stepListStep: 'stepListStep';
+  readonly preLine: 'preLine';
 };
 export default classNames;
