@@ -107,9 +107,11 @@ export const SearchField = (({
     }
     const handleOutsideMenuEvent: EventListener = (event): void => {
       const node = event.target as Node;
+      if (node === inputRef.current) {
+        setCurrentFocus(-1);
+      }
       if (!listboxRef?.current?.contains(node) && node !== inputRef.current) {
         setShowResults(false);
-        setCurrentFocus(-1);
         event.type === 'click' && listboxRef?.current?.focus();
       }
     };
