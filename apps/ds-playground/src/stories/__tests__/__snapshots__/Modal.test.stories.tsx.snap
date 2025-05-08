@@ -4,7 +4,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_7mezm_95"
+         class="_srOnly_9vvah_119"
          tabindex="-1"
     >
     </div>
@@ -24,8 +24,8 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_7mezm_55">
-      <div class="_topContainer_7mezm_6">
+    <div class="_containerForMainMenu_9vvah_55">
+      <div class="_topContainer_9vvah_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -34,7 +34,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_7mezm_23">
+        <div class="_contentContainer_9vvah_23">
           <div class="_container_72xc2_5">
             <div class>
             </div>
@@ -93,10 +93,10 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_7mezm_32">
-        <div class="_separatorRight_7mezm_45">
+      <div class="_separator_9vvah_32">
+        <div class="_separatorRight_9vvah_45">
         </div>
-        <div class="_separatorLeft_7mezm_37">
+        <div class="_separatorLeft_9vvah_37">
         </div>
       </div>
     </div>
@@ -172,7 +172,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_7mezm_95"
+         class="_srOnly_9vvah_119"
          tabindex="-1"
     >
     </div>
@@ -192,8 +192,8 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_7mezm_55">
-      <div class="_topContainer_7mezm_6">
+    <div class="_containerForMainMenu_9vvah_55">
+      <div class="_topContainer_9vvah_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -202,7 +202,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_7mezm_23">
+        <div class="_contentContainer_9vvah_23">
           <div class="_container_72xc2_5">
             <div class>
             </div>
@@ -261,10 +261,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_7mezm_32">
-        <div class="_separatorRight_7mezm_45">
+      <div class="_separator_9vvah_32">
+        <div class="_separatorRight_9vvah_45">
         </div>
-        <div class="_separatorLeft_7mezm_37">
+        <div class="_separatorLeft_9vvah_37">
         </div>
       </div>
     </div>
@@ -324,7 +324,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_7mezm_95"
+         class="_srOnly_9vvah_119"
          tabindex="-1"
     >
     </div>
@@ -344,8 +344,8 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_7mezm_55">
-      <div class="_topContainer_7mezm_6">
+    <div class="_containerForMainMenu_9vvah_55">
+      <div class="_topContainer_9vvah_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -354,7 +354,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_7mezm_23">
+        <div class="_contentContainer_9vvah_23">
           <div class="_container_72xc2_5">
             <div class>
             </div>
@@ -413,10 +413,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_7mezm_32">
-        <div class="_separatorRight_7mezm_45">
+      <div class="_separator_9vvah_32">
+        <div class="_separatorRight_9vvah_45">
         </div>
-        <div class="_separatorLeft_7mezm_37">
+        <div class="_separatorLeft_9vvah_37">
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
 {
   "topbanner.InkLogoImageText": "Statens innkrevjing logo",
-  "topbanner.InkLogoLinkText": "Framside Statens innkreving",
+  "topbanner.InkLogoLinkText": "Framside Statens innkrevjing",
   "topbanner.LsoLogoImageText": "Lønnsstøtte",
   "topbanner.LsoLogoLinkText": "Framside Lønnsstøtte",
   "topbanner.NavAriaLabel": "Temaoversikt",
+  "topbanner.Search": "Søk",
   "topbanner.SkeLogoImageText": "Skatteetaten logo",
   "topbanner.SkeLogoLinkText": "Framside Skatteetaten",
   "topbanner.SkipLinkText": "Hopp til hovudinnhald",

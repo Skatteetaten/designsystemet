@@ -213,7 +213,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             type={'search'}
             onKeyDown={(event) => {
               if (event.key === 'Enter') {
-                onSearch?.(event);
+                onSearch?.(event, inputRef?.current?.value);
               }
             }}
             onBlur={onBlur}
@@ -287,7 +287,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             className={searchButtonClassName}
             disabled={disabled}
             onClick={(event): void => {
-              onSearchClick?.(event);
+              onSearchClick?.(event, inputRef?.current?.value);
             }}
           >
             {hasSearchButtonIcon ? (

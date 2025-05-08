@@ -2,7 +2,8 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
-  KeyboardEventHandler,
+  KeyboardEvent,
+  MouseEvent,
   MouseEventHandler,
   Ref,
 } from 'react';
@@ -84,9 +85,14 @@ interface SearchFieldCommonProps
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
   /** Kalles med enter-knapp i søkefeltet */
-  onSearch?: KeyboardEventHandler<HTMLInputElement>;
+  onSearch?: (event: KeyboardEvent<HTMLInputElement>, value?: string) => void;
+  //onSearch?: KeyboardEventHandler<HTMLInputElement> & { value?: string };
   /** Kalles ved trykk på søkeknappen */
-  onSearchClick?: MouseEventHandler<HTMLButtonElement>;
+  onSearchClick?: (
+    event: MouseEvent<HTMLButtonElement>,
+    value?: string
+  ) => void;
+  //onSearchClick?: MouseEventHandler<HTMLButtonElement> & { value?: string };
   /** Kalles ved trykk på søkeresultat */
   onResultClick?: (result: SearchResult) => void;
   /** Liste med søkeresultater som skal vises under feltet */
