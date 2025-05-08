@@ -1,6 +1,0 @@
-import{j as t}from"./jsx-runtime-BjG_zV1W.js";import{C as e}from"./index-ukAKs0SN.js";import{c as o}from"./helpers-BRYKCfPN.js";import"./index-EsEcB_zD.js";import"./index-7h80QhK_.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-B77p9Xne.js";import"./index-vpaAjjI_.js";import"./index-_-BAtSXr.js";import"./index-SYCMKRjb.js";e.Actions.displayName="Card.Actions";const p="Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.",c={children:p},j={component:e.Actions,title:"Komponenter/Card/Actions",argTypes:{children:{control:"text",table:{category:o.props}},spacingVertical:{table:{category:o.props}}},args:{...c}},r={render:i=>t.jsx(e,{children:t.jsx(e.Actions,{...i})})};var s,a,n;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`{
-  render: args => <Card>
-      <Card.Actions {...args} />
-    </Card>
-} satisfies Story`,...(n=(a=r.parameters)==null?void 0:a.docs)==null?void 0:n.source}}};const h=["Preview"];export{r as Preview,h as __namedExportsOrder,j as default};
-//# sourceMappingURL=CardActions.stories-MEZA8MYe.js.map
