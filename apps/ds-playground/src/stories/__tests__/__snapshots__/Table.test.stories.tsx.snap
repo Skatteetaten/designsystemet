@@ -428,7 +428,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
           </td>
         </tr>
         <tr id="3vesy"
-            class="_editableRow_expanded_k68xh_5"
+            class="_editableRow_expanded_1fi2s_5"
             data-testid="row-1"
         >
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  _buttonCell_expanded_1rqke_14">
@@ -452,12 +452,12 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                 </path>
               </svg>
             </button>
-            <div class="_expandableContent_1rqke_22 _expandableContent_k68xh_31"
+            <div class="_expandableContent_1rqke_22 _expandableContent_1fi2s_23"
                  style="width: 515px;"
             >
-              <div class="_editableRowTriangle_k68xh_9">
+              <div class="_editableRowTriangle_1fi2s_9">
               </div>
-              <span class="_srOnly_k68xh_38"
+              <span class="_srOnly_1fi2s_30"
                     tabindex="-1"
               >
                 Rediger data
