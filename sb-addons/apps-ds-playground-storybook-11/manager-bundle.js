@@ -4,5 +4,5 @@ try{
 :host`]["--palette-graphite-70"],textColor:e[`:root,
 :host`]["--palette-graphite-100"],colorPrimary:e[`:root,
 :host`]["--palette-azure-70"],colorSecondary:e[`:root,
-:host`]["--palette-azure-70"],brandImage:"https://www.skatteetaten.no/globalassets/design/logo/skatteetaten/skjerm/horisontal/skatteetaten-logo-horisontal-rgb-svart.png",brandTitle:"Skatteetatens logo"});var c=()=>"1.6.1"?.includes("-SNAPSHOT")?{}:{tests:i=>!i.title.startsWith("Tester/")};s.setConfig({theme:p,sidebar:{filters:{patterns:o=>!o.tags.includes("isHidden"),...c()}}});})();
+:host`]["--palette-azure-70"],brandImage:"https://www.skatteetaten.no/globalassets/design/logo/skatteetaten/skjerm/horisontal/skatteetaten-logo-horisontal-rgb-svart.png",brandTitle:"Skatteetatens logo"});var c=()=>"2.0.1"?.includes("-SNAPSHOT")?{}:{tests:i=>!i.title.startsWith("Tester/")};s.setConfig({theme:p,sidebar:{filters:{patterns:o=>!o.tags.includes("isHidden"),...c()}}});})();
 }catch(e){ console.error("[Storybook] One of your manager-entries failed: " + import.meta.url, e); }
