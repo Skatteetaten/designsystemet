@@ -9,7 +9,11 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
 import { getIconButtonSize } from './utils';
@@ -32,7 +36,6 @@ export const RowWithLeftSideExpandButton = ({
   expandableContent,
   expandButtonTitle,
   expandButtonAriaDescribedby,
-  isDesktop,
   isExpanded,
   isExpandButtonDisabled,
   hideIconButton,
@@ -48,6 +51,7 @@ export const RowWithLeftSideExpandButton = ({
     rowRef,
   }));
   const expandableWrapperRef = useRef<HTMLDivElement | null>(null);
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
@@ -131,7 +135,6 @@ export const RowWithRightSideExpandButton = ({
   iconButtonAriaExpanded,
   svgPath,
   expandButtonAriaDescribedby,
-  isDesktop,
   isExpanded,
   isExpandButtonDisabled,
   onExpandClick,
@@ -149,6 +152,7 @@ export const RowWithRightSideExpandButton = ({
   }));
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const [rowLength, setRowLength] = useState<number>(999);
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   const isExpandableContentRows = (): boolean => {
     if (Array.isArray(expandableContent)) {

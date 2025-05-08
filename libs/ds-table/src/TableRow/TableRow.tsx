@@ -8,11 +8,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableRowProps } from './TableRow.types';
@@ -49,7 +45,6 @@ export const TableRow = ({
   const [isExpandedInternal, setIsExpandedInternal] = useState(false);
   const context = useContext(TableContext);
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   const isExpanded = isExpandedExternal ?? isExpandedInternal;
 
@@ -102,7 +97,6 @@ export const TableRow = ({
         expandableContent={expandableContent}
         context={context}
         svgPath={svgPath}
-        isDesktop={isDesktop}
         onExpandClick={onExpandClick}
       >
         {children}

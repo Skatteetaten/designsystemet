@@ -17,7 +17,6 @@ export interface ExpandableRowProps extends BaseProps {
   expandButtonAriaDescribedby?: string;
   iconButtonAriaExpanded?: IconButtonProps['ariaExpanded'];
   hideIconButton?: boolean;
-  isDesktop: boolean;
   isExpanded?: boolean;
   isExpandButtonDisabled?: boolean;
   onExpandClick: () => void;
