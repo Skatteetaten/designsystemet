@@ -13,8 +13,8 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
 import { getIconButtonSize } from './utils';
-import { Table } from '../Table/Table';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
+import { TableRow } from '../TableRow/TableRow';
 
 import styles from './TableRowWithIconButton.module.scss';
 
@@ -152,12 +152,11 @@ export const RowWithRightSideExpandButton = ({
   const isExpandableContentRows = (): boolean => {
     if (Array.isArray(expandableContent)) {
       return !expandableContent?.some(
-        (element) => !isValidElement(element) || element.type !== Table.Row
+        (element) => !isValidElement(element) || element.type !== TableRow
       );
     } else {
       return (
-        isValidElement(expandableContent) &&
-        expandableContent.type === Table.Row
+        isValidElement(expandableContent) && expandableContent.type === TableRow
       );
     }
   };
