@@ -1,20 +1,13 @@
-@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @use 'libs/ds-core-utils/src/styles';
 
 .buttonCell {
-  max-width: 2rem;
   padding: var(--spacing-xs);
-
-  @media (min-width: breakpoints.$breakpoint-m) {
-    max-width: 2.75rem;
-  }
 
   &_expanded {
     padding: var(--spacing-xs) var(--spacing-xs) 0;
   }
 
   &_compact {
-    max-width: 1.375rem;
     padding: var(--spacing-xs) 0 0;
   }
 }
@@ -31,6 +24,7 @@
     font-size: var(--font-size-s);
 
     // TODO noe med padding-right hvis iconPosition er right
+    // TODO noe med padding-left hvis iconPosition er left
 
     > svg {
       width: var(--size-small);

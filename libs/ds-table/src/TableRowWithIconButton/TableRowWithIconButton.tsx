@@ -37,7 +37,8 @@ export const RowWithLeftSideExpandButton = ({
   expandableContent,
   expandButtonTitle,
   expandButtonAriaDescribedby,
-  isExpanded,
+  expandText,
+  isExpanded = getTableRowIsExpandedDefault(),
   isExpandButtonDisabled,
   hideIconButton,
   children,
@@ -54,7 +55,15 @@ export const RowWithLeftSideExpandButton = ({
   const expandableWrapperRef = useRef<HTMLDivElement | null>(null);
   const isDesktop = useMediaQuery('(min-width: 1024px)');
 
+  const cellRef = useRef<HTMLTableCellElement | null>(null);
+
   useEffect(() => {
+    const boundingRects = cellRef.current?.getBoundingClientRect();
+    cellRef.current?.style.setProperty(
+      'max-width',
+      `${boundingRects?.width}px`
+    );
+
     const observer = new ResizeObserver((entries) => {
       for (const entry of entries) {
         expandableWrapperRef.current?.style?.setProperty(
@@ -67,7 +76,13 @@ export const RowWithLeftSideExpandButton = ({
     return (): void => {
       observer.disconnect();
     };
-  }, []);
+  }, [isExpanded]);
+
+  useEffect(() => {
+    if (buttonRef.current) {
+      buttonRef.current.ariaExpanded = isExpanded.toString();
+    }
+  }, [isExpanded]);
 
   const handleClick = (): void => {
     onExpandClick();
@@ -91,21 +106,37 @@ export const RowWithLeftSideExpandButton = ({
       data-testid={dataTestId}
     >
       <TableDataCell
-        className={`${styles.buttonCell} ${
-          context?.variant === 'compact' ? styles.buttonCell_compact : ''
+        ref={cellRef}
+        className={`${!expandText ? styles.buttonCell : ''} ${
+          context?.variant === 'compact' && !expandText
+            ? styles.buttonCell_compact
+            : ''
         } ${isExpanded && hideIconButton ? styles.buttonCell_expanded : ''}`.trim()}
       >
-        <IconButton
-          ref={buttonRef}
-          className={hideIconButton ? styles.hideIcon : ''}
-          svgPath={svgPath}
-          title={expandButtonTitle}
-          size={getIconButtonSize(isDesktop, context?.variant)}
-          ariaDescribedby={expandButtonAriaDescribedby}
-          ariaExpanded={iconButtonAriaExpanded}
-          disabled={isExpandButtonDisabled}
-          onClick={handleClick}
-        />
+        {expandText ? (
+          <InlineButton
+            ref={buttonRef}
+            className={`${styles.expandButton} ${context?.variant === 'compact' ? styles.expandButton_compact : ''}`.trim()}
+            svgPath={svgPath}
+            ariaDescribedby={expandButtonAriaDescribedby}
+            disabled={isExpandButtonDisabled}
+            onClick={handleClick}
+          >
+            {expandText}
+          </InlineButton>
+        ) : (
+          <IconButton
+            ref={buttonRef}
+            className={hideIconButton ? styles.hideIcon : ''}
+            svgPath={svgPath}
+            title={expandButtonTitle}
+            size={getIconButtonSize(isDesktop, context?.variant)}
+            ariaDescribedby={expandButtonAriaDescribedby}
+            ariaExpanded={iconButtonAriaExpanded}
+            disabled={isExpandButtonDisabled}
+            onClick={handleClick}
+          />
+        )}
         {isExpanded && (
           <div
             ref={expandableWrapperRef}

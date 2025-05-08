@@ -74,7 +74,6 @@ export const Examples: Story = {
         <Table.Body>
           <Table.Row
             expandText={expandText}
-            expandButtonPosition={'right'}
             expandableContent={'Ekstra innhold'}
             isExpandable
             onExpand={() => setexpandText('Vis mindre')}

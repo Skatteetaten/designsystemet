@@ -8,12 +8,12 @@ exports[`Tester/Table/Sum WithAttributes play-test 1`] = `
          data-testid="123ID"
   >
     <tr class>
-      <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1"
+      <th class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_right_1jzpx_24  _sum_16rlo_1"
           scope="row"
       >
         Sum
       </th>
-      <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+      <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_right_1jzpx_24  _sum_16rlo_1">
         9 000 kr
       </td>
     </tr>
@@ -25,18 +25,18 @@ exports[`Tester/Table/Sum WithMultipleSums play-test 1`] = `
 <div data-test-block="true">
   <tfoot>
     <tr class>
-      <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1"
+      <th class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_right_1jzpx_24  _sum_16rlo_1"
           scope="row"
       >
         Sum
       </th>
-      <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+      <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_right_1jzpx_24  _sum_16rlo_1">
         400 kr
       </td>
-      <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+      <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_right_1jzpx_24  _sum_16rlo_1">
         899 kr
       </td>
-      <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+      <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_right_1jzpx_24  _sum_16rlo_1">
         399 kr
       </td>
     </tr>
@@ -50,12 +50,12 @@ exports[`Tester/Table/Sum WithRef play-test 1`] = `
     <tr class
         id="dummyIdForwardedFromRef"
     >
-      <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1"
+      <th class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_right_1jzpx_24  _sum_16rlo_1"
           scope="row"
       >
         Sum
       </th>
-      <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+      <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_right_1jzpx_24  _sum_16rlo_1">
         9 000 kr
       </td>
     </tr>

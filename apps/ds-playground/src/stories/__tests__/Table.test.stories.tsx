@@ -356,7 +356,7 @@ const ExpandEditSortTable = (
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {sortedData.map(({ isExpandable, id, rowData }, index) => {
+        {sortedData.map(({ isExpandable, id, rowData, expandText }, index) => {
           const content = (
             <>
               <Table.DataCell alignment={'left'} id={id}>
@@ -380,6 +380,7 @@ const ExpandEditSortTable = (
                 key={id}
                 data-testid={`row-expand-${index}`}
                 expandButtonAriaDescribedby={id}
+                expandText={expandText}
                 expandableContent={
                   <div className={'emptyExpandedTableRow'}>
                     <Heading ref={redigerDataRef} as={'h2'} level={2}>
