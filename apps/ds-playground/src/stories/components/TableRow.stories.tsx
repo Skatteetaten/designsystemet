@@ -1,4 +1,4 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -8,6 +8,7 @@ import {
 } from '@skatteetaten/ds-table';
 
 import { category } from '../../../.storybook/helpers';
+import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Table.Row,
@@ -30,6 +31,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    expandText: { control: 'text', table: { category: category.props } },
     // Event
     onExpand: {
       control: false,
@@ -62,3 +64,28 @@ export const Preview: Story = {
     ),
   ],
 } satisfies Story;
+
+export const Examples: Story = {
+  render: (_args): JSX.Element => {
+    const [expandText, setexpandText] = useState('Vis mer');
+
+    return (
+      <Table caption={'row example'}>
+        <Table.Body>
+          <Table.Row
+            expandText={expandText}
+            expandButtonPosition={'right'}
+            expandableContent={'Ekstra innhold'}
+            isExpandable
+            onExpand={() => setexpandText('Vis mindre')}
+            onClose={() => setexpandText('Vis mer')}
+          >
+            <Table.DataCell key={'cell1'}>{'cell 1'}</Table.DataCell>
+            <Table.DataCell key={'cell2'}>{'cell 2'}</Table.DataCell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    );
+  },
+} satisfies Story;
+Examples.parameters = exampleParameters;

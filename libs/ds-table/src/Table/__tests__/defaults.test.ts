@@ -3,6 +3,7 @@ import {
   getHeaderCellAsDefault,
   getTableCellAlignmentDefault,
   getTableRowExpandButtonPositionDefault,
+  getTableRowIsExpandedDefault,
   getTableSumAlignmentDefault,
   getTableVariantDefault,
 } from '../defaults';
@@ -25,5 +26,8 @@ describe('Table defaults', () => {
   });
   it('Når getTableSumAlignmentDefault kalles, så returnerer den riktig verdi', () => {
     expect(getTableSumAlignmentDefault()).toBe('right');
+  });
+  it('Når getTableRowIsExpandedDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getTableRowIsExpandedDefault()).toBe(false);
   });
 });

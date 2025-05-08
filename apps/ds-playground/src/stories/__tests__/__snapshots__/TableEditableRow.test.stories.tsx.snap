@@ -13,7 +13,7 @@ exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
             lang="nb"
             data-testid="123ID"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1m9pc_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -67,10 +67,11 @@ exports[`Tester/Table/EditableRow WithEditButtonPositionRight smoke-test 1`] = `
           <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
             3,000
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _buttonCell_1m9pc_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
@@ -105,7 +106,7 @@ exports[`Tester/Table/EditableRow WithEditableContent smoke-test 1`] = `
         <tr id=":r8:"
             class
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1m9pc_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -151,7 +152,7 @@ exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
         <tr id="dummyIdForwardedFromRef"
             class
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1m9pc_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"

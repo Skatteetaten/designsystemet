@@ -30,6 +30,7 @@ export const TableRow = ({
   expandButtonPosition = getTableRowExpandButtonPositionDefault(),
   expandableContent,
   expandButtonAriaDescribedby,
+  expandText,
   isExpandable,
   isExpanded: isExpandedExternal,
   onExpand,
@@ -95,6 +96,7 @@ export const TableRow = ({
         expandButtonTitle={buttonTitle}
         expandButtonAriaDescribedby={expandButtonAriaDescribedby}
         expandableContent={expandableContent}
+        expandText={expandText}
         context={context}
         svgPath={svgPath}
         onExpandClick={onExpandClick}

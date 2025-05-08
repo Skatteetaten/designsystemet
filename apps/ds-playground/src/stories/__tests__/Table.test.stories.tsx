@@ -275,6 +275,17 @@ const data = [
       revenue: 1055,
     },
   },
+  {
+    id: '58pxb',
+    isExpandable: true,
+    expandText: 'Vis mer',
+    rowData: {
+      month: 'Mai',
+      amount: 3567,
+      coverage: '40 %',
+      revenue: 1800,
+    },
+  },
 ];
 
 const ExpandEditSortTable = (
@@ -425,7 +436,7 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
       </Table.Row>
     </Table.Header>
     <Table.Body>
-      {data.map(({ isExpandable, id, rowData }, index) => {
+      {data.map(({ isExpandable, id, rowData, expandText }, index) => {
         const content = (
           <>
             <Table.DataCell alignment={'left'} id={id}>
@@ -450,6 +461,7 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
               data-testid={`row-expand-${index}`}
               expandButtonAriaDescribedby={id}
               expandButtonPosition={'right'}
+              expandText={expandText}
               expandableContent={
                 <div className={'emptyExpandedTableRow'}>
                   <Heading as={'h2'} level={2}>

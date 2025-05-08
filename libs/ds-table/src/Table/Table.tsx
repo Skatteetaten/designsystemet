@@ -10,6 +10,7 @@ import {
   getTableRowExpandButtonPositionDefault,
   getTableCellAlignmentDefault,
   getTableSumAlignmentDefault,
+  getTableRowIsExpandedDefault,
 } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
 import { TableBody } from '../TableBody/TableBody';
@@ -181,4 +182,5 @@ export {
   getTableRowExpandButtonPositionDefault,
   getTableVariantDefault,
   getTableSumAlignmentDefault,
+  getTableRowIsExpandedDefault,
 };

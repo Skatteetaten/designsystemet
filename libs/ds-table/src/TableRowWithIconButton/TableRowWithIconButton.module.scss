@@ -19,6 +19,28 @@
   }
 }
 
+.expandButton {
+  line-height: var(--semantic-line-height-table);
+  white-space: nowrap; // litt usikker på denne
+
+  > svg {
+    --semantic-line-height-buttons: var(--semantic-line-height-table);
+  }
+
+  &_compact {
+    font-size: var(--font-size-s);
+
+    // TODO noe med padding-right hvis iconPosition er right
+
+    > svg {
+      width: var(--size-small);
+      min-width: var(--size-small);
+
+      --font-size-m: var(--font-size-s);
+    }
+  }
+}
+
 .expandableContent {
   position: relative;
   box-sizing: border-box;
