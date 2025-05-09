@@ -5,6 +5,7 @@
   display: flex;
   max-width: var(--semantic-responsive-container);
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   padding: var(--semantic-responsive-container-spacing);
   padding-top: var(--spacing-s);
@@ -18,15 +19,10 @@
 
   .contentContainer {
     display: flex;
-    flex: 1;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    gap: var(--spacing-s);
-  }
-
-  .content {
-    display: flex;
-    align-items: center;
+    margin-left: auto;
     gap: var(--spacing-s);
   }
 }
