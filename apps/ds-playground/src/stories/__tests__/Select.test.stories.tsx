@@ -556,3 +556,26 @@ export const WithLongPlaceholder = {
     placeholder: { table: { disable: false } },
   },
 } satisfies Story;
+
+const TwoSelects: StoryFn<typeof Select> = () => {
+  return (
+    <div className={'flex gapS'}>
+      <Select label={'Fruktsort'} required>
+        <Select.Option value={1}>{'Banan'}</Select.Option>
+        <Select.Option value={2}>{'Eple'}</Select.Option>
+      </Select>
+      <Select
+        label={'Fruktsort'}
+        helpText={'Velg frukten du liker best.'}
+        required
+      >
+        <Select.Option value={1}>{'Banan'}</Select.Option>
+        <Select.Option value={2}>{'Eple'}</Select.Option>
+      </Select>
+    </div>
+  );
+};
+
+export const TwoSelectsOneWithHelpText = {
+  render: TwoSelects,
+};

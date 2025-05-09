@@ -2,7 +2,7 @@
 
 exports[`Tester/Help (intern) ClickCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-expanded="false"
@@ -26,7 +26,7 @@ exports[`Tester/Help (intern) ClickCloseButton play-test 1`] = `
 
 exports[`Tester/Help (intern) ClickHelpButton play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-expanded="false"
@@ -55,7 +55,7 @@ exports[`Tester/Help (intern) Defaults play-test 1`] = `
 
 exports[`Tester/Help (intern) WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <div class="_description_10ldw_17">
+  <div class="_description_sf6vs_17">
     En liten beskrivelse
   </div>
 </div>
@@ -63,7 +63,7 @@ exports[`Tester/Help (intern) WithDescription play-test 1`] = `
 
 exports[`Tester/Help (intern) WithHelpSvgPathTitleHelpSvgAndTargetId play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-describedby="storybook-root"
@@ -88,7 +88,7 @@ exports[`Tester/Help (intern) WithHelpSvgPathTitleHelpSvgAndTargetId play-test 1
 
 exports[`Tester/Help (intern) WithHelpTextAndDescription smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-expanded="false"
@@ -107,7 +107,7 @@ exports[`Tester/Help (intern) WithHelpTextAndDescription smoke-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="_description_10ldw_17">
+  <div class="_description_sf6vs_17">
     En liten beskrivelse
   </div>
 </div>
@@ -115,7 +115,7 @@ exports[`Tester/Help (intern) WithHelpTextAndDescription smoke-test 1`] = `
 
 exports[`Tester/Help (intern) WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-expanded="false"
@@ -139,7 +139,7 @@ exports[`Tester/Help (intern) WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/Help (intern) WithHelptext play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-expanded="false"
@@ -163,7 +163,7 @@ exports[`Tester/Help (intern) WithHelptext play-test 1`] = `
 
 exports[`Tester/Help (intern) WithHideHelp play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27 _srOnly_10ldw_59"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27 _srOnly_sf6vs_60"
           data-brightness="default"
           type="button"
           aria-expanded="false"
@@ -182,7 +182,7 @@ exports[`Tester/Help (intern) WithHideHelp play-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="_description_10ldw_17  _srOnly_10ldw_59">
+  <div class="_description_sf6vs_17  _srOnly_sf6vs_60">
     En liten beskrivelse
   </div>
 </div>
@@ -190,7 +190,7 @@ exports[`Tester/Help (intern) WithHideHelp play-test 1`] = `
 
 exports[`Tester/Help (intern) WithLongHelpTextAndDescription smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-expanded="false"
@@ -209,7 +209,7 @@ exports[`Tester/Help (intern) WithLongHelpTextAndDescription smoke-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="_description_10ldw_17">
+  <div class="_description_sf6vs_17">
     Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
   </div>
 </div>
