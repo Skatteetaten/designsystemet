@@ -723,3 +723,20 @@ export const WithLongInput = {
     },
   },
 } satisfies Story;
+
+const TwoSearchFields: StoryFn<typeof SearchField> = () => {
+  return (
+    <div className={'flex gapS'}>
+      <SearchField label={'Søk etter grønnsaker'} hideLabel={false} />
+      <SearchField
+        label={'Søk etter grønnsaker'}
+        helpText={'Hjelpetekst'}
+        hideLabel={false}
+      />
+    </div>
+  );
+};
+
+export const TwoSearchFieldsOneWithHelpText = {
+  render: TwoSearchFields,
+};
