@@ -38,6 +38,17 @@ export const SkjemaMedSteg = (): JSX.Element => {
     type: 'Person',
   };
 
+  const [activeStep, setActiveStep] = useState(1);
+  const [hasNorwegianAddress, setHasNorwegianAddress] = useState<
+    string | undefined
+  >(undefined);
+  const [hasNorwegianAddressError, setHasNorwegianAddressError] =
+    useState(false);
+
+  const onNext = (): void => {
+    setActiveStep(activeStep + 1);
+  };
+
   return (
     <>
       <TopBannerExternal
@@ -108,59 +119,103 @@ export const SkjemaMedSteg = (): JSX.Element => {
             </i>
           </Paragraph>
         </div>
-        <StepList>
-          <StepList.Step title={'Kort beskrivelse av steg'} stepNumber={1}>
-            <Paragraph className={styles.marginTopM} hasSpacing>
-              {
-                'Fremskutt hjelpetekst skal forklare brukeren hvordan eller hvorfor de skal fylle ut feltene.'
-              }
-            </Paragraph>
-            <RadioGroup legend={'Har du norsk adresse?'}>
-              <RadioGroup.Radio value={'ja'}>
-                {'Ja, har norsk adresse'}
-              </RadioGroup.Radio>
-              <RadioGroup.Radio value={'nei'}>
-                {'Nei, har ikke norsk adresse'}
-              </RadioGroup.Radio>
-            </RadioGroup>
-            {/* savner hasSpacing på TextField */}
-            <TextField label={'Postadresse'} className={styles.adress} />
-            <div className={styles.flex}>
-              <TextField
-                label={'Postnummer'}
-                className={`${styles.postalCode} ${styles.marginRightM}`}
-              />
-              <TextField label={'Poststed'} className={styles.city} readOnly />
-            </div>
-            <TextField label={'Telefonnummer'} className={styles.phone} />
-          </StepList.Step>
-          <StepList.Step
-            title={'Oppsummering før innsending'}
-            stepNumber={2}
-            nextButtonText={'Send inn'}
-          >
-            <Card color={'ochre'} className={styles.marginTopM}>
-              <Card.Content>
-                <DescriptionList hasSpacing>
-                  <DescriptionList.Element term={'Innsender'}>
-                    {'Knuslete Foxtrot'}
-                  </DescriptionList.Element>
-                  <DescriptionList.Element term={'Adresse'}>
-                    <span className={styles.preLine}>
-                      {'Adresseveien 1\n1234 Lillevik'}
-                    </span>
-                  </DescriptionList.Element>
-                  <DescriptionList.Element term={'Telefon'}>
-                    {/* formattere  */}
-                    {'98765432'}
-                  </DescriptionList.Element>
-                </DescriptionList>
-                <Checkbox>
-                  {'Jeg bekrefter at opplysningene over stemmer.'}
-                </Checkbox>
-              </Card.Content>
-            </Card>
-          </StepList.Step>
+        <StepList className={styles.marginBottomM}>
+          {activeStep === 1 && (
+            <StepList.Step
+              title={'Kort beskrivelse av steg'}
+              stepNumber={1}
+              variant={activeStep === 1 ? 'active' : 'passive'}
+              shouldAutoFocusWhenActive={false}
+              onNext={(): void => {
+                if (hasNorwegianAddress) {
+                  onNext();
+                } else {
+                  setHasNorwegianAddressError(true);
+                }
+              }}
+            >
+              <Paragraph className={styles.marginTopM} hasSpacing>
+                {
+                  'Fremskutt hjelpetekst skal forklare brukeren hvordan eller hvorfor de skal fylle ut feltene.'
+                }
+              </Paragraph>
+              <RadioGroup
+                legend={'Har du norsk adresse?'}
+                errorMessage={
+                  hasNorwegianAddressError
+                    ? 'Fyll ut om du har norsk adresse'
+                    : undefined
+                }
+                onChange={(e): void => {
+                  setHasNorwegianAddressError(false);
+                  setHasNorwegianAddress(e.target.value);
+                }}
+              >
+                <RadioGroup.Radio value={'ja'}>
+                  {'Ja, har norsk adresse'}
+                </RadioGroup.Radio>
+                <RadioGroup.Radio value={'nei'}>
+                  {'Nei, har ikke norsk adresse'}
+                </RadioGroup.Radio>
+              </RadioGroup>
+              {hasNorwegianAddress === 'ja' && (
+                <>
+                  {/* savner hasSpacing på TextField */}
+                  <TextField label={'Postadresse'} className={styles.adress} />
+                  <div className={styles.flex}>
+                    <TextField
+                      label={'Postnummer'}
+                      className={`${styles.postalCode} ${styles.marginRightM}`}
+                    />
+                    <TextField
+                      label={'Poststed'}
+                      className={styles.city}
+                      readOnly
+                    />
+                  </div>
+                  <TextField label={'Telefonnummer'} className={styles.phone} />
+                </>
+              )}
+              {hasNorwegianAddress === 'nei' && (
+                <>
+                  <TextField
+                    label={'Utenlandsk adresse'}
+                    className={styles.adress}
+                  />
+                  <TextField label={'Telefonnummer'} className={styles.phone} />
+                </>
+              )}
+            </StepList.Step>
+          )}
+          {activeStep === 2 && (
+            <StepList.Step
+              title={'Oppsummering før innsending'}
+              stepNumber={2}
+              nextButtonText={'Send inn'}
+            >
+              <Card color={'ochre'} className={styles.marginTopM}>
+                <Card.Content>
+                  <DescriptionList hasSpacing>
+                    <DescriptionList.Element term={'Innsender'}>
+                      {'Knuslete Foxtrot'}
+                    </DescriptionList.Element>
+                    <DescriptionList.Element term={'Adresse'}>
+                      <span className={styles.preLine}>
+                        {'Adresseveien 1\n1234 Lillevik'}
+                      </span>
+                    </DescriptionList.Element>
+                    <DescriptionList.Element term={'Telefon'}>
+                      {/* formattere  */}
+                      {'98765432'}
+                    </DescriptionList.Element>
+                  </DescriptionList>
+                  <Checkbox>
+                    {'Jeg bekrefter at opplysningene over stemmer.'}
+                  </Checkbox>
+                </Card.Content>
+              </Card>
+            </StepList.Step>
+          )}
         </StepList>
         <div className={styles.article}>
           <div className={styles.flex}>

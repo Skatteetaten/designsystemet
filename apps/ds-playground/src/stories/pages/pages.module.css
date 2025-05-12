@@ -93,6 +93,10 @@
   margin-top: var(--spacing-m);
 }
 
+.marginBottomM {
+  margin-bottom: var(--spacing-m);
+}
+
 .marginTopL {
   margin-top: var(--spacing-l);
 }
