@@ -4,25 +4,25 @@ def jenkinsfile
 
 def publishToNpmOverride = { Map<String, Object> props  ->
   if (props.publishToNpm) {
-    sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches=''"
+    sh "npx nx run-many --target=publish --switches=''"
   }
 }
 
 def publishToNpmJsOverride = { Map<String, Object> props  ->
   if (props.npmjs.publish) {
-    sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches='--registry https://registry.npmjs.org/ --access public'"
+    sh "npx nx run-many --target=publish --switches='--registry https://registry.npmjs.org/ --access public'"
   }
 }
 
 def publishSnapshotToNpmOverride = { Map<String, Object> props  ->
   if (props.publishSnapshotToNpm) {
-    sh "npx nx affected --head=HEAD --base origin/master --target=publish --switches='--tag ${props.branchVersion}'"
+    sh "npx nx run-many --target=publish --switches='--tag ${props.branchVersion}'"
   }
 }
 
 def preCompile = { Map<String, Object> props  ->
   if (!props.isReleaseBuild && props.publishSnapshotToNpm) {
-    sh "npx nx affected --head=HEAD --base origin/master --target=set-version --packageVersion=${props.npmSnapshotVersion}"
+    sh "npx nx run-many --target=set-version --packageVersion=${props.npmSnapshotVersion}"
   }
 }
 
@@ -53,7 +53,8 @@ def overrides = [
     ],
     preCompile                   : preCompile,
     npmPublishFolder             : './dist/libs',
-    versionStrategy              : [[branch: 'master', versionHint: '2', minorOnPrefixes: 'release/']],
+    versionStrategy              : [[branch: 'master', versionHint: '2', minorOnPrefixes: 'release/'],
+                                    [branch: 'klondike', versionHint: '1', minorOnPrefixes: 'release/']],
     createBuildEnvs              : { props -> "STORYBOOK_BUILD_VERSION=${props.version}" },
 ]
 
