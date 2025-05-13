@@ -15,7 +15,6 @@ import customLogo from '../../assets/custom-logo.svg';
 import { ReactComponent as FlagFinland } from '../../assets/fi-flag.svg';
 import { ReactComponent as FlagPlaceholder } from '../../assets/Flag_placeholder.svg';
 import skeLogo from '../../assets/ske-logo.svg';
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: TopBannerExternal,

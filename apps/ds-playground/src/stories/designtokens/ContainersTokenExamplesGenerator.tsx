@@ -18,6 +18,7 @@ const breakpoints: Breakpoint[] = [
   { name: 'Breakpoint L', query: '@media (width >= 1366px)' },
 ];
 
+//eslint-disable-next-line @typescript-eslint/no-explicit-any
 const containersJsonTyped: any = containersJson;
 
 const generateTableRows = (

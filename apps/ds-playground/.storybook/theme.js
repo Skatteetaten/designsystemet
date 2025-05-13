@@ -1,9 +1,9 @@
-import palette from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
 import { create } from '@storybook/theming';
+
+import palette from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
 
 export default create({
   base: 'light',
-  // eslint-disable-next-line sonarjs/no-duplicate-string
   appBg: palette[':root,\n:host']['--palette-graphite-5'],
   barTextColor: palette[':root,\n:host']['--palette-graphite-70'],
   textColor: palette[':root,\n:host']['--palette-graphite-100'],

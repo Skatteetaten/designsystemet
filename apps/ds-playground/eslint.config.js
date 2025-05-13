@@ -6,27 +6,20 @@ import baseConfig from '../../eslint.config.js';
 export default [
   ...baseConfig,
   ...nxPlugin.configs['flat/react'],
+  ...storybookPlugin.configs['flat/recommended'],
   {
-    plugins: {
-      storybook: storybookPlugin,
-    },
     rules: {
-      ...storybookPlugin.configs.recommended.rules,
-    },
-  },
-  {
-    files: ['./.storybook/main.js', './.storybook/main.ts'],
-    rules: {
-      'no-uninstalled-addons': [
+      'storybook/no-uninstalled-addons': [
         'error',
         {
           ignore: ['@nx/react/plugins/storybook'],
+          packageJsonLocation: '../.././package.json',
         },
       ],
     },
   },
   {
-    ignores: ['src/puppeteer.d.ts'],
+    ignores: ['src/puppeteer.d.ts', '!.storybook'],
   },
   {
     ignores: ['src/puppeteer.d.ts'],
