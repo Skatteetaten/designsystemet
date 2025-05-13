@@ -32,6 +32,7 @@ const meta = {
       table: { category: category.props },
     },
     expandText: { control: 'text', table: { category: category.props } },
+    hasExpandText: { table: { category: category.props } },
     // Event
     onExpand: {
       control: false,
@@ -75,6 +76,7 @@ export const Examples: Story = {
           <Table.Row
             expandText={expandText}
             expandableContent={'Ekstra innhold'}
+            hasExpandText
             isExpandable
             onExpand={() => setexpandText('Vis mindre')}
             onClose={() => setexpandText('Vis mer')}

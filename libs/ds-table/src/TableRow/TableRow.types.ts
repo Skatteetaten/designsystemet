@@ -21,8 +21,10 @@ export interface TableRowProps extends BaseProps {
    *  Dette er for å tydeliggjøre hvilken rad som ekspanderes
    */
   expandButtonAriaDescribedby?: string;
-  /** Synlig tekst ved siden av expandButton */
+  /** Overstyring av standard tekst ved siden av utvid-knappen */
   expandText?: string;
+  /** Om utvid-knappen skal ha synlig tekst */
+  hasExpandText?: boolean;
   /** Avgjør om raden kan utvides */
   isExpandable?: boolean;
   /** Brukes til å styre ekspandert tilstand utenfor komponenten */

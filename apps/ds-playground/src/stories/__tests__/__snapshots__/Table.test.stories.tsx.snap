@@ -596,7 +596,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
           </td>
@@ -760,7 +760,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 101px;"
+              style="max-width: 105px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
@@ -803,7 +803,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 101px;"
+              style="max-width: 105px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
@@ -846,7 +846,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 101px;"
+              style="max-width: 105px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
@@ -888,7 +888,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 101px;"
+              style="max-width: 105px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
@@ -930,7 +930,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             data-testid="row-expand-4"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21"
-              style="max-width: 101px;"
+              style="max-width: 105px;"
           >
             <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_1ylia_15"
                     data-brightness="default"
@@ -948,7 +948,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
           </td>
@@ -1222,7 +1222,7 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
           </td>
@@ -1444,7 +1444,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 134.656px;"
+              style="max-width: 139.031px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
@@ -1487,7 +1487,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 134.656px;"
+              style="max-width: 139.031px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
@@ -1530,7 +1530,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 134.656px;"
+              style="max-width: 139.031px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
@@ -1572,7 +1572,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 134.656px;"
+              style="max-width: 139.031px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
@@ -1614,7 +1614,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             data-testid="row-expand-4"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21"
-              style="max-width: 134.656px;"
+              style="max-width: 139.031px;"
           >
             <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_1ylia_15"
                     data-brightness="default"
@@ -1632,7 +1632,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
           </td>
@@ -2083,7 +2083,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_compact_1jzpx_30 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5 _buttonCell_compact_1ylia_11"
-              style="max-width: 91.875px;"
+              style="max-width: 93.0938px;"
           >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
@@ -2126,7 +2126,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_compact_1jzpx_30 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5 _buttonCell_compact_1ylia_11"
-              style="max-width: 91.875px;"
+              style="max-width: 93.0938px;"
           >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
@@ -2169,7 +2169,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_compact_1jzpx_30 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5 _buttonCell_compact_1ylia_11"
-              style="max-width: 91.875px;"
+              style="max-width: 93.0938px;"
           >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
@@ -2211,7 +2211,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_compact_1jzpx_30 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5 _buttonCell_compact_1ylia_11"
-              style="max-width: 91.875px;"
+              style="max-width: 93.0938px;"
           >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
@@ -2253,7 +2253,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             data-testid="row-expand-4"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_compact_1jzpx_30 _dataCell_left_1jzpx_21"
-              style="max-width: 91.875px;"
+              style="max-width: 93.0938px;"
           >
             <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_1ylia_15 _expandButton_compact_1ylia_22"
                     data-brightness="default"
@@ -2271,7 +2271,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
           </td>
@@ -2545,7 +2545,7 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
           </td>
@@ -2690,7 +2690,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-0"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 117px;"
+              style="max-width: 121px;"
           >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
@@ -2733,7 +2733,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-1"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 117px;"
+              style="max-width: 121px;"
           >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
@@ -2776,7 +2776,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-2"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 117px;"
+              style="max-width: 121px;"
           >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
@@ -2818,7 +2818,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-expand-3"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  _buttonCell_1ylia_5"
-              style="max-width: 117px;"
+              style="max-width: 121px;"
           >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
@@ -2860,7 +2860,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             data-testid="row-expand-4"
         >
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21"
-              style="max-width: 117px;"
+              style="max-width: 121px;"
           >
             <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_1ylia_15"
                     data-brightness="default"
@@ -2878,7 +2878,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
           </td>

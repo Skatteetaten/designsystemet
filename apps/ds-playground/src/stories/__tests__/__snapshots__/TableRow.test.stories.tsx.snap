@@ -85,7 +85,7 @@ exports[`Tester/Table/Row WithExpandTextLeft play-test 1`] = `
       <tbody>
         <tr class>
           <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21"
-              style="max-width: 94.1406px;"
+              style="max-width: 95.5312px;"
           >
             <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_1ylia_15"
                     data-brightness="default"
@@ -103,11 +103,11 @@ exports[`Tester/Table/Row WithExpandTextLeft play-test 1`] = `
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
             <div class="_expandableContent_1ylia_31"
-                 style="width: 207px;"
+                 style="width: 209px;"
             >
               Ekstra innhold
             </div>
@@ -163,7 +163,7 @@ exports[`Tester/Table/Row WithExpandTextRight play-test 1`] = `
                 </path>
               </svg>
               <span class>
-                Vis mer
+                Detaljer
               </span>
             </button>
           </td>
