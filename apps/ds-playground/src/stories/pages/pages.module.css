@@ -109,12 +109,14 @@
   display: flex;
 }
 
-.adress {
+.address {
   width: 338px;
+  margin-bottom: var(--spacing-m);
 }
 
 .postalCode {
   width: 109px;
+  margin-bottom: var(--spacing-m);
 }
 
 .city {
@@ -127,4 +129,8 @@
 
 .preLine {
   white-space: pre-line;
+}
+
+.noWrap {
+  white-space: nowrap;
 }

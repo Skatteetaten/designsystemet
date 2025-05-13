@@ -20,10 +20,11 @@ declare const classNames: {
   readonly marginTopL: 'marginTopL';
   readonly marginRightM: 'marginRightM';
   readonly flex: 'flex';
-  readonly adress: 'adress';
+  readonly address: 'address';
   readonly postalCode: 'postalCode';
   readonly city: 'city';
   readonly phone: 'phone';
   readonly preLine: 'preLine';
+  readonly noWrap: 'noWrap';
 };
 export default classNames;
