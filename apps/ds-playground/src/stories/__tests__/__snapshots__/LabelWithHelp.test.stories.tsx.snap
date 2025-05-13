@@ -29,7 +29,7 @@ exports[`Tester/LabelWithHelp (intern) WithCustomClassNames play-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-describedby="labelId-:rd:"
@@ -49,11 +49,11 @@ exports[`Tester/LabelWithHelp (intern) WithCustomClassNames play-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="_helpBox_10ldw_31  dummyClassname dummyClassname">
-    <div class="_helpBoxText_10ldw_44">
+  <div class="_helpBox_sf6vs_32  dummyClassname dummyClassname">
+    <div class="_helpBoxText_sf6vs_45">
       hjelp
     </div>
-    <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_10ldw_51"
+    <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_sf6vs_52"
             data-brightness="default"
             type="button"
     >
@@ -72,7 +72,7 @@ exports[`Tester/LabelWithHelp (intern) WithCustomClassNames play-test 1`] = `
       </svg>
     </button>
   </div>
-  <div class="_description_10ldw_17 _descriptionMarginTop_10ldw_23  dummyClassname">
+  <div class="_description_sf6vs_17 _descriptionMarginTop_sf6vs_23  dummyClassname">
     beskrivelse
   </div>
 </div>
@@ -85,7 +85,7 @@ exports[`Tester/LabelWithHelp (intern) WithDescription play-test 1`] = `
   >
     Ledetekst
   </label>
-  <div class="_description_10ldw_17">
+  <div class="_description_sf6vs_17">
     Kort hjelpetekst
   </div>
 </div>
@@ -98,7 +98,7 @@ exports[`Tester/LabelWithHelp (intern) WithHelpTextSvgPathAndTitle play-test 1`]
   >
     Ledetekst
   </label>
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-describedby="labelId-:r7:"
@@ -128,7 +128,7 @@ exports[`Tester/LabelWithHelp (intern) WithHelpToggleEvent smoke-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
           data-brightness="default"
           type="button"
           aria-describedby="labelId-:rb:"
@@ -158,7 +158,7 @@ exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27 _srOnly_10ldw_59"
+  <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27 _srOnly_sf6vs_60"
           data-brightness="default"
           type="button"
           aria-describedby="labelId-:r5:"
@@ -178,7 +178,7 @@ exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="_description_10ldw_17  _srOnly_10ldw_59">
+  <div class="_description_sf6vs_17  _srOnly_sf6vs_60">
     Kort hjelpetekst
   </div>
 </div>

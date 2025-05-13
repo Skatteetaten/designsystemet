@@ -1,3 +1,5 @@
+const path = require('path');
+
 /**
  * @returns rollup plugin
  */
@@ -6,30 +8,29 @@ function addStyleImportPlugin() {
     name: 'add-style-import',
     generateBundle(options, bundle) {
       Object.keys(bundle).forEach(function (key) {
-        if (bundle[key].modules) {
-          Object.keys(bundle[key].modules).every(function (moduleKey) {
-            if (moduleKey.includes('.scss')) {
-              const filename = bundle[key].fileName;
-              const replacementValue = filename.includes('/')
-                ? "$1\nimport './styles.css';\n"
-                : `$1\nimport './${filename.substr(
-                    0,
-                    filename.search(/([.-])/)
-                  )}/styles.css';\n`;
-              const lastImport = bundle[key].imports.slice(-1);
-
-              const searchRegex = new RegExp(
-                `(^import.*${lastImport}';$)`,
-                'gm'
-              );
-              const newCode = bundle[key].code.replace(
-                searchRegex,
-                replacementValue
-              );
-
-              bundle[key].code = newCode;
+        if (bundle[key].imports) {
+          bundle[key].imports.some((importValue) => {
+            if (!importValue.includes('.scss')) {
               return false;
             }
+            const filename = bundle[key].fileName;
+            const replacementValue = filename.includes('/')
+              ? "$1\nimport './styles.css';\n"
+              : `$1\nimport './${filename.substr(
+                  0,
+                  filename.search(/([.-])/)
+                )}/styles.css';\n`;
+            const imports = bundle[key].imports;
+            const lastImport = imports[imports.length - 1];
+
+            const searchRegex = new RegExp(
+              `(^import.*${path.basename(lastImport)}';$)`,
+              'gm'
+            );
+            bundle[key].code = bundle[key].code.replace(
+              searchRegex,
+              replacementValue
+            );
             return true;
           });
         }

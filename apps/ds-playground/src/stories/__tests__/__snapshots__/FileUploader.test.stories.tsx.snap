@@ -171,7 +171,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
     >
       Hemmelig kode
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:rv:"
@@ -272,7 +272,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
     >
       Dokumentasjon og grunnlag
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r1v:"
@@ -405,7 +405,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
     >
       Last opp filer
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r27:"
@@ -1061,7 +1061,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
     >
       Dokumentasjon og grunnlag
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:rb:"

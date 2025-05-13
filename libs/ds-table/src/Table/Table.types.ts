@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, Ref, RefObject, SetStateAction } from 'react';
+import { Dispatch, ReactNode, Ref, RefObject, SetStateAction, FC } from 'react';
 
 import { BaseProps, Density, Position } from '@skatteetaten/ds-core-utils';
 
@@ -62,7 +62,7 @@ export interface TableProps extends BaseProps {
   canBeManuallyFocused?: boolean;
 }
 
-export interface TableComponent extends React.FC<TableProps> {
+export interface TableComponent extends FC<TableProps> {
   Header: typeof TableHeader;
   HeaderCell: typeof TableHeaderCell;
   Row: typeof TableRow;

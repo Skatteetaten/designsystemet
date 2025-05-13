@@ -4,7 +4,6 @@ declare const classNames: {
   readonly columnsThree: 'columnsThree';
   readonly columnsTwo: 'columnsTwo';
   readonly contentContainer: 'contentContainer';
-  readonly content: 'content';
   readonly separator: 'separator';
   readonly separatorLeft: 'separatorLeft';
   readonly separatorRight: 'separatorRight';

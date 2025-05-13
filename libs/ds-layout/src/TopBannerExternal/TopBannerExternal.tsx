@@ -159,87 +159,85 @@ export const TopBannerExternal = ({
           <div className={styles.contentContainer}>
             {children}
 
-            <div className={styles.content}>
-              <TopBannerLangPicker
-                ref={languagePickerRef}
-                defaultLocale={defaultLocale}
-                showSami={showSami}
-                openMenu={openMenu}
-                setOpenMenu={setOpenMenu}
-                menuButtonRef={languagePickerButtonRef}
-                additionalLanguages={additionalLanguages}
-                onLanguageClick={onLanguageClick}
-              />
+            <TopBannerLangPicker
+              ref={languagePickerRef}
+              defaultLocale={defaultLocale}
+              showSami={showSami}
+              openMenu={openMenu}
+              setOpenMenu={setOpenMenu}
+              menuButtonRef={languagePickerButtonRef}
+              additionalLanguages={additionalLanguages}
+              onLanguageClick={onLanguageClick}
+            />
 
-              {onLogOutClick && user && (
-                <>
-                  <TopBannerUserButton user={user} onClick={onUserClick} />
-                  <TopBannerButton
-                    svgPath={LogOutSVGpath}
-                    variant={'outline'}
-                    onClick={onLogOutClick}
-                  >
-                    {t('topbannerbutton.Logout')}
-                  </TopBannerButton>
-                </>
-              )}
-
-              {onLogInClick && !user && (
+            {onLogOutClick && user && (
+              <>
+                <TopBannerUserButton user={user} onClick={onUserClick} />
                 <TopBannerButton
-                  svgPath={LockOutlineSVGpath}
-                  variant={'filled'}
-                  onClick={onLogInClick}
+                  svgPath={LogOutSVGpath}
+                  variant={'outline'}
+                  onClick={onLogOutClick}
                 >
-                  {t('topbannerbutton.Login')}
+                  {t('topbannerbutton.Logout')}
                 </TopBannerButton>
-              )}
+              </>
+            )}
 
-              {showMenu && (
-                <>
-                  <TopBannerButton
-                    ref={menuButtonRef}
-                    svgPath={
-                      openMenu === 'MainMenu' ? CancelSVGpath : MenuSVGpath
-                    }
-                    ariaExpanded={isMenuOpen}
-                    onClick={handleMenuClick}
+            {onLogInClick && !user && (
+              <TopBannerButton
+                svgPath={LockOutlineSVGpath}
+                variant={'filled'}
+                onClick={onLogInClick}
+              >
+                {t('topbannerbutton.Login')}
+              </TopBannerButton>
+            )}
+
+            {showMenu && (
+              <>
+                <TopBannerButton
+                  ref={menuButtonRef}
+                  svgPath={
+                    openMenu === 'MainMenu' ? CancelSVGpath : MenuSVGpath
+                  }
+                  ariaExpanded={isMenuOpen}
+                  onClick={handleMenuClick}
+                  onFocus={() => {
+                    statusFlagRef.current.focusCaptured = isMenuOpen;
+                  }}
+                >
+                  {t('topbannerbutton.Menu')}
+                </TopBannerButton>
+                {isMenuOpen && (
+                  <div
+                    ref={menuRef}
+                    className={styles.mainMenu}
                     onFocus={() => {
                       statusFlagRef.current.focusCaptured = isMenuOpen;
                     }}
+                    onMouseUp={() => {
+                      statusFlagRef.current.mouseUpCaptured = isMenuOpen;
+                    }}
+                    onMouseDown={() => {
+                      statusFlagRef.current.mouseDownCaptured = isMenuOpen;
+                    }}
                   >
-                    {t('topbannerbutton.Menu')}
-                  </TopBannerButton>
-                  {isMenuOpen && (
-                    <div
-                      ref={menuRef}
-                      className={styles.mainMenu}
-                      onFocus={() => {
-                        statusFlagRef.current.focusCaptured = isMenuOpen;
-                      }}
-                      onMouseUp={() => {
-                        statusFlagRef.current.mouseUpCaptured = isMenuOpen;
-                      }}
-                      onMouseDown={() => {
-                        statusFlagRef.current.mouseDownCaptured = isMenuOpen;
-                      }}
+                    <nav
+                      aria-label={t('topbanner.NavAriaLabel')}
+                      className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`.trim()}
                     >
-                      <nav
-                        aria-label={t('topbanner.NavAriaLabel')}
-                        className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`.trim()}
-                      >
-                        <div className={styles.column}>{firstColumn}</div>
-                        {secondColumn && (
-                          <div className={styles.column}>{secondColumn}</div>
-                        )}
-                        {thirdColumn && (
-                          <div className={styles.column}>{thirdColumn}</div>
-                        )}
-                      </nav>
-                    </div>
-                  )}
-                </>
-              )}
-            </div>
+                      <div className={styles.column}>{firstColumn}</div>
+                      {secondColumn && (
+                        <div className={styles.column}>{secondColumn}</div>
+                      )}
+                      {thirdColumn && (
+                        <div className={styles.column}>{thirdColumn}</div>
+                      )}
+                    </nav>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </div>
         <div className={styles.separator}>
