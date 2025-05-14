@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
@@ -36,33 +38,35 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <>
-      <Heading as={'h1'} level={1} hasSpacing>
-        {'Flere oppgir kryptoverdier i skattemeldingen'}
-      </Heading>
-      <Paragraph variant={'ingress'} hasSpacing>
-        {'Antall personer som oppgir kryptoverdier i skattemeldingen har økt fra 15.000 til 41.000. ' +
-          'Skatteetaten ønsker at det skal bli pliktig for tilbydere av vekslingstjenester å rapportere om transaksjoner og eiere.'}
-      </Paragraph>
-      <Paragraph hasSpacing>
-        {'- Det har vært en god vekst i antall personer som eier kryptovaluta, men fortsatt er det mange som ikke rapporterer sine verdier. ' +
-          'Vi har økt vår innsats innen både veiledning og kontroll for at også denne delen av økonomien skal bli riktigere beskattet, sier skattedirektør Nina Schanke Funnemark.'}
-      </Paragraph>
-      <Paragraph>
-        {'Sammenlignet med '}
-        <a
-          href={
-            'https://www.skatteetaten.no/presse/nyhetsrommet/flere-oppgir-kryptoverdier-i-skattemeldingen/'
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <Heading as={'h1'} level={1} hasSpacing>
+          {'Flere oppgir kryptoverdier i skattemeldingen'}
+        </Heading>
+        <Paragraph variant={'ingress'} hasSpacing>
+          {'Antall personer som oppgir kryptoverdier i skattemeldingen har økt fra 15.000 til 41.000. ' +
+            'Skatteetaten ønsker at det skal bli pliktig for tilbydere av vekslingstjenester å rapportere om transaksjoner og eiere.'}
+        </Paragraph>
+        <Paragraph hasSpacing>
+          {'- Det har vært en god vekst i antall personer som eier kryptovaluta, men fortsatt er det mange som ikke rapporterer sine verdier. ' +
+            'Vi har økt vår innsats innen både veiledning og kontroll for at også denne delen av økonomien skal bli riktigere beskattet, sier skattedirektør Nina Schanke Funnemark.'}
+        </Paragraph>
+        <Paragraph>
+          {'Sammenlignet med '}
+          <a
+            href={
+              'https://www.skatteetaten.no/presse/nyhetsrommet/flere-oppgir-kryptoverdier-i-skattemeldingen/'
+            }
+          >
+            {'tidligere år'}
+          </a>
+          {
+            ' oppgir langt flere personer at de eier kryptovaluta, og inntekt, formue og fradrag fra kryptovaluta øker også kraftig.'
           }
-        >
-          {'tidligere år'}
-        </a>
-        {
-          ' oppgir langt flere personer at de eier kryptovaluta, og inntekt, formue og fradrag fra kryptovaluta øker også kraftig.'
-        }
-      </Paragraph>
-    </>
-  ),
+        </Paragraph>
+      </>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

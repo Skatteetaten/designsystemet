@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import { MegaButton } from '@skatteetaten/ds-buttons';
@@ -51,6 +53,8 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => <MegaButton>{'Se eller endre skattekortet'}</MegaButton>,
+  render: (_args): JSX.Element => {
+    return <MegaButton>{'Se eller endre skattekortet'}</MegaButton>;
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
@@ -81,53 +83,67 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <>
-      <div>
-        <IconButton
-          className={'exampleSpacing'}
-          svgPath={PrintSVGpath}
-          size={'extraSmall'}
-          title={'Skriv ut'}
-          isOutlined
-        />
-        <IconButton
-          svgPath={PrintSVGpath}
-          size={'extraSmall'}
-          title={'Skriv ut'}
-        />
-      </div>
-      <div>
-        <IconButton
-          className={'exampleSpacing'}
-          svgPath={PrintSVGpath}
-          size={'small'}
-          title={'Skriv ut'}
-          isOutlined
-        />
-        <IconButton svgPath={PrintSVGpath} size={'small'} title={'Skriv ut'} />
-      </div>
-      <div>
-        <IconButton
-          className={'exampleSpacing'}
-          svgPath={PrintSVGpath}
-          size={'medium'}
-          title={'Skriv ut'}
-          isOutlined
-        />
-        <IconButton svgPath={PrintSVGpath} size={'medium'} title={'Skriv ut'} />
-      </div>
-      <div>
-        <IconButton
-          className={'exampleSpacing'}
-          svgPath={PrintSVGpath}
-          size={'large'}
-          title={'Skriv ut'}
-          isOutlined
-        />
-        <IconButton svgPath={PrintSVGpath} size={'large'} title={'Skriv ut'} />
-      </div>
-    </>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <div>
+          <IconButton
+            className={'exampleSpacing'}
+            svgPath={PrintSVGpath}
+            size={'extraSmall'}
+            title={'Skriv ut'}
+            isOutlined
+          />
+          <IconButton
+            svgPath={PrintSVGpath}
+            size={'extraSmall'}
+            title={'Skriv ut'}
+          />
+        </div>
+        <div>
+          <IconButton
+            className={'exampleSpacing'}
+            svgPath={PrintSVGpath}
+            size={'small'}
+            title={'Skriv ut'}
+            isOutlined
+          />
+          <IconButton
+            svgPath={PrintSVGpath}
+            size={'small'}
+            title={'Skriv ut'}
+          />
+        </div>
+        <div>
+          <IconButton
+            className={'exampleSpacing'}
+            svgPath={PrintSVGpath}
+            size={'medium'}
+            title={'Skriv ut'}
+            isOutlined
+          />
+          <IconButton
+            svgPath={PrintSVGpath}
+            size={'medium'}
+            title={'Skriv ut'}
+          />
+        </div>
+        <div>
+          <IconButton
+            className={'exampleSpacing'}
+            svgPath={PrintSVGpath}
+            size={'large'}
+            title={'Skriv ut'}
+            isOutlined
+          />
+          <IconButton
+            svgPath={PrintSVGpath}
+            size={'large'}
+            title={'Skriv ut'}
+          />
+        </div>
+      </>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

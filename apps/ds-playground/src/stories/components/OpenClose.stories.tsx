@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
@@ -80,38 +82,40 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <>
-      <Heading level={4} as={'h2'}>
-        {'Aksjesparekonto (ASK)'}
-      </Heading>
-      <Paragraph>
-        {
-          'Du som er personlig skattyter, kan etablere en aksjesparekonto (ASK) for børsnoterte aksjer og aksjefondsandeler.'
-        }
-      </Paragraph>
-      <OpenClose title={exampleTitle} isExpanded>
-        {exampleContent}
-      </OpenClose>
-      <OpenClose title={exampleTitle}>{exampleContent}</OpenClose>
-      <OpenClose title={exampleTitle} showUnderline>
-        {exampleContent}
-      </OpenClose>
-      <OpenClose title={exampleTitle} iconPosition={'right'}>
-        {exampleContent}
-      </OpenClose>
-      <OpenClose title={exampleTitle} variant={'compact'}>
-        {exampleContent}
-      </OpenClose>
-      <OpenClose
-        title={exampleTitle}
-        iconPosition={'right'}
-        variant={'compact'}
-        showUnderline
-      >
-        {exampleContent}
-      </OpenClose>
-    </>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <Heading level={4} as={'h2'}>
+          {'Aksjesparekonto (ASK)'}
+        </Heading>
+        <Paragraph>
+          {
+            'Du som er personlig skattyter, kan etablere en aksjesparekonto (ASK) for børsnoterte aksjer og aksjefondsandeler.'
+          }
+        </Paragraph>
+        <OpenClose title={exampleTitle} isExpanded>
+          {exampleContent}
+        </OpenClose>
+        <OpenClose title={exampleTitle}>{exampleContent}</OpenClose>
+        <OpenClose title={exampleTitle} showUnderline>
+          {exampleContent}
+        </OpenClose>
+        <OpenClose title={exampleTitle} iconPosition={'right'}>
+          {exampleContent}
+        </OpenClose>
+        <OpenClose title={exampleTitle} variant={'compact'}>
+          {exampleContent}
+        </OpenClose>
+        <OpenClose
+          title={exampleTitle}
+          iconPosition={'right'}
+          variant={'compact'}
+          showUnderline
+        >
+          {exampleContent}
+        </OpenClose>
+      </>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

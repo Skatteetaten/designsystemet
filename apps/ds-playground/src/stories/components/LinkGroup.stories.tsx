@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
@@ -58,34 +60,36 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <>
-      <LinkGroup hasSpacing>
-        <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
-          {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (PDF)'}
-        </LinkGroup.Link>
-        <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
-          {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (Word)'}
-        </LinkGroup.Link>
-      </LinkGroup>
-      <LinkGroup>
-        <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
-          {'Kontakt oss'}
-        </LinkGroup.Link>
-        <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
-          {'Jobb i Skatteetaten'}
-        </LinkGroup.Link>
-        <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
-          {'Om oss'}
-        </LinkGroup.Link>
-        <LinkGroup.Link key={'linkGroupLink_4'} href={'#storybook-root'}>
-          {'Analyse og rapporter'}
-        </LinkGroup.Link>
-        <LinkGroup.Link key={'linkGroupLink_5'} href={'#storybook-root'}>
-          {'Forskning'}
-        </LinkGroup.Link>
-      </LinkGroup>
-    </>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <LinkGroup hasSpacing>
+          <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
+            {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (PDF)'}
+          </LinkGroup.Link>
+          <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
+            {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (Word)'}
+          </LinkGroup.Link>
+        </LinkGroup>
+        <LinkGroup>
+          <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
+            {'Kontakt oss'}
+          </LinkGroup.Link>
+          <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
+            {'Jobb i Skatteetaten'}
+          </LinkGroup.Link>
+          <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
+            {'Om oss'}
+          </LinkGroup.Link>
+          <LinkGroup.Link key={'linkGroupLink_4'} href={'#storybook-root'}>
+            {'Analyse og rapporter'}
+          </LinkGroup.Link>
+          <LinkGroup.Link key={'linkGroupLink_5'} href={'#storybook-root'}>
+            {'Forskning'}
+          </LinkGroup.Link>
+        </LinkGroup>
+      </>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

@@ -64,10 +64,12 @@ export const Preview: Story = {
 };
 
 export const Examples: Story = {
-  render: (_args) => (
-    <div className={'height100vh'}>
-      <ScrollToTopButton visibilityThreshold={0} />
-    </div>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <div className={'height100vh'}>
+        <ScrollToTopButton visibilityThreshold={0} />
+      </div>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;
