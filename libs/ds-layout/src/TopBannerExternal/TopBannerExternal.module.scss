@@ -98,7 +98,6 @@
 
   &Search {
     max-width: 25rem;
-    border-radius: var(--border-radius-m);
     margin: var(--spacing-m) var(--spacing-m) var(--spacing-xl);
 
     @media (min-width: breakpoints.$breakpoint-xs) {
