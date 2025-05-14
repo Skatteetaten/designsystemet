@@ -15,6 +15,7 @@ import customLogo from '../../assets/custom-logo.svg';
 import { ReactComponent as FlagFinland } from '../../assets/fi-flag.svg';
 import { ReactComponent as FlagPlaceholder } from '../../assets/Flag_placeholder.svg';
 import skeLogo from '../../assets/ske-logo.svg';
+import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: TopBannerExternal,
@@ -44,7 +45,10 @@ const meta = {
     secondColumn: { control: 'text', table: { disable: true } },
     thirdColumn: { control: 'text', table: { disable: true } },
     additionalLanguages: { table: { disable: true } },
+    searchContent: { control: 'text', table: { disable: true } },
     // Events
+    onSearchClick: { table: { disable: true } },
+    onSearch: { table: { disable: true } },
     onLanguageClick: { table: { disable: true } },
     onLogInClick: { table: { disable: true } },
     onLogOutClick: { table: { disable: true } },
@@ -61,6 +65,7 @@ const loginText = dsI18n.t('ds_layout:topbannerbutton.Login');
 const logoutText = dsI18n.t('ds_layout:topbannerbutton.Logout');
 const themeText = dsI18n.t('ds_layout:topbanner.NavAriaLabel');
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
+const searchText = dsI18n.t('ds_layout:topbanner.Search');
 const skipLinkText = dsI18n.t('ds_layout:topbanner.SkipLinkText');
 const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
@@ -116,7 +121,7 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const WithDefaults = {
-  name: 'With Defaults (A3 delvis, B1, B2)',
+  name: 'With Defaults (A3 delvis, B1, B2, Search B3 delvis)',
   args: {
     ...defaultArgs,
   },
@@ -133,6 +138,9 @@ export const WithDefaults = {
     await expect(canvas.queryByText(loginText)).not.toBeInTheDocument();
 
     await expect(canvas.queryByText(logoutText)).not.toBeInTheDocument();
+
+    const searchButton = canvas.queryByRole('button', { name: searchText });
+    await expect(searchButton).not.toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -269,17 +277,17 @@ export const ClickMainMenuOpenAndClose = {
     const canvas = within(canvasElement);
     const menuButton = canvas.getByRole('button', { name: menuText });
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
-    const menuSvg = canvas.getAllByRole('img', { hidden: true });
-    expect(menuSvg[3]).toBeInTheDocument();
-    expect(menuSvg[3]).toHaveAttribute('aria-hidden', 'true');
+    const menuSvg = within(menuButton).getByRole('img', { hidden: true });
+    await expect(menuSvg).toBeInTheDocument();
+    await expect(menuSvg).toHaveAttribute('aria-hidden', 'true');
     await userEvent.click(menuButton);
     await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
     const menuContainer = canvas.getByRole('navigation', {
       name: themeText,
     });
     await expect(menuContainer).toBeInTheDocument();
-    expect(menuContainer.tagName).toBe('NAV');
-    expect(menuContainer).toHaveAttribute('aria-label', themeText);
+    await expect(menuContainer.tagName).toBe('NAV');
+    await expect(menuContainer).toHaveAttribute('aria-label', themeText);
     await userEvent.click(menuButton);
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
     await expect(menuContainer).not.toBeInTheDocument();
@@ -758,5 +766,40 @@ export const WithExtraLangs = {
     await expect(
       canvas.getByRole('button', { name: 'Suomi Meny' })
     ).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const ClickSearchOpenAndClose = {
+  name: 'Click Search Open And Close (Search B2, B1, B3, A2, A1)',
+  args: {
+    ...defaultArgs,
+    searchContent: 'hei hei',
+    firstColumn: (
+      <Link href={'#storybook-root'}>
+        {'Meny-knapp blir synlig når den har innhold'}
+      </Link>
+    ),
+  },
+  parameters: {
+    // imageSnapshot: { disable: true },
+    imageSnapshot: {
+      click: [`xpath=//span[text()='Søk']`],
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchButton = canvas.getByRole('button', { name: searchText });
+    await expect(searchButton).toHaveAttribute('aria-expanded', 'false');
+    const searchSvg = within(searchButton).getByRole('img', { hidden: true });
+    await expect(searchSvg).toBeInTheDocument();
+    await expect(searchSvg).toHaveAttribute('aria-hidden', 'true');
+    await userEvent.click(searchButton);
+    await expect(searchButton).toHaveAttribute('aria-expanded', 'true');
+    const searchField = canvas.getByRole('searchbox');
+    await expect(searchField).toHaveFocus();
+    await expect(canvas.getByText('hei hei')).toBeInTheDocument();
+
+    await userEvent.click(searchButton);
+    await expect(searchButton).toHaveAttribute('aria-expanded', 'false');
   },
 } satisfies Story;

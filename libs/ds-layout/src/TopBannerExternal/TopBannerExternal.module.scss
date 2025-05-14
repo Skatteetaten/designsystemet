@@ -63,6 +63,7 @@
   top: 100%;
   right: 0;
   left: 0;
+  border-bottom: 2px solid var(--semantic-divider-30);
   background-color: var(--palette-graphite-5);
 
   .columns {
@@ -93,6 +94,29 @@
 
   .column {
     overflow-wrap: anywhere;
+  }
+
+  &Search {
+    max-width: 25rem;
+    margin: var(--spacing-m) var(--spacing-m) var(--spacing-xl);
+
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      margin: var(--spacing-m) auto var(--spacing-xl);
+    }
+  }
+
+  &SearchSpacing {
+    margin-bottom: var(--spacing-m);
+  }
+
+  &SearchLabel {
+    color: var(--palette-graphite-100);
+    font-size: var(--font-size-l);
+    line-height: var(--semantic-line-height-heading3);
+
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      font-size: var(--font-size-xl);
+    }
   }
 }
 

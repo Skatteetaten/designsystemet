@@ -3,6 +3,7 @@ import { useRef, useState, MouseEvent, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
+import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
 import {
   TopBannerExternal,
   TopBannerExternalHandle,
@@ -14,9 +15,8 @@ import {
   Person,
   RolePicker,
 } from '@skatteetaten/ds-overlays';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { dsI18n, langToLocale } from '../../../../../libs/ds-core-utils/src';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   getTopBannerLangPickerLocaleDefault,
@@ -192,7 +192,14 @@ const meta = {
       control: false,
       table: { category: category.props },
     },
+    searchContent: { control: 'text', table: { category: category.props } },
     // Events
+    onSearchClick: {
+      ...htmlEventDescription,
+    },
+    onSearch: {
+      ...htmlEventDescription,
+    },
     onLogInClick: {
       ...htmlEventDescription,
     },
@@ -272,10 +279,38 @@ export const Examples: Story = {
           secondColumn={isLoggedIn ? 'Second column' : ''}
           thirdColumn={isLoggedIn ? 'Third column' : ''}
           user={user}
+          searchContent={
+            <>
+              <Paragraph className={'bottomSpacingS'}>
+                {'Dette har andre søkt på:'}
+              </Paragraph>
+              <nav>
+                <LinkGroup>
+                  <LinkGroup.Link href={'#'}>
+                    {'Se skatteoppgjøret ditt'}
+                  </LinkGroup.Link>
+                  <LinkGroup.Link href={'#'}>
+                    {
+                      'Søk om utsatt leveringsfrist for skattemeldingen – person eller bedrift'
+                    }
+                  </LinkGroup.Link>
+                  <LinkGroup.Link href={'#'}>
+                    {'Se dine skattekrav og betalinger'}
+                  </LinkGroup.Link>
+                </LinkGroup>
+              </nav>
+            </>
+          }
           onLanguageClick={handleLanguageClick}
           onLogInClick={handleLogIn}
           onLogOutClick={handleLogOut}
           onUserClick={(): void => modalRef.current?.showModal()}
+          onSearch={(e, value) => {
+            alert(`søker etter ${value}`);
+          }}
+          onSearchClick={(e, value) => {
+            alert(`søker etter ${value}`);
+          }}
         />
         <RolePicker
           ref={modalRef}

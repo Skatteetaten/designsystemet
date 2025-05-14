@@ -64,6 +64,9 @@ code {
 .topSpacingS {
   margin-top: var(--spacing-s);
 }
+.bottomSpacingS {
+  margin-bottom: var(--spacing-s) !important;
+}
 
 .bottomSpacingXL {
   margin-bottom: var(--spacing-xl);
