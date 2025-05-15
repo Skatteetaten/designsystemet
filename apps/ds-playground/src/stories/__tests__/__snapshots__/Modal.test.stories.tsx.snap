@@ -106,7 +106,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r16:"
+          aria-labelledby="modalHeadingId-:r17:"
           data-variant="plain"
   >
     <div tabindex="-1"
@@ -119,11 +119,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r17:"
+             aria-labelledby="svgtitle-:r18:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r17:">
+          <title id="svgtitle-:r18:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -131,7 +131,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r16:"
+        <h1 id="modalHeadingId-:r17:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -274,7 +274,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r1b:"
+          aria-labelledby="modalHeadingId-:r1c:"
           data-variant="outline"
   >
     <div tabindex="-1"
@@ -287,11 +287,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1c:"
+             aria-labelledby="svgtitle-:r1d:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1c:">
+          <title id="svgtitle-:r1d:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -299,7 +299,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r1b:"
+        <h1 id="modalHeadingId-:r1c:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -426,7 +426,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r1g:"
+          aria-labelledby="modalHeadingId-:r1h:"
           data-variant="outline"
           open
   >
@@ -440,11 +440,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1h:"
+             aria-labelledby="svgtitle-:r1i:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1h:">
+          <title id="svgtitle-:r1i:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -452,7 +452,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r1g:"
+        <h1 id="modalHeadingId-:r1h:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -1285,7 +1285,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
           Vil du erstatte nye opplysninger fra fil?
         </h1>
         <div class>
-          <label id="labelId-:r12:"
+          <label id="labelId-:r13:"
                  class="_label_348na_5"
                  for="textFieldTextboxId-:r11:"
           >

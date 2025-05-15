@@ -4,7 +4,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
-import { TextField } from '@skatteetaten/ds-forms';
+import { TextField, TextFieldProps } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -38,6 +38,7 @@ const meta = {
     classNames: {
       table: { disable: true, category: category.props },
     },
+    characterLimit: { table: { disable: true, category: category.props } },
     defaultValue: {
       control: 'text',
       table: { disable: true, category: category.props },
@@ -675,5 +676,73 @@ export const WithLongInput = {
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
+  },
+} satisfies Story;
+
+const TemplateWithCharacterCounter = (args: TextFieldProps): JSX.Element => {
+  const [value, setValue] = useState('');
+
+  return (
+    <TextField
+      {...args}
+      value={value}
+      characterLimit={50}
+      onChange={(e): void => {
+        setValue(e.target.value);
+      }}
+    />
+  );
+};
+
+export const WithCharacterLimit = {
+  name: 'With CharacterLimit (A10)',
+  render: TemplateWithCharacterCounter,
+  args: {
+    ...defaultArgs,
+    characterLimit: 50,
+  },
+  argTypes: {
+    characterLimit: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithCharacterLimitExceeded = {
+  name: 'With CharacterLimit Exceeded (A10)',
+  render: TemplateWithCharacterCounter,
+  args: {
+    ...defaultArgs,
+    characterLimit: 50,
+  },
+  argTypes: {
+    characterLimit: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textArea = canvas.getByRole('textbox');
+    const shortText = 'Dette er en kort tekst.';
+    const longText =
+      'Dette er en veldig lang tekst som bør være mer enn 50 tegn';
+
+    await userEvent.type(textArea, shortText);
+    const remainingCount = await canvas.findByText('27 tegn igjen');
+    expect(remainingCount).toBeInTheDocument();
+
+    await userEvent.clear(textArea);
+    await userEvent.type(textArea, longText);
+    const exceededCount = await canvas.findByText('8 tegn for mye');
+    expect(exceededCount).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithCharacterLimitAndError = {
+  name: 'With CharacterLimit And Error (A10)',
+  render: TemplateWithCharacterCounter,
+  args: {
+    ...defaultArgs,
+    errorMessage: 'Feilmelding',
+    characterLimit: 50,
+  },
+  argTypes: {
+    characterLimit: { table: { disable: false } },
   },
 } satisfies Story;

@@ -1,4 +1,11 @@
-import { ChangeEvent, JSX, ModifierKey, useId } from 'react';
+import {
+  ChangeEvent,
+  JSX,
+  ModifierKey,
+  useId,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 
 import {
   dsI18n,
@@ -11,6 +18,7 @@ import {
 
 import { TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { InputCounter } from '../InputCounter/InputCounter';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './TextField.module.scss';
@@ -22,6 +30,7 @@ export const TextField = ({
   classNames,
   lang,
   'data-testid': dataTestId,
+  characterLimit,
   description,
   errorMessage,
   helpSvgPath,
@@ -54,7 +63,11 @@ export const TextField = ({
   useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `textFieldErrorId-${useId()}`;
   const generatedId = `textFieldTextboxId-${useId()}`;
+  const characterCounterId = `textAreaCharacterCounter-${useId()}`;
   const textboxId = externalId ?? generatedId;
+
+  const textboxRef = useRef<HTMLInputElement>(null);
+  useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
   const separator = dsI18n.language === Languages.Engelsk ? ',' : ' ';
   const addSpacesOrCommas = (value: string): string =>
@@ -165,6 +178,11 @@ export const TextField = ({
       classNames?.textbox ?? ''
     }`.trim();
 
+  const ariaDescribedBy =
+    [errorMessage && errorId, characterLimit && characterCounterId]
+      .filter(Boolean)
+      .join(' ') || undefined;
+
   return (
     <div
       className={`${className} ${classNames?.container ?? ''}`.trim()}
@@ -203,13 +221,22 @@ export const TextField = ({
         readOnly={readOnly}
         required={required}
         value={value}
-        aria-describedby={errorMessage ? errorId : undefined}
+        aria-describedby={ariaDescribedBy}
         aria-invalid={!!errorMessage || undefined}
         onBlur={onBlur}
         onChange={handleChange}
         onFocus={onFocus}
         onKeyDown={handleKeyDown}
       />
+
+      {characterLimit ? (
+        <InputCounter
+          inputRef={textboxRef}
+          id={characterCounterId}
+          characterLimit={characterLimit}
+          value={value ? String(value) : undefined}
+        />
+      ) : null}
       <ErrorMessage
         id={errorId}
         showError={!!errorMessage}
