@@ -1,14 +1,15 @@
 import { JSX } from 'react';
 
+import { useEffect, useGlobals } from '@storybook/preview-api';
+import { Decorator, Preview } from '@storybook/react';
+import * as MockDate from 'mockdate';
+
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import {
   dsI18n,
   getCommonClassNameDefault,
   Languages,
 } from '@skatteetaten/ds-core-utils';
-import { useEffect, useGlobals } from '@storybook/preview-api';
-import { Decorator, Preview } from '@storybook/react';
-import * as MockDate from 'mockdate';
 
 import { category } from './helpers';
 

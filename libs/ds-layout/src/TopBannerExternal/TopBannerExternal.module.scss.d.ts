@@ -10,6 +10,9 @@ declare const classNames: {
   readonly containerForMainMenu: 'containerForMainMenu';
   readonly columns: 'columns';
   readonly column: 'column';
+  readonly mainMenuSearch: 'mainMenuSearch';
+  readonly mainMenuSearchLabel: 'mainMenuSearchLabel';
+  readonly mainMenuSearchSpacing: 'mainMenuSearchSpacing';
   readonly srOnly: 'srOnly';
 };
 export default classNames;

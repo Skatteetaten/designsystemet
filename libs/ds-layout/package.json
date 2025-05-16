@@ -21,7 +21,11 @@
     "@skatteetaten/ds-typography": "2.0.1",
     "@skatteetaten/ds-icons": "2.0.1",
     "@skatteetaten/ds-progress": "2.0.1",
-    "@floating-ui/react": "0.26.28"
+    "@floating-ui/react": "0.26.28",
+    "@skatteetaten/ds-forms": "2.0.1",
+    "date-fns": "4.1.0",
+    "@skatteetaten/ds-status": "2.0.1",
+    "@skatteetaten/ds-content": "2.0.1"
   },
   "scripts": {},
   "dependencies": {},

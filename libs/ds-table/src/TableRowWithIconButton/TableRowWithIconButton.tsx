@@ -18,8 +18,8 @@ import {
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
 import { getIconButtonSize } from './utils';
 import { getTableRowIsExpandedDefault } from '../Table/defaults';
+import { Table } from '../Table/Table';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
-import { TableRow } from '../TableRow/TableRow';
 
 import styles from './TableRowWithIconButton.module.scss';
 
@@ -192,11 +192,12 @@ export const RowWithRightSideExpandButton = ({
   const isExpandableContentRows = (): boolean => {
     if (Array.isArray(expandableContent)) {
       return !expandableContent?.some(
-        (element) => !isValidElement(element) || element.type !== TableRow
+        (element) => !isValidElement(element) || element.type !== Table.Row
       );
     } else {
       return (
-        isValidElement(expandableContent) && expandableContent.type === TableRow
+        isValidElement(expandableContent) &&
+        expandableContent.type === Table.Row
       );
     }
   };
