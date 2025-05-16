@@ -20,7 +20,12 @@ const meta = {
     isExpandable: { table: { category: category.props } },
     isExpanded: { table: { category: category.props } },
     expandButtonAriaDescribedby: { table: { category: category.aria } },
-    expandButtonTitle: { table: { category: category.props } },
+    expandButtonTitle: {
+      table: {
+        defaultValue: { summary: dsI18n.t('ds_tables:tablerow.Expandable') },
+        category: category.props,
+      },
+    },
     expandButtonPosition: {
       control: 'inline-radio',
       table: {
