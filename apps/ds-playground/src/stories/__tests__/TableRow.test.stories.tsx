@@ -21,8 +21,8 @@ const meta = {
     expandButtonAriaDescribedby: { table: { disable: true } },
     expandButtonPosition: { table: { disable: true } },
     expandButtonTitle: { table: { disable: true } },
-    expandText: { table: { disable: true } },
-    hasExpandText: { table: { disable: true } },
+    expandButtonText: { table: { disable: true } },
+    showExpandButtonText: { table: { disable: true } },
     isExpandable: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
     children: { table: { disable: true } },
@@ -226,15 +226,15 @@ export const WithExpandTextLeft = {
   name: 'With ExpandText on Left Side (TableRow A11.1, B6)',
   args: {
     isExpandable: true,
-    hasExpandText: true,
+    showExpandButtonText: true,
     expandButtonAriaDescribedby: 'Id123',
     expandableContent: 'Ekstra innhold',
     onExpand: fn(),
   },
   argTypes: {
     isExpandable: { table: { disable: false } },
-    hasExpandText: { table: { disable: false } },
-    expandText: { table: { disable: false } },
+    showExpandButtonText: { table: { disable: false } },
+    expandButtonText: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
@@ -253,7 +253,7 @@ export const WithExpandTextRight = {
   name: 'With ExpandText on Right Side (TableRow A11.1, B6)',
   args: {
     isExpandable: true,
-    hasExpandText: true,
+    showExpandButtonText: true,
     expandButtonPosition: 'right',
     expandButtonAriaDescribedby: 'Id123',
     expandableContent: 'Ekstra innhold',
@@ -261,8 +261,8 @@ export const WithExpandTextRight = {
   },
   argTypes: {
     isExpandable: { table: { disable: false } },
-    hasExpandText: { table: { disable: false } },
-    expandText: { table: { disable: false } },
+    showExpandButtonText: { table: { disable: false } },
+    expandButtonText: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
   play: async ({ canvasElement, args }): Promise<void> => {

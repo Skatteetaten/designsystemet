@@ -2,6 +2,7 @@ import { JSX, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   getTableRowExpandButtonPositionDefault,
   Table,
@@ -31,8 +32,14 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
-    expandText: { control: 'text', table: { category: category.props } },
-    hasExpandText: { table: { category: category.props } },
+    expandButtonText: {
+      control: 'text',
+      table: {
+        defaultValue: { summary: dsI18n.t('ds_tables:tablerow.ExpandText') },
+        category: category.props,
+      },
+    },
+    showExpandButtonText: { table: { category: category.props } },
     // Event
     onExpand: {
       control: false,
@@ -68,18 +75,18 @@ export const Preview: Story = {
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [expandText, setexpandText] = useState('Vis mer');
+    const [expandButtonText, setExpandButtonText] = useState('Vis mer');
 
     return (
       <Table caption={'row example'}>
         <Table.Body>
           <Table.Row
-            expandText={expandText}
+            expandButtonText={expandButtonText}
             expandableContent={'Ekstra innhold'}
-            hasExpandText
+            showExpandButtonText
             isExpandable
-            onExpand={() => setexpandText('Vis mindre')}
-            onClose={() => setexpandText('Vis mer')}
+            onExpand={() => setExpandButtonText('Vis mindre')}
+            onClose={() => setExpandButtonText('Vis mer')}
           >
             <Table.DataCell key={'cell1'}>{'cell 1'}</Table.DataCell>
             <Table.DataCell key={'cell2'}>{'cell 2'}</Table.DataCell>

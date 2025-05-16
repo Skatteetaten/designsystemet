@@ -30,8 +30,8 @@ export const TableRow = ({
   expandButtonPosition = getTableRowExpandButtonPositionDefault(),
   expandableContent,
   expandButtonAriaDescribedby,
-  expandText,
-  hasExpandText,
+  expandButtonText,
+  showExpandButtonText,
   isExpandable,
   isExpanded: isExpandedExternal,
   onExpand,
@@ -93,8 +93,8 @@ export const TableRow = ({
         expandButtonTitle={expandButtonTitle ?? t('tablerow.Expandable')}
         expandButtonAriaDescribedby={expandButtonAriaDescribedby}
         expandableContent={expandableContent}
-        expandText={expandText ?? t('tablerow.ExpandText')}
-        hasExpandText={hasExpandText}
+        expandButtonText={expandButtonText ?? t('tablerow.ExpandText')}
+        showExpandButtonText={showExpandButtonText}
         context={context}
         svgPath={isExpanded ? ChevronUpSVGpath : ChevronDownSVGpath}
         onExpandClick={onExpandClick}

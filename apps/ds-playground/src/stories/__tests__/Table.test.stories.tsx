@@ -278,7 +278,7 @@ const data = [
   {
     id: '58pxb',
     isExpandable: true,
-    hasExpandText: true,
+    showExpandButtonText: true,
     rowData: {
       month: 'Mai',
       amount: 3567,
@@ -357,7 +357,7 @@ const ExpandEditSortTable = (
       </Table.Header>
       <Table.Body>
         {sortedData.map(
-          ({ isExpandable, id, rowData, hasExpandText }, index) => {
+          ({ isExpandable, id, rowData, showExpandButtonText }, index) => {
             const content = (
               <>
                 <Table.DataCell alignment={'left'} id={id}>
@@ -381,7 +381,7 @@ const ExpandEditSortTable = (
                   key={id}
                   data-testid={`row-expand-${index}`}
                   expandButtonAriaDescribedby={id}
-                  hasExpandText={hasExpandText}
+                  showExpandButtonText={showExpandButtonText}
                   expandableContent={
                     <div className={'emptyExpandedTableRow'}>
                       <Heading ref={redigerDataRef} as={'h2'} level={2}>
@@ -439,59 +439,61 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
       </Table.Row>
     </Table.Header>
     <Table.Body>
-      {data.map(({ isExpandable, id, rowData, hasExpandText }, index) => {
-        const content = (
-          <>
-            <Table.DataCell alignment={'left'} id={id}>
-              {rowData.coverage}
-            </Table.DataCell>
-            <Table.DataCell alignment={'right'}>
-              {rowData.amount}
-            </Table.DataCell>
-            <Table.DataCell alignment={'center'}>
-              {rowData.month}
-            </Table.DataCell>
-            <Table.DataCell alignment={'right'}>
-              {rowData.revenue}
-            </Table.DataCell>
-          </>
-        );
+      {data.map(
+        ({ isExpandable, id, rowData, showExpandButtonText }, index) => {
+          const content = (
+            <>
+              <Table.DataCell alignment={'left'} id={id}>
+                {rowData.coverage}
+              </Table.DataCell>
+              <Table.DataCell alignment={'right'}>
+                {rowData.amount}
+              </Table.DataCell>
+              <Table.DataCell alignment={'center'}>
+                {rowData.month}
+              </Table.DataCell>
+              <Table.DataCell alignment={'right'}>
+                {rowData.revenue}
+              </Table.DataCell>
+            </>
+          );
 
-        if (isExpandable) {
+          if (isExpandable) {
+            return (
+              <Table.Row
+                key={id}
+                data-testid={`row-expand-${index}`}
+                expandButtonAriaDescribedby={id}
+                expandButtonPosition={'right'}
+                showExpandButtonText={showExpandButtonText}
+                expandableContent={
+                  <div className={'emptyExpandedTableRow'}>
+                    <Heading as={'h2'} level={2}>
+                      {'data'}
+                    </Heading>
+                  </div>
+                }
+                isExpandable
+              >
+                {content}
+              </Table.Row>
+            );
+          }
+
           return (
-            <Table.Row
-              key={id}
-              data-testid={`row-expand-${index}`}
-              expandButtonAriaDescribedby={id}
-              expandButtonPosition={'right'}
-              hasExpandText={hasExpandText}
-              expandableContent={
-                <div className={'emptyExpandedTableRow'}>
-                  <Heading as={'h2'} level={2}>
-                    {'data'}
-                  </Heading>
-                </div>
-              }
-              isExpandable
+            <Table.EditableRow
+              key={index}
+              id={id}
+              data-testid={`row-${index}`}
+              editButtonAriaDescribedby={id}
+              editButtonPosition={'right'}
+              editableContent={editableContent}
             >
               {content}
-            </Table.Row>
+            </Table.EditableRow>
           );
         }
-
-        return (
-          <Table.EditableRow
-            key={index}
-            id={id}
-            data-testid={`row-${index}`}
-            editButtonAriaDescribedby={id}
-            editButtonPosition={'right'}
-            editableContent={editableContent}
-          >
-            {content}
-          </Table.EditableRow>
-        );
-      })}
+      )}
     </Table.Body>
     <Table.Sum colSpan={4} hasTopSeparator>
       {'4555'}
