@@ -103,6 +103,7 @@ export const SearchField = (({
 
   useEffect(() => {
     if (!shouldShowResults) {
+      setCurrentFocus(-1);
       return;
     }
     const handleOutsideMenuEvent: EventListener = (event): void => {
