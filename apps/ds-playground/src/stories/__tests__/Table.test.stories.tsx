@@ -278,7 +278,7 @@ const data = [
   {
     id: '58pxb',
     isExpandable: true,
-    showExpandButtonText: true,
+    showExpandButtonTitle: true,
     rowData: {
       month: 'Mai',
       amount: 3567,
@@ -357,7 +357,7 @@ const ExpandEditSortTable = (
       </Table.Header>
       <Table.Body>
         {sortedData.map(
-          ({ isExpandable, id, rowData, showExpandButtonText }, index) => {
+          ({ isExpandable, id, rowData, showExpandButtonTitle }, index) => {
             const content = (
               <>
                 <Table.DataCell alignment={'left'} id={id}>
@@ -381,7 +381,7 @@ const ExpandEditSortTable = (
                   key={id}
                   data-testid={`row-expand-${index}`}
                   expandButtonAriaDescribedby={id}
-                  showExpandButtonText={showExpandButtonText}
+                  showExpandButtonTitle={showExpandButtonTitle}
                   expandableContent={
                     <div className={'emptyExpandedTableRow'}>
                       <Heading ref={redigerDataRef} as={'h2'} level={2}>
@@ -440,7 +440,7 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
     </Table.Header>
     <Table.Body>
       {data.map(
-        ({ isExpandable, id, rowData, showExpandButtonText }, index) => {
+        ({ isExpandable, id, rowData, showExpandButtonTitle }, index) => {
           const content = (
             <>
               <Table.DataCell alignment={'left'} id={id}>
@@ -465,7 +465,7 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
                 data-testid={`row-expand-${index}`}
                 expandButtonAriaDescribedby={id}
                 expandButtonPosition={'right'}
-                showExpandButtonText={showExpandButtonText}
+                showExpandButtonTitle={showExpandButtonTitle}
                 expandableContent={
                   <div className={'emptyExpandedTableRow'}>
                     <Heading as={'h2'} level={2}>

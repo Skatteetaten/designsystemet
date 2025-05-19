@@ -37,8 +37,7 @@ export const RowWithLeftSideExpandButton = ({
   expandableContent,
   expandButtonTitle,
   expandButtonAriaDescribedby,
-  expandButtonText,
-  showExpandButtonText,
+  showExpandButtonTitle,
   isExpanded = getTableRowIsExpandedDefault(),
   isExpandButtonDisabled,
   hideIconButton,
@@ -108,13 +107,13 @@ export const RowWithLeftSideExpandButton = ({
     >
       <TableDataCell
         ref={cellRef}
-        className={`${!showExpandButtonText ? styles.buttonCell : ''} ${
-          context?.variant === 'compact' && !showExpandButtonText
+        className={`${!showExpandButtonTitle ? styles.buttonCell : ''} ${
+          context?.variant === 'compact' && !showExpandButtonTitle
             ? styles.buttonCell_compact
             : ''
         } ${isExpanded && hideIconButton ? styles.buttonCell_expanded : ''}`.trim()}
       >
-        {showExpandButtonText ? (
+        {showExpandButtonTitle ? (
           <InlineButton
             ref={buttonRef}
             className={`${styles.expandButton} ${context?.variant === 'compact' ? styles.expandButton_compact : ''}`.trim()}
@@ -123,7 +122,7 @@ export const RowWithLeftSideExpandButton = ({
             disabled={isExpandButtonDisabled}
             onClick={handleClick}
           >
-            {expandButtonText}
+            {expandButtonTitle}
           </InlineButton>
         ) : (
           <IconButton
@@ -165,8 +164,7 @@ export const RowWithRightSideExpandButton = ({
   context,
   expandButtonTitle,
   expandableContent,
-  expandButtonText,
-  showExpandButtonText,
+  showExpandButtonTitle,
   iconButtonAriaExpanded,
   svgPath,
   expandButtonAriaDescribedby,
@@ -226,14 +224,14 @@ export const RowWithRightSideExpandButton = ({
       >
         {children}
         <TableDataCell
-          className={`${!showExpandButtonText ? styles.buttonCell : ''} ${
-            context?.variant === 'compact' && !showExpandButtonText
+          className={`${!showExpandButtonTitle ? styles.buttonCell : ''} ${
+            context?.variant === 'compact' && !showExpandButtonTitle
               ? styles.buttonCell_compact
               : ''
           }`.trim()}
           alignment={'right'}
         >
-          {showExpandButtonText ? (
+          {showExpandButtonTitle ? (
             <InlineButton
               ref={buttonRef}
               className={`${styles.expandButton} ${context?.variant === 'compact' ? styles.expandButton_compact : ''}`.trim()}
@@ -242,7 +240,7 @@ export const RowWithRightSideExpandButton = ({
               disabled={isExpandButtonDisabled}
               onClick={handleClick}
             >
-              {expandButtonText}
+              {expandButtonTitle}
             </InlineButton>
           ) : (
             <IconButton

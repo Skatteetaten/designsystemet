@@ -30,8 +30,7 @@ export const TableRow = ({
   expandButtonPosition = getTableRowExpandButtonPositionDefault(),
   expandableContent,
   expandButtonAriaDescribedby,
-  expandButtonText,
-  showExpandButtonText,
+  showExpandButtonTitle,
   isExpandable,
   isExpanded: isExpandedExternal,
   onExpand,
@@ -63,6 +62,12 @@ export const TableRow = ({
     setIsExpandedInternal(!isExpandedInternal);
   };
 
+  const getButtonTitle = (): string =>
+    expandButtonTitle ??
+    (showExpandButtonTitle
+      ? t('tablerow.ExpandText')
+      : t('tablerow.Expandable'));
+
   const Tag =
     expandButtonPosition === 'left'
       ? RowWithLeftSideExpandButton
@@ -90,11 +95,10 @@ export const TableRow = ({
         data-testid={dataTestId}
         isExpanded={isExpanded}
         iconButtonAriaExpanded={isExpanded}
-        expandButtonTitle={expandButtonTitle ?? t('tablerow.Expandable')}
+        expandButtonTitle={getButtonTitle()}
         expandButtonAriaDescribedby={expandButtonAriaDescribedby}
         expandableContent={expandableContent}
-        expandButtonText={expandButtonText ?? t('tablerow.ExpandText')}
-        showExpandButtonText={showExpandButtonText}
+        showExpandButtonTitle={showExpandButtonTitle}
         context={context}
         svgPath={isExpanded ? ChevronUpSVGpath : ChevronDownSVGpath}
         onExpandClick={onExpandClick}

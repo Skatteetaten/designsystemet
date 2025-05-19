@@ -37,14 +37,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
-    expandButtonText: {
-      control: 'text',
-      table: {
-        defaultValue: { summary: dsI18n.t('ds_tables:tablerow.ExpandText') },
-        category: category.props,
-      },
-    },
-    showExpandButtonText: { table: { category: category.props } },
+    showExpandButtonTitle: { table: { category: category.props } },
     // Event
     onExpand: {
       control: false,
@@ -80,18 +73,18 @@ export const Preview: Story = {
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [expandButtonText, setExpandButtonText] = useState('Vis mer');
+    const [expandButtonTitle, setExpandButtonTitle] = useState('Vis mer');
 
     return (
       <Table caption={'row example'}>
         <Table.Body>
           <Table.Row
-            expandButtonText={expandButtonText}
+            expandButtonTitle={expandButtonTitle}
             expandableContent={'Ekstra innhold'}
-            showExpandButtonText
+            showExpandButtonTitle
             isExpandable
-            onExpand={() => setExpandButtonText('Vis mindre')}
-            onClose={() => setExpandButtonText('Vis mer')}
+            onExpand={() => setExpandButtonTitle('Vis mindre')}
+            onClose={() => setExpandButtonTitle('Vis mer')}
           >
             <Table.DataCell key={'cell1'}>{'cell 1'}</Table.DataCell>
             <Table.DataCell key={'cell2'}>{'cell 2'}</Table.DataCell>

@@ -13,7 +13,7 @@ export interface ExpandableRowProps extends BaseProps {
   expandButtonTitle: string;
   expandableContent: ReactNode;
   expandButtonText: string;
-  showExpandButtonText?: boolean;
+  showExpandButtonTitle?: boolean;
   context: TableContextProps | null;
   svgPath: ReactElement<SVGPathElement>;
   expandButtonAriaDescribedby?: string;

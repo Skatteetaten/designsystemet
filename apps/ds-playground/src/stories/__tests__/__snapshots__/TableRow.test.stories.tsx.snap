@@ -75,6 +75,53 @@ exports[`Tester/Table/Row WithExpandButtonPositionRight smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Table/Row WithExpandButtonTitle smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
+        testtabell
+      </caption>
+      <tbody>
+        <tr class>
+          <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21"
+              style="max-width: 101px;"
+          >
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_1ylia_15"
+                    data-brightness="default"
+                    type="button"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Vis mer
+              </span>
+            </button>
+          </td>
+          <th id="Id123"
+              class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21"
+              scope="row"
+          >
+            Cake
+          </th>
+          <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21">
+            3,000
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
 exports[`Tester/Table/Row WithExpandTextLeft play-test 1`] = `
 <div data-test-block="true">
   <div class>

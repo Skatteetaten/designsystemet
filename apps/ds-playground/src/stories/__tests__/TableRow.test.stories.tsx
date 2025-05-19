@@ -21,8 +21,7 @@ const meta = {
     expandButtonAriaDescribedby: { table: { disable: true } },
     expandButtonPosition: { table: { disable: true } },
     expandButtonTitle: { table: { disable: true } },
-    expandButtonText: { table: { disable: true } },
-    showExpandButtonText: { table: { disable: true } },
+    showExpandButtonTitle: { table: { disable: true } },
     isExpandable: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
     children: { table: { disable: true } },
@@ -226,15 +225,15 @@ export const WithExpandTextLeft = {
   name: 'With ExpandText on Left Side (TableRow A11.1, B6)',
   args: {
     isExpandable: true,
-    showExpandButtonText: true,
+    showExpandButtonTitle: true,
     expandButtonAriaDescribedby: 'Id123',
     expandableContent: 'Ekstra innhold',
     onExpand: fn(),
   },
   argTypes: {
     isExpandable: { table: { disable: false } },
-    showExpandButtonText: { table: { disable: false } },
-    expandButtonText: { table: { disable: false } },
+    showExpandButtonTitle: { table: { disable: false } },
+    expandButtonTitle: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
@@ -253,7 +252,7 @@ export const WithExpandTextRight = {
   name: 'With ExpandText on Right Side (TableRow A11.1, B6)',
   args: {
     isExpandable: true,
-    showExpandButtonText: true,
+    showExpandButtonTitle: true,
     expandButtonPosition: 'right',
     expandButtonAriaDescribedby: 'Id123',
     expandableContent: 'Ekstra innhold',
@@ -261,8 +260,8 @@ export const WithExpandTextRight = {
   },
   argTypes: {
     isExpandable: { table: { disable: false } },
-    showExpandButtonText: { table: { disable: false } },
-    expandButtonText: { table: { disable: false } },
+    showExpandButtonTitle: { table: { disable: false } },
+    expandButtonTitle: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
@@ -273,5 +272,21 @@ export const WithExpandTextRight = {
     await fireEvent.click(inlineButton);
     await expect(args.onExpand).toHaveBeenCalled();
     await expect(inlineButton).toHaveAttribute('aria-expanded', 'true');
+  },
+} satisfies Story;
+
+export const WithExpandButtonTitle = {
+  render: Template,
+  name: 'With ExpandButtonTitle',
+  args: {
+    isExpandable: true,
+    showExpandButtonTitle: true,
+    expandButtonTitle: 'Vis mer',
+    expandableContent: 'Ekstra innhold',
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    showExpandButtonTitle: { table: { disable: false } },
+    expandButtonTitle: { table: { disable: false } },
   },
 } satisfies Story;

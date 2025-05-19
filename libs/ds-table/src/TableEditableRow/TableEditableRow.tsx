@@ -78,7 +78,6 @@ export const TableEditableRow = ({
       isExpandButtonDisabled={!!context?.rowInEditModeId}
       isExpanded={isExpanded}
       expandButtonTitle={t('tablerow.Editable')}
-      expandButtonText={''}
       expandButtonAriaDescribedby={editButtonAriaDescribedby}
       expandableContent={
         <>
