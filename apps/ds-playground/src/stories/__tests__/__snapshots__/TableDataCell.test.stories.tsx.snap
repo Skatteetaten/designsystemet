@@ -3,7 +3,7 @@
 exports[`Tester/Table/DataCell WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <td id="htmlId"
-      class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21  dummyClassname"
+      class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  dummyClassname"
       lang="nb"
       data-testid="123ID"
   >
@@ -14,7 +14,7 @@ exports[`Tester/Table/DataCell WithAttributes play-test 1`] = `
 
 exports[`Tester/Table/DataCell WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21">
+  <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
     cellChildren
   </td>
 </div>
@@ -22,7 +22,7 @@ exports[`Tester/Table/DataCell WithChildren play-test 1`] = `
 
 exports[`Tester/Table/DataCell WithRef play-test 1`] = `
 <div data-test-block="true">
-  <td class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21"
+  <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
       id="dummyIdForwardedFromRef"
   >
     cake
@@ -32,7 +32,7 @@ exports[`Tester/Table/DataCell WithRef play-test 1`] = `
 
 exports[`Tester/Table/DataCell WithThAndScope play-test 1`] = `
 <div data-test-block="true">
-  <th class="_dataCell_1jzpx_1 _dataCell_standard_1jzpx_1 _dataCell_left_1jzpx_21"
+  <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
       scope="row"
   >
     cake

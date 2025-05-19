@@ -2,7 +2,6 @@ import { JSX, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   getTableRowExpandButtonPositionDefault,
   Table,
@@ -20,12 +19,7 @@ const meta = {
     isExpandable: { table: { category: category.props } },
     isExpanded: { table: { category: category.props } },
     expandButtonAriaDescribedby: { table: { category: category.aria } },
-    expandButtonTitle: {
-      table: {
-        defaultValue: { summary: dsI18n.t('ds_tables:tablerow.Expandable') },
-        category: category.props,
-      },
-    },
+    expandButtonTitle: { table: { category: category.props } },
     expandButtonPosition: {
       control: 'inline-radio',
       table: {

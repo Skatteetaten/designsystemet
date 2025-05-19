@@ -3,12 +3,9 @@
 .buttonCell {
   padding: var(--spacing-xs);
 
-  &_expanded {
-    padding: var(--spacing-xs) var(--spacing-xs) 0;
-  }
-
+  &_expanded,
   &_compact {
-    padding: var(--spacing-xs) 0 0;
+    padding: var(--spacing-xs) var(--spacing-xs) 0;
   }
 }
 
@@ -22,9 +19,6 @@
 
   &_compact {
     font-size: var(--font-size-s);
-
-    // TODO noe med padding-right hvis iconPosition er right
-    // TODO noe med padding-left hvis iconPosition er left
 
     > svg {
       width: var(--size-small);
