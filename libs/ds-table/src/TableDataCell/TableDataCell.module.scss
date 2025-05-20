@@ -1,6 +1,7 @@
 @use '../shared';
 
 .dataCell {
+  box-sizing: border-box; // for å unngå at datacell med inline button blir større på expand
   border-bottom: var(--table-cell-border-bottom);
   background: var(--table-cell-background);
   font-weight: var(--semantic-font-weight-default);
@@ -28,8 +29,7 @@
   }
 
   &_compact {
-    padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs)
-      var(--spacing-s);
+    padding: var(--spacing-xs) var(--spacing-s);
     font-size: var(--font-size-s);
   }
 }

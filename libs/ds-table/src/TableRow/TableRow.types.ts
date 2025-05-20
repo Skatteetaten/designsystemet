@@ -6,7 +6,7 @@ type ExpandButtonPosition = Extract<Position, 'left' | 'right'>;
 
 export interface TableRowProps extends BaseProps {
   ref?: Ref<HTMLTableRowElement>;
-  /** Overstyring av standard title for expandButton */
+  /** Overstyring av standard title/tekst for expandButton */
   expandButtonTitle?: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   expandButtonPosition?: ExpandButtonPosition;
@@ -21,6 +21,8 @@ export interface TableRowProps extends BaseProps {
    *  Dette er for å tydeliggjøre hvilken rad som ekspanderes
    */
   expandButtonAriaDescribedby?: string;
+  /** Om utvid-knappen skal ha synlig tekst */
+  showExpandButtonTitle?: boolean;
   /** Avgjør om raden kan utvides */
   isExpandable?: boolean;
   /** Brukes til å styre ekspandert tilstand utenfor komponenten */

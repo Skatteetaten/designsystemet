@@ -9,17 +9,17 @@ exports[`Tester/Table/Table Defaults play-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Category
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Items
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Expenditure
@@ -28,57 +28,57 @@ exports[`Tester/Table/Table Defaults play-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21 _dataCell_rowspan_25tph_17 rowSpanRight"
               rowspan="2"
           >
             Edible
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Donuts
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Cake
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21 _dataCell_rowspan_25tph_17 rowSpanRight"
               rowspan="2"
           >
             Non-Edible
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Stationery
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             18,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Batteries
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             9,000
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1"
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1">
             32,000
           </td>
         </tr>
@@ -101,17 +101,17 @@ exports[`Tester/Table/Table WithAttributes play-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Category
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Items
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Expenditure
@@ -120,57 +120,57 @@ exports[`Tester/Table/Table WithAttributes play-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21 _dataCell_rowspan_25tph_17 rowSpanRight"
               rowspan="2"
           >
             Edible
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Donuts
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Cake
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21 _dataCell_rowspan_25tph_17 rowSpanRight"
               rowspan="2"
           >
             Non-Edible
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Stationery
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             18,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Batteries
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             9,000
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1"
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1">
             32,000
           </td>
         </tr>
@@ -191,17 +191,17 @@ exports[`Tester/Table/Table WithCanBeManuallyFocused play-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Category
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Items
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Expenditure
@@ -210,57 +210,57 @@ exports[`Tester/Table/Table WithCanBeManuallyFocused play-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21 _dataCell_rowspan_25tph_17 rowSpanRight"
               rowspan="2"
           >
             Edible
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Donuts
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Cake
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21 _dataCell_rowspan_25tph_17 rowSpanRight"
               rowspan="2"
           >
             Non-Edible
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Stationery
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             18,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Batteries
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             9,000
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1"
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1">
             32,000
           </td>
         </tr>
@@ -279,23 +279,23 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51">
+          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
           </td>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r13:"
+                   aria-labelledby="svgtitle-:r1a:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r13:">
+                <title id="svgtitle-:r1a:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -306,22 +306,22 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r14:"
+                   aria-labelledby="svgtitle-:r1b:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r14:">
+                <title id="svgtitle-:r1b:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -332,21 +332,21 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r15:"
+                   aria-labelledby="svgtitle-:r1c:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r15:">
+                <title id="svgtitle-:r1c:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -357,22 +357,22 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r16:"
+                   aria-labelledby="svgtitle-:r1d:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r16:">
+                <title id="svgtitle-:r1d:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -390,21 +390,24 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 166px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     disabled
                     type="button"
                     aria-describedby="s5f0e"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r18:"
+                   aria-labelledby="svgtitle-:r1f:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r18:">
+                <title id="svgtitle-:r1f:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -413,17 +416,17 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             100 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             5426
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Januar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1000
           </td>
         </tr>
@@ -431,29 +434,32 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class="_editableRow_expanded_1fi2s_5"
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  _buttonCell_expanded_1rqke_14">
-            <button class="_button_19ayz_1 _button_medium_19ayz_42  _hideIcon_1rqke_38"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5  _buttonCell_expanded_ialpx_8"
+              style="max-width: 166px;"
+          >
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _hideIcon_ialpx_44"
                     data-brightness="default"
                     disabled
                     type="button"
                     aria-describedby="3vesy"
+                    aria-expanded="true"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1a:"
+                   aria-labelledby="svgtitle-:r1h:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1a:">
+                <title id="svgtitle-:r1h:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
                 </path>
               </svg>
             </button>
-            <div class="_expandableContent_1rqke_22 _expandableContent_1fi2s_23"
-                 style="width: 515px;"
+            <div class="_expandableContent_ialpx_28 _expandableContent_1fi2s_23"
+                 style="width: 641px;"
             >
               <div class="_editableRowTriangle_1fi2s_9">
               </div>
@@ -468,17 +474,17 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </div>
           </td>
           <td id="3vesy"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             50 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             5432
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Februar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             500
           </td>
         </tr>
@@ -486,21 +492,24 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 166px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     disabled
                     type="button"
                     aria-describedby="16prz"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1c:"
+                   aria-labelledby="svgtitle-:r1j:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1c:">
+                <title id="svgtitle-:r1j:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -509,24 +518,26 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             20 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             4899
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Mars
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 166px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -536,11 +547,11 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1d:"
+                   aria-labelledby="svgtitle-:r1k:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1d:">
+                <title id="svgtitle-:r1k:">
                   Mer informasjon
                 </title>
                 <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
@@ -549,30 +560,71 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             30 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2344
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             April
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1055
+          </td>
+        </tr>
+        <tr class
+            data-testid="row-expand-4"
+        >
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              style="max-width: 166px;"
+          >
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="58pxb"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+          </td>
+          <td id="58pxb"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+          >
+            40 %
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            3567
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
+            Mai
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            1800
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
@@ -596,67 +648,16 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51">
+          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
           </td>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-labelledby="svgtitle-:ri:"
-                   aria-hidden="false"
-                   role="img"
-              >
-                <title id="svgtitle-:ri:">
-                  Sorterbar
-                </title>
-                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                >
-                </path>
-              </svg>
-            </button>
-          </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
-              data-testid="header-belop"
-              scope="col"
-          >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
-                    type="button"
-            >
-              Beløp
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-labelledby="svgtitle-:rj:"
-                   aria-hidden="false"
-                   role="img"
-              >
-                <title id="svgtitle-:rj:">
-                  Sorterbar
-                </title>
-                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                >
-                </path>
-              </svg>
-            </button>
-          </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57"
-              scope="col"
-          >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
-                    type="button"
-            >
-              Måned
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rk:"
@@ -674,15 +675,15 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
-              data-testid="header-avkastning"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+              data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
-              Avkastning
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              Beløp
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rl:"
@@ -700,20 +701,40 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr id="s5f0e"
-            class
-            data-testid="row-0"
-        >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
-            <button class="_button_19ayz_1 _button_medium_19ayz_42"
-                    data-brightness="default"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
+              scope="col"
+          >
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
-                    aria-describedby="s5f0e"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+              Måned
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:rm:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:rm:">
+                  Sorterbar
+                </title>
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
+                </path>
+              </svg>
+            </button>
+          </th>
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+              data-testid="header-avkastning"
+              scope="col"
+          >
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+                    type="button"
+            >
+              Avkastning
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rn:"
@@ -721,37 +742,31 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                    role="img"
               >
                 <title id="svgtitle-:rn:">
-                  Rediger rad
+                  Sorterbar
                 </title>
-                <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
-          </td>
-          <td id="s5f0e"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
-          >
-            100 %
-          </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
-            5426
-          </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
-            Januar
-          </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
-            1000
-          </td>
+          </th>
         </tr>
-        <tr id="3vesy"
+      </thead>
+      <tbody>
+        <tr id="s5f0e"
             class
-            data-testid="row-1"
+            data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 105px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
-                    aria-describedby="3vesy"
+                    aria-describedby="s5f0e"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
@@ -768,30 +783,33 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </td>
-          <td id="3vesy"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+          <td id="s5f0e"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
-            50 %
+            100 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
-            5432
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            5426
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
-            Februar
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
+            Januar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
-            500
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            1000
           </td>
         </tr>
-        <tr id="16prz"
+        <tr id="3vesy"
             class
-            data-testid="row-2"
+            data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 105px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
-                    aria-describedby="16prz"
+                    aria-describedby="3vesy"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
@@ -808,25 +826,70 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </td>
+          <td id="3vesy"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+          >
+            50 %
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            5432
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
+            Februar
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            500
+          </td>
+        </tr>
+        <tr id="16prz"
+            class
+            data-testid="row-2"
+        >
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 105px;"
+          >
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="16prz"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:rt:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:rt:">
+                  Rediger rad
+                </title>
+                <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+                </path>
+              </svg>
+            </button>
+          </td>
           <td id="16prz"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             20 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             4899
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Mars
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 105px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -836,11 +899,11 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:rs:"
+                   aria-labelledby="svgtitle-:ru:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:rs:">
+                <title id="svgtitle-:ru:">
                   Mer informasjon
                 </title>
                 <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
@@ -849,30 +912,71 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             30 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2344
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             April
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1055
+          </td>
+        </tr>
+        <tr class
+            data-testid="row-expand-4"
+        >
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              style="max-width: 105px;"
+          >
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="58pxb"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+          </td>
+          <td id="58pxb"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+          >
+            40 %
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            3567
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
+            Mai
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            1800
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
@@ -896,27 +1000,27 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Dekningsgrad
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_right_wql7r_54"
               scope="col"
           >
             Beløp
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_center_1525d_57"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_center_wql7r_57"
               scope="col"
           >
             Måned
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_right_wql7r_54"
               scope="col"
           >
             Avkastning
           </th>
-          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51">
+          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
           </td>
         </tr>
       </thead>
@@ -926,33 +1030,34 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
             data-testid="row-0"
         >
           <td id="s5f0e"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             100 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             5426
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Januar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1000
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r25:"
+                   aria-labelledby="svgtitle-:r2f:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r25:">
+                <title id="svgtitle-:r2f:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -966,33 +1071,34 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
             data-testid="row-1"
         >
           <td id="3vesy"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             50 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             5432
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Februar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             500
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r27:"
+                   aria-labelledby="svgtitle-:r2h:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r27:">
+                <title id="svgtitle-:r2h:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1006,33 +1112,34 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
             data-testid="row-2"
         >
           <td id="16prz"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             20 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             4899
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Mars
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2000
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r29:"
+                   aria-labelledby="svgtitle-:r2j:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r29:">
+                <title id="svgtitle-:r2j:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1045,20 +1152,20 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
             data-testid="row-expand-3"
         >
           <td id="3xpjb"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             30 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2344
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             April
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1055
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -1068,11 +1175,11 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r2a:"
+                   aria-labelledby="svgtitle-:r2k:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r2a:">
+                <title id="svgtitle-:r2k:">
                   Mer informasjon
                 </title>
                 <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
@@ -1081,16 +1188,55 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
             </button>
           </td>
         </tr>
+        <tr class
+            data-testid="row-expand-4"
+        >
+          <td id="58pxb"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+          >
+            40 %
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            3567
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
+            Mai
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            1800
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="58pxb"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+          </td>
+        </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
@@ -1109,27 +1255,27 @@ exports[`Tester/Table/Table WithFullWidthAndTextAlignment smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             left
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_center_1525d_57"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_center_wql7r_57"
               scope="col"
           >
             center
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_right_wql7r_54"
               scope="col"
           >
             right
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             default
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_right_wql7r_54"
               scope="col"
           >
             right
@@ -1138,36 +1284,36 @@ exports[`Tester/Table/Table WithFullWidthAndTextAlignment smoke-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             left
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             center
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             right
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             default
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             left
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             left
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             center
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             right
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             default
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             right
           </td>
         </tr>
@@ -1186,23 +1332,23 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51">
+          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
           </td>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1p:"
+                   aria-labelledby="svgtitle-:r22:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1p:">
+                <title id="svgtitle-:r22:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -1213,22 +1359,22 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1q:"
+                   aria-labelledby="svgtitle-:r23:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1q:">
+                <title id="svgtitle-:r23:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -1239,21 +1385,21 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1r:"
+                   aria-labelledby="svgtitle-:r24:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1r:">
+                <title id="svgtitle-:r24:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -1264,22 +1410,22 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1s:"
+                   aria-labelledby="svgtitle-:r25:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1s:">
+                <title id="svgtitle-:r25:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -1297,20 +1443,23 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 139.031px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1u:"
+                   aria-labelledby="svgtitle-:r27:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1u:">
+                <title id="svgtitle-:r27:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1319,17 +1468,17 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             100 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             5426
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Januar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1000
           </td>
         </tr>
@@ -1337,20 +1486,23 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 139.031px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r20:"
+                   aria-labelledby="svgtitle-:r29:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r20:">
+                <title id="svgtitle-:r29:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1359,17 +1511,17 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             50 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             5432
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Februar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             500
           </td>
         </tr>
@@ -1377,20 +1529,23 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 139.031px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r22:"
+                   aria-labelledby="svgtitle-:r2b:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r22:">
+                <title id="svgtitle-:r2b:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1399,24 +1554,26 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             20 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             4899
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Mars
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 139.031px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -1426,11 +1583,11 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r23:"
+                   aria-labelledby="svgtitle-:r2c:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r23:">
+                <title id="svgtitle-:r2c:">
                   Mer informasjon
                 </title>
                 <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
@@ -1439,30 +1596,71 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             30 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2344
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             April
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1055
+          </td>
+        </tr>
+        <tr class
+            data-testid="row-expand-4"
+        >
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              style="max-width: 139.031px;"
+          >
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="58pxb"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+          </td>
+          <td id="58pxb"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+          >
+            40 %
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            3567
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
+            Mai
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            1800
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
@@ -1488,17 +1686,17 @@ exports[`Tester/Table/Table WithRef play-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Category
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Items
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
               scope="col"
           >
             Expenditure
@@ -1507,57 +1705,57 @@ exports[`Tester/Table/Table WithRef play-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21 _dataCell_rowspan_25tph_17 rowSpanRight"
               rowspan="2"
           >
             Edible
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Donuts
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Cake
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21 _dataCell_rowspan_25tph_17 rowSpanRight"
               rowspan="2"
           >
             Non-Edible
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Stationery
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             18,000
           </td>
         </tr>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             Batteries
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             9,000
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1"
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1">
             32,000
           </td>
         </tr>
@@ -1580,17 +1778,17 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </caption>
         <thead>
           <tr class>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               Forename
             </th>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               Surname
             </th>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               email
@@ -1599,35 +1797,35 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </thead>
         <tbody>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Otto
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Octavius
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               doc.ock@example.org
             </td>
           </tr>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Norman
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Osbourne
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               norman.osbourne@example.org
             </td>
           </tr>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Curt
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Connors
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               curt.connors@example.org
             </td>
           </tr>
@@ -1643,17 +1841,17 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </caption>
         <thead>
           <tr class>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               Forename
             </th>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               Surname
             </th>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               email
@@ -1662,35 +1860,35 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </thead>
         <tbody>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Otto
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Octavius
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               doc.ock@example.org
             </td>
           </tr>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Norman
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Osbourne
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               norman.osbourne@example.org
             </td>
           </tr>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Curt
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Connors
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               curt.connors@example.org
             </td>
           </tr>
@@ -1706,17 +1904,17 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </caption>
         <thead>
           <tr class>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               Forename
             </th>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               Surname
             </th>
-            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
                 scope="col"
             >
               email
@@ -1725,35 +1923,35 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </thead>
         <tbody>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Otto
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Octavius
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               doc.ock@example.org
             </td>
           </tr>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Norman
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Osbourne
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               norman.osbourne@example.org
             </td>
           </tr>
           <tr class>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Curt
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               Connors
             </td>
-            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+            <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
               curt.connors@example.org
             </td>
           </tr>
@@ -1773,16 +1971,16 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_1525d_1 _headerCell_compact_1525d_63  _headerCell_left_1525d_51">
+          <td class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_left_wql7r_51">
           </td>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_compact_1525d_63"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_compact_wql7r_63"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r0:"
@@ -1800,15 +1998,15 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_compact_1525d_63"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_compact_wql7r_63"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1:"
@@ -1826,14 +2024,14 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_compact_1525d_63"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_compact_wql7r_63"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r2:"
@@ -1851,15 +2049,15 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_compact_1525d_63"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_compact_wql7r_63"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r3:"
@@ -1884,11 +2082,14 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8"
+              style="max-width: 85.0938px;"
+          >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
@@ -1906,17 +2107,17 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
           >
             100 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             5426
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
             Januar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             1000
           </td>
         </tr>
@@ -1924,11 +2125,14 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8"
+              style="max-width: 85.0938px;"
+          >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
@@ -1946,17 +2150,17 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
           >
             50 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             5432
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
             Februar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             500
           </td>
         </tr>
@@ -1964,11 +2168,14 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8"
+              style="max-width: 85.0938px;"
+          >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
@@ -1986,24 +2193,26 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
           >
             20 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             4899
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
             Mars
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8"
+              style="max-width: 85.0938px;"
+          >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
@@ -2026,30 +2235,71 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
           >
             30 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             2344
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
             April
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             1055
+          </td>
+        </tr>
+        <tr class
+            data-testid="row-expand-4"
+        >
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
+              style="max-width: 85.0938px;"
+          >
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12 _expandButton_compact_ialpx_19"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="58pxb"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+          </td>
+          <td id="58pxb"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
+          >
+            40 %
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
+            3567
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
+            Mai
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
+            1800
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
+          <th class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
@@ -2073,27 +2323,27 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_1525d_1 _headerCell_compact_1525d_63  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_left_wql7r_51"
               scope="col"
           >
             Dekningsgrad
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_compact_1525d_63  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_right_wql7r_54"
               scope="col"
           >
             Beløp
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_compact_1525d_63  _headerCell_center_1525d_57"
+          <th class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_center_wql7r_57"
               scope="col"
           >
             Måned
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_compact_1525d_63  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_right_wql7r_54"
               scope="col"
           >
             Avkastning
           </th>
-          <td class="_headerCell_1525d_1 _headerCell_compact_1525d_63  _headerCell_left_1525d_51">
+          <td class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_left_wql7r_51">
           </td>
         </tr>
       </thead>
@@ -2103,33 +2353,34 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
             data-testid="row-0"
         >
           <td id="s5f0e"
-              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
           >
             100 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             5426
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
             Januar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             1000
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8">
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:rc:"
+                   aria-labelledby="svgtitle-:rd:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:rc:">
+                <title id="svgtitle-:rd:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -2143,33 +2394,34 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
             data-testid="row-1"
         >
           <td id="3vesy"
-              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
           >
             50 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             5432
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
             Februar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             500
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8">
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:re:"
+                   aria-labelledby="svgtitle-:rf:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:re:">
+                <title id="svgtitle-:rf:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -2183,33 +2435,34 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
             data-testid="row-2"
         >
           <td id="16prz"
-              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
           >
             20 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             4899
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
             Mars
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             2000
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8">
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:rg:"
+                   aria-labelledby="svgtitle-:rh:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:rg:">
+                <title id="svgtitle-:rh:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -2222,20 +2475,20 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
             data-testid="row-expand-3"
         >
           <td id="3xpjb"
-              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
           >
             30 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             2344
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
             April
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             1055
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8">
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
@@ -2245,11 +2498,11 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
               <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:rh:"
+                   aria-labelledby="svgtitle-:ri:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:rh:">
+                <title id="svgtitle-:ri:">
                   Mer informasjon
                 </title>
                 <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
@@ -2258,16 +2511,55 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
             </button>
           </td>
         </tr>
+        <tr class
+            data-testid="row-expand-4"
+        >
+          <td id="58pxb"
+              class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
+          >
+            40 %
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
+            3567
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_center_25tph_27">
+            Mai
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
+            1800
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12 _expandButton_compact_ialpx_19"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="58pxb"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+          </td>
+        </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
+          <th class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
@@ -2286,23 +2578,23 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51">
+          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
           </td>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1e:"
+                   aria-labelledby="svgtitle-:r1m:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1e:">
+                <title id="svgtitle-:r1m:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -2313,22 +2605,22 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1f:"
+                   aria-labelledby="svgtitle-:r1n:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1f:">
+                <title id="svgtitle-:r1n:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -2339,21 +2631,21 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1g:"
+                   aria-labelledby="svgtitle-:r1o:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1g:">
+                <title id="svgtitle-:r1o:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -2364,22 +2656,22 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54"
+          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
+            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_1525d_31"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _headerCellSortButtonIcon_wql7r_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1h:"
+                   aria-labelledby="svgtitle-:r1p:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1h:">
+                <title id="svgtitle-:r1p:">
                   Sorterbar
                 </title>
                 <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
@@ -2397,20 +2689,23 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 121px;"
+          >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
                     type="button"
                     aria-describedby="s5f0e"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1j:"
+                   aria-labelledby="svgtitle-:r1r:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1j:">
+                <title id="svgtitle-:r1r:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -2419,17 +2714,17 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             100 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             5426
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Januar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1000
           </td>
         </tr>
@@ -2437,20 +2732,23 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 121px;"
+          >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
                     type="button"
                     aria-describedby="3vesy"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1l:"
+                   aria-labelledby="svgtitle-:r1t:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1l:">
+                <title id="svgtitle-:r1t:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -2459,17 +2757,17 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             50 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             5432
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Februar
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             500
           </td>
         </tr>
@@ -2477,20 +2775,23 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 121px;"
+          >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
                     type="button"
                     aria-describedby="16prz"
+                    aria-expanded="false"
             >
               <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1n:"
+                   aria-labelledby="svgtitle-:r1v:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1n:">
+                <title id="svgtitle-:r1v:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -2499,24 +2800,26 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             20 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             4899
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             Mars
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 121px;"
+          >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
                     data-brightness="default"
                     type="button"
@@ -2526,11 +2829,11 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1o:"
+                   aria-labelledby="svgtitle-:r20:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1o:">
+                <title id="svgtitle-:r20:">
                   Mer informasjon
                 </title>
                 <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
@@ -2539,30 +2842,71 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
           >
             30 %
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2344
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
             April
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1055
+          </td>
+        </tr>
+        <tr class
+            data-testid="row-expand-4"
+        >
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              style="max-width: 121px;"
+          >
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="58pxb"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+          </td>
+          <td id="58pxb"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+          >
+            40 %
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            3567
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_center_25tph_27">
+            Mai
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            1800
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>

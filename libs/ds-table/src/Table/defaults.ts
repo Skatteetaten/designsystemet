@@ -10,3 +10,4 @@ export const getTableRowExpandButtonPositionDefault = (): EditButtonPosition =>
   'left';
 export const getTableCellAlignmentDefault = (): TextAlignment => 'left';
 export const getTableSumAlignmentDefault = (): TextAlignment => 'right';
+export const getTableRowIsExpandedDefault = (): boolean => false;
