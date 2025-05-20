@@ -1,4 +1,4 @@
-import { useContext, JSX } from 'react';
+import { useContext, JSX, useRef } from 'react';
 
 import { NavigationTile } from '@skatteetaten/ds-navigation';
 import { Alert } from '@skatteetaten/ds-status';
@@ -17,12 +17,19 @@ export function RolePickerRow({
   onClick,
 }: RolePickerRowProps): JSX.Element {
   const ctx = useContext(RolePickerContext);
+  const ref = useRef<HTMLAnchorElement>(null);
 
   const hasError = ctx?.error?.entityId === id;
+
+  const handleCloseError = (): void => {
+    ctx?.setError(undefined);
+    ref.current?.focus();
+  };
 
   return (
     <div>
       <NavigationTile
+        ref={ref}
         href={'#'}
         className={`${hasError ? styles.withAlert : ''}`}
         titleAs={titleAs ?? 'h3'}
@@ -39,7 +46,7 @@ export function RolePickerRow({
       <Alert
         variant={'warning'}
         showAlert={hasError}
-        onClose={() => ctx?.setError(undefined)}
+        onClose={handleCloseError}
       >
         {ctx?.error?.message}
       </Alert>
