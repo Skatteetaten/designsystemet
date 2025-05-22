@@ -1,6 +1,5 @@
 import {
   ChangeEvent,
-  FocusEvent,
   MouseEvent,
   useEffect,
   useRef,
@@ -57,7 +56,8 @@ export const SkjemaMedSteg = (): JSX.Element => {
 
   const [activeStep, setActiveStep] = useState(1);
   const [hasLocalAddress, setHasLocalAddress] = useState<string>('');
-  const [hasLocalAddressError, setHasLocalAddressError] = useState(false);
+  const [localAddressErrorMessage, setLocalAddressErrorMessage] =
+    useState<string>('');
 
   type Contacts = {
     address: string;
@@ -78,6 +78,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
     city: '',
     phone: '',
   });
+
   const [contactsError, setContactsError] = useState<ContactsError>({
     address: '',
     postalCode: '',
@@ -86,8 +87,8 @@ export const SkjemaMedSteg = (): JSX.Element => {
 
   const [showErrorSummary, setShowErrorSummary] = useState(false);
 
-  const [consent, setConsent] = useState<string>('');
-  const [consentError, setConsentError] = useState(false);
+  const [hasGivenConsent, setHasGivenConsent] = useState(false);
+  const [consentError, setConsentError] = useState<string>('');
 
   useEffect(() => {
     if (!Object.values(contactsError).some((error) => error)) {
@@ -95,23 +96,16 @@ export const SkjemaMedSteg = (): JSX.Element => {
     }
   }, [contactsError]);
 
-  const validateContacts = (): ContactsError => {
-    const errors: ContactsError = {
-      address: contactsInput.address ? '' : 'Postadresse må fylles ut.',
-      postalCode: contactsInput.postalCode ? '' : 'Postnummer må fylles ut.',
-      phone: contactsInput.phone ? '' : 'Telefonnummer må fylles ut.',
-    };
-    return errors;
-  };
-
   const handleInputChange =
-    (field: keyof Contacts) =>
+    (field: keyof ContactsError) =>
     (e: ChangeEvent<HTMLInputElement>): void => {
       const value = e.target.value;
-      setContactsError((prev) => ({
-        ...prev,
-        [field]: '',
-      }));
+      if (contactsError[field] !== '') {
+        setContactsError((prev) => ({
+          ...prev,
+          [field]: '',
+        }));
+      }
       setContactsInput((prevState) => ({
         ...prevState,
         [field]: value,
@@ -122,30 +116,24 @@ export const SkjemaMedSteg = (): JSX.Element => {
       }));
     };
 
-  const handleBlur =
-    (field: keyof Contacts) =>
-    (e: FocusEvent<HTMLInputElement>): void => {
-      setContactsError((prev) => ({
-        ...prev,
-        [field]: validateField(field, e.target),
-      }));
-    };
+  const handleBlur = (field: keyof Contacts, value: string): void => {
+    setContactsError((prev) => ({
+      ...prev,
+      [field]: validateField(field, value),
+    }));
+  };
 
-  const validateField = (
-    field: keyof Contacts,
-    target: EventTarget & HTMLInputElement
-  ): string => {
+  const validateField = (field: keyof Contacts, value: string): string => {
     switch (field) {
       case 'address':
-        return target.validity.valueMissing ? 'Adresse må fylles ut.' : '';
+        return value ? '' : 'Postadresse må fylles ut.';
       case 'postalCode':
-        if (target.validity.valueMissing) return 'Postnummer må fylles ut.';
-        if (target.validity.patternMismatch)
-          return 'Postnummer må inneholde fire tall.';
+        if (!value) return 'Postnummer må fylles ut.';
+        if (!/^\d{4}$/.test(value)) return 'Postnummer må inneholde fire tall.';
         return '';
       case 'phone':
-        if (target.validity.valueMissing) return 'Telefonnummer må fylles ut.';
-        if (target.validity.patternMismatch)
+        if (!value) return 'Telefonnummer må fylles ut.';
+        if (!/^[0-9+ ]*$/.test(value))
           return 'Telefonnummer må inneholde tall.';
         return '';
       default:
@@ -155,25 +143,35 @@ export const SkjemaMedSteg = (): JSX.Element => {
 
   const onNext = (): void => {
     setActiveStep(activeStep + 1);
-    setConsent('');
+    setHasGivenConsent(false);
   };
 
   const handleNextStep = (): void => {
     if (!hasLocalAddress) {
-      setHasLocalAddressError(true);
+      setLocalAddressErrorMessage('Fyll ut om du har norsk adresse');
       return;
     }
 
     if (hasLocalAddress === 'ja') {
-      const errors = validateContacts();
-      setContactsError(errors);
+      const updatedErrors: ContactsError = { ...contactsError };
 
-      if (Object.values(errors).some((error) => error)) {
+      Object.entries(contactsInput).forEach(([field, value]) => {
+        updatedErrors[field as keyof ContactsError] = validateField(
+          field as keyof ContactsError,
+          value
+        );
+      });
+
+      setContactsError(updatedErrors);
+
+      if (Object.values(updatedErrors).filter((error) => error).length > 1) {
         setShowErrorSummary(true);
         return;
       }
+      if (Object.values(updatedErrors).some((error) => error)) {
+        return;
+      }
     }
-
     onNext();
   };
 
@@ -267,13 +265,9 @@ export const SkjemaMedSteg = (): JSX.Element => {
                   <RadioGroup
                     legend={'Har du norsk adresse?'}
                     selectedValue={hasLocalAddress}
-                    errorMessage={
-                      hasLocalAddressError
-                        ? 'Fyll ut om du har norsk adresse'
-                        : undefined
-                    }
+                    errorMessage={localAddressErrorMessage}
                     onChange={(e): void => {
-                      setHasLocalAddressError(false);
+                      setLocalAddressErrorMessage('');
                       setHasLocalAddress(e.target.value);
                     }}
                   >
@@ -294,7 +288,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                         errorMessage={contactsError.address}
                         required
                         onChange={handleInputChange('address')}
-                        onBlur={handleBlur('address')}
+                        onBlur={(e) => handleBlur('address', e.target.value)}
                       />
                       <div className={styles.flex}>
                         <TextField
@@ -310,7 +304,9 @@ export const SkjemaMedSteg = (): JSX.Element => {
                           errorMessage={contactsError.postalCode}
                           required
                           onChange={handleInputChange('postalCode')}
-                          onBlur={handleBlur('postalCode')}
+                          onBlur={(e) =>
+                            handleBlur('postalCode', e.target.value)
+                          }
                         />
                         <TextField
                           label={'Poststed'}
@@ -330,7 +326,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                         errorMessage={contactsError.phone}
                         required
                         onChange={handleInputChange('phone')}
-                        onBlur={handleBlur('phone')}
+                        onBlur={(e) => handleBlur('phone', e.target.value)}
                       />
                       <ErrorSummary
                         showErrorSummary={showErrorSummary}
@@ -338,21 +334,16 @@ export const SkjemaMedSteg = (): JSX.Element => {
                         title={'For å gå videre må du rette opp i følgende:'}
                         titleAs={'h3'}
                       >
-                        {contactsError.address && (
-                          <ErrorSummary.Error referenceId={'input_address'}>
-                            {'Adresse må fylles ut.'}
-                          </ErrorSummary.Error>
-                        )}
-                        {contactsError.postalCode && (
-                          <ErrorSummary.Error referenceId={'input_postalcode'}>
-                            {'Postnummer må fylles ut.'}
-                          </ErrorSummary.Error>
-                        )}
-                        {contactsError.phone && (
-                          <ErrorSummary.Error referenceId={'input_phone'}>
-                            {'Telefonnummer må fylles ut.'}
-                          </ErrorSummary.Error>
-                        )}
+                        {Object.entries(contactsError)
+                          .filter(([_, error]) => error)
+                          .map(([field, error]) => (
+                            <ErrorSummary.Error
+                              key={field}
+                              referenceId={`input_${field}`}
+                            >
+                              {error}
+                            </ErrorSummary.Error>
+                          ))}
                       </ErrorSummary>
                     </>
                   )}
@@ -390,12 +381,12 @@ export const SkjemaMedSteg = (): JSX.Element => {
               nextButtonText={'Send inn'}
               variant={activeStep === 2 ? 'active' : 'passive'}
               onNext={(): void => {
-                if (consent) {
+                if (hasGivenConsent) {
                   window.alert(
                     'Når Kvitteringssiden er ferdig, blir du sendt dit.'
                   );
                 } else {
-                  setConsentError(true);
+                  setConsentError('Du må bekrefte at opplysningene stemmer');
                 }
               }}
             >
@@ -420,16 +411,12 @@ export const SkjemaMedSteg = (): JSX.Element => {
                     )}
                   </DescriptionList>
                   <Checkbox
-                    value={'consent'}
-                    errorMessage={
-                      consentError
-                        ? 'Du må bekrefte at opplysningene stemmer'
-                        : undefined
-                    }
+                    checked={hasGivenConsent}
+                    errorMessage={consentError}
                     required
                     onChange={(e): void => {
-                      setConsentError(false);
-                      setConsent(e.target.value);
+                      setConsentError('');
+                      setHasGivenConsent(e.target.checked);
                     }}
                   >
                     {'Jeg bekrefter at opplysningene over stemmer.'}
