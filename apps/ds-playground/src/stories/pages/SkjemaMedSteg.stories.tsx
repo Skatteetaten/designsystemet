@@ -290,7 +290,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                         onChange={handleInputChange('address')}
                         onBlur={(e) => handleBlur('address', e.target.value)}
                       />
-                      <div className={styles.flex}>
+                      <div className={styles.flexWrap}>
                         <TextField
                           id={'input_postalcode'}
                           label={'Postnummer'}
@@ -355,7 +355,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                 </>
               )}
               {activeStep > 1 && (
-                <div className={`${styles.flex} ${styles.marginTopM}`}>
+                <div className={`${styles.flexWrap} ${styles.marginTopM}`}>
                   <Paragraph className={styles.marginRightM}>
                     {hasLocalAddress === 'ja'
                       ? `${me.name}, ${contactsInput.address}, ${contactsInput.postalCode}, ${contactsInput.city}, ${contactsInput.phone}`
@@ -427,13 +427,17 @@ export const SkjemaMedSteg = (): JSX.Element => {
           )}
         </StepList>
         <div className={styles.article}>
-          <div className={styles.flex}>
-            <InlineButton className={styles.marginRightM}>
+          <div className={styles.flexWrap}>
+            <InlineButton
+              className={`${styles.marginRightM} ${styles.marginBottomM}`}
+            >
               {'Lagre og fortsett senere'}
             </InlineButton>
-            <InlineButton>{'Avbryt og slett'}</InlineButton>
+            <InlineButton className={styles.marginBottomM}>
+              {'Avbryt og slett'}
+            </InlineButton>
           </div>
-          <Paragraph className={styles.marginTopM} hasSpacing>
+          <Paragraph hasSpacing>
             <i>
               {
                 'Når du klikker på "Neste", blir informasjonen som du har skrevet inn automatisk lagret.'

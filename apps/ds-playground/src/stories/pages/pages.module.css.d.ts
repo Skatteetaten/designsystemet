@@ -19,7 +19,7 @@ declare const classNames: {
   readonly marginBottomM: 'marginBottomM';
   readonly marginTopL: 'marginTopL';
   readonly marginRightM: 'marginRightM';
-  readonly flex: 'flex';
+  readonly flexWrap: 'flexWrap';
   readonly address: 'address';
   readonly postalCode: 'postalCode';
   readonly city: 'city';
