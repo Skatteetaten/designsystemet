@@ -63,7 +63,7 @@ export const TextField = ({
   useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `textFieldErrorId-${useId()}`;
   const generatedId = `textFieldTextboxId-${useId()}`;
-  const characterCounterId = `textAreaCharacterCounter-${useId()}`;
+  const characterCounterId = `textFieldCharacterCounter-${useId()}`;
   const textboxId = externalId ?? generatedId;
 
   const textboxRef = useRef<HTMLInputElement>(null);
@@ -202,7 +202,7 @@ export const TextField = ({
         {label}
       </LabelWithHelp>
       <input
-        ref={ref}
+        ref={textboxRef}
         id={textboxId}
         className={textboxClassName}
         data-testid={dataTestId}
@@ -228,7 +228,6 @@ export const TextField = ({
         onFocus={onFocus}
         onKeyDown={handleKeyDown}
       />
-
       {characterLimit ? (
         <InputCounter
           inputRef={textboxRef}

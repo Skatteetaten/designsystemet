@@ -89,7 +89,7 @@ exports[`Tester/TextField WithCharacterLimit smoke-test 1`] = `
            class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
            data-variant="medium"
            autocomplete="off"
-           aria-describedby="textAreaCharacterCounter-:r3m:"
+           aria-describedby="textFieldCharacterCounter-:r3m:"
            value
     >
     <div class="_inputCounter_uwfwg_1"
@@ -119,7 +119,7 @@ exports[`Tester/TextField WithCharacterLimitAndError smoke-test 1`] = `
            class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
            data-variant="medium"
            autocomplete="off"
-           aria-describedby="textFieldErrorId-:r3s: textAreaCharacterCounter-:r3u:"
+           aria-describedby="textFieldErrorId-:r3s: textFieldCharacterCounter-:r3u:"
            aria-invalid="true"
            value
     >
@@ -164,12 +164,12 @@ exports[`Tester/TextField WithCharacterLimitExceeded play-test 1`] = `
            class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
            data-variant="medium"
            autocomplete="off"
-           aria-describedby="textAreaCharacterCounter-:r3q:"
+           aria-describedby="textFieldCharacterCounter-:r3q:"
            value="Dette er en veldig lang tekst som bør være mer enn 50 tegn"
     >
     <div class="_inputCounter_uwfwg_1 _inputCounter_overLimit_uwfwg_5"
          aria-live="polite"
-         id="textAreaCharacterCounter-:r3q:"
+         id="textFieldCharacterCounter-:r3q:"
     >
       8 tegn for mye
     </div>
