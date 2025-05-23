@@ -347,7 +347,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:rv:"
+    <label id="labelId-:r12:"
            class="_label_348na_5"
            for="input_aar"
     >
@@ -358,11 +358,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
            data-variant="medium"
            autocomplete="off"
            required
-           aria-describedby="textFieldErrorId-:rt:"
+           aria-describedby="textFieldErrorId-:rv:"
            aria-invalid="true"
            value="1009"
     >
-    <div id="textFieldErrorId-:rt:"
+    <div id="textFieldErrorId-:rv:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -438,7 +438,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
 <div data-test-block="true">
   <div class="bottomSpacingXL">
-    <label id="labelId-:rj:"
+    <label id="labelId-:rk:"
            class="_label_348na_5"
            for="input_aar"
     >
