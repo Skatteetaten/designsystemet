@@ -61,4 +61,7 @@
 
   /* <hr /> Gjelder tabellheader, inputfelt, Accordion-rader */
   --semantic-divider-100: var(--palette-graphite-100);
+
+  /* <hr /> Gjelder divider. 80 in hex = 50% opacity */
+  --palette-dark-alpha-50: #1a1a1a80;
 }
