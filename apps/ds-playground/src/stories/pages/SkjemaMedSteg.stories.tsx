@@ -10,7 +10,12 @@ import {
 import { InlineButton, Link, LinkGroup } from '@skatteetaten/ds-buttons';
 import { StepList } from '@skatteetaten/ds-collections';
 import { Card, DescriptionList } from '@skatteetaten/ds-content';
-import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  formatNationalIdentityNumber,
+  formatPhoneNumber,
+  langToLocale,
+} from '@skatteetaten/ds-core-utils';
 import {
   Checkbox,
   ErrorSummary,
@@ -148,7 +153,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
 
   const handleNextStep = (): void => {
     if (!hasLocalAddress) {
-      setLocalAddressErrorMessage('Fyll ut om du har norsk adresse');
+      setLocalAddressErrorMessage('Svar på om du har norsk adresse.');
       return;
     }
 
@@ -235,8 +240,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
               {me.name}
             </DescriptionList.Element>
             <DescriptionList.Element term={'Fødselsnummer'}>
-              {/* formattere  */}
-              {me.personId}
+              {formatNationalIdentityNumber(me.personId)}
             </DescriptionList.Element>
           </DescriptionList>
           <Paragraph className={styles.wideContent} hasSpacing>
@@ -358,7 +362,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                 <div className={`${styles.flexWrap} ${styles.marginTopM}`}>
                   <Paragraph className={styles.marginRightM}>
                     {hasLocalAddress === 'ja'
-                      ? `${me.name}, ${contactsInput.address}, ${contactsInput.postalCode}, ${contactsInput.city}, ${contactsInput.phone}`
+                      ? `${me.name}, ${contactsInput.address}, ${contactsInput.postalCode}, ${contactsInput.city}, ${formatPhoneNumber(contactsInput.phone)}`
                       : `${me.name}, Utenlandsk adresse`}
                   </Paragraph>
                   <InlineButton
@@ -386,7 +390,9 @@ export const SkjemaMedSteg = (): JSX.Element => {
                     'Når Kvitteringssiden er ferdig, blir du sendt dit.'
                   );
                 } else {
-                  setConsentError('Du må bekrefte at opplysningene stemmer');
+                  setConsentError(
+                    'Du må bekrefte at opplysningene over stemmer.'
+                  );
                 }
               }}
             >
@@ -405,8 +411,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                     </DescriptionList.Element>
                     {hasLocalAddress && (
                       <DescriptionList.Element term={'Telefon'}>
-                        {/* formattere  */}
-                        {contactsInput.phone}
+                        {formatPhoneNumber(contactsInput.phone)}
                       </DescriptionList.Element>
                     )}
                   </DescriptionList>
