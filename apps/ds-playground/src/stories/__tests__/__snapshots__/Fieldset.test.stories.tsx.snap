@@ -84,7 +84,7 @@ exports[`Tester/Fieldset WithDescription play-test 1`] = `
     >
       Ledetekst
     </div>
-    <div class="_description_10ldw_17">
+    <div class="_description_sf6vs_17">
       Kort hjelpetekst
     </div>
     <div class="_contentContainer_s6jvz_32">
@@ -133,7 +133,7 @@ exports[`Tester/Fieldset WithHelpTextSvgPathAndTitle play-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:ra:"
@@ -175,7 +175,7 @@ exports[`Tester/Fieldset WithHelpToggleEvent smoke-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:re:"
@@ -217,7 +217,7 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
     >
       Ledetekst
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27 _srOnly_10ldw_59"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27 _srOnly_sf6vs_60"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r6:"
@@ -237,7 +237,7 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_10ldw_17  _srOnly_10ldw_59">
+    <div class="_description_sf6vs_17  _srOnly_sf6vs_60">
       Kort hjelpetekst
     </div>
     <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">

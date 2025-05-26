@@ -128,3 +128,12 @@ export const formatNationalIdentityNumber = (
 
   return result.value;
 };
+
+export const formatPhoneNumber = (phoneNumber: string): string => {
+  const result = formatter({
+    type: 'phoneNumber',
+    value: phoneNumber,
+  });
+
+  return result.value;
+};

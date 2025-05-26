@@ -103,13 +103,16 @@ export const SearchField = (({
 
   useEffect(() => {
     if (!shouldShowResults) {
+      setCurrentFocus(-1);
       return;
     }
     const handleOutsideMenuEvent: EventListener = (event): void => {
       const node = event.target as Node;
+      if (node === inputRef.current) {
+        setCurrentFocus(-1);
+      }
       if (!listboxRef?.current?.contains(node) && node !== inputRef.current) {
         setShowResults(false);
-        setCurrentFocus(-1);
         event.type === 'click' && listboxRef?.current?.focus();
       }
     };
@@ -211,7 +214,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             type={'search'}
             onKeyDown={(event) => {
               if (event.key === 'Enter') {
-                onSearch?.(event);
+                onSearch?.(event, inputRef?.current?.value);
               }
             }}
             onBlur={onBlur}
@@ -285,7 +288,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             className={searchButtonClassName}
             disabled={disabled}
             onClick={(event): void => {
-              onSearchClick?.(event);
+              onSearchClick?.(event, inputRef?.current?.value);
             }}
           >
             {hasSearchButtonIcon ? (

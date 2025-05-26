@@ -47,5 +47,7 @@
   "searchfield.ButtonTitle": "Oza",
   "searchfield.ClearButtonTitle": "Bidjat ruovttoluotta",
   "searchfield.Focus": "Geavat vulos/bajás boaluid válljet evttohusaid",
-  "searchfield.NumberOfResults": "{{ant}} evttohus/evttohusat."
+  "searchfield.NumberOfResults": "{{ant}} evttohus/evttohusat.",
+  "textarea.CharactersLeft": "({{ant}} tegn igjen)",
+  "textarea.TooManyCharacters": "({{ant}} tegn for mye)"
 }

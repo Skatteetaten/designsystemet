@@ -1,3 +1,5 @@
+/* saksvisning */
+
 .wrapperInternalLayout {
   display: var(--semantic-responsive-internal-container-display);
   flex-direction: var(--semantic-responsive-internal-container-flex-direction);
@@ -67,8 +69,11 @@
   width: var(--semantic-responsive-wide-content);
 }
 
+/* skjema med steg */
+
 .mainExternal {
   width: var(--semantic-responsive-container);
+  box-sizing: border-box;
   padding: var(--semantic-responsive-container-spacing);
   margin: auto;
 }
@@ -89,9 +94,53 @@
   margin-top: var(--spacing-m);
 }
 
+.marginBottomM {
+  margin-bottom: var(--spacing-m);
+}
+
+.marginTopL {
+  margin-top: var(--spacing-l);
+}
+
 .marginRightM {
   margin-right: var(--spacing-m);
 }
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.address {
+  width: 100%;
+  max-width: 338px;
+  margin-bottom: var(--spacing-m);
+}
+
+.postalCode {
+  width: 109px;
+  margin-bottom: var(--spacing-m);
+}
+
+.city {
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: var(--spacing-m);
+}
+
+.phone {
+  width: 193px;
+}
+
+.preLine {
+  white-space: pre-line;
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+/* kvittering */
 
 .checkIconContainer {
   display: flex;
@@ -132,8 +181,4 @@
 
 .stepListStep {
   padding: var(--spacing-xxl) 0 var(--spacing-m);
-}
-
-.preLine {
-  white-space: pre-line;
 }

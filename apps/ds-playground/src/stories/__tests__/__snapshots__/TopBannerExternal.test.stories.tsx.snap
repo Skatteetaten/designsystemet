@@ -4,7 +4,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -24,8 +24,8 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -34,52 +34,37 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -88,36 +73,191 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
-            <button class="_button_2n6jz_1"
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="false"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
+        </div>
+        <div class="_separatorLeft_1ns8f_37">
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerExternal ClickSearchOpenAndClose play-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <div id="topbanner-focus-target"
+         class="_srOnly_1ns8f_118"
+         tabindex="-1"
+    >
+    </div>
+    <a href="main"
+       class="_skipLink_nmfvk_1"
+    >
+      <span class="_skipLinkContent_nmfvk_22">
+        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+           href="https://www.skatteetaten.no/"
+        >
+          <img class="_logo_1u6ee_1"
+               alt="Forside Skatteetaten"
+               src="[REMOVED]"
+          >
+        </a>
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       aria-hidden="true"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
+                  >
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
+                    </path>
+                  </svg>
+                </span>
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
                      role="img"
                 >
-                  <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                  <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
             </button>
+            <div class="_menuArrow_72xc2_67">
+            </div>
           </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="false"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Søk
+            </span>
+          </button>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="false"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -129,7 +269,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -149,8 +289,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -159,52 +299,37 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -213,17 +338,30 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -235,7 +373,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -255,8 +393,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -265,52 +403,37 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -319,17 +442,30 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -341,7 +477,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -361,8 +497,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -371,52 +507,37 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -425,17 +546,30 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -447,7 +581,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -467,8 +601,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -477,52 +611,37 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -531,17 +650,30 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -553,7 +685,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -573,8 +705,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -583,52 +715,37 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -637,17 +754,30 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -663,7 +793,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
           class="dummyClassname"
   >
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -683,8 +813,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -693,52 +823,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -747,17 +862,30 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -769,7 +897,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -789,8 +917,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -799,9 +927,9 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
+        <div class="_contentContainer_1ns8f_23">
           <div class>
-            <label id="labelId-:rc:"
+            <label id="labelId-:rd:"
                    class="_label_348na_5  _srOnly_348na_18"
                    for="textFieldTextboxId-:rb:"
             >
@@ -819,51 +947,36 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
             >
             </div>
           </div>
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -872,17 +985,30 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -894,7 +1020,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -914,8 +1040,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -924,52 +1050,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -978,17 +1089,30 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -1000,7 +1124,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -1020,8 +1144,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -1030,52 +1154,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1084,47 +1193,60 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -1230,7 +1352,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -1250,8 +1372,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -1260,52 +1382,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1314,47 +1421,60 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -1460,7 +1580,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -1480,8 +1600,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -1490,52 +1610,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1544,47 +1649,60 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -1692,7 +1810,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
           id="dummyIdForwardedFromRef"
   >
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -1712,8 +1830,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -1722,52 +1840,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1776,17 +1879,30 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -1798,7 +1914,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -1818,8 +1934,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -1828,52 +1944,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1882,57 +1983,70 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71 _columnsThree_64p0f_82 _columnsTwo_64p0f_82"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Third column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69 _columnsThree_1ns8f_80 _columnsTwo_1ns8f_80"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Second column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Third column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -2048,7 +2162,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -2068,8 +2182,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -2078,52 +2192,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2132,57 +2231,70 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71 _columnsThree_64p0f_82 _columnsTwo_64p0f_82"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Third column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69 _columnsThree_1ns8f_80 _columnsTwo_1ns8f_80"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Second column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Third column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -2298,7 +2410,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -2318,8 +2430,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -2328,52 +2440,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2382,57 +2479,70 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71 _columnsThree_64p0f_82 _columnsTwo_64p0f_82"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Third column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69 _columnsThree_1ns8f_80 _columnsTwo_1ns8f_80"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Second column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Third column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -2548,7 +2658,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -2568,8 +2678,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -2578,52 +2688,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2632,52 +2727,65 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71  _columnsTwo_64p0f_82"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69  _columnsTwo_1ns8f_80"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Second column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -2788,7 +2896,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -2808,8 +2916,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -2818,52 +2926,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2872,52 +2965,65 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71  _columnsTwo_64p0f_82"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69  _columnsTwo_1ns8f_80"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Second column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -3028,7 +3134,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_64p0f_98"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -3048,8 +3154,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_64p0f_58">
-      <div class="_topContainer_64p0f_6">
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
         <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
@@ -3058,52 +3164,37 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_64p0f_22">
-          <div class="_content_64p0f_22">
-            <div class="_container_72xc2_5">
-              <div class>
-              </div>
-              <button class="_button_2n6jz_1  _menuButton_72xc2_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_72xc2_20">
-                  <span class="_flagIcon_72xc2_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_72xc2_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_72xc2_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3112,52 +3203,65 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_72xc2_67">
-              </div>
-            </div>
-            <button class="_button_2n6jz_1"
-                    aria-expanded="true"
-                    type="button"
-            >
-              <span class="_iconWrapper_2n6jz_18">
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-                  </path>
-                </svg>
               </span>
-              <span class="_buttonText_2n6jz_27">
-                Meny
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
               </span>
-            </button>
-            <div class="_mainMenu_64p0f_63">
-              <nav aria-label="Temaoversikt"
-                   class="_columns_64p0f_71  _columnsTwo_64p0f_82"
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
               >
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
-                  </div>
-                </div>
-                <div class="_column_64p0f_71">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
-                  </div>
-                </div>
-              </nav>
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
+          </div>
+          <button class="_button_2n6jz_1"
+                  aria-expanded="true"
+                  type="button"
+          >
+            <span class="_iconWrapper_2n6jz_18">
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+                </path>
+              </svg>
+            </span>
+            <span class="_buttonText_2n6jz_27">
+              Meny
+            </span>
+          </button>
+          <div class="_mainMenu_1ns8f_60">
+            <nav aria-label="Temaoversikt"
+                 class="_columns_1ns8f_69  _columnsTwo_1ns8f_80"
+            >
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  First column with pink background
+                </div>
+              </div>
+              <div class="_column_1ns8f_69">
+                <div class="dummyClassNamePinkBackground">
+                  Second column with pink background
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="_separator_64p0f_35">
-        <div class="_separatorRight_64p0f_48">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_64p0f_40">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>

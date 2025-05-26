@@ -370,7 +370,7 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3d:"
@@ -390,7 +390,7 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_10ldw_17   dummyClassname">
+    <div class="_description_sf6vs_17   dummyClassname">
       beskrivelse
     </div>
     <div class="_contentContainer_s6jvz_32">
@@ -494,7 +494,7 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <div class="_description_10ldw_17">
+    <div class="_description_sf6vs_17">
       Vi trenger å vite om du har barn.
     </div>
     <div class="_contentContainer_s6jvz_32">
@@ -846,7 +846,7 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r34:"
@@ -947,7 +947,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_10ldw_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r2i:"
@@ -967,11 +967,11 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_helpBox_10ldw_31">
-      <div class="_helpBoxText_10ldw_44">
+    <div class="_helpBox_sf6vs_32">
+      <div class="_helpBoxText_sf6vs_45">
         Vi trenger å vite om du har barn.
       </div>
-      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_10ldw_51"
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_sf6vs_52"
               data-brightness="default"
               type="button"
       >

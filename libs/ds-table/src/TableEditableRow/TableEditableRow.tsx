@@ -1,11 +1,7 @@
 import { useContext, useId, useImperativeHandle, useRef, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { EditSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableEditableRowProps } from './TableEditableRow.types';
@@ -54,7 +50,6 @@ export const TableEditableRow = ({
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const generatedId = useId();
   const id = idExternal ?? generatedId;
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const isExpanded = id === context?.rowInEditModeId;
   const concatenatedClassNames = `${
     isExpanded ? styles.editableRow_expanded : ''
@@ -96,7 +91,6 @@ export const TableEditableRow = ({
       }
       context={context}
       svgPath={EditSVGpath}
-      isDesktop={isDesktop}
       hideIconButton={isExpanded}
       onExpandClick={(): void => {
         onEdit && onEdit();

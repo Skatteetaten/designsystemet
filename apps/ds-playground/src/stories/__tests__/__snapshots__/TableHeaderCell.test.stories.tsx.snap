@@ -6,7 +6,7 @@ exports[`Tester/Table/HeaderCell WithAttributes play-test 1`] = `
     <thead>
       <tr class>
         <th id="htmlId"
-            class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 dummyClassname"
+            class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51 dummyClassname"
             lang="nb"
             data-testid="123ID"
         >
@@ -23,7 +23,7 @@ exports[`Tester/Table/HeaderCell WithChildren play-test 1`] = `
   <table>
     <thead>
       <tr class>
-        <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51">
+        <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
           columnheader
         </th>
       </tr>
@@ -37,7 +37,7 @@ exports[`Tester/Table/HeaderCell WithRef play-test 1`] = `
   <table>
     <thead>
       <tr class>
-        <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51"
+        <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
             id="dummyIdForwardedFromRef"
         >
           cake

@@ -1,0 +1,8 @@
+.inputCounter {
+  color: var(--semantic-disabled-foreground);
+  font-size: var(--font-size-s);
+
+  &_overLimit {
+    color: var(--semantic-danger-foreground);
+  }
+}

@@ -15,6 +15,7 @@ import {
 
 import { TextAreaProps } from './TextArea.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { InputCounter } from '../InputCounter/InputCounter';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './TextArea.module.scss';
@@ -35,6 +36,7 @@ export const TextArea = ({
   titleHelpSvg,
   autoComplete = getCommonAutoCompleteDefault(),
   autoCorrect,
+  characterLimit,
   defaultValue,
   disabled,
   form,
@@ -57,6 +59,7 @@ export const TextArea = ({
   useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `textAreaErrorId-${useId()}`;
   const generatedId = `textAreaTextboxId-${useId()}`;
+  const characterCounterId = `textAreaCharacterCounter-${useId()}`;
   const textboxId = externalId ?? generatedId;
 
   const textboxRef = useRef<HTMLTextAreaElement>(null);
@@ -88,6 +91,11 @@ export const TextArea = ({
     `${styles.textarea}  ${autosizeTextarea} ${label && !hideLabel ? styles.textareaMarginTop : ''} ${
       classNames?.textbox ?? ''
     }`.trim();
+
+  const ariaDescribedBy =
+    [errorMessage && errorId, characterLimit && characterCounterId]
+      .filter(Boolean)
+      .join(' ') || undefined;
 
   return (
     <div
@@ -126,12 +134,20 @@ export const TextArea = ({
         rows={rows}
         spellCheck={spellCheck}
         value={value}
-        aria-describedby={errorMessage ? errorId : undefined}
+        aria-describedby={ariaDescribedBy}
         aria-invalid={!!errorMessage || undefined}
         onBlur={onBlur}
         onChange={handleChange}
         onFocus={onFocus}
       />
+      {characterLimit ? (
+        <InputCounter
+          inputRef={textboxRef}
+          id={characterCounterId}
+          characterLimit={characterLimit}
+          value={value ? String(value) : undefined}
+        />
+      ) : null}
       <ErrorMessage
         id={errorId}
         showError={!!errorMessage}

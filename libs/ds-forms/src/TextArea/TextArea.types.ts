@@ -50,6 +50,8 @@ export interface TextAreaCommonProps
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
+  /** Viser teller over antall tillatte tegn i feltet. Du må fortsatt håndtere faktiske tegnbegrensninger/validering ved behov. */
+  characterLimit?: number;
   /** Tekst på feilmelding */
   errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */

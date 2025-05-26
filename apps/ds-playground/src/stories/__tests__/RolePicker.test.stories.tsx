@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, within } from '@storybook/test';
+import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -942,5 +942,47 @@ export const WithMinimumEntitiesForSearch = {
 
     const searchInput = within(modal).queryByRole('searchbox');
     expect(searchInput).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithCloseError = {
+  name: 'With Close Error',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  render: ErrorTemplate,
+  argTypes: {
+    me: { table: { disable: false } },
+    people: { table: { disable: false } },
+    businesses: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const firstLink = within(modal).getAllByRole('link')[0];
+
+    await fireEvent.click(firstLink);
+
+    const alertText = await within(modal).findByText(
+      'Du har ikke tilgang til skjemaet på vegne av denne personen. Kontakt personen hvis du trenger tilgang.'
+    );
+
+    const alert = alertText.parentElement as HTMLDivElement;
+
+    expect(alert).toBeInTheDocument();
+
+    const iconButton = within(alert).getByRole('button');
+    expect(iconButton).toBeInTheDocument();
+    await fireEvent.click(iconButton);
+    await waitFor(() => expect(alert).not.toBeInTheDocument());
+
+    expect(firstLink).toHaveFocus();
   },
 } satisfies Story;

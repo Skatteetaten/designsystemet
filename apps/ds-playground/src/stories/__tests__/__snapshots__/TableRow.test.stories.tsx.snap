@@ -14,12 +14,12 @@ exports[`Tester/Table/Row WithAttributes play-test 1`] = `
             data-testid="123ID"
         >
           <th id="Id123"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
@@ -39,15 +39,15 @@ exports[`Tester/Table/Row WithExpandButtonPositionRight smoke-test 1`] = `
       <tbody>
         <tr class>
           <th id="Id123"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -75,6 +75,159 @@ exports[`Tester/Table/Row WithExpandButtonPositionRight smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Table/Row WithExpandButtonTitle smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
+        testtabell
+      </caption>
+      <tbody>
+        <tr class>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              style="max-width: 101px;"
+          >
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+                    data-brightness="default"
+                    type="button"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
+                </path>
+              </svg>
+              <span class>
+                Vis mer
+              </span>
+            </button>
+          </td>
+          <th id="Id123"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              scope="row"
+          >
+            Cake
+          </th>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
+            3,000
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/Table/Row WithExpandTextLeft play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
+        testtabell
+      </caption>
+      <tbody>
+        <tr class>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              style="max-width: 95.5312px;"
+          >
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="Id123"
+                    aria-expanded="true"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M5.88 16.88L12 10.773L18.12 16.88L20 15L12 7L4 15L5.88 16.88Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+            <div class="_expandableContent_ialpx_28"
+                 style="width: 209px;"
+            >
+              Ekstra innhold
+            </div>
+          </td>
+          <th id="Id123"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              scope="row"
+          >
+            Cake
+          </th>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
+            3,000
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/Table/Row WithExpandTextRight play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
+        testtabell
+      </caption>
+      <tbody>
+        <tr class="_row_noBorder_ialpx_40">
+          <th id="Id123"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              scope="row"
+          >
+            Cake
+          </th>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
+            3,000
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+                    data-brightness="default"
+                    type="button"
+                    aria-describedby="Id123"
+                    aria-expanded="true"
+            >
+              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M5.88 16.88L12 10.773L18.12 16.88L20 15L12 7L4 15L5.88 16.88Z">
+                </path>
+              </svg>
+              <span class>
+                Detaljer
+              </span>
+            </button>
+          </td>
+        </tr>
+        <tr class="_expandedRowRight_ialpx_36">
+          <td colspan="3">
+            <div>
+              Ekstra innhold
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
 exports[`Tester/Table/Row WithExpandableContent smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
@@ -84,7 +237,9 @@ exports[`Tester/Table/Row WithExpandableContent smoke-test 1`] = `
       </caption>
       <tbody>
         <tr class>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+              style="max-width: 40px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -106,12 +261,12 @@ exports[`Tester/Table/Row WithExpandableContent smoke-test 1`] = `
             </button>
           </td>
           <th id="Id123"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
@@ -133,12 +288,12 @@ exports[`Tester/Table/Row WithRef play-test 1`] = `
             id="dummyIdForwardedFromRef"
         >
           <th id="Id123"
-              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+              class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>

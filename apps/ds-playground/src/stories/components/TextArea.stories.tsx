@@ -27,6 +27,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    characterLimit: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     helpSvgPath: {
