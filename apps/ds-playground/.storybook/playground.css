@@ -294,3 +294,15 @@ a.resetLinkStyling {
   padding-right: var(--spacing-xs);
   border-right: 1px solid var(--palette-graphite-0);
 }
+
+.evenRow {
+  background-color: var(--palette-graphite-5);
+}
+
+.oddRow {
+  background-color: var(--palette-graphite-0);
+}
+
+.stripedTable:nth-of-type(even) {
+  background-color: var(--palette-graphite-5);
+}
