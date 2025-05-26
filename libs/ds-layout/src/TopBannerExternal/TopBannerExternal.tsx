@@ -218,7 +218,6 @@ export const TopBannerExternal = ({
                 <TopBannerUserButton user={user} onClick={onUserClick} />
                 <TopBannerButton
                   svgPath={LogOutSVGpath}
-                  variant={'outline'}
                   onClick={onLogOutClick}
                 >
                   {t('topbannerbutton.Logout')}

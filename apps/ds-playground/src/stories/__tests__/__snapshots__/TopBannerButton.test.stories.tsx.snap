@@ -1,127 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke-test 1`] = `
-<div data-test-block="true">
-  <div class="topbannerButtonContainer">
-    <button class="_button_2n6jz_1"
-            type="button"
-    >
-      <span class="_iconWrapper_2n6jz_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-hidden="true"
-             role="img"
-        >
-          <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-          </path>
-        </svg>
-      </span>
-      <span class="_buttonText_2n6jz_27">
-        Meny
-      </span>
-    </button>
-    <button class="_button_2n6jz_1 _button_outline_2n6jz_90"
-            type="button"
-    >
-      <span class="_iconWrapper_2n6jz_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-hidden="true"
-             role="img"
-        >
-          <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
-          </path>
-        </svg>
-      </span>
-      <span class="_buttonText_2n6jz_27">
-        Logg ut
-      </span>
-    </button>
-    <button class="_button_2n6jz_1 _button_filled_2n6jz_32"
-            type="button"
-    >
-      <span class="_iconWrapper_2n6jz_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-hidden="true"
-             role="img"
-        >
-          <path d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 0 4Zm6 3V10H6v10h12Zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 1 1 10 0v2h1Zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z">
-          </path>
-        </svg>
-      </span>
-      <span class="_buttonText_2n6jz_27">
-        Logg in
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smoke-test 1`] = `
-<div data-test-block="true">
-  <div class="topbannerButtonContainer">
-    <button class="_button_2n6jz_1"
-            type="button"
-    >
-      <span class="_iconWrapper_2n6jz_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-hidden="true"
-             role="img"
-        >
-          <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-          </path>
-        </svg>
-      </span>
-      <span class="_buttonText_2n6jz_27">
-        Meny
-      </span>
-    </button>
-    <button class="_button_2n6jz_1 _button_outline_2n6jz_90"
-            type="button"
-    >
-      <span class="_iconWrapper_2n6jz_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-hidden="true"
-             role="img"
-        >
-          <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
-          </path>
-        </svg>
-      </span>
-      <span class="_buttonText_2n6jz_27">
-        Logg ut
-      </span>
-    </button>
-    <button class="_button_2n6jz_1 _button_filled_2n6jz_32"
-            type="button"
-    >
-      <span class="_iconWrapper_2n6jz_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-hidden="true"
-             role="img"
-        >
-          <path d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 0 4Zm6 3V10H6v10h12Zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 1 1 10 0v2h1Zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z">
-          </path>
-        </svg>
-      </span>
-      <span class="_buttonText_2n6jz_27">
-        Logg in
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
 exports[`Tester/TopBanner/TopBannerButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
   <button class="_button_2n6jz_1"
@@ -186,29 +64,6 @@ exports[`Tester/TopBanner/TopBannerButton (intern) VariantFilledOnMobileScreen s
     </span>
     <span class="_buttonText_2n6jz_27">
       Logg inn
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Tester/TopBanner/TopBannerButton (intern) VariantOutlineOnMobileScreen smoke-test 1`] = `
-<div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_outline_2n6jz_90"
-          type="button"
-  >
-    <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
-        </path>
-      </svg>
-    </span>
-    <span class="_buttonText_2n6jz_27">
-      Logg ut
     </span>
   </button>
 </div>
@@ -319,11 +174,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithTitle play-test 1`] = `
       <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r6:"
+           aria-labelledby="svgtitle-:r5:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r6:">
+        <title id="svgtitle-:r5:">
           Title
         </title>
         <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
@@ -355,29 +210,6 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantFilled smoke-test 
     </span>
     <span class="_buttonText_2n6jz_27">
       Logg inn
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantOutline smoke-test 1`] = `
-<div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_outline_2n6jz_90"
-          type="button"
-  >
-    <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
-        </path>
-      </svg>
-    </span>
-    <span class="_buttonText_2n6jz_27">
-      Logg ut
     </span>
   </button>
 </div>
