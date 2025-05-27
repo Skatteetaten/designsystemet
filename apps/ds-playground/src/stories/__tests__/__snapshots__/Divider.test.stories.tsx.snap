@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Divider Defaults smoke-test 1`] = `
+<div data-test-block="true">
+  <hr class="_divider_156uu_1"
+      data-spacing-top="s"
+      data-spacing-bottom="s"
+  >
+</div>
+`;
+
+exports[`Tester/Divider IsHRElement play-test 1`] = `
+<div data-test-block="true">
+  <hr class="_divider_156uu_1"
+      data-spacing-top="s"
+      data-spacing-bottom="s"
+  >
+</div>
+`;
+
+exports[`Tester/Divider WithAriaHidden play-test 1`] = `
+<div data-test-block="true">
+  <hr class="_divider_156uu_1"
+      aria-hidden="true"
+      data-spacing-top="s"
+      data-spacing-bottom="s"
+  >
+</div>
+`;
+
+exports[`Tester/Divider WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <hr id="htmlId"
+      lang="nb"
+      data-testid="123ID"
+      class="_divider_156uu_1  dummyClassname"
+      data-spacing-top="s"
+      data-spacing-bottom="s"
+  >
+</div>
+`;
+
+exports[`Tester/Divider WithRef play-test 1`] = `
+<div data-test-block="true">
+  <hr class="_divider_156uu_1"
+      data-spacing-top="s"
+      data-spacing-bottom="s"
+      id="dummyIdForwardedFromRef"
+  >
+</div>
+`;
+
+exports[`Tester/Divider WithSubtle smoke-test 1`] = `
+<div data-test-block="true">
+  <hr class="_divider_156uu_1 _divider_subtle_156uu_7"
+      data-spacing-top="s"
+      data-spacing-bottom="s"
+  >
+</div>
+`;

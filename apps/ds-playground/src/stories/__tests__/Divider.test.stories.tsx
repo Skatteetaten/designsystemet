@@ -68,6 +68,20 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const Defaults = {
+  name: 'Defaults (A1)',
+} satisfies Story;
+
+export const WithSubtle = {
+  name: 'With Subtle (A3)',
+  args: {
+    subtle: true,
+  },
+  argTypes: {
+    subtle: { table: { disable: false } },
+  },
+} satisfies Story;
+
 export const IsHRElement = {
   name: 'Is <hr>-element (B1)',
   parameters: {
