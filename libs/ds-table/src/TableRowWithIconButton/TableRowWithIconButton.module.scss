@@ -33,8 +33,12 @@
   position: relative;
   box-sizing: border-box;
   padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
-  margin-top: var(--spacing-m);
+  margin-top: var(--spacing-xs);
   margin-left: calc(var(--spacing-xs) * -1);
+
+  &_compact {
+    margin-top: 0;
+  }
 }
 
 .expandedRowRight {

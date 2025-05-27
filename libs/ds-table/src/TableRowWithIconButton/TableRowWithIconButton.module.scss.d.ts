@@ -5,6 +5,7 @@ declare const classNames: {
   readonly expandButton: 'expandButton';
   readonly expandButton_compact: 'expandButton_compact';
   readonly expandableContent: 'expandableContent';
+  readonly expandableContent_compact: 'expandableContent_compact';
   readonly expandedRowRight: 'expandedRowRight';
   readonly row_noBorder: 'row_noBorder';
   readonly hideIcon: 'hideIcon';
