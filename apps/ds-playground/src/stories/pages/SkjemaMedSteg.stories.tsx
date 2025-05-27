@@ -36,7 +36,8 @@ import {
 import { Person, RolePicker } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './pages.module.css';
+import styles from './SkjemaMedSteg.module.css';
+import stylesAsString from './SkjemaMedSteg.module.css?raw';
 
 export default {
   title: 'Sidetyper/Ekstern/Skjema med steg',
@@ -44,6 +45,13 @@ export default {
     layout: 'fullscreen',
     controls: {
       disable: true,
+    },
+    docs: {
+      source: {
+        transform: (code: string): string => {
+          return `/* CSS */ \n ${stylesAsString} \n /* TSX */ \n ${code}`;
+        },
+      },
     },
   },
 };
