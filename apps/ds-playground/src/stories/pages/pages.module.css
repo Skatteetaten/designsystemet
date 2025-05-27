@@ -151,6 +151,7 @@
   border-radius: 50%;
   margin-right: var(--spacing-l);
   background-color: var(--palette-forest-100);
+  box-shadow: 0 0 0 4px var(--palette-graphite-0);
   outline: 2px solid var(--palette-forest-100);
   outline-offset: 2px;
 }

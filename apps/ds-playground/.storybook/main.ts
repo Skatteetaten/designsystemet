@@ -38,6 +38,7 @@ const config: StorybookConfig = {
     '@storybook/addon-coverage',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
+    '@storybook/addon-links',
     '@nx/react/plugins/storybook',
   ],
   core: {
