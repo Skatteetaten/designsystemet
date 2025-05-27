@@ -207,6 +207,99 @@ export const Examples: Story = {
 
     const uploadUrl = 'http://localhost:9090/test';
 
+    const handleDelete = async (file: UploadedFile): Promise<boolean> => {
+      await new Promise((_) => setTimeout(_, 1500));
+      if (shouldMockUpload) {
+        remove(file);
+        return true;
+      }
+      let deleteStatus = true;
+
+      await fetch(uploadUrl, {
+        method: 'DELETE',
+      }).then((response) => {
+        if (!response.ok) {
+          deleteStatus = false;
+        } else {
+          remove(file);
+        }
+      });
+      return deleteStatus;
+    };
+
+    const handleChange = async (files: File[]): Promise<void> => {
+      setLoading();
+      setError('');
+      if (files.some((file) => file.size > 900_000)) {
+        setError('Filen er for stor');
+        return;
+      }
+
+      const succeeded: Array<UploadedFile> = [];
+      const failed: Array<{ name: string; reason: string; id?: string }> = [];
+
+      let uploadPromises: Promise<MockUploadedFile>[] = [];
+
+      if (shouldMockUpload) {
+        uploadPromises = createMockPromises(files.length);
+      } else {
+        uploadPromises = files.map((file) =>
+          fetch(uploadUrl, {
+            method: 'POST',
+            body: file,
+          }).then((response) => {
+            console.log(response);
+            if (!response.ok) {
+              return Promise.reject(response);
+            }
+            return response.json();
+          })
+        );
+      }
+
+      const results = await Promise.allSettled(uploadPromises);
+
+      results.forEach((result, index) => {
+        if (result.status === 'fulfilled') {
+          console.log('FULLLFILLED', result);
+          succeeded.push({
+            name: files[index].name,
+            href: result.value.href,
+            id: Math.random().toString(36).substring(2, 10),
+          });
+        } else if (result.status === 'rejected') {
+          console.log('REJECT', result);
+          failed.push({
+            name: files[index].name,
+            reason: result.reason.statusText,
+            id: Math.random().toString(36).substring(2, 10),
+          });
+        }
+      });
+
+      if (failed.length) {
+        const error = `${failed.length} av ${files.length} filer ble ikke lastet Opp`;
+        setFailure(
+          failed.map(({ name, reason }) => ({
+            name,
+            errorMessage: reason,
+          })),
+          [
+            {
+              error,
+              files: failed.map(({ name, id }) => ({
+                name,
+                id,
+              })),
+            },
+          ],
+          succeeded
+        );
+      } else {
+        setSuccess(succeeded);
+      }
+    };
+
     return (
       <>
         <Checkbox
@@ -224,98 +317,8 @@ export const Examples: Story = {
           {...fileUploaderState}
           errorMessage={error ?? ''}
           multiple
-          onFileDelete={async (file): Promise<boolean> => {
-            await new Promise((_) => setTimeout(_, 1500));
-            if (shouldMockUpload) {
-              remove(file);
-              return true;
-            }
-            let deleteStatus = true;
-
-            await fetch(uploadUrl, {
-              method: 'DELETE',
-            }).then((response) => {
-              if (!response.ok) {
-                deleteStatus = false;
-              } else {
-                remove(file);
-              }
-            });
-            return deleteStatus;
-          }}
-          onFileChange={async (files: File[]): Promise<void> => {
-            setLoading();
-            setError('');
-            if (files.some((file) => file.size > 900_000)) {
-              setError('Filen er for stor eller noe');
-              return;
-            }
-
-            const succeeded: Array<UploadedFile> = [];
-            const failed: Array<{ name: string; reason: string; id?: string }> =
-              [];
-
-            let uploadPromises: Promise<MockUploadedFile>[] = [];
-
-            if (shouldMockUpload) {
-              uploadPromises = createMockPromises(files.length);
-            } else {
-              uploadPromises = files.map((file) =>
-                fetch(uploadUrl, {
-                  method: 'POST',
-                  body: file,
-                }).then((response) => {
-                  console.log(response);
-                  if (!response.ok) {
-                    return Promise.reject(response);
-                  }
-                  return response.json();
-                })
-              );
-            }
-
-            const results = await Promise.allSettled(uploadPromises);
-
-            results.forEach((result, index) => {
-              if (result.status === 'fulfilled') {
-                console.log('FULLLFILLED', result);
-                succeeded.push({
-                  name: files[index].name,
-                  href: result.value.href,
-                  id: Math.random().toString(36).substring(2, 10),
-                });
-              } else if (result.status === 'rejected') {
-                console.log('REJECT', result);
-                failed.push({
-                  name: files[index].name,
-                  reason: result.reason.statusText,
-                  id: Math.random().toString(36).substring(2, 10),
-                });
-              }
-            });
-
-            if (failed.length) {
-              const error = `${failed.length} av ${files.length} filer ble ikke lastet Opp`;
-              setFailure(
-                failed.map(({ name, reason }) => ({
-                  name,
-                  errorMessage: reason,
-                })),
-                [
-                  {
-                    error,
-                    files: failed.map(({ name, id }) => ({
-                      name,
-                      id,
-                    })),
-                  },
-                ],
-                succeeded
-              );
-            } else {
-              setSuccess(succeeded);
-            }
-          }}
+          onFileDelete={handleDelete}
+          onFileChange={handleChange}
         ></FileUploader>
       </>
     );

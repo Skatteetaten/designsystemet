@@ -81,7 +81,7 @@ export const FileUploaderTest = () => {
   const [fileUploaderState, setSuccess, setLoading, setFailure, remove] =
     FileUploader.useFileUploader();
 
-  const handleDelete = async (file: UploadedFile) => {
+  const handleDelete = async (file: UploadedFile): Promise<boolean> => {
     try {
       // Simulerer et API-kall for å slette filen
       const response = await fetch(`/api/files/${file.id}`, {
@@ -105,34 +105,61 @@ export const FileUploaderTest = () => {
       // Indikerer at opplasting pågår
       setLoading();
 
-      // Simulerer opplasting av filer
-      const uploadPromises = files.map((file) =>
-        fetch('/api/upload', {
-          method: 'POST',
-          body: file,
-        }).then((response) => response.json())
+      // Simulerer API-kall for opplasting
+      const results = await Promise.allSettled(
+        files.map(file => uploadFileToServer(file))
       );
 
-      const results = await Promise.all(uploadPromises);
+      // Kategoriserer resultatet
+      const succeeded: UploadedFile[] = [];
+      const failed: UploadedFile[] = [];
+      const errorsByType: Record<string, { error: string, files: UploadedFile[] }> = {};
 
-      // Setter tilstanden til vellykket opplasting med filene
-      const uploadedFiles = files.map((file, index) => ({
-        name: file.name,
-        href: results[index].fileUrl,
-        id: results[index].fileId,
-      }));
+      results.forEach((result, index) => {
+        if (result.status === 'fulfilled') {
+          succeeded.push({
+            name: files[index].name,
+            id: result.value.id,
+            href: result.value.url
+          });
+        } else {
+          // Finn eller opprett feilkategori
+          const errorType = result.reason.code || 'unknown';
+          const errorMessage = result.reason.message || 'Ukjent feil';
 
-      setSuccess(uploadedFiles);
+          if (!errorsByType[errorType]) {
+            errorsByType[errorType] = {
+              error: errorMessage,
+              files: []
+            };
+          }
+
+          const failedFile = { name: files[index].name };
+          failed.push(failedFile);
+          errorsByType[errorType].files.push(failedFile);
+        }
+      });
+
+      // Håndter resultatet
+      if (failed.length > 0) {
+        // Send strukturerte feilmeldinger og eventuelle vellykkede filer
+        setFailure(
+          failed,
+          Object.values(errorsByType),
+          succeeded.length > 0 ? succeeded : undefined
+        );
+      } else {
+        // Alt gikk bra
+        setSuccess(succeeded);
+      }
     } catch (error: unknown) {
-      // Håndterer feil under opplastingen
+      // Generell feil i selve prosessen
       setFailure(
-        files.map((file) => ({ name: file.name })),
-        [
-          {
-            error: `Det oppstod en feil under opplasting: ${error}`,
-            files: files.map((file) => ({ name: file.name })),
-          },
-        ]
+        files.map(file => ({ name: file.name })),
+        [{
+          error: `Det oppstod en feil under opplasting: ${error}`,
+          files: files.map(file => ({ name: file.name }))
+        }]
       );
     }
   };
@@ -234,121 +261,3 @@ setFailure(
 ```
 
 Denne strukturen sikrer at feilmeldinger vises korrekt med filene de gjelder for.
-
-## Avanserte brukstilfeller
-
-### Håndtering av flere filer
-
-Når du bruker FileUploader med `multiple={true}`, kan du ha behov for å begrense antall filer eller filtyper:
-
-```jsx
-const handleChange = async (files: File[]): Promise<void> => {
-  // Sjekk for maksimalt antall filer
-  if (fileUploaderState.uploadedFiles.length + files.length > 5) {
-    setErrorMessage('Du kan maks laste opp 5 filer');
-  }
-
-  // Fortsett med opplastingen
-  setLoading();
-  // ...
-};
-```
-
-### Komplett feilhåndteringseksempel
-
-```jsx
-const handleChange = async (files: File[]): Promise<void> => {
-  try {
-    // Indikerer at opplasting pågår
-    setLoading();
-
-    // Simulerer API-kall for opplasting
-    const results = await Promise.allSettled(
-      files.map(file => uploadFileToServer(file))
-    );
-
-    // Kategoriserer resultatet
-    const succeeded: UploadedFile[] = [];
-    const failed: UploadedFile[] = [];
-    const errorsByType: Record<string, { error: string, files: UploadedFile[] }> = {};
-
-    results.forEach((result, index) => {
-      if (result.status === 'fulfilled') {
-        succeeded.push({
-          name: files[index].name,
-          id: result.value.id,
-          href: result.value.url
-        });
-      } else {
-        // Finn eller opprett feilkategori
-        const errorType = result.reason.code || 'unknown';
-        const errorMessage = result.reason.message || 'Ukjent feil';
-
-        if (!errorsByType[errorType]) {
-          errorsByType[errorType] = {
-            error: errorMessage,
-            files: []
-          };
-        }
-
-        const failedFile = { name: files[index].name };
-        failed.push(failedFile);
-        errorsByType[errorType].files.push(failedFile);
-      }
-    });
-
-    // Håndter resultatet
-    if (failed.length > 0) {
-      // Send strukturerte feilmeldinger og eventuelle vellykkede filer
-      setFailure(
-        failed,
-        Object.values(errorsByType),
-        succeeded.length > 0 ? succeeded : undefined
-      );
-    } else {
-      // Alt gikk bra
-      setSuccess(succeeded);
-    }
-  } catch (error: unknown) {
-    // Generell feil i selve prosessen
-    setFailure(
-      files.map(file => ({ name: file.name })),
-      [{
-        error: `Det oppstod en feil under opplasting: ${error}`,
-        files: files.map(file => ({ name: file.name }))
-      }]
-    );
-  }
-};
-```
-
-### Delvis vellykket opplasting
-
-Når noen filer lykkes og andre feiler, kan du bruke det valgfrie `succeededFiles`-parameteret:
-
-```jsx
-const results = await Promise.allSettled(uploadPromises);
-
-const succeeded: Array<UploadedFile> = [];
-const failed: Array<UploadedFile> = [];
-
-// Separer vellykkede og mislykkede opplastinger
-results.forEach((result, index) => {
-  if (result.status === 'fulfilled') {
-    succeeded.push({ name: files[index].name, id: result.value.id });
-  } else {
-    failed.push({ name: files[index].name });
-  }
-});
-
-// Rapporter både feil og vellykkede opplastinger
-if (failed.length > 0) {
-  setFailure(
-    failed,
-    [{ error: 'Opplasting feilet', files: failed }],
-    succeeded // Legg til vellykkede filer i tilstanden
-  );
-} else {
-  setSuccess(succeeded);
-}
-```
