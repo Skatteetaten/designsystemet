@@ -140,7 +140,7 @@ export const RowWithLeftSideExpandButton = ({
         {isExpanded && (
           <div
             ref={expandableWrapperRef}
-            className={`${styles.expandableContent} ${
+            className={`${styles.expandableContent} ${context?.variant === 'compact' ? styles.expandableContent_compact : ''} ${
               classNames?.expandedContent ?? ''
             }`.trim()}
           >
