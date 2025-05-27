@@ -390,7 +390,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 166px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -434,10 +434,10 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class="_editableRow_expanded_1fi2s_5"
             data-testid="row-1"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5  _buttonCell_expanded_ialpx_8"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5  _buttonCell_expanded_j3mwt_8"
               style="max-width: 166px;"
           >
-            <button class="_button_19ayz_1 _button_medium_19ayz_42  _hideIcon_ialpx_44"
+            <button class="_button_19ayz_1 _button_medium_19ayz_42  _hideIcon_j3mwt_47"
                     data-brightness="default"
                     disabled
                     type="button"
@@ -458,7 +458,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                 </path>
               </svg>
             </button>
-            <div class="_expandableContent_ialpx_28 _expandableContent_1fi2s_23"
+            <div class="_expandableContent_j3mwt_28  _expandableContent_1fi2s_23"
                  style="width: 641px;"
             >
               <div class="_editableRowTriangle_1fi2s_9">
@@ -492,7 +492,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 166px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -535,7 +535,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 166px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -580,7 +580,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               style="max-width: 166px;"
           >
-            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_j3mwt_12"
                     data-brightness="default"
                     type="button"
                     aria-describedby="58pxb"
@@ -759,7 +759,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 105px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -802,7 +802,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class
             data-testid="row-1"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 105px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -845,7 +845,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 105px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -887,7 +887,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 105px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -932,7 +932,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               style="max-width: 105px;"
           >
-            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_j3mwt_12"
                     data-brightness="default"
                     type="button"
                     aria-describedby="58pxb"
@@ -1043,7 +1043,7 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1000
           </td>
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_j3mwt_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -1084,7 +1084,7 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             500
           </td>
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_j3mwt_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -1125,7 +1125,7 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             2000
           </td>
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_j3mwt_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -1165,7 +1165,7 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
             1055
           </td>
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_ialpx_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_j3mwt_5">
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
@@ -1206,7 +1206,7 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
             1800
           </td>
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24">
-            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_j3mwt_12"
                     data-brightness="default"
                     type="button"
                     aria-describedby="58pxb"
@@ -1443,7 +1443,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 139.031px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -1486,7 +1486,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class
             data-testid="row-1"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 139.031px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -1529,7 +1529,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 139.031px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -1571,7 +1571,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 139.031px;"
           >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
@@ -1616,7 +1616,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               style="max-width: 139.031px;"
           >
-            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_j3mwt_12"
                     data-brightness="default"
                     type="button"
                     aria-describedby="58pxb"
@@ -2082,7 +2082,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8"
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_j3mwt_5 _buttonCell_compact_j3mwt_8"
               style="max-width: 85.0938px;"
           >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
@@ -2125,7 +2125,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class
             data-testid="row-1"
         >
-          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8"
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_j3mwt_5 _buttonCell_compact_j3mwt_8"
               style="max-width: 85.0938px;"
           >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
@@ -2168,7 +2168,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8"
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_j3mwt_5 _buttonCell_compact_j3mwt_8"
               style="max-width: 85.0938px;"
           >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
@@ -2210,7 +2210,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8"
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21  _buttonCell_j3mwt_5 _buttonCell_compact_j3mwt_8"
               style="max-width: 85.0938px;"
           >
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
@@ -2255,7 +2255,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
           <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_left_25tph_21"
               style="max-width: 85.0938px;"
           >
-            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12 _expandButton_compact_ialpx_19"
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_j3mwt_12 _expandButton_compact_j3mwt_19"
                     data-brightness="default"
                     type="button"
                     aria-describedby="58pxb"
@@ -2366,7 +2366,7 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
           <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             1000
           </td>
-          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_j3mwt_5 _buttonCell_compact_j3mwt_8">
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
@@ -2407,7 +2407,7 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
           <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             500
           </td>
-          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_j3mwt_5 _buttonCell_compact_j3mwt_8">
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
@@ -2448,7 +2448,7 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
           <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             2000
           </td>
-          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_j3mwt_5 _buttonCell_compact_j3mwt_8">
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
@@ -2488,7 +2488,7 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
           <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
             1055
           </td>
-          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_ialpx_5 _buttonCell_compact_ialpx_8">
+          <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24  _buttonCell_j3mwt_5 _buttonCell_compact_j3mwt_8">
             <button class="_button_19ayz_1 _button_extraSmall_19ayz_34"
                     data-brightness="default"
                     type="button"
@@ -2529,7 +2529,7 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
             1800
           </td>
           <td class="_dataCell_25tph_1 _dataCell_compact_25tph_30 _dataCell_right_25tph_24">
-            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12 _expandButton_compact_ialpx_19"
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_j3mwt_12 _expandButton_compact_j3mwt_19"
                     data-brightness="default"
                     type="button"
                     aria-describedby="58pxb"
@@ -2689,7 +2689,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class
             data-testid="row-0"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 121px;"
           >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
@@ -2732,7 +2732,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class
             data-testid="row-1"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 121px;"
           >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
@@ -2775,7 +2775,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class
             data-testid="row-2"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 121px;"
           >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
@@ -2817,7 +2817,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_ialpx_5"
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
               style="max-width: 121px;"
           >
             <button class="_button_19ayz_1 _button_large_19ayz_48"
@@ -2862,7 +2862,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               style="max-width: 121px;"
           >
-            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_ialpx_12"
+            <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _expandButton_j3mwt_12"
                     data-brightness="default"
                     type="button"
                     aria-describedby="58pxb"

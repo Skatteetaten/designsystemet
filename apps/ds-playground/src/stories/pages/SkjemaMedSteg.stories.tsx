@@ -38,7 +38,8 @@ import {
 import { Person, RolePicker } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './pages.module.css';
+import styles from './SkjemaMedSteg.module.css';
+import stylesAsString from './SkjemaMedSteg.module.css?raw';
 
 export default {
   title: 'Sidetyper/Ekstern/Skjema med steg',
@@ -46,6 +47,13 @@ export default {
     layout: 'fullscreen',
     controls: {
       disable: true,
+    },
+    docs: {
+      source: {
+        transform: (code: string): string => {
+          return `/* CSS */ \n ${stylesAsString} \n /* TSX */ \n ${code}`;
+        },
+      },
     },
   },
 };
@@ -388,10 +396,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
               variant={activeStep === 2 ? 'active' : 'passive'}
               onNext={
                 hasGivenConsent
-                  ? linkTo(
-                      'Sidetyper/Ekstern/Kvittering med Panel',
-                      'Kvittering Med Panel'
-                    )
+                  ? linkTo('Sidetyper/Ekstern/Kvittering', 'Kvittering')
                   : (): void =>
                       setConsentError(
                         'Du må bekrefte at opplysningene over stemmer.'

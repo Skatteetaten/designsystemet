@@ -1,4 +1,4 @@
-import { MouseEvent, useRef, useState, type JSX } from 'react';
+import { MouseEvent, useEffect, useRef, useState, type JSX } from 'react';
 
 import {
   Button,
@@ -6,10 +6,19 @@ import {
   Link,
   LinkGroup,
 } from '@skatteetaten/ds-buttons';
-import { OpenClose, StepList } from '@skatteetaten/ds-collections';
-import { DescriptionList } from '@skatteetaten/ds-content';
-import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
-import { ArrowBackSVGpath, PrintSVGpath } from '@skatteetaten/ds-icons';
+import { OpenClose } from '@skatteetaten/ds-collections';
+import { DescriptionList, Panel } from '@skatteetaten/ds-content';
+import {
+  dsI18n,
+  formatNationalIdentityNumber,
+  formatPhoneNumber,
+  langToLocale,
+} from '@skatteetaten/ds-core-utils';
+import {
+  ArrowBackSVGpath,
+  CheckIcon,
+  PrintSVGpath,
+} from '@skatteetaten/ds-icons';
 import {
   Footer,
   TopBannerExternal,
@@ -19,10 +28,10 @@ import {
 import { Person, RolePicker } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './pages.module.css';
+import styles from './Kvittering.module.css';
 
 export default {
-  title: 'Sidetyper/Ekstern/Kvittering med StepList',
+  title: 'Sidetyper/Ekstern/Kvittering',
   parameters: {
     layout: 'fullscreen',
     controls: {
@@ -31,7 +40,7 @@ export default {
   },
 };
 
-export const KvitteringMedStepList = (): JSX.Element => {
+export const Kvittering = (): JSX.Element => {
   const modalRef = useRef<HTMLDialogElement>(null);
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const [user, setUser] = useState<User>();
@@ -41,6 +50,12 @@ export const KvitteringMedStepList = (): JSX.Element => {
     personId: '12345678910',
     type: 'Person',
   };
+
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    panelRef.current?.focus();
+  }, []);
 
   return (
     <>
@@ -102,18 +117,22 @@ export const KvitteringMedStepList = (): JSX.Element => {
               {'Knuslete Foxtrot'}
             </DescriptionList.Element>
             <DescriptionList.Element term={'Fødselsnummer'}>
-              {/* formattere  */}
-              {'12345678910'}
+              {formatNationalIdentityNumber(me.personId)}
             </DescriptionList.Element>
           </DescriptionList>
         </div>
-        <StepList className={styles.stepList}>
-          <StepList.Step
-            stepNumber={1}
-            variant={'positiveResult'}
+        <div ref={panelRef} tabIndex={-1}>
+          <Panel
+            className={styles.panel}
+            variant={'outline'}
+            color={'forest'}
             title={'[Skjematittel] er sendt inn'}
             titleAs={'h2'}
-            className={styles.stepListStep}
+            renderIcon={(): JSX.Element => (
+              <div className={styles.checkIconContainer}>
+                <CheckIcon size={'large'} className={styles.checkIcon} />
+              </div>
+            )}
           >
             <Paragraph className={styles.marginTopM}>
               {'Det kan ta inntil 4 uker før du får svar.'}
@@ -137,13 +156,12 @@ export const KvitteringMedStepList = (): JSX.Element => {
                   </span>
                 </DescriptionList.Element>
                 <DescriptionList.Element term={'Telefon'}>
-                  {/* formattere  */}
-                  {'98765432'}
+                  {formatPhoneNumber('98765432')}
                 </DescriptionList.Element>
               </DescriptionList>
             </OpenClose>
-          </StepList.Step>
-        </StepList>
+          </Panel>
+        </div>
         <div className={styles.article}>
           <Button className={styles.marginRightM}>{'Til Min side'}</Button>
           <Button variant={'secondary'}>{'Logg ut'}</Button>
@@ -172,10 +190,15 @@ export const KvitteringMedStepList = (): JSX.Element => {
                 'Pressemeldinger, pressekontaker og annen informasjon for journalister.'
               }
             </Paragraph>
-            <LinkGroup color={'white'} className={styles.marginBottomL}>
+            <LinkGroup color={'white'} hasSpacing>
               <LinkGroup.Link href={'#'}>{'Se vårt presserom'}</LinkGroup.Link>
             </LinkGroup>
-            <Heading as={'h2'} level={3} hasSpacing>
+            <Heading
+              as={'h2'}
+              level={3}
+              className={styles.marginTopL}
+              hasSpacing
+            >
               {'Bruke data fra Skatteetaten'}
             </Heading>
             <Paragraph hasSpacing>

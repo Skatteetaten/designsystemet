@@ -5,7 +5,6 @@ import { expect, userEvent, within, waitFor, fn } from '@storybook/test';
 
 import {
   LockOutlineSVGpath,
-  LogOutSVGpath,
   MenuSVGpath,
   PersonSVGpath,
 } from '@skatteetaten/ds-icons';
@@ -158,29 +157,6 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithVariantOutline = {
-  name: 'Variant Outline (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-    children: 'Logg ut',
-    svgPath: LogOutSVGpath,
-    variant: 'outline',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-  },
-} satisfies Story;
-
 export const WithVariantFilled = {
   name: 'Variant Filled (LoginButton A1, A2)',
   args: {
@@ -247,31 +223,6 @@ export const DefaultsOnMobileScreen = {
   },
 } satisfies Story;
 
-export const VariantOutlineOnMobileScreen = {
-  name: 'Variant Outline On Mobile Screen  (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-    children: 'Logg ut',
-    svgPath: LogOutSVGpath,
-    variant: 'outline',
-  },
-  argTypes: {
-    children: { table: { disable: false } },
-    svgPath: { table: { disable: false } },
-    variant: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-    viewport: {
-      defaultViewport: '--mobile',
-    },
-  },
-} satisfies Story;
-
 export const VariantFilledOnMobileScreen = {
   name: 'Variant Filled On Mobile Screen  (LoginButton A1, A2)',
   args: {
@@ -293,38 +244,6 @@ export const VariantFilledOnMobileScreen = {
     },
     viewport: {
       defaultViewport: '--mobile',
-    },
-  },
-} satisfies Story;
-
-const TemplateWithAllVariant: StoryFn<typeof TopBannerButton> = () => (
-  <div className={'topbannerButtonContainer'}>
-    <TopBannerButton svgPath={MenuSVGpath}>{'Meny'}</TopBannerButton>
-    <TopBannerButton svgPath={LogOutSVGpath} variant={'outline'}>
-      {'Logg ut'}
-    </TopBannerButton>
-    <TopBannerButton svgPath={LockOutlineSVGpath} variant={'filled'}>
-      {'Logg in'}
-    </TopBannerButton>
-  </div>
-);
-
-export const AllVariantOnMobileScreen = {
-  render: TemplateWithAllVariant,
-  name: 'All Variants On Mobile Screen (LoginButton A1, A2)',
-  parameters: {
-    viewport: {
-      defaultViewport: '--mobile',
-    },
-  },
-} satisfies Story;
-
-export const AllVariantOnBreakpointS = {
-  render: TemplateWithAllVariant,
-  name: 'All Variants On Breakpoint-m (LoginButton A1, A2)',
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
     },
   },
 } satisfies Story;
