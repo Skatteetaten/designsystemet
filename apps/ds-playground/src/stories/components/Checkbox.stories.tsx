@@ -51,6 +51,13 @@ export const Examples: Story = {
   render: (args): JSX.Element => {
     const [checked, setChecked] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+
+    const handleChange = (): void => {
+      if (!checked) {
+        setErrorMessage('Du må lese og forstå innholdet for å gå videre.');
+      }
+    };
+
     return (
       <>
         <Checkbox
@@ -58,30 +65,15 @@ export const Examples: Story = {
           errorMessage={errorMessage}
           checked={checked}
           required
+          onBlur={handleChange}
           onChange={(): void => {
             setChecked(!checked);
             setErrorMessage('');
           }}
-          onBlur={(event): void => {
-            args?.onBlur && args.onBlur(event);
-          }}
-          onFocus={(event): void => {
-            args?.onFocus && args.onFocus(event);
-          }}
         >
           {'Jeg har lest og forstått innholdet'}
         </Checkbox>
-        <Button
-          onClick={(): void => {
-            if (!checked) {
-              setErrorMessage(
-                'Du må lese og forstå innholdet for å gå videre.'
-              );
-            }
-          }}
-        >
-          {'Send'}
-        </Button>
+        <Button onClick={handleChange}>{'Send'}</Button>
       </>
     );
   },
