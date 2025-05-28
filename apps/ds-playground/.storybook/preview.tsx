@@ -82,7 +82,9 @@ const DSViewports = {
 };
 
 const parameters = {
-  docs: { controls: { sort: 'requiredFirst' } },
+  docs: {
+    controls: { sort: 'requiredFirst' },
+  },
   actions: {
     disable: true,
   },

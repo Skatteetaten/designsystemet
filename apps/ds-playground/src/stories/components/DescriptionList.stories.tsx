@@ -111,81 +111,83 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <div>
-      <DescriptionList
-        variant={'horizontal'}
-        descriptionDirection={'vertical'}
-        hasSpacing
-      >
-        <DescriptionList.Element term={'Saksbehandler'}>
-          {'Kenneth Performance'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Status'}>
-          {'Under behandling'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Sist endret'}>
-          {'30.12.2013'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Frist'}>
-          {'30.12.2013'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Farge'}>
-          {'Smaragdgrønn'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Først endret'}>
-          {'30.12.2010'}
-        </DescriptionList.Element>
-      </DescriptionList>
-
-      <DescriptionList variant={'vertical'}>
-        <DescriptionList.Element
-          term={
-            <>
-              <span>{'navn'}</span>
-              <Popover>
-                <Popover.Trigger
-                  className={'dummySpacingLeft'}
-                  size={'extraSmall'}
-                />
-                <Popover.Content>
-                  {
-                    'Et navn er en betegnelse eller tittel som brukes for å identifisere en person, et sted, en ting eller et konsept.'
-                  }
-                </Popover.Content>
-              </Popover>
-            </>
-          }
+  render: (_args): JSX.Element => {
+    return (
+      <div>
+        <DescriptionList
+          variant={'horizontal'}
+          descriptionDirection={'vertical'}
+          hasSpacing
         >
-          {'Byron Schweppes-Hansen'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Kommune'}>
-          <Tag svgPath={EyeOffSVGpath} color={'burgundy'} size={'small'}>
-            {'Skjult'}
-          </Tag>
-          <InlineButton svgPath={LockOutlineSVGpath}>
-            {'vis informasjon'}
-          </InlineButton>
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Adresse'}>
-          {'Adresseveien 1 '}
-          <IconButton
-            size={'extraSmall'}
-            title={'kopier'}
-            svgPath={CopySVGpath}
-            onClick={() => {
-              navigator.clipboard.writeText('Adresseveien 1\n1410 Kolbotn');
-            }}
-          />
-          <br />
-          {'1410 Kolbotn'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Boligtype'}>
-          <ErrorMessage showError>{'Kunne ikke hente inn info'}</ErrorMessage>
-        </DescriptionList.Element>
-      </DescriptionList>
-    </div>
-  ),
+          <DescriptionList.Element term={'Saksbehandler'}>
+            {'Kenneth Performance'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Status'}>
+            {'Under behandling'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Sist endret'}>
+            {'30.12.2013'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Frist'}>
+            {'30.12.2013'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Farge'}>
+            {'Smaragdgrønn'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Først endret'}>
+            {'30.12.2010'}
+          </DescriptionList.Element>
+        </DescriptionList>
+
+        <DescriptionList variant={'vertical'}>
+          <DescriptionList.Element
+            term={
+              <>
+                <span>{'navn'}</span>
+                <Popover>
+                  <Popover.Trigger
+                    className={'dummySpacingLeft'}
+                    size={'extraSmall'}
+                  />
+                  <Popover.Content>
+                    {
+                      'Et navn er en betegnelse eller tittel som brukes for å identifisere en person, et sted, en ting eller et konsept.'
+                    }
+                  </Popover.Content>
+                </Popover>
+              </>
+            }
+          >
+            {'Byron Schweppes-Hansen'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Kommune'}>
+            <Tag svgPath={EyeOffSVGpath} color={'burgundy'} size={'small'}>
+              {'Skjult'}
+            </Tag>
+            <InlineButton svgPath={LockOutlineSVGpath}>
+              {'vis informasjon'}
+            </InlineButton>
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Adresse'}>
+            {'Adresseveien 1 '}
+            <IconButton
+              size={'extraSmall'}
+              title={'kopier'}
+              svgPath={CopySVGpath}
+              onClick={() => {
+                navigator.clipboard.writeText('Adresseveien 1\n1410 Kolbotn');
+              }}
+            />
+            <br />
+            {'1410 Kolbotn'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Boligtype'}>
+            <ErrorMessage showError>{'Kunne ikke hente inn info'}</ErrorMessage>
+          </DescriptionList.Element>
+        </DescriptionList>
+      </div>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;
 
@@ -198,34 +200,36 @@ export const ExampleWithFixedColumns: Story = {
   }
 
   */
-  render: (_args): JSX.Element => (
-    <div>
-      <DescriptionList
-        variant={'horizontal'}
-        descriptionDirection={'vertical'}
-        className={styles.descriptionListTwoColumns}
-        hasSpacing
-      >
-        <DescriptionList.Element term={'Saksbehandler'}>
-          {'Kenneth Performance'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Status'}>
-          {'Under behandling'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Sist endret'}>
-          {'30.12.2013'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Frist'}>
-          {'30.12.2013'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Farge'}>
-          {'Smaragdgrønn'}
-        </DescriptionList.Element>
-        <DescriptionList.Element term={'Først endret'}>
-          {'30.12.2010'}
-        </DescriptionList.Element>
-      </DescriptionList>
-    </div>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <div>
+        <DescriptionList
+          variant={'horizontal'}
+          descriptionDirection={'vertical'}
+          className={styles.descriptionListTwoColumns}
+          hasSpacing
+        >
+          <DescriptionList.Element term={'Saksbehandler'}>
+            {'Kenneth Performance'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Status'}>
+            {'Under behandling'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Sist endret'}>
+            {'30.12.2013'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Frist'}>
+            {'30.12.2013'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Farge'}>
+            {'Smaragdgrønn'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Først endret'}>
+            {'30.12.2010'}
+          </DescriptionList.Element>
+        </DescriptionList>
+      </div>
+    );
+  },
 } satisfies Story;
 ExampleWithFixedColumns.parameters = exampleParameters;

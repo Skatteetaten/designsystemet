@@ -87,26 +87,28 @@ export const Preview: Story = {
 } satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <nav
-      className={'flex gapXl'}
-      aria-label={'Beskrivelse av navigasjonsflater'}
-    >
-      <NavigationTile
-        title={defaultTitle}
-        description={defaultDescription}
-        href={'#'}
-        size={'extraLarge'}
-        svgPath={AccountEnkSVGpath}
-      />
-      <NavigationTile
-        title={defaultTitle}
-        description={defaultDescription}
-        href={'#'}
-        size={'extraLarge'}
-        svgPath={AccountEnkSVGpath}
-      />
-    </nav>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <nav
+        className={'flex gapXl'}
+        aria-label={'Beskrivelse av navigasjonsflater'}
+      >
+        <NavigationTile
+          title={defaultTitle}
+          description={defaultDescription}
+          href={'#'}
+          size={'extraLarge'}
+          svgPath={AccountEnkSVGpath}
+        />
+        <NavigationTile
+          title={defaultTitle}
+          description={defaultDescription}
+          href={'#'}
+          size={'extraLarge'}
+          svgPath={AccountEnkSVGpath}
+        />
+      </nav>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

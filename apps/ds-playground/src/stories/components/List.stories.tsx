@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import { getListAsDefault, List, Paragraph } from '@skatteetaten/ds-typography';
@@ -42,34 +44,36 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <>
-      <Paragraph hasSpacing>{'På Min side finner du'}</Paragraph>
-      <List hasSpacing>
-        <List.Element key={'listElement_1'}>
-          {'din kontaktinformasjon'}
-        </List.Element>
-        <List.Element key={'listElement_2'}>
-          {'opplysningene dine i Folkeregisteret'}
-        </List.Element>
-        <List.Element key={'listElement_3'}>
-          {
-            'oversikt over skatten din, blant annet skattekort, skattemelding og skatteoppgjør'
-          }
-        </List.Element>
-        <List.Element key={'listElement_4'}>
-          {'kontonummeret du har registrert hos oss'}
-        </List.Element>
-        <List.Element key={'listElement_5'}>
-          {
-            'innboksen din med faktura, melding og brev fra Skatteetaten og Folkeregisteret'
-          }
-        </List.Element>
-      </List>
-      <Paragraph>
-        {'Du kan også endre mange av opplysningene dine på Min side.'}
-      </Paragraph>
-    </>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <Paragraph hasSpacing>{'På Min side finner du'}</Paragraph>
+        <List hasSpacing>
+          <List.Element key={'listElement_1'}>
+            {'din kontaktinformasjon'}
+          </List.Element>
+          <List.Element key={'listElement_2'}>
+            {'opplysningene dine i Folkeregisteret'}
+          </List.Element>
+          <List.Element key={'listElement_3'}>
+            {
+              'oversikt over skatten din, blant annet skattekort, skattemelding og skatteoppgjør'
+            }
+          </List.Element>
+          <List.Element key={'listElement_4'}>
+            {'kontonummeret du har registrert hos oss'}
+          </List.Element>
+          <List.Element key={'listElement_5'}>
+            {
+              'innboksen din med faktura, melding og brev fra Skatteetaten og Folkeregisteret'
+            }
+          </List.Element>
+        </List>
+        <Paragraph>
+          {'Du kan også endre mange av opplysningene dine på Min side.'}
+        </Paragraph>
+      </>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;
