@@ -161,11 +161,19 @@ export const SkjemaMedSteg = (): JSX.Element => {
     setHasGivenConsent(false);
   };
 
-  const handleNextStep = (): void => {
+  const checkLocalAddressError = (): void => {
     if (!hasLocalAddress) {
       setLocalAddressErrorMessage('Svar på om du har norsk adresse.');
       return;
     }
+  };
+
+  const setConsentErrorMessage = (): void => {
+    setConsentError('Du må bekrefte at opplysningene over stemmer.');
+  };
+
+  const handleNextStep = (): void => {
+    checkLocalAddressError();
 
     if (hasLocalAddress === 'ja') {
       const updatedErrors: ContactsError = { ...contactsError };
@@ -266,7 +274,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
               titleAs={'h2'}
               stepNumber={1}
               variant={activeStep === 1 ? 'active' : 'passive'}
-              shouldAutoFocusWhenActive={false}
+              nextButtonProps={{ ariaDescribedby: 'infoNextButton' }}
               onNext={handleNextStep}
             >
               {activeStep === 1 && (
@@ -280,6 +288,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                     legend={'Har du norsk adresse?'}
                     selectedValue={hasLocalAddress}
                     errorMessage={localAddressErrorMessage}
+                    onBlur={checkLocalAddressError}
                     onChange={(e): void => {
                       setLocalAddressErrorMessage('');
                       setHasLocalAddress(e.target.value);
@@ -306,7 +315,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                       />
                       <div className={styles.flexWrap}>
                         <TextField
-                          id={'input_postalcode'}
+                          id={'input_postalCode'}
                           label={'Postnummer'}
                           className={`${styles.postalCode} ${styles.marginRightM}`}
                           classNames={{ errorMessage: styles.noWrap }}
@@ -397,10 +406,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
               onNext={
                 hasGivenConsent
                   ? linkTo('Sidetyper/Ekstern/Kvittering', 'Kvittering')
-                  : (): void =>
-                      setConsentError(
-                        'Du må bekrefte at opplysningene over stemmer.'
-                      )
+                  : setConsentErrorMessage
               }
             >
               <Card color={'ochre'} className={styles.marginTopM}>
@@ -426,6 +432,9 @@ export const SkjemaMedSteg = (): JSX.Element => {
                     checked={hasGivenConsent}
                     errorMessage={consentError}
                     required
+                    onBlur={
+                      hasGivenConsent ? undefined : setConsentErrorMessage
+                    }
                     onChange={(e): void => {
                       setConsentError('');
                       setHasGivenConsent(e.target.checked);
@@ -449,10 +458,10 @@ export const SkjemaMedSteg = (): JSX.Element => {
               {'Avbryt og slett'}
             </InlineButton>
           </div>
-          <Paragraph hasSpacing>
+          <Paragraph id={'infoNextButton'} hasSpacing>
             <i>
               {
-                'Når du klikker på "Neste", blir informasjonen som du har skrevet inn automatisk lagret.'
+                'Når du klikker på «Neste», blir informasjonen som du har skrevet inn automatisk lagret.'
               }
             </i>
           </Paragraph>
@@ -462,16 +471,11 @@ export const SkjemaMedSteg = (): JSX.Element => {
         titleFirstColumn={'Skatteetaten'}
         titleSecondColumn={'Følg oss'}
         secondColumn={
-          <>
-            <Paragraph hasSpacing>
-              {'Du kan kontakte oss i sosiale medier.'}
-            </Paragraph>
-            <LinkGroup color={'white'}>
-              <LinkGroup.Link href={'#'}>
-                {'Se alle Skatteetatens kontoer'}
-              </LinkGroup.Link>
-            </LinkGroup>
-          </>
+          <LinkGroup color={'white'}>
+            <LinkGroup.Link href={'#'}>
+              {'Se våre kontoer i sosiale medier'}
+            </LinkGroup.Link>
+          </LinkGroup>
         }
         titleThirdColumn={'Presse'}
         thirdColumn={

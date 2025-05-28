@@ -51,16 +51,11 @@ export const Examples: Story = {
         titleFirstColumn={'Om Skatteetaten'}
         titleSecondColumn={'Følg oss'}
         secondColumn={
-          <>
-            <Paragraph hasSpacing>
-              {'Du kan kontakte oss i sosiale medier.'}
-            </Paragraph>
-            <LinkGroup color={'white'}>
-              <LinkGroup.Link href={'#'}>
-                {'Se alle Skatteetatens kontoer'}
-              </LinkGroup.Link>
-            </LinkGroup>
-          </>
+          <LinkGroup color={'white'}>
+            <LinkGroup.Link href={'#'}>
+              {'Se våre kontoer i sosiale medier'}
+            </LinkGroup.Link>
+          </LinkGroup>
         }
         titleThirdColumn={'Presse'}
         thirdColumn={
