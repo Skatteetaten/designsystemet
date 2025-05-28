@@ -306,7 +306,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                       />
                       <div className={styles.flexWrap}>
                         <TextField
-                          id={'input_postalcode'}
+                          id={'input_postalCode'}
                           label={'Postnummer'}
                           className={`${styles.postalCode} ${styles.marginRightM}`}
                           classNames={{ errorMessage: styles.noWrap }}
@@ -452,7 +452,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
           <Paragraph hasSpacing>
             <i>
               {
-                'Når du klikker på "Neste", blir informasjonen som du har skrevet inn automatisk lagret.'
+                'Når du klikker på «Neste», blir informasjonen som du har skrevet inn automatisk lagret.'
               }
             </i>
           </Paragraph>
@@ -462,16 +462,11 @@ export const SkjemaMedSteg = (): JSX.Element => {
         titleFirstColumn={'Skatteetaten'}
         titleSecondColumn={'Følg oss'}
         secondColumn={
-          <>
-            <Paragraph hasSpacing>
-              {'Du kan kontakte oss i sosiale medier.'}
-            </Paragraph>
-            <LinkGroup color={'white'}>
-              <LinkGroup.Link href={'#'}>
-                {'Se alle Skatteetatens kontoer'}
-              </LinkGroup.Link>
-            </LinkGroup>
-          </>
+          <LinkGroup color={'white'}>
+            <LinkGroup.Link href={'#'}>
+              {'Se våre kontoer i sosiale medier'}
+            </LinkGroup.Link>
+          </LinkGroup>
         }
         titleThirdColumn={'Presse'}
         thirdColumn={
