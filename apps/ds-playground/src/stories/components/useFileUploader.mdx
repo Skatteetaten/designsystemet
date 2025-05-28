@@ -1,0 +1,263 @@
+import ReturnValuesTable from './useFileUploaderReturnValuesTable.md?raw';
+import ParametersTable from './useFileUploaderParametersTable.md?raw';
+import { Meta, Markdown } from '@storybook/blocks';
+
+<Meta title="Komponenter/FileUploader/useFileUploader" />
+
+# useFileUploader
+
+`useFileUploader` er en React hook som kan brukes for å administrere opplastingstilstand for filer i en FileUploader-komponent.
+
+## Importering
+
+```jsx
+import { FileUploader } from '@skatteetaten/ds-forms';
+
+// Hooken hentes fra FileUploader-komponenten
+const { useFileUploader } = FileUploader;
+```
+
+## API
+
+```typescript
+const [
+  fileUploaderState,
+  setSuccess,
+  setLoading,
+  setFailure,
+  remove
+] = useFileUploader<T>(
+  renderStatus?: (status: UploadResultData<T>) => ReactNode,
+  initiallyUploadedFiles?: Array<UploadedFile>
+);
+```
+
+### Parametere
+
+<Markdown>{ParametersTable}</Markdown>
+
+### Returverdier
+
+```typescript
+[
+  // Tilstand
+  {
+    uploadedFiles: Array<UploadedFile>;
+    uploadResult: UploadResult | undefined;
+    isUploading: boolean;
+  },
+  // Metoder
+  setSuccess: (files: Array<UploadedFile>, data?: T) => void,
+  setLoading: () => void,
+  setFailure: (files: Array<UploadedFile>, errorMessage: T, succeededFiles?: Array<UploadedFile>) => void,
+  remove: (file: UploadedFile) => void
+]
+```
+
+<Markdown>{ReturnValuesTable}</Markdown>
+
+## Beskrivelse
+
+`useFileUploader` er en hook som håndterer tilstanden til filopplasting i et grensesnitt. Den håndterer opplastede filer, statusmeldinger, og tilbyr funksjoner for å administrere hele opplastingsprosessen.
+
+Hooken støtter generiske typer (`<T>`) som kan brukes for å definere egne datatyper til statusmeldinger.
+
+### Validering og feilhåndtering
+
+Hooken utfører automatisk validering for å sikre at duplikate filer ikke legges til:
+
+- Hvis en fil med samme `id` allerede finnes i tilstanden, vil `setSuccess` og `setFailure` kaste en feil.
+- For filer uten `id` brukes filnavnet til å sjekke for duplikater.
+
+## Eksempel
+
+Nedenfor er et eksempel på hvordan `useFileUploader` kan brukes i en React-komponent:
+
+```jsx
+import { FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
+
+export const FileUploaderTest = () => {
+  // Destrukturering av returverdier fra hooken
+  const [fileUploaderState, setSuccess, setLoading, setFailure, remove] =
+    FileUploader.useFileUploader();
+
+  const handleDelete = async (file: UploadedFile): Promise<boolean> => {
+    try {
+      // Simulerer et API-kall for å slette filen
+      const response = await fetch(`/api/files/${file.id}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        // Fjerner filen fra tilstanden
+        remove(file);
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.error('Feil under sletting av fil:', error);
+      return false;
+    }
+  };
+
+  const handleChange = async (files: File[]): Promise<void> => {
+    try {
+      // Indikerer at opplasting pågår
+      setLoading();
+
+      // Simulerer API-kall for opplasting
+      const results = await Promise.allSettled(
+        files.map(file => uploadFileToServer(file))
+      );
+
+      // Kategoriserer resultatet
+      const succeeded: UploadedFile[] = [];
+      const failed: UploadedFile[] = [];
+      const errorsByType: Record<string, { error: string, files: UploadedFile[] }> = {};
+
+      results.forEach((result, index) => {
+        if (result.status === 'fulfilled') {
+          succeeded.push({
+            name: files[index].name,
+            id: result.value.id,
+            href: result.value.url
+          });
+        } else {
+          // Finn eller opprett feilkategori
+          const errorType = result.reason.code || 'unknown';
+          const errorMessage = result.reason.message || 'Ukjent feil';
+
+          if (!errorsByType[errorType]) {
+            errorsByType[errorType] = {
+              error: errorMessage,
+              files: []
+            };
+          }
+
+          const failedFile = { name: files[index].name };
+          failed.push(failedFile);
+          errorsByType[errorType].files.push(failedFile);
+        }
+      });
+
+      // Håndter resultatet
+      if (failed.length > 0) {
+        // Send strukturerte feilmeldinger og eventuelle vellykkede filer
+        setFailure(
+          failed,
+          Object.values(errorsByType),
+          succeeded.length > 0 ? succeeded : undefined
+        );
+      } else {
+        // Alt gikk bra
+        setSuccess(succeeded);
+      }
+    } catch (error: unknown) {
+      // Generell feil i selve prosessen
+      setFailure(
+        files.map(file => ({ name: file.name })),
+        [{
+          error: `Det oppstod en feil under opplasting: ${error}`,
+          files: files.map(file => ({ name: file.name }))
+        }]
+      );
+    }
+  };
+
+  return (
+    <FileUploader
+      label="Last opp dokumentasjon"
+      acceptedFileFormats={['.pdf', '.jpeg', '.png']}
+      multiple
+      {...fileUploaderState}
+      onFileDelete={handleDelete}
+      onFileChange={handleChange}
+    />
+  );
+};
+```
+
+## Bruk med FileUploader-komponenten
+
+Hooken er designet for å brukes sammen med `FileUploader`-komponenten. Tilstanden fra hooken kan spres (spread) direkte til `FileUploader`.
+
+```jsx
+<FileUploader
+  label={'Last opp et dokument'}
+  acceptedFileFormats={['.pdf', '.jpeg', '.png']}
+  {...fileUploaderState}
+  onFileDelete={handleDelete}
+  onFileChange={handleChange}
+/>
+```
+
+## Spesialisert bruk med egne datatyper
+
+Hooken støtter generiske typer for å håndtere egendefinerte datastrukturer i statusmeldinger:
+
+```jsx
+// Definerer en egen datatype for statusmeldinger
+type CustomErrorData = {
+  code: string;
+  message: string;
+};
+
+// Bruker egendefinert datatype med hooken
+const [state, setSuccess, setLoading, setFailure, remove] =
+  FileUploader.useFileUploader<CustomErrorData>(
+    // Egendefinert renderer for statusmeldinger
+    (status) => {
+      if (status.data && status.hasUploadFailed) {
+        return <div>Feilkode: {status.data.code} - {status.data.message}</div>;
+      }
+      return status.uploadedFilesMessage;
+    }
+  );
+
+// Senere kan du bruke den egendefinerte datatypen
+setFailure(
+  [{ name: 'dokument.pdf' }],
+  { code: 'ERR-001', message: 'Ugyldig filformat' }
+);
+```
+
+### Standard feilvisning
+
+Hvis du ikke angir en egendefinert `renderStatus`-funksjon, vil hooken vise feilmeldinger på følgende måte:
+
+1. Hvis dataene følger standardformatet (array med `error` og `files`-felter), vises en liste med feilmeldinger og berørte filer.
+2. Ellers vises den generelle statusmeldingen.
+
+Dette skjer gjennom den interne `renderFileStatusMessage`-funksjonen, som kontrollerer om feilmeldingsformatet er gyldig ved hjelp av `isUploadError`-funksjonen.
+
+## Tilstandshåndtering
+
+Hooken håndterer følgende tilstander:
+
+1. **Initiell tilstand**: Ingen opplastede filer eller med initialt opplastede filer
+2. **Opplasting pågår**: `isUploading` er satt til `true`
+3. **Vellykket opplasting**: Filene legges til i `uploadedFiles` og en suksessmelding vises
+4. **Feilet opplasting**: Feilmelding vises og eventuelle vellykkede filer legges til
+5. **Sletting av filer**: Individuell fil fjernes fra listen
+
+### Struktur for feilmelding
+
+For at feilmeldinger skal vises riktig, må data som sendes til `setFailure` følge en bestemt struktur:
+
+```typescript
+setFailure(
+  files, // Filer som feilet
+  [
+    {
+      error: 'Feilmelding', // Tekst som beskriver feilen
+      files: [
+        // Liste over filer som er berørt av denne feilen
+        { name: 'filnavn.pdf', id: 'fil-id' },
+      ],
+    },
+  ],
+  succeededFiles // Valgfri: filer som likevel ble lastet opp
+);
+```
+
+Denne strukturen sikrer at feilmeldinger vises korrekt med filene de gjelder for.
