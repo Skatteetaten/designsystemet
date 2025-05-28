@@ -3,10 +3,8 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, getButtonVariantDefault } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonButtonTypeDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
+import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -22,7 +20,7 @@ const meta = {
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_progress:spinner.LoadingLabel') },
+        defaultValue: { summary: getSpinnerLabelDefault() },
       },
     },
     svgPath: {

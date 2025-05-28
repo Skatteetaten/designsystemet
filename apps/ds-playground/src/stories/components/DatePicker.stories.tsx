@@ -5,15 +5,16 @@ import { Meta, StoryObj } from '@storybook/react';
 import { isWithinInterval, format } from 'date-fns';
 
 import {
-  dsI18n,
   formArrSize,
   getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
+  getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
   getDatePickerDateFormat,
+  getDatePickerPlaceholderDefault,
   TextArea,
 } from '@skatteetaten/ds-forms';
 
@@ -55,7 +56,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     variant: {
@@ -81,7 +82,7 @@ const meta = {
     placeholder: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: dsI18n.t('ds_forms:datepicker.TypeOrSelect') },
+        defaultValue: { summary: getDatePickerPlaceholderDefault() },
       },
     },
     readOnly: { table: { category: category.htmlAttribute } },

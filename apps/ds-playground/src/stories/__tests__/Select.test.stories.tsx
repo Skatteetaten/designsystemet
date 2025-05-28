@@ -10,8 +10,8 @@ import {
   within,
 } from '@storybook/test';
 
-import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
-import { Select } from '@skatteetaten/ds-forms';
+import { formArrSize } from '@skatteetaten/ds-core-utils';
+import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -197,9 +197,7 @@ export const Defaults = {
     await expect(selectNode).toBeInTheDocument();
     await expect(selectNode).toBeEnabled();
     await expect(selectNode).toHaveValue('');
-    await expect(selectNode).toHaveTextContent(
-      dsI18n.t('Shared:shared.ChooseValue')
-    );
+    await expect(selectNode).toHaveTextContent(getSelectPlaceholderDefault());
     await expect(selectNode).toHaveAttribute('id');
     await expect(selectNode.tagName).toBe('SELECT');
     await expect(selectNode).not.toBeRequired();

@@ -1,8 +1,11 @@
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
 
-import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
-import { ExternalLayout, dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  getScrollToTopButtonTextDefault,
+  ScrollToTopButton,
+} from '@skatteetaten/ds-buttons';
+import { ExternalLayout } from '@skatteetaten/ds-core-utils';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -140,9 +143,7 @@ export const WithCustomClassNames = {
     const iconContainer = button.querySelector('div');
 
     const icon = canvas.getByRole('img', { hidden: true });
-    const label = canvas.getByText(
-      dsI18n.t('ds_buttons:scrolltotopbutton.Title')
-    );
+    const label = canvas.getByText(getScrollToTopButtonTextDefault());
     await expect(container).toHaveClass('dummyClassname');
     await expect(button).toHaveClass('dummyClassname');
     await expect(iconContainer).toHaveClass('dummyClassname');

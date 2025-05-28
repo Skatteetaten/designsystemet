@@ -5,9 +5,11 @@ import {
   getStepListStepTitleAsDefault,
   getStepListStepVariantDefault,
   getStepListStepShouldAutoFocusWhenActiveDefault,
+  getStepListStepEditButtonTextDefault,
+  getStepListStepNextButtonTextDefault,
 } from '@skatteetaten/ds-collections';
 import { getPanelTitleAsDefault } from '@skatteetaten/ds-content';
-import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
+import { headingAsArr } from '@skatteetaten/ds-core-utils';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -20,7 +22,7 @@ const meta = {
     editButtonText: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_collections:steplist.Edit') },
+        defaultValue: { summary: getStepListStepEditButtonTextDefault() },
       },
     },
     nextButtonProps: {
@@ -32,7 +34,7 @@ const meta = {
     nextButtonText: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_collections:steplist.Next') },
+        defaultValue: { summary: getStepListStepNextButtonTextDefault() },
       },
     },
     introTitle: {

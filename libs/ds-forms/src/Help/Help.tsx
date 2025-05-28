@@ -2,7 +2,10 @@ import { JSX, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getHelpTitleHelpSvgDefault,
+} from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { HelpProps } from './Help.types';
@@ -15,7 +18,7 @@ export const Help = ({
   helpSvgPath,
   hideHelp,
   targetId,
-  titleHelpSvg,
+  titleHelpSvg = getHelpTitleHelpSvgDefault(),
   onHelpToggle,
   className,
   classNames,
@@ -26,7 +29,6 @@ export const Help = ({
   const helpButtonRef = useRef<HTMLButtonElement>(null);
 
   const svgHelpIcon = helpSvgPath ?? HelpSimpleSVGpath;
-  const titleHelpIcon = titleHelpSvg ?? t('shared.Help');
 
   const toggleHelpText = (): void => {
     onHelpToggle?.(!showHelpText);
@@ -49,7 +51,7 @@ export const Help = ({
           ref={helpButtonRef}
           className={`${styles.helpButton} ${hideHelpClassName}`.trim()}
           svgPath={svgHelpIcon}
-          title={titleHelpIcon}
+          title={titleHelpSvg}
           size={'extraSmall'}
           ariaExpanded={showHelpText}
           ariaDescribedby={targetId}
@@ -89,3 +91,5 @@ export const Help = ({
 };
 
 Help.displayName = 'Help';
+
+export { getHelpTitleHelpSvgDefault };

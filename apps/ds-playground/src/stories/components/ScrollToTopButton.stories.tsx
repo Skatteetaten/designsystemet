@@ -4,6 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import {
   getScrollToMainDefault,
+  getScrollToTopButtonTextDefault,
   getVisibilityThresholdDefault,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
@@ -37,7 +38,12 @@ const meta = {
       control: false,
       table: { category: category.props },
     },
-    children: { table: { category: category.props } },
+    children: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getScrollToTopButtonTextDefault() },
+      },
+    },
   },
   args: {},
   parameters: {

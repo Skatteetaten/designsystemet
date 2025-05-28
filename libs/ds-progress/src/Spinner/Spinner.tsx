@@ -1,12 +1,12 @@
 import { JSX, useEffect, useId, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import {
   getSpinnerColorDefault,
   getSpinnerTitlePositionDefault,
   getSpinnerSizeDefault,
+  getSpinnerLabelDefault,
 } from './defaults';
 import { SpinnerProps } from './Spinner.types';
 
@@ -24,9 +24,8 @@ export const Spinner = ({
   size = getSpinnerSizeDefault(),
   hideTitle,
   percentComplete,
-  children,
+  children = getSpinnerLabelDefault(),
 }: SpinnerProps): JSX.Element => {
-  const { t } = useTranslation('ds_progress', { i18n: dsI18n });
   const [isRendered, setIsRendered] = useState<boolean>(false);
   const generatedId = useId();
   const titleId = `title-${id ?? generatedId}`;
@@ -54,7 +53,6 @@ export const Spinner = ({
     classNames?.container ?? ''
   }`.trim();
   const isInPercentageMode = percentComplete !== undefined;
-  const spinnerLabel = t('spinner.LoadingLabel');
 
   const getAriaBusyStatus = (): 'true' | 'false' | undefined => {
     if (!isInPercentageMode) return undefined;
@@ -95,8 +93,9 @@ export const Spinner = ({
             titlePosition === 'bottom' ? styles.spinnerTitle_centerText : ''
           } ${classNames?.title ?? ''}`.trim()}
         >
-          {isInPercentageMode && `${spinnerLabel} (${percentComplete} %)`}
-          {!isInPercentageMode && isRendered && (children ?? spinnerLabel)}
+          {isInPercentageMode &&
+            `${getSpinnerLabelDefault()} (${percentComplete} %)`}
+          {!isInPercentageMode && isRendered && children}
         </span>
       </div>
       {isInPercentageMode && (
@@ -118,4 +117,5 @@ export {
   getSpinnerColorDefault,
   getSpinnerSizeDefault,
   getSpinnerTitlePositionDefault,
+  getSpinnerLabelDefault,
 };

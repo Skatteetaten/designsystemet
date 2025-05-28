@@ -1,4 +1,4 @@
-import { Density } from '@skatteetaten/ds-core-utils';
+import { Density, dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { TableCellAs, TextAlignment } from './Table.types';
 import { EditButtonPosition } from '../TableEditableRow/TableEditableRow.types';
@@ -11,3 +11,5 @@ export const getTableRowExpandButtonPositionDefault = (): EditButtonPosition =>
 export const getTableCellAlignmentDefault = (): TextAlignment => 'left';
 export const getTableSumAlignmentDefault = (): TextAlignment => 'right';
 export const getTableRowIsExpandedDefault = (): boolean => false;
+export const getTableSumTextDefault = (): string =>
+  dsI18n.t('ds_tables:tablesum.Sum');

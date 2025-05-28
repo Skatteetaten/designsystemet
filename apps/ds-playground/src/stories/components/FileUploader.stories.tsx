@@ -2,7 +2,7 @@ import { useState, JSX } from 'react';
 
 import { StoryObj, Meta } from '@storybook/react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
 
 import { category } from '../../../.storybook/helpers';
@@ -41,7 +41,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     uploadedFiles: { control: false, table: { category: category.props } },
