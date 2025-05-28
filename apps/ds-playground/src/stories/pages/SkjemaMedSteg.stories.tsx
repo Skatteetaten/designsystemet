@@ -7,6 +7,8 @@ import {
   type JSX,
 } from 'react';
 
+import { linkTo } from '@storybook/addon-links';
+
 import { InlineButton, Link, LinkGroup } from '@skatteetaten/ds-buttons';
 import { StepList } from '@skatteetaten/ds-collections';
 import { Card, DescriptionList } from '@skatteetaten/ds-content';
@@ -392,17 +394,14 @@ export const SkjemaMedSteg = (): JSX.Element => {
               stepNumber={2}
               nextButtonText={'Send inn'}
               variant={activeStep === 2 ? 'active' : 'passive'}
-              onNext={(): void => {
-                if (hasGivenConsent) {
-                  window.alert(
-                    'Når Kvitteringssiden er ferdig, blir du sendt dit.'
-                  );
-                } else {
-                  setConsentError(
-                    'Du må bekrefte at opplysningene over stemmer.'
-                  );
-                }
-              }}
+              onNext={
+                hasGivenConsent
+                  ? linkTo('Sidetyper/Ekstern/Kvittering', 'Kvittering')
+                  : (): void =>
+                      setConsentError(
+                        'Du må bekrefte at opplysningene over stemmer.'
+                      )
+              }
             >
               <Card color={'ochre'} className={styles.marginTopM}>
                 <Card.Content>
