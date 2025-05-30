@@ -4,8 +4,11 @@ import * as DescriptionListStories from './DescriptionList.stories';
 import * as DescriptionListElement from './DescriptionListElement.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={DescriptionListStories} />
+
+<DocHeaderWrapper componentName="DescriptionList">
 
 # DescriptionList
 
@@ -15,6 +18,8 @@ import { DocIntro } from '../utils/DocIntro';
   name="DescriptionList"
   url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/descriptionlist/"
 />
+
+</DocHeaderWrapper>
 
 Merk at hvis komponenten mottar tomme elementer i lista med children så vil den tegne opp tomrom. For å unngå dette kan man filtrere vekk tomme elementer før de sendes til komponenten.
 

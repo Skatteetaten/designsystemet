@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #cde1f9;
+      }
+
+      .cls-5 {
+        fill: url(#New_Pattern_Swatch_4-4);
+      }
+
+      .cls-6 {
+        fill: url(#New_Pattern_Swatch_4-2);
+      }
+
+      .cls-7 {
+        fill: url(#New_Pattern_Swatch_4-3);
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        fill: #093e61;
+      }
+
+      .cls-2 {
+        stroke: #093e61;
+        stroke-width: 6px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-10 {
+        fill: url(#New_Pattern_Swatch_4);
+      }
+
+      .cls-3 {
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+    </style>
+    <pattern id="New_Pattern_Swatch_4" data-name="New Pattern Swatch 4" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-329.61 605.45)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-4" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_4-2" data-name="New Pattern Swatch 4" patternTransform="translate(-268.11 584.3)" xlink:href="#New_Pattern_Swatch_4"/>
+    <pattern id="New_Pattern_Swatch_4-3" data-name="New Pattern Swatch 4" patternTransform="translate(-266.11 619.52)" xlink:href="#New_Pattern_Swatch_4"/>
+    <pattern id="New_Pattern_Swatch_4-4" data-name="New Pattern Swatch 4" patternTransform="translate(-268.11 617.52)" xlink:href="#New_Pattern_Swatch_4"/>
+  </defs>
+  <circle class="cls-10" cx="65.6" cy="101" r="46.43"/>
+  <g>
+    <g>
+      <rect class="cls-6" x="35.32" y="62.69" width="145.5" height="38.31"/>
+      <path class="cls-7" d="M178.82,64.69v34.31H37.32v-34.31h141.5M180.82,62.69H35.32v38.31h145.5v-38.31h0Z"/>
+    </g>
+    <g>
+      <rect class="cls-8" x="33.32" y="60.69" width="145.5" height="38.31"/>
+      <path class="cls-5" d="M176.82,62.69v34.31H35.32v-34.31h141.5M178.82,60.69H33.32v38.31h145.5v-38.31h0Z"/>
+    </g>
+  </g>
+  <g>
+    <line class="cls-2" x1="67.89" y1="116.3" x2="172.82" y2="116.3"/>
+    <g>
+      <polygon class="cls-9" points="56.62 123.27 39.05 123.27 47.84 109.33 56.62 123.27"/>
+      <line class="cls-3" x1="47.84" y1="114.35" x2="47.84" y2="118.61"/>
+      <line class="cls-3" x1="47.84" y1="120.05" x2="47.84" y2="121.4"/>
+    </g>
+  </g>
+</svg>
