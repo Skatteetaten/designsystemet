@@ -19,7 +19,7 @@ export interface DividerProps extends BaseProps {
    */
   spacingBottom?: DividerSpacing;
   /**
-   * Variant. Angir om divider skal vises med en subtil/dempet stil med 50% gjennomsiktighet eller sort.
+   * Definerer stilen til divider: sort farge som default eller en subtil/dempet stil med 50% gjennomsiktighet.
    */
   variant?: DividerVariant;
   /**
