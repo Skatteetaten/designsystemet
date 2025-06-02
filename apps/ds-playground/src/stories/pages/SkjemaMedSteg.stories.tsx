@@ -161,11 +161,12 @@ export const SkjemaMedSteg = (): JSX.Element => {
     setHasGivenConsent(false);
   };
 
-  const checkLocalAddressError = (): void => {
+  const setLocalAddressError = (): boolean => {
     if (!hasLocalAddress) {
       setLocalAddressErrorMessage('Svar på om du har norsk adresse.');
-      return;
+      return true;
     }
+    return false;
   };
 
   const setConsentErrorMessage = (): void => {
@@ -173,7 +174,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
   };
 
   const handleNextStep = (): void => {
-    checkLocalAddressError();
+    if (setLocalAddressError()) return;
 
     if (hasLocalAddress === 'ja') {
       const updatedErrors: ContactsError = { ...contactsError };
@@ -288,7 +289,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                     legend={'Har du norsk adresse?'}
                     selectedValue={hasLocalAddress}
                     errorMessage={localAddressErrorMessage}
-                    onBlur={checkLocalAddressError}
+                    onBlur={setLocalAddressError}
                     onChange={(e): void => {
                       setLocalAddressErrorMessage('');
                       setHasLocalAddress(e.target.value);
