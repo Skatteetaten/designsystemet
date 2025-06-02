@@ -46,6 +46,7 @@ const meta = {
     },
     // Aria
     ariaHidden: {
+      control: 'boolean',
       table: { category: category.aria },
     },
   },
