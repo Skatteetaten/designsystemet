@@ -23,7 +23,7 @@ export interface DividerProps extends BaseProps {
    */
   variant?: DividerVariant;
   /**
-   * Skal divider skjules for skjermlesere.
+   * Bestemmer om divider skjules for skjermlesere.
    */
   ariaHidden?: ComponentPropsWithoutRef<'hr'>['aria-hidden'];
 }
