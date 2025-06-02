@@ -1,0 +1,29 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as DividerStories from './Divider.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+
+<Meta of={DividerStories} />
+
+# Button
+
+<VersionBadge packageName={'content'} />
+
+<DocIntro
+  name="Divider"
+  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/divider/"
+/>
+
+<Primary />
+
+```tsx
+import { Divider } from '@skatteetaten/ds-content';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={DividerStories.Examples} />
+
+<Canvas of={DividerStories.ThemeExample} />

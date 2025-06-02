@@ -23,6 +23,7 @@ code {
   padding-top: 100vh;
   color: var(--palette-denim-5);
 }
+
 .width100 {
   width: 100%;
 }
@@ -47,6 +48,7 @@ code {
 .block {
   display: block;
 }
+
 .centerMargin {
   margin-left: auto;
   margin-right: auto;
@@ -64,6 +66,7 @@ code {
 .topSpacingS {
   margin-top: var(--spacing-s);
 }
+
 .bottomSpacingS {
   margin-bottom: var(--spacing-s) !important;
 }
@@ -110,6 +113,7 @@ code {
   display: inline-block;
   margin-right: 20px;
 }
+
 .scrollTableWrapperWarning {
   width: 320px;
   background: var(--semantic-warning-background);
@@ -162,8 +166,13 @@ code {
 .gapS {
   gap: var(--spacing-s);
 }
+
 .gapXs {
   gap: var(--spacing-xs);
+}
+
+.gapM {
+  gap: var(--spacing-m);
 }
 
 .gapXl {
@@ -285,6 +294,10 @@ a.resetLinkStyling {
   flex-wrap: wrap;
 }
 
+.flexGrow {
+  flex-grow: 1;
+}
+
 .blueBackground {
   --theme-primary: var(--palette-denim-100);
 }
@@ -305,4 +318,12 @@ a.resetLinkStyling {
 
 .stripedTable:nth-of-type(even) {
   background-color: var(--palette-graphite-5);
+}
+
+.dividerCard {
+  width: 18rem;
+}
+
+.descriptionList {
+  --description-list-dd-align: right;
 }
