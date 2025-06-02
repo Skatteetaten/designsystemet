@@ -2,8 +2,9 @@
 
 exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_card_nrlm6_5"
+  <div class="_card_12a62_5"
        data-color="white"
+       data-spacing="m"
   >
     <div class="_cardAlert_1mlgn_1 bottomSpacingXL"
          data-variant="info"
@@ -40,7 +41,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1">
+      <div class="_cardContent_c08vq_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
@@ -83,7 +84,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1">
+      <div class="_cardContent_c08vq_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
@@ -126,7 +127,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1">
+      <div class="_cardContent_c08vq_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
