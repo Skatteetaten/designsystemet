@@ -40,6 +40,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './SkjemaMedSteg.module.css';
 import stylesAsString from './SkjemaMedSteg.module.css?raw';
+import { includeStylesTransform } from '../../../.storybook/helpers';
 
 export default {
   title: 'Sidetyper/Ekstern/Skjema med steg',
@@ -50,9 +51,7 @@ export default {
     },
     docs: {
       source: {
-        transform: (code: string): string => {
-          return `/* CSS */ \n ${stylesAsString} \n /* TSX */ \n ${code}`;
-        },
+        transform: includeStylesTransform(stylesAsString),
       },
     },
   },

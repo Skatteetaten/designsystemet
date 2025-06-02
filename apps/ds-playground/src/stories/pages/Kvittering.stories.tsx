@@ -29,6 +29,8 @@ import { Person, RolePicker } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './Kvittering.module.css';
+import stylesAsString from './Kvittering.module.css?raw';
+import { includeStylesTransform } from '../../../.storybook/helpers';
 
 export default {
   title: 'Sidetyper/Ekstern/Kvittering',
@@ -36,6 +38,11 @@ export default {
     layout: 'fullscreen',
     controls: {
       disable: true,
+    },
+    docs: {
+      source: {
+        transform: includeStylesTransform(stylesAsString),
+      },
     },
   },
 };

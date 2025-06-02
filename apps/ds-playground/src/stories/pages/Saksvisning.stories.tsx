@@ -28,6 +28,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './Saksvisning.module.css';
 import stylesAsString from './Saksvisning.module.css?raw';
+import { includeStylesTransform } from '../../../.storybook/helpers';
 
 export default {
   title: 'Sidetyper/Intern/Saksvisning',
@@ -38,9 +39,7 @@ export default {
     },
     docs: {
       source: {
-        transform: (code: string): string => {
-          return `/* CSS */ \n ${stylesAsString} \n /* TSX */ \n ${code}`;
-        },
+        transform: includeStylesTransform(stylesAsString),
       },
     },
   },

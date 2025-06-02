@@ -96,6 +96,30 @@
     overflow-wrap: anywhere;
   }
 
+  .thirdColumn {
+    grid-area: auto;
+
+    @media (min-width: breakpoints.$breakpoint-s) {
+      grid-area: 2 / 2 / 2 / 2;
+    }
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      grid-area: auto;
+    }
+  }
+
+  .firstColumn {
+    grid-row: auto;
+
+    @media (min-width: breakpoints.$breakpoint-s) {
+      grid-row: 1 / 3;
+    }
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      grid-row: auto;
+    }
+  }
+
   &Search {
     max-width: 25rem;
     margin: var(--spacing-m) var(--spacing-m) var(--spacing-xl);
