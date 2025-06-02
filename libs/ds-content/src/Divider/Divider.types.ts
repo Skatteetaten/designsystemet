@@ -6,6 +6,8 @@ export const dividerSpacingArr = [...spacingArr, 'none'] as const;
 
 export type DividerSpacing = (typeof dividerSpacingArr)[number];
 
+export type DividerVariant = 'default' | 'subtle';
+
 export interface DividerProps extends BaseProps {
   ref?: Ref<HTMLHRElement>;
   /**
@@ -17,9 +19,9 @@ export interface DividerProps extends BaseProps {
    */
   spacingBottom?: DividerSpacing;
   /**
-   * Angir om divider skal vises med en subtil/dempet stil med 50% gjennomsiktighet.
+   * Variant. Angir om divider skal vises med en subtil/dempet stil med 50% gjennomsiktighet eller sort.
    */
-  subtle?: boolean;
+  variant?: DividerVariant;
   /**
    * Skal divider skjules for skjermlesere.
    */

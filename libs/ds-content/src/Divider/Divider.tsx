@@ -5,6 +5,7 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
   getDividerSpacingBottomDefault,
   getDividerSpacingTopDefault,
+  getDividerVariantDefault,
 } from './defaults';
 import { DividerProps } from './Divider.types';
 
@@ -16,13 +17,12 @@ export const Divider = ({
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
-  subtle,
+  variant = getDividerVariantDefault(),
   spacingTop = getDividerSpacingTopDefault(),
   spacingBottom = getDividerSpacingBottomDefault(),
   ariaHidden,
 }: DividerProps): JSX.Element => {
-  const concatenatedClassName =
-    `${styles.divider} ${subtle ? styles.divider_subtle : ''} ${className}`.trim();
+  const concatenatedClassName = `${styles.divider} ${className}`.trim();
   return (
     <hr
       ref={ref}
@@ -31,10 +31,15 @@ export const Divider = ({
       data-testid={dataTestId}
       className={concatenatedClassName}
       aria-hidden={ariaHidden}
+      data-variant={variant}
       data-spacing-top={spacingTop}
       data-spacing-bottom={spacingBottom}
     />
   );
 };
 
-export { getDividerSpacingTopDefault, getDividerSpacingBottomDefault };
+export {
+  getDividerSpacingTopDefault,
+  getDividerSpacingBottomDefault,
+  getDividerVariantDefault,
+};

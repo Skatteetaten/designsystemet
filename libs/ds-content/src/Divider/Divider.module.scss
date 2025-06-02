@@ -4,7 +4,7 @@
   margin: 0;
   background-color: var(--semantic-divider-100);
 
-  &_subtle {
+  &[data-variant='subtle'] {
     background-color: var(--palette-dark-alpha-50);
   }
 

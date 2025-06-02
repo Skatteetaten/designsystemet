@@ -14,9 +14,9 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    subtle: { table: { disable: true } },
     spacingTop: { table: { disable: true } },
     spacingBottom: { table: { disable: true } },
+    variant: { table: { disable: true } },
     // Aria
     ariaHidden: { table: { disable: true } },
   },
@@ -75,10 +75,10 @@ export const Defaults = {
 export const WithSubtle = {
   name: 'With Subtle (A3)',
   args: {
-    subtle: true,
+    variant: 'subtle',
   },
   argTypes: {
-    subtle: { table: { disable: false } },
+    variant: { table: { disable: false } },
   },
 } satisfies Story;
 

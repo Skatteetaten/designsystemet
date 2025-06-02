@@ -10,6 +10,7 @@ import {
   dividerSpacingArr,
   getDividerSpacingBottomDefault,
   getDividerSpacingTopDefault,
+  getDividerVariantDefault,
 } from '@skatteetaten/ds-content';
 import { ArbeidTrygdPensjonIcon, EditSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -36,7 +37,13 @@ const meta = {
         defaultValue: { summary: getDividerSpacingBottomDefault() },
       },
     },
-    subtle: { table: { category: category.props } },
+    variant: {
+      table: {
+        category: category.props,
+
+        defaultValue: { summary: getDividerVariantDefault() },
+      },
+    },
     // Aria
     ariaHidden: {
       table: { category: category.aria },
@@ -54,7 +61,7 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <div>
-        <Card className={'autoFit'}>
+        <Card className={'dividerCard'}>
           <Card.Header>
             <Heading as={'h3'} level={3}>
               {'Utregning'}
@@ -76,7 +83,7 @@ export const Examples: Story = {
                 {'110 000'}
               </DescriptionList.Element>
             </DescriptionList>
-            <Divider subtle />
+            <Divider variant={'subtle'} />
 
             <DescriptionList
               className={'descriptionList'}
@@ -108,7 +115,7 @@ export const ThemeExample: Story = {
             {'Arbeid, trygd og pensjon'}
           </Heading>
         </div>
-        <Divider spacingTop={'xs'} spacingBottom={'l'} subtle />
+        <Divider spacingTop={'xs'} spacingBottom={'l'} variant={'subtle'} />
         <Card className={'cardWidth'}>
           <Card.Alert
             variant={'danger'}
