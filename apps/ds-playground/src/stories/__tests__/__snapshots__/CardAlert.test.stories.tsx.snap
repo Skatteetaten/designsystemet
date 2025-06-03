@@ -9,7 +9,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
          data-variant="info"
     >
       <div class="_cardAlertHeadingContainer_1mlgn_49">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_1mlgn_23"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _cardAlertIcon_1mlgn_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -25,7 +25,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r7:"
@@ -52,7 +52,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
          data-variant="warning"
     >
       <div class="_cardAlertHeadingContainer_1mlgn_49">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_1mlgn_23"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _cardAlertIcon_1mlgn_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -68,7 +68,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r9:"
@@ -95,7 +95,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
          data-variant="danger"
     >
       <div class="_cardAlertHeadingContainer_1mlgn_49">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_1mlgn_23"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _cardAlertIcon_1mlgn_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -111,7 +111,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:rb:"
@@ -147,7 +147,7 @@ exports[`Tester/Card/Alert WithAttributes play-test 1`] = `
        data-variant="info"
   >
     <div class="_cardAlertHeadingContainer_1mlgn_49">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_1mlgn_23"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _cardAlertIcon_1mlgn_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -163,7 +163,7 @@ exports[`Tester/Card/Alert WithAttributes play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -197,7 +197,7 @@ exports[`Tester/Card/Alert WithRef play-test 1`] = `
        id="dummyIdForwardedFromRef"
   >
     <div class="_cardAlertHeadingContainer_1mlgn_49">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_1mlgn_23"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _cardAlertIcon_1mlgn_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -213,7 +213,7 @@ exports[`Tester/Card/Alert WithRef play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -241,7 +241,7 @@ exports[`Tester/Card/Alert WithSvgPath smoke-test 1`] = `
        data-variant="info"
   >
     <div class="_cardAlertHeadingContainer_1mlgn_49">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_1mlgn_23"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _cardAlertIcon_1mlgn_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -257,7 +257,7 @@ exports[`Tester/Card/Alert WithSvgPath smoke-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"

@@ -157,7 +157,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
                 type="button"
                 aria-describedby="steptitle-:r7:"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -186,7 +186,7 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
       >
         <span class="_stepCircle_w1s5s_196
       _stepCircle_neutralResult_w1s5s_235">
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _stepCircleIcon_w1s5s_244"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r6:"
@@ -228,7 +228,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
       >
         <span class="_stepCircle_w1s5s_196
       _stepCircle_active_w1s5s_221">
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _stepCircleIcon_w1s5s_244"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r3:"

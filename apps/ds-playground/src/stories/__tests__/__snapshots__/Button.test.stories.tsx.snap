@@ -110,7 +110,7 @@ exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -149,7 +149,7 @@ exports[`Tester/Button WithExternalIcon play-test 1`] = `
       Til altinn.no
     </span>
     <span class="_iconWrapper_6ybyo_25">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25 _iconExternal_6ybyo_66"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25 _iconExternal_6ybyo_66"
            viewbox="0 0 24 24"
            focusable="false"
            aria-label="Til et annet nettsted"
@@ -170,7 +170,7 @@ exports[`Tester/Button WithIcon play-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -205,7 +205,7 @@ exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -350,7 +350,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
             type="button"
     >
       <span class="_iconWrapper_6ybyo_25">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -368,7 +368,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
             type="button"
     >
       <span class="_iconWrapper_6ybyo_25">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -386,7 +386,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
             type="button"
     >
       <span class="_iconWrapper_6ybyo_25">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -404,7 +404,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
             type="button"
     >
       <span class="_iconWrapper_6ybyo_25">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -423,7 +423,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -453,7 +453,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -483,7 +483,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -513,7 +513,7 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_6ybyo_25"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"

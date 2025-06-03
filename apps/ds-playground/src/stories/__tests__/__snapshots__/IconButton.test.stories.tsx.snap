@@ -6,7 +6,7 @@ exports[`Tester/IconButton Defaults play-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r2:"
@@ -30,7 +30,7 @@ exports[`Tester/IconButton WithAccesskey play-test 1`] = `
           accesskey="a"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rg:"
@@ -54,7 +54,7 @@ exports[`Tester/IconButton WithAriaDescribedby play-test 1`] = `
           type="button"
           aria-describedby="araiDescId"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:re:"
@@ -78,7 +78,7 @@ exports[`Tester/IconButton WithAriaExpanded play-test 1`] = `
           type="button"
           aria-expanded="true"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rf:"
@@ -104,7 +104,7 @@ exports[`Tester/IconButton WithAttributes play-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r1:"
@@ -127,7 +127,7 @@ exports[`Tester/IconButton WithBrightness smoke-test 1`] = `
           data-brightness="light"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r12:"
@@ -151,7 +151,7 @@ exports[`Tester/IconButton WithBrightnessAndDisabled smoke-test 1`] = `
           disabled
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r15:"
@@ -174,7 +174,7 @@ exports[`Tester/IconButton WithBrightnessAndOutline smoke-test 1`] = `
           data-brightness="light"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r13:"
@@ -219,7 +219,7 @@ exports[`Tester/IconButton WithCustomSVGPath smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r4:"
@@ -243,7 +243,7 @@ exports[`Tester/IconButton WithDisabled play-test 1`] = `
           disabled
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rb:"
@@ -267,7 +267,7 @@ exports[`Tester/IconButton WithDisabledAndOutline smoke-test 1`] = `
           disabled
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rc:"
@@ -290,7 +290,7 @@ exports[`Tester/IconButton WithEventHandlers play-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rh:"
@@ -313,7 +313,7 @@ exports[`Tester/IconButton WithOutline smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r3:"
@@ -337,7 +337,7 @@ exports[`Tester/IconButton WithRef play-test 1`] = `
           type="button"
           id="dummyIdForwardedFromRef"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r0:"
@@ -360,7 +360,7 @@ exports[`Tester/IconButton WithSizeExtraSmall smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r5:"
@@ -383,7 +383,7 @@ exports[`Tester/IconButton WithSizeExtraSmallAndOutline smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r8:"
@@ -406,7 +406,7 @@ exports[`Tester/IconButton WithSizeLarge smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r7:"
@@ -429,7 +429,7 @@ exports[`Tester/IconButton WithSizeLargeAndOutline smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:ra:"
@@ -452,7 +452,7 @@ exports[`Tester/IconButton WithSizeSmall smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r6:"
@@ -475,7 +475,7 @@ exports[`Tester/IconButton WithSizeSmallAndOutline smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r9:"
@@ -499,7 +499,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:ri:"
@@ -517,7 +517,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rj:"
@@ -535,7 +535,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rk:"
@@ -553,7 +553,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rl:"
@@ -643,7 +643,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rq:"
@@ -661,7 +661,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rr:"
@@ -679,7 +679,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rs:"
@@ -697,7 +697,7 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rt:"
@@ -789,7 +789,7 @@ exports[`Tester/IconButton WithType play-test 1`] = `
           data-brightness="default"
           type="submit"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rd:"

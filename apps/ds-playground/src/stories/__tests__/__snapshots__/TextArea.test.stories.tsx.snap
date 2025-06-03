@@ -99,7 +99,7 @@ exports[`Tester/TextArea WithAutoSizeInModal play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r31:"
@@ -199,7 +199,7 @@ exports[`Tester/TextArea WithCharacterLimitAndError smoke-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -294,7 +294,7 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
             aria-describedby="labelId-:rb:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rc:"
@@ -323,7 +323,7 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15 dummyClassname">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -462,7 +462,7 @@ exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -518,7 +518,7 @@ exports[`Tester/TextArea WithHelpText play-test 1`] = `
             aria-describedby="labelId-:r2e:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2f:"
@@ -561,7 +561,7 @@ exports[`Tester/TextArea WithHelpTextAndDescription smoke-test 1`] = `
             aria-describedby="labelId-:r2k:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2l:"
@@ -607,7 +607,7 @@ exports[`Tester/TextArea WithHelpToggleEvent smoke-test 1`] = `
             aria-describedby="labelId-:r2u:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2v:"

@@ -3,6 +3,7 @@ declare const classNames: {
   readonly systemIcon_small: 'systemIcon_small';
   readonly systemIcon_medium: 'systemIcon_medium';
   readonly systemIcon_large: 'systemIcon_large';
+  readonly systemIcon_largePlus: 'systemIcon_largePlus';
   readonly systemIcon_extraLarge: 'systemIcon_extraLarge';
   readonly themeIcon: 'themeIcon';
   readonly themeIcon_small: 'themeIcon_small';

@@ -39,7 +39,7 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -125,7 +125,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r3:"
@@ -162,7 +162,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -248,7 +248,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -340,7 +340,7 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -373,7 +373,7 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -439,7 +439,7 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -528,7 +528,7 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -617,7 +617,7 @@ exports[`Tester/Pagination WithHiddenPageSummary play-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -650,7 +650,7 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -743,7 +743,7 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -849,7 +849,7 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -882,7 +882,7 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1027,7 +1027,7 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1117,7 +1117,7 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1150,7 +1150,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1236,7 +1236,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
           <span class>
             Neste
           </span>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"

@@ -228,7 +228,7 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
             aria-describedby="legendId-:r3q:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3r:"
@@ -301,7 +301,7 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
            aria-atomic="true"
       >
         <div class="_errorMessage_vog41_15 _errorMessage_1f9v8_15 dummyClassname">
-          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -601,7 +601,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
            aria-atomic="true"
       >
         <div class="_errorMessage_vog41_15 _errorMessage_1f9v8_15">
-          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -656,7 +656,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndAriaDescribedby play-te
            aria-atomic="true"
       >
         <div class="_errorMessage_vog41_15 _errorMessage_1f9v8_15">
-          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+          <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -734,7 +734,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
             aria-describedby="legendId-:r2s:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2t:"
@@ -756,7 +756,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r31:"
@@ -845,7 +845,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
             aria-describedby="legendId-:r3j:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3k:"
