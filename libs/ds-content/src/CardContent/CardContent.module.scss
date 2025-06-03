@@ -11,13 +11,11 @@
   }
 
   &:first-child:has(+ &) {
-    margin-top: var(--card-padding);
     margin-bottom: var(--spacing-s);
   }
 
-  &:last-child:has(+ &) {
+  &:last-child:not(:only-child) {
     margin-top: var(--spacing-s);
-    margin-bottom: var(--card-padding);
   }
 }
 

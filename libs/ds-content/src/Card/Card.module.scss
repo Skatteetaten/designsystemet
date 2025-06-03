@@ -74,8 +74,12 @@
   &[data-spacing='responsive'] {
     --card-padding: var(--spacing-s);
 
-    @media (min-width: breakpoints.$breakpoint-m) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       --card-padding: var(--spacing-m);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-l) {
+      --card-padding: var(--spacing-xl);
     }
   }
 }

@@ -14,7 +14,7 @@ exports[`Tester/Card/Header WithAttributes play-test 1`] = `
 
 exports[`Tester/Card/Header WithChildrenRigthContent smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_card_12a62_5"
+  <div class="_card_lg4k9_5"
        data-color="white"
        data-spacing="m"
   >
