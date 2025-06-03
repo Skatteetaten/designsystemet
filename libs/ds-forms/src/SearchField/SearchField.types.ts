@@ -18,7 +18,7 @@ import {
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
 
-export const searchArrSize = [sizeArr[2], sizeArr[3], sizeArr[4]] as const;
+export const searchArrSize = [sizeArr[2], sizeArr[3], sizeArr[5]] as const;
 export type SearchSize = (typeof searchArrSize)[number];
 
 type RequiredDatePickerHTMLAttributes = Pick<

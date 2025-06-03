@@ -36,6 +36,7 @@
   fill: var(--semantic-page-foreground);
 
   &_small,
+  &_largePlus,
   &_extraLarge {
     /* Dette er ikke noe tillatt størrelse for Tema ikoner */
     display: none;
