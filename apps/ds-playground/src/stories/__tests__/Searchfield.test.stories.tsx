@@ -5,6 +5,7 @@ import {
   KeyboardEvent,
   useState,
   JSX,
+  useMemo,
 } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -21,7 +22,11 @@ import {
   dsI18n,
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
-import { searchArrSize, SearchField } from '@skatteetaten/ds-forms';
+import {
+  searchArrSize,
+  SearchField,
+  searchInList,
+} from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -521,17 +526,37 @@ export const WithEventHandlers = {
   },
 } satisfies Story;
 
-export const WithArrowKeyNavigation = {
-  name: 'With ArrowKeyNavgitaion (C2)',
-  args: {
-    ...defaultArgs,
-    results: [
+const KeyboardNavigationTemplate: StoryFn<typeof SearchField> = (args) => {
+  const [value, setValue] = useState<string>('');
+
+  const options = useMemo(() => {
+    return [
       { description: 'Hydrogen', key: 'H' },
       { description: 'Helium', key: 'He' },
       { description: 'Litium', key: 'Li' },
       { description: 'Beryllium', key: 'Be' },
       { description: 'Bor', key: 'B' },
-    ],
+    ];
+  }, []);
+
+  const results = useMemo(() => searchInList(options, value), [value, options]);
+
+  return (
+    <SearchField
+      {...args}
+      results={results}
+      onChange={(event) => {
+        setValue(event.target.value);
+      }}
+    />
+  );
+};
+
+export const WithArrowKeyNavigation = {
+  name: 'With ArrowKeyNavgitaion (C2)',
+  render: KeyboardNavigationTemplate,
+  args: {
+    ...defaultArgs,
     onResultClick: fn(),
   },
   parameters: {
@@ -540,9 +565,12 @@ export const WithArrowKeyNavigation = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const searchbox = canvas.getByRole('searchbox');
-    const results = await canvas.findAllByRole('option');
 
     searchbox.focus();
+    await userEvent.keyboard('h');
+    await userEvent.keyboard('[backspace]');
+
+    const results = await canvas.findAllByRole('option');
     await userEvent.keyboard('[ArrowDown]');
     await expect(results[0]).toHaveFocus();
     await userEvent.keyboard('[ArrowDown]');

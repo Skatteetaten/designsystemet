@@ -98,7 +98,13 @@ export const SearchField = (({
   }, [value, defaultValue]);
 
   useEffect(() => {
-    setShowResults(!!(!disabled && results?.length));
+    setShowResults(
+      !!(
+        !disabled &&
+        results?.length &&
+        document.activeElement === inputRef?.current
+      )
+    );
   }, [disabled, results]);
 
   useEffect(() => {
