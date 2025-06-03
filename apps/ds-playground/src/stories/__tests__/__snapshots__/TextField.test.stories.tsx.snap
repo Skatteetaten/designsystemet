@@ -133,7 +133,7 @@ exports[`Tester/TextField WithCharacterLimitAndError smoke-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -197,7 +197,7 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
             aria-describedby="labelId-:rb:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rc:"
@@ -226,7 +226,7 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15 dummyClassname">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -400,7 +400,7 @@ exports[`Tester/TextField WithErrorMessage play-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -456,7 +456,7 @@ exports[`Tester/TextField WithHelpText play-test 1`] = `
             aria-describedby="labelId-:r2q:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2r:"
@@ -499,7 +499,7 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
             aria-describedby="labelId-:r30:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r31:"
@@ -545,7 +545,7 @@ exports[`Tester/TextField WithHelpToggleEvent smoke-test 1`] = `
             aria-describedby="labelId-:r3a:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3b:"

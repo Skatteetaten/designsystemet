@@ -10,7 +10,7 @@ exports[`Tester/TopBanner/TopBannerInternalActionMenu WithAttributes play-test 1
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -33,7 +33,7 @@ exports[`Tester/TopBanner/TopBannerInternalActionMenu WithImperativeActions play
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -65,7 +65,7 @@ exports[`Tester/TopBanner/TopBannerInternalActionMenu WithRef play-test 1`] = `
           id="dummyIdForwardedFromRef"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"

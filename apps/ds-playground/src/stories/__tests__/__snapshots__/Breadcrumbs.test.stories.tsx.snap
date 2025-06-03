@@ -176,7 +176,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r4:"

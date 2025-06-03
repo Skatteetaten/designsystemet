@@ -12,7 +12,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -56,7 +56,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -104,7 +104,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -148,7 +148,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -182,7 +182,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
         <a class="_link_z7jba_1 _link_white_z7jba_1"
            href="/hjelp"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -197,7 +197,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -214,7 +214,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -228,7 +228,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
           </span>
         </button>
         <div class="_userContainer_450zt_79">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _userContainerIcon_450zt_95"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -259,7 +259,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -303,7 +303,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -347,7 +347,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -391,7 +391,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -440,7 +440,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnDesktop play-test 1`] 
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -484,7 +484,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithHideLogoOnMobile play-test 1`] =
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -523,7 +523,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -567,7 +567,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongConstructionText smoke-test 
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -616,7 +616,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -651,7 +651,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -668,7 +668,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -685,7 +685,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -699,7 +699,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
           </span>
         </button>
         <div class="_userContainer_450zt_79">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _userContainerIcon_450zt_95"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -730,7 +730,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -765,7 +765,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -782,7 +782,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -799,7 +799,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -813,7 +813,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
           </span>
         </button>
         <div class="_userContainer_450zt_79">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _userContainerIcon_450zt_95"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -844,7 +844,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -891,7 +891,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -926,7 +926,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -940,7 +940,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
           </span>
         </button>
         <div class="_userContainer_450zt_79">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _userContainerIcon_450zt_95"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -971,7 +971,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithPoliceLogo smoke-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1017,7 +1017,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1061,7 +1061,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1096,7 +1096,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1113,7 +1113,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1130,7 +1130,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1144,7 +1144,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
           </span>
         </button>
         <div class="_userContainer_450zt_79">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _userContainerIcon_450zt_95"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1175,7 +1175,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1210,7 +1210,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1227,7 +1227,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1244,7 +1244,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1258,7 +1258,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
           </span>
         </button>
         <div class="_userContainer_450zt_79">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _userContainerIcon_450zt_95"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1289,7 +1289,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
        class="_skipLink_nmfvk_1 _skipLink_450zt_25"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1321,7 +1321,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
       </div>
       <div class="_childrenAndUserContainer_450zt_72">
         <div class="_userContainer_450zt_79">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _userContainerIcon_450zt_95"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userContainerIcon_450zt_95"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"

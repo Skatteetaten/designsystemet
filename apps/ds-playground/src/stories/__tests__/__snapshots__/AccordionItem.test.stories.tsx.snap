@@ -14,7 +14,7 @@ exports[`Tester/Accordion/Item Defaults play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -47,7 +47,7 @@ exports[`Tester/Accordion/Item IsDefaultExpanded play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -80,7 +80,7 @@ exports[`Tester/Accordion/Item IsExpanded play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -113,7 +113,7 @@ exports[`Tester/Accordion/Item PersistFocusOnClick play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -149,7 +149,7 @@ exports[`Tester/Accordion/Item WithAttributes play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -185,7 +185,7 @@ exports[`Tester/Accordion/Item WithCustomClassNames play-test 1`] = `
           </p>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -213,7 +213,7 @@ exports[`Tester/Accordion/Item WithCustomIcon smoke-test 1`] = `
               type="button"
       >
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -229,7 +229,7 @@ exports[`Tester/Accordion/Item WithCustomIcon smoke-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -264,7 +264,7 @@ linjer
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -297,7 +297,7 @@ exports[`Tester/Accordion/Item WithOnClick play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -330,7 +330,7 @@ exports[`Tester/Accordion/Item WithPersistedState play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_open_ihaf2_23"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -387,7 +387,7 @@ exports[`Tester/Accordion/Item WithRef play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -420,7 +420,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -448,7 +448,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -476,7 +476,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -504,7 +504,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -532,7 +532,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -560,7 +560,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="_iconWrapper_ihaf2_80 _iconWrapper_medium_ihaf2_86">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_ihaf2_18 _chevron_medium_ihaf2_29 _chevron_closed_ihaf2_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"

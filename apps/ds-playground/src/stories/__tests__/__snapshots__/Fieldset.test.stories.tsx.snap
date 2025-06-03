@@ -139,7 +139,7 @@ exports[`Tester/Fieldset WithHelpTextSvgPathAndTitle play-test 1`] = `
             aria-describedby="legendId-:ra:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rb:"
@@ -181,7 +181,7 @@ exports[`Tester/Fieldset WithHelpToggleEvent smoke-test 1`] = `
             aria-describedby="legendId-:re:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rf:"
@@ -223,7 +223,7 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
             aria-describedby="legendId-:r6:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r7:"

@@ -2,7 +2,7 @@
 
 exports[`Tester/Icon Defaults play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"
@@ -16,7 +16,7 @@ exports[`Tester/Icon Defaults play-test 1`] = `
 
 exports[`Tester/Icon SystemIconSizeExtraLarge play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_extraLarge_1b9cs_25"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_extraLarge_o38m2_25"
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"
@@ -30,7 +30,7 @@ exports[`Tester/Icon SystemIconSizeExtraLarge play-test 1`] = `
 
 exports[`Tester/Icon SystemIconSizeLarge play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15"
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"
@@ -44,7 +44,7 @@ exports[`Tester/Icon SystemIconSizeLarge play-test 1`] = `
 
 exports[`Tester/Icon SystemIconSizeLargePlus play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_largePlus_1b9cs_20"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_largePlus_o38m2_20"
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"
@@ -58,7 +58,7 @@ exports[`Tester/Icon SystemIconSizeLargePlus play-test 1`] = `
 
 exports[`Tester/Icon SystemIconSizeMedium play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"
@@ -72,7 +72,7 @@ exports[`Tester/Icon SystemIconSizeMedium play-test 1`] = `
 
 exports[`Tester/Icon SystemIconSizeSmall play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5"
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"
@@ -86,7 +86,7 @@ exports[`Tester/Icon SystemIconSizeSmall play-test 1`] = `
 
 exports[`Tester/Icon ThemeIconSizeLarge play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_themeIcon_1b9cs_31 _themeIcon_large_1b9cs_43"
+  <svg class="_themeIcon_o38m2_31 _themeIcon_large_o38m2_34"
        viewbox="0 0 48 48"
        focusable="false"
        aria-hidden="true"
@@ -100,7 +100,7 @@ exports[`Tester/Icon ThemeIconSizeLarge play-test 1`] = `
 
 exports[`Tester/Icon ThemeIconSizeMedium play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_themeIcon_1b9cs_31 _themeIcon_medium_1b9cs_38"
+  <svg class="_themeIcon_o38m2_31 _themeIcon_medium_o38m2_38"
        viewbox="0 0 48 48"
        focusable="false"
        aria-hidden="true"
@@ -114,7 +114,7 @@ exports[`Tester/Icon ThemeIconSizeMedium play-test 1`] = `
 
 exports[`Tester/Icon WithAriaLabel play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
        viewbox="0 0 24 24"
        focusable="false"
        aria-label="min custom aria-label beskrivelse"
@@ -130,7 +130,7 @@ exports[`Tester/Icon WithAriaLabel play-test 1`] = `
 exports[`Tester/Icon WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <svg id="htmlid"
-       class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 dummyClassname"
+       class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 dummyClassname"
        lang="nb"
        data-testid="123ID"
        viewbox="0 0 24 24"
@@ -146,7 +146,7 @@ exports[`Tester/Icon WithAttributes play-test 1`] = `
 
 exports[`Tester/Icon WithCustomSVG smoke-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"
@@ -160,7 +160,7 @@ exports[`Tester/Icon WithCustomSVG smoke-test 1`] = `
 
 exports[`Tester/Icon WithRef play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"
@@ -175,7 +175,7 @@ exports[`Tester/Icon WithRef play-test 1`] = `
 
 exports[`Tester/Icon WithTitle play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+  <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
        viewbox="0 0 24 24"
        focusable="false"
        aria-labelledby="svgtitle-:r5:"
@@ -193,7 +193,7 @@ exports[`Tester/Icon WithTitle play-test 1`] = `
 
 exports[`Tester/Icon WithVariant play-test 1`] = `
 <div data-test-block="true">
-  <svg class="_themeIcon_1b9cs_31 _themeIcon_medium_1b9cs_38"
+  <svg class="_themeIcon_o38m2_31 _themeIcon_medium_o38m2_38"
        viewbox="0 0 48 48"
        focusable="false"
        aria-hidden="true"

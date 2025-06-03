@@ -40,7 +40,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
                   type="button"
                   aria-describedby="steptitle-:ro:"
           >
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -118,7 +118,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           <span class="_stepCircle_w1s5s_196
       _stepCircle_positiveResult_w1s5s_226">
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rt:"
@@ -172,7 +172,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           <span class="_stepCircle_w1s5s_196
       _stepCircle_neutralResult_w1s5s_235">
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rv:"
@@ -242,7 +242,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
                   type="button"
                   aria-describedby="steptitle-:r8:"
           >
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -320,7 +320,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           <span class="_stepCircle_w1s5s_196
       _stepCircle_positiveResult_w1s5s_226">
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rd:"
@@ -374,7 +374,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           <span class="_stepCircle_w1s5s_196
       _stepCircle_neutralResult_w1s5s_235">
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rf:"
@@ -444,7 +444,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
                   type="button"
                   aria-describedby="steptitle-:rg:"
           >
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -522,7 +522,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           <span class="_stepCircle_w1s5s_196
       _stepCircle_positiveResult_w1s5s_226">
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rl:"
@@ -576,7 +576,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           <span class="_stepCircle_w1s5s_196
       _stepCircle_neutralResult_w1s5s_235">
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rn:"
@@ -707,7 +707,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         <span class="_stepCircle_w1s5s_196
       _stepCircle_positiveResult_w1s5s_226">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r1f:"
@@ -790,7 +790,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
                   type="button"
                   aria-describedby="steptitle-:r0:"
           >
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_r1hjf_42"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -868,7 +868,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           <span class="_stepCircle_w1s5s_196
       _stepCircle_positiveResult_w1s5s_226">
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r5:"
@@ -922,7 +922,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           <span class="_stepCircle_w1s5s_196
       _stepCircle_neutralResult_w1s5s_235">
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _stepCircleIcon_w1s5s_244"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _stepCircleIcon_w1s5s_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r7:"

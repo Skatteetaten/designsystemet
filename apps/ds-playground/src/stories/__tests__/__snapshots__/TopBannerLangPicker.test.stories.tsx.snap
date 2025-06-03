@@ -39,7 +39,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -53,7 +53,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
       <span class="_srOnly_72xc2_133">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -100,7 +100,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -114,7 +114,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
       <span class="_srOnly_72xc2_133">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -156,7 +156,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
             <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -326,7 +326,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -340,7 +340,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
       <span class="_srOnly_72xc2_133">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -395,7 +395,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -409,7 +409,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
       <span class="_srOnly_72xc2_133">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -519,7 +519,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
             <span class="_buttonText_1qb8h_21">
               English
             </span>
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -619,7 +619,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -633,7 +633,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
       <span class="_srOnly_72xc2_133">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -680,7 +680,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -694,7 +694,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
       <span class="_srOnly_72xc2_133">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -736,7 +736,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
             <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
-            <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"

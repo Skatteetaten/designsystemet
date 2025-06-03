@@ -10,7 +10,7 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
             class="_dropZone_10i3l_14"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -61,7 +61,7 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
             class="_dropZone_10i3l_14"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -110,7 +110,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
             aria-describedby=":r2b:-fileuploader-error"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -135,7 +135,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15 dummyClassname">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -177,7 +177,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
             aria-describedby="labelId-:rv:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r10:"
@@ -199,7 +199,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
             aria-describedby=":ru:-fileuploader-error :rt:-accepted-formats"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -234,7 +234,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -278,7 +278,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
             aria-describedby="labelId-:r1v:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r20:"
@@ -299,7 +299,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
             class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -338,7 +338,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r23:"
@@ -367,7 +367,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
                       type="button"
                       aria-describedby=":r22:-file-file.txt"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:r24:"
@@ -411,7 +411,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
             aria-describedby="labelId-:r27:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r28:"
@@ -432,7 +432,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
             class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -533,7 +533,7 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
             class="_dropZone_10i3l_14"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -582,7 +582,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
             aria-describedby=":r1n:-accepted-formats"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -630,7 +630,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1r:"
@@ -655,7 +655,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
                       type="button"
                       aria-describedby=":r1q:-file-document.pdf"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:r1s:"
@@ -694,7 +694,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             aria-describedby=":r13:-accepted-formats"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -736,7 +736,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
            data-brightness="default"
       >
         <span class="_iconWrapper_lurqs_8">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_lurqs_8"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_lurqs_8"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -761,7 +761,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r18:"
@@ -790,7 +790,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                       type="button"
                       aria-describedby=":r17:-file-dokumentasjon.pdf"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:r19:"
@@ -817,7 +817,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1b:"
@@ -842,7 +842,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                       type="button"
                       aria-describedby=":r1a:-file-grunnlag.jpg"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:r1c:"
@@ -876,7 +876,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             aria-describedby=":r1d:-accepted-formats"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -918,7 +918,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
            data-brightness="default"
       >
         <span class="_iconWrapper_lurqs_8">
-          <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_lurqs_8"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_lurqs_8"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -943,7 +943,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1i:"
@@ -972,7 +972,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                       type="button"
                       aria-describedby=":r1h:-file-dokumentasjon.pdf"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:r1j:"
@@ -999,7 +999,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1l:"
@@ -1024,7 +1024,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                       type="button"
                       aria-describedby=":r1k:-file-grunnlag.jpg"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:r1m:"
@@ -1067,7 +1067,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             aria-describedby="labelId-:rb:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rc:"
@@ -1089,7 +1089,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             aria-describedby=":r9:-accepted-formats"
     >
       <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_1b9cs_2 _systemIcon_large_1b9cs_15 _icon_10i3l_10"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1137,7 +1137,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rf:"
@@ -1166,7 +1166,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                       type="button"
                       aria-describedby=":re:-file-dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:rg:"
@@ -1193,7 +1193,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ri:"
@@ -1218,7 +1218,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                       type="button"
                       aria-describedby=":rh:-file-grunnlag.jpg"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:rj:"
@@ -1245,7 +1245,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rl:"
@@ -1270,7 +1270,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                       type="button"
                       aria-describedby=":rk:-file-Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:rm:"
@@ -1297,7 +1297,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         >
           <div class="_cardContent_48t19_1">
             <div class="_fileContentContainer_15fus_20">
-              <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _fileListIcon_15fus_116"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ro:"
@@ -1326,7 +1326,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                       type="button"
                       aria-describedby=":rn:-file-test.png"
               >
-                <svg class="_systemIcon_1b9cs_2 _systemIcon_small_1b9cs_5 _icon_19ayz_26"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-labelledby="svgtitle-:rp:"

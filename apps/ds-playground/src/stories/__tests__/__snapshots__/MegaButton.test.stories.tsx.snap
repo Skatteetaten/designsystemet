@@ -34,7 +34,7 @@ exports[`Tester/MegaButton AsLinkExternal play-test 1`] = `
     <span class>
       Klikk her
     </span>
-    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_cezwo_34"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_cezwo_34"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -135,7 +135,7 @@ exports[`Tester/MegaButton WithExternalIcon play-test 1`] = `
     <span class>
       Klikk her
     </span>
-    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_cezwo_34"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_cezwo_34"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -182,7 +182,7 @@ exports[`Tester/MegaButton WithLongTextAndExternalIcon smoke-test 1`] = `
     <span class>
       Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje
     </span>
-    <svg class="_systemIcon_1b9cs_2 _systemIcon_medium_1b9cs_10 _icon_cezwo_34"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_cezwo_34"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
