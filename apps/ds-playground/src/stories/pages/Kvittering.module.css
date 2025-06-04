@@ -35,6 +35,10 @@
   fill: var(--palette-graphite-0);
 }
 
+.noFocusVisible:focus-visible {
+  outline: none;
+}
+
 .panel {
   padding: var(--spacing-xxl);
   margin: 0 auto var(--spacing-l);

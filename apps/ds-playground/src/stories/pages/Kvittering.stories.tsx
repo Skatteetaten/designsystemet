@@ -121,7 +121,7 @@ export const Kvittering = (): JSX.Element => {
             </DescriptionList.Element>
           </DescriptionList>
         </div>
-        <div ref={panelRef} tabIndex={-1}>
+        <div ref={panelRef} tabIndex={-1} className={styles.noFocusVisible}>
           <Panel
             className={styles.panel}
             variant={'outline'}
