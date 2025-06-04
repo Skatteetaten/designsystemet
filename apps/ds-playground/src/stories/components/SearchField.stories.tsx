@@ -10,7 +10,6 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import {
   getSearchFieldHasSearchButtonIconDefault,
-  searchArrSize,
   SearchField,
   searchInList,
 } from '@skatteetaten/ds-forms';
@@ -58,7 +57,6 @@ const meta = {
       },
     },
     variant: {
-      options: [...searchArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,

@@ -12,6 +12,7 @@ import {
   BaseProps,
   FormRequiredProps,
   Prettify,
+  Size,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
 
@@ -19,7 +20,7 @@ import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
 
 export const searchArrSize = [sizeArr[2], sizeArr[3], sizeArr[5]] as const;
-export type SearchSize = (typeof searchArrSize)[number];
+export type SearchSize = Extract<Size, 'medium' | 'large' | 'extraLarge'>;
 
 type RequiredDatePickerHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
