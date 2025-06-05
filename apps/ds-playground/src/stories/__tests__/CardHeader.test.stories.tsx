@@ -26,9 +26,6 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    spacingVertical: {
-      table: { disable: true },
-    },
     classNames: {
       table: { disable: true },
     },
