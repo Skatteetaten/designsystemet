@@ -266,6 +266,24 @@ export const SystemIconSizeLarge = {
   },
 } satisfies Story;
 
+export const SystemIconSizeLargePlus = {
+  name: 'With Size Large Plus - SystemIcon (A2)',
+  args: {
+    ...defaultArgs,
+    svgPath: AccountChildSVGpath,
+    variant: 'systemIcon',
+    size: 'largePlus',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const icon = canvas.getByRole('img', { hidden: true });
+    await expect(icon.classList.toString()).toContain('systemIcon_largePlus');
+  },
+} satisfies Story;
+
 export const SystemIconSizeExtraLarge = {
   name: 'With Size Extra Large - SystemIcon (A2)',
   args: {

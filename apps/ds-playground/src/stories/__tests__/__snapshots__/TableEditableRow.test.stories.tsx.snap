@@ -21,7 +21,7 @@ exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
                     type="button"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r3:"
@@ -76,7 +76,7 @@ exports[`Tester/Table/EditableRow WithEditButtonPositionRight smoke-test 1`] = `
                     type="button"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rb:"
@@ -117,7 +117,7 @@ exports[`Tester/Table/EditableRow WithEditableContent smoke-test 1`] = `
                     type="button"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r9:"
@@ -166,7 +166,7 @@ exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
                     type="button"
                     aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1:"

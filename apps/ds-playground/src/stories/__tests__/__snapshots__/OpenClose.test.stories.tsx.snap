@@ -8,7 +8,7 @@ exports[`Tester/OpenClose Compact smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49 _icon_compact_aoyc4_52"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49 _icon_compact_aoyc4_52"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -34,7 +34,7 @@ exports[`Tester/OpenClose CompactAndIsExpanded smoke-test 1`] = `
               aria-expanded="true"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_open_aoyc4_46 _icon_compact_aoyc4_52"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_open_aoyc4_46 _icon_compact_aoyc4_52"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -63,7 +63,7 @@ exports[`Tester/OpenClose CompactWithIconRight smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49 _icon_compact_aoyc4_52"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49 _icon_compact_aoyc4_52"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -89,7 +89,7 @@ exports[`Tester/OpenClose CompactWithIconRightAndUnderline smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49 _icon_compact_aoyc4_52"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49 _icon_compact_aoyc4_52"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -115,7 +115,7 @@ exports[`Tester/OpenClose CompactWithUnderline smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49 _icon_compact_aoyc4_52"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49 _icon_compact_aoyc4_52"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -141,7 +141,7 @@ exports[`Tester/OpenClose Defaults play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -167,7 +167,7 @@ exports[`Tester/OpenClose IconRightContent smoke-test 1`] = `
               aria-expanded="true"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_open_aoyc4_46"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_open_aoyc4_46"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -199,7 +199,7 @@ exports[`Tester/OpenClose InContext smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -225,7 +225,7 @@ exports[`Tester/OpenClose IsExpanded play-test 1`] = `
               aria-expanded="true"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_open_aoyc4_46"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_open_aoyc4_46"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -257,7 +257,7 @@ exports[`Tester/OpenClose WithAttributes play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -283,7 +283,7 @@ exports[`Tester/OpenClose WithChangingTitle play-test 1`] = `
               aria-expanded="true"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_open_aoyc4_46"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_open_aoyc4_46"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -312,7 +312,7 @@ exports[`Tester/OpenClose WithIconRight smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -338,7 +338,7 @@ exports[`Tester/OpenClose WithIconRightAndNoUnderline smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -364,7 +364,7 @@ exports[`Tester/OpenClose WithIsOnClickOnlyFiredOnOpen play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -390,7 +390,7 @@ exports[`Tester/OpenClose WithLongTitle smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -416,7 +416,7 @@ exports[`Tester/OpenClose WithOnClick play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -443,7 +443,7 @@ exports[`Tester/OpenClose WithRef play-test 1`] = `
               type="button"
               id="dummyIdForwardedFromRef"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -469,7 +469,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -490,7 +490,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -511,7 +511,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -532,7 +532,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -553,7 +553,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -574,7 +574,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -600,7 +600,7 @@ exports[`Tester/OpenClose WithoutUnderline smoke-test 1`] = `
               aria-expanded="false"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_aoyc4_37 _icon_active_aoyc4_37 _icon_closed_aoyc4_49"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"

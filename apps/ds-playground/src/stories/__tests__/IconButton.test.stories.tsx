@@ -4,10 +4,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
-import {
-  getCommonButtonTypeDefault,
-  sizeArr,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import {
   AttachFileSVGpath,
   BellOutlineSVGpath,
@@ -32,7 +29,6 @@ const verifyAttribute =
     await expect(iconButton).toHaveAttribute(attribute, expectedValue);
   };
 
-const availableSizes = [...sizeArr].slice(0, 4);
 const meta = {
   component: IconButton,
   title: 'Tester/IconButton',
@@ -49,8 +45,6 @@ const meta = {
     spinnerTitle: { table: { disable: true } },
     isOutlined: { table: { disable: true } },
     size: {
-      table: { disable: true },
-      options: availableSizes,
       control: 'radio',
     },
     svgPath: {

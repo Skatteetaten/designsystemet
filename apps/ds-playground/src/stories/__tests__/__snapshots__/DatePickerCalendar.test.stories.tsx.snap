@@ -8,7 +8,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rk:"
@@ -95,7 +95,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -136,7 +136,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rt:"
@@ -560,7 +560,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ra:"
@@ -647,7 +647,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -688,7 +688,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rj:"
@@ -1108,7 +1108,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r26:"
@@ -1195,7 +1195,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1236,7 +1236,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2f:"
@@ -1656,7 +1656,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r34:"
@@ -1743,7 +1743,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1784,7 +1784,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3d:"
@@ -2205,7 +2205,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2q:"
@@ -2292,7 +2292,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2333,7 +2333,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r33:"
@@ -2764,7 +2764,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1i:"
@@ -2851,7 +2851,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2892,7 +2892,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1r:"
@@ -3332,7 +3332,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1s:"
@@ -3419,7 +3419,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -3460,7 +3460,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r25:"
@@ -3900,7 +3900,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r18:"
@@ -3987,7 +3987,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4028,7 +4028,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1h:"
@@ -4464,7 +4464,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r0:"
@@ -4551,7 +4551,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4592,7 +4592,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -5012,7 +5012,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ru:"
@@ -5099,7 +5099,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -5140,7 +5140,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r17:"

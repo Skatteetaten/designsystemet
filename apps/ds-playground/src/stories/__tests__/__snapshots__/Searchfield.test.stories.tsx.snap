@@ -30,7 +30,7 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rk:"
@@ -85,7 +85,7 @@ exports[`Tester/SearchField TwoSearchFieldsOneWithHelpText smoke-test 1`] = `
           </span>
         </div>
         <button class="_searchButton_2ptm8_109">
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r45:"
@@ -121,7 +121,7 @@ exports[`Tester/SearchField TwoSearchFieldsOneWithHelpText smoke-test 1`] = `
               aria-describedby="searchField-:r46:-label"
               aria-expanded="false"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r49:"
@@ -154,7 +154,7 @@ exports[`Tester/SearchField TwoSearchFieldsOneWithHelpText smoke-test 1`] = `
           </span>
         </div>
         <button class="_searchButton_2ptm8_109">
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r4a:"
@@ -210,7 +210,7 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r30:"
@@ -319,7 +319,7 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
         </div>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2r:"
@@ -376,7 +376,7 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -475,7 +475,7 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
                 data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r2e:"
@@ -491,7 +491,7 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
         </button>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2f:"
@@ -546,7 +546,7 @@ dummyClassnameFormContainer">
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -603,7 +603,7 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
                 data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r1r:"
@@ -619,7 +619,7 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
         </button>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1s:"
@@ -676,7 +676,7 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r20:"
@@ -734,7 +734,7 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
       <button class="_searchButton_2ptm8_109"
               disabled
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1i:"
@@ -789,7 +789,7 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3n:"
@@ -809,7 +809,7 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -857,7 +857,7 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2m:"
@@ -898,7 +898,7 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
             aria-describedby="searchField-:r21:-label"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r24:"
@@ -920,7 +920,7 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r26:"
@@ -954,7 +954,7 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r25:"
@@ -995,7 +995,7 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
             aria-describedby="searchField-:r31:-label"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r34:"
@@ -1028,7 +1028,7 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r35:"
@@ -1085,7 +1085,7 @@ exports[`Tester/SearchField WithLongInput smoke-test 1`] = `
                 data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r40:"
@@ -1101,7 +1101,7 @@ exports[`Tester/SearchField WithLongInput smoke-test 1`] = `
         </button>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r41:"
@@ -1142,7 +1142,7 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
             aria-describedby="searchField-:rc:-label"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rf:"
@@ -1178,7 +1178,7 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rg:"
@@ -1233,7 +1233,7 @@ exports[`Tester/SearchField WithLongPlaceholder smoke-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3s:"
@@ -1289,7 +1289,7 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2a:"
@@ -1344,7 +1344,7 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -1399,7 +1399,7 @@ exports[`Tester/SearchField WithRequired play-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3f:"
@@ -1454,7 +1454,7 @@ exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3j:"
@@ -1511,7 +1511,7 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
                 data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r1m:"
@@ -1527,7 +1527,7 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
         </button>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1n:"
@@ -1584,7 +1584,7 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
                 data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r1d:"
@@ -1600,7 +1600,7 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
         </button>
       </div>
       <button class="_searchButton_2ptm8_109 _searchButton_large_2ptm8_132">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1e:"
@@ -1654,7 +1654,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ro:"
@@ -1703,7 +1703,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109 _searchButton_large_2ptm8_132">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rs:"
@@ -1752,7 +1752,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         </span>
       </div>
       <button class="_searchButton_2ptm8_109  _searchButton_extraLarge_2ptm8_138">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_2ptm8_128"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_2ptm8_128"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r10:"

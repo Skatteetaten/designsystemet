@@ -6,7 +6,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) Defaults play-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -29,7 +29,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) DefaultsOnMobileScreen smoke-
           type="button"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -52,7 +52,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) VariantFilledOnMobileScreen s
           type="button"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -78,7 +78,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithAttributes play-test 1`] 
           type="button"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -101,7 +101,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithClassNames play-test 1`] 
           type="button"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -124,7 +124,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithEventHandlers play-test 1
           type="button"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -148,7 +148,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithRef play-test 1`] = `
           id="dummyIdForwardedFromRef"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -171,7 +171,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithTitle play-test 1`] = `
           type="button"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r5:"
@@ -198,7 +198,7 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantFilled smoke-test 
           type="button"
   >
     <span class="_iconWrapper_2n6jz_18">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_2n6jz_18"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2n6jz_18"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"

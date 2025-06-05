@@ -64,7 +64,7 @@ exports[`Tester/InlineButton WithBrightness smoke-test 1`] = `
           data-brightness="light"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -86,7 +86,7 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -123,7 +123,7 @@ exports[`Tester/InlineButton WithDisabledAndBrightness smoke-test 1`] = `
           disabled
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -146,7 +146,7 @@ exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
           disabled
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -181,7 +181,7 @@ exports[`Tester/InlineButton WithIcon play-test 1`] = `
           data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -206,7 +206,7 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
     <span class>
       Legg til rapport
     </span>
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -241,7 +241,7 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
     <span class>
       Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
     </span>
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -283,7 +283,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -303,7 +303,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       <span class>
         Legg til rapport
       </span>
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -339,7 +339,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
             data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42 _hide_r1hjf_93"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42 _hide_r1hjf_93"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -371,7 +371,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       <span class="_hide_r1hjf_93">
         Legg til rapport
       </span>
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_r1hjf_42 _hide_r1hjf_93"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42 _hide_r1hjf_93"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"

@@ -22,11 +22,7 @@ import {
   dsI18n,
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
-import {
-  searchArrSize,
-  SearchField,
-  searchInList,
-} from '@skatteetaten/ds-forms';
+import { SearchField, searchInList } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -72,7 +68,6 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...searchArrSize],
       control: 'inline-radio',
     },
     // HTML
