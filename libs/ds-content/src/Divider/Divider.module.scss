@@ -2,10 +2,10 @@
   height: 1px;
   border: none;
   margin: 0;
-  background-color: var(--semantic-divider-100);
+  background-color: var(--palette-dark-alpha-50);
 
-  &[data-variant='subtle'] {
-    background-color: var(--palette-dark-alpha-50);
+  &[data-variant='strong'] {
+    background-color: var(--semantic-divider-100);
   }
 
   &[data-spacing-top='xxs'] {
