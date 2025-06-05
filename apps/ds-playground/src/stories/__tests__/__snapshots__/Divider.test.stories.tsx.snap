@@ -55,10 +55,10 @@ exports[`Tester/Divider WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Divider WithSubtle smoke-test 1`] = `
+exports[`Tester/Divider WithStrong smoke-test 1`] = `
 <div data-test-block="true">
   <hr class="_divider_1k5th_1"
-      data-variant="subtle"
+      data-variant="strong"
       data-spacing-top="s"
       data-spacing-bottom="s"
   >
