@@ -3,7 +3,7 @@
 exports[`Tester/Divider Defaults smoke-test 1`] = `
 <div data-test-block="true">
   <hr class="_divider_1k5th_1"
-      data-variant="default"
+      data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
   >
@@ -13,7 +13,7 @@ exports[`Tester/Divider Defaults smoke-test 1`] = `
 exports[`Tester/Divider IsHRElement play-test 1`] = `
 <div data-test-block="true">
   <hr class="_divider_1k5th_1"
-      data-variant="default"
+      data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
   >
@@ -24,7 +24,7 @@ exports[`Tester/Divider WithAriaHidden play-test 1`] = `
 <div data-test-block="true">
   <hr class="_divider_1k5th_1"
       aria-hidden="true"
-      data-variant="default"
+      data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
   >
@@ -37,7 +37,7 @@ exports[`Tester/Divider WithAttributes play-test 1`] = `
       lang="nb"
       data-testid="123ID"
       class="_divider_1k5th_1 dummyClassname"
-      data-variant="default"
+      data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
   >
@@ -47,7 +47,7 @@ exports[`Tester/Divider WithAttributes play-test 1`] = `
 exports[`Tester/Divider WithRef play-test 1`] = `
 <div data-test-block="true">
   <hr class="_divider_1k5th_1"
-      data-variant="default"
+      data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
       id="dummyIdForwardedFromRef"

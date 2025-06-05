@@ -2,7 +2,7 @@ import { JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { InlineButton, Link } from '@skatteetaten/ds-buttons';
+import { InlineButton } from '@skatteetaten/ds-buttons';
 import {
   Card,
   DescriptionList,
@@ -62,6 +62,9 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <div>
+        <Paragraph>
+          {'Delestrek brukt som dekorelement og skjult for skjermleser'}
+        </Paragraph>
         <Card className={'dividerCard'}>
           <Card.Header>
             <Heading as={'h3'} level={3}>
@@ -84,7 +87,7 @@ export const Examples: Story = {
                 {'110 000'}
               </DescriptionList.Element>
             </DescriptionList>
-            <Divider variant={'subtle'} />
+            <Divider ariaHidden />
 
             <DescriptionList
               className={'descriptionList'}
@@ -110,27 +113,19 @@ export const ThemeExample: Story = {
     const headingRef = useRef<HTMLHeadingElement>(null);
     return (
       <div>
+        <Paragraph>
+          {
+            'Delestrek som er meningsbærende og dermed ikke skjult for skjermleser'
+          }
+        </Paragraph>
         <div className={'flex gapM'}>
           <ArbeidTrygdPensjonIcon size={'extraLarge'} />
           <Heading as={'h1'} level={2}>
             {'Arbeid, trygd og pensjon'}
           </Heading>
         </div>
-        <Divider spacingTop={'xs'} spacingBottom={'l'} variant={'subtle'} />
+        <Divider spacingTop={'xs'} spacingBottom={'l'} />
         <Card className={'cardWidth'}>
-          <Card.Alert
-            variant={'danger'}
-            title={'Å nei, ikke bra!'}
-            titleAs={'h3'}
-            onClose={(): void => headingRef?.current?.focus()}
-          >
-            <Paragraph>
-              {
-                'Nå bør du fikse på dette kortet for å unngå at [annet kort] blir feil.'
-              }
-            </Paragraph>
-            <Link href={'#'}>{'Navn på et annet kort'}</Link>
-          </Card.Alert>
           <Card.Header>
             <Heading ref={headingRef} as={'h3'} level={3} canBeManuallyFocused>
               {'Andre inntekter'}
