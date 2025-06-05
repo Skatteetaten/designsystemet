@@ -19,6 +19,7 @@ import {
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
 
 import {
+  getEnableSRNavigationHintDefault,
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
 } from './defaults';
@@ -57,6 +58,7 @@ export const SearchField = (({
   required,
   showRequiredMark,
   value,
+  enableSRNavigationHint = getEnableSRNavigationHintDefault(),
   hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
   hideLabel = getSearchFieldHideLabelDefault(),
   onBlur,
@@ -196,9 +198,11 @@ export const SearchField = (({
 ${classNames?.searchContainer ?? ''}`.trim()}
       >
         <div className={styles.inputWrapper}>
-          <span id={srFocusId} className={styles.srOnly}>
-            {t('searchfield.Focus')}
-          </span>
+          {enableSRNavigationHint && (
+            <span id={srFocusId} className={styles.srOnly}>
+              {t('searchfield.Focus')}
+            </span>
+          )}
           <input
             ref={inputRef}
             id={inputId}
@@ -214,7 +218,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             value={value}
             autoComplete={autoComplete}
             required={required}
-            aria-describedby={`${errorMessage ? `${errorId} ` : ''}${srFocusId}`.trim()}
+            aria-describedby={`${errorMessage ? `${errorId} ` : ''}${enableSRNavigationHint ? srFocusId : ''}`.trim()}
             aria-invalid={!!errorMessage || undefined}
             aria-owns={shouldShowResults ? resultsId : undefined}
             type={'search'}
@@ -324,4 +328,9 @@ SearchField.displayName = 'SearchField';
 SearchField.Result = SearchFieldResult;
 SearchField.Result.displayName = 'SearchField.Result';
 
-export { searchInList, getSearchFieldHasSearchButtonIconDefault };
+export {
+  searchInList,
+  getSearchFieldHasSearchButtonIconDefault,
+  getEnableSRNavigationHintDefault,
+  getSearchFieldHideLabelDefault,
+};

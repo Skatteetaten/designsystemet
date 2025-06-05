@@ -63,6 +63,7 @@ const meta = {
     searchButtonTitle: { table: { disable: true } },
     results: { table: { disable: true } },
     helpText: { table: { disable: true } },
+    enableSRNavigationHint: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
@@ -763,3 +764,24 @@ const TwoSearchFields: StoryFn<typeof SearchField> = () => {
 export const TwoSearchFieldsOneWithHelpText = {
   render: TwoSearchFields,
 };
+
+export const WithEnableSRNavigationHintsFalse = {
+  argTypes: {
+    enableSRNavigationHint: {
+      table: { disable: false },
+      control: 'boolean',
+    },
+  },
+  args: {
+    ...defaultArgs,
+    enableSRNavigationHint: false,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const sRtexst = dsI18n.t('ds_forms:searchfield.Focus');
+    await expect(canvas.queryByText(sRtexst)).not.toBeInTheDocument();
+  },
+} satisfies Story;

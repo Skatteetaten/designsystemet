@@ -1,6 +1,7 @@
 import {
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
+  getEnableSRNavigationHintDefault,
 } from '../defaults';
 
 describe('SearchField defaults', () => {
@@ -10,5 +11,9 @@ describe('SearchField defaults', () => {
 
   it('Når kalles getSearchFieldHideLabelDefault, så returnerer den riktig verdi', () => {
     expect(getSearchFieldHideLabelDefault()).toBe(true);
+  });
+
+  it('Når getEnableSRNavigationHintDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getEnableSRNavigationHintDefault()).toBe(true);
   });
 });

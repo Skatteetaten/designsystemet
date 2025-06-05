@@ -49,6 +49,7 @@ const meta = {
     },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
+    enableSRNavigationHint: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
