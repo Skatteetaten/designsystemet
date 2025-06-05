@@ -4,71 +4,71 @@
   margin: 0;
   background-color: var(--palette-dark-alpha-50);
 
-  &[data-variant='strong'] {
+  &:where([data-variant='strong']) {
     background-color: var(--semantic-divider-100);
   }
 
-  &[data-spacing-top='xxs'] {
+  &:where([data-spacing-top='xxs']) {
     margin-top: var(--spacing-xxs);
   }
 
-  &[data-spacing-top='xs'] {
+  &:where([data-spacing-top='xs']) {
     margin-top: var(--spacing-xs);
   }
 
-  &[data-spacing-top='s'] {
+  &:where([data-spacing-top='s']) {
     margin-top: var(--spacing-s);
   }
 
-  &[data-spacing-top='m'] {
+  &:where([data-spacing-top='m']) {
     margin-top: var(--spacing-m);
   }
 
-  &[data-spacing-top='l'] {
+  &:where([data-spacing-top='l']) {
     margin-top: var(--spacing-l);
   }
 
-  &[data-spacing-top='xl'] {
+  &:where([data-spacing-top='xl']) {
     margin-top: var(--spacing-xl);
   }
 
-  &[data-spacing-top='xxl'] {
+  &:where([data-spacing-top='xxl']) {
     margin-top: var(--spacing-xxl);
   }
 
-  &[data-spacing-top='mega'] {
+  &:where([data-spacing-top='mega']) {
     margin-top: var(--spacing-mega);
   }
 
-  &[data-spacing-bottom='xxs'] {
+  &:where([data-spacing-bottom='xxs']) {
     margin-bottom: var(--spacing-xxs);
   }
 
-  &[data-spacing-bottom='xs'] {
+  &:where([data-spacing-bottom='xs']) {
     margin-bottom: var(--spacing-xs);
   }
 
-  &[data-spacing-bottom='s'] {
+  &:where([data-spacing-bottom='s']) {
     margin-bottom: var(--spacing-s);
   }
 
-  &[data-spacing-bottom='m'] {
+  &:where([data-spacing-bottom='m']) {
     margin-bottom: var(--spacing-m);
   }
 
-  &[data-spacing-bottom='l'] {
+  &:where([data-spacing-bottom='l']) {
     margin-bottom: var(--spacing-l);
   }
 
-  &[data-spacing-bottom='xl'] {
+  &:where([data-spacing-bottom='xl']) {
     margin-bottom: var(--spacing-xl);
   }
 
-  &[data-spacing-bottom='xxl'] {
+  &:where([data-spacing-bottom='xxl']) {
     margin-bottom: var(--spacing-xxl);
   }
 
-  &[data-spacing-bottom='mega'] {
+  &:where([data-spacing-bottom='mega']) {
     margin-bottom: var(--spacing-mega);
   }
 }
