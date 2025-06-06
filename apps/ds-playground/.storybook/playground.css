@@ -24,7 +24,6 @@ code {
   color: var(--palette-denim-5);
 }
 
-
 .width100 {
   width: 100%;
 }
@@ -49,7 +48,6 @@ code {
 .block {
   display: block;
 }
-
 
 .centerMargin {
   margin-left: auto;
