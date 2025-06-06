@@ -13,7 +13,6 @@ export const CardHeader = ({
   lang,
   'data-testid': dataTestId,
   rightContent,
-  spacingVertical,
   classNames,
   children,
 }: CardContentProps): JSX.Element => {
@@ -24,7 +23,6 @@ export const CardHeader = ({
       className={`${styles.cardHeader} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
-      data-spacing={spacingVertical}
     >
       {children}
       {rightContent && (

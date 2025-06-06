@@ -12,7 +12,6 @@ export const CardActions = ({
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
-  spacingVertical,
   children,
 }: CardActionsProps): JSX.Element => {
   return (
@@ -22,7 +21,6 @@ export const CardActions = ({
       className={`${styles.cardActions} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
-      data-spacing={spacingVertical}
     >
       {children}
     </div>

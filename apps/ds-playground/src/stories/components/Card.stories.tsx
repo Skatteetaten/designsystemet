@@ -7,6 +7,7 @@ import {
   Card,
   DescriptionList,
   getCardColorDefault,
+  getCardSpacingDefault,
 } from '@skatteetaten/ds-content';
 import {
   ArbeidTrygdPensjonIcon,
@@ -40,7 +41,10 @@ const meta = {
       table: { category: category.props },
     },
     spacing: {
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getCardSpacingDefault() },
+      },
     },
     color: {
       control: 'inline-radio',

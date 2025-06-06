@@ -18,9 +18,10 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
+    color: { table: { disable: true } },
+    spacing: { table: { disable: true } },
     // Aria
     ariaLabelledBy: { table: { disable: true } },
-    color: { table: { disable: true } },
   },
 } satisfies Meta<typeof Card>;
 export default meta;

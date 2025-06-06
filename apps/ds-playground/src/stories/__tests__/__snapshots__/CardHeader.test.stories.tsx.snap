@@ -3,7 +3,7 @@
 exports[`Tester/Card/Header WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="_cardHeader_ddyt8_1 dummyClassname"
+       class="_cardHeader_13s42_1 dummyClassname"
        lang="en"
        data-testid="123ID"
   >
@@ -14,10 +14,11 @@ exports[`Tester/Card/Header WithAttributes play-test 1`] = `
 
 exports[`Tester/Card/Header WithChildrenRigthContent smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_card_nrlm6_5"
+  <div class="_card_lg4k9_5"
        data-color="white"
+       data-spacing="m"
   >
-    <div class="_cardHeader_ddyt8_1">
+    <div class="_cardHeader_13s42_1">
       <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8">
         <li class="_element_1b7zf_1">
           første element
@@ -26,7 +27,7 @@ exports[`Tester/Card/Header WithChildrenRigthContent smoke-test 1`] = `
           andre element
         </li>
       </ul>
-      <div class="_rightContent_ddyt8_12">
+      <div class="_rightContent_13s42_12">
         <div class="_tag_i9is8_1 _tag_ochre_i9is8_18 _tag_medium_i9is8_30">
           <div class="_iconWrapper_i9is8_12"
                aria-hidden="true"
@@ -51,7 +52,7 @@ exports[`Tester/Card/Header WithChildrenRigthContent smoke-test 1`] = `
 
 exports[`Tester/Card/Header WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardHeader_ddyt8_1"
+  <div class="_cardHeader_13s42_1"
        id="dummyIdForwardedFromRef"
   >
     Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
