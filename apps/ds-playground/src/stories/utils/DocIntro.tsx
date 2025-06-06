@@ -8,7 +8,7 @@ interface DocIntroProps {
   url: string;
 }
 
-export const DocIntro = ({ name, url }: DocIntroProps): ReactNode => {
+export const DocIntro = ({ url }: DocIntroProps): ReactNode => {
   return (
     <div className={'topSpacingL'}>
       <DSLink href={url} svgPath={InfoSquareSVGpath} className={'docs'}>
