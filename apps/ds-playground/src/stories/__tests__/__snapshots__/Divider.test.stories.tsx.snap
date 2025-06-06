@@ -2,7 +2,7 @@
 
 exports[`Tester/Divider Defaults smoke-test 1`] = `
 <div data-test-block="true">
-  <hr class="_divider_17r62_1"
+  <hr class="_divider_q1e4d_1"
       data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
@@ -12,7 +12,7 @@ exports[`Tester/Divider Defaults smoke-test 1`] = `
 
 exports[`Tester/Divider IsHRElement play-test 1`] = `
 <div data-test-block="true">
-  <hr class="_divider_17r62_1"
+  <hr class="_divider_q1e4d_1"
       data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
@@ -22,7 +22,7 @@ exports[`Tester/Divider IsHRElement play-test 1`] = `
 
 exports[`Tester/Divider WithAriaHidden play-test 1`] = `
 <div data-test-block="true">
-  <hr class="_divider_17r62_1"
+  <hr class="_divider_q1e4d_1"
       aria-hidden="true"
       data-variant="subtle"
       data-spacing-top="s"
@@ -36,7 +36,7 @@ exports[`Tester/Divider WithAttributes play-test 1`] = `
   <hr id="htmlId"
       lang="nb"
       data-testid="123ID"
-      class="_divider_17r62_1 dummyClassname"
+      class="_divider_q1e4d_1 dummyClassname"
       data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
@@ -46,7 +46,7 @@ exports[`Tester/Divider WithAttributes play-test 1`] = `
 
 exports[`Tester/Divider WithRef play-test 1`] = `
 <div data-test-block="true">
-  <hr class="_divider_17r62_1"
+  <hr class="_divider_q1e4d_1"
       data-variant="subtle"
       data-spacing-top="s"
       data-spacing-bottom="s"
@@ -57,7 +57,7 @@ exports[`Tester/Divider WithRef play-test 1`] = `
 
 exports[`Tester/Divider WithStrong smoke-test 1`] = `
 <div data-test-block="true">
-  <hr class="_divider_17r62_1"
+  <hr class="_divider_q1e4d_1"
       data-variant="strong"
       data-spacing-top="s"
       data-spacing-bottom="s"

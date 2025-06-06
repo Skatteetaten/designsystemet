@@ -62,8 +62,10 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <div>
-        <Paragraph>
-          {'Delestrek brukt som dekorelement og skjult for skjermleser'}
+        <Paragraph hasSpacing>
+          {
+            'Delestrek som er meningsbærende og dermed ikke skjult for skjermleser'
+          }
         </Paragraph>
         <Card className={'dividerCard'}>
           <Card.Header>
@@ -87,7 +89,7 @@ export const Examples: Story = {
                 {'110 000'}
               </DescriptionList.Element>
             </DescriptionList>
-            <Divider ariaHidden />
+            <Divider />
 
             <DescriptionList
               className={'descriptionList'}
@@ -113,10 +115,8 @@ export const ThemeExample: Story = {
     const headingRef = useRef<HTMLHeadingElement>(null);
     return (
       <div>
-        <Paragraph>
-          {
-            'Delestrek som er meningsbærende og dermed ikke skjult for skjermleser'
-          }
+        <Paragraph hasSpacing>
+          {'Delestrek brukt som dekorelement og skjult for skjermleser'}
         </Paragraph>
         <div className={'flex gapM'}>
           <ArbeidTrygdPensjonIcon size={'extraLarge'} />
@@ -124,7 +124,7 @@ export const ThemeExample: Story = {
             {'Arbeid, trygd og pensjon'}
           </Heading>
         </div>
-        <Divider spacingTop={'xs'} spacingBottom={'l'} />
+        <Divider spacingTop={'xs'} spacingBottom={'l'} ariaHidden />
         <Card className={'cardWidth'}>
           <Card.Header>
             <Heading ref={headingRef} as={'h3'} level={3} canBeManuallyFocused>
