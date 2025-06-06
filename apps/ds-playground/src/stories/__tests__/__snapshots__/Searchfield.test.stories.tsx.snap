@@ -758,6 +758,55 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/SearchField WithEnableSRNavigationHintsFalse play-test 1`] = `
+<div data-test-block="true">
+  <div id="searchField-:r4b:"
+       class="_topContainer_2ptm8_13"
+  >
+    <label id="searchField-:r4b:-label"
+           class="_label_348na_5  _srOnly_348na_18"
+           for="searchField-:r4b:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <div class="_searchContainer_2ptm8_5">
+      <div class="_inputWrapper_2ptm8_47">
+        <input id="searchField-:r4b:-input"
+               class="_input_2ptm8_47"
+               autocomplete="off"
+               aria-describedby
+               type="search"
+        >
+        <span aria-live="assertive"
+              class="_srOnly_2ptm8_190"
+        >
+        </span>
+      </div>
+      <button class="_searchButton_2ptm8_109">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_2ptm8_128"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r4e:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r4e:">
+            Søk
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div id="searchFieldErrorId-:r4c:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r3k:"

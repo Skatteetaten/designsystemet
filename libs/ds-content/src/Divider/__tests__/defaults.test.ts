@@ -17,6 +17,6 @@ describe('Divider defaults', () => {
 
   it('Når getDividerVariantDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getDividerVariantDefault();
-    expect(renderDefault).toBe('default');
+    expect(renderDefault).toBe('subtle');
   });
 });

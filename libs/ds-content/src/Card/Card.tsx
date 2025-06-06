@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { CardProps, CardComponent } from './Card.types';
-import { getCardColorDefault } from './defaults';
+import { getCardColorDefault, getCardSpacingDefault } from './defaults';
 import { CardActions } from '../CardActions/CardActions';
 import { CardAlert } from '../CardAlert/CardAlert';
 import {
@@ -24,7 +24,7 @@ export const Card = (({
   'data-testid': dataTestId,
   color = getCardColorDefault(),
   ariaLabelledBy,
-  spacing,
+  spacing = getCardSpacingDefault(),
   children,
 }: CardProps): JSX.Element => {
   const cardClassName = `${styles.card} ${className}`.trim();
@@ -55,6 +55,7 @@ Card.Header = CardHeader;
 
 export {
   getCardColorDefault,
+  getCardSpacingDefault,
   getCardAlertVariantDefault,
   getCardAlertSvgPathDefault,
   getCardAlertTitleAsDefault,

@@ -452,7 +452,7 @@ export const Examples: Story = {
           }}
           firstColumn={
             user ? (
-              <Card>
+              <Card spacing={'s'}>
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
                     {user.role === 'meg' && (

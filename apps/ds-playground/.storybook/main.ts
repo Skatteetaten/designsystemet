@@ -29,6 +29,7 @@ const packageVersions = directories.reduce((previousValue, currentValue) => {
 }, {});
 
 const config: StorybookConfig = {
+  staticDirs: ['../src/public'],
   stories: [
     '../src/stories/**/*.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',

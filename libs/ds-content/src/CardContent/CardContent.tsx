@@ -13,7 +13,6 @@ export const CardContent = ({
   lang,
   'data-testid': dataTestId,
   rightContent,
-  spacingVertical,
   classNames,
   children,
 }: CardContentProps): JSX.Element => {
@@ -24,7 +23,6 @@ export const CardContent = ({
       className={`${styles.cardContent} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
-      data-spacing={spacingVertical}
     >
       <div className={classNames?.children}>{children}</div>
       {rightContent && (

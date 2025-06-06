@@ -20,9 +20,6 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    spacingVertical: {
-      table: { disable: true },
-    },
   },
 } satisfies Meta<typeof Card.Actions>;
 export default meta;

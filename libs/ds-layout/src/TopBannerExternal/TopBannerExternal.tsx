@@ -272,6 +272,7 @@ export const TopBannerExternal = ({
                         label={t('topbanner.SearchLabel')}
                         variant={isMobile ? 'large' : 'extraLarge'}
                         hideLabel={false}
+                        enableSRNavigationHint={false}
                         onSearch={onSearch}
                         onSearchClick={onSearchClick}
                       />

@@ -2,17 +2,19 @@ import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
 import * as DividerStories from './Divider.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={DividerStories} />
 
-# Button
+<DocHeaderWrapper componentName={'Divider'}>
+
+# Divider
 
 <VersionBadge packageName={'content'} />
 
-<DocIntro
-  name="Divider"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/divider/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/divider/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 

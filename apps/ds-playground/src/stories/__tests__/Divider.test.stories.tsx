@@ -72,10 +72,10 @@ export const Defaults = {
   name: 'Defaults (A1)',
 } satisfies Story;
 
-export const WithSubtle = {
-  name: 'With Subtle (A3)',
+export const WithStrong = {
+  name: 'With Strong (A3)',
   args: {
-    variant: 'subtle',
+    variant: 'strong',
   },
   argTypes: {
     variant: { table: { disable: false } },
