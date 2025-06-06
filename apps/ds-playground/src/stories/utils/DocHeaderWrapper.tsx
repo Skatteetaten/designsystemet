@@ -9,11 +9,16 @@ export const DocHeaderWrapper = ({
   componentName,
   children,
 }: DocHeaderWrapperProps): JSX.Element => {
+  const illustrationBasePath =
+    process.env.NODE_ENV === 'development'
+      ? '/illustrations/'
+      : '/web/designsystemet/illustrations/';
+
   return (
     <div className={'docHeaderWrapper'}>
       <div>{children}</div>
       <img
-        src={`/illustrations/${componentName}.svg`}
+        src={`${illustrationBasePath}${componentName}.svg`}
         className={'componentIcon'}
         alt={''}
         aria-hidden
