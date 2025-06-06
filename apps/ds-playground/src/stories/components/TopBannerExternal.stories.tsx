@@ -448,7 +448,7 @@ export const Examples: Story = {
           ref={topBannerRef}
           firstColumn={
             user ? (
-              <Card>
+              <Card spacing={'s'}>
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
                     {user.role === 'meg' && (
@@ -531,7 +531,7 @@ export const Examples: Story = {
                   {'For bedrifter og organisasjoner'}
                 </a>
               </Heading>
-              <LinkGroup hasSpacing>
+              <LinkGroup>
                 {virksomhetlinks.map((link) => (
                   <LinkGroup.Link
                     key={link.text}

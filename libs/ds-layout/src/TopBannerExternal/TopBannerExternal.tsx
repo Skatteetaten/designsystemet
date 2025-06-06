@@ -321,11 +321,7 @@ export const TopBannerExternal = ({
                         <div className={styles.column}>{secondColumn}</div>
                       )}
                       {thirdColumn && (
-                        <div
-                          className={`${styles.column} ${styles.thirdColumn}`}
-                        >
-                          {thirdColumn}
-                        </div>
+                        <div className={styles.column}>{thirdColumn}</div>
                       )}
                     </nav>
                   </div>
