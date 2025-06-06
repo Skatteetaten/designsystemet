@@ -3,17 +3,19 @@ import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as TextFieldStories from './TextField.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={TextFieldStories} />
+
+<DocHeaderWrapper componentName="TextField">
 
 # TextField
 
 <VersionBadge packageName={'forms'} />
 
-<DocIntro
-  name="TextField"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/" />
+
+</DocHeaderWrapper>
 
 List brukes til å assosiere TextField med datalist-elementet for å få autocomplete-forslag i tekstfeltet. Datalist er støttet av skjermlesere, men det er noe begrenset hva som leses opp. I tillegg har datalist inkonsistent oppførsel på tvers av nettlesere. Derfor kan det hende at vi velger å erstatte denne med andre alternativer i framtiden.
 

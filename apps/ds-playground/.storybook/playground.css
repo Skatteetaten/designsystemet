@@ -63,8 +63,16 @@ code {
   margin-top: var(--spacing-xl);
 }
 
+.topSpacingL {
+  margin-top: var(--spacing-l) !important;
+}
+
 .topSpacingS {
   margin-top: var(--spacing-s);
+}
+
+.topSpacingXs {
+  margin-top: var(--spacing-xs);
 }
 
 .bottomSpacingS {
@@ -201,9 +209,11 @@ code {
 
 a.docs {
   color: var(--semantic-interactive-main);
+  line-height: var(--semantic-line-height-article);
   text-decoration-color: var(--semantic-interactive-main);
   padding: var(--spacing-xs) 0;
   font-weight: var(--font-weight-medium);
+  font-family: 'Inter';
   text-decoration-line: underline;
 }
 
@@ -326,4 +336,22 @@ a.resetLinkStyling {
 
 .descriptionList {
   --description-list-dd-align: right;
+}
+
+.docHeaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.componentIcon {
+  width: 11rem;
+
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 }

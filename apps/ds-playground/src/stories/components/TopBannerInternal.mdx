@@ -4,17 +4,19 @@ import * as TopBannerInternalStories from './TopBannerInternal.stories';
 import * as TopBannerInternalActionMenu from './TopBannerInternalActionMenu.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={TopBannerInternalStories} />
+
+<DocHeaderWrapper componentName="TopBannerInternal">
 
 # TopBannerInternal
 
 <VersionBadge packageName={'layout'} />
 
-<DocIntro
-  name="TopBannerInternal"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbanner-internal/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbanner-internal/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 

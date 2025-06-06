@@ -22,6 +22,7 @@ export const VersionBadge = ({ packageName }: VersionBadgeProps): ReactNode => {
 
   return (
     <img
+      className={'topSpacingXs'}
       src={`https://img.shields.io/badge/%40skatteetaten%2Fds--${normalizedPackageName}-${normalizedVersion}-${color}?logo=npm`}
       alt={`@skatteetaten/ds-${packageName}@${version}`}
     />
