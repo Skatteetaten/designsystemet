@@ -248,6 +248,9 @@ export const Defaults = {
     await expect(searchButton).toBeInTheDocument();
     await expect(searchButton).toBeEnabled();
     await expect(searchButton.tagName).toBe('BUTTON');
+
+    const sRtexst = dsI18n.t('ds_forms:searchfield.Focus');
+    await expect(await canvas.findByText(sRtexst)).toBeInTheDocument();
   },
 } satisfies Story;
 

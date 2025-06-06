@@ -9,6 +9,7 @@ import {
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
+  getEnableSRNavigationHintDefault,
   getSearchFieldHasSearchButtonIconDefault,
   SearchField,
   searchInList,
@@ -49,7 +50,14 @@ const meta = {
     },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
-    enableSRNavigationHint: { table: { category: category.props } },
+    enableSRNavigationHint: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getEnableSRNavigationHintDefault().toString(),
+        },
+      },
+    },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
