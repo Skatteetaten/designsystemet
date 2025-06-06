@@ -98,6 +98,11 @@ interface SearchFieldCommonProps
   results?: Array<SearchResult>;
   /** Om søkeknappen skal vises med ikon eller tekst */
   hasSearchButtonIcon?: boolean;
+  /**
+    Hvis søkefeltet skal vise resultater med results propen så skal denne settes til true for å gi en ekstra instruksjon til skjermleser.
+    Hvis komponenten skal ta deg til en egen side for å vise resultater i stedet for å bruke results-propen så skal denne settes til false fordi skjermleserteksten ikke er relevant.
+   */
+  enableSRNavigationHint?: boolean;
 }
 
 export type SearchFieldProps = SearchFieldCommonProps & FormRequiredProps;
