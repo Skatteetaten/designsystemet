@@ -32,11 +32,11 @@ exports[`Tester/Card/Content WithChildrenRigthContent smoke-test 1`] = `
         </ul>
       </div>
       <div class="_rightContent_12yk0_17">
-        <div class="_tag_i9is8_1 _tag_ochre_i9is8_18 _tag_medium_i9is8_30">
-          <div class="_iconWrapper_i9is8_12"
+        <div class="_tag_sjct7_1 _tag_ochre_sjct7_18 _tag_medium_sjct7_30">
+          <div class="_iconWrapper_sjct7_12"
                aria-hidden="true"
           >
-            <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_i9is8_12"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_sjct7_12"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
