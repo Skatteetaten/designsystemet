@@ -13,7 +13,7 @@ export const DocHeaderWrapper = ({
     <div className={'docHeaderWrapper'}>
       <div>{children}</div>
       <img
-        src={`/componentIcons/${componentName}.svg`}
+        src={`/illustrations/${componentName}.svg`}
         className={'componentIcon'}
         alt={''}
         aria-hidden

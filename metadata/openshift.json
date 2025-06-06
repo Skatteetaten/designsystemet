@@ -14,11 +14,6 @@
         "Cache-Control": "no-cache"
       },
       "locations": {
-        "componentIcons/*.svg": {
-          "headers": {
-            "Cache-Control": "no-cache"
-          }
-        },
         "playroom/index.html": {
           "headers": {
             "Cache-Control": "no-cache"
