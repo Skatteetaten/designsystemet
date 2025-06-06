@@ -1,11 +1,12 @@
 declare const classNames: {
-  readonly columnWrapper: 'columnWrapper';
   readonly linkWrapper: 'linkWrapper';
-  readonly columnOneLinkPadding: 'columnOneLinkPadding';
-  readonly columnThreeLinkPadding: 'columnThreeLinkPadding';
-  readonly menuSpacingLarge: 'menuSpacingLarge';
-  readonly menuSpacingSmall: 'menuSpacingSmall';
-  readonly menuSpacingMedium: 'menuSpacingMedium';
+  readonly linkWrapperPadding: 'linkWrapperPadding';
+  readonly noPadding: 'noPadding';
+  readonly marginBottomXL: 'marginBottomXL';
+  readonly marginBottomS: 'marginBottomS';
+  readonly marginRightS: 'marginRightS';
   readonly flex: 'flex';
+  readonly columns: 'columns';
+  readonly secondColumn: 'secondColumn';
 };
 export default classNames;
