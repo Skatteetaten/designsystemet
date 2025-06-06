@@ -315,7 +315,9 @@ export const TopBannerExternal = ({
                       aria-label={t('topbanner.NavAriaLabel')}
                       className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`.trim()}
                     >
-                      <div className={styles.column}>{firstColumn}</div>
+                      <div className={`${styles.column} ${styles.firstColumn}`}>
+                        {firstColumn}
+                      </div>
                       {secondColumn && (
                         <div className={styles.column}>{secondColumn}</div>
                       )}

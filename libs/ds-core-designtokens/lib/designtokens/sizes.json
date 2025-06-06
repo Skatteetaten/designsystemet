@@ -4,6 +4,7 @@
     "--size-small": "1rem",
     "--size-medium": "1.25rem",
     "--size-large": "1.5rem",
+    "--size-large-plus": "2rem",
     "--size-extra-large": "2.5rem",
     "--semantic-size-default": "var(--size-small)"
   }
