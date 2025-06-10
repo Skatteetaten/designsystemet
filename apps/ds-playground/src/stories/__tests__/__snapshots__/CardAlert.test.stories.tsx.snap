@@ -41,7 +41,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_12yk0_1">
+      <div class="_cardContent_qt0f6_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
@@ -84,7 +84,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_12yk0_1">
+      <div class="_cardContent_qt0f6_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
@@ -127,7 +127,7 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_12yk0_1">
+      <div class="_cardContent_qt0f6_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>

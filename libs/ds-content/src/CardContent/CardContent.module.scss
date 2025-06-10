@@ -6,15 +6,15 @@
   margin: var(--card-padding);
   gap: var(--spacing-l);
 
-  &:not(:first-child, :last-child) {
+  &:where(:not(:first-child, :last-child)) {
     margin: var(--spacing-s) var(--card-padding);
   }
 
-  &:first-child:has(+ &) {
+  &:where(:first-child:has(+ &)) {
     margin-bottom: var(--spacing-s);
   }
 
-  &:last-child:not(:only-child) {
+  &:where(:last-child:not(:only-child)) {
     margin-top: var(--spacing-s);
   }
 }
