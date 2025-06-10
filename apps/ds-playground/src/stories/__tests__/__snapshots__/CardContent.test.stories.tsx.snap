@@ -3,7 +3,7 @@
 exports[`Tester/Card/Content WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="_cardContent_12yk0_1 dummyClassname"
+       class="_cardContent_qt0f6_1 dummyClassname"
        lang="en"
        data-testid="123ID"
   >
@@ -20,7 +20,7 @@ exports[`Tester/Card/Content WithChildrenRigthContent smoke-test 1`] = `
        data-color="white"
        data-spacing="m"
   >
-    <div class="_cardContent_12yk0_1">
+    <div class="_cardContent_qt0f6_1">
       <div>
         <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8">
           <li class="_element_1b7zf_1">
@@ -31,7 +31,7 @@ exports[`Tester/Card/Content WithChildrenRigthContent smoke-test 1`] = `
           </li>
         </ul>
       </div>
-      <div class="_rightContent_12yk0_17">
+      <div class="_rightContent_qt0f6_17">
         <div class="_tag_sjct7_1 _tag_ochre_sjct7_18 _tag_medium_sjct7_30">
           <div class="_iconWrapper_sjct7_12"
                aria-hidden="true"
@@ -56,11 +56,11 @@ exports[`Tester/Card/Content WithChildrenRigthContent smoke-test 1`] = `
 
 exports[`Tester/Card/Content WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardContent_12yk0_1">
+  <div class="_cardContent_qt0f6_1">
     <div class="dummyClassname">
       Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
     </div>
-    <div class="_rightContent_12yk0_17 dummyClassname">
+    <div class="_rightContent_qt0f6_17 dummyClassname">
       høyrejustert innhold
     </div>
   </div>
@@ -69,7 +69,7 @@ exports[`Tester/Card/Content WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/Card/Content WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardContent_12yk0_1"
+  <div class="_cardContent_qt0f6_1"
        id="dummyIdForwardedFromRef"
   >
     <div>

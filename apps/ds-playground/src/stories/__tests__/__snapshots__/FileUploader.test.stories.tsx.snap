@@ -336,7 +336,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -361,7 +361,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -628,7 +628,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -649,7 +649,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
                 </span>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -759,7 +759,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -784,7 +784,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -815,7 +815,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -836,7 +836,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                 </span>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -941,7 +941,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -966,7 +966,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -997,7 +997,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -1018,7 +1018,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                 </span>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -1135,7 +1135,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -1160,7 +1160,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -1191,7 +1191,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -1212,7 +1212,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 </span>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -1243,7 +1243,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -1264,7 +1264,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 </span>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"
@@ -1295,7 +1295,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
              data-color="white"
              data-spacing="xxs"
         >
-          <div class="_cardContent_12yk0_1">
+          <div class="_cardContent_qt0f6_1">
             <div class="_fileContentContainer_15fus_20">
               <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _fileListIcon_15fus_116"
                    viewbox="0 0 24 24"
@@ -1320,7 +1320,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 </a>
               </div>
             </div>
-            <div class="_rightContent_12yk0_17 _fileContentRight_15fus_10">
+            <div class="_rightContent_qt0f6_17 _fileContentRight_15fus_10">
               <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _fileDeleteButton_15fus_6"
                       data-brightness="default"
                       type="button"

@@ -6,7 +6,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
        data-color="ochre"
        data-spacing="m"
   >
-    <div class="_cardContent_12yk0_1">
+    <div class="_cardContent_qt0f6_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
@@ -16,7 +16,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
        data-color="forest"
        data-spacing="m"
   >
-    <div class="_cardContent_12yk0_1">
+    <div class="_cardContent_qt0f6_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
@@ -26,7 +26,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
        data-color="burgundy"
        data-spacing="m"
   >
-    <div class="_cardContent_12yk0_1">
+    <div class="_cardContent_qt0f6_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
@@ -36,7 +36,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
        data-color="denim"
        data-spacing="m"
   >
-    <div class="_cardContent_12yk0_1">
+    <div class="_cardContent_qt0f6_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
@@ -46,7 +46,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
        data-color="graphite"
        data-spacing="m"
   >
-    <div class="_cardContent_12yk0_1">
+    <div class="_cardContent_qt0f6_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
@@ -56,7 +56,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
        data-color="white"
        data-spacing="m"
   >
-    <div class="_cardContent_12yk0_1">
+    <div class="_cardContent_qt0f6_1">
       <div>
         Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
