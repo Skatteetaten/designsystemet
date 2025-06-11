@@ -1,37 +1,40 @@
 @use '@skatteetaten/ds-core-designtokens/designtokens/breakpoints' as *;
 
-@media (min-width: $breakpoint-m) {
-  .columnWrapper {
-    margin-top: 58px; // for at den skal havne på linje med meny i andre kolonne
+.linkWrapper {
+  list-style-type: none;
+
+  &Padding {
+    padding: 0 var(--spacing-s-plus);
   }
 }
 
-.linkWrapper {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-}
-
-.columnOneLinkPadding {
-  padding: 0 var(--spacing-s) 0 var(--spacing-s);
-}
-
-.columnThreeLinkPadding {
+.noPadding {
   padding: 0;
 }
 
-.menuSpacingLarge {
-  margin-bottom: var(--spacing-l);
+.marginBottomXL {
+  margin-bottom: var(--spacing-xl);
 }
 
-.menuSpacingSmall {
+.marginBottomS {
   margin-bottom: var(--spacing-s);
 }
 
-.menuSpacingMedium {
-  margin-bottom: var(--spacing-m);
+.marginRightS {
+  margin-right: var(--spacing-s);
 }
 
 .flex {
   display: flex;
+}
+
+@media (min-width: $breakpoint-m) {
+  .columns.columns {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .secondColumn {
+    display: flex;
+    gap: var(--spacing-xxl);
+  }
 }

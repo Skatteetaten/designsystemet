@@ -27,6 +27,7 @@ type searchProps = Pick<SearchFieldProps, 'onSearch' | 'onSearchClick'>;
 
 export interface TopBannerExternalProps extends BaseProps, searchProps {
   ref?: Ref<TopBannerExternalHandle>;
+  classNames?: { columns?: string };
   /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. Hvis språk som sendes inn ikke finnes blant standardspråkene eller i additionalLanguages så vil den falle tilbake på bokmål som standard. */
   defaultLocale?: TopBannerLangPickerProps['defaultLocale'];
   /** Callback når et språk trykkes på i språkvelgeren. */

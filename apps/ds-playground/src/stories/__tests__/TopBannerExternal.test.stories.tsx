@@ -27,6 +27,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { disable: true } },
     showSami: { table: { disable: true } },
     defaultLocale: { table: { disable: true } },
     children: {
