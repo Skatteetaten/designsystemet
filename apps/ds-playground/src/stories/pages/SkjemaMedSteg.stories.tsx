@@ -24,11 +24,7 @@ import {
   RadioGroup,
   TextField,
 } from '@skatteetaten/ds-forms';
-import {
-  ArrowBackSVGpath,
-  EditSVGpath,
-  PrintSVGpath,
-} from '@skatteetaten/ds-icons';
+import { ArrowBackSVGpath, PrintSVGpath } from '@skatteetaten/ds-icons';
 import {
   Footer,
   TopBannerExternal,
@@ -275,7 +271,9 @@ export const SkjemaMedSteg = (): JSX.Element => {
               stepNumber={1}
               variant={activeStep === 1 ? 'active' : 'passive'}
               nextButtonProps={{ ariaDescribedby: 'infoNextButton' }}
+              shouldAutoFocusWhenActive={false}
               onNext={handleNextStep}
+              onEdit={activeStep > 1 ? (): void => setActiveStep(1) : undefined}
             >
               {activeStep === 1 && (
                 <>
@@ -378,20 +376,12 @@ export const SkjemaMedSteg = (): JSX.Element => {
                 </>
               )}
               {activeStep > 1 && (
-                <div className={`${styles.flexWrap} ${styles.marginTopM}`}>
+                <div className={styles.flexWrap}>
                   <Paragraph className={styles.marginRightM}>
                     {hasLocalAddress === 'ja'
                       ? `${me.name}, ${contactsInput.address}, ${contactsInput.postalCode}, ${contactsInput.city}, ${formatPhoneNumber(contactsInput.phone)}`
                       : `${me.name}, Utenlandsk adresse`}
                   </Paragraph>
-                  <InlineButton
-                    svgPath={EditSVGpath}
-                    onClick={(): void => {
-                      setActiveStep(1);
-                    }}
-                  >
-                    {'Endre'}
-                  </InlineButton>
                 </div>
               )}
             </StepList.Step>
