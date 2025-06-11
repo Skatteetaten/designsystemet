@@ -5,3 +5,5 @@ export * from './TopBannerExternal/TopBannerExternal.types';
 export * from './TopBannerInternal/TopBannerInternal';
 export * from './TopBannerInternal/TopBannerInternal.types';
 export * from './TopBannerInternalActionMenu/TopBannerInternalActionMenu.types';
+export * from './TopBannerExternalUserMenu/TopBannerExternalUserMenu';
+export * from './TopBannerExternalUserMenu/TopBannerExternalUserMenu.types';
