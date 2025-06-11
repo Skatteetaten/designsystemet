@@ -270,11 +270,13 @@ export const SkjemaMedSteg = (): JSX.Element => {
         <StepList className={styles.marginBottomL}>
           {activeStep >= 1 && (
             <StepList.Step
+              id={'step1'}
               title={'Kort beskrivelse av steg'}
               titleAs={'h2'}
               stepNumber={1}
               variant={activeStep === 1 ? 'active' : 'passive'}
               nextButtonProps={{ ariaDescribedby: 'infoNextButton' }}
+              shouldAutoFocusWhenActive={false}
               onNext={handleNextStep}
             >
               {activeStep === 1 && (
@@ -388,6 +390,9 @@ export const SkjemaMedSteg = (): JSX.Element => {
                     svgPath={EditSVGpath}
                     onClick={(): void => {
                       setActiveStep(1);
+                      setTimeout(() => {
+                        document.getElementById('step1-focus-target')?.focus();
+                      });
                     }}
                   >
                     {'Endre'}
