@@ -18,6 +18,7 @@ import {
 import {
   TopBannerExternal,
   TopBannerExternalHandle,
+  TopBannerExternalUserMenu,
   User,
 } from '@skatteetaten/ds-layout';
 import {
@@ -1024,6 +1025,7 @@ export const ExampleWithUserMenu: Story = {
             modalRef.current?.close();
           }}
         />
+        <TopBannerExternalUserMenu children={'Hei Lasse!'} />
       </>
     );
   },
