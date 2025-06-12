@@ -2,18 +2,15 @@ import { ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
+  Color,
   Position,
-  colorNamesArr,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
 
 import { AccordionItem } from '../AccordionItem/AccordionItem';
 
 export type AccordionColor =
-  | Extract<
-      (typeof colorNamesArr)[number],
-      'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'
-    >
+  | Extract<Color, 'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'>
   | 'none';
 
 export type AccordionSize = Extract<

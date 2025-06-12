@@ -7,23 +7,20 @@ import { CardAlert } from '../CardAlert/CardAlert';
 import { CardContent } from '../CardContent/CardContent';
 import { CardHeader } from '../CardHeader/CardHeader';
 
-export type CardColor = Extract<
-  (typeof colorNamesArr)[number],
-  'white' | 'ochre' | 'forest' | 'burgundy' | 'denim' | 'graphite'
->;
-
 export type CardSpacing =
   | Extract<Spacing, 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'mega'>
   | 'responsive';
 
-export const cardColorArr: CardColor[] = [
-  colorNamesArr[0],
-  colorNamesArr[1],
-  colorNamesArr[2],
-  colorNamesArr[3],
-  colorNamesArr[5],
-  colorNamesArr[6],
-];
+export const cardColorArr = colorNamesArr.filter(
+  (color) =>
+    color === 'white' ||
+    color === 'ochre' ||
+    color === 'forest' ||
+    color === 'burgundy' ||
+    color === 'denim' ||
+    color === 'graphite'
+);
+export type CardColor = (typeof cardColorArr)[number];
 
 export interface CardComponentCommonProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
