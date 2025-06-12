@@ -1,18 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as TopBannerExternalStories from './TopBannerExternal.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={TopBannerExternalStories} />
+
+<DocHeaderWrapper componentName={'TopBannerExternal'} >
 
 # TopBannerExternal
 
 <VersionBadge packageName={'layout'} />
 
-<DocIntro
-  name="TopBannerExternal"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 
@@ -24,8 +27,6 @@ import { TopBannerExternal } from '@skatteetaten/ds-layout';
 
 ## Examples
 
-For å åpne eller lukke hovedmenyen kan man bruke ref.openMenu() og ref.closeMenu(). Eksempelet under
-viser et tilfelle hvor vi har navigasjonslenker i menyen og ønsker at menyen skal lukkes når lenkene
-brukes til å navgiere til ny side.
+For å åpne eller lukke hovedmenyen kan man bruke ref.openMenu() og ref.closeMenu(). Eksempelet under viser et tilfelle hvor vi har navigasjonslenker i menyen og ønsker at menyen skal lukkes når lenkene brukes til å navgiere til ny side.
 
 <Canvas of={TopBannerExternalStories.Examples} />

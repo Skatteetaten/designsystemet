@@ -1,18 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as MegaButtonStories from './MegaButton.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={MegaButtonStories} />
+
+<DocHeaderWrapper componentName={'MegaButton'}>
 
 # MegaButton
 
 <VersionBadge packageName={'buttons'} />
 
-<DocIntro
-  name="MegaButton"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/megabutton/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/megabutton/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 

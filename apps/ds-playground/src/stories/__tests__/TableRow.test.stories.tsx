@@ -4,6 +4,8 @@ import { expect, fireEvent, fn, within } from '@storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
 
+import { wrapper } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: Table.Row,
   title: 'Tester/Table/Row',
@@ -19,6 +21,7 @@ const meta = {
     expandButtonAriaDescribedby: { table: { disable: true } },
     expandButtonPosition: { table: { disable: true } },
     expandButtonTitle: { table: { disable: true } },
+    showExpandButtonTitle: { table: { disable: true } },
     isExpandable: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
     children: { table: { disable: true } },
@@ -176,5 +179,114 @@ export const WithExpandableExtraRows = {
     ).toBeInTheDocument();
     await expect(args.onExpand).toHaveBeenCalled();
     await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
+  },
+} satisfies Story;
+
+export const WithExpandableContent = {
+  render: Template,
+  name: 'With Expandable Content',
+  args: {
+    isExpandable: true,
+    expandableContent: 'Ekstra innhold',
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    expandableContent: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      click: `${wrapper} button`,
+    },
+  },
+} satisfies Story;
+
+export const WithExpandButtonPositionRight = {
+  render: Template,
+  name: 'With ExpandButtonPosition Right',
+  args: {
+    isExpandable: true,
+    expandButtonPosition: 'right',
+    expandableContent: 'Ekstra innhold',
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    expandButtonPosition: { table: { disable: false } },
+    expandableContent: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      click: `${wrapper} button`,
+    },
+  },
+} satisfies Story;
+
+export const WithExpandTextLeft = {
+  render: Template,
+  name: 'With ExpandText on Left Side (TableRow A11.1, B6)',
+  args: {
+    isExpandable: true,
+    showExpandButtonTitle: true,
+    expandButtonAriaDescribedby: 'Id123',
+    expandableContent: 'Ekstra innhold',
+    onExpand: fn(),
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    showExpandButtonTitle: { table: { disable: false } },
+    expandButtonTitle: { table: { disable: false } },
+    expandButtonAriaDescribedby: { table: { disable: false } },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inlineButton = canvas.getByRole('button');
+    await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
+    await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
+    await fireEvent.click(inlineButton);
+    await expect(args.onExpand).toHaveBeenCalled();
+    await expect(inlineButton).toHaveAttribute('aria-expanded', 'true');
+  },
+} satisfies Story;
+
+export const WithExpandTextRight = {
+  render: Template,
+  name: 'With ExpandText on Right Side (TableRow A11.1, B6)',
+  args: {
+    isExpandable: true,
+    showExpandButtonTitle: true,
+    expandButtonPosition: 'right',
+    expandButtonAriaDescribedby: 'Id123',
+    expandableContent: 'Ekstra innhold',
+    onExpand: fn(),
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    showExpandButtonTitle: { table: { disable: false } },
+    expandButtonTitle: { table: { disable: false } },
+    expandButtonAriaDescribedby: { table: { disable: false } },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inlineButton = canvas.getByRole('button');
+    await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
+    await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
+    await fireEvent.click(inlineButton);
+    await expect(args.onExpand).toHaveBeenCalled();
+    await expect(inlineButton).toHaveAttribute('aria-expanded', 'true');
+  },
+} satisfies Story;
+
+export const WithExpandButtonTitle = {
+  render: Template,
+  name: 'With ExpandButtonTitle',
+  args: {
+    isExpandable: true,
+    showExpandButtonTitle: true,
+    expandButtonTitle: 'Vis mer',
+    expandableContent: 'Ekstra innhold',
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    showExpandButtonTitle: { table: { disable: false } },
+    expandButtonTitle: { table: { disable: false } },
   },
 } satisfies Story;

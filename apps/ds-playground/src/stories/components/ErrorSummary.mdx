@@ -1,18 +1,22 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls, ArgTypes } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as ErrorSummaryStories from './ErrorSummary.stories';
+import * as ErrorSummaryError from './ErrorSummaryError.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={ErrorSummaryStories} />
+
+<DocHeaderWrapper componentName="ErrorSummary">
 
 # ErrorSummary
 
 <VersionBadge packageName={'forms'} />
 
-<DocIntro
-  name="ErrorSummary"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errorsummary/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errorsummary/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 
@@ -21,6 +25,10 @@ import { ErrorSummary } from '@skatteetaten/ds-forms';
 ```
 
 <Controls />
+
+## `ErrorSummary.Error`
+
+<ArgTypes of={ErrorSummaryError} />
 
 ## Examples
 

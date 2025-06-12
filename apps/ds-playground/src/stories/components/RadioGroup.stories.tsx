@@ -91,6 +91,7 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [type, setType] = useState<string>('foretak');
     const [svar, setSvar] = useState<string>('');
+    const [svarError, setSvarError] = useState<string>('');
 
     return (
       <>
@@ -113,8 +114,18 @@ export const Examples: Story = {
           variant={'horizontal'}
           legend={'Har du sendt inn skattemeldingen?'}
           selectedValue={svar}
+          errorMessage={svarError}
           required
-          onChange={(e): void => setSvar(e.target.value)}
+          onBlur={
+            svar
+              ? undefined
+              : (): void =>
+                  setSvarError('Svar på om du har sendt inn skattemeldingen.')
+          }
+          onChange={(e): void => {
+            setSvar(e.target.value);
+            setSvarError('');
+          }}
         >
           <RadioGroup.Radio value={'ja'}>{'Ja'}</RadioGroup.Radio>
           <RadioGroup.Radio value={'nei'}>{'Nei'}</RadioGroup.Radio>

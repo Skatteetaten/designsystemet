@@ -1,3 +1,10 @@
+.breadcrumbs {
+  padding: var(--semantic-responsive-internal-container-spacing);
+  padding-top: var(--spacing-s);
+  padding-bottom: var(--spacing-s);
+  background-color: var(--palette-graphite-5);
+}
+
 .wrapperInternalLayout {
   display: var(--semantic-responsive-internal-container-display);
   flex-direction: var(--semantic-responsive-internal-container-flex-direction);
@@ -23,13 +30,6 @@
   display: block;
 }
 
-.breadcrumbs {
-  padding: var(--semantic-responsive-internal-container-spacing);
-  padding-top: var(--spacing-s);
-  padding-bottom: var(--spacing-s);
-  background-color: var(--palette-graphite-5);
-}
-
 .noMargin {
   margin: 0;
 }
@@ -50,10 +50,6 @@
   gap: var(--spacing-m);
 }
 
-.marginBottomL {
-  margin-bottom: var(--spacing-l);
-}
-
 .card {
   max-width: 100%;
 }
@@ -65,4 +61,8 @@
 
 .wideContent {
   width: var(--semantic-responsive-wide-content);
+}
+
+.marginBottomL {
+  margin-bottom: var(--spacing-l);
 }

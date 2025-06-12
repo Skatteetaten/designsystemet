@@ -2,14 +2,6 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .card {
-  --card-padding: var(--card-padding-m);
-  --card-padding-mobile: var(--spacing-s);
-  --card-padding-xs: var(--card-padding-mobile);
-  --card-padding-s: var(--card-padding-mobile);
-  --card-padding-m: var(--spacing-m);
-  --card-padding-l: var(--card-padding-m);
-  --card-padding-xl: var(--card-padding-m);
-
   max-width: var(--container-m);
   box-sizing: border-box;
   border: 1px solid var(--variant-outline-color);
@@ -80,26 +72,14 @@
   }
 
   &[data-spacing='responsive'] {
-    --card-padding: var(--card-padding-mobile);
-
-    @media (min-width: breakpoints.$breakpoint-xs) {
-      --card-padding: var(--card-padding-xs);
-    }
+    --card-padding: var(--spacing-s);
 
     @media (min-width: breakpoints.$breakpoint-s) {
-      --card-padding: var(--card-padding-s);
-    }
-
-    @media (min-width: breakpoints.$breakpoint-m) {
-      --card-padding: var(--card-padding-m);
+      --card-padding: var(--spacing-m);
     }
 
     @media (min-width: breakpoints.$breakpoint-l) {
-      --card-padding: var(--card-padding-l);
-    }
-
-    @media (min-width: breakpoints.$breakpoint-xl) {
-      --card-padding: var(--card-padding-xl);
+      --card-padding: var(--spacing-xl);
     }
   }
 }

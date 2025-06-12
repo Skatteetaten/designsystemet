@@ -37,25 +37,16 @@
 
   &Arrow {
     position: absolute;
-    bottom: calc(-1 * var(--spacing-m));
+    bottom: calc(-0.5 * var(--spacing-m) - 1px);
     left: var(--spacing-m);
-    width: 0;
-    height: 0;
-    border-top: 16px solid var(--card-note-border);
-    border-right: 16px solid transparent;
-    border-left: 16px solid transparent;
-
-    &::after {
-      position: relative;
-      top: -3px;
-      left: -18px;
-      width: 0;
-      height: 0;
-      border-top: 18px solid var(--card-note-color);
-      border-right: 18px solid transparent;
-      border-left: 18px solid transparent;
-      content: '';
-    }
+    width: var(--size-small);
+    height: var(--size-small);
+    border-top: 1px solid transparent;
+    border-right: 1px solid var(--card-note-border);
+    border-bottom: 1px solid var(--card-note-border);
+    border-left: 1px solid transparent;
+    background: var(--card-note-color);
+    transform: rotate(45deg);
   }
 
   &CloseButton {

@@ -5,6 +5,7 @@ import {
   KeyboardEvent,
   useState,
   JSX,
+  useMemo,
 } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -21,7 +22,7 @@ import {
   dsI18n,
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
-import { searchArrSize, SearchField } from '@skatteetaten/ds-forms';
+import { SearchField, searchInList } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -62,12 +63,12 @@ const meta = {
     searchButtonTitle: { table: { disable: true } },
     results: { table: { disable: true } },
     helpText: { table: { disable: true } },
+    enableSRNavigationHint: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...searchArrSize],
       control: 'inline-radio',
     },
     // HTML
@@ -247,6 +248,9 @@ export const Defaults = {
     await expect(searchButton).toBeInTheDocument();
     await expect(searchButton).toBeEnabled();
     await expect(searchButton.tagName).toBe('BUTTON');
+
+    const sRtexst = dsI18n.t('ds_forms:searchfield.Focus');
+    await expect(await canvas.findByText(sRtexst)).toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -521,17 +525,37 @@ export const WithEventHandlers = {
   },
 } satisfies Story;
 
-export const WithArrowKeyNavigation = {
-  name: 'With ArrowKeyNavgitaion (C2)',
-  args: {
-    ...defaultArgs,
-    results: [
+const KeyboardNavigationTemplate: StoryFn<typeof SearchField> = (args) => {
+  const [value, setValue] = useState<string>('');
+
+  const options = useMemo(() => {
+    return [
       { description: 'Hydrogen', key: 'H' },
       { description: 'Helium', key: 'He' },
       { description: 'Litium', key: 'Li' },
       { description: 'Beryllium', key: 'Be' },
       { description: 'Bor', key: 'B' },
-    ],
+    ];
+  }, []);
+
+  const results = useMemo(() => searchInList(options, value), [value, options]);
+
+  return (
+    <SearchField
+      {...args}
+      results={results}
+      onChange={(event) => {
+        setValue(event.target.value);
+      }}
+    />
+  );
+};
+
+export const WithArrowKeyNavigation = {
+  name: 'With ArrowKeyNavgitaion (C2)',
+  render: KeyboardNavigationTemplate,
+  args: {
+    ...defaultArgs,
     onResultClick: fn(),
   },
   parameters: {
@@ -540,9 +564,12 @@ export const WithArrowKeyNavigation = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const searchbox = canvas.getByRole('searchbox');
-    const results = await canvas.findAllByRole('option');
 
     searchbox.focus();
+    await userEvent.keyboard('h');
+    await userEvent.keyboard('[backspace]');
+
+    const results = await canvas.findAllByRole('option');
     await userEvent.keyboard('[ArrowDown]');
     await expect(results[0]).toHaveFocus();
     await userEvent.keyboard('[ArrowDown]');
@@ -721,5 +748,43 @@ export const WithLongInput = {
     defaultValue: {
       table: { disable: false },
     },
+  },
+} satisfies Story;
+
+const TwoSearchFields: StoryFn<typeof SearchField> = () => {
+  return (
+    <div className={'flex gapS'}>
+      <SearchField label={'Søk etter grønnsaker'} hideLabel={false} />
+      <SearchField
+        label={'Søk etter grønnsaker'}
+        helpText={'Hjelpetekst'}
+        hideLabel={false}
+      />
+    </div>
+  );
+};
+
+export const TwoSearchFieldsOneWithHelpText = {
+  render: TwoSearchFields,
+};
+
+export const WithEnableSRNavigationHintsFalse = {
+  argTypes: {
+    enableSRNavigationHint: {
+      table: { disable: false },
+      control: 'boolean',
+    },
+  },
+  args: {
+    ...defaultArgs,
+    enableSRNavigationHint: false,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const sRtexst = dsI18n.t('ds_forms:searchfield.Focus');
+    await expect(canvas.queryByText(sRtexst)).not.toBeInTheDocument();
   },
 } satisfies Story;

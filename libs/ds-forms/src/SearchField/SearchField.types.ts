@@ -2,7 +2,8 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
-  KeyboardEventHandler,
+  KeyboardEvent,
+  MouseEvent,
   MouseEventHandler,
   Ref,
 } from 'react';
@@ -11,14 +12,15 @@ import {
   BaseProps,
   FormRequiredProps,
   Prettify,
+  Size,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
 
-export const searchArrSize = [sizeArr[2], sizeArr[3], sizeArr[4]] as const;
-export type SearchSize = (typeof searchArrSize)[number];
+export const searchArrSize = [sizeArr[2], sizeArr[3], sizeArr[5]] as const;
+export type SearchSize = Extract<Size, 'medium' | 'large' | 'extraLarge'>;
 
 type RequiredDatePickerHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
@@ -84,15 +86,23 @@ interface SearchFieldCommonProps
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
   /** Kalles med enter-knapp i søkefeltet */
-  onSearch?: KeyboardEventHandler<HTMLInputElement>;
+  onSearch?: (event: KeyboardEvent<HTMLInputElement>, value?: string) => void;
   /** Kalles ved trykk på søkeknappen */
-  onSearchClick?: MouseEventHandler<HTMLButtonElement>;
+  onSearchClick?: (
+    event: MouseEvent<HTMLButtonElement>,
+    value?: string
+  ) => void;
   /** Kalles ved trykk på søkeresultat */
   onResultClick?: (result: SearchResult) => void;
   /** Liste med søkeresultater som skal vises under feltet */
   results?: Array<SearchResult>;
   /** Om søkeknappen skal vises med ikon eller tekst */
   hasSearchButtonIcon?: boolean;
+  /**
+    Hvis søkefeltet skal vise resultater med results propen så skal denne settes til true for å gi en ekstra instruksjon til skjermleser.
+    Hvis komponenten skal ta deg til en egen side for å vise resultater i stedet for å bruke results-propen så skal denne settes til false fordi skjermleserteksten ikke er relevant.
+   */
+  enableSRNavigationHint?: boolean;
 }
 
 export type SearchFieldProps = SearchFieldCommonProps & FormRequiredProps;

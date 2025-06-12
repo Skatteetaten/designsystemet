@@ -1,18 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as BreadcrumbsStories from './Breadcrumbs.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={BreadcrumbsStories} />
+
+<DocHeaderWrapper componentName={'Breadcrumbs'}>
 
 # Breadcrumbs
 
 <VersionBadge packageName={'navigation'} />
 
-<DocIntro
-  name="Breadcrumbs"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 

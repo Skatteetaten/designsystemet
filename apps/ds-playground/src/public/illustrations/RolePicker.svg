@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        fill: none;
+      }
+
+      .cls-12 {
+        fill: #cde1f9;
+      }
+
+      .cls-13 {
+        fill: url(#New_Pattern_Swatch_1-3);
+      }
+
+      .cls-14 {
+        fill: url(#New_Pattern_Swatch_1-2);
+      }
+
+      .cls-15 {
+        fill: url(#New_Pattern_Swatch_1-8);
+      }
+
+      .cls-16 {
+        fill: url(#New_Pattern_Swatch_1-7);
+      }
+
+      .cls-17 {
+        fill: url(#New_Pattern_Swatch_1-6);
+      }
+
+      .cls-18 {
+        fill: url(#New_Pattern_Swatch_2-3);
+      }
+
+      .cls-19 {
+        fill: url(#New_Pattern_Swatch_2-2);
+      }
+
+      .cls-20 {
+        fill: url(#New_Pattern_Swatch_2-8);
+      }
+
+      .cls-21 {
+        fill: url(#New_Pattern_Swatch_2-5);
+      }
+
+      .cls-22 {
+        fill: url(#New_Pattern_Swatch_2-6);
+      }
+
+      .cls-23 {
+        fill: url(#New_Pattern_Swatch_2-9);
+      }
+
+      .cls-2 {
+        stroke: url(#New_Pattern_Swatch_1-4);
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke: url(#New_Pattern_Swatch_1-9);
+      }
+
+      .cls-4 {
+        stroke: url(#New_Pattern_Swatch_1-5);
+      }
+
+      .cls-24 {
+        fill: #fff;
+      }
+
+      .cls-25 {
+        fill: #093e61;
+      }
+
+      .cls-5 {
+        stroke: url(#New_Pattern_Swatch_2);
+      }
+
+      .cls-5, .cls-10, .cls-11 {
+        stroke-width: 4px;
+      }
+
+      .cls-6 {
+        stroke-width: 3px;
+      }
+
+      .cls-6, .cls-9 {
+        stroke: #093e61;
+      }
+
+      .cls-26 {
+        fill: #1362ae;
+      }
+
+      .cls-7 {
+        stroke: url(#New_Pattern_Swatch_1-11);
+      }
+
+      .cls-8 {
+        stroke: url(#New_Pattern_Swatch_1-10);
+      }
+
+      .cls-9 {
+        stroke-width: 6px;
+      }
+
+      .cls-27 {
+        fill: url(#New_Pattern_Swatch_4);
+      }
+
+      .cls-28 {
+        fill: url(#New_Pattern_Swatch_1);
+      }
+
+      .cls-10 {
+        stroke: url(#New_Pattern_Swatch_2-4);
+      }
+
+      .cls-11 {
+        stroke: url(#New_Pattern_Swatch_2-7);
+      }
+    </style>
+    <pattern id="New_Pattern_Swatch_4" data-name="New Pattern Swatch 4" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-607.05 -776.49)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-12" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1" data-name="New Pattern Swatch 1" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-3474.92 -4043.4) scale(.62)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-25" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1-2" data-name="New Pattern Swatch 1" patternTransform="translate(-3473.69 -4021.74) scale(.62)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-3" data-name="New Pattern Swatch 1" patternTransform="translate(-3474.92 -4113.71) scale(.62 .63)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_2" data-name="New Pattern Swatch 2" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(461.37 -191.34) scale(1.15)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-26" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_2-2" data-name="New Pattern Swatch 2" patternTransform="translate(1527.83 866.54) scale(1.28)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_2-3" data-name="New Pattern Swatch 2" patternTransform="translate(1527.83 866.54) scale(1.28)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_2-4" data-name="New Pattern Swatch 2" patternTransform="translate(461.37 -161.82) scale(1.15)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_2-5" data-name="New Pattern Swatch 2" patternTransform="translate(1527.83 872.37) scale(1.28)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_2-6" data-name="New Pattern Swatch 2" patternTransform="translate(1527.83 872.37) scale(1.28)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_2-7" data-name="New Pattern Swatch 2" patternTransform="translate(461.37 -136.01) scale(1.15)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_2-8" data-name="New Pattern Swatch 2" patternTransform="translate(1527.83 876.68) scale(1.28)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_2-9" data-name="New Pattern Swatch 2" patternTransform="translate(1527.83 876.68) scale(1.28)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_1-4" data-name="New Pattern Swatch 1" patternTransform="translate(-3474.92 -4088.15) scale(.62 .63)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-5" data-name="New Pattern Swatch 1" patternTransform="translate(-3474.92 -4060.95) scale(.62 .63)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-6" data-name="New Pattern Swatch 1" patternTransform="translate(1527.83 872.96) scale(1.28)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-7" data-name="New Pattern Swatch 1" patternTransform="translate(-5768.86 -6339.74) scale(.3)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-8" data-name="New Pattern Swatch 1" patternTransform="translate(-5770.14 -6341.02) scale(.3)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-9" data-name="New Pattern Swatch 1" patternTransform="translate(-5737.59 -6340.42) scale(.3)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-10" data-name="New Pattern Swatch 1" patternTransform="translate(-6921.22 -9032.06) rotate(-45) scale(.12)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-11" data-name="New Pattern Swatch 1" patternTransform="translate(-6921.22 -9032.06) rotate(-45) scale(.12)" xlink:href="#New_Pattern_Swatch_1"/>
+  </defs>
+  <circle class="cls-27" cx="134.51" cy="104.46" r="46.43"/>
+  <g>
+    <g>
+      <rect class="cls-28" x="49.29" y="25.75" width="99.95" height="148.9"/>
+      <path class="cls-14" d="M147.25,27.75v144.9H51.29V27.75h95.95M149.25,25.75H49.29v148.9h99.95V25.75h0Z"/>
+    </g>
+    <g>
+      <rect class="cls-24" x="48.06" y="22.5" width="99.95" height="150.47"/>
+      <path class="cls-13" d="M146.02,24.5v146.47H50.06V24.5h95.95M148.02,22.5H48.06v150.47h99.95V22.5h0Z"/>
+    </g>
+    <line class="cls-6" x1="55.56" y1="50.77" x2="105.15" y2="50.77"/>
+    <line class="cls-9" x1="55.56" y1="37.02" x2="136.9" y2="37.02"/>
+    <g>
+      <line class="cls-5" x1="76.5" y1="100.91" x2="133.74" y2="100.91"/>
+      <g>
+        <circle class="cls-19" cx="62.53" cy="97.14" r="3.36"/>
+        <path class="cls-18" d="M68.05,107.22h-11.04c0-3.05,2.47-5.52,5.52-5.52s5.52,2.47,5.52,5.52Z"/>
+      </g>
+    </g>
+    <g>
+      <line class="cls-10" x1="76.5" y1="130.42" x2="133.74" y2="130.42"/>
+      <g>
+        <circle class="cls-21" cx="62.53" cy="126.65" r="3.36"/>
+        <path class="cls-22" d="M68.05,136.73h-11.04c0-3.05,2.47-5.52,5.52-5.52s5.52,2.47,5.52,5.52Z"/>
+      </g>
+    </g>
+    <g>
+      <line class="cls-11" x1="76.5" y1="156.24" x2="133.74" y2="156.24"/>
+      <g>
+        <circle class="cls-20" cx="62.53" cy="152.46" r="3.36"/>
+        <path class="cls-23" d="M68.05,162.55h-11.04c0-3.05,2.47-5.52,5.52-5.52s5.52,2.47,5.52,5.52Z"/>
+      </g>
+    </g>
+    <line class="cls-2" x1="54.4" y1="116.71" x2="140.43" y2="116.71"/>
+    <line class="cls-4" x1="54.4" y1="143.91" x2="140.43" y2="143.91"/>
+    <g>
+      <g>
+        <rect class="cls-17" x="56.72" y="65.07" width="83.71" height="16.75"/>
+        <path class="cls-16" d="M139.43,66.07v14.75H57.72v-14.75h81.71M140.43,65.07H56.72v16.75h83.71v-16.75h0Z"/>
+      </g>
+      <g>
+        <rect class="cls-24" x="55.44" y="63.79" width="83.71" height="16.75"/>
+        <path class="cls-15" d="M138.16,64.79v14.75H56.44v-14.75h81.71M139.16,63.79H55.44v16.75h83.71v-16.75h0Z"/>
+      </g>
+      <line class="cls-3" x1="120.61" y1="63.79" x2="120.61" y2="80.54"/>
+      <line class="cls-6" x1="62.2" y1="72.09" x2="96.02" y2="72.09"/>
+      <g>
+        <circle class="cls-8" cx="128.19" cy="70.64" r="2.74"/>
+        <line class="cls-7" x1="130.12" y1="72.58" x2="133.38" y2="75.83"/>
+      </g>
+    </g>
+  </g>
+</svg>

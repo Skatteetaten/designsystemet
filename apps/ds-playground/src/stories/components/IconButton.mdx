@@ -1,18 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as IconButtonStories from './IconButton.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={IconButtonStories} />
+
+<DocHeaderWrapper componentName="IconButton">
 
 # IconButton
 
 <VersionBadge packageName={'buttons'} />
 
-<DocIntro
-  name="IconButton"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/iconbutton/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/iconbutton/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 

@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
@@ -75,19 +77,21 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <div className={'flex'}>
-      <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
-        {'Legg til'}
-      </InlineButton>
-      <InlineButton
-        className={'exampleSpacing'}
-        svgPath={CancelSVGpath}
-        iconPosition={'right'}
-      >
-        {'Fjern'}
-      </InlineButton>
-    </div>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <div className={'flex'}>
+        <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
+          {'Legg til'}
+        </InlineButton>
+        <InlineButton
+          className={'exampleSpacing'}
+          svgPath={CancelSVGpath}
+          iconPosition={'right'}
+        >
+          {'Fjern'}
+        </InlineButton>
+      </div>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

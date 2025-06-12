@@ -1,11 +1,7 @@
 import { useContext, useId, useImperativeHandle, useRef, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { EditSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableEditableRowProps } from './TableEditableRow.types';
@@ -54,7 +50,6 @@ export const TableEditableRow = ({
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const generatedId = useId();
   const id = idExternal ?? generatedId;
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const isExpanded = id === context?.rowInEditModeId;
   const concatenatedClassNames = `${
     isExpanded ? styles.editableRow_expanded : ''
@@ -67,50 +62,17 @@ export const TableEditableRow = ({
     }, 0);
   };
 
-  if (editButtonPosition === 'left') {
-    return (
-      <RowWithLeftSideExpandButton
-        ref={rowWithButtonRef}
-        id={id}
-        lang={lang}
-        className={concatenatedClassNames}
-        data-testid={dataTestId}
-        classNames={{ expandedContent: styles.expandableContent }}
-        isExpandButtonDisabled={!!context?.rowInEditModeId}
-        isExpanded={isExpanded}
-        expandButtonTitle={t('tablerow.Editable')}
-        expandButtonAriaDescribedby={editButtonAriaDescribedby}
-        expandableContent={
-          <>
-            <div className={styles.editableRowTriangle} />
-            <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
-              {t('tablerow.EditData')}
-            </span>
-            {/* eslint-disable-next-line react-compiler/react-compiler */}
-            {editableContent?.(closeEditableContent)}
-          </>
-        }
-        context={context}
-        svgPath={EditSVGpath}
-        isDesktop={isDesktop}
-        hideIconButton={isExpanded}
-        onExpandClick={(): void => {
-          onEdit && onEdit();
-          context?.setRowInEditModeId(id);
-          setTimeout(() => srOnlySpanRef.current?.focus(), 0);
-        }}
-      >
-        {children}
-      </RowWithLeftSideExpandButton>
-    );
-  }
+  const Tag =
+    editButtonPosition === 'left'
+      ? RowWithLeftSideExpandButton
+      : RowWithRightSideExpandButton;
 
   return (
-    <RowWithRightSideExpandButton
+    <Tag
       ref={rowWithButtonRef}
       id={id}
-      className={concatenatedClassNames}
       lang={lang}
+      className={concatenatedClassNames}
       data-testid={dataTestId}
       classNames={{ expandedContent: styles.expandableContent }}
       isExpandButtonDisabled={!!context?.rowInEditModeId}
@@ -120,18 +82,15 @@ export const TableEditableRow = ({
       expandableContent={
         <>
           <div className={styles.editableRowTriangle} />
-          <div tabIndex={-1}>
-            <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
-              {t('tablerow.EditData')}
-            </span>
-            {/* eslint-disable-next-line react-compiler/react-compiler */}
-            {editableContent?.(closeEditableContent)}
-          </div>
+          <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
+            {t('tablerow.EditData')}
+          </span>
+          {/* eslint-disable-next-line react-compiler/react-compiler */}
+          {editableContent?.(closeEditableContent)}
         </>
       }
       context={context}
       svgPath={EditSVGpath}
-      isDesktop={isDesktop}
       hideIconButton={isExpanded}
       onExpandClick={(): void => {
         onEdit && onEdit();
@@ -140,7 +99,7 @@ export const TableEditableRow = ({
       }}
     >
       {children}
-    </RowWithRightSideExpandButton>
+    </Tag>
   );
 };
 

@@ -29,6 +29,7 @@ const packageVersions = directories.reduce((previousValue, currentValue) => {
 }, {});
 
 const config: StorybookConfig = {
+  staticDirs: ['../src/public'],
   stories: [
     '../src/stories/**/*.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
@@ -38,6 +39,7 @@ const config: StorybookConfig = {
     '@storybook/addon-coverage',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
+    '@storybook/addon-links',
     '@nx/react/plugins/storybook',
   ],
   core: {

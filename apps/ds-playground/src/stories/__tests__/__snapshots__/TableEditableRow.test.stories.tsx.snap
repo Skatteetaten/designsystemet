@@ -13,19 +13,22 @@ exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
             lang="nb"
             data-testid="123ID"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
+              style="max-width: 40px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
+                    aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r7:"
+                   aria-labelledby="svgtitle-:r3:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r7:">
+                <title id="svgtitle-:r3:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -33,12 +36,108 @@ exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
               </svg>
             </button>
           </td>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
+            3,000
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/Table/EditableRow WithEditButtonPositionRight smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
+        testtabell
+      </caption>
+      <tbody>
+        <tr id=":ra:"
+            class
+        >
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              scope="row"
+          >
+            Cake
+          </th>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
+            3,000
+          </td>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_right_25tph_24  _buttonCell_j3mwt_5">
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
+                    data-brightness="default"
+                    type="button"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:rb:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:rb:">
+                  Rediger rad
+                </title>
+                <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+                </path>
+              </svg>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/Table/EditableRow WithEditableContent smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
+        testtabell
+      </caption>
+      <tbody>
+        <tr id=":r8:"
+            class
+        >
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
+              style="max-width: 40px;"
+          >
+            <button class="_button_19ayz_1 _button_medium_19ayz_42"
+                    data-brightness="default"
+                    type="button"
+                    aria-expanded="false"
+            >
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r9:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r9:">
+                  Rediger rad
+                </title>
+                <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+                </path>
+              </svg>
+            </button>
+          </td>
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
+              scope="row"
+          >
+            Cake
+          </th>
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>
@@ -59,12 +158,15 @@ exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
         <tr id="dummyIdForwardedFromRef"
             class
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5"
+              style="max-width: 40px;"
+          >
             <button class="_button_19ayz_1 _button_medium_19ayz_42"
                     data-brightness="default"
                     type="button"
+                    aria-expanded="false"
             >
-              <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1:"
@@ -79,12 +181,12 @@ exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
               </svg>
             </button>
           </td>
-          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20"
+          <th class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21"
               scope="row"
           >
             Cake
           </th>
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20">
+          <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21">
             3,000
           </td>
         </tr>

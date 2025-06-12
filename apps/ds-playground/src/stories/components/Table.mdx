@@ -1,18 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as TableStories from './Table.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={TableStories} />
+
+<DocHeaderWrapper componentName="Table">
 
 # Table
 
 <VersionBadge packageName={'table'} />
 
-<DocIntro
-  name="Table"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/table/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/table/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 
@@ -47,3 +50,7 @@ import { Table } from '@skatteetaten/ds-table';
 ### Selectable
 
 <Canvas of={TableStories.Selectable} />
+
+### With Stripes
+
+<Canvas of={TableStories.WithStripes} />

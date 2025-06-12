@@ -1,18 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as PaginationStories from './Pagination.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro, Link } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={PaginationStories} />
+
+<DocHeaderWrapper componentName="Pagination">
 
 # Pagination
 
 <VersionBadge packageName={'navigation'} />
 
-<DocIntro
-  name="Pagination"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/" />
+
+</DocHeaderWrapper>
 
 Hvordan bruke <Link url="#hvordan-bruke-props-i-kombinasjon-med-andre-props" target="_self">props</Link> i komponenten
 

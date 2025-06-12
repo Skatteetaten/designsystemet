@@ -1,6 +1,7 @@
 import { MouseEventHandler, ReactNode, Ref, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { SearchFieldProps } from '@skatteetaten/ds-forms';
 
 import { TopBannerLangPickerProps } from '../TopBannerLangPicker/TopBannerLangPicker.types';
 import { TopBannerLogoProps } from '../TopBannerLogo/TopBannerLogo.types';
@@ -16,14 +17,17 @@ type UserOthers = {
 };
 
 export type User = UserMyself | UserOthers;
-export type TopBannerMenu = 'Lang' | 'MainMenu' | 'None';
+export type TopBannerMenu = 'Lang' | 'MainMenu' | 'Search' | 'None';
 
 type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
   text: TopBannerSkipLinkProps['children'];
 };
 
-export interface TopBannerExternalProps extends BaseProps {
+type searchProps = Pick<SearchFieldProps, 'onSearch' | 'onSearchClick'>;
+
+export interface TopBannerExternalProps extends BaseProps, searchProps {
   ref?: Ref<TopBannerExternalHandle>;
+  classNames?: { columns?: string };
   /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. Hvis språk som sendes inn ikke finnes blant standardspråkene eller i additionalLanguages så vil den falle tilbake på bokmål som standard. */
   defaultLocale?: TopBannerLangPickerProps['defaultLocale'];
   /** Callback når et språk trykkes på i språkvelgeren. */
@@ -47,6 +51,8 @@ export interface TopBannerExternalProps extends BaseProps {
   secondColumn?: ReactNode;
   /** Meny-innhold tredje kolonne */
   thirdColumn?: ReactNode;
+  /** Innhold under søkefeltet */
+  searchContent?: ReactNode;
   /** Tekst eller markup som blir plassert mellom logo og innbakte menyer og knapper. */
   children?: ReactNode;
   /**
@@ -57,11 +63,11 @@ export interface TopBannerExternalProps extends BaseProps {
    */
   skipLink?: SkipLink;
   /**
-   * logo.logo Overskriver default logo. Må også angi logo for mobilvisning, alt-tekst og url.
-   * logo.mobileLogo  Overskriver default logo for mobilvisning.
-   * logo.alt Overskriver default alt-tekst for logo kun dersom logo og mobileLogo også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.
-   * logo.href  Overskriver default URL.
-   * logo.as HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. Hvis default logo endres til å ikke være en lenke, så blir logoAltText automatisk tilpasset.
+   * logo.logo: Overskriver default logo. Må også angi alt-tekst og url.
+   * **Deprecated logo.mobileLogo:**  Overskriver default logo for mobilvisning.
+   * logo.alt: Overskriver default alt-tekst for logo, kun dersom logo også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.
+   * logo.href:  Overskriver default URL.
+   * logo.as: HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. Hvis default logo endres til å ikke være en lenke, så blir logoAltText automatisk tilpasset.
    */
   logo?: TopBannerLogoProps;
   /** Legger til flere alternativer i språkvelgeren. */

@@ -22,7 +22,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: TopBannerInternal,
-  title: 'Komponenter/TopBannerInternal/TopBannerInternal',
+  title: 'Komponenter/TopBannerInternal',
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
@@ -123,7 +123,6 @@ export const Examples: Story = {
           logoHref={'/home'}
         >
           <SearchField
-            classNames={{ searchContainer: 'noMargin' }}
             label={'Søk etter sak, virksomhet, dokument'}
             placeholder={'Søk etter sak, virksomhet, dokument...'}
           />

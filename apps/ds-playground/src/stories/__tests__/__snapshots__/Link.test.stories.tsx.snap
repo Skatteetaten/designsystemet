@@ -50,7 +50,7 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
   <a class="_link_z7jba_1 _link_white_z7jba_1"
      href="#storybook-root"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -60,7 +60,7 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
       </path>
     </svg>
     Er du pendler?
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -91,7 +91,7 @@ exports[`Tester/Link WithExternalIcon play-test 1`] = `
      href="#storybook-root"
   >
     Er du pendler?
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -110,7 +110,7 @@ exports[`Tester/Link WithIcon play-test 1`] = `
   <a class="_link_z7jba_1"
      href="#storybook-root"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -139,7 +139,7 @@ exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
   <a class="_link_z7jba_1"
      href="#storybook-root"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -149,7 +149,7 @@ exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
       </path>
     </svg>
     Denne lenken har en veldig lang tekst med ikon på venstre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isExternal_z7jba_44"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -168,7 +168,7 @@ exports[`Tester/Link WithOnClick play-test 1`] = `
   <a class="_link_z7jba_1"
      href="#storybook-root"
   >
-    <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"

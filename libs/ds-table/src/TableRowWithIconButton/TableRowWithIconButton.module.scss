@@ -1,21 +1,31 @@
-@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @use 'libs/ds-core-utils/src/styles';
 
 .buttonCell {
-  max-width: 2rem;
   padding: var(--spacing-xs);
 
-  @media (min-width: breakpoints.$breakpoint-m) {
-    max-width: 2.75rem;
-  }
-
-  &_expanded {
+  &_expanded,
+  &_compact {
     padding: var(--spacing-xs) var(--spacing-xs) 0;
+  }
+}
+
+.expandButton {
+  line-height: var(--semantic-line-height-table);
+  white-space: nowrap; // litt usikker på denne
+
+  > svg {
+    --semantic-line-height-buttons: var(--semantic-line-height-table);
   }
 
   &_compact {
-    max-width: 1.375rem;
-    padding: var(--spacing-xs) 0 0;
+    font-size: var(--font-size-s);
+
+    > svg {
+      width: var(--size-small);
+      min-width: var(--size-small);
+
+      --font-size-m: var(--font-size-s);
+    }
   }
 }
 
@@ -23,8 +33,12 @@
   position: relative;
   box-sizing: border-box;
   padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
-  margin-top: var(--spacing-m);
+  margin-top: var(--spacing-xs);
   margin-left: calc(var(--spacing-xs) * -1);
+
+  &_compact {
+    margin-top: 0;
+  }
 }
 
 .expandedRowRight {

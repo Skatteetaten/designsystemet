@@ -1,5 +1,6 @@
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+//eslint-disable-next-line storybook/use-storybook-testing-library
 import { PointerEventsCheckLevel } from '@testing-library/user-event';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';

@@ -27,6 +27,8 @@ import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './Saksvisning.module.css';
+import stylesAsString from './Saksvisning.module.css?raw';
+import { includeStylesTransform } from '../../../.storybook/helpers';
 
 export default {
   title: 'Sidetyper/Intern/Saksvisning',
@@ -34,6 +36,11 @@ export default {
     layout: 'fullscreen',
     controls: {
       disable: true,
+    },
+    docs: {
+      source: {
+        transform: includeStylesTransform(stylesAsString),
+      },
     },
   },
 };

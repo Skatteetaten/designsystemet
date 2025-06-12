@@ -1,20 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as CardStories from './Card.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={CardStories} />
 
-# Card (beta)
+<DocHeaderWrapper componentName={'Card'}>
+
+# Card
 
 <VersionBadge packageName={'content'} />
 
-<DocIntro
-  name="Card"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/card/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/card/" />
 
-Card er i Beta. Det kan komme endringer.
+</DocHeaderWrapper>
 
 <Primary />
 

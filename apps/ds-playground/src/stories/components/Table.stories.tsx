@@ -20,6 +20,81 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
+const data = [
+  {
+    id: 'abcd',
+    firma: 'Bluth Company',
+    timestamp: '08.04.2020 11:31:57',
+    status: 'Under behandling',
+    eta: 'Mer enn 1 dag',
+    ansatte: [
+      {
+        id: 'efgh',
+        navn: 'Per Olsen',
+        fnr: '11012020 99999',
+        beskrivelse: 'Ingen flere opplysninger',
+      },
+    ],
+  },
+  {
+    id: 'ijkl',
+    firma: 'Business Engros',
+    timestamp: '08.04.2020 11:32:16',
+    status: 'Under behandling',
+    eta: '23 min',
+    ansatte: [
+      {
+        id: 'mnop',
+        navn: 'Bryce Navnesen',
+        fnr: '02012020 99999',
+        beskrivelse: 'noen flere opplysninger',
+      },
+      {
+        id: 'qrst',
+        navn: 'Alice Middleman',
+        fnr: '03012020 99999',
+        beskrivelse: 'mange flere opplysninger',
+      },
+    ],
+  },
+  {
+    id: 'uvwx',
+    firma: 'Corwood Industries',
+    timestamp: '08.04.2020 11:32:16',
+    status: 'Ferdig',
+    eta: '–',
+    ansatte: [
+      {
+        id: 'yzab',
+        navn: 'Kai Mossige',
+        fnr: '01012020 99999',
+        beskrivelse: 'finnes flere opplysninger?',
+      },
+    ],
+  },
+  {
+    id: 'cdef',
+    firma: 'Limerick Partner',
+    timestamp: '08.04.2020 11:32:47',
+    status: 'Ferdig',
+    eta: '–',
+    ansatte: [
+      {
+        id: 'ghij',
+        navn: 'Kari Saksbehandler',
+        fnr: '01012020 99999',
+        beskrivelse: 'Ingen flere opplysninger',
+      },
+      {
+        id: 'klmn',
+        navn: 'Bob Egil Hansen',
+        fnr: '04012020 99999',
+        beskrivelse: 'Ingen andre opplysninger',
+      },
+    ],
+  },
+];
+
 const meta = {
   component: Table,
   title: 'Komponenter/Table/Table',
@@ -239,81 +314,6 @@ export const Expandable: Story = {
     const [sortState, setSortState] = useState<SortState>({
       direction: 'none',
     });
-
-    const data = [
-      {
-        id: 'abcd',
-        firma: 'Bluth Company',
-        timestamp: '08.04.2020 11:31:57',
-        status: 'Under behandling',
-        eta: 'Mer enn 1 dag',
-        ansatte: [
-          {
-            id: 'efgh',
-            navn: 'Per Olsen',
-            fnr: '11012020 99999',
-            beskrivelse: 'Ingen flere opplysninger',
-          },
-        ],
-      },
-      {
-        id: 'ijkl',
-        firma: 'Business Engros',
-        timestamp: '08.04.2020 11:32:16',
-        status: 'Under behandling',
-        eta: '23 min',
-        ansatte: [
-          {
-            id: 'mnop',
-            navn: 'Bryce Navnesen',
-            fnr: '02012020 99999',
-            beskrivelse: 'noen flere opplysninger',
-          },
-          {
-            id: 'qrst',
-            navn: 'Alice Middleman',
-            fnr: '03012020 99999',
-            beskrivelse: 'mange flere opplysninger',
-          },
-        ],
-      },
-      {
-        id: 'uvwx',
-        firma: 'Corwood Industries',
-        timestamp: '08.04.2020 11:32:16',
-        status: 'Ferdig',
-        eta: '–',
-        ansatte: [
-          {
-            id: 'yzab',
-            navn: 'Kai Mossige',
-            fnr: '01012020 99999',
-            beskrivelse: 'finnes flere opplysninger?',
-          },
-        ],
-      },
-      {
-        id: 'cdef',
-        firma: 'Limerick Partner',
-        timestamp: '08.04.2020 11:32:47',
-        status: 'Ferdig',
-        eta: '–',
-        ansatte: [
-          {
-            id: 'ghij',
-            navn: 'Kari Saksbehandler',
-            fnr: '01012020 99999',
-            beskrivelse: 'Ingen flere opplysninger',
-          },
-          {
-            id: 'klmn',
-            navn: 'Bob Egil Hansen',
-            fnr: '04012020 99999',
-            beskrivelse: 'Ingen andre opplysninger',
-          },
-        ],
-      },
-    ];
 
     const sortedData = data.slice().sort((a, b) => {
       const sortKey = sortState.sortKey as keyof (typeof data)[0];
@@ -750,3 +750,83 @@ export const Selectable: Story = {
   },
 } satisfies Story;
 Selectable.parameters = exampleParameters;
+
+export const WithStripes: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <Table caption={'Firmaoversikt'}>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell scope={'col'}>{'Firma'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'Startet'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>
+                {'Forventet behandlet'}
+              </Table.HeaderCell>
+              <Table.HeaderCell as={'td'} />
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {data.map((row) => {
+              return (
+                <Table.Row
+                  key={row.id}
+                  // .stripedTable:nth-of-type(even) { background-color: var(--palette-graphite-5);}
+                  className={'stripedTable'}
+                  expandableContent={
+                    <div className={'emptyExpandedTableRow'}></div>
+                  }
+                  expandButtonAriaDescribedby={row.id}
+                  isExpandable
+                >
+                  <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
+                  <Table.DataCell>{row.timestamp}</Table.DataCell>
+                  <Table.DataCell>{row.status}</Table.DataCell>
+                  <Table.DataCell>{row.eta}</Table.DataCell>
+                </Table.Row>
+              );
+            })}
+          </Table.Body>
+        </Table>
+        <Table caption={'Firmaoversikt'}>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell scope={'col'}>{'Firma'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'Startet'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>
+                {'Forventet behandlet'}
+              </Table.HeaderCell>
+              <Table.HeaderCell as={'td'} />
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {data.map((row, index) => {
+              return (
+                <Table.Row
+                  key={row.id}
+                  // .evenRow { background-color: var(--palette-graphite-5); }
+                  // .oddRow { background-color: var(--palette-graphite-0); }
+                  className={index % 2 === 0 ? 'oddRow' : 'evenRow'}
+                  expandButtonPosition={'right'}
+                  expandableContent={
+                    <div className={'emptyExpandedTableRow'}></div>
+                  }
+                  expandButtonAriaDescribedby={row.id}
+                  isExpandable
+                >
+                  <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
+                  <Table.DataCell>{row.timestamp}</Table.DataCell>
+                  <Table.DataCell>{row.status}</Table.DataCell>
+                  <Table.DataCell>{row.eta}</Table.DataCell>
+                </Table.Row>
+              );
+            })}
+          </Table.Body>
+        </Table>
+      </>
+    );
+  },
+} satisfies Story;
+WithStripes.parameters = exampleParameters;

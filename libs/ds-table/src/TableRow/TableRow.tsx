@@ -8,11 +8,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableRowProps } from './TableRow.types';
@@ -34,6 +30,7 @@ export const TableRow = ({
   expandButtonPosition = getTableRowExpandButtonPositionDefault(),
   expandableContent,
   expandButtonAriaDescribedby,
+  showExpandButtonTitle,
   isExpandable,
   isExpanded: isExpandedExternal,
   onExpand,
@@ -41,16 +38,14 @@ export const TableRow = ({
   children,
 }: TableRowProps): JSX.Element => {
   const testRef = useRef<RowWithExpandButtonHandle>(null);
-  const rowRef = useRef<HTMLTableRowElement>(null);
   useImperativeHandle(
     ref,
-    () => testRef?.current?.rowRef?.current as HTMLTableRowElement
+    () => testRef.current?.rowRef?.current as HTMLTableRowElement
   );
 
   const [isExpandedInternal, setIsExpandedInternal] = useState(false);
   const context = useContext(TableContext);
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   const isExpanded = isExpandedExternal ?? isExpandedInternal;
 
@@ -67,30 +62,16 @@ export const TableRow = ({
     setIsExpandedInternal(!isExpandedInternal);
   };
 
-  const buttonTitle = expandButtonTitle ?? t('tablerow.Expandable');
+  const getButtonTitle = (): string =>
+    expandButtonTitle ??
+    (showExpandButtonTitle
+      ? t('tablerow.ExpandText')
+      : t('tablerow.Expandable'));
 
-  const svgPath = isExpanded ? ChevronUpSVGpath : ChevronDownSVGpath;
-  const isExpandButtonDisabled = false;
-
-  const expandableRowProps = {
-    id,
-    className,
-    lang,
-    'data-testid': dataTestId,
-    rowRef,
-    context,
-    expandButtonTitle: buttonTitle,
-    expandableContent,
-    t,
-    svgPath,
-    expandButtonAriaDescribedby,
-    isDesktop,
-    isExpanded,
-    iconButtonAriaExpanded: isExpanded,
-    isExpandButtonDisabled,
-    onExpandClick,
-    children,
-  };
+  const Tag =
+    expandButtonPosition === 'left'
+      ? RowWithLeftSideExpandButton
+      : RowWithRightSideExpandButton;
 
   if (!isExpandable) {
     return (
@@ -104,13 +85,28 @@ export const TableRow = ({
         {children}
       </tr>
     );
-  }
-  if (expandButtonPosition === 'left') {
+  } else {
     return (
-      <RowWithLeftSideExpandButton ref={testRef} {...expandableRowProps} />
+      <Tag
+        ref={testRef}
+        id={id}
+        className={className}
+        lang={lang}
+        data-testid={dataTestId}
+        isExpanded={isExpanded}
+        iconButtonAriaExpanded={isExpanded}
+        expandButtonTitle={getButtonTitle()}
+        expandButtonAriaDescribedby={expandButtonAriaDescribedby}
+        expandableContent={expandableContent}
+        showExpandButtonTitle={showExpandButtonTitle}
+        context={context}
+        svgPath={isExpanded ? ChevronUpSVGpath : ChevronDownSVGpath}
+        onExpandClick={onExpandClick}
+      >
+        {children}
+      </Tag>
     );
   }
-  return <RowWithRightSideExpandButton ref={testRef} {...expandableRowProps} />;
 };
 
 TableRow.displayName = 'TableRow';

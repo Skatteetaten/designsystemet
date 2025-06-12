@@ -1,9 +1,14 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .logoContainer {
-  height: var(--size-extra-large);
+  height: 2rem;
+  align-self: center;
   padding: var(--spacing-xs);
   margin-left: calc(-1 * var(--spacing-xs));
+
+  @media (min-width: breakpoints.$breakpoint-s) {
+    height: var(--size-extra-large);
+  }
 }
 
 .logoAsLink {
@@ -17,22 +22,5 @@
 }
 
 .logo {
-  &_mobile {
-    height: 100%;
-  }
-
-  &_desktop {
-    display: none;
-    height: 100%;
-  }
-
-  @media (min-width: breakpoints.$breakpoint-m) {
-    &_mobile {
-      display: none;
-    }
-
-    &_desktop {
-      display: inline-block;
-    }
-  }
+  height: 100%;
 }

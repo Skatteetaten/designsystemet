@@ -47,5 +47,7 @@
   "searchfield.ButtonTitle": "Søk",
   "searchfield.ClearButtonTitle": "Nullstill",
   "searchfield.Focus": "Bruk piltaster ned/opp for å velge forslag når de vises",
-  "searchfield.NumberOfResults": "{{ant}} forslag vises."
+  "searchfield.NumberOfResults": "{{ant}} forslag vises.",
+  "textarea.CharactersLeft": "{{ant}} tegn igjen",
+  "textarea.TooManyCharacters": "{{ant}} tegn for mye"
 }

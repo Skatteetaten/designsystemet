@@ -15,7 +15,7 @@ exports[`Tester/Popover/Content VerticalScroll smoke-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -56,7 +56,7 @@ exports[`Tester/Popover/Content WithAttributes play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -102,7 +102,7 @@ exports[`Tester/Popover/Content WithMarkup smoke-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -141,7 +141,7 @@ exports[`Tester/Popover/Content WithRef play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"

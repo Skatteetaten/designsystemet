@@ -34,7 +34,7 @@ exports[`Tester/ScrollToTopButton Defaults play-test 1`] = `
                 type="button"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -91,7 +91,7 @@ exports[`Tester/ScrollToTopButton WithAttributes play-test 1`] = `
                 data-testid="123ID"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -145,7 +145,7 @@ exports[`Tester/ScrollToTopButton WithChildren play-test 1`] = `
                 type="button"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -199,7 +199,7 @@ exports[`Tester/ScrollToTopButton WithCustomClassNames play-test 1`] = `
                 type="button"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48 dummyClassname">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56 dummyClassname"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56 dummyClassname"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -253,7 +253,7 @@ exports[`Tester/ScrollToTopButton WithMobileScreen smoke-test 1`] = `
                 type="button"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -310,7 +310,7 @@ exports[`Tester/ScrollToTopButton WithNotScrollToMain play-test 1`] = `
                 type="button"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -365,7 +365,7 @@ exports[`Tester/ScrollToTopButton WithRef play-test 1`] = `
                 id="dummyIdForwardedFromRef"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -426,7 +426,7 @@ exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
                 type="button"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -480,7 +480,7 @@ exports[`Tester/ScrollToTopButton WithWideScreen smoke-test 1`] = `
                 type="button"
         >
           <div class="_scrollToTopButtonIconContainer_gchs5_48">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _scrollToTopButtonIconContainerIcon_gchs5_56"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"

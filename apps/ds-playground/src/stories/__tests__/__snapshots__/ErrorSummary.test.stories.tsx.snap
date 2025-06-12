@@ -23,7 +23,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
   >
     <div class="_errorSummary_1iu8h_6 dummyClassname">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -52,7 +52,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
   >
     <div class="_errorSummary_1iu8h_6">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -68,7 +68,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
         </h2>
         <ul class="_linkGroup_w23nb_1">
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -84,7 +84,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
             </a>
           </li>
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -115,7 +115,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
   >
     <div class="_errorSummary_1iu8h_6">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -131,7 +131,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
         </h2>
         <ul class="_linkGroup_w23nb_1">
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -147,7 +147,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
             </a>
           </li>
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -183,7 +183,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
   >
     <div class="_errorSummary_1iu8h_6">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -199,7 +199,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
         </h2>
         <ul class="_linkGroup_w23nb_1">
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -215,7 +215,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
             </a>
           </li>
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -251,7 +251,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
   >
     <div class="_errorSummary_1iu8h_6">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -267,7 +267,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
         </h2>
         <ul class="_linkGroup_w23nb_1">
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -283,7 +283,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
             </a>
           </li>
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -319,7 +319,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
   >
     <div class="_errorSummary_1iu8h_6">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -347,7 +347,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:rv:"
+    <label id="labelId-:r12:"
            class="_label_348na_5"
            for="input_aar"
     >
@@ -358,16 +358,16 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
            data-variant="medium"
            autocomplete="off"
            required
-           aria-describedby="textFieldErrorId-:rt:"
+           aria-describedby="textFieldErrorId-:rv:"
            aria-invalid="true"
            value="1009"
     >
-    <div id="textFieldErrorId-:rt:"
+    <div id="textFieldErrorId-:rv:"
          aria-live="assertive"
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -390,7 +390,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
   >
     <div class="_errorSummary_1iu8h_6">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -406,7 +406,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
         </h2>
         <ul class="_linkGroup_w23nb_1">
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -438,7 +438,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
 <div data-test-block="true">
   <div class="bottomSpacingXL">
-    <label id="labelId-:rj:"
+    <label id="labelId-:rk:"
            class="_label_348na_5"
            for="input_aar"
     >
@@ -458,7 +458,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
          aria-atomic="true"
     >
       <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _errorMessageIcon_vog41_25"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -480,7 +480,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
   >
     <div class="_errorSummary_1iu8h_6">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -496,7 +496,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
         </h2>
         <ul class="_linkGroup_w23nb_1">
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -546,7 +546,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
   >
     <div class="_errorSummary_1iu8h_6">
       <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_large_dry7n_15 _icon_1iu8h_18"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -562,7 +562,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
         </h1>
         <ul class="_linkGroup_w23nb_1">
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -578,7 +578,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
             </a>
           </li>
           <li class="_linkGroupItem_w23nb_8">
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_w23nb_14 _icon_forward_w23nb_26"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_w23nb_14 _icon_forward_w23nb_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"

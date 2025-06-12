@@ -9,8 +9,8 @@ import {
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
+  getEnableSRNavigationHintDefault,
   getSearchFieldHasSearchButtonIconDefault,
-  searchArrSize,
   SearchField,
   searchInList,
 } from '@skatteetaten/ds-forms';
@@ -50,6 +50,14 @@ const meta = {
     },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
+    enableSRNavigationHint: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getEnableSRNavigationHintDefault().toString(),
+        },
+      },
+    },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
@@ -58,7 +66,6 @@ const meta = {
       },
     },
     variant: {
-      options: [...searchArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,

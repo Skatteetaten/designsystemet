@@ -47,5 +47,7 @@
   "searchfield.ButtonTitle": "Search",
   "searchfield.ClearButtonTitle": "Clear",
   "searchfield.Focus": "Use up and down to choose options when they are shown",
-  "searchfield.NumberOfResults": "{{ant}} items shown."
+  "searchfield.NumberOfResults": "{{ant}} items shown.",
+  "textarea.CharactersLeft": "({{ant}} characters remaining)",
+  "textarea.TooManyCharacters": "({{ant}} characters too many)"
 }

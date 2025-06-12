@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-9 {
+        fill: #9ccff2;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: url(#New_Pattern_Swatch_3);
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-5 {
+        stroke-width: 10px;
+      }
+
+      .cls-3, .cls-6, .cls-7, .cls-8 {
+        stroke-width: 6px;
+      }
+
+      .cls-4 {
+        stroke: #093e61;
+        stroke-width: 4px;
+      }
+
+      .cls-5 {
+        stroke: url(#New_Pattern_Swatch_3-2);
+      }
+
+      .cls-6 {
+        stroke: url(#New_Pattern_Swatch_3-3);
+      }
+
+      .cls-7 {
+        stroke: url(#New_Pattern_Swatch_3-5);
+      }
+
+      .cls-8 {
+        stroke: url(#New_Pattern_Swatch_3-4);
+      }
+    </style>
+    <pattern id="New_Pattern_Swatch_3" data-name="New Pattern Swatch 3" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-180 -1405.37)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-9" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_3-2" data-name="New Pattern Swatch 3" patternTransform="translate(-180 -1424.37)" xlink:href="#New_Pattern_Swatch_3"/>
+    <pattern id="New_Pattern_Swatch_3-3" data-name="New Pattern Swatch 3" patternTransform="translate(-180 -1424.37)" xlink:href="#New_Pattern_Swatch_3"/>
+    <pattern id="New_Pattern_Swatch_3-4" data-name="New Pattern Swatch 3" patternTransform="translate(-180 -1424.37)" xlink:href="#New_Pattern_Swatch_3"/>
+    <pattern id="New_Pattern_Swatch_3-5" data-name="New Pattern Swatch 3" patternTransform="translate(-180 -1424.37)" xlink:href="#New_Pattern_Swatch_3"/>
+  </defs>
+  <line class="cls-2" x1="41.39" y1="39.45" x2="158.61" y2="39.45"/>
+  <line class="cls-3" x1="41.39" y1="58.8" x2="158.61" y2="58.8"/>
+  <line class="cls-3" x1="123.37" y1="74.48" x2="158.61" y2="74.48"/>
+  <line class="cls-3" x1="41.39" y1="74.48" x2="106.36" y2="74.48"/>
+  <line class="cls-5" x1="41.39" y1="125.52" x2="158.61" y2="125.52"/>
+  <line class="cls-6" x1="41.39" y1="144.87" x2="158.61" y2="144.87"/>
+  <line class="cls-8" x1="123.37" y1="160.55" x2="158.61" y2="160.55"/>
+  <line class="cls-7" x1="41.39" y1="160.55" x2="106.36" y2="160.55"/>
+  <line class="cls-4" x1="172.57" y1="101" x2="27.43" y2="101"/>
+</svg>

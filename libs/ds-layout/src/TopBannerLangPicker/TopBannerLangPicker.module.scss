@@ -35,7 +35,7 @@
   .arrowMobile {
     fill: var(--semantic-interactive-main);
 
-    @media (min-width: breakpoints.$breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       display: none;
     }
   }
@@ -44,7 +44,7 @@
     display: none;
     fill: var(--semantic-interactive-main);
 
-    @media (min-width: breakpoints.$breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       display: inline;
     }
   }
@@ -56,7 +56,7 @@
     }
   }
 
-  @media (min-width: breakpoints.$breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-m) {
     padding-right: var(--spacing-xs);
   }
 }

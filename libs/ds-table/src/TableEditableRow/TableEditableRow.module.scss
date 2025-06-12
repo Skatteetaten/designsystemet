@@ -7,54 +7,25 @@
     background: var(--palette-ochre-10);
   }
 
-  &_expandedWithBorder {
-    --table-cell-border-bottom: solid 1px var(--palette-ochre-50);
-
-    background: var(--palette-ochre-10);
-  }
-
-  &Cell {
-    position: relative;
-    padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
-    background: var(--palette-ochre-5);
-  }
-
-  &ButtonCell {
-    padding: var(--spacing-xs);
-  }
-
   &Triangle {
     position: absolute;
-    top: -1px;
+    top: -10px;
     left: var(--spacing-xl);
-    width: 0;
-    height: 0;
-    border-top: 16px solid var(--palette-ochre-50);
-    border-right: 16px solid transparent;
-    border-left: 16px solid transparent;
-
-    &::after {
-      position: relative;
-      top: -4px;
-      left: -18px;
-      width: 0;
-      height: 0;
-      border-top: 18px solid var(--palette-ochre-10);
-      border-right: 18px solid transparent;
-      border-left: 18px solid transparent;
-      content: '';
-    }
+    width: var(--size-small);
+    height: var(--size-small);
+    border-top: 1px solid transparent;
+    border-right: 1px solid var(--palette-ochre-50);
+    border-bottom: 1px solid var(--palette-ochre-50);
+    border-left: 1px solid transparent;
+    background: var(--palette-ochre-10);
+    transform: rotate(45deg);
   }
-}
-
-.expandedRow {
-  border-bottom: solid 1px var(--semantic-divider-30);
 }
 
 .expandableContent {
   position: relative;
   padding-top: var(--spacing-m);
-  border-top: solid 1px var(--palette-ochre-50);
+  border-top: 1px solid var(--palette-ochre-50);
   background: var(--palette-ochre-5);
 }
 

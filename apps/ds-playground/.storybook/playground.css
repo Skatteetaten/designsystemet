@@ -23,6 +23,7 @@ code {
   padding-top: 100vh;
   color: var(--palette-denim-5);
 }
+
 .width100 {
   width: 100%;
 }
@@ -47,6 +48,7 @@ code {
 .block {
   display: block;
 }
+
 .centerMargin {
   margin-left: auto;
   margin-right: auto;
@@ -61,12 +63,28 @@ code {
   margin-top: var(--spacing-xl);
 }
 
+.topSpacingL {
+  margin-top: var(--spacing-l) !important;
+}
+
 .topSpacingS {
   margin-top: var(--spacing-s);
 }
 
+.topSpacingXs {
+  margin-top: var(--spacing-xs);
+}
+
+.bottomSpacingS {
+  margin-bottom: var(--spacing-s) !important;
+}
+
 .bottomSpacingXL {
   margin-bottom: var(--spacing-xl);
+}
+
+.bottomSpacingL {
+  margin-bottom: var(--spacing-l);
 }
 
 .bottomSpacingXS {
@@ -103,6 +121,7 @@ code {
   display: inline-block;
   margin-right: 20px;
 }
+
 .scrollTableWrapperWarning {
   width: 320px;
   background: var(--semantic-warning-background);
@@ -155,8 +174,13 @@ code {
 .gapS {
   gap: var(--spacing-s);
 }
+
 .gapXs {
   gap: var(--spacing-xs);
+}
+
+.gapM {
+  gap: var(--spacing-m);
 }
 
 .gapXl {
@@ -185,9 +209,11 @@ code {
 
 a.docs {
   color: var(--semantic-interactive-main);
+  line-height: var(--semantic-line-height-article);
   text-decoration-color: var(--semantic-interactive-main);
   padding: var(--spacing-xs) 0;
   font-weight: var(--font-weight-medium);
+  font-family: 'Inter';
   text-decoration-line: underline;
 }
 
@@ -278,8 +304,8 @@ a.resetLinkStyling {
   flex-wrap: wrap;
 }
 
-.noMargin {
-  margin: 0 !important;
+.flexGrow {
+  flex-grow: 1;
 }
 
 .blueBackground {
@@ -290,4 +316,42 @@ a.resetLinkStyling {
   width: auto !important;
   padding-right: var(--spacing-xs);
   border-right: 1px solid var(--palette-graphite-0);
+}
+
+.evenRow {
+  background-color: var(--palette-graphite-5);
+}
+
+.oddRow {
+  background-color: var(--palette-graphite-0);
+}
+
+.stripedTable:nth-of-type(even) {
+  background-color: var(--palette-graphite-5);
+}
+
+.dividerCard {
+  width: 18rem;
+}
+
+.descriptionList {
+  --description-list-dd-align: right;
+}
+
+.docHeaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.componentIcon {
+  width: 11rem;
+
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 }

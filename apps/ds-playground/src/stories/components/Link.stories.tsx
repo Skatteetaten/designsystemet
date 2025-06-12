@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
@@ -51,24 +53,26 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <>
-      <div className={'exampleSpacing'}>
-        <Link href={'#link'}>
-          {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (pdf)'}
-        </Link>
-      </div>
-      <div className={'exampleSpacing'}>
-        <Link href={'#link'} isExternal>
-          {'Kontakte Statens Vegvesen'}
-        </Link>
-      </div>
-      <div className={'exampleSpacing'}>
-        <Link href={'#link'} isExternal>
-          {'Brukerveiledning for bilforhandlere'}
-        </Link>
-      </div>
-    </>
-  ),
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <div className={'exampleSpacing'}>
+          <Link href={'#link'}>
+            {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (pdf)'}
+          </Link>
+        </div>
+        <div className={'exampleSpacing'}>
+          <Link href={'#link'} isExternal>
+            {'Kontakte Statens Vegvesen'}
+          </Link>
+        </div>
+        <div className={'exampleSpacing'}>
+          <Link href={'#link'} isExternal>
+            {'Brukerveiledning for bilforhandlere'}
+          </Link>
+        </div>
+      </>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

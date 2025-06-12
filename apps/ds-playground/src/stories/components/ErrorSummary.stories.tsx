@@ -15,7 +15,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: ErrorSummary,
-  title: 'Komponenter/ErrorSummary/ErrorSummary',
+  title: 'Komponenter/ErrorSummary',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },

@@ -2,14 +2,15 @@
 
 exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_card_nrlm6_5"
+  <div class="_card_lg4k9_5"
        data-color="white"
+       data-spacing="m"
   >
-    <div class="_cardAlert_e7y3b_1 bottomSpacingXL"
+    <div class="_cardAlert_1mlgn_1 bottomSpacingXL"
          data-variant="info"
     >
-      <div class="_cardAlertHeadingContainer_e7y3b_57">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_e7y3b_23"
+      <div class="_cardAlertHeadingContainer_1mlgn_49">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _cardAlertIcon_1mlgn_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -21,11 +22,11 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_e7y3b_50"
+        <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_1mlgn_42"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r7:"
@@ -40,19 +41,19 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1">
+      <div class="_cardContent_qt0f6_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
       </div>
-      <div class="_cardAlertArrow_e7y3b_29">
+      <div class="_cardAlertArrow_1mlgn_29">
       </div>
     </div>
-    <div class="_cardAlert_e7y3b_1 bottomSpacingXL"
+    <div class="_cardAlert_1mlgn_1 bottomSpacingXL"
          data-variant="warning"
     >
-      <div class="_cardAlertHeadingContainer_e7y3b_57">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_e7y3b_23"
+      <div class="_cardAlertHeadingContainer_1mlgn_49">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _cardAlertIcon_1mlgn_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -64,11 +65,11 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_e7y3b_50"
+        <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_1mlgn_42"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r9:"
@@ -83,19 +84,19 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1">
+      <div class="_cardContent_qt0f6_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
       </div>
-      <div class="_cardAlertArrow_e7y3b_29">
+      <div class="_cardAlertArrow_1mlgn_29">
       </div>
     </div>
-    <div class="_cardAlert_e7y3b_1 bottomSpacingXL"
+    <div class="_cardAlert_1mlgn_1 bottomSpacingXL"
          data-variant="danger"
     >
-      <div class="_cardAlertHeadingContainer_e7y3b_57">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_e7y3b_23"
+      <div class="_cardAlertHeadingContainer_1mlgn_49">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _cardAlertIcon_1mlgn_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -107,11 +108,11 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
           Merknad
         </h3>
-        <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_e7y3b_50"
+        <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_1mlgn_42"
                 data-brightness="default"
                 type="button"
         >
-          <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:rb:"
@@ -126,12 +127,12 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="_cardContent_48t19_1">
+      <div class="_cardContent_qt0f6_1">
         <div>
           Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
         </div>
       </div>
-      <div class="_cardAlertArrow_e7y3b_29">
+      <div class="_cardAlertArrow_1mlgn_29">
       </div>
     </div>
   </div>
@@ -141,13 +142,13 @@ exports[`Tester/Card/Alert AllVariants smoke-test 1`] = `
 exports[`Tester/Card/Alert WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="_cardAlert_e7y3b_1 dummyClassname"
+       class="_cardAlert_1mlgn_1 dummyClassname"
        lang="en"
        data-testid="123ID"
        data-variant="info"
   >
-    <div class="_cardAlertHeadingContainer_e7y3b_57">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_e7y3b_23"
+    <div class="_cardAlertHeadingContainer_1mlgn_49">
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _cardAlertIcon_1mlgn_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -159,11 +160,11 @@ exports[`Tester/Card/Alert WithAttributes play-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_e7y3b_50"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_1mlgn_42"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -179,7 +180,7 @@ exports[`Tester/Card/Alert WithAttributes play-test 1`] = `
       </button>
     </div>
     Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
-    <div class="_cardAlertArrow_e7y3b_29">
+    <div class="_cardAlertArrow_1mlgn_29">
     </div>
   </div>
 </div>
@@ -192,12 +193,12 @@ exports[`Tester/Card/Alert WithOnClose play-test 1`] = `
 
 exports[`Tester/Card/Alert WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardAlert_e7y3b_1"
+  <div class="_cardAlert_1mlgn_1"
        data-variant="info"
        id="dummyIdForwardedFromRef"
   >
-    <div class="_cardAlertHeadingContainer_e7y3b_57">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_e7y3b_23"
+    <div class="_cardAlertHeadingContainer_1mlgn_49">
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _cardAlertIcon_1mlgn_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -209,11 +210,11 @@ exports[`Tester/Card/Alert WithRef play-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_e7y3b_50"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_1mlgn_42"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -229,7 +230,7 @@ exports[`Tester/Card/Alert WithRef play-test 1`] = `
       </button>
     </div>
     Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
-    <div class="_cardAlertArrow_e7y3b_29">
+    <div class="_cardAlertArrow_1mlgn_29">
     </div>
   </div>
 </div>
@@ -237,11 +238,11 @@ exports[`Tester/Card/Alert WithRef play-test 1`] = `
 
 exports[`Tester/Card/Alert WithSvgPath smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardAlert_e7y3b_1"
+  <div class="_cardAlert_1mlgn_1"
        data-variant="info"
   >
-    <div class="_cardAlertHeadingContainer_e7y3b_57">
-      <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _cardAlertIcon_e7y3b_23"
+    <div class="_cardAlertHeadingContainer_1mlgn_49">
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _cardAlertIcon_1mlgn_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -253,11 +254,11 @@ exports[`Tester/Card/Alert WithSvgPath smoke-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47">
         Merknad
       </h3>
-      <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_e7y3b_50"
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _cardAlertCloseButton_1mlgn_42"
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -273,7 +274,7 @@ exports[`Tester/Card/Alert WithSvgPath smoke-test 1`] = `
       </button>
     </div>
     Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
-    <div class="_cardAlertArrow_e7y3b_29">
+    <div class="_cardAlertArrow_1mlgn_29">
     </div>
   </div>
 </div>

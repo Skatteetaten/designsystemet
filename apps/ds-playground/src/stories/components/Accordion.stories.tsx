@@ -321,7 +321,7 @@ export const WorkTask: Story = {
             {'Under arbeid'}
           </DescriptionList.Element>
         </DescriptionList>
-        <Accordion iconPosition={'left'} className={'bottomSpacingXL'}>
+        <Accordion iconPosition={'left'} className={'bottomSpacingL'}>
           <Accordion.Item title={'Informasjon fra skattemeldingen'}>
             <Table
               caption={'Informasjon fra skattemeldingen'}
@@ -387,14 +387,15 @@ export const WorkTask: Story = {
               }
             </em>
           </Accordion.Item>
-          <Accordion.Item title={'Valg for saken'}>
-            <RadioGroup legend={'valg for saken'} hideLegend>
-              <RadioGroup.Radio>{'Mangler dokumentasjon'}</RadioGroup.Radio>
-              <RadioGroup.Radio>{'Opprett nytt krav'}</RadioGroup.Radio>
-              <RadioGroup.Radio>{'Godta krav'}</RadioGroup.Radio>
-            </RadioGroup>
-          </Accordion.Item>
         </Accordion>
+        <Heading as={'h2'} level={3} hasSpacing>
+          {'Valg for saken'}
+        </Heading>
+        <RadioGroup legend={'valg for saken'} hideLegend>
+          <RadioGroup.Radio>{'Mangler dokumentasjon'}</RadioGroup.Radio>
+          <RadioGroup.Radio>{'Opprett nytt krav'}</RadioGroup.Radio>
+          <RadioGroup.Radio>{'Godta krav'}</RadioGroup.Radio>
+        </RadioGroup>
         <Button className={'exampleSpacing'}>{'Bekreft og fortsett'}</Button>
         <Button variant={'secondary'}>{'Avbryt'}</Button>
       </div>

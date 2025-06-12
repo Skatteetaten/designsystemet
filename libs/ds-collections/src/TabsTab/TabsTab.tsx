@@ -83,7 +83,11 @@ export const TabsTab = ({
       }}
     >
       {svgPath && (
-        <Icon svgPath={svgPath} variant={'systemIcon'} size={'small'} />
+        <Icon
+          svgPath={svgPath}
+          variant={'systemIcon'}
+          size={variant === 'compact' ? 'small' : 'medium'}
+        />
       )}
       {children}
     </button>

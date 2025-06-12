@@ -12,6 +12,13 @@
       "path": "/web/designsystemet/",
       "headers": {
         "Cache-Control": "no-cache"
+      },
+      "locations": {
+        "playroom/index.html": {
+          "headers": {
+            "Cache-Control": "no-cache"
+          }
+        }
       }
     }
   }

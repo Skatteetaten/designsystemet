@@ -1,18 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as AccordionStories from './Accordion.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={AccordionStories} />
+
+<DocHeaderWrapper componentName={'Accordion'}>
 
 # Accordion
 
 <VersionBadge packageName={'collections'} />
 
-<DocIntro
-  name="Accordion"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/accordion/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/accordion/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 

@@ -16,7 +16,7 @@ exports[`Tester/Chips/Chips Defaults smoke-test 1`] = `
               class="_toggleChip_1ard9_1  _toggleChip_withCheckmark_1ard9_43"
               aria-pressed="false"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1ard9_58"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_1ard9_58"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -33,7 +33,7 @@ exports[`Tester/Chips/Chips Defaults smoke-test 1`] = `
               class="_removableChip_zdnya_1"
       >
         Oslo
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_zdnya_41"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_zdnya_41"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -70,7 +70,7 @@ exports[`Tester/Chips/Chips WithAriaLabel play-test 1`] = `
               class="_toggleChip_1ard9_1  _toggleChip_withCheckmark_1ard9_43"
               aria-pressed="false"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1ard9_58"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_1ard9_58"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -87,7 +87,7 @@ exports[`Tester/Chips/Chips WithAriaLabel play-test 1`] = `
               class="_removableChip_zdnya_1"
       >
         Oslo
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_zdnya_41"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_zdnya_41"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -126,7 +126,7 @@ exports[`Tester/Chips/Chips WithAttributes play-test 1`] = `
               class="_toggleChip_1ard9_1  _toggleChip_withCheckmark_1ard9_43"
               aria-pressed="false"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1ard9_58"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_1ard9_58"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -143,7 +143,7 @@ exports[`Tester/Chips/Chips WithAttributes play-test 1`] = `
               class="_removableChip_zdnya_1"
       >
         Oslo
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_zdnya_41"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_zdnya_41"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -170,7 +170,7 @@ exports[`Tester/Chips/Chips WithCloseAndFocusNext play-test 1`] = `
               class="_removableChip_zdnya_1"
       >
         Trondheim
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_zdnya_41"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_zdnya_41"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r8:"
@@ -190,7 +190,7 @@ exports[`Tester/Chips/Chips WithCloseAndFocusNext play-test 1`] = `
               class="_removableChip_zdnya_1"
       >
         Oslo
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_zdnya_41"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_zdnya_41"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -237,7 +237,7 @@ exports[`Tester/Chips/Chips WithRef play-test 1`] = `
               class="_toggleChip_1ard9_1  _toggleChip_withCheckmark_1ard9_43"
               aria-pressed="false"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_1ard9_58"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_1ard9_58"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -254,7 +254,7 @@ exports[`Tester/Chips/Chips WithRef play-test 1`] = `
               class="_removableChip_zdnya_1"
       >
         Oslo
-        <svg class="_systemIcon_dry7n_2 _systemIcon_small_dry7n_5 _icon_zdnya_41"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_zdnya_41"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"

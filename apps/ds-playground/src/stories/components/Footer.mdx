@@ -1,18 +1,23 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls, ArgTypes } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as FooterStories from './Footer.stories';
+import * as FooterLink from './FooterLink.stories';
+import * as FooterLogo from './FooterLogo.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={FooterStories} />
+
+<DocHeaderWrapper componentName="Footer">
 
 # Footer
 
 <VersionBadge packageName={'layout'} />
 
-<DocIntro
-  name="Footer"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/footer/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/footer/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 
@@ -21,6 +26,14 @@ import { Footer } from '@skatteetaten/ds-layout';
 ```
 
 <Controls />
+
+## `Footer.Link`
+
+<ArgTypes of={FooterLink} />
+
+## `Footer.Logo`
+
+<ArgTypes of={FooterLogo} />
 
 ## Examples
 

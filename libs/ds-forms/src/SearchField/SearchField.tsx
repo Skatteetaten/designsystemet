@@ -19,6 +19,7 @@ import {
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
 
 import {
+  getEnableSRNavigationHintDefault,
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
 } from './defaults';
@@ -57,6 +58,7 @@ export const SearchField = (({
   required,
   showRequiredMark,
   value,
+  enableSRNavigationHint = getEnableSRNavigationHintDefault(),
   hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
   hideLabel = getSearchFieldHideLabelDefault(),
   onBlur,
@@ -98,18 +100,27 @@ export const SearchField = (({
   }, [value, defaultValue]);
 
   useEffect(() => {
-    setShowResults(!!(!disabled && results?.length));
+    setShowResults(
+      !!(
+        !disabled &&
+        results?.length &&
+        document.activeElement === inputRef?.current
+      )
+    );
   }, [disabled, results]);
 
   useEffect(() => {
     if (!shouldShowResults) {
+      setCurrentFocus(-1);
       return;
     }
     const handleOutsideMenuEvent: EventListener = (event): void => {
       const node = event.target as Node;
+      if (node === inputRef.current) {
+        setCurrentFocus(-1);
+      }
       if (!listboxRef?.current?.contains(node) && node !== inputRef.current) {
         setShowResults(false);
-        setCurrentFocus(-1);
         event.type === 'click' && listboxRef?.current?.focus();
       }
     };
@@ -187,9 +198,11 @@ export const SearchField = (({
 ${classNames?.searchContainer ?? ''}`.trim()}
       >
         <div className={styles.inputWrapper}>
-          <span id={srFocusId} className={styles.srOnly}>
-            {t('searchfield.Focus')}
-          </span>
+          {enableSRNavigationHint && (
+            <span id={srFocusId} className={styles.srOnly}>
+              {t('searchfield.Focus')}
+            </span>
+          )}
           <input
             ref={inputRef}
             id={inputId}
@@ -205,13 +218,13 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             value={value}
             autoComplete={autoComplete}
             required={required}
-            aria-describedby={`${errorMessage ? `${errorId} ` : ''}${srFocusId}`.trim()}
+            aria-describedby={`${errorMessage ? `${errorId} ` : ''}${enableSRNavigationHint ? srFocusId : ''}`.trim()}
             aria-invalid={!!errorMessage || undefined}
             aria-owns={shouldShowResults ? resultsId : undefined}
             type={'search'}
             onKeyDown={(event) => {
               if (event.key === 'Enter') {
-                onSearch?.(event);
+                onSearch?.(event, inputRef?.current?.value);
               }
             }}
             onBlur={onBlur}
@@ -285,7 +298,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             className={searchButtonClassName}
             disabled={disabled}
             onClick={(event): void => {
-              onSearchClick?.(event);
+              onSearchClick?.(event, inputRef?.current?.value);
             }}
           >
             {hasSearchButtonIcon ? (
@@ -315,4 +328,9 @@ SearchField.displayName = 'SearchField';
 SearchField.Result = SearchFieldResult;
 SearchField.Result.displayName = 'SearchField.Result';
 
-export { searchInList, getSearchFieldHasSearchButtonIconDefault };
+export {
+  searchInList,
+  getSearchFieldHasSearchButtonIconDefault,
+  getEnableSRNavigationHintDefault,
+  getSearchFieldHideLabelDefault,
+};

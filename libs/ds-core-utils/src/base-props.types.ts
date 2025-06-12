@@ -32,6 +32,7 @@ export const sizeArr = [
   'small',
   'medium',
   'large',
+  'largePlus',
   'extraLarge',
 ] as const;
 export type Size = (typeof sizeArr)[number];

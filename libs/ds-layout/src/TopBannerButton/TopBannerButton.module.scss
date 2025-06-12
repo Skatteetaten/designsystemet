@@ -68,7 +68,7 @@
     }
   }
 
-  @media (min-width: breakpoints.$breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-m) {
     height: fit-content;
     flex-direction: row;
     align-items: center;

@@ -2,46 +2,6 @@
 
 .cardActions {
   display: flex;
-  margin: var(--card-padding);
+  margin: var(--spacing-m) var(--card-padding) var(--card-padding);
   gap: var(--spacing-m);
-
-  &[data-spacing='xxs'] {
-    margin-top: var(--spacing-xxs);
-    margin-bottom: var(--spacing-xxs);
-  }
-
-  &[data-spacing='xs'] {
-    margin-top: var(--spacing-xs);
-    margin-bottom: var(--spacing-xs);
-  }
-
-  &[data-spacing='s'] {
-    margin-top: var(--spacing-s);
-    margin-bottom: var(--spacing-s);
-  }
-
-  &[data-spacing='m'] {
-    margin-top: var(--spacing-m);
-    margin-bottom: var(--spacing-m);
-  }
-
-  &[data-spacing='l'] {
-    margin-top: var(--spacing-l);
-    margin-bottom: var(--spacing-l);
-  }
-
-  &[data-spacing='xl'] {
-    margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  &[data-spacing='xxl'] {
-    margin-top: var(--spacing-xxl);
-    margin-bottom: var(--spacing-xxl);
-  }
-
-  &[data-spacing='mega'] {
-    margin-top: var(--spacing-mega);
-    margin-bottom: var(--spacing-mega);
-  }
 }

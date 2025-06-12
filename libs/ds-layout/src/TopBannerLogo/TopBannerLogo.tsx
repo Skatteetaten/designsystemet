@@ -12,7 +12,6 @@ import {
   getTopBannerLogoHrefDefault,
 } from './defaults';
 import defaultEnglishLogo from './ske-logo-en.svg';
-import defaultMobileLogo from './ske-logo-mobile.svg';
 import defaultNorwegainLogo from './ske-logo.svg';
 import { TopBannerLogoProps } from './TopBannerLogo.types';
 
@@ -27,7 +26,7 @@ export const TopBannerLogo = ({
   as: Tag = getTopBannerLogoAsDefault(),
   logo,
   href = getTopBannerLogoHrefDefault(),
-  mobileLogo,
+  mobileLogo, // deprecated
   alt,
   onClick,
 }: TopBannerLogoProps): JSX.Element => {
@@ -58,18 +57,7 @@ export const TopBannerLogo = ({
       href={Tag === 'div' ? undefined : href}
       onClick={onClick}
     >
-      <>
-        <img
-          className={styles.logo_mobile}
-          alt={altText}
-          src={mobileLogo ?? defaultMobileLogo}
-        />
-        <img
-          className={styles.logo_desktop}
-          alt={altText}
-          src={logo ?? defaultLogo}
-        />
-      </>
+      <img className={styles.logo} alt={altText} src={logo ?? defaultLogo} />
     </Tag>
   );
 };

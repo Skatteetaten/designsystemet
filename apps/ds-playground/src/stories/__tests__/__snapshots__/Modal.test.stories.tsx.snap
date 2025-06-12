@@ -4,7 +4,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -12,7 +12,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
        class="_skipLink_nmfvk_1"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -24,66 +24,47 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
-              <div class>
-              </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_azp4i_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -92,17 +73,30 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_azp4i_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -112,7 +106,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r16:"
+          aria-labelledby="modalHeadingId-:r17:"
           data-variant="plain"
   >
     <div tabindex="-1"
@@ -122,14 +116,14 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r17:"
+             aria-labelledby="svgtitle-:r18:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r17:">
+          <title id="svgtitle-:r18:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -137,7 +131,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r16:"
+        <h1 id="modalHeadingId-:r17:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -178,7 +172,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -186,7 +180,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
        class="_skipLink_nmfvk_1"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -198,66 +192,47 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
-              <div class>
-              </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_azp4i_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -266,17 +241,30 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_azp4i_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -286,7 +274,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r1b:"
+          aria-labelledby="modalHeadingId-:r1c:"
           data-variant="outline"
   >
     <div tabindex="-1"
@@ -296,14 +284,14 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1c:"
+             aria-labelledby="svgtitle-:r1d:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1c:">
+          <title id="svgtitle-:r1d:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -311,7 +299,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r1b:"
+        <h1 id="modalHeadingId-:r1c:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -336,7 +324,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_r8gmx_95"
+         class="_srOnly_1ns8f_118"
          tabindex="-1"
     >
     </div>
@@ -344,7 +332,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
        class="_skipLink_nmfvk_1"
     >
       <span class="_skipLinkContent_nmfvk_22">
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_nmfvk_45"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_nmfvk_45"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -356,66 +344,47 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_r8gmx_55">
-      <div class="_topContainer_r8gmx_6">
-        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+    <div class="_containerForMainMenu_1ns8f_55">
+      <div class="_topContainer_1ns8f_6">
+        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_mobile_1tdet_16"
-               alt="Forside Skatteetaten"
-               src="[REMOVED]"
-          >
-          <img class="_logo_desktop_1tdet_19"
+          <img class="_logo_1u6ee_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_r8gmx_21">
-          <div class="_content_r8gmx_21">
-            <div class="_container_azp4i_5">
-              <div class>
-              </div>
-              <button class="_button_1hyk0_1  _menuButton_azp4i_17"
-                      lang="nb"
-                      aria-expanded="false"
-                      type="button"
-              >
-                <span class="_iconWrapper_azp4i_20">
-                  <span class="_flagIcon_azp4i_25">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         aria-hidden="true"
-                         viewbox="0 0 1100 800"
-                         class="_flagIconSvg_azp4i_30"
-                    >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
-                            style="fill: rgb(255, 255, 255);"
-                      >
-                      </path>
-                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
-                            style="fill: rgb(239, 43, 45);"
-                      >
-                      </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
-                            style="fill: rgb(0, 40, 104);"
-                      >
-                      </path>
-                    </svg>
-                  </span>
-                  <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowMobile_azp4i_33"
-                       viewbox="0 0 24 24"
-                       focusable="false"
+        <div class="_contentContainer_1ns8f_23">
+          <div class="_container_72xc2_5">
+            <div class>
+            </div>
+            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+                    lang="nb"
+                    aria-expanded="false"
+                    type="button"
+            >
+              <span class="_iconWrapper_72xc2_20">
+                <span class="_flagIcon_72xc2_25">
+                  <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
-                       role="img"
+                       viewbox="0 0 1100 800"
+                       class="_flagIconSvg_72xc2_30"
                   >
-                    <path d="m7 10 5 5 5-5H7Z">
+                    <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                          style="fill: rgb(255, 255, 255);"
+                    >
+                    </path>
+                    <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                          style="fill: rgb(239, 43, 45);"
+                    >
+                    </path>
+                    <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                          style="fill: rgb(0, 40, 104);"
+                    >
                     </path>
                   </svg>
                 </span>
-                Bokmål
-                <span class="_srOnly_azp4i_133">
-                  &nbsp;Meny
-                </span>
-                <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _arrowDesktop_azp4i_41"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -424,17 +393,30 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
                   <path d="m7 10 5 5 5-5H7Z">
                   </path>
                 </svg>
-              </button>
-              <div class="_menuArrow_azp4i_67">
-              </div>
+              </span>
+              Bokmål
+              <span class="_srOnly_72xc2_133">
+                &nbsp;Meny
+              </span>
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="m7 10 5 5 5-5H7Z">
+                </path>
+              </svg>
+            </button>
+            <div class="_menuArrow_72xc2_67">
             </div>
           </div>
         </div>
       </div>
-      <div class="_separator_r8gmx_32">
-        <div class="_separatorRight_r8gmx_45">
+      <div class="_separator_1ns8f_32">
+        <div class="_separatorRight_1ns8f_45">
         </div>
-        <div class="_separatorLeft_r8gmx_37">
+        <div class="_separatorLeft_1ns8f_37">
         </div>
       </div>
     </div>
@@ -444,7 +426,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r1g:"
+          aria-labelledby="modalHeadingId-:r1h:"
           data-variant="outline"
           open
   >
@@ -455,14 +437,14 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1h:"
+             aria-labelledby="svgtitle-:r1i:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1h:">
+          <title id="svgtitle-:r1i:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -470,7 +452,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r1g:"
+        <h1 id="modalHeadingId-:r1h:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -521,7 +503,7 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rj:"
@@ -590,7 +572,7 @@ exports[`Tester/Modal Defaults play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -659,7 +641,7 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -731,7 +713,7 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -799,7 +781,7 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rl:"
@@ -868,7 +850,7 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rn:"
@@ -937,7 +919,7 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rp:"
@@ -1006,7 +988,7 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -1022,7 +1004,7 @@ exports[`Tester/Modal WithIcon play-test 1`] = `
       </button>
       <div class="_modalPaddingL_i27cp_48">
         <div>
-          <svg class="_systemIcon_dry7n_2 _systemIcon_extraLarge_dry7n_20"
+          <svg class="_systemIcon_o38m2_2 _systemIcon_extraLarge_o38m2_25"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1086,7 +1068,7 @@ exports[`Tester/Modal WithImage play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -1159,7 +1141,7 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rf:"
@@ -1232,7 +1214,7 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rt:"
@@ -1282,7 +1264,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rv:"
@@ -1303,7 +1285,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
           Vil du erstatte nye opplysninger fra fil?
         </h1>
         <div class>
-          <label id="labelId-:r12:"
+          <label id="labelId-:r13:"
                  class="_label_348na_5"
                  for="textFieldTextboxId-:r11:"
           >
@@ -1350,7 +1332,7 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rc:"
@@ -1419,7 +1401,7 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rh:"

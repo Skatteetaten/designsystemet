@@ -8,14 +8,14 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ri:"
+             aria-labelledby="svgtitle-:rk:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ri:">
+          <title id="svgtitle-:rk:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -24,14 +24,14 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:rl:"
+          <label id="labelId-:rn:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:rk:"
+                 for="selectId-:rm:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:rk:"
+            <select id="selectId-:rm:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -95,7 +95,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -105,27 +105,27 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:rj:"
+          <div id="selectErrorId-:rl:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:rp:"
+          <label id="labelId-:rs:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:ro:"
+                 for="textFieldTextboxId-:rq:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:ro:"
+          <input id="textFieldTextboxId-:rq:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:rn:"
+          <div id="textFieldErrorId-:rp:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -136,14 +136,14 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rq:"
+             aria-labelledby="svgtitle-:rt:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rq:">
+          <title id="svgtitle-:rt:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -560,14 +560,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r9:"
+             aria-labelledby="svgtitle-:ra:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r9:">
+          <title id="svgtitle-:ra:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -576,14 +576,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:rc:"
+          <label id="labelId-:rd:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:rb:"
+                 for="selectId-:rc:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:rb:"
+            <select id="selectId-:rc:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -647,7 +647,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -657,27 +657,27 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:ra:"
+          <div id="selectErrorId-:rb:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:rg:"
+          <label id="labelId-:ri:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:rf:"
+                 for="textFieldTextboxId-:rg:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:rf:"
+          <input id="textFieldTextboxId-:rg:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:re:"
+          <div id="textFieldErrorId-:rf:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -688,14 +688,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rh:"
+             aria-labelledby="svgtitle-:rj:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rh:">
+          <title id="svgtitle-:rj:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -1108,14 +1108,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1v:"
+             aria-labelledby="svgtitle-:r26:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1v:">
+          <title id="svgtitle-:r26:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -1124,14 +1124,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:r22:"
+          <label id="labelId-:r29:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:r21:"
+                 for="selectId-:r28:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:r21:"
+            <select id="selectId-:r28:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -1195,7 +1195,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1205,27 +1205,27 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:r20:"
+          <div id="selectErrorId-:r27:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:r26:"
+          <label id="labelId-:r2e:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:r25:"
+                 for="textFieldTextboxId-:r2c:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r25:"
+          <input id="textFieldTextboxId-:r2c:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:r24:"
+          <div id="textFieldErrorId-:r2b:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -1236,14 +1236,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r27:"
+             aria-labelledby="svgtitle-:r2f:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r27:">
+          <title id="svgtitle-:r2f:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -1656,14 +1656,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r2q:"
+             aria-labelledby="svgtitle-:r34:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r2q:">
+          <title id="svgtitle-:r34:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -1672,14 +1672,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:r2t:"
+          <label id="labelId-:r37:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:r2s:"
+                 for="selectId-:r36:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:r2s:"
+            <select id="selectId-:r36:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -1743,7 +1743,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1753,27 +1753,27 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:r2r:"
+          <div id="selectErrorId-:r35:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:r31:"
+          <label id="labelId-:r3c:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:r30:"
+                 for="textFieldTextboxId-:r3a:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r30:"
+          <input id="textFieldTextboxId-:r3a:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:r2v:"
+          <div id="textFieldErrorId-:r39:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -1784,14 +1784,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r32:"
+             aria-labelledby="svgtitle-:r3d:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r32:">
+          <title id="svgtitle-:r3d:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -2205,14 +2205,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r2h:"
+             aria-labelledby="svgtitle-:r2q:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r2h:">
+          <title id="svgtitle-:r2q:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -2221,14 +2221,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:r2k:"
+          <label id="labelId-:r2t:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:r2j:"
+                 for="selectId-:r2s:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:r2j:"
+            <select id="selectId-:r2s:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -2292,7 +2292,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2302,27 +2302,27 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:r2i:"
+          <div id="selectErrorId-:r2r:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:r2o:"
+          <label id="labelId-:r32:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:r2n:"
+                 for="textFieldTextboxId-:r30:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r2n:"
+          <input id="textFieldTextboxId-:r30:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:r2m:"
+          <div id="textFieldErrorId-:r2v:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -2333,14 +2333,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r2p:"
+             aria-labelledby="svgtitle-:r33:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r2p:">
+          <title id="svgtitle-:r33:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -2764,14 +2764,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1d:"
+             aria-labelledby="svgtitle-:r1i:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1d:">
+          <title id="svgtitle-:r1i:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -2780,14 +2780,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:r1g:"
+          <label id="labelId-:r1l:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:r1f:"
+                 for="selectId-:r1k:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:r1f:"
+            <select id="selectId-:r1k:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -2851,7 +2851,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2861,27 +2861,27 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:r1e:"
+          <div id="selectErrorId-:r1j:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:r1k:"
+          <label id="labelId-:r1q:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:r1j:"
+                 for="textFieldTextboxId-:r1o:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r1j:"
+          <input id="textFieldTextboxId-:r1o:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:r1i:"
+          <div id="textFieldErrorId-:r1n:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -2892,14 +2892,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1l:"
+             aria-labelledby="svgtitle-:r1r:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1l:">
+          <title id="svgtitle-:r1r:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -3332,14 +3332,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1m:"
+             aria-labelledby="svgtitle-:r1s:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1m:">
+          <title id="svgtitle-:r1s:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -3348,14 +3348,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:r1p:"
+          <label id="labelId-:r1v:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:r1o:"
+                 for="selectId-:r1u:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:r1o:"
+            <select id="selectId-:r1u:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -3419,7 +3419,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -3429,27 +3429,27 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:r1n:"
+          <div id="selectErrorId-:r1t:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:r1t:"
+          <label id="labelId-:r24:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:r1s:"
+                 for="textFieldTextboxId-:r22:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r1s:"
+          <input id="textFieldTextboxId-:r22:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:r1r:"
+          <div id="textFieldErrorId-:r21:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -3460,14 +3460,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1u:"
+             aria-labelledby="svgtitle-:r25:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1u:">
+          <title id="svgtitle-:r25:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -3900,14 +3900,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r14:"
+             aria-labelledby="svgtitle-:r18:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r14:">
+          <title id="svgtitle-:r18:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -3916,14 +3916,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:r17:"
+          <label id="labelId-:r1b:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:r16:"
+                 for="selectId-:r1a:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:r16:"
+            <select id="selectId-:r1a:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -3987,7 +3987,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -3997,27 +3997,27 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:r15:"
+          <div id="selectErrorId-:r19:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:r1b:"
+          <label id="labelId-:r1g:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:r1a:"
+                 for="textFieldTextboxId-:r1e:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r1a:"
+          <input id="textFieldTextboxId-:r1e:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:r19:"
+          <div id="textFieldErrorId-:r1d:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -4028,14 +4028,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1c:"
+             aria-labelledby="svgtitle-:r1h:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1c:">
+          <title id="svgtitle-:r1h:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -4464,7 +4464,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r0:"
@@ -4551,7 +4551,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4568,7 +4568,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:r7:"
+          <label id="labelId-:r8:"
                  class="_label_348na_5  _srOnly_348na_18"
                  for="textFieldTextboxId-:r6:"
           >
@@ -4592,14 +4592,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r8:"
+             aria-labelledby="svgtitle-:r9:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r8:">
+          <title id="svgtitle-:r9:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
@@ -5012,14 +5012,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rr:"
+             aria-labelledby="svgtitle-:ru:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rr:">
+          <title id="svgtitle-:ru:">
             Forrige måned Desember 2023
           </title>
           <path d="M9.86 4.5L3 12.5L9.86 20.5L11.8 18.83L7.45 13.75H21V11.25L7.45 11.25L11.8 6.17L9.86 4.5Z">
@@ -5028,14 +5028,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
       </button>
       <div class="_calendarNavigationMonthAndYearContainer_feosd_26">
         <div class>
-          <label id="labelId-:ru:"
+          <label id="labelId-:r11:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="selectId-:rt:"
+                 for="selectId-:r10:"
           >
             Velg måned
           </label>
           <div class="_selectContainer_1q368_1  _calendarNavigationMonth_feosd_26">
-            <select id="selectId-:rt:"
+            <select id="selectId-:r10:"
                     class="_select_1q368_1"
             >
               <option class="_option_idcf7_1"
@@ -5099,7 +5099,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _selectIcon_1q368_55"
+            <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _selectIcon_1q368_55"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -5109,27 +5109,27 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:rs:"
+          <div id="selectErrorId-:rv:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="_calendarNavigationYear_feosd_40">
-          <label id="labelId-:r12:"
+          <label id="labelId-:r16:"
                  class="_label_348na_5  _srOnly_348na_18"
-                 for="textFieldTextboxId-:r11:"
+                 for="textFieldTextboxId-:r14:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r11:"
+          <input id="textFieldTextboxId-:r14:"
                  class="_textbox_1kevi_5 $"
                  data-variant="medium"
                  autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
-          <div id="textFieldErrorId-:r10:"
+          <div id="textFieldErrorId-:r13:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -5140,14 +5140,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_dry7n_2 _systemIcon_medium_dry7n_10 _icon_19ayz_26"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r13:"
+             aria-labelledby="svgtitle-:r17:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r13:">
+          <title id="svgtitle-:r17:">
             Neste måned Februar 2024
           </title>
           <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">

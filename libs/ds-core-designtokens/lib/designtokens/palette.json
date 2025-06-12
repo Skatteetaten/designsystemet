@@ -49,6 +49,7 @@
     "--semantic-interactive-main": "var(--palette-azure-70)",
     "--semantic-interactive-foreground": "var(--palette-azure-100)",
     "--semantic-divider-30": "var(--palette-graphite-30)",
-    "--semantic-divider-100": "var(--palette-graphite-100)"
+    "--semantic-divider-100": "var(--palette-graphite-100)",
+    "--palette-dark-alpha-50": "#1a1a1a80"
   }
 }

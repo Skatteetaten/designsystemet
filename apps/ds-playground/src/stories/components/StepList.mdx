@@ -1,18 +1,21 @@
-import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import { Meta, Primary, Controls } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
 import * as StepListStories from './StepList.stories';
 import { VersionBadge } from '../utils/VersionBadge';
 import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={StepListStories} />
+
+<DocHeaderWrapper componentName="StepList">
 
 # StepList
 
 <VersionBadge packageName={'collections'} />
 
-<DocIntro
-  name="StepList"
-  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/steplist/"
-/>
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/steplist/" />
+
+</DocHeaderWrapper>
 
 <Primary />
 

@@ -1,7 +1,11 @@
+import { JSX } from 'react';
+
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
 
 import { Table } from '@skatteetaten/ds-table';
+
+import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Table.EditableRow,
@@ -61,6 +65,36 @@ export const WithRef = {
   },
 } satisfies Story;
 
+export const WithAttributes = {
+  render: Template,
+  name: 'With Attributes (FA2-5)',
+  args: {
+    id: 'htmlId',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      click: `${wrapper} button`,
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const table = canvas.getByRole('row');
+    await expect(table).toHaveClass('dummyClassname');
+    await expect(table).toHaveAttribute('id', 'htmlId');
+    await expect(table).toHaveAttribute('lang', 'nb');
+    await expect(table).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
 export const WithEditButtonRef = {
   render: Template,
   name: 'With EditButtonRef',
@@ -116,30 +150,48 @@ export const WithEditableContentRef = {
   },
 } satisfies Story;
 
-export const WithAttributes = {
+export const WithEditableContent = {
   render: Template,
-  name: 'With Attributes (FA2-5)',
+  name: 'With EditableContent',
   args: {
-    id: 'htmlId',
-    className: 'dummyClassname',
-    lang: 'nb',
-    'data-testid': '123ID',
-  },
-  argTypes: {
-    id: { table: { disable: false } },
-    className: { table: { disable: false } },
-    lang: { table: { disable: false } },
-    'data-testid': { table: { disable: false } },
+    editableContent: (closeEditing): JSX.Element => (
+      <span
+        onClick={(): void => {
+          closeEditing();
+        }}
+      >
+        {'Rediger data'}
+      </span>
+    ),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: {
+      click: `${wrapper} button`,
+    },
   },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const table = canvas.getByRole('row');
-    await expect(table).toHaveClass('dummyClassname');
-    await expect(table).toHaveAttribute('id', 'htmlId');
-    await expect(table).toHaveAttribute('lang', 'nb');
-    await expect(table).toHaveAttribute('data-testid', '123ID');
+} satisfies Story;
+
+export const WithEditButtonPositionRight = {
+  render: Template,
+  name: 'With EditButtonPosition Right',
+  args: {
+    editButtonPosition: 'right',
+    editableContent: (closeEditing): JSX.Element => (
+      <span
+        onClick={(): void => {
+          closeEditing();
+        }}
+      >
+        {'Rediger data'}
+      </span>
+    ),
+  },
+  argTypes: {
+    editButtonPosition: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      click: `${wrapper} button`,
+    },
   },
 } satisfies Story;

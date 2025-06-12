@@ -16,10 +16,6 @@ export type CardSpacing =
   | Extract<Spacing, 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'mega'>
   | 'responsive';
 
-export type CardSpacingVertical = Extract<
-  Spacing,
-  'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'mega'
->;
 export const cardColorArr: CardColor[] = [
   colorNamesArr[0],
   colorNamesArr[1],
@@ -36,7 +32,7 @@ export interface CardComponentCommonProps extends BaseProps {
   /** Farge på border og bakgrunn. */
   color?: CardColor;
   ariaLabelledBy?: ComponentPropsWithoutRef<'section'>['aria-labelledby'];
-  /** Luft til innholdet i Card. For at den skal ta effekt må man bruke minst én av underkomponentene. Card.Actions, Card.Content osv. */
+  /** Luft til innholdet i Card. For at den skal ta effekt må man bruke minst én av underkomponentene: Card.Header, Card.Content, Card.Actions. */
   spacing?: CardSpacing;
 }
 
