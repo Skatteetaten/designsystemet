@@ -68,7 +68,9 @@
     
     <link href="./sb-addons/interactions-10/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/apps-ds-playground-storybook-11/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/links-11/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/apps-ds-playground-storybook-12/manager-bundle.js" rel="modulepreload" />
       <link
   rel="icon"
   type="image/png"
@@ -82,6 +84,12 @@
   #storybook-explorer-tree button {
     color: var(--palette-graphite-70);
   }
+  #components {
+    display: none;
+  }
+  div[data-parent-id='components'] {
+    display: none;
+  }
 </style>
  
 
@@ -92,7 +100,7 @@
     </style>
 
     
-    <link href="./sb-addons/apps-ds-playground-storybook-11/manager-bundle.css" rel="stylesheet" />
+    <link href="./sb-addons/apps-ds-playground-storybook-12/manager-bundle.css" rel="stylesheet" />
     
   </head>
   <body>
@@ -188,7 +196,9 @@
       
         import './sb-addons/interactions-10/manager-bundle.js';
       
-        import './sb-addons/apps-ds-playground-storybook-11/manager-bundle.js';
+        import './sb-addons/links-11/manager-bundle.js';
+      
+        import './sb-addons/apps-ds-playground-storybook-12/manager-bundle.js';
       
       
       import './sb-manager/runtime.js';
