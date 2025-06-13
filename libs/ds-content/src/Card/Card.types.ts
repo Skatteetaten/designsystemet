@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
-import { BaseProps, colorNamesArr, Spacing } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Color, Spacing } from '@skatteetaten/ds-core-utils';
 
 import { CardActions } from '../CardActions/CardActions';
 import { CardAlert } from '../CardAlert/CardAlert';
@@ -11,15 +11,14 @@ export type CardSpacing =
   | Extract<Spacing, 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'mega'>
   | 'responsive';
 
-export const cardColorArr = colorNamesArr.filter(
-  (color) =>
-    color === 'white' ||
-    color === 'ochre' ||
-    color === 'forest' ||
-    color === 'burgundy' ||
-    color === 'denim' ||
-    color === 'graphite'
-);
+export const cardColorArr = [
+  'white',
+  'ochre',
+  'forest',
+  'burgundy',
+  'denim',
+  'graphite',
+] as const satisfies readonly Color[];
 export type CardColor = (typeof cardColorArr)[number];
 
 export interface CardComponentCommonProps extends BaseProps {

@@ -2,7 +2,7 @@ import { CSSProperties, ReactElement, ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
-  colorNamesArr,
+  Color,
   HeadingAs,
   SubheadingAs,
 } from '@skatteetaten/ds-core-utils';
@@ -11,14 +11,13 @@ import { IconProps } from '@skatteetaten/ds-icons';
 export const panelVariantArr = ['outline', 'filled'] as const;
 export type PanelVariant = (typeof panelVariantArr)[number];
 
-export const panelColorArr = colorNamesArr.filter(
-  (color) =>
-    color === 'ochre' ||
-    color === 'forest' ||
-    color === 'burgundy' ||
-    color === 'denim' ||
-    color === 'graphite'
-);
+export const panelColorArr = [
+  'ochre',
+  'forest',
+  'burgundy',
+  'denim',
+  'graphite',
+] as const satisfies readonly Color[];
 export type PanelColor = (typeof panelColorArr)[number];
 
 export const panelPaddingArr = ['s', 'm', 'l', 'xl', 'xxl', 'mega'] as const;
