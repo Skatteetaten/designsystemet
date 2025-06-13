@@ -3,6 +3,16 @@
 exports[`Tester/Card/Card AllColors smoke-test 1`] = `
 <div data-test-block="true">
   <div class="_card_lg4k9_5 bottomSpacingXL"
+       data-color="white"
+       data-spacing="m"
+  >
+    <div class="_cardContent_qt0f6_1">
+      <div>
+        Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
+      </div>
+    </div>
+  </div>
+  <div class="_card_lg4k9_5 bottomSpacingXL"
        data-color="ochre"
        data-spacing="m"
   >
@@ -44,16 +54,6 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
   </div>
   <div class="_card_lg4k9_5 bottomSpacingXL"
        data-color="graphite"
-       data-spacing="m"
-  >
-    <div class="_cardContent_qt0f6_1">
-      <div>
-        Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
-      </div>
-    </div>
-  </div>
-  <div class="_card_lg4k9_5 bottomSpacingXL"
-       data-color="white"
        data-spacing="m"
   >
     <div class="_cardContent_qt0f6_1">
