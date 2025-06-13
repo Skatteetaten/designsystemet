@@ -176,6 +176,7 @@ const meta = {
   title: 'Komponenter/TopBannerExternal',
   argTypes: {
     // Props
+    classNames: { control: false, table: { category: category.props } },
     showSami: {
       table: {
         category: category.props,
@@ -447,19 +448,22 @@ export const ExampleWithRolePicker: Story = {
       <>
         <TopBannerExternal
           ref={topBannerRef}
+          classNames={{
+            columns: styles.columns,
+          }}
           firstColumn={
             user ? (
               <Card spacing={'s'}>
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
                     {user.role === 'meg' && (
-                      <FavoriteIcon className={'marginRightS'} />
+                      <FavoriteIcon className={styles.marginRightS} />
                     )}
                     {user.role === 'andre' && (
-                      <AccountMultipleIcon className={'marginRightS'} />
+                      <AccountMultipleIcon className={styles.marginRightS} />
                     )}
                     {user.role === 'virksomhet' && (
-                      <BriefcaseIcon className={'marginRightS'} />
+                      <BriefcaseIcon className={styles.marginRightS} />
                     )}
 
                     {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -468,13 +472,13 @@ export const ExampleWithRolePicker: Story = {
                     {'Se, endre og send inn'}
                   </Paragraph>
                   <ul
-                    className={`${styles.linkWrapper} ${styles.columnOneLinkPadding}`}
+                    className={`${styles.linkWrapper} ${styles.linkWrapperPadding}`}
                   >
                     {(user.role === 'virksomhet'
                       ? virksomhetLinks
                       : loggedInLinks
                     ).map((link, index) => (
-                      <li key={index} className={styles.menuSpacingSmall}>
+                      <li key={index} className={styles.marginBottomS}>
                         <Link
                           href={link.href}
                           onClick={(e): void => {
@@ -492,11 +496,14 @@ export const ExampleWithRolePicker: Story = {
             ) : (
               <>
                 <Heading as={'h2'} level={3} className={styles.flex}>
-                  <PersonIcon className={'marginRightS'} size={'largePlus'} />
+                  <PersonIcon
+                    className={styles.marginRightS}
+                    size={'largePlus'}
+                  />
 
                   {'Min side'}
                 </Heading>
-                <Paragraph className={styles.menuSpacingSmall}>
+                <Paragraph className={styles.marginBottomS}>
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger'}
                 </Paragraph>
                 <Button svgPath={LockOutlineSVGpath}>
@@ -510,77 +517,83 @@ export const ExampleWithRolePicker: Story = {
               <Heading as={'h2'} level={2} hasSpacing>
                 {'Alle temaer'}
               </Heading>
-              <Heading as={'h3'} level={3} hasSpacing>
-                <a href={LenkerUinnlogget.PERSON_FORSIDE}>{'For personer'}</a>
-              </Heading>
-              <LinkGroup className={styles.menuSpacingLarge}>
-                {personlinks.map((link) => (
-                  <LinkGroup.Link
-                    key={link.text}
-                    href={link.href}
-                    onClick={(e): void => {
-                      e.preventDefault();
-                      topBannerRef.current?.closeMenu?.();
-                    }}
-                  >
-                    {link.text}
-                  </LinkGroup.Link>
-                ))}
-              </LinkGroup>
-              <Heading as={'h3'} level={3} hasSpacing>
-                <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
-                  {'For bedrifter og organisasjoner'}
-                </a>
-              </Heading>
-              <LinkGroup>
-                {virksomhetlinks.map((link) => (
-                  <LinkGroup.Link
-                    key={link.text}
-                    href={link.href}
-                    onClick={(e): void => {
-                      e.preventDefault();
-                      topBannerRef.current?.closeMenu?.();
-                    }}
-                  >
-                    {link.text}
-                  </LinkGroup.Link>
-                ))}
-              </LinkGroup>
+              <div className={styles.secondColumn}>
+                <div>
+                  <Heading as={'h3'} level={3} hasSpacing>
+                    <a href={LenkerUinnlogget.PERSON_FORSIDE}>
+                      {'For personer'}
+                    </a>
+                  </Heading>
+                  <LinkGroup className={styles.marginBottomXL}>
+                    {personlinks.map((link) => (
+                      <LinkGroup.Link
+                        key={link.text}
+                        href={link.href}
+                        onClick={(e): void => {
+                          e.preventDefault();
+                          topBannerRef.current?.closeMenu?.();
+                        }}
+                      >
+                        {link.text}
+                      </LinkGroup.Link>
+                    ))}
+                  </LinkGroup>
+                  <Heading as={'h3'} level={3} hasSpacing>
+                    <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
+                      {'For bedrifter og organisasjoner'}
+                    </a>
+                  </Heading>
+                  <LinkGroup className={styles.marginBottomXL}>
+                    {virksomhetlinks.map((link) => (
+                      <LinkGroup.Link
+                        key={link.text}
+                        href={link.href}
+                        onClick={(e): void => {
+                          e.preventDefault();
+                          topBannerRef.current?.closeMenu?.();
+                        }}
+                      >
+                        {link.text}
+                      </LinkGroup.Link>
+                    ))}
+                  </LinkGroup>
+                </div>
+                <div>
+                  <Heading as={'h3'} level={3} hasSpacing>
+                    <a href={LenkerUinnlogget.RETTSKILDER}>{'Rettskilder'}</a>
+                  </Heading>
+                  <LinkGroup className={styles.marginBottomXL}>
+                    <LinkGroup.Link
+                      href={LenkerUinnlogget.RETTSKILDER_PER_EMNE}
+                    >
+                      {'Rettskilder per emne'}
+                    </LinkGroup.Link>
+                    <LinkGroup.Link
+                      href={LenkerUinnlogget.RETTSKILDER_PER_TYPE}
+                    >
+                      {'Rettskilder per type'}
+                    </LinkGroup.Link>
+                  </LinkGroup>
+                  <Heading as={'h3'} level={3} hasSpacing>
+                    {'Om oss'}
+                  </Heading>
+                  <ul className={`${styles.linkWrapper} ${styles.noPadding}`}>
+                    {omOssLinks.map((link, index) => (
+                      <li key={index} className={styles.marginBottomS}>
+                        <Link href={link.href} svgPath={link.svgPath}>
+                          {link.text}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </>
-          }
-          thirdColumn={
-            <div className={styles.columnWrapper}>
-              <Heading as={'h3'} level={3} hasSpacing>
-                <a href={LenkerUinnlogget.RETTSKILDER}>{'Rettskilder'}</a>
-              </Heading>
-              <LinkGroup className={styles.menuSpacingLarge}>
-                <LinkGroup.Link href={LenkerUinnlogget.RETTSKILDER_PER_EMNE}>
-                  {'Rettskilder per emne'}
-                </LinkGroup.Link>
-                <LinkGroup.Link href={LenkerUinnlogget.RETTSKILDER_PER_TYPE}>
-                  {'Rettskilder per type'}
-                </LinkGroup.Link>
-              </LinkGroup>
-              <Heading as={'h3'} level={3} hasSpacing>
-                {'Om oss'}
-              </Heading>
-              <ul
-                className={`${styles.linkWrapper} ${styles.columnThreeLinkPadding}`}
-              >
-                {omOssLinks.map((link, index) => (
-                  <li key={index} className={styles.menuSpacingSmall}>
-                    <Link href={link.href} svgPath={link.svgPath}>
-                      {link.text}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
           }
           user={user}
           searchContent={
             <>
-              <Paragraph className={'bottomSpacingS'}>
+              <Paragraph className={styles.marginBottomS}>
                 {'Dette har andre søkt på:'}
               </Paragraph>
               <LinkGroup>

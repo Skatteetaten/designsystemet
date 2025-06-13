@@ -13,6 +13,7 @@ import {
   formatNationalIdentityNumber,
   formatPhoneNumber,
   langToLocale,
+  useMediaQuery,
 } from '@skatteetaten/ds-core-utils';
 import {
   ArrowBackSVGpath,
@@ -51,6 +52,8 @@ export const Kvittering = (): JSX.Element => {
   const modalRef = useRef<HTMLDialogElement>(null);
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const [user, setUser] = useState<User>();
+
+  const isMobile = !useMediaQuery('(min-width: 480px)');
 
   const me: Person = {
     name: 'Knuslete Foxtrot',
@@ -153,7 +156,9 @@ export const Kvittering = (): JSX.Element => {
               <strong>{'IN-PG-1234567'}</strong>
             </Paragraph>
             <OpenClose title={'Se hva du har sendt inn'}>
-              <DescriptionList>
+              <DescriptionList
+                descriptionDirection={isMobile ? 'vertical' : 'horizontal'}
+              >
                 <DescriptionList.Element term={'Innsender'}>
                   {'Knuslete Foxtrot'}
                 </DescriptionList.Element>

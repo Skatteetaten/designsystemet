@@ -38,6 +38,7 @@ export const TopBannerExternal = ({
   ref,
   id,
   className = getCommonClassNameDefault(),
+  classNames,
   lang,
   'data-testid': dataTestId,
   firstColumn,
@@ -313,11 +314,9 @@ export const TopBannerExternal = ({
                   >
                     <nav
                       aria-label={t('topbanner.NavAriaLabel')}
-                      className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`.trim()}
+                      className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName} ${classNames?.columns ?? ''}`.trim()}
                     >
-                      <div className={`${styles.column} ${styles.firstColumn}`}>
-                        {firstColumn}
-                      </div>
+                      <div className={styles.column}>{firstColumn}</div>
                       {secondColumn && (
                         <div className={styles.column}>{secondColumn}</div>
                       )}

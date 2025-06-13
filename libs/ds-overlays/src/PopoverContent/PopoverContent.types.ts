@@ -11,9 +11,6 @@ export const popoverPositionArr = [
 
 export type PopoverPosition = (typeof popoverPositionArr)[number];
 
-export const popoverColorArr = ['forest', 'ochre', 'white'] as const;
-export type PopoverColor = (typeof popoverColorArr)[number];
-
 export interface PopoverContentProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
   /** Tekst */

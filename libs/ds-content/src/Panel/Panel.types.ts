@@ -2,19 +2,23 @@ import { CSSProperties, ReactElement, ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
+  Color,
   HeadingAs,
   SubheadingAs,
-  colorNamesArr,
 } from '@skatteetaten/ds-core-utils';
 import { IconProps } from '@skatteetaten/ds-icons';
 
 export const panelVariantArr = ['outline', 'filled'] as const;
 export type PanelVariant = (typeof panelVariantArr)[number];
 
-export type PanelColor = Extract<
-  (typeof colorNamesArr)[number],
-  'ochre' | 'forest' | 'burgundy' | 'denim' | 'graphite'
->;
+export const panelColorArr = [
+  'ochre',
+  'forest',
+  'burgundy',
+  'denim',
+  'graphite',
+] as const satisfies readonly Color[];
+export type PanelColor = (typeof panelColorArr)[number];
 
 export const panelPaddingArr = ['s', 'm', 'l', 'xl', 'xxl', 'mega'] as const;
 export type PanelPadding = (typeof panelPaddingArr)[number];

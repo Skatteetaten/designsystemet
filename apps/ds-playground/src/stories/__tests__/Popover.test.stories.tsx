@@ -2,7 +2,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, fn, userEvent, within } from '@storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Popover, popoverColorArr } from '@skatteetaten/ds-overlays';
+import { Popover } from '@skatteetaten/ds-overlays';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 
@@ -32,8 +32,6 @@ const meta = {
       control: 'text',
     },
     color: {
-      options: [...popoverColorArr],
-      control: 'radio',
       table: { disable: true },
     },
     disableAutoDismiss: { table: { disable: true } },

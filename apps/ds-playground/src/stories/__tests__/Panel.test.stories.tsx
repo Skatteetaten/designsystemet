@@ -9,12 +9,9 @@ import {
   panelVariantArr,
   panelSpacingArr,
   panelPaddingArr,
+  panelColorArr,
 } from '@skatteetaten/ds-content';
-import {
-  colorNamesArr,
-  headingAsArr,
-  subheadingAsArr,
-} from '@skatteetaten/ds-core-utils';
+import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { InfoIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -24,14 +21,6 @@ import waitIllustration from '../../assets/wait-alert-illustration.png';
 
 const tittelText = 'Det er en tittel';
 const subtittelText = 'Det er en undertittel';
-
-const panelColorArr = [
-  colorNamesArr[0],
-  colorNamesArr[1],
-  colorNamesArr[2],
-  colorNamesArr[3],
-  colorNamesArr[5],
-];
 
 const meta = {
   component: Panel,
@@ -55,7 +44,6 @@ const meta = {
     classNames: { table: { disable: true } },
     color: {
       table: { disable: true },
-      options: [...panelColorArr],
       control: 'inline-radio',
     },
     hasResponsivePadding: { table: { disable: true } },

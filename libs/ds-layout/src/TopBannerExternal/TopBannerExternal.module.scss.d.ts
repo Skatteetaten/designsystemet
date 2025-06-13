@@ -3,7 +3,6 @@ declare const classNames: {
   readonly mainMenu: 'mainMenu';
   readonly columnsThree: 'columnsThree';
   readonly columnsTwo: 'columnsTwo';
-  readonly firstColumn: 'firstColumn';
   readonly contentContainer: 'contentContainer';
   readonly separator: 'separator';
   readonly separatorLeft: 'separatorLeft';
