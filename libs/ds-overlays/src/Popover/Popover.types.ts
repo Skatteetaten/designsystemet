@@ -8,7 +8,7 @@ import {
 
 import { UseFloatingReturn, useInteractions } from '@floating-ui/react';
 
-import { colorNamesArr, positionArr } from '@skatteetaten/ds-core-utils';
+import { Color, positionArr } from '@skatteetaten/ds-core-utils';
 
 import { PopoverContent } from '../PopoverContent/PopoverContent';
 import { PopoverTrigger } from '../PopoverTrigger/PopoverTrigger';
@@ -18,16 +18,7 @@ export type PopoverPosition = Extract<
   'topStart' | 'topEnd' | 'bottomStart' | 'bottomEnd'
 >;
 
-export type PopoverColor = Extract<
-  (typeof colorNamesArr)[number],
-  'ochre' | 'forest' | 'white'
->;
-
-export const popoverColorArr: PopoverColor[] = [
-  colorNamesArr[0],
-  colorNamesArr[1],
-  colorNamesArr[6],
-];
+export type PopoverColor = Extract<Color, 'ochre' | 'forest' | 'white'>;
 
 export interface PopoverProps {
   /** Plassering av popover */

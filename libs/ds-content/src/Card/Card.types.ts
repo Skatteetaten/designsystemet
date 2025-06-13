@@ -1,29 +1,25 @@
 import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
-import { BaseProps, colorNamesArr, Spacing } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Color, Spacing } from '@skatteetaten/ds-core-utils';
 
 import { CardActions } from '../CardActions/CardActions';
 import { CardAlert } from '../CardAlert/CardAlert';
 import { CardContent } from '../CardContent/CardContent';
 import { CardHeader } from '../CardHeader/CardHeader';
 
-export type CardColor = Extract<
-  (typeof colorNamesArr)[number],
-  'white' | 'ochre' | 'forest' | 'burgundy' | 'denim' | 'graphite'
->;
-
 export type CardSpacing =
   | Extract<Spacing, 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'mega'>
   | 'responsive';
 
-export const cardColorArr: CardColor[] = [
-  colorNamesArr[0],
-  colorNamesArr[1],
-  colorNamesArr[2],
-  colorNamesArr[3],
-  colorNamesArr[5],
-  colorNamesArr[6],
-];
+export const cardColorArr = [
+  'white',
+  'ochre',
+  'forest',
+  'burgundy',
+  'denim',
+  'graphite',
+] as const satisfies readonly Color[];
+export type CardColor = (typeof cardColorArr)[number];
 
 export interface CardComponentCommonProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;

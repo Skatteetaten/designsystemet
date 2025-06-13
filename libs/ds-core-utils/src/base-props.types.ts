@@ -26,6 +26,7 @@ export const colorNamesArr = [
   'white',
   'black',
 ] as const;
+export type Color = (typeof colorNamesArr)[number];
 
 export const sizeArr = [
   'extraSmall',

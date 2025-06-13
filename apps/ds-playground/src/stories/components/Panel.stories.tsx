@@ -12,11 +12,7 @@ import {
   getPanelTitleAsDefault,
   getPanelVariantDefault,
 } from '@skatteetaten/ds-content';
-import {
-  colorNamesArr,
-  headingAsArr,
-  subheadingAsArr,
-} from '@skatteetaten/ds-core-utils';
+import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -25,14 +21,6 @@ import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-
-const panelColorArr = [
-  colorNamesArr[0],
-  colorNamesArr[1],
-  colorNamesArr[2],
-  colorNamesArr[3],
-  colorNamesArr[5],
-];
 
 const meta = {
   component: Panel,
@@ -46,7 +34,6 @@ const meta = {
     },
     classNames: { control: false, table: { category: category.props } },
     color: {
-      options: panelColorArr,
       control: 'inline-radio',
       table: {
         category: category.props,
