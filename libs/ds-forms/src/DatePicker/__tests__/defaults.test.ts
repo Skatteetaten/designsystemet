@@ -13,7 +13,7 @@ describe('DatePicker defaults', () => {
   });
   it('Når getDatePickerPlaceholderDefault kalles, så returnerer den riktig verdi', () => {
     expect(getDatePickerPlaceholderDefault()).toBe(
-      dsI18n.t('ds_forms.datepicker.TypeOrSelect')
+      dsI18n.t('ds_forms:datepicker.TypeOrSelect')
     );
   });
 });
