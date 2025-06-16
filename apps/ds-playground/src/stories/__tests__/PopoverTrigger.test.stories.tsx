@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Popover } from '@skatteetaten/ds-overlays';
 

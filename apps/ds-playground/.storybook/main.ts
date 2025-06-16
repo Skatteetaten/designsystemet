@@ -1,6 +1,7 @@
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { StorybookConfig } from '@storybook/react-vite';
 import svgr from '@svgr/rollup';
+import { NodePackageImporter } from 'sass';
 import sassDts from 'vite-plugin-sass-dts';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
@@ -31,16 +32,17 @@ const packageVersions = directories.reduce((previousValue, currentValue) => {
 const config: StorybookConfig = {
   staticDirs: ['../src/public'],
   stories: [
-    '../src/stories/**/*.mdx',
-    '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    // '../src/stories/**/*.mdx',
+    // '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/stories/components/ScrollToTopButton.mdx',
+    '../src/stories/components/ScrollToTopButton.stories.tsx',
   ],
   addons: [
-    '@storybook/addon-essentials',
     '@storybook/addon-coverage',
     '@storybook/addon-a11y',
-    '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@nx/react/plugins/storybook',
+    '@storybook/addon-docs',
   ],
   core: {
     disableTelemetry: true,
@@ -68,7 +70,16 @@ const config: StorybookConfig = {
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
 
+    console.log(config);
     return mergeConfig(config, {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: 'modern-compiler',
+            importers: [new NodePackageImporter()],
+          },
+        },
+      },
       resolve: {
         alias: [
           {

@@ -1,7 +1,7 @@
 import { MouseEvent, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within, waitFor, fn } from '@storybook/test';
+import { expect, fireEvent, within, waitFor, fn } from 'storybook/test';
 
 import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';

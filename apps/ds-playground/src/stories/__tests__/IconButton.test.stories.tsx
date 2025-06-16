@@ -1,7 +1,7 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
 import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';

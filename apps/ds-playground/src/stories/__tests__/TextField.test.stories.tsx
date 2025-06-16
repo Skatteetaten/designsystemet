@@ -1,7 +1,7 @@
 import { FocusEvent, ChangeEvent, useState, JSX } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { TextField, TextFieldProps } from '@skatteetaten/ds-forms';
 

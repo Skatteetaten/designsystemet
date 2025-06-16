@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 
 import { Card } from '@skatteetaten/ds-content';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';

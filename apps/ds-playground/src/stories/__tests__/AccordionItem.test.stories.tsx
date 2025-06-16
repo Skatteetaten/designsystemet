@@ -8,7 +8,7 @@ import {
   userEvent,
   waitFor,
   within,
-} from '@storybook/test';
+} from 'storybook/test';
 
 import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';

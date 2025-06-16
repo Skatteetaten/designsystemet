@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
+import { useArgs } from 'storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
 import {
   fn,
@@ -9,7 +9,7 @@ import {
   waitFor,
   within,
   userEvent,
-} from '@storybook/test';
+} from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {

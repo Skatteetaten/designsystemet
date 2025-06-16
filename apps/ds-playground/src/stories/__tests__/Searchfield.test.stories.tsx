@@ -16,7 +16,7 @@ import {
   within,
   expect,
   fn,
-} from '@storybook/test';
+} from 'storybook/test';
 
 import {
   dsI18n,

@@ -1,8 +1,8 @@
 import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
+import { useArgs } from 'storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { TextArea, TextAreaProps } from '@skatteetaten/ds-forms';

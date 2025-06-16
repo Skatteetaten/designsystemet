@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within } from '@storybook/test';
+import { expect, fireEvent, within } from 'storybook/test';
 
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 

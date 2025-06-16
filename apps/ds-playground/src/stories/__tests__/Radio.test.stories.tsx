@@ -1,7 +1,7 @@
 import { useState, FocusEvent, ChangeEvent } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { RadioGroup } from '@skatteetaten/ds-forms';
 

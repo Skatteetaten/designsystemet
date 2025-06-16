@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, waitFor, within } from '@storybook/test';
+import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 

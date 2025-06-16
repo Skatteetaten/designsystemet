@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fireEvent, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';

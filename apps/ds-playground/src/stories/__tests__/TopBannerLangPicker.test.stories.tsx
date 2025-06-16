@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 import { TopBannerMenu } from '@skatteetaten/ds-layout';

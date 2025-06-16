@@ -1,5 +1,5 @@
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 
 import { List, ListProps, Paragraph } from '@skatteetaten/ds-typography';
 

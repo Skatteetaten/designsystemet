@@ -1,7 +1,7 @@
 import { useRef, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, within } from '@storybook/test';
+import { expect, fireEvent, userEvent, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';

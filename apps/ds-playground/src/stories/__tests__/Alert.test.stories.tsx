@@ -1,8 +1,8 @@
 import { JSX } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
+import { useArgs } from 'storybook/preview-api';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';

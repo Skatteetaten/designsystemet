@@ -1,5 +1,5 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within, expect } from '@storybook/test';
+import { within, expect } from 'storybook/test';
 
 import { Tabs } from '@skatteetaten/ds-collections';
 

@@ -1,6 +1,6 @@
 import { useState, JSX } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
+import { useArgs } from 'storybook/preview-api';
 import { Meta, StoryObj } from '@storybook/react';
 import { isWithinInterval, format } from 'date-fns';
 

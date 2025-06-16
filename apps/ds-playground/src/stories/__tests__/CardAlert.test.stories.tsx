@@ -1,5 +1,5 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Card, CardAlertVariant } from '@skatteetaten/ds-content';
 import { SkattetrekkSVGpath } from '@skatteetaten/ds-icons';

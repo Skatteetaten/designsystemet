@@ -1,7 +1,7 @@
 import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, waitFor, within } from '@storybook/test';
+import { expect, fireEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';

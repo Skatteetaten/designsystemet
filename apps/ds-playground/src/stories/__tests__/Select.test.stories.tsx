@@ -8,7 +8,7 @@ import {
   userEvent,
   waitFor,
   within,
-} from '@storybook/test';
+} from 'storybook/test';
 
 import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
 

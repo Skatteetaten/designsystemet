@@ -8,7 +8,7 @@ import {
   userEvent,
   waitFor,
   within,
-} from '@storybook/test';
+} from 'storybook/test';
 
 import {
   dsI18n,

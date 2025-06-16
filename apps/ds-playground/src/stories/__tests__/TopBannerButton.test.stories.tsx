@@ -1,7 +1,7 @@
 import { MouseEvent, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within, waitFor, fn } from '@storybook/test';
+import { expect, userEvent, within, waitFor, fn } from 'storybook/test';
 
 import {
   LockOutlineSVGpath,

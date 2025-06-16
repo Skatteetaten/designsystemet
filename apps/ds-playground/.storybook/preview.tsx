@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { useEffect, useGlobals } from '@storybook/preview-api';
+import { useEffect, useGlobals } from 'storybook/preview-api';
 import { Decorator, Preview } from '@storybook/react';
 import * as MockDate from 'mockdate';
 

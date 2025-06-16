@@ -1,8 +1,8 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
+import { useArgs } from 'storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 import { within as shadowWithin } from 'shadow-dom-testing-library';
 
 import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';

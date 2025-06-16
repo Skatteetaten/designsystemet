@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';

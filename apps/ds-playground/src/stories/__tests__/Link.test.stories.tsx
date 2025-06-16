@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { dsI18n, linkColorArr } from '@skatteetaten/ds-core-utils';
