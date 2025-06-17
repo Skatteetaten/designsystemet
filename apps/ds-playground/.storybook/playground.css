@@ -355,3 +355,7 @@ a.resetLinkStyling {
     display: none;
   }
 }
+
+.descriptionListTwoColumns {
+  --description-list-columns: 2;
+}

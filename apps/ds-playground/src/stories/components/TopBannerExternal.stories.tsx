@@ -38,137 +38,7 @@ import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 import { exampleParameters } from '../utils/stories.utils';
 
-import styles from './TopBannerExternalExample.module.scss';
-
-const me: Person = {
-  name: 'Ola Nordmann',
-  personId: '10101012345',
-  type: 'Person',
-};
-
-const businesses: Paginated<Business> = {
-  total: 12,
-  list: [
-    {
-      name: 'Costco AS',
-      organizationNumber: '123456777',
-      isDeleted: false,
-      unitType: 'AS',
-      type: 'Organization',
-      subunits: [
-        {
-          name: 'Google ASA',
-          organizationNumber: '123456789',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'ASA',
-        },
-        {
-          name: 'Facebook RHF',
-          organizationNumber: '123456790',
-          isDeleted: true,
-          type: 'Organization',
-          unitType: 'RHF',
-        },
-      ],
-    },
-    {
-      name: 'Instagram AS',
-      organizationNumber: '312843211',
-      isDeleted: true,
-      unitType: 'AS',
-      type: 'Organization',
-      subunits: [
-        {
-          name: 'Snapchat AS',
-          organizationNumber: '123456623',
-          isDeleted: true,
-          type: 'Organization',
-          unitType: 'AS',
-        },
-        {
-          name: 'Statoil ASA',
-          organizationNumber: '312849218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'ASA',
-        },
-      ],
-    },
-    {
-      name: 'Samsung DA',
-      organizationNumber: '312943218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'DA',
-    },
-    {
-      name: 'Toshiba AS',
-      organizationNumber: '312643218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Hitachi AS',
-      organizationNumber: '312743218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Vanguard AS',
-      organizationNumber: '332843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Amazon ASA',
-      organizationNumber: '112843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'ASA',
-    },
-    {
-      name: 'Meta ANS',
-      organizationNumber: '212843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'ANS',
-    },
-  ],
-};
-
-const people: Paginated<Person> = {
-  total: 4,
-  list: [
-    {
-      name: 'Antikvitet presis',
-      personId: '13889999726',
-      type: 'Person',
-      isDeleted: false,
-    },
-    {
-      name: 'Bønne elegant',
-      personId: '18849574503',
-      type: 'Person',
-      isDeleted: false,
-    },
-    {
-      name: 'Lomme filosofisk',
-      personId: '08889674513',
-      type: 'Person',
-      isDeleted: false,
-    },
-    {
-      name: 'Adelsmann varm',
-      personId: '14892449911',
-      type: 'Person',
-      isDeleted: false,
-    },
-  ],
-};
+import topBannerExternalExampleStyles from './TopBannerExternalExample.module.scss';
 
 const meta = {
   component: TopBannerExternal,
@@ -248,7 +118,6 @@ export const Examples: Story = {
     const modalRef = useRef<HTMLDialogElement>(null);
     const topBannerRef = useRef<TopBannerExternalHandle>(null);
     const [user, setUser] = useState<User>();
-    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
     const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
       const lang = e.currentTarget.lang;
@@ -257,11 +126,140 @@ export const Examples: Story = {
 
     const handleLogOut = (): void => {
       setUser(undefined);
-      setIsLoggedIn(false);
     };
 
     const handleLogIn = (): void => {
       modalRef.current?.showModal();
+    };
+
+    const me: Person = {
+      name: 'Ola Nordmann',
+      personId: '10101012345',
+      type: 'Person',
+    };
+
+    const businesses: Paginated<Business> = {
+      total: 12,
+      list: [
+        {
+          name: 'Costco AS',
+          organizationNumber: '123456777',
+          isDeleted: false,
+          unitType: 'AS',
+          type: 'Organization',
+          subunits: [
+            {
+              name: 'Google ASA',
+              organizationNumber: '123456789',
+              isDeleted: false,
+              type: 'Organization',
+              unitType: 'ASA',
+            },
+            {
+              name: 'Facebook RHF',
+              organizationNumber: '123456790',
+              isDeleted: true,
+              type: 'Organization',
+              unitType: 'RHF',
+            },
+          ],
+        },
+        {
+          name: 'Instagram AS',
+          organizationNumber: '312843211',
+          isDeleted: true,
+          unitType: 'AS',
+          type: 'Organization',
+          subunits: [
+            {
+              name: 'Snapchat AS',
+              organizationNumber: '123456623',
+              isDeleted: true,
+              type: 'Organization',
+              unitType: 'AS',
+            },
+            {
+              name: 'Statoil ASA',
+              organizationNumber: '312849218',
+              isDeleted: false,
+              type: 'Organization',
+              unitType: 'ASA',
+            },
+          ],
+        },
+        {
+          name: 'Samsung DA',
+          organizationNumber: '312943218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'DA',
+        },
+        {
+          name: 'Toshiba AS',
+          organizationNumber: '312643218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+        {
+          name: 'Hitachi AS',
+          organizationNumber: '312743218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+        {
+          name: 'Vanguard AS',
+          organizationNumber: '332843218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+        {
+          name: 'Amazon ASA',
+          organizationNumber: '112843218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'ASA',
+        },
+        {
+          name: 'Meta ANS',
+          organizationNumber: '212843218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'ANS',
+        },
+      ],
+    };
+
+    const people: Paginated<Person> = {
+      total: 4,
+      list: [
+        {
+          name: 'Antikvitet presis',
+          personId: '13889999726',
+          type: 'Person',
+          isDeleted: false,
+        },
+        {
+          name: 'Bønne elegant',
+          personId: '18849574503',
+          type: 'Person',
+          isDeleted: false,
+        },
+        {
+          name: 'Lomme filosofisk',
+          personId: '08889674513',
+          type: 'Person',
+          isDeleted: false,
+        },
+        {
+          name: 'Adelsmann varm',
+          personId: '14892449911',
+          type: 'Person',
+          isDeleted: false,
+        },
+      ],
     };
 
     enum LenkerUinnlogget {
@@ -448,7 +446,7 @@ export const Examples: Story = {
         <TopBannerExternal
           ref={topBannerRef}
           classNames={{
-            columns: styles.columns,
+            columns: topBannerExternalExampleStyles.columns,
           }}
           firstColumn={
             user ? (
@@ -456,13 +454,19 @@ export const Examples: Story = {
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
                     {user.role === 'meg' && (
-                      <FavoriteIcon className={styles.marginRightS} />
+                      <FavoriteIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
                     {user.role === 'andre' && (
-                      <AccountMultipleIcon className={styles.marginRightS} />
+                      <AccountMultipleIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
                     {user.role === 'virksomhet' && (
-                      <BriefcaseIcon className={styles.marginRightS} />
+                      <BriefcaseIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
 
                     {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -471,13 +475,16 @@ export const Examples: Story = {
                     {'Se, endre og send inn'}
                   </Paragraph>
                   <ul
-                    className={`${styles.linkWrapper} ${styles.linkWrapperPadding}`}
+                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.linkWrapperPadding}`}
                   >
                     {(user.role === 'virksomhet'
                       ? virksomhetLinks
                       : loggedInLinks
                     ).map((link, index) => (
-                      <li key={index} className={styles.marginBottomS}>
+                      <li
+                        key={index}
+                        className={topBannerExternalExampleStyles.marginBottomS}
+                      >
                         <Link
                           href={link.href}
                           onClick={(e): void => {
@@ -494,15 +501,21 @@ export const Examples: Story = {
               </Card>
             ) : (
               <>
-                <Heading as={'h2'} level={3} className={styles.flex}>
+                <Heading
+                  as={'h2'}
+                  level={3}
+                  className={topBannerExternalExampleStyles.flex}
+                >
                   <PersonIcon
-                    className={styles.marginRightS}
+                    className={topBannerExternalExampleStyles.marginRightS}
                     size={'largePlus'}
                   />
 
                   {'Min side'}
                 </Heading>
-                <Paragraph className={styles.marginBottomS}>
+                <Paragraph
+                  className={topBannerExternalExampleStyles.marginBottomS}
+                >
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger'}
                 </Paragraph>
                 <Button svgPath={LockOutlineSVGpath}>
@@ -516,14 +529,16 @@ export const Examples: Story = {
               <Heading as={'h2'} level={2} hasSpacing>
                 {'Alle temaer'}
               </Heading>
-              <div className={styles.secondColumn}>
+              <div className={topBannerExternalExampleStyles.secondColumn}>
                 <div>
                   <Heading as={'h3'} level={3} hasSpacing>
                     <a href={LenkerUinnlogget.PERSON_FORSIDE}>
                       {'For personer'}
                     </a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
+                  >
                     {personlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -542,7 +557,9 @@ export const Examples: Story = {
                       {'For bedrifter og organisasjoner'}
                     </a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
+                  >
                     {virksomhetlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -561,7 +578,9 @@ export const Examples: Story = {
                   <Heading as={'h3'} level={3} hasSpacing>
                     <a href={LenkerUinnlogget.RETTSKILDER}>{'Rettskilder'}</a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
+                  >
                     <LinkGroup.Link
                       href={LenkerUinnlogget.RETTSKILDER_PER_EMNE}
                     >
@@ -576,9 +595,14 @@ export const Examples: Story = {
                   <Heading as={'h3'} level={3} hasSpacing>
                     {'Om oss'}
                   </Heading>
-                  <ul className={`${styles.linkWrapper} ${styles.noPadding}`}>
+                  <ul
+                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.noPadding}`}
+                  >
                     {omOssLinks.map((link, index) => (
-                      <li key={index} className={styles.marginBottomS}>
+                      <li
+                        key={index}
+                        className={topBannerExternalExampleStyles.marginBottomS}
+                      >
                         <Link href={link.href} svgPath={link.svgPath}>
                           {link.text}
                         </Link>
@@ -592,7 +616,9 @@ export const Examples: Story = {
           user={user}
           searchContent={
             <>
-              <Paragraph className={styles.marginBottomS}>
+              <Paragraph
+                className={topBannerExternalExampleStyles.marginBottomS}
+              >
                 {'Dette har andre søkt på:'}
               </Paragraph>
               <LinkGroup>
