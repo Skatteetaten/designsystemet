@@ -115,7 +115,7 @@ exports[`Tester/SearchField TwoSearchFieldsOneWithHelpText smoke-test 1`] = `
       >
         Søk etter grønnsaker
       </label>
-      <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+      <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
               data-brightness="default"
               type="button"
               aria-describedby="searchField-:r46:-label"
@@ -654,7 +654,7 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <div class="_description_sf6vs_17">
+    <div class="_description_5szkl_17">
       En liten beskrivelse tekst
     </div>
     <div class="_searchContainer_2ptm8_5 _searchContainerMarginTop_2ptm8_9">
@@ -941,7 +941,7 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="searchField-:r21:-label"
@@ -961,11 +961,11 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_helpBox_sf6vs_32">
-      <div class="_helpBoxText_sf6vs_45">
+    <div class="_helpBox_5szkl_32">
+      <div class="_helpBoxText_5szkl_45">
         Hjelpetekst
       </div>
-      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_sf6vs_52"
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_5szkl_52"
               data-brightness="default"
               type="button"
       >
@@ -1038,7 +1038,7 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="searchField-:r31:-label"
@@ -1185,7 +1185,7 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
     >
       Leter du etter en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG gjenstand?
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="searchField-:rc:-label"
@@ -1205,7 +1205,7 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_sf6vs_17">
+    <div class="_description_5szkl_17">
       Med en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG beskrivelse?
     </div>
     <div class="_searchContainer_2ptm8_5 _searchContainerMarginTop_2ptm8_9">
