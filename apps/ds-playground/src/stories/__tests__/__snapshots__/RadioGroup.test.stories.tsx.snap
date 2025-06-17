@@ -222,7 +222,7 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
     >
       Type virksomhet
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3q:"
@@ -242,7 +242,7 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_sf6vs_17   dummyClassname">
+    <div class="_description_5szkl_17   dummyClassname">
       beskrivelse
     </div>
     <div class="_contentContainer_s6jvz_32">
@@ -402,7 +402,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
     >
       Type virksomhet
     </div>
-    <div class="_description_sf6vs_17">
+    <div class="_description_5szkl_17">
       Vi trenger å vite din type virksomhet.
     </div>
     <div class="_contentContainer_s6jvz_32">
@@ -728,7 +728,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
     >
       Type virksomhet
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r2s:"
@@ -748,11 +748,11 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_helpBox_sf6vs_32">
-      <div class="_helpBoxText_sf6vs_45">
+    <div class="_helpBox_5szkl_32">
+      <div class="_helpBoxText_5szkl_45">
         Vi trenger å vite din type virksomhet.
       </div>
-      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_sf6vs_52"
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_5szkl_52"
               data-brightness="default"
               type="button"
       >
@@ -839,7 +839,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
     >
       Type virksomhet
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3j:"
