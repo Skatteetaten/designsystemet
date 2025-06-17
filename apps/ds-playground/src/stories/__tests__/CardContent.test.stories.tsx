@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
 import { Card } from '@skatteetaten/ds-content';
-import { statusArr } from '@skatteetaten/ds-core-utils';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { Tag } from '@skatteetaten/ds-status';
 import { List } from '@skatteetaten/ds-typography';
@@ -37,8 +36,6 @@ const defaultText =
 
 const defaultArgs = {
   children: defaultText,
-  variant: statusArr[1],
-  title: 'Merknad',
 };
 
 export const WithRef = {

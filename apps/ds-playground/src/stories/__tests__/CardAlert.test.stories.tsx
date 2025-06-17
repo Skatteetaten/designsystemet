@@ -2,7 +2,6 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { Card, CardAlertVariant } from '@skatteetaten/ds-content';
-import { statusArr } from '@skatteetaten/ds-core-utils';
 import { SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -38,7 +37,6 @@ const defaultText =
 
 const defaultArgs = {
   children: defaultText,
-  variant: statusArr[1],
   title: 'Merknad',
 };
 
