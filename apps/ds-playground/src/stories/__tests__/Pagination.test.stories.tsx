@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { useArgs } from 'storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
+import { useArgs } from 'storybook/preview-api';
 import {
   fn,
   expect,

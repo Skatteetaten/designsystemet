@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { useArgs } from 'storybook/preview-api';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { useArgs } from 'storybook/preview-api';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';

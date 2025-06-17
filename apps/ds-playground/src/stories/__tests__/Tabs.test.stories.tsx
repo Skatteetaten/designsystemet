@@ -1,7 +1,7 @@
 import { JSX, useState } from 'react';
 
-import { useArgs } from 'storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { useArgs } from 'storybook/preview-api';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
