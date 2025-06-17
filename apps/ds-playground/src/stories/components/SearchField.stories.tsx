@@ -3,10 +3,10 @@ import React, { JSX, useMemo, useState } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
-  dsI18n,
   getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
+  getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
   getEnableSRNavigationHintDefault,
@@ -62,7 +62,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     variant: {

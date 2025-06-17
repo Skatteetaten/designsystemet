@@ -1,12 +1,12 @@
 import { useEffect, useState, JSX } from 'react';
-import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { MoveUpIcon } from '@skatteetaten/ds-icons';
 
 import {
   getScrollToMainDefault,
   getVisibilityThresholdDefault,
+  getScrollToTopButtonTextDefault,
 } from './defaults';
 import { ScrollToTopButtonProps } from './ScrollToTopButton.types';
 
@@ -22,7 +22,7 @@ export const ScrollToTopButton = ({
   shadowRootNode,
   visibilityThreshold = getVisibilityThresholdDefault(),
   scrollToMain = getScrollToMainDefault(),
-  children,
+  children = getScrollToTopButtonTextDefault(),
 }: ScrollToTopButtonProps): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(!visibilityThreshold);
   useEffect(() => {
@@ -33,8 +33,6 @@ export const ScrollToTopButton = ({
     window.addEventListener('scroll', onScroll);
     return (): void => window.removeEventListener('scroll', onScroll);
   }, [visibilityThreshold]);
-
-  const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
 
   const buttonClassname = `${styles.scrollToTopButton} ${
     visible ? styles.scrollToTopButton_visible : ''
@@ -78,7 +76,7 @@ export const ScrollToTopButton = ({
             classNames?.label ?? ''
           }`.trim()}
         >
-          {children ? children : t('scrolltotopbutton.Title')}
+          {children}
         </div>
       </button>
     </div>
@@ -86,4 +84,8 @@ export const ScrollToTopButton = ({
 };
 ScrollToTopButton.displayName = 'ScrollToTopButton';
 
-export { getVisibilityThresholdDefault, getScrollToMainDefault };
+export {
+  getVisibilityThresholdDefault,
+  getScrollToMainDefault,
+  getScrollToTopButtonTextDefault,
+} from './defaults';

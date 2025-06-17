@@ -3,11 +3,11 @@ import { useState, ChangeEvent, FocusEvent, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
-  dsI18n,
   formArrSize,
   getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
   getAutoCompletePropDescription,
+  getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
@@ -55,7 +55,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     // HTML

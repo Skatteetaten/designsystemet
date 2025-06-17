@@ -2,7 +2,7 @@ import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import {
   RadioGroup,
   getRadioGroupVariantDefault,
@@ -42,7 +42,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     variant: {

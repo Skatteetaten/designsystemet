@@ -1,10 +1,10 @@
 import { Children, JSX } from 'react';
-import { useTranslation } from 'react-i18next';
-
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { TableSumProps } from './TableSum.types';
-import { getTableSumAlignmentDefault } from '../Table/defaults';
+import {
+  getTableSumAlignmentDefault,
+  getTableSumTextDefault,
+} from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 import { TableRow } from '../TableRow/TableRow';
 
@@ -20,11 +20,9 @@ export const TableSum = ({
   valueAlignment = getTableSumAlignmentDefault(),
   colSpan,
   hasTopSeparator,
-  sumText,
+  sumText = getTableSumTextDefault(),
   children,
 }: TableSumProps): JSX.Element => {
-  const { t } = useTranslation('ds_tables', { i18n: dsI18n });
-
   const concatenatedClassName = `${styles.sum} ${
     hasTopSeparator ? styles.sum_topSeparator : ''
   }`.trim();
@@ -37,7 +35,7 @@ export const TableSum = ({
           alignment={labelAlignment}
           colSpan={colSpan}
         >
-          {sumText ?? t('tablesum.Sum')}
+          {sumText}
         </TableDataCell>
         {Children.map(children, (child) => (
           <TableDataCell

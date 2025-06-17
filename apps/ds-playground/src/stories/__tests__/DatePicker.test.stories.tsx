@@ -15,7 +15,11 @@ import {
   formArrSize,
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
-import { DatePicker, TextField } from '@skatteetaten/ds-forms';
+import {
+  DatePicker,
+  getDatePickerPlaceholderDefault,
+  TextField,
+} from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -210,7 +214,7 @@ export const Defaults = {
     await expect(input).toHaveAttribute('id');
     await expect(input).toHaveAttribute(
       'placeholder',
-      dsI18n.t('ds_forms:datepicker.TypeOrSelect')
+      getDatePickerPlaceholderDefault()
     );
     await expect(input.tagName).toBe('INPUT');
     await expect(input).not.toBeRequired();

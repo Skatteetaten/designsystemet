@@ -8,6 +8,8 @@ import { CheckIcon, EditSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import {
+  getStepListStepEditButtonTextDefault,
+  getStepListStepNextButtonTextDefault,
   getStepListStepShouldAutoFocusWhenActiveDefault,
   getStepListStepTitleAsDefault,
   getStepListStepVariantDefault,
@@ -22,12 +24,12 @@ export const StepListStep = ({
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
-  editButtonText,
+  editButtonText = getStepListStepEditButtonTextDefault(),
   introContent,
   introTitle,
   introTitleAs,
   nextButtonProps,
-  nextButtonText,
+  nextButtonText = getStepListStepNextButtonTextDefault(),
   stepNumber,
   svgPath,
   svgTitle,
@@ -161,7 +163,7 @@ export const StepListStep = ({
               });
             }}
           >
-            {editButtonText ?? t('steplist.Edit')}
+            {editButtonText}
           </InlineButton>
         )}
       </div>
@@ -171,7 +173,7 @@ export const StepListStep = ({
           <div className={styles.nextLine}></div>
           <span className={styles.buttonWrapper}>
             <Button onClick={onNext} {...nextButtonProps}>
-              {nextButtonText ?? t('steplist.Next')}
+              {nextButtonText}
             </Button>
           </span>
         </>
