@@ -3,7 +3,6 @@ import { useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
   ErrorSummary,
   TextField,
@@ -27,7 +26,6 @@ const meta = {
     showErrorSummary: { table: { category: category.props } },
     title: { table: { category: category.props } },
     titleAs: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,

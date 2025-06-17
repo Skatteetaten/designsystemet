@@ -1,12 +1,7 @@
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import {
-  List,
-  listAsArr,
-  ListProps,
-  Paragraph,
-} from '@skatteetaten/ds-typography';
+import { List, ListProps, Paragraph } from '@skatteetaten/ds-typography';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -22,14 +17,11 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     canBeManuallyFocused: { table: { disable: true } },
-    children: {
-      table: { disable: true },
-    },
+    children: { table: { disable: true } },
     hasSpacing: { table: { disable: true } },
     // Tags
     as: {
       table: { disable: true },
-      options: [...listAsArr],
       control: 'inline-radio',
     },
   },

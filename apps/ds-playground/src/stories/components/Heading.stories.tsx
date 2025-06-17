@@ -2,7 +2,6 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -14,7 +13,6 @@ const meta = {
   argTypes: {
     // Props
     as: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,

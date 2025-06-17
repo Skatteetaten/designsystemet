@@ -30,29 +30,13 @@ const meta = {
       mapping: SystemSVGPaths,
     },
     helpText: { table: { disable: true } },
-    hideLegend: {
-      table: {
-        disable: true,
-      },
-    },
+    hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    showRequiredMark: {
-      table: {
-        disable: true,
-      },
-    },
+    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
-    disabled: {
-      table: {
-        disable: true,
-      },
-    },
-    form: {
-      table: {
-        disable: true,
-      },
-    },
+    disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
     // Events
     onHelpToggle: { table: { disable: true } },
   },

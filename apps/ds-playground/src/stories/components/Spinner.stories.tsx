@@ -9,7 +9,6 @@ import {
   getSpinnerLabelDefault,
   getSpinnerSizeDefault,
   getSpinnerTitlePositionDefault,
-  spinnerSizeArr,
 } from '@skatteetaten/ds-progress';
 
 import { category } from '../../../.storybook/helpers';
@@ -28,7 +27,6 @@ const meta = {
       },
     },
     size: {
-      options: [...spinnerSizeArr],
       control: 'inline-radio',
       table: {
         category: category.props,

@@ -4,7 +4,6 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -30,17 +29,10 @@ const meta = {
       table: { disable: true },
       control: { disable: true },
     },
-    shadowRootNode: {
-      table: { disable: true },
-    },
-    showErrorSummary: {
-      table: { disable: true },
-    },
-    title: {
-      table: { disable: true },
-    },
+    shadowRootNode: { table: { disable: true } },
+    showErrorSummary: { table: { disable: true } },
+    title: { table: { disable: true } },
     titleAs: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: { disable: true },
     },

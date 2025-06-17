@@ -4,7 +4,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within, waitFor, fn } from '@storybook/test';
 
 import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
-import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
+import { headingAsArr } from '@skatteetaten/ds-core-utils';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -30,17 +30,13 @@ const meta = {
     children: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...densityArr],
       control: 'inline-radio',
     },
-    iconPosition: {
-      table: { disable: true },
-    },
+    iconPosition: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
     isDefaultExpanded: { table: { disable: true } },
     isOnClickOnlyFiredOnOpen: { table: { disable: true } },
     titleAs: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: { disable: true },
     },

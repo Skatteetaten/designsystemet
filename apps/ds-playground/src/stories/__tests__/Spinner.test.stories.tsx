@@ -3,12 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import {
-  Spinner,
-  spinnerColorArr,
-  spinnerPositionArr,
-  spinnerSizeArr,
-} from '@skatteetaten/ds-progress';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 const meta = {
   component: Spinner,
@@ -28,24 +23,18 @@ const meta = {
     size: {
       table: { disable: true },
       control: 'inline-radio',
-      options: [...spinnerSizeArr],
     },
     titlePosition: {
       table: { disable: true },
       control: 'inline-radio',
-      options: [...spinnerPositionArr],
     },
     color: {
       table: { disable: true },
       control: 'inline-radio',
-      options: [...spinnerColorArr],
     },
     classNames: { table: { disable: true } },
     percentComplete: { table: { disable: true } },
-    hideTitle: {
-      control: 'boolean',
-      table: { disable: true },
-    },
+    hideTitle: { table: { disable: true } },
   },
 } satisfies Meta<typeof Spinner>;
 export default meta;

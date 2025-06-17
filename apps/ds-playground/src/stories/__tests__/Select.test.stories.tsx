@@ -10,7 +10,6 @@ import {
   within,
 } from '@storybook/test';
 
-import { formArrSize } from '@skatteetaten/ds-core-utils';
 import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -27,9 +26,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: {
-      table: { disable: true },
-    },
+    children: { table: { disable: true } },
     classNames: { table: { disable: true } },
     defaultValue: { table: { disable: true } },
     value: { table: { disable: true } },
@@ -46,7 +43,6 @@ const meta = {
     hidePlaceholder: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...formArrSize],
       control: 'inline-radio',
     },
     label: { table: { disable: true } },

@@ -3,7 +3,6 @@ import { ReactNode, useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
-import { densityArr } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import {
   CopySVGpath,
@@ -103,8 +102,6 @@ const meta = {
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
     variant: {
-      options: [...densityArr],
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getTableVariantDefault() },

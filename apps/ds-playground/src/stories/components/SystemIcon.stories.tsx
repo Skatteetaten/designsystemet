@@ -2,7 +2,6 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
   getIconVariantDefault,
@@ -22,9 +21,7 @@ const meta = {
     // Props
     size: {
       control: 'select',
-      options: [...sizeArr].slice(1),
       table: {
-        //type: { summary: [...sizeArr].slice(1) },
         category: category.props,
         defaultValue: { summary: getIconSizeDefault() },
       },

@@ -22,9 +22,7 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
-    shadowRootNode: {
-      table: { disable: true },
-    },
+    shadowRootNode: { table: { disable: true } },
     target: { table: { disable: true } },
   },
 } satisfies Meta<typeof TopBannerSkipLink>;

@@ -27,12 +27,8 @@ const meta = {
       control: 'text',
     },
     hasSpacing: { table: { disable: true } },
-    as: {
-      table: { disable: true },
-    },
-    level: {
-      table: { disable: true },
-    },
+    as: { table: { disable: true } },
+    level: { table: { disable: true } },
   },
 } satisfies Meta<typeof Heading>;
 export default meta;

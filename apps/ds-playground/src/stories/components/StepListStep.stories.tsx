@@ -9,7 +9,6 @@ import {
   getStepListStepNextButtonTextDefault,
 } from '@skatteetaten/ds-collections';
 import { getPanelTitleAsDefault } from '@skatteetaten/ds-content';
-import { headingAsArr } from '@skatteetaten/ds-core-utils';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -42,7 +41,6 @@ const meta = {
       table: { category: category.props, type: { summary: 'string' } },
     },
     introTitleAs: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -50,7 +48,6 @@ const meta = {
       },
     },
     titleAs: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,

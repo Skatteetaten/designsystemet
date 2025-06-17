@@ -32,7 +32,6 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-
     autosize: { table: { disable: true, category: category.props } },
     classNames: {
       table: { disable: true, category: category.props },

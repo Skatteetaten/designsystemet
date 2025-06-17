@@ -11,19 +11,13 @@ const meta = {
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
-    className: {
-      table: { disable: true },
-    },
+    className: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: {
-      table: { disable: true },
-    },
-    term: {
-      table: { disable: true },
-    },
+    children: { table: { disable: true } },
+    term: { table: { disable: true } },
   },
   args: {
     term: 'Ansvarlig fagperson',

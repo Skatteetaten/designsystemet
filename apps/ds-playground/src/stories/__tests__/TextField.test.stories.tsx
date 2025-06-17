@@ -3,7 +3,6 @@ import { FocusEvent, ChangeEvent, useState, JSX } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
-import { formArrSize } from '@skatteetaten/ds-core-utils';
 import { TextField, TextFieldProps } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -32,7 +31,6 @@ const meta = {
     // Props
     variant: {
       table: { disable: true, category: category.props },
-      options: [...formArrSize],
       control: 'inline-radio',
     },
     classNames: {
