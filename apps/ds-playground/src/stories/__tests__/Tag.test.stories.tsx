@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Tag } from '@skatteetaten/ds-status';
 
@@ -32,8 +31,6 @@ const meta = {
       table: { disable: true },
     },
     size: {
-      options: [sizeArr[1], sizeArr[2]],
-      control: 'radio',
       table: { disable: true },
     },
   },
