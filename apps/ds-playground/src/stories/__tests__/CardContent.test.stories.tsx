@@ -25,9 +25,7 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    classNames: {
-      table: { disable: true },
-    },
+    classNames: { table: { disable: true } },
   },
 } satisfies Meta<typeof Card.Content>;
 export default meta;

@@ -17,9 +17,9 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    canBeManuallyFocused: { table: { disable: false } },
+    canBeManuallyFocused: { table: { disable: true } },
     children: {
-      table: { disable: false },
+      table: { disable: true },
       control: 'text',
     },
     svgPath: {
@@ -27,12 +27,8 @@ const meta = {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    color: {
-      table: { disable: true },
-    },
-    size: {
-      table: { disable: true },
-    },
+    color: { table: { disable: true } },
+    size: { table: { disable: true } },
   },
 } satisfies Meta<typeof Tag>;
 export default meta;
@@ -99,7 +95,7 @@ export const DefaultYellow = {
   },
   argTypes: {
     color: {
-      table: { disable: true },
+      table: { disable: false },
     },
   },
 } satisfies Story;
@@ -112,7 +108,7 @@ export const DefaultGreen = {
   },
   argTypes: {
     color: {
-      table: { disable: true },
+      table: { disable: false },
     },
   },
 } satisfies Story;
@@ -125,7 +121,7 @@ export const DefaultRed = {
   },
   argTypes: {
     color: {
-      table: { disable: true },
+      table: { disable: false },
     },
   },
 } satisfies Story;
@@ -138,7 +134,7 @@ export const DefaultGrey: Story = {
   },
   argTypes: {
     color: {
-      table: { disable: true },
+      table: { disable: false },
     },
   },
 } satisfies Story;
@@ -151,7 +147,7 @@ export const Small = {
   },
   argTypes: {
     size: {
-      table: { disable: true },
+      table: { disable: false },
     },
   },
 } satisfies Story;

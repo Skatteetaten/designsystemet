@@ -31,16 +31,12 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    color: {
-      table: { disable: true },
-    },
+    color: { table: { disable: true } },
     disableAutoDismiss: { table: { disable: true } },
     disableAutoDismissOnMobile: { table: { disable: true } },
     isOpen: { table: { disable: true } },
     position: { table: { disable: true } },
-    shouldRestoreFocus: {
-      table: { disable: true },
-    },
+    shouldRestoreFocus: { table: { disable: true } },
     // Event
     onClose: { table: { disable: true } },
   },

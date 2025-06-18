@@ -3,7 +3,6 @@ import { ChangeEvent, useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
-  formArrSize,
   getCommonFormVariantDefault,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
@@ -42,7 +41,6 @@ const meta = {
     hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
     variant: {
-      options: [...formArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,

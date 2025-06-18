@@ -8,7 +8,6 @@ import {
   getOpenCloseUnderlineDefault,
   getOpenCloseVariantDefault,
 } from '@skatteetaten/ds-collections';
-import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -46,16 +45,12 @@ const meta = {
     },
     title: { table: { category: category.props } },
     titleAs: {
-      options: ['div', ...headingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: 'div' },
-        type: { summary: ['div', ...headingAsArr].toString() },
       },
     },
     variant: {
-      options: [...densityArr],
       control: 'inline-radio',
       table: {
         category: category.props,

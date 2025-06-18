@@ -3,7 +3,7 @@ import { FocusEvent, MouseEvent, useState } from 'react';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
-import { Button, buttonVariantArr } from '@skatteetaten/ds-buttons';
+import { Button } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
   getCommonButtonTypeDefault,
@@ -43,11 +43,7 @@ const meta = {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    variant: {
-      table: { disable: true },
-      options: [...buttonVariantArr],
-      control: 'radio',
-    },
+    variant: { table: { disable: true } },
     isExternal: { table: { disable: true } },
     // HTML
     accessKey: { table: { disable: true } },

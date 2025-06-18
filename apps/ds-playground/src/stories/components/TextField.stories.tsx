@@ -3,7 +3,6 @@ import { useState, ChangeEvent, FocusEvent, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
-  formArrSize,
   getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
   getAutoCompletePropDescription,
@@ -21,7 +20,6 @@ const meta = {
   argTypes: {
     // Props
     variant: {
-      options: [...formArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,

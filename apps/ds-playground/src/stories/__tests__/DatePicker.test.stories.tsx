@@ -12,7 +12,6 @@ import {
 
 import {
   dsI18n,
-  formArrSize,
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
@@ -68,7 +67,6 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...formArrSize],
       control: 'inline-radio',
     },
     // HTML

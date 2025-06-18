@@ -9,31 +9,17 @@ const meta = {
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
-    className: {
-      table: { disable: true },
-    },
+    className: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: {
-      table: { disable: true },
-    },
-    variant: {
-      table: { disable: true },
-    },
-    isVerticalOnMobile: {
-      table: { disable: true },
-    },
-    descriptionDirection: {
-      table: { disable: true },
-    },
-    hasSpacing: {
-      table: { disable: true },
-    },
-    size: {
-      table: { disable: true },
-    },
+    children: { table: { disable: true } },
+    variant: { table: { disable: true } },
+    isVerticalOnMobile: { table: { disable: true } },
+    descriptionDirection: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
+    size: { table: { disable: true } },
   },
   args: {
     children: [

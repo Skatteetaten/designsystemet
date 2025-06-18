@@ -23,15 +23,9 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    classNames: {
-      table: { disable: true },
-    },
-    scrollToMain: {
-      table: { disable: true },
-    },
-    visibilityThreshold: {
-      table: { disable: true },
-    },
+    classNames: { table: { disable: true } },
+    scrollToMain: { table: { disable: true } },
+    visibilityThreshold: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
     children: { table: { disable: true } },
   },

@@ -5,7 +5,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { isWithinInterval, format } from 'date-fns';
 
 import {
-  formArrSize,
   getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
@@ -60,7 +59,6 @@ const meta = {
       },
     },
     variant: {
-      options: [...formArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,

@@ -27,22 +27,14 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    backgroundBrightness: {
-      table: { disable: true },
-    },
-    showAlert: {
-      table: { disable: true },
-    },
+    backgroundBrightness: { table: { disable: true } },
+    showAlert: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    variant: {
-      options: [...statusArr],
-      control: 'radio',
-      table: { disable: true },
-    },
+    variant: { table: { disable: true } },
     // Events
     onClose: { table: { disable: true } },
     // Aria
