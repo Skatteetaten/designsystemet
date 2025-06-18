@@ -15,11 +15,6 @@ import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
 
-const exampleTitle = 'Hva er aksjesparekonto';
-const exampleContent =
-  'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. ' +
-  'Gevinster blir ikke skattlagt og det gis ikke fradrag for tap så lenge verdien holdes inne på kontoen. ';
-
 const meta = {
   component: OpenClose,
   title: 'Komponenter/OpenClose',
@@ -83,6 +78,11 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
+    const exampleTitle = 'Hva er aksjesparekonto';
+    const exampleContent =
+      'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. ' +
+      'Gevinster blir ikke skattlagt og det gis ikke fradrag for tap så lenge verdien holdes inne på kontoen. ';
+
     return (
       <>
         <Heading level={4} as={'h2'}>

@@ -24,8 +24,6 @@ import { Tag } from '@skatteetaten/ds-status';
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
-import styles from './DescriptionListStory.module.scss';
-
 const meta = {
   component: DescriptionList,
   title: 'Komponenter/DescriptionList',
@@ -206,7 +204,7 @@ export const ExampleWithFixedColumns: Story = {
         <DescriptionList
           variant={'horizontal'}
           descriptionDirection={'vertical'}
-          className={styles.descriptionListTwoColumns}
+          className={'descriptionListTwoColumns'}
           hasSpacing
         >
           <DescriptionList.Element term={'Saksbehandler'}>
