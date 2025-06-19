@@ -1,0 +1,11 @@
+import{j as e}from"./jsx-runtime-BjG_zV1W.js";import{useMDXComponents as i}from"./index-Ugg2TbUJ.js";import{M as m,P as n,C as a}from"./index-B8eyfm74.js";import{P as o}from"./utils-DcYZjmgD.js";import{T as p,E as l,W as d}from"./TextField.stories-BEr6YajO.js";import{V as x}from"./VersionBadge-C4FYJtRW.js";import{D as f}from"./DocIntro-CnEVXQMu.js";import{D as c}from"./DocHeaderWrapper-BEEvztbP.js";import"./index-D_ouKaeX.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-D_BopVbc.js";import"./index-D9u29hOa.js";import"./index-Cu4lwwaE.js";import"./index-BedKbVpA.js";import"./index-DrFu-skq.js";import"./lz-string-DoYuj_7g.js";import"./index-CwaotbcG.js";import"./index-CReUDGGp.js";import"./DatePickerCalendar-v_gY3V1L.js";import"./index-CUnERQXD.js";import"./index-BQO_0U1F.js";import"./index-BQtvKDNR.js";import"./LabelWithHelp-JKcqOKZ0.js";import"./Help-BOwxnveE.js";import"./index-BAA7SjBM.js";import"./index-CPxI8T3e.js";import"./index-j9ELDiWk.js";import"./helpers-DjiZIot2.js";import"./icon.systems-NRpsphgm.js";import"./icon.utils-D_vdkWhZ.js";import"./stories.utils-WEsnq5G6.js";function s(r){const t={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",...i(),...r.components};return e.jsxs(e.Fragment,{children:[e.jsx(m,{of:p}),`
+`,e.jsxs(c,{componentName:"TextField",children:[e.jsx(t.h1,{id:"textfield",children:"TextField"}),e.jsx(x,{packageName:"forms"}),e.jsx(f,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/"})]}),`
+`,e.jsx(t.p,{children:"List brukes til å assosiere TextField med datalist-elementet for å få autocomplete-forslag i tekstfeltet. Datalist er støttet av skjermlesere, men det er noe begrenset hva som leses opp. I tillegg har datalist inkonsistent oppførsel på tvers av nettlesere. Derfor kan det hende at vi velger å erstatte denne med andre alternativer i framtiden."}),`
+`,e.jsx(n,{}),`
+`,e.jsx(t.pre,{children:e.jsx(t.code,{className:"language-tsx",children:`import { TextField } from '@skatteetaten/ds-forms';
+`})}),`
+`,e.jsx(a,{}),`
+`,e.jsx(t.h2,{id:"examples",children:"Examples"}),`
+`,e.jsx(o,{of:l}),`
+`,e.jsx(o,{of:d})]})}function J(r={}){const{wrapper:t}={...i(),...r.components};return t?e.jsx(t,{...r,children:e.jsx(s,{...r})}):s(r)}export{J as default};
+//# sourceMappingURL=TextField-ZbzQ-XOf.js.map

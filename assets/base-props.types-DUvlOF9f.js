@@ -1,2 +1,0 @@
-const s=["ochre","forest","burgundy","denim","azure","graphite","white","black"],r=["extraSmall","small","medium","large","largePlus","extraLarge"],a=[r[2],r[3]],e=["white"],n=["success","info","warning","error","danger"],t=["h1","h2","h3","h4","h5","h6"],o=["h2","h3","h4","h5","h6"],c=["standard","compact"],h=["xxs","xs","s","m","l","xl","xxl","mega"];export{r as a,o as b,s as c,c as d,h as e,a as f,t as h,e as l,n as s};
-//# sourceMappingURL=base-props.types-DUvlOF9f.js.map
