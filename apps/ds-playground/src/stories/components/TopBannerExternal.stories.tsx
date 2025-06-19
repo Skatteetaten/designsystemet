@@ -139,7 +139,7 @@ export const Examples: Story = {
     };
 
     const businesses: Paginated<Business> = {
-      total: 12,
+      total: 3,
       list: [
         {
           name: 'Costco AS',
@@ -147,22 +147,6 @@ export const Examples: Story = {
           isDeleted: false,
           unitType: 'AS',
           type: 'Organization',
-          subunits: [
-            {
-              name: 'Google ASA',
-              organizationNumber: '123456789',
-              isDeleted: false,
-              type: 'Organization',
-              unitType: 'ASA',
-            },
-            {
-              name: 'Facebook RHF',
-              organizationNumber: '123456790',
-              isDeleted: true,
-              type: 'Organization',
-              unitType: 'RHF',
-            },
-          ],
         },
         {
           name: 'Instagram AS',
@@ -170,50 +154,6 @@ export const Examples: Story = {
           isDeleted: true,
           unitType: 'AS',
           type: 'Organization',
-          subunits: [
-            {
-              name: 'Snapchat AS',
-              organizationNumber: '123456623',
-              isDeleted: true,
-              type: 'Organization',
-              unitType: 'AS',
-            },
-            {
-              name: 'Statoil ASA',
-              organizationNumber: '312849218',
-              isDeleted: false,
-              type: 'Organization',
-              unitType: 'ASA',
-            },
-          ],
-        },
-        {
-          name: 'Samsung DA',
-          organizationNumber: '312943218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'DA',
-        },
-        {
-          name: 'Toshiba AS',
-          organizationNumber: '312643218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'AS',
-        },
-        {
-          name: 'Hitachi AS',
-          organizationNumber: '312743218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'AS',
-        },
-        {
-          name: 'Vanguard AS',
-          organizationNumber: '332843218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'AS',
         },
         {
           name: 'Amazon ASA',
@@ -221,43 +161,6 @@ export const Examples: Story = {
           isDeleted: false,
           type: 'Organization',
           unitType: 'ASA',
-        },
-        {
-          name: 'Meta ANS',
-          organizationNumber: '212843218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'ANS',
-        },
-      ],
-    };
-
-    const people: Paginated<Person> = {
-      total: 4,
-      list: [
-        {
-          name: 'Antikvitet presis',
-          personId: '13889999726',
-          type: 'Person',
-          isDeleted: false,
-        },
-        {
-          name: 'Bønne elegant',
-          personId: '18849574503',
-          type: 'Person',
-          isDeleted: false,
-        },
-        {
-          name: 'Lomme filosofisk',
-          personId: '08889674513',
-          type: 'Person',
-          isDeleted: false,
-        },
-        {
-          name: 'Adelsmann varm',
-          personId: '14892449911',
-          type: 'Person',
-          isDeleted: false,
         },
       ],
     };
@@ -651,7 +554,6 @@ export const Examples: Story = {
           ref={modalRef}
           me={me}
           businesses={businesses}
-          people={people}
           onEntitySelect={async (entity) => {
             let role: User['role'];
             if (entity.name === me.name) {
