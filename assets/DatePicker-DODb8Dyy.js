@@ -1,0 +1,9 @@
+import{j as t}from"./jsx-runtime-BjG_zV1W.js";import{useMDXComponents as m}from"./index-Ugg2TbUJ.js";import{M as i,P as s,C as n}from"./index-DAFHjOKu.js";import{P as p}from"./utils-CpUWkXjk.js";import{D as a,E as c}from"./DatePicker.stories-DdCF-7H9.js";import{V as x}from"./VersionBadge-bx6yAMKu.js";import{D as d}from"./DocIntro-D_XXAKh-.js";import{D as l}from"./DocHeaderWrapper-BEEvztbP.js";import"./index-D_ouKaeX.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-kBaDV3LR.js";import"./index-D9u29hOa.js";import"./index-Cu4lwwaE.js";import"./index-BedKbVpA.js";import"./index-DrFu-skq.js";import"./lz-string-DoYuj_7g.js";import"./index-CwaotbcG.js";import"./index-BP9ucNdn.js";import"./DatePickerCalendar-CmyXWAFv.js";import"./index-Dvbywa6-.js";import"./index-BQO_0U1F.js";import"./index-BQtvKDNR.js";import"./LabelWithHelp-DECIiZLx.js";import"./Help-DnfPEwtQ.js";import"./index-Dc9vnWYl.js";import"./index-DisSb1NM.js";import"./index-CJxYRboy.js";import"./helpers-DjiZIot2.js";import"./icon.systems-NRpsphgm.js";import"./icon.utils-D_vdkWhZ.js";import"./stories.utils-WEsnq5G6.js";function e(r){const o={code:"code",h1:"h1",h2:"h2",pre:"pre",...m(),...r.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:a}),`
+`,t.jsxs(l,{componentName:"DatePicker",children:[t.jsx(o.h1,{id:"datepicker",children:"DatePicker"}),t.jsx(x,{packageName:"forms"}),t.jsx(d,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/datepicker/"})]}),`
+`,t.jsx(s,{}),`
+`,t.jsx(o.pre,{children:t.jsx(o.code,{className:"language-tsx",children:`import { DatePicker } from '@skatteetaten/ds-forms';
+`})}),`
+`,t.jsx(n,{}),`
+`,t.jsx(o.h2,{id:"examples",children:"Examples"}),`
+`,t.jsx(p,{of:c})]})}function J(r={}){const{wrapper:o}={...m(),...r.components};return o?t.jsx(o,{...r,children:t.jsx(e,{...r})}):e(r)}export{J as default};
+//# sourceMappingURL=DatePicker-DODb8Dyy.js.map
