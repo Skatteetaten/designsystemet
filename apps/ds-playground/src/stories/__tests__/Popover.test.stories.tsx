@@ -1,4 +1,4 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, fn, userEvent, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -41,6 +41,7 @@ const meta = {
     onClose: { table: { disable: true } },
   },
   render: Template,
+  tags: ['test'],
 } satisfies Meta<typeof Popover>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,4 +1,4 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Card, cardColorArr } from '@skatteetaten/ds-content';
@@ -23,6 +23,7 @@ const meta = {
     // Aria
     ariaLabelledBy: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Card>;
 export default meta;
 type Story = StoryObj<typeof meta>;

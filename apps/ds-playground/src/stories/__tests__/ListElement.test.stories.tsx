@@ -1,4 +1,4 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { List } from '@skatteetaten/ds-typography';
@@ -19,6 +19,7 @@ const meta = {
       control: 'text',
     },
   },
+  tags: ['test'],
 } satisfies Meta<typeof List.Element>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -46,3 +46,8 @@ vite.config.*.timestamp*
 vitest.config.*.timestamp*
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
+
+# image snapshots
+**/__vis__/**/__diffs__
+**/__vis__/**/__results__
+**/__vis__/local

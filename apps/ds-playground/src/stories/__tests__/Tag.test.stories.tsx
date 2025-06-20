@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
@@ -30,6 +30,7 @@ const meta = {
     color: { table: { disable: true } },
     size: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Tag>;
 export default meta;
 type Story = StoryObj<typeof meta>;

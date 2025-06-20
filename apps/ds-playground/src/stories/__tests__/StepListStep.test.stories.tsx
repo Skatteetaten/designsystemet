@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, waitFor, within } from 'storybook/test';
 
 import { StepList } from '@skatteetaten/ds-collections';
@@ -55,6 +55,7 @@ const meta = {
       },
     },
   },
+  tags: ['test'],
 } as Meta<typeof StepList.Step>;
 export default meta;
 type Story = StoryObj<typeof meta>;

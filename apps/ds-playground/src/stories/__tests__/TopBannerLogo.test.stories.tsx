@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -40,6 +40,7 @@ const meta = {
     alt: { table: { disable: true } },
     href: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof TopBannerLogo>;
 export default meta;
 type Story = StoryObj<typeof meta>;

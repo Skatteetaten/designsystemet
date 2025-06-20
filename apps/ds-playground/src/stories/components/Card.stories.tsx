@@ -1,6 +1,6 @@
 import { JSX, useRef } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { IconButton, InlineButton, Link } from '@skatteetaten/ds-buttons';
 import {

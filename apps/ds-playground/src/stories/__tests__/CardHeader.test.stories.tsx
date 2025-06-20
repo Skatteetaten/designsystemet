@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Card } from '@skatteetaten/ds-content';
@@ -27,6 +27,7 @@ const meta = {
     },
     classNames: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Card.Header>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -8,7 +8,7 @@ import {
   useMemo,
 } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
   fireEvent,
   userEvent,
@@ -99,6 +99,7 @@ const meta = {
     onSearchClick: { table: { disable: true } },
     onResultClick: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof SearchField>;
 export default meta;
 type Story = StoryObj<typeof meta>;

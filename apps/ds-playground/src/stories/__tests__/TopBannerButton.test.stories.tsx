@@ -1,6 +1,6 @@
 import { MouseEvent, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within, waitFor, fn } from 'storybook/test';
 
 import {
@@ -41,6 +41,7 @@ const meta = {
     // Events
     onClick: { table: { disable: true } },
   },
+  tags: ['test'],
 } as Meta<typeof TopBannerButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,6 +1,6 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
@@ -65,6 +65,7 @@ const meta = {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof IconButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;

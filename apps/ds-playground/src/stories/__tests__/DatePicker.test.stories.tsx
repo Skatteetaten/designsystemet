@@ -1,6 +1,6 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
   expect,
   fireEvent,
@@ -97,6 +97,7 @@ const meta = {
   parameters: {
     mockDate: today,
   },
+  tags: ['test'],
 } satisfies Meta<typeof DatePicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;

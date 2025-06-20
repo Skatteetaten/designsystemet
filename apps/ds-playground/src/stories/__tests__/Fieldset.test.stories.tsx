@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
@@ -42,6 +42,7 @@ const meta = {
     // Events
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Fieldset>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, fn, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -28,6 +28,7 @@ const meta = {
     onClose: { table: { disable: true } },
     onExpand: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Table.Row>;
 export default meta;
 type Story = StoryObj<typeof meta>;

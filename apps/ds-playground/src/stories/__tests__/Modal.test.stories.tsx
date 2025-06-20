@@ -1,6 +1,6 @@
 import { useRef, JSX, useState, useEffect } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, fireEvent, within, waitFor } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
@@ -60,6 +60,7 @@ const meta = {
     children: 'Modal innhold',
     title: defaultTitle,
   },
+  tags: ['test'],
 } satisfies Meta<typeof Modal>;
 export default meta;
 type Story = StoryObj<typeof meta>;

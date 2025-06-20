@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Chips, ChipsRemovableProps } from '@skatteetaten/ds-collections';
@@ -24,6 +24,7 @@ const meta = {
     // Events
     onClose: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Chips.Removable>;
 export default meta;
 type Story = StoryObj<typeof meta>;

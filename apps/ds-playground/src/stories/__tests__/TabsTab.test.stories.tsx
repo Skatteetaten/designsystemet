@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Tabs } from '@skatteetaten/ds-collections';
@@ -23,6 +23,7 @@ const meta = {
     svgPath: { table: { disable: true } },
     value: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Tabs.Tab>;
 export default meta;
 type Story = StoryObj<typeof meta>;

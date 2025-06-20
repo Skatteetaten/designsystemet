@@ -1,6 +1,6 @@
 import { JSX, useRef } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { MegaButton, Link, Button } from '@skatteetaten/ds-buttons';
 import {

@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Spinner } from '@skatteetaten/ds-progress';
@@ -36,6 +36,7 @@ const meta = {
     percentComplete: { table: { disable: true } },
     hideTitle: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Spinner>;
 export default meta;
 type Story = StoryObj<typeof meta>;

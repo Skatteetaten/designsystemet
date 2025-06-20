@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { CheckSVGpath, WarningSVGpath } from '@skatteetaten/ds-icons';
 import {

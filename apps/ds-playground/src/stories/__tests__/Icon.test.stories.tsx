@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { sizeArr } from '@skatteetaten/ds-core-utils';
@@ -45,6 +45,7 @@ const meta = {
     // Aria
     ariaLabel: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Icon>;
 export default meta;
 type Story = StoryObj<typeof meta>;

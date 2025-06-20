@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { within, expect } from 'storybook/test';
 
 import { Tabs } from '@skatteetaten/ds-collections';
@@ -16,6 +16,7 @@ const meta = {
     // Props
     children: { table: { disable: false } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Tabs.Panel>;
 export default meta;
 type Story = StoryObj<typeof meta>;

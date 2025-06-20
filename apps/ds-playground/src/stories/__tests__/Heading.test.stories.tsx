@@ -1,4 +1,4 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
@@ -30,6 +30,7 @@ const meta = {
     as: { table: { disable: true } },
     level: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Heading>;
 export default meta;
 type Story = StoryObj<typeof meta>;

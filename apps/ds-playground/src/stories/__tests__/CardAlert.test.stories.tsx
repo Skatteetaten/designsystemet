@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Card, CardAlertVariant } from '@skatteetaten/ds-content';
@@ -28,6 +28,7 @@ const meta = {
     // Events
     onClose: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Card.Alert>;
 export default meta;
 type Story = StoryObj<typeof meta>;

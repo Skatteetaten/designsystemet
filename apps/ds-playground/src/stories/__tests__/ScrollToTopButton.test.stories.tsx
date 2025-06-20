@@ -1,4 +1,4 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import {
@@ -34,6 +34,7 @@ const meta = {
       default: 'grey',
     },
   },
+  tags: ['test'],
 } satisfies Meta<typeof ScrollToTopButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;

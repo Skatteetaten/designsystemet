@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import { Chips, ChipsProps } from '@skatteetaten/ds-collections';
@@ -23,6 +23,7 @@ const meta = {
     // Aria
     ariaLabel: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Chips>;
 export default meta;
 type Story = StoryObj<typeof meta>;

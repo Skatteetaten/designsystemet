@@ -1,6 +1,6 @@
 import { useState, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -43,6 +43,7 @@ const meta = {
       </Breadcrumbs.List>
     ),
   },
+  tags: ['test'],
 } satisfies Meta<typeof Breadcrumbs>;
 export default meta;
 type Story = StoryObj<typeof meta>;

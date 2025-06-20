@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Table } from '@skatteetaten/ds-table';
@@ -25,6 +25,7 @@ const meta = {
     scope: { table: { disable: true } },
     sortKey: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Table.HeaderCell>;
 export default meta;
 type Story = StoryObj<typeof meta>;

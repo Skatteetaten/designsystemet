@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within } from 'storybook/test';
 
 import {
@@ -34,6 +34,7 @@ const meta = {
     // Events
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Help>;
 export default meta;
 type Story = StoryObj<typeof meta>;

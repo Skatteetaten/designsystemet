@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { Fieldset, DatePicker } from '@skatteetaten/ds-forms';

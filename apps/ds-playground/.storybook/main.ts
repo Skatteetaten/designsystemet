@@ -39,6 +39,8 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-docs',
+    '@storybook/addon-vitest',
+    'storybook-addon-vis',
   ],
   core: {
     disableTelemetry: true,

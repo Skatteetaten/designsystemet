@@ -41,7 +41,8 @@
     "test:collectAndMergeCoverage": "npx nx run-many --target=test -- --url=http://127.0.0.1:4400 --coverage --maxWorkers=4 && node --no-warnings=ExperimentalWarning --loader ts-node/esm libs/ds-dev-config/src/scripts/mergeCoverage.ts",
     "test:update": "JEST_IMAGE_SNAPSHOT_TRACK_OBSOLETE=1 nx test ds-playground -- --url=http://host.docker.internal:4400/ -u",
     "test:update:lima": "JEST_IMAGE_SNAPSHOT_TRACK_OBSOLETE=1 nx test ds-playground -- --url=http://host.lima.internal:4400/ -u",
-    "test:coverage": "FORCE_COLOR=false CI=true npm-run-all -r -p 'start:static -- --silent' test:collectAndMergeCoverage",
+    "test:coverageOLD": "FORCE_COLOR=false CI=true npm-run-all -r -p 'start:static -- --silent' test:collectAndMergeCoverage",
+    "test:coverage": "FORCE_COLOR=false CI=true vitest run --project=storybook",
     "generate:coverage": "nyc report --report-dir=coverage/apps/stories --reporter=html --reporter=lcov",
     "typecheck": "nx run-many --target=tsc --parallel=8",
     "clean": "nx clear-cache",
@@ -57,7 +58,7 @@
     "sonarqube": "sonar-scanner",
     "generate:iconIndexFiles": "node libs/ds-icons/src/createIconIndexFiles.cjs",
     "generate:designtokens": "node ./libs/ds-core-designtokens/scripts/CSStoJS.cjs && nx format ds-core-designtokens",
-    "docker:start": "docker run -d --rm --name snapshotscontainer -p 3000:3000 -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true browserless/chrome:1.59.0-puppeteer-20.2.1",
+    "docker:start": "docker run -d --rm --name snapshotscontainer -p 3000:3000 -p 63315:63315 -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true browserless/chrome:1.59.0-puppeteer-20.2.1",
     "docker:start:linux": "docker run -d --rm --name snapshotscontainer -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true --net=host browserless/chrome:1.59.0-chrome-stable",
     "docker:stop": "docker stop snapshotscontainer",
     "downloadTranslations": "TEKSTLISTEKATALOG=designsystemet TEKSTLISTER='Shared,ds-buttons,ds-forms,ds-navigation,ds-layout,ds-tables,ds-status,ds-collections,ds-overlays,ds-progress' TRANSLATIONS_FOLDER='./libs/ds-core-utils/src/translations' node --no-warnings=ExperimentalWarning --loader ts-node/esm ./libs/ds-dev-config/src/scripts/downloadTranslations.ts",
@@ -66,8 +67,7 @@
   "dependencies": {
     "@floating-ui/react": "0.26.28",
     "@skatteetaten/ds-core-designtokens": "file:dist/libs/ds-core-designtokens",
-    "@skatteetaten/ds-core-utils": "file:dist/libs/ds-core-utils",
-    "@storybook/react": "9.0.10",
+    "@storybook/react": "9.0.11",
     "@swc/helpers": "0.5.15",
     "chalk": "5.4.1",
     "core-js": "3.39.0",
@@ -79,7 +79,7 @@
     "react-dom": "19.0.0",
     "react-i18next": "15.7.2",
     "regenerator-runtime": "0.14.1",
-    "storybook": "9.0.10",
+    "storybook": "9.0.11",
     "tslib": "2.8.1"
   },
   "devDependencies": {
@@ -103,11 +103,12 @@
     "@nx/web": "21.2.0",
     "@nx/workspace": "21.2.0",
     "@rollup/plugin-url": "8.0.2",
-    "@storybook/addon-a11y": "9.0.10",
+    "@storybook/addon-a11y": "9.0.11",
     "@storybook/addon-coverage": "2.0.0",
-    "@storybook/addon-docs": "9.0.10",
-    "@storybook/addon-links": "9.0.10",
-    "@storybook/react-vite": "9.0.10",
+    "@storybook/addon-docs": "9.0.11",
+    "@storybook/addon-links": "9.0.11",
+    "@storybook/addon-vitest": "9.0.11",
+    "@storybook/react-vite": "9.0.11",
     "@storybook/test-runner": "0.23.0",
     "@svgr/rollup": "8.1.0",
     "@svgr/webpack": "8.1.0",
@@ -127,6 +128,8 @@
     "@typescript-eslint/eslint-plugin": "8.34.0",
     "@typescript-eslint/parser": "8.34.0",
     "@vitejs/plugin-react-swc": "3.7.2",
+    "@vitest/browser": "3.2.3",
+    "@vitest/coverage-v8": "3.2.3",
     "axe-playwright": "1.2.3",
     "babel-loader": "8.4.1",
     "css-loader": "7.1.2",
@@ -141,7 +144,7 @@
     "eslint-plugin-react-compiler": "19.0.0-beta-714736e-20250131",
     "eslint-plugin-react-hooks": "5.1.0",
     "eslint-plugin-sonarjs": "2.0.3",
-    "eslint-plugin-storybook": "0.12.0",
+    "eslint-plugin-storybook": "9.0.11",
     "eslint-plugin-testing-library": "7.1.1",
     "filter-files": "0.4.0",
     "gh-pages": "6.3.0",
@@ -169,6 +172,7 @@
     "sass-loader": "16.0.5",
     "shadow-dom-testing-library": "1.11.3",
     "sonarqube-scanner": "4.2.6",
+    "storybook-addon-vis": "2.1.1",
     "style-loader": "3.3.4",
     "stylelint": "16.14.1",
     "stylelint-config-idiomatic-order": "10.0.0",
@@ -183,8 +187,12 @@
     "unzipper": "0.12.3",
     "url-loader": "4.1.1",
     "vite": "6.3.5",
-    "vite-plugin-sass-dts": "1.3.22",
-    "vite-tsconfig-paths": "5.1.4"
+    "vite-plugin-sass-dts": "1.3.31",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "3.2.3"
   },
-  "type": "module"
+  "type": "module",
+  "overrides": {
+    "storybook": "$storybook"
+  }
 }

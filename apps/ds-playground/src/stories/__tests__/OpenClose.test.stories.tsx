@@ -1,6 +1,6 @@
 import { MouseEvent, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within, waitFor, fn } from 'storybook/test';
 
 import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
@@ -44,6 +44,7 @@ const meta = {
     showUnderline: { table: { disable: true } },
     onClick: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof OpenClose>;
 export default meta;
 type Story = StoryObj<typeof meta>;

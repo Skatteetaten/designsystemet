@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
@@ -64,6 +64,7 @@ const meta = {
     // Events
     onClick: { table: { disable: true } },
   },
+  tags: ['test'],
 } as Meta<typeof NavigationTile>;
 export default meta;
 type Story = StoryObj<typeof meta>;

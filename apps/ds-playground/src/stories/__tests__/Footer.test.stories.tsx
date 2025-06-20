@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
@@ -37,6 +37,7 @@ const meta = {
   parameters: {
     layout: 'fullscreen',
   },
+  tags: ['test'],
 } satisfies Meta<typeof Footer>;
 export default meta;
 type Story = StoryObj<typeof meta>;

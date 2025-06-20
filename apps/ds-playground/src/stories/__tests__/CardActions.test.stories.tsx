@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
@@ -21,6 +21,7 @@ const meta = {
       control: 'text',
     },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Card.Actions>;
 export default meta;
 type Story = StoryObj<typeof meta>;

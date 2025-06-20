@@ -1,4 +1,4 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Blockquote, BlockquoteProps } from '@skatteetaten/ds-typography';
@@ -23,6 +23,7 @@ const meta = {
     },
     hasSpacing: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Blockquote>;
 export default meta;
 type Story = StoryObj<typeof meta>;

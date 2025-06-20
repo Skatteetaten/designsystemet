@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Divider } from '@skatteetaten/ds-content';
@@ -20,6 +20,7 @@ const meta = {
     // Aria
     ariaHidden: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Divider>;
 export default meta;
 type Story = StoryObj<typeof meta>;

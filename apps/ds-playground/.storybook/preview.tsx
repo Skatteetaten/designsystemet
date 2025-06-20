@@ -3,6 +3,7 @@ import { JSX } from 'react';
 import { Decorator, Preview } from '@storybook/react';
 import * as MockDate from 'mockdate';
 import { useEffect, useGlobals } from 'storybook/preview-api';
+import { page } from '@vitest/browser/context';
 
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import {
@@ -84,14 +85,18 @@ const parameters = {
   docs: {
     controls: { sort: 'requiredFirst' },
   },
+
   actions: {
     disable: true,
   },
+
   controls: {
     sort: 'requiredFirst',
     hideNoControlsWarning: true,
   },
+
   viewport: { viewports: DSViewports },
+
   options: {
     storySort: {
       method: 'alphabetical',
@@ -105,6 +110,7 @@ const parameters = {
       ],
     },
   },
+
   backgrounds: {
     default: 'light',
     values: [
@@ -125,6 +131,13 @@ const parameters = {
         value: 'var(--theme-primary)',
       },
     ],
+  },
+
+  a11y: {
+    // 'todo' - show a11y violations in the test UI only
+    // 'error' - fail CI on a11y violations
+    // 'off' - skip a11y checks entirely
+    test: 'todo',
   },
 };
 
@@ -234,6 +247,11 @@ const preview = {
       manual: true,
     },
   },
-  tags: ['autodocs'],
+  tags: ['autodocs', '!test', '!snapshot'],
+  async afterEach(context): Promise<void> {
+    // console.log(context);
+    const shot = await page.screenshot();
+    console.log('screenshot taken', shot);
+  },
 } satisfies Preview;
 export default preview;

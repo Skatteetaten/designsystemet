@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
@@ -44,6 +44,7 @@ const meta = {
     // Events
     onLanguageClick: { table: { disable: true } },
   },
+  tags: ['test'],
 } as Meta<typeof TopBannerLangPicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;

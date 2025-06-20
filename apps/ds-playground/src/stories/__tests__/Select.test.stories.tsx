@@ -1,6 +1,6 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
   expect,
   fireEvent,
@@ -61,6 +61,7 @@ const meta = {
     onFocus: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Select>;
 export default meta;
 type Story = StoryObj<typeof meta>;

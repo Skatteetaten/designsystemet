@@ -1,6 +1,6 @@
 import { useRef, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, userEvent, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';

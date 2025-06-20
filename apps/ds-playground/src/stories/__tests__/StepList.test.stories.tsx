@@ -1,6 +1,6 @@
 import { useId, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import { StepList, StepListProps } from '@skatteetaten/ds-collections';
@@ -27,6 +27,7 @@ const meta = {
     },
   },
   parameters: { a11y: { disable: true } },
+  tags: ['test'],
 } satisfies Meta<typeof StepList>;
 export default meta;
 type Story = StoryObj<typeof meta>;
