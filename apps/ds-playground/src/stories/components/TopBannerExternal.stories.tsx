@@ -18,7 +18,6 @@ import {
 import {
   TopBannerExternal,
   TopBannerExternalHandle,
-  TopBannerExternalUserMenu,
   User,
 } from '@skatteetaten/ds-layout';
 import {
@@ -39,7 +38,7 @@ import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 import { exampleParameters } from '../utils/stories.utils';
 
-import styles from './TopBannerExternalExample.module.scss';
+import topBannerExternalExampleStyles from './TopBannerExternalExample.module.scss';
 
 const me: Person = {
   name: 'Ola Nordmann',
@@ -48,7 +47,7 @@ const me: Person = {
 };
 
 const businesses: Paginated<Business> = {
-  total: 12,
+  total: 3,
   list: [
     {
       name: 'Costco AS',
@@ -56,22 +55,6 @@ const businesses: Paginated<Business> = {
       isDeleted: false,
       unitType: 'AS',
       type: 'Organization',
-      subunits: [
-        {
-          name: 'Google ASA',
-          organizationNumber: '123456789',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'ASA',
-        },
-        {
-          name: 'Facebook RHF',
-          organizationNumber: '123456790',
-          isDeleted: true,
-          type: 'Organization',
-          unitType: 'RHF',
-        },
-      ],
     },
     {
       name: 'Instagram AS',
@@ -79,50 +62,6 @@ const businesses: Paginated<Business> = {
       isDeleted: true,
       unitType: 'AS',
       type: 'Organization',
-      subunits: [
-        {
-          name: 'Snapchat AS',
-          organizationNumber: '123456623',
-          isDeleted: true,
-          type: 'Organization',
-          unitType: 'AS',
-        },
-        {
-          name: 'Statoil ASA',
-          organizationNumber: '312849218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'ASA',
-        },
-      ],
-    },
-    {
-      name: 'Samsung DA',
-      organizationNumber: '312943218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'DA',
-    },
-    {
-      name: 'Toshiba AS',
-      organizationNumber: '312643218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Hitachi AS',
-      organizationNumber: '312743218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
-    },
-    {
-      name: 'Vanguard AS',
-      organizationNumber: '332843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'AS',
     },
     {
       name: 'Amazon ASA',
@@ -131,44 +70,193 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'ASA',
     },
-    {
-      name: 'Meta ANS',
-      organizationNumber: '212843218',
-      isDeleted: false,
-      type: 'Organization',
-      unitType: 'ANS',
-    },
   ],
 };
 
-const people: Paginated<Person> = {
-  total: 4,
-  list: [
-    {
-      name: 'Antikvitet presis',
-      personId: '13889999726',
-      type: 'Person',
-      isDeleted: false,
-    },
-    {
-      name: 'Bønne elegant',
-      personId: '18849574503',
-      type: 'Person',
-      isDeleted: false,
-    },
-    {
-      name: 'Lomme filosofisk',
-      personId: '08889674513',
-      type: 'Person',
-      isDeleted: false,
-    },
-    {
-      name: 'Adelsmann varm',
-      personId: '14892449911',
-      type: 'Person',
-      isDeleted: false,
-    },
-  ],
+enum LenkerUinnlogget {
+  PERSON_SKATT = 'https://www.skatteetaten.no/person/skatt/',
+  PERSON_AVGIFTER = 'https://www.skatteetaten.no/person/avgifter/',
+  PERSON_FOLKEREGISTER = 'https://www.skatteetaten.no/person/folkeregister/',
+  PERSON_UTENLANDSK = 'https://www.skatteetaten.no/person/utenlandsk/',
+  PERSON_BETALING_OG_INNKREVING = 'https://www.skatteetaten.no/person/betaling-og-innkreving/',
+  PERSON_FORSIDE = 'https://www.skatteetaten.no/person/',
+  VIRKSOMHET_SKATT = 'https://www.skatteetaten.no/bedrift-og-organisasjon/skatt/',
+  VIRKSOMHET_AVGIFTER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/avgifter/',
+  VIRKSOMHET_RAPPORTERING_OG_BRANSJER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/rapportering-og-bransjer/',
+  VIRKSOMHET_STARTE_OG_DRIVE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/starte-og-drive/',
+  VIRKSOMHET_ARBEIDSGIVER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/arbeidsgiver/',
+  VIRKSOMHET_UTENLANDSK = 'https://www.skatteetaten.no/bedrift-og-organisasjon/utenlandsk/',
+  VIRKSOMHET_FORSIDE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/',
+  RETTSKILDER = 'https://www.skatteetaten.no/rettskilder/',
+  RETTSKILDER_PER_EMNE = 'https://www.skatteetaten.no/rettskilder/emne/',
+  RETTSKILDER_PER_TYPE = 'https://www.skatteetaten.no/rettskilder/type/',
+  OM_OSS_KONTAKT = 'https://www.skatteetaten.no/kontakt/',
+  OM_OSS_DELING_AV_DATA = 'https://www.skatteetaten.no/deling/',
+  OM_OSS_PRESSE = 'https://www.skatteetaten.no/presse/',
+}
+
+enum LenkerInnloggetIkkeMinSide {
+  SKATT = '/web/mineskatteforhold/',
+  FOLKEREGISTER = '/web/minfolkeregisterside/',
+  INNBOKS = '/web/innboks/',
+  KJORETOY = '/web/desta/',
+  AKSJEOPPGAVEN = '/web/aksjeoppgaven/?referrer=min-side',
+}
+
+enum MinsideLenker {
+  VIRKSOMHET_KALENDER = '/virksomhet/kalender',
+  VIRKSOMHET_KRAVOVERSIKT = '/virksomhet/kravoversikt',
+  PERSON_FORSIDE = '/person',
+  PERSON_ARBEIDINNTEKT = '/person/arbeidinntekt',
+  PERSON_EIENDOMMER = '/person/eiendommer',
+  PERSON_KRAVOVERSIKT = '/person/kravoversikt',
+  PERSON_SAKSTATUS = '/person/sakstatus',
+  VIRKSOMHET_SAKSTATUS = '/virksomhet/sakstatus',
+}
+
+const loggedInLinks = [
+  {
+    href: MinsideLenker.PERSON_FORSIDE,
+    text: 'Min side',
+  },
+  {
+    href: LenkerInnloggetIkkeMinSide.SKATT,
+    text: 'Skatt',
+  },
+  {
+    href: LenkerInnloggetIkkeMinSide.FOLKEREGISTER,
+    text: 'Folkeregister',
+  },
+  {
+    href: LenkerInnloggetIkkeMinSide.INNBOKS,
+    text: 'Innboks',
+  },
+  {
+    href: MinsideLenker.PERSON_SAKSTATUS,
+    text: 'Mine saker',
+  },
+  {
+    href: MinsideLenker.PERSON_KRAVOVERSIKT,
+    text: 'Krav og betalinger',
+  },
+  {
+    href: LenkerInnloggetIkkeMinSide.KJORETOY,
+    text: 'Bil og andre kjøretøy',
+  },
+  {
+    href: MinsideLenker.PERSON_ARBEIDINNTEKT,
+    text: 'Arbeid og inntekt',
+  },
+  {
+    href: LenkerInnloggetIkkeMinSide.AKSJEOPPGAVEN,
+    text: 'Aksjeoppgaven',
+  },
+  {
+    href: MinsideLenker.PERSON_EIENDOMMER,
+    text: 'Eiendommer',
+  },
+];
+
+const personlinks = [
+  {
+    href: LenkerUinnlogget.PERSON_FORSIDE,
+    text: 'Person forside',
+  },
+  {
+    href: LenkerUinnlogget.PERSON_SKATT,
+    text: 'Skatt',
+  },
+  {
+    href: LenkerUinnlogget.PERSON_AVGIFTER,
+    text: 'Avgifter',
+  },
+  {
+    href: LenkerUinnlogget.PERSON_FOLKEREGISTER,
+    text: 'Folkeregisteret',
+  },
+  {
+    href: LenkerUinnlogget.PERSON_UTENLANDSK,
+    text: 'Utenlandsk',
+  },
+  {
+    href: LenkerUinnlogget.PERSON_BETALING_OG_INNKREVING,
+    text: 'Betaling og innkreving',
+  },
+];
+
+const virksomhetlinks = [
+  {
+    href: LenkerUinnlogget.VIRKSOMHET_SKATT,
+    text: 'Skatt',
+  },
+  {
+    href: LenkerUinnlogget.VIRKSOMHET_AVGIFTER,
+    text: 'Avgifter',
+  },
+  {
+    href: LenkerUinnlogget.VIRKSOMHET_RAPPORTERING_OG_BRANSJER,
+    text: 'Rapportering og bransjer',
+  },
+  {
+    href: LenkerUinnlogget.VIRKSOMHET_STARTE_OG_DRIVE,
+    text: 'Starte og drive',
+  },
+  {
+    href: LenkerUinnlogget.VIRKSOMHET_ARBEIDSGIVER,
+    text: 'Arbeidsgiver',
+  },
+  {
+    href: LenkerUinnlogget.VIRKSOMHET_UTENLANDSK,
+    text: 'Utenlandsk',
+  },
+];
+
+const virksomhetLinks = [
+  {
+    href: 'web/minside/virksomhet/',
+    text: 'Min side',
+  },
+  {
+    href: MinsideLenker.VIRKSOMHET_KALENDER,
+    text: 'Kalender',
+  },
+  {
+    href: MinsideLenker.VIRKSOMHET_KRAVOVERSIKT,
+    text: 'Krav og betalinger',
+  },
+  {
+    href: MinsideLenker.VIRKSOMHET_SAKSTATUS,
+    text: 'Mine saker',
+  },
+  {
+    href: LenkerInnloggetIkkeMinSide.INNBOKS,
+    text: 'Innboks',
+  },
+];
+
+const omOssLinks = [
+  {
+    href: LenkerUinnlogget.OM_OSS_KONTAKT,
+    text: 'Kontakt oss',
+    svgPath: ChatBubbleOutlineSVGpath,
+  },
+  {
+    href: LenkerUinnlogget.OM_OSS_KONTAKT,
+    text: 'Deling av data',
+    svgPath: ArrowUpDownSVGpath,
+  },
+  {
+    href: LenkerUinnlogget.OM_OSS_KONTAKT,
+    text: 'Presse',
+    svgPath: ShareSVGpath,
+  },
+];
+
+const userMock: User = {
+  role: 'virksomhet',
+  name: 'Buljo Badeland AS',
+  orgnr: '999999999',
+  person: me,
 };
 
 const meta = {
@@ -249,7 +337,6 @@ export const ExampleWithRolePicker: Story = {
     const modalRef = useRef<HTMLDialogElement>(null);
     const topBannerRef = useRef<TopBannerExternalHandle>(null);
     const [user, setUser] = useState<User>();
-    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
     const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
       const lang = e.currentTarget.lang;
@@ -258,198 +345,18 @@ export const ExampleWithRolePicker: Story = {
 
     const handleLogOut = (): void => {
       setUser(undefined);
-      setIsLoggedIn(false);
     };
 
     const handleLogIn = (): void => {
       modalRef.current?.showModal();
     };
 
-    enum LenkerUinnlogget {
-      PERSON_SKATT = 'https://www.skatteetaten.no/person/skatt/',
-      PERSON_AVGIFTER = 'https://www.skatteetaten.no/person/avgifter/',
-      PERSON_FOLKEREGISTER = 'https://www.skatteetaten.no/person/folkeregister/',
-      PERSON_UTENLANDSK = 'https://www.skatteetaten.no/person/utenlandsk/',
-      PERSON_BETALING_OG_INNKREVING = 'https://www.skatteetaten.no/person/betaling-og-innkreving/',
-      PERSON_FORSIDE = 'https://www.skatteetaten.no/person/',
-      VIRKSOMHET_SKATT = 'https://www.skatteetaten.no/bedrift-og-organisasjon/skatt/',
-      VIRKSOMHET_AVGIFTER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/avgifter/',
-      VIRKSOMHET_RAPPORTERING_OG_BRANSJER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/rapportering-og-bransjer/',
-      VIRKSOMHET_STARTE_OG_DRIVE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/starte-og-drive/',
-      VIRKSOMHET_ARBEIDSGIVER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/arbeidsgiver/',
-      VIRKSOMHET_UTENLANDSK = 'https://www.skatteetaten.no/bedrift-og-organisasjon/utenlandsk/',
-      VIRKSOMHET_FORSIDE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/',
-      RETTSKILDER = 'https://www.skatteetaten.no/rettskilder/',
-      RETTSKILDER_PER_EMNE = 'https://www.skatteetaten.no/rettskilder/emne/',
-      RETTSKILDER_PER_TYPE = 'https://www.skatteetaten.no/rettskilder/type/',
-      OM_OSS_KONTAKT = 'https://www.skatteetaten.no/kontakt/',
-      OM_OSS_DELING_AV_DATA = 'https://www.skatteetaten.no/deling/',
-      OM_OSS_PRESSE = 'https://www.skatteetaten.no/presse/',
-    }
-
-    enum LenkerInnloggetIkkeMinSide {
-      SKATT = '/web/mineskatteforhold/',
-      FOLKEREGISTER = '/web/minfolkeregisterside/',
-      INNBOKS = '/web/innboks/',
-      KJORETOY = '/web/desta/',
-      AKSJEOPPGAVEN = '/web/aksjeoppgaven/?referrer=min-side',
-    }
-
-    enum MinsideLenker {
-      VIRKSOMHET_KALENDER = '/virksomhet/kalender',
-      VIRKSOMHET_KRAVOVERSIKT = '/virksomhet/kravoversikt',
-      PERSON_FORSIDE = '/person',
-      PERSON_ARBEIDINNTEKT = '/person/arbeidinntekt',
-      PERSON_EIENDOMMER = '/person/eiendommer',
-      PERSON_KRAVOVERSIKT = '/person/kravoversikt',
-      PERSON_SAKSTATUS = '/person/sakstatus',
-      VIRKSOMHET_SAKSTATUS = '/virksomhet/sakstatus',
-    }
-
-    const loggedInLinks = [
-      {
-        href: MinsideLenker.PERSON_FORSIDE,
-        text: 'Min side',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.SKATT,
-        text: 'Skatt',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.FOLKEREGISTER,
-        text: 'Folkeregister',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.INNBOKS,
-        text: 'Innboks',
-      },
-      {
-        href: MinsideLenker.PERSON_SAKSTATUS,
-        text: 'Mine saker',
-      },
-      {
-        href: MinsideLenker.PERSON_KRAVOVERSIKT,
-        text: 'Krav og betalinger',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.KJORETOY,
-        text: 'Bil og andre kjøretøy',
-      },
-      {
-        href: MinsideLenker.PERSON_ARBEIDINNTEKT,
-        text: 'Arbeid og inntekt',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.AKSJEOPPGAVEN,
-        text: 'Aksjeoppgaven',
-      },
-      {
-        href: MinsideLenker.PERSON_EIENDOMMER,
-        text: 'Eiendommer',
-      },
-    ];
-
-    const personlinks = [
-      {
-        href: LenkerUinnlogget.PERSON_FORSIDE,
-        text: 'Person forside',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_SKATT,
-        text: 'Skatt',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_AVGIFTER,
-        text: 'Avgifter',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_FOLKEREGISTER,
-        text: 'Folkeregisteret',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_UTENLANDSK,
-        text: 'Utenlandsk',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_BETALING_OG_INNKREVING,
-        text: 'Betaling og innkreving',
-      },
-    ];
-
-    const virksomhetlinks = [
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_SKATT,
-        text: 'Skatt',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_AVGIFTER,
-        text: 'Avgifter',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_RAPPORTERING_OG_BRANSJER,
-        text: 'Rapportering og bransjer',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_STARTE_OG_DRIVE,
-        text: 'Starte og drive',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_ARBEIDSGIVER,
-        text: 'Arbeidsgiver',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_UTENLANDSK,
-        text: 'Utenlandsk',
-      },
-    ];
-
-    const virksomhetLinks = [
-      {
-        href: 'web/minside/virksomhet/',
-        text: 'Min side',
-      },
-      {
-        href: MinsideLenker.VIRKSOMHET_KALENDER,
-        text: 'Kalender',
-      },
-      {
-        href: MinsideLenker.VIRKSOMHET_KRAVOVERSIKT,
-        text: 'Krav og betalinger',
-      },
-      {
-        href: MinsideLenker.VIRKSOMHET_SAKSTATUS,
-        text: 'Mine saker',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.INNBOKS,
-        text: 'Innboks',
-      },
-    ];
-
-    const omOssLinks = [
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Kontakt oss',
-        svgPath: ChatBubbleOutlineSVGpath,
-      },
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Deling av data',
-        svgPath: ArrowUpDownSVGpath,
-      },
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Presse',
-        svgPath: ShareSVGpath,
-      },
-    ];
-
     return (
       <>
         <TopBannerExternal
           ref={topBannerRef}
           classNames={{
-            columns: styles.columns,
+            columns: topBannerExternalExampleStyles.columns,
           }}
           firstColumn={
             user ? (
@@ -457,13 +364,19 @@ export const ExampleWithRolePicker: Story = {
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
                     {user.role === 'meg' && (
-                      <FavoriteIcon className={styles.marginRightS} />
+                      <FavoriteIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
                     {user.role === 'andre' && (
-                      <AccountMultipleIcon className={styles.marginRightS} />
+                      <AccountMultipleIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
                     {user.role === 'virksomhet' && (
-                      <BriefcaseIcon className={styles.marginRightS} />
+                      <BriefcaseIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
 
                     {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -472,13 +385,16 @@ export const ExampleWithRolePicker: Story = {
                     {'Se, endre og send inn'}
                   </Paragraph>
                   <ul
-                    className={`${styles.linkWrapper} ${styles.linkWrapperPadding}`}
+                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.linkWrapperPadding}`}
                   >
                     {(user.role === 'virksomhet'
                       ? virksomhetLinks
                       : loggedInLinks
                     ).map((link, index) => (
-                      <li key={index} className={styles.marginBottomS}>
+                      <li
+                        key={index}
+                        className={topBannerExternalExampleStyles.marginBottomS}
+                      >
                         <Link
                           href={link.href}
                           onClick={(e): void => {
@@ -495,15 +411,21 @@ export const ExampleWithRolePicker: Story = {
               </Card>
             ) : (
               <>
-                <Heading as={'h2'} level={3} className={styles.flex}>
+                <Heading
+                  as={'h2'}
+                  level={3}
+                  className={topBannerExternalExampleStyles.flex}
+                >
                   <PersonIcon
-                    className={styles.marginRightS}
+                    className={topBannerExternalExampleStyles.marginRightS}
                     size={'largePlus'}
                   />
 
                   {'Min side'}
                 </Heading>
-                <Paragraph className={styles.marginBottomS}>
+                <Paragraph
+                  className={topBannerExternalExampleStyles.marginBottomS}
+                >
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger'}
                 </Paragraph>
                 <Button svgPath={LockOutlineSVGpath}>
@@ -517,14 +439,16 @@ export const ExampleWithRolePicker: Story = {
               <Heading as={'h2'} level={2} hasSpacing>
                 {'Alle temaer'}
               </Heading>
-              <div className={styles.secondColumn}>
+              <div className={topBannerExternalExampleStyles.secondColumn}>
                 <div>
                   <Heading as={'h3'} level={3} hasSpacing>
                     <a href={LenkerUinnlogget.PERSON_FORSIDE}>
                       {'For personer'}
                     </a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
+                  >
                     {personlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -543,7 +467,9 @@ export const ExampleWithRolePicker: Story = {
                       {'For bedrifter og organisasjoner'}
                     </a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
+                  >
                     {virksomhetlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -562,7 +488,9 @@ export const ExampleWithRolePicker: Story = {
                   <Heading as={'h3'} level={3} hasSpacing>
                     <a href={LenkerUinnlogget.RETTSKILDER}>{'Rettskilder'}</a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
+                  >
                     <LinkGroup.Link
                       href={LenkerUinnlogget.RETTSKILDER_PER_EMNE}
                     >
@@ -577,9 +505,14 @@ export const ExampleWithRolePicker: Story = {
                   <Heading as={'h3'} level={3} hasSpacing>
                     {'Om oss'}
                   </Heading>
-                  <ul className={`${styles.linkWrapper} ${styles.noPadding}`}>
+                  <ul
+                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.noPadding}`}
+                  >
                     {omOssLinks.map((link, index) => (
-                      <li key={index} className={styles.marginBottomS}>
+                      <li
+                        key={index}
+                        className={topBannerExternalExampleStyles.marginBottomS}
+                      >
                         <Link href={link.href} svgPath={link.svgPath}>
                           {link.text}
                         </Link>
@@ -593,7 +526,9 @@ export const ExampleWithRolePicker: Story = {
           user={user}
           searchContent={
             <>
-              <Paragraph className={styles.marginBottomS}>
+              <Paragraph
+                className={topBannerExternalExampleStyles.marginBottomS}
+              >
                 {'Dette har andre søkt på:'}
               </Paragraph>
               <LinkGroup>
@@ -626,7 +561,6 @@ export const ExampleWithRolePicker: Story = {
           ref={modalRef}
           me={me}
           businesses={businesses}
-          people={people}
           onEntitySelect={async (entity) => {
             let role: User['role'];
             if (entity.name === me.name) {
@@ -655,7 +589,6 @@ export const ExampleWithUserMenu: Story = {
     const modalRef = useRef<HTMLDialogElement>(null);
     const topBannerRef = useRef<TopBannerExternalHandle>(null);
     const [user, setUser] = useState<User>();
-    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
     const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
       const lang = e.currentTarget.lang;
@@ -664,209 +597,40 @@ export const ExampleWithUserMenu: Story = {
 
     const handleLogOut = (): void => {
       setUser(undefined);
-      setIsLoggedIn(false);
     };
 
     const handleLogIn = (): void => {
       modalRef.current?.showModal();
     };
 
-    enum LenkerUinnlogget {
-      PERSON_SKATT = 'https://www.skatteetaten.no/person/skatt/',
-      PERSON_AVGIFTER = 'https://www.skatteetaten.no/person/avgifter/',
-      PERSON_FOLKEREGISTER = 'https://www.skatteetaten.no/person/folkeregister/',
-      PERSON_UTENLANDSK = 'https://www.skatteetaten.no/person/utenlandsk/',
-      PERSON_BETALING_OG_INNKREVING = 'https://www.skatteetaten.no/person/betaling-og-innkreving/',
-      PERSON_FORSIDE = 'https://www.skatteetaten.no/person/',
-      VIRKSOMHET_SKATT = 'https://www.skatteetaten.no/bedrift-og-organisasjon/skatt/',
-      VIRKSOMHET_AVGIFTER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/avgifter/',
-      VIRKSOMHET_RAPPORTERING_OG_BRANSJER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/rapportering-og-bransjer/',
-      VIRKSOMHET_STARTE_OG_DRIVE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/starte-og-drive/',
-      VIRKSOMHET_ARBEIDSGIVER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/arbeidsgiver/',
-      VIRKSOMHET_UTENLANDSK = 'https://www.skatteetaten.no/bedrift-og-organisasjon/utenlandsk/',
-      VIRKSOMHET_FORSIDE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/',
-      RETTSKILDER = 'https://www.skatteetaten.no/rettskilder/',
-      RETTSKILDER_PER_EMNE = 'https://www.skatteetaten.no/rettskilder/emne/',
-      RETTSKILDER_PER_TYPE = 'https://www.skatteetaten.no/rettskilder/type/',
-      OM_OSS_KONTAKT = 'https://www.skatteetaten.no/kontakt/',
-      OM_OSS_DELING_AV_DATA = 'https://www.skatteetaten.no/deling/',
-      OM_OSS_PRESSE = 'https://www.skatteetaten.no/presse/',
-    }
-
-    enum LenkerInnloggetIkkeMinSide {
-      SKATT = '/web/mineskatteforhold/',
-      FOLKEREGISTER = '/web/minfolkeregisterside/',
-      INNBOKS = '/web/innboks/',
-      KJORETOY = '/web/desta/',
-      AKSJEOPPGAVEN = '/web/aksjeoppgaven/?referrer=min-side',
-    }
-
-    enum MinsideLenker {
-      VIRKSOMHET_KALENDER = '/virksomhet/kalender',
-      VIRKSOMHET_KRAVOVERSIKT = '/virksomhet/kravoversikt',
-      PERSON_FORSIDE = '/person',
-      PERSON_ARBEIDINNTEKT = '/person/arbeidinntekt',
-      PERSON_EIENDOMMER = '/person/eiendommer',
-      PERSON_KRAVOVERSIKT = '/person/kravoversikt',
-      PERSON_SAKSTATUS = '/person/sakstatus',
-      VIRKSOMHET_SAKSTATUS = '/virksomhet/sakstatus',
-    }
-
-    const loggedInLinks = [
-      {
-        href: MinsideLenker.PERSON_FORSIDE,
-        text: 'Min side',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.SKATT,
-        text: 'Skatt',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.FOLKEREGISTER,
-        text: 'Folkeregister',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.INNBOKS,
-        text: 'Innboks',
-      },
-      {
-        href: MinsideLenker.PERSON_SAKSTATUS,
-        text: 'Mine saker',
-      },
-      {
-        href: MinsideLenker.PERSON_KRAVOVERSIKT,
-        text: 'Krav og betalinger',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.KJORETOY,
-        text: 'Bil og andre kjøretøy',
-      },
-      {
-        href: MinsideLenker.PERSON_ARBEIDINNTEKT,
-        text: 'Arbeid og inntekt',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.AKSJEOPPGAVEN,
-        text: 'Aksjeoppgaven',
-      },
-      {
-        href: MinsideLenker.PERSON_EIENDOMMER,
-        text: 'Eiendommer',
-      },
-    ];
-
-    const personlinks = [
-      {
-        href: LenkerUinnlogget.PERSON_FORSIDE,
-        text: 'Person forside',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_SKATT,
-        text: 'Skatt',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_AVGIFTER,
-        text: 'Avgifter',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_FOLKEREGISTER,
-        text: 'Folkeregisteret',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_UTENLANDSK,
-        text: 'Utenlandsk',
-      },
-      {
-        href: LenkerUinnlogget.PERSON_BETALING_OG_INNKREVING,
-        text: 'Betaling og innkreving',
-      },
-    ];
-
-    const virksomhetlinks = [
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_SKATT,
-        text: 'Skatt',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_AVGIFTER,
-        text: 'Avgifter',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_RAPPORTERING_OG_BRANSJER,
-        text: 'Rapportering og bransjer',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_STARTE_OG_DRIVE,
-        text: 'Starte og drive',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_ARBEIDSGIVER,
-        text: 'Arbeidsgiver',
-      },
-      {
-        href: LenkerUinnlogget.VIRKSOMHET_UTENLANDSK,
-        text: 'Utenlandsk',
-      },
-    ];
-
-    const virksomhetLinks = [
-      {
-        href: 'web/minside/virksomhet/',
-        text: 'Min side',
-      },
-      {
-        href: MinsideLenker.VIRKSOMHET_KALENDER,
-        text: 'Kalender',
-      },
-      {
-        href: MinsideLenker.VIRKSOMHET_KRAVOVERSIKT,
-        text: 'Krav og betalinger',
-      },
-      {
-        href: MinsideLenker.VIRKSOMHET_SAKSTATUS,
-        text: 'Mine saker',
-      },
-      {
-        href: LenkerInnloggetIkkeMinSide.INNBOKS,
-        text: 'Innboks',
-      },
-    ];
-
-    const omOssLinks = [
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Kontakt oss',
-        svgPath: ChatBubbleOutlineSVGpath,
-      },
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Deling av data',
-        svgPath: ArrowUpDownSVGpath,
-      },
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Presse',
-        svgPath: ShareSVGpath,
-      },
-    ];
-
     return (
       <>
         <TopBannerExternal
           ref={topBannerRef}
+          canRepresentOthers={businesses.total > 0}
+          varslerAmount={3}
+          classNames={{
+            columns: topBannerExternalExampleStyles.columns,
+          }}
           firstColumn={
             user ? (
               <Card spacing={'s'}>
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
                     {user.role === 'meg' && (
-                      <FavoriteIcon className={'marginRightS'} />
+                      <FavoriteIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
                     {user.role === 'andre' && (
-                      <AccountMultipleIcon className={'marginRightS'} />
+                      <AccountMultipleIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
                     {user.role === 'virksomhet' && (
-                      <BriefcaseIcon className={'marginRightS'} />
+                      <BriefcaseIcon
+                        className={topBannerExternalExampleStyles.marginRightS}
+                      />
                     )}
 
                     {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -875,13 +639,16 @@ export const ExampleWithUserMenu: Story = {
                     {'Se, endre og send inn'}
                   </Paragraph>
                   <ul
-                    className={`${styles.linkWrapper} ${styles.columnOneLinkPadding}`}
+                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.linkWrapperPadding}`}
                   >
                     {(user.role === 'virksomhet'
                       ? virksomhetLinks
                       : loggedInLinks
                     ).map((link, index) => (
-                      <li key={index} className={styles.menuSpacingSmall}>
+                      <li
+                        key={index}
+                        className={topBannerExternalExampleStyles.marginBottomS}
+                      >
                         <Link
                           href={link.href}
                           onClick={(e): void => {
@@ -898,12 +665,21 @@ export const ExampleWithUserMenu: Story = {
               </Card>
             ) : (
               <>
-                <Heading as={'h2'} level={3} className={styles.flex}>
-                  <PersonIcon className={'marginRightS'} size={'largePlus'} />
+                <Heading
+                  as={'h2'}
+                  level={3}
+                  className={topBannerExternalExampleStyles.flex}
+                >
+                  <PersonIcon
+                    className={topBannerExternalExampleStyles.marginRightS}
+                    size={'largePlus'}
+                  />
 
                   {'Min side'}
                 </Heading>
-                <Paragraph className={styles.menuSpacingSmall}>
+                <Paragraph
+                  className={topBannerExternalExampleStyles.marginBottomS}
+                >
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger'}
                 </Paragraph>
                 <Button svgPath={LockOutlineSVGpath}>
@@ -917,77 +693,107 @@ export const ExampleWithUserMenu: Story = {
               <Heading as={'h2'} level={2} hasSpacing>
                 {'Alle temaer'}
               </Heading>
-              <Heading as={'h3'} level={3} hasSpacing>
-                <a href={LenkerUinnlogget.PERSON_FORSIDE}>{'For personer'}</a>
-              </Heading>
-              <LinkGroup className={styles.menuSpacingLarge}>
-                {personlinks.map((link) => (
-                  <LinkGroup.Link
-                    key={link.text}
-                    href={link.href}
-                    onClick={(e): void => {
-                      e.preventDefault();
-                      topBannerRef.current?.closeMenu?.();
-                    }}
+              <div className={topBannerExternalExampleStyles.secondColumn}>
+                <div>
+                  <Heading as={'h3'} level={3} hasSpacing>
+                    <a href={LenkerUinnlogget.PERSON_FORSIDE}>
+                      {'For personer'}
+                    </a>
+                  </Heading>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
                   >
-                    {link.text}
-                  </LinkGroup.Link>
-                ))}
-              </LinkGroup>
-              <Heading as={'h3'} level={3} hasSpacing>
-                <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
-                  {'For bedrifter og organisasjoner'}
-                </a>
-              </Heading>
-              <LinkGroup>
-                {virksomhetlinks.map((link) => (
-                  <LinkGroup.Link
-                    key={link.text}
-                    href={link.href}
-                    onClick={(e): void => {
-                      e.preventDefault();
-                      topBannerRef.current?.closeMenu?.();
-                    }}
+                    {personlinks.map((link) => (
+                      <LinkGroup.Link
+                        key={link.text}
+                        href={link.href}
+                        onClick={(e): void => {
+                          e.preventDefault();
+                          topBannerRef.current?.closeMenu?.();
+                        }}
+                      >
+                        {link.text}
+                      </LinkGroup.Link>
+                    ))}
+                  </LinkGroup>
+                  <Heading as={'h3'} level={3} hasSpacing>
+                    <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
+                      {'For bedrifter og organisasjoner'}
+                    </a>
+                  </Heading>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
                   >
-                    {link.text}
-                  </LinkGroup.Link>
-                ))}
-              </LinkGroup>
+                    {virksomhetlinks.map((link) => (
+                      <LinkGroup.Link
+                        key={link.text}
+                        href={link.href}
+                        onClick={(e): void => {
+                          e.preventDefault();
+                          topBannerRef.current?.closeMenu?.();
+                        }}
+                      >
+                        {link.text}
+                      </LinkGroup.Link>
+                    ))}
+                  </LinkGroup>
+                </div>
+                <div>
+                  <Heading as={'h3'} level={3} hasSpacing>
+                    <a href={LenkerUinnlogget.RETTSKILDER}>{'Rettskilder'}</a>
+                  </Heading>
+                  <LinkGroup
+                    className={topBannerExternalExampleStyles.marginBottomXL}
+                  >
+                    <LinkGroup.Link
+                      href={LenkerUinnlogget.RETTSKILDER_PER_EMNE}
+                    >
+                      {'Rettskilder per emne'}
+                    </LinkGroup.Link>
+                    <LinkGroup.Link
+                      href={LenkerUinnlogget.RETTSKILDER_PER_TYPE}
+                      onClick={(e): void => {
+                        e.preventDefault();
+                        topBannerRef.current?.closeMenu?.();
+                      }}
+                    >
+                      {'Rettskilder per type'}
+                    </LinkGroup.Link>
+                  </LinkGroup>
+                  <Heading as={'h3'} level={3} hasSpacing>
+                    {'Om oss'}
+                  </Heading>
+                  <ul
+                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.noPadding}`}
+                  >
+                    {omOssLinks.map((link, index) => (
+                      <li
+                        key={index}
+                        className={topBannerExternalExampleStyles.marginBottomS}
+                      >
+                        <Link
+                          href={link.href}
+                          svgPath={link.svgPath}
+                          onClick={(e): void => {
+                            e.preventDefault();
+                            topBannerRef.current?.closeMenu?.();
+                          }}
+                        >
+                          {link.text}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </>
           }
-          thirdColumn={
-            <div className={styles.columnWrapper}>
-              <Heading as={'h3'} level={3} hasSpacing>
-                <a href={LenkerUinnlogget.RETTSKILDER}>{'Rettskilder'}</a>
-              </Heading>
-              <LinkGroup className={styles.menuSpacingLarge}>
-                <LinkGroup.Link href={LenkerUinnlogget.RETTSKILDER_PER_EMNE}>
-                  {'Rettskilder per emne'}
-                </LinkGroup.Link>
-                <LinkGroup.Link href={LenkerUinnlogget.RETTSKILDER_PER_TYPE}>
-                  {'Rettskilder per type'}
-                </LinkGroup.Link>
-              </LinkGroup>
-              <Heading as={'h3'} level={3} hasSpacing>
-                {'Om oss'}
-              </Heading>
-              <ul
-                className={`${styles.linkWrapper} ${styles.columnThreeLinkPadding}`}
-              >
-                {omOssLinks.map((link, index) => (
-                  <li key={index} className={styles.menuSpacingSmall}>
-                    <Link href={link.href} svgPath={link.svgPath}>
-                      {link.text}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          }
-          user={user}
+          user={userMock}
           searchContent={
             <>
-              <Paragraph className={'bottomSpacingS'}>
+              <Paragraph
+                className={topBannerExternalExampleStyles.marginBottomS}
+              >
                 {'Dette har andre søkt på:'}
               </Paragraph>
               <LinkGroup>
@@ -1005,6 +811,7 @@ export const ExampleWithUserMenu: Story = {
               </LinkGroup>
             </>
           }
+          showUserMenu
           onLanguageClick={handleLanguageClick}
           onLogInClick={handleLogIn}
           onLogOutClick={handleLogOut}
@@ -1020,7 +827,6 @@ export const ExampleWithUserMenu: Story = {
           ref={modalRef}
           me={me}
           businesses={businesses}
-          people={people}
           onEntitySelect={async (entity) => {
             let role: User['role'];
             if (entity.name === me.name) {
@@ -1038,7 +844,6 @@ export const ExampleWithUserMenu: Story = {
             modalRef.current?.close();
           }}
         />
-        <TopBannerExternalUserMenu children={'Hei Lasse!'} />
       </>
     );
   },

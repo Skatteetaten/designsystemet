@@ -1,9 +1,15 @@
-import { ReactNode, Ref } from 'react';
+import { MouseEventHandler, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+
+import { User } from '../TopBannerExternal/TopBannerExternal.types';
 
 export interface TopBannerExternalUserMenuProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
   /** Innhold i komponenten */
-  children: ReactNode;
+  user: User | null | undefined;
+  varslerAmount?: number;
+  onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
+  onUserClick?: MouseEventHandler<HTMLButtonElement>;
+  canRepresentOthers?: boolean;
 }

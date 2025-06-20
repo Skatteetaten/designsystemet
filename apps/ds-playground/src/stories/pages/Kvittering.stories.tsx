@@ -107,6 +107,7 @@ export const Kvittering = (): JSX.Element => {
         onEntitySelect={async () => {
           setUser({
             role: 'meg',
+            name: me.name,
           });
           modalRef.current?.close();
         }}

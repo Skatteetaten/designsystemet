@@ -2,6 +2,7 @@ import { MouseEventHandler, ReactNode, Ref, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { SearchFieldProps } from '@skatteetaten/ds-forms';
+import { Person } from '@skatteetaten/ds-overlays';
 
 import { TopBannerLangPickerProps } from '../TopBannerLangPicker/TopBannerLangPicker.types';
 import { TopBannerLogoProps } from '../TopBannerLogo/TopBannerLogo.types';
@@ -9,11 +10,15 @@ import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.t
 
 type UserMyself = {
   role: 'meg';
+  name: string;
+  person?: Person;
 };
 
 type UserOthers = {
   role: 'andre' | 'virksomhet';
   name: string;
+  orgnr?: string;
+  person?: Person;
 };
 
 export type User = UserMyself | UserOthers;
@@ -26,6 +31,8 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 type searchProps = Pick<SearchFieldProps, 'onSearch' | 'onSearchClick'>;
 
 export interface TopBannerExternalProps extends BaseProps, searchProps {
+  varslerAmount?: number;
+  me?: Person;
   ref?: Ref<TopBannerExternalHandle>;
   classNames?: { columns?: string };
   /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. Hvis språk som sendes inn ikke finnes blant standardspråkene eller i additionalLanguages så vil den falle tilbake på bokmål som standard. */
@@ -38,6 +45,8 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
   onLogInClick?: MouseEventHandler<HTMLButtonElement>;
   /** Callback når Logg ut-knapp trykkes på. Om Logg ut-knappen er synlig eller ikke henger sammen med onLogIn, onLogOut og userRole. Knappen er synlig hvis userRole har en rolle og det finnes callback-funksjoner for Logg inn- og Logg ut-knappen. NB! Husk å nullstill userRole i onLogOut slik at Logg inn-knappen blir synlig. */
   onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
+  RolePicker?: MouseEventHandler<HTMLButtonElement>;
+  canRepresentOthers?: boolean;
   /**
    Styrer rolle og navn til innloget bruker. Hvis user.role er satt til 'meg', vises 'Meg selv' automatisk på user-knappen. Rollen som velges dikterer også hvilket ikon user-knappen får.
    Hvis role ikke er lik 'meg' må user.name settes for å styre teksten på user-knappen.
@@ -72,6 +81,7 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
   logo?: TopBannerLogoProps;
   /** Legger til flere alternativer i språkvelgeren. */
   additionalLanguages?: TopBannerLangPickerProps['additionalLanguages'];
+  showUserMenu?: boolean;
 }
 
 export interface TopBannerExternalHandle
