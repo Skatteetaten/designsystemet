@@ -22,9 +22,11 @@ Each component should follow this folder structure:
 ```
 /MyComponent
   __tests__
-    MyComponent.tests.[ts|tsx]
+    defaults.tests.[ts|tsx]
   MyComponent.tsx
   MyComponent.module.scss
+  defaults.ts
+  MyComponent.types.ts
   MyComponent.Item.tsx          # For compound components
   MyComponent.Item.module.scss  # For compound components
 ```
