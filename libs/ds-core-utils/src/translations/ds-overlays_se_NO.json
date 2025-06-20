@@ -13,7 +13,7 @@
   "rolepicker.Cancel": "Botke",
   "rolepicker.Deceased": "Oamehaš",
   "rolepicker.Deleted": "\tHeaittihuvvon",
-  "rolepicker.GoToMyPage": "\tVuolgge Mu siidui",
+  "rolepicker.GoToMyPage": "Vuolgge Mu siidui",
   "rolepicker.Heading": "\tGean áiggut ovddastit?",
   "rolepicker.InactiveBusinessPostfix": "\t(Heaittihuvvon)",
   "rolepicker.Logout": "Čálit olggos",
@@ -39,5 +39,11 @@
   "rolepicker.ShowLess": "Čájet unnit",
   "rolepicker.ShowSubBusinessesHeading": "\tČájet vuolleovttadagaid",
   "rolepicker.SubUnit": "\tVuolleovttadat",
-  "rolepicker.YouCanRepresent": "\tDon sáhtát ovddastit"
+  "rolepicker.YouCanRepresent": "\tDon sáhtát ovddastit",
+  "topbannerexternalusermenu.AboutMe": "(Om meg)",
+  "topbannerexternalusermenu.AboutTheOrganisation": "(Om virksomheten)",
+  "topbannerexternalusermenu.MyPage": "Mu siidui",
+  "topbannerexternalusermenu.Notification": "(Varsel)",
+  "topbannerexternalusermenu.OnBehalfOf": "(På vegne av)",
+  "topbannerexternalusermenu.SwitchUser": "(Bytt bruker)"
 }

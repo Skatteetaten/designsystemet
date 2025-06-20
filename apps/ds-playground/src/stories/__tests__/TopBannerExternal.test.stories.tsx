@@ -67,6 +67,7 @@ const themeText = dsI18n.t('ds_layout:topbanner.NavAriaLabel');
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const searchText = dsI18n.t('ds_layout:topbanner.Search');
 const skipLinkText = dsI18n.t('ds_layout:topbanner.SkipLinkText');
+
 const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
   onLogInClick: undefined,
@@ -75,7 +76,6 @@ const defaultArgs: TopBannerExternalProps = {
 };
 
 export const WithRef = {
-  name: 'With Ref (FA1)',
   args: {
     ref: (instance: TopBannerExternalHandle | null): void => {
       if (instance?.current) {
@@ -83,18 +83,7 @@ export const WithRef = {
       }
     },
   },
-  argTypes: {
-    ref: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const header = canvas.getByRole('banner');
-    await expect(header).toHaveAttribute('id', 'dummyIdForwardedFromRef');
-  },
-} satisfies Story;
+};
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',

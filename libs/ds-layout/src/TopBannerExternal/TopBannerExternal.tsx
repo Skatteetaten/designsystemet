@@ -27,6 +27,8 @@ import {
   TopBannerMenu,
 } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
+import { TopBannerExternalUserMenu } from '../TopBannerExternalUserMenu/TopBannerExternalUserMenu';
+import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
 import { TopBannerLangPicker } from '../TopBannerLangPicker/TopBannerLangPicker';
 import { TopBannerLogo } from '../TopBannerLogo/TopBannerLogo';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
@@ -58,6 +60,9 @@ export const TopBannerExternal = ({
   onUserClick,
   onSearch,
   onSearchClick,
+  showUserMenu,
+  varslerAmount,
+  canRepresentOthers,
 }: TopBannerExternalProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
   const isMobile = !useMediaQuery('(min-width: 480px)');
@@ -213,8 +218,7 @@ export const TopBannerExternal = ({
               additionalLanguages={additionalLanguages}
               onLanguageClick={onLanguageClick}
             />
-
-            {onLogOutClick && user && (
+            {onLogOutClick && user && !showUserMenu && (
               <>
                 <TopBannerUserButton user={user} onClick={onUserClick} />
                 <TopBannerButton
@@ -225,7 +229,6 @@ export const TopBannerExternal = ({
                 </TopBannerButton>
               </>
             )}
-
             {onLogInClick && !user && (
               <TopBannerButton
                 svgPath={LockOutlineSVGpath}
@@ -234,6 +237,19 @@ export const TopBannerExternal = ({
               >
                 {t('topbannerbutton.Login')}
               </TopBannerButton>
+            )}
+            {showUserMenu && (
+              <TopBannerInternalActionMenu>
+                {
+                  <TopBannerExternalUserMenu
+                    canRepresentOthers={canRepresentOthers}
+                    user={user}
+                    varslerAmount={varslerAmount || 0}
+                    onLogOutClick={onLogOutClick}
+                    onUserClick={onUserClick}
+                  />
+                }
+              </TopBannerInternalActionMenu>
             )}
             {showSearch && (
               <>

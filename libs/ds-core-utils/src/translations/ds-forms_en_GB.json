@@ -43,11 +43,11 @@
   "fileuploader.NoRightsUploadError": "You do not have permission to upload files",
   "fileuploader.SuccessIconLabel": "Completed",
   "fileuploader.UploadedHeading": "Uploaded:",
-  "fileuploader.UploadedSummary": "({{fileCount}} file(s) uploaded)",
+  "fileuploader.UploadedSummary": "{{fileCount}} file(s) uploaded",
   "searchfield.ButtonTitle": "Search",
   "searchfield.ClearButtonTitle": "Clear",
   "searchfield.Focus": "Use up and down to choose options when they are shown",
   "searchfield.NumberOfResults": "{{ant}} items shown.",
-  "textarea.CharactersLeft": "({{ant}} characters remaining)",
-  "textarea.TooManyCharacters": "({{ant}} characters too many)"
+  "textarea.CharactersLeft": "{{ant}} characters remaining",
+  "textarea.TooManyCharacters": "{{ant}} characters too many"
 }

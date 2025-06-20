@@ -39,5 +39,11 @@
   "rolepicker.ShowLess": "Vis færre",
   "rolepicker.ShowSubBusinessesHeading": "Vis underenheter",
   "rolepicker.SubUnit": "Underenhet",
-  "rolepicker.YouCanRepresent": "Du kan representere"
+  "rolepicker.YouCanRepresent": "Du kan representere",
+  "topbannerexternalusermenu.AboutMe": "Om meg",
+  "topbannerexternalusermenu.AboutTheOrganisation": "Om virksomheten",
+  "topbannerexternalusermenu.MyPage": "Min side",
+  "topbannerexternalusermenu.Notification": "Varsel",
+  "topbannerexternalusermenu.OnBehalfOf": "På vegne av",
+  "topbannerexternalusermenu.SwitchUser": "Bytt bruker"
 }
