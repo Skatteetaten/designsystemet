@@ -8,7 +8,7 @@ export interface TopBannerExternalUserMenuProps extends BaseProps {
   ref?: Ref<HTMLButtonElement>;
   /** Innhold i komponenten */
   user: User;
-  varslerAmount?: number;
+  notificationCount?: number;
   onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
   onUserClick?: MouseEventHandler<HTMLButtonElement>;
   canRepresentOthers?: boolean;

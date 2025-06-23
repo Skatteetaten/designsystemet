@@ -40,7 +40,7 @@ export const TopBannerExternalUserMenu = ({
   lang,
   'data-testid': dataTestId,
   user,
-  varslerAmount,
+  notificationCount,
   onLogOutClick,
   onUserClick,
   canRepresentOthers,
@@ -88,7 +88,7 @@ export const TopBannerExternalUserMenu = ({
 
   const domainName = window.location.hostname;
   const varselCircleStyle =
-    varslerAmount && varslerAmount > 9
+    notificationCount && notificationCount > 9
       ? styles.varselCircleLarge
       : styles.varselCircleSmall;
   return (
@@ -158,18 +158,19 @@ export const TopBannerExternalUserMenu = ({
                     {t('ds_overlays:topbannerexternalusermenu.Notification')}
                   </Link>
                 )}
-                {typeof varslerAmount == 'number' && varslerAmount > 0 && (
-                  <span
-                    className={varselCircleStyle}
-                    data-testid={'varsel-circle'}
-                  >
-                    <span className={styles.varselAmount}>
-                      {varslerAmount > 99
-                        ? '99+'
-                        : varslerAmount > 1 && varslerAmount}
+                {typeof notificationCount == 'number' &&
+                  notificationCount > 0 && (
+                    <span
+                      className={varselCircleStyle}
+                      data-testid={'varsel-circle'}
+                    >
+                      <span className={styles.varselAmount}>
+                        {notificationCount > 99
+                          ? '99+'
+                          : notificationCount > 1 && notificationCount}
+                      </span>
                     </span>
-                  </span>
-                )}
+                  )}
               </div>
               <div>
                 <Link

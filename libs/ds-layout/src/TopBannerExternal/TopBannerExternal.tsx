@@ -60,7 +60,7 @@ export const TopBannerExternal = ({
   onSearch,
   onSearchClick,
   showUserMenu,
-  varslerAmount,
+  notificationCount,
   canRepresentOthers,
 }: TopBannerExternalProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
@@ -241,7 +241,7 @@ export const TopBannerExternal = ({
               <TopBannerExternalUserMenu
                 canRepresentOthers={canRepresentOthers}
                 user={user}
-                varslerAmount={varslerAmount || 0}
+                notificationCount={notificationCount || 0}
                 onLogOutClick={onLogOutClick}
                 onUserClick={onUserClick}
               />

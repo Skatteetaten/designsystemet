@@ -601,7 +601,7 @@ export const ExampleWithUserMenu: Story = {
         <TopBannerExternal
           ref={topBannerRef}
           canRepresentOthers={businesses.total > 0}
-          varslerAmount={3}
+          notificationCount={3}
           classNames={{
             columns: topBannerExternalExampleStyles.columns,
           }}

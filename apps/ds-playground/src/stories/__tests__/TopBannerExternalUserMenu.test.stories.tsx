@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TopBannerExternalUserMenu } from '@skatteetaten/ds-layout';
 
 const meta: Meta<typeof TopBannerExternalUserMenu> = {
@@ -17,7 +18,7 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
         type: '',
       },
     },
-    varslerAmount: 5,
+    notificationCount: 5,
     canRepresentOthers: true,
     onUserClick: fn(),
     onLogOutClick: fn(),
@@ -49,7 +50,7 @@ export const Default: Story = {
 export const WithNoNotifications: Story = {
   name: 'No Notifications',
   args: {
-    varslerAmount: 0,
+    notificationCount: 0,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -63,7 +64,7 @@ export const WithNoNotifications: Story = {
 export const WithMoreThan9Notifications: Story = {
   name: 'More Than 99 Notifications',
   args: {
-    varslerAmount: 100,
+    notificationCount: 100,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -74,8 +75,7 @@ export const WithMoreThan9Notifications: Story = {
   },
 };
 
-export const switchUser: Story = {
-  name: 'Switch User',
+export const SwitchUser: Story = {
   args: {
     onUserClick: fn(),
     onLogOutClick: fn(),
@@ -94,8 +94,7 @@ export const switchUser: Story = {
   },
 };
 
-export const logOut: Story = {
-  name: 'Log Out',
+export const LogOut: Story = {
   args: {
     onLogOutClick: fn(),
   },
