@@ -781,7 +781,7 @@ export const ExampleWithUserMenu: Story = {
               </div>
             </>
           }
-          user={userMock}
+          user={user}
           searchContent={
             <>
               <Paragraph

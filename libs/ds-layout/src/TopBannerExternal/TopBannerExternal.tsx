@@ -28,7 +28,6 @@ import {
 } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerExternalUserMenu } from '../TopBannerExternalUserMenu/TopBannerExternalUserMenu';
-import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
 import { TopBannerLangPicker } from '../TopBannerLangPicker/TopBannerLangPicker';
 import { TopBannerLogo } from '../TopBannerLogo/TopBannerLogo';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
@@ -238,18 +237,14 @@ export const TopBannerExternal = ({
                 {t('topbannerbutton.Login')}
               </TopBannerButton>
             )}
-            {showUserMenu && (
-              <TopBannerInternalActionMenu>
-                {
-                  <TopBannerExternalUserMenu
-                    canRepresentOthers={canRepresentOthers}
-                    user={user}
-                    varslerAmount={varslerAmount || 0}
-                    onLogOutClick={onLogOutClick}
-                    onUserClick={onUserClick}
-                  />
-                }
-              </TopBannerInternalActionMenu>
+            {user && showUserMenu && (
+              <TopBannerExternalUserMenu
+                canRepresentOthers={canRepresentOthers}
+                user={user}
+                varslerAmount={varslerAmount || 0}
+                onLogOutClick={onLogOutClick}
+                onUserClick={onUserClick}
+              />
             )}
             {showSearch && (
               <>
