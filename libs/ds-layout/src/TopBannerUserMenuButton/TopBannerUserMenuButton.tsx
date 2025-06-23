@@ -91,8 +91,6 @@ export const TopBannerUserMenuButton = ({
         svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
         className={styles.arrowDesktop}
       />
-
-      <span className={styles.srOnly}>&nbsp;{t('topbannerbutton.Menu')}</span>
     </TopBannerButton>
   );
 };
