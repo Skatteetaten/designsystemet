@@ -68,6 +68,7 @@ export const TabsTab = ({
       lang={lang}
       data-testid={dataTestId}
       role={'tab'}
+      type={'button'}
       tabIndex={activeTab !== value ? -1 : 0}
       aria-selected={activeTab === value}
       aria-controls={`ds-tab-panel-${baseId}-${value}`}
