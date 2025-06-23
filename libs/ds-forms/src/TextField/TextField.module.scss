@@ -1,4 +1,8 @@
-@use 'libs/ds-core-utils/src/styles';
+.wrapper {
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
+}
 
 .textbox {
   display: block;

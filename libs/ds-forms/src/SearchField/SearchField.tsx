@@ -60,6 +60,7 @@ export const SearchField = (({
   value,
   enableSRNavigationHint = getEnableSRNavigationHintDefault(),
   hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
+  hasSpacing,
   hideLabel = getSearchFieldHideLabelDefault(),
   onBlur,
   onChange,
@@ -177,6 +178,7 @@ export const SearchField = (({
       id={searchFieldId}
       className={containerClassName}
       lang={lang}
+      data-has-spacing={hasSpacing}
       onKeyDown={handleKeyDown}
     >
       <LabelWithHelp

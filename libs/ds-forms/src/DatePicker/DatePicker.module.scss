@@ -1,3 +1,9 @@
+.wrapper {
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
+}
+
 .dateContainer {
   position: relative;
   display: flex;

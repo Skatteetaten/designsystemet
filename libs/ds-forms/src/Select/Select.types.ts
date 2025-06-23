@@ -51,6 +51,8 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   label: string;
   /** Tilleggstekst */
   description?: LabelWithHelpProps['description'];
+  /** Margin under feltet */
+  hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
   /** Overskriver default hjelpeikon */

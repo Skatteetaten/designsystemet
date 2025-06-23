@@ -38,6 +38,7 @@ const meta = {
     label: { table: { category: category.props } },
     disabledDates: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -169,6 +170,7 @@ export const Examples: Story = {
           errorMessage={errorMessage}
           maxDate={maxDate}
           minDate={minDate}
+          hasSpacing
           required
           onSelectDate={handleSelect}
           onChange={(e) => setInputValue(e.target.value)}

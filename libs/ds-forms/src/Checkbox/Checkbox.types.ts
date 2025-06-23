@@ -32,6 +32,8 @@ export interface CheckboxProps
   description?: string;
   /** Tekst på feilmelding */
   errorMessage?: string;
+  /** Margin under checkboxen */
+  hasSpacing?: boolean;
   /** Skjuler ledeteksten men synlig for skjermleser */
   hideLabel?: boolean;
 }

@@ -74,6 +74,8 @@ interface SearchFieldCommonProps
   description?: LabelWithHelpProps['description'];
   /** Tekst på feilmelding */
   errorMessage?: string;
+  /** Margin under feltet */
+  hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
   /** Overskriver default hjelpeikon */

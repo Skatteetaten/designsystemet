@@ -1284,7 +1284,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <div class>
+        <div class="_wrapper_1dg5q_1">
           <label id="labelId-:r13:"
                  class="_label_348na_5"
                  for="textFieldTextboxId-:r11:"
@@ -1292,7 +1292,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
             Navn
           </label>
           <input id="textFieldTextboxId-:r11:"
-                 class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
+                 class="_textbox_1dg5q_5 $ _textboxMarginTop_1dg5q_24"
                  data-variant="medium"
                  autocomplete="off"
           >

@@ -53,6 +53,7 @@ const meta = {
     description: { table: { disable: true } },
     label: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -726,6 +727,7 @@ export const OpenCalendarMovesOver = {
   args: {
     ...defaultArgs,
     value: valueDate,
+    hasSpacing: true,
   },
   parameters: {
     HTMLSnapshot: { disable: true },

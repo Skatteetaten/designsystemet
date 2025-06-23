@@ -29,6 +29,7 @@ const meta = {
     },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,

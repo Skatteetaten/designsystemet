@@ -14,6 +14,10 @@
     margin-bottom: var(--spacing-s);
   }
 
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
+
   .input {
     position: absolute;
     top: 2px;

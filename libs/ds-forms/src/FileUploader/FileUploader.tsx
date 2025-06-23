@@ -46,6 +46,7 @@ export const FileUploader = (({
   uploadResult,
   uploadedFiles,
   invalidCharacterRegexp,
+  hasSpacing,
   hideLabel,
   showRequiredMark,
   shouldNormalizeFileName,
@@ -195,6 +196,7 @@ export const FileUploader = (({
       className={concatenatedClassnames}
       lang={lang}
       data-testid={dataTestId}
+      data-has-spacing={hasSpacing}
     >
       {label && (
         <LabelWithHelp
