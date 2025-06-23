@@ -3,6 +3,8 @@ import { expect, within } from '@storybook/test';
 
 import { Table } from '@skatteetaten/ds-table';
 
+import { wrapper } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: Table.HeaderCell,
   title: 'Tester/Table/HeaderCell',
@@ -18,6 +20,7 @@ const meta = {
     as: { table: { disable: true } },
     children: { table: { disable: true } },
     colSpan: { table: { disable: true } },
+    isSortDisabled: { table: { disable: true } },
     isSortable: { table: { disable: true } },
     scope: { table: { disable: true } },
     sortKey: { table: { disable: true } },
@@ -111,5 +114,30 @@ export const WithChildren = {
     const canvas = within(canvasElement);
     const dataCell = canvas.getByText('columnheader');
     await expect(dataCell).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithDisabled = {
+  render: Template,
+  name: 'With Disabled (Table Header A8)',
+  args: {
+    children: 'columnheader',
+    isSortable: true,
+    isSortDisabled: true,
+    sortKey: 'columnheader',
+  },
+  argTypes: {
+    isSortDisabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} button`,
+      hover: `${wrapper} button`,
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const dataCell = canvas.getByText('columnheader');
+    await expect(dataCell).toBeDisabled();
   },
 } satisfies Story;

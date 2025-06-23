@@ -9,17 +9,17 @@ exports[`Tester/Table/Table Defaults play-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Category
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Items
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Expenditure
@@ -101,17 +101,17 @@ exports[`Tester/Table/Table WithAttributes play-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Category
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Items
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Expenditure
@@ -191,17 +191,17 @@ exports[`Tester/Table/Table WithCanBeManuallyFocused play-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Category
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Items
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Expenditure
@@ -279,16 +279,16 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
+          <td class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60">
           </td>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_left_1jim6_60"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1a:"
@@ -306,15 +306,15 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1b:"
@@ -332,14 +332,14 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_center_1jim6_66"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1c:"
@@ -357,15 +357,15 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1d:"
@@ -648,16 +648,16 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
+          <td class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60">
           </td>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_left_1jim6_60"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rk:"
@@ -675,15 +675,15 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rl:"
@@ -701,14 +701,14 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_center_1jim6_66"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rm:"
@@ -726,15 +726,15 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rn:"
@@ -1000,27 +1000,27 @@ exports[`Tester/Table/Table WithFullWidthAndRightButtonPosition smoke-test 1`] =
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Dekningsgrad
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_right_1jim6_63"
               scope="col"
           >
             Beløp
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_center_wql7r_57"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_center_1jim6_66"
               scope="col"
           >
             Måned
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_right_1jim6_63"
               scope="col"
           >
             Avkastning
           </th>
-          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
+          <td class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60">
           </td>
         </tr>
       </thead>
@@ -1255,27 +1255,27 @@ exports[`Tester/Table/Table WithFullWidthAndTextAlignment smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             left
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_center_wql7r_57"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_center_1jim6_66"
               scope="col"
           >
             center
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_right_1jim6_63"
               scope="col"
           >
             right
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             default
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_right_1jim6_63"
               scope="col"
           >
             right
@@ -1332,16 +1332,16 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
+          <td class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60">
           </td>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_left_1jim6_60"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r22:"
@@ -1359,15 +1359,15 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r23:"
@@ -1385,14 +1385,14 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_center_1jim6_66"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r24:"
@@ -1410,15 +1410,15 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r25:"
@@ -1686,17 +1686,17 @@ exports[`Tester/Table/Table WithRef play-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Category
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Items
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
               scope="col"
           >
             Expenditure
@@ -1778,17 +1778,17 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </caption>
         <thead>
           <tr class>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               Forename
             </th>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               Surname
             </th>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               email
@@ -1841,17 +1841,17 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </caption>
         <thead>
           <tr class>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               Forename
             </th>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               Surname
             </th>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               email
@@ -1904,17 +1904,17 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </caption>
         <thead>
           <tr class>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               Forename
             </th>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               Surname
             </th>
-            <th class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51"
+            <th class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60"
                 scope="col"
             >
               email
@@ -1971,16 +1971,16 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_left_wql7r_51">
+          <td class="_headerCell_1jim6_1 _headerCell_compact_1jim6_72  _headerCell_left_1jim6_60">
           </td>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_left_1jim6_60"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_compact_wql7r_63"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_compact_1jim6_72"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r0:"
@@ -1998,15 +1998,15 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_compact_wql7r_63"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_compact_1jim6_72"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1:"
@@ -2024,14 +2024,14 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_center_1jim6_66"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_compact_wql7r_63"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_compact_1jim6_72"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r2:"
@@ -2049,15 +2049,15 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_compact_wql7r_63"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_compact_1jim6_72"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r3:"
@@ -2323,27 +2323,27 @@ exports[`Tester/Table/Table WithVariantCompactAndRightButtonPosition smoke-test 
       </caption>
       <thead>
         <tr class>
-          <th class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_compact_1jim6_72  _headerCell_left_1jim6_60"
               scope="col"
           >
             Dekningsgrad
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_compact_1jim6_72  _headerCell_right_1jim6_63"
               scope="col"
           >
             Beløp
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_center_wql7r_57"
+          <th class="_headerCell_1jim6_1 _headerCell_compact_1jim6_72  _headerCell_center_1jim6_66"
               scope="col"
           >
             Måned
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_compact_1jim6_72  _headerCell_right_1jim6_63"
               scope="col"
           >
             Avkastning
           </th>
-          <td class="_headerCell_wql7r_1 _headerCell_compact_wql7r_63  _headerCell_left_wql7r_51">
+          <td class="_headerCell_1jim6_1 _headerCell_compact_1jim6_72  _headerCell_left_1jim6_60">
           </td>
         </tr>
       </thead>
@@ -2578,16 +2578,16 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
       </caption>
       <thead>
         <tr class>
-          <td class="_headerCell_wql7r_1 _headerCell_standard_wql7r_1  _headerCell_left_wql7r_51">
+          <td class="_headerCell_1jim6_1 _headerCell_standard_1jim6_1  _headerCell_left_1jim6_60">
           </td>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_left_wql7r_51"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_left_1jim6_60"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1m:"
@@ -2605,15 +2605,15 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-belop"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Beløp
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1n:"
@@ -2631,14 +2631,14 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_center_wql7r_57"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_center_1jim6_66"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Måned
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1o:"
@@ -2656,15 +2656,15 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="_headerCell_wql7r_1 _headerCell_noPadding_wql7r_17  _headerCell_right_wql7r_54"
+          <th class="_headerCell_1jim6_1 _headerCell_noPadding_1jim6_17  _headerCell_right_1jim6_63"
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="_headerCellSortButton_wql7r_20 _headerCell_standard_wql7r_1"
+            <button class="_headerCellSortButton_1jim6_20 _headerCell_standard_1jim6_1"
                     type="button"
             >
               Avkastning
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_wql7r_31"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _headerCellSortButtonIcon_1jim6_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1p:"

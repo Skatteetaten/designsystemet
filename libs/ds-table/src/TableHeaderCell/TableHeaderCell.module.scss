@@ -31,6 +31,10 @@
       :active > & {
         fill: var(--semantic-interactive-foreground);
       }
+
+      :disabled > & {
+        fill: var(--semantic-disabled-foreground);
+      }
     }
 
     &:hover {
@@ -46,6 +50,15 @@
       background: var(--semantic-interactive-background);
       box-shadow: inset 0 0 0 3px var(--semantic-interactive-foreground);
       color: var(--semantic-interactive-foreground);
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      background-color: transparent;
+      box-shadow: none;
+      color: inherit;
+      cursor: not-allowed;
     }
   }
 
