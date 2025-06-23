@@ -10,6 +10,7 @@ export interface TopBannerUserMenuButtonProps extends BaseProps {
   ref?: Ref<HTMLButtonElement>;
   /** Hvilken rolle innlogget bruker har. Hvis user.role er lik 'meg' settes automatisk teksten 'Meg selv' ellers settes teksten til user.name */
   user: User;
+  hasNotifications: boolean;
   isMenuOpen: boolean;
   /** Callback når knappen trykkes på. */
   onClick?: MouseEventHandler<HTMLButtonElement>;

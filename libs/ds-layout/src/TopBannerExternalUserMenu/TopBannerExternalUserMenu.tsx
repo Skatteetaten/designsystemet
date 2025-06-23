@@ -87,10 +87,7 @@ export const TopBannerExternalUserMenu = ({
   }, [isOpen]);
 
   const domainName = window.location.hostname;
-  const varselCircleStyle =
-    notificationCount && notificationCount > 9
-      ? styles.varselCircleLarge
-      : styles.varselCircleSmall;
+
   return (
     <>
       <TopBannerUserMenuButton
@@ -102,6 +99,7 @@ export const TopBannerExternalUserMenu = ({
         ref={mergedButtonRef}
         user={user ?? undefined}
         isMenuOpen={isOpen}
+        hasNotifications={!!notificationCount}
         onClick={() => {
           setOpen(!isOpen);
         }}
@@ -141,7 +139,8 @@ export const TopBannerExternalUserMenu = ({
                 </InlineButton>
               </div>
               <Divider></Divider>
-              <div className={styles.varselWrapper}>
+
+              <div className={styles.notificationWrapper}>
                 {user?.role === 'virksomhet' && (
                   <Link
                     svgPath={BellSVGpath}
@@ -158,19 +157,16 @@ export const TopBannerExternalUserMenu = ({
                     {t('ds_overlays:topbannerexternalusermenu.Notification')}
                   </Link>
                 )}
-                {typeof notificationCount == 'number' &&
-                  notificationCount > 0 && (
-                    <span
-                      className={varselCircleStyle}
-                      data-testid={'varsel-circle'}
-                    >
-                      <span className={styles.varselAmount}>
-                        {notificationCount > 99
-                          ? '99+'
-                          : notificationCount > 1 && notificationCount}
-                      </span>
-                    </span>
-                  )}
+                {!!notificationCount && notificationCount > 0 && (
+                  <span
+                    className={styles.notificationBadge}
+                    data-testid={'varsel-circle'}
+                  >
+                    {notificationCount > 99
+                      ? '99+'
+                      : notificationCount > 1 && notificationCount}
+                  </span>
+                )}
               </div>
               <div>
                 <Link

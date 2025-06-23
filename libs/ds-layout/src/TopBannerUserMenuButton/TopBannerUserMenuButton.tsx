@@ -24,6 +24,7 @@ export const TopBannerUserMenuButton = ({
   'data-testid': dataTestId,
   onClick,
   user,
+  hasNotifications,
   isMenuOpen,
 }: TopBannerUserMenuButtonProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
@@ -91,6 +92,7 @@ export const TopBannerUserMenuButton = ({
         svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
         className={styles.arrowDesktop}
       />
+      {hasNotifications && <span className={styles.notificationBadge}></span>}
     </TopBannerButton>
   );
 };

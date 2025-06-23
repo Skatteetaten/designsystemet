@@ -24,23 +24,48 @@
   }
 }
 
+.notificationBadge {
+  position: absolute;
+  top: 0;
+  right: 1.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--palette-burgundy-70);
+  outline: 2px solid var(--palette-graphite-0);
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    top: -0.25rem;
+    right: -0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
 .menuButton {
   z-index: 1000;
 
   .iconWrapper {
     display: flex;
     align-items: center;
-    padding: var(--spacing-xs);
   }
 
   .userIcon {
     display: flex;
+    width: 1.75rem;
+    height: 1.75rem;
     flex-shrink: 0;
-    padding: var(--spacing-xxs);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--semantic-interactive-main);
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      background: none;
+    }
 
     &Svg {
-      width: var(--size-medium);
-      fill: currentcolor;
+      fill: var(--palette-graphite-0);
     }
   }
 
