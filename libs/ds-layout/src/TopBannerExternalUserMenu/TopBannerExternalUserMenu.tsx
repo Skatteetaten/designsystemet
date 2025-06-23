@@ -1,4 +1,4 @@
-import { JSX, useRef, useState } from 'react';
+import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
@@ -13,7 +13,6 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { TopBannerExternalUserMenuProps } from './TopBannerExternalUserMenu.types';
-import { User } from '../TopBannerExternal/TopBannerExternal.types';
 
 import styles from './TopBannerExternalUserMenu.module.scss';
 
@@ -30,8 +29,6 @@ export const TopBannerExternalUserMenu = ({
   canRepresentOthers,
 }: TopBannerExternalUserMenuProps): JSX.Element => {
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
-  const modalRef = useRef<HTMLDialogElement>(null);
-  const [role, setRole] = useState<User>();
   const domainName = window.location.hostname;
   const varselCircleStyle =
     varslerAmount && varslerAmount > 9
