@@ -86,7 +86,7 @@ export const TopBannerExternalUserMenu = ({
     }
   }, [isOpen]);
 
-  const domainName = window.location.hostname;
+  const domainName = 'skatteetaten.no';
 
   return (
     <>

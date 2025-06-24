@@ -91,7 +91,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
       >
       <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/varsler"
+           href="https://skatteetaten.no/web/minside/virksomhet/varsler"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -115,7 +115,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside"
+           href="https://skatteetaten.no/web/minside"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -131,7 +131,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/omvirksomheten"
+           href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -269,7 +269,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
       >
       <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/varsler"
+           href="https://skatteetaten.no/web/minside/virksomhet/varsler"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -293,7 +293,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside"
+           href="https://skatteetaten.no/web/minside"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -309,7 +309,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/omvirksomheten"
+           href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -441,7 +441,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
       >
       <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/person/varsler"
+           href="https://skatteetaten.no/web/minside/person/varsler"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -465,7 +465,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside"
+           href="https://skatteetaten.no/web/minside"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -481,7 +481,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/person/ommeg"
+           href="https://skatteetaten.no/web/minside/person/ommeg"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -619,7 +619,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
       >
       <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/varsler"
+           href="https://skatteetaten.no/web/minside/virksomhet/varsler"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -643,7 +643,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside"
+           href="https://skatteetaten.no/web/minside"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -659,7 +659,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/omvirksomheten"
+           href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -797,7 +797,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
       >
       <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/varsler"
+           href="https://skatteetaten.no/web/minside/virksomhet/varsler"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -821,7 +821,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside"
+           href="https://skatteetaten.no/web/minside"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -837,7 +837,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/omvirksomheten"
+           href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -973,7 +973,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
       >
       <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/varsler"
+           href="https://skatteetaten.no/web/minside/virksomhet/varsler"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -992,7 +992,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside"
+           href="https://skatteetaten.no/web/minside"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -1008,7 +1008,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
       </div>
       <div>
         <a class="_link_z7jba_1"
-           href="https://host.docker.internal/web/minside/virksomhet/omvirksomheten"
+           href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
