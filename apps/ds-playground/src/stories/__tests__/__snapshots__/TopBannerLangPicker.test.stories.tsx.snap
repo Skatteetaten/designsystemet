@@ -132,6 +132,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
           <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
                   lang="nb"
                   aria-current="true"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -171,6 +172,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
           <button class="_button_1qb8h_1"
                   lang="nn"
                   aria-current="false"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -201,6 +203,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
           <button class="_button_1qb8h_1"
                   lang="en"
                   aria-current="false"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -239,6 +242,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
           <button class="_button_1qb8h_1"
                   lang="se"
                   aria-current="false"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -427,6 +431,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
           <button class="_button_1qb8h_1"
                   lang="nb"
                   aria-current="false"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -457,6 +462,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
           <button class="_button_1qb8h_1"
                   lang="nn"
                   aria-current="false"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -487,6 +493,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
           <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
                   lang="en"
                   aria-current="true"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -534,6 +541,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
           <button class="_button_1qb8h_1"
                   lang="se"
                   aria-current="false"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -712,6 +720,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
           <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
                   lang="nb"
                   aria-current="true"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -751,6 +760,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
           <button class="_button_1qb8h_1"
                   lang="nn"
                   aria-current="false"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
@@ -781,6 +791,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
           <button class="_button_1qb8h_1"
                   lang="en"
                   aria-current="false"
+                  type="button"
           >
             <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"

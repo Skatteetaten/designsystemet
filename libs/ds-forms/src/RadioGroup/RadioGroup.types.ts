@@ -62,7 +62,7 @@ interface RadioGroupComponentCommonProps
   legend: FieldsetProps['legend'];
   /** Tilleggstekst */
   description?: FieldsetProps['description'];
-  /** Margin under gruppen */
+  /** Margin under komponenten */
   hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: FieldsetProps['helpText'];

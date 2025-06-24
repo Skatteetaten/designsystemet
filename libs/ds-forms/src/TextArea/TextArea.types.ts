@@ -54,7 +54,7 @@ export interface TextAreaCommonProps
   characterLimit?: number;
   /** Tekst på feilmelding */
   errorMessage?: string;
-  /** Margin under feltet */
+  /** Margin under komponenten */
   hasSpacing?: boolean;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;

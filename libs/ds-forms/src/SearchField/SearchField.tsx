@@ -297,6 +297,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
         </div>
         {!readOnly && (
           <button
+            type={'button'}
             className={searchButtonClassName}
             disabled={disabled}
             onClick={(event): void => {

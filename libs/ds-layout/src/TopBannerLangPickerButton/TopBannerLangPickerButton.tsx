@@ -41,6 +41,7 @@ export const TopBannerLangPickerButton = ({
       lang={lang}
       data-testid={dataTestId}
       aria-current={ariaCurrent}
+      type={'button'}
       onClick={onClick}
       onKeyDown={onKeyDown}
     >

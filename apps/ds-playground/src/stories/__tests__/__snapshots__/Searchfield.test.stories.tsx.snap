@@ -29,7 +29,9 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -84,7 +86,9 @@ exports[`Tester/SearchField TwoSearchFieldsOneWithHelpText smoke-test 1`] = `
           >
           </span>
         </div>
-        <button class="_searchButton_r6duz_112">
+        <button type="button"
+                class="_searchButton_r6duz_112"
+        >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
                viewbox="0 0 24 24"
                focusable="false"
@@ -153,7 +157,9 @@ exports[`Tester/SearchField TwoSearchFieldsOneWithHelpText smoke-test 1`] = `
           >
           </span>
         </div>
-        <button class="_searchButton_r6duz_112">
+        <button type="button"
+                class="_searchButton_r6duz_112"
+        >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
                viewbox="0 0 24 24"
                focusable="false"
@@ -209,7 +215,9 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -318,7 +326,9 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
           </ul>
         </div>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -375,7 +385,9 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -429,7 +441,9 @@ exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         search test
       </button>
     </div>
@@ -490,7 +504,9 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -545,7 +561,9 @@ dummyClassnameFormContainer">
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -618,7 +636,9 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -675,7 +695,9 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -731,7 +753,8 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112"
+      <button type="button"
+              class="_searchButton_r6duz_112"
               disabled
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
@@ -782,7 +805,9 @@ exports[`Tester/SearchField WithEnableSRNavigationHintsFalse play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -837,7 +862,9 @@ exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -905,7 +932,9 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1002,7 +1031,9 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1076,7 +1107,9 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1149,7 +1182,9 @@ exports[`Tester/SearchField WithLongInput smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1226,7 +1261,9 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1281,7 +1318,9 @@ exports[`Tester/SearchField WithLongPlaceholder smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1337,7 +1376,9 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1392,7 +1433,9 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1447,7 +1490,9 @@ exports[`Tester/SearchField WithRequired play-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1502,7 +1547,9 @@ exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1575,7 +1622,9 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1648,7 +1697,9 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <button class="_searchButton_r6duz_112 _searchButton_large_r6duz_135">
+      <button type="button"
+              class="_searchButton_r6duz_112 _searchButton_large_r6duz_135"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1702,7 +1753,9 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1751,7 +1804,9 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112 _searchButton_large_r6duz_135">
+      <button type="button"
+              class="_searchButton_r6duz_112 _searchButton_large_r6duz_135"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1800,7 +1855,9 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112  _searchButton_extraLarge_r6duz_141">
+      <button type="button"
+              class="_searchButton_r6duz_112  _searchButton_extraLarge_r6duz_141"
+      >
         <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_r6duz_131"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1854,7 +1911,9 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112">
+      <button type="button"
+              class="_searchButton_r6duz_112"
+      >
         Søk
       </button>
     </div>
@@ -1891,7 +1950,9 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112 _searchButton_large_r6duz_135">
+      <button type="button"
+              class="_searchButton_r6duz_112 _searchButton_large_r6duz_135"
+      >
         Søk
       </button>
     </div>
@@ -1928,7 +1989,9 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         >
         </span>
       </div>
-      <button class="_searchButton_r6duz_112  _searchButton_extraLarge_r6duz_141">
+      <button type="button"
+              class="_searchButton_r6duz_112  _searchButton_extraLarge_r6duz_141"
+      >
         Søk
       </button>
     </div>

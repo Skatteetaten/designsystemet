@@ -282,7 +282,6 @@ export const DatePickerCalendar = ({
           } ${
             selectedMonthIndex === 0 ? Number(selectedYear) - 1 : selectedYear
           }`}
-          type={'button'}
           disabled={isPrevMonthInvalid}
           onClick={(): void => onPrevMonth()}
         />
@@ -321,7 +320,6 @@ export const DatePickerCalendar = ({
           } ${
             selectedMonthIndex === 11 ? Number(selectedYear) + 1 : selectedYear
           }`}
-          type={'button'}
           disabled={isNextMonthInvalid}
           onClick={(): void => onNextMonth()}
         />
