@@ -5,11 +5,12 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { User } from '../TopBannerExternal/TopBannerExternal.types';
 
 export interface TopBannerExternalUserMenuProps extends BaseProps {
-  ref?: Ref<HTMLDivElement>;
+  ref?: Ref<HTMLButtonElement>;
   /** Innhold i komponenten */
-  user: User | null | undefined;
-  varslerAmount?: number;
+  user: User;
+  notificationCount?: number;
   onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
   onUserClick?: MouseEventHandler<HTMLButtonElement>;
   canRepresentOthers?: boolean;
+  children?: React.ReactNode;
 }

@@ -10,8 +10,7 @@ import {
   within,
 } from '@storybook/test';
 
-import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
-import { Select } from '@skatteetaten/ds-forms';
+import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -27,9 +26,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: {
-      table: { disable: true },
-    },
+    children: { table: { disable: true } },
     classNames: { table: { disable: true } },
     defaultValue: { table: { disable: true } },
     value: { table: { disable: true } },
@@ -46,7 +43,6 @@ const meta = {
     hidePlaceholder: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...formArrSize],
       control: 'inline-radio',
     },
     label: { table: { disable: true } },
@@ -197,9 +193,7 @@ export const Defaults = {
     await expect(selectNode).toBeInTheDocument();
     await expect(selectNode).toBeEnabled();
     await expect(selectNode).toHaveValue('');
-    await expect(selectNode).toHaveTextContent(
-      dsI18n.t('Shared:shared.ChooseValue')
-    );
+    await expect(selectNode).toHaveTextContent(getSelectPlaceholderDefault());
     await expect(selectNode).toHaveAttribute('id');
     await expect(selectNode.tagName).toBe('SELECT');
     await expect(selectNode).not.toBeRequired();

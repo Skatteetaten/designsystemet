@@ -191,7 +191,7 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
     >
       Navn
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:rb:"
@@ -211,7 +211,7 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_sf6vs_17   dummyClassname">
+    <div class="_description_5szkl_17   dummyClassname">
       beskrivelse
     </div>
     <input id="textFieldTextboxId-:r9:"
@@ -337,7 +337,7 @@ exports[`Tester/TextField WithDescription play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_description_sf6vs_17">
+    <div class="_description_5szkl_17">
       En liten beskrivelse tekst
     </div>
     <input id="textFieldTextboxId-:r28:"
@@ -450,7 +450,7 @@ exports[`Tester/TextField WithHelpText play-test 1`] = `
     >
       Navn
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r2q:"
@@ -493,7 +493,7 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
     >
       Navn
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r30:"
@@ -513,7 +513,7 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_sf6vs_17">
+    <div class="_description_5szkl_17">
       En liten beskrivelse tekst
     </div>
     <input id="textFieldTextboxId-:r2u:"
@@ -539,7 +539,7 @@ exports[`Tester/TextField WithHelpToggleEvent smoke-test 1`] = `
     >
       Navn
     </label>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="labelId-:r3a:"

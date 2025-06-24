@@ -2,8 +2,11 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Table, getTableSumAlignmentDefault } from '@skatteetaten/ds-table';
+import {
+  Table,
+  getTableSumAlignmentDefault,
+  getTableSumTextDefault,
+} from '@skatteetaten/ds-table';
 
 import { category } from '../../../.storybook/helpers';
 
@@ -19,7 +22,7 @@ const meta = {
     sumText: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_tables:tablesum.Sum') },
+        defaultValue: { summary: getTableSumTextDefault() },
       },
     },
     labelAlignment: {

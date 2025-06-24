@@ -17,15 +17,17 @@ export interface TableHeaderCellCommonProps
   ref?: Ref<HTMLTableCellElement>;
   /** Tekstjustering */
   alignment?: TextAlignment;
-  /** HTML-element for cellen*/
+  /** HTML-element for cellen */
   as?: TableCellAs;
-  /** Innhold i cellen*/
+  /** Innhold i cellen */
   children?: ReactNode;
+  /** Angir om sorteringsknappen er disabled. Gjelder kun når isSortable er satt til true. */
+  isSortDisabled?: boolean;
 }
 
 type HeaderCellDiscriminatedProps =
   | {
-      /** Angir om det er mulig å sortere tabellen med  */
+      /** Angir om det er mulig å sortere tabellen med */
       isSortable: true;
       /** Tekstjustering */
       sortKey: string;

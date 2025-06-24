@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
 import { Card } from '@skatteetaten/ds-content';
-import { statusArr } from '@skatteetaten/ds-core-utils';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { Tag } from '@skatteetaten/ds-status';
 import { List } from '@skatteetaten/ds-typography';
@@ -26,9 +25,7 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    classNames: {
-      table: { disable: true },
-    },
+    classNames: { table: { disable: true } },
   },
 } satisfies Meta<typeof Card.Content>;
 export default meta;
@@ -39,8 +36,6 @@ const defaultText =
 
 const defaultArgs = {
   children: defaultText,
-  variant: statusArr[1],
-  title: 'Merknad',
 };
 
 export const WithRef = {

@@ -1,7 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, waitFor, within } from '@storybook/test';
 
-import { StepList, stepVariantArr } from '@skatteetaten/ds-collections';
+import { StepList } from '@skatteetaten/ds-collections';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
 
@@ -48,7 +48,6 @@ const meta = {
     },
     svgTitle: { table: { disable: true, category: category.props } },
     variant: {
-      options: [...stepVariantArr],
       control: 'inline-radio',
       table: {
         disable: true,

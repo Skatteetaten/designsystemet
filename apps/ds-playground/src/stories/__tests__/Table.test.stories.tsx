@@ -28,9 +28,7 @@ const meta = {
     // Props
     canBeManuallyFocused: { table: { disable: true } },
     caption: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-    },
+    variant: { table: { disable: true } },
     hasFullWidth: { table: { disable: true } },
     showCaption: { table: { disable: true } },
     sortState: { table: { disable: true } },

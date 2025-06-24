@@ -31,7 +31,7 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 type searchProps = Pick<SearchFieldProps, 'onSearch' | 'onSearchClick'>;
 
 export interface TopBannerExternalProps extends BaseProps, searchProps {
-  varslerAmount?: number;
+  notificationCount?: number;
   me?: Person;
   ref?: Ref<TopBannerExternalHandle>;
   classNames?: { columns?: string };

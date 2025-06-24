@@ -1,7 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getHelpTitleHelpSvgDefault,
+} from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import {
@@ -67,7 +70,7 @@ export const WithHelptext = {
     const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-    const helpSvg = canvas.getByLabelText(dsI18n.t('Shared:shared.Help'), {
+    const helpSvg = canvas.getByLabelText(getHelpTitleHelpSvgDefault(), {
       selector: 'svg',
     });
     await expect(helpSvg).toBeInTheDocument();

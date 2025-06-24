@@ -28,48 +28,18 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     classNames: { table: { disable: true } },
-    children: {
-      table: { disable: true },
-    },
+    children: { table: { disable: true } },
     defaultChecked: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
-    hideLabel: {
-      table: {
-        disable: true,
-      },
-    },
-    showRequiredMark: {
-      table: {
-        disable: true,
-      },
-    },
+    hideLabel: { table: { disable: true } },
+    showRequiredMark: { table: { disable: true } },
     // HTML
-    checked: {
-      table: {
-        disable: true,
-      },
-    },
-    disabled: {
-      table: {
-        disable: true,
-      },
-    },
-    form: {
-      table: {
-        disable: true,
-      },
-    },
-    name: {
-      table: {
-        disable: true,
-      },
-    },
-    required: {
-      table: {
-        disable: true,
-      },
-    },
+    checked: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
+    name: { table: { disable: true } },
+    required: { table: { disable: true } },
     value: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },

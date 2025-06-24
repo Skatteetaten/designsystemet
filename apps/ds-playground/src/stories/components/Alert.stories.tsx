@@ -2,7 +2,6 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { statusArr } from '@skatteetaten/ds-core-utils';
 import {
   Alert,
   getAlertBackgroundBrightnessDefault,
@@ -24,23 +23,13 @@ const meta = {
         defaultValue: { summary: getAlertBackgroundBrightnessDefault() },
       },
     },
-    showAlert: {
-      table: { category: category.props },
-      control: 'radio',
-      options: [true, false],
-    },
+    showAlert: { table: { category: category.props } },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
-    variant: {
-      options: [...statusArr],
-      control: 'radio',
-      table: {
-        category: category.props,
-      },
-    },
+    variant: { table: { category: category.props } },
     // Aria
     ariaLive: { table: { category: category.aria } },
     // Events

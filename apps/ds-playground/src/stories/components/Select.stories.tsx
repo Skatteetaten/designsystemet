@@ -3,11 +3,10 @@ import { ChangeEvent, useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
-  dsI18n,
-  formArrSize,
   getCommonFormVariantDefault,
+  getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
-import { Select } from '@skatteetaten/ds-forms';
+import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -25,7 +24,7 @@ const meta = {
     placeholder: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.ChooseValue') },
+        defaultValue: { summary: getSelectPlaceholderDefault() },
       },
     },
     description: { table: { category: category.props } },
@@ -42,7 +41,6 @@ const meta = {
     hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
     variant: {
-      options: [...formArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -54,7 +52,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     // HTML

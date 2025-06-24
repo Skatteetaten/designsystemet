@@ -1,11 +1,7 @@
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import {
-  Paragraph,
-  ParagraphProps,
-  paragraphVariantArr,
-} from '@skatteetaten/ds-typography';
+import { Paragraph, ParagraphProps } from '@skatteetaten/ds-typography';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 
@@ -26,11 +22,7 @@ const meta = {
       control: 'text',
     },
     hasSpacing: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      options: [...paragraphVariantArr],
-      control: 'radio',
-    },
+    variant: { table: { disable: true } },
   },
 } satisfies Meta<typeof Paragraph>;
 export default meta;

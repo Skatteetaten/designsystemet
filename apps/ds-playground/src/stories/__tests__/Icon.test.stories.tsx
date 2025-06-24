@@ -12,6 +12,11 @@ import {
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
 
+const systemIconSizeArr = sizeArr.filter((size) => size !== 'extraSmall');
+const themeIconSizeArr = sizeArr.filter(
+  (size) => size === 'medium' || size === 'large'
+);
+
 const meta = {
   component: Icon,
   title: 'Tester/Icon',
@@ -25,8 +30,7 @@ const meta = {
     // Props
     size: {
       table: { disable: true },
-      control: 'radio',
-      options: [...sizeArr].slice(1),
+      options: [...systemIconSizeArr],
     },
     svgPath: {
       table: { disable: true },
@@ -313,7 +317,7 @@ export const ThemeIconSizeMedium = {
   argTypes: {
     size: {
       table: { disable: false },
-      options: [sizeArr[2], sizeArr[3]],
+      options: [...themeIconSizeArr],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -334,7 +338,7 @@ export const ThemeIconSizeLarge = {
   argTypes: {
     size: {
       table: { disable: false },
-      options: [sizeArr[2], sizeArr[3]],
+      options: [...themeIconSizeArr],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

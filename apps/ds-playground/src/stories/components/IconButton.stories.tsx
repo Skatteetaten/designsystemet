@@ -8,11 +8,11 @@ import {
   getIconButtonSizeDefault,
 } from '@skatteetaten/ds-buttons';
 import {
-  dsI18n,
   getCommonButtonTypeDefault,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
 import { PrintSVGpath } from '@skatteetaten/ds-icons';
+import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -36,7 +36,7 @@ const meta = {
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_progress:spinner.LoadingLabel') },
+        defaultValue: { summary: getSpinnerLabelDefault() },
       },
     },
     isOutlined: { table: { category: category.props } },

@@ -11,7 +11,6 @@ import {
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -98,7 +97,9 @@ export const Examples: Story = {
           <Heading as={'h3'} level={3}>
             {'Mine oppgaver'}
           </Heading>
-          {loremIpsum}
+          {
+            'Lorem ipsum dolor sit amet, skattemyndighetene consectetuer adipiscing elit. Donec odio magna, sagittis eget rutrum quis, egestas vel nibh. Nullam eleifend ultricies eros, at accumsan nisl tincidunt sed. Vivamus vestibulum semper laoreet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Phasellus vel sapien eu magna laoreet rutrum. Curabitur eleifend tincidunt laoreet. Proin quam nibh, placerat vel blandit eu, placerat in tellus. Aenean lorem sem, malesuada in libero ut, mollis pretium turpis. Donec vitae sapien eu libero rutrum rutrum. Nam quis lacus neque. Pellentesque ultrices mattis odio. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas fermentum tortor at risus.'
+          }
         </Tabs.Panel>
         <Tabs.Panel value={'tab2'}>
           <Heading as={'h3'} level={3}>

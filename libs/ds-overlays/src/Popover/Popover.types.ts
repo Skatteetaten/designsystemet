@@ -18,7 +18,12 @@ export type PopoverPosition = Extract<
   'topStart' | 'topEnd' | 'bottomStart' | 'bottomEnd'
 >;
 
-export type PopoverColor = Extract<Color, 'ochre' | 'forest' | 'white'>;
+export const popoverColorArr = [
+  'ochre',
+  'forest',
+  'white',
+] as const satisfies readonly Color[];
+export type PopoverColor = (typeof popoverColorArr)[number];
 
 export interface PopoverProps {
   /** Plassering av popover */

@@ -14,12 +14,8 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: {
-      table: { disable: true },
-    },
-    showError: {
-      table: { disable: true },
-    },
+    children: { table: { disable: true } },
+    showError: { table: { disable: true } },
   },
 } satisfies Meta<typeof ErrorMessage>;
 export default meta;

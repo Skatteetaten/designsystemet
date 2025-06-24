@@ -3,7 +3,6 @@ import { ReactNode, useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
-import { densityArr } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import {
   CopySVGpath,
@@ -20,81 +19,6 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
-const data = [
-  {
-    id: 'abcd',
-    firma: 'Bluth Company',
-    timestamp: '08.04.2020 11:31:57',
-    status: 'Under behandling',
-    eta: 'Mer enn 1 dag',
-    ansatte: [
-      {
-        id: 'efgh',
-        navn: 'Per Olsen',
-        fnr: '11012020 99999',
-        beskrivelse: 'Ingen flere opplysninger',
-      },
-    ],
-  },
-  {
-    id: 'ijkl',
-    firma: 'Business Engros',
-    timestamp: '08.04.2020 11:32:16',
-    status: 'Under behandling',
-    eta: '23 min',
-    ansatte: [
-      {
-        id: 'mnop',
-        navn: 'Bryce Navnesen',
-        fnr: '02012020 99999',
-        beskrivelse: 'noen flere opplysninger',
-      },
-      {
-        id: 'qrst',
-        navn: 'Alice Middleman',
-        fnr: '03012020 99999',
-        beskrivelse: 'mange flere opplysninger',
-      },
-    ],
-  },
-  {
-    id: 'uvwx',
-    firma: 'Corwood Industries',
-    timestamp: '08.04.2020 11:32:16',
-    status: 'Ferdig',
-    eta: '–',
-    ansatte: [
-      {
-        id: 'yzab',
-        navn: 'Kai Mossige',
-        fnr: '01012020 99999',
-        beskrivelse: 'finnes flere opplysninger?',
-      },
-    ],
-  },
-  {
-    id: 'cdef',
-    firma: 'Limerick Partner',
-    timestamp: '08.04.2020 11:32:47',
-    status: 'Ferdig',
-    eta: '–',
-    ansatte: [
-      {
-        id: 'ghij',
-        navn: 'Kari Saksbehandler',
-        fnr: '01012020 99999',
-        beskrivelse: 'Ingen flere opplysninger',
-      },
-      {
-        id: 'klmn',
-        navn: 'Bob Egil Hansen',
-        fnr: '04012020 99999',
-        beskrivelse: 'Ingen andre opplysninger',
-      },
-    ],
-  },
-];
-
 const meta = {
   component: Table,
   title: 'Komponenter/Table/Table',
@@ -103,8 +27,6 @@ const meta = {
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
     variant: {
-      options: [...densityArr],
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getTableVariantDefault() },
@@ -314,6 +236,81 @@ export const Expandable: Story = {
     const [sortState, setSortState] = useState<SortState>({
       direction: 'none',
     });
+
+    const data = [
+      {
+        id: 'abcd',
+        firma: 'Bluth Company',
+        timestamp: '08.04.2020 11:31:57',
+        status: 'Under behandling',
+        eta: 'Mer enn 1 dag',
+        ansatte: [
+          {
+            id: 'efgh',
+            navn: 'Per Olsen',
+            fnr: '11012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'ijkl',
+        firma: 'Business Engros',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Under behandling',
+        eta: '23 min',
+        ansatte: [
+          {
+            id: 'mnop',
+            navn: 'Bryce Navnesen',
+            fnr: '02012020 99999',
+            beskrivelse: 'noen flere opplysninger',
+          },
+          {
+            id: 'qrst',
+            navn: 'Alice Middleman',
+            fnr: '03012020 99999',
+            beskrivelse: 'mange flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'uvwx',
+        firma: 'Corwood Industries',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'yzab',
+            navn: 'Kai Mossige',
+            fnr: '01012020 99999',
+            beskrivelse: 'finnes flere opplysninger?',
+          },
+        ],
+      },
+      {
+        id: 'cdef',
+        firma: 'Limerick Partner',
+        timestamp: '08.04.2020 11:32:47',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'ghij',
+            navn: 'Kari Saksbehandler',
+            fnr: '01012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+          {
+            id: 'klmn',
+            navn: 'Bob Egil Hansen',
+            fnr: '04012020 99999',
+            beskrivelse: 'Ingen andre opplysninger',
+          },
+        ],
+      },
+    ];
 
     const sortedData = data.slice().sort((a, b) => {
       const sortKey = sortState.sortKey as keyof (typeof data)[0];
@@ -753,6 +750,81 @@ Selectable.parameters = exampleParameters;
 
 export const WithStripes: Story = {
   render: (_args): JSX.Element => {
+    const data = [
+      {
+        id: 'abcd',
+        firma: 'Bluth Company',
+        timestamp: '08.04.2020 11:31:57',
+        status: 'Under behandling',
+        eta: 'Mer enn 1 dag',
+        ansatte: [
+          {
+            id: 'efgh',
+            navn: 'Per Olsen',
+            fnr: '11012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'ijkl',
+        firma: 'Business Engros',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Under behandling',
+        eta: '23 min',
+        ansatte: [
+          {
+            id: 'mnop',
+            navn: 'Bryce Navnesen',
+            fnr: '02012020 99999',
+            beskrivelse: 'noen flere opplysninger',
+          },
+          {
+            id: 'qrst',
+            navn: 'Alice Middleman',
+            fnr: '03012020 99999',
+            beskrivelse: 'mange flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'uvwx',
+        firma: 'Corwood Industries',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'yzab',
+            navn: 'Kai Mossige',
+            fnr: '01012020 99999',
+            beskrivelse: 'finnes flere opplysninger?',
+          },
+        ],
+      },
+      {
+        id: 'cdef',
+        firma: 'Limerick Partner',
+        timestamp: '08.04.2020 11:32:47',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'ghij',
+            navn: 'Kari Saksbehandler',
+            fnr: '01012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+          {
+            id: 'klmn',
+            navn: 'Bob Egil Hansen',
+            fnr: '04012020 99999',
+            beskrivelse: 'Ingen andre opplysninger',
+          },
+        ],
+      },
+    ];
+
     return (
       <>
         <Table caption={'Firmaoversikt'}>

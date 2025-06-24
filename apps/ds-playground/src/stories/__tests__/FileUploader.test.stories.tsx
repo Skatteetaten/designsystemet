@@ -3,7 +3,10 @@ import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 //eslint-disable-next-line storybook/use-storybook-testing-library
 import { PointerEventsCheckLevel } from '@testing-library/user-event';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getHelpTitleHelpSvgDefault,
+} from '@skatteetaten/ds-core-utils';
 import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -51,7 +54,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     uploadedFiles: { table: { disable: true, category: category.props } },

@@ -2,7 +2,6 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { CheckSVGpath, WarningSVGpath } from '@skatteetaten/ds-icons';
 import {
   Tag,
@@ -13,8 +12,6 @@ import {
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-
-const tagSizes = [sizeArr[1], sizeArr[2]];
 
 const meta = {
   component: Tag,
@@ -30,8 +27,6 @@ const meta = {
       },
     },
     size: {
-      options: tagSizes,
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getTagSizeDefault() },

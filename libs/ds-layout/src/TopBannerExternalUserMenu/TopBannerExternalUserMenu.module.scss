@@ -1,39 +1,49 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.arrow {
+  position: absolute;
+  z-index: -1;
+  width: var(--size-large);
+  height: var(--size-large);
+  border: 1px solid var(--palette-graphite-70);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  background-color: var(--palette-graphite-0);
+  transform: rotate(45deg);
+}
+
+.menu {
+  z-index: 100;
+  width: 18rem;
+  padding: var(--spacing-s);
+  border: 1px solid var(--palette-graphite-70);
+  background-color: var(--palette-graphite-0);
+  color: var(--palette-graphite-100);
+}
+
 .wrapper {
   margin: var(--spacing-xs);
 }
 
-.varselCircleSmall {
-  display: flex;
-  width: 19px;
-  height: 19px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-left: var(--spacing-s);
+.notificationBadge {
+  display: grid;
+  min-width: 0.5rem;
+  height: 1rem;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-radius: 1.5rem;
   background-color: var(--palette-burgundy-70);
   color: var(--palette-graphite-0);
-  transform: translateY(7px);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: 85%;
+  place-items: center;
 }
 
-.varselCircleLarge {
+.notificationWrapper {
   display: flex;
-  width: 30px;
-  height: 19px;
   align-items: center;
-  justify-content: center;
-  border-radius: 33%;
-  margin-left: var(--spacing-s);
-  background-color: var(--palette-burgundy-70);
-  color: var(--palette-graphite-0);
-  transform: translateY(7px);
-}
-
-.varselAmount {
-  font-size: var(--font-size-xs);
-}
-
-.varselWrapper {
-  display: flex;
+  margin: 0;
+  gap: var(--spacing-s);
 }
 
 .orgnr {

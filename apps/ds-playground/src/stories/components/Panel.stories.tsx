@@ -12,7 +12,6 @@ import {
   getPanelTitleAsDefault,
   getPanelVariantDefault,
 } from '@skatteetaten/ds-content';
-import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -79,7 +78,6 @@ const meta = {
     },
     subtitle: { table: { category: category.props } },
     subtitleAs: {
-      options: [...subheadingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -88,7 +86,6 @@ const meta = {
     },
     title: { table: { category: category.props } },
     titleAs: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,

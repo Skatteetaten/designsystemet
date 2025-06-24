@@ -2,7 +2,6 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { Card, CardAlertVariant } from '@skatteetaten/ds-content';
-import { statusArr } from '@skatteetaten/ds-core-utils';
 import { SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -21,28 +20,13 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    variant: {
-      table: { disable: true },
-      control: 'text',
-    },
-    title: {
-      table: { disable: true },
-      control: 'text',
-    },
-    titleAs: {
-      table: { disable: true },
-    },
-    showAlert: {
-      table: { disable: true },
-      control: 'text',
-    },
-    svgPath: {
-      table: { disable: true },
-    },
+    variant: { table: { disable: true } },
+    title: { table: { disable: true } },
+    titleAs: { table: { disable: true } },
+    showAlert: { table: { disable: true } },
+    svgPath: { table: { disable: true } },
     // Events
-    onClose: {
-      table: { disable: true },
-    },
+    onClose: { table: { disable: true } },
   },
 } satisfies Meta<typeof Card.Alert>;
 export default meta;
@@ -53,7 +37,6 @@ const defaultText =
 
 const defaultArgs = {
   children: defaultText,
-  variant: statusArr[1],
   title: 'Merknad',
 };
 

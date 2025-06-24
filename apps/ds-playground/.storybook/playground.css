@@ -355,3 +355,7 @@ a.resetLinkStyling {
     display: none;
   }
 }
+
+dl.descriptionListTwoColumns {
+  --description-list-columns: 2;
+}

@@ -88,6 +88,10 @@ export const Preview: Story = {
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
+    const defaultTitle = 'Skatt';
+    const defaultDescription =
+      'Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.';
+
     return (
       <nav
         className={'flex gapXl'}

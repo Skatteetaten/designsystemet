@@ -11,7 +11,6 @@ import {
   panelPaddingArr,
   panelColorArr,
 } from '@skatteetaten/ds-content';
-import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { InfoIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -49,23 +48,16 @@ const meta = {
     hasResponsivePadding: { table: { disable: true } },
     headingRef: { table: { disable: true }, control: { disable: true } },
     hideGraphicMobile: { table: { disable: true } },
-    hideSubtitle: {
-      table: { disable: true },
-    },
-    hideTitle: {
-      table: { disable: true },
-    },
+    hideSubtitle: { table: { disable: true } },
+    hideTitle: { table: { disable: true } },
     imageSource: {
       table: { disable: true },
       control: 'select',
       options: ['', farmerIllustration, waitIllustration],
     },
-    imageSourceAltText: {
-      table: { disable: true },
-    },
+    imageSourceAltText: { table: { disable: true } },
     padding: {
       table: { disable: true },
-      options: [...panelPaddingArr],
       control: 'inline-radio',
     },
     renderIcon: {
@@ -74,28 +66,20 @@ const meta = {
     },
     spacing: {
       table: { disable: true },
-      options: [...panelSpacingArr],
       control: 'inline-radio',
     },
-    subtitle: {
-      table: { disable: true },
-    },
+    subtitle: { table: { disable: true } },
     subtitleAs: {
-      options: [...subheadingAsArr],
       control: 'inline-radio',
       table: { disable: true },
     },
-    title: {
-      table: { disable: true },
-    },
+    title: { table: { disable: true } },
     titleAs: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: { disable: true },
     },
     variant: {
       table: { disable: true },
-      options: [...panelVariantArr],
       control: 'inline-radio',
     },
   },

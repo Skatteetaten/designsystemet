@@ -1804,7 +1804,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
 </div>
 `;
 
-exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerExternal WithRef smoke-test 1`] = `
 <div data-test-block="true">
   <header class
           id="dummyIdForwardedFromRef"
