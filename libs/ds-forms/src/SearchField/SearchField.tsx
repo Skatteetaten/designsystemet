@@ -276,7 +276,6 @@ ${classNames?.searchContainer ?? ''}`.trim()}
           )}
           {showClearButton && !disabled && !readOnly && (
             <IconButton
-              type={'reset'}
               className={styles.clearButton}
               size={variant === 'medium' ? 'extraSmall' : 'small'}
               svgPath={CancelSVGpath}
