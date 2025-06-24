@@ -1,4 +1,6 @@
 import {
+  Children,
+  isValidElement,
   JSX,
   RefObject,
   useEffect,
@@ -180,6 +182,16 @@ export const TopBannerExternal = (({
     });
   };
 
+  // TODO: Dersom språkknappen fjernes, er ikke dette nødvendig. Kun midlertidig for å plassere eventuell UserMenu på riktig sted.
+  const childrenArray = Children.toArray(children);
+  const userMenu = childrenArray.filter((child) =>
+    isValidElement(child) ? child.type === TopBannerExternal.UserMenu : null
+  );
+
+  const childrenWithoutUserMenu = childrenArray.filter((child) =>
+    isValidElement(child) ? child.type !== TopBannerExternal.UserMenu : null
+  );
+
   return (
     <header
       ref={innerRef}
@@ -203,7 +215,7 @@ export const TopBannerExternal = (({
         <div className={styles.topContainer}>
           <TopBannerLogo {...logo} />
           <div className={styles.contentContainer}>
-            {children}
+            {childrenWithoutUserMenu}
 
             <TopBannerLangPicker
               ref={languagePickerRef}
@@ -215,6 +227,7 @@ export const TopBannerExternal = (({
               additionalLanguages={additionalLanguages}
               onLanguageClick={onLanguageClick}
             />
+            {userMenu}
             {onLogOutClick && user && (
               <>
                 <TopBannerUserButton user={user} onClick={onUserClick} />
