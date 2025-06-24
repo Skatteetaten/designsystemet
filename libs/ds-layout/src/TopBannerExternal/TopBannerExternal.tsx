@@ -1,4 +1,6 @@
 import {
+  Children,
+  isValidElement,
   JSX,
   RefObject,
   useEffect,
@@ -25,6 +27,7 @@ import {
 import {
   TopBannerExternalProps,
   TopBannerMenu,
+  TopBannerExternalComponent,
 } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerExternalUserMenu } from '../TopBannerExternalUserMenu/TopBannerExternalUserMenu';
@@ -35,7 +38,7 @@ import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton'
 
 import styles from './TopBannerExternal.module.scss';
 
-export const TopBannerExternal = ({
+export const TopBannerExternal = (({
   ref,
   id,
   className = getCommonClassNameDefault(),
@@ -59,9 +62,6 @@ export const TopBannerExternal = ({
   onUserClick,
   onSearch,
   onSearchClick,
-  showUserMenu,
-  notificationCount,
-  canRepresentOthers,
 }: TopBannerExternalProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
   const isMobile = !useMediaQuery('(min-width: 480px)');
@@ -182,6 +182,16 @@ export const TopBannerExternal = ({
     });
   };
 
+  // TODO: Dersom språkknappen fjernes, er ikke dette nødvendig. Kun midlertidig for å plassere eventuell UserMenu på riktig sted.
+  const childrenArray = Children.toArray(children);
+  const userMenu = childrenArray.filter((child) =>
+    isValidElement(child) ? child.type === TopBannerExternal.UserMenu : null
+  );
+
+  const childrenWithoutUserMenu = childrenArray.filter((child) =>
+    isValidElement(child) ? child.type !== TopBannerExternal.UserMenu : null
+  );
+
   return (
     <header
       ref={innerRef}
@@ -205,7 +215,7 @@ export const TopBannerExternal = ({
         <div className={styles.topContainer}>
           <TopBannerLogo {...logo} />
           <div className={styles.contentContainer}>
-            {children}
+            {childrenWithoutUserMenu}
 
             <TopBannerLangPicker
               ref={languagePickerRef}
@@ -217,7 +227,8 @@ export const TopBannerExternal = ({
               additionalLanguages={additionalLanguages}
               onLanguageClick={onLanguageClick}
             />
-            {onLogOutClick && user && !showUserMenu && (
+            {userMenu}
+            {onLogOutClick && user && (
               <>
                 <TopBannerUserButton user={user} onClick={onUserClick} />
                 <TopBannerButton
@@ -236,15 +247,6 @@ export const TopBannerExternal = ({
               >
                 {t('topbannerbutton.Login')}
               </TopBannerButton>
-            )}
-            {user && showUserMenu && (
-              <TopBannerExternalUserMenu
-                canRepresentOthers={canRepresentOthers}
-                user={user}
-                notificationCount={notificationCount || 0}
-                onLogOutClick={onLogOutClick}
-                onUserClick={onUserClick}
-              />
             )}
             {showSearch && (
               <>
@@ -348,6 +350,7 @@ export const TopBannerExternal = ({
       </div>
     </header>
   );
-};
+}) as TopBannerExternalComponent;
 
 TopBannerExternal.displayName = 'TopBannerExternal';
+TopBannerExternal.UserMenu = TopBannerExternalUserMenu;

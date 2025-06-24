@@ -6,11 +6,16 @@ import { User } from '../TopBannerExternal/TopBannerExternal.types';
 
 export interface TopBannerExternalUserMenuProps extends BaseProps {
   ref?: Ref<HTMLButtonElement>;
-  /** Innhold i komponenten */
+  /** Brukerinformasjon for brukeren som er logget inn */
   user: User;
+  /** Antall ubehandlede varsler */
   notificationCount?: number;
+  /** Funksjon som kalles når brukeren klikker på logge ut knappen */
   onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
-  onUserClick?: MouseEventHandler<HTMLButtonElement>;
+  /** Funksjon som kalles når brukeren klikker på bytt bruker knappen */
+  onSwitchUserClick?: MouseEventHandler<HTMLButtonElement>;
+  /** Angir om brukeren kan representere andre */
   canRepresentOthers?: boolean;
+  /** Barnelementer for komponenten */
   children?: React.ReactNode;
 }
