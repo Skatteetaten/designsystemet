@@ -43,7 +43,6 @@ export const Fieldset = ({
         ? styles.legend_required
         : styles.legendWithMarkup_required;
   }
-  const hasSpacingClassName = hasSpacing ? styles.fieldset_hasSpacing : '';
   const hideLegendClassName = hideLegend ? styles.srOnly : '';
   const noMarginBottomLegendClassName =
     description || helpText ? styles.legendNoMarginBottom : '';
@@ -61,10 +60,11 @@ export const Fieldset = ({
       ref={ref}
       id={id}
       data-testid={dataTestId}
-      className={`${styles.fieldset} ${hasSpacingClassName} ${className}`.trim()}
+      className={`${styles.fieldset} ${className}`.trim()}
       lang={lang}
       disabled={disabled}
       form={form}
+      data-has-spacing={hasSpacing}
     >
       <legend id={legendId} className={styles.srOnly}>
         {legend}

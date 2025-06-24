@@ -3,6 +3,10 @@
 .container {
   min-width: 10rem;
   max-width: 25rem;
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-xl);
+  }
 }
 
 .icon {

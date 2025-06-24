@@ -44,6 +44,7 @@ export const Select = (({
   form,
   name,
   required,
+  hasSpacing,
   hideLabel,
   hidePlaceholder,
   showRequiredMark,
@@ -95,7 +96,8 @@ export const Select = (({
   return (
     <div
       lang={lang}
-      className={`${className} ${classNames?.container ?? ''}`.trim()}
+      className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
+      data-has-spacing={hasSpacing}
     >
       <LabelWithHelp
         classNames={classNames}

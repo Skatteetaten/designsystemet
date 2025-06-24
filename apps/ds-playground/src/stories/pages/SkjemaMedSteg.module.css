@@ -41,18 +41,15 @@
 .address {
   width: 100%;
   max-width: 338px;
-  margin-bottom: var(--spacing-m);
 }
 
 .postalCode {
   width: 109px;
-  margin-bottom: var(--spacing-m);
 }
 
 .city {
   width: 100%;
   max-width: 280px;
-  margin-bottom: var(--spacing-m);
 }
 
 .phone {

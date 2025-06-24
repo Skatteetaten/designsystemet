@@ -59,6 +59,7 @@ export const DatePicker = ({
   placeholder = getDatePickerPlaceholderDefault(),
   readOnly,
   required,
+  hasSpacing,
   hideLabel,
   showRequiredMark,
   onBlur,
@@ -202,8 +203,9 @@ export const DatePicker = ({
 
   return (
     <div
-      className={`${className} ${classNames?.container ?? ''}`.trim()}
+      className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
       lang={lang}
+      data-has-spacing={hasSpacing}
     >
       <LabelWithHelp
         classNames={classNames}

@@ -43,6 +43,10 @@
     --clear-button-right: var(--spacing-m);
     --search-result-padding: var(--spacing-s) var(--spacing-m);
   }
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
 }
 
 .clearButton {

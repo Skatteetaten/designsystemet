@@ -39,6 +39,7 @@ const meta = {
     defaultValue: { control: 'text', table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     label: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),

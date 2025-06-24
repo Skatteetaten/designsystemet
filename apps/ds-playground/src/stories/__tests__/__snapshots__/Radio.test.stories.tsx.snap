@@ -2,18 +2,20 @@
 
 exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:ra:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rb:"
@@ -41,18 +43,20 @@ exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:ru:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rv:"
@@ -81,18 +85,20 @@ exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r6:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1 dummyClassname"
              lang="nb"
@@ -124,18 +130,20 @@ exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:re:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rf:"
@@ -166,18 +174,20 @@ exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r12:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r13:"
@@ -205,18 +215,20 @@ exports[`Tester/RadioGroup/Radio WithEventHandlers play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:ri:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rj:"
@@ -247,18 +259,20 @@ exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:rm:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rn:"
@@ -289,18 +303,20 @@ exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r2:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3:"
@@ -328,18 +344,20 @@ exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithValue play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:rq:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       radio example
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rr:"

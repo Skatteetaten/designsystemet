@@ -28,6 +28,7 @@ export const Checkbox = ({
   required,
   value,
   ariaDescribedby,
+  hasSpacing,
   hideLabel,
   showRequiredMark,
   onChange,
@@ -64,6 +65,7 @@ export const Checkbox = ({
     <div
       className={`${styles.container} ${spacingBottomClassName} ${className}`.trim()}
       lang={lang}
+      data-has-spacing={hasSpacing}
     >
       <input
         ref={ref}

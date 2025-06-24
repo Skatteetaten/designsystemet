@@ -49,6 +49,7 @@ export const TextArea = ({
   rows,
   spellCheck,
   value,
+  hasSpacing,
   hideLabel,
   showRequiredMark,
   onBlur,
@@ -99,8 +100,9 @@ export const TextArea = ({
 
   return (
     <div
-      className={`${className} ${classNames?.container ?? ''}`.trim()}
+      className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
       lang={lang}
+      data-has-spacing={hasSpacing}
     >
       <LabelWithHelp
         classNames={classNames}

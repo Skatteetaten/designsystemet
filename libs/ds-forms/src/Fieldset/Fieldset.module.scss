@@ -6,7 +6,7 @@
   margin: 0;
   overflow-wrap: anywhere;
 
-  &_hasSpacing {
+  &[data-has-spacing='true'] {
     margin-bottom: var(--spacing-m);
   }
 }

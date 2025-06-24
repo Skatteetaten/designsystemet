@@ -928,7 +928,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
           >
         </a>
         <div class="_contentContainer_1ns8f_23">
-          <div class>
+          <div class="_wrapper_1dg5q_1">
             <label id="labelId-:rd:"
                    class="_label_348na_5  _srOnly_348na_18"
                    for="textFieldTextboxId-:rb:"
@@ -936,7 +936,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
               Søk
             </label>
             <input id="textFieldTextboxId-:rb:"
-                   class="_textbox_1kevi_5 $"
+                   class="_textbox_1dg5q_5 $"
                    data-variant="medium"
                    autocomplete="off"
                    placeholder="Søk"

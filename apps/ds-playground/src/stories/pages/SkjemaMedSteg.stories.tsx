@@ -307,6 +307,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                         className={styles.address}
                         value={contactsInput.address}
                         errorMessage={contactsError.address}
+                        hasSpacing
                         required
                         onChange={handleInputChange('address')}
                         onBlur={(e) => handleBlur('address', e.target.value)}
@@ -323,6 +324,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                           maxLength={4}
                           minLength={4}
                           errorMessage={contactsError.postalCode}
+                          hasSpacing
                           required
                           onChange={handleInputChange('postalCode')}
                           onBlur={(e) =>
@@ -333,6 +335,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                           label={'Poststed'}
                           className={styles.city}
                           value={contactsInput.city}
+                          hasSpacing
                           required
                           readOnly
                         />

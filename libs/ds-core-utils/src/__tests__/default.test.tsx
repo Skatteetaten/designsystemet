@@ -2,6 +2,7 @@ import {
   getCommonButtonTypeDefault,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
+  getHasSpacingDefault,
   getHelpTitleHelpSvgDefault,
 } from '../defaults';
 import { dsI18n } from '../i18n';
@@ -21,5 +22,8 @@ describe('Core utils defaults', () => {
   });
   it('Når getHelpTitleHelpSvgDefault kalles, så returnerer den riktig verdi', () => {
     expect(getHelpTitleHelpSvgDefault()).toBe(dsI18n.t('Shared:shared.Help'));
+  });
+  it('Når getHasSpacingDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getHasSpacingDefault()).toBe(true);
   });
 });

@@ -37,6 +37,7 @@ const meta = {
     characterLimit: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -120,6 +121,7 @@ export const Examples: Story = {
           className={'textField300'}
           description={'Gjennomsnittlig oppgjør for fire dager'}
           value={creditInput}
+          hasSpacing
           thousandSeparator
           onChange={(e: ChangeEvent<HTMLInputElement>): void =>
             setCreditInput(e.target.value)

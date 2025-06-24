@@ -47,6 +47,8 @@ export interface DatePickerProps
   label: string;
   /** Tilleggstekst */
   description?: LabelWithHelpProps['description'];
+  /** Margin under komponenten */
+  hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
   /** Overskriver default hjelpeikon */

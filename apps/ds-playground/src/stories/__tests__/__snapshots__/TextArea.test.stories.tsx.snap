@@ -2,7 +2,7 @@
 
 exports[`Tester/TextArea Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:rh:"
            class="_label_348na_5"
            for="textAreaTextboxId-:rf:"
@@ -10,7 +10,7 @@ exports[`Tester/TextArea Defaults play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:rf:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
     >
     </textarea>
@@ -25,7 +25,7 @@ exports[`Tester/TextArea Defaults play-test 1`] = `
 
 exports[`Tester/TextArea WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <div class="dummyClassname"
+  <div class="_wrapper_uj4gm_1 dummyClassname"
        lang="nb"
   >
     <label id="labelId-:r7:"
@@ -35,7 +35,7 @@ exports[`Tester/TextArea WithAttributes play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="htmlid"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               data-testid="123ID"
               autocomplete="off"
               form="formid123"
@@ -52,7 +52,7 @@ exports[`Tester/TextArea WithAttributes play-test 1`] = `
 
 exports[`Tester/TextArea WithAutoCompleteNameFormAutoCorrectSpellcheckAndPlaceholder play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r15:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r13:"
@@ -60,7 +60,7 @@ exports[`Tester/TextArea WithAutoCompleteNameFormAutoCorrectSpellcheckAndPlaceho
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r13:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="given-name"
               autocorrect="on"
               form="form_name"
@@ -119,7 +119,7 @@ exports[`Tester/TextArea WithAutoSizeInModal play-test 1`] = `
         >
           Modal med textarea
         </h1>
-        <div class>
+        <div class="_wrapper_uj4gm_1">
           <label id="labelId-:r35:"
                  class="_label_348na_5"
                  for="textAreaTextboxId-:r33:"
@@ -127,7 +127,7 @@ exports[`Tester/TextArea WithAutoSizeInModal play-test 1`] = `
             Andre opplysninger
           </label>
           <textarea id="textAreaTextboxId-:r33:"
-                    class="_textarea_4jmeo_5  _textarea_autosize_4jmeo_31 _textareaMarginTop_4jmeo_22"
+                    class="_textarea_uj4gm_5  _textarea_autosize_uj4gm_31 _textareaMarginTop_uj4gm_22"
                     autocomplete="off"
                     style="height: 0px;"
           >
@@ -146,7 +146,7 @@ exports[`Tester/TextArea WithAutoSizeInModal play-test 1`] = `
 
 exports[`Tester/TextArea WithCharacterLimit smoke-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r3d:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r3b:"
@@ -154,7 +154,7 @@ exports[`Tester/TextArea WithCharacterLimit smoke-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r3b:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               aria-describedby="textAreaCharacterCounter-:r3c:"
     >
@@ -175,7 +175,7 @@ exports[`Tester/TextArea WithCharacterLimit smoke-test 1`] = `
 
 exports[`Tester/TextArea WithCharacterLimitAndError smoke-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r3l:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r3j:"
@@ -183,7 +183,7 @@ exports[`Tester/TextArea WithCharacterLimitAndError smoke-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r3j:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               aria-describedby="textAreaErrorId-:r3i: textAreaCharacterCounter-:r3k:"
               aria-invalid="true"
@@ -198,8 +198,8 @@ exports[`Tester/TextArea WithCharacterLimitAndError smoke-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+      <div class="_errorMessage_1ycvu_15">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -208,7 +208,7 @@ exports[`Tester/TextArea WithCharacterLimitAndError smoke-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_vog41_29">
+        <p class="_errorMessageText_1ycvu_32">
           Feilmelding
         </p>
       </div>
@@ -219,7 +219,7 @@ exports[`Tester/TextArea WithCharacterLimitAndError smoke-test 1`] = `
 
 exports[`Tester/TextArea WithCharacterLimitExceeded play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r3h:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r3f:"
@@ -227,7 +227,7 @@ exports[`Tester/TextArea WithCharacterLimitExceeded play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r3f:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               aria-describedby="textAreaCharacterCounter-:r3g:"
     >
@@ -250,7 +250,7 @@ exports[`Tester/TextArea WithCharacterLimitExceeded play-test 1`] = `
 
 exports[`Tester/TextArea WithControlledValueAndAutoSize play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r39:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r37:"
@@ -258,7 +258,7 @@ exports[`Tester/TextArea WithControlledValueAndAutoSize play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r37:"
-              class="_textarea_4jmeo_5  _textarea_autosize_4jmeo_31 _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5  _textarea_autosize_uj4gm_31 _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               style="height: 64px;"
     >
@@ -281,7 +281,7 @@ exports[`Tester/TextArea WithControlledValueAndAutoSize play-test 1`] = `
 
 exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <div class="dummyClassname">
+  <div class="_wrapper_uj4gm_1  dummyClassname">
     <label id="labelId-:rb:"
            class="_label_348na_5    dummyClassname"
            for="textAreaTextboxId-:r9:"
@@ -312,7 +312,7 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
       beskrivelse
     </div>
     <textarea id="textAreaTextboxId-:r9:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22 dummyClassname"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22 dummyClassname"
               autocomplete="off"
               aria-describedby="textAreaErrorId-:r8:"
               aria-invalid="true"
@@ -322,8 +322,8 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_vog41_15 dummyClassname">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+      <div class="_errorMessage_1ycvu_15 dummyClassname">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -332,7 +332,7 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_vog41_29">
+        <p class="_errorMessageText_1ycvu_32">
           Opplysninger er obligatorisk
         </p>
       </div>
@@ -343,7 +343,7 @@ exports[`Tester/TextArea WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/TextArea WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:rt:"
            class="_label_348na_5"
            for="textAreaTextboxId-:rr:"
@@ -351,7 +351,7 @@ exports[`Tester/TextArea WithDefaultValue play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:rr:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
     >
       Kari Nordmann
@@ -367,7 +367,7 @@ exports[`Tester/TextArea WithDefaultValue play-test 1`] = `
 
 exports[`Tester/TextArea WithDefaultValueAndAutoSize play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r11:"
            class="_label_348na_5"
            for="textAreaTextboxId-:rv:"
@@ -375,7 +375,7 @@ exports[`Tester/TextArea WithDefaultValueAndAutoSize play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:rv:"
-              class="_textarea_4jmeo_5  _textarea_autosize_4jmeo_31 _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5  _textarea_autosize_uj4gm_31 _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               style="height: 88px;"
     >
@@ -392,7 +392,7 @@ exports[`Tester/TextArea WithDefaultValueAndAutoSize play-test 1`] = `
 
 exports[`Tester/TextArea WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r26:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r24:"
@@ -403,7 +403,7 @@ exports[`Tester/TextArea WithDescription play-test 1`] = `
       En liten beskrivelse tekst
     </div>
     <textarea id="textAreaTextboxId-:r24:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
     >
     </textarea>
@@ -418,7 +418,7 @@ exports[`Tester/TextArea WithDescription play-test 1`] = `
 
 exports[`Tester/TextArea WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:rl:"
            class="_label_348na_5"
            for="textAreaTextboxId-:rj:"
@@ -426,7 +426,7 @@ exports[`Tester/TextArea WithDisabled play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:rj:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               disabled
     >
@@ -443,7 +443,7 @@ exports[`Tester/TextArea WithDisabled play-test 1`] = `
 
 exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r21:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r1v:"
@@ -451,7 +451,7 @@ exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r1v:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               aria-describedby="textAreaErrorId-:r1u:"
               aria-invalid="true"
@@ -461,8 +461,8 @@ exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+      <div class="_errorMessage_1ycvu_15">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -471,7 +471,7 @@ exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_vog41_29">
+        <p class="_errorMessageText_1ycvu_32">
           Opplysninger er obligatorisk
         </p>
       </div>
@@ -482,7 +482,7 @@ exports[`Tester/TextArea WithErrorMessage play-test 1`] = `
 
 exports[`Tester/TextArea WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r2q:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r2o:"
@@ -490,7 +490,7 @@ exports[`Tester/TextArea WithEventHandlers play-test 1`] = `
       TextArea har blitt blurret
     </label>
     <textarea id="textAreaTextboxId-:r2o:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
     >
     </textarea>
@@ -505,7 +505,7 @@ exports[`Tester/TextArea WithEventHandlers play-test 1`] = `
 
 exports[`Tester/TextArea WithHelpText play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r2e:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r2c:"
@@ -533,7 +533,7 @@ exports[`Tester/TextArea WithHelpText play-test 1`] = `
       </svg>
     </button>
     <textarea id="textAreaTextboxId-:r2c:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
     >
     </textarea>
@@ -548,7 +548,7 @@ exports[`Tester/TextArea WithHelpText play-test 1`] = `
 
 exports[`Tester/TextArea WithHelpTextAndDescription smoke-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r2k:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r2i:"
@@ -579,7 +579,7 @@ exports[`Tester/TextArea WithHelpTextAndDescription smoke-test 1`] = `
       En liten beskrivelse tekst
     </div>
     <textarea id="textAreaTextboxId-:r2i:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
     >
     </textarea>
@@ -594,7 +594,7 @@ exports[`Tester/TextArea WithHelpTextAndDescription smoke-test 1`] = `
 
 exports[`Tester/TextArea WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r2u:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r2s:"
@@ -622,7 +622,7 @@ exports[`Tester/TextArea WithHelpToggleEvent smoke-test 1`] = `
       </svg>
     </button>
     <textarea id="textAreaTextboxId-:r2s:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
     >
     </textarea>
@@ -637,7 +637,7 @@ exports[`Tester/TextArea WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/TextArea WithHideLabel play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r2a:"
            class="_label_348na_5  _srOnly_348na_18"
            for="textAreaTextboxId-:r28:"
@@ -645,7 +645,7 @@ exports[`Tester/TextArea WithHideLabel play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r28:"
-              class="_textarea_4jmeo_5"
+              class="_textarea_uj4gm_5"
               autocomplete="off"
     >
     </textarea>
@@ -660,7 +660,7 @@ exports[`Tester/TextArea WithHideLabel play-test 1`] = `
 
 exports[`Tester/TextArea WithMinAndMaxLength play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r1l:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r1j:"
@@ -668,7 +668,7 @@ exports[`Tester/TextArea WithMinAndMaxLength play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r1j:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               maxlength="50"
               minlength="10"
@@ -685,7 +685,7 @@ exports[`Tester/TextArea WithMinAndMaxLength play-test 1`] = `
 
 exports[`Tester/TextArea WithReadOnly play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r19:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r17:"
@@ -693,7 +693,7 @@ exports[`Tester/TextArea WithReadOnly play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r17:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               readonly
     >
@@ -710,7 +710,7 @@ exports[`Tester/TextArea WithReadOnly play-test 1`] = `
 
 exports[`Tester/TextArea WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r3:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r1:"
@@ -718,7 +718,7 @@ exports[`Tester/TextArea WithRef play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r1:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               name="dummyNameForwardedFromRef"
     >
@@ -734,7 +734,7 @@ exports[`Tester/TextArea WithRef play-test 1`] = `
 
 exports[`Tester/TextArea WithRequired play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r1d:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r1b:"
@@ -742,7 +742,7 @@ exports[`Tester/TextArea WithRequired play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r1b:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               required
     >
@@ -758,7 +758,7 @@ exports[`Tester/TextArea WithRequired play-test 1`] = `
 
 exports[`Tester/TextArea WithRequiredAndMark smoke-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r1h:"
            class="_label_348na_5 _label_required_348na_12"
            for="textAreaTextboxId-:r1f:"
@@ -766,7 +766,7 @@ exports[`Tester/TextArea WithRequiredAndMark smoke-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r1f:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               required
     >
@@ -782,7 +782,7 @@ exports[`Tester/TextArea WithRequiredAndMark smoke-test 1`] = `
 
 exports[`Tester/TextArea WithRows play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:r1p:"
            class="_label_348na_5"
            for="textAreaTextboxId-:r1n:"
@@ -790,7 +790,7 @@ exports[`Tester/TextArea WithRows play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:r1n:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
               rows="4"
     >
@@ -806,7 +806,7 @@ exports[`Tester/TextArea WithRows play-test 1`] = `
 
 exports[`Tester/TextArea WithValue play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_uj4gm_1">
     <label id="labelId-:rp:"
            class="_label_348na_5"
            for="textAreaTextboxId-:rn:"
@@ -814,7 +814,7 @@ exports[`Tester/TextArea WithValue play-test 1`] = `
       Andre opplysninger
     </label>
     <textarea id="textAreaTextboxId-:rn:"
-              class="_textarea_4jmeo_5   _textareaMarginTop_4jmeo_22"
+              class="_textarea_uj4gm_5   _textareaMarginTop_uj4gm_22"
               autocomplete="off"
     >
       Kari Nordmann

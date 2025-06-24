@@ -25,72 +25,48 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     classNames: { table: { disable: true } },
-    description: { table: { category: category.props } },
+    description: { table: { disable: true } },
+    errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: {
-        category: category.props,
+        disable: true,
         defaultValue: { summary: 'HelpSimpleSVGpath' },
       },
     },
-    helpText: { table: { category: category.props } },
-    hideLabel: {
-      table: {
-        category: category.props,
-      },
-    },
-    label: { table: { category: category.props } },
-    showRequiredMark: {
-      table: {
-        category: category.props,
-      },
-    },
-
-    shouldNormalizeFileName: {
-      table: { category: category.props, disable: true },
-    },
-    errorMessage: { table: { category: category.props, disable: true } },
+    helpText: { table: { disable: true } },
+    hideLabel: { table: { disable: true } },
+    label: { table: { disable: true } },
+    showRequiredMark: { table: { disable: true } },
+    shouldNormalizeFileName: { table: { disable: true } },
     titleHelpSvg: {
       table: {
         category: category.props,
+        disable: true,
         defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
-    uploadedFiles: { table: { disable: true, category: category.props } },
-    acceptedFileFormatsDisplay: {
-      table: { disable: true, category: category.props },
-    },
-    acceptedFileFormatsDescription: {
-      table: { disable: true, category: category.props },
-    },
-    uploadResult: { table: { disable: true, category: category.props } },
-    children: { table: { disable: true, category: category.props } },
-    fileIconTitle: { table: { disable: true, category: category.props } },
-    isUploading: { table: { disable: true, category: category.props } },
+    uploadedFiles: { table: { disable: true } },
+    acceptedFileFormatsDisplay: { table: { disable: true } },
+    acceptedFileFormatsDescription: { table: { disable: true } },
+    uploadResult: { table: { disable: true } },
+    children: { table: { disable: true } },
+    fileIconTitle: { table: { disable: true } },
+    isUploading: { table: { disable: true } },
     invalidCharacterRegexp: {
       control: 'text',
-      table: { disable: true, category: category.props },
+      table: { disable: true },
     },
-    acceptedFileFormats: { table: { disable: true, category: category.props } },
+    acceptedFileFormats: { table: { disable: true } },
     // HTML
-    multiple: {
-      table: { disable: true, category: category.htmlAttribute },
-    },
+    multiple: { table: { disable: true } },
     // Events
-    onFileDelete: {
-      table: { category: category.event, disable: true },
-    },
-    onFileDownload: {
-      table: { category: category.event, disable: true },
-    },
-    onFileChange: {
-      table: { category: category.event, disable: true },
-    },
-
-    onHelpToggle: {
-      table: { category: category.event, disable: true },
-    },
+    onFileDelete: { table: { disable: true } },
+    onFileDownload: { table: { disable: true } },
+    onFileChange: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof FileUploader>;
 export default meta;
@@ -105,15 +81,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -129,14 +102,12 @@ export const WithAttributes = {
     lang: 'en',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -150,14 +121,12 @@ export const WithAttributes = {
 
 export const Defaults: StoryObj<FileUploaderProps> = {
   name: 'Defaults (A1 delvis)',
-  argTypes: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(
       canvas.getByText(dsI18n.t('ds_forms:fileuploader.AddSingleLabel'))
     ).toBeInTheDocument();
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} button`,
@@ -168,7 +137,6 @@ export const Defaults: StoryObj<FileUploaderProps> = {
 
 export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
   name: 'With Files (A5, B4 delvis)',
-  argTypes: {},
   args: {
     helpText: 'Hjelpetekst',
     label: 'Dokumentasjon og grunnlag',
@@ -186,7 +154,6 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
       },
     ],
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(
@@ -204,22 +171,25 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
 
 export const WithIsUploading: StoryObj<FileUploaderProps> = {
   name: 'With Uploading (A3 delvis, A2 delvis)',
-  argTypes: {},
   args: {
     isUploading: true,
   },
-  parameters: {},
+  argTypes: {
+    isUploading: { table: { disable: false } },
+  },
 } satisfies Story;
 
 export const WithError: StoryObj<FileUploaderProps> = {
-  name: 'With Error And Multiple(A4, A1 delvis)',
-  argTypes: {},
+  name: 'With Error And Multiple (A4, A1 delvis)',
   args: {
     multiple: true,
     helpText: 'Hjelpetekst',
     label: 'Hemmelig kode',
     acceptedFileFormats: ['.java', '.cpp', '.py'],
     errorMessage: 'Du må laste opp en fil',
+  },
+  argTypes: {
+    errorMessage: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -230,16 +200,14 @@ export const WithError: StoryObj<FileUploaderProps> = {
       canvas.getByText(dsI18n.t('ds_forms:fileuploader.AddMultipleLabel'))
     ).toBeInTheDocument();
   },
-
-  parameters: {},
 } satisfies Story;
 
 const UploadResultTemplate: StoryFn<typeof FileUploader> = (args) => (
   <>
     <FileUploader
       {...args}
-      className={'bottomSpacingXL'}
       uploadResult={{ statusMessage: 'Lastet opp 4 filer' }}
+      hasSpacing
     />
     <FileUploader
       {...args}
@@ -254,7 +222,6 @@ const UploadResultTemplate: StoryFn<typeof FileUploader> = (args) => (
 export const WithUploadResult: StoryObj<FileUploaderProps> = {
   name: 'With UploadResult (A4)',
   render: UploadResultTemplate,
-  argTypes: {},
   args: {
     acceptedFileFormats: ['.java', '.cpp', '.py'],
     uploadedFiles: [
@@ -265,13 +232,10 @@ export const WithUploadResult: StoryObj<FileUploaderProps> = {
       { name: 'grunnlag.jpg' },
     ],
   },
-
-  parameters: {},
 } satisfies Story;
 
 export const WithTextOverrides: StoryObj<FileUploaderProps> = {
   name: 'With Text Overrides (A8)',
-  argTypes: {},
   args: {
     acceptedFileFormats: ['image/png'],
     acceptedFileFormatsDescription: 'Tillatte filformater:_',
@@ -279,7 +243,6 @@ export const WithTextOverrides: StoryObj<FileUploaderProps> = {
     children: 'Trykk eller dra og slipp filer her',
     uploadedFiles: [{ name: 'document.pdf' }],
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(
@@ -290,8 +253,6 @@ export const WithTextOverrides: StoryObj<FileUploaderProps> = {
       canvas.getByText('Trykk eller dra og slipp filer her')
     ).toBeInTheDocument();
   },
-
-  parameters: {},
 } satisfies Story;
 
 export const WithFileChange: StoryObj<FileUploaderProps> = {

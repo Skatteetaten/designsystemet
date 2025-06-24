@@ -10,6 +10,8 @@ export interface ErrorSummaryProps extends BaseProps {
   children?: ReactNode;
   /** Valgfritt innhold */
   content?: ReactNode;
+  /** Margin under komponenten */
+  hasSpacing?: boolean;
   /** Mulighet til å angi shadowRootNode slik at fokus kan settes når elementet feilen hører til ligger i shadowDOM */
   shadowRootNode?: Document | ShadowRoot;
   /** Om komponenten skal vises */
