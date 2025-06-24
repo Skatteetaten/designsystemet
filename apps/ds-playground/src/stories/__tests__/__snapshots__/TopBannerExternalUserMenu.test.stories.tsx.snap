@@ -49,19 +49,19 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
     <span class="_notificationBadge_a68oa_28">
     </span>
   </button>
-  <div class="_menu_1evtp_13"
+  <div class="_menu_1mc3d_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
-    <div class="_wrapper_1evtp_22">
-      <div class="_namePrefix_1evtp_52">
+    <div class="_wrapper_1mc3d_22">
+      <div class="_namePrefix_1mc3d_44">
         På vegne av
       </div>
-      <div class="_name_1evtp_52">
+      <div class="_name_1mc3d_44">
         Buljo Tulljo
       </div>
-      <div class="_orgnr_1evtp_47">
+      <div class="_orgnr_1mc3d_39">
         Orgnr. 123456789
       </div>
       <div>
@@ -89,7 +89,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
           data-spacing-top="s"
           data-spacing-bottom="s"
       >
-      <div class="_notificationWrapper_1evtp_40">
+      <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
            href="https://host.docker.internal/web/minside/virksomhet/varsler"
         >
@@ -107,7 +107,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
           </svg>
           Varsel
         </a>
-        <span class="_notificationBadge_1evtp_26"
+        <span class="_notificationBadge_1mc3d_26"
               data-testid="varsel-circle"
         >
           5
@@ -170,7 +170,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         </button>
       </div>
     </div>
-    <div class="_arrow_1evtp_1"
+    <div class="_arrow_1mc3d_1"
          style="top: -13px; left: 41.5px;"
     >
     </div>
@@ -227,19 +227,19 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
     <span class="_notificationBadge_a68oa_28">
     </span>
   </button>
-  <div class="_menu_1evtp_13"
+  <div class="_menu_1mc3d_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
-    <div class="_wrapper_1evtp_22">
-      <div class="_namePrefix_1evtp_52">
+    <div class="_wrapper_1mc3d_22">
+      <div class="_namePrefix_1mc3d_44">
         På vegne av
       </div>
-      <div class="_name_1evtp_52">
+      <div class="_name_1mc3d_44">
         Buljo Tulljo
       </div>
-      <div class="_orgnr_1evtp_47">
+      <div class="_orgnr_1mc3d_39">
         Orgnr. 123456789
       </div>
       <div>
@@ -267,7 +267,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
           data-spacing-top="s"
           data-spacing-bottom="s"
       >
-      <div class="_notificationWrapper_1evtp_40">
+      <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
            href="https://host.docker.internal/web/minside/virksomhet/varsler"
         >
@@ -285,7 +285,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
           </svg>
           Varsel
         </a>
-        <span class="_notificationBadge_1evtp_26"
+        <span class="_notificationBadge_1mc3d_26"
               data-testid="varsel-circle"
         >
           5
@@ -348,7 +348,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         </button>
       </div>
     </div>
-    <div class="_arrow_1evtp_1"
+    <div class="_arrow_1mc3d_1"
          style="top: -13px; left: 41.5px;"
     >
     </div>
@@ -405,13 +405,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
     <span class="_notificationBadge_a68oa_28">
     </span>
   </button>
-  <div class="_menu_1evtp_13"
+  <div class="_menu_1mc3d_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
-    <div class="_wrapper_1evtp_22">
-      <div class="_name_1evtp_52">
+    <div class="_wrapper_1mc3d_22">
+      <div class="_name_1mc3d_44">
         Buljo Tulljo
       </div>
       <div>
@@ -439,7 +439,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
           data-spacing-top="s"
           data-spacing-bottom="s"
       >
-      <div class="_notificationWrapper_1evtp_40">
+      <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
            href="https://host.docker.internal/web/minside/person/varsler"
         >
@@ -457,7 +457,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
           </svg>
           Varsel
         </a>
-        <span class="_notificationBadge_1evtp_26"
+        <span class="_notificationBadge_1mc3d_26"
               data-testid="varsel-circle"
         >
           5
@@ -520,7 +520,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         </button>
       </div>
     </div>
-    <div class="_arrow_1evtp_1"
+    <div class="_arrow_1mc3d_1"
          style="top: -13px; left: 34.5px;"
     >
     </div>
@@ -577,19 +577,19 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
     <span class="_notificationBadge_a68oa_28">
     </span>
   </button>
-  <div class="_menu_1evtp_13"
+  <div class="_menu_1mc3d_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
-    <div class="_wrapper_1evtp_22">
-      <div class="_namePrefix_1evtp_52">
+    <div class="_wrapper_1mc3d_22">
+      <div class="_namePrefix_1mc3d_44">
         På vegne av
       </div>
-      <div class="_name_1evtp_52">
+      <div class="_name_1mc3d_44">
         Buljo Tulljo
       </div>
-      <div class="_orgnr_1evtp_47">
+      <div class="_orgnr_1mc3d_39">
         Orgnr. 123456789
       </div>
       <div>
@@ -617,7 +617,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
           data-spacing-top="s"
           data-spacing-bottom="s"
       >
-      <div class="_notificationWrapper_1evtp_40">
+      <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
            href="https://host.docker.internal/web/minside/virksomhet/varsler"
         >
@@ -635,7 +635,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
           </svg>
           Varsel
         </a>
-        <span class="_notificationBadge_1evtp_26"
+        <span class="_notificationBadge_1mc3d_26"
               data-testid="varsel-circle"
         >
           5
@@ -698,7 +698,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         </button>
       </div>
     </div>
-    <div class="_arrow_1evtp_1"
+    <div class="_arrow_1mc3d_1"
          style="top: -13px; left: 41.5px;"
     >
     </div>
@@ -755,19 +755,19 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
     <span class="_notificationBadge_a68oa_28">
     </span>
   </button>
-  <div class="_menu_1evtp_13"
+  <div class="_menu_1mc3d_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
-    <div class="_wrapper_1evtp_22">
-      <div class="_namePrefix_1evtp_52">
+    <div class="_wrapper_1mc3d_22">
+      <div class="_namePrefix_1mc3d_44">
         På vegne av
       </div>
-      <div class="_name_1evtp_52">
+      <div class="_name_1mc3d_44">
         Buljo Tulljo
       </div>
-      <div class="_orgnr_1evtp_47">
+      <div class="_orgnr_1mc3d_39">
         Orgnr. 123456789
       </div>
       <div>
@@ -795,7 +795,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
           data-spacing-top="s"
           data-spacing-bottom="s"
       >
-      <div class="_notificationWrapper_1evtp_40">
+      <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
            href="https://host.docker.internal/web/minside/virksomhet/varsler"
         >
@@ -813,7 +813,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
           </svg>
           Varsel
         </a>
-        <span class="_notificationBadge_1evtp_26"
+        <span class="_notificationBadge_1mc3d_26"
               data-testid="varsel-circle"
         >
           99+
@@ -876,7 +876,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
         </button>
       </div>
     </div>
-    <div class="_arrow_1evtp_1"
+    <div class="_arrow_1mc3d_1"
          style="top: -13px; left: 41.5px;"
     >
     </div>
@@ -931,19 +931,19 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
       </path>
     </svg>
   </button>
-  <div class="_menu_1evtp_13"
+  <div class="_menu_1mc3d_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
-    <div class="_wrapper_1evtp_22">
-      <div class="_namePrefix_1evtp_52">
+    <div class="_wrapper_1mc3d_22">
+      <div class="_namePrefix_1mc3d_44">
         På vegne av
       </div>
-      <div class="_name_1evtp_52">
+      <div class="_name_1mc3d_44">
         Buljo Tulljo
       </div>
-      <div class="_orgnr_1evtp_47">
+      <div class="_orgnr_1mc3d_39">
         Orgnr. 123456789
       </div>
       <div>
@@ -971,7 +971,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
           data-spacing-top="s"
           data-spacing-bottom="s"
       >
-      <div class="_notificationWrapper_1evtp_40">
+      <div class="_notificationWrapper_1mc3d_35">
         <a class="_link_z7jba_1"
            href="https://host.docker.internal/web/minside/virksomhet/varsler"
         >
@@ -1047,7 +1047,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
         </button>
       </div>
     </div>
-    <div class="_arrow_1evtp_1"
+    <div class="_arrow_1mc3d_1"
          style="top: -13px; left: 41.5px;"
     >
     </div>

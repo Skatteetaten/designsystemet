@@ -20,7 +20,7 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
     },
     notificationCount: 5,
     canRepresentOthers: true,
-    onUserClick: fn(),
+    onSwitchUserClick: fn(),
     onLogOutClick: fn(),
   },
 };
@@ -107,7 +107,7 @@ export const WithMoreThan9Notifications: Story = {
 
 export const SwitchUser: Story = {
   args: {
-    onUserClick: fn(),
+    onSwitchUserClick: fn(),
     onLogOutClick: fn(),
   },
   play: async ({ args, canvasElement }) => {
@@ -127,7 +127,7 @@ export const SwitchUser: Story = {
 
     await userEvent.click(switchUserButton);
 
-    await waitFor(() => expect(args.onUserClick).toHaveBeenCalled());
+    await waitFor(() => expect(args.onSwitchUserClick).toHaveBeenCalled());
   },
 };
 
