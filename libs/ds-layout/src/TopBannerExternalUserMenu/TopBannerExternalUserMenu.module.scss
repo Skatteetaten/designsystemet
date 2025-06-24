@@ -26,24 +26,16 @@
 }
 
 .notificationBadge {
-  display: grid;
-  min-width: 0.5rem;
-  height: 1rem;
   padding: var(--spacing-xs) var(--spacing-s);
   border-radius: 1.5rem;
   background-color: var(--palette-burgundy-70);
   color: var(--palette-graphite-0);
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-bold);
-  line-height: 85%;
-  place-items: center;
 }
 
-.notificationWrapper {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  gap: var(--spacing-s);
+.notificationWrapper > a {
+  margin-right: var(--spacing-s);
 }
 
 .orgnr {

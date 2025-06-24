@@ -42,7 +42,7 @@ export const TopBannerExternalUserMenu = ({
   user,
   notificationCount,
   onLogOutClick,
-  onUserClick,
+  onSwitchUserClick,
   canRepresentOthers,
   children,
 }: TopBannerExternalUserMenuProps): JSX.Element => {
@@ -125,7 +125,7 @@ export const TopBannerExternalUserMenu = ({
                     {t('ds_overlays:topbannerexternalusermenu.OnBehalfOf')}
                   </div>
                 )}
-              <div className={styles.name}>{user?.name}</div>
+              <div className={styles.name}>{user.name}</div>
               {user?.role === 'virksomhet' && user.orgnr && (
                 <div className={styles.orgnr}>{`Orgnr. ${user.orgnr}`}</div>
               )}
@@ -133,7 +133,7 @@ export const TopBannerExternalUserMenu = ({
                 <InlineButton
                   data-testid={'switch-user'}
                   svgPath={PersonMoreSVGpath}
-                  onClick={onUserClick}
+                  onClick={onSwitchUserClick}
                 >
                   {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
                 </InlineButton>

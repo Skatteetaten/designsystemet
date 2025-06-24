@@ -25,6 +25,7 @@ import {
 import {
   TopBannerExternalProps,
   TopBannerMenu,
+  TopBannerExternalComponent,
 } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerExternalUserMenu } from '../TopBannerExternalUserMenu/TopBannerExternalUserMenu';
@@ -35,7 +36,7 @@ import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton'
 
 import styles from './TopBannerExternal.module.scss';
 
-export const TopBannerExternal = ({
+export const TopBannerExternal = (({
   ref,
   id,
   className = getCommonClassNameDefault(),
@@ -59,9 +60,6 @@ export const TopBannerExternal = ({
   onUserClick,
   onSearch,
   onSearchClick,
-  showUserMenu,
-  notificationCount,
-  canRepresentOthers,
 }: TopBannerExternalProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
   const isMobile = !useMediaQuery('(min-width: 480px)');
@@ -217,7 +215,7 @@ export const TopBannerExternal = ({
               additionalLanguages={additionalLanguages}
               onLanguageClick={onLanguageClick}
             />
-            {onLogOutClick && user && !showUserMenu && (
+            {onLogOutClick && user && (
               <>
                 <TopBannerUserButton user={user} onClick={onUserClick} />
                 <TopBannerButton
@@ -236,15 +234,6 @@ export const TopBannerExternal = ({
               >
                 {t('topbannerbutton.Login')}
               </TopBannerButton>
-            )}
-            {user && showUserMenu && (
-              <TopBannerExternalUserMenu
-                canRepresentOthers={canRepresentOthers}
-                user={user}
-                notificationCount={notificationCount || 0}
-                onLogOutClick={onLogOutClick}
-                onUserClick={onUserClick}
-              />
             )}
             {showSearch && (
               <>
@@ -348,6 +337,7 @@ export const TopBannerExternal = ({
       </div>
     </header>
   );
-};
+}) as TopBannerExternalComponent;
 
 TopBannerExternal.displayName = 'TopBannerExternal';
+TopBannerExternal.UserMenu = TopBannerExternalUserMenu;

@@ -76,6 +76,7 @@ const meta = {
       control: false,
       table: { category: category.props },
     },
+
     searchContent: { control: 'text', table: { category: category.props } },
     // Events
     onSearchClick: {
@@ -812,8 +813,6 @@ export const ExampleWithUserMenu: Story = {
       <>
         <TopBannerExternal
           ref={topBannerRef}
-          canRepresentOthers={businesses.total > 0}
-          notificationCount={3}
           classNames={{
             columns: topBannerExternalExampleStyles.columns,
           }}
@@ -993,7 +992,6 @@ export const ExampleWithUserMenu: Story = {
               </div>
             </>
           }
-          user={user}
           searchContent={
             <>
               <Paragraph
@@ -1016,9 +1014,8 @@ export const ExampleWithUserMenu: Story = {
               </LinkGroup>
             </>
           }
-          showUserMenu
           onLanguageClick={handleLanguageClick}
-          onLogInClick={handleLogIn}
+          onLogInClick={!user ? handleLogIn : undefined}
           onLogOutClick={handleLogOut}
           onUserClick={(): void => modalRef.current?.showModal()}
           onSearch={(e, value) => {
@@ -1027,7 +1024,17 @@ export const ExampleWithUserMenu: Story = {
           onSearchClick={(e, value) => {
             alert(`søker etter ${value}`);
           }}
-        />
+        >
+          {user && (
+            <TopBannerExternal.UserMenu
+              user={user}
+              notificationCount={5}
+              canRepresentOthers
+              onLogOutClick={() => setUser(undefined)}
+              onSwitchUserClick={() => modalRef.current?.showModal()}
+            />
+          )}
+        </TopBannerExternal>
         <RolePicker
           ref={modalRef}
           me={me}
