@@ -596,6 +596,218 @@ export const ExampleWithUserMenu: Story = {
       modalRef.current?.showModal();
     };
 
+    const me: Person = {
+      name: 'Ola Nordmann',
+      personId: '10101012345',
+      type: 'Person',
+    };
+
+    const businesses: Paginated<Business> = {
+      total: 3,
+      list: [
+        {
+          name: 'Costco AS',
+          organizationNumber: '123456777',
+          isDeleted: false,
+          unitType: 'AS',
+          type: 'Organization',
+        },
+        {
+          name: 'Instagram AS',
+          organizationNumber: '312843211',
+          isDeleted: true,
+          unitType: 'AS',
+          type: 'Organization',
+        },
+        {
+          name: 'Amazon ASA',
+          organizationNumber: '112843218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'ASA',
+        },
+      ],
+    };
+
+    enum LenkerUinnlogget {
+      PERSON_SKATT = 'https://www.skatteetaten.no/person/skatt/',
+      PERSON_AVGIFTER = 'https://www.skatteetaten.no/person/avgifter/',
+      PERSON_FOLKEREGISTER = 'https://www.skatteetaten.no/person/folkeregister/',
+      PERSON_UTENLANDSK = 'https://www.skatteetaten.no/person/utenlandsk/',
+      PERSON_BETALING_OG_INNKREVING = 'https://www.skatteetaten.no/person/betaling-og-innkreving/',
+      PERSON_FORSIDE = 'https://www.skatteetaten.no/person/',
+      VIRKSOMHET_SKATT = 'https://www.skatteetaten.no/bedrift-og-organisasjon/skatt/',
+      VIRKSOMHET_AVGIFTER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/avgifter/',
+      VIRKSOMHET_RAPPORTERING_OG_BRANSJER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/rapportering-og-bransjer/',
+      VIRKSOMHET_STARTE_OG_DRIVE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/starte-og-drive/',
+      VIRKSOMHET_ARBEIDSGIVER = 'https://www.skatteetaten.no/bedrift-og-organisasjon/arbeidsgiver/',
+      VIRKSOMHET_UTENLANDSK = 'https://www.skatteetaten.no/bedrift-og-organisasjon/utenlandsk/',
+      VIRKSOMHET_FORSIDE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/',
+      RETTSKILDER = 'https://www.skatteetaten.no/rettskilder/',
+      RETTSKILDER_PER_EMNE = 'https://www.skatteetaten.no/rettskilder/emne/',
+      RETTSKILDER_PER_TYPE = 'https://www.skatteetaten.no/rettskilder/type/',
+      OM_OSS_KONTAKT = 'https://www.skatteetaten.no/kontakt/',
+      OM_OSS_DELING_AV_DATA = 'https://www.skatteetaten.no/deling/',
+      OM_OSS_PRESSE = 'https://www.skatteetaten.no/presse/',
+    }
+
+    enum LenkerInnloggetIkkeMinSide {
+      SKATT = '/web/mineskatteforhold/',
+      FOLKEREGISTER = '/web/minfolkeregisterside/',
+      INNBOKS = '/web/innboks/',
+      KJORETOY = '/web/desta/',
+      AKSJEOPPGAVEN = '/web/aksjeoppgaven/?referrer=min-side',
+    }
+
+    enum MinsideLenker {
+      VIRKSOMHET_KALENDER = '/virksomhet/kalender',
+      VIRKSOMHET_KRAVOVERSIKT = '/virksomhet/kravoversikt',
+      PERSON_FORSIDE = '/person',
+      PERSON_ARBEIDINNTEKT = '/person/arbeidinntekt',
+      PERSON_EIENDOMMER = '/person/eiendommer',
+      PERSON_KRAVOVERSIKT = '/person/kravoversikt',
+      PERSON_SAKSTATUS = '/person/sakstatus',
+      VIRKSOMHET_SAKSTATUS = '/virksomhet/sakstatus',
+    }
+
+    const loggedInLinks = [
+      {
+        href: MinsideLenker.PERSON_FORSIDE,
+        text: 'Min side',
+      },
+      {
+        href: LenkerInnloggetIkkeMinSide.SKATT,
+        text: 'Skatt',
+      },
+      {
+        href: LenkerInnloggetIkkeMinSide.FOLKEREGISTER,
+        text: 'Folkeregister',
+      },
+      {
+        href: LenkerInnloggetIkkeMinSide.INNBOKS,
+        text: 'Innboks',
+      },
+      {
+        href: MinsideLenker.PERSON_SAKSTATUS,
+        text: 'Mine saker',
+      },
+      {
+        href: MinsideLenker.PERSON_KRAVOVERSIKT,
+        text: 'Krav og betalinger',
+      },
+      {
+        href: LenkerInnloggetIkkeMinSide.KJORETOY,
+        text: 'Bil og andre kjøretøy',
+      },
+      {
+        href: MinsideLenker.PERSON_ARBEIDINNTEKT,
+        text: 'Arbeid og inntekt',
+      },
+      {
+        href: LenkerInnloggetIkkeMinSide.AKSJEOPPGAVEN,
+        text: 'Aksjeoppgaven',
+      },
+      {
+        href: MinsideLenker.PERSON_EIENDOMMER,
+        text: 'Eiendommer',
+      },
+    ];
+
+    const personlinks = [
+      {
+        href: LenkerUinnlogget.PERSON_FORSIDE,
+        text: 'Person forside',
+      },
+      {
+        href: LenkerUinnlogget.PERSON_SKATT,
+        text: 'Skatt',
+      },
+      {
+        href: LenkerUinnlogget.PERSON_AVGIFTER,
+        text: 'Avgifter',
+      },
+      {
+        href: LenkerUinnlogget.PERSON_FOLKEREGISTER,
+        text: 'Folkeregisteret',
+      },
+      {
+        href: LenkerUinnlogget.PERSON_UTENLANDSK,
+        text: 'Utenlandsk',
+      },
+      {
+        href: LenkerUinnlogget.PERSON_BETALING_OG_INNKREVING,
+        text: 'Betaling og innkreving',
+      },
+    ];
+
+    const virksomhetlinks = [
+      {
+        href: LenkerUinnlogget.VIRKSOMHET_SKATT,
+        text: 'Skatt',
+      },
+      {
+        href: LenkerUinnlogget.VIRKSOMHET_AVGIFTER,
+        text: 'Avgifter',
+      },
+      {
+        href: LenkerUinnlogget.VIRKSOMHET_RAPPORTERING_OG_BRANSJER,
+        text: 'Rapportering og bransjer',
+      },
+      {
+        href: LenkerUinnlogget.VIRKSOMHET_STARTE_OG_DRIVE,
+        text: 'Starte og drive',
+      },
+      {
+        href: LenkerUinnlogget.VIRKSOMHET_ARBEIDSGIVER,
+        text: 'Arbeidsgiver',
+      },
+      {
+        href: LenkerUinnlogget.VIRKSOMHET_UTENLANDSK,
+        text: 'Utenlandsk',
+      },
+    ];
+
+    const virksomhetLinks = [
+      {
+        href: 'web/minside/virksomhet/',
+        text: 'Min side',
+      },
+      {
+        href: MinsideLenker.VIRKSOMHET_KALENDER,
+        text: 'Kalender',
+      },
+      {
+        href: MinsideLenker.VIRKSOMHET_KRAVOVERSIKT,
+        text: 'Krav og betalinger',
+      },
+      {
+        href: MinsideLenker.VIRKSOMHET_SAKSTATUS,
+        text: 'Mine saker',
+      },
+      {
+        href: LenkerInnloggetIkkeMinSide.INNBOKS,
+        text: 'Innboks',
+      },
+    ];
+
+    const omOssLinks = [
+      {
+        href: LenkerUinnlogget.OM_OSS_KONTAKT,
+        text: 'Kontakt oss',
+        svgPath: ChatBubbleOutlineSVGpath,
+      },
+      {
+        href: LenkerUinnlogget.OM_OSS_KONTAKT,
+        text: 'Deling av data',
+        svgPath: ArrowUpDownSVGpath,
+      },
+      {
+        href: LenkerUinnlogget.OM_OSS_KONTAKT,
+        text: 'Presse',
+        svgPath: ShareSVGpath,
+      },
+    ];
+
     return (
       <>
         <TopBannerExternal
