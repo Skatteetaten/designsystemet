@@ -487,7 +487,7 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
         </span>
         <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _clearButton_2ptm8_40"
                 data-brightness="default"
-                type="reset"
+                type="button"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
@@ -619,7 +619,7 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
         </span>
         <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _clearButton_2ptm8_40"
                 data-brightness="default"
-                type="reset"
+                type="button"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
@@ -1165,7 +1165,7 @@ exports[`Tester/SearchField WithLongInput smoke-test 1`] = `
         </span>
         <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _clearButton_2ptm8_40"
                 data-brightness="default"
-                type="reset"
+                type="button"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
@@ -1605,7 +1605,7 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
         </span>
         <button class="_button_19ayz_1 _button_extraSmall_19ayz_34  _clearButton_2ptm8_40"
                 data-brightness="default"
-                type="reset"
+                type="button"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
@@ -1680,7 +1680,7 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
         </span>
         <button class="_button_19ayz_1 _button_small_19ayz_38  _clearButton_2ptm8_40"
                 data-brightness="default"
-                type="reset"
+                type="button"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _icon_19ayz_26"
                viewbox="0 0 24 24"
