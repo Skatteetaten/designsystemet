@@ -140,64 +140,70 @@ export const TopBannerExternalUserMenu = ({
               </div>
               <Divider></Divider>
 
-              <div className={styles.notificationWrapper}>
-                {user?.role === 'virksomhet' && (
+              <div className={styles.linkWrapper}>
+                <div className={styles.notificationWrapper}>
+                  {user?.role === 'virksomhet' && (
+                    <Link
+                      svgPath={BellSVGpath}
+                      href={`https://${domainName}/web/minside/virksomhet/varsler`}
+                    >
+                      {t('ds_overlays:topbannerexternalusermenu.Notification')}
+                    </Link>
+                  )}
+                  {user?.role === 'meg' && (
+                    <Link
+                      svgPath={BellSVGpath}
+                      href={`https://${domainName}/web/minside/person/varsler`}
+                    >
+                      {t('ds_overlays:topbannerexternalusermenu.Notification')}
+                    </Link>
+                  )}
+                  {!!notificationCount && notificationCount > 0 && (
+                    <span
+                      aria-label={t(
+                        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+                        { count: notificationCount }
+                      )}
+                      className={styles.notificationBadge}
+                      data-testid={'varsel-circle'}
+                    >
+                      {notificationCount > 99
+                        ? '99+'
+                        : notificationCount > 1 && notificationCount}
+                    </span>
+                  )}
+                </div>
+                <div className={styles.link}>
                   <Link
-                    svgPath={BellSVGpath}
-                    href={`https://${domainName}/web/minside/virksomhet/varsler`}
+                    svgPath={PersonSVGpath}
+                    href={`https://${domainName}/web/minside`}
                   >
-                    {t('ds_overlays:topbannerexternalusermenu.Notification')}
+                    {t('ds_overlays:topbannerexternalusermenu.MyPage')}
                   </Link>
+                </div>
+                {user?.role === 'virksomhet' && (
+                  <div className={styles.link}>
+                    <Link
+                      svgPath={InfoSquareSVGpath}
+                      href={`https://${domainName}/web/minside/virksomhet/omvirksomheten`}
+                    >
+                      {t(
+                        'ds_overlays:topbannerexternalusermenu.AboutTheOrganisation'
+                      )}
+                    </Link>
+                  </div>
                 )}
                 {user?.role === 'meg' && (
-                  <Link
-                    svgPath={BellSVGpath}
-                    href={`https://${domainName}/web/minside/person/varsler`}
-                  >
-                    {t('ds_overlays:topbannerexternalusermenu.Notification')}
-                  </Link>
-                )}
-                {!!notificationCount && notificationCount > 0 && (
-                  <span
-                    className={styles.notificationBadge}
-                    data-testid={'varsel-circle'}
-                  >
-                    {notificationCount > 99
-                      ? '99+'
-                      : notificationCount > 1 && notificationCount}
-                  </span>
+                  <div className={styles.link}>
+                    <Link
+                      svgPath={InfoSquareSVGpath}
+                      href={`https://${domainName}/web/minside/person/ommeg`}
+                    >
+                      {t('ds_overlays:topbannerexternalusermenu.AboutMe')}
+                    </Link>
+                  </div>
                 )}
               </div>
-              <div>
-                <Link
-                  svgPath={PersonSVGpath}
-                  href={`https://${domainName}/web/minside`}
-                >
-                  {t('ds_overlays:topbannerexternalusermenu.MyPage')}
-                </Link>
-              </div>
-              {user?.role === 'virksomhet' && (
-                <div>
-                  <Link
-                    svgPath={InfoSquareSVGpath}
-                    href={`https://${domainName}/web/minside/virksomhet/omvirksomheten`}
-                  >
-                    {t(
-                      'ds_overlays:topbannerexternalusermenu.AboutTheOrganisation'
-                    )}
-                  </Link>
-                </div>
-              )}
-              {user?.role === 'meg' && (
-                <div>
-                  <Link
-                    svgPath={InfoSquareSVGpath}
-                    href={`https://${domainName}/web/minside/person/ommeg`}
-                  >
-                    {t('ds_overlays:topbannerexternalusermenu.AboutMe')}
-                  </Link>
-                </div>
-              )}
               <div>
                 <Divider></Divider>
                 {children}

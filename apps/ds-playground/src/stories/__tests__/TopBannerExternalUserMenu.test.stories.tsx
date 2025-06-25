@@ -20,7 +20,7 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
     },
     notificationCount: 5,
     canRepresentOthers: true,
-    onUserClick: fn(),
+    onSwitchUserClick: fn(),
     onLogOutClick: fn(),
   },
 };
@@ -107,7 +107,7 @@ export const WithMoreThan9Notifications: Story = {
 
 export const SwitchUser: Story = {
   args: {
-    onUserClick: fn(),
+    onSwitchUserClick: fn(),
     onLogOutClick: fn(),
   },
   play: async ({ args, canvasElement }) => {
@@ -127,7 +127,7 @@ export const SwitchUser: Story = {
 
     await userEvent.click(switchUserButton);
 
-    await waitFor(() => expect(args.onUserClick).toHaveBeenCalled());
+    await waitFor(() => expect(args.onSwitchUserClick).toHaveBeenCalled());
   },
 };
 
@@ -181,5 +181,23 @@ export const NoPaaVegneAv: Story = {
     // Sjekker at "på vegne av" ikke vises
     const onBehalfOfText = canvas.queryByText('På vegne av');
     await expect(onBehalfOfText).not.toBeInTheDocument();
+  },
+};
+
+export const WithChildren: Story = {
+  args: {
+    children: <div data-testid={'usermenu-child'}>{'Child'}</div>,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const menuButton = canvas.getByRole('button', {
+      name: `${userIconTitle} ${defaultUserName} ${menuText}`,
+    });
+    await userEvent.click(menuButton);
+
+    const customChild = canvas.getByTestId('usermenu-child');
+    await expect(customChild).toBeInTheDocument();
+    await expect(customChild).toHaveTextContent('Child');
   },
 };

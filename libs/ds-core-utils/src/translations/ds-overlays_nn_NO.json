@@ -44,6 +44,7 @@
   "topbannerexternalusermenu.AboutTheOrganisation": "(Om virksomheten)",
   "topbannerexternalusermenu.MyPage": "Mi side",
   "topbannerexternalusermenu.Notification": "(Varsel)",
+  "topbannerexternalusermenu.NotificationCountMessage": "Varsler, {{count}} uleste",
   "topbannerexternalusermenu.OnBehalfOf": "På vegner av",
   "topbannerexternalusermenu.SwitchUser": "Byt brukar"
 }
