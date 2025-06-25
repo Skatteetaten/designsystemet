@@ -62,7 +62,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         Buljo Tulljo
       </div>
       <div class="_orgnr_1mc3d_39">
-        Orgnr. 123456789
+        Orgnr. 123&nbsp;456&nbsp;789
       </div>
       <div>
         <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
@@ -240,7 +240,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         Buljo Tulljo
       </div>
       <div class="_orgnr_1mc3d_39">
-        Orgnr. 123456789
+        Orgnr. 123&nbsp;456&nbsp;789
       </div>
       <div>
         <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
@@ -590,7 +590,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         Buljo Tulljo
       </div>
       <div class="_orgnr_1mc3d_39">
-        Orgnr. 123456789
+        Orgnr. 123&nbsp;456&nbsp;789
       </div>
       <div>
         <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
@@ -768,7 +768,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
         Buljo Tulljo
       </div>
       <div class="_orgnr_1mc3d_39">
-        Orgnr. 123456789
+        Orgnr. 123&nbsp;456&nbsp;789
       </div>
       <div>
         <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
@@ -944,7 +944,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
         Buljo Tulljo
       </div>
       <div class="_orgnr_1mc3d_39">
-        Orgnr. 123456789
+        Orgnr. 123&nbsp;456&nbsp;789
       </div>
       <div>
         <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"

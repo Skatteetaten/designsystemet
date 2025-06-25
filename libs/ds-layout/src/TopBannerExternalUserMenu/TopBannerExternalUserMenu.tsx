@@ -16,7 +16,11 @@ import {
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { Divider } from '@skatteetaten/ds-content';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  formatOrganisationNumber,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import {
   InfoSquareSVGpath,
   BellSVGpath,
@@ -127,7 +131,9 @@ export const TopBannerExternalUserMenu = ({
                 )}
               <div className={styles.name}>{user.name}</div>
               {user?.role === 'virksomhet' && user.orgnr && (
-                <div className={styles.orgnr}>{`Orgnr. ${user.orgnr}`}</div>
+                <div
+                  className={styles.orgnr}
+                >{`Orgnr. ${formatOrganisationNumber(user.orgnr)}`}</div>
               )}
               <div>
                 <InlineButton

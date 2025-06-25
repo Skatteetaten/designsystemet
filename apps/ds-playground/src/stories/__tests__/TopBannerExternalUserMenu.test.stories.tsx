@@ -54,7 +54,7 @@ export const Default: Story = {
     await expect(userName).toBeInTheDocument();
 
     // Sjekker om org nummeret er synlig
-    const orgnr = within(userMenu).getByText('Orgnr. 123456789');
+    const orgnr = within(userMenu).getByText('Orgnr. 123 456 789');
     await expect(orgnr).toBeInTheDocument();
 
     // Sjekker om varsler-tallet er synlig
