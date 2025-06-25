@@ -1,11 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
+  TopBannerExternal,
   TopBannerExternalUserMenu,
   TopBannerExternalUserMenuProps,
 } from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
+
+TopBannerExternal.UserMenu.displayName = 'TopBannerExternal.UserMenu';
 
 const meta = {
   component: TopBannerExternalUserMenu,
@@ -36,8 +39,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {
-  parameters: {
-    backgrounds: { default: 'themePrimary' },
-  },
-} satisfies Story;
+export const Preview: Story = {} satisfies Story;
