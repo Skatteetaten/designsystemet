@@ -7,13 +7,10 @@ import { Card } from '@skatteetaten/ds-content';
 import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
 import {
   AccountMultipleIcon,
-  ArrowUpDownSVGpath,
   BriefcaseIcon,
-  ChatBubbleOutlineSVGpath,
   FavoriteIcon,
   LockOutlineSVGpath,
   PersonIcon,
-  ShareSVGpath,
 } from '@skatteetaten/ds-icons';
 import {
   TopBannerExternal,
@@ -180,11 +177,9 @@ export const Examples: Story = {
       VIRKSOMHET_UTENLANDSK = 'https://www.skatteetaten.no/bedrift-og-organisasjon/utenlandsk/',
       VIRKSOMHET_FORSIDE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/',
       RETTSKILDER = 'https://www.skatteetaten.no/rettskilder/',
-      RETTSKILDER_PER_EMNE = 'https://www.skatteetaten.no/rettskilder/emne/',
-      RETTSKILDER_PER_TYPE = 'https://www.skatteetaten.no/rettskilder/type/',
-      OM_OSS_KONTAKT = 'https://www.skatteetaten.no/kontakt/',
-      OM_OSS_DELING_AV_DATA = 'https://www.skatteetaten.no/deling/',
-      OM_OSS_PRESSE = 'https://www.skatteetaten.no/presse/',
+      PRESSE = 'https://www.skatteetaten.no/presse/',
+      SAMARBEIDSPARTNERE = 'https://www.skatteetaten.no/samarbeidspartnere/',
+      KONTAKT = 'https://www.skatteetaten.no/kontakt/',
     }
 
     enum LenkerInnloggetIkkeMinSide {
@@ -291,7 +286,7 @@ export const Examples: Story = {
       },
       {
         href: LenkerUinnlogget.VIRKSOMHET_STARTE_OG_DRIVE,
-        text: 'Starte og drive',
+        text: 'Starte, drive og avslutte',
       },
       {
         href: LenkerUinnlogget.VIRKSOMHET_ARBEIDSGIVER,
@@ -323,24 +318,6 @@ export const Examples: Story = {
       {
         href: LenkerInnloggetIkkeMinSide.INNBOKS,
         text: 'Innboks',
-      },
-    ];
-
-    const omOssLinks = [
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Kontakt oss',
-        svgPath: ChatBubbleOutlineSVGpath,
-      },
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Deling av data',
-        svgPath: ArrowUpDownSVGpath,
-      },
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Presse',
-        svgPath: ShareSVGpath,
       },
     ];
 
@@ -421,9 +398,7 @@ export const Examples: Story = {
                 >
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger'}
                 </Paragraph>
-                <Button svgPath={LockOutlineSVGpath}>
-                  {'Logg inn på min side'}
-                </Button>
+                <Button svgPath={LockOutlineSVGpath}>{'Logg inn'}</Button>
               </>
             )
           }
@@ -478,40 +453,24 @@ export const Examples: Story = {
                   </LinkGroup>
                 </div>
                 <div>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} level={4} hasSpacing>
                     <a href={LenkerUinnlogget.RETTSKILDER}>{'Rettskilder'}</a>
                   </Heading>
-                  <LinkGroup
+                  <Heading as={'h3'} level={4} hasSpacing>
+                    <a href={LenkerUinnlogget.PRESSE}>{'Presse'}</a>
+                  </Heading>
+                  <Heading
+                    as={'h3'}
+                    level={4}
                     className={topBannerExternalExampleStyles.marginBottomXL}
                   >
-                    <LinkGroup.Link
-                      href={LenkerUinnlogget.RETTSKILDER_PER_EMNE}
-                    >
-                      {'Rettskilder per emne'}
-                    </LinkGroup.Link>
-                    <LinkGroup.Link
-                      href={LenkerUinnlogget.RETTSKILDER_PER_TYPE}
-                    >
-                      {'Rettskilder per type'}
-                    </LinkGroup.Link>
-                  </LinkGroup>
-                  <Heading as={'h3'} level={3} hasSpacing>
-                    {'Om oss'}
+                    <a href={LenkerUinnlogget.SAMARBEIDSPARTNERE}>
+                      {'Samarbeidspartner'}
+                    </a>
                   </Heading>
-                  <ul
-                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.noPadding}`}
-                  >
-                    {omOssLinks.map((link, index) => (
-                      <li
-                        key={index}
-                        className={topBannerExternalExampleStyles.marginBottomS}
-                      >
-                        <Link href={link.href} svgPath={link.svgPath}>
-                          {link.text}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <Heading as={'h3'} level={4} hasSpacing>
+                    <a href={LenkerUinnlogget.KONTAKT}>{'Kontakt oss'}</a>
+                  </Heading>
                 </div>
               </div>
             </>
