@@ -357,3 +357,7 @@ a.resetLinkStyling {
 dl.descriptionListTwoColumns {
   --description-list-columns: 2;
 }
+
+.editableContent {
+  padding: var(--spacing-s) var(--spacing-l) var(--spacing-l);
+}

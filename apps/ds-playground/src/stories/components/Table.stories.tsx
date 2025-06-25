@@ -3,7 +3,8 @@ import { ReactNode, useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
-import { Checkbox } from '@skatteetaten/ds-forms';
+import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
+import { Checkbox, TextField } from '@skatteetaten/ds-forms';
 import {
   CopySVGpath,
   DeleteSVGpath,
@@ -902,3 +903,177 @@ export const WithStripes: Story = {
   },
 } satisfies Story;
 WithStripes.parameters = exampleParameters;
+
+export const AddRow: Story = {
+  render: (_args): JSX.Element => {
+    const data = [
+      {
+        id: 'abc',
+        dato: '23.07.2025',
+        personNumber: '14487219408',
+        firstName: 'Treliters',
+        lastName: 'Geir',
+        amount: '641693',
+      },
+      {
+        id: 'def',
+        dato: '23.08.2025',
+        personNumber: '70070903485',
+        firstName: 'Ringlete',
+        lastName: 'Under',
+        amount: '139914',
+      },
+      {
+        id: 'ghi',
+        dato: '23.09.2025',
+        personNumber: '70168226499',
+        firstName: 'Uskikka',
+        lastName: 'Resistens',
+        amount: '667946',
+      },
+    ];
+
+    const [addRow, setAddRow] = useState<boolean>(false);
+
+    const [sortState, setSortState] = useState<SortState>({
+      direction: 'none',
+    });
+
+    const sortedData = data.slice().sort((a, b) => {
+      const sortKey = sortState.sortKey as keyof (typeof data)[0];
+      if (!sortKey) {
+        return 0;
+      }
+      if (a[sortKey] === b[sortKey]) {
+        return 0;
+      }
+      if (sortState.direction === 'ascending') {
+        return a[sortKey] > b[sortKey] ? 1 : -1;
+      }
+      return a[sortKey] < b[sortKey] ? 1 : -1;
+    });
+
+    return (
+      <>
+        <Button
+          className={'bottomSpacingL'}
+          onClick={(): void => setAddRow(true)}
+        >
+          {'Legg til person'}
+        </Button>
+        <Table
+          caption={'Personoversikt'}
+          variant={'compact'}
+          rowInEditModeId={addRow ? 'addPerson' : undefined}
+          sortState={sortState}
+          setSortState={setSortState}
+        >
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell scope={'col'} sortKey={'dato'} isSortable>
+                {'Sist endret'}
+              </Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>
+                {'Fødselsnummer'}
+              </Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'} alignment={'right'}>
+                {'Beløp'}
+              </Table.HeaderCell>
+              <Table.HeaderCell as={'td'} />
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {addRow && (
+              <Table.EditableRow
+                id={'addPerson'}
+                editButtonPosition={'right'}
+                editableContent={(closeEditing: () => void): ReactNode => (
+                  <div className={'editableContent'}>
+                    <div className={'flex gapM bottomSpacingXL'}>
+                      <TextField label={'Fødselsnummer (11 siffer)'} />
+                      <TextField label={'Etternavn'} />
+                    </div>
+                    <TextField
+                      label={'Beløp i kroner'}
+                      className={'textField150 bottomSpacingXL'}
+                    />
+                    <div className={'flex gapS'}>
+                      <Button
+                        onClick={(): void => {
+                          closeEditing();
+                          setAddRow(false);
+                        }}
+                      >
+                        {'Lagre'}
+                      </Button>
+                      <Button
+                        variant={'secondary'}
+                        onClick={(): void => {
+                          closeEditing();
+                          setAddRow(false);
+                        }}
+                      >
+                        {'Avbryt'}
+                      </Button>
+                    </div>
+                  </div>
+                )}
+              >
+                <Table.DataCell colSpan={4}>{'Legg til person'}</Table.DataCell>
+              </Table.EditableRow>
+            )}
+            {sortedData.map((row) => {
+              return (
+                <Table.EditableRow
+                  key={row.id}
+                  editButtonPosition={'right'}
+                  editableContent={(closeEditing: () => void): ReactNode => (
+                    <div className={'editableContent'}>
+                      <div className={'flex gapM bottomSpacingXL'}>
+                        <TextField
+                          label={'Fødselsnummer (11 siffer)'}
+                          defaultValue={row.personNumber}
+                        />
+                        <TextField
+                          label={'Etternavn'}
+                          defaultValue={row.lastName}
+                        />
+                      </div>
+                      <TextField
+                        label={'Beløp i kroner'}
+                        className={'textField150 bottomSpacingXL'}
+                        defaultValue={row.amount}
+                      />
+                      <div className={'flex gapS'}>
+                        <Button onClick={(): void => closeEditing()}>
+                          {'Lagre'}
+                        </Button>
+                        <Button
+                          variant={'secondary'}
+                          onClick={(): void => closeEditing()}
+                        >
+                          {'Avbryt'}
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                >
+                  <Table.DataCell>{row.dato}</Table.DataCell>
+                  <Table.DataCell>
+                    {formatNationalIdentityNumber(row.personNumber)}
+                  </Table.DataCell>
+                  <Table.DataCell>{`${row.firstName} ${row.lastName}`}</Table.DataCell>
+                  <Table.DataCell
+                    alignment={'right'}
+                  >{`${row.amount} kr`}</Table.DataCell>
+                </Table.EditableRow>
+              );
+            })}
+          </Table.Body>
+        </Table>
+      </>
+    );
+  },
+} satisfies Story;
+AddRow.parameters = exampleParameters;
