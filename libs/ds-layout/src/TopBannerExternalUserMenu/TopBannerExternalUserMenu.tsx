@@ -135,15 +135,13 @@ export const TopBannerExternalUserMenu = ({
                   className={styles.orgnr}
                 >{`Orgnr. ${formatOrganisationNumber(user.orgnr)}`}</div>
               )}
-              <div>
-                <InlineButton
-                  data-testid={'switch-user'}
-                  svgPath={PersonMoreSVGpath}
-                  onClick={onSwitchUserClick}
-                >
-                  {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
-                </InlineButton>
-              </div>
+              <InlineButton
+                data-testid={'switch-user'}
+                svgPath={PersonMoreSVGpath}
+                onClick={onSwitchUserClick}
+              >
+                {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
+              </InlineButton>
               <Divider></Divider>
 
               <div className={styles.linkWrapper}>

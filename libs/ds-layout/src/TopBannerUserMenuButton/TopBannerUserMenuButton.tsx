@@ -85,6 +85,7 @@ export const TopBannerUserMenuButton = ({
           svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
           className={styles.arrowMobile}
         />
+        {hasNotifications && <span className={styles.notificationBadge}></span>}
       </span>
       {buttonText}
       <span className={styles.srOnly}>&nbsp;{t('topbannerbutton.Menu')}</span>
@@ -92,7 +93,11 @@ export const TopBannerUserMenuButton = ({
         svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
         className={styles.arrowDesktop}
       />
-      {hasNotifications && <span className={styles.notificationBadge}></span>}
+      {hasNotifications && (
+        <span
+          className={`${styles.notificationBadge} ${styles.notificationBadgeDesktop}`}
+        ></span>
+      )}
     </TopBannerButton>
   );
 };

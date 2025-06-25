@@ -35,10 +35,19 @@
   outline: 2px solid var(--palette-graphite-0);
 
   @media (min-width: breakpoints.$breakpoint-m) {
-    top: -0.25rem;
-    right: -0.25rem;
-    width: 0.75rem;
-    height: 0.75rem;
+    display: none;
+  }
+
+  &Desktop {
+    display: none;
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      top: -0.25rem;
+      right: -0.25rem;
+      display: inline;
+      width: 0.75rem;
+      height: 0.75rem;
+    }
   }
 }
 
