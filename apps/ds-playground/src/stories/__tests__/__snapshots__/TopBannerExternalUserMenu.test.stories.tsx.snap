@@ -2,14 +2,14 @@
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_om5nw_56 _usernameButton_om5nw_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_100mj_56 _usernameButton_100mj_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_om5nw_59">
-      <span class="_userIcon_om5nw_63">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_om5nw_78"
+    <span class="_iconWrapper_100mj_59">
+      <span class="_userIcon_100mj_64">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_100mj_79"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -23,7 +23,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_om5nw_81"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_100mj_82"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -32,14 +32,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_om5nw_28">
+      <span class="_notificationBadge_100mj_28">
       </span>
     </span>
     Buljo Tulljo
-    <span class="_srOnly_om5nw_104">
+    <span class="_srOnly_100mj_105">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_om5nw_89"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_100mj_90"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -48,7 +48,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_om5nw_28 _notificationBadgeDesktop_om5nw_43">
+    <span class="_notificationBadge_100mj_28 _notificationBadgeDesktop_100mj_43">
     </span>
   </button>
   <div class="_menu_1p9xm_13"
@@ -183,14 +183,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_om5nw_56 _usernameButton_om5nw_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_100mj_56 _usernameButton_100mj_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_om5nw_59">
-      <span class="_userIcon_om5nw_63">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_om5nw_78"
+    <span class="_iconWrapper_100mj_59">
+      <span class="_userIcon_100mj_64">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_100mj_79"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r15:"
@@ -204,7 +204,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_om5nw_81"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_100mj_82"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -213,14 +213,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_om5nw_28">
+      <span class="_notificationBadge_100mj_28">
       </span>
     </span>
     Buljo Tulljo
-    <span class="_srOnly_om5nw_104">
+    <span class="_srOnly_100mj_105">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_om5nw_89"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_100mj_90"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -229,7 +229,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_om5nw_28 _notificationBadgeDesktop_om5nw_43">
+    <span class="_notificationBadge_100mj_28 _notificationBadgeDesktop_100mj_43">
     </span>
   </button>
   <div class="_menu_1p9xm_13"
@@ -364,14 +364,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_om5nw_56"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_100mj_56"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_om5nw_59">
-      <span class="_userIcon_om5nw_63">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_om5nw_78"
+    <span class="_iconWrapper_100mj_59">
+      <span class="_userIcon_100mj_64">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_100mj_79"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1e:"
@@ -385,7 +385,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_om5nw_81"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_100mj_82"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -394,14 +394,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_om5nw_28">
+      <span class="_notificationBadge_100mj_28">
       </span>
     </span>
     Meg selv
-    <span class="_srOnly_om5nw_104">
+    <span class="_srOnly_100mj_105">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_om5nw_89"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_100mj_90"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -410,7 +410,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_om5nw_28 _notificationBadgeDesktop_om5nw_43">
+    <span class="_notificationBadge_100mj_28 _notificationBadgeDesktop_100mj_43">
     </span>
   </button>
   <div class="_menu_1p9xm_13"
@@ -539,14 +539,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_om5nw_56 _usernameButton_om5nw_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_100mj_56 _usernameButton_100mj_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_om5nw_59">
-      <span class="_userIcon_om5nw_63">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_om5nw_78"
+    <span class="_iconWrapper_100mj_59">
+      <span class="_userIcon_100mj_64">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_100mj_79"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rs:"
@@ -560,7 +560,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_om5nw_81"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_100mj_82"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -569,14 +569,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_om5nw_28">
+      <span class="_notificationBadge_100mj_28">
       </span>
     </span>
     Buljo Tulljo
-    <span class="_srOnly_om5nw_104">
+    <span class="_srOnly_100mj_105">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_om5nw_89"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_100mj_90"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -585,7 +585,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_om5nw_28 _notificationBadgeDesktop_om5nw_43">
+    <span class="_notificationBadge_100mj_28 _notificationBadgeDesktop_100mj_43">
     </span>
   </button>
   <div class="_menu_1p9xm_13"
@@ -720,14 +720,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_om5nw_56 _usernameButton_om5nw_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_100mj_56 _usernameButton_100mj_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_om5nw_59">
-      <span class="_userIcon_om5nw_63">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_om5nw_78"
+    <span class="_iconWrapper_100mj_59">
+      <span class="_userIcon_100mj_64">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_100mj_79"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1n:"
@@ -741,7 +741,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_om5nw_81"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_100mj_82"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -750,14 +750,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_om5nw_28">
+      <span class="_notificationBadge_100mj_28">
       </span>
     </span>
     Buljo Tulljo
-    <span class="_srOnly_om5nw_104">
+    <span class="_srOnly_100mj_105">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_om5nw_89"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_100mj_90"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -766,7 +766,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_om5nw_28 _notificationBadgeDesktop_om5nw_43">
+    <span class="_notificationBadge_100mj_28 _notificationBadgeDesktop_100mj_43">
     </span>
   </button>
   <div class="_menu_1p9xm_13"
@@ -904,14 +904,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_om5nw_56 _usernameButton_om5nw_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_100mj_56 _usernameButton_100mj_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_om5nw_59">
-      <span class="_userIcon_om5nw_63">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_om5nw_78"
+    <span class="_iconWrapper_100mj_59">
+      <span class="_userIcon_100mj_64">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_100mj_79"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rj:"
@@ -925,7 +925,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_om5nw_81"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_100mj_82"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -934,14 +934,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_om5nw_28">
+      <span class="_notificationBadge_100mj_28">
       </span>
     </span>
     Buljo Tulljo
-    <span class="_srOnly_om5nw_104">
+    <span class="_srOnly_100mj_105">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_om5nw_89"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_100mj_90"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -950,7 +950,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_om5nw_28 _notificationBadgeDesktop_om5nw_43">
+    <span class="_notificationBadge_100mj_28 _notificationBadgeDesktop_100mj_43">
     </span>
   </button>
   <div class="_menu_1p9xm_13"
@@ -1085,14 +1085,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_om5nw_56 _usernameButton_om5nw_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_100mj_56 _usernameButton_100mj_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_om5nw_59">
-      <span class="_userIcon_om5nw_63">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_om5nw_78"
+    <span class="_iconWrapper_100mj_59">
+      <span class="_userIcon_100mj_64">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_100mj_79"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ra:"
@@ -1106,7 +1106,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_om5nw_81"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_100mj_82"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -1117,10 +1117,10 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
       </svg>
     </span>
     Buljo Tulljo
-    <span class="_srOnly_om5nw_104">
+    <span class="_srOnly_100mj_105">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_om5nw_89"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_100mj_90"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"

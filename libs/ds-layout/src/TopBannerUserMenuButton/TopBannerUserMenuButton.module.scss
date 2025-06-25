@@ -26,8 +26,8 @@
 
 .notificationBadge {
   position: absolute;
-  top: 0;
-  right: 1.25rem;
+  top: -0.25rem;
+  right: 1rem;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -39,14 +39,14 @@
   }
 
   &Desktop {
+    top: -0.25rem;
+    right: -0.25rem;
     display: none;
+    width: 0.75rem;
+    height: 0.75rem;
 
     @media (min-width: breakpoints.$breakpoint-m) {
-      top: -0.25rem;
-      right: -0.25rem;
       display: inline;
-      width: 0.75rem;
-      height: 0.75rem;
     }
   }
 }
@@ -55,6 +55,7 @@
   z-index: 1000;
 
   .iconWrapper {
+    position: relative;
     display: flex;
     align-items: center;
   }
