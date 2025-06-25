@@ -906,10 +906,10 @@ WithStripes.parameters = exampleParameters;
 
 export const AddRow: Story = {
   render: (_args): JSX.Element => {
-    const data = [
+    const [data, setData] = useState([
       {
         id: 'abc',
-        dato: '23.07.2025',
+        dato: '23.7.2025',
         personNumber: '14487219408',
         firstName: 'Treliters',
         lastName: 'Geir',
@@ -917,7 +917,7 @@ export const AddRow: Story = {
       },
       {
         id: 'def',
-        dato: '23.08.2025',
+        dato: '23.8.2025',
         personNumber: '70070903485',
         firstName: 'Ringlete',
         lastName: 'Under',
@@ -925,13 +925,13 @@ export const AddRow: Story = {
       },
       {
         id: 'ghi',
-        dato: '23.09.2025',
+        dato: '23.9.2025',
         personNumber: '70168226499',
         firstName: 'Uskikka',
         lastName: 'Resistens',
         amount: '667946',
       },
-    ];
+    ]);
 
     const [addRow, setAddRow] = useState<boolean>(false);
 
@@ -941,17 +941,18 @@ export const AddRow: Story = {
 
     const sortedData = data.slice().sort((a, b) => {
       const sortKey = sortState.sortKey as keyof (typeof data)[0];
-      if (!sortKey) {
-        return 0;
-      }
-      if (a[sortKey] === b[sortKey]) {
-        return 0;
-      }
-      if (sortState.direction === 'ascending') {
+      if (!sortKey) return 0;
+      if (a[sortKey] === b[sortKey]) return 0;
+      if (sortState.direction === 'ascending')
         return a[sortKey] > b[sortKey] ? 1 : -1;
-      }
       return a[sortKey] < b[sortKey] ? 1 : -1;
     });
+
+    const handleSaveRow = (id: string, updated: any): void => {
+      setData((prev) =>
+        prev.map((row) => (row.id === id ? { ...row, ...updated } : row))
+      );
+    };
 
     return (
       <>
@@ -988,65 +989,109 @@ export const AddRow: Story = {
               <Table.EditableRow
                 id={'addPerson'}
                 editButtonPosition={'right'}
-                editableContent={(closeEditing: () => void): ReactNode => (
-                  <div className={'editableContent'}>
-                    <div className={'flex gapM bottomSpacingXL'}>
-                      <TextField label={'Fødselsnummer (11 siffer)'} />
-                      <TextField label={'Etternavn'} />
-                    </div>
-                    <TextField
-                      label={'Beløp i kroner'}
-                      className={'textField150 bottomSpacingXL'}
-                    />
-                    <div className={'flex gapS'}>
-                      <Button
-                        onClick={(): void => {
-                          closeEditing();
-                          setAddRow(false);
-                        }}
-                      >
-                        {'Lagre'}
-                      </Button>
-                      <Button
-                        variant={'secondary'}
-                        onClick={(): void => {
-                          closeEditing();
-                          setAddRow(false);
-                        }}
-                      >
-                        {'Avbryt'}
-                      </Button>
-                    </div>
-                  </div>
-                )}
-              >
-                <Table.DataCell colSpan={4}>{'Legg til person'}</Table.DataCell>
-              </Table.EditableRow>
-            )}
-            {sortedData.map((row) => {
-              return (
-                <Table.EditableRow
-                  key={row.id}
-                  editButtonPosition={'right'}
-                  editableContent={(closeEditing: () => void): ReactNode => (
+                editableContent={(closeEditing: () => void): ReactNode => {
+                  const [personNumber, setPersonNumber] = useState('');
+                  const [lastName, setLastName] = useState('');
+                  const [amount, setAmount] = useState('');
+                  return (
                     <div className={'editableContent'}>
                       <div className={'flex gapM bottomSpacingXL'}>
                         <TextField
                           label={'Fødselsnummer (11 siffer)'}
-                          defaultValue={row.personNumber}
+                          value={personNumber}
+                          onChange={(e) => setPersonNumber(e.target.value)}
                         />
                         <TextField
                           label={'Etternavn'}
-                          defaultValue={row.lastName}
+                          value={lastName}
+                          onChange={(e) => setLastName(e.target.value)}
                         />
                       </div>
                       <TextField
                         label={'Beløp i kroner'}
                         className={'textField150 bottomSpacingXL'}
-                        defaultValue={row.amount}
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
                       />
                       <div className={'flex gapS'}>
-                        <Button onClick={(): void => closeEditing()}>
+                        <Button
+                          onClick={(): void => {
+                            setData((prev) => [
+                              ...prev,
+                              {
+                                id: Math.random().toString(36).slice(2),
+                                dato: new Date().toLocaleDateString('no-NO'),
+                                personNumber,
+                                firstName: '',
+                                lastName,
+                                amount,
+                              },
+                            ]);
+                            closeEditing();
+                            setAddRow(false);
+                          }}
+                        >
+                          {'Lagre'}
+                        </Button>
+                        <Button
+                          variant={'secondary'}
+                          onClick={(): void => {
+                            closeEditing();
+                            setAddRow(false);
+                          }}
+                        >
+                          {'Avbryt'}
+                        </Button>
+                      </div>
+                    </div>
+                  );
+                }}
+              >
+                <Table.DataCell colSpan={4}>{'Legg til person'}</Table.DataCell>
+              </Table.EditableRow>
+            )}
+            {sortedData.map((person) => (
+              <Table.EditableRow
+                key={person.id}
+                editButtonPosition={'right'}
+                editableContent={(closeEditing: () => void): ReactNode => {
+                  const [personNumber, setPersonNumber] = useState(
+                    person.personNumber
+                  );
+                  const [lastName, setLastName] = useState(person.lastName);
+                  const [amount, setAmount] = useState(person.amount);
+                  return (
+                    <div className={'editableContent'}>
+                      <div className={'flex gapM bottomSpacingXL'}>
+                        <TextField
+                          label={'Fødselsnummer (11 siffer)'}
+                          value={personNumber}
+                          onChange={(e) => setPersonNumber(e.target.value)}
+                        />
+                        <TextField
+                          label={'Etternavn'}
+                          value={lastName}
+                          onChange={(e) => setLastName(e.target.value)}
+                        />
+                      </div>
+                      <TextField
+                        label={'Beløp i kroner'}
+                        value={amount}
+                        className={'textField150 bottomSpacingXL'}
+                        onChange={(e) => setAmount(e.target.value)}
+                      />
+                      <div className={'flex gapS'}>
+                        <Button
+                          onClick={(): void => {
+                            handleSaveRow(person.id, {
+                              dato: new Date().toLocaleDateString('no-NO'),
+                              personNumber,
+                              lastName,
+                              amount,
+                            });
+                            closeEditing();
+                          }}
+                        >
                           {'Lagre'}
                         </Button>
                         <Button
@@ -1057,19 +1102,19 @@ export const AddRow: Story = {
                         </Button>
                       </div>
                     </div>
-                  )}
-                >
-                  <Table.DataCell>{row.dato}</Table.DataCell>
-                  <Table.DataCell>
-                    {formatNationalIdentityNumber(row.personNumber)}
-                  </Table.DataCell>
-                  <Table.DataCell>{`${row.firstName} ${row.lastName}`}</Table.DataCell>
-                  <Table.DataCell
-                    alignment={'right'}
-                  >{`${row.amount} kr`}</Table.DataCell>
-                </Table.EditableRow>
-              );
-            })}
+                  );
+                }}
+              >
+                <Table.DataCell>{person.dato}</Table.DataCell>
+                <Table.DataCell>
+                  {formatNationalIdentityNumber(person.personNumber)}
+                </Table.DataCell>
+                <Table.DataCell>{`${person.firstName} ${person.lastName}`}</Table.DataCell>
+                <Table.DataCell alignment={'right'}>
+                  {`${person.amount} kr`}
+                </Table.DataCell>
+              </Table.EditableRow>
+            ))}
           </Table.Body>
         </Table>
       </>
