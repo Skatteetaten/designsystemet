@@ -42,12 +42,6 @@ type Story = StoryObj<typeof meta>;
 const defaultArgs: TopBannerUserButtonProps = {
   user: {
     role: 'meg',
-    name: 'Ola Nordmann',
-    person: {
-      personId: '12345',
-      name: 'Ola Nordmann',
-      type: 'Ola Nordmann',
-    },
   },
 };
 

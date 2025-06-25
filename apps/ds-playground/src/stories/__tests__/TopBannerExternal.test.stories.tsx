@@ -76,6 +76,7 @@ const defaultArgs: TopBannerExternalProps = {
 };
 
 export const WithRef = {
+  name: 'With Ref (FA1)',
   args: {
     ref: (instance: TopBannerExternalHandle | null): void => {
       if (instance?.current) {
@@ -83,7 +84,18 @@ export const WithRef = {
       }
     },
   },
-};
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const header = canvas.getByRole('banner');
+    await expect(header).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
