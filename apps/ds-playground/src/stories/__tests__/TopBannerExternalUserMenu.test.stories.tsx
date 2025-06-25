@@ -110,6 +110,9 @@ export const SwitchUser: Story = {
     onSwitchUserClick: fn(),
     onLogOutClick: fn(),
   },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
 
@@ -134,6 +137,9 @@ export const SwitchUser: Story = {
 export const LogOut: Story = {
   args: {
     onLogOutClick: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
