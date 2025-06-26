@@ -1,4 +1,4 @@
-import { ReactNode, useState, JSX } from 'react';
+import { ReactNode, useState, JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -947,6 +947,8 @@ export const AddRow: Story = {
     });
 
     const [addRow, setAddRow] = useState<boolean>(false);
+    const addPersonButtonRef = useRef<HTMLButtonElement>(null);
+    const personNumberInputRef = useRef<HTMLInputElement>(null);
 
     const handleSaveRow = (
       id: string,
@@ -1013,11 +1015,45 @@ export const AddRow: Story = {
       return hasError;
     };
 
+    const [highlightedRowId, setHighlightedRowId] = useState<string | null>(
+      null
+    );
+
+    const handleAddRow = (closeEditing: () => void): void => {
+      const hasErrors = validateFields();
+      if (!hasErrors) {
+        const newRow = {
+          id: Math.random().toString(36).slice(2),
+          dato: new Date().toLocaleDateString('no-NO'),
+          personNumber,
+          firstName: '',
+          lastName,
+          amount,
+        };
+
+        setData((prev) => [newRow, ...prev]);
+        setHighlightedRowId(newRow.id);
+        closeEditing();
+        setAddRow(false);
+        clearFields();
+        clearErrors();
+
+        setTimeout(() => addPersonButtonRef.current?.focus(), 0);
+
+        setTimeout(() => setHighlightedRowId(null), 3000);
+      }
+    };
     return (
       <>
         <Button
+          ref={addPersonButtonRef}
           className={'bottomSpacingL'}
-          onClick={(): void => setAddRow(true)}
+          onClick={(): void => {
+            setAddRow(true);
+            setTimeout(() => {
+              personNumberInputRef.current?.focus();
+            }, 0);
+          }}
         >
           {'Legg til person'}
         </Button>
@@ -1053,6 +1089,7 @@ export const AddRow: Story = {
                     <div className={'editableContent'}>
                       <div className={'flex gapM bottomSpacingXL'}>
                         <TextField
+                          ref={personNumberInputRef}
                           label={'Fødselsnummer (11 siffer)'}
                           value={personNumber}
                           errorMessage={personNumberError}
@@ -1094,26 +1131,7 @@ export const AddRow: Story = {
                       />
                       <div className={'flex gapS'}>
                         <Button
-                          onClick={(): void => {
-                            const hasErrors = validateFields();
-                            if (!hasErrors) {
-                              setData((prev) => [
-                                {
-                                  id: Math.random().toString(36).slice(2),
-                                  dato: new Date().toLocaleDateString('no-NO'),
-                                  personNumber,
-                                  firstName: '',
-                                  lastName,
-                                  amount,
-                                },
-                                ...prev,
-                              ]);
-                              closeEditing();
-                              setAddRow(false);
-                              clearFields();
-                              clearErrors();
-                            }
-                          }}
+                          onClick={(): void => handleAddRow(closeEditing)}
                         >
                           {'Lagre'}
                         </Button>
@@ -1124,6 +1142,10 @@ export const AddRow: Story = {
                             setAddRow(false);
                             clearFields();
                             clearErrors();
+                            setTimeout(
+                              () => addPersonButtonRef.current?.focus(),
+                              0
+                            );
                           }}
                         >
                           {'Avbryt'}
@@ -1139,10 +1161,24 @@ export const AddRow: Story = {
             {sortedData.map((person) => (
               <Table.EditableRow
                 key={person.id}
+                // .highlightRow {
+                //   animation-name: highlightRow;
+                //   animation-duration: 3s;
+                //   animation-iteration-count: 1;
+                // }
+                // @keyframes highlightRow {
+                //   0%,
+                //   99% {
+                //     background-color: var(--palette-forest-10);
+                //   }
+                //   100% {
+                //     background-color: unset;
+                //   }
+                // }
+                className={person.id === highlightedRowId ? 'highlightRow' : ''}
                 editButtonPosition={'right'}
                 editableContent={(closeEditing: () => void): ReactNode => {
                   // TODO fill initial values
-                  // TODO green row when new person is added
                   // TODO fix focus
                   return (
                     <div className={'editableContent'}>

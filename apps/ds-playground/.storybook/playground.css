@@ -361,3 +361,20 @@ dl.descriptionListTwoColumns {
 .editableContent {
   padding: var(--spacing-s) var(--spacing-l) var(--spacing-l);
 }
+
+.highlightRow {
+  animation-name: highlightRow;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes highlightRow {
+  0%,
+  99% {
+    background-color: var(--palette-forest-10);
+  }
+
+  100% {
+    background-color: unset;
+  }
+}
