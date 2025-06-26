@@ -53,7 +53,11 @@
 
 .namePrefix {
   color: var(--palette-graphite-70);
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 4%;
+  line-height: var(--semantic-line-height-heading4);
+  text-transform: uppercase;
 }
 
 .name {
