@@ -28,6 +28,7 @@ import {
   LogOutSVGpath,
   PersonMoreSVGpath,
 } from '@skatteetaten/ds-icons';
+import { Heading } from '@skatteetaten/ds-typography';
 
 import { TopBannerExternalUserMenuProps } from './TopBannerExternalUserMenu.types';
 import { TopBannerUserMenuButton } from '../TopBannerUserMenuButton/TopBannerUserMenuButton';
@@ -123,14 +124,18 @@ export const TopBannerExternalUserMenu = ({
             style={floatingStyles}
           >
             <div className={styles.wrapper}>
-              {(user?.role === 'virksomhet' || user?.role === 'andre') &&
+              {(user.role === 'virksomhet' || user.role === 'andre') &&
                 canRepresentOthers && (
                   <div className={styles.namePrefix}>
                     {t('ds_overlays:topbannerexternalusermenu.OnBehalfOf')}
                   </div>
                 )}
-              <div className={styles.name}>{user.name}</div>
-              {user?.role === 'virksomhet' && user.orgnr && (
+              <Heading as={'h4'} level={4}>
+                {user.role === 'virksomhet'
+                  ? user.name.toUpperCase()
+                  : user.name}
+              </Heading>
+              {user.role === 'virksomhet' && user.orgnr && (
                 <div
                   className={styles.orgnr}
                 >{`Orgnr. ${formatOrganisationNumber(user.orgnr)}`}</div>
@@ -146,7 +151,7 @@ export const TopBannerExternalUserMenu = ({
 
               <div className={styles.linkWrapper}>
                 <div className={styles.notificationWrapper}>
-                  {user?.role === 'virksomhet' && (
+                  {user.role === 'virksomhet' && (
                     <Link
                       svgPath={BellSVGpath}
                       href={`https://${domainName}/web/minside/virksomhet/varsler`}
@@ -154,7 +159,7 @@ export const TopBannerExternalUserMenu = ({
                       {t('ds_overlays:topbannerexternalusermenu.Notification')}
                     </Link>
                   )}
-                  {user?.role === 'meg' && (
+                  {user.role === 'meg' && (
                     <Link
                       svgPath={BellSVGpath}
                       href={`https://${domainName}/web/minside/person/varsler`}
@@ -185,7 +190,7 @@ export const TopBannerExternalUserMenu = ({
                     {t('ds_overlays:topbannerexternalusermenu.MyPage')}
                   </Link>
                 </div>
-                {user?.role === 'virksomhet' && (
+                {user.role === 'virksomhet' && (
                   <div className={styles.link}>
                     <Link
                       svgPath={InfoSquareSVGpath}
@@ -197,7 +202,7 @@ export const TopBannerExternalUserMenu = ({
                     </Link>
                   </div>
                 )}
-                {user?.role === 'meg' && (
+                {user.role === 'meg' && (
                   <div className={styles.link}>
                     <Link
                       svgPath={InfoSquareSVGpath}

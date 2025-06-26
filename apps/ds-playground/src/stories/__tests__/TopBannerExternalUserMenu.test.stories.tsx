@@ -50,7 +50,7 @@ export const Default: Story = {
     const userMenu = menuButton.nextSibling as HTMLDivElement;
 
     // Sjekker om brukerens navn er synlig
-    const userName = within(userMenu).getByText('Buljo Tulljo');
+    const userName = within(userMenu).getByText('Buljo Tulljo'.toUpperCase());
     await expect(userName).toBeInTheDocument();
 
     // Sjekker om org nummeret er synlig

@@ -60,9 +60,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
       <div class="_namePrefix_893sq_52">
         På vegne av
       </div>
-      <div class="_name_893sq_52">
-        Buljo Tulljo
-      </div>
+      <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+        BULJO TULLJO
+      </h4>
       <div class="_orgnr_893sq_47">
         Orgnr. 123&nbsp;456&nbsp;789
       </div>
@@ -241,9 +241,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
       <div class="_namePrefix_893sq_52">
         På vegne av
       </div>
-      <div class="_name_893sq_52">
-        Buljo Tulljo
-      </div>
+      <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+        BULJO TULLJO
+      </h4>
       <div class="_orgnr_893sq_47">
         Orgnr. 123&nbsp;456&nbsp;789
       </div>
@@ -419,9 +419,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
     <div class="_wrapper_893sq_22">
-      <div class="_name_893sq_52">
+      <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
         Buljo Tulljo
-      </div>
+      </h4>
       <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
               data-testid="switch-user"
               data-brightness="default"
@@ -597,9 +597,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
       <div class="_namePrefix_893sq_52">
         På vegne av
       </div>
-      <div class="_name_893sq_52">
-        Buljo Tulljo
-      </div>
+      <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+        BULJO TULLJO
+      </h4>
       <div class="_orgnr_893sq_47">
         Orgnr. 123&nbsp;456&nbsp;789
       </div>
@@ -778,9 +778,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
       <div class="_namePrefix_893sq_52">
         På vegne av
       </div>
-      <div class="_name_893sq_52">
-        Buljo Tulljo
-      </div>
+      <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+        BULJO TULLJO
+      </h4>
       <div class="_orgnr_893sq_47">
         Orgnr. 123&nbsp;456&nbsp;789
       </div>
@@ -962,9 +962,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
       <div class="_namePrefix_893sq_52">
         På vegne av
       </div>
-      <div class="_name_893sq_52">
-        Buljo Tulljo
-      </div>
+      <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+        BULJO TULLJO
+      </h4>
       <div class="_orgnr_893sq_47">
         Orgnr. 123&nbsp;456&nbsp;789
       </div>
@@ -1139,9 +1139,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
       <div class="_namePrefix_893sq_52">
         På vegne av
       </div>
-      <div class="_name_893sq_52">
-        Buljo Tulljo
-      </div>
+      <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+        BULJO TULLJO
+      </h4>
       <div class="_orgnr_893sq_47">
         Orgnr. 123&nbsp;456&nbsp;789
       </div>
