@@ -3,7 +3,10 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { Footer } from '@skatteetaten/ds-layout';
+import {
+  Footer,
+  getOpenDefaultLinksInNewTabDefault,
+} from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -24,6 +27,14 @@ const meta = {
     accessibilityURL: { table: { category: category.props } },
     hideLogo: { table: { category: category.props } },
     hideDefaultLinks: { table: { category: category.props } },
+    openDefaultLinksInNewTab: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getOpenDefaultLinksInNewTabDefault().toString(),
+        },
+      },
+    },
     titleFirstColumn: { table: { category: category.props } },
     titleSecondColumn: { table: { category: category.props } },
     titleThirdColumn: { table: { category: category.props } },
