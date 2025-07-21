@@ -246,10 +246,6 @@ export const Examples: Story = {
 
     const personlinks = [
       {
-        href: LenkerUinnlogget.PERSON_FORSIDE,
-        text: 'Person forside',
-      },
-      {
         href: LenkerUinnlogget.PERSON_SKATT,
         text: 'Skatt',
       },
@@ -396,7 +392,7 @@ export const Examples: Story = {
                 <Paragraph
                   className={topBannerExternalExampleStyles.marginBottomS}
                 >
-                  {'Se dine oppgaver og oversikt. Les og svar på meldinger'}
+                  {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
                 <Button svgPath={LockOutlineSVGpath}>{'Logg inn'}</Button>
               </>
