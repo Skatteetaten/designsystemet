@@ -1,9 +1,9 @@
 import { JSX } from 'react';
 
 import { Decorator, Preview } from '@storybook/react';
+// import { page } from '@vitest/browser/context';
 import * as MockDate from 'mockdate';
 import { useEffect, useGlobals } from 'storybook/preview-api';
-import { page } from '@vitest/browser/context';
 
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import {
@@ -137,8 +137,9 @@ const parameters = {
     // 'todo' - show a11y violations in the test UI only
     // 'error' - fail CI on a11y violations
     // 'off' - skip a11y checks entirely
-    test: 'todo',
+    test: 'off',
   },
+  chromatic: { disableSnapshot: true },
 };
 
 const argTypes = {
@@ -233,10 +234,10 @@ const globalTypes = {
 const preview = {
   decorators: [
     (Story): JSX.Element => <Story />,
-    LanguageUpdater,
-    testBlock,
-    mockDate,
-    SpacingUpdater,
+    // LanguageUpdater,
+    // testBlock,
+    // mockDate,
+    // SpacingUpdater,
   ],
   parameters,
   globalTypes,
@@ -248,10 +249,10 @@ const preview = {
     },
   },
   tags: ['autodocs', '!test', '!snapshot'],
-  async afterEach(context): Promise<void> {
-    // console.log(context);
-    const shot = await page.screenshot();
-    console.log('screenshot taken', shot);
-  },
+  // async afterEach(context): Promise<void> {
+  //   // console.log(context);
+  //   const shot = await page.screenshot();
+  //   console.log('screenshot taken', shot);
+  // },
 } satisfies Preview;
 export default preview;

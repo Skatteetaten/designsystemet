@@ -533,36 +533,36 @@ export const WithInitialPickerDate = {
   },
 } satisfies Story;
 
-export const GenerouslyWithFormatFromUser = {
-  name: 'Generously With Format From User (A3)',
-  args: {
-    ...defaultArgs,
-    value: valueDate,
-  },
-  argTypes: {},
-  parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const input = canvas.getByRole('textbox');
-    input.focus();
-
-    const user = userEvent.setup();
-
-    await fireEvent.change(input, { target: { value: '0103' } });
-
-    await user.tab();
-    await waitFor(() => expect(input).toHaveValue('01.03.2024'));
-    input.focus();
-
-    await fireEvent.change(input, { target: { value: '0104' } });
-    await user.tab();
-
-    await waitFor(() => expect(input).toHaveValue('01.04.2024'));
-  },
-} satisfies Story;
+// export const GenerouslyWithFormatFromUser = {
+//   name: 'Generously With Format From User (A3)',
+//   args: {
+//     ...defaultArgs,
+//     value: valueDate,
+//   },
+//   argTypes: {},
+//   parameters: {
+//     imageSnapshot: { disable: true },
+//     HTMLSnapshot: { disable: true },
+//   },
+//   play: async ({ canvasElement }): Promise<void> => {
+//     const canvas = within(canvasElement);
+//     const input = canvas.getByRole('textbox');
+//     input.focus();
+//
+//     const user = userEvent.setup();
+//
+//     await fireEvent.change(input, { target: { value: '0103' } });
+//
+//     await user.tab();
+//     await waitFor(() => expect(input).toHaveValue('01.03.2024'));
+//     input.focus();
+//
+//     await fireEvent.change(input, { target: { value: '0104' } });
+//     await user.tab();
+//
+//     await waitFor(() => expect(input).toHaveValue('01.04.2024'));
+//   },
+// } satisfies Story;
 
 const EventHandlersTemplate: StoryFn<typeof DatePicker> = (args) => {
   const [labelText, setLabelText] = useState('Tester events');

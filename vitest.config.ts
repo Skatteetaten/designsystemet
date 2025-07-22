@@ -34,18 +34,18 @@ export default defineConfig({
             provider: 'playwright',
             api: {
               //port: 13337,
-              host: 'host.docker.internal',
+              // host: 'host.docker.internal',
             },
             instances: [
               {
                 browser: 'chromium',
-                connect: {
-                  wsEndpoint: 'ws://127.0.0.1:3000/playwright',
-                  exposeNetwork: '*',
-                },
-                context: {
-                  baseURL: 'http://host.docker.internal:63315',
-                },
+                // connect: {
+                //   wsEndpoint: 'ws://127.0.0.1:3000/playwright',
+                //   exposeNetwork: '*',
+                // },
+                // context: {
+                //   baseURL: 'http://host.docker.internal:63315',
+                // },
               },
             ],
           },

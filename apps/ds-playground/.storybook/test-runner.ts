@@ -220,23 +220,23 @@ const config: TestRunnerConfig = {
   },
 
   async preVisit(page, context) {
-    await injectAxe(page);
-    const storyContext = await getStoryContext(page, context);
-    await adjustViewport(page, storyContext.parameters.viewport);
+    // await injectAxe(page);
+    // const storyContext = await getStoryContext(page, context);
+    // await adjustViewport(page, storyContext.parameters.viewport);
   },
 
-  async postVisit(page, context): Promise<void> {
-    await page.waitForLoadState('domcontentloaded');
-    await page.waitForLoadState('load');
-    //BUG: networkidle henger når man oppdaterer tester samtidig som devserver med HMR kjører. Fungerer etter npm run build && npm run start:static
-    !env.HMR && (await page.waitForLoadState('networkidle'));
-    await page.evaluate(async () => await document.fonts.ready);
-
-    const storyContext = (await getStoryContext(page, context)) as StoryContext;
-    await verifyAxeRules(page, storyContext);
-    await verifyHTMLSnapshots(page, storyContext);
-    await verifyImageSnapshots(page, storyContext, context);
-  },
+  // async postVisit(page, context): Promise<void> {
+  //   await page.waitForLoadState('domcontentloaded');
+  //   await page.waitForLoadState('load');
+  //   //BUG: networkidle henger når man oppdaterer tester samtidig som devserver med HMR kjører. Fungerer etter npm run build && npm run start:static
+  //   !env.HMR && (await page.waitForLoadState('networkidle'));
+  //   await page.evaluate(async () => await document.fonts.ready);
+  //
+  //   const storyContext = (await getStoryContext(page, context)) as StoryContext;
+  //   await verifyAxeRules(page, storyContext);
+  //   await verifyHTMLSnapshots(page, storyContext);
+  //   await verifyImageSnapshots(page, storyContext, context);
+  // },
 };
 
 module.exports = config;

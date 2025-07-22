@@ -1,0 +1,10 @@
+{
+  "$schema": "https://www.chromatic.com/config-file.schema.json",
+  "projectId": "Project:685bde72d88ce361ac80ba59",
+  "onlyChanged": false,
+  "onlyStoryFiles": [
+    "!apps/ds-playground/src/stories/**/*",
+    "apps/ds-playground/src/stories/__tests__/*.test.stories.tsx"
+  ],
+  "zip": true
+}

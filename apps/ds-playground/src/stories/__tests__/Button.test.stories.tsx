@@ -59,6 +59,9 @@ const meta = {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   tags: ['test'],
 } satisfies Meta<typeof Button>;
 export default meta;

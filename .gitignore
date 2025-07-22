@@ -36,6 +36,7 @@ testem.log
 **/*stats.html
 *.dump
 .nx
+.chromatic
 
 # System Files
 .DS_Store

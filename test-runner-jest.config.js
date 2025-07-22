@@ -12,10 +12,10 @@ module.exports = {
     '<rootDir>/apps/ds-playground/src/stories/__tests__/**/*test.stories.@(js|jsx|ts|tsx)',
   ],
   modulePathIgnorePatterns: ['<rootDir>/dist', '<rootDir>/.nx'],
-  reporters: [
-    ...config.reporters,
-    'jest-image-snapshot/src/outdated-snapshot-reporter.js',
-  ],
+  // reporters: [
+  //   ...config.reporters,
+  //   'jest-image-snapshot/src/outdated-snapshot-reporter.js',
+  // ],
   /**
    * Add your own overrides below
    *
@@ -25,13 +25,13 @@ module.exports = {
   testEnvironmentOptions: {
     'jest-playwright': {
       collectCoverage: true,
-      connectOptions: process.env['CI']
-        ? {}
-        : {
-            chromium: {
-              wsEndpoint: 'ws://127.0.0.1:3000/playwright',
-            },
-          },
+      // connectOptions: process.env['CI']
+      //   ? {}
+      //   : {
+      //       chromium: {
+      //         wsEndpoint: 'ws://127.0.0.1:3000/playwright',
+      //       },
+      //     },
     },
   },
 };
