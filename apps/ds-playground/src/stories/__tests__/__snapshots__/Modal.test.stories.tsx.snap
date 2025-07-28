@@ -35,20 +35,20 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
           >
         </a>
         <div class="_contentContainer_1ns8f_23">
-          <div class="_container_72xc2_5">
+          <div class="_container_xyk98_5">
             <div class>
             </div>
-            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+            <button class="_button_2n6jz_1  _menuButton_xyk98_17"
                     lang="nb"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_72xc2_20">
-                <span class="_flagIcon_72xc2_25">
+              <span class="_iconWrapper_xyk98_83">
+                <span class="_flagIcon_xyk98_88">
                   <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
                        viewbox="0 0 1100 800"
-                       class="_flagIconSvg_72xc2_30"
+                       class="_flagIconSvg_xyk98_93"
                   >
                     <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                           style="fill: rgb(255, 255, 255);"
@@ -64,7 +64,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_xyk98_96"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -75,10 +75,10 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                 </svg>
               </span>
               Bokmål
-              <span class="_srOnly_72xc2_133">
+              <span class="_srOnly_xyk98_179">
                 &nbsp;Meny
               </span>
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_xyk98_104"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -88,8 +88,6 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                 </path>
               </svg>
             </button>
-            <div class="_menuArrow_72xc2_67">
-            </div>
           </div>
         </div>
       </div>
@@ -106,7 +104,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r17:"
+          aria-labelledby="modalHeadingId-:r18:"
           data-variant="plain"
   >
     <div tabindex="-1"
@@ -119,11 +117,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r18:"
+             aria-labelledby="svgtitle-:r19:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r18:">
+          <title id="svgtitle-:r19:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -131,7 +129,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r17:"
+        <h1 id="modalHeadingId-:r18:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -203,20 +201,20 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
           >
         </a>
         <div class="_contentContainer_1ns8f_23">
-          <div class="_container_72xc2_5">
+          <div class="_container_xyk98_5">
             <div class>
             </div>
-            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+            <button class="_button_2n6jz_1  _menuButton_xyk98_17"
                     lang="nb"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_72xc2_20">
-                <span class="_flagIcon_72xc2_25">
+              <span class="_iconWrapper_xyk98_83">
+                <span class="_flagIcon_xyk98_88">
                   <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
                        viewbox="0 0 1100 800"
-                       class="_flagIconSvg_72xc2_30"
+                       class="_flagIconSvg_xyk98_93"
                   >
                     <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                           style="fill: rgb(255, 255, 255);"
@@ -232,7 +230,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_xyk98_96"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -243,10 +241,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                 </svg>
               </span>
               Bokmål
-              <span class="_srOnly_72xc2_133">
+              <span class="_srOnly_xyk98_179">
                 &nbsp;Meny
               </span>
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_xyk98_104"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -256,8 +254,6 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                 </path>
               </svg>
             </button>
-            <div class="_menuArrow_72xc2_67">
-            </div>
           </div>
         </div>
       </div>
@@ -274,7 +270,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r1c:"
+          aria-labelledby="modalHeadingId-:r1e:"
           data-variant="outline"
   >
     <div tabindex="-1"
@@ -287,11 +283,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1d:"
+             aria-labelledby="svgtitle-:r1f:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1d:">
+          <title id="svgtitle-:r1f:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -299,7 +295,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r1c:"
+        <h1 id="modalHeadingId-:r1e:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -355,20 +351,20 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
           >
         </a>
         <div class="_contentContainer_1ns8f_23">
-          <div class="_container_72xc2_5">
+          <div class="_container_xyk98_5">
             <div class>
             </div>
-            <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+            <button class="_button_2n6jz_1  _menuButton_xyk98_17"
                     lang="nb"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_72xc2_20">
-                <span class="_flagIcon_72xc2_25">
+              <span class="_iconWrapper_xyk98_83">
+                <span class="_flagIcon_xyk98_88">
                   <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
                        viewbox="0 0 1100 800"
-                       class="_flagIconSvg_72xc2_30"
+                       class="_flagIconSvg_xyk98_93"
                   >
                     <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                           style="fill: rgb(255, 255, 255);"
@@ -384,7 +380,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_xyk98_96"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -395,10 +391,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
                 </svg>
               </span>
               Bokmål
-              <span class="_srOnly_72xc2_133">
+              <span class="_srOnly_xyk98_179">
                 &nbsp;Meny
               </span>
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_xyk98_104"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -408,8 +404,6 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
                 </path>
               </svg>
             </button>
-            <div class="_menuArrow_72xc2_67">
-            </div>
           </div>
         </div>
       </div>
@@ -426,7 +420,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_i27cp_5"
-          aria-labelledby="modalHeadingId-:r1h:"
+          aria-labelledby="modalHeadingId-:r1k:"
           data-variant="outline"
           open
   >
@@ -440,11 +434,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1i:"
+             aria-labelledby="svgtitle-:r1l:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1i:">
+          <title id="svgtitle-:r1l:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -452,7 +446,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_i27cp_48">
-        <h1 id="modalHeadingId-:r1h:"
+        <h1 id="modalHeadingId-:r1k:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
         >
           Vil du erstatte nye opplysninger fra fil?

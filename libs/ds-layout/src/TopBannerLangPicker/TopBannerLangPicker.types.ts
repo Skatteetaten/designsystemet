@@ -23,12 +23,14 @@ export interface TopBannerLangPickerProps extends BaseProps {
   onLanguageClick?: MouseEventHandler<HTMLButtonElement>;
   /** Om samisk språk skal vises eller ikke. */
   showSami?: boolean;
-  /** Hvilken meny som er åpen i TopBanner*/
+  /** Hvilken meny som er åpen i TopBanner. */
   openMenu: TopBannerMenu;
-  /** Setter hvilken meny som er åpen*/
+  /** Setter hvilken meny som er åpen. */
   setOpenMenu: Dispatch<SetStateAction<TopBannerMenu>>;
   menuButtonRef?: RefObject<HTMLButtonElement | null>;
   additionalLanguages?: AdditionalLanguages;
+  /** Tilpasser langpicker til visning i meny i stedet for topbanner. */
+  isInMobileMenu?: boolean;
 }
 
 export interface TopBannerLangPickerComponent

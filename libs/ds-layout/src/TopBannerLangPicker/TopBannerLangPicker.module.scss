@@ -13,6 +13,83 @@
   inset: 0;
 }
 
+.menuButtonDesktopOnly {
+  height: fit-content;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--spacing-xxs) var(--spacing-s) var(--spacing-xxs)
+    var(--spacing-xs);
+  border-width: 3px;
+  border-color: transparent;
+  border-radius: var(--spacing-l);
+  background-color: transparent;
+  font-size: var(--font-size-m);
+  gap: var(--spacing-xs);
+  line-height: var(--semantic-line-height-buttons);
+
+  &:hover {
+    border-color: var(--semantic-interactive-main);
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    &::before {
+      position: absolute;
+      border: 2px solid var(--semantic-interactive-main);
+      border-radius: 3rem;
+      content: '';
+      inset: -7px;
+    }
+  }
+
+  &:active {
+    &::before {
+      position: absolute;
+      border: 2px solid var(--semantic-interactive-main);
+      border-radius: 3rem;
+      content: '';
+      inset: -7px;
+    }
+
+    background-color: var(--semantic-interactive-background);
+    transform: translateY(2px);
+  }
+
+  &_outline {
+    border-color: var(--semantic-interactive-main);
+
+    &:active {
+      border-color: var(--semantic-interactive-main);
+      color: var(--semantic-interactive-main);
+
+      .icon {
+        fill: var(--semantic-interactive-main);
+      }
+    }
+  }
+
+  &_filled {
+    border-color: var(--semantic-interactive-main);
+    background-color: var(--semantic-interactive-main);
+    color: var(--palette-graphite-0);
+
+    &:hover {
+      border-color: var(--semantic-interactive-foreground);
+      background-color: var(--semantic-interactive-foreground);
+
+      .icon {
+        background-color: var(--semantic-interactive-foreground);
+      }
+    }
+
+    &:active {
+      border-color: var(--semantic-interactive-foreground);
+      background-color: var(--semantic-interactive-foreground);
+      color: var(--palette-graphite-0);
+    }
+  }
+}
+
 .menuButton {
   z-index: 1000;
 
@@ -62,11 +139,9 @@
 }
 
 .menu {
-  position: fixed;
   z-index: 1000;
-  right: var(--spacing-m);
-  left: var(--spacing-m);
-  margin-top: var(--spacing-l);
+  min-width: calc(100vw - var(--spacing-m) * 2);
+  padding: 0 var(--spacing-m);
 
   &Arrow {
     position: absolute;
@@ -78,10 +153,6 @@
     border-right: 17px solid transparent;
     border-bottom: 17px solid var(--palette-graphite-70);
     border-left: 17px solid transparent;
-
-    &:last-child {
-      display: none;
-    }
 
     &::after {
       position: relative;
@@ -98,17 +169,7 @@
   }
 
   @media (min-width: breakpoints.$breakpoint-xs) {
-    position: absolute;
-    right: 0;
-    left: auto;
-  }
-
-  @media (min-width: breakpoints.$breakpoint-s) {
-    left: 0;
-  }
-
-  @media (min-width: breakpoints.$breakpoint-m) {
-    left: auto;
+    min-width: unset;
   }
 }
 

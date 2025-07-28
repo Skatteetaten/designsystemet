@@ -10,6 +10,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
+import { getOpenDefaultLinksInNewTabDefault } from './defaults';
 import { FooterComponent, FooterProps } from './Footer.types';
 import defaultEnglishLogo from './logo_en.svg';
 import defaultNorwegainLogo from './logo_no.svg';
@@ -17,7 +18,6 @@ import { FooterLink } from '../FooterLink/FooterLink';
 import { FooterLogo } from '../FooterLogo/FooterLogo';
 
 import styles from './Footer.module.scss';
-import { getOpenDefaultLinksInNewTabDefault } from './defaults';
 
 export const Footer = (({
   ref,
