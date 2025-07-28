@@ -71,14 +71,26 @@ export const TopBannerExternal = ({
   const languagePickerRef = useRef<HTMLDivElement>(null);
   const languagePickerButtonRef = useRef<HTMLButtonElement>(null);
   const [openMenu, setOpenMenu] = useState<TopBannerMenu>('None');
+  const [openMenuLangPickerMobile, setOpenMenuLangPickerMobile] =
+    useState<TopBannerMenu>('None');
   const isMenuOpen = openMenu === 'MainMenu';
   const isSearchOpen = openMenu === 'Search';
+  const showMenu = firstColumn || secondColumn || thirdColumn;
+  const showSearch = onSearchClick || onSearch || searchContent;
+  const islangPickerInMenu = showMenu && user && isMobile;
+
+  const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
+  const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
 
   const statusFlagRef = useRef({
     focusCaptured: false,
     mouseUpCaptured: false,
     mouseDownCaptured: false,
   });
+
+  useEffect(() => {
+    setOpenMenuLangPickerMobile('None');
+  }, [openMenu, islangPickerInMenu]);
 
   useEffect(() => {
     if (openMenu === 'None') {
@@ -165,12 +177,6 @@ export const TopBannerExternal = ({
     setOpenMenu((openMenu) => (openMenu === 'MainMenu' ? 'None' : 'MainMenu'));
   };
 
-  const showMenu = firstColumn || secondColumn || thirdColumn;
-  const showSearch = onSearchClick || onSearch || searchContent;
-
-  const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
-  const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
-
   const handleSearchClick = (): void => {
     setOpenMenu((openMenu) => (openMenu === 'Search' ? 'None' : 'Search'));
     setTimeout(() => {
@@ -203,16 +209,18 @@ export const TopBannerExternal = ({
           <div className={styles.contentContainer}>
             {children}
 
-            <TopBannerLangPicker
-              ref={languagePickerRef}
-              defaultLocale={defaultLocale}
-              showSami={showSami}
-              openMenu={openMenu}
-              setOpenMenu={setOpenMenu}
-              menuButtonRef={languagePickerButtonRef}
-              additionalLanguages={additionalLanguages}
-              onLanguageClick={onLanguageClick}
-            />
+            {!islangPickerInMenu && (
+              <TopBannerLangPicker
+                ref={languagePickerRef}
+                defaultLocale={defaultLocale}
+                showSami={showSami}
+                openMenu={openMenu}
+                setOpenMenu={setOpenMenu}
+                menuButtonRef={languagePickerButtonRef}
+                additionalLanguages={additionalLanguages}
+                onLanguageClick={onLanguageClick}
+              />
+            )}
 
             {onLogOutClick && user && (
               <>
@@ -312,6 +320,19 @@ export const TopBannerExternal = ({
                       statusFlagRef.current.mouseDownCaptured = isMenuOpen;
                     }}
                   >
+                    {islangPickerInMenu && (
+                      <TopBannerLangPicker
+                        ref={languagePickerRef}
+                        defaultLocale={defaultLocale}
+                        showSami={showSami}
+                        openMenu={openMenuLangPickerMobile}
+                        setOpenMenu={setOpenMenuLangPickerMobile}
+                        menuButtonRef={languagePickerButtonRef}
+                        additionalLanguages={additionalLanguages}
+                        isInMobileMenu
+                        onLanguageClick={onLanguageClick}
+                      />
+                    )}
                     <nav
                       aria-label={t('topbanner.NavAriaLabel')}
                       className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName} ${classNames?.columns ?? ''}`.trim()}

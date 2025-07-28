@@ -1,6 +1,10 @@
 declare const classNames: {
   readonly container: 'container';
   readonly overlay: 'overlay';
+  readonly menuButtonDesktopOnly: 'menuButtonDesktopOnly';
+  readonly menuButtonDesktopOnly_outline: 'menuButtonDesktopOnly_outline';
+  readonly icon: 'icon';
+  readonly menuButtonDesktopOnly_filled: 'menuButtonDesktopOnly_filled';
   readonly menuButton: 'menuButton';
   readonly iconWrapper: 'iconWrapper';
   readonly flagIcon: 'flagIcon';
