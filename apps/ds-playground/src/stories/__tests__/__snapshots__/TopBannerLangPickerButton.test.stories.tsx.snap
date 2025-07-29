@@ -2,10 +2,10 @@
 
 exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1qb8h_1"
+  <button class="_button_8mknb_1"
           type="button"
   >
-    <span class="_flagWrapper_1qb8h_15">
+    <span class="_flagWrapper_8mknb_15">
       <svg xmlns="http://www.w3.org/2000/svg"
            aria-hidden="true"
            viewbox="0 0 1100 800"
@@ -24,7 +24,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) Defaults play-test 
         </path>
       </svg>
     </span>
-    <span class="_buttonText_1qb8h_21">
+    <span class="_buttonText_8mknb_21">
       Bokmål
     </span>
   </button>
@@ -33,11 +33,11 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) Defaults play-test 
 
 exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAriaCurrent play-test 1`] = `
 <div data-test-block="true">
-  <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
+  <button class="_buttonCurrent_8mknb_25 _button_8mknb_1"
           aria-current="true"
           type="button"
   >
-    <span class="_flagWrapper_1qb8h_15">
+    <span class="_flagWrapper_8mknb_15">
       <svg xmlns="http://www.w3.org/2000/svg"
            aria-hidden="true"
            viewbox="0 0 1100 800"
@@ -56,7 +56,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAriaCurrent pla
         </path>
       </svg>
     </span>
-    <span class="_buttonText_1qb8h_21">
+    <span class="_buttonText_8mknb_21">
       Bokmål
     </span>
     <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
@@ -75,12 +75,12 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAriaCurrent pla
 exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlid"
-          class="_button_1qb8h_1 dummyClassname"
+          class="_button_8mknb_1 dummyClassname"
           lang="nb"
           data-testid="123ID"
           type="button"
   >
-    <span class="_flagWrapper_1qb8h_15">
+    <span class="_flagWrapper_8mknb_15">
       <svg xmlns="http://www.w3.org/2000/svg"
            aria-hidden="true"
            viewbox="0 0 1100 800"
@@ -99,7 +99,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAttributes play
         </path>
       </svg>
     </span>
-    <span class="_buttonText_1qb8h_21">
+    <span class="_buttonText_8mknb_21">
       Bokmål
     </span>
   </button>
@@ -108,10 +108,10 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAttributes play
 
 exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1qb8h_1"
+  <button class="_button_8mknb_1"
           type="button"
   >
-    <span class="_flagWrapper_1qb8h_15">
+    <span class="_flagWrapper_8mknb_15">
       <svg xmlns="http://www.w3.org/2000/svg"
            aria-hidden="true"
            viewbox="0 0 1100 800"
@@ -130,7 +130,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithEventHandlers p
         </path>
       </svg>
     </span>
-    <span class="_buttonText_1qb8h_21">
+    <span class="_buttonText_8mknb_21">
       Blitt klikket på
     </span>
   </button>
@@ -139,11 +139,11 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithEventHandlers p
 
 exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1qb8h_1"
+  <button class="_button_8mknb_1"
           type="button"
           id="dummyIdForwardedFromRef"
   >
-    <span class="_flagWrapper_1qb8h_15">
+    <span class="_flagWrapper_8mknb_15">
       <svg xmlns="http://www.w3.org/2000/svg"
            aria-hidden="true"
            viewbox="0 0 1100 800"
@@ -162,7 +162,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithRef play-test 1
         </path>
       </svg>
     </span>
-    <span class="_buttonText_1qb8h_21">
+    <span class="_buttonText_8mknb_21">
       Bokmål
     </span>
   </button>
