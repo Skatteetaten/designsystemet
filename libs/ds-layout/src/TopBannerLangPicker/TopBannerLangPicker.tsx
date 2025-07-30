@@ -63,6 +63,7 @@ export const TopBannerLangPicker = (({
   'data-testid': dataTestId,
   defaultLocale = getTopBannerLangPickerLocaleDefault(),
   showSami = getTopBannerLangPickerShowSamiDefault(),
+  selectedLang: selectedLangExternal,
   additionalLanguages,
   onLanguageClick,
   openMenu,
@@ -107,11 +108,12 @@ export const TopBannerLangPicker = (({
     menuButtonRefInternal,
   ]);
 
-  const [selectedLang, setSelectedLang] = useState<string>(
+  const [selectedLangInternal, setSelectedLangInternal] = useState<string>(
     isLanguages(defaultLocale)
       ? convertLocaleToLang(defaultLocale)
       : defaultLocale
   );
+  const selectedLang = selectedLangExternal ?? selectedLangInternal;
   useEffect(() => {
     document.documentElement.lang = selectedLang;
   }, [selectedLang]);
@@ -151,7 +153,7 @@ export const TopBannerLangPicker = (({
   const handleLanguageClick = (
     e: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    setSelectedLang(e.currentTarget.lang);
+    setSelectedLangInternal(e.currentTarget.lang);
     setOpenMenu('None');
     menuButtonRefInternal?.current?.focus();
     onLanguageClick?.(e);

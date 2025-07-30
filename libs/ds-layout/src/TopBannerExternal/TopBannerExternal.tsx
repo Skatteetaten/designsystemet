@@ -33,6 +33,8 @@ import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton';
 
 import styles from './TopBannerExternal.module.scss';
+import { convertLocaleToLang, isLanguages } from '../TopBannerLangPicker/utils';
+import { getTopBannerLangPickerLocaleDefault } from '../TopBannerLangPicker/defaults';
 
 export const TopBannerExternal = ({
   ref,
@@ -42,7 +44,7 @@ export const TopBannerExternal = ({
   lang,
   'data-testid': dataTestId,
   firstColumn,
-  defaultLocale,
+  defaultLocale = getTopBannerLangPickerLocaleDefault(),
   logo,
   secondColumn,
   skipLink,
@@ -61,6 +63,7 @@ export const TopBannerExternal = ({
 }: TopBannerExternalProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
   const isMobile = !useMediaQuery('(min-width: 480px)');
+  const isBreakpointS = !useMediaQuery('(min-width: 640px)');
   const innerRef = useRef<HTMLHeadElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
   const searchButtonRef = useRef<HTMLButtonElement>(null);
@@ -77,7 +80,7 @@ export const TopBannerExternal = ({
   const isSearchOpen = openMenu === 'Search';
   const showMenu = firstColumn || secondColumn || thirdColumn;
   const showSearch = onSearchClick || onSearch || searchContent;
-  const islangPickerInMenu = showMenu && user && isMobile;
+  const islangPickerInMenu = showMenu && user && isBreakpointS;
 
   const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
   const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
@@ -87,6 +90,12 @@ export const TopBannerExternal = ({
     mouseUpCaptured: false,
     mouseDownCaptured: false,
   });
+
+  const [selectedLang, setSelectedLang] = useState<string>(
+    isLanguages(defaultLocale)
+      ? convertLocaleToLang(defaultLocale)
+      : defaultLocale
+  );
 
   useEffect(() => {
     setOpenMenuLangPickerMobile('None');
@@ -218,7 +227,11 @@ export const TopBannerExternal = ({
                 setOpenMenu={setOpenMenu}
                 menuButtonRef={languagePickerButtonRef}
                 additionalLanguages={additionalLanguages}
-                onLanguageClick={onLanguageClick}
+                selectedLang={selectedLang}
+                onLanguageClick={(e) => {
+                  setSelectedLang(e.currentTarget.lang);
+                  onLanguageClick?.(e);
+                }}
               />
             )}
 
@@ -329,8 +342,12 @@ export const TopBannerExternal = ({
                         setOpenMenu={setOpenMenuLangPickerMobile}
                         menuButtonRef={languagePickerButtonRef}
                         additionalLanguages={additionalLanguages}
+                        selectedLang={selectedLang}
                         isInMobileMenu
-                        onLanguageClick={onLanguageClick}
+                        onLanguageClick={(e) => {
+                          setSelectedLang(e.currentTarget.lang);
+                          onLanguageClick?.(e);
+                        }}
                       />
                     )}
                     <nav

@@ -22,6 +22,8 @@
   border-width: 3px;
   border-color: transparent;
   border-radius: var(--spacing-l);
+  margin-bottom: calc(-1 * var(--spacing-l));
+  margin-left: var(--spacing-xs);
   background-color: transparent;
   font-size: var(--font-size-m);
   gap: var(--spacing-xs);
@@ -174,7 +176,6 @@
 }
 
 .list {
-  overflow: auto;
   max-height: calc(100vh - 100px);
   box-sizing: border-box;
   padding: 0;
