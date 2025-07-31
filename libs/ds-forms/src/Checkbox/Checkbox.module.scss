@@ -1,4 +1,4 @@
-@use 'libs/ds-core-utils/src/styles' as style;
+@use 'libs/ds-core-utils/src/mixins/styles' as style;
 
 .container {
   --checkbox-border-color: var(--semantic-page-foreground);

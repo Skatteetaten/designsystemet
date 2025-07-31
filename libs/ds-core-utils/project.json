@@ -27,6 +27,11 @@
             "glob": "LICENSE",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "*.scss",
+            "input": "libs/ds-core-utils/src/mixins",
+            "output": "."
           }
         ],
         "babelUpwardRootMode": true
