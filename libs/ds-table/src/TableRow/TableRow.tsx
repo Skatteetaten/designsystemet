@@ -63,7 +63,7 @@ export const TableRow = ({
   };
 
   const getButtonTitle = (): string =>
-    expandButtonTitle ??
+    expandButtonTitle ||
     (showExpandButtonTitle
       ? t('tablerow.ExpandText')
       : t('tablerow.Expandable'));
