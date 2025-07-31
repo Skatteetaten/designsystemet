@@ -27,14 +27,14 @@ import {
   TopBannerMenu,
 } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
+import { getTopBannerLangPickerLocaleDefault } from '../TopBannerLangPicker/defaults';
 import { TopBannerLangPicker } from '../TopBannerLangPicker/TopBannerLangPicker';
+import { convertLocaleToLang, isLanguages } from '../TopBannerLangPicker/utils';
 import { TopBannerLogo } from '../TopBannerLogo/TopBannerLogo';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton';
 
 import styles from './TopBannerExternal.module.scss';
-import { convertLocaleToLang, isLanguages } from '../TopBannerLangPicker/utils';
-import { getTopBannerLangPickerLocaleDefault } from '../TopBannerLangPicker/defaults';
 
 export const TopBannerExternal = ({
   ref,

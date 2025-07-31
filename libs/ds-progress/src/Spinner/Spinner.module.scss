@@ -1,4 +1,4 @@
-@use 'libs/ds-core-utils/src/styles' as styles;
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
 
 .spinner {
   --spinner-size: var(--size-small);
