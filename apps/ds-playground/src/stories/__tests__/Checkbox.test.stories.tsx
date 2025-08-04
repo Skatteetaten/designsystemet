@@ -32,6 +32,7 @@ const meta = {
     defaultChecked: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     // HTML

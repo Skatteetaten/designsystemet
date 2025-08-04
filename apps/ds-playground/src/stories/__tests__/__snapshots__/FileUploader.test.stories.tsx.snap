@@ -2,15 +2,15 @@
 
 exports[`Tester/FileUploader Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5">
+  <div class="_container_4neni_5">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r6:"
-            class="_dropZone_10i3l_14"
+            class="_dropZone_4neni_17"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -19,7 +19,7 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r6:"
         >
           Legg til fil
@@ -39,7 +39,7 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -50,7 +50,7 @@ exports[`Tester/FileUploader Defaults play-test 1`] = `
 
 exports[`Tester/FileUploader WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5 dummyClassname"
+  <div class="_container_4neni_5 dummyClassname"
        lang="en"
        data-testid="123ID"
   >
@@ -58,10 +58,10 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
     </div>
     <button type="button"
             id="htmlId"
-            class="_dropZone_10i3l_14"
+            class="_dropZone_4neni_17"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -70,7 +70,7 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for="htmlId"
         >
           Legg til fil
@@ -90,7 +90,7 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -101,16 +101,16 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
 
 exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5  dummyClassname">
+  <div class="_container_4neni_5  dummyClassname">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r2a:"
-            class="_dropZone_10i3l_14  _dropZone_error_10i3l_31"
+            class="_dropZone_4neni_17  _dropZone_error_4neni_34"
             aria-describedby=":r2b:-fileuploader-error"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -119,7 +119,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r2a:"
         >
           Legg til fil
@@ -134,8 +134,8 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_vog41_15 dummyClassname">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+      <div class="_errorMessage_1ycvu_15 dummyClassname">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -144,7 +144,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_vog41_29">
+        <p class="_errorMessageText_1ycvu_32">
           feil
         </p>
       </div>
@@ -153,7 +153,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -164,7 +164,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/FileUploader WithError play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5">
+  <div class="_container_4neni_5">
     <label id="labelId-:rv:"
            class="_label_348na_5"
            for=":rt:"
@@ -195,11 +195,11 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
     </div>
     <button type="button"
             id=":rt:"
-            class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28 _dropZone_error_10i3l_31"
+            class="_dropZone_4neni_17 _dropZoneMarginTop_4neni_31 _dropZone_error_4neni_34"
             aria-describedby=":ru:-fileuploader-error :rt:-accepted-formats"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -208,7 +208,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":rt:"
         >
           Legg til fil(er)
@@ -222,10 +222,10 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
       </div>
     </button>
     <span id=":rt:-accepted-formats"
-          class="_fileInfo_10i3l_56"
+          class="_fileInfo_4neni_59"
     >
       Filer du kan laste opp:
-      <span class="_fileFormatList_10i3l_73">
+      <span class="_fileFormatList_4neni_76">
         .java, .cpp, .py
       </span>
     </span>
@@ -233,8 +233,8 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+      <div class="_errorMessage_1ycvu_15">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -243,7 +243,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_vog41_29">
+        <p class="_errorMessageText_1ycvu_32">
           Du må laste opp en fil
         </p>
       </div>
@@ -252,7 +252,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -263,7 +263,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
 
 exports[`Tester/FileUploader WithFileChange play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5"
+  <div class="_container_4neni_5"
        data-testid="testid123"
   >
     <label id="labelId-:r1v:"
@@ -296,10 +296,10 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
     </div>
     <button type="button"
             id=":r1t:"
-            class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28"
+            class="_dropZone_4neni_17 _dropZoneMarginTop_4neni_31"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -308,7 +308,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r1t:"
         >
           Legg til fil
@@ -328,7 +328,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <ul class="_fileList_10i3l_77">
+    <ul class="_fileList_4neni_80">
       <li id=":r22:"
           class="_fileListItem_15fus_108"
       >
@@ -386,7 +386,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -398,7 +398,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
 
 exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5">
+  <div class="_container_4neni_5">
     <label id="labelId-:r27:"
            class="_label_348na_5"
            for=":r25:"
@@ -429,10 +429,10 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
     </div>
     <button type="button"
             id=":r25:"
-            class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28"
+            class="_dropZone_4neni_17 _dropZoneMarginTop_4neni_31"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -441,7 +441,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r25:"
         >
           Legg til fil
@@ -461,7 +461,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -472,15 +472,15 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5">
+  <div class="_container_4neni_5">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":rq:"
-            class="_dropZone_10i3l_14"
+            class="_dropZone_4neni_17"
             disabled
     >
-      <div class="_removePointerEvents_10i3l_83">
+      <div class="_removePointerEvents_4neni_86">
         <div aria-live="polite"
              aria-atomic="true"
              class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_large_wnf1f_28"
@@ -488,12 +488,12 @@ exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
           <div class="_spinnerAnimation_wnf1f_40">
           </div>
           <span id="title-:rs:"
-                class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 _spinner_10i3l_91"
+                class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 _spinner_4neni_94"
           >
             Opplasting pågår
           </span>
         </div>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":rq:"
         >
         </label>
@@ -512,7 +512,7 @@ exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -523,17 +523,17 @@ exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
 
 exports[`Tester/FileUploader WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5"
+  <div class="_container_4neni_5"
        id="dummyIdForwardedFromRef"
   >
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r0:"
-            class="_dropZone_10i3l_14"
+            class="_dropZone_4neni_17"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -542,7 +542,7 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r0:"
         >
           Legg til fil
@@ -562,7 +562,7 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -573,16 +573,16 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
 
 exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5">
+  <div class="_container_4neni_5">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r1n:"
-            class="_dropZone_10i3l_14"
+            class="_dropZone_4neni_17"
             aria-describedby=":r1n:-accepted-formats"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -591,7 +591,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r1n:"
         >
           Trykk eller dra og slipp filer her
@@ -604,10 +604,10 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
       </div>
     </button>
     <span id=":r1n:-accepted-formats"
-          class="_fileInfo_10i3l_56"
+          class="_fileInfo_4neni_59"
     >
       Tillatte filformater:_
-      <span class="_fileFormatList_10i3l_73">
+      <span class="_fileFormatList_4neni_76">
         bilder og dokumenter
       </span>
     </span>
@@ -620,7 +620,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <ul class="_fileList_10i3l_77">
+    <ul class="_fileList_4neni_80">
       <li id=":r1q:"
           class="_fileListItem_15fus_108"
       >
@@ -674,7 +674,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -685,16 +685,18 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
 
 exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5 bottomSpacingXL">
+  <div class="_container_4neni_5"
+       data-has-spacing="true"
+  >
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r13:"
-            class="_dropZone_10i3l_14"
+            class="_dropZone_4neni_17"
             aria-describedby=":r13:-accepted-formats"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -703,7 +705,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r13:"
         >
           Legg til fil
@@ -716,10 +718,10 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
       </div>
     </button>
     <span id=":r13:-accepted-formats"
-          class="_fileInfo_10i3l_56"
+          class="_fileInfo_4neni_59"
     >
       Filer du kan laste opp:
-      <span class="_fileFormatList_10i3l_73">
+      <span class="_fileFormatList_4neni_76">
         .java, .cpp, .py
       </span>
     </span>
@@ -731,7 +733,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     <div aria-live="polite"
          aria-atomic="true"
     >
-      <div class="_alert_lurqs_1 _alert_10i3l_87"
+      <div class="_alert_lurqs_1 _alert_4neni_90"
            data-variant="success"
            data-brightness="default"
       >
@@ -751,7 +753,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </span>
       </div>
     </div>
-    <ul class="_fileList_10i3l_77">
+    <ul class="_fileList_4neni_80">
       <li id=":r17:"
           class="_fileListItem_15fus_108"
       >
@@ -861,22 +863,22 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
     </div>
   </div>
-  <div class="_container_10i3l_5">
+  <div class="_container_4neni_5">
     <div tabindex="-1">
     </div>
     <button type="button"
             id=":r1d:"
-            class="_dropZone_10i3l_14"
+            class="_dropZone_4neni_17"
             aria-describedby=":r1d:-accepted-formats"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -885,7 +887,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r1d:"
         >
           Legg til fil
@@ -898,10 +900,10 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
       </div>
     </button>
     <span id=":r1d:-accepted-formats"
-          class="_fileInfo_10i3l_56"
+          class="_fileInfo_4neni_59"
     >
       Filer du kan laste opp:
-      <span class="_fileFormatList_10i3l_73">
+      <span class="_fileFormatList_4neni_76">
         .java, .cpp, .py
       </span>
     </span>
@@ -913,7 +915,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     <div aria-live="polite"
          aria-atomic="true"
     >
-      <div class="_alert_lurqs_1 _alert_10i3l_87"
+      <div class="_alert_lurqs_1 _alert_4neni_90"
            data-variant="error"
            data-brightness="default"
       >
@@ -933,7 +935,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </span>
       </div>
     </div>
-    <ul class="_fileList_10i3l_77">
+    <ul class="_fileList_4neni_80">
       <li id=":r1h:"
           class="_fileListItem_15fus_108"
       >
@@ -1043,7 +1045,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >
@@ -1054,7 +1056,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
 
 exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_10i3l_5">
+  <div class="_container_4neni_5">
     <label id="labelId-:rb:"
            class="_label_348na_5"
            for=":r9:"
@@ -1085,11 +1087,11 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
     </div>
     <button type="button"
             id=":r9:"
-            class="_dropZone_10i3l_14 _dropZoneMarginTop_10i3l_28"
+            class="_dropZone_4neni_17 _dropZoneMarginTop_4neni_31"
             aria-describedby=":r9:-accepted-formats"
     >
-      <div class="_removePointerEvents_10i3l_83">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_10i3l_10"
+      <div class="_removePointerEvents_4neni_86">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_4neni_13"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1098,7 +1100,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
           <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
           </path>
         </svg>
-        <label class="_innerLabel_10i3l_97"
+        <label class="_innerLabel_4neni_100"
                for=":r9:"
         >
           Legg til fil
@@ -1111,10 +1113,10 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
       </div>
     </button>
     <span id=":r9:-accepted-formats"
-          class="_fileInfo_10i3l_56"
+          class="_fileInfo_4neni_59"
     >
       Filer du kan laste opp:
-      <span class="_fileFormatList_10i3l_73">
+      <span class="_fileFormatList_4neni_76">
         .pdf, .jpeg
       </span>
     </span>
@@ -1127,7 +1129,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <ul class="_fileList_10i3l_77">
+    <ul class="_fileList_4neni_80">
       <li id=":re:"
           class="_fileListItem_15fus_108"
       >
@@ -1345,7 +1347,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </div>
       </li>
     </ul>
-    <div class="_srOnly_10i3l_61"
+    <div class="_srOnly_4neni_64"
          aria-live="polite"
          aria-atomic="true"
     >

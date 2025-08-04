@@ -141,9 +141,9 @@ module.exports = {
           'libs/ds-core-utils/src'
         ),
         // Add this alias for SCSS imports
-        'libs/ds-core-utils/src/styles': path.resolve(
+        'libs/ds-core-utils/src/mixins/styles': path.resolve(
           root,
-          'libs/ds-core-utils/src/styles'
+          'libs/ds-core-utils/src/mixins/styles'
         ),
 
         'libs/ds-core-designtokens/lib/designtokens': path.resolve(

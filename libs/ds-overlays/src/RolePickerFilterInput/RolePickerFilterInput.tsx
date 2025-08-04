@@ -68,7 +68,6 @@ export const RolePickerFilterInput = ({
           />
           {showClearButton && (
             <IconButton
-              type={'reset'}
               className={styles.clearButton}
               size={'extraSmall'}
               svgPath={CancelSVGpath}

@@ -22,7 +22,7 @@ export interface FieldsetProps
   hideLegend?: boolean;
   /** Tilleggstekst */
   description?: string;
-  /** Margin under fieldset */
+  /** Margin under komponenten */
   hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: HelpProps['helpText'];

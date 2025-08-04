@@ -42,6 +42,8 @@ export interface FileUploaderCommonProps
   children?: string;
   /** Tekst på feilmelding */
   errorMessage?: string;
+  /** Margin under komponenten */
+  hasSpacing?: boolean;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: LabelWithHelpProps['hideLabel'];
   /** Ledetekst */

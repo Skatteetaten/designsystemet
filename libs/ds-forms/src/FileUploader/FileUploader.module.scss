@@ -1,8 +1,12 @@
-@use 'libs/ds-core-utils/src/styles' as style;
+@use 'libs/ds-core-utils/src/mixins/styles' as style;
 
 .container {
   min-width: 10rem;
   max-width: 25rem;
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-xl);
+  }
 }
 
 .icon {

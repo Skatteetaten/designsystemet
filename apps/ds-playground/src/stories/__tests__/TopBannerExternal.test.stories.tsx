@@ -804,3 +804,38 @@ export const ClickSearchOpenAndClose = {
     await expect(searchButton).toHaveAttribute('aria-expanded', 'false');
   },
 } satisfies Story;
+
+export const LangPickerInMenuWhenLoggedInOnMobile = {
+  name: 'LangPicker In Menu When Logged In OnMobile ',
+  args: {
+    ...defaultArgs,
+    searchContent: 'hei hei',
+    firstColumn: (
+      <Link href={'#storybook-root'}>
+        {'Meny-knapp blir synlig når den har innhold'}
+      </Link>
+    ),
+    user: { role: 'meg' },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const languageButton = canvas.queryByRole('button', {
+      name: 'Bokmål Meny',
+    });
+    await expect(languageButton).not.toBeInTheDocument();
+
+    const menuButton = canvas.getByRole('button', { name: menuText });
+    await userEvent.click(menuButton);
+
+    await expect(
+      canvas.getByRole('button', { name: 'Bokmål Meny' })
+    ).toBeInTheDocument();
+  },
+} satisfies Story;

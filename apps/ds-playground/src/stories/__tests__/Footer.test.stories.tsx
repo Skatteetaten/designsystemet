@@ -32,6 +32,7 @@ const meta = {
     firstColumn: { table: { disable: true } },
     secondColumn: { table: { disable: true } },
     thirdColumn: { table: { disable: true } },
+    openDefaultLinksInNewTab: { table: { disable: true } },
   },
   parameters: {
     layout: 'fullscreen',
@@ -532,5 +533,25 @@ export const WithOneColumnBreakpointM = {
     viewport: {
       defaultViewport: '--breakpoint-m',
     },
+  },
+} satisfies Story;
+
+// Når Footer har en kolonne, vises det riktig på breakpoint-m og oppover
+export const WithDefaultLinksInNewTab = {
+  name: 'With default links in new tab false (A4)',
+  args: {
+    ...defaultArgs,
+    firstColumn: defaultFirstColumn,
+    openDefaultLinksInNewTab: false,
+  },
+  argTypes: {
+    openDefaultLinksInNewTab: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    console.log(dsI18n.t('Shared:shared.NewTab'));
+    await expect(
+      canvas.queryByText(dsI18n.t('Shared:shared.NewTab'), { exact: false })
+    ).not.toBeInTheDocument();
   },
 } satisfies Story;

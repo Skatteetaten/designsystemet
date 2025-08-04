@@ -16,6 +16,10 @@ $border-width: 3px;
   @media (min-width: breakpoints.$breakpoint-s) {
     flex-direction: row;
   }
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
 }
 
 .iconContainer {

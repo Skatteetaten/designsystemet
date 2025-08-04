@@ -2,7 +2,7 @@
 
 exports[`Tester/ErrorSummary/ErrorSummary Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
@@ -13,7 +13,7 @@ exports[`Tester/ErrorSummary/ErrorSummary Defaults play-test 1`] = `
 
 exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        id="htmlId"
        lang="nb"
        data-testid="123ID"
@@ -21,9 +21,9 @@ exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6 dummyClassname">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6 dummyClassname">
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -33,7 +33,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           For å gå videre må du rette opp 0 feil:
         </h2>
@@ -45,14 +45,14 @@ exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
 
 exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6">
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -62,7 +62,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           For å gå videre må du rette opp 2 feil:
         </h2>
@@ -108,14 +108,14 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
 
 exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6">
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -125,7 +125,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           For å gå videre må du rette opp 2 feil:
         </h2>
@@ -163,7 +163,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
             </a>
           </li>
         </ul>
-        <div class="_content_1iu8h_57">
+        <div class="_content_1ql2b_60">
           <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
           </p>
@@ -176,14 +176,14 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
 
 exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6">
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -193,7 +193,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           For å gå videre må du rette opp 2 feil:
         </h2>
@@ -231,7 +231,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
             </a>
           </li>
         </ul>
-        <div class="_content_1iu8h_57">
+        <div class="_content_1ql2b_60">
           <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
           </p>
@@ -244,14 +244,14 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
 
 exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6">
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -261,7 +261,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           For å gå videre må du rette opp 2 feil:
         </h2>
@@ -299,7 +299,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
             </a>
           </li>
         </ul>
-        <div class="_content_1iu8h_57">
+        <div class="_content_1ql2b_60">
           <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
           </p>
@@ -312,14 +312,14 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
 
 exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6">
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -329,11 +329,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           Inntektsmottaker inneholder 2 feil:
         </h2>
-        <div class="_content_1iu8h_57 _contentWithoutChildren_1iu8h_60">
+        <div class="_content_1ql2b_60 _contentWithoutChildren_1ql2b_63">
           <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17">
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
           </p>
@@ -346,7 +346,9 @@ exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
 
 exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="_wrapper_1dg5q_1"
+       data-has-spacing="true"
+  >
     <label id="labelId-:r12:"
            class="_label_348na_5"
            for="input_aar"
@@ -354,7 +356,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
       År
     </label>
     <input id="input_aar"
-           class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
+           class="_textbox_1dg5q_5 $ _textboxMarginTop_1dg5q_24"
            data-variant="medium"
            autocomplete="off"
            required
@@ -366,8 +368,8 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+      <div class="_errorMessage_1ycvu_15">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -376,21 +378,23 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_vog41_29">
+        <p class="_errorMessageText_1ycvu_32">
           Inntekståret må være etter 2008
         </p>
       </div>
     </div>
   </div>
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        id="errorSummary1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6"
+         data-has-spacing="true"
+    >
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -400,7 +404,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           For å gå videre må du rette opp 1 feil:
         </h2>
@@ -425,7 +429,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
       </div>
     </div>
   </div>
-  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   topSpacingXL"
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
           type="button"
   >
     <span class="_buttonText_6ybyo_69">
@@ -437,7 +441,9 @@ exports[`Tester/ErrorSummary/ErrorSummary WithFocus play-test 1`] = `
 
 exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
 <div data-test-block="true">
-  <div class="bottomSpacingXL">
+  <div class="_wrapper_1dg5q_1"
+       data-has-spacing="true"
+  >
     <label id="labelId-:rk:"
            class="_label_348na_5"
            for="input_aar"
@@ -445,7 +451,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
       År
     </label>
     <input id="input_aar"
-           class="_textbox_1kevi_5 $ _textboxMarginTop_1kevi_24"
+           class="_textbox_1dg5q_5 $ _textboxMarginTop_1dg5q_24"
            data-variant="medium"
            autocomplete="off"
            required
@@ -457,8 +463,8 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_vog41_15">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+      <div class="_errorMessage_1ycvu_15">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -467,20 +473,20 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_vog41_29">
+        <p class="_errorMessageText_1ycvu_32">
           Inntekståret må være etter 2008
         </p>
       </div>
     </div>
   </div>
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6">
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -490,7 +496,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           For å gå videre må du rette opp 1 feil:
         </h2>
@@ -520,7 +526,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
 
 exports[`Tester/ErrorSummary/ErrorSummary WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
@@ -539,14 +545,14 @@ exports[`Tester/ErrorSummary/ErrorSummary WithShadowRootNode play-test 1`] = `
 
 exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
 <div data-test-block="true">
-  <div class="_wrapper_1iu8h_1"
+  <div class="_wrapper_1ql2b_1"
        aria-live="assertive"
        tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_1iu8h_6">
-      <div class="_iconContainer_1iu8h_18">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1iu8h_18"
+    <div class="_errorSummary_1ql2b_6">
+      <div class="_iconContainer_1ql2b_21">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_large_o38m2_15 _icon_1ql2b_21"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -556,7 +562,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_summaryContainer_1iu8h_43">
+      <div class="_summaryContainer_1ql2b_46">
         <h1 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54">
           For å gå videre må du rette opp 2 feil:
         </h1>

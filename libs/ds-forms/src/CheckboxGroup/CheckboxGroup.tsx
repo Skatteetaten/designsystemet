@@ -1,6 +1,9 @@
 import { useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonClassNameDefault,
+  getHasSpacingDefault,
+} from '@skatteetaten/ds-core-utils';
 
 import {
   CheckboxGroupComponent,
@@ -28,6 +31,7 @@ export const CheckboxGroup = (({
   titleHelpSvg,
   disabled,
   form,
+  hasSpacing = getHasSpacingDefault(),
   hideLegend,
   showRequiredMark,
   onHelpToggle,
@@ -52,7 +56,7 @@ export const CheckboxGroup = (({
       helpSvgPath={helpSvgPath}
       helpText={helpText}
       titleHelpSvg={titleHelpSvg}
-      hasSpacing
+      hasSpacing={hasSpacing}
       onHelpToggle={onHelpToggle}
     >
       <CheckboxContext.Provider

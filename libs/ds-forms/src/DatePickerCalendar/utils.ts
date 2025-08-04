@@ -322,3 +322,9 @@ export const findPreviousAvailableDate = (
 
   return currentDate;
 };
+
+export const areAllSelectableDatesDisabled = (grid: Array<Cell>[]): boolean => {
+  return grid.every((row) =>
+    row.every((cell) => cell.disabled || cell.isAdjacentMonth)
+  );
+};

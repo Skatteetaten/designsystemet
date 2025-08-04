@@ -1,13 +1,17 @@
-import {
-  JSX,
-  ReactNode,
-  useEffect,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import { JSX, ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import {
+  useFloating,
+  autoUpdate,
+  offset,
+  shift,
+  arrow,
+  useDismiss,
+  useInteractions,
+  useMergeRefs,
+  FloatingFocusManager,
+} from '@floating-ui/react';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon, MenuDownSVGpath, MenuUpSVGpath } from '@skatteetaten/ds-icons';
@@ -50,6 +54,7 @@ const getFlag = (
   }
 };
 
+/* eslint-disable react/forbid-dom-props */
 export const TopBannerLangPicker = (({
   ref,
   id,
@@ -58,25 +63,57 @@ export const TopBannerLangPicker = (({
   'data-testid': dataTestId,
   defaultLocale = getTopBannerLangPickerLocaleDefault(),
   showSami = getTopBannerLangPickerShowSamiDefault(),
+  selectedLang: selectedLangExternal,
   additionalLanguages,
   onLanguageClick,
   openMenu,
+  isInMobileMenu,
   setOpenMenu,
   menuButtonRef,
 }: TopBannerLangPickerProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
-  const menuRef = useRef<HTMLDivElement>(null);
+  const arrowRef = useRef<HTMLDivElement>(null);
+  const arrowLen = arrowRef.current?.offsetWidth ?? 0;
+  // +6 for at pilen skal ligge på utsiden av outline på knappen
+  const floatingOffset = Math.sqrt(2 * arrowLen ** 2) / 2;
+
+  const isMenuOpen = openMenu === 'Lang';
+  const floatingData = useFloating<HTMLButtonElement>({
+    open: isMenuOpen,
+    onOpenChange: (open) => {
+      setOpenMenu(open ? 'Lang' : 'None');
+    },
+    placement: 'bottom-start',
+    whileElementsMounted: autoUpdate,
+    middleware: [
+      offset({ mainAxis: floatingOffset, alignmentAxis: -16 }),
+      shift(),
+      arrow({ element: arrowRef }),
+    ],
+  });
+
+  const dismiss = useDismiss(floatingData.context, {
+    ancestorScroll: false,
+  });
+  const interactions = useInteractions([dismiss]);
+  const { refs, floatingStyles, middlewareData } = floatingData;
+  const { getFloatingProps, getReferenceProps } = interactions;
+
   const menuButtonRefInternal = useRef<HTMLButtonElement>(null);
-  useImperativeHandle(
+
+  const mergedButtonRef = useMergeRefs([
+    refs.setReference,
     menuButtonRef,
-    () => menuButtonRefInternal?.current as HTMLButtonElement
-  );
-  const [selectedLang, setSelectedLang] = useState<string>(
+    menuButtonRefInternal,
+  ]);
+
+  const [selectedLangInternal, setSelectedLangInternal] = useState<string>(
     isLanguages(defaultLocale)
       ? convertLocaleToLang(defaultLocale)
       : defaultLocale
   );
+  const selectedLang = selectedLangExternal ?? selectedLangInternal;
   useEffect(() => {
     document.documentElement.lang = selectedLang;
   }, [selectedLang]);
@@ -86,23 +123,11 @@ export const TopBannerLangPicker = (({
   );
   const [currentFocus, setCurrentFocus] = useState(-1);
 
-  const isMenuOpen = openMenu === 'Lang';
   useEffect(() => {
     if (!isMenuOpen) {
       setCurrentFocus(-1);
       return;
     }
-
-    const handleOutsideMenuEvent: EventListener = (event): void => {
-      const node = event.composedPath()[0] as Node;
-      if (
-        !menuButtonRefInternal?.current?.contains(node) &&
-        !menuRef.current?.contains(node)
-      ) {
-        setOpenMenu('None');
-        event.type === 'click' && menuButtonRefInternal?.current?.focus();
-      }
-    };
 
     const handleKeyDown = (e: KeyboardEvent): void => {
       const languageLength = Object.keys(languages).length;
@@ -120,19 +145,15 @@ export const TopBannerLangPicker = (({
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('focusin', handleOutsideMenuEvent);
-    document.addEventListener('click', handleOutsideMenuEvent);
     return (): void => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('click', handleOutsideMenuEvent);
-      document.removeEventListener('focusin', handleOutsideMenuEvent);
     };
   }, [isMenuOpen, setOpenMenu, languages]);
 
   const handleLanguageClick = (
     e: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    setSelectedLang(e.currentTarget.lang);
+    setSelectedLangInternal(e.currentTarget.lang);
     setOpenMenu('None');
     menuButtonRefInternal?.current?.focus();
     onLanguageClick?.(e);
@@ -150,11 +171,12 @@ export const TopBannerLangPicker = (({
       lang={lang}
       data-testid={dataTestId}
     >
-      <div className={isMenuOpen ? styles.overlay : ''} />
+      {!isInMobileMenu && <div className={isMenuOpen ? styles.overlay : ''} />}
       <TopBannerButton
-        ref={menuButtonRefInternal}
+        ref={mergedButtonRef}
+        {...getReferenceProps()}
         lang={selectedLang}
-        className={styles.menuButton}
+        className={`${styles.menuButton} ${isInMobileMenu ? styles.menuButtonDesktopOnly : ''}`}
         ariaExpanded={isMenuOpen}
         onClick={handleMenuClick}
         onKeyDown={(e) => {
@@ -181,40 +203,60 @@ export const TopBannerLangPicker = (({
           className={styles.arrowDesktop}
         />
       </TopBannerButton>
-      <div className={styles.menuArrow} />
 
       {isMenuOpen && (
-        <div ref={menuRef} className={styles.menu}>
-          <ul className={styles.list}>
-            {Object.values(languages).map((language, index) => {
-              return (
-                <li key={`${language.lang}`} className={styles.listItem}>
-                  <TopBannerLangPicker.Button
-                    lang={language.lang}
-                    ariaCurrent={language.lang === selectedLang}
-                    flagIcon={getFlag(language.lang, additionalLanguages)}
-                    focus={index === currentFocus}
-                    onClick={handleLanguageClick}
-                    onKeyDown={(e): void => {
-                      /* Hvis vi er på første eller siste element stopper vi propagering slik at
+        <FloatingFocusManager
+          returnFocus={menuButtonRefInternal}
+          context={floatingData.context}
+          modal={false}
+          // -1 her for å hindre at fokusManager overstyrer fokus vekk fra knappen når menyen åpnes
+          initialFocus={-1}
+        >
+          <div
+            ref={refs.setFloating}
+            className={styles.menu}
+            {...getFloatingProps()}
+            style={floatingStyles}
+          >
+            <ul className={styles.list}>
+              {Object.values(languages).map((language, index) => {
+                return (
+                  <li key={`${language.lang}`} className={styles.listItem}>
+                    <TopBannerLangPicker.Button
+                      lang={language.lang}
+                      ariaCurrent={language.lang === selectedLang}
+                      flagIcon={getFlag(language.lang, additionalLanguages)}
+                      focus={index === currentFocus}
+                      onClick={handleLanguageClick}
+                      onKeyDown={(e): void => {
+                        /* Hvis vi er på første eller siste element stopper vi propagering slik at
                          eventet ikke fanges av eventListener på document og vi får tilbake
                          standard oppførsel på tab og shift-tab. */
-                      if (
-                        (index === Object.keys(languages).length - 1 &&
-                          e.key === 'Tab') ||
-                        (index === 0 && e.shiftKey && e.key === 'Tab')
-                      ) {
-                        e.stopPropagation();
-                      }
-                    }}
-                  >
-                    {language.displayName}
-                  </TopBannerLangPicker.Button>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+                        if (
+                          (index === Object.keys(languages).length - 1 &&
+                            e.key === 'Tab') ||
+                          (index === 0 && e.shiftKey && e.key === 'Tab')
+                        ) {
+                          e.stopPropagation();
+                        }
+                      }}
+                    >
+                      {language.displayName}
+                    </TopBannerLangPicker.Button>
+                  </li>
+                );
+              })}
+            </ul>
+            <div
+              ref={arrowRef}
+              style={{
+                left: middlewareData.arrow?.x,
+                top: `-${(arrowRef.current?.offsetWidth ?? 0) / 2}px`,
+              }}
+              className={styles.menuArrow}
+            />
+          </div>
+        </FloatingFocusManager>
       )}
     </div>
   );

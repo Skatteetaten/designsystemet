@@ -29,6 +29,7 @@ const meta = {
       table: { disable: true },
       control: { disable: true },
     },
+    hasSpacing: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
     showErrorSummary: { table: { disable: true } },
     title: { table: { disable: true } },
@@ -218,11 +219,11 @@ export const WithTitleAs = {
 const TemplateWithInput: StoryFn<typeof ErrorSummary> = () => (
   <>
     <TextField
-      className={'bottomSpacingXL'}
       id={'input_aar'}
       label={'År'}
       value={1009}
       errorMessage={'Inntekståret må være etter 2008'}
+      hasSpacing
       required
     />
     <ErrorSummary showErrorSummary>
@@ -251,11 +252,11 @@ const TemplateWithShadowRootNode: StoryFn<typeof ErrorSummary> = () => {
   return (
     <div data-test-block>
       <TextField
-        className={'bottomSpacingXL'}
         id={'input_aar'}
         label={'År'}
         value={1009}
         errorMessage={'Inntekståret må være etter 2008'}
+        hasSpacing
         required
       />
       <ErrorSummary shadowRootNode={shadowRoot ?? undefined} showErrorSummary>
@@ -314,15 +315,19 @@ const TemplateWithFocus: StoryFn<typeof ErrorSummary> = () => {
         label={'År'}
         value={1009}
         errorMessage={'Inntekståret må være etter 2008'}
+        hasSpacing
         required
       />
-      <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
+      <ErrorSummary
+        id={'errorSummary1'}
+        showErrorSummary={state.hasError}
+        hasSpacing
+      >
         <ErrorSummary.Error referenceId={'input_aar'}>
           {'Inntekståret må være etter 2008'}
         </ErrorSummary.Error>
       </ErrorSummary>
       <Button
-        className={'topSpacingXL'}
         onClick={(): void => {
           setState({ hasError: !state.hasError });
           setTimeout((): void => {

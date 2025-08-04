@@ -47,6 +47,7 @@ export const Formatters: StoryObj = {
           label={'Fødselsnummer (11 siffer)'}
           value={nationalidentitynumberValue}
           className={'textField300'}
+          hasSpacing
           onChange={(e) =>
             setNationalidentitynumberValue(
               formatter({
@@ -61,6 +62,7 @@ export const Formatters: StoryObj = {
           label={'Organisasjonsnummer (9 siffer)'}
           value={organisationNumberValue}
           className={'textField300'}
+          hasSpacing
           onChange={(e) =>
             setOrganisationNumberValue(
               formatter({

@@ -14,6 +14,7 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     showError: { table: { category: category.props } },
   },
   args: {
@@ -35,10 +36,10 @@ export const Examples: Story = {
     return (
       <>
         <TextField
-          className={'bottomSpacingXL'}
           label={'Fødselsdato'}
           value={'17.5.19'}
           errorMessage={'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ'}
+          hasSpacing
         />
         <Button
           variant={'secondary'}

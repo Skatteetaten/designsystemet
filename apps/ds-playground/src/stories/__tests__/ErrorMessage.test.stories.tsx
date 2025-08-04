@@ -15,6 +15,7 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     showError: { table: { disable: true } },
   },
 } satisfies Meta<typeof ErrorMessage>;

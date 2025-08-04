@@ -24,6 +24,10 @@
   overflow-wrap: anywhere;
   word-break: normal;
 
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
+
   &Icon {
     height: calc(var(--font-size-s) * var(--semantic-line-height-default));
     fill: var(--semantic-danger-foreground);

@@ -43,6 +43,7 @@ const meta = {
     },
     description: { table: { disable: true, category: category.props } },
     errorMessage: { table: { disable: true, category: category.props } },
+    hasSpacing: { table: { disable: true, category: category.props } },
     helpSvgPath: {
       table: { disable: true, category: category.props },
       options: Object.keys(SystemSVGPaths),

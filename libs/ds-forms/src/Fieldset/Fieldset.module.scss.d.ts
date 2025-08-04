@@ -1,6 +1,5 @@
 declare const classNames: {
   readonly fieldset: 'fieldset';
-  readonly fieldset_hasSpacing: 'fieldset_hasSpacing';
   readonly legend: 'legend';
   readonly legend_required: 'legend_required';
   readonly legendWithMarkup_required: 'legendWithMarkup_required';
