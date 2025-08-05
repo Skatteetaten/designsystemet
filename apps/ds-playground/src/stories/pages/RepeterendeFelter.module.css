@@ -1,0 +1,86 @@
+.mainExternal {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+}
+
+.miniNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-m) 0;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  margin: auto;
+}
+
+.marginTopL {
+  margin-top: var(--spacing-l);
+}
+
+.desciptionList dt {
+  min-width: 256px;
+}
+
+.repeatingFields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.addNewButton {
+  max-width: max-content;
+}
+
+.editModal {
+  width: 552px;
+}
+
+.editModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.flexStartRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--spacing-m);
+}
+
+.editModalAdressFields {
+  display: flex;
+  gap: var(--spacing-m);
+
+  dt {
+    color: var(--palette-graphite-70);
+  }
+}
+
+.panel {
+  margin: var(--spacing-xl) auto;
+}
+
+.panelContent {
+  display: flex;
+  max-width: 556px;
+  gap: var(--spacing-l);
+
+  .panelContentRigth {
+    flex: 1;
+  }
+
+  dt {
+    min-width: 360px;
+  }
+}
+
+.saveDeleteOrEditLater {
+  width: var(--container-m);
+  padding: var(--spacing-xs) 0;
+  margin: var(--spacing-l) auto;
+  background-color: var(--palette-graphite-5);
+}
