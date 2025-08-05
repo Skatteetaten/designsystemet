@@ -22,17 +22,15 @@ export const TopBannerUserMenuButton = ({
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
-  onClick,
   user,
   hasNotifications,
   isMenuOpen,
+  onClick,
 }: TopBannerUserMenuButtonProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
   const buttonText =
     user.role === 'meg' ? t('topbannerbutton.Myself') : user.name;
-
-  const concatenatedClassname = `${styles.menuButton} ${className}`.trim();
 
   const getUserIcon = (role: string): ReactNode => {
     switch (role) {
@@ -65,7 +63,7 @@ export const TopBannerUserMenuButton = ({
     <TopBannerButton
       ref={ref}
       id={id}
-      className={concatenatedClassname}
+      className={`${styles.menuButton} ${className}`.trim()}
       classNames={
         user.role === 'meg'
           ? undefined

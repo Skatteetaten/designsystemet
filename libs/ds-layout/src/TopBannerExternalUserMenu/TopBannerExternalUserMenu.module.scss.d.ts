@@ -1,13 +1,10 @@
 declare const classNames: {
   readonly arrow: 'arrow';
   readonly menu: 'menu';
-  readonly wrapper: 'wrapper';
   readonly notificationBadge: 'notificationBadge';
-  readonly notificationWrapper: 'notificationWrapper';
+  readonly marginRightS: 'marginRightS';
   readonly link: 'link';
-  readonly linkWrapper: 'linkWrapper';
-  readonly orgnr: 'orgnr';
   readonly namePrefix: 'namePrefix';
-  readonly name: 'name';
+  readonly marginTopS: 'marginTopS';
 };
 export default classNames;

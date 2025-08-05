@@ -19,10 +19,8 @@
   border: 1px solid var(--palette-graphite-70);
   background-color: var(--palette-graphite-0);
   color: var(--palette-graphite-100);
-}
-
-.wrapper {
-  margin: var(--spacing-xs);
+  font-size: var(--font-size-s);
+  line-height: var(--semantic-line-height-heading4);
 }
 
 .notificationBadge {
@@ -30,11 +28,11 @@
   border-radius: 1.5rem;
   background-color: var(--palette-burgundy-70);
   color: var(--palette-graphite-0);
-  font-size: var(--font-size-s);
+  font-variant-numeric: tabular-nums;
   font-weight: var(--font-weight-bold);
 }
 
-.notificationWrapper > a {
+.marginRightS {
   margin-right: var(--spacing-s);
 }
 
@@ -42,25 +40,14 @@
   margin: var(--spacing-s) 0;
 }
 
-.linkWrapper {
-  margin: var(--spacing-s) 0;
-}
-
-.orgnr {
-  margin-bottom: var(--spacing-xs);
-  font-size: var(--font-size-s);
-}
-
 .namePrefix {
   color: var(--palette-graphite-70);
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-medium);
-  letter-spacing: 4%;
-  line-height: var(--semantic-line-height-heading4);
+  letter-spacing: calc(0.04 * var(--font-size-s));
   text-transform: uppercase;
 }
 
-.name {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+.marginTopS {
+  margin-top: var(--spacing-s);
 }

@@ -44,11 +44,11 @@ export const TopBannerExternalUserMenu = ({
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
-  user,
   notificationCount,
+  user,
+  canRepresentOthers,
   onLogOutClick,
   onSwitchUserClick,
-  canRepresentOthers,
   children,
 }: TopBannerExternalUserMenuProps): JSX.Element => {
   const arrowRef = useRef<HTMLDivElement>(null);
@@ -91,8 +91,6 @@ export const TopBannerExternalUserMenu = ({
     }
   }, [isOpen]);
 
-  const domainName = 'skatteetaten.no';
-
   return (
     <>
       <TopBannerUserMenuButton
@@ -102,7 +100,7 @@ export const TopBannerExternalUserMenu = ({
         data-testid={dataTestId}
         {...getReferenceProps()}
         ref={mergedButtonRef}
-        user={user ?? undefined}
+        user={user}
         isMenuOpen={isOpen}
         hasNotifications={!!notificationCount}
         onClick={() => {
@@ -123,112 +121,96 @@ export const TopBannerExternalUserMenu = ({
             ref={refs.setFloating}
             style={floatingStyles}
           >
-            <div className={styles.wrapper}>
+            <Heading as={'h4'} level={4}>
               {(user.role === 'virksomhet' || user.role === 'andre') &&
                 canRepresentOthers && (
                   <div className={styles.namePrefix}>
                     {t('ds_overlays:topbannerexternalusermenu.OnBehalfOf')}
                   </div>
                 )}
-              <Heading as={'h4'} level={4}>
-                {user.role === 'virksomhet'
-                  ? user.name.toUpperCase()
-                  : user.name}
-              </Heading>
-              {user.role === 'virksomhet' && user.orgnr && (
-                <div
-                  className={styles.orgnr}
-                >{`Orgnr. ${formatOrganisationNumber(user.orgnr)}`}</div>
+              {user.role === 'virksomhet' ? user.name.toUpperCase() : user.name}
+            </Heading>
+            {user.role === 'virksomhet' && user.orgnr && (
+              <div>{`${t('ds_overlays:rolepicker.BusinessDescriptionPrefix')} ${formatOrganisationNumber(user.orgnr)}`}</div>
+            )}
+            <InlineButton
+              className={styles.marginTopS}
+              data-testid={'switch-user'}
+              svgPath={PersonMoreSVGpath}
+              onClick={onSwitchUserClick}
+            >
+              {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
+            </InlineButton>
+            <Divider spacingTop={'m'}></Divider>
+            <div className={styles.link}>
+              {(user.role === 'virksomhet' || user.role === 'meg') && (
+                <Link
+                  className={styles.marginRightS}
+                  svgPath={BellSVGpath}
+                  href={`https://skatteetaten.no/web/minside/${user.role === 'meg' ? 'person' : 'virksomhet'}/varsler`}
+                >
+                  {t('ds_overlays:topbannerexternalusermenu.Notification')}
+                </Link>
               )}
-              <InlineButton
-                data-testid={'switch-user'}
-                svgPath={PersonMoreSVGpath}
-                onClick={onSwitchUserClick}
-              >
-                {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
-              </InlineButton>
-              <Divider></Divider>
-
-              <div className={styles.linkWrapper}>
-                <div className={styles.notificationWrapper}>
-                  {user.role === 'virksomhet' && (
-                    <Link
-                      svgPath={BellSVGpath}
-                      href={`https://${domainName}/web/minside/virksomhet/varsler`}
-                    >
-                      {t('ds_overlays:topbannerexternalusermenu.Notification')}
-                    </Link>
+              {!!notificationCount && notificationCount > 0 && (
+                <span
+                  aria-label={t(
+                    'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+                    { count: notificationCount }
                   )}
-                  {user.role === 'meg' && (
-                    <Link
-                      svgPath={BellSVGpath}
-                      href={`https://${domainName}/web/minside/person/varsler`}
-                    >
-                      {t('ds_overlays:topbannerexternalusermenu.Notification')}
-                    </Link>
-                  )}
-                  {!!notificationCount && notificationCount > 0 && (
-                    <span
-                      aria-label={t(
-                        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
-                        { count: notificationCount }
-                      )}
-                      className={styles.notificationBadge}
-                      data-testid={'varsel-circle'}
-                    >
-                      {notificationCount > 99
-                        ? '99+'
-                        : notificationCount > 1 && notificationCount}
-                    </span>
-                  )}
-                </div>
-                <div className={styles.link}>
-                  <Link
-                    svgPath={PersonSVGpath}
-                    href={`https://${domainName}/web/minside`}
-                  >
-                    {t('ds_overlays:topbannerexternalusermenu.MyPage')}
-                  </Link>
-                </div>
-                {user.role === 'virksomhet' && (
-                  <div className={styles.link}>
-                    <Link
-                      svgPath={InfoSquareSVGpath}
-                      href={`https://${domainName}/web/minside/virksomhet/omvirksomheten`}
-                    >
-                      {t(
-                        'ds_overlays:topbannerexternalusermenu.AboutTheOrganisation'
-                      )}
-                    </Link>
-                  </div>
-                )}
-                {user.role === 'meg' && (
-                  <div className={styles.link}>
-                    <Link
-                      svgPath={InfoSquareSVGpath}
-                      href={`https://${domainName}/web/minside/person/ommeg`}
-                    >
-                      {t('ds_overlays:topbannerexternalusermenu.AboutMe')}
-                    </Link>
-                  </div>
-                )}
-              </div>
-              <div>
-                <Divider></Divider>
-                {children}
-                <InlineButton svgPath={LogOutSVGpath} onClick={onLogOutClick}>
-                  {t('ds_overlays:rolepicker.Logout')}
-                </InlineButton>
-              </div>
+                  className={styles.notificationBadge}
+                  data-testid={'varsel-circle'}
+                >
+                  {notificationCount > 99
+                    ? '99+'
+                    : notificationCount > 0 && notificationCount}
+                </span>
+              )}
             </div>
-
+            <div className={styles.link}>
+              <Link
+                svgPath={PersonSVGpath}
+                href={'https://skatteetaten.no/web/minside'}
+              >
+                {t('ds_overlays:topbannerexternalusermenu.MyPage')}
+              </Link>
+            </div>
+            {user.role === 'virksomhet' && (
+              <div className={styles.link}>
+                <Link
+                  svgPath={InfoSquareSVGpath}
+                  href={
+                    'https://skatteetaten.no/web/minside/virksomhet/omvirksomheten'
+                  }
+                >
+                  {t(
+                    'ds_overlays:topbannerexternalusermenu.AboutTheOrganisation'
+                  )}
+                </Link>
+              </div>
+            )}
+            {user.role === 'meg' && (
+              <div className={styles.link}>
+                <Link
+                  svgPath={InfoSquareSVGpath}
+                  href={'https://skatteetaten.no/web/minside/person/ommeg'}
+                >
+                  {t('ds_overlays:topbannerexternalusermenu.AboutMe')}
+                </Link>
+              </div>
+            )}
+            <Divider spacingTop={'m'}></Divider>
+            {children}
+            <InlineButton svgPath={LogOutSVGpath} onClick={onLogOutClick}>
+              {t('ds_overlays:rolepicker.Logout')}
+            </InlineButton>
             <div
               ref={arrowRef}
               style={{
                 left: middlewareData.arrow?.x,
                 top: `-${(arrowRef.current?.offsetWidth ?? 0) / 2}px`,
               }}
-              className={`${styles.arrow}`.trim()}
+              className={styles.arrow}
             ></div>
           </div>
         </FloatingFocusManager>

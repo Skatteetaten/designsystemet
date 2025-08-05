@@ -7,6 +7,22 @@ import { TopBannerExternalUserMenu } from '@skatteetaten/ds-layout';
 const meta: Meta<typeof TopBannerExternalUserMenu> = {
   title: 'Tester/TopBanner/TopBannerExternalUserMenu',
   component: TopBannerExternalUserMenu,
+  argTypes: {
+    // Baseprops
+    ref: { table: { disable: true } },
+    className: { table: { disable: true } },
+    id: { table: { disable: true } },
+    lang: { table: { disable: true } },
+    'data-testid': { table: { disable: true } },
+    // Props
+    user: { table: { disable: true } },
+    notificationCount: { table: { disable: true } },
+    canRepresentOthers: { table: { disable: true } },
+    children: { table: { disable: true } },
+    // Events
+    onLogOutClick: { table: { disable: true } },
+    onSwitchUserClick: { table: { disable: true } },
+  },
   args: {
     user: {
       name: 'Buljo Tulljo',
@@ -20,13 +36,10 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
     },
     notificationCount: 5,
     canRepresentOthers: true,
-    onSwitchUserClick: fn(),
-    onLogOutClick: fn(),
   },
-};
+} satisfies Meta<typeof TopBannerExternalUserMenu>;
 export default meta;
-
-type Story = StoryObj<typeof TopBannerExternalUserMenu>;
+type Story = StoryObj<typeof meta>;
 
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const userIconTitle = dsI18n.t('ds_layout:topbannerbutton.CompanyTitle');
@@ -54,7 +67,9 @@ export const Default: Story = {
     await expect(userName).toBeInTheDocument();
 
     // Sjekker om org nummeret er synlig
-    const orgnr = within(userMenu).getByText('Orgnr. 123 456 789');
+    const orgnr = within(userMenu).getByText(
+      `${dsI18n.t('ds_overlays:rolepicker.BusinessDescriptionPrefix')} 123 456 789`
+    );
     await expect(orgnr).toBeInTheDocument();
 
     // Sjekker om varsler-tallet er synlig
@@ -67,6 +82,9 @@ export const WithNoNotifications: Story = {
   name: 'No Notifications',
   args: {
     notificationCount: 0,
+  },
+  argTypes: {
+    notificationCount: { table: { disable: false } },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -89,6 +107,9 @@ export const WithMoreThan9Notifications: Story = {
   args: {
     notificationCount: 100,
   },
+  argTypes: {
+    notificationCount: { table: { disable: false } },
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
@@ -108,7 +129,6 @@ export const WithMoreThan9Notifications: Story = {
 export const SwitchUser: Story = {
   args: {
     onSwitchUserClick: fn(),
-    onLogOutClick: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -166,14 +186,8 @@ export const NoPaaVegneAv: Story = {
     user: {
       name: 'Buljo Tulljo',
       role: 'meg',
-      person: {
-        name: 'Buljo Tulljo',
-        personId: '6969420420',
-        type: '',
-      },
     },
   },
-
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
@@ -193,6 +207,9 @@ export const NoPaaVegneAv: Story = {
 export const WithChildren: Story = {
   args: {
     children: <div data-testid={'usermenu-child'}>{'Child'}</div>,
+  },
+  argTypes: {
+    children: { table: { disable: false } },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

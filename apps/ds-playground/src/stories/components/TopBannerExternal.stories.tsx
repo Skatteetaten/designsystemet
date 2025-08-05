@@ -547,14 +547,6 @@ export const ExampleWithUserMenu: Story = {
       dsI18n.changeLanguage(langToLocale[lang]);
     };
 
-    const handleLogOut = (): void => {
-      setUser(undefined);
-    };
-
-    const handleLogIn = (): void => {
-      modalRef.current?.showModal();
-    };
-
     const me: Person = {
       name: 'Ola Nordmann',
       personId: '10101012345',
@@ -973,9 +965,9 @@ export const ExampleWithUserMenu: Story = {
             </>
           }
           onLanguageClick={handleLanguageClick}
-          onLogInClick={!user ? handleLogIn : undefined}
-          onLogOutClick={handleLogOut}
-          onUserClick={(): void => modalRef.current?.showModal()}
+          onLogInClick={
+            !user ? (): void => modalRef.current?.showModal() : undefined
+          }
           onSearch={(e, value) => {
             alert(`søker etter ${value}`);
           }}
@@ -986,7 +978,7 @@ export const ExampleWithUserMenu: Story = {
           {user && (
             <TopBannerExternal.UserMenu
               user={user}
-              notificationCount={5}
+              notificationCount={1}
               canRepresentOthers
               onLogOutClick={() => setUser(undefined)}
               onSwitchUserClick={() => modalRef.current?.showModal()}
@@ -1006,10 +998,10 @@ export const ExampleWithUserMenu: Story = {
             } else {
               role = 'andre';
             }
-
             setUser({
               role: role,
               name: entity.name,
+              orgnr: '999 999 999',
             });
             modalRef.current?.close();
           }}
