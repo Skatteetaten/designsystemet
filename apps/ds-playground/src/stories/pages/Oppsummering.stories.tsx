@@ -161,7 +161,7 @@ export const Oppsummering = (): JSX.Element => {
         </div>
         <div className={styles.article}>
           <Checkbox className={`${styles.marginTopM} ${styles.marginBottomXl}`}>
-            {'Jeg bekgrefter at opplysningene stemmer'}
+            {'Jeg bekrefter at opplysningene stemmer'}
           </Checkbox>
           <Button
             className={styles.marginRightM}
