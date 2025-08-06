@@ -207,7 +207,7 @@ export const TopBannerExternalUserMenu = ({
             <div
               ref={arrowRef}
               style={{
-                left: middlewareData.arrow?.x,
+                left: `${(middlewareData.arrow?.x ?? 0) - 16}px`,
                 top: `-${(arrowRef.current?.offsetWidth ?? 0) / 2}px`,
               }}
               className={styles.arrow}

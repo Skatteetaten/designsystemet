@@ -51,13 +51,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
     <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
     </span>
   </button>
-  <div class="_menu_1nngw_13"
+  <div class="_menu_48ebb_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
     <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
-      <div class="_namePrefix_1nngw_41">
+      <div class="_namePrefix_48ebb_45">
         På vegne av
       </div>
       BULJO TULLJO
@@ -65,7 +65,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
     <div>
       Org. nr: 123&nbsp;456&nbsp;789
     </div>
-    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_1nngw_49"
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
             data-testid="switch-user"
             data-brightness="default"
             type="button"
@@ -88,8 +88,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         data-spacing-top="m"
         data-spacing-bottom="s"
     >
-    <div class="_link_1nngw_37">
-      <a class="_link_z7jba_1  _marginRightS_1nngw_33"
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
@@ -107,13 +107,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         Varsel
       </a>
       <span aria-label="Varsler, 5 uleste"
-            class="_notificationBadge_1nngw_24"
+            class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
         5
       </span>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside"
       >
@@ -129,7 +129,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         Min side
       </a>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
       >
@@ -167,8 +167,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         Logg ut
       </span>
     </button>
-    <div class="_arrow_1nngw_1"
-         style="top: -13px; left: 41.5px;"
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
     >
     </div>
   </div>
@@ -226,13 +226,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
     <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
     </span>
   </button>
-  <div class="_menu_1nngw_13"
+  <div class="_menu_48ebb_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
     <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
-      <div class="_namePrefix_1nngw_41">
+      <div class="_namePrefix_48ebb_45">
         På vegne av
       </div>
       BULJO TULLJO
@@ -240,7 +240,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
     <div>
       Org. nr: 123&nbsp;456&nbsp;789
     </div>
-    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_1nngw_49"
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
             data-testid="switch-user"
             data-brightness="default"
             type="button"
@@ -263,8 +263,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         data-spacing-top="m"
         data-spacing-bottom="s"
     >
-    <div class="_link_1nngw_37">
-      <a class="_link_z7jba_1  _marginRightS_1nngw_33"
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
@@ -282,13 +282,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         Varsel
       </a>
       <span aria-label="Varsler, 5 uleste"
-            class="_notificationBadge_1nngw_24"
+            class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
         5
       </span>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside"
       >
@@ -304,7 +304,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         Min side
       </a>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
       >
@@ -342,8 +342,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         Logg ut
       </span>
     </button>
-    <div class="_arrow_1nngw_1"
-         style="top: -13px; left: 41.5px;"
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
     >
     </div>
   </div>
@@ -401,7 +401,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
     <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
     </span>
   </button>
-  <div class="_menu_1nngw_13"
+  <div class="_menu_48ebb_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
@@ -409,7 +409,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
     <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
       Buljo Tulljo
     </h4>
-    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_1nngw_49"
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
             data-testid="switch-user"
             data-brightness="default"
             type="button"
@@ -432,8 +432,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         data-spacing-top="m"
         data-spacing-bottom="s"
     >
-    <div class="_link_1nngw_37">
-      <a class="_link_z7jba_1  _marginRightS_1nngw_33"
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/person/varsler"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
@@ -451,13 +451,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         Varsel
       </a>
       <span aria-label="Varsler, 5 uleste"
-            class="_notificationBadge_1nngw_24"
+            class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
         5
       </span>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside"
       >
@@ -473,7 +473,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         Min side
       </a>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside/person/ommeg"
       >
@@ -511,8 +511,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         Logg ut
       </span>
     </button>
-    <div class="_arrow_1nngw_1"
-         style="top: -13px; left: 34.5px;"
+    <div class="_arrow_48ebb_1"
+         style="left: 18.5px; top: -13px;"
     >
     </div>
   </div>
@@ -570,13 +570,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
     <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
     </span>
   </button>
-  <div class="_menu_1nngw_13"
+  <div class="_menu_48ebb_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
     <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
-      <div class="_namePrefix_1nngw_41">
+      <div class="_namePrefix_48ebb_45">
         På vegne av
       </div>
       BULJO TULLJO
@@ -584,7 +584,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
     <div>
       Org. nr: 123&nbsp;456&nbsp;789
     </div>
-    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_1nngw_49"
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
             data-testid="switch-user"
             data-brightness="default"
             type="button"
@@ -607,8 +607,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         data-spacing-top="m"
         data-spacing-bottom="s"
     >
-    <div class="_link_1nngw_37">
-      <a class="_link_z7jba_1  _marginRightS_1nngw_33"
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
@@ -626,13 +626,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         Varsel
       </a>
       <span aria-label="Varsler, 5 uleste"
-            class="_notificationBadge_1nngw_24"
+            class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
         5
       </span>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside"
       >
@@ -648,7 +648,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         Min side
       </a>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
       >
@@ -686,8 +686,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         Logg ut
       </span>
     </button>
-    <div class="_arrow_1nngw_1"
-         style="top: -13px; left: 41.5px;"
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
     >
     </div>
   </div>
@@ -745,13 +745,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
     <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
     </span>
   </button>
-  <div class="_menu_1nngw_13"
+  <div class="_menu_48ebb_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
     <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
-      <div class="_namePrefix_1nngw_41">
+      <div class="_namePrefix_48ebb_45">
         På vegne av
       </div>
       BULJO TULLJO
@@ -759,7 +759,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
     <div>
       Org. nr: 123&nbsp;456&nbsp;789
     </div>
-    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_1nngw_49"
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
             data-testid="switch-user"
             data-brightness="default"
             type="button"
@@ -782,8 +782,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         data-spacing-top="m"
         data-spacing-bottom="s"
     >
-    <div class="_link_1nngw_37">
-      <a class="_link_z7jba_1  _marginRightS_1nngw_33"
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
@@ -801,13 +801,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         Varsel
       </a>
       <span aria-label="Varsler, 5 uleste"
-            class="_notificationBadge_1nngw_24"
+            class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
         5
       </span>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside"
       >
@@ -823,7 +823,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         Min side
       </a>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
       >
@@ -864,8 +864,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         Logg ut
       </span>
     </button>
-    <div class="_arrow_1nngw_1"
-         style="top: -13px; left: 41.5px;"
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
     >
     </div>
   </div>
@@ -923,13 +923,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
     <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
     </span>
   </button>
-  <div class="_menu_1nngw_13"
+  <div class="_menu_48ebb_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
     <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
-      <div class="_namePrefix_1nngw_41">
+      <div class="_namePrefix_48ebb_45">
         På vegne av
       </div>
       BULJO TULLJO
@@ -937,7 +937,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
     <div>
       Org. nr: 123&nbsp;456&nbsp;789
     </div>
-    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_1nngw_49"
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
             data-testid="switch-user"
             data-brightness="default"
             type="button"
@@ -960,8 +960,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
         data-spacing-top="m"
         data-spacing-bottom="s"
     >
-    <div class="_link_1nngw_37">
-      <a class="_link_z7jba_1  _marginRightS_1nngw_33"
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
@@ -979,13 +979,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
         Varsel
       </a>
       <span aria-label="Varsler, 100 uleste"
-            class="_notificationBadge_1nngw_24"
+            class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
         99+
       </span>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside"
       >
@@ -1001,7 +1001,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
         Min side
       </a>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
       >
@@ -1039,8 +1039,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
         Logg ut
       </span>
     </button>
-    <div class="_arrow_1nngw_1"
-         style="top: -13px; left: 41.5px;"
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
     >
     </div>
   </div>
@@ -1094,13 +1094,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
       </path>
     </svg>
   </button>
-  <div class="_menu_1nngw_13"
+  <div class="_menu_48ebb_13"
        tabindex="-1"
        data-floating-ui-focusable
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
   >
     <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
-      <div class="_namePrefix_1nngw_41">
+      <div class="_namePrefix_48ebb_45">
         På vegne av
       </div>
       BULJO TULLJO
@@ -1108,7 +1108,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
     <div>
       Org. nr: 123&nbsp;456&nbsp;789
     </div>
-    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_1nngw_49"
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
             data-testid="switch-user"
             data-brightness="default"
             type="button"
@@ -1131,8 +1131,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
         data-spacing-top="m"
         data-spacing-bottom="s"
     >
-    <div class="_link_1nngw_37">
-      <a class="_link_z7jba_1  _marginRightS_1nngw_33"
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
@@ -1150,7 +1150,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
         Varsel
       </a>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside"
       >
@@ -1166,7 +1166,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
         Min side
       </a>
     </div>
-    <div class="_link_1nngw_37">
+    <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
          href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
       >
@@ -1204,8 +1204,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
         Logg ut
       </span>
     </button>
-    <div class="_arrow_1nngw_1"
-         style="top: -13px; left: 41.5px;"
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
     >
     </div>
   </div>

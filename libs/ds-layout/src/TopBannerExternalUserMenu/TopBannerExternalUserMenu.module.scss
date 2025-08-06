@@ -15,8 +15,12 @@
 .menu {
   z-index: 100;
   width: 18rem;
+  max-width: calc(100vw - (var(--spacing-m) * 2));
+  box-sizing: border-box;
   padding: var(--spacing-s);
   border: 1px solid var(--palette-graphite-70);
+  margin-right: var(--spacing-m);
+  margin-left: var(--spacing-m);
   background-color: var(--palette-graphite-0);
   color: var(--palette-graphite-100);
   font-size: var(--font-size-s);
