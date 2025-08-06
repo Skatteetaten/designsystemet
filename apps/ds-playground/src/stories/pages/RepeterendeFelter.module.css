@@ -28,7 +28,9 @@
 .repeatingFields {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
   gap: var(--spacing-m);
+  list-style: none;
 }
 
 .addNewButton {

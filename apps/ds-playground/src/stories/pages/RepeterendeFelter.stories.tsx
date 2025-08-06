@@ -232,48 +232,52 @@ export function RepeterendeFelter(): JSX.Element {
           <Heading as={'h2'} level={2} hasSpacing>
             {'Overskift/kategori'}
           </Heading>
-          <div className={styles.repeatingFields}>
+          <ul className={styles.repeatingFields}>
             {cards.length === 0 ? (
-              <Paragraph>{'Ingen personer i listen.'}</Paragraph>
+              <li>
+                <Paragraph>{'Ingen personer i listen.'}</Paragraph>
+              </li>
             ) : (
               cards.map((card) => (
-                <Card key={card.id} spacing={'m'} color={'graphite'}>
-                  <Card.Header>
-                    <Heading as={'h3'} level={3} hasSpacing>
-                      {card.navn}
-                    </Heading>
-                  </Card.Header>
-                  <Card.Content>
-                    <DescriptionList className={styles.desciptionList}>
-                      <DescriptionList.Element term={'Adresse'}>
-                        {card.adresse}
-                      </DescriptionList.Element>
-                      <DescriptionList.Element term={'Postnummer'}>
-                        {card.postnummer}
-                      </DescriptionList.Element>
-                      <DescriptionList.Element term={'Poststed'}>
-                        {card.poststed}
-                      </DescriptionList.Element>
-                      <DescriptionList.Element term={'Rolle'}>
-                        {card.rolle}
-                      </DescriptionList.Element>
-                    </DescriptionList>
-                  </Card.Content>
-                  <Card.Actions>
-                    <InlineButton
-                      svgPath={EditSVGpath}
-                      onClick={() => handleEdit(card)}
-                    >
-                      {'Rediger'}
-                    </InlineButton>
-                    <InlineButton
-                      svgPath={DeleteSVGpath}
-                      onClick={() => handleDeleteCard(card.id)}
-                    >
-                      {'Slett'}
-                    </InlineButton>
-                  </Card.Actions>
-                </Card>
+                <li key={card.id}>
+                  <Card key={card.id} spacing={'m'} color={'graphite'}>
+                    <Card.Header>
+                      <Heading as={'h3'} level={3} hasSpacing>
+                        {card.navn}
+                      </Heading>
+                    </Card.Header>
+                    <Card.Content>
+                      <DescriptionList className={styles.desciptionList}>
+                        <DescriptionList.Element term={'Adresse'}>
+                          {card.adresse}
+                        </DescriptionList.Element>
+                        <DescriptionList.Element term={'Postnummer'}>
+                          {card.postnummer}
+                        </DescriptionList.Element>
+                        <DescriptionList.Element term={'Poststed'}>
+                          {card.poststed}
+                        </DescriptionList.Element>
+                        <DescriptionList.Element term={'Rolle'}>
+                          {card.rolle}
+                        </DescriptionList.Element>
+                      </DescriptionList>
+                    </Card.Content>
+                    <Card.Actions>
+                      <InlineButton
+                        svgPath={EditSVGpath}
+                        onClick={() => handleEdit(card)}
+                      >
+                        {'Rediger'}
+                      </InlineButton>
+                      <InlineButton
+                        svgPath={DeleteSVGpath}
+                        onClick={() => handleDeleteCard(card.id)}
+                      >
+                        {'Slett'}
+                      </InlineButton>
+                    </Card.Actions>
+                  </Card>
+                </li>
               ))
             )}
             <Button
@@ -283,7 +287,7 @@ export function RepeterendeFelter(): JSX.Element {
             >
               {'Legg til ny person'}
             </Button>
-          </div>
+          </ul>
           <Modal
             ref={editModalRef}
             title={'Rediger person'}
