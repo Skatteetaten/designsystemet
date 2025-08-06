@@ -166,7 +166,7 @@ export const Oppsummering = (): JSX.Element => {
           <Button
             className={styles.marginRightM}
             onClick={() => {
-              linkTo('Sidetyper/Ekstern/Oppgaveliste');
+              linkTo('Sidetyper/Ekstern/Oppgaveliste', 'Oppgaveliste')();
             }}
           >
             {'Lagre og gå til oppgaveliste'}

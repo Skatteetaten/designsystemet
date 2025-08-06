@@ -1,4 +1,4 @@
-import { Fragment, JSX } from 'react';
+import { MouseEvent, Fragment, JSX, useRef, useState } from 'react';
 
 import { linkTo } from '@storybook/addon-links';
 
@@ -9,7 +9,11 @@ import {
   LinkGroup,
 } from '@skatteetaten/ds-buttons';
 import { DescriptionList, Divider, Panel } from '@skatteetaten/ds-content';
-import { useMediaQuery } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  langToLocale,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 import {
   CheckIcon,
   CheckSVGpath,
@@ -17,7 +21,12 @@ import {
   SendSVGpath,
   WarningOutlineSVGpath,
 } from '@skatteetaten/ds-icons';
-import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
+import {
+  Footer,
+  TopBannerExternal,
+  TopBannerExternalHandle,
+  User,
+} from '@skatteetaten/ds-layout';
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 import { Tag, TagColor } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -25,6 +34,12 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import styles from './Oppgaveliste.module.css';
 import stylesAsString from './Oppgaveliste.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
+import {
+  Business,
+  Paginated,
+  Person,
+  RolePicker,
+} from '@skatteetaten/ds-overlays';
 
 export default {
   title: 'Sidetyper/Ekstern/Oppgaveliste',
@@ -54,6 +69,28 @@ interface Task {
 }
 
 export const Oppgaveliste = (): JSX.Element => {
+  const modalRef = useRef<HTMLDialogElement>(null);
+  const topBannerRef = useRef<TopBannerExternalHandle>(null);
+  const [user, setUser] = useState<User>();
+
+  const me: Person = {
+    name: 'Ola Nordmann',
+    personId: '10101012345',
+    type: 'Person',
+  };
+
+  const businesses: Paginated<Business> = {
+    total: 1,
+    list: [
+      {
+        name: 'Høssing Funk Skole',
+        organizationNumber: '999 999 999',
+        type: 'Organization',
+        unitType: '',
+      },
+    ],
+  };
+
   const isDesktop = useMediaQuery('(min-width: 480px)');
   const checkTasks: Task[] = [
     {
@@ -137,9 +174,7 @@ export const Oppgaveliste = (): JSX.Element => {
             href={'#'}
             onClick={(e) => {
               e.preventDefault();
-              console.log('stuff');
-              linkTo('Sidetyper/Ekstern/Kvittering', 'Kvittering');
-              // linkTo('Sidetyper/Exstern/Oppsummering', 'Oppsummering');
+              linkTo('Sidetyper/Ekstern/Oppsummering', 'Oppsummering')();
             }}
           >
             {task.text}
@@ -161,7 +196,60 @@ export const Oppgaveliste = (): JSX.Element => {
 
   return (
     <>
-      <TopBannerExternal />
+      <TopBannerExternal
+        ref={topBannerRef}
+        firstColumn={
+          <LinkGroup>
+            <LinkGroup.Link
+              href={'#storybook-root'}
+              onClick={(e): void => {
+                e.preventDefault();
+                topBannerRef.current?.closeMenu?.();
+              }}
+            >
+              {'Skatt'}
+            </LinkGroup.Link>
+            <LinkGroup.Link
+              href={'#storybook-root'}
+              onClick={(e): void => {
+                e.preventDefault();
+                topBannerRef.current?.closeMenu?.();
+              }}
+            >
+              {'Avgift'}
+            </LinkGroup.Link>
+          </LinkGroup>
+        }
+        user={user}
+        onLanguageClick={(e: MouseEvent<HTMLButtonElement>): void => {
+          void dsI18n.changeLanguage(langToLocale[e.currentTarget.lang]);
+        }}
+        onLogInClick={(): void => modalRef.current?.showModal()}
+        onLogOutClick={(): void => setUser(undefined)}
+        onUserClick={(): void => modalRef.current?.showModal()}
+      />
+      <RolePicker
+        ref={modalRef}
+        me={me}
+        businesses={businesses}
+        onEntitySelect={async (entity) => {
+          let role: User['role'];
+          if (entity.name === me.name) {
+            role = 'meg';
+          } else if (entity.type === 'Organization') {
+            role = 'virksomhet';
+          } else {
+            role = 'andre';
+          }
+
+          setUser({
+            role: role,
+            name: entity.name,
+          });
+          modalRef.current?.close();
+        }}
+      />
+
       <main className={styles.mainExternal}>
         <Breadcrumbs>
           <Breadcrumbs.List>
