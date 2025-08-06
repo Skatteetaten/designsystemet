@@ -1,4 +1,6 @@
-import { JSX } from 'react';
+import { Fragment, JSX } from 'react';
+
+import { linkTo } from '@storybook/addon-links';
 
 import {
   Button,
@@ -21,7 +23,7 @@ import { Tag, TagColor } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './Oppgaveliste.module.css';
-import stylesAsString from './OppgaveListe.module.css?raw';
+import stylesAsString from './Oppgaveliste.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
 
 export default {
@@ -128,9 +130,18 @@ export const Oppgaveliste = (): JSX.Element => {
     }
 
     return (
-      <>
+      <Fragment key={task.text}>
         <div className={styles.task}>
-          <Link className={styles.taskLink} href={'#'}>
+          <Link
+            className={styles.taskLink}
+            href={'#'}
+            onClick={(e) => {
+              e.preventDefault();
+              console.log('stuff');
+              linkTo('Sidetyper/Ekstern/Kvittering', 'Kvittering');
+              // linkTo('Sidetyper/Exstern/Oppsummering', 'Oppsummering');
+            }}
+          >
             {task.text}
           </Link>
           <div>
@@ -144,7 +155,7 @@ export const Oppgaveliste = (): JSX.Element => {
           </div>
         </div>
         <Divider />
-      </>
+      </Fragment>
     );
   };
 
