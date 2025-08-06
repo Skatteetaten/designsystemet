@@ -44,6 +44,8 @@ export const Oppsummering = (): JSX.Element => {
   const modalRef = useRef<HTMLDialogElement>(null);
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const [user, setUser] = useState<User>();
+  const [errorMessage, setErrorMessage] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
 
   const me: Person = {
     name: 'Knuslete Foxtrot',
@@ -52,6 +54,7 @@ export const Oppsummering = (): JSX.Element => {
   };
 
   const panelRef = useRef<HTMLDivElement>(null);
+  const checkRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     panelRef.current?.focus();
@@ -160,13 +163,27 @@ export const Oppsummering = (): JSX.Element => {
           </Card>
         </div>
         <div className={styles.article}>
-          <Checkbox className={`${styles.marginTopM} ${styles.marginBottomXl}`}>
+          <Checkbox
+            ref={checkRef}
+            checked={isChecked}
+            errorMessage={errorMessage}
+            className={`${styles.marginTopM} ${styles.marginBottomXl}`}
+            onChange={() => {
+              setIsChecked(!isChecked);
+              setErrorMessage('');
+            }}
+          >
             {'Jeg bekrefter at opplysningene stemmer'}
           </Checkbox>
           <Button
             className={styles.marginRightM}
             onClick={() => {
-              linkTo('Sidetyper/Ekstern/Oppgaveliste', 'Oppgaveliste')();
+              if (isChecked) {
+                linkTo('Sidetyper/Ekstern/Oppgaveliste', 'Oppgaveliste')();
+              } else {
+                setErrorMessage('Du må bekrefte at opplysningene stemmer.');
+                checkRef.current?.focus();
+              }
             }}
           >
             {'Lagre og gå til oppgaveliste'}
