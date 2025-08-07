@@ -1,5 +1,6 @@
 declare const classNames: {
   readonly mainExternal: 'mainExternal';
+  readonly tabIndexNoOutline: 'tabIndexNoOutline';
   readonly miniNav: 'miniNav';
   readonly article: 'article';
   readonly marginTopL: 'marginTopL';

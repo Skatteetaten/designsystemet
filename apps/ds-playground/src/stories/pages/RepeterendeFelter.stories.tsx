@@ -125,9 +125,9 @@ export function RepeterendeFelter(): JSX.Element {
 
   useEffect(() => {
     if (editCard && firstInputInEditModalRef.current) {
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         firstInputInEditModalRef.current?.focus();
-      }, 0);
+      });
     }
   }, [editCard]);
 
@@ -151,12 +151,12 @@ export function RepeterendeFelter(): JSX.Element {
       );
       editModalRef.current?.close();
 
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         const cardElement = cardRefs.current.get(editCard.id);
         if (cardElement) {
           cardElement.focus();
         }
-      }, 0);
+      });
 
       setEditCard(null);
     }
@@ -168,12 +168,12 @@ export function RepeterendeFelter(): JSX.Element {
     setEditCard(null);
 
     if (cardId) {
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         const cardElement = cardRefs.current.get(cardId);
         if (cardElement) {
           cardElement.focus();
         }
-      }, 0);
+      });
     }
   };
 
@@ -198,7 +198,7 @@ export function RepeterendeFelter(): JSX.Element {
 
     setCards(remainingCards);
 
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       if (remainingCards.length === 0) {
         headingRef.current?.focus();
       } else {
@@ -215,7 +215,7 @@ export function RepeterendeFelter(): JSX.Element {
           targetCardElement.focus();
         }
       }
-    }, 0);
+    });
   };
 
   return (
@@ -301,7 +301,11 @@ export function RepeterendeFelter(): JSX.Element {
           </DescriptionList>
         </div>
         <div className={styles.article}>
-          <div ref={headingRef} tabIndex={-1}>
+          <div
+            ref={headingRef}
+            className={styles.tabIndexNoOutline}
+            tabIndex={-1}
+          >
             <Heading as={'h2'} level={2} hasSpacing>
               {'Overskift/kategori'}
             </Heading>
@@ -320,6 +324,7 @@ export function RepeterendeFelter(): JSX.Element {
                         ref={(element: HTMLDivElement | null) =>
                           setCardRef(card.id, element)
                         }
+                        className={styles.tabIndexNoOutline}
                         tabIndex={-1}
                       >
                         <Heading as={'h3'} level={3} hasSpacing>

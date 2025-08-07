@@ -9,6 +9,10 @@
   }
 }
 
+.tabIndexNoOutline:focus {
+  outline: none;
+}
+
 .miniNav {
   display: flex;
   align-items: center;
