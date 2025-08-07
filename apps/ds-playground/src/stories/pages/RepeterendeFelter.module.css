@@ -3,6 +3,10 @@
   box-sizing: border-box;
   padding: var(--semantic-responsive-container-spacing);
   margin: auto;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .miniNav {

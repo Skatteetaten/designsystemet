@@ -1,4 +1,4 @@
-import { type JSX, type MouseEvent, useRef, useState } from 'react';
+import { type JSX, type MouseEvent, useEffect, useRef, useState } from 'react';
 
 import {
   Button,
@@ -61,7 +61,12 @@ export function RepeterendeFelter(): JSX.Element {
   const editModalRef = useRef<HTMLDialogElement>(null);
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
 
+  const firstInputInEditModalRef = useRef<HTMLInputElement>(null);
+  const headingRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<Map<number, HTMLDivElement>>(new Map());
+
   const [editCard, setEditCard] = useState<RepeatingCardContent | null>(null);
+  const [lastAddedCardId, setLastAddedCardId] = useState<number | null>(null);
   const [nextId, setNextId] = useState(3);
 
   const hoppOgSprettBarnehage: Business = {
@@ -108,6 +113,32 @@ export function RepeterendeFelter(): JSX.Element {
     () => defaultCards
   );
 
+  useEffect(() => {
+    if (lastAddedCardId !== null) {
+      const cardElement = cardRefs.current.get(lastAddedCardId);
+      if (cardElement) {
+        cardElement.focus();
+      }
+      setLastAddedCardId(null);
+    }
+  }, [lastAddedCardId]);
+
+  useEffect(() => {
+    if (editCard && firstInputInEditModalRef.current) {
+      setTimeout(() => {
+        firstInputInEditModalRef.current?.focus();
+      }, 0);
+    }
+  }, [editCard]);
+
+  const setCardRef = (id: number, element: HTMLDivElement | null): void => {
+    if (element) {
+      cardRefs.current.set(id, element);
+    } else {
+      cardRefs.current.delete(id);
+    }
+  };
+
   const handleEdit = (card: RepeatingCardContent): void => {
     setEditCard({ ...card });
     editModalRef.current?.showModal();
@@ -119,13 +150,31 @@ export function RepeterendeFelter(): JSX.Element {
         prevCards.map((card) => (card.id === editCard.id ? editCard : card))
       );
       editModalRef.current?.close();
+
+      setTimeout(() => {
+        const cardElement = cardRefs.current.get(editCard.id);
+        if (cardElement) {
+          cardElement.focus();
+        }
+      }, 0);
+
       setEditCard(null);
     }
   };
 
   const handleCancelEdit = (): void => {
+    const cardId = editCard?.id;
     editModalRef.current?.close();
     setEditCard(null);
+
+    if (cardId) {
+      setTimeout(() => {
+        const cardElement = cardRefs.current.get(cardId);
+        if (cardElement) {
+          cardElement.focus();
+        }
+      }, 0);
+    }
   };
 
   const handleAddCard = (): void => {
@@ -139,11 +188,34 @@ export function RepeterendeFelter(): JSX.Element {
     };
 
     setCards((prevCards) => [...prevCards, newCard]);
+    setLastAddedCardId(nextId);
     setNextId(nextId + 1);
   };
 
   const handleDeleteCard = (cardId: number): void => {
-    setCards((prevCards) => prevCards.filter((card) => card.id !== cardId));
+    const cardIndex = cards.findIndex((card) => card.id === cardId);
+    const remainingCards = cards.filter((card) => card.id !== cardId);
+
+    setCards(remainingCards);
+
+    setTimeout(() => {
+      if (remainingCards.length === 0) {
+        headingRef.current?.focus();
+      } else {
+        let targetCardId: number;
+
+        if (cardIndex > 0) {
+          targetCardId = remainingCards[cardIndex - 1].id;
+        } else {
+          targetCardId = remainingCards[0].id;
+        }
+
+        const targetCardElement = cardRefs.current.get(targetCardId);
+        if (targetCardElement) {
+          targetCardElement.focus();
+        }
+      }
+    }, 0);
   };
 
   return (
@@ -203,7 +275,7 @@ export function RepeterendeFelter(): JSX.Element {
           rolePickerModalRef.current?.close();
         }}
       />
-      <main className={styles.mainExternal}>
+      <main className={styles.mainExternal} tabIndex={-1}>
         <div className={styles.miniNav}>
           <Link href={'#'} svgPath={ArrowBackSVGpath}>
             {'Til Min side'}
@@ -229,9 +301,11 @@ export function RepeterendeFelter(): JSX.Element {
           </DescriptionList>
         </div>
         <div className={styles.article}>
-          <Heading as={'h2'} level={2} hasSpacing>
-            {'Overskift/kategori'}
-          </Heading>
+          <div ref={headingRef} tabIndex={-1}>
+            <Heading as={'h2'} level={2} hasSpacing>
+              {'Overskift/kategori'}
+            </Heading>
+          </div>
           <ul className={styles.repeatingFields}>
             {cards.length === 0 ? (
               <li>
@@ -242,9 +316,16 @@ export function RepeterendeFelter(): JSX.Element {
                 <li key={card.id}>
                   <Card key={card.id} spacing={'m'} color={'graphite'}>
                     <Card.Header>
-                      <Heading as={'h3'} level={3} hasSpacing>
-                        {card.navn}
-                      </Heading>
+                      <div
+                        ref={(element: HTMLDivElement | null) =>
+                          setCardRef(card.id, element)
+                        }
+                        tabIndex={-1}
+                      >
+                        <Heading as={'h3'} level={3} hasSpacing>
+                          {card.navn}
+                        </Heading>
+                      </div>
                     </Card.Header>
                     <Card.Content>
                       <DescriptionList className={styles.desciptionList}>
@@ -280,14 +361,14 @@ export function RepeterendeFelter(): JSX.Element {
                 </li>
               ))
             )}
-            <Button
-              svgPath={AddSVGpath}
-              className={styles.addNewButton}
-              onClick={handleAddCard}
-            >
-              {'Legg til ny person'}
-            </Button>
           </ul>
+          <Button
+            svgPath={AddSVGpath}
+            className={styles.addNewButton}
+            onClick={handleAddCard}
+          >
+            {'Legg til ny person'}
+          </Button>
           <Modal
             ref={editModalRef}
             title={'Rediger person'}
@@ -297,6 +378,7 @@ export function RepeterendeFelter(): JSX.Element {
               <div className={styles.editModalContent}>
                 <div>
                   <TextField
+                    ref={firstInputInEditModalRef}
                     label={'Navn'}
                     value={editCard.navn}
                     hasSpacing
