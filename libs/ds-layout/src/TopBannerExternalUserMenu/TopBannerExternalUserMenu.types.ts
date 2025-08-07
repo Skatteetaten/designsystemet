@@ -14,8 +14,6 @@ export interface TopBannerExternalUserMenuProps extends BaseProps {
   onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
   /** Funksjon som kalles når brukeren klikker på bytt bruker knappen */
   onSwitchUserClick?: MouseEventHandler<HTMLButtonElement>;
-  /** Angir om brukeren kan representere andre */
-  canRepresentOthers?: boolean;
   /** Barnelementer for komponenten */
   children?: React.ReactNode;
 }

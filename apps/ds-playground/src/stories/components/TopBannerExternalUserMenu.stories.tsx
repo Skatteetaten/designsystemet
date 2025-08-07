@@ -17,9 +17,6 @@ const meta = {
     notificationCount: { table: { category: category.props } },
     user: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
-    canRepresentOthers: {
-      table: { category: category.props },
-    },
     // Events
     onLogOutClick: { table: { category: category.event } },
     onSwitchUserClick: { table: { category: category.event } },

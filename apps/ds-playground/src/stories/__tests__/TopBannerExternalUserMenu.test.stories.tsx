@@ -17,7 +17,6 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
     // Props
     user: { table: { disable: true } },
     notificationCount: { table: { disable: true } },
-    canRepresentOthers: { table: { disable: true } },
     children: { table: { disable: true } },
     // Events
     onLogOutClick: { table: { disable: true } },
@@ -35,7 +34,6 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
       },
     },
     notificationCount: 5,
-    canRepresentOthers: true,
   },
 } satisfies Meta<typeof TopBannerExternalUserMenu>;
 export default meta;

@@ -46,7 +46,6 @@ export const TopBannerExternalUserMenu = ({
   'data-testid': dataTestId,
   notificationCount,
   user,
-  canRepresentOthers,
   onLogOutClick,
   onSwitchUserClick,
   children,
@@ -122,12 +121,11 @@ export const TopBannerExternalUserMenu = ({
             style={floatingStyles}
           >
             <Heading as={'h4'} level={4}>
-              {(user.role === 'virksomhet' || user.role === 'andre') &&
-                canRepresentOthers && (
-                  <div className={styles.namePrefix}>
-                    {t('ds_overlays:topbannerexternalusermenu.OnBehalfOf')}
-                  </div>
-                )}
+              {user.role !== 'meg' && (
+                <div className={styles.namePrefix}>
+                  {t('ds_overlays:topbannerexternalusermenu.OnBehalfOf')}
+                </div>
+              )}
               {user.role === 'virksomhet' ? user.name.toUpperCase() : user.name}
             </Heading>
             {user.role === 'virksomhet' && user.orgnr && (

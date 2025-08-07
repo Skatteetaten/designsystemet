@@ -979,7 +979,6 @@ export const ExampleWithUserMenu: Story = {
             <TopBannerExternal.UserMenu
               user={user}
               notificationCount={1}
-              canRepresentOthers
               onLogOutClick={() => setUser(undefined)}
               onSwitchUserClick={() => modalRef.current?.showModal()}
             />
