@@ -39,6 +39,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
     <span class="_srOnly_w1eq3_100">
       &nbsp;Meny
     </span>
+    <span class="srOnly">
+      Varsler, 5 uleste
+    </span>
     <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
          viewbox="0 0 24 24"
          focusable="false"
@@ -91,6 +94,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"
@@ -106,7 +110,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         </svg>
         Varsel
       </a>
-      <span aria-label="Varsler, 5 uleste"
+      <span id="notificationCount"
+            aria-label="Varsler, 5 uleste"
             class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
@@ -207,8 +212,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_w1eq3_28">
-      </span>
     </span>
     Buljo Tulljo
     <span class="_srOnly_w1eq3_100">
@@ -223,8 +226,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
-    </span>
   </button>
   <div class="_menu_48ebb_13"
        tabindex="-1"
@@ -266,6 +267,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"
@@ -281,12 +283,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         </svg>
         Varsel
       </a>
-      <span aria-label="Varsler, 5 uleste"
-            class="_notificationBadge_48ebb_28"
-            data-testid="varsel-circle"
-      >
-        5
-      </span>
     </div>
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
@@ -382,8 +378,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_w1eq3_28">
-      </span>
     </span>
     Meg selv
     <span class="_srOnly_w1eq3_100">
@@ -398,8 +392,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
-    </span>
   </button>
   <div class="_menu_48ebb_13"
        tabindex="-1"
@@ -435,6 +427,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/person/varsler"
+         aria-describedby="notificationCount"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"
@@ -450,12 +443,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         </svg>
         Varsel
       </a>
-      <span aria-label="Varsler, 5 uleste"
-            class="_notificationBadge_48ebb_28"
-            data-testid="varsel-circle"
-      >
-        5
-      </span>
     </div>
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
@@ -558,6 +545,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
     <span class="_srOnly_w1eq3_100">
       &nbsp;Meny
     </span>
+    <span class="srOnly">
+      Varsler, 5 uleste
+    </span>
     <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
          viewbox="0 0 24 24"
          focusable="false"
@@ -610,6 +600,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"
@@ -625,7 +616,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         </svg>
         Varsel
       </a>
-      <span aria-label="Varsler, 5 uleste"
+      <span id="notificationCount"
+            aria-label="Varsler, 5 uleste"
             class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
@@ -726,8 +718,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_w1eq3_28">
-      </span>
     </span>
     Buljo Tulljo
     <span class="_srOnly_w1eq3_100">
@@ -742,8 +732,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
-    </span>
   </button>
   <div class="_menu_48ebb_13"
        tabindex="-1"
@@ -785,6 +773,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"
@@ -800,12 +789,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         </svg>
         Varsel
       </a>
-      <span aria-label="Varsler, 5 uleste"
-            class="_notificationBadge_48ebb_28"
-            data-testid="varsel-circle"
-      >
-        5
-      </span>
     </div>
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1"
@@ -872,7 +855,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
 </div>
 `;
 
-exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications play-test 1`] = `
 <div data-test-block="true">
   <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_w1eq3_56 _usernameButton_w1eq3_5"
           type="button"
@@ -910,6 +893,9 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
     Buljo Tulljo
     <span class="_srOnly_w1eq3_100">
       &nbsp;Meny
+    </span>
+    <span class="srOnly">
+      Varsler, 100 uleste
     </span>
     <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
          viewbox="0 0 24 24"
@@ -963,6 +949,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"
@@ -978,7 +965,8 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan9Notifications p
         </svg>
         Varsel
       </a>
-      <span aria-label="Varsler, 100 uleste"
+      <span id="notificationCount"
+            aria-label="Varsler, 100 uleste"
             class="_notificationBadge_48ebb_28"
             data-testid="varsel-circle"
       >
@@ -1134,6 +1122,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
     <div class="_link_48ebb_41">
       <a class="_link_z7jba_1  _marginRightS_48ebb_37"
          href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
       >
         <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"

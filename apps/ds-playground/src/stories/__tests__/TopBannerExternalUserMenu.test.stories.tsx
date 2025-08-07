@@ -45,11 +45,14 @@ const defaultUserName = 'Buljo Tulljo';
 
 export const Default: Story = {
   name: 'Default View',
-  play: async ({ canvasElement }) => {
+  play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
 
     const menuButton = canvas.getByRole('button', {
-      name: `${userIconTitle} ${defaultUserName} ${menuText}`,
+      name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
+        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        { count: args.notificationCount }
+      )}`,
     });
 
     await expect(menuButton).toBeInTheDocument();
@@ -100,7 +103,7 @@ export const WithNoNotifications: Story = {
   },
 };
 
-export const WithMoreThan9Notifications: Story = {
+export const WithMoreThan99Notifications: Story = {
   name: 'More Than 99 Notifications',
   args: {
     notificationCount: 100,
@@ -108,11 +111,14 @@ export const WithMoreThan9Notifications: Story = {
   argTypes: {
     notificationCount: { table: { disable: false } },
   },
-  play: async ({ canvasElement }) => {
+  play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
 
     const menuButton = canvas.getByRole('button', {
-      name: `${userIconTitle} ${defaultUserName} ${menuText}`,
+      name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
+        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        { count: args.notificationCount }
+      )}`,
     });
 
     await expect(menuButton).toBeInTheDocument();
@@ -135,7 +141,10 @@ export const SwitchUser: Story = {
     const canvas = within(canvasElement);
 
     const menuButton = canvas.getByRole('button', {
-      name: `${userIconTitle} ${defaultUserName} ${menuText}`,
+      name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
+        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        { count: args.notificationCount }
+      )}`,
     });
 
     await expect(menuButton).toBeInTheDocument();
@@ -155,6 +164,7 @@ export const SwitchUser: Story = {
 export const LogOut: Story = {
   args: {
     onLogOutClick: fn(),
+    notificationCount: 0,
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -185,6 +195,7 @@ export const NoPaaVegneAv: Story = {
       name: 'Buljo Tulljo',
       role: 'meg',
     },
+    notificationCount: 0,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -205,6 +216,7 @@ export const NoPaaVegneAv: Story = {
 export const WithChildren: Story = {
   args: {
     children: <div data-testid={'usermenu-child'}>{'Child'}</div>,
+    notificationCount: 0,
   },
   argTypes: {
     children: { table: { disable: false } },

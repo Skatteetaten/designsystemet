@@ -83,22 +83,25 @@ export const TopBannerUserMenuButton = ({
           svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
           className={styles.arrowMobile}
         />
-        {notificationCount && notificationCount > 0 && (
+        {!!notificationCount && notificationCount > 0 && (
           <span className={styles.notificationBadge}></span>
         )}
       </span>
       {buttonText}
       <span className={styles.srOnly}>&nbsp;{t('topbannerbutton.Menu')}</span>
+      {!!notificationCount && notificationCount > 0 && (
+        <span className={'srOnly'}>
+          {t('ds_overlays:topbannerexternalusermenu.NotificationCountMessage', {
+            count: notificationCount,
+          })}
+        </span>
+      )}
       <Icon
         svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
         className={styles.arrowDesktop}
       />
-      {notificationCount && notificationCount > 0 && (
+      {!!notificationCount && notificationCount > 0 && (
         <span
-          aria-label={t(
-            'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
-            { count: notificationCount }
-          )}
           className={`${styles.notificationBadge} ${styles.notificationBadgeDesktop}`}
         ></span>
       )}
