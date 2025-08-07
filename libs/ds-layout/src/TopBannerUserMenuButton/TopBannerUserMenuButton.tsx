@@ -23,11 +23,11 @@ export const TopBannerUserMenuButton = ({
   lang,
   'data-testid': dataTestId,
   user,
-  hasNotifications,
+  notificationCount,
   isMenuOpen,
   onClick,
 }: TopBannerUserMenuButtonProps): JSX.Element => {
-  const { t } = useTranslation('ds_layout', { i18n: dsI18n });
+  const { t } = useTranslation(['ds_layout', 'ds_overlays'], { i18n: dsI18n });
 
   const buttonText =
     user.role === 'meg' ? t('topbannerbutton.Myself') : user.name;
@@ -83,7 +83,9 @@ export const TopBannerUserMenuButton = ({
           svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
           className={styles.arrowMobile}
         />
-        {hasNotifications && <span className={styles.notificationBadge}></span>}
+        {notificationCount && notificationCount > 0 && (
+          <span className={styles.notificationBadge}></span>
+        )}
       </span>
       {buttonText}
       <span className={styles.srOnly}>&nbsp;{t('topbannerbutton.Menu')}</span>
@@ -91,8 +93,12 @@ export const TopBannerUserMenuButton = ({
         svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
         className={styles.arrowDesktop}
       />
-      {hasNotifications && (
+      {notificationCount && notificationCount > 0 && (
         <span
+          aria-label={t(
+            'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+            { count: notificationCount }
+          )}
           className={`${styles.notificationBadge} ${styles.notificationBadgeDesktop}`}
         ></span>
       )}

@@ -101,7 +101,7 @@ export const TopBannerExternalUserMenu = ({
         ref={mergedButtonRef}
         user={user}
         isMenuOpen={isOpen}
-        hasNotifications={!!notificationCount}
+        notificationCount={notificationCount}
         onClick={() => {
           setOpen(!isOpen);
         }}
