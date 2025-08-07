@@ -146,12 +146,14 @@ export const TopBannerExternalUserMenu = ({
                   className={styles.marginRightS}
                   svgPath={BellSVGpath}
                   href={`https://skatteetaten.no/web/minside/${user.role === 'meg' ? 'person' : 'virksomhet'}/varsler`}
+                  ariaDescribedby={'notificationCount'}
                 >
                   {t('ds_overlays:topbannerexternalusermenu.Notification')}
                 </Link>
               )}
               {!!notificationCount && notificationCount > 0 && (
                 <span
+                  id={'notificationCount'}
                   aria-label={t(
                     'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
                     { count: notificationCount }
