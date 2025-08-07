@@ -1,4 +1,11 @@
-import { type JSX, type MouseEvent, useEffect, useRef, useState } from 'react';
+import {
+  type JSX,
+  type MouseEvent,
+  useActionState,
+  useCallback,
+  useRef,
+  useState,
+} from 'react';
 
 import {
   Button,
@@ -66,7 +73,6 @@ export function RepeterendeFelter(): JSX.Element {
   const cardRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
   const [editCard, setEditCard] = useState<RepeatingCardContent | null>(null);
-  const [lastAddedCardId, setLastAddedCardId] = useState<number | null>(null);
   const [nextId, setNextId] = useState(3);
 
   const hoppOgSprettBarnehage: Business = {
@@ -113,53 +119,90 @@ export function RepeterendeFelter(): JSX.Element {
     () => defaultCards
   );
 
-  useEffect(() => {
-    if (lastAddedCardId !== null) {
-      const cardElement = cardRefs.current.get(lastAddedCardId);
-      if (cardElement) {
-        cardElement.focus();
+  type EditActionState = {
+    success: boolean;
+    error?: string;
+  };
+
+  const [, editAction, isEditPending] = useActionState(
+    async (
+      _prevState: EditActionState,
+      formData: FormData
+    ): Promise<EditActionState> => {
+      if (!editCard) {
+        return { success: false, error: 'Ingen kort å redigere' };
       }
-      setLastAddedCardId(null);
-    }
-  }, [lastAddedCardId]);
 
-  useEffect(() => {
-    if (editCard && firstInputInEditModalRef.current) {
-      requestAnimationFrame(() => {
-        firstInputInEditModalRef.current?.focus();
-      });
-    }
-  }, [editCard]);
+      const updatedCard = {
+        id: editCard.id,
+        navn: formData.get('navn') as string,
+        adresse: formData.get('adresse') as string,
+        postnummer: formData.get('postnummer') as string,
+        poststed: editCard.poststed,
+        rolle: formData.get('rolle') as string,
+      };
 
-  const setCardRef = (id: number, element: HTMLDivElement | null): void => {
-    if (element) {
-      cardRefs.current.set(id, element);
-    } else {
-      cardRefs.current.delete(id);
-    }
-  };
-
-  const handleEdit = (card: RepeatingCardContent): void => {
-    setEditCard({ ...card });
-    editModalRef.current?.showModal();
-  };
-
-  const handleSaveEdit = (): void => {
-    if (editCard) {
       setCards((prevCards) =>
-        prevCards.map((card) => (card.id === editCard.id ? editCard : card))
+        prevCards.map((card) =>
+          card.id === updatedCard.id ? updatedCard : card
+        )
       );
+
       editModalRef.current?.close();
+      setEditCard(null);
 
       requestAnimationFrame(() => {
-        const cardElement = cardRefs.current.get(editCard.id);
+        const cardElement = cardRefs.current.get(updatedCard.id);
         if (cardElement) {
           cardElement.focus();
         }
       });
 
-      setEditCard(null);
-    }
+      return { success: true };
+    },
+    { success: false }
+  );
+
+  const setCardRef = useCallback(
+    (id: number) =>
+      (element: HTMLDivElement | null): void => {
+        if (element) {
+          cardRefs.current.set(id, element);
+        } else {
+          cardRefs.current.delete(id);
+        }
+      },
+    []
+  );
+
+  const handleEdit = (card: RepeatingCardContent): void => {
+    setEditCard({ ...card });
+    editModalRef.current?.showModal();
+
+    requestAnimationFrame(() => {
+      firstInputInEditModalRef.current?.focus();
+    });
+  };
+
+  const addCardAction = (): void => {
+    const newCard: RepeatingCardContent = {
+      id: nextId,
+      navn: `Ny person ${nextId}`,
+      adresse: `Adresseveien ${nextId}`,
+      postnummer: '0000',
+      poststed: 'Sted',
+      rolle: 'Rolle',
+    };
+
+    setCards((prevCards) => [...prevCards, newCard]);
+
+    requestAnimationFrame(() => {
+      const cardElement = cardRefs.current.get(nextId);
+      if (cardElement) {
+        cardElement.focus();
+      }
+    });
+    setNextId(nextId + 1);
   };
 
   const handleCancelEdit = (): void => {
@@ -177,22 +220,7 @@ export function RepeterendeFelter(): JSX.Element {
     }
   };
 
-  const handleAddCard = (): void => {
-    const newCard: RepeatingCardContent = {
-      id: nextId,
-      navn: `Ny person ${nextId}`,
-      adresse: `Adresseveien ${nextId}`,
-      postnummer: '0000',
-      poststed: 'Sted',
-      rolle: 'Rolle',
-    };
-
-    setCards((prevCards) => [...prevCards, newCard]);
-    setLastAddedCardId(nextId);
-    setNextId(nextId + 1);
-  };
-
-  const handleDeleteCard = (cardId: number): void => {
+  const deleteCardAction = (cardId: number): void => {
     const cardIndex = cards.findIndex((card) => card.id === cardId);
     const remainingCards = cards.filter((card) => card.id !== cardId);
 
@@ -321,9 +349,7 @@ export function RepeterendeFelter(): JSX.Element {
                   <Card key={card.id} spacing={'m'} color={'graphite'}>
                     <Card.Header>
                       <div
-                        ref={(element: HTMLDivElement | null) =>
-                          setCardRef(card.id, element)
-                        }
+                        ref={setCardRef(card.id)}
                         className={styles.tabIndexNoOutline}
                         tabIndex={-1}
                       >
@@ -357,7 +383,7 @@ export function RepeterendeFelter(): JSX.Element {
                       </InlineButton>
                       <InlineButton
                         svgPath={DeleteSVGpath}
-                        onClick={() => handleDeleteCard(card.id)}
+                        onClick={() => deleteCardAction(card.id)}
                       >
                         {'Slett'}
                       </InlineButton>
@@ -370,7 +396,7 @@ export function RepeterendeFelter(): JSX.Element {
           <Button
             svgPath={AddSVGpath}
             className={styles.addNewButton}
-            onClick={handleAddCard}
+            onClick={addCardAction}
           >
             {'Legg til ny person'}
           </Button>
@@ -380,33 +406,31 @@ export function RepeterendeFelter(): JSX.Element {
             className={styles.editModal}
           >
             {editCard && (
-              <div className={styles.editModalContent}>
+              <form action={editAction} className={styles.editModalContent}>
                 <div>
                   <TextField
                     ref={firstInputInEditModalRef}
                     label={'Navn'}
-                    value={editCard.navn}
+                    name={'navn'}
+                    defaultValue={editCard.navn}
                     hasSpacing
-                    onChange={(e) =>
-                      setEditCard({ ...editCard, navn: e.target.value })
-                    }
+                    required
                   />
+
                   <TextField
                     label={'Adresse'}
-                    value={editCard.adresse}
+                    name={'adresse'}
+                    defaultValue={editCard.adresse}
                     hasSpacing
-                    onChange={(e) =>
-                      setEditCard({ ...editCard, adresse: e.target.value })
-                    }
+                    required
                   />
                   <div className={styles.editModalAdressFields}>
                     <TextField
                       label={'Postnummer'}
-                      value={editCard.postnummer}
+                      name={'postnummer'}
+                      defaultValue={editCard.postnummer}
                       hasSpacing
-                      onChange={(e) =>
-                        setEditCard({ ...editCard, postnummer: e.target.value })
-                      }
+                      required
                     />
                     <DescriptionList descriptionDirection={'vertical'}>
                       <DescriptionList.Element term={'Poststed'}>
@@ -416,20 +440,25 @@ export function RepeterendeFelter(): JSX.Element {
                   </div>
                   <TextField
                     label={'Rolle'}
-                    value={editCard.rolle}
+                    name={'rolle'}
+                    defaultValue={editCard.rolle}
                     hasSpacing
-                    onChange={(e) =>
-                      setEditCard({ ...editCard, rolle: e.target.value })
-                    }
+                    required
                   />
                 </div>
                 <div className={styles.flexStartRow}>
-                  <Button onClick={handleSaveEdit}>{'Lagre'}</Button>
-                  <Button variant={'secondary'} onClick={handleCancelEdit}>
+                  <Button type={'submit'} disabled={isEditPending}>
+                    {isEditPending ? 'Lagrer...' : 'Lagre'}
+                  </Button>
+                  <Button
+                    variant={'secondary'}
+                    disabled={isEditPending}
+                    onClick={handleCancelEdit}
+                  >
                     {'Avbryt'}
                   </Button>
                 </div>
-              </div>
+              </form>
             )}
           </Modal>
         </div>
