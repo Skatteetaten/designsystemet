@@ -459,18 +459,10 @@ export function RepeterendeFelter(): JSX.Element {
                   />
                 </div>
                 <div className={styles.flexStartRow}>
-                  <Button
-                    type={'submit'}
-                    disabled={isEditPending}
-                    hasSpinner={isEditPending}
-                  >
+                  <Button type={'submit'} hasSpinner={isEditPending}>
                     {isEditPending ? 'Lagrer...' : 'Lagre'}
                   </Button>
-                  <Button
-                    variant={'secondary'}
-                    disabled={isEditPending}
-                    onClick={handleCancelEdit}
-                  >
+                  <Button variant={'secondary'} onClick={handleCancelEdit}>
                     {'Avbryt'}
                   </Button>
                 </div>
