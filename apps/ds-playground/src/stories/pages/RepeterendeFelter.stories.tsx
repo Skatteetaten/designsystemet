@@ -18,6 +18,7 @@ import {
   dsI18n,
   formatOrganisationNumber,
   langToLocale,
+  useMediaQuery,
 } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import {
@@ -74,6 +75,9 @@ export function RepeterendeFelter(): JSX.Element {
 
   const [editCard, setEditCard] = useState<RepeatingCardContent | null>(null);
   const [nextId, setNextId] = useState(3);
+
+  const isMobile = !useMediaQuery('(min-width: 480px)');
+  console.log('isMobile', isMobile);
 
   const hoppOgSprettBarnehage: Business = {
     name: 'Hopp Og Sprett Barnehage',
@@ -141,6 +145,8 @@ export function RepeterendeFelter(): JSX.Element {
         poststed: editCard.poststed,
         rolle: formData.get('rolle') as string,
       };
+
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       setCards((prevCards) =>
         prevCards.map((card) =>
@@ -315,10 +321,12 @@ export function RepeterendeFelter(): JSX.Element {
             {'Skjema eller oppgave'}
           </Heading>
           <DescriptionList className={styles.desciptionList} hasSpacing>
-            <DescriptionList.Element term={'Navn'}>
+            <DescriptionList.Element term={'Virksomhetens navn'}>
               {hoppOgSprettBarnehage.name}
             </DescriptionList.Element>
-            <DescriptionList.Element term={'Organisasjonsnummer'}>
+            <DescriptionList.Element
+              term={isMobile ? 'Organisasjons-nummer' : 'Organisasjonsnummer'}
+            >
               {formatOrganisationNumber(
                 hoppOgSprettBarnehage.organizationNumber
               )}
@@ -358,8 +366,13 @@ export function RepeterendeFelter(): JSX.Element {
                         </Heading>
                       </div>
                     </Card.Header>
-                    <Card.Content>
-                      <DescriptionList className={styles.desciptionList}>
+                    <Card.Content className={styles.cardContent}>
+                      <DescriptionList
+                        descriptionDirection={
+                          isMobile ? 'vertical' : 'horizontal'
+                        }
+                        className={styles.desciptionList}
+                      >
                         <DescriptionList.Element term={'Adresse'}>
                           {card.adresse}
                         </DescriptionList.Element>
@@ -447,7 +460,11 @@ export function RepeterendeFelter(): JSX.Element {
                   />
                 </div>
                 <div className={styles.flexStartRow}>
-                  <Button type={'submit'} disabled={isEditPending}>
+                  <Button
+                    type={'submit'}
+                    disabled={isEditPending}
+                    hasSpinner={isEditPending}
+                  >
                     {isEditPending ? 'Lagrer...' : 'Lagre'}
                   </Button>
                   <Button

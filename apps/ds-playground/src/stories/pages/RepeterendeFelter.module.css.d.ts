@@ -11,6 +11,7 @@ declare const classNames: {
   readonly editModalContent: 'editModalContent';
   readonly flexStartRow: 'flexStartRow';
   readonly editModalAdressFields: 'editModalAdressFields';
+  readonly cardContent: 'cardContent';
   readonly panel: 'panel';
   readonly panelContent: 'panelContent';
   readonly panelContentRigth: 'panelContentRigth';
