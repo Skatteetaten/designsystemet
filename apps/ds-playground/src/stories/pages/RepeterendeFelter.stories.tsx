@@ -77,7 +77,6 @@ export function RepeterendeFelter(): JSX.Element {
   const [nextId, setNextId] = useState(3);
 
   const isMobile = !useMediaQuery('(min-width: 480px)');
-  console.log('isMobile', isMobile);
 
   const hoppOgSprettBarnehage: Business = {
     name: 'Hopp Og Sprett Barnehage',
