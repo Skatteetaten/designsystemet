@@ -2,7 +2,6 @@ import {
   type JSX,
   type MouseEvent,
   useActionState,
-  useCallback,
   useRef,
   useState,
 } from 'react';
@@ -71,7 +70,6 @@ export function RepeterendeFelter(): JSX.Element {
 
   const firstInputInEditModalRef = useRef<HTMLInputElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
   const [editCard, setEditCard] = useState<RepeatingCardContent | null>(null);
   const [nextId, setNextId] = useState(3);
@@ -127,6 +125,15 @@ export function RepeterendeFelter(): JSX.Element {
     error?: string;
   };
 
+  const focusCard = (cardId: number): void => {
+    requestAnimationFrame(() => {
+      const cardElement = document.querySelector(
+        `[data-card-id="${cardId}"]`
+      ) as HTMLElement;
+      cardElement?.focus();
+    });
+  };
+
   const [, editAction, isEditPending] = useActionState(
     async (
       _prevState: EditActionState,
@@ -145,7 +152,7 @@ export function RepeterendeFelter(): JSX.Element {
         rolle: formData.get('rolle') as string,
       };
 
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
       setCards((prevCards) =>
         prevCards.map((card) =>
@@ -156,28 +163,11 @@ export function RepeterendeFelter(): JSX.Element {
       editModalRef.current?.close();
       setEditCard(null);
 
-      requestAnimationFrame(() => {
-        const cardElement = cardRefs.current.get(updatedCard.id);
-        if (cardElement) {
-          cardElement.focus();
-        }
-      });
+      focusCard(updatedCard.id);
 
       return { success: true };
     },
     { success: false }
-  );
-
-  const setCardRef = useCallback(
-    (id: number) =>
-      (element: HTMLDivElement | null): void => {
-        if (element) {
-          cardRefs.current.set(id, element);
-        } else {
-          cardRefs.current.delete(id);
-        }
-      },
-    []
   );
 
   const handleEdit = (card: RepeatingCardContent): void => {
@@ -196,13 +186,7 @@ export function RepeterendeFelter(): JSX.Element {
     };
 
     setCards((prevCards) => [...prevCards, newCard]);
-
-    requestAnimationFrame(() => {
-      const cardElement = cardRefs.current.get(nextId);
-      if (cardElement) {
-        cardElement.focus();
-      }
-    });
+    focusCard(nextId);
     setNextId(nextId + 1);
   };
 
@@ -212,12 +196,7 @@ export function RepeterendeFelter(): JSX.Element {
     setEditCard(null);
 
     if (cardId) {
-      requestAnimationFrame(() => {
-        const cardElement = cardRefs.current.get(cardId);
-        if (cardElement) {
-          cardElement.focus();
-        }
-      });
+      focusCard(cardId);
     }
   };
 
@@ -239,10 +218,7 @@ export function RepeterendeFelter(): JSX.Element {
           targetCardId = remainingCards[0].id;
         }
 
-        const targetCardElement = cardRefs.current.get(targetCardId);
-        if (targetCardElement) {
-          targetCardElement.focus();
-        }
+        focusCard(targetCardId);
       }
     });
   };
@@ -352,7 +328,7 @@ export function RepeterendeFelter(): JSX.Element {
                   <Card key={card.id} spacing={'m'} color={'graphite'}>
                     <Card.Header>
                       <div
-                        ref={setCardRef(card.id)}
+                        data-card-id={card.id}
                         className={styles.tabIndexNoOutline}
                         tabIndex={-1}
                       >
