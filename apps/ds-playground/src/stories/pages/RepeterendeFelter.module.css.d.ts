@@ -15,6 +15,5 @@ declare const classNames: {
   readonly panel: 'panel';
   readonly panelContent: 'panelContent';
   readonly panelContentRigth: 'panelContentRigth';
-  readonly saveDeleteOrEditLater: 'saveDeleteOrEditLater';
 };
 export default classNames;

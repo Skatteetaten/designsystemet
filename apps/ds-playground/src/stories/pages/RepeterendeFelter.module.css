@@ -77,22 +77,28 @@
 }
 
 .panel {
-  margin: var(--spacing-xl) auto;
+  margin: var(--spacing-l) auto;
 }
 
 .panelContent {
   display: flex;
   max-width: 556px;
-  gap: var(--spacing-l);
+  flex-direction: row;
+  gap: var(--spacing-m);
 
-  .panelContentRigth {
-    flex: 1;
+  @media (width <= 640px) {
+    flex-direction: column;
+    gap: var(--spacing-m);
+
+    .panelContentRigth {
+      flex: 1;
+    }
   }
 }
 
-.saveDeleteOrEditLater {
-  width: var(--container-m);
-  padding: var(--spacing-xs) 0;
-  margin: var(--spacing-l) auto;
-  background-color: var(--palette-graphite-5);
+/* For debugging purposes during development */
+*:focus {
+  z-index: 9999;
+  outline: 3px solid var(--palette-burgundy-50) !important;
+  outline-offset: 2px !important;
 }

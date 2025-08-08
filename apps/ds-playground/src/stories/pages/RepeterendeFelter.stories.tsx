@@ -183,10 +183,6 @@ export function RepeterendeFelter(): JSX.Element {
   const handleEdit = (card: RepeatingCardContent): void => {
     setEditCard({ ...card });
     editModalRef.current?.showModal();
-
-    requestAnimationFrame(() => {
-      firstInputInEditModalRef.current?.focus();
-    });
   };
 
   const addCardAction = (): void => {
@@ -472,7 +468,7 @@ export function RepeterendeFelter(): JSX.Element {
         </div>
         <Panel color={'forest'} className={styles.panel}>
           <div className={styles.panelContent}>
-            <Icon svgPath={KronerSVGpath} size={'extraLarge'} />
+            {!isMobile && <Icon svgPath={KronerSVGpath} size={'extraLarge'} />}
             <div className={styles.panelContentRigth}>
               <Heading as={'h3'} level={3} hasSpacing>
                 {'Foreløpig oppsummering'}
@@ -485,16 +481,22 @@ export function RepeterendeFelter(): JSX.Element {
             </div>
           </div>
         </Panel>
+
         <div className={`${styles.flexStartRow} ${styles.article}`}>
           <Button>{'Send inn'}</Button>
           <Button variant={'secondary'}>{'Avbryt'}</Button>
         </div>
-        <div className={styles.saveDeleteOrEditLater}>
-          <div className={`${styles.flexStartRow} ${styles.article}`}>
+        <Panel
+          color={'graphite'}
+          variant={'filled'}
+          padding={'s'}
+          className={styles.panel}
+        >
+          <div className={styles.panelContent}>
             <InlineButton>{'Lagre og fortsett senere'}</InlineButton>
             <InlineButton>{'Avbryt og slett'}</InlineButton>
           </div>
-        </div>
+        </Panel>
       </main>
       <Footer
         titleFirstColumn={'Skatteetaten'}
