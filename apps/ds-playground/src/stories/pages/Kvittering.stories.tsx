@@ -1,4 +1,4 @@
-import { JSX, useEffect, useRef } from 'react';
+import { JSX } from 'react';
 
 import { Button, InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { OpenClose } from '@skatteetaten/ds-collections';
@@ -46,12 +46,6 @@ export const Kvittering = (): JSX.Element => {
     type: 'Person',
   };
 
-  const panelRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    panelRef.current?.focus();
-  }, []);
-
   return (
     <main className={styles.mainExternal}>
       <div className={styles.miniNav}>
@@ -73,7 +67,7 @@ export const Kvittering = (): JSX.Element => {
           </DescriptionList.Element>
         </DescriptionList>
       </div>
-      <div ref={panelRef} tabIndex={-1} className={styles.noFocusVisible}>
+      <div tabIndex={-1} className={styles.noFocusVisible}>
         <Panel
           className={styles.panel}
           variant={'outline'}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type JSX } from 'react';
+import { useRef, useState, type JSX } from 'react';
 
 import { linkTo } from '@storybook/addon-links';
 
@@ -8,13 +8,13 @@ import { Checkbox } from '@skatteetaten/ds-forms';
 import { ArrowBackSVGpath, PrintSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './Oppsummering.module.css';
-import stylesAsString from './Oppsummering.module.css?raw';
+import styles from './Deloppgave.module.css';
+import stylesAsString from './Deloppgave.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
 import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 export default {
-  title: 'Sidetyper/Ekstern/Oppsummering',
+  title: 'Sidetyper/Ekstern/Deloppgave (beta)',
   decorators: [withPageLayout],
   parameters: {
     layout: 'fullscreen',
@@ -29,16 +29,11 @@ export default {
   },
 };
 
-export const Oppsummering = (): JSX.Element => {
+export const Deloppgave = (): JSX.Element => {
   const [errorMessage, setErrorMessage] = useState('');
   const [isChecked, setIsChecked] = useState(false);
 
-  const panelRef = useRef<HTMLDivElement>(null);
   const checkRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    panelRef.current?.focus();
-  }, []);
 
   return (
     <main className={styles.mainExternal}>
@@ -58,7 +53,10 @@ export const Oppsummering = (): JSX.Element => {
           }
         </Paragraph>
       </div>
-      <div ref={panelRef} tabIndex={-1} className={styles.noFocusVisible}>
+      <div
+        tabIndex={-1}
+        className={`${styles.noFocusVisible} ${styles.article}`}
+      >
         <Card color={'forest'}>
           <Card.Content>
             <Heading as={'h2'} level={3} hasSpacing>
@@ -116,7 +114,7 @@ export const Oppsummering = (): JSX.Element => {
           className={styles.marginRightM}
           onClick={() => {
             if (isChecked) {
-              linkTo('Sidetyper/Ekstern/Oppgaveliste', 'Oppgaveliste')();
+              linkTo('Sidetyper/Ekstern/Oppgaveliste (beta)', 'Oppgaveliste')();
             } else {
               setErrorMessage('Du må bekrefte at opplysningene stemmer.');
               checkRef.current?.focus();

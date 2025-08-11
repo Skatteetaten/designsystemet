@@ -22,7 +22,7 @@ import { includeStylesTransform } from '../../../.storybook/helpers';
 import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 export default {
-  title: 'Sidetyper/Ekstern/Oppgaveliste',
+  title: 'Sidetyper/Ekstern/Oppgaveliste (beta)',
   decorators: [withPageLayout],
   parameters: {
     layout: 'fullscreen',
@@ -72,7 +72,7 @@ export const Oppgaveliste = (): JSX.Element => {
       status: Status.NotStarted,
     },
     {
-      text: 'Documentasjon (Statens Vegvesen)',
+      text: 'Dokumentasjon (Statens Vegvesen)',
       status: Status.Missing,
     },
     {
@@ -133,7 +133,7 @@ export const Oppgaveliste = (): JSX.Element => {
             href={'#'}
             onClick={(e) => {
               e.preventDefault();
-              linkTo('Sidetyper/Ekstern/Oppsummering', 'Oppsummering')();
+              linkTo('Sidetyper/Ekstern/Deloppgave (beta)', 'Deloppgave')();
             }}
           >
             {task.text}
@@ -155,7 +155,7 @@ export const Oppgaveliste = (): JSX.Element => {
 
   return (
     <main className={styles.mainExternal}>
-      <Breadcrumbs>
+      <Breadcrumbs className={styles.marginTopM}>
         <Breadcrumbs.List>
           <Breadcrumbs.Item>
             <Breadcrumbs.Link href={'#'}>{'Min side'}</Breadcrumbs.Link>
@@ -212,6 +212,7 @@ export const Oppgaveliste = (): JSX.Element => {
       </div>
 
       <Panel
+        className={styles.panel}
         variant={'filled'}
         color={'graphite'}
         spacing={'xxl'}
