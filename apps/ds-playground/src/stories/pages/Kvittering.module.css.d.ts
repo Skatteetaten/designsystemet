@@ -8,7 +8,6 @@ declare const classNames: {
   readonly panel: 'panel';
   readonly marginTopM: 'marginTopM';
   readonly preLine: 'preLine';
-  readonly marginTopL: 'marginTopL';
   readonly marginRightM: 'marginRightM';
 };
 export default classNames;

@@ -57,10 +57,6 @@
   white-space: pre-line;
 }
 
-.marginTopL {
-  margin-top: var(--spacing-l);
-}
-
 .marginRightM {
   margin-right: var(--spacing-m);
 }

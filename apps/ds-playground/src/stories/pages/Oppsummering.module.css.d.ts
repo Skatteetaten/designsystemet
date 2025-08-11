@@ -5,7 +5,6 @@ declare const classNames: {
   readonly noFocusVisible: 'noFocusVisible';
   readonly marginTopM: 'marginTopM';
   readonly marginBottomXl: 'marginBottomXl';
-  readonly marginTopL: 'marginTopL';
   readonly marginRightM: 'marginRightM';
 };
 export default classNames;

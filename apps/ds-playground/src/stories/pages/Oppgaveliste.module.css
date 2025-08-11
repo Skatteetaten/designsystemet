@@ -69,10 +69,6 @@
   }
 }
 
-.marginTopL {
-  margin-top: var(--spacing-l);
-}
-
 .marginTopXl {
   margin-top: var(--spacing-xl);
 }
