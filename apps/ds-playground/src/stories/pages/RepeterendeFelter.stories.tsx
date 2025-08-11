@@ -48,6 +48,12 @@ import styles from './RepeterendeFelter.module.css';
 import stylesAsString from './RepeterendeFelter.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
 
+const markdownDoc = `
+Dette eksemplet viser hvordan man kan implementere repeterende felter i et skjema. Brukeren kan legge til, redigere og slette personer i en liste.
+
+[Les om hvordan fokus skal håndteres for repeterende elementer i ensideapplikasjoner i Skatteetatens veileder for stil og tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/ensideapplikasjon/)
+`;
+
 export default {
   title: 'Sidetyper/Ekstern/Repeterende felter',
   parameters: {
@@ -56,6 +62,9 @@ export default {
       disable: true,
     },
     docs: {
+      description: {
+        component: markdownDoc,
+      },
       source: {
         transform: includeStylesTransform(stylesAsString),
       },
@@ -163,8 +172,6 @@ export function RepeterendeFelter(): JSX.Element {
       editModalRef.current?.close();
       setEditCard(null);
 
-      focusCard(updatedCard.id);
-
       return { success: true };
     },
     { success: false }
@@ -191,13 +198,8 @@ export function RepeterendeFelter(): JSX.Element {
   };
 
   const handleCancelEdit = (): void => {
-    const cardId = editCard?.id;
     editModalRef.current?.close();
     setEditCard(null);
-
-    if (cardId) {
-      focusCard(cardId);
-    }
   };
 
   const deleteCardAction = (cardId: number): void => {

@@ -95,10 +95,3 @@
     }
   }
 }
-
-/* For debugging purposes during development */
-*:focus {
-  z-index: 9999;
-  outline: 3px solid var(--palette-burgundy-50) !important;
-  outline-offset: 2px !important;
-}
