@@ -31,7 +31,7 @@
 
 .desciptionList {
   display: grid;
-  gap: var(--spacing-m, 1rem);
+  gap: var(--spacing-xs);
   grid-template-columns: 1fr 1fr;
 }
 
