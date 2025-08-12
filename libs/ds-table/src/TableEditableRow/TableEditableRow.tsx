@@ -81,7 +81,29 @@ export const TableEditableRow = ({
       expandButtonAriaDescribedby={editButtonAriaDescribedby}
       expandableContent={
         <>
-          <div className={styles.editableRowTriangle} />
+          <svg
+            width={'24'}
+            height={'14'}
+            viewBox={'0 0 24 14'}
+            className={styles.triangle}
+            aria-hidden={'true'}
+            focusable={'false'}
+          >
+            <polygon
+              points={'0,0 24,0 12,12'}
+              fill={'var(--palette-ochre-10)'}
+              stroke={'var(--palette-ochre-50)'}
+              strokeWidth={'1'}
+            />
+            <line
+              x1={'0'}
+              y1={'0.5'}
+              x2={'24'}
+              y2={'0.5'}
+              stroke={'var(--palette-ochre-10)'}
+              strokeWidth={'1'}
+            />
+          </svg>
           <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
             {t('tablerow.EditData')}
           </span>
