@@ -11,11 +11,12 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import styles from './Oppsummering.module.css';
 import stylesAsString from './Oppsummering.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
+import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 export default {
   title: 'Sidetyper/Ekstern/Oppsummering',
+  decorators: [withPageLayout],
   parameters: {
-    withHeaderFooter: true,
     layout: 'fullscreen',
     controls: {
       disable: true,

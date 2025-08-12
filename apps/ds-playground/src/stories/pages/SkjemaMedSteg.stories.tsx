@@ -22,11 +22,12 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import styles from './SkjemaMedSteg.module.css';
 import stylesAsString from './SkjemaMedSteg.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
+import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 export default {
   title: 'Sidetyper/Ekstern/Skjema med steg',
+  decorators: [withPageLayout],
   parameters: {
-    withHeaderFooter: true,
     layout: 'fullscreen',
     controls: {
       disable: true,

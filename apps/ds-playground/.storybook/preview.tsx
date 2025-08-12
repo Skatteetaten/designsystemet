@@ -15,7 +15,6 @@ import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 import '../src/stories/designtokens/designtokens.css';
-import { TopBannerExternalAndFooter } from '../src/stories/utils/TopBannerExternalAndFooter';
 
 if (process.env.NODE_ENV === 'development') {
   import('./abomination.css');
@@ -47,19 +46,6 @@ const testBlock: Decorator = (Story, context) => {
   } else {
     return <Story />;
   }
-};
-
-const withPageLayout: Decorator = (Story, context) => {
-  const { parameters } = context;
-  const { withHeaderFooter } = parameters;
-  if (withHeaderFooter) {
-    return (
-      <TopBannerExternalAndFooter>
-        <Story />
-      </TopBannerExternalAndFooter>
-    );
-  }
-  return <Story />;
 };
 
 const mockDate: Decorator = (Story, context) => {
@@ -238,7 +224,6 @@ const preview = {
     testBlock,
     mockDate,
     SpacingUpdater,
-    withPageLayout,
   ],
   parameters,
   globalTypes,

@@ -19,11 +19,12 @@ import { Heading } from '@skatteetaten/ds-typography';
 import styles from './Oppgaveliste.module.css';
 import stylesAsString from './Oppgaveliste.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
+import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 export default {
   title: 'Sidetyper/Ekstern/Oppgaveliste',
+  decorators: [withPageLayout],
   parameters: {
-    withHeaderFooter: true,
     layout: 'fullscreen',
     controls: {
       disable: true,
