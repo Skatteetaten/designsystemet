@@ -6,7 +6,7 @@ declare const classNames: {
   readonly userIcon: 'userIcon';
   readonly arrowMobile: 'arrowMobile';
   readonly arrowDesktop: 'arrowDesktop';
-  readonly usernameText: 'usernameText';
+  readonly buttonText: 'buttonText';
   readonly iconWrapper: 'iconWrapper';
   readonly userIconSvg: 'userIconSvg';
   readonly srOnly: 'srOnly';

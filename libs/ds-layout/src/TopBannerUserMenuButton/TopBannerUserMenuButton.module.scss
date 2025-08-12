@@ -17,11 +17,13 @@
       max-width: 20rem;
     }
   }
+}
 
-  &Text {
-    width: 100%;
-    text-overflow: ellipsis;
-  }
+.buttonText {
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .notificationBadge {

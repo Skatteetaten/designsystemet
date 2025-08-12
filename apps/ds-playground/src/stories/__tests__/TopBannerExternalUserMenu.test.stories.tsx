@@ -44,7 +44,7 @@ const userIconTitle = dsI18n.t('ds_layout:topbannerbutton.CompanyTitle');
 const defaultUserName = 'Buljo Tulljo';
 
 export const Default: Story = {
-  name: 'Default View',
+  name: 'With Defaults (A1, A2, B1, B2)',
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
 
@@ -63,17 +63,14 @@ export const Default: Story = {
 
     const userMenu = menuButton.nextSibling as HTMLDivElement;
 
-    // Sjekker om brukerens navn er synlig
     const userName = within(userMenu).getByText('Buljo Tulljo'.toUpperCase());
     await expect(userName).toBeInTheDocument();
 
-    // Sjekker om org nummeret er synlig
     const orgnr = within(userMenu).getByText(
       `${dsI18n.t('ds_overlays:rolepicker.BusinessDescriptionPrefix')} 123 456 789`
     );
     await expect(orgnr).toBeInTheDocument();
 
-    // Sjekker om varsler-tallet er synlig
     const notificationAmount = canvas.getByText('5');
     await expect(notificationAmount).toBeInTheDocument();
   },
@@ -104,7 +101,7 @@ export const WithNoNotifications: Story = {
 };
 
 export const WithMoreThan99Notifications: Story = {
-  name: 'More Than 99 Notifications',
+  name: 'More Than 99 Notifications (A3)',
   args: {
     notificationCount: 100,
   },
@@ -124,7 +121,6 @@ export const WithMoreThan99Notifications: Story = {
     await expect(menuButton).toBeInTheDocument();
     await userEvent.click(menuButton);
 
-    // Sjekker at varsler-tallet vises som "99+"
     const notificationAmount = canvas.getByText('99+');
     await expect(notificationAmount).toBeInTheDocument();
   },
@@ -207,7 +203,6 @@ export const NoPaaVegneAv: Story = {
     await expect(menuButton).toBeInTheDocument();
     await userEvent.click(menuButton);
 
-    // Sjekker at "på vegne av" ikke vises
     const onBehalfOfText = canvas.queryByText('På vegne av');
     await expect(onBehalfOfText).not.toBeInTheDocument();
   },
@@ -232,5 +227,15 @@ export const WithChildren: Story = {
     const customChild = canvas.getByTestId('usermenu-child');
     await expect(customChild).toBeInTheDocument();
     await expect(customChild).toHaveTextContent('Child');
+  },
+};
+
+export const WithLongBusinessName: Story = {
+  args: {
+    user: {
+      name: 'Ytre Enebakk Trefelling og økologisk Lemon Curd Ringo Hirtshals',
+      role: 'virksomhet',
+      orgnr: '123456789',
+    },
   },
 };

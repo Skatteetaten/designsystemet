@@ -2,14 +2,14 @@
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_w1eq3_56 _usernameButton_w1eq3_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_w1eq3_59">
-      <span class="_userIcon_w1eq3_64">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_w1eq3_79"
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -23,7 +23,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_w1eq3_82"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -32,17 +32,19 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_w1eq3_28">
+      <span class="_notificationBadge_wxv6i_31">
       </span>
     </span>
-    Buljo Tulljo
-    <span class="_srOnly_w1eq3_100">
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
       &nbsp;Meny
     </span>
     <span class="srOnly">
       Varsler, 5 uleste
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -51,7 +53,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
+    <span class="_notificationBadge_wxv6i_31 _notificationBadgeDesktop_wxv6i_46">
     </span>
   </button>
   <div class="_menu_48ebb_13"
@@ -182,14 +184,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_w1eq3_56 _usernameButton_w1eq3_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_w1eq3_59">
-      <span class="_userIcon_w1eq3_64">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_w1eq3_79"
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r15:"
@@ -203,7 +205,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_w1eq3_82"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -213,11 +215,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
         </path>
       </svg>
     </span>
-    Buljo Tulljo
-    <span class="_srOnly_w1eq3_100">
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -348,14 +352,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_w1eq3_56"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_w1eq3_59">
-      <span class="_userIcon_w1eq3_64">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_w1eq3_79"
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1e:"
@@ -369,7 +373,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_w1eq3_82"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -379,11 +383,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
         </path>
       </svg>
     </span>
-    Meg selv
-    <span class="_srOnly_w1eq3_100">
+    <span class="_buttonText_wxv6i_24">
+      Meg selv
+    </span>
+    <span class="_srOnly_wxv6i_103">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -508,14 +514,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_w1eq3_56 _usernameButton_w1eq3_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_w1eq3_59">
-      <span class="_userIcon_w1eq3_64">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_w1eq3_79"
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rs:"
@@ -529,7 +535,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_w1eq3_82"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -538,17 +544,19 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_w1eq3_28">
+      <span class="_notificationBadge_wxv6i_31">
       </span>
     </span>
-    Buljo Tulljo
-    <span class="_srOnly_w1eq3_100">
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
       &nbsp;Meny
     </span>
     <span class="srOnly">
       Varsler, 5 uleste
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -557,7 +565,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
+    <span class="_notificationBadge_wxv6i_31 _notificationBadgeDesktop_wxv6i_46">
     </span>
   </button>
   <div class="_menu_48ebb_13"
@@ -688,14 +696,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_w1eq3_56 _usernameButton_w1eq3_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_w1eq3_59">
-      <span class="_userIcon_w1eq3_64">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_w1eq3_79"
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1n:"
@@ -709,7 +717,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_w1eq3_82"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -719,11 +727,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         </path>
       </svg>
     </span>
-    Buljo Tulljo
-    <span class="_srOnly_w1eq3_100">
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -855,16 +865,74 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
 </div>
 `;
 
+exports[`Tester/TopBanner/TopBannerExternalUserMenu WithLongBusinessName smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="false"
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r20:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r20:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 10 5 5 5-5H7Z">
+        </path>
+      </svg>
+      <span class="_notificationBadge_wxv6i_31">
+      </span>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Ytre Enebakk Trefelling og økologisk Lemon Curd Ringo Hirtshals
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <span class="srOnly">
+      Varsler, 5 uleste
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 10 5 5 5-5H7Z">
+      </path>
+    </svg>
+    <span class="_notificationBadge_wxv6i_31 _notificationBadgeDesktop_wxv6i_46">
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_w1eq3_56 _usernameButton_w1eq3_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_w1eq3_59">
-      <span class="_userIcon_w1eq3_64">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_w1eq3_79"
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rj:"
@@ -878,7 +946,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications 
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_w1eq3_82"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -887,17 +955,19 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications 
         <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
-      <span class="_notificationBadge_w1eq3_28">
+      <span class="_notificationBadge_wxv6i_31">
       </span>
     </span>
-    Buljo Tulljo
-    <span class="_srOnly_w1eq3_100">
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
       &nbsp;Meny
     </span>
     <span class="srOnly">
       Varsler, 100 uleste
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -906,7 +976,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications 
       <path d="m7 15 5-5 5 5H7Z">
       </path>
     </svg>
-    <span class="_notificationBadge_w1eq3_28 _notificationBadgeDesktop_w1eq3_43">
+    <span class="_notificationBadge_wxv6i_31 _notificationBadgeDesktop_wxv6i_46">
     </span>
   </button>
   <div class="_menu_48ebb_13"
@@ -1037,14 +1107,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications 
 
 exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_w1eq3_56 _usernameButton_w1eq3_5"
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
           type="button"
           aria-expanded="true"
           data-floating-ui-inert
   >
-    <span class="_iconWrapper_w1eq3_59">
-      <span class="_userIcon_w1eq3_64">
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_w1eq3_79"
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ra:"
@@ -1058,7 +1128,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
           </path>
         </svg>
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_w1eq3_82"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -1068,11 +1138,13 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
         </path>
       </svg>
     </span>
-    Buljo Tulljo
-    <span class="_srOnly_w1eq3_100">
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
       &nbsp;Meny
     </span>
-    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_w1eq3_90"
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"

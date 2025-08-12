@@ -69,7 +69,6 @@ export const TopBannerUserMenuButton = ({
           ? undefined
           : {
               container: styles.usernameButton,
-              text: styles.usernameText,
             }
       }
       lang={lang}
@@ -87,7 +86,7 @@ export const TopBannerUserMenuButton = ({
           <span className={styles.notificationBadge}></span>
         )}
       </span>
-      {buttonText}
+      <span className={styles.buttonText}>{buttonText}</span>
       <span className={styles.srOnly}>&nbsp;{t('topbannerbutton.Menu')}</span>
       {!!notificationCount && notificationCount > 0 && (
         <span className={'srOnly'}>
