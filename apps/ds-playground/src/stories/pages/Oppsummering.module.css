@@ -29,10 +29,6 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.marginTopL {
-  margin-top: var(--spacing-l);
-}
-
 .marginRightM {
   margin-right: var(--spacing-m);
 }

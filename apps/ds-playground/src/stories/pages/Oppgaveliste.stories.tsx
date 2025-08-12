@@ -1,19 +1,10 @@
-import { MouseEvent, Fragment, JSX, useRef, useState } from 'react';
+import { Fragment, JSX } from 'react';
 
 import { linkTo } from '@storybook/addon-links';
 
-import {
-  Button,
-  InlineButton,
-  Link,
-  LinkGroup,
-} from '@skatteetaten/ds-buttons';
+import { Button, InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { DescriptionList, Divider, Panel } from '@skatteetaten/ds-content';
-import {
-  dsI18n,
-  langToLocale,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 import {
   CheckIcon,
   CheckSVGpath,
@@ -21,28 +12,18 @@ import {
   SendSVGpath,
   WarningOutlineSVGpath,
 } from '@skatteetaten/ds-icons';
-import {
-  Footer,
-  TopBannerExternal,
-  TopBannerExternalHandle,
-  User,
-} from '@skatteetaten/ds-layout';
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 import { Tag, TagColor } from '@skatteetaten/ds-status';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+import { Heading } from '@skatteetaten/ds-typography';
 
 import styles from './Oppgaveliste.module.css';
 import stylesAsString from './Oppgaveliste.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
-import {
-  Business,
-  Paginated,
-  Person,
-  RolePicker,
-} from '@skatteetaten/ds-overlays';
+import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 export default {
   title: 'Sidetyper/Ekstern/Oppgaveliste',
+  decorators: [withPageLayout],
   parameters: {
     layout: 'fullscreen',
     controls: {
@@ -69,28 +50,6 @@ interface Task {
 }
 
 export const Oppgaveliste = (): JSX.Element => {
-  const modalRef = useRef<HTMLDialogElement>(null);
-  const topBannerRef = useRef<TopBannerExternalHandle>(null);
-  const [user, setUser] = useState<User>();
-
-  const me: Person = {
-    name: 'Ola Nordmann',
-    personId: '10101012345',
-    type: 'Person',
-  };
-
-  const businesses: Paginated<Business> = {
-    total: 1,
-    list: [
-      {
-        name: 'Høssing Funk Skole',
-        organizationNumber: '999 999 999',
-        type: 'Organization',
-        unitType: '',
-      },
-    ],
-  };
-
   const isDesktop = useMediaQuery('(min-width: 480px)');
   const checkTasks: Task[] = [
     {
@@ -195,195 +154,74 @@ export const Oppgaveliste = (): JSX.Element => {
   };
 
   return (
-    <>
-      <TopBannerExternal
-        ref={topBannerRef}
-        firstColumn={
-          <LinkGroup>
-            <LinkGroup.Link
-              href={'#storybook-root'}
-              onClick={(e): void => {
-                e.preventDefault();
-                topBannerRef.current?.closeMenu?.();
-              }}
-            >
-              {'Skatt'}
-            </LinkGroup.Link>
-            <LinkGroup.Link
-              href={'#storybook-root'}
-              onClick={(e): void => {
-                e.preventDefault();
-                topBannerRef.current?.closeMenu?.();
-              }}
-            >
-              {'Avgift'}
-            </LinkGroup.Link>
-          </LinkGroup>
-        }
-        user={user}
-        onLanguageClick={(e: MouseEvent<HTMLButtonElement>): void => {
-          void dsI18n.changeLanguage(langToLocale[e.currentTarget.lang]);
-        }}
-        onLogInClick={(): void => modalRef.current?.showModal()}
-        onLogOutClick={(): void => setUser(undefined)}
-        onUserClick={(): void => modalRef.current?.showModal()}
-      />
-      <RolePicker
-        ref={modalRef}
-        me={me}
-        businesses={businesses}
-        onEntitySelect={async (entity) => {
-          let role: User['role'];
-          if (entity.name === me.name) {
-            role = 'meg';
-          } else if (entity.type === 'Organization') {
-            role = 'virksomhet';
-          } else {
-            role = 'andre';
-          }
+    <main className={styles.mainExternal}>
+      <Breadcrumbs>
+        <Breadcrumbs.List>
+          <Breadcrumbs.Item>
+            <Breadcrumbs.Link href={'#'}>{'Min side'}</Breadcrumbs.Link>
+          </Breadcrumbs.Item>
 
-          setUser({
-            role: role,
-            name: entity.name,
-          });
-          modalRef.current?.close();
-        }}
-      />
+          <Breadcrumbs.Item>
+            <Breadcrumbs.Link href={'#'}>{'Løsning'}</Breadcrumbs.Link>
+          </Breadcrumbs.Item>
 
-      <main className={styles.mainExternal}>
-        <Breadcrumbs>
-          <Breadcrumbs.List>
-            <Breadcrumbs.Item>
-              <Breadcrumbs.Link href={'#'}>{'Min side'}</Breadcrumbs.Link>
-            </Breadcrumbs.Item>
-
-            <Breadcrumbs.Item>
-              <Breadcrumbs.Link href={'#'}>{'Løsning'}</Breadcrumbs.Link>
-            </Breadcrumbs.Item>
-
-            <Breadcrumbs.Item>
-              <Breadcrumbs.Link href={'#'}>
-                {'Rytmisk musikkutdanning'}
-              </Breadcrumbs.Link>
-            </Breadcrumbs.Item>
-          </Breadcrumbs.List>
-        </Breadcrumbs>
-        <div className={styles.article}>
-          <Heading as={'h1'} level={1} hasSpacing>
-            {'Innrapportering for rytmisk musikkutdanning'}
-          </Heading>
-          <DescriptionList hasSpacing>
-            <DescriptionList.Element term={'Virksomhetetns navn'}>
-              {'Høssing Funk Skole'}
-            </DescriptionList.Element>
-            <DescriptionList.Element term={'Organisasjonsnummer'}>
-              {'999 999 999'}
-            </DescriptionList.Element>
-            <DescriptionList.Element term={'Inntektsår'}>
-              {'2025'}
-            </DescriptionList.Element>
-          </DescriptionList>
-          <Heading as={'h2'} className={styles.heading} level={2} hasSpacing>
-            <span className={styles.headingIcon}>
-              <CheckIcon />
-            </span>
-            {'Sjekk før du starter'}
-          </Heading>
-          {checkTasks.map(createTask)}
-          <Heading
-            as={'h2'}
-            className={`${styles.heading} ${styles.marginTopXl}`}
-            level={2}
-            hasSpacing
-          >
-            <span className={styles.headingIcon}>
-              <EditIcon />
-            </span>
-            {'Forbered søknad'}
-          </Heading>
-          {prepareTasks.map(createTask)}
-          <Button className={styles.sendInButton} svgPath={SendSVGpath}>
-            {'Se over og send inn'}
-          </Button>
-        </div>
-
-        <Panel
-          variant={'filled'}
-          color={'graphite'}
-          spacing={'xxl'}
-          padding={'m'}
+          <Breadcrumbs.Item>
+            <Breadcrumbs.Link href={'#'}>
+              {'Rytmisk musikkutdanning'}
+            </Breadcrumbs.Link>
+          </Breadcrumbs.Item>
+        </Breadcrumbs.List>
+      </Breadcrumbs>
+      <div className={styles.article}>
+        <Heading as={'h1'} level={1} hasSpacing>
+          {'Innrapportering for rytmisk musikkutdanning'}
+        </Heading>
+        <DescriptionList hasSpacing>
+          <DescriptionList.Element term={'Virksomhetetns navn'}>
+            {'Høssing Funk Skole'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Organisasjonsnummer'}>
+            {'999 999 999'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Inntektsår'}>
+            {'2025'}
+          </DescriptionList.Element>
+        </DescriptionList>
+        <Heading as={'h2'} className={styles.heading} level={2} hasSpacing>
+          <span className={styles.headingIcon}>
+            <CheckIcon />
+          </span>
+          {'Sjekk før du starter'}
+        </Heading>
+        {checkTasks.map(createTask)}
+        <Heading
+          as={'h2'}
+          className={`${styles.heading} ${styles.marginTopXl}`}
+          level={2}
+          hasSpacing
         >
-          <InlineButton className={styles.marginRightButton}>
-            {'Large og fortsett senere'}
-          </InlineButton>
-          <InlineButton>{'Avbryt og slett'}</InlineButton>
-        </Panel>
-      </main>
-      <Footer
-        titleFirstColumn={'Skatteetaten'}
-        titleSecondColumn={'Følg oss'}
-        secondColumn={
-          <>
-            <Paragraph hasSpacing>
-              {'Du kan kontakte oss i sosiale medier.'}
-            </Paragraph>
-            <LinkGroup color={'white'}>
-              <LinkGroup.Link href={'#'}>
-                {'Se alle Skatteetatens kontoer'}
-              </LinkGroup.Link>
-            </LinkGroup>
-          </>
-        }
-        titleThirdColumn={'Presse'}
-        thirdColumn={
-          <>
-            <Paragraph hasSpacing>
-              {
-                'Pressemeldinger, pressekontaker og annen informasjon for journalister.'
-              }
-            </Paragraph>
-            <LinkGroup color={'white'} hasSpacing>
-              <LinkGroup.Link href={'#'}>{'Se vårt presserom'}</LinkGroup.Link>
-            </LinkGroup>
-            <Heading
-              as={'h2'}
-              level={3}
-              className={styles.marginTopL}
-              hasSpacing
-            >
-              {'Bruke data fra Skatteetaten'}
-            </Heading>
-            <Paragraph hasSpacing>
-              {
-                'Skatteetaten deler data som andre virksomheter og etater kan gjenbruke for å fornkle og effektivisere eksisterende og nye digitale tjenester.'
-              }
-            </Paragraph>
-            <LinkGroup color={'white'}>
-              <LinkGroup.Link href={'#'}>
-                {'Hvordan få tilgang til data'}
-              </LinkGroup.Link>
-            </LinkGroup>
-          </>
-        }
+          <span className={styles.headingIcon}>
+            <EditIcon />
+          </span>
+          {'Forbered søknad'}
+        </Heading>
+        {prepareTasks.map(createTask)}
+        <Button className={styles.sendInButton} svgPath={SendSVGpath}>
+          {'Se over og send inn'}
+        </Button>
+      </div>
+
+      <Panel
+        variant={'filled'}
+        color={'graphite'}
+        spacing={'xxl'}
+        padding={'m'}
       >
-        <Footer.LinkFirstColumn href={'#'}>
-          {'Jobb i Skatteetaten'}
-        </Footer.LinkFirstColumn>
-        <Footer.LinkFirstColumn href={'#'}>{'Om oss'}</Footer.LinkFirstColumn>
-        <Footer.LinkFirstColumn href={'#'}>
-          {'Analyse og rapporter'}
-        </Footer.LinkFirstColumn>
-        <Footer.LinkFirstColumn href={'#'}>
-          {'Forskning'}
-        </Footer.LinkFirstColumn>
-        <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
-        <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
-        <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
-        <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
-        <Footer.Link href={'#'} isExternal>
-          {'Koronatiltak'}
-        </Footer.Link>
-      </Footer>
-    </>
+        <InlineButton className={styles.marginRightButton}>
+          {'Large og fortsett senere'}
+        </InlineButton>
+        <InlineButton>{'Avbryt og slett'}</InlineButton>
+      </Panel>
+    </main>
   );
 };

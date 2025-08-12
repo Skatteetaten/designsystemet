@@ -12,7 +12,6 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { category } from './helpers';
-
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 import '../src/stories/designtokens/designtokens.css';

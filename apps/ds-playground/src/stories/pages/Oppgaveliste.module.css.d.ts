@@ -6,7 +6,6 @@ declare const classNames: {
   readonly article: 'article';
   readonly heading: 'heading';
   readonly headingIcon: 'headingIcon';
-  readonly marginTopL: 'marginTopL';
   readonly marginTopXl: 'marginTopXl';
   readonly sendInButton: 'sendInButton';
 };
