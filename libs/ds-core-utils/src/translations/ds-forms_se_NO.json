@@ -43,11 +43,11 @@
   "fileuploader.NoRightsUploadError": "Dus ii leat vuoigatvuohta lasihit fiillaid",
   "fileuploader.SuccessIconLabel": "Dievasmahtton",
   "fileuploader.UploadedHeading": "Lasihuvvon:",
-  "fileuploader.UploadedSummary": "({{fileCount}} filer lastet opp)",
+  "fileuploader.UploadedSummary": "{{fileCount}} fiilla lasihuvvon",
   "searchfield.ButtonTitle": "Oza",
   "searchfield.ClearButtonTitle": "Bidjat ruovttoluotta",
   "searchfield.Focus": "Geavat vulos/bajás boaluid válljet evttohusaid",
   "searchfield.NumberOfResults": "{{ant}} evttohus/evttohusat.",
-  "textarea.CharactersLeft": "({{ant}} tegn igjen)",
-  "textarea.TooManyCharacters": "({{ant}} tegn for mye)"
+  "textarea.CharactersLeft": "{{ant}} mearkka liiggás",
+  "textarea.TooManyCharacters": "{{ant}} mearkka badjelmeare"
 }

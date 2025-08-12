@@ -1,0 +1,1274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="true"
+          data-floating-ui-inert
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 15 5-5 5 5H7Z">
+        </path>
+      </svg>
+      <span class="_notificationBadge_wxv6i_31">
+      </span>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <span class="srOnly">
+      Varsler, 5 uleste
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 15 5-5 5 5H7Z">
+      </path>
+    </svg>
+    <span class="_notificationBadge_wxv6i_31 _notificationBadgeDesktop_wxv6i_46">
+    </span>
+  </button>
+  <div class="_menu_48ebb_13"
+       tabindex="-1"
+       data-floating-ui-focusable
+       style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
+  >
+    <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+      <div class="_namePrefix_48ebb_45">
+        På vegne av
+      </div>
+      BULJO TULLJO
+    </h4>
+    <div>
+      Org. nr: 123&nbsp;456&nbsp;789
+    </div>
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
+            data-testid="switch-user"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4Zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6Zm9 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+        </path>
+      </svg>
+      <span class>
+        Bytt bruker
+      </span>
+    </button>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
+         href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M17.33 10.2V13.8H17.31L19.98 15.6V18.3H3.98V15.6L6.65 13.8V10.2C6.65 7.84 8.15 5.83 10.24 5.1C10.22 5 10.21 4.9 10.21 4.8C10.21 3.81 11.01 3 11.99 3C12.97 3 13.77 3.81 13.77 4.8C13.77 4.9 13.76 5 13.74 5.1C15.83 5.84 17.33 7.84 17.33 10.2ZM13.78 19.2C13.78 20.19 12.98 21 12 21C11.02 21 10.22 20.19 10.22 19.2H13.78Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+          >
+          </path>
+        </svg>
+        Varsel
+      </a>
+      <span id="notificationCount"
+            aria-label="Varsler, 5 uleste"
+            class="_notificationBadge_48ebb_28"
+            data-testid="varsel-circle"
+      >
+        5
+      </span>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+        Min side
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
+          </path>
+        </svg>
+        Om virksomheten
+      </a>
+    </div>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+        </path>
+      </svg>
+      <span class>
+        Logg ut
+      </span>
+    </button>
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="true"
+          data-floating-ui-inert
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r15:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r15:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 15 5-5 5 5H7Z">
+        </path>
+      </svg>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 15 5-5 5 5H7Z">
+      </path>
+    </svg>
+  </button>
+  <div class="_menu_48ebb_13"
+       tabindex="-1"
+       data-floating-ui-focusable
+       style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
+  >
+    <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+      <div class="_namePrefix_48ebb_45">
+        På vegne av
+      </div>
+      BULJO TULLJO
+    </h4>
+    <div>
+      Org. nr: 123&nbsp;456&nbsp;789
+    </div>
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
+            data-testid="switch-user"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4Zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6Zm9 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+        </path>
+      </svg>
+      <span class>
+        Bytt bruker
+      </span>
+    </button>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
+         href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M17.33 10.2V13.8H17.31L19.98 15.6V18.3H3.98V15.6L6.65 13.8V10.2C6.65 7.84 8.15 5.83 10.24 5.1C10.22 5 10.21 4.9 10.21 4.8C10.21 3.81 11.01 3 11.99 3C12.97 3 13.77 3.81 13.77 4.8C13.77 4.9 13.76 5 13.74 5.1C15.83 5.84 17.33 7.84 17.33 10.2ZM13.78 19.2C13.78 20.19 12.98 21 12 21C11.02 21 10.22 20.19 10.22 19.2H13.78Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+          >
+          </path>
+        </svg>
+        Varsel
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+        Min side
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
+          </path>
+        </svg>
+        Om virksomheten
+      </a>
+    </div>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+        </path>
+      </svg>
+      <span class>
+        Logg ut
+      </span>
+    </button>
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59"
+          type="button"
+          aria-expanded="true"
+          data-floating-ui-inert
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1e:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1e:">
+            Innlogget som
+          </title>
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 15 5-5 5 5H7Z">
+        </path>
+      </svg>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Meg selv
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 15 5-5 5 5H7Z">
+      </path>
+    </svg>
+  </button>
+  <div class="_menu_48ebb_13"
+       tabindex="-1"
+       data-floating-ui-focusable
+       style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
+  >
+    <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+      Buljo Tulljo
+    </h4>
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
+            data-testid="switch-user"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4Zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6Zm9 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+        </path>
+      </svg>
+      <span class>
+        Bytt bruker
+      </span>
+    </button>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
+         href="https://skatteetaten.no/web/minside/person/varsler"
+         aria-describedby="notificationCount"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M17.33 10.2V13.8H17.31L19.98 15.6V18.3H3.98V15.6L6.65 13.8V10.2C6.65 7.84 8.15 5.83 10.24 5.1C10.22 5 10.21 4.9 10.21 4.8C10.21 3.81 11.01 3 11.99 3C12.97 3 13.77 3.81 13.77 4.8C13.77 4.9 13.76 5 13.74 5.1C15.83 5.84 17.33 7.84 17.33 10.2ZM13.78 19.2C13.78 20.19 12.98 21 12 21C11.02 21 10.22 20.19 10.22 19.2H13.78Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+          >
+          </path>
+        </svg>
+        Varsel
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+        Min side
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside/person/ommeg"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
+          </path>
+        </svg>
+        Om meg
+      </a>
+    </div>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+        </path>
+      </svg>
+      <span class>
+        Logg ut
+      </span>
+    </button>
+    <div class="_arrow_48ebb_1"
+         style="left: 18.5px; top: -13px;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="true"
+          data-floating-ui-inert
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rs:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rs:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 15 5-5 5 5H7Z">
+        </path>
+      </svg>
+      <span class="_notificationBadge_wxv6i_31">
+      </span>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <span class="srOnly">
+      Varsler, 5 uleste
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 15 5-5 5 5H7Z">
+      </path>
+    </svg>
+    <span class="_notificationBadge_wxv6i_31 _notificationBadgeDesktop_wxv6i_46">
+    </span>
+  </button>
+  <div class="_menu_48ebb_13"
+       tabindex="-1"
+       data-floating-ui-focusable
+       style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
+  >
+    <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+      <div class="_namePrefix_48ebb_45">
+        På vegne av
+      </div>
+      BULJO TULLJO
+    </h4>
+    <div>
+      Org. nr: 123&nbsp;456&nbsp;789
+    </div>
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
+            data-testid="switch-user"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4Zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6Zm9 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+        </path>
+      </svg>
+      <span class>
+        Bytt bruker
+      </span>
+    </button>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
+         href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M17.33 10.2V13.8H17.31L19.98 15.6V18.3H3.98V15.6L6.65 13.8V10.2C6.65 7.84 8.15 5.83 10.24 5.1C10.22 5 10.21 4.9 10.21 4.8C10.21 3.81 11.01 3 11.99 3C12.97 3 13.77 3.81 13.77 4.8C13.77 4.9 13.76 5 13.74 5.1C15.83 5.84 17.33 7.84 17.33 10.2ZM13.78 19.2C13.78 20.19 12.98 21 12 21C11.02 21 10.22 20.19 10.22 19.2H13.78Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+          >
+          </path>
+        </svg>
+        Varsel
+      </a>
+      <span id="notificationCount"
+            aria-label="Varsler, 5 uleste"
+            class="_notificationBadge_48ebb_28"
+            data-testid="varsel-circle"
+      >
+        5
+      </span>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+        Min side
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
+          </path>
+        </svg>
+        Om virksomheten
+      </a>
+    </div>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+        </path>
+      </svg>
+      <span class>
+        Logg ut
+      </span>
+    </button>
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="true"
+          data-floating-ui-inert
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1n:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1n:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 15 5-5 5 5H7Z">
+        </path>
+      </svg>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 15 5-5 5 5H7Z">
+      </path>
+    </svg>
+  </button>
+  <div class="_menu_48ebb_13"
+       tabindex="-1"
+       data-floating-ui-focusable
+       style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
+  >
+    <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+      <div class="_namePrefix_48ebb_45">
+        På vegne av
+      </div>
+      BULJO TULLJO
+    </h4>
+    <div>
+      Org. nr: 123&nbsp;456&nbsp;789
+    </div>
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
+            data-testid="switch-user"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4Zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6Zm9 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+        </path>
+      </svg>
+      <span class>
+        Bytt bruker
+      </span>
+    </button>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
+         href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M17.33 10.2V13.8H17.31L19.98 15.6V18.3H3.98V15.6L6.65 13.8V10.2C6.65 7.84 8.15 5.83 10.24 5.1C10.22 5 10.21 4.9 10.21 4.8C10.21 3.81 11.01 3 11.99 3C12.97 3 13.77 3.81 13.77 4.8C13.77 4.9 13.76 5 13.74 5.1C15.83 5.84 17.33 7.84 17.33 10.2ZM13.78 19.2C13.78 20.19 12.98 21 12 21C11.02 21 10.22 20.19 10.22 19.2H13.78Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+          >
+          </path>
+        </svg>
+        Varsel
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+        Min side
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
+          </path>
+        </svg>
+        Om virksomheten
+      </a>
+    </div>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <div data-testid="usermenu-child">
+      Child
+    </div>
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+        </path>
+      </svg>
+      <span class>
+        Logg ut
+      </span>
+    </button>
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerExternalUserMenu WithLongBusinessName smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="false"
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r20:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r20:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 10 5 5 5-5H7Z">
+        </path>
+      </svg>
+      <span class="_notificationBadge_wxv6i_31">
+      </span>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Ytre Enebakk Trefelling og økologisk Lemon Curd Ringo Hirtshals
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <span class="srOnly">
+      Varsler, 5 uleste
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 10 5 5 5-5H7Z">
+      </path>
+    </svg>
+    <span class="_notificationBadge_wxv6i_31 _notificationBadgeDesktop_wxv6i_46">
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="true"
+          data-floating-ui-inert
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rj:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rj:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 15 5-5 5 5H7Z">
+        </path>
+      </svg>
+      <span class="_notificationBadge_wxv6i_31">
+      </span>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <span class="srOnly">
+      Varsler, 100 uleste
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 15 5-5 5 5H7Z">
+      </path>
+    </svg>
+    <span class="_notificationBadge_wxv6i_31 _notificationBadgeDesktop_wxv6i_46">
+    </span>
+  </button>
+  <div class="_menu_48ebb_13"
+       tabindex="-1"
+       data-floating-ui-focusable
+       style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
+  >
+    <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+      <div class="_namePrefix_48ebb_45">
+        På vegne av
+      </div>
+      BULJO TULLJO
+    </h4>
+    <div>
+      Org. nr: 123&nbsp;456&nbsp;789
+    </div>
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
+            data-testid="switch-user"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4Zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6Zm9 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+        </path>
+      </svg>
+      <span class>
+        Bytt bruker
+      </span>
+    </button>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
+         href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M17.33 10.2V13.8H17.31L19.98 15.6V18.3H3.98V15.6L6.65 13.8V10.2C6.65 7.84 8.15 5.83 10.24 5.1C10.22 5 10.21 4.9 10.21 4.8C10.21 3.81 11.01 3 11.99 3C12.97 3 13.77 3.81 13.77 4.8C13.77 4.9 13.76 5 13.74 5.1C15.83 5.84 17.33 7.84 17.33 10.2ZM13.78 19.2C13.78 20.19 12.98 21 12 21C11.02 21 10.22 20.19 10.22 19.2H13.78Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+          >
+          </path>
+        </svg>
+        Varsel
+      </a>
+      <span id="notificationCount"
+            aria-label="Varsler, 100 uleste"
+            class="_notificationBadge_48ebb_28"
+            data-testid="varsel-circle"
+      >
+        99+
+      </span>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+        Min side
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
+          </path>
+        </svg>
+        Om virksomheten
+      </a>
+    </div>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+        </path>
+      </svg>
+      <span class>
+        Logg ut
+      </span>
+    </button>
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="true"
+          data-floating-ui-inert
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:ra:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:ra:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 15 5-5 5 5H7Z">
+        </path>
+      </svg>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 15 5-5 5 5H7Z">
+      </path>
+    </svg>
+  </button>
+  <div class="_menu_48ebb_13"
+       tabindex="-1"
+       data-floating-ui-focusable
+       style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 96px);"
+  >
+    <h4 class="_heading_12p5o_1 _heading_level4_12p5o_43">
+      <div class="_namePrefix_48ebb_45">
+        På vegne av
+      </div>
+      BULJO TULLJO
+    </h4>
+    <div>
+      Org. nr: 123&nbsp;456&nbsp;789
+    </div>
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8  _marginTopS_48ebb_53"
+            data-testid="switch-user"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M15 14c-2.67 0-8 1.33-8 4v2h16v-2c0-2.67-5.33-4-8-4Zm-9-4V7H4v3H1v2h3v3h2v-3h3v-2H6Zm9 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+        </path>
+      </svg>
+      <span class>
+        Bytt bruker
+      </span>
+    </button>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1  _marginRightS_48ebb_37"
+         href="https://skatteetaten.no/web/minside/virksomhet/varsler"
+         aria-describedby="notificationCount"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M17.33 10.2V13.8H17.31L19.98 15.6V18.3H3.98V15.6L6.65 13.8V10.2C6.65 7.84 8.15 5.83 10.24 5.1C10.22 5 10.21 4.9 10.21 4.8C10.21 3.81 11.01 3 11.99 3C12.97 3 13.77 3.81 13.77 4.8C13.77 4.9 13.76 5 13.74 5.1C15.83 5.84 17.33 7.84 17.33 10.2ZM13.78 19.2C13.78 20.19 12.98 21 12 21C11.02 21 10.22 20.19 10.22 19.2H13.78Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+          >
+          </path>
+        </svg>
+        Varsel
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+        Min side
+      </a>
+    </div>
+    <div class="_link_48ebb_41">
+      <a class="_link_z7jba_1"
+         href="https://skatteetaten.no/web/minside/virksomhet/omvirksomheten"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M21 3H3v18h18zm-7.75 5.4h-2.5V6h2.5zm0 9.6h-2.5v-7.2h2.5z">
+          </path>
+        </svg>
+        Om virksomheten
+      </a>
+    </div>
+    <hr class="_divider_q1e4d_1"
+        data-variant="subtle"
+        data-spacing-top="m"
+        data-spacing-bottom="s"
+    >
+    <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
+            data-brightness="default"
+            type="button"
+    >
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_r1hjf_42"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+        </path>
+      </svg>
+      <span class>
+        Logg ut
+      </span>
+    </button>
+    <div class="_arrow_48ebb_1"
+         style="left: 25.5px; top: -13px;"
+    >
+    </div>
+  </div>
+</div>
+`;

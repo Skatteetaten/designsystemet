@@ -39,5 +39,12 @@
   "rolepicker.ShowLess": "Show less",
   "rolepicker.ShowSubBusinessesHeading": "Show subunits",
   "rolepicker.SubUnit": "Subunit",
-  "rolepicker.YouCanRepresent": "You can represent"
+  "rolepicker.YouCanRepresent": "You can represent",
+  "topbannerexternalusermenu.AboutMe": "(About me)",
+  "topbannerexternalusermenu.AboutTheOrganisation": "(About the organisation)",
+  "topbannerexternalusermenu.MyPage": "My page",
+  "topbannerexternalusermenu.Notification": "Notification",
+  "topbannerexternalusermenu.NotificationCountMessage": "Notifications, {{count}} unread",
+  "topbannerexternalusermenu.OnBehalfOf": "On behalf of",
+  "topbannerexternalusermenu.SwitchUser": "Switch user"
 }

@@ -67,6 +67,7 @@ const themeText = dsI18n.t('ds_layout:topbanner.NavAriaLabel');
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const searchText = dsI18n.t('ds_layout:topbanner.Search');
 const skipLinkText = dsI18n.t('ds_layout:topbanner.SkipLinkText');
+
 const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
   onLogInClick: undefined,

@@ -2,18 +2,24 @@ import { MouseEventHandler, ReactNode, Ref, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { SearchFieldProps } from '@skatteetaten/ds-forms';
+import { Person } from '@skatteetaten/ds-overlays';
 
+import { TopBannerExternalUserMenu } from '../TopBannerExternalUserMenu/TopBannerExternalUserMenu';
 import { TopBannerLangPickerProps } from '../TopBannerLangPicker/TopBannerLangPicker.types';
 import { TopBannerLogoProps } from '../TopBannerLogo/TopBannerLogo.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
 type UserMyself = {
   role: 'meg';
+  name?: string;
+  person?: Person;
 };
 
 type UserOthers = {
   role: 'andre' | 'virksomhet';
   name: string;
+  orgnr?: string;
+  person?: Person;
 };
 
 export type User = UserMyself | UserOthers;
@@ -72,6 +78,10 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
   logo?: TopBannerLogoProps;
   /** Legger til flere alternativer i språkvelgeren. */
   additionalLanguages?: TopBannerLangPickerProps['additionalLanguages'];
+}
+export interface TopBannerExternalComponent
+  extends React.FC<TopBannerExternalProps> {
+  UserMenu: typeof TopBannerExternalUserMenu;
 }
 
 export interface TopBannerExternalHandle
