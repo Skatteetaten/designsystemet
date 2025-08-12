@@ -990,7 +990,11 @@ export const AddRow: Story = {
       setAmount('');
     };
 
-    const validateFields = (): boolean => {
+    const validateFields = (
+      personNumber: string,
+      lastName: string,
+      amount: string
+    ): boolean => {
       let hasError = false;
       if (personNumber === '') {
         setPersonNumberError('Fødselsnummer må fylles ut');
@@ -1020,7 +1024,7 @@ export const AddRow: Story = {
     );
 
     const handleAddRow = (closeEditing: () => void): void => {
-      const hasErrors = validateFields();
+      const hasErrors = validateFields(personNumber, lastName, amount);
       if (!hasErrors) {
         const newRow = {
           id: Math.random().toString(36).slice(2),
@@ -1178,35 +1182,33 @@ export const AddRow: Story = {
                 className={person.id === highlightedRowId ? 'highlightRow' : ''}
                 editButtonPosition={'right'}
                 editableContent={(closeEditing: () => void): ReactNode => {
-                  // TODO fill initial values
-                  // TODO fix focus
                   return (
                     <div className={'editableContent'}>
                       <div className={'flex gapM bottomSpacingXL'}>
                         <TextField
                           label={'Fødselsnummer (11 siffer)'}
-                          value={personNumber}
+                          value={personNumber || person.personNumber}
                           errorMessage={personNumberError}
                           onChange={(e) => {
                             setPersonNumber(e.target.value);
                             setPersonNumberError('');
                           }}
                           onBlur={handleBlur(
-                            personNumber,
+                            personNumber || person.personNumber,
                             setPersonNumberError,
                             'Fødselsnummer'
                           )}
                         />
                         <TextField
                           label={'Etternavn'}
-                          value={lastName}
+                          value={lastName || person.lastName}
                           errorMessage={lastNameError}
                           onChange={(e) => {
                             setLastName(e.target.value);
                             setLastNameError('');
                           }}
                           onBlur={handleBlur(
-                            lastName,
+                            lastName || person.lastName,
                             setLastNameError,
                             'Etternavn'
                           )}
@@ -1214,26 +1216,37 @@ export const AddRow: Story = {
                       </div>
                       <TextField
                         label={'Beløp i kroner'}
-                        value={amount}
+                        value={amount || person.amount}
                         className={'textField150 bottomSpacingXL'}
                         errorMessage={amountError}
                         onChange={(e) => {
                           setAmount(e.target.value);
                           setAmountError('');
                         }}
-                        onBlur={handleBlur(amount, setAmountError, 'Beløp')}
+                        onBlur={handleBlur(
+                          amount || person.amount,
+                          setAmountError,
+                          'Beløp'
+                        )}
                       />
                       <div className={'flex gapS'}>
                         <Button
                           onClick={(): void => {
-                            const hasErrors = validateFields();
+                            const hasErrors = validateFields(
+                              personNumber || person.personNumber,
+                              lastName || person.lastName,
+                              amount || person.amount
+                            );
                             if (!hasErrors) {
                               handleSaveRow(person.id, {
                                 dato: new Date().toLocaleDateString('no-NO'),
-                                personNumber,
-                                lastName,
-                                amount,
+                                personNumber:
+                                  personNumber || person.personNumber,
+                                lastName: lastName || person.lastName,
+                                amount: amount || person.amount,
                               });
+                              clearFields();
+                              clearErrors();
                               closeEditing();
                             }
                           }}
