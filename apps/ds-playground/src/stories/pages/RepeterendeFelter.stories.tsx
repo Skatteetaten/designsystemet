@@ -22,6 +22,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import styles from './RepeterendeFelter.module.css';
 import stylesAsString from './RepeterendeFelter.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
+import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 const markdownDoc = `
 Dette eksemplet viser hvordan man kan implementere repeterende felter i et skjema. Brukeren kan legge til, redigere og slette personer i en liste.
@@ -31,8 +32,8 @@ Dette eksemplet viser hvordan man kan implementere repeterende felter i et skjem
 
 export default {
   title: 'Sidetyper/Ekstern/Repeterende felter',
+  decorators: [withPageLayout],
   parameters: {
-    // withHeaderFooter: true,
     layout: 'fullscreen',
     controls: {
       disable: true,
