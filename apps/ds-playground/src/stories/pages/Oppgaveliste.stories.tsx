@@ -219,7 +219,7 @@ export const Oppgaveliste = (): JSX.Element => {
         padding={'m'}
       >
         <InlineButton className={styles.marginRightButton}>
-          {'Large og fortsett senere'}
+          {'Lagre og fortsett senere'}
         </InlineButton>
         <InlineButton>{'Avbryt og slett'}</InlineButton>
       </Panel>

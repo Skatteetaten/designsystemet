@@ -67,6 +67,8 @@ export const Kvittering = (): JSX.Element => {
           </DescriptionList.Element>
         </DescriptionList>
       </div>
+      {/* Ved navigering fra skjema til kvittering er Panel eneste endring på siden.
+      Derfor skal fokus settes hit. */}
       <div tabIndex={-1} className={styles.noFocusVisible}>
         <Panel
           className={styles.panel}

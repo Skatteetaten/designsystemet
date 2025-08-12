@@ -53,50 +53,45 @@ export const Deloppgave = (): JSX.Element => {
           }
         </Paragraph>
       </div>
-      <div
-        tabIndex={-1}
-        className={`${styles.noFocusVisible} ${styles.article}`}
-      >
-        <Card color={'forest'}>
-          <Card.Content>
-            <Heading as={'h2'} level={3} hasSpacing>
-              {'Opplysninger om virksomheten'}
-            </Heading>
-            <DescriptionList>
-              <DescriptionList.Element term={'Navn'}>
-                {'McRonald Hansen'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Adresse'}>
-                {'Adresseveien 1'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Postnummer'}>
-                {'1314'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Poststed'}>
-                {'Kolbotn'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Rolle'}>
-                {'Styreeier'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Navn'}>
-                {'McRonald Hansen'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Adresse'}>
-                {'Adresseveien 1'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Postnummer'}>
-                {'1314'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Poststed'}>
-                {'Kolbotn'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Rolle'}>
-                {'Styreeier'}
-              </DescriptionList.Element>
-            </DescriptionList>
-          </Card.Content>
-        </Card>
-      </div>
+      <Card color={'forest'} className={styles.article}>
+        <Card.Content>
+          <Heading as={'h2'} level={3} hasSpacing>
+            {'Opplysninger om virksomheten'}
+          </Heading>
+          <DescriptionList>
+            <DescriptionList.Element term={'Navn'}>
+              {'McRonald Hansen'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Adresse'}>
+              {'Adresseveien 1'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Postnummer'}>
+              {'1314'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Poststed'}>
+              {'Kolbotn'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Rolle'}>
+              {'Styreeier'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Navn'}>
+              {'McRonald Hansen'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Adresse'}>
+              {'Adresseveien 1'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Postnummer'}>
+              {'1314'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Poststed'}>
+              {'Kolbotn'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Rolle'}>
+              {'Styreeier'}
+            </DescriptionList.Element>
+          </DescriptionList>
+        </Card.Content>
+      </Card>
       <div className={styles.article}>
         <Checkbox
           ref={checkRef}

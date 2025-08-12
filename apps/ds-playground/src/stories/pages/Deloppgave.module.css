@@ -17,10 +17,6 @@
   margin: auto;
 }
 
-.noFocusVisible:focus-visible {
-  outline: none;
-}
-
 .marginTopM {
   margin-top: var(--spacing-m);
 }
