@@ -1,0 +1,78 @@
+.mainExternal {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+}
+
+.marginRightButton {
+  margin-right: var(--spacing-l);
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskLink {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+
+  @media (width >= 480px) {
+    font-size: var(--font-size-m);
+  }
+}
+
+.article {
+  max-width: var(--semantic-responsive-article);
+  margin: var(--spacing-xl) auto 0;
+}
+
+.heading {
+  position: relative;
+}
+
+.headingIcon {
+  position: absolute;
+  left: calc(-1 * (var(--size-extra-large) + var(--spacing-l)));
+  display: none;
+  width: var(--size-extra-large);
+  height: var(--size-extra-large);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--palette-graphite-70);
+  border-radius: 50%;
+  background: var(--step-circle-background);
+  color: var(--step-circle-foreground);
+  outline-offset: 2px;
+
+  @media (width >= 1024px) {
+    display: flex;
+  }
+
+  &_passive {
+    border: 2px solid var(--palette-graphite-70);
+  }
+
+  &_active {
+    border: none;
+    font-weight: var(--font-weight-bold);
+    outline: 2px solid var(--semantic-interactive-main);
+  }
+
+  &Icon {
+    width: var(--size-large);
+    min-width: var(--size-large);
+    height: var(--size-large);
+    fill: var(--step-circle-foreground);
+  }
+}
+
+.marginTopXl {
+  margin-top: var(--spacing-xl);
+}
+
+.sendInButton {
+  margin: var(--spacing-xxl) 0 var(--spacing-m);
+}

@@ -17,53 +17,18 @@
   margin: auto;
 }
 
+.noFocusVisible:focus-visible {
+  outline: none;
+}
+
 .marginTopM {
   margin-top: var(--spacing-m);
 }
 
-.marginBottomM {
-  margin-bottom: var(--spacing-m);
+.marginBottomXl {
+  margin-bottom: var(--spacing-xl);
 }
 
 .marginRightM {
   margin-right: var(--spacing-m);
-}
-
-.flexWrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.address {
-  width: 100%;
-  max-width: 338px;
-}
-
-.postalCode {
-  width: 109px;
-}
-
-.city {
-  width: 100%;
-  max-width: 280px;
-}
-
-.phone {
-  width: 193px;
-}
-
-.preLine {
-  white-space: pre-line;
-}
-
-.noWrap {
-  white-space: nowrap;
-}
-
-.wideContent {
-  width: var(--semantic-responsive-wide-content);
-}
-
-.marginBottomL {
-  margin-bottom: var(--spacing-l);
 }
