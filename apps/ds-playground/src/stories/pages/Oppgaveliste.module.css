@@ -32,6 +32,10 @@
   position: relative;
 }
 
+.panel {
+  margin: 0 auto;
+}
+
 .headingIcon {
   position: absolute;
   left: calc(-1 * (var(--size-extra-large) + var(--spacing-l)));
@@ -71,6 +75,10 @@
 
 .marginTopXl {
   margin-top: var(--spacing-xl);
+}
+
+.marginTopM {
+  margin-top: var(--spacing-m);
 }
 
 .sendInButton {
