@@ -88,6 +88,8 @@ export * from './HelpOutline';
 export * from './HelpSimple';
 export * from './History';
 export * from './Home';
+export * from './HomeMultiple';
+export * from './HomeValue';
 export * from './HorizontalDots';
 export * from './HorizontalDotsCircle';
 export * from './HorizontalDotsCircleSolid';
