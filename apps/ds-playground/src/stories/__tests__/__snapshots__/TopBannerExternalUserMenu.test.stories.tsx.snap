@@ -832,14 +832,14 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
         Om virksomheten
       </a>
     </div>
+    <div data-testid="usermenu-child">
+      Child
+    </div>
     <hr class="_divider_q1e4d_1"
         data-variant="subtle"
         data-spacing-top="m"
         data-spacing-bottom="s"
     >
-    <div data-testid="usermenu-child">
-      Child
-    </div>
     <button class="_button_r1hjf_1 _button_withIconLeft_r1hjf_8"
             data-brightness="default"
             type="button"

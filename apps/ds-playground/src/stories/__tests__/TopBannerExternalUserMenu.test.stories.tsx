@@ -209,6 +209,7 @@ export const NoPaaVegneAv: Story = {
 };
 
 export const WithChildren: Story = {
+  name: 'With Custom Children (A6)',
   args: {
     children: <div data-testid={'usermenu-child'}>{'Child'}</div>,
     notificationCount: 0,

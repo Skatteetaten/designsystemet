@@ -199,8 +199,8 @@ export const TopBannerExternalUserMenu = ({
                 </Link>
               </div>
             )}
-            <Divider spacingTop={'m'}></Divider>
             {children}
+            <Divider spacingTop={'m'}></Divider>
             <InlineButton svgPath={LogOutSVGpath} onClick={onLogOutClick}>
               {t('ds_overlays:rolepicker.Logout')}
             </InlineButton>
