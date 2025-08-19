@@ -38,17 +38,17 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
           <div class="_container_1uqc5_5">
             <div class>
             </div>
-            <button class="_button_2n6jz_1  _menuButton_1uqc5_17"
+            <button class="_button_2n6jz_1  _menuButton_1npwf_17"
                     lang="nb"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_1uqc5_85">
-                <span class="_flagIcon_1uqc5_90">
+              <span class="_iconWrapper_1npwf_82">
+                <span class="_flagIcon_1npwf_87">
                   <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
                        viewbox="0 0 1100 800"
-                       class="_flagIconSvg_1uqc5_95"
+                       class="_flagIconSvg_1npwf_92"
                   >
                     <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                           style="fill: rgb(255, 255, 255);"
@@ -64,7 +64,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1uqc5_98"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -75,10 +75,10 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
                 </svg>
               </span>
               Bokmål
-              <span class="_srOnly_1uqc5_180">
+              <span class="_srOnly_1npwf_180">
                 &nbsp;Meny
               </span>
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1uqc5_106"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -204,17 +204,17 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
           <div class="_container_1uqc5_5">
             <div class>
             </div>
-            <button class="_button_2n6jz_1  _menuButton_1uqc5_17"
+            <button class="_button_2n6jz_1  _menuButton_1npwf_17"
                     lang="nb"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_1uqc5_85">
-                <span class="_flagIcon_1uqc5_90">
+              <span class="_iconWrapper_1npwf_82">
+                <span class="_flagIcon_1npwf_87">
                   <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
                        viewbox="0 0 1100 800"
-                       class="_flagIconSvg_1uqc5_95"
+                       class="_flagIconSvg_1npwf_92"
                   >
                     <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                           style="fill: rgb(255, 255, 255);"
@@ -230,7 +230,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1uqc5_98"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -241,10 +241,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
                 </svg>
               </span>
               Bokmål
-              <span class="_srOnly_1uqc5_180">
+              <span class="_srOnly_1npwf_180">
                 &nbsp;Meny
               </span>
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1uqc5_106"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -354,17 +354,17 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
           <div class="_container_1uqc5_5">
             <div class>
             </div>
-            <button class="_button_2n6jz_1  _menuButton_1uqc5_17"
+            <button class="_button_2n6jz_1  _menuButton_1npwf_17"
                     lang="nb"
                     aria-expanded="false"
                     type="button"
             >
-              <span class="_iconWrapper_1uqc5_85">
-                <span class="_flagIcon_1uqc5_90">
+              <span class="_iconWrapper_1npwf_82">
+                <span class="_flagIcon_1npwf_87">
                   <svg xmlns="http://www.w3.org/2000/svg"
                        aria-hidden="true"
                        viewbox="0 0 1100 800"
-                       class="_flagIconSvg_1uqc5_95"
+                       class="_flagIconSvg_1npwf_92"
                   >
                     <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                           style="fill: rgb(255, 255, 255);"
@@ -380,7 +380,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1uqc5_98"
+                <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -391,10 +391,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
                 </svg>
               </span>
               Bokmål
-              <span class="_srOnly_1uqc5_180">
+              <span class="_srOnly_1npwf_180">
                 &nbsp;Meny
               </span>
-              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1uqc5_106"
+              <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
