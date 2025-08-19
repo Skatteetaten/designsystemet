@@ -431,7 +431,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
           </td>
         </tr>
         <tr id="3vesy"
-            class="_editableRow_expanded_1fi2s_5"
+            class="_editableRow_expanded_1k5kh_5"
             data-testid="row-1"
         >
           <td class="_dataCell_25tph_1 _dataCell_standard_25tph_1 _dataCell_left_25tph_21  _buttonCell_j3mwt_5  _buttonCell_expanded_j3mwt_8"
@@ -458,12 +458,32 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                 </path>
               </svg>
             </button>
-            <div class="_expandableContent_j3mwt_28  _expandableContent_1fi2s_23"
+            <div class="_expandableContent_j3mwt_28  _expandableContent_1k5kh_16"
                  style="width: 641px;"
             >
-              <div class="_editableRowTriangle_1fi2s_9">
-              </div>
-              <span class="_srOnly_1fi2s_30"
+              <svg width="24"
+                   height="14"
+                   viewbox="0 0 24 14"
+                   class="_triangle_1k5kh_10"
+                   aria-hidden="true"
+                   focusable="false"
+              >
+                <polygon points="0,0 24,0 12,12"
+                         fill="var(--palette-ochre-10)"
+                         stroke="var(--palette-ochre-50)"
+                         stroke-width="1"
+                >
+                </polygon>
+                <line x1="0"
+                      y1="0.5"
+                      x2="24"
+                      y2="0.5"
+                      stroke="var(--palette-ochre-10)"
+                      stroke-width="1"
+                >
+                </line>
+              </svg>
+              <span class="_srOnly_1k5kh_23"
                     tabindex="-1"
               >
                 Rediger data

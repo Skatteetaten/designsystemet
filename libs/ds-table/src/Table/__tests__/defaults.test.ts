@@ -5,6 +5,7 @@ import {
   getHeaderCellAsDefault,
   getTableCellAlignmentDefault,
   getTableRowExpandButtonPositionDefault,
+  getTableRowExpandButtonTitleDefault,
   getTableRowIsExpandedDefault,
   getTableSumAlignmentDefault,
   getTableSumTextDefault,
@@ -35,5 +36,10 @@ describe('Table defaults', () => {
   });
   it('Når getTableSumTextDefault kalles, så returnerer den riktig verdi', () => {
     expect(getTableSumTextDefault()).toBe(dsI18n.t('ds_tables:tablesum.Sum'));
+  });
+  it('Når getTableRowExpandButtonTitleDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getTableRowExpandButtonTitleDefault()).toBe(
+      dsI18n.t('ds_tables:tablerow.Expandable')
+    );
   });
 });
