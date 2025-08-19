@@ -4,6 +4,8 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import {
   getTableRowExpandButtonPositionDefault,
+  getTableRowExpandButtonTitleDefault,
+  getTableRowIsExpandedDefault,
   Table,
 } from '@skatteetaten/ds-table';
 
@@ -14,18 +16,43 @@ const meta = {
   component: Table.Row,
   title: 'Komponenter/Table/Row',
   argTypes: {
+    // @ts-expect-error - Props til TableRowWithIconButton kommer med på storybook pga Table.Row i isExpandableContentRows og skal disables.
+    classNames: { table: { disable: true } },
+    context: { table: { disable: true } },
+    svgPath: { table: { disable: true } },
+    hideIconButton: { table: { disable: true } },
+    iconButtonAriaExpanded: { table: { disable: true } },
+    isExpandButtonDisabled: { table: { disable: true } },
+    onExpandClick: { table: { disable: true } },
     // Props
     children: { control: false, table: { category: category.props } },
-    isExpandable: { table: { category: category.props } },
-    isExpanded: { table: { category: category.props } },
+    isExpandable: {
+      control: 'boolean',
+      table: { category: category.props },
+      description: 'Om raden er utvidbar.',
+    },
+    isExpanded: {
+      control: 'boolean',
+      table: {
+        defaultValue: { summary: getTableRowIsExpandedDefault().toString() },
+        category: category.props,
+      },
+    },
     expandButtonAriaDescribedby: { table: { category: category.aria } },
-    expandButtonTitle: { table: { category: category.props } },
+    expandButtonTitle: {
+      table: {
+        defaultValue: { summary: getTableRowExpandButtonTitleDefault() },
+        category: category.props,
+      },
+    },
     expandButtonPosition: {
       control: 'inline-radio',
+      options: ['left', 'right'],
       table: {
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
         category: category.props,
       },
+      description: 'Posisjonen til utvidelsesknappen.',
     },
     expandableContent: {
       control: 'text',
@@ -36,10 +63,12 @@ const meta = {
     onExpand: {
       control: false,
       table: { category: category.event },
+      description: 'Callback når raden utvides.',
     },
     onClose: {
       control: false,
       table: { category: category.event },
+      description: 'Callback når raden lukkes.',
     },
   },
   args: {
