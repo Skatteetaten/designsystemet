@@ -13,3 +13,5 @@ export const getTableSumAlignmentDefault = (): TextAlignment => 'right';
 export const getTableRowIsExpandedDefault = (): boolean => false;
 export const getTableSumTextDefault = (): string =>
   dsI18n.t('ds_tables:tablesum.Sum');
+export const getTableRowExpandButtonTitleDefault = (): string =>
+  dsI18n.t('ds_tables:tablerow.Expandable');

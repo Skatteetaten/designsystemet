@@ -4,6 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import {
   getTableRowExpandButtonPositionDefault,
+  getTableRowExpandButtonTitleDefault,
   getTableRowIsExpandedDefault,
   Table,
 } from '@skatteetaten/ds-table';
@@ -38,7 +39,12 @@ const meta = {
       },
     },
     expandButtonAriaDescribedby: { table: { category: category.aria } },
-    expandButtonTitle: { table: { category: category.props } },
+    expandButtonTitle: {
+      table: {
+        defaultValue: { summary: getTableRowExpandButtonTitleDefault() },
+        category: category.props,
+      },
+    },
     expandButtonPosition: {
       control: 'inline-radio',
       options: ['left', 'right'],

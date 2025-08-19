@@ -17,7 +17,10 @@ import {
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
 import { getIconButtonSize } from './utils';
-import { getTableRowIsExpandedDefault } from '../Table/defaults';
+import {
+  getTableRowExpandButtonTitleDefault,
+  getTableRowIsExpandedDefault,
+} from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 import { TableRow } from '../TableRow/TableRow';
 
@@ -35,7 +38,7 @@ export const RowWithLeftSideExpandButton = ({
   context,
   iconButtonAriaExpanded,
   expandableContent,
-  expandButtonTitle,
+  expandButtonTitle = getTableRowExpandButtonTitleDefault(),
   expandButtonAriaDescribedby,
   showExpandButtonTitle,
   isExpanded = getTableRowIsExpandedDefault(),
@@ -162,7 +165,7 @@ export const RowWithRightSideExpandButton = ({
   lang,
   'data-testid': dataTestId,
   context,
-  expandButtonTitle,
+  expandButtonTitle = getTableRowExpandButtonTitleDefault(),
   expandableContent,
   showExpandButtonTitle,
   iconButtonAriaExpanded,

@@ -12,7 +12,10 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableRowProps } from './TableRow.types';
-import { getTableRowExpandButtonPositionDefault } from '../Table/defaults';
+import {
+  getTableRowExpandButtonPositionDefault,
+  getTableRowExpandButtonTitleDefault,
+} from '../Table/defaults';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
 import { TableContext } from '../TableContext/TableContext';
 import {
@@ -66,7 +69,7 @@ export const TableRow = ({
     expandButtonTitle ||
     (showExpandButtonTitle
       ? t('tablerow.ExpandText')
-      : t('tablerow.Expandable'));
+      : getTableRowExpandButtonTitleDefault());
 
   const Tag =
     expandButtonPosition === 'left'
