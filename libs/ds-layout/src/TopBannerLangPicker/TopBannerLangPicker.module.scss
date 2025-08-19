@@ -93,8 +93,6 @@
 }
 
 .menuButton {
-  z-index: 1000;
-
   .iconWrapper {
     display: flex;
     align-items: center;
@@ -133,6 +131,10 @@
     .arrowDesktop {
       fill: var(--semantic-interactive-foreground);
     }
+  }
+
+  &_open {
+    z-index: 1000;
   }
 
   @media (min-width: breakpoints.$breakpoint-m) {

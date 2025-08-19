@@ -1,5 +1,12 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
+.overlay {
+  position: fixed;
+  z-index: 800;
+  background: rgb(255 255 255 / 80%);
+  inset: 0;
+}
+
 .arrow {
   position: absolute;
   z-index: -1;
@@ -13,7 +20,7 @@
 }
 
 .menu {
-  z-index: 100;
+  z-index: 1000;
   width: 18rem;
   max-width: calc(100vw - (var(--spacing-m) * 2));
   box-sizing: border-box;

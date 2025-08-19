@@ -7,6 +7,7 @@ declare const classNames: {
   readonly arrowMobile: 'arrowMobile';
   readonly arrowDesktop: 'arrowDesktop';
   readonly buttonText: 'buttonText';
+  readonly menuButton_open: 'menuButton_open';
   readonly iconWrapper: 'iconWrapper';
   readonly userIconSvg: 'userIconSvg';
   readonly srOnly: 'srOnly';

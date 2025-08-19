@@ -63,6 +63,7 @@ export const TopBannerExternalUserMenu = ({
       setOpen(open);
     },
     placement: 'bottom-start',
+
     whileElementsMounted: autoUpdate,
     middleware: [
       offset({ mainAxis: floatingOffset, alignmentAxis: -32 }),
@@ -73,7 +74,7 @@ export const TopBannerExternalUserMenu = ({
   });
 
   const dismiss = useDismiss(floatingData.context, {
-    ancestorScroll: true,
+    ancestorScroll: false,
   });
   const interactions = useInteractions([dismiss]);
   const { refs, floatingStyles, middlewareData } = floatingData;
@@ -91,7 +92,8 @@ export const TopBannerExternalUserMenu = ({
   }, [isOpen]);
 
   return (
-    <>
+    <div>
+      <div className={isOpen ? styles.overlay : ''} />
       <TopBannerUserMenuButton
         id={id}
         className={className}
@@ -215,7 +217,7 @@ export const TopBannerExternalUserMenu = ({
           </div>
         </FloatingFocusManager>
       )}
-    </>
+    </div>
   );
 };
 
