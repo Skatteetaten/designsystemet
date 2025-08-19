@@ -937,6 +937,14 @@ export const AddRow: Story = {
       direction: 'none',
     });
 
+    const [nextId, setNextId] = useState(4);
+    const [addRow, setAddRow] = useState<boolean>(false);
+    const [highlightedRowId, setHighlightedRowId] = useState<string | null>(
+      null
+    );
+    const addPersonButtonRef = useRef<HTMLButtonElement>(null);
+    const personNumberInputRef = useRef<HTMLInputElement>(null);
+
     const sortedData = data.slice().sort((a, b) => {
       const sortKey = sortState.sortKey as keyof (typeof data)[0];
       if (!sortKey) return 0;
@@ -945,10 +953,6 @@ export const AddRow: Story = {
         return a[sortKey] > b[sortKey] ? 1 : -1;
       return a[sortKey] < b[sortKey] ? 1 : -1;
     });
-
-    const [addRow, setAddRow] = useState<boolean>(false);
-    const addPersonButtonRef = useRef<HTMLButtonElement>(null);
-    const personNumberInputRef = useRef<HTMLInputElement>(null);
 
     const handleSaveRow = (
       id: string,
@@ -959,94 +963,112 @@ export const AddRow: Story = {
       );
     };
 
-    const [personNumber, setPersonNumber] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [amount, setAmount] = useState('');
-    const [personNumberError, setPersonNumberError] = useState('');
-    const [lastNameError, setLastNameError] = useState('');
-    const [amountError, setAmountError] = useState('');
+    const validateField = (field: string, value: string): string => {
+      if (field === 'personNumber') {
+        if (value.trim() === '') return 'Fødselsnummer må fylles ut';
+        if (value.length !== 11) return 'Fødselsnummer må være 11 siffer';
+      }
+      if (field === 'lastName') {
+        if (value.trim() === '') return 'Etternavn må fylles ut';
+      }
+      if (field === 'amount') {
+        if (value.trim() === '') return 'Beløp må fylles ut';
+        if (value !== '' && Number.isNaN(Number(value)))
+          return 'Beløp må være et tall';
+      }
+      return '';
+    };
 
-    const handleBlur =
-      (value: string, setError: (msg: string) => void, label: string) =>
-      (): void => {
-        setError(value.trim() === '' ? `${label} må fylles ut` : '');
-        if (label === 'Fødselsnummer' && value.length !== 11) {
-          setError('Fødselsnummer må være 11 siffer');
-        }
-        if (label === 'Beløp' && value !== '' && isNaN(Number(value))) {
-          setError('Beløp må være et tall');
+    const createFormComponent = (
+      initialData: { personNumber: string; lastName: string; amount: string },
+      onSave: (data: {
+        personNumber: string;
+        lastName: string;
+        amount: string;
+      }) => void,
+      onCancel: () => void,
+      isAdd?: boolean
+    ): JSX.Element => {
+      const [personNumber, setPersonNumber] = useState(
+        initialData.personNumber
+      );
+      const [lastName, setLastName] = useState(initialData.lastName);
+      const [amount, setAmount] = useState(initialData.amount);
+      const [personNumberError, setPersonNumberError] = useState('');
+      const [lastNameError, setLastNameError] = useState('');
+      const [amountError, setAmountError] = useState('');
+
+      const handleBlur = (
+        field: string,
+        value: string,
+        setError: (msg: string) => void
+      ): void => {
+        const error = validateField(field, value);
+        setError(error);
+      };
+
+      const handleSave = (): void => {
+        const personNumberErr = validateField('personNumber', personNumber);
+        const lastNameErr = validateField('lastName', lastName);
+        const amountErr = validateField('amount', amount);
+
+        setPersonNumberError(personNumberErr);
+        setLastNameError(lastNameErr);
+        setAmountError(amountErr);
+
+        if (!personNumberErr && !lastNameErr && !amountErr) {
+          onSave({ personNumber, lastName, amount });
         }
       };
 
-    const clearErrors = (): void => {
-      setPersonNumberError('');
-      setLastNameError('');
-      setAmountError('');
+      return (
+        <div className={'editableContent'}>
+          <div className={'flex gapM bottomSpacingXL'}>
+            <TextField
+              ref={isAdd ? personNumberInputRef : undefined}
+              label={'Fødselsnummer (11 siffer)'}
+              value={personNumber}
+              errorMessage={personNumberError}
+              onChange={(e) => {
+                setPersonNumber(e.target.value);
+                setPersonNumberError('');
+              }}
+              onBlur={() =>
+                handleBlur('personNumber', personNumber, setPersonNumberError)
+              }
+            />
+            <TextField
+              label={'Etternavn'}
+              value={lastName}
+              errorMessage={lastNameError}
+              onChange={(e) => {
+                setLastName(e.target.value);
+                setLastNameError('');
+              }}
+              onBlur={() => handleBlur('lastName', lastName, setLastNameError)}
+            />
+          </div>
+          <TextField
+            label={'Beløp i kroner'}
+            className={'textField150 bottomSpacingXL'}
+            value={amount}
+            errorMessage={amountError}
+            onChange={(e) => {
+              setAmount(e.target.value);
+              setAmountError('');
+            }}
+            onBlur={() => handleBlur('amount', amount, setAmountError)}
+          />
+          <div className={'flex gapS'}>
+            <Button onClick={handleSave}>{'Lagre'}</Button>
+            <Button variant={'secondary'} onClick={onCancel}>
+              {'Avbryt'}
+            </Button>
+          </div>
+        </div>
+      );
     };
 
-    const clearFields = (): void => {
-      setPersonNumber('');
-      setLastName('');
-      setAmount('');
-    };
-
-    const validateFields = (
-      personNumber: string,
-      lastName: string,
-      amount: string
-    ): boolean => {
-      let hasError = false;
-      if (personNumber === '') {
-        setPersonNumberError('Fødselsnummer må fylles ut');
-        hasError = true;
-      }
-      if (lastName === '') {
-        setLastNameError('Etternavn må fylles ut');
-        hasError = true;
-      }
-      if (amount === '') {
-        setAmountError('Beløp må fylles ut');
-        hasError = true;
-      }
-      if (personNumber !== '' && personNumber.length !== 11) {
-        setPersonNumberError('Fødselsnummer må være 11 siffer');
-        hasError = true;
-      }
-      if (amount !== '' && isNaN(Number(amount))) {
-        setAmountError('Beløp må være et tall');
-        hasError = true;
-      }
-      return hasError;
-    };
-
-    const [highlightedRowId, setHighlightedRowId] = useState<string | null>(
-      null
-    );
-
-    const handleAddRow = (closeEditing: () => void): void => {
-      const hasErrors = validateFields(personNumber, lastName, amount);
-      if (!hasErrors) {
-        const newRow = {
-          id: Math.random().toString(36).slice(2),
-          dato: new Date().toLocaleDateString('no-NO'),
-          personNumber,
-          firstName: '',
-          lastName,
-          amount,
-        };
-
-        setData((prev) => [newRow, ...prev]);
-        setHighlightedRowId(newRow.id);
-        closeEditing();
-        setAddRow(false);
-        clearFields();
-        clearErrors();
-
-        setTimeout(() => addPersonButtonRef.current?.focus(), 0);
-
-        setTimeout(() => setHighlightedRowId(null), 3000);
-      }
-    };
     return (
       <>
         <Button
@@ -1054,9 +1076,7 @@ export const AddRow: Story = {
           className={'bottomSpacingL'}
           onClick={(): void => {
             setAddRow(true);
-            setTimeout(() => {
-              personNumberInputRef.current?.focus();
-            }, 0);
+            setTimeout(() => personNumberInputRef.current?.focus(), 0);
           }}
         >
           {'Legg til person'}
@@ -1089,73 +1109,31 @@ export const AddRow: Story = {
                 id={'addPerson'}
                 editButtonPosition={'right'}
                 editableContent={(closeEditing: () => void): ReactNode => {
-                  return (
-                    <div className={'editableContent'}>
-                      <div className={'flex gapM bottomSpacingXL'}>
-                        <TextField
-                          ref={personNumberInputRef}
-                          label={'Fødselsnummer (11 siffer)'}
-                          value={personNumber}
-                          errorMessage={personNumberError}
-                          onChange={(e) => {
-                            setPersonNumber(e.target.value);
-                            setPersonNumberError('');
-                          }}
-                          onBlur={handleBlur(
-                            personNumber,
-                            setPersonNumberError,
-                            'Fødselsnummer'
-                          )}
-                        />
-                        <TextField
-                          label={'Etternavn'}
-                          value={lastName}
-                          errorMessage={lastNameError}
-                          onChange={(e) => {
-                            setLastName(e.target.value);
-                            setLastNameError('');
-                          }}
-                          onBlur={handleBlur(
-                            lastName,
-                            setLastNameError,
-                            'Etternavn'
-                          )}
-                        />
-                      </div>
-                      <TextField
-                        label={'Beløp i kroner'}
-                        className={'textField150 bottomSpacingXL'}
-                        value={amount}
-                        errorMessage={amountError}
-                        onChange={(e) => {
-                          setAmount(e.target.value);
-                          setAmountError('');
-                        }}
-                        onBlur={handleBlur(amount, setAmountError, 'Beløp')}
-                      />
-                      <div className={'flex gapS'}>
-                        <Button
-                          onClick={(): void => handleAddRow(closeEditing)}
-                        >
-                          {'Lagre'}
-                        </Button>
-                        <Button
-                          variant={'secondary'}
-                          onClick={(): void => {
-                            closeEditing();
-                            setAddRow(false);
-                            clearFields();
-                            clearErrors();
-                            setTimeout(
-                              () => addPersonButtonRef.current?.focus(),
-                              0
-                            );
-                          }}
-                        >
-                          {'Avbryt'}
-                        </Button>
-                      </div>
-                    </div>
+                  return createFormComponent(
+                    { personNumber: '', lastName: '', amount: '' },
+                    (data) => {
+                      const newRow = {
+                        id: nextId.toString(),
+                        dato: new Date().toLocaleDateString('no-NO'),
+                        personNumber: data.personNumber,
+                        firstName: '',
+                        lastName: data.lastName,
+                        amount: data.amount,
+                      };
+                      setData((prev) => [newRow, ...prev]);
+                      setHighlightedRowId(newRow.id);
+                      setNextId((prev) => prev + 1);
+                      setAddRow(false);
+                      closeEditing();
+                      setTimeout(() => addPersonButtonRef.current?.focus(), 0);
+                      setTimeout(() => setHighlightedRowId(null), 3000);
+                    },
+                    () => {
+                      setAddRow(false);
+                      closeEditing();
+                      setTimeout(() => addPersonButtonRef.current?.focus(), 0);
+                    },
+                    true
                   );
                 }}
               >
@@ -1182,88 +1160,24 @@ export const AddRow: Story = {
                 className={person.id === highlightedRowId ? 'highlightRow' : ''}
                 editButtonPosition={'right'}
                 editableContent={(closeEditing: () => void): ReactNode => {
-                  return (
-                    <div className={'editableContent'}>
-                      <div className={'flex gapM bottomSpacingXL'}>
-                        <TextField
-                          label={'Fødselsnummer (11 siffer)'}
-                          value={personNumber || person.personNumber}
-                          errorMessage={personNumberError}
-                          onChange={(e) => {
-                            setPersonNumber(e.target.value);
-                            setPersonNumberError('');
-                          }}
-                          onBlur={handleBlur(
-                            personNumber || person.personNumber,
-                            setPersonNumberError,
-                            'Fødselsnummer'
-                          )}
-                        />
-                        <TextField
-                          label={'Etternavn'}
-                          value={lastName || person.lastName}
-                          errorMessage={lastNameError}
-                          onChange={(e) => {
-                            setLastName(e.target.value);
-                            setLastNameError('');
-                          }}
-                          onBlur={handleBlur(
-                            lastName || person.lastName,
-                            setLastNameError,
-                            'Etternavn'
-                          )}
-                        />
-                      </div>
-                      <TextField
-                        label={'Beløp i kroner'}
-                        value={amount || person.amount}
-                        className={'textField150 bottomSpacingXL'}
-                        errorMessage={amountError}
-                        onChange={(e) => {
-                          setAmount(e.target.value);
-                          setAmountError('');
-                        }}
-                        onBlur={handleBlur(
-                          amount || person.amount,
-                          setAmountError,
-                          'Beløp'
-                        )}
-                      />
-                      <div className={'flex gapS'}>
-                        <Button
-                          onClick={(): void => {
-                            const hasErrors = validateFields(
-                              personNumber || person.personNumber,
-                              lastName || person.lastName,
-                              amount || person.amount
-                            );
-                            if (!hasErrors) {
-                              handleSaveRow(person.id, {
-                                dato: new Date().toLocaleDateString('no-NO'),
-                                personNumber:
-                                  personNumber || person.personNumber,
-                                lastName: lastName || person.lastName,
-                                amount: amount || person.amount,
-                              });
-                              clearFields();
-                              clearErrors();
-                              closeEditing();
-                            }
-                          }}
-                        >
-                          {'Lagre'}
-                        </Button>
-                        <Button
-                          variant={'secondary'}
-                          onClick={(): void => {
-                            closeEditing();
-                            clearErrors();
-                          }}
-                        >
-                          {'Avbryt'}
-                        </Button>
-                      </div>
-                    </div>
+                  return createFormComponent(
+                    {
+                      personNumber: person.personNumber,
+                      lastName: person.lastName,
+                      amount: person.amount,
+                    },
+                    (data) => {
+                      handleSaveRow(person.id, {
+                        dato: new Date().toLocaleDateString('no-NO'),
+                        personNumber: data.personNumber,
+                        lastName: data.lastName,
+                        amount: data.amount,
+                      });
+                      closeEditing();
+                    },
+                    () => {
+                      closeEditing();
+                    }
                   );
                 }}
               >
