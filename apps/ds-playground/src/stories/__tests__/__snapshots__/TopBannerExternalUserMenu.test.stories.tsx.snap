@@ -182,6 +182,57 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/TopBanner/TopBannerExternalUserMenu EscapeKeyFocusReturn play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"
+          type="button"
+          aria-expanded="false"
+  >
+    <span class="_iconWrapper_wxv6i_62">
+      <span class="_userIcon_wxv6i_67">
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _userIconSvg_wxv6i_82"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r24:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r24:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_wxv6i_85"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 10 5 5 5-5H7Z">
+        </path>
+      </svg>
+    </span>
+    <span class="_buttonText_wxv6i_24">
+      Buljo Tulljo
+    </span>
+    <span class="_srOnly_wxv6i_103">
+      &nbsp;Meny
+    </span>
+    <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_wxv6i_93"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="m7 10 5 5 5-5H7Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
 exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
 <div data-test-block="true">
   <button class="_button_2n6jz_1 _button_filled_2n6jz_32 _menuButton_wxv6i_59 _usernameButton_wxv6i_5"

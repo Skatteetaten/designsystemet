@@ -240,3 +240,31 @@ export const WithLongBusinessName: Story = {
     },
   },
 };
+
+export const EscapeKeyFocusReturn: Story = {
+  name: 'Escape Key Returns Focus to Button (C2)',
+  args: {
+    notificationCount: 0,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const menuButton = canvas.getByRole('button', {
+      name: `${userIconTitle} ${defaultUserName} ${menuText}`,
+    });
+
+    await expect(menuButton).toBeInTheDocument();
+
+    await userEvent.click(menuButton);
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+
+    await userEvent.keyboard('{Escape}');
+
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+
+    await expect(menuButton).toHaveFocus();
+  },
+};
