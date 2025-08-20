@@ -35,7 +35,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
           >
         </a>
         <div class="_contentContainer_1jm4n_23">
-          <div class="_container_1uqc5_5">
+          <div class="_container_1npwf_5">
             <div class>
             </div>
             <button class="_button_2n6jz_1  _menuButton_1npwf_17"
@@ -201,7 +201,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
           >
         </a>
         <div class="_contentContainer_1jm4n_23">
-          <div class="_container_1uqc5_5">
+          <div class="_container_1npwf_5">
             <div class>
             </div>
             <button class="_button_2n6jz_1  _menuButton_1npwf_17"
@@ -351,7 +351,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
           >
         </a>
         <div class="_contentContainer_1jm4n_23">
-          <div class="_container_1uqc5_5">
+          <div class="_container_1npwf_5">
             <div class>
             </div>
             <button class="_button_2n6jz_1  _menuButton_1npwf_17"
