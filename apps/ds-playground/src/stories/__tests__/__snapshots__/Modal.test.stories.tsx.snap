@@ -4,7 +4,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -24,17 +24,17 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -91,10 +91,10 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -170,7 +170,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -190,17 +190,17 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -257,10 +257,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -320,7 +320,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -340,17 +340,17 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -407,10 +407,10 @@ exports[`Tester/Modal AutoOpenAndCloseOnUserInput smoke-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>

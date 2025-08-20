@@ -2,10 +2,10 @@
 
 exports[`Tester/TopBanner/TopBannerLogo (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+  <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
      href="https://www.skatteetaten.no/"
   >
-    <img class="_logo_1u6ee_1"
+    <img class="_logo_1td2x_1"
          alt="Forside Skatteetaten"
          src="[REMOVED]"
     >
@@ -15,8 +15,8 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) Defaults play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerLogo (intern) WithAs play-test 1`] = `
 <div data-test-block="true">
-  <div class="_logoContainer_1u6ee_1">
-    <img class="_logo_1u6ee_1"
+  <div class="_logoContainer_1td2x_1">
+    <img class="_logo_1td2x_1"
          alt="Skatteetaten logo"
          src="[REMOVED]"
     >
@@ -27,12 +27,12 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) WithAs play-test 1`] = `
 exports[`Tester/TopBanner/TopBannerLogo (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <a id="htmlId"
-     class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13 dummyClassname"
+     class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13 dummyClassname"
      lang="en"
      data-testid="123ID"
      href="https://www.skatteetaten.no/"
   >
-    <img class="_logo_1u6ee_1"
+    <img class="_logo_1td2x_1"
          alt="Forside Skatteetaten"
          src="[REMOVED]"
     >
@@ -42,10 +42,10 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) WithAttributes play-test 1`] = 
 
 exports[`Tester/TopBanner/TopBannerLogo (intern) WithLogoMobileLogoAltAndHref play-test 1`] = `
 <div data-test-block="true">
-  <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+  <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
      href="#"
   >
-    <img class="_logo_1u6ee_1"
+    <img class="_logo_1td2x_1"
          alt="custom alt text"
          src="[REMOVED]"
     >
@@ -55,11 +55,11 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) WithLogoMobileLogoAltAndHref pl
 
 exports[`Tester/TopBanner/TopBannerLogo (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+  <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
      href="https://www.skatteetaten.no/"
      id="dummyIdForwardedFromRef"
   >
-    <img class="_logo_1u6ee_1"
+    <img class="_logo_1td2x_1"
          alt="Forside Skatteetaten"
          src="[REMOVED]"
     >
