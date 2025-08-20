@@ -2,15 +2,11 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
+import { TopBannerExternal, TopBannerInternal } from '@skatteetaten/ds-layout';
 import { Breadcrumbs, BreadcrumbsProps } from '@skatteetaten/ds-navigation';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import {
-  Footer,
-  TopBannerExternal,
-  TopBannerInternal,
-} from '@skatteetaten/ds-layout';
 
 Breadcrumbs.List.displayName = 'Breadcrumbs.List';
 Breadcrumbs.Item.displayName = 'Breadcrumbs.Item';
