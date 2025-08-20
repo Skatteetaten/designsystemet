@@ -378,3 +378,15 @@ dl.descriptionListTwoColumns {
     background-color: unset;
   }
 }
+
+.breadcrumbs--external {
+  width: var(--semantic-responsive-container);
+  margin: var(--spacing-m) auto;
+  padding: var(--semantic-responsive-container-spacing);
+  box-sizing: border-box;
+}
+
+.breadcrumbs--internal {
+  padding: var(--spacing-s)
+    var(--semantic-responsive-internal-container-spacing);
+}
