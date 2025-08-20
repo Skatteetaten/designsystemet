@@ -4,7 +4,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -24,17 +24,17 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -110,10 +110,10 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
           </button>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -125,7 +125,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickSearchOpenAndClose play-test 1`
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -145,17 +145,17 @@ exports[`Tester/TopBanner/TopBannerExternal ClickSearchOpenAndClose play-test 1`
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -250,10 +250,10 @@ exports[`Tester/TopBanner/TopBannerExternal ClickSearchOpenAndClose play-test 1`
           </button>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -265,7 +265,7 @@ exports[`Tester/TopBanner/TopBannerExternal LangPickerInMenuWhenLoggedInOnMobile
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -285,17 +285,17 @@ exports[`Tester/TopBanner/TopBannerExternal LangPickerInMenuWhenLoggedInOnMobile
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <button class="_button_2n6jz_1"
                   aria-expanded="false"
                   type="button"
@@ -334,7 +334,7 @@ exports[`Tester/TopBanner/TopBannerExternal LangPickerInMenuWhenLoggedInOnMobile
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <div class="_container_1uqc5_5">
               <button class="_button_2n6jz_1  _menuButton_1uqc5_17 _menuButtonDesktopOnly_1uqc5_17"
                       lang="nb"
@@ -388,9 +388,9 @@ exports[`Tester/TopBanner/TopBannerExternal LangPickerInMenuWhenLoggedInOnMobile
               </button>
             </div>
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69"
+                 class="_columns_1jm4n_74"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <a class="_link_z7jba_1"
                    href="#storybook-root"
                 >
@@ -401,10 +401,10 @@ exports[`Tester/TopBanner/TopBannerExternal LangPickerInMenuWhenLoggedInOnMobile
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -416,7 +416,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -436,17 +436,17 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -503,10 +503,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -518,7 +518,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -538,17 +538,17 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -605,10 +605,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -620,7 +620,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -640,17 +640,17 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -707,10 +707,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -722,7 +722,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -742,17 +742,17 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -809,10 +809,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -824,7 +824,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -844,17 +844,17 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -911,10 +911,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -930,7 +930,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
           class="dummyClassname"
   >
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -950,17 +950,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -1017,10 +1017,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -1032,7 +1032,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -1052,17 +1052,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_wrapper_1dg5q_1">
             <label id="labelId-:rg:"
                    class="_label_348na_5  _srOnly_348na_18"
@@ -1138,10 +1138,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -1153,7 +1153,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -1173,17 +1173,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -1240,10 +1240,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -1255,7 +1255,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -1275,17 +1275,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -1359,11 +1359,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69"
+                 class="_columns_1jm4n_74"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
@@ -1372,10 +1372,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -1481,7 +1481,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -1501,17 +1501,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -1585,11 +1585,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69"
+                 class="_columns_1jm4n_74"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
@@ -1598,10 +1598,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -1707,7 +1707,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -1727,17 +1727,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -1811,11 +1811,11 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69"
+                 class="_columns_1jm4n_74"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
@@ -1824,10 +1824,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -1935,7 +1935,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
           id="dummyIdForwardedFromRef"
   >
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -1955,17 +1955,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -2022,10 +2022,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -2037,7 +2037,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -2057,17 +2057,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -2141,21 +2141,21 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69 _columnsThree_1ns8f_80 _columnsTwo_1ns8f_80"
+                 class="_columns_1jm4n_74 _columnsThree_1jm4n_85 _columnsTwo_1jm4n_85"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Second column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Third column with pink background
                 </div>
@@ -2164,10 +2164,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -2283,7 +2283,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -2303,17 +2303,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -2387,21 +2387,21 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69 _columnsThree_1ns8f_80 _columnsTwo_1ns8f_80"
+                 class="_columns_1jm4n_74 _columnsThree_1jm4n_85 _columnsTwo_1jm4n_85"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Second column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Third column with pink background
                 </div>
@@ -2410,10 +2410,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -2529,7 +2529,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -2549,17 +2549,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -2633,21 +2633,21 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69 _columnsThree_1ns8f_80 _columnsTwo_1ns8f_80"
+                 class="_columns_1jm4n_74 _columnsThree_1jm4n_85 _columnsTwo_1jm4n_85"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Second column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Third column with pink background
                 </div>
@@ -2656,10 +2656,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -2775,7 +2775,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -2795,17 +2795,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -2879,16 +2879,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69  _columnsTwo_1ns8f_80"
+                 class="_columns_1jm4n_74  _columnsTwo_1jm4n_85"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Second column with pink background
                 </div>
@@ -2897,10 +2897,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -3011,7 +3011,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -3031,17 +3031,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -3115,16 +3115,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69  _columnsTwo_1ns8f_80"
+                 class="_columns_1jm4n_74  _columnsTwo_1jm4n_85"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Second column with pink background
                 </div>
@@ -3133,10 +3133,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
@@ -3247,7 +3247,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
 <div data-test-block="true">
   <header class>
     <div id="topbanner-focus-target"
-         class="_srOnly_1ns8f_118"
+         class="_srOnly_1jm4n_123"
          tabindex="-1"
     >
     </div>
@@ -3267,17 +3267,17 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_containerForMainMenu_1ns8f_55">
-      <div class="_topContainer_1ns8f_6">
-        <a class="_logoContainer_1u6ee_1 _logoAsLink_1u6ee_13"
+    <div class="_containerForMainMenu_1jm4n_60">
+      <div class="_topContainer_1jm4n_6">
+        <a class="_logoContainer_1td2x_1 _logoAsLink_1td2x_13"
            href="https://www.skatteetaten.no/"
         >
-          <img class="_logo_1u6ee_1"
+          <img class="_logo_1td2x_1"
                alt="Forside Skatteetaten"
                src="[REMOVED]"
           >
         </a>
-        <div class="_contentContainer_1ns8f_23">
+        <div class="_contentContainer_1jm4n_23">
           <div class="_container_1uqc5_5">
             <div class>
             </div>
@@ -3351,16 +3351,16 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
               Meny
             </span>
           </button>
-          <div class="_mainMenu_1ns8f_60">
+          <div class="_mainMenu_1jm4n_65">
             <nav aria-label="Temaoversikt"
-                 class="_columns_1ns8f_69  _columnsTwo_1ns8f_80"
+                 class="_columns_1jm4n_74  _columnsTwo_1jm4n_85"
             >
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   First column with pink background
                 </div>
               </div>
-              <div class="_column_1ns8f_69">
+              <div class="_column_1jm4n_74">
                 <div class="dummyClassNamePinkBackground">
                   Second column with pink background
                 </div>
@@ -3369,10 +3369,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
           </div>
         </div>
       </div>
-      <div class="_separator_1ns8f_32">
-        <div class="_separatorRight_1ns8f_45">
+      <div class="_separator_1jm4n_37">
+        <div class="_separatorRight_1jm4n_50">
         </div>
-        <div class="_separatorLeft_1ns8f_37">
+        <div class="_separatorLeft_1jm4n_42">
         </div>
       </div>
     </div>
