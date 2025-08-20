@@ -889,6 +889,94 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Modal WithFormValidationFocusRetention play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Åpne modal
+    </span>
+  </button>
+  <dialog class="_modal_i27cp_5"
+          aria-labelledby="modalHeadingId-:r1m:"
+          data-variant="outline"
+          open
+  >
+    <div tabindex="-1"
+         class="_modalContainer_i27cp_23"
+    >
+      <button class="_button_19ayz_1 _button_medium_19ayz_42  _closeButton_i27cp_58"
+              data-brightness="default"
+              type="button"
+      >
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_19ayz_26"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1n:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1n:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_i27cp_48">
+        <h1 id="modalHeadingId-:r1m:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_i27cp_26"
+        >
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <div class="_wrapper_1dg5q_1">
+          <label id="labelId-:r1r:"
+                 class="_label_348na_5"
+                 for="textFieldTextboxId-:r1p:"
+          >
+            Navn (minst 3 tegn)
+          </label>
+          <input id="textFieldTextboxId-:r1p:"
+                 class="_textbox_1dg5q_5 $ _textboxMarginTop_1dg5q_24"
+                 data-variant="medium"
+                 autocomplete="off"
+                 aria-describedby="textFieldErrorId-:r1o:"
+                 aria-invalid="true"
+          >
+          <div id="textFieldErrorId-:r1o:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+            <div class="_errorMessage_1ycvu_15">
+              <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-hidden="true"
+                   role="img"
+              >
+                <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+                </path>
+              </svg>
+              <p class="_errorMessageText_1ycvu_32">
+                Navnet må være minst 3 tegn
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1"
+                type="button"
+        >
+          <span class="_buttonText_6ybyo_69">
+            Lukk
+          </span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
 exports[`Tester/Modal WithHideTitle play-test 1`] = `
 <div data-test-block="true">
   <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23">
