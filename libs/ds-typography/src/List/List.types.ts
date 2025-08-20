@@ -1,4 +1,4 @@
-import React, { JSX, Ref } from 'react';
+import React, { ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -14,7 +14,7 @@ export interface ListProps extends BaseProps {
   /** Margin under listen */
   hasSpacing?: boolean;
   /** Listelementer */
-  children?: JSX.Element | JSX.Element[];
+  children?: ReactNode;
   /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
   canBeManuallyFocused?: boolean;
 }

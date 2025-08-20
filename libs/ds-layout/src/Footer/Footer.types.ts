@@ -1,4 +1,4 @@
-import { JSX, ReactNode, Ref } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import { LinkProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -38,7 +38,7 @@ export interface FooterProps extends BaseProps {
    * Footer.Logo blir plassert ved siden av Skatteetatens logo.
    * Footer.Link blir plassert under logoen horisontalt.
    */
-  children?: JSX.Element | JSX.Element[];
+  children?: ReactNode;
 }
 
 export interface FooterComponent extends React.FC<FooterProps> {

@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactNode, JSX, Ref } from 'react';
+import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
@@ -15,7 +15,7 @@ export interface FieldsetProps
   ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<{ legend?: string } & HelpProps['classNames']>;
   /** Innhold */
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
   /** Ledetekst */
   legend: ReactNode;
   /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
