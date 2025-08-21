@@ -133,14 +133,16 @@ export const TopBannerExternalUserMenu = ({
             {user.role === 'virksomhet' && user.orgnr && (
               <div>{`${t('ds_overlays:rolepicker.BusinessDescriptionPrefix')} ${formatOrganisationNumber(user.orgnr)}`}</div>
             )}
-            <InlineButton
-              className={styles.marginTopS}
-              data-testid={'switch-user'}
-              svgPath={PersonMoreSVGpath}
-              onClick={onSwitchUserClick}
-            >
-              {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
-            </InlineButton>
+            {onSwitchUserClick && (
+              <InlineButton
+                className={styles.marginTopS}
+                data-testid={'switch-user'}
+                svgPath={PersonMoreSVGpath}
+                onClick={onSwitchUserClick}
+              >
+                {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
+              </InlineButton>
+            )}
             <Divider spacingTop={'m'}></Divider>
             <div className={styles.link}>
               {(user.role === 'virksomhet' || user.role === 'meg') && (

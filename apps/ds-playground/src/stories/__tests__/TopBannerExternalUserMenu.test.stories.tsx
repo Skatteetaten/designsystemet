@@ -23,6 +23,7 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
     onSwitchUserClick: { table: { disable: true } },
   },
   args: {
+    onSwitchUserClick: fn(),
     user: {
       name: 'Buljo Tulljo',
       role: 'virksomhet',
@@ -42,7 +43,6 @@ type Story = StoryObj<typeof meta>;
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const userIconTitle = dsI18n.t('ds_layout:topbannerbutton.CompanyTitle');
 const defaultUserName = 'Buljo Tulljo';
-
 export const Default: Story = {
   name: 'With Defaults (A1, A2, B1, B2)',
   play: async ({ args, canvasElement }) => {
@@ -266,5 +266,29 @@ export const EscapeKeyFocusReturn: Story = {
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
 
     await expect(menuButton).toHaveFocus();
+  },
+};
+
+export const WithNoOnSwitchUserClick: Story = {
+  name: 'With No onSwitchUserClick',
+  args: {
+    onSwitchUserClick: undefined,
+    notificationCount: 0,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const menuButton = canvas.getByRole('button', {
+      name: `${userIconTitle} ${defaultUserName} ${menuText}`,
+    });
+
+    await expect(menuButton).toBeInTheDocument();
+    await userEvent.click(menuButton);
+
+    const switchUserButton = canvas.queryByRole('button', {
+      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.SwitchUser'),
+    });
+
+    await expect(switchUserButton).not.toBeInTheDocument();
   },
 };
