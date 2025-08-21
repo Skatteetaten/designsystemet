@@ -390,3 +390,7 @@ dl.descriptionListTwoColumns {
   padding: var(--spacing-s)
     var(--semantic-responsive-internal-container-spacing);
 }
+
+.tabIndexNoOutline:focus {
+  outline: none;
+}
