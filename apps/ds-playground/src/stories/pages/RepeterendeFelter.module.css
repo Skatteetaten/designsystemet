@@ -89,9 +89,5 @@
   @media (width <= 640px) {
     flex-direction: column;
     gap: var(--spacing-m);
-
-    .panelContentRigth {
-      flex: 1;
-    }
   }
 }

@@ -12,8 +12,7 @@ import {
   ArrowBackSVGpath,
   DeleteSVGpath,
   EditSVGpath,
-  Icon,
-  KronerSVGpath,
+  KronerIcon,
   PrintSVGpath,
 } from '@skatteetaten/ds-icons';
 import { type Business, Modal } from '@skatteetaten/ds-overlays';
@@ -24,12 +23,6 @@ import stylesAsString from './RepeterendeFelter.module.css?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
 import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
-const markdownDoc = `
-Dette eksemplet viser hvordan man kan implementere repeterende felter i et skjema. Brukeren kan legge til, redigere og slette personer i en liste.
-
-[Les om hvordan fokus skal håndteres for repeterende elementer i ensideapplikasjoner i Skatteetatens veileder for stil og tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/ensideapplikasjon/)
-`;
-
 export default {
   title: 'Sidetyper/Ekstern/Repeterende felter',
   decorators: [withPageLayout],
@@ -39,9 +32,6 @@ export default {
       disable: true,
     },
     docs: {
-      description: {
-        component: markdownDoc,
-      },
       source: {
         transform: includeStylesTransform(stylesAsString),
       },
@@ -355,20 +345,21 @@ export function RepeterendeFelter(): JSX.Element {
           )}
         </Modal>
       </div>
-      <Panel color={'forest'} className={styles.panel}>
-        <div className={styles.panelContent}>
-          {!isMobile && <Icon svgPath={KronerSVGpath} size={'extraLarge'} />}
-          <div className={styles.panelContentRigth}>
-            <Heading as={'h3'} level={3} hasSpacing>
-              {'Foreløpig oppsummering'}
-            </Heading>
-            <DescriptionList className={styles.desciptionList}>
-              <DescriptionList.Element term={'Antall personer'}>
-                {cards.length}
-              </DescriptionList.Element>
-            </DescriptionList>
-          </div>
-        </div>
+      <Panel
+        color={'forest'}
+        {...(!isMobile && {
+          renderIcon: (): JSX.Element => <KronerIcon size={'extraLarge'} />,
+        })}
+        className={styles.panel}
+      >
+        <Heading as={'h3'} level={3} hasSpacing>
+          {'Foreløpig oppsummering'}
+        </Heading>
+        <DescriptionList>
+          <DescriptionList.Element term={'Antall personer'}>
+            {cards.length}
+          </DescriptionList.Element>
+        </DescriptionList>
       </Panel>
 
       <div className={`${styles.flexStartRow} ${styles.article}`}>
