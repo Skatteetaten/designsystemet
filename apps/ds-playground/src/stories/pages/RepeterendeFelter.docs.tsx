@@ -1,4 +1,3 @@
-/* eslint-disable react/forbid-dom-props */
 import type { ReactNode } from 'react';
 
 import { Link } from '@skatteetaten/ds-buttons';
