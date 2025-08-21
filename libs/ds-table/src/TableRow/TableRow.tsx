@@ -62,7 +62,7 @@ export const TableRow = ({
     } else {
       onExpand?.();
     }
-    setIsExpandedInternal(!isExpandedInternal);
+    setIsExpandedInternal((prevState) => !prevState);
   };
 
   const getButtonTitle = (): string =>
