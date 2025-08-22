@@ -252,29 +252,25 @@ export const NonDigitFilteringInput = {
 export const RawValueExtraction = {
   name: 'Raw Value Extraction',
   render: (): JSX.Element => {
-    const TestComponent = (): JSX.Element => {
-      const formatter = useFormattedInput({
-        type: 'organisationNumber',
-        initialValue: '123456789',
-      });
+    const formatter = useFormattedInput({
+      type: 'organisationNumber',
+      initialValue: '123456789',
+    });
 
-      return (
-        <>
-          <TextField
-            label={'Organisasjonsnummer'}
-            value={formatter.value}
-            onChange={formatter.onChange}
-            onKeyDown={formatter.onKeyDown}
-          />
-          <div data-testid={'raw-value'}>
-            {'Raw: '}
-            {formatter.rawValue}
-          </div>
-        </>
-      );
-    };
-
-    return <TestComponent />;
+    return (
+      <>
+        <TextField
+          label={'Organisasjonsnummer'}
+          value={formatter.value}
+          onChange={formatter.onChange}
+          onKeyDown={formatter.onKeyDown}
+        />
+        <div data-testid={'raw-value'}>
+          {'Raw: '}
+          {formatter.rawValue}
+        </div>
+      </>
+    );
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
