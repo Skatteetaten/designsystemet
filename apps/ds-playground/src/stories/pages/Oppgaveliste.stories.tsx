@@ -133,7 +133,7 @@ export const Oppgaveliste = (): JSX.Element => {
             href={'#'}
             onClick={(e) => {
               e.preventDefault();
-              linkTo('Sidetyper/Ekstern/Deloppgave (beta)', 'Deloppgave')();
+              linkTo('Sidetyper/Ekstern/Oppgaveliste (beta)', 'Deloppgave')();
             }}
           >
             {task.text}

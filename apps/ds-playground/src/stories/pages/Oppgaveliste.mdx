@@ -1,0 +1,19 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as Oppgaveliste from './Oppgaveliste.stories';
+import * as Deloppgave from './Deloppgave.stories';
+
+{/* <Meta title="Sidetyper/Ekstern/Oppgaveliste (beta)" /> */}
+
+<Meta title="Sidetyper/Ekstern/Oppgaveliste (beta)" />
+
+# Oppgaveliste
+
+Eksemplet viser en oversikt over alle oppgaver brukeren trenger å gjøre, og lett se hvilke som er gjort og hvilke som gjenstår. Oppgaver trenger ikke nødvendigvis gjøres i rekkefølge.
+
+<Canvas of={Oppgaveliste.Oppgaveliste} />
+
+# Deloppgave
+
+Dette er et eksempel på en deloppgave som er koblet til en [oppgaveliste](#oppgaveliste). Meningen er å illustrere hvordan man går frem og tilbake mellom oppgavelisten og en deloppgaven, ikke nødvendigvis oppbyggingen av selve oppgaven som kan variere fra løsning til løsning.
+
+<Canvas of={Deloppgave.Deloppgave} />
