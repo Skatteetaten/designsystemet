@@ -101,8 +101,7 @@ const numberOptions: Intl.NumberFormatOptions = {
 
 const formatNumberFull = ({
   input,
-  //TODO: Bør vi defaulte til bokmål i stedet for brukeren sitt språkvalg?
-  // ønsker at den skal være koblet til valget som er gjort i språkvelgeren?
+  //TODO: ønsker at den skal være koblet til valget som er gjort i språkvelgeren?
   locale = 'nb-NO',
   options = {},
 }: FormatNumberFullProps): FormattingResponse => {
@@ -167,8 +166,5 @@ const getSeparators = (
   const groupSeparator = separators?.find(
     (part) => part.type === 'group'
   )?.value;
-  // const minusSign = separators?.find(
-  //   (part) => part.type === 'minusSign'
-  // )?.value;
   return { decimalSeparator, groupSeparator };
 };
