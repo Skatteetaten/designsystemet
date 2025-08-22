@@ -59,6 +59,41 @@ console.log(phoneNumber.value);
 // 11 22 33 44
 ```
 
+### Beløp (Beta)
+
+Formatering av beløp er basert på [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat). Formateringsfunksjonen vil som standard følge [Skatteetatens skriveregler](https://www.skatteetaten.no/stilogtone/skrive/skriveregler/tall/), men det er også mulig å sende inn et options object som overstyrer instillingene til Intl.NumberFormat.
+
+Input kan være enten number eller string. Hvis input er string vil formatteren forsøke å tolke den som et tall i henhold til valgt locale. Hvis input ikke inneholder et gyldig tall så returneres input igjen som string uten noen endringer.
+
+```tsx
+import { formatter, formatNumber } from '@skatteetaten/ds-core-utils';
+const amount = formatter({
+  value: '1234567',
+  type: 'number',
+});
+// 1 234 567
+
+formatNumber('1234567');
+// 1 234 567
+
+//engelsk format med komma som tusenskille og punktum som desimalskille
+formatNumber(1234567, { locale: 'en-GB' });
+// 1,234,567
+
+// valuta blir NOK som default, men det er mulig med vilkårlige kombinasjoner av locale og currency
+const result = formatNumber('12345.6', {
+  locale: 'en-GB',
+  style: 'currency',
+  currency: 'GBP',
+});
+// £12,345.60
+
+const result = formatNumber('12345.6789', {
+  style: 'currency',
+});
+// 12 345,68 kr
+```
+
 ## Grupperingshjelper for org.- fødsels-, konto- og telefonnummer
 
 Fødselsnummer, organisasjonsnummer, kontonummer og telefonnummer viser grupperte siffer som skilles med mellomrom. Nevnte grupperingen er lik for alle språk. F.eks så grupperes organisasjonsnummer med tre og tre siffer. 123 456 789 Den generiske funksjonen tar imot alle typer tegn, fjerner alle tegn som ikke er gyldig med valgt type og retunerer siffer som er gruppert.
