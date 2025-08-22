@@ -4,8 +4,18 @@ import type { ChangeEvent, KeyboardEvent } from 'react';
 import { formatter } from './formatter';
 import { FormatTypes } from './formatter.types';
 
+type InputFormatTypes = Exclude<FormatTypes, 'number'>;
+
+/**
+ * Ikke-bryteromstegn brukt som separator i formaterte verdier.
+ * Brukes for å forhindre linjeskift innenfor formaterte tall.
+ */
 const NON_BREAKING_SPACE = '\u00A0';
 
+/**
+ * Maksimalt tillatte lengder for ulike inputtyper.
+ * Disse begrensningene sikrer gyldig datainnlegging for norske standarder.
+ */
 const MAX_LENGTHS = {
   nationalIdentityNumber: 11,
   organisationNumber: 9,
@@ -13,24 +23,46 @@ const MAX_LENGTHS = {
   phoneNumber: 10,
 } as const;
 
+/**
+ * Henter maksimalt tillatt lengde for en gitt formattype.
+ * @param type - Formattypen å hente maksimallengde for
+ * @returns Maksimallengde
+ */
 const getMaxLength = (type: FormatTypes): number | undefined => {
-  if (type === 'number') return undefined;
   return MAX_LENGTHS[type as keyof typeof MAX_LENGTHS];
 };
 
-interface UseFormatterMaskOptions {
-  type: FormatTypes;
+/**
+ * Konfigurasjonsalternativer for useFormattedInput-hooken.
+ */
+interface UseFormattedInputOptions {
+  /** Typen formattering som skal anvendes */
+  type: InputFormatTypes;
+  /** Startverdi som skal formateres og vises (valgfritt) */
   initialValue?: string;
 }
 
-interface UseFormatterMaskReturn {
+/**
+ * Returtype for useFormattedInput-hooken.
+ */
+interface UseFormattedInputReturn {
+  /** Den formaterte verdien for visning */
   value: string;
-  displayValue: string;
+  /** Endringshåndterer for input-hendelser */
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  /** Key down-håndterer for spesiell tasteatferd */
   onKeyDown: (event: KeyboardEvent<HTMLInputElement>) => void;
+  /** Den rå uformaterte verdien (bare tall) */
   rawValue: string;
 }
 
+/**
+ * Posisjonerer markøren etter et bestemt antall siffer i et formatert input.
+ * Bruker requestAnimationFrame for å sikre riktig timing med DOM-oppdateringer.
+ * @param input - HTML input-elementet
+ * @param formattedValue - Den formaterte strengverdien
+ * @param targetDigitCount - Antall siffer markøren skal posisjoneres etter
+ */
 const positionCursorAfterDigits = (
   input: HTMLInputElement,
   formattedValue: string,
@@ -53,20 +85,45 @@ const positionCursorAfterDigits = (
   });
 };
 
+/**
+ * (BETA - kan komme endringer)
+ * Hook for å administrere formaterte inputfelt med automatisk formatering og markørposisjonering.
+ * Støtter norske personnummer, organisasjonsnummer, kontonummer og telefonnummer.
+ *
+ * Funksjoner:
+ * - Automatisk formatering under skriving
+ * - Smart markørposisjonering etter formatendringer
+ * - Korrekt håndtering av backspace/delete ved separatorgrenser
+ * - Utvinning av råverdi (bare siffer)
+ * - Lengdevalidering for spesifikke formater
+ * @param options - Konfigurasjonsobjekt
+ * @param options.type - Typen formatering som skal anvendes
+ * @param options.initialValue - Startverdi som skal formateres og vises
+ * @returns Objekt med formatert verdi, hendelseshåndterere og råverdi
+ * @example
+ * ```tsx
+ * const phoneFormatter = useFormattedInput({
+ *   type: 'phoneNumber',
+ *   initialValue: '12345678'
+ * });
+ *
+ * return (
+ *   <TextField
+ *     value={phoneFormatter.value}
+ *     onChange={phoneFormatter.onChange}
+ *     onKeyDown={phoneFormatter.onKeyDown}
+ *   />
+ * );
+ * ```
+ */
 export const useFormattedInput = ({
   type,
   initialValue = '',
-}: UseFormatterMaskOptions): UseFormatterMaskReturn => {
+}: UseFormattedInputOptions): UseFormattedInputReturn => {
   const [rawValue, setRawValue] = useState(() => {
-    if (type === 'number') {
-      // For numbers, preserve the original value structure
-      return initialValue;
-    } else {
-      // For other types, clean to digits only and limit length
-      const cleaned = initialValue.replace(/[^\d]/g, '');
-      const maxLength = getMaxLength(type);
-      return maxLength ? cleaned.substring(0, maxLength) : cleaned;
-    }
+    const cleaned = initialValue.replace(/[^\d]/g, '');
+    const maxLength = getMaxLength(type);
+    return maxLength ? cleaned.substring(0, maxLength) : cleaned;
   });
 
   const displayValue = formatter({
@@ -74,13 +131,64 @@ export const useFormattedInput = ({
     type,
   }).value;
 
+  const handleBackspaceAtSeparator = useCallback(
+    (input: HTMLInputElement, digitCount: number) => {
+      if (digitCount > 0) {
+        const newDigits =
+          rawValue.slice(0, digitCount - 1) + rawValue.slice(digitCount);
+        setRawValue(newDigits);
+
+        const formattedValue = formatter({
+          value: newDigits,
+          type,
+        }).value;
+
+        positionCursorAfterDigits(input, formattedValue, digitCount - 1);
+      }
+    },
+    [rawValue, type]
+  );
+
+  const handleDeleteAtSeparator = useCallback(
+    (input: HTMLInputElement, digitsBeforeSeparator: number) => {
+      if (digitsBeforeSeparator < rawValue.length) {
+        const newDigits =
+          rawValue.slice(0, digitsBeforeSeparator) +
+          rawValue.slice(digitsBeforeSeparator + 1);
+        setRawValue(newDigits);
+
+        const formattedValue = formatter({
+          value: newDigits,
+          type,
+        }).value;
+
+        positionCursorAfterDigits(input, formattedValue, digitsBeforeSeparator);
+      }
+    },
+    [rawValue, type]
+  );
+
+  const handleDeleteAtDigit = useCallback(
+    (input: HTMLInputElement, digitsBeforeCursor: number) => {
+      if (digitsBeforeCursor < rawValue.length) {
+        const newDigits =
+          rawValue.slice(0, digitsBeforeCursor) +
+          rawValue.slice(digitsBeforeCursor + 1);
+        setRawValue(newDigits);
+
+        const formattedValue = formatter({
+          value: newDigits,
+          type,
+        }).value;
+
+        positionCursorAfterDigits(input, formattedValue, digitsBeforeCursor);
+      }
+    },
+    [rawValue, type]
+  );
+
   const handleKeyDown = useCallback(
     (event: KeyboardEvent<HTMLInputElement>) => {
-      // Skip special handling for number type - let browser handle it naturally
-      if (type === 'number') {
-        return;
-      }
-
       const input = event.currentTarget;
       const cursorPosition = input.selectionStart || 0;
       const value = input.value;
@@ -120,20 +228,7 @@ export const useFormattedInput = ({
             }
           }
 
-          // Remove the last digit before the separator (at position digitCount-1)
-          if (digitCount > 0) {
-            const newDigits =
-              rawValue.slice(0, digitCount - 1) + rawValue.slice(digitCount);
-            setRawValue(newDigits);
-
-            const formattedValue = formatter({
-              value: newDigits,
-              type,
-            }).value;
-
-            // Position cursor after the remaining digits before where separator was
-            positionCursorAfterDigits(input, formattedValue, digitCount - 1);
-          }
+          handleBackspaceAtSeparator(input, digitCount);
         }
         // Normal backspace behavior - delete the digit before cursor
         else if (cursorPosition > 0 && !isPreviousCharacterSeparator) {
@@ -162,26 +257,7 @@ export const useFormattedInput = ({
             }
           }
 
-          // The digit to remove is at position digitsBeforeSeparator in rawValue
-          // (this is the first digit after the separator)
-          if (digitsBeforeSeparator < rawValue.length) {
-            const newDigits =
-              rawValue.slice(0, digitsBeforeSeparator) +
-              rawValue.slice(digitsBeforeSeparator + 1);
-            setRawValue(newDigits);
-
-            const formattedValue = formatter({
-              value: newDigits,
-              type,
-            }).value;
-
-            // Position cursor at the same position (before where the separator now is)
-            positionCursorAfterDigits(
-              input,
-              formattedValue,
-              digitsBeforeSeparator
-            );
-          }
+          handleDeleteAtSeparator(input, digitsBeforeSeparator);
         }
         // If cursor is after a digit and delete is pressed, delete the next digit
         else if (
@@ -198,25 +274,7 @@ export const useFormattedInput = ({
             }
           }
 
-          // Remove the digit at the cursor position
-          if (digitsBeforeCursor < rawValue.length) {
-            const newDigits =
-              rawValue.slice(0, digitsBeforeCursor) +
-              rawValue.slice(digitsBeforeCursor + 1);
-            setRawValue(newDigits);
-
-            const formattedValue = formatter({
-              value: newDigits,
-              type,
-            }).value;
-
-            // Keep cursor at the same position
-            positionCursorAfterDigits(
-              input,
-              formattedValue,
-              digitsBeforeCursor
-            );
-          }
+          handleDeleteAtDigit(input, digitsBeforeCursor);
         }
       }
 
@@ -232,7 +290,13 @@ export const useFormattedInput = ({
         event.preventDefault();
       }
     },
-    [rawValue, type]
+    [
+      rawValue,
+      type,
+      handleBackspaceAtSeparator,
+      handleDeleteAtSeparator,
+      handleDeleteAtDigit,
+    ]
   );
 
   const handleChange = useCallback(
@@ -240,13 +304,6 @@ export const useFormattedInput = ({
       const input = event.target as HTMLInputElement;
       const inputValue = input.value;
 
-      if (type === 'number') {
-        // For numbers, store the raw input value and let formatter handle it
-        setRawValue(inputValue);
-        return;
-      }
-
-      // For other types, maintain existing logic
       const cursorPosition = input.selectionStart || 0;
       const oldValue = inputValue;
 
@@ -276,7 +333,6 @@ export const useFormattedInput = ({
 
   return {
     value: displayValue,
-    displayValue,
     onChange: handleChange,
     onKeyDown: handleKeyDown,
     rawValue,
