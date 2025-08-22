@@ -14,6 +14,5 @@ declare const classNames: {
   readonly cardContent: 'cardContent';
   readonly panel: 'panel';
   readonly panelContent: 'panelContent';
-  readonly panelContentRigth: 'panelContentRigth';
 };
 export default classNames;
