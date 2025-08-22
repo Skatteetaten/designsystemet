@@ -50,15 +50,15 @@ export const Preview: Story = {} satisfies Story;
 export const ExternalExample: Story = {
   name: 'I publikumsløsning',
   render: (_args): JSX.Element => {
+    // .breadcrumbs--external {
+    //   width: var(--semantic-responsive-container);
+    //   margin: var(--spacing-m) auto;
+    //   padding: var(--semantic-responsive-container-spacing);
+    //   box-sizing: border-box;
+    // }
     return (
       <>
         <TopBannerExternal />
-        {/* .breadcrumbs--external {
-          width: var(--semantic-responsive-container);
-          margin: var(--spacing-m) auto;
-          padding: var(--semantic-responsive-container-spacing);
-          box-sizing: border-box;
-        } */}
         <Breadcrumbs className={'breadcrumbs--external'}>
           <Breadcrumbs.List shouldCollapse>
             <Breadcrumbs.Item>
@@ -83,35 +83,33 @@ export const ExternalExample: Story = {
     );
   },
 } satisfies Story;
-ExternalExample.parameters = exampleParameters;
-ExternalExample.parameters = { layout: 'fullscreen' };
+ExternalExample.parameters = {
+  ...exampleParameters,
+  layout: 'fullscreen',
+};
 
 export const InternalExample: Story = {
   name: 'I intern løsning',
   render: (_args): JSX.Element => {
+    // .breadcrumbs--internal {
+    //   padding: var(--spacing-s) var(--semantic-responsive-internal-container-spacing);
+    // }
     return (
       <>
         <TopBannerInternal title={'Navn på system'} logoHref={'/'} />
-        {/* .breadcrumbs--internal {
-          padding: var(--spacing-s) var(--semantic-responsive-internal-container-spacing);
-        } */}
         <Breadcrumbs className={'breadcrumbs--internal'}>
           <Breadcrumbs.List shouldCollapse>
             <Breadcrumbs.Item>
-              <Breadcrumbs.Link href={'#'}>
-                {'Bedrift og organisasjon'}
-              </Breadcrumbs.Link>
+              <Breadcrumbs.Link href={'#'}>{'Arbeidsliste'}</Breadcrumbs.Link>
             </Breadcrumbs.Item>
             <Breadcrumbs.Item>
-              <Breadcrumbs.Link href={'#'}>{'Avgifter'}</Breadcrumbs.Link>
+              <Breadcrumbs.Link href={'#'}>{'Eplepress AS'}</Breadcrumbs.Link>
             </Breadcrumbs.Item>
             <Breadcrumbs.Item>
-              <Breadcrumbs.Link href={'#'}>
-                {'Avgifter på bil og kjøretøy'}
-              </Breadcrumbs.Link>
+              <Breadcrumbs.Link href={'#'}>{'Arbeidsoppgave'}</Breadcrumbs.Link>
             </Breadcrumbs.Item>
             <Breadcrumbs.Item>
-              <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
+              <Breadcrumbs.Link href={'#'}>{'Informasjon'}</Breadcrumbs.Link>
             </Breadcrumbs.Item>
           </Breadcrumbs.List>
         </Breadcrumbs>
@@ -119,5 +117,7 @@ export const InternalExample: Story = {
     );
   },
 } satisfies Story;
-InternalExample.parameters = exampleParameters;
-InternalExample.parameters = { layout: 'fullscreen' };
+InternalExample.parameters = {
+  ...exampleParameters,
+  layout: 'fullscreen',
+};
