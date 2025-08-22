@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { StoryObj } from '@storybook/react';
 
-import { formatter } from '@skatteetaten/ds-core-utils';
+import { formatter, useFormattedInput } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
 export default {
@@ -21,70 +21,59 @@ const defaultArgs = {
 export const Formatters: StoryObj = {
   argTypes: defaultArgs,
   render: function Render() {
-    const [organisationNumberValue, setOrganisationNumberValue] = useState('');
-    const [nationalidentitynumberValue, setNationalidentitynumberValue] =
-      useState('');
-    const [bankAccountNumberValue, setBankAccountNumberValue] = useState('');
-    useEffect(() => {
-      setNationalidentitynumberValue(
-        formatter({ value: '26301518292', type: 'nationalIdentityNumber' })
-          .value
-      );
-      setOrganisationNumberValue(
-        formatter({
-          value: '974 761 076',
-          type: 'organisationNumber',
-        }).value
-      );
-      setBankAccountNumberValue(
-        formatter({ value: '7694 05 24802', type: 'bankAccountNumber' }).value
-      );
-    }, []);
+    const phoneNumberFormatter = useFormattedInput({
+      type: 'phoneNumber',
+      initialValue: '12345678',
+    });
+
+    const organisationNumberFormatter = useFormattedInput({
+      type: 'organisationNumber',
+      initialValue: '974761076',
+    });
+
+    const nationalIdentityNumberFormatter = useFormattedInput({
+      type: 'nationalIdentityNumber',
+      initialValue: '26301518292',
+    });
+
+    const bankAccountNumberFormatter = useFormattedInput({
+      type: 'bankAccountNumber',
+      initialValue: '76940524802',
+    });
 
     return (
       <>
         <TextField
-          label={'Fødselsnummer (11 siffer)'}
-          value={nationalidentitynumberValue}
+          label={'Telefonnummer'}
+          value={phoneNumberFormatter.value}
           className={'textField300'}
           hasSpacing
-          onChange={(e) =>
-            setNationalidentitynumberValue(
-              formatter({
-                value: e.target.value ? e.target.value : '',
-                type: 'nationalIdentityNumber',
-              }).value
-            )
-          }
+          onChange={phoneNumberFormatter.onChange}
+          onKeyDown={phoneNumberFormatter.onKeyDown}
         />
-
         <TextField
           label={'Organisasjonsnummer (9 siffer)'}
-          value={organisationNumberValue}
+          value={organisationNumberFormatter.value}
           className={'textField300'}
           hasSpacing
-          onChange={(e) =>
-            setOrganisationNumberValue(
-              formatter({
-                value: e.target.value ? e.target.value : '',
-                type: 'organisationNumber',
-              }).value
-            )
-          }
+          onChange={organisationNumberFormatter.onChange}
+          onKeyDown={organisationNumberFormatter.onKeyDown}
         />
 
         <TextField
-          label={'Kontonummer'}
-          value={bankAccountNumberValue}
+          label={'Fødselsnummer (11 siffer)'}
+          value={nationalIdentityNumberFormatter.value}
           className={'textField300'}
-          onChange={(e) =>
-            setBankAccountNumberValue(
-              formatter({
-                value: e.target.value ? e.target.value : '',
-                type: 'bankAccountNumber',
-              }).value
-            )
-          }
+          hasSpacing
+          onChange={nationalIdentityNumberFormatter.onChange}
+          onKeyDown={nationalIdentityNumberFormatter.onKeyDown}
+        />
+        <TextField
+          label={'Kontonummer'}
+          value={bankAccountNumberFormatter.value}
+          className={'textField300'}
+          onChange={bankAccountNumberFormatter.onChange}
+          onKeyDown={bankAccountNumberFormatter.onKeyDown}
         />
       </>
     );
