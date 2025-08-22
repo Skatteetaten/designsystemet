@@ -63,7 +63,7 @@ console.log(phoneNumber.value);
 
 Formatering av beløp er basert på [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat). Formateringsfunksjonen vil som standard følge [Skatteetatens skriveregler](https://www.skatteetaten.no/stilogtone/skrive/skriveregler/tall/), men det er også mulig å sende inn et options object som overstyrer instillingene til Intl.NumberFormat.
 
-Input kan være enten number eller string. Hvis input er string vil formatteren forsøke å tolke den som et tall i henhold til valgt locale. Hvis input ikke inneholder et gyldig tall så returneres input igjen som string uten noen endriner.
+Input kan være enten number eller string. Hvis input er string vil formatteren forsøke å tolke den som et tall i henhold til valgt locale. Hvis input ikke inneholder et gyldig tall så returneres input igjen som string uten noen endringer.
 
 ```tsx
 import { formatter, formatNumber } from '@skatteetaten/ds-core-utils';
