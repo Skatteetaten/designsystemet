@@ -347,10 +347,9 @@ export function RepeterendeFelter(): JSX.Element {
       </div>
       <Panel
         color={'forest'}
-        {...(!isMobile && {
-          renderIcon: (): JSX.Element => <KronerIcon size={'extraLarge'} />,
-        })}
+        renderIcon={() => <KronerIcon size={'extraLarge'} />}
         className={styles.panel}
+        hideGraphicMobile
       >
         <Heading as={'h3'} level={3} hasSpacing>
           {'Foreløpig oppsummering'}
