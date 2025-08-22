@@ -20,7 +20,7 @@ const MAX_LENGTHS = {
   nationalIdentityNumber: 11,
   organisationNumber: 9,
   bankAccountNumber: 11,
-  phoneNumber: 10,
+  phoneNumber: 8,
 } as const;
 
 /**

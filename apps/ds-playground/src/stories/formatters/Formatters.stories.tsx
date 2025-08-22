@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
-
 import { StoryObj } from '@storybook/react';
 
-import { formatter, useFormattedInput } from '@skatteetaten/ds-core-utils';
+import { useFormattedInput } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
 export default {

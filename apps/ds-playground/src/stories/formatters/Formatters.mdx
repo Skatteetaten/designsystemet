@@ -141,6 +141,49 @@ export const formatter = ({ value, type, locale }: FormatterProps): FormattingRe
 }
 ```
 
+# useFormattedInput Hook
+
+Hook for håndtering av formaterte input-felt med automatisk formatering og markørposisjonering. Støtter norske telefonnummer, organisasjonsnummer, fødselsnummer og kontonummer.
+
+## Funksjonalitet
+
+- **Automatisk formatering** under skriving
+- **Smart markørposisjonering** etter formatendringer
+- **Backspace/delete-håndtering** ved separatorgrenser
+- **Råverdi-utvinning** (bare siffer)
+- **Lengdevalidering** for spesifikke formater
+
+## Bruk
+
+```tsx
+import { useFormattedInput } from '@skatteetaten/ds-core-utils';
+
+const formatter = useFormattedInput({
+  type: 'phoneNumber',
+  initialValue: '12345678',
+});
+
+<TextField
+  value={formatter.value}
+  onChange={formatter.onChange}
+  onKeyDown={formatter.onKeyDown}
+/>;
+```
+
+## Støttede typer
+
+- `phoneNumber` - Norske telefonnummer (8 siffer)
+- `organisationNumber` - Organisasjonsnummer (9 siffer)
+- `nationalIdentityNumber` - Fødselsnummer (11 siffer)
+- `bankAccountNumber` - Kontonummer (11 siffer)
+
+## Returnerer
+
+- `value` - Formatert visningsverdi
+- `onChange` - Endringshåndterer
+- `onKeyDown` - Tastaturhåndterer
+- `rawValue` - Uformatert verdi (bare siffer)
+
 ## Examples
 
 <Canvas of={Formatters.Formatters} />
