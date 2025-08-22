@@ -215,9 +215,13 @@ a.docs {
   text-decoration-line: underline;
 }
 
-p.fontSizeM,
-li.fontSizeM,
-.fontSizeM {
+ul.fontSizeM {
+  li {
+    font-size: var(--font-size-m);
+  }
+}
+
+p.fontSizeM {
   font-size: var(--font-size-m);
 }
 

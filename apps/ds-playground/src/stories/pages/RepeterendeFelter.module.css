@@ -82,7 +82,6 @@
 
 .panelContent {
   display: flex;
-  max-width: 556px;
   flex-direction: row;
   gap: var(--spacing-l);
 

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { Link } from '@skatteetaten/ds-buttons';
+import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 type DocLinkItem = {
@@ -25,16 +25,13 @@ export function RepeterendeFelterDocs(): ReactNode {
       <Paragraph className={'fontSizeM'}>
         {'Les om bakgrunn og detaljer i relaterte mønstre:'}
       </Paragraph>
-
-      <ul>
+      <LinkGroup className={'fontSizeM'}>
         {urls.map((link) => (
-          <li key={link.href} className={'fontSizeM'}>
-            <Link href={link.href} className={'docs'}>
-              {link.text}
-            </Link>
-          </li>
+          <LinkGroup.Link key={link.href} href={link.href} className={'docs'}>
+            {link.text}
+          </LinkGroup.Link>
         ))}
-      </ul>
+      </LinkGroup>
     </div>
   );
 }
