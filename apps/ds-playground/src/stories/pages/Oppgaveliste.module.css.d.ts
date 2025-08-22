@@ -10,5 +10,7 @@ declare const classNames: {
   readonly marginTopXl: 'marginTopXl';
   readonly marginTopM: 'marginTopM';
   readonly sendInButton: 'sendInButton';
+  readonly resetList: 'resetList';
+  readonly resetListElement: 'resetListElement';
 };
 export default classNames;
