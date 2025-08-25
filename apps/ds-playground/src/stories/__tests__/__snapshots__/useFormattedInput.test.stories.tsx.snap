@@ -82,14 +82,14 @@ exports[`Tester/useFormattedInput MaxLengthValidation play-test 1`] = `
            class="_label_348na_5"
            for="textFieldTextboxId-:rh:"
     >
-      Telefonnummer (max 8 digits)
+      Telefonnummer (max 10 digits)
     </label>
     <input id="textFieldTextboxId-:rh:"
            class="_textbox_1dg5q_5 $ _textboxMarginTop_1dg5q_24"
            data-testid="formatted-input-phoneNumber"
            data-variant="medium"
            autocomplete="off"
-           value="12&nbsp;34&nbsp;56&nbsp;78"
+           value="12&nbsp;34&nbsp;56&nbsp;78&nbsp;90"
     >
     <div id="textFieldErrorId-:rg:"
          aria-live="assertive"

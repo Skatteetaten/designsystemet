@@ -157,7 +157,7 @@ export const MaxLengthValidation = {
   render: (): JSX.Element => (
     <TestFormattedInput
       type={'phoneNumber'}
-      label={'Telefonnummer (max 8 digits)'}
+      label={'Telefonnummer (max 10 digits)'}
     />
   ),
   play: async ({ canvasElement }): Promise<void> => {
@@ -165,15 +165,15 @@ export const MaxLengthValidation = {
     const textbox = canvas.getByRole('textbox') as HTMLInputElement;
 
     textbox.focus();
-    // Try to type more than 8 digits
+    // Try to type more than 10 digits
     await userEvent.type(textbox, '123456789012345');
 
-    // Should only show first 8 digits formatted
-    await expect(textbox).toHaveValue(formatNBS('12 34 56 78'));
+    // Should only show first 10 digits formatted
+    await expect(textbox).toHaveValue(formatNBS('12 34 56 78 90'));
 
     // Try to type another digit - should be prevented
     await userEvent.type(textbox, '1');
-    await expect(textbox).toHaveValue(formatNBS('12 34 56 78')); // Should remain unchanged
+    await expect(textbox).toHaveValue(formatNBS('12 34 56 78 90')); // Should remain unchanged
   },
 } satisfies Story;
 
