@@ -14,14 +14,16 @@ import { includeStylesTransform } from '../../../.storybook/helpers';
 import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 export default {
-  title: 'Sidetyper/Ekstern/Deloppgave (beta)',
+  title: 'Sidetyper/Ekstern/Oppgaveliste (beta)',
   decorators: [withPageLayout],
   parameters: {
     layout: 'fullscreen',
     controls: {
       disable: true,
     },
+    tags: ['!autodocs'],
     docs: {
+      autodocs: false,
       source: {
         transform: includeStylesTransform(stylesAsString),
       },

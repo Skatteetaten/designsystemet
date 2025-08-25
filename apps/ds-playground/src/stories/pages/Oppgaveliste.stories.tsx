@@ -126,14 +126,14 @@ export const Oppgaveliste = (): JSX.Element => {
     }
 
     return (
-      <Fragment key={task.text}>
+      <li key={task.text} className={styles.resetListElement}>
         <div className={styles.task}>
           <Link
             className={styles.taskLink}
             href={'#'}
             onClick={(e) => {
               e.preventDefault();
-              linkTo('Sidetyper/Ekstern/Deloppgave (beta)', 'Deloppgave')();
+              linkTo('Sidetyper/Ekstern/Oppgaveliste (beta)', 'Deloppgave')();
             }}
           >
             {task.text}
@@ -149,7 +149,7 @@ export const Oppgaveliste = (): JSX.Element => {
           </div>
         </div>
         <Divider />
-      </Fragment>
+      </li>
     );
   };
 
@@ -193,7 +193,7 @@ export const Oppgaveliste = (): JSX.Element => {
           </span>
           {'Sjekk før du starter'}
         </Heading>
-        {checkTasks.map(createTask)}
+        <ul className={styles.resetList}>{checkTasks.map(createTask)}</ul>
         <Heading
           as={'h2'}
           className={`${styles.heading} ${styles.marginTopXl}`}
@@ -205,7 +205,7 @@ export const Oppgaveliste = (): JSX.Element => {
           </span>
           {'Forbered søknad'}
         </Heading>
-        {prepareTasks.map(createTask)}
+        <ul className={styles.resetList}>{prepareTasks.map(createTask)}</ul>
         <Button className={styles.sendInButton} svgPath={SendSVGpath}>
           {'Se over og send inn'}
         </Button>

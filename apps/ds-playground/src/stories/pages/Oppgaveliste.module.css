@@ -84,3 +84,14 @@
 .sendInButton {
   margin: var(--spacing-xxl) 0 var(--spacing-m);
 }
+
+.resetList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.resetListElement {
+  padding: 0;
+  margin: 0;
+}
