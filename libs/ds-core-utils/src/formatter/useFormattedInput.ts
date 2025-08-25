@@ -3,6 +3,7 @@ import type { ChangeEvent, KeyboardEvent } from 'react';
 
 import { formatter } from './formatter';
 import { FormatTypes } from './formatter.types';
+import { maxLengths } from './utils';
 
 type InputFormatTypes = Exclude<FormatTypes, 'number'>;
 
@@ -13,23 +14,12 @@ type InputFormatTypes = Exclude<FormatTypes, 'number'>;
 const NON_BREAKING_SPACE = '\u00A0';
 
 /**
- * Maksimalt tillatte lengder for ulike inputtyper.
- * Disse begrensningene sikrer gyldig datainnlegging for norske standarder.
- */
-const MAX_LENGTHS = {
-  nationalIdentityNumber: 11,
-  organisationNumber: 9,
-  bankAccountNumber: 11,
-  phoneNumber: 8,
-} as const;
-
-/**
  * Henter maksimalt tillatt lengde for en gitt formattype.
  * @param type - Formattypen å hente maksimallengde for
  * @returns Maksimallengde
  */
 const getMaxLength = (type: FormatTypes): number | undefined => {
-  return MAX_LENGTHS[type as keyof typeof MAX_LENGTHS];
+  return maxLengths[type as keyof typeof maxLengths];
 };
 
 /**
