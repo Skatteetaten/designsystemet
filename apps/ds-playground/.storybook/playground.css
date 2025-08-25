@@ -215,6 +215,16 @@ a.docs {
   text-decoration-line: underline;
 }
 
+ul.fontSizeM {
+  li {
+    font-size: var(--font-size-m);
+  }
+}
+
+p.fontSizeM {
+  font-size: var(--font-size-m);
+}
+
 .semantic-article {
   max-width: var(--semantic-responsive-article);
   margin: auto;

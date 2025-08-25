@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  KeyboardEventHandler,
   Ref,
 } from 'react';
 
@@ -38,6 +39,7 @@ interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   onFocus?: FocusEventHandler<HTMLInputElement>;
+  onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 }
 
 export interface TextFieldCommonProps

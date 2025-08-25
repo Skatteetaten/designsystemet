@@ -4,11 +4,7 @@ import {
   formatter,
   formatNumber,
 } from '../formatter';
-import { NON_BREAKING_SPACE } from '../utils';
-
-const formatNBS = (value: string): string => {
-  return value.replaceAll(' ', NON_BREAKING_SPACE);
-};
+import { formatNBS } from '../utils';
 
 describe('Formatter', () => {
   it('Når format skal bli for organisasjonsnummer', () => {

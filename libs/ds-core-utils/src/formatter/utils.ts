@@ -3,7 +3,11 @@ import { NumberParser } from './NumberParser';
 
 export const NON_BREAKING_SPACE = '\u00A0';
 
-const maxLengths: ValidData = {
+export const formatNBS = (value: string): string => {
+  return value.replaceAll(' ', NON_BREAKING_SPACE);
+};
+
+export const maxLengths: ValidData = {
   nationalIdentityNumber: 11,
   organisationNumber: 9,
   bankAccountNumber: 11,

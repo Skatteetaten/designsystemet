@@ -1,0 +1,23 @@
+import { Meta } from '@storybook/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
+import { DocIntro } from '../utils/DocIntro';
+import { RepeterendeFelterDocs } from './RepeterendeFelter.docs';
+
+import { RepeterendeFelter } from './RepeterendeFelter.stories';
+
+<Meta
+  title="Sidetyper/Ekstern/Repeterende felter"
+  component={RepeterendeFelter}
+  parameters={{
+    layout: 'fullscreen',
+    controls: {
+      disable: true,
+    },
+  }}
+/>
+
+# Repeterende felter
+
+<RepeterendeFelterDocs />
+
+<Canvas of={RepeterendeFelter} />
