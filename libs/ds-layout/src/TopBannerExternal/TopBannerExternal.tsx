@@ -84,7 +84,13 @@ export const TopBannerExternal = (({
   const isSearchOpen = openMenu === 'Search';
   const showMenu = firstColumn || secondColumn || thirdColumn;
   const showSearch = onSearchClick || onSearch || searchContent;
-  const islangPickerInMenu = showMenu && user && isBreakpointS;
+
+  const childrenArray = Children.toArray(children);
+  const hasUserMenuAsChild = childrenArray.find((child) =>
+    isValidElement(child) ? child.type === TopBannerExternal.UserMenu : null
+  );
+  const islangPickerInMenu =
+    showMenu && (user || hasUserMenuAsChild) && isBreakpointS;
 
   const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
   const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
@@ -198,7 +204,6 @@ export const TopBannerExternal = (({
   };
 
   // TODO: Dersom språkknappen fjernes, er ikke dette nødvendig. Kun midlertidig for å plassere eventuell UserMenu på riktig sted.
-  const childrenArray = Children.toArray(children);
   const userMenu = childrenArray.filter((child) =>
     isValidElement(child) ? child.type === TopBannerExternal.UserMenu : null
   );
