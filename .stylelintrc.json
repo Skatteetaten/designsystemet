@@ -11,7 +11,7 @@
     {
       "files": ["**/*.scss"],
       "extends": ["./libs/ds-dev-config/config/designsystem-stylelintrc.yml"],
-      "rules": {}
+      "rules": { "number-max-precision": 5 }
     }
   ],
   "rules": {}
