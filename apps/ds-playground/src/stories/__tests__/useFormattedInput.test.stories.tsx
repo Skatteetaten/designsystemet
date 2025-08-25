@@ -4,6 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { useFormattedInput } from '@skatteetaten/ds-core-utils';
+import { formatNBS } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
 const meta = {
@@ -69,13 +70,13 @@ export const PhoneNumberFormatting = {
     const textbox = canvas.getByRole('textbox') as HTMLInputElement;
 
     // Should format initial value
-    await expect(textbox).toHaveValue('12\u00A034\u00A056\u00A078');
+    await expect(textbox).toHaveValue(formatNBS('12 34 56 78'));
 
     // Test typing additional numbers
     textbox.focus();
     await userEvent.clear(textbox);
     await userEvent.type(textbox, '87654321');
-    await expect(textbox).toHaveValue('87\u00A065\u00A043\u00A021');
+    await expect(textbox).toHaveValue(formatNBS('87 65 43 21'));
   },
 } satisfies Story;
 
@@ -93,13 +94,13 @@ export const OrganisationNumberFormatting = {
     const textbox = canvas.getByRole('textbox') as HTMLInputElement;
 
     // Should format initial value (974 761 076)
-    await expect(textbox).toHaveValue('974\u00A0761\u00A0076');
+    await expect(textbox).toHaveValue(formatNBS('974 761 076'));
 
     // Test typing new number
     textbox.focus();
     await userEvent.clear(textbox);
     await userEvent.type(textbox, '123456789');
-    await expect(textbox).toHaveValue('123\u00A0456\u00A0789');
+    await expect(textbox).toHaveValue(formatNBS('123 456 789'));
   },
 } satisfies Story;
 
@@ -117,13 +118,13 @@ export const NationalIdentityNumberFormatting = {
     const textbox = canvas.getByRole('textbox') as HTMLInputElement;
 
     // Should format initial value (263015 18292)
-    await expect(textbox).toHaveValue('263015\u00A018292');
+    await expect(textbox).toHaveValue(formatNBS('263015 18292'));
 
     // Test typing new number
     textbox.focus();
     await userEvent.clear(textbox);
     await userEvent.type(textbox, '12345612345');
-    await expect(textbox).toHaveValue('123456\u00A012345');
+    await expect(textbox).toHaveValue(formatNBS('123456 12345'));
   },
 } satisfies Story;
 
@@ -141,13 +142,13 @@ export const BankAccountNumberFormatting = {
     const textbox = canvas.getByRole('textbox') as HTMLInputElement;
 
     // Should format initial value (7694 05 24802)
-    await expect(textbox).toHaveValue('7694\u00A005\u00A024802');
+    await expect(textbox).toHaveValue(formatNBS('7694 05 24802'));
 
     // Test typing new number
     textbox.focus();
     await userEvent.clear(textbox);
     await userEvent.type(textbox, '12341212345');
-    await expect(textbox).toHaveValue('1234\u00A012\u00A012345');
+    await expect(textbox).toHaveValue(formatNBS('1234 12 12345'));
   },
 } satisfies Story;
 
@@ -164,15 +165,15 @@ export const MaxLengthValidation = {
     const textbox = canvas.getByRole('textbox') as HTMLInputElement;
 
     textbox.focus();
-    // Try to type more than 10 digits
+    // Try to type more than 8 digits
     await userEvent.type(textbox, '123456789012345');
 
-    // Should only show first 10 digits formatted
-    await expect(textbox).toHaveValue('12\u00A034\u00A056\u00A078');
+    // Should only show first 8 digits formatted
+    await expect(textbox).toHaveValue(formatNBS('12 34 56 78'));
 
     // Try to type another digit - should be prevented
     await userEvent.type(textbox, '1');
-    await expect(textbox).toHaveValue('12\u00A034\u00A056\u00A078'); // Should remain unchanged
+    await expect(textbox).toHaveValue(formatNBS('12 34 56 78')); // Should remain unchanged
   },
 } satisfies Story;
 
@@ -191,14 +192,14 @@ export const BackspaceAtSeparator = {
 
     textbox.focus();
     // Initial value: "123 456 789"
-    await expect(textbox).toHaveValue('123\u00A0456\u00A0789');
+    await expect(textbox).toHaveValue(formatNBS('123 456 789'));
 
     // Position cursor after first separator (after "123 ")
     textbox.setSelectionRange(4, 4);
 
     // Press backspace - should delete the "3" before the separator
     await userEvent.keyboard('{Backspace}');
-    await expect(textbox).toHaveValue('124\u00A0567\u00A089');
+    await expect(textbox).toHaveValue(formatNBS('124 567 89'));
   },
 } satisfies Story;
 
@@ -217,14 +218,14 @@ export const DeleteAtSeparator = {
 
     textbox.focus();
     // Initial value: "123 456 789"
-    await expect(textbox).toHaveValue('123\u00A0456\u00A0789');
+    await expect(textbox).toHaveValue(formatNBS('123 456 789'));
 
     // Position cursor before first separator (after "123")
     textbox.setSelectionRange(3, 3);
 
     // Press delete - should delete the "4" after the separator
     await userEvent.keyboard('{Delete}');
-    await expect(textbox).toHaveValue('123\u00A0567\u00A089');
+    await expect(textbox).toHaveValue(formatNBS('123 567 89'));
   },
 } satisfies Story;
 
@@ -245,7 +246,7 @@ export const NonDigitFilteringInput = {
     await userEvent.type(textbox, '1a2b3c4d5e6f7g8h');
 
     // Should only show digits, formatted
-    await expect(textbox).toHaveValue('12\u00A034\u00A056\u00A078');
+    await expect(textbox).toHaveValue(formatNBS('12 34 56 78'));
   },
 } satisfies Story;
 
@@ -278,7 +279,7 @@ export const RawValueExtraction = {
     const rawValueDisplay = canvas.getByTestId('raw-value');
 
     // Initial formatted value should be "123 456 789"
-    await expect(textbox).toHaveValue('123\u00A0456\u00A0789');
+    await expect(textbox).toHaveValue(formatNBS('123 456 789'));
     // Raw value should be just digits
     await expect(rawValueDisplay).toHaveTextContent('Raw: 123456789');
 
@@ -286,7 +287,7 @@ export const RawValueExtraction = {
     await userEvent.clear(textbox);
     await userEvent.type(textbox, '987654321');
 
-    await expect(textbox).toHaveValue('987\u00A0654\u00A0321');
+    await expect(textbox).toHaveValue(formatNBS('987 654 321'));
     await waitFor(() => {
       expect(rawValueDisplay).toHaveTextContent('Raw: 987654321');
     });
