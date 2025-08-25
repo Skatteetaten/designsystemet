@@ -343,19 +343,19 @@ exports[`Tester/Accordion/Item WithPersistedState play-test 1`] = `
       </button>
     </div>
     <div class="_content_gtoqo_115 _content_medium_gtoqo_126">
-      <div class="_container_1vcnk_5">
+      <div class="_container_fcjgo_5">
         <input id="checkboxInputId-:ri:"
-               class="_input_1vcnk_20"
+               class="_input_fcjgo_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:ri:"
-               class="_label_1vcnk_32"
+               class="_label_fcjgo_32"
         >
-          <span class="_labelCheckbox_1vcnk_43">
-            <span class="_labelCheckboxCheck_1vcnk_53">
+          <span class="_labelCheckbox_fcjgo_43">
+            <span class="_labelCheckboxCheck_fcjgo_53">
             </span>
           </span>
-          <span class="_labelContent_1vcnk_66">
+          <span class="_labelContent_fcjgo_66">
             <span class>
               Jeg er valgt
             </span>

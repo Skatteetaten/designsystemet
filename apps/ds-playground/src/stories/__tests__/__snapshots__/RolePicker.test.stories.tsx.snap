@@ -292,19 +292,19 @@ exports[`Tester/RolePicker Defaults play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:rd:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:rd:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -316,20 +316,20 @@ exports[`Tester/RolePicker Defaults play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:rf:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:rf:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -1288,19 +1288,19 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r1b:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r1b:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -1312,20 +1312,20 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r1d:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r1d:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -1752,19 +1752,19 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r5m:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r5m:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -1776,20 +1776,20 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r5o:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r5o:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -2382,19 +2382,19 @@ exports[`Tester/RolePicker WithCloseError play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:re0:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:re0:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -2406,20 +2406,20 @@ exports[`Tester/RolePicker WithCloseError play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:re2:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:re2:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -3009,19 +3009,19 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r50:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r50:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -3033,20 +3033,20 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r52:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r52:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -3436,20 +3436,20 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
               >
                 Andre personer
               </h2>
-              <div class="_container_1vcnk_5  _showDeceasedChecbox_10bzt_9">
+              <div class="_container_fcjgo_5  _showDeceasedChecbox_10bzt_9">
                 <input id="checkboxInputId-:rbb:"
-                       class="_input_1vcnk_20"
+                       class="_input_fcjgo_20"
                        type="checkbox"
                        checked
                 >
                 <label for="checkboxInputId-:rbb:"
-                       class="_label_1vcnk_32"
+                       class="_label_fcjgo_32"
                 >
-                  <span class="_labelCheckbox_1vcnk_43">
-                    <span class="_labelCheckboxCheck_1vcnk_53">
+                  <span class="_labelCheckbox_fcjgo_43">
+                    <span class="_labelCheckboxCheck_fcjgo_53">
                     </span>
                   </span>
-                  <span class="_labelContent_1vcnk_66">
+                  <span class="_labelContent_fcjgo_66">
                     <span class>
                       Vis avdøde
                     </span>
@@ -4257,19 +4257,19 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r8d:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r8d:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -4281,20 +4281,20 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r8f:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r8f:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -4847,19 +4847,19 @@ exports[`Tester/RolePicker WithMinimumEntitiesForSearch play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:rd2:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:rd2:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -4871,20 +4871,20 @@ exports[`Tester/RolePicker WithMinimumEntitiesForSearch play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:rd4:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:rd4:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -5341,20 +5341,20 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:ram:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:ram:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -5625,19 +5625,19 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:rc7:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:rc7:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -5649,19 +5649,19 @@ exports[`Tester/RolePicker WithNoDoubleUnitTypes play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:rc9:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:rc9:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -6005,19 +6005,19 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:rb3:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:rb3:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -6236,19 +6236,19 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r6s:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r6s:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -6260,20 +6260,20 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r6u:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r6u:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -7229,19 +7229,19 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r31:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r31:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -7253,20 +7253,20 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r33:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r33:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -7733,20 +7733,20 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r1v:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r1v:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -7758,19 +7758,19 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r21:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r21:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -8427,19 +8427,19 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r9h:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r9h:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -8451,20 +8451,20 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r9j:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r9j:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -9036,19 +9036,19 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r42:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r42:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -9060,20 +9060,20 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r44:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                          checked
                   >
                   <label for="checkboxInputId-:r44:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
@@ -9619,19 +9619,19 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                 Virksomheter
               </h2>
               <div class="_checkboxGroup_3mzou_9">
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r7p:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r7p:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis avviklede virksomheter
                       </span>
@@ -9643,19 +9643,19 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                   >
                   </div>
                 </div>
-                <div class="_container_1vcnk_5">
+                <div class="_container_fcjgo_5">
                   <input id="checkboxInputId-:r7r:"
-                         class="_input_1vcnk_20"
+                         class="_input_fcjgo_20"
                          type="checkbox"
                   >
                   <label for="checkboxInputId-:r7r:"
-                         class="_label_1vcnk_32"
+                         class="_label_fcjgo_32"
                   >
-                    <span class="_labelCheckbox_1vcnk_43">
-                      <span class="_labelCheckboxCheck_1vcnk_53">
+                    <span class="_labelCheckbox_fcjgo_43">
+                      <span class="_labelCheckboxCheck_fcjgo_53">
                       </span>
                     </span>
-                    <span class="_labelContent_1vcnk_66">
+                    <span class="_labelContent_fcjgo_66">
                       <span class>
                         Vis underenheter
                       </span>
