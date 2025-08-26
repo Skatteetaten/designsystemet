@@ -41,7 +41,7 @@ export const Deloppgave = (): JSX.Element => {
     <main className={styles.mainExternal}>
       <div className={styles.miniNav}>
         <Link href={'#'} svgPath={ArrowBackSVGpath}>
-          {'Til Min side'}
+          {'Til Innrapportering for rytmisk musikkutdanning'}
         </Link>
         <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
       </div>
