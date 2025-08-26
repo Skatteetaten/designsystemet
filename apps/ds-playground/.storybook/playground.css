@@ -401,6 +401,10 @@ dl.descriptionListTwoColumns {
     var(--semantic-responsive-internal-container-spacing);
 }
 
+.tabIndexNoOutline:focus {
+  outline: none;
+}
+
 .interactiveColor.interactiveColor {
   color: var(--semantic-interactive-main);
 }

@@ -943,7 +943,7 @@ export const AddRow: Story = {
       null
     );
     const addPersonButtonRef = useRef<HTMLButtonElement>(null);
-    const personNumberInputRef = useRef<HTMLInputElement>(null);
+    const addPersonRef = useRef<HTMLDivElement>(null);
 
     const sortedData = data.slice().sort((a, b) => {
       const sortKey = sortState.sortKey as keyof (typeof data)[0];
@@ -1025,7 +1025,6 @@ export const AddRow: Story = {
         <div className={'editableContent'}>
           <div className={'flex gapM bottomSpacingXL'}>
             <TextField
-              ref={isAdd ? personNumberInputRef : undefined}
               label={'Fødselsnummer (11 siffer)'}
               value={personNumber}
               errorMessage={personNumberError}
@@ -1076,7 +1075,7 @@ export const AddRow: Story = {
           className={'bottomSpacingL'}
           onClick={(): void => {
             setAddRow(true);
-            setTimeout(() => personNumberInputRef.current?.focus(), 0);
+            setTimeout(() => addPersonRef.current?.focus(), 0);
           }}
         >
           {'Legg til person'}
@@ -1137,7 +1136,15 @@ export const AddRow: Story = {
                   );
                 }}
               >
-                <Table.DataCell colSpan={4}>{'Legg til person'}</Table.DataCell>
+                <Table.DataCell colSpan={4}>
+                  <div
+                    ref={addPersonRef}
+                    tabIndex={-1}
+                    className={'tabIndexNoOutline'}
+                  >
+                    {'Legg til person'}
+                  </div>
+                </Table.DataCell>
               </Table.EditableRow>
             )}
             {sortedData.map((person) => (
