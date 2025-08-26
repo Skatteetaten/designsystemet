@@ -10,7 +10,8 @@
   background-color: var(--palette-graphite-0);
 
   @media (min-width: breakpoints.$breakpoint-xs) {
-    padding: var(--spacing-m);
+    // hardkoder px-verdier slik at tabellen får plass med stor/ekstra stor skrift i nettleser.
+    padding: 16px;
   }
 
   &Navigation {
@@ -19,7 +20,9 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: var(--spacing-xs);
-    gap: var(--spacing-xs);
+
+    // hardkoder px-verdier slik at tabellen får plass med stor/ekstra stor skrift i nettleser.
+    gap: 4px;
 
     &MonthAndYearContainer {
       display: flex;
@@ -50,12 +53,16 @@
       flex-wrap: nowrap;
       justify-content: center;
       margin-bottom: var(--spacing-m);
-      gap: var(--spacing-l);
+
+      // hardkoder px-verdier slik at tabellen får plass med stor/ekstra stor skrift i nettleser.
+      gap: 24px;
 
       &MonthAndYearContainer {
         width: auto;
         order: unset;
-        gap: var(--spacing-m);
+
+        // hardkoder px-verdier slik at tabellen får plass med stor/ekstra stor skrift i nettleser.
+        gap: 16px;
       }
 
       &ArrowIcon {
@@ -63,11 +70,15 @@
       }
 
       &Month {
-        width: 10.4375rem;
+        // hardkoder px-verdier slik at tabellen får plass med stor/ekstra stor skrift i nettleser.
+        min-width: 128px;
+        max-width: 186px;
       }
 
       &Year {
-        width: 4.375rem;
+        // hardkoder px-verdier slik at tabellen får plass med stor/ekstra stor skrift i nettleser.
+        min-width: 70px;
+        max-width: 86px;
       }
     }
   }
