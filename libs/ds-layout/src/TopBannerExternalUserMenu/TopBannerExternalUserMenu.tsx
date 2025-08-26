@@ -158,10 +158,6 @@ export const TopBannerExternalUserMenu = ({
               {!!notificationCount && notificationCount > 0 && (
                 <span
                   id={'notificationCount'}
-                  aria-label={t(
-                    'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
-                    { count: notificationCount }
-                  )}
                   className={styles.notificationBadge}
                   data-testid={'varsel-circle'}
                 >

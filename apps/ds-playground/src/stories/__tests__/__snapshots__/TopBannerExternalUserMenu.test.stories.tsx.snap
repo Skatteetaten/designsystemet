@@ -47,7 +47,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
         &nbsp;Meny
       </span>
       <span class="srOnly">
-        Varsler, 5 uleste
+        &nbsp;Varsler, 5 uleste
       </span>
       <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_a1gs7_93"
            viewbox="0 0 24 24"
@@ -118,7 +118,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
           Varsel
         </a>
         <span id="notificationCount"
-              aria-label="Varsler, 5 uleste"
               class="_notificationBadge_11fw5_35"
               data-testid="varsel-circle"
         >
@@ -632,7 +631,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
         &nbsp;Meny
       </span>
       <span class="srOnly">
-        Varsler, 5 uleste
+        &nbsp;Varsler, 5 uleste
       </span>
       <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_a1gs7_93"
            viewbox="0 0 24 24"
@@ -703,7 +702,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
           Varsel
         </a>
         <span id="notificationCount"
-              aria-label="Varsler, 5 uleste"
               class="_notificationBadge_11fw5_35"
               data-testid="varsel-circle"
         >
@@ -994,7 +992,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithLongBusinessName smoke-t
         &nbsp;Meny
       </span>
       <span class="srOnly">
-        Varsler, 5 uleste
+        &nbsp;Varsler, 5 uleste
       </span>
       <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_a1gs7_93"
            viewbox="0 0 24 24"
@@ -1059,7 +1057,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications 
         &nbsp;Meny
       </span>
       <span class="srOnly">
-        Varsler, 100 uleste
+        &nbsp;Varsler, 100 uleste
       </span>
       <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_a1gs7_93"
            viewbox="0 0 24 24"
@@ -1130,7 +1128,6 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications 
           Varsel
         </a>
         <span id="notificationCount"
-              aria-label="Varsler, 100 uleste"
               class="_notificationBadge_11fw5_35"
               data-testid="varsel-circle"
         >
