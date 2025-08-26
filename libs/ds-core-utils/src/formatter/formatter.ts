@@ -2,74 +2,23 @@ import {
   FormattingResponse,
   FormatTypes,
   FormatOptions,
-  ValidData,
-  Converted,
+  FormatNumberFullProps,
+  FormatNumberOptions,
 } from './formatter.types';
+import { NumberParser } from './NumberParser';
+import { cleanInput, insertSpaces, minusToHyphen } from './utils';
 
-export const NON_BREAKING_SPACE = '\u00A0';
-
-const maxLengths: ValidData = {
-  nationalIdentityNumber: 11,
-  organisationNumber: 9,
-  bankAccountNumber: 11,
-  phoneNumber: 10,
-};
-
-const cleanInput = ({
-  value,
-  type,
-}: {
-  value: string;
+type FormatGenericProps = {
+  value: string | number;
   type: FormatTypes;
-}): Converted => {
-  if (
-    [
-      'nationalIdentityNumber',
-      'organisationNumber',
-      'bankAccountNumber',
-      'phoneNumber',
-    ].includes(type)
-  ) {
-    /* Seksjon for å håndtere alt annet en number-format */
-    let newValue = value.replace(/[^\d]/g, '');
-    if (type in maxLengths) {
-      newValue = newValue.substring(0, maxLengths[type]);
-    }
-    return {
-      value: newValue,
-    };
-  } else {
-    return {
-      value: '',
-    };
-  }
-};
-
-const insertSpaces = ({
-  value,
-  positions,
-}: {
-  value: string;
   positions: number[];
-}): string => {
-  let result = value;
-  const strIndex = value.length;
-  const pos = positions.filter((e) => e < strIndex).sort((a, b) => a - b);
-  for (const place of [...pos].reverse()) {
-    result = `${result.slice(0, place)}${NON_BREAKING_SPACE}${result.slice(place)}`;
-  }
-  return result;
 };
 
 const formatGeneric = ({
   value,
   type,
   positions,
-}: {
-  value: string;
-  type: FormatTypes;
-  positions: number[];
-}): FormattingResponse => {
+}: FormatGenericProps): FormattingResponse => {
   let reformatted = value;
   reformatted = cleanInput({ value: reformatted, type }).value;
   reformatted = insertSpaces({ value: reformatted, positions });
@@ -81,7 +30,13 @@ const formatGeneric = ({
 export const formatter = ({
   value,
   type,
+  locale,
+  options,
 }: FormatOptions): FormattingResponse => {
+  if (type === 'number') {
+    return formatNumberFull({ input: value, locale, options });
+  }
+
   if (type === 'nationalIdentityNumber') {
     return formatGeneric({
       value,
@@ -136,4 +91,80 @@ export const formatPhoneNumber = (phoneNumber: string): string => {
   });
 
   return result.value;
+};
+
+const numberOptions: Intl.NumberFormatOptions = {
+  style: 'decimal',
+  // hvis style = 'currency' så kaster den TypeError i runtime hvis currency ikke er definert
+  currency: 'nok',
+};
+
+const formatNumberFull = ({
+  input,
+  //TODO: ønsker at den skal være koblet til valget som er gjort i språkvelgeren?
+  locale = 'nb-NO',
+  options = {},
+}: FormatNumberFullProps): FormattingResponse => {
+  const inputAsString = input.toString();
+  const InputAsNumber =
+    typeof input === 'number'
+      ? input
+      : new NumberParser(locale).parse(inputAsString);
+
+  //Hvis input ikke er et gyldig tall så returnerer vi input uten endring.
+  if (isNaN(InputAsNumber)) {
+    return {
+      value: inputAsString,
+    };
+  }
+
+  const numberFormatter = new Intl.NumberFormat(locale, {
+    ...numberOptions,
+    //maximumFractionDigits: 19, TODO: Hvofor har Olav satt 19 her?
+    ...options,
+  });
+  let formatted = numberFormatter.format(InputAsNumber);
+  //Formatteren kan legge inn inn annet unicode symbol enn vanlig "-".
+  formatted = minusToHyphen(formatted);
+
+  const { decimalSeparator } = getSeparators(numberFormatter);
+  const numberHasDecimal = new RegExp(`${decimalSeparator}`);
+  const isDecimalTailInInput =
+    numberHasDecimal.test(inputAsString) &&
+    inputAsString.slice(-1) === decimalSeparator;
+
+  const valueWithDecimalTail = isDecimalTailInInput
+    ? `${formatted}${decimalSeparator}`
+    : formatted;
+
+  return {
+    value: formatted ?? '',
+    valueWithDecimalTail,
+  };
+};
+
+export const formatNumber = (
+  input: string | number,
+  options?: FormatNumberOptions
+): string => {
+  const { value } = formatNumberFull({
+    input: input,
+    locale: options?.locale,
+    options,
+  });
+  return value;
+};
+
+const getSeparators = (
+  formatter: Intl.NumberFormat
+): { decimalSeparator?: string; groupSeparator?: string } => {
+  // Tallet -1234.5 er minste eksempeltall som returnerer group- og desimaltegnene.
+  const separators = formatter.formatToParts(-1234.5);
+  const decimalSeparator = separators?.find(
+    (part) => part.type === 'decimal'
+  )?.value;
+  const groupSeparator = separators?.find(
+    (part) => part.type === 'group'
+  )?.value;
+  return { decimalSeparator, groupSeparator };
 };

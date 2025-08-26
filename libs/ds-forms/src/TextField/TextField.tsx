@@ -59,6 +59,7 @@ export const TextField = ({
   onBlur,
   onChange,
   onFocus,
+  onKeyDown,
   onHelpToggle,
 }: TextFieldProps): JSX.Element => {
   useValidateFormRequiredProps({ required, showRequiredMark });
@@ -81,7 +82,14 @@ export const TextField = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (!thousandSeparator) return;
+    if (onKeyDown) {
+      onKeyDown(e);
+      return;
+    }
+
+    if (!thousandSeparator) {
+      return;
+    }
 
     const input = e.currentTarget;
     const cursorPosition = input.selectionStart || 0;

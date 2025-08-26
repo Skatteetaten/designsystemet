@@ -14,14 +14,16 @@ import { includeStylesTransform } from '../../../.storybook/helpers';
 import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
 export default {
-  title: 'Sidetyper/Ekstern/Deloppgave (beta)',
+  title: 'Sidetyper/Ekstern/Oppgaveliste (beta)',
   decorators: [withPageLayout],
   parameters: {
     layout: 'fullscreen',
     controls: {
       disable: true,
     },
+    tags: ['!autodocs'],
     docs: {
+      autodocs: false,
       source: {
         transform: includeStylesTransform(stylesAsString),
       },
@@ -39,7 +41,7 @@ export const Deloppgave = (): JSX.Element => {
     <main className={styles.mainExternal}>
       <div className={styles.miniNav}>
         <Link href={'#'} svgPath={ArrowBackSVGpath}>
-          {'Til Min side'}
+          {'Til Innrapportering for rytmisk musikkutdanning'}
         </Link>
         <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
       </div>

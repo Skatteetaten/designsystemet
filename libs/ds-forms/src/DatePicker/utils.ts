@@ -40,7 +40,7 @@ export const parseDateFromInput = (
   );
 
   for (const format of dateFormats) {
-    const date = parse(value, format, new Date());
+    const date = parse(value, format, new Date(new Date().getFullYear(), 0, 1));
     if (isValid(date)) {
       return date;
     }

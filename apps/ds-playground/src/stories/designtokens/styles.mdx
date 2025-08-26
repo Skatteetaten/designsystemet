@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Designtokens/Hjelpestiler (SCSS)" />
+
+# Hjelpestiler (SCSS)
+
+## Mixins
+
+Bruk denne kommandoen for å importere mixins:
+
+```bash
+@import '~@skatteetaten/ds-core-utils/styles';
+```
+
+Tilgjengelige mixins er:
+
+- link
+- sr-only
+
+```bash
+.link {
+  @include link;
+}
+
+.srOnly {
+  @include sr-only;
+}
+```

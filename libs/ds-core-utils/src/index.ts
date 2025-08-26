@@ -7,3 +7,5 @@ export * from './i18n';
 export * from './Separator/Separator';
 export * from './hooks/hooks';
 export * from './formatter/formatter';
+export * from './formatter/utils';
+export * from './formatter/useFormattedInput';

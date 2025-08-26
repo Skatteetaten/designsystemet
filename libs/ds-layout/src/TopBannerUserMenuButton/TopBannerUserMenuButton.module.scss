@@ -54,7 +54,9 @@
 }
 
 .menuButton {
-  z-index: 1000;
+  &_open {
+    z-index: 1000;
+  }
 
   .iconWrapper {
     position: relative;
