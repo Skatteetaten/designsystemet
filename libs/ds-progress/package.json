@@ -8,7 +8,7 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "peerDependencies": {
-    "i18next": "^24",
+    "i18next": "^24 || ^25",
     "react": "^19 ",
     "react-i18next": "^15",
     "@skatteetaten/ds-core-utils": "2.1.0"
