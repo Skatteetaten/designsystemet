@@ -37,7 +37,7 @@ export default [
     },
   },
   {
-    files: ['**/*.stories.tsx', '**/test-runner.ts'],
+    files: ['**/*.stories.tsx'],
     rules: {
       'jest/no-standalone-expect': 'off',
       //'sonarjs/no-identical-functions': 'off',
