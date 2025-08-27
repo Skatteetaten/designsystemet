@@ -71,7 +71,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -155,7 +155,6 @@ export const VariantSuccess = {
   name: 'Variant Success (A1, A3)',
   args: {
     ...defaultArgs,
-    children: 'Chromatic testing',
     showAlert: true,
     variant: 'success',
   },
@@ -385,7 +384,7 @@ export const WithCloseOnClickButton = {
     showAlert: true,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   render: (args): JSX.Element => {
     const [, setArgs] = useArgs();
@@ -426,7 +425,7 @@ export const WithAriaLiveOff = {
     ariaLive: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -234,10 +234,10 @@ const globalTypes = {
 const preview = {
   decorators: [
     (Story): JSX.Element => <Story />,
-    // LanguageUpdater,
-    // testBlock,
-    // mockDate,
-    // SpacingUpdater,
+    LanguageUpdater,
+    testBlock,
+    mockDate,
+    SpacingUpdater,
   ],
   parameters,
   globalTypes,
