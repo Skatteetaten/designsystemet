@@ -52,3 +52,7 @@ vitest.config.*.timestamp*
 **/__vis__/**/__diffs__
 **/__vis__/**/__results__
 **/__vis__/local
+
+# storybook
+debug-storybook.log
+build-storybook.log

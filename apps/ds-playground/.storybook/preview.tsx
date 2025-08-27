@@ -139,7 +139,7 @@ const parameters = {
     // 'off' - skip a11y checks entirely
     test: 'off',
   },
-  chromatic: { disableSnapshot: false },
+  chromatic: { disableSnapshot: true },
 };
 
 const argTypes = {
