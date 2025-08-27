@@ -1,5 +1,4 @@
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
-import { storybookVis } from 'storybook-addon-vis/vitest-plugin';
 import { defineConfig } from 'vitest/config';
 
 import path from 'node:path';
@@ -24,13 +23,12 @@ export default defineConfig({
             configDir: path.join(dirname, 'apps/ds-playground/.storybook'),
             storybookUrl: 'http://127.0.0.1:4400',
           }),
-          storybookVis(),
         ],
         test: {
           name: 'storybook',
           browser: {
             enabled: true,
-            headless: false,
+            headless: true,
             provider: 'playwright',
             api: {
               //port: 13337,

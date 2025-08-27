@@ -1,7 +1,5 @@
 import * as a11yAddonAnnotations from '@storybook/addon-a11y/preview';
 import { setProjectAnnotations } from '@storybook/react-vite';
-// @ts-expect-error TODO
-import { vis } from 'storybook-addon-vis/vitest-setup';
 import { beforeAll } from 'vitest';
 
 import * as projectAnnotations from './preview';
@@ -15,7 +13,7 @@ const project = setProjectAnnotations([
 beforeAll(project.beforeAll);
 
 // capture image snapshot at the end of each test
-vis.setup({ auto: false });
+// vis.setup({ auto: false });
 
 // capture image snapshot at the end of each test for multiple themes (light and dark in this example).
 //

@@ -41,6 +41,9 @@ const meta = {
     ariaLive: { table: { disable: true } },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Alert>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -152,6 +155,7 @@ export const VariantSuccess = {
   name: 'Variant Success (A1, A3)',
   args: {
     ...defaultArgs,
+    children: 'Chromatic testing',
     showAlert: true,
     variant: 'success',
   },
