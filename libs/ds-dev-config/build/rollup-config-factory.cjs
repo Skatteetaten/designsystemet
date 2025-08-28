@@ -44,7 +44,7 @@ const bundleCss = (pathToCSS, outputDir) => {
   const config = [];
   const files = glob.sync(pathToCSS);
   files.forEach((file) => {
-    let scoppedSubFolder;
+    let scopedSubFolder;
     const parts = path.dirname(file).split(path.sep);
     const srcIndex = parts.indexOf('src');
     if (srcIndex === -1) {

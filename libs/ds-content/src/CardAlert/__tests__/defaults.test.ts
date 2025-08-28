@@ -1,5 +1,4 @@
 import {
-  ErrorSVGpath,
   InfoSquareSVGpath,
   WarningStopSVGpath,
   WarningSVGpath,
