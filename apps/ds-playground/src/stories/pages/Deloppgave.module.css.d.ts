@@ -1,0 +1,9 @@
+declare const classNames: {
+  readonly mainExternal: 'mainExternal';
+  readonly miniNav: 'miniNav';
+  readonly article: 'article';
+  readonly marginTopM: 'marginTopM';
+  readonly marginBottomXl: 'marginBottomXl';
+  readonly marginRightM: 'marginRightM';
+};
+export default classNames;

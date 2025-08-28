@@ -23,6 +23,7 @@ export const ErrorSummary = (({
   shadowRootNode,
   title,
   titleAs = getErrorSummaryTitleAsDefault(),
+  hasSpacing,
   showErrorSummary,
   children,
 }: ErrorSummaryProps): JSX.Element => {
@@ -52,7 +53,10 @@ export const ErrorSummary = (({
       aria-atomic
     >
       {showErrorSummary && (
-        <div className={`${styles.errorSummary} ${className}`.trim()}>
+        <div
+          className={`${styles.errorSummary} ${className}`.trim()}
+          data-has-spacing={hasSpacing}
+        >
           <div className={styles.iconContainer}>
             <Icon
               svgPath={WarningSVGpath}

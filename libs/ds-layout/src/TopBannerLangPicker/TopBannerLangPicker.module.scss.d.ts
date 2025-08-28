@@ -1,12 +1,17 @@
 declare const classNames: {
   readonly container: 'container';
   readonly overlay: 'overlay';
+  readonly menuButtonDesktopOnly: 'menuButtonDesktopOnly';
+  readonly menuButtonDesktopOnly_outline: 'menuButtonDesktopOnly_outline';
+  readonly icon: 'icon';
+  readonly menuButtonDesktopOnly_filled: 'menuButtonDesktopOnly_filled';
   readonly menuButton: 'menuButton';
   readonly iconWrapper: 'iconWrapper';
   readonly flagIcon: 'flagIcon';
   readonly flagIconSvg: 'flagIconSvg';
   readonly arrowMobile: 'arrowMobile';
   readonly arrowDesktop: 'arrowDesktop';
+  readonly menuButton_open: 'menuButton_open';
   readonly menu: 'menu';
   readonly menuArrow: 'menuArrow';
   readonly list: 'list';

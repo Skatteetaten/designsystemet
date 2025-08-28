@@ -26,6 +26,7 @@ export const colorNamesArr = [
   'white',
   'black',
 ] as const;
+export type Color = (typeof colorNamesArr)[number];
 
 export const sizeArr = [
   'extraSmall',
@@ -37,7 +38,10 @@ export const sizeArr = [
 ] as const;
 export type Size = (typeof sizeArr)[number];
 
-export const formArrSize = [sizeArr[2], sizeArr[3]] as const;
+export const formArrSize = [
+  'medium',
+  'large',
+] as const satisfies readonly Size[];
 export type FormSize = (typeof formArrSize)[number];
 
 export const positionArr = [

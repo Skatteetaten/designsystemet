@@ -2,7 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
-  JSX,
+  ReactNode,
   Ref,
 } from 'react';
 
@@ -51,6 +51,8 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   label: string;
   /** Tilleggstekst */
   description?: LabelWithHelpProps['description'];
+  /** Margin under komponenten */
+  hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
   /** Overskriver default hjelpeikon */
@@ -64,7 +66,7 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   /** Definerer stilen til Select */
   variant?: FormSize;
   /** SelectOption-komponenter */
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
   /** Tekst på feilmelding */

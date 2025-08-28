@@ -1,10 +1,14 @@
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+
 import {
   getDataCellAsDefault,
   getHeaderCellAsDefault,
   getTableCellAlignmentDefault,
   getTableRowExpandButtonPositionDefault,
+  getTableRowExpandButtonTitleDefault,
   getTableRowIsExpandedDefault,
   getTableSumAlignmentDefault,
+  getTableSumTextDefault,
   getTableVariantDefault,
 } from '../defaults';
 
@@ -29,5 +33,13 @@ describe('Table defaults', () => {
   });
   it('Når getTableRowIsExpandedDefault kalles, så returnerer den riktig verdi', () => {
     expect(getTableRowIsExpandedDefault()).toBe(false);
+  });
+  it('Når getTableSumTextDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getTableSumTextDefault()).toBe(dsI18n.t('ds_tables:tablesum.Sum'));
+  });
+  it('Når getTableRowExpandButtonTitleDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getTableRowExpandButtonTitleDefault()).toBe(
+      dsI18n.t('ds_tables:tablerow.Expandable')
+    );
   });
 });

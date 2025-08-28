@@ -1,0 +1,106 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/mixins/styles';
+
+.username {
+  &Button {
+    max-width: 4.5rem;
+
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      max-width: 6.25rem;
+    }
+
+    @media (min-width: breakpoints.$breakpoint-s) {
+      max-width: 7.5rem;
+    }
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      max-width: 20rem;
+    }
+  }
+}
+
+.buttonText {
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -0.25rem;
+  right: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--palette-burgundy-70);
+  outline: 2px solid var(--palette-graphite-0);
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    display: none;
+  }
+
+  &Desktop {
+    display: none;
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      top: -0.25rem;
+      right: -0.25rem;
+      display: inline;
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+}
+
+.menuButton {
+  &_open {
+    z-index: 1000;
+  }
+
+  .iconWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .userIcon {
+    display: flex;
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--semantic-interactive-main);
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      background: none;
+    }
+
+    &Svg {
+      fill: var(--palette-graphite-0);
+    }
+  }
+
+  .arrowMobile {
+    fill: currentcolor;
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      display: none;
+    }
+  }
+
+  .arrowDesktop {
+    display: none;
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      display: inline;
+      fill: currentcolor;
+    }
+  }
+}
+
+.srOnly {
+  @include styles.sr-only;
+}

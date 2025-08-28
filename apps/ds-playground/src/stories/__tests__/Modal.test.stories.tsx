@@ -723,3 +723,60 @@ export const AutoOpenAndCloseOnUserInput = {
     dismissOnEsc: { table: { disable: false } },
   },
 } satisfies Story;
+
+const TemplateWithFormValidation: StoryFn<typeof Modal> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  const [errorMessage, setErrorMessage] = useState<string>('');
+
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Åpne modal'}
+      </Button>
+      <Modal {...args} ref={ref}>
+        <TextField
+          label={'Navn (minst 3 tegn)'}
+          errorMessage={errorMessage}
+          onBlur={() => setErrorMessage('Navnet må være minst 3 tegn')}
+        />
+        <Button onClick={() => ref.current?.close()}>{'Lukk'}</Button>
+      </Modal>
+    </>
+  );
+};
+
+export const WithFormValidationFocusRetention = {
+  render: TemplateWithFormValidation,
+  name: 'With Form Validation Focus Retention',
+  args: {
+    dismissOnEsc: false,
+    dismissOnOutsideClick: false,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  argTypes: {
+    dismissOnEsc: { table: { disable: false } },
+    dismissOnOutsideClick: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const openButton = canvas.getByRole('button', { name: 'Åpne modal' });
+    await userEvent.click(openButton);
+
+    const modal = canvas.getByRole('dialog');
+    await expect(modal).toBeInTheDocument();
+
+    const textField = canvas.getByRole('textbox');
+
+    await userEvent.click(textField);
+    await userEvent.tab();
+
+    const closeButton = canvas.getByRole('button', { name: 'Lukk' });
+    await expect(
+      canvas.getByText('Navnet må være minst 3 tegn')
+    ).toBeInTheDocument();
+    await expect(closeButton).toHaveFocus();
+  },
+} satisfies Story;

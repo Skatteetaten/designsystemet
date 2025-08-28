@@ -2,18 +2,20 @@
 
 exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:re:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rf:"
@@ -70,18 +72,20 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:rk:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5 _radioGroupItemContainer_horizontal_1f9v8_10">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rl:"
@@ -140,21 +144,22 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <fieldset id="htmlId"
             data-testid="123ID"
-            class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11 dummyClassname"
+            class="_fieldset_u2f5e_5 dummyClassname"
             lang="nb"
             form="123form"
+            data-has-spacing="true"
   >
     <legend id="legendId-:r8:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r9:"
@@ -211,18 +216,20 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r3q:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28 dummyClassname"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28 dummyClassname"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3q:"
@@ -242,10 +249,10 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_sf6vs_17   dummyClassname">
+    <div class="_description_5szkl_17   dummyClassname">
       beskrivelse
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3s:"
@@ -300,8 +307,8 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_vog41_15 _errorMessage_1f9v8_15 dummyClassname">
-          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+        <div class="_errorMessage_1ycvu_15 _errorMessage_1f9v8_15 dummyClassname">
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -310,7 +317,7 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_vog41_29">
+          <p class="_errorMessageText_1ycvu_32">
             feil
           </p>
         </div>
@@ -322,18 +329,20 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r16:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r17:"
@@ -391,21 +400,23 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r34:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_description_sf6vs_17">
+    <div class="_description_5szkl_17">
       Vi trenger å vite din type virksomhet.
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r35:"
@@ -462,20 +473,21 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11"
+  <fieldset class="_fieldset_u2f5e_5"
             disabled
+            data-has-spacing="true"
   >
     <legend id="legendId-:r1c:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1d:"
@@ -533,18 +545,20 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r2g:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r2h:"
@@ -600,8 +614,8 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_vog41_15 _errorMessage_1f9v8_15">
-          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+        <div class="_errorMessage_1ycvu_15 _errorMessage_1f9v8_15">
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -610,7 +624,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_vog41_29">
+          <p class="_errorMessageText_1ycvu_32">
             Feilmelding
           </p>
         </div>
@@ -622,18 +636,20 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r2n:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r2o:"
@@ -655,8 +671,8 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndAriaDescribedby play-te
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_vog41_15 _errorMessage_1f9v8_15">
-          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+        <div class="_errorMessage_1ycvu_15 _errorMessage_1f9v8_15">
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -665,7 +681,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndAriaDescribedby play-te
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_vog41_29">
+          <p class="_errorMessageText_1ycvu_32">
             Feilmelding
           </p>
         </div>
@@ -677,18 +693,20 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndAriaDescribedby play-te
 
 exports[`Tester/RadioGroup/RadioGroup WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r3a:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3b:"
@@ -717,18 +735,20 @@ exports[`Tester/RadioGroup/RadioGroup WithEventHandlers play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r2s:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r2s:"
@@ -748,11 +768,11 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_helpBox_sf6vs_32">
-      <div class="_helpBoxText_sf6vs_45">
+    <div class="_helpBox_5szkl_32">
+      <div class="_helpBoxText_5szkl_45">
         Vi trenger å vite din type virksomhet.
       </div>
-      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_sf6vs_52"
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_5szkl_52"
               data-brightness="default"
               type="button"
       >
@@ -771,7 +791,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r2u:"
@@ -828,18 +848,20 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r3j:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3j:"
@@ -859,7 +881,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3l:"
@@ -916,18 +938,20 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:rq:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rr:"
@@ -984,18 +1008,20 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r24:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r25:"
@@ -1059,20 +1085,21 @@ exports[`Tester/RadioGroup/RadioGroup WithOnBlurEvent play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11"
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
             id="dummyIdForwardedFromRef"
   >
     <legend id="legendId-:r2:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3:"
@@ -1129,18 +1156,20 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r1i:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1j:"
@@ -1200,18 +1229,20 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r1o:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15 _legend_required_s6jvz_23"
+    <div class="_legend_u2f5e_15 _legend_required_u2f5e_23"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1p:"
@@ -1271,9 +1302,11 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r1u:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       <h4 class="_heading_12p5o_1 _heading_level3_12p5o_34">
         Type virksomhet
@@ -1282,7 +1315,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
         Med virksomhet så menes bla bla
       </span>
     </legend>
-    <div class="_legend_s6jvz_15 _legendWithMarkup_required_s6jvz_23"
+    <div class="_legend_u2f5e_15 _legendWithMarkup_required_u2f5e_23"
          aria-hidden="true"
     >
       <h4 class="_heading_12p5o_1 _heading_level3_12p5o_34">
@@ -1292,7 +1325,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
         Med virksomhet så menes bla bla
       </span>
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r1v:"
@@ -1352,18 +1385,20 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
 
 exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r10:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r11:"
@@ -1421,18 +1456,20 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
 
 exports[`Tester/RadioGroup/RadioGroup WithoutErrorMessage play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r2a:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Type virksomhet
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Type virksomhet
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r2b:"

@@ -2,21 +2,21 @@
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangButton play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_72xc2_5">
+  <div class="_container_1npwf_5">
     <div class>
     </div>
-    <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+    <button class="_button_2n6jz_1  _menuButton_1npwf_17"
             lang="en"
             aria-expanded="false"
             type="button"
     >
-      <span class="_iconWrapper_72xc2_20">
-        <span class="_flagIcon_72xc2_25">
+      <span class="_iconWrapper_1npwf_82">
+        <span class="_flagIcon_1npwf_87">
           <svg xmlns="http://www.w3.org/2000/svg"
                xml:space="preserve"
                aria-hidden="true"
                viewbox="0 0 1000 600"
-               class="_flagIconSvg_72xc2_30"
+               class="_flagIconSvg_1npwf_92"
           >
             <style>
               .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
@@ -39,7 +39,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -50,10 +50,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
         </svg>
       </span>
       English
-      <span class="_srOnly_72xc2_133">
+      <span class="_srOnly_1npwf_180">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -63,28 +63,29 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
         </path>
       </svg>
     </button>
-    <div class="_menuArrow_72xc2_67">
-    </div>
   </div>
 </div>
 `;
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_72xc2_5">
-    <div class="_overlay_72xc2_10">
+  <div class="_container_1npwf_5">
+    <div class="_overlay_1npwf_10"
+         data-floating-ui-inert
+    >
     </div>
-    <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+    <button class="_button_2n6jz_1  _menuButton_1npwf_17 _menuButton_open_1npwf_116"
             lang="nb"
             aria-expanded="true"
             type="button"
+            data-floating-ui-inert
     >
-      <span class="_iconWrapper_72xc2_20">
-        <span class="_flagIcon_72xc2_25">
+      <span class="_iconWrapper_1npwf_82">
+        <span class="_flagIcon_1npwf_87">
           <svg xmlns="http://www.w3.org/2000/svg"
                aria-hidden="true"
                viewbox="0 0 1100 800"
-               class="_flagIconSvg_72xc2_30"
+               class="_flagIconSvg_1npwf_92"
           >
             <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                   style="fill: rgb(255, 255, 255);"
@@ -100,7 +101,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -111,10 +112,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
         </svg>
       </span>
       Bokmål
-      <span class="_srOnly_72xc2_133">
+      <span class="_srOnly_1npwf_180">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -124,20 +125,23 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
         </path>
       </svg>
     </button>
-    <div class="_menuArrow_72xc2_67">
-    </div>
-    <div class="_menu_72xc2_17">
-      <ul class="_list_72xc2_111">
-        <li class="_listItem_72xc2_126">
-          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
+    <div class="_menu_1npwf_17"
+         tabindex="-1"
+         data-floating-ui-focusable
+         style="position: absolute; left: 0px; top: 0px; transform: translate(-16px, 80px);"
+    >
+      <ul class="_list_1npwf_159">
+        <li class="_listItem_1npwf_173">
+          <button class="_buttonCurrent_8mknb_25 _button_8mknb_1"
                   lang="nb"
                   aria-current="true"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    aria-hidden="true"
                    viewbox="0 0 1100 800"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                       style="fill: rgb(255, 255, 255);"
@@ -153,7 +157,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               Bokmål
             </span>
             <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
@@ -167,16 +171,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
             </svg>
           </button>
         </li>
-        <li class="_listItem_72xc2_126">
-          <button class="_button_1qb8h_1"
+        <li class="_listItem_1npwf_173">
+          <button class="_button_8mknb_1"
                   lang="nn"
                   aria-current="false"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    aria-hidden="true"
                    viewbox="0 0 1100 800"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                       style="fill: rgb(255, 255, 255);"
@@ -192,22 +197,23 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="_listItem_72xc2_126">
-          <button class="_button_1qb8h_1"
+        <li class="_listItem_1npwf_173">
+          <button class="_button_8mknb_1"
                   lang="en"
                   aria-current="false"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    xml:space="preserve"
                    aria-hidden="true"
                    viewbox="0 0 1000 600"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <style>
                   .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
@@ -230,21 +236,22 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               English
             </span>
           </button>
         </li>
-        <li class="_listItem_72xc2_126">
-          <button class="_button_1qb8h_1"
+        <li class="_listItem_1npwf_173">
+          <button class="_button_8mknb_1"
                   lang="se"
                   aria-current="false"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    aria-hidden="true"
                    viewbox="0 0 808 600"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <path d="M370 0v116.34c78.64 24.02 136 97.27 136 183.66s-57.36 159.64-136 183.66V600h438V0z"
                       style="fill: rgb(0, 53, 173);"
@@ -280,12 +287,16 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               Sámegiella
             </span>
           </button>
         </li>
       </ul>
+      <div class="_menuArrow_1npwf_130"
+           style="top: -17px; left: 29px;"
+      >
+      </div>
     </div>
   </div>
 </div>
@@ -294,23 +305,23 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlid"
-       class="_container_72xc2_5 dummyClassname"
+       class="_container_1npwf_5 dummyClassname"
        lang="nb"
        data-testid="123ID"
   >
     <div class>
     </div>
-    <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+    <button class="_button_2n6jz_1  _menuButton_1npwf_17"
             lang="nb"
             aria-expanded="false"
             type="button"
     >
-      <span class="_iconWrapper_72xc2_20">
-        <span class="_flagIcon_72xc2_25">
+      <span class="_iconWrapper_1npwf_82">
+        <span class="_flagIcon_1npwf_87">
           <svg xmlns="http://www.w3.org/2000/svg"
                aria-hidden="true"
                viewbox="0 0 1100 800"
-               class="_flagIconSvg_72xc2_30"
+               class="_flagIconSvg_1npwf_92"
           >
             <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                   style="fill: rgb(255, 255, 255);"
@@ -326,7 +337,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -337,10 +348,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
         </svg>
       </span>
       Bokmål
-      <span class="_srOnly_72xc2_133">
+      <span class="_srOnly_1npwf_180">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -350,29 +361,30 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
         </path>
       </svg>
     </button>
-    <div class="_menuArrow_72xc2_67">
-    </div>
   </div>
 </div>
 `;
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_72xc2_5">
-    <div class="_overlay_72xc2_10">
+  <div class="_container_1npwf_5">
+    <div class="_overlay_1npwf_10"
+         data-floating-ui-inert
+    >
     </div>
-    <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+    <button class="_button_2n6jz_1  _menuButton_1npwf_17 _menuButton_open_1npwf_116"
             lang="en"
             aria-expanded="true"
             type="button"
+            data-floating-ui-inert
     >
-      <span class="_iconWrapper_72xc2_20">
-        <span class="_flagIcon_72xc2_25">
+      <span class="_iconWrapper_1npwf_82">
+        <span class="_flagIcon_1npwf_87">
           <svg xmlns="http://www.w3.org/2000/svg"
                xml:space="preserve"
                aria-hidden="true"
                viewbox="0 0 1000 600"
-               class="_flagIconSvg_72xc2_30"
+               class="_flagIconSvg_1npwf_92"
           >
             <style>
               .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
@@ -395,7 +407,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -406,10 +418,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
         </svg>
       </span>
       English
-      <span class="_srOnly_72xc2_133">
+      <span class="_srOnly_1npwf_180">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -419,20 +431,23 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
         </path>
       </svg>
     </button>
-    <div class="_menuArrow_72xc2_67">
-    </div>
-    <div class="_menu_72xc2_17">
-      <ul class="_list_72xc2_111">
-        <li class="_listItem_72xc2_126">
-          <button class="_button_1qb8h_1"
+    <div class="_menu_1npwf_17"
+         tabindex="-1"
+         data-floating-ui-focusable
+         style="position: absolute; left: 0px; top: 0px; transform: translate(-16px, 80px);"
+    >
+      <ul class="_list_1npwf_159">
+        <li class="_listItem_1npwf_173">
+          <button class="_button_8mknb_1"
                   lang="nb"
                   aria-current="false"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    aria-hidden="true"
                    viewbox="0 0 1100 800"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                       style="fill: rgb(255, 255, 255);"
@@ -448,21 +463,22 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               Bokmål
             </span>
           </button>
         </li>
-        <li class="_listItem_72xc2_126">
-          <button class="_button_1qb8h_1"
+        <li class="_listItem_1npwf_173">
+          <button class="_button_8mknb_1"
                   lang="nn"
                   aria-current="false"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    aria-hidden="true"
                    viewbox="0 0 1100 800"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                       style="fill: rgb(255, 255, 255);"
@@ -478,22 +494,23 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="_listItem_72xc2_126">
-          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
+        <li class="_listItem_1npwf_173">
+          <button class="_buttonCurrent_8mknb_25 _button_8mknb_1"
                   lang="en"
                   aria-current="true"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    xml:space="preserve"
                    aria-hidden="true"
                    viewbox="0 0 1000 600"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <style>
                   .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
@@ -516,7 +533,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               English
             </span>
             <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
@@ -530,16 +547,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
             </svg>
           </button>
         </li>
-        <li class="_listItem_72xc2_126">
-          <button class="_button_1qb8h_1"
+        <li class="_listItem_1npwf_173">
+          <button class="_button_8mknb_1"
                   lang="se"
                   aria-current="false"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    aria-hidden="true"
                    viewbox="0 0 808 600"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <path d="M370 0v116.34c78.64 24.02 136 97.27 136 183.66s-57.36 159.64-136 183.66V600h438V0z"
                       style="fill: rgb(0, 53, 173);"
@@ -575,12 +593,16 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               Sámegiella
             </span>
           </button>
         </li>
       </ul>
+      <div class="_menuArrow_1npwf_130"
+           style="top: -17px; left: 29px;"
+      >
+      </div>
     </div>
   </div>
 </div>
@@ -588,22 +610,22 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_72xc2_5"
+  <div class="_container_1npwf_5"
        id="dummyIdForwardedFromRef"
   >
     <div class>
     </div>
-    <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+    <button class="_button_2n6jz_1  _menuButton_1npwf_17"
             lang="nb"
             aria-expanded="false"
             type="button"
     >
-      <span class="_iconWrapper_72xc2_20">
-        <span class="_flagIcon_72xc2_25">
+      <span class="_iconWrapper_1npwf_82">
+        <span class="_flagIcon_1npwf_87">
           <svg xmlns="http://www.w3.org/2000/svg"
                aria-hidden="true"
                viewbox="0 0 1100 800"
-               class="_flagIconSvg_72xc2_30"
+               class="_flagIconSvg_1npwf_92"
           >
             <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                   style="fill: rgb(255, 255, 255);"
@@ -619,7 +641,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -630,10 +652,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
         </svg>
       </span>
       Bokmål
-      <span class="_srOnly_72xc2_133">
+      <span class="_srOnly_1npwf_180">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -643,28 +665,29 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_menuArrow_72xc2_67">
-    </div>
   </div>
 </div>
 `;
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`] = `
 <div data-test-block="true">
-  <div class="_container_72xc2_5">
-    <div class="_overlay_72xc2_10">
+  <div class="_container_1npwf_5">
+    <div class="_overlay_1npwf_10"
+         data-floating-ui-inert
+    >
     </div>
-    <button class="_button_2n6jz_1  _menuButton_72xc2_17"
+    <button class="_button_2n6jz_1  _menuButton_1npwf_17 _menuButton_open_1npwf_116"
             lang="nb"
             aria-expanded="true"
             type="button"
+            data-floating-ui-inert
     >
-      <span class="_iconWrapper_72xc2_20">
-        <span class="_flagIcon_72xc2_25">
+      <span class="_iconWrapper_1npwf_82">
+        <span class="_flagIcon_1npwf_87">
           <svg xmlns="http://www.w3.org/2000/svg"
                aria-hidden="true"
                viewbox="0 0 1100 800"
-               class="_flagIconSvg_72xc2_30"
+               class="_flagIconSvg_1npwf_92"
           >
             <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                   style="fill: rgb(255, 255, 255);"
@@ -680,7 +703,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
             </path>
           </svg>
         </span>
-        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_72xc2_33"
+        <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowMobile_1npwf_95"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -691,10 +714,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
         </svg>
       </span>
       Bokmål
-      <span class="_srOnly_72xc2_133">
+      <span class="_srOnly_1npwf_180">
         &nbsp;Meny
       </span>
-      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_72xc2_41"
+      <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _arrowDesktop_1npwf_103"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -704,20 +727,23 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
         </path>
       </svg>
     </button>
-    <div class="_menuArrow_72xc2_67">
-    </div>
-    <div class="_menu_72xc2_17">
-      <ul class="_list_72xc2_111">
-        <li class="_listItem_72xc2_126">
-          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1"
+    <div class="_menu_1npwf_17"
+         tabindex="-1"
+         data-floating-ui-focusable
+         style="position: absolute; left: 0px; top: 0px; transform: translate(-16px, 80px);"
+    >
+      <ul class="_list_1npwf_159">
+        <li class="_listItem_1npwf_173">
+          <button class="_buttonCurrent_8mknb_25 _button_8mknb_1"
                   lang="nb"
                   aria-current="true"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    aria-hidden="true"
                    viewbox="0 0 1100 800"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                       style="fill: rgb(255, 255, 255);"
@@ -733,7 +759,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               Bokmål
             </span>
             <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10"
@@ -747,16 +773,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
             </svg>
           </button>
         </li>
-        <li class="_listItem_72xc2_126">
-          <button class="_button_1qb8h_1"
+        <li class="_listItem_1npwf_173">
+          <button class="_button_8mknb_1"
                   lang="nn"
                   aria-current="false"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    aria-hidden="true"
                    viewbox="0 0 1100 800"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
                       style="fill: rgb(255, 255, 255);"
@@ -772,22 +799,23 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="_listItem_72xc2_126">
-          <button class="_button_1qb8h_1"
+        <li class="_listItem_1npwf_173">
+          <button class="_button_8mknb_1"
                   lang="en"
                   aria-current="false"
+                  type="button"
           >
-            <span class="_flagWrapper_1qb8h_15">
+            <span class="_flagWrapper_8mknb_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    xml:space="preserve"
                    aria-hidden="true"
                    viewbox="0 0 1000 600"
-                   class="_flagIconSvg_72xc2_30"
+                   class="_flagIconSvg_1npwf_92"
               >
                 <style>
                   .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
@@ -810,12 +838,16 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                 </path>
               </svg>
             </span>
-            <span class="_buttonText_1qb8h_21">
+            <span class="_buttonText_8mknb_21">
               English
             </span>
           </button>
         </li>
       </ul>
+      <div class="_menuArrow_1npwf_130"
+           style="top: -17px; left: 29px;"
+      >
+      </div>
     </div>
   </div>
 </div>

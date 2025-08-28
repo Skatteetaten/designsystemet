@@ -39,11 +39,7 @@ const meta = {
     isExpanded: { table: { disable: true } },
     isDefaultExpanded: { table: { disable: true } },
     svgPath: { table: { disable: true } },
-    titleAs: {
-      options: [...headingAsArr],
-      control: 'inline-radio',
-      table: { disable: true },
-    },
+    titleAs: { table: { disable: true } },
     title: { table: { disable: true } },
     subtitle: { table: { disable: true } },
     // Events

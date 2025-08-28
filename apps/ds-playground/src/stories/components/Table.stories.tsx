@@ -1,10 +1,10 @@
-import { ReactNode, useState, JSX } from 'react';
+import { ReactNode, useState, JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
-import { densityArr } from '@skatteetaten/ds-core-utils';
-import { Checkbox } from '@skatteetaten/ds-forms';
+import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
+import { Checkbox, TextField } from '@skatteetaten/ds-forms';
 import {
   CopySVGpath,
   DeleteSVGpath,
@@ -20,81 +20,6 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
-const data = [
-  {
-    id: 'abcd',
-    firma: 'Bluth Company',
-    timestamp: '08.04.2020 11:31:57',
-    status: 'Under behandling',
-    eta: 'Mer enn 1 dag',
-    ansatte: [
-      {
-        id: 'efgh',
-        navn: 'Per Olsen',
-        fnr: '11012020 99999',
-        beskrivelse: 'Ingen flere opplysninger',
-      },
-    ],
-  },
-  {
-    id: 'ijkl',
-    firma: 'Business Engros',
-    timestamp: '08.04.2020 11:32:16',
-    status: 'Under behandling',
-    eta: '23 min',
-    ansatte: [
-      {
-        id: 'mnop',
-        navn: 'Bryce Navnesen',
-        fnr: '02012020 99999',
-        beskrivelse: 'noen flere opplysninger',
-      },
-      {
-        id: 'qrst',
-        navn: 'Alice Middleman',
-        fnr: '03012020 99999',
-        beskrivelse: 'mange flere opplysninger',
-      },
-    ],
-  },
-  {
-    id: 'uvwx',
-    firma: 'Corwood Industries',
-    timestamp: '08.04.2020 11:32:16',
-    status: 'Ferdig',
-    eta: '–',
-    ansatte: [
-      {
-        id: 'yzab',
-        navn: 'Kai Mossige',
-        fnr: '01012020 99999',
-        beskrivelse: 'finnes flere opplysninger?',
-      },
-    ],
-  },
-  {
-    id: 'cdef',
-    firma: 'Limerick Partner',
-    timestamp: '08.04.2020 11:32:47',
-    status: 'Ferdig',
-    eta: '–',
-    ansatte: [
-      {
-        id: 'ghij',
-        navn: 'Kari Saksbehandler',
-        fnr: '01012020 99999',
-        beskrivelse: 'Ingen flere opplysninger',
-      },
-      {
-        id: 'klmn',
-        navn: 'Bob Egil Hansen',
-        fnr: '04012020 99999',
-        beskrivelse: 'Ingen andre opplysninger',
-      },
-    ],
-  },
-];
-
 const meta = {
   component: Table,
   title: 'Komponenter/Table/Table',
@@ -103,8 +28,6 @@ const meta = {
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
     variant: {
-      options: [...densityArr],
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getTableVariantDefault() },
@@ -314,6 +237,81 @@ export const Expandable: Story = {
     const [sortState, setSortState] = useState<SortState>({
       direction: 'none',
     });
+
+    const data = [
+      {
+        id: 'abcd',
+        firma: 'Bluth Company',
+        timestamp: '08.04.2020 11:31:57',
+        status: 'Under behandling',
+        eta: 'Mer enn 1 dag',
+        ansatte: [
+          {
+            id: 'efgh',
+            navn: 'Per Olsen',
+            fnr: '11012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'ijkl',
+        firma: 'Business Engros',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Under behandling',
+        eta: '23 min',
+        ansatte: [
+          {
+            id: 'mnop',
+            navn: 'Bryce Navnesen',
+            fnr: '02012020 99999',
+            beskrivelse: 'noen flere opplysninger',
+          },
+          {
+            id: 'qrst',
+            navn: 'Alice Middleman',
+            fnr: '03012020 99999',
+            beskrivelse: 'mange flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'uvwx',
+        firma: 'Corwood Industries',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'yzab',
+            navn: 'Kai Mossige',
+            fnr: '01012020 99999',
+            beskrivelse: 'finnes flere opplysninger?',
+          },
+        ],
+      },
+      {
+        id: 'cdef',
+        firma: 'Limerick Partner',
+        timestamp: '08.04.2020 11:32:47',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'ghij',
+            navn: 'Kari Saksbehandler',
+            fnr: '01012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+          {
+            id: 'klmn',
+            navn: 'Bob Egil Hansen',
+            fnr: '04012020 99999',
+            beskrivelse: 'Ingen andre opplysninger',
+          },
+        ],
+      },
+    ];
 
     const sortedData = data.slice().sort((a, b) => {
       const sortKey = sortState.sortKey as keyof (typeof data)[0];
@@ -753,6 +751,81 @@ Selectable.parameters = exampleParameters;
 
 export const WithStripes: Story = {
   render: (_args): JSX.Element => {
+    const data = [
+      {
+        id: 'abcd',
+        firma: 'Bluth Company',
+        timestamp: '08.04.2020 11:31:57',
+        status: 'Under behandling',
+        eta: 'Mer enn 1 dag',
+        ansatte: [
+          {
+            id: 'efgh',
+            navn: 'Per Olsen',
+            fnr: '11012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'ijkl',
+        firma: 'Business Engros',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Under behandling',
+        eta: '23 min',
+        ansatte: [
+          {
+            id: 'mnop',
+            navn: 'Bryce Navnesen',
+            fnr: '02012020 99999',
+            beskrivelse: 'noen flere opplysninger',
+          },
+          {
+            id: 'qrst',
+            navn: 'Alice Middleman',
+            fnr: '03012020 99999',
+            beskrivelse: 'mange flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'uvwx',
+        firma: 'Corwood Industries',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'yzab',
+            navn: 'Kai Mossige',
+            fnr: '01012020 99999',
+            beskrivelse: 'finnes flere opplysninger?',
+          },
+        ],
+      },
+      {
+        id: 'cdef',
+        firma: 'Limerick Partner',
+        timestamp: '08.04.2020 11:32:47',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'ghij',
+            navn: 'Kari Saksbehandler',
+            fnr: '01012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+          {
+            id: 'klmn',
+            navn: 'Bob Egil Hansen',
+            fnr: '04012020 99999',
+            beskrivelse: 'Ingen andre opplysninger',
+          },
+        ],
+      },
+    ];
+
     return (
       <>
         <Table caption={'Firmaoversikt'}>
@@ -830,3 +903,305 @@ export const WithStripes: Story = {
   },
 } satisfies Story;
 WithStripes.parameters = exampleParameters;
+
+export const AddRow: Story = {
+  render: (_args): JSX.Element => {
+    const [data, setData] = useState([
+      {
+        id: 'abc',
+        dato: '23.7.2025',
+        personNumber: '14487219408',
+        firstName: 'Treliters',
+        lastName: 'Geir',
+        amount: '641693',
+      },
+      {
+        id: 'def',
+        dato: '23.8.2025',
+        personNumber: '70070903485',
+        firstName: 'Ringlete',
+        lastName: 'Under',
+        amount: '139914',
+      },
+      {
+        id: 'ghi',
+        dato: '23.9.2025',
+        personNumber: '70168226499',
+        firstName: 'Uskikka',
+        lastName: 'Resistens',
+        amount: '667946',
+      },
+    ]);
+
+    const [sortState, setSortState] = useState<SortState>({
+      direction: 'none',
+    });
+
+    const [nextId, setNextId] = useState(4);
+    const [addRow, setAddRow] = useState<boolean>(false);
+    const [highlightedRowId, setHighlightedRowId] = useState<string | null>(
+      null
+    );
+    const addPersonButtonRef = useRef<HTMLButtonElement>(null);
+    const addPersonRef = useRef<HTMLDivElement>(null);
+
+    const sortedData = data.slice().sort((a, b) => {
+      const sortKey = sortState.sortKey as keyof (typeof data)[0];
+      if (!sortKey) return 0;
+      if (a[sortKey] === b[sortKey]) return 0;
+      if (sortState.direction === 'ascending')
+        return a[sortKey] > b[sortKey] ? 1 : -1;
+      return a[sortKey] < b[sortKey] ? 1 : -1;
+    });
+
+    const handleSaveRow = (
+      id: string,
+      updated: Partial<(typeof data)[0]>
+    ): void => {
+      setData((prev) =>
+        prev.map((row) => (row.id === id ? { ...row, ...updated } : row))
+      );
+    };
+
+    const validateField = (field: string, value: string): string => {
+      if (field === 'personNumber') {
+        if (value.trim() === '') return 'Fødselsnummer må fylles ut';
+        if (value.length !== 11) return 'Fødselsnummer må være 11 siffer';
+      }
+      if (field === 'lastName') {
+        if (value.trim() === '') return 'Etternavn må fylles ut';
+      }
+      if (field === 'amount') {
+        if (value.trim() === '') return 'Beløp må fylles ut';
+        if (value !== '' && Number.isNaN(Number(value)))
+          return 'Beløp må være et tall';
+      }
+      return '';
+    };
+
+    const createFormComponent = (
+      initialData: { personNumber: string; lastName: string; amount: string },
+      onSave: (data: {
+        personNumber: string;
+        lastName: string;
+        amount: string;
+      }) => void,
+      onCancel: () => void,
+      isAdd?: boolean
+    ): JSX.Element => {
+      const [personNumber, setPersonNumber] = useState(
+        initialData.personNumber
+      );
+      const [lastName, setLastName] = useState(initialData.lastName);
+      const [amount, setAmount] = useState(initialData.amount);
+      const [personNumberError, setPersonNumberError] = useState('');
+      const [lastNameError, setLastNameError] = useState('');
+      const [amountError, setAmountError] = useState('');
+
+      const handleBlur = (
+        field: string,
+        value: string,
+        setError: (msg: string) => void
+      ): void => {
+        const error = validateField(field, value);
+        setError(error);
+      };
+
+      const handleSave = (): void => {
+        const personNumberErr = validateField('personNumber', personNumber);
+        const lastNameErr = validateField('lastName', lastName);
+        const amountErr = validateField('amount', amount);
+
+        setPersonNumberError(personNumberErr);
+        setLastNameError(lastNameErr);
+        setAmountError(amountErr);
+
+        if (!personNumberErr && !lastNameErr && !amountErr) {
+          onSave({ personNumber, lastName, amount });
+        }
+      };
+
+      return (
+        <div className={'editableContent'}>
+          <div className={'flex gapM bottomSpacingXL'}>
+            <TextField
+              label={'Fødselsnummer (11 siffer)'}
+              value={personNumber}
+              errorMessage={personNumberError}
+              onChange={(e) => {
+                setPersonNumber(e.target.value);
+                setPersonNumberError('');
+              }}
+              onBlur={() =>
+                handleBlur('personNumber', personNumber, setPersonNumberError)
+              }
+            />
+            <TextField
+              label={'Etternavn'}
+              value={lastName}
+              errorMessage={lastNameError}
+              onChange={(e) => {
+                setLastName(e.target.value);
+                setLastNameError('');
+              }}
+              onBlur={() => handleBlur('lastName', lastName, setLastNameError)}
+            />
+          </div>
+          <TextField
+            label={'Beløp i kroner'}
+            className={'textField150 bottomSpacingXL'}
+            value={amount}
+            errorMessage={amountError}
+            onChange={(e) => {
+              setAmount(e.target.value);
+              setAmountError('');
+            }}
+            onBlur={() => handleBlur('amount', amount, setAmountError)}
+          />
+          <div className={'flex gapS'}>
+            <Button onClick={handleSave}>{'Lagre'}</Button>
+            <Button variant={'secondary'} onClick={onCancel}>
+              {'Avbryt'}
+            </Button>
+          </div>
+        </div>
+      );
+    };
+
+    return (
+      <>
+        <Button
+          ref={addPersonButtonRef}
+          className={'bottomSpacingL'}
+          onClick={(): void => {
+            setAddRow(true);
+            setTimeout(() => addPersonRef.current?.focus(), 0);
+          }}
+        >
+          {'Legg til person'}
+        </Button>
+        <Table
+          caption={'Personoversikt'}
+          variant={'compact'}
+          rowInEditModeId={addRow ? 'addPerson' : undefined}
+          sortState={sortState}
+          setSortState={setSortState}
+        >
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell scope={'col'} sortKey={'dato'} isSortable>
+                {'Sist endret'}
+              </Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>
+                {'Fødselsnummer'}
+              </Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'} alignment={'right'}>
+                {'Beløp'}
+              </Table.HeaderCell>
+              <Table.HeaderCell as={'td'} />
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {addRow && (
+              <Table.EditableRow
+                id={'addPerson'}
+                editButtonPosition={'right'}
+                editableContent={(closeEditing: () => void): ReactNode => {
+                  return createFormComponent(
+                    { personNumber: '', lastName: '', amount: '' },
+                    (data) => {
+                      const newRow = {
+                        id: nextId.toString(),
+                        dato: new Date().toLocaleDateString('no-NO'),
+                        personNumber: data.personNumber,
+                        firstName: '',
+                        lastName: data.lastName,
+                        amount: data.amount,
+                      };
+                      setData((prev) => [newRow, ...prev]);
+                      setHighlightedRowId(newRow.id);
+                      setNextId((prev) => prev + 1);
+                      setAddRow(false);
+                      closeEditing();
+                      setTimeout(() => addPersonButtonRef.current?.focus(), 0);
+                      setTimeout(() => setHighlightedRowId(null), 3000);
+                    },
+                    () => {
+                      setAddRow(false);
+                      closeEditing();
+                      setTimeout(() => addPersonButtonRef.current?.focus(), 0);
+                    },
+                    true
+                  );
+                }}
+              >
+                <Table.DataCell colSpan={4}>
+                  <div
+                    ref={addPersonRef}
+                    tabIndex={-1}
+                    className={'tabIndexNoOutline'}
+                  >
+                    {'Legg til person'}
+                  </div>
+                </Table.DataCell>
+              </Table.EditableRow>
+            )}
+            {sortedData.map((person) => (
+              <Table.EditableRow
+                key={person.id}
+                // .highlightRow {
+                //   animation-name: highlightRow;
+                //   animation-duration: 3s;
+                //   animation-iteration-count: 1;
+                // }
+                // @keyframes highlightRow {
+                //   0%,
+                //   99% {
+                //     background-color: var(--palette-forest-10);
+                //   }
+                //   100% {
+                //     background-color: unset;
+                //   }
+                // }
+                className={person.id === highlightedRowId ? 'highlightRow' : ''}
+                editButtonPosition={'right'}
+                editableContent={(closeEditing: () => void): ReactNode => {
+                  return createFormComponent(
+                    {
+                      personNumber: person.personNumber,
+                      lastName: person.lastName,
+                      amount: person.amount,
+                    },
+                    (data) => {
+                      handleSaveRow(person.id, {
+                        dato: new Date().toLocaleDateString('no-NO'),
+                        personNumber: data.personNumber,
+                        lastName: data.lastName,
+                        amount: data.amount,
+                      });
+                      closeEditing();
+                    },
+                    () => {
+                      closeEditing();
+                    }
+                  );
+                }}
+              >
+                <Table.DataCell>{person.dato}</Table.DataCell>
+                <Table.DataCell>
+                  {formatNationalIdentityNumber(person.personNumber)}
+                </Table.DataCell>
+                <Table.DataCell>{`${person.firstName} ${person.lastName}`}</Table.DataCell>
+                <Table.DataCell alignment={'right'}>
+                  {`${person.amount} kr`}
+                </Table.DataCell>
+              </Table.EditableRow>
+            ))}
+          </Table.Body>
+        </Table>
+      </>
+    );
+  },
+} satisfies Story;
+AddRow.parameters = exampleParameters;

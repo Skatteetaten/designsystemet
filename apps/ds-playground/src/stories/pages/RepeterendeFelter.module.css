@@ -1,0 +1,92 @@
+.mainExternal {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.tabIndexNoOutline:focus {
+  outline: none;
+}
+
+.miniNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-m) 0;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  margin: auto;
+}
+
+.marginTopL {
+  margin-top: var(--spacing-l);
+}
+
+.desciptionList {
+  display: grid;
+  gap: var(--spacing-xs);
+  grid-template-columns: 1fr 1fr;
+}
+
+.repeatingFields {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  gap: var(--spacing-m);
+  list-style: none;
+}
+
+.addNewButton {
+  max-width: max-content;
+}
+
+.editModal {
+  width: 100%;
+}
+
+.editModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.flexStartRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--spacing-m);
+}
+
+.editModalAdressFields {
+  display: flex;
+  gap: var(--spacing-m);
+
+  dt {
+    color: var(--palette-graphite-70);
+  }
+}
+
+.cardContent div:first-child {
+  width: 100%;
+}
+
+.panel {
+  margin: var(--spacing-l) auto;
+}
+
+.panelContent {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-l);
+
+  @media (width <= 640px) {
+    flex-direction: column;
+    gap: var(--spacing-s);
+  }
+}

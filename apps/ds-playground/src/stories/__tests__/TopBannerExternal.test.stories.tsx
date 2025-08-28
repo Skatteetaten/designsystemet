@@ -67,6 +67,7 @@ const themeText = dsI18n.t('ds_layout:topbanner.NavAriaLabel');
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const searchText = dsI18n.t('ds_layout:topbanner.Search');
 const skipLinkText = dsI18n.t('ds_layout:topbanner.SkipLinkText');
+
 const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
   onLogInClick: undefined,
@@ -801,5 +802,40 @@ export const ClickSearchOpenAndClose = {
 
     await userEvent.click(searchButton);
     await expect(searchButton).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;
+
+export const LangPickerInMenuWhenLoggedInOnMobile = {
+  name: 'LangPicker In Menu When Logged In OnMobile ',
+  args: {
+    ...defaultArgs,
+    searchContent: 'hei hei',
+    firstColumn: (
+      <Link href={'#storybook-root'}>
+        {'Meny-knapp blir synlig når den har innhold'}
+      </Link>
+    ),
+    user: { role: 'meg' },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const languageButton = canvas.queryByRole('button', {
+      name: 'Bokmål Meny',
+    });
+    await expect(languageButton).not.toBeInTheDocument();
+
+    const menuButton = canvas.getByRole('button', { name: menuText });
+    await userEvent.click(menuButton);
+
+    await expect(
+      canvas.getByRole('button', { name: 'Bokmål Meny' })
+    ).toBeInTheDocument();
   },
 } satisfies Story;

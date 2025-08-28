@@ -2,18 +2,18 @@
 
 exports[`Tester/Fieldset Defaults play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:r2:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -26,21 +26,21 @@ exports[`Tester/Fieldset WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <fieldset id="htmlid"
             data-testid="123ID"
-            class="_fieldset_s6jvz_5  dummyClassname"
+            class="_fieldset_u2f5e_5 dummyClassname"
             lang="nb"
             form="123form"
   >
     <legend id="legendId-:r1:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -51,18 +51,18 @@ exports[`Tester/Fieldset WithAttributes play-test 1`] = `
 
 exports[`Tester/Fieldset WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:rg:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15    dummyClassname"
+    <div class="_legend_u2f5e_15    dummyClassname"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -73,21 +73,21 @@ exports[`Tester/Fieldset WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/Fieldset WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:r3:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <div class="_description_sf6vs_17">
+    <div class="_description_5szkl_17">
       Kort hjelpetekst
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -98,20 +98,20 @@ exports[`Tester/Fieldset WithDescription play-test 1`] = `
 
 exports[`Tester/Fieldset WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5"
+  <fieldset class="_fieldset_u2f5e_5"
             disabled
   >
     <legend id="legendId-:r9:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -122,18 +122,18 @@ exports[`Tester/Fieldset WithDisabled play-test 1`] = `
 
 exports[`Tester/Fieldset WithHelpTextSvgPathAndTitle play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:ra:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:ra:"
@@ -153,7 +153,7 @@ exports[`Tester/Fieldset WithHelpTextSvgPathAndTitle play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -164,18 +164,18 @@ exports[`Tester/Fieldset WithHelpTextSvgPathAndTitle play-test 1`] = `
 
 exports[`Tester/Fieldset WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:re:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:re:"
@@ -195,7 +195,7 @@ exports[`Tester/Fieldset WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -206,18 +206,18 @@ exports[`Tester/Fieldset WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:r6:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39 _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39 _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27 _srOnly_sf6vs_60"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27 _srOnly_5szkl_60"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r6:"
@@ -237,10 +237,10 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_sf6vs_17  _srOnly_sf6vs_60">
+    <div class="_description_5szkl_17  _srOnly_5szkl_60">
       Kort hjelpetekst
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
       <div>
         Innhold
       </div>
@@ -251,18 +251,18 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
 
 exports[`Tester/Fieldset WithLongLegend smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:rd:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -273,20 +273,20 @@ exports[`Tester/Fieldset WithLongLegend smoke-test 1`] = `
 
 exports[`Tester/Fieldset WithRef play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5"
+  <fieldset class="_fieldset_u2f5e_5"
             id="dummyIdForwardedFromRef"
   >
     <legend id="legendId-:r0:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -297,18 +297,18 @@ exports[`Tester/Fieldset WithRef play-test 1`] = `
 
 exports[`Tester/Fieldset WithShowRequiredMark smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:r4:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15 _legend_required_s6jvz_23"
+    <div class="_legend_u2f5e_15 _legend_required_u2f5e_23"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -319,9 +319,9 @@ exports[`Tester/Fieldset WithShowRequiredMark smoke-test 1`] = `
 
 exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5">
+  <fieldset class="_fieldset_u2f5e_5">
     <legend id="legendId-:r5:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34">
         Dette er en Heading i legend
@@ -332,7 +332,7 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
         </em>
       </p>
     </legend>
-    <div class="_legend_s6jvz_15 _legendWithMarkup_required_s6jvz_23"
+    <div class="_legend_u2f5e_15 _legendWithMarkup_required_u2f5e_23"
          aria-hidden="true"
     >
       <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34">
@@ -344,7 +344,7 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
         </em>
       </p>
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>
@@ -355,18 +355,20 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
 
 exports[`Tester/Fieldset WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r8:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Ledetekst
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Ledetekst
     </div>
-    <div class="_contentContainer_s6jvz_32">
+    <div class="_contentContainer_u2f5e_32">
       <div>
         Innhold
       </div>

@@ -22,7 +22,10 @@ import {
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 
 import { DatePickerProps } from './DatePicker.types';
-import { getDatePickerDateFormat } from './defaults';
+import {
+  getDatePickerDateFormat,
+  getDatePickerPlaceholderDefault,
+} from './defaults';
 import { formatDateForInput, parseDateFromInput } from './utils';
 import { DatePickerCalendar } from '../DatePickerCalendar/DatePickerCalendar';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
@@ -53,9 +56,10 @@ export const DatePicker = ({
   autoComplete = getCommonAutoCompleteDefault(),
   disabled,
   name,
-  placeholder,
+  placeholder = getDatePickerPlaceholderDefault(),
   readOnly,
   required,
+  hasSpacing,
   hideLabel,
   showRequiredMark,
   onBlur,
@@ -187,10 +191,7 @@ export const DatePicker = ({
     };
   }, [showCalendar]);
 
-  const placeholderValue =
-    placeholder?.trim() === ''
-      ? undefined
-      : (placeholder ?? t('datepicker.TypeOrSelect'));
+  const placeholderValue = placeholder?.trim() === '' ? undefined : placeholder;
 
   const isLarge = variant === 'large';
   const inputClassName = `${styles.input} ${
@@ -202,8 +203,9 @@ export const DatePicker = ({
 
   return (
     <div
-      className={`${className} ${classNames?.container ?? ''}`.trim()}
+      className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
       lang={lang}
+      data-has-spacing={hasSpacing}
     >
       <LabelWithHelp
         classNames={classNames}
@@ -284,4 +286,4 @@ export const DatePicker = ({
 
 DatePicker.displayName = 'DatePicker';
 
-export { getDatePickerDateFormat };
+export { getDatePickerDateFormat, getDatePickerPlaceholderDefault };

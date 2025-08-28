@@ -60,6 +60,7 @@ export const SearchField = (({
   value,
   enableSRNavigationHint = getEnableSRNavigationHintDefault(),
   hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
+  hasSpacing,
   hideLabel = getSearchFieldHideLabelDefault(),
   onBlur,
   onChange,
@@ -177,6 +178,7 @@ export const SearchField = (({
       id={searchFieldId}
       className={containerClassName}
       lang={lang}
+      data-has-spacing={hasSpacing}
       onKeyDown={handleKeyDown}
     >
       <LabelWithHelp
@@ -276,7 +278,6 @@ ${classNames?.searchContainer ?? ''}`.trim()}
           )}
           {showClearButton && !disabled && !readOnly && (
             <IconButton
-              type={'reset'}
               className={styles.clearButton}
               size={variant === 'medium' ? 'extraSmall' : 'small'}
               svgPath={CancelSVGpath}
@@ -295,6 +296,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
         </div>
         {!readOnly && (
           <button
+            type={'button'}
             className={searchButtonClassName}
             disabled={disabled}
             onClick={(event): void => {

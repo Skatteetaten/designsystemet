@@ -2,69 +2,71 @@
 
 exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:rh:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:ri:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:ri:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:rk:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:rk:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:rm:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:rm:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -83,9 +85,11 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
 
 exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:rp:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34">
         Dette er en Heading i legend
@@ -96,7 +100,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
         </em>
       </p>
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34">
@@ -108,58 +112,58 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
         </em>
       </p>
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:rq:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:rq:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:rs:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:rs:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:ru:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:ru:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -178,9 +182,11 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
 
 exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r11:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34">
         Dette er en Heading i legend
@@ -191,7 +197,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
         </em>
       </p>
     </legend>
-    <div class="_legend_s6jvz_15 _legendWithMarkup_required_s6jvz_23"
+    <div class="_legend_u2f5e_15 _legendWithMarkup_required_u2f5e_23"
          aria-hidden="true"
     >
       <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34">
@@ -203,58 +209,58 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
         </em>
       </p>
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r12:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r12:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r14:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r14:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r16:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r16:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -275,72 +281,73 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <fieldset id="htmlid"
             data-testid="123ID"
-            class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11 dummyClassname"
+            class="_fieldset_u2f5e_5 dummyClassname"
             lang="nb"
             form="123form"
+            data-has-spacing="true"
   >
     <legend id="legendId-:r9:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:ra:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:ra:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:rc:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:rc:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:re:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:re:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -359,18 +366,20 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r3d:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28 dummyClassname"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28 dummyClassname"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3d:"
@@ -390,67 +399,67 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_description_sf6vs_17   dummyClassname">
+    <div class="_description_5szkl_17   dummyClassname">
       beskrivelse
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r3f:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                aria-describedby="checkboxGroupErrorId-:r3c:"
                aria-invalid="true"
                type="checkbox"
         >
         <label for="checkboxInputId-:r3f:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40 _labelCheckbox_error_1k24j_60">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43 _labelCheckbox_error_1vcnk_63">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r3h:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                aria-describedby="checkboxGroupErrorId-:r3c:"
                aria-invalid="true"
                type="checkbox"
         >
         <label for="checkboxInputId-:r3h:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40 _labelCheckbox_error_1k24j_60">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43 _labelCheckbox_error_1vcnk_63">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r3j:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                aria-describedby="checkboxGroupErrorId-:r3c:"
                aria-invalid="true"
                type="checkbox"
         >
         <label for="checkboxInputId-:r3j:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40 _labelCheckbox_error_1k24j_60">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43 _labelCheckbox_error_1vcnk_63">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -461,8 +470,8 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_vog41_15 _errorMessage_1e92u_5 dummyClassname">
-          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+        <div class="_errorMessage_1ycvu_15 _errorMessage_1e92u_5 dummyClassname">
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -471,7 +480,7 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_vog41_29">
+          <p class="_errorMessageText_1ycvu_32">
             Velg minst ett av alternativene
           </p>
         </div>
@@ -483,72 +492,74 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r2s:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_description_sf6vs_17">
+    <div class="_description_5szkl_17">
       Vi trenger å vite om du har barn.
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2t:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2t:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2v:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2v:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r31:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r31:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -567,71 +578,72 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11"
+  <fieldset class="_fieldset_u2f5e_5"
             disabled
+            data-has-spacing="true"
   >
     <legend id="legendId-:r1h:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1i:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r1i:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1k:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r1k:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1m:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r1m:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -650,72 +662,73 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11"
+  <fieldset class="_fieldset_u2f5e_5"
             disabled
+            data-has-spacing="true"
   >
     <legend id="legendId-:r1p:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1q:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
                checked
         >
         <label for="checkboxInputId-:r1q:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1s:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r1s:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1u:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r1u:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -734,75 +747,77 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithError play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r29:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2a:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                aria-describedby="checkboxGroupErrorId-:r28:"
                aria-invalid="true"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2a:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40 _labelCheckbox_error_1k24j_60">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43 _labelCheckbox_error_1vcnk_63">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2c:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                aria-describedby="checkboxGroupErrorId-:r28:"
                aria-invalid="true"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2c:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40 _labelCheckbox_error_1k24j_60">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43 _labelCheckbox_error_1vcnk_63">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2e:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                aria-describedby="checkboxGroupErrorId-:r28:"
                aria-invalid="true"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2e:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40 _labelCheckbox_error_1k24j_60">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43 _labelCheckbox_error_1vcnk_63">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -813,8 +828,8 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
-        <div class="_errorMessage_vog41_15 _errorMessage_1e92u_5">
-          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_vog41_25"
+        <div class="_errorMessage_1ycvu_15 _errorMessage_1e92u_5">
+          <svg class="_systemIcon_o38m2_2 _systemIcon_small_o38m2_5 _errorMessageIcon_1ycvu_28"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -823,7 +838,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
             <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
             </path>
           </svg>
-          <p class="_errorMessageText_vog41_29">
+          <p class="_errorMessageText_1ycvu_32">
             Velg minst ett av alternativene
           </p>
         </div>
@@ -835,18 +850,20 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r34:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r34:"
@@ -866,58 +883,58 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r36:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r36:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r38:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r38:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r3a:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r3a:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -936,18 +953,20 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r2i:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15   _legendNoMarginBottom_s6jvz_28"
+    <div class="_legend_u2f5e_15   _legendNoMarginBottom_u2f5e_28"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_sf6vs_27"
+    <button class="_button_19ayz_1 _button_extraSmall_19ayz_34 _button_outlined_19ayz_98 _helpButton_5szkl_27"
             data-brightness="default"
             type="button"
             aria-describedby="legendId-:r2i:"
@@ -967,11 +986,11 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_helpBox_sf6vs_32">
-      <div class="_helpBoxText_sf6vs_45">
+    <div class="_helpBox_5szkl_32">
+      <div class="_helpBoxText_5szkl_45">
         Vi trenger å vite om du har barn.
       </div>
-      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_sf6vs_52"
+      <button class="_button_19ayz_1 _button_small_19ayz_38  _helpBoxCloseButton_5szkl_52"
               data-brightness="default"
               type="button"
       >
@@ -990,58 +1009,58 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2k:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2k:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2m:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2m:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2o:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2o:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -1060,69 +1079,71 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r19:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+    <div class="_legend_u2f5e_15  _srOnly_u2f5e_39"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32 _contentContainerNoMarginTop_u2f5e_35">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1a:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r1a:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1c:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r1c:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r1e:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r1e:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -1141,71 +1162,72 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11"
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
             id="dummyIdForwardedFromRef"
   >
     <legend id="legendId-:r1:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15"
+    <div class="_legend_u2f5e_15"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r2:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r2:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r4:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r4:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r6:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r6:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>
@@ -1224,69 +1246,71 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
 
 exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+  <fieldset class="_fieldset_u2f5e_5"
+            data-has-spacing="true"
+  >
     <legend id="legendId-:r21:"
-            class="_srOnly_s6jvz_39"
+            class="_srOnly_u2f5e_39"
     >
       Velg det som passer deg
     </legend>
-    <div class="_legend_s6jvz_15 _legend_required_s6jvz_23"
+    <div class="_legend_u2f5e_15 _legend_required_u2f5e_23"
          aria-hidden="true"
     >
       Velg det som passer deg
     </div>
-    <div class="_contentContainer_s6jvz_32">
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+    <div class="_contentContainer_u2f5e_32">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r22:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r22:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn over 16 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r24:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r24:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn under 12 år
             </span>
           </span>
         </label>
       </div>
-      <div class="_container_1k24j_5 _containerSpacingBottom_1k24j_14">
+      <div class="_container_1vcnk_5 _containerSpacingBottom_1vcnk_14">
         <input id="checkboxInputId-:r26:"
-               class="_input_1k24j_17"
+               class="_input_1vcnk_20"
                type="checkbox"
         >
         <label for="checkboxInputId-:r26:"
-               class="_label_1k24j_29"
+               class="_label_1vcnk_32"
         >
-          <span class="_labelCheckbox_1k24j_40">
-            <span class="_labelCheckboxCheck_1k24j_50">
+          <span class="_labelCheckbox_1vcnk_43">
+            <span class="_labelCheckboxCheck_1vcnk_53">
             </span>
           </span>
-          <span class="_labelContent_1k24j_63">
+          <span class="_labelContent_1vcnk_66">
             <span class>
               Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
             </span>

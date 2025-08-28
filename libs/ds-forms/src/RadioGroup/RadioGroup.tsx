@@ -2,6 +2,7 @@ import { useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
 import {
   getCommonClassNameDefault,
+  getHasSpacingDefault,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
@@ -34,6 +35,7 @@ export const RadioGroup = (({
   form,
   name,
   required,
+  hasSpacing = getHasSpacingDefault(),
   hideLegend,
   showRequiredMark,
   shadowRootNode,
@@ -100,7 +102,7 @@ export const RadioGroup = (({
       helpSvgPath={helpSvgPath}
       helpText={helpText}
       titleHelpSvg={titleHelpSvg}
-      hasSpacing
+      hasSpacing={hasSpacing}
       onHelpToggle={onHelpToggle}
     >
       <div className={radioGroupItemContainer}>

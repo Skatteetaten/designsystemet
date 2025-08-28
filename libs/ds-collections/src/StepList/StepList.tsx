@@ -7,6 +7,8 @@ import {
   getStepListStepTitleAsDefault,
   getStepListStepVariantDefault,
   getStepListStepShouldAutoFocusWhenActiveDefault,
+  getStepListStepEditButtonTextDefault,
+  getStepListStepNextButtonTextDefault,
 } from '../StepListStep/defaults';
 import { StepListStep } from '../StepListStep/StepListStep';
 
@@ -41,4 +43,6 @@ export {
   getStepListStepTitleAsDefault,
   getStepListStepVariantDefault,
   getStepListStepShouldAutoFocusWhenActiveDefault,
+  getStepListStepEditButtonTextDefault,
+  getStepListStepNextButtonTextDefault,
 };

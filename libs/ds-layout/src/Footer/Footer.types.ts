@@ -1,4 +1,4 @@
-import { JSX, ReactNode, Ref } from 'react';
+import { ReactNode, Ref } from 'react';
 
 import { LinkProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -30,13 +30,15 @@ export interface FooterProps extends BaseProps {
   thirdColumn?: ReactNode;
   /** Om standard lenker skal skjules */
   hideDefaultLinks?: boolean;
+  /** Om standard lenker skal åpne i ny fane */
+  openDefaultLinksInNewTab?: boolean;
   /**
    * Footer.LinkFirstColumn, Footer.Logo eller Footer.Link:
    * Footer.LinkFirstColumn blir plassert under de første tre lenkene i første kolonne.
    * Footer.Logo blir plassert ved siden av Skatteetatens logo.
    * Footer.Link blir plassert under logoen horisontalt.
    */
-  children?: JSX.Element | JSX.Element[];
+  children?: ReactNode;
 }
 
 export interface FooterComponent extends React.FC<FooterProps> {

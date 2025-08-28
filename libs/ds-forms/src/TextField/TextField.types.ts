@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  KeyboardEventHandler,
   Ref,
 } from 'react';
 
@@ -38,6 +39,7 @@ interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   onFocus?: FocusEventHandler<HTMLInputElement>;
+  onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 }
 
 export interface TextFieldCommonProps
@@ -55,6 +57,8 @@ export interface TextFieldCommonProps
   characterLimit?: number;
   /** Tekst på feilmelding */
   errorMessage?: string;
+  /** Margin under komponenten */
+  hasSpacing?: boolean;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
   /** Input eller textarea ledetekst */

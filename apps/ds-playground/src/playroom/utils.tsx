@@ -66,12 +66,24 @@ function extractArrowFunctionContent(str: string): string {
 }
 
 const getPlayroomUrlFromSource = (code: string): string => {
-  let url = createUrl({
-    baseUrl:
-      process.env.NODE_ENV === 'development'
-        ? 'http://localhost:9000'
-        : '/web/designsystemet/playroom/index.html',
+  let baseUrl = '';
 
+  if (process.env.NODE_ENV === 'development') {
+    baseUrl = 'http://localhost:9000';
+  } else {
+    // Get the current URL's origin and pathname
+    const { origin, pathname } = window.location;
+
+    // Extract the base path up to the last directory that contains the current application
+    // This assumes that "/playroom/index.html" should be a sibling to the current application path
+    const basePath = pathname.split('/').slice(0, -1).join('/');
+
+    // Construct the full playroom URL
+    baseUrl = `${origin}${basePath}/playroom/index.html`;
+  }
+
+  let url = createUrl({
+    baseUrl,
     code,
     title: 'Playroom',
     paramType: 'search',

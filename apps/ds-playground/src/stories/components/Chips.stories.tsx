@@ -36,18 +36,18 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-const lokasjoner = [
-  'Ål',
-  'Bjørnafjorden',
-  'Evje og Hornnes',
-  'Hamar',
-  'Trondheim',
-];
-
-const dager = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag'];
-
 export const Examples: Story = {
   render: (_args): JSX.Element => {
+    const lokasjoner = [
+      'Ål',
+      'Bjørnafjorden',
+      'Evje og Hornnes',
+      'Hamar',
+      'Trondheim',
+    ];
+
+    const dager = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag'];
+
     const [filter, setFilter] = useState(lokasjoner);
     const [valgteDager, setValgteDater] = useState<string[]>([
       dager[0],

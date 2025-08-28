@@ -1,9 +1,9 @@
 declare const classNames: {
   readonly topContainer: 'topContainer';
+  readonly contentContainer: 'contentContainer';
   readonly mainMenu: 'mainMenu';
   readonly columnsThree: 'columnsThree';
   readonly columnsTwo: 'columnsTwo';
-  readonly contentContainer: 'contentContainer';
   readonly separator: 'separator';
   readonly separatorLeft: 'separatorLeft';
   readonly separatorRight: 'separatorRight';

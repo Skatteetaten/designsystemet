@@ -6,6 +6,7 @@ import {
   useMemo,
   useRef,
   useState,
+  useEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -25,6 +26,7 @@ import {
   isWithinMinMaxRange,
   findNextAvailableDate,
   findPreviousAvailableDate,
+  areAllSelectableDatesDisabled,
 } from './utils';
 import { Select } from '../Select/Select';
 import { TextField } from '../TextField/TextField';
@@ -47,6 +49,7 @@ export const DatePickerCalendar = ({
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
   const calendarRef = useRef<HTMLTableElement>(null);
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
   const disabledDateTimestamps = useMemo(
     () =>
@@ -263,6 +266,27 @@ export const DatePickerCalendar = ({
     [selectedYear, selectedMonthIndex, minDate, maxDate, disabledDates]
   );
 
+  useEffect(() => {
+    const nextButton = nextButtonRef.current;
+
+    const handleKeyDown = (event: Event): void => {
+      const keyboardEvent = event as globalThis.KeyboardEvent;
+      if (keyboardEvent.key === 'Tab' && !keyboardEvent.shiftKey) {
+        const allSelectableDatesDisabled = areAllSelectableDatesDisabled(grid);
+        if (allSelectableDatesDisabled) {
+          keyboardEvent.preventDefault();
+          onTabKeyOut && onTabKeyOut();
+        }
+      }
+    };
+
+    nextButton?.addEventListener('keydown', handleKeyDown);
+
+    return (): void => {
+      nextButton?.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [grid, onTabKeyOut]);
+
   const concatenatedClassName = `${styles.calendar} ${className}`.trim();
 
   return (
@@ -282,7 +306,6 @@ export const DatePickerCalendar = ({
           } ${
             selectedMonthIndex === 0 ? Number(selectedYear) - 1 : selectedYear
           }`}
-          type={'button'}
           disabled={isPrevMonthInvalid}
           onClick={(): void => onPrevMonth()}
         />
@@ -314,6 +337,7 @@ export const DatePickerCalendar = ({
           />
         </div>
         <IconButton
+          ref={nextButtonRef}
           className={styles.calendarNavigationArrowIcon}
           svgPath={ArrowForwardSVGpath}
           title={`${t('datepicker.NextMonth')} ${
@@ -321,7 +345,6 @@ export const DatePickerCalendar = ({
           } ${
             selectedMonthIndex === 11 ? Number(selectedYear) + 1 : selectedYear
           }`}
-          type={'button'}
           disabled={isNextMonthInvalid}
           onClick={(): void => onNextMonth()}
         />

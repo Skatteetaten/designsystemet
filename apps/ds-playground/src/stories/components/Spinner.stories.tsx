@@ -3,13 +3,12 @@ import { useEffect, useState, JSX, useRef } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Spinner,
   getSpinnerColorDefault,
+  getSpinnerLabelDefault,
   getSpinnerSizeDefault,
   getSpinnerTitlePositionDefault,
-  spinnerSizeArr,
 } from '@skatteetaten/ds-progress';
 
 import { category } from '../../../.storybook/helpers';
@@ -24,11 +23,10 @@ const meta = {
     children: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+        defaultValue: { summary: getSpinnerLabelDefault() },
       },
     },
     size: {
-      options: [...spinnerSizeArr],
       control: 'inline-radio',
       table: {
         category: category.props,

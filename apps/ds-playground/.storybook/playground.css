@@ -142,13 +142,11 @@ code {
 }
 
 .textField150 {
-  padding-bottom: 20px;
   max-width: 150px;
   width: 100%;
 }
 
 .textField300 {
-  padding-bottom: 20px;
   max-width: 300px;
   width: 100%;
 }
@@ -215,6 +213,16 @@ a.docs {
   font-weight: var(--font-weight-medium);
   font-family: 'Inter';
   text-decoration-line: underline;
+}
+
+ul.fontSizeM {
+  li {
+    font-size: var(--font-size-m);
+  }
+}
+
+p.fontSizeM {
+  font-size: var(--font-size-m);
 }
 
 .semantic-article {
@@ -354,4 +362,52 @@ a.resetLinkStyling {
   @media only screen and (max-width: 480px) {
     display: none;
   }
+}
+
+dl.descriptionListTwoColumns {
+  --description-list-columns: 2;
+}
+
+.editableContent {
+  padding: var(--spacing-s) var(--spacing-l) var(--spacing-l);
+}
+
+.highlightRow {
+  animation-name: highlightRow;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes highlightRow {
+  0%,
+  99% {
+    background-color: var(--palette-forest-10);
+  }
+
+  100% {
+    background-color: unset;
+  }
+}
+
+.breadcrumbs--external {
+  width: var(--semantic-responsive-container);
+  margin: var(--spacing-m) auto;
+  padding: var(--semantic-responsive-container-spacing);
+  box-sizing: border-box;
+}
+
+.breadcrumbs--internal {
+  padding: var(--spacing-s)
+    var(--semantic-responsive-internal-container-spacing);
+}
+
+.tabIndexNoOutline:focus {
+  outline: none;
+}
+
+.interactiveColor.interactiveColor {
+  color: var(--semantic-interactive-main);
+}
+.interactiveColor:hover {
+  color: var(--semantic-page-background);
 }

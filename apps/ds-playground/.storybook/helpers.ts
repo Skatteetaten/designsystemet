@@ -16,6 +16,5 @@ export const htmlEventDescription: Partial<ArgTypes> = {
 export const includeStylesTransform =
   (stylesAsString: string) =>
   (code: string): string => {
-    console.log(code);
     return `/* CSS */ \n ${stylesAsString} \n /* TSX */ \n ${code}`;
   };

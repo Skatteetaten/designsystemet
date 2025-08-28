@@ -3,7 +3,7 @@ import { useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 
 import { category } from '../../../.storybook/helpers';
@@ -21,6 +21,7 @@ const meta = {
     classNames: { control: false, table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -36,7 +37,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     // HTML

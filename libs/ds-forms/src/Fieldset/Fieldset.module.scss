@@ -1,4 +1,4 @@
-@use 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/mixins/styles';
 
 .fieldset {
   padding: 0;
@@ -6,7 +6,7 @@
   margin: 0;
   overflow-wrap: anywhere;
 
-  &_hasSpacing {
+  &[data-has-spacing='true'] {
     margin-bottom: var(--spacing-m);
   }
 }

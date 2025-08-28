@@ -11,6 +11,8 @@ import {
   getTableCellAlignmentDefault,
   getTableSumAlignmentDefault,
   getTableRowIsExpandedDefault,
+  getTableSumTextDefault,
+  getTableRowExpandButtonTitleDefault,
 } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
 import { TableBody } from '../TableBody/TableBody';
@@ -183,4 +185,6 @@ export {
   getTableVariantDefault,
   getTableSumAlignmentDefault,
   getTableRowIsExpandedDefault,
+  getTableSumTextDefault,
+  getTableRowExpandButtonTitleDefault,
 };

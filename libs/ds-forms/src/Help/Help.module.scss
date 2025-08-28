@@ -1,4 +1,4 @@
-@use 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/mixins/styles';
 
 @keyframes animationhelpbox {
   from {
@@ -27,7 +27,7 @@
 
 .helpButton {
   margin-left: var(--spacing-s);
-  vertical-align: text-top;
+  vertical-align: bottom;
 }
 
 .helpBox {

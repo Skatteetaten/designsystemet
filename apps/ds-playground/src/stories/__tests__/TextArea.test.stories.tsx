@@ -32,7 +32,6 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-
     autosize: { table: { disable: true, category: category.props } },
     classNames: {
       table: { disable: true, category: category.props },
@@ -44,6 +43,7 @@ const meta = {
     },
     description: { table: { disable: true, category: category.props } },
     errorMessage: { table: { disable: true, category: category.props } },
+    hasSpacing: { table: { disable: true, category: category.props } },
     helpSvgPath: {
       table: { disable: true, category: category.props },
       options: Object.keys(SystemSVGPaths),

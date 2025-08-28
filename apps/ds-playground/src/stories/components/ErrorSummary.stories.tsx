@@ -3,7 +3,6 @@ import { useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
   ErrorSummary,
   TextField,
@@ -20,6 +19,7 @@ const meta = {
     // Props
     children: { control: false, table: { category: category.props } },
     content: { control: 'text', table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     shadowRootNode: {
       control: false,
       table: { control: false, category: category.props },
@@ -27,7 +27,6 @@ const meta = {
     showErrorSummary: { table: { category: category.props } },
     title: { table: { category: category.props } },
     titleAs: {
-      options: [...headingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -66,6 +65,7 @@ export const Examples: Story = {
           label={'År'}
           value={1009}
           errorMessage={'Inntekståret må være etter 2008'}
+          hasSpacing
           required
         />
         <TextField
@@ -77,6 +77,7 @@ export const Examples: Story = {
               ? 'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'
               : undefined
           }
+          hasSpacing
           required
         />
         <TextField
@@ -86,9 +87,14 @@ export const Examples: Story = {
           errorMessage={
             state.hasError ? 'Antall dager må fylles ut.' : undefined
           }
+          hasSpacing
           required
         />
-        <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
+        <ErrorSummary
+          id={'errorSummary1'}
+          showErrorSummary={state.hasError}
+          hasSpacing
+        >
           <ErrorSummary.Error referenceId={'input_aar'}>
             {'Inntekståret må være etter 2008'}
           </ErrorSummary.Error>
@@ -100,7 +106,6 @@ export const Examples: Story = {
           </ErrorSummary.Error>
         </ErrorSummary>
         <Button
-          className={'topSpacingXL'}
           onClick={(): void => {
             setState({ hasError: !state.hasError });
           }}

@@ -1,5 +1,5 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
-@use 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/mixins/styles';
 
 .topContainer {
   display: flex;
@@ -10,11 +10,11 @@
   padding: var(--semantic-responsive-container-spacing);
   padding-top: var(--spacing-s);
   margin: auto;
-  gap: var(--spacing-s);
 
   @media (min-width: breakpoints.$breakpoint-s) {
     padding-top: var(--spacing-m);
     padding-bottom: var(--spacing-s);
+    gap: var(--spacing-s);
   }
 
   .contentContainer {
@@ -23,7 +23,11 @@
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-    gap: var(--spacing-s);
+    gap: var(--spacing-xxs);
+
+    @media (min-width: breakpoints.$breakpoint-s) {
+      gap: var(--spacing-s);
+    }
   }
 }
 

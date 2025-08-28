@@ -119,14 +119,19 @@ export const Modal = ({
     /**
      * Hvis konsument endrer children i en åpen modal, vil fokus settes til body og dismissOnEsc vil slutte å fungere.
      * Setter derfor fokus tilbake til modalen.
+     * Legger på en timeout for å sikre at innholdet i modalen er oppdatert før fokus eventuelt settes tilbake.
      */
-    if (
-      !dismissOnEsc &&
-      modalRef.current?.open &&
-      document.activeElement?.nodeName === 'BODY'
-    ) {
-      modalRef.current.focus();
-    }
+    const timeoutId = setTimeout(() => {
+      if (
+        !dismissOnEsc &&
+        modalRef.current?.open &&
+        document.activeElement?.nodeName === 'BODY'
+      ) {
+        modalRef.current.focus();
+      }
+    }, 0);
+
+    return (): void => clearTimeout(timeoutId);
   }, [children, dismissOnEsc]);
 
   const isClickOutside = (event: MouseEvent): boolean => {

@@ -2,27 +2,16 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { colorNamesArr, sizeArr } from '@skatteetaten/ds-core-utils';
 import { CheckSVGpath, WarningSVGpath } from '@skatteetaten/ds-icons';
 import {
   Tag,
   getTagColorDefault,
   getTagSizeDefault,
-  TagColor,
 } from '@skatteetaten/ds-status';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-
-const tagColors: TagColor[] = [
-  colorNamesArr[0],
-  colorNamesArr[1],
-  colorNamesArr[2],
-  colorNamesArr[5],
-];
-
-const tagSizes = [sizeArr[1], sizeArr[2]];
 
 const meta = {
   component: Tag,
@@ -36,12 +25,8 @@ const meta = {
         category: category.props,
         defaultValue: { summary: getTagColorDefault() },
       },
-      control: 'radio',
-      options: tagColors,
     },
     size: {
-      options: tagSizes,
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getTagSizeDefault() },

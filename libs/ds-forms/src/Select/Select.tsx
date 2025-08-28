@@ -6,16 +6,15 @@ import {
   JSX,
   useLayoutEffect,
 } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import {
-  dsI18n,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
+import { getSelectPlaceholderDefault } from './defaults';
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -36,7 +35,7 @@ export const Select = (({
   helpSvgPath,
   helpText,
   label,
-  placeholder,
+  placeholder = getSelectPlaceholderDefault(),
   titleHelpSvg,
   variant = getCommonFormVariantDefault(),
   value,
@@ -45,6 +44,7 @@ export const Select = (({
   form,
   name,
   required,
+  hasSpacing,
   hideLabel,
   hidePlaceholder,
   showRequiredMark,
@@ -55,7 +55,6 @@ export const Select = (({
   children,
 }: SelectProps): JSX.Element => {
   useValidateFormRequiredProps({ required, showRequiredMark });
-  const { t } = useTranslation('Shared', { i18n: dsI18n });
 
   const selectRef = useRef<HTMLSelectElement>(null);
   useImperativeHandle(ref, () => selectRef?.current as HTMLSelectElement);
@@ -97,7 +96,8 @@ export const Select = (({
   return (
     <div
       lang={lang}
-      className={`${className} ${classNames?.container ?? ''}`.trim()}
+      className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
+      data-has-spacing={hasSpacing}
     >
       <LabelWithHelp
         classNames={classNames}
@@ -135,9 +135,7 @@ export const Select = (({
           onChange={handleChange}
           onFocus={onFocus}
         >
-          {!hidePlaceholder && (
-            <option value={''}>{placeholder ?? t('shared.ChooseValue')}</option>
-          )}
+          {!hidePlaceholder && <option value={''}>{placeholder}</option>}
           {children}
         </select>
         <ChevronDownIcon className={selectIconClassName} />
@@ -156,3 +154,5 @@ export const Select = (({
 Select.displayName = 'Select';
 Select.Option = SelectOption;
 Select.Option.displayName = 'Select.Option';
+
+export { getSelectPlaceholderDefault };

@@ -10,17 +10,23 @@ import {
 
 export interface ExpandableRowProps extends BaseProps {
   ref?: RefObject<RowWithExpandButtonHandle | null>;
-  expandButtonTitle: string;
-  expandableContent: ReactNode;
+  /** Overstyring av standard title/tekst for utvidelsesknappen. Default title er "Mer informasjon" (når showExpandButtonTitle er false). Når showExpandButtonTitle er satt til true, vises teksten "Detaljer" som default. */
+  expandButtonTitle?: string;
+  /** Innholdet som vises når raden er utvidet. Hvis det ekspanderte innholdet skal være flere tabellrader som skal aligneres med resten av tabellen så må radene ikke wrappes i React.Fragment, i stedet kan de sendes inn som array. */
+  expandableContent?: ReactNode;
+  /** Om utvidelsesknappen skal ha synlig tekst. */
   showExpandButtonTitle?: boolean;
-  context: TableContextProps | null;
-  svgPath: ReactElement<SVGPathElement>;
+  /** Skal settes til radheader sin id dersom rad er ekspanderbar. Dette er for å tydeliggjøre hvilken rad som ekspanderes. */
   expandButtonAriaDescribedby?: string;
-  iconButtonAriaExpanded?: IconButtonProps['ariaExpanded'];
-  hideIconButton?: boolean;
+  /** Brukes til å styre ekspandert tilstand utenfor komponenten. */
   isExpanded?: boolean;
-  isExpandButtonDisabled?: boolean;
-  onExpandClick: () => void;
+  /** Innholdet i raden. Bruk Table.DataCell for celler. */
   children?: ReactNode;
   classNames?: { expandedContent?: string };
+  context: TableContextProps | null;
+  svgPath: ReactElement<SVGPathElement>;
+  hideIconButton?: boolean;
+  iconButtonAriaExpanded?: IconButtonProps['ariaExpanded'];
+  isExpandButtonDisabled?: boolean;
+  onExpandClick: () => void;
 }

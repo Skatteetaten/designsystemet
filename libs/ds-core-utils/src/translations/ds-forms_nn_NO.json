@@ -43,11 +43,11 @@
   "fileuploader.NoRightsUploadError": "Du har ikkje rett til å laste opp filer",
   "fileuploader.SuccessIconLabel": "Fullført",
   "fileuploader.UploadedHeading": "Lasta opp:",
-  "fileuploader.UploadedSummary": "({{fileCount}} fil(er) lasta opp)",
+  "fileuploader.UploadedSummary": "{{fileCount}} fil(er) lasta opp",
   "searchfield.ButtonTitle": "Søk",
   "searchfield.ClearButtonTitle": "Nullstill",
   "searchfield.Focus": "Bruk piltastane ned og opp for å velje",
   "searchfield.NumberOfResults": "{{ant}} forslag blir vist.",
-  "textarea.CharactersLeft": "({{ant}} tegn igjen)",
-  "textarea.TooManyCharacters": "({{ant}} tegn for mye)"
+  "textarea.CharactersLeft": "{{ant}} teikn igjen",
+  "textarea.TooManyCharacters": "{{ant}} teikn for mykje"
 }

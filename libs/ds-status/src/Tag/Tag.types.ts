@@ -1,11 +1,11 @@
 import { ReactElement, Ref } from 'react';
 
-import { BaseProps, Size, colorNamesArr } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Color, Size } from '@skatteetaten/ds-core-utils';
 
 export type TagSize = Extract<Size, 'medium' | 'small'>;
 
 export type TagColor = Extract<
-  (typeof colorNamesArr)[number],
+  Color,
   'ochre' | 'forest' | 'burgundy' | 'graphite'
 >;
 

@@ -52,6 +52,7 @@ const meta = {
     defaultValue: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     label: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },

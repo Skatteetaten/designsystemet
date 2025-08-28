@@ -13,6 +13,7 @@ export const ErrorMessage = ({
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
+  hasSpacing,
   showError,
   children,
 }: ErrorMessageProps): JSX.Element => {
@@ -26,7 +27,10 @@ export const ErrorMessage = ({
       aria-atomic
     >
       {showError && (
-        <div className={`${styles.errorMessage} ${className}`.trim()}>
+        <div
+          className={`${styles.errorMessage} ${className}`.trim()}
+          data-has-spacing={hasSpacing}
+        >
           <Icon
             svgPath={WarningSVGpath}
             size={'small'}

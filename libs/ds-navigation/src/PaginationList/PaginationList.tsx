@@ -43,7 +43,6 @@ const FirstLastPageButton = ({
     <li className={style}>
       {hidePrevNextButtonTitle ? (
         <IconButton
-          type={'button'}
           svgPath={icon}
           title={buttonTitle}
           onClick={() => handleChange(activePage + multiplication)}

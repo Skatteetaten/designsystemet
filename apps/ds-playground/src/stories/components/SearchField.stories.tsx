@@ -3,10 +3,10 @@ import React, { JSX, useMemo, useState } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
-  dsI18n,
   getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
+  getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
   getEnableSRNavigationHintDefault,
@@ -39,6 +39,7 @@ const meta = {
     defaultValue: { control: 'text', table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     label: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
@@ -62,7 +63,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     variant: {

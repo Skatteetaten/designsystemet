@@ -15,16 +15,19 @@ import { category } from '../../../.storybook/helpers';
 import { ThemeSVGPaths } from '../utils/icon.themes';
 import { exampleParameters } from '../utils/stories.utils';
 
+const themeIconSizeArr = sizeArr.filter(
+  (size) => size === 'medium' || size === 'large'
+);
+
 const meta = {
   component: Icon,
   title: 'Komponenter/Icon/ThemeIcon',
   argTypes: {
     // Props
     size: {
-      control: 'select',
-      options: [sizeArr[2], sizeArr[3]],
+      options: [...themeIconSizeArr],
       table: {
-        type: { summary: [sizeArr[2], sizeArr[3]].toString() },
+        type: { summary: [...themeIconSizeArr].toString() },
         category: category.props,
         defaultValue: { summary: getIconSizeDefault() },
       },

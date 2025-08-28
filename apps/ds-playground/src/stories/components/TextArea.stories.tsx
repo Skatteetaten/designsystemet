@@ -3,9 +3,9 @@ import { useState, ChangeEvent, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
-  dsI18n,
   getCommonAutoCompleteDefault,
   getAutoCompletePropDescription,
+  getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import { TextArea } from '@skatteetaten/ds-forms';
 
@@ -30,6 +30,7 @@ const meta = {
     characterLimit: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -45,7 +46,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     // HTML

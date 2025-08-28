@@ -53,11 +53,13 @@ export const TextField = ({
   readOnly,
   required,
   value,
+  hasSpacing,
   hideLabel,
   showRequiredMark,
   onBlur,
   onChange,
   onFocus,
+  onKeyDown,
   onHelpToggle,
 }: TextFieldProps): JSX.Element => {
   useValidateFormRequiredProps({ required, showRequiredMark });
@@ -80,7 +82,14 @@ export const TextField = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (!thousandSeparator) return;
+    if (onKeyDown) {
+      onKeyDown(e);
+      return;
+    }
+
+    if (!thousandSeparator) {
+      return;
+    }
 
     const input = e.currentTarget;
     const cursorPosition = input.selectionStart || 0;
@@ -185,8 +194,9 @@ export const TextField = ({
 
   return (
     <div
-      className={`${className} ${classNames?.container ?? ''}`.trim()}
+      className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
       lang={lang}
+      data-has-spacing={hasSpacing}
     >
       <LabelWithHelp
         classNames={classNames}

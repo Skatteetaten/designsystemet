@@ -10,6 +10,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
+import { getOpenDefaultLinksInNewTabDefault } from './defaults';
 import { FooterComponent, FooterProps } from './Footer.types';
 import defaultEnglishLogo from './logo_en.svg';
 import defaultNorwegainLogo from './logo_no.svg';
@@ -35,6 +36,7 @@ export const Footer = (({
   titleThirdColumn,
   hideLogo,
   hideDefaultLinks,
+  openDefaultLinksInNewTab = getOpenDefaultLinksInNewTabDefault(),
   children,
 }: FooterProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
@@ -61,6 +63,10 @@ export const Footer = (({
     dsI18n.language === Languages.Engelsk
       ? styles.skatteetatenLogo_en
       : styles.skatteetatenLogo;
+
+  const openInNexText = `(${t('shared.NewTab')})`;
+  const getLinkText = (text: string): string =>
+    `${text} ${openDefaultLinksInNewTab ? openInNexText : ''}`.trim();
 
   return (
     <footer
@@ -91,17 +97,17 @@ export const Footer = (({
                     {!hideDefaultLinks && [
                       <LinkGroup.Link
                         key={'contactUs'}
-                        target={'_blank'}
+                        target={openDefaultLinksInNewTab ? '_blank' : undefined}
                         href={contactUsURL ?? t('shared.ContactUsURL')}
                       >
-                        {`${t('shared.ContactUs')} (${t('shared.NewTab')})`}
+                        {getLinkText(t('shared.ContactUs'))}
                       </LinkGroup.Link>,
                       <LinkGroup.Link
                         key={'securityAndPrivacy'}
                         href={securityURL ?? t('shared.SecurityAndPrivacyURL')}
-                        target={'_blank'}
+                        target={openDefaultLinksInNewTab ? '_blank' : undefined}
                       >
-                        {`${t('shared.SecurityAndPrivacy')} (${t('shared.NewTab')})`}
+                        {getLinkText(t('shared.SecurityAndPrivacy'))}
                       </LinkGroup.Link>,
                       <LinkGroup.Link
                         key={'accessibilityStatement'}
@@ -109,10 +115,10 @@ export const Footer = (({
                           accessibilityURL ??
                           t('shared.AccessibilityStatementURL')
                         }
-                        target={'_blank'}
+                        target={openDefaultLinksInNewTab ? '_blank' : undefined}
                         isExternal
                       >
-                        {`${t('shared.AccessibilityStatement')} (${t('shared.NewTab')})`}
+                        {getLinkText(t('shared.AccessibilityStatement'))}
                       </LinkGroup.Link>,
                     ]}
                     {linksFirstColumn}
@@ -170,6 +176,8 @@ export const Footer = (({
     </footer>
   );
 }) as FooterComponent;
+
+export { getOpenDefaultLinksInNewTabDefault };
 
 Footer.displayName = 'Footer';
 Footer.Logo = FooterLogo;

@@ -13,14 +13,17 @@ import {
   FormRequiredProps,
   Prettify,
   Size,
-  sizeArr,
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
 
-export const searchArrSize = [sizeArr[2], sizeArr[3], sizeArr[5]] as const;
-export type SearchSize = Extract<Size, 'medium' | 'large' | 'extraLarge'>;
+export const searchArrSize = [
+  'medium',
+  'large',
+  'extraLarge',
+] as const satisfies readonly Size[];
+export type SearchSize = (typeof searchArrSize)[number];
 
 type RequiredDatePickerHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
@@ -71,6 +74,8 @@ interface SearchFieldCommonProps
   description?: LabelWithHelpProps['description'];
   /** Tekst på feilmelding */
   errorMessage?: string;
+  /** Margin under komponenten */
+  hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
   /** Overskriver default hjelpeikon */

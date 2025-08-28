@@ -23,23 +23,13 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: {
-      table: { disable: true },
-    },
-    description: {
-      table: { disable: true },
-    },
+    children: { table: { disable: true } },
+    description: { table: { disable: true } },
     // HTML
-    value: {
-      table: { disable: true },
-    },
-    form: {
-      table: { disable: true },
-    },
+    value: { table: { disable: true } },
+    form: { table: { disable: true } },
     // Aria
-    ariaDescribedby: {
-      table: { disable: true },
-    },
+    ariaDescribedby: { table: { disable: true } },
     // Events
     onBlur: { ...htmlEventDescription, table: { disable: true } },
     onChange: { ...htmlEventDescription, table: { disable: true } },

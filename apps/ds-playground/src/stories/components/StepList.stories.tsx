@@ -123,7 +123,6 @@ export const Examples: Story = {
                   </Paragraph>
                 </OpenClose>
                 <RadioGroup
-                  id={'step3radio'}
                   legend={
                     'Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko?'
                   }
@@ -138,7 +137,9 @@ export const Examples: Story = {
                     setStep3(e.target.value);
                   }}
                 >
-                  <RadioGroup.Radio value={'ja'}>{'Ja'}</RadioGroup.Radio>
+                  <RadioGroup.Radio id={'step3radio'} value={'ja'}>
+                    {'Ja'}
+                  </RadioGroup.Radio>
                   <RadioGroup.Radio value={'nei'}>{'Nei'}</RadioGroup.Radio>
                 </RadioGroup>
                 <ErrorSummary showErrorSummary={hasStep3Error}>

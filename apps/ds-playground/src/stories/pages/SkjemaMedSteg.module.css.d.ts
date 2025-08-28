@@ -4,7 +4,6 @@ declare const classNames: {
   readonly article: 'article';
   readonly marginTopM: 'marginTopM';
   readonly marginBottomM: 'marginBottomM';
-  readonly marginTopL: 'marginTopL';
   readonly marginRightM: 'marginRightM';
   readonly flexWrap: 'flexWrap';
   readonly address: 'address';

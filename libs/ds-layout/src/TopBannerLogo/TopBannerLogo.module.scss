@@ -3,7 +3,7 @@
 .logoContainer {
   height: 2rem;
   align-self: center;
-  padding: var(--spacing-xs);
+  padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-xs);
   margin-left: calc(-1 * var(--spacing-xs));
 
   @media (min-width: breakpoints.$breakpoint-s) {

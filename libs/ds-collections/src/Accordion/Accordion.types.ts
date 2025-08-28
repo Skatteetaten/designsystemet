@@ -1,25 +1,14 @@
 import { ReactNode, Ref } from 'react';
 
-import {
-  BaseProps,
-  Position,
-  colorNamesArr,
-  sizeArr,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Color, Position, Size } from '@skatteetaten/ds-core-utils';
 
 import { AccordionItem } from '../AccordionItem/AccordionItem';
 
 export type AccordionColor =
-  | Extract<
-      (typeof colorNamesArr)[number],
-      'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'
-    >
+  | Extract<Color, 'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'>
   | 'none';
 
-export type AccordionSize = Extract<
-  (typeof sizeArr)[number],
-  'small' | 'medium' | 'large'
->;
+export type AccordionSize = Extract<Size, 'small' | 'medium' | 'large'>;
 
 export type IconPosition = Extract<Position, 'left' | 'right'>;
 export interface AccordionProps extends BaseProps {

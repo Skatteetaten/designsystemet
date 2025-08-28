@@ -239,47 +239,17 @@ const meta = {
       table: { disable: true },
       control: 'object',
     },
-    minimumEntitiesForSearch: {
-      table: { disable: true },
-      control: 'number',
-    },
-    title: {
-      table: { disable: true },
-      control: 'text',
-    },
-    dismissOnEsc: {
-      table: { disable: true },
-      control: 'boolean',
-    },
-    dismissOnOutsideClick: {
-      table: { disable: true },
-      control: 'boolean',
-    },
-    hideCloseButton: {
-      table: { disable: true },
-      control: 'boolean',
-    },
-    showSubunits: {
-      table: { disable: true },
-      control: 'boolean',
-    },
-    showInactiveBusinesses: {
-      table: { disable: true },
-      control: 'boolean',
-    },
-    showDeceasedPeople: {
-      table: { disable: true },
-      control: 'boolean',
-    },
-    onClose: {
-      table: { disable: true },
-    },
-    onEntitySelect: {
-      table: { disable: true },
-    },
-    onLogout: {
-      table: { disable: true },
-    },
+    minimumEntitiesForSearch: { table: { disable: true } },
+    title: { table: { disable: true } },
+    dismissOnEsc: { table: { disable: true } },
+    dismissOnOutsideClick: { table: { disable: true } },
+    hideCloseButton: { table: { disable: true } },
+    showSubunits: { table: { disable: true } },
+    showInactiveBusinesses: { table: { disable: true } },
+    showDeceasedPeople: { table: { disable: true } },
+    onClose: { table: { disable: true } },
+    onEntitySelect: { table: { disable: true } },
+    onLogout: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: 'object',

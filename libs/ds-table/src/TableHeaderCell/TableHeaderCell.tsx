@@ -29,6 +29,7 @@ export const TableHeaderCell = ({
   alignment = getTableCellAlignmentDefault(),
   as: Tag = getHeaderCellAsDefault(),
   colSpan,
+  isSortDisabled,
   isSortable,
   scope,
   sortKey,
@@ -100,6 +101,7 @@ export const TableHeaderCell = ({
         <button
           className={`${styles.headerCellSortButton} ${variantClassName}`.trim()}
           type={'button'}
+          disabled={isSortDisabled}
           onClick={handleOnSort}
         >
           {children}

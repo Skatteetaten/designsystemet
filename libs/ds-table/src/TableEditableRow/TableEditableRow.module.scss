@@ -1,4 +1,4 @@
-@use 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/mixins/styles';
 
 .editableRow {
   &_expanded {
@@ -6,20 +6,12 @@
 
     background: var(--palette-ochre-10);
   }
+}
 
-  &Triangle {
-    position: absolute;
-    top: -10px;
-    left: var(--spacing-xl);
-    width: var(--size-small);
-    height: var(--size-small);
-    border-top: 1px solid transparent;
-    border-right: 1px solid var(--palette-ochre-50);
-    border-bottom: 1px solid var(--palette-ochre-50);
-    border-left: 1px solid transparent;
-    background: var(--palette-ochre-10);
-    transform: rotate(45deg);
-  }
+.triangle {
+  position: absolute;
+  top: -2px;
+  left: var(--spacing-xl);
 }
 
 .expandableContent {

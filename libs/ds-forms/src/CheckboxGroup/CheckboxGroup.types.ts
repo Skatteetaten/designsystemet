@@ -29,6 +29,8 @@ interface CheckboxGroupCommonProps
   legend: FieldsetProps['legend'];
   /** Tilleggstekst */
   description?: FieldsetProps['description'];
+  /** Margin under komponenten */
+  hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: FieldsetProps['helpText'];
   /** Overskriver default hjelpeikon */

@@ -17,6 +17,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    isSortDisabled: { table: { category: category.props } },
     isSortable: { table: { category: category.props } },
     sortKey: { table: { category: category.props } },
     alignment: {

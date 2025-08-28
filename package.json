@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/designsystemet",
   "groupId": "no.skatteetaten.aurora",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "license": "Apache-2.0",
   "private": false,
   "author": {
@@ -74,11 +74,11 @@
     "core-js": "3.39.0",
     "core-js-pure": "3.39.0",
     "date-fns": "4.1.0",
-    "i18next": "24.2.2",
+    "i18next": "25.4.2",
     "jscodeshift": "17.3.0",
     "react": "19.0.0 ",
     "react-dom": "19.0.0",
-    "react-i18next": "15.4.1",
+    "react-i18next": "15.7.2",
     "regenerator-runtime": "0.14.1",
     "storybook": "8.5.3",
     "tslib": "2.8.1"

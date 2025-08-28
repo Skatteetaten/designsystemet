@@ -26,7 +26,7 @@
   "rolepicker.PeopleHeading": "Andre personar",
   "rolepicker.PeopleHits": "treff i andre personar",
   "rolepicker.Person": "person",
-  "rolepicker.SearchAll": "Søk etter personens navn eller fødselsnummer, namnet på verksemda eller organisasjonsnummer.",
+  "rolepicker.SearchAll": "Søk etter personens namn eller fødselsnummer, namnet på verksemda eller organisasjonsnummer.",
   "rolepicker.SearchBusinesses": "Søk etter namn på verksemda eller organisasjonsnummer.",
   "rolepicker.SearchPeople": "Søk etter personens namn eller fødselsnummer.",
   "rolepicker.SearchPlaceholder": "Søk i lista etter person/verksemd",
@@ -39,5 +39,12 @@
   "rolepicker.ShowLess": "Vis færre",
   "rolepicker.ShowSubBusinessesHeading": "Vis undereiningar",
   "rolepicker.SubUnit": "Undereining",
-  "rolepicker.YouCanRepresent": "Du kan representere"
+  "rolepicker.YouCanRepresent": "Du kan representere",
+  "topbannerexternalusermenu.AboutMe": "Om meg",
+  "topbannerexternalusermenu.AboutTheOrganisation": "Om verksemda",
+  "topbannerexternalusermenu.MyPage": "Mi side",
+  "topbannerexternalusermenu.Notification": "Varsel",
+  "topbannerexternalusermenu.NotificationCountMessage": "Varslar, {{count}} ulesne",
+  "topbannerexternalusermenu.OnBehalfOf": "På vegner av",
+  "topbannerexternalusermenu.SwitchUser": "Byt brukar"
 }

@@ -5,11 +5,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 import { within as shadowWithin } from 'shadow-dom-testing-library';
 
-import {
-  RadioGroup,
-  RadioGroupProps,
-  radioGroupVariantArr,
-} from '@skatteetaten/ds-forms';
+import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -32,6 +28,7 @@ const meta = {
     defaultValue: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -46,7 +43,6 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...radioGroupVariantArr],
       control: 'inline-radio',
     },
     // HTML

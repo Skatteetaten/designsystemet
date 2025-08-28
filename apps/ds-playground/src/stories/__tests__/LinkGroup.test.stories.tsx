@@ -1,11 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-import {
-  LinkGroup,
-  LinkGroupProps,
-  linkGroupVariantArr,
-} from '@skatteetaten/ds-buttons';
+import { LinkGroup, LinkGroupProps } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
 
@@ -34,7 +30,6 @@ const meta = {
     },
     variant: {
       table: { disable: true },
-      options: [...linkGroupVariantArr],
       control: 'inline-radio',
     },
   },

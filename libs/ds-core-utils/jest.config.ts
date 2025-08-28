@@ -11,6 +11,8 @@ const { exclude: _, ...swcJestConfig } = JSON.parse(
 if (swcJestConfig.swcrc === undefined) {
   swcJestConfig.swcrc = false;
 }
+// needed for Intellij debugger to work properly
+swcJestConfig.sourceMaps = 'inline';
 
 // jest needs EsModule Interop to find the default exported function
 swcJestConfig.module.noInterop = false;

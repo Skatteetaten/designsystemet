@@ -1,8 +1,14 @@
+.wrapper {
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
+}
+
 .dateContainer {
   position: relative;
   display: flex;
   width: 100%;
-  max-width: 164px;
+  max-width: 10.25rem;
 
   &MarginTop {
     margin-top: var(--spacing-xs);

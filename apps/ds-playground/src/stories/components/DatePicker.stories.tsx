@@ -5,15 +5,15 @@ import { Meta, StoryObj } from '@storybook/react';
 import { isWithinInterval, format } from 'date-fns';
 
 import {
-  dsI18n,
-  formArrSize,
   getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
+  getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
   getDatePickerDateFormat,
+  getDatePickerPlaceholderDefault,
   TextArea,
 } from '@skatteetaten/ds-forms';
 
@@ -38,6 +38,7 @@ const meta = {
     label: { table: { category: category.props } },
     disabledDates: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -55,11 +56,10 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
     variant: {
-      options: [...formArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -81,7 +81,7 @@ const meta = {
     placeholder: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: dsI18n.t('ds_forms:datepicker.TypeOrSelect') },
+        defaultValue: { summary: getDatePickerPlaceholderDefault() },
       },
     },
     readOnly: { table: { category: category.htmlAttribute } },
@@ -170,6 +170,7 @@ export const Examples: Story = {
           errorMessage={errorMessage}
           maxDate={maxDate}
           minDate={minDate}
+          hasSpacing
           required
           onSelectDate={handleSelect}
           onChange={(e) => setInputValue(e.target.value)}

@@ -13,10 +13,7 @@ import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerButton } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  TopBannerButtonProps,
-  topBannerButtonVariantArr,
-} from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton.types';
+import { TopBannerButtonProps } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton.types';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -38,11 +35,7 @@ const meta = {
       mapping: SystemSVGPaths,
     },
     title: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      options: [...topBannerButtonVariantArr],
-      control: 'radio',
-    },
+    variant: { table: { disable: true } },
     // Aria
     ariaExpanded: { table: { disable: true } },
     // Events

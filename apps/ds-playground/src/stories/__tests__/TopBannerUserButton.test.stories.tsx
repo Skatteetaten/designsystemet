@@ -40,7 +40,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs: TopBannerUserButtonProps = {
-  user: { role: 'meg' },
+  user: {
+    role: 'meg',
+  },
 };
 
 export const WithRef = {

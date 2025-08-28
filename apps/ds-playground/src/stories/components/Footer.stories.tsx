@@ -3,11 +3,14 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { Footer } from '@skatteetaten/ds-layout';
+import {
+  Footer,
+  getOpenDefaultLinksInNewTabDefault,
+} from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
-import logo from '../../assets/ske-logo-horizontal-white.png';
+import footerLogo from '../../assets/ske-logo-horizontal-white.png';
 import { exampleParameters } from '../utils/stories.utils';
 
 Footer.Link.displayName = 'Footer.Link';
@@ -24,6 +27,14 @@ const meta = {
     accessibilityURL: { table: { category: category.props } },
     hideLogo: { table: { category: category.props } },
     hideDefaultLinks: { table: { category: category.props } },
+    openDefaultLinksInNewTab: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getOpenDefaultLinksInNewTabDefault().toString(),
+        },
+      },
+    },
     titleFirstColumn: { table: { category: category.props } },
     titleSecondColumn: { table: { category: category.props } },
     titleThirdColumn: { table: { category: category.props } },
@@ -95,7 +106,11 @@ export const Examples: Story = {
           {'Forskning'}
         </Footer.LinkFirstColumn>
         <Footer.Logo>
-          <img className={'logoHeight'} src={logo} alt={'Skatteetaten logo'} />
+          <img
+            className={'logoHeight'}
+            src={footerLogo}
+            alt={'Skatteetaten logo'}
+          />
         </Footer.Logo>
         <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
         <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>

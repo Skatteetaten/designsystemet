@@ -12,10 +12,13 @@ import {
 
 import {
   dsI18n,
-  formArrSize,
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
-import { DatePicker, TextField } from '@skatteetaten/ds-forms';
+import {
+  DatePicker,
+  getDatePickerPlaceholderDefault,
+  TextField,
+} from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -50,6 +53,7 @@ const meta = {
     description: { table: { disable: true } },
     label: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -64,7 +68,6 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
-      options: [...formArrSize],
       control: 'inline-radio',
     },
     // HTML
@@ -210,7 +213,7 @@ export const Defaults = {
     await expect(input).toHaveAttribute('id');
     await expect(input).toHaveAttribute(
       'placeholder',
-      dsI18n.t('ds_forms:datepicker.TypeOrSelect')
+      getDatePickerPlaceholderDefault()
     );
     await expect(input.tagName).toBe('INPUT');
     await expect(input).not.toBeRequired();
@@ -724,6 +727,7 @@ export const OpenCalendarMovesOver = {
   args: {
     ...defaultArgs,
     value: valueDate,
+    hasSpacing: true,
   },
   parameters: {
     HTMLSnapshot: { disable: true },
@@ -820,5 +824,91 @@ export const HideCalendarOnResizeWidth = {
     window.innerWidth = window.innerWidth - 100;
     await fireEvent.resize(window);
     await expect(calendarTable).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const TabNavigationWithAllDatesDisabled = {
+  name: 'Tab Navigation With All Dates Disabled (Calendar Navigation)',
+  args: {
+    ...defaultArgs,
+    disabledDates: [
+      // Disable all dates in January 2024
+      ...Array.from({ length: 31 }, (_, i) => new Date(2024, 0, i + 1)),
+      // Disable first few days of February 2024 (visible in January view)
+      ...Array.from({ length: 5 }, (_, i) => new Date(2024, 1, i + 1)),
+    ],
+    initialPickerDate: new Date('2024-01-15'),
+  },
+  argTypes: {
+    disabledDates: { table: { disable: false } },
+    initialPickerDate: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+    mockDate: new Date('2024-01-15'),
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+
+    // Open the calendar
+    await fireEvent.click(calendarButton);
+
+    const calendarTable = canvas.getByRole('table');
+    await expect(calendarTable).toBeInTheDocument();
+
+    // Calendar will automatically show next available month (February 2024)
+    // We need to navigate back to January 2024 where all dates are disabled
+    const prevMonthButton = canvas.getByRole('button', {
+      name: /forrige måned/i,
+    });
+    await expect(prevMonthButton).toBeInTheDocument();
+
+    // Click previous month to go back to January 2024
+    await fireEvent.click(prevMonthButton);
+
+    // Verify we're now in January 2024 by checking the caption
+    const caption = canvas.getByText(/januar 2024/i);
+    await expect(caption).toBeInTheDocument();
+
+    // Verify that all date buttons in the current month view are disabled
+    // This includes January dates and visible February dates
+    const dateButtons = canvas.getAllByRole('button').filter(
+      (button) =>
+        button.textContent &&
+        /^\d+$/.test(button.textContent.trim()) &&
+        button.closest('td') // Only actual date cells, not navigation
+    );
+
+    // Check that we have date buttons and they are all disabled
+    await expect(dateButtons.length).toBeGreaterThan(0);
+    for (const dateButton of dateButtons) {
+      await expect(dateButton).toBeDisabled();
+    }
+
+    // Find the next month navigation button
+    const nextMonthButton = canvas.getByRole('button', {
+      name: /neste måned/i,
+    });
+    await expect(nextMonthButton).toBeInTheDocument();
+
+    // Focus the next month button and simulate tab key
+    nextMonthButton.focus();
+    await userEvent.keyboard('[Tab]');
+
+    // Calendar should close when tabbing from next month button
+    // because all dates in the current view are disabled
+    await waitFor(() => {
+      expect(calendarTable).not.toBeInTheDocument();
+    });
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
+
+    // Focus should return to the calendar button that opened the calendar
+    await waitFor(() => {
+      expect(calendarButton).toHaveFocus();
+    });
   },
 } satisfies Story;

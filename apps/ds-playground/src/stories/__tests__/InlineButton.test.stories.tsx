@@ -35,12 +35,8 @@ const meta = {
     children: { table: { disable: true } },
     hasSpinner: { table: { disable: true } },
     spinnerTitle: { table: { disable: true } },
-    iconPosition: {
-      table: { disable: true },
-    },
-    brightness: {
-      table: { disable: true },
-    },
+    iconPosition: { table: { disable: true } },
+    brightness: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
