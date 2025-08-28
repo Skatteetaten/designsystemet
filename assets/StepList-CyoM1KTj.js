@@ -1,0 +1,9 @@
+import{j as t}from"./jsx-runtime-BjG_zV1W.js";import{useMDXComponents as s}from"./index-Ugg2TbUJ.js";import{M as m,P as i,C as n}from"./index-Iwr_fTA7.js";import{P as p}from"./utils-_cAdEKyH.js";import{S as a,E as c}from"./StepList.stories-CxGfKR19.js";import{V as l}from"./VersionBadge-DA5NWhz_.js";import{D as x}from"./DocIntro-D_UnTr65.js";import{D as d}from"./DocHeaderWrapper-CB3j5pAP.js";import"./index-D_ouKaeX.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-Bj9Tme-v.js";import"./index-D9u29hOa.js";import"./index-Cu4lwwaE.js";import"./index-BedKbVpA.js";import"./index-DrFu-skq.js";import"./lz-string-DoYuj_7g.js";import"./index-dPA2yXmo.js";import"./index-CGk5cNE3.js";import"./index-CgEl4Pzg.js";import"./index-Du3yX_TW.js";import"./index-uxUkjR_c.js";import"./index-DtTKNpP0.js";import"./index-DXWIZOJk.js";import"./index-BuHbB7kV.js";import"./DatePickerCalendar-wzrlqniL.js";import"./LabelWithHelp-BzCMv1X3.js";import"./Help-YRS8Catz.js";import"./index-krISk8b9.js";import"./helpers-B90wjoUE.js";import"./stories.utils-Ys3NG0dr.js";function e(r){const o={code:"code",h1:"h1",h2:"h2",pre:"pre",...s(),...r.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{of:a}),`
+`,t.jsxs(d,{componentName:"StepList",children:[t.jsx(o.h1,{id:"steplist",children:"StepList"}),t.jsx(l,{packageName:"collections"}),t.jsx(x,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/steplist/"})]}),`
+`,t.jsx(i,{}),`
+`,t.jsx(o.pre,{children:t.jsx(o.code,{className:"language-tsx",children:`import { StepList } from '@skatteetaten/ds-collections';
+`})}),`
+`,t.jsx(n,{}),`
+`,t.jsx(o.h2,{id:"examples",children:"Examples"}),`
+`,t.jsx(p,{of:c})]})}function G(r={}){const{wrapper:o}={...s(),...r.components};return o?t.jsx(o,{...r,children:t.jsx(e,{...r})}):e(r)}export{G as default};
+//# sourceMappingURL=StepList-CyoM1KTj.js.map
