@@ -11,22 +11,3 @@ const project = setProjectAnnotations([
   projectAnnotations,
 ]);
 beforeAll(project.beforeAll);
-
-// capture image snapshot at the end of each test
-// vis.setup({ auto: false });
-
-// capture image snapshot at the end of each test for multiple themes (light and dark in this example).
-//
-// Note that this changes the theme in the `afterEach` hook.
-// If you want to capture manual snapshots in different themes,
-// configure Vitest to run the tests in different themes.
-// vis.setup({
-//   auto: {
-//     async light() {
-//       document.body.classList.remove('dark');
-//     },
-//     async dark() {
-//       document.body.classList.add('dark');
-//     },
-//   },
-// });

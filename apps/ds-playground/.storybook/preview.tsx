@@ -249,10 +249,5 @@ const preview = {
     },
   },
   tags: ['autodocs', '!test', '!snapshot'],
-  // async afterEach(context): Promise<void> {
-  //   // console.log(context);
-  //   const shot = await page.screenshot();
-  //   console.log('screenshot taken', shot);
-  // },
 } satisfies Preview;
 export default preview;

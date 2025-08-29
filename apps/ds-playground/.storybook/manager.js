@@ -26,7 +26,7 @@ addons.setConfig({
       patterns: (item) => {
         return !item.tags.includes('isHidden');
       },
-      // ...getTestStoryFilters(),
+      ...getTestStoryFilters(),
     },
   },
 });
