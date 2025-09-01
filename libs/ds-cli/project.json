@@ -36,13 +36,6 @@
         "babelUpwardRootMode": true
       }
     },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/ds-cli"],
-      "options": {
-        "jestConfig": "libs/ds-cli/jest.config.ts"
-      }
-    },
     "tsc": {
       "executor": "@skatteetaten/ds-dev-config:tsCheck",
       "options": {
@@ -60,6 +53,13 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish dist/libs/ds-cli {args.switches}"
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/libs/ds-cli"
       }
     }
   }

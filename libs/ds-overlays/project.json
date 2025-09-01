@@ -31,13 +31,6 @@
         ]
       }
     },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "libs/ds-overlays/jest.config.ts"
-      }
-    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],
@@ -71,6 +64,13 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish dist/libs/ds-overlays {args.switches}"
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/libs/ds-overlays"
       }
     }
   }
