@@ -27,6 +27,9 @@ const meta = {
     ariaLabel: { table: { disable: true } },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Icon>;
 export default meta;
 type Story = StoryObj<typeof meta>;
