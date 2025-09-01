@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
+import { expect, fireEvent, fn, within } from 'storybook/test';
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -13,7 +13,6 @@ import {
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
-import customLogo from '../../assets/custom-mobile-logo.svg';
 import demoLogo from '../../assets/demo-logo-white.svg';
 
 const meta = {

@@ -21,6 +21,9 @@ const meta = {
     ariaHidden: { table: { disable: true } },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Divider>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -86,7 +89,7 @@ export const WithStrong = {
 export const IsHRElement = {
   name: 'Is <hr>-element (B1)',
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -103,7 +106,7 @@ export const WithAriaHidden = {
     ariaHidden: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

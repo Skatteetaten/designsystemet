@@ -51,6 +51,9 @@ const meta = {
     ],
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Breadcrumbs.List>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -68,7 +71,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;

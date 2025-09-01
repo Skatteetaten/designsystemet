@@ -59,10 +59,10 @@ const meta = {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
-  // parameters: {
-  //   chromatic: { disableSnapshot: false },
-  // },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Button>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -85,7 +85,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
@@ -315,7 +315,7 @@ export const WithType = {
     type: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
@@ -330,7 +330,7 @@ export const WithAriaDescribedby = {
     ariaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('aria-describedby', 'testid1234'),
 } satisfies Story;
@@ -345,7 +345,7 @@ export const WithAccesskey = {
     accessKey: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('accessKey', 'j'),
 } satisfies Story;
@@ -383,7 +383,7 @@ export const WithEventHandlers = {
     onClick: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

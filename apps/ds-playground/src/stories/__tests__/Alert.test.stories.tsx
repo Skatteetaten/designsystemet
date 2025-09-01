@@ -2,9 +2,9 @@ import { JSX } from 'react';
 
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { useArgs } from 'storybook/preview-api';
-import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
+import { expect, fn, within } from 'storybook/test';
 
-import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
+import { statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
