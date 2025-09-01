@@ -1,7 +1,6 @@
 import { JSX } from 'react';
 
 import { Decorator, Preview } from '@storybook/react';
-// import { page } from '@vitest/browser/context';
 import * as MockDate from 'mockdate';
 import { useEffect, useGlobals } from 'storybook/preview-api';
 
