@@ -29,12 +29,13 @@ const meta = {
     shadowRootNode: { table: { disable: true } },
     children: { table: { disable: true } },
   },
+  tags: ['test'],
   parameters: {
+    chromatic: { disableSnapshot: false },
     backgrounds: {
       default: 'grey',
     },
   },
-  tags: ['test'],
 } satisfies Meta<typeof ScrollToTopButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;

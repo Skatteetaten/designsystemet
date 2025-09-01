@@ -24,6 +24,10 @@ const meta = {
     hasSpacing: { table: { disable: true } },
     variant: { table: { disable: true } },
   },
+  tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Paragraph>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -84,7 +88,7 @@ export const IsPElement = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -255,12 +255,13 @@ const meta = {
       control: 'object',
     },
   },
+  tags: ['test'],
   parameters: {
+    chromatic: { disableSnapshot: false },
     viewport: {
       viewPortHeight: 1400,
     },
   },
-  tags: ['test'],
 } satisfies Meta<typeof RolePicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -877,7 +878,7 @@ export const WithNoDoubleUnitTypes = {
     businesses: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -922,7 +923,7 @@ export const WithCloseError = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   render: ErrorTemplate,
   argTypes: {

@@ -42,6 +42,9 @@ const meta = {
   },
   render: Template,
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Popover>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -99,7 +102,7 @@ export const WithOnClickTriggerAndCloseButton = {
   },
 
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
@@ -128,7 +131,7 @@ export const WithAutoClose = {
     disableAutoDismiss: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -152,7 +155,7 @@ export const WithAutoCloseDisabled = {
     disableAutoDismiss: true,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {

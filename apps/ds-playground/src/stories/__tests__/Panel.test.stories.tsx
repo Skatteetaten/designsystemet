@@ -84,6 +84,9 @@ const meta = {
     },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Panel>;
 export default meta;
 type Story = StoryObj<typeof meta>;

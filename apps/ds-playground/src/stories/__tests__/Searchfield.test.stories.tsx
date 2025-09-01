@@ -100,6 +100,9 @@ const meta = {
     onResultClick: { table: { disable: true } },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof SearchField>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -125,7 +128,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
 } satisfies Story;
@@ -339,7 +342,7 @@ export const WithValue = {
     value: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('value', valueText),
 } satisfies Story;
@@ -354,7 +357,7 @@ export const WithDefaultValue = {
     defaultValue: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('value', valueText),
 } satisfies Story;
@@ -499,7 +502,7 @@ export const WithEventHandlers = {
     onClear: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -561,7 +564,7 @@ export const WithArrowKeyNavigation = {
     onResultClick: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -604,7 +607,7 @@ export const WithAccesskey = {
     accessKey: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('accessKey', 'j'),
 } satisfies Story;
@@ -685,7 +688,7 @@ export const WithRequired = {
     required: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -782,7 +785,7 @@ export const WithEnableSRNavigationHintsFalse = {
     enableSRNavigationHint: false,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
