@@ -28,6 +28,9 @@ const meta = {
     onChange: { table: { disable: true } },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Tabs>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -176,7 +179,7 @@ export const WithDefaultValue = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -222,7 +225,7 @@ export const WithValue = {
     );
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   // play: async ({ canvasElement, step }): Promise<void> => {
   //   const canvas = within(canvasElement);
@@ -268,7 +271,7 @@ export const WithAriaRolesTabindex = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -338,7 +341,7 @@ export const WithTabClick = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -365,7 +368,7 @@ export const WithTabOnClickEvent = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -36,6 +36,10 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
     },
     notificationCount: 5,
   },
+  tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof TopBannerExternalUserMenu>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -131,7 +135,7 @@ export const SwitchUser: Story = {
     onSwitchUserClick: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
@@ -163,7 +167,7 @@ export const LogOut: Story = {
     notificationCount: 0,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
@@ -247,7 +251,7 @@ export const EscapeKeyFocusReturn: Story = {
     notificationCount: 0,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

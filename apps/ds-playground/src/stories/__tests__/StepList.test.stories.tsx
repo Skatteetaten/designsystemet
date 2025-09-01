@@ -26,8 +26,11 @@ const meta = {
       table: { disable: true, category: category.props },
     },
   },
-  parameters: { a11y: { disable: true } },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    a11y: { disable: true },
+  },
 } satisfies Meta<typeof StepList>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -46,7 +49,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -316,7 +319,7 @@ export const WithMultipleSteps = {
   name: 'With steps (A6, A8, A9)',
   render: TemplateMultipleSteps,
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
