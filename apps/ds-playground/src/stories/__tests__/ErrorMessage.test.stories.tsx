@@ -1,5 +1,5 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { ErrorMessage } from '@skatteetaten/ds-forms';
 
@@ -18,6 +18,7 @@ const meta = {
     hasSpacing: { table: { disable: true } },
     showError: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof ErrorMessage>;
 export default meta;
 type Story = StoryObj<typeof meta>;

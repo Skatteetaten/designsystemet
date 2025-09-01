@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { dsI18n, linkColorArr } from '@skatteetaten/ds-core-utils';
@@ -60,6 +60,7 @@ const meta = {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
+  tags: ['test'],
 } as Meta<typeof Link>;
 export default meta;
 type Story = StoryObj<typeof meta>;

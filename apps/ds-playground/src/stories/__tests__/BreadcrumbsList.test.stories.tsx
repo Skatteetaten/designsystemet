@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
@@ -50,6 +50,7 @@ const meta = {
       </Breadcrumbs.Item>,
     ],
   },
+  tags: ['test'],
 } satisfies Meta<typeof Breadcrumbs.List>;
 export default meta;
 type Story = StoryObj<typeof meta>;

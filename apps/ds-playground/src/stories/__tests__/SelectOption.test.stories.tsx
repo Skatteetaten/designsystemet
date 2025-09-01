@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Select } from '@skatteetaten/ds-forms';
 
@@ -18,6 +18,7 @@ const meta = {
     // HTML
     value: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Select.Option>;
 export default meta;
 type Story = StoryObj<typeof meta>;

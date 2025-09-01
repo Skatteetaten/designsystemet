@@ -1,6 +1,6 @@
 import { useState, JSX } from 'react';
 
-import { StoryObj, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react-vite';
 
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';

@@ -32,6 +32,7 @@ def overrides = [
     iqCredentialsId              : 'designsystem-iq',
     iqOrganizationName           : 'Team Designsystem',
     sonarQube                    : true,
+    chromatic                    : true,
     npmInstallCommand            : "ci",
     nodeVersion                  : "22",
     disableAllReports            : env.BRANCH_NAME.startsWith('disable-reports/'),
@@ -60,7 +61,7 @@ def overrides = [
 
 
 
-fileLoader.withGit('https://git.aurora.skead.no/scm/auf/designsystemet.git', "FRONT-837_webleveranse_template", "aurora-bitbucket") {
+fileLoader.withGit('https://git.aurora.skead.no/scm/auf/designsystemet.git', "feature/chromatic", "aurora-bitbucket") {
   jenkinsfile = fileLoader.load('jenkins/template.groovy')
 }
 

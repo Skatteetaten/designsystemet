@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -57,6 +57,7 @@ const meta = {
   parameters: {
     layout: 'fullscreen',
   },
+  tags: ['test'],
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
 type Story = StoryObj<typeof meta>;

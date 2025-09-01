@@ -1,7 +1,7 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Checkbox } from '@skatteetaten/ds-forms';
 
@@ -49,6 +49,7 @@ const meta = {
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Checkbox>;
 export default meta;
 type Story = StoryObj<typeof meta>;

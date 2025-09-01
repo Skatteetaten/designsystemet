@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { LinkGroup, LinkGroupProps } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
@@ -33,6 +33,7 @@ const meta = {
       control: 'inline-radio',
     },
   },
+  tags: ['test'],
 } satisfies Meta<typeof LinkGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { BreadcrumbsLinkProps, Breadcrumbs } from '@skatteetaten/ds-navigation';

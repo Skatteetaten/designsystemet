@@ -1,8 +1,8 @@
 import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { useArgs } from 'storybook/preview-api';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { TextArea, TextAreaProps } from '@skatteetaten/ds-forms';
@@ -81,6 +81,7 @@ const meta = {
     onFocus: { table: { disable: true, category: category.event } },
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof TextArea>;
 export default meta;
 type Story = StoryObj<typeof meta>;

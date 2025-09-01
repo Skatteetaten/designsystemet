@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { DescriptionList } from '@skatteetaten/ds-content';
 
@@ -43,6 +43,7 @@ const meta = {
       </DescriptionList.Element>,
     ],
   },
+  tags: ['test'],
 } satisfies Meta<typeof DescriptionList>;
 export default meta;
 type Story = StoryObj<typeof meta>;

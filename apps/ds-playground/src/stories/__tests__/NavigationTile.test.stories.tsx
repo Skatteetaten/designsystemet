@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { AccountEnkSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
@@ -64,6 +64,7 @@ const meta = {
     // Events
     onClick: { table: { disable: true } },
   },
+  tags: ['test'],
 } as Meta<typeof NavigationTile>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Popover } from '@skatteetaten/ds-overlays';
 
@@ -48,6 +48,7 @@ const meta = {
       <Popover.Trigger {...args} />
     </Popover>
   ),
+  tags: ['test'],
 } satisfies Meta<typeof Popover.Trigger>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,7 +1,7 @@
-import { StoryObj, Meta, StoryFn } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
-//eslint-disable-next-line storybook/use-storybook-testing-library
+import { StoryObj, Meta, StoryFn } from '@storybook/react-vite';
+// eslint-disable-next-line storybook/use-storybook-testing-library
 import { PointerEventsCheckLevel } from '@testing-library/user-event';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import {
   dsI18n,
@@ -68,6 +68,7 @@ const meta = {
     onFileChange: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof FileUploader>;
 export default meta;
 type Story = StoryObj<typeof meta>;

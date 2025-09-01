@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
@@ -38,6 +38,7 @@ const meta = {
       table: { disable: true },
     },
   },
+  tags: ['test'],
 } satisfies Meta<typeof ErrorSummary>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,6 +1,6 @@
 import { useRef, useState, MouseEvent, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button, Link, LinkGroup } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';

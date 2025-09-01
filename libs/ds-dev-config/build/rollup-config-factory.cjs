@@ -58,6 +58,16 @@ const bundleCss = (pathToCSS, outputDir) => {
         include: file,
         extract: `${outputDir}/${scopedSubFolder}/styles.css`,
         minimize: true,
+        use: {
+          sass: {
+            api: 'modern-compiler',
+            includePaths: [
+              //'.',
+              // './libs/ds-core-designtokens/lib/designtokens',
+              // './libs/ds-core-utils/src',
+            ],
+          },
+        },
       })
     );
   });

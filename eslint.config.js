@@ -11,7 +11,12 @@ export default [
   reactCompiler.configs.recommended,
   ...devConfig,
   {
-    ignores: ['**/.*', '**/node_modules/*'],
+    ignores: [
+      '**/.*',
+      '**/node_modules/*',
+      '**/vite.config.*.timestamp*',
+      '**/vitest.config.*.timestamp*',
+    ],
   },
   {
     plugins: {},

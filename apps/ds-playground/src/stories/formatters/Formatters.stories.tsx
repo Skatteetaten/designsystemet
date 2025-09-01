@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj } from '@storybook/react-vite';
 
 import { useFormattedInput } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';

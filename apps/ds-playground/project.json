@@ -47,7 +47,7 @@
     "test": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "test-storybook -c apps/ds-playground/.storybook"
+        "command": "vitest --project=storybook"
       }
     },
     "stylelint": {

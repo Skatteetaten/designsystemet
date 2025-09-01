@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, userEvent, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
@@ -25,6 +25,7 @@ const meta = {
     shadowRootNode: { table: { disable: true } },
     target: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof TopBannerSkipLink>;
 export default meta;
 type Story = StoryObj<typeof meta>;
