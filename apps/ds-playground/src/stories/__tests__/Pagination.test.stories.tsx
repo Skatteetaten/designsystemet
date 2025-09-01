@@ -2,14 +2,7 @@ import { JSX } from 'react';
 
 import { StoryObj, Meta } from '@storybook/react-vite';
 import { useArgs } from 'storybook/preview-api';
-import {
-  fn,
-  expect,
-  fireEvent,
-  waitFor,
-  within,
-  userEvent,
-} from 'storybook/test';
+import { fn, expect, fireEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
