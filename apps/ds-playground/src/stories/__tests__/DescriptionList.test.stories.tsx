@@ -44,6 +44,9 @@ const meta = {
     ],
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof DescriptionList>;
 export default meta;
 type Story = StoryObj<typeof meta>;

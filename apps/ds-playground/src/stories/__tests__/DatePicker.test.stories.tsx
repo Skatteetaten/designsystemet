@@ -94,10 +94,11 @@ const meta = {
     onSelectDate: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
   parameters: {
     mockDate: today,
+    chromatic: { disableSnapshot: false },
   },
-  tags: ['test'],
 } satisfies Meta<typeof DatePicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -124,7 +125,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
 } satisfies Story;
@@ -275,7 +276,7 @@ export const WithValue = {
     value: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: verifyAttribute('value', '01.02.2024'),
 } satisfies Story;
@@ -290,7 +291,7 @@ export const WithRequired = {
     required: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -333,7 +334,7 @@ export const WithoutErrorMessage = {
     await expect(textbox).not.toHaveAttribute('aria-describedby');
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
 } satisfies Story;
@@ -541,7 +542,7 @@ export const WithInitialPickerDate = {
 //   },
 //   argTypes: {},
 //   parameters: {
-//     imageSnapshot: { disable: true },
+//     chromatic: { disableSnapshot: true },
 //     HTMLSnapshot: { disable: true },
 //   },
 //   play: async ({ canvasElement }): Promise<void> => {
@@ -596,7 +597,7 @@ export const WithEventHandlers = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
@@ -621,7 +622,7 @@ export const ClickCalendarButton = {
     onFocus: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -642,7 +643,7 @@ export const ClickCalendarDateButton = {
     value: valueDate,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -666,7 +667,7 @@ export const ClickOutsideCalendar = {
     value: valueDate,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -693,7 +694,7 @@ export const OpenCalendarEscape = {
     value: valueDate,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -751,7 +752,7 @@ export const WithShadowDom = {
   },
   decorators: [webComponent],
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
     customElementName: 'calendar-customelement',
   },
@@ -801,7 +802,7 @@ export const HideCalendarOnResizeWidth = {
     value: valueDate,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -845,7 +846,7 @@ export const TabNavigationWithAllDatesDisabled = {
     initialPickerDate: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
     mockDate: new Date('2024-01-15'),
   },
