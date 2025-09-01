@@ -46,6 +46,9 @@ const meta = {
     currentPage: undefined,
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Pagination>;
 
 export default meta;
@@ -73,7 +76,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -206,7 +209,7 @@ export const WithNavigation: Story = {
     defaultCurrent: 2,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -257,7 +260,7 @@ export const WithPrevNextLabel: Story = {
     hidePrevNextButtonTitle: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
@@ -373,7 +376,7 @@ export const WithCustomAriaLabel: Story = {
     ariaLabel: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -392,7 +395,7 @@ export const WithPageSummary: Story = {
     defaultCurrent: 1,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -427,7 +430,7 @@ export const WithHiddenPageSummary: Story = {
 
 export const WithControlled: Story = {
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   args: { totalItems: 30, sibling: 1, pageSize: 5, currentPage: 1 },
   argTypes: {

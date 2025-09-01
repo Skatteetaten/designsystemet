@@ -61,6 +61,9 @@ const meta = {
     title: defaultTitle,
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Modal>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -287,7 +290,7 @@ export const ClickCloseButton = {
     },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -310,7 +313,7 @@ export const WithAutoClose = {
     },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -332,7 +335,7 @@ export const WithAutoCloseDisabled = {
     dismissOnOutsideClick: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -718,7 +721,7 @@ export const AutoOpenAndCloseOnUserInput = {
     dismissOnEsc: false,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   argTypes: {
     dismissOnEsc: { table: { disable: false } },
@@ -754,7 +757,7 @@ export const WithFormValidationFocusRetention = {
     dismissOnOutsideClick: false,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   argTypes: {
     dismissOnEsc: { table: { disable: false } },
