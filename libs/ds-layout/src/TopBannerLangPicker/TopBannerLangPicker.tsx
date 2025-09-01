@@ -176,7 +176,7 @@ export const TopBannerLangPicker = (({
         ref={mergedButtonRef}
         {...getReferenceProps()}
         lang={selectedLang}
-        className={`${styles.menuButton} ${isInMobileMenu ? styles.menuButtonDesktopOnly : ''}`}
+        className={`${styles.menuButton} ${isMenuOpen ? styles.menuButton_open : ''} ${isInMobileMenu ? styles.menuButtonDesktopOnly : ''}`}
         ariaExpanded={isMenuOpen}
         onClick={handleMenuClick}
         onKeyDown={(e) => {

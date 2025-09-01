@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
@@ -48,6 +48,7 @@ const meta = {
     mockDate: today,
   },
   render: DatesTemplate,
+  tags: ['test'],
 } satisfies Meta<typeof DatePickerCalendar>;
 export default meta;
 type Story = StoryObj<typeof meta>;

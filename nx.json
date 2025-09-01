@@ -106,5 +106,8 @@
         "targetName": "lint"
       }
     }
-  ]
+  ],
+  "tui": {
+    "autoExit": true
+  }
 }

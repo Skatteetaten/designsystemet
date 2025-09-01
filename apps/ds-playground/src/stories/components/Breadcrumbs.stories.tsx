@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TopBannerExternal, TopBannerInternal } from '@skatteetaten/ds-layout';
 import { Breadcrumbs, BreadcrumbsProps } from '@skatteetaten/ds-navigation';

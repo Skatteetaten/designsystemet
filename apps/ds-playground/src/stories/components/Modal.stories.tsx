@@ -1,6 +1,6 @@
 import { useRef, JSX, useEffect, useState } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';

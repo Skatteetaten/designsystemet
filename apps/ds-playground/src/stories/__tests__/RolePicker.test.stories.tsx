@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -260,6 +260,7 @@ const meta = {
       viewPortHeight: 1400,
     },
   },
+  tags: ['test'],
 } satisfies Meta<typeof RolePicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;

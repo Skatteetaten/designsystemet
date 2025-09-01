@@ -1,9 +1,9 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { within as shadowWithin } from 'shadow-dom-testing-library';
+import { useArgs } from 'storybook/preview-api';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -55,6 +55,7 @@ const meta = {
     onBlur: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;

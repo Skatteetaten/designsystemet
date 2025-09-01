@@ -6,8 +6,8 @@ import {
   useState,
 } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -39,6 +39,7 @@ const meta = {
   args: {
     caption: caption,
   },
+  tags: ['test'],
 } satisfies Meta<typeof Table>;
 export default meta;
 type Story = StoryObj<typeof meta>;

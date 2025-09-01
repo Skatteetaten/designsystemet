@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Accordion, AccordionProps } from '@skatteetaten/ds-collections';
 
@@ -30,6 +30,7 @@ const meta = {
       <Accordion.Item title={defaultTitle}>{defaultContent}</Accordion.Item>
     ),
   },
+  tags: ['test'],
 } satisfies Meta<typeof Accordion>;
 export default meta;
 type Story = StoryObj<typeof meta>;

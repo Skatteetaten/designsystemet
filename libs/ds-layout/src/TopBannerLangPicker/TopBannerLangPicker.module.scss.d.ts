@@ -11,6 +11,7 @@ declare const classNames: {
   readonly flagIconSvg: 'flagIconSvg';
   readonly arrowMobile: 'arrowMobile';
   readonly arrowDesktop: 'arrowDesktop';
+  readonly menuButton_open: 'menuButton_open';
   readonly menu: 'menu';
   readonly menuArrow: 'menuArrow';
   readonly list: 'list';

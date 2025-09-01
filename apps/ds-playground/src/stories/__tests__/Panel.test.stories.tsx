@@ -1,7 +1,7 @@
 import { Fragment, JSX, useEffect, useRef } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import {
@@ -83,6 +83,7 @@ const meta = {
       control: 'inline-radio',
     },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Panel>;
 export default meta;
 type Story = StoryObj<typeof meta>;

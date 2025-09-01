@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, within } from 'storybook/test';
 
 import { Table } from '@skatteetaten/ds-table';
 
@@ -26,6 +26,7 @@ const meta = {
     onEdit: { table: { disable: true } },
     children: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Table.EditableRow>;
 export default meta;
 type Story = StoryObj<typeof meta>;

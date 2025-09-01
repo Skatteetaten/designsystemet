@@ -63,7 +63,7 @@ export const TopBannerUserMenuButton = ({
     <TopBannerButton
       ref={ref}
       id={id}
-      className={`${styles.menuButton} ${className}`.trim()}
+      className={`${styles.menuButton} ${isMenuOpen ? styles.menuButton_open : ''} ${className}`.trim()}
       classNames={
         user.role === 'meg'
           ? undefined
@@ -90,6 +90,7 @@ export const TopBannerUserMenuButton = ({
       <span className={styles.srOnly}>&nbsp;{t('topbannerbutton.Menu')}</span>
       {!!notificationCount && notificationCount > 0 && (
         <span className={'srOnly'}>
+          &nbsp;
           {t('ds_overlays:topbannerexternalusermenu.NotificationCountMessage', {
             count: notificationCount,
           })}

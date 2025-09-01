@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Table } from '@skatteetaten/ds-table';
 
@@ -22,6 +22,7 @@ const meta = {
     valueAlignment: { table: { disable: true } },
   },
   args: { children: '9 000 kr' },
+  tags: ['test'],
 } satisfies Meta<typeof Table.Sum>;
 export default meta;
 type Story = StoryObj<typeof meta>;

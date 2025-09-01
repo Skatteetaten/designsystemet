@@ -35,12 +35,12 @@ const config: StorybookConfig = {
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    '@storybook/addon-essentials',
     '@storybook/addon-coverage',
     '@storybook/addon-a11y',
-    '@storybook/addon-interactions',
     '@storybook/addon-links',
-    '@nx/react/plugins/storybook',
+    '@storybook/addon-docs',
+    '@storybook/addon-vitest',
+    '@chromatic-com/storybook',
   ],
   core: {
     disableTelemetry: true,
@@ -69,6 +69,14 @@ const config: StorybookConfig = {
     const { mergeConfig } = await import('vite');
 
     return mergeConfig(config, {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: 'modern-compiler',
+            loadPaths: ['.'],
+          },
+        },
+      },
       resolve: {
         alias: [
           {

@@ -63,6 +63,7 @@ export const TopBannerExternalUserMenu = ({
       setOpen(open);
     },
     placement: 'bottom-start',
+
     whileElementsMounted: autoUpdate,
     middleware: [
       offset({ mainAxis: floatingOffset, alignmentAxis: -32 }),
@@ -73,7 +74,7 @@ export const TopBannerExternalUserMenu = ({
   });
 
   const dismiss = useDismiss(floatingData.context, {
-    ancestorScroll: true,
+    ancestorScroll: false,
   });
   const interactions = useInteractions([dismiss]);
   const { refs, floatingStyles, middlewareData } = floatingData;
@@ -91,7 +92,8 @@ export const TopBannerExternalUserMenu = ({
   }, [isOpen]);
 
   return (
-    <>
+    <div>
+      <div className={isOpen ? styles.overlay : ''} />
       <TopBannerUserMenuButton
         id={id}
         className={className}
@@ -131,14 +133,16 @@ export const TopBannerExternalUserMenu = ({
             {user.role === 'virksomhet' && user.orgnr && (
               <div>{`${t('ds_overlays:rolepicker.BusinessDescriptionPrefix')} ${formatOrganisationNumber(user.orgnr)}`}</div>
             )}
-            <InlineButton
-              className={styles.marginTopS}
-              data-testid={'switch-user'}
-              svgPath={PersonMoreSVGpath}
-              onClick={onSwitchUserClick}
-            >
-              {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
-            </InlineButton>
+            {onSwitchUserClick && (
+              <InlineButton
+                className={styles.marginTopS}
+                data-testid={'switch-user'}
+                svgPath={PersonMoreSVGpath}
+                onClick={onSwitchUserClick}
+              >
+                {t('ds_overlays:topbannerexternalusermenu.SwitchUser')}
+              </InlineButton>
+            )}
             <Divider spacingTop={'m'}></Divider>
             <div className={styles.link}>
               {(user.role === 'virksomhet' || user.role === 'meg') && (
@@ -154,10 +158,6 @@ export const TopBannerExternalUserMenu = ({
               {!!notificationCount && notificationCount > 0 && (
                 <span
                   id={'notificationCount'}
-                  aria-label={t(
-                    'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
-                    { count: notificationCount }
-                  )}
                   className={styles.notificationBadge}
                   data-testid={'varsel-circle'}
                 >
@@ -199,8 +199,8 @@ export const TopBannerExternalUserMenu = ({
                 </Link>
               </div>
             )}
-            <Divider spacingTop={'m'}></Divider>
             {children}
+            <Divider spacingTop={'m'}></Divider>
             <InlineButton svgPath={LogOutSVGpath} onClick={onLogOutClick}>
               {t('ds_overlays:rolepicker.Logout')}
             </InlineButton>
@@ -215,7 +215,7 @@ export const TopBannerExternalUserMenu = ({
           </div>
         </FloatingFocusManager>
       )}
-    </>
+    </div>
   );
 };
 

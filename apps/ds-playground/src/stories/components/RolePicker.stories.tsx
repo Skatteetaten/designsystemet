@@ -1,6 +1,6 @@
 import { JSX, useRef, useState, MouseEvent } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';

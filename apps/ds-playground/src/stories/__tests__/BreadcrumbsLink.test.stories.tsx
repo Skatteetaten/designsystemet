@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { BreadcrumbsLinkProps, Breadcrumbs } from '@skatteetaten/ds-navigation';
 
@@ -28,6 +28,7 @@ const meta = {
     // Props
     children: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof Breadcrumbs.Link>;
 export default meta;
 type Story = StoryObj<typeof meta>;

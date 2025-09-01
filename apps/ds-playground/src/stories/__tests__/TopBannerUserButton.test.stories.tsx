@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
@@ -35,6 +35,7 @@ const meta = {
     // Events
     onClick: { table: { disable: true } },
   },
+  tags: ['test'],
 } as Meta<typeof TopBannerUserButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;

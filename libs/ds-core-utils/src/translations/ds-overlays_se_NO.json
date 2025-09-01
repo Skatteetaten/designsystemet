@@ -40,11 +40,11 @@
   "rolepicker.ShowSubBusinessesHeading": "\tČájet vuolleovttadagaid",
   "rolepicker.SubUnit": "\tVuolleovttadat",
   "rolepicker.YouCanRepresent": "\tDon sáhtát ovddastit",
-  "topbannerexternalusermenu.AboutMe": "(Om meg)",
-  "topbannerexternalusermenu.AboutTheOrganisation": "(Om virksomheten)",
+  "topbannerexternalusermenu.AboutMe": "Mu birra",
+  "topbannerexternalusermenu.AboutTheOrganisation": "Doaimmahusa birra",
   "topbannerexternalusermenu.MyPage": "Mu siidui",
-  "topbannerexternalusermenu.Notification": "(Varsel)",
-  "topbannerexternalusermenu.NotificationCountMessage": "(Varsler, {{count}} uleste)",
-  "topbannerexternalusermenu.OnBehalfOf": "(På vegne av)",
-  "topbannerexternalusermenu.SwitchUser": "(Bytt bruker)"
+  "topbannerexternalusermenu.Notification": "Várrehus",
+  "topbannerexternalusermenu.NotificationCountMessage": "Várrehus, {{count}} ođđa",
+  "topbannerexternalusermenu.OnBehalfOf": "Bealis",
+  "topbannerexternalusermenu.SwitchUser": "Molsso geavaheaddji"
 }

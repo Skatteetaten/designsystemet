@@ -1,6 +1,6 @@
 import { useId, useState, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { OpenClose, StepList } from '@skatteetaten/ds-collections';
 import { Card } from '@skatteetaten/ds-content';

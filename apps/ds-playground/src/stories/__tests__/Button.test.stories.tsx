@@ -1,7 +1,7 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import {
@@ -59,6 +59,10 @@ const meta = {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
+  // parameters: {
+  //   chromatic: { disableSnapshot: false },
+  // },
+  tags: ['test'],
 } satisfies Meta<typeof Button>;
 export default meta;
 type Story = StoryObj<typeof meta>;

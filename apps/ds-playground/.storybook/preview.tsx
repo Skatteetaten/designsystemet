@@ -1,8 +1,8 @@
 import { JSX } from 'react';
 
-import { useEffect, useGlobals } from '@storybook/preview-api';
 import { Decorator, Preview } from '@storybook/react';
 import * as MockDate from 'mockdate';
+import { useEffect, useGlobals } from 'storybook/preview-api';
 
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import {
@@ -84,14 +84,18 @@ const parameters = {
   docs: {
     controls: { sort: 'requiredFirst' },
   },
+
   actions: {
     disable: true,
   },
+
   controls: {
     sort: 'requiredFirst',
     hideNoControlsWarning: true,
   },
+
   viewport: { viewports: DSViewports },
+
   options: {
     storySort: {
       method: 'alphabetical',
@@ -105,6 +109,7 @@ const parameters = {
       ],
     },
   },
+
   backgrounds: {
     default: 'light',
     values: [
@@ -126,6 +131,14 @@ const parameters = {
       },
     ],
   },
+
+  a11y: {
+    // 'todo' - show a11y violations in the test UI only
+    // 'error' - fail CI on a11y violations
+    // 'off' - skip a11y checks entirely
+    test: 'off',
+  },
+  chromatic: { disableSnapshot: true },
 };
 
 const argTypes = {
@@ -234,6 +247,6 @@ const preview = {
       manual: true,
     },
   },
-  tags: ['autodocs'],
+  tags: ['autodocs', '!test', '!snapshot'],
 } satisfies Preview;
 export default preview;

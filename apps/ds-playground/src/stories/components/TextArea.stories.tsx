@@ -1,6 +1,6 @@
 import { useState, ChangeEvent, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   getCommonAutoCompleteDefault,

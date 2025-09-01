@@ -1,7 +1,7 @@
 import { useState, FocusEvent, ChangeEvent } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { RadioGroup } from '@skatteetaten/ds-forms';
 
@@ -35,6 +35,7 @@ const meta = {
     onChange: { ...htmlEventDescription, table: { disable: true } },
     onFocus: { ...htmlEventDescription, table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof RadioGroup.Radio>;
 export default meta;
 type Story = StoryObj<typeof meta>;

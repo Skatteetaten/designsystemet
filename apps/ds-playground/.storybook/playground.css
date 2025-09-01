@@ -400,3 +400,14 @@ dl.descriptionListTwoColumns {
   padding: var(--spacing-s)
     var(--semantic-responsive-internal-container-spacing);
 }
+
+.tabIndexNoOutline:focus {
+  outline: none;
+}
+
+.interactiveColor.interactiveColor {
+  color: var(--semantic-interactive-main);
+}
+.interactiveColor:hover {
+  color: var(--semantic-page-background);
+}

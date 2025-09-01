@@ -11,7 +11,7 @@
     "noPropertyAccessFromIndexSignature": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["vite/client"]
+    "types": ["vite/client", "@vitest/browser/providers/playwright"]
   },
   "files": [
     "../../types/vite-env.d.ts",

@@ -1,4 +1,5 @@
 declare const classNames: {
+  readonly overlay: 'overlay';
   readonly arrow: 'arrow';
   readonly menu: 'menu';
   readonly notificationBadge: 'notificationBadge';

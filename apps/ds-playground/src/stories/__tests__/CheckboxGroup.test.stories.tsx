@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, within } from 'storybook/test';
 
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -41,6 +41,7 @@ const meta = {
     // Events
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
 } satisfies Meta<typeof CheckboxGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;

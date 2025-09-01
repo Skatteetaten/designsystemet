@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -30,6 +30,7 @@ const meta = {
       <Popover.Content {...args} />
     </Popover>
   ),
+  tags: ['test'],
 } satisfies Meta<typeof Popover.Content>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -60,7 +61,6 @@ export const WithRef = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
-    console.log(canvas.getAllByRole('generic'));
     await expect(container).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
 } satisfies Story;
