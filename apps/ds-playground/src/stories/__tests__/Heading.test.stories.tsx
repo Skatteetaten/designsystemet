@@ -31,6 +31,9 @@ const meta = {
     level: { table: { disable: true } },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Heading>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -55,7 +58,7 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');

@@ -35,6 +35,9 @@ const meta = {
     onHelpToggle: { table: { disable: true } },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Help>;
 export default meta;
 type Story = StoryObj<typeof meta>;

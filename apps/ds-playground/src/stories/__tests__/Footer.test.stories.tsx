@@ -34,10 +34,11 @@ const meta = {
     thirdColumn: { table: { disable: true } },
     openDefaultLinksInNewTab: { table: { disable: true } },
   },
+  tags: ['test'],
   parameters: {
     layout: 'fullscreen',
+    chromatic: { disableSnapshot: false },
   },
-  tags: ['test'],
 } satisfies Meta<typeof Footer>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -110,7 +111,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -220,7 +221,7 @@ export const WithHideDefaultLinks = {
   },
 
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

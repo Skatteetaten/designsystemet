@@ -34,6 +34,9 @@ const meta = {
     },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof LinkGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;
