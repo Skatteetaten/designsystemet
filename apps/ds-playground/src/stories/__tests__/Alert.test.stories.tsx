@@ -1,10 +1,9 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
-import { useArgs } from 'storybook/preview-api';
-import { expect, fn, within } from 'storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
-import { statusArr } from '@skatteetaten/ds-core-utils';
+import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -387,31 +386,32 @@ export const WithCloseOnClickButton = {
     chromatic: { disableSnapshot: true },
   },
   render: (args): JSX.Element => {
-    const [, setArgs] = useArgs();
+    const [showAlert, setShowAlert] = useState(true);
     return (
       <Alert
         {...args}
+        showAlert={showAlert}
         onClose={() => {
-          setArgs({ showAlert: false });
+          setShowAlert(false);
         }}
       >
         {args.children}
       </Alert>
     );
   },
-  // play: async ({ canvasElement }): Promise<void> => {
-  //   const canvas = within(canvasElement);
-  //
-  //   const alertNode = canvas.getByText(defaultText);
-  //   await expect(alertNode).toBeInTheDocument();
-  //
-  //   const iconButton = canvas.getByRole('button');
-  //   await expect(iconButton).toBeInTheDocument();
-  //   const svg = canvas.getByTitle(dsI18n.t('ds_status:alert.CloseMessage'));
-  //   await expect(svg).toBeInTheDocument();
-  //   await userEvent.click(iconButton);
-  //   await waitFor(() => expect(alertNode).not.toBeInTheDocument());
-  // },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const alertNode = canvas.getByText(defaultText);
+    await expect(alertNode).toBeInTheDocument();
+
+    const iconButton = canvas.getByRole('button');
+    await expect(iconButton).toBeInTheDocument();
+    const svg = canvas.getByTitle(dsI18n.t('ds_status:alert.CloseMessage'));
+    await expect(svg).toBeInTheDocument();
+    await userEvent.click(iconButton);
+    await waitFor(() => expect(alertNode).not.toBeInTheDocument());
+  },
 } satisfies Story;
 
 export const WithAriaLiveOff = {

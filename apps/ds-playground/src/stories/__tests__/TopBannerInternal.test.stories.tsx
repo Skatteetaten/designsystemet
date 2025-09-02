@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, fn, within } from 'storybook/test';
+import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -456,22 +456,22 @@ export const WithHideLogoOnMobile = {
   args: {
     hideLogoOnMobile: true,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--mobile',
     },
   },
-  // play: async ({ canvasElement }): Promise<void> => {
-  //   const canvas = within(canvasElement);
-  //   const link = await canvas.findByRole('link', {
-  //     name: 'MVA',
-  //   });
-  //   await expect(link).toBeInTheDocument();
-  //   await waitFor(() => {
-  //     const logo = link.querySelector('img');
-  //     expect(logo).not.toBeInTheDocument();
-  //   });
-  // },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = await canvas.findByRole('link', {
+      name: 'MVA',
+    });
+    await expect(link).toBeInTheDocument();
+    await waitFor(() => {
+      const logo = link.querySelector('img');
+      expect(logo).not.toBeInTheDocument();
+    });
+  },
 } satisfies Story;
 
 export const WithHideLogoOnDesktop = {
@@ -487,16 +487,16 @@ export const WithHideLogoOnDesktop = {
       defaultViewport: '--breakpoint-s',
     },
   },
-  // play: async ({ canvasElement }): Promise<void> => {
-  //   const canvas = within(canvasElement);
-  //   const link = await canvas.findByRole('link', {
-  //     name: 'MVA',
-  //   });
-  //   await expect(link).toBeInTheDocument();
-  //
-  //   await waitFor(() => {
-  //     const logo = link.querySelector('img');
-  //     expect(logo).toBeInTheDocument();
-  //   });
-  // },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = await canvas.findByRole('link', {
+      name: 'MVA',
+    });
+    await expect(link).toBeInTheDocument();
+
+    await waitFor(() => {
+      const logo = link.querySelector('img');
+      expect(logo).toBeInTheDocument();
+    });
+  },
 } satisfies Story;
