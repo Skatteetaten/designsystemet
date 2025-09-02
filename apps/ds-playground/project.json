@@ -29,7 +29,8 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "configDir": "apps/ds-playground/.storybook",
-        "outputDir": "dist/storybook/ds-playground"
+        "outputDir": "dist/storybook/ds-playground",
+        "statsJson": true
       },
       "configurations": {
         "ci": {

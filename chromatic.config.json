@@ -1,11 +1,14 @@
 {
   "$schema": "https://www.chromatic.com/config-file.schema.json",
   "projectId": "Project:68ad8bf775fcb9aa19b070e9",
-  "onlyChanged": false,
-  "onlyStoryFiles": [
-    "apps/ds-playground/src/stories/__tests__/*.test.stories.tsx"
-  ],
   "storybookConfigDir": "apps/ds-playground/.storybook",
+  "storybookBuildDir": "dist/storybook/ds-playground",
+  "externals": [
+    "libs/ds-core-designtokens/**/*.css",
+    "../../**/*.svg",
+    "../../**/*.png"
+  ],
+  "onlyChanged": true,
   "buildScriptName": "build:playground",
   "zip": true
 }
