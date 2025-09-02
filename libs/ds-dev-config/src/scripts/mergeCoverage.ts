@@ -17,7 +17,7 @@ libs.forEach((lib) => {
 });
 
 fs.copyFileSync(
-  'coverage/storybook/coverage-storybook.json',
+  'coverage/storybook/coverage-final.json',
   `${REPORTS_FOLDER}/coverage-storybook.json`
 );
 
