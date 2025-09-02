@@ -1,7 +1,6 @@
 import { JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-import { useArgs } from 'storybook/preview-api';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
@@ -202,12 +201,12 @@ export const WithValue = {
     value: { table: { disable: false } },
   },
   render: (args): JSX.Element => {
-    const [{ value }, updateArgs] = useArgs();
+    const [value, setValue] = useState('tab2');
     const toggleTab = (): void => {
       if (value === 'tab1') {
-        updateArgs({ value: 'tab2' });
+        setValue('tab2');
       } else {
-        updateArgs({ value: 'tab1' });
+        setValue('tab1');
       }
     };
     return (
@@ -227,38 +226,23 @@ export const WithValue = {
   parameters: {
     chromatic: { disableSnapshot: true },
   },
-  play: async ({ canvasElement, step }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    await step(
-      'Sjekker om Bedrift-tab finnes og har attribut aria-selected:true',
-      async () => {
-        const secondTab = await canvas.findByRole('tab', {
-          name: 'Bedrift',
-          selected: true,
-        });
-        await expect(secondTab).toBeInTheDocument();
-      }
-    );
+    const secondTab = await canvas.findByRole('tab', {
+      name: 'Bedrift',
+    });
+    await expect(secondTab).toHaveAttribute('aria-selected', 'true');
 
-    await step(
-      'Endrer value-prop utenfra og forventer at Person-tab er aktiv',
-      async () => {
-        const button = await canvas.findByRole('button', { name: 'ToggleTab' });
-        await userEvent.click(button);
-        const firsttab = await canvas.findByRole('tab', {
-          name: 'Person',
-          selected: true,
-        });
-        await expect(firsttab).toBeInTheDocument();
-      }
+    const button = await canvas.findByRole('button', { name: 'ToggleTab' });
+    await userEvent.click(button);
+    const firstTab = await canvas.findByRole('tab', {
+      name: 'Person',
+    });
+    await waitFor(() =>
+      expect(firstTab).toHaveAttribute('aria-selected', 'true')
     );
-
-    await step(
-      'Ingen test - Nullstiller - Toggler aktiv tab tilbake til tab2/Bedrift for å kunne kjøre test i nettelser flere ganger',
-      async () => {
-        const button = await canvas.findByRole('button', { name: 'ToggleTab' });
-        await userEvent.click(button);
-      }
+    await waitFor(() =>
+      expect(secondTab).toHaveAttribute('aria-selected', 'false')
     );
   },
 } satisfies Story;
