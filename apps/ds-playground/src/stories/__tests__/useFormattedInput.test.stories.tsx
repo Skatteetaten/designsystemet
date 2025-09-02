@@ -10,7 +10,6 @@ import { TextField } from '@skatteetaten/ds-forms';
 const meta = {
   title: 'Tester/useFormattedInput',
   parameters: {
-    imageSnapshot: { disable: true },
     controls: {
       disable: true,
     },

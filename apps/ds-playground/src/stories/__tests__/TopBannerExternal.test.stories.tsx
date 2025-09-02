@@ -54,10 +54,11 @@ const meta = {
     onLogOutClick: { table: { disable: true } },
     onUserClick: { table: { disable: true } },
   },
+  tags: ['test'],
   parameters: {
+    chromatic: { disableSnapshot: false },
     layout: 'fullscreen',
   },
-  tags: ['test'],
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -89,7 +90,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -273,7 +274,7 @@ export const ClickMainMenuOpenAndClose = {
     ),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -621,7 +622,7 @@ export const WithThreeColumnsBreakpointXS = {
 export const ClickLangPickerOpenAndClose = {
   name: 'Click LanguagePicker Open And Close (LanguagePicker C2)',
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -745,7 +746,7 @@ export const WithExtraLangs = {
     defaultLocale: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -783,7 +784,7 @@ export const ClickSearchOpenAndClose = {
     ),
   },
   parameters: {
-    // imageSnapshot: { disable: true },
+    // chromatic: { disableSnapshot: true },
     imageSnapshot: {
       click: [`xpath=//span[text()='Søk']`],
     },
@@ -819,7 +820,7 @@ export const LangPickerInMenuWhenLoggedInOnMobile = {
     user: { role: 'meg' },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
     viewport: {
       defaultViewport: '--mobile',
     },

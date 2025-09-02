@@ -48,10 +48,11 @@ const meta = {
     title: 'MVA',
     logoHref: '#',
   },
+  tags: ['test'],
   parameters: {
+    chromatic: { disableSnapshot: false },
     layout: 'fullscreen',
   },
-  tags: ['test'],
 } satisfies Meta<typeof TopBannerInternal>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -84,7 +85,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -120,7 +121,7 @@ export const WithAttributes = {
 export const WithDefaults = {
   name: 'With Defaults (B1)',
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -293,7 +294,7 @@ export const WithLogoClick = {
     }),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);

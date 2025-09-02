@@ -17,6 +17,9 @@ const meta = {
     children: { table: { disable: false } },
   },
   tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Tabs.Panel>;
 export default meta;
 type Story = StoryObj<typeof meta>;

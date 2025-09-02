@@ -26,7 +26,9 @@ const meta = {
   args: {
     children: 'Menu Content',
   },
+  tags: ['test'],
   parameters: {
+    chromatic: { disableSnapshot: false },
     backgrounds: { default: 'themePrimary' },
   },
 } satisfies Meta<typeof TopBannerInternal.ActionMenu>;
@@ -50,7 +52,7 @@ export const WithAttributes = {
     await expect(actionMenu).toHaveAttribute('lang', 'en');
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -69,7 +71,7 @@ export const WithRef = {
     await expect(button).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
 } satisfies Story;
 
