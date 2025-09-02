@@ -1,4 +1,4 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { StoryObj, Meta } from '@storybook/react-vite';
 import { useArgs } from 'storybook/preview-api';
@@ -338,6 +338,9 @@ export const WithListLimit: Story = {
     sibling: getDefaultSibling(),
     currentPage: 1,
   },
+  argTypes: {
+    currentPage: { table: { disable: false } },
+  },
   render: (args): JSX.Element => {
     const [{ currentPage }, updateArgs] = useArgs();
     const pageSize = 5;
@@ -452,13 +455,19 @@ export const WithControlled: Story = {
     });
     await expect(currentButton).toBeInTheDocument();
   },
-  render: (args): JSX.Element => {
-    const [{ currentPage }, setPage] = useArgs();
+  render: (): JSX.Element => {
+    const [currentPage, setCurrentPage] = useState(1);
     const onChange = (page: number): void => {
-      setPage({ currentPage: page });
+      setCurrentPage(page);
     };
     return (
-      <Pagination {...args} currentPage={currentPage} onChange={onChange} />
+      <Pagination
+        totalItems={30}
+        sibling={1}
+        pageSize={5}
+        currentPage={currentPage}
+        onChange={onChange}
+      />
     );
   },
 } satisfies Story;
