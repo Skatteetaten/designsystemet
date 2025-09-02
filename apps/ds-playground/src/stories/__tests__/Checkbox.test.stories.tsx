@@ -176,9 +176,9 @@ export const WithDescriptionAndLongText = {
   argTypes: {
     description: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -206,9 +206,9 @@ export const WithLongText = {
   argTypes: {
     children: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -223,9 +223,9 @@ export const WithLongTextAndBreaking = {
   argTypes: {
     children: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;

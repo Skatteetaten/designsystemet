@@ -191,8 +191,10 @@ export const PanelPadding = {
     controls: {
       include: ['hasResponsivePadding', 'classNames', 'renderIcon'],
     },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   tags: ['!dev'],

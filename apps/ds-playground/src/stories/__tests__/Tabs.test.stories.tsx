@@ -95,11 +95,6 @@ export const Defaults = {
   argTypes: {
     defaultValue: { table: { disable: false } },
   },
-  parameters: {
-    viewport: {
-      defaultViewport: undefined,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const tab = canvas.getByRole('tab', { name: 'Person' });
@@ -293,8 +288,10 @@ export const WithMultiline = {
   },
   parameters: {
     imageSnapshot: { disable: false },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   render: (args): JSX.Element => {

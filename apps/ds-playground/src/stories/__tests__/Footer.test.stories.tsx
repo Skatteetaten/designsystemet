@@ -342,9 +342,9 @@ export const WithThreeColumnsBreakpointXs = {
     titleSecondColumn: { table: { disable: false } },
     titleThirdColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -367,9 +367,9 @@ export const WithThreeColumnsBreakpointS = {
     titleSecondColumn: { table: { disable: false } },
     titleThirdColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -392,9 +392,9 @@ export const WithThreeColumnsBreakpointM = {
     titleSecondColumn: { table: { disable: false } },
     titleThirdColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -417,9 +417,9 @@ export const WithThreeColumnsBreakpointL = {
     titleSecondColumn: { table: { disable: false } },
     titleThirdColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-l',
+      value: '--breakpoint-l',
     },
   },
 } satisfies Story;
@@ -438,9 +438,9 @@ export const WithTwoColumnsBreakpointXs = {
     secondColumn: { table: { disable: false } },
     titleSecondColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -459,9 +459,9 @@ export const WithTwoColumnsBreakpointS = {
     secondColumn: { table: { disable: false } },
     titleSecondColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -480,9 +480,9 @@ export const WithTwoColumnsBreakpointM = {
     secondColumn: { table: { disable: false } },
     titleSecondColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -497,9 +497,9 @@ export const WithOneColumnBreakpointXs = {
   argTypes: {
     firstColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -514,9 +514,9 @@ export const WithOneColumnBreakpointS = {
   argTypes: {
     firstColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -531,9 +531,9 @@ export const WithOneColumnBreakpointM = {
   argTypes: {
     firstColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;

@@ -354,9 +354,9 @@ export const WithImageMobile = {
   argTypes: {
     imageSource: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -390,9 +390,9 @@ export const WithIconMobile = {
   argTypes: {
     renderIcon: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -408,9 +408,9 @@ export const WithHideGraphicMobileAndIcon = {
   argTypes: {
     hideGraphicMobile: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -426,9 +426,9 @@ export const WithHideGraphicMobileAndImage = {
   argTypes: {
     hideGraphicMobile: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -559,9 +559,9 @@ export const WithPadding = {
       control: { disable: true },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -720,9 +720,9 @@ export const WithResponsivePadding = {
       control: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

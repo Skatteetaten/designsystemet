@@ -459,8 +459,10 @@ export const WithSpinner = {
       focus: `${wrapper} > a:first-child`,
       click: `${wrapper} > a:first-child`,
     },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

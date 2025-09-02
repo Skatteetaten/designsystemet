@@ -134,13 +134,15 @@ export const Defaults = {
     svgPath: { table: { disable: false } },
   },
   parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
     imageSnapshot: {
       focus: `${wrapper} > button`,
       hover: `${wrapper} > button`,
       click: `${wrapper} > button`,
+    },
+  },
+  globals: {
+    viewport: {
+      value: '--breakpoint-m',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -166,13 +168,15 @@ export const WithVariantFilled = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
     imageSnapshot: {
       focus: `${wrapper} > button`,
       hover: `${wrapper} > button`,
       click: `${wrapper} > button`,
+    },
+  },
+  globals: {
+    viewport: {
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -214,8 +218,10 @@ export const DefaultsOnMobileScreen = {
       hover: `${wrapper} > button`,
       click: `${wrapper} > button`,
     },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -239,8 +245,10 @@ export const VariantFilledOnMobileScreen = {
       hover: `${wrapper} > button`,
       click: `${wrapper} > button`,
     },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

@@ -239,9 +239,9 @@ export const WithVariantLargeAndLongText = {
     variant: { table: { disable: false } },
     children: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

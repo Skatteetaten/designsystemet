@@ -257,9 +257,9 @@ export const AllVariantsMobile = {
     ...defaultArgs,
     showAlert: true,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

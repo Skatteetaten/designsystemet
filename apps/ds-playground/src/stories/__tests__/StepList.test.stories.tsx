@@ -170,9 +170,9 @@ export const WithVariants = {
 export const WithBreakPointS = {
   name: 'With step Variants breakpoint-s (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
       viewPortHeight: 1200,
     },
   },
@@ -181,9 +181,9 @@ export const WithBreakPointS = {
 export const WithBreakPointXS = {
   name: 'With step Variants breakpoint-xs (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
       viewPortHeight: 1200,
     },
   },
@@ -192,9 +192,9 @@ export const WithBreakPointXS = {
 export const WithBreakPointMobile = {
   name: 'With step Variants mobile (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
       viewPortHeight: 1550,
     },
   },

@@ -156,9 +156,9 @@ export const WithChildren = {
   argTypes: {
     children: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -173,9 +173,9 @@ export const SkipLinkFocusedMobileScreen = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -192,9 +192,9 @@ export const SkipLinkFocusedBreakpointXS = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -211,9 +211,9 @@ export const SkipLinkFocusedBreakpointS = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -230,9 +230,9 @@ export const SkipLinkFocusedBreakpointM = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -249,9 +249,9 @@ export const SkipLinkFocusedBreakpointL = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-l',
+      value: '--breakpoint-l',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -344,9 +344,9 @@ export const WithOneColumnBreakpointS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -369,9 +369,9 @@ export const WithOneColumnBreakpointXS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -447,9 +447,9 @@ export const WithTwoColumnsBreakpointS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -477,9 +477,9 @@ export const WithTwoColumnsBreakpointXS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -570,9 +570,9 @@ export const WithThreeColumnsBreakpointS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -605,9 +605,9 @@ export const WithThreeColumnsBreakpointXS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -821,8 +821,10 @@ export const LangPickerInMenuWhenLoggedInOnMobile = {
   },
   parameters: {
     chromatic: { disableSnapshot: true },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

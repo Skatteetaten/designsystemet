@@ -283,11 +283,9 @@ export const WithDefaultValueAndAutoSize = {
     defaultValue: { table: { disable: false } },
     autosize: { table: { disable: false } },
   },
-  parameters: {
-    parameters: {
-      viewport: {
-        defaultViewport: '--breakpoint-xs',
-      },
+  globals: {
+    viewport: {
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -682,11 +680,9 @@ export const WithControlledValueAndAutoSize = {
     value: { table: { disable: false } },
     autosize: { table: { disable: false } },
   },
-  parameters: {
-    parameters: {
-      viewport: {
-        defaultViewport: '--breakpoint-xs',
-      },
+  globals: {
+    viewport: {
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

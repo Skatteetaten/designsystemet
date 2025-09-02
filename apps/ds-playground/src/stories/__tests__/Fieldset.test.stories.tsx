@@ -272,9 +272,9 @@ export const WithLongLegend = {
   argTypes: {
     legend: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

@@ -175,9 +175,9 @@ export const WithChildrenAndContentMobile = {
     children: { table: { disable: false } },
     content: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -193,9 +193,9 @@ export const WithChildrenAndContentBreakpointXs = {
     children: { table: { disable: false } },
     content: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
