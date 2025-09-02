@@ -242,7 +242,9 @@ export const WithExpandTextLeft = {
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-    const inlineButton = canvas.getByRole('button');
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.ExpandText'),
+    });
     await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
     await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(inlineButton);
@@ -270,7 +272,9 @@ export const WithExpandTextRight = {
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-    const inlineButton = canvas.getByRole('button');
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.ExpandText'),
+    });
     await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
     await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(inlineButton);
