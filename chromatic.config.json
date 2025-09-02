@@ -3,9 +3,6 @@
   "projectId": "Project:68ad8bf775fcb9aa19b070e9",
   "storybookConfigDir": "apps/ds-playground/.storybook",
   "storybookBuildDir": "dist/storybook/ds-playground",
-  "onlyStoryFiles": [
-    "apps/ds-playground/src/stories/__tests__/*.test.stories.tsx"
-  ],
   "externals": [
     "libs/ds-core-designtokens/**/*.css",
     "../../**/*.svg",
