@@ -94,7 +94,7 @@ const parameters = {
     hideNoControlsWarning: true,
   },
 
-  viewport: { viewports: DSViewports },
+  viewport: { options: DSViewports },
 
   options: {
     storySort: {
@@ -113,22 +113,10 @@ const parameters = {
   backgrounds: {
     default: 'light',
     values: [
-      {
-        name: 'light',
-        value: 'var(--palette-graphite-0)',
-      },
-      {
-        name: 'dark',
-        value: 'var(--palette-graphite-100)',
-      },
-      {
-        name: 'grey',
-        value: 'var(--palette-graphite-70)',
-      },
-      {
-        name: 'themePrimary',
-        value: 'var(--theme-primary)',
-      },
+      { name: 'light', value: 'var(--palette-graphite-0)' },
+      { name: 'dark', value: 'var(--palette-graphite-100)' },
+      { name: 'grey', value: 'var(--palette-graphite-70)' },
+      { name: 'themePrimary', value: 'var(--theme-primary)' },
     ],
   },
 
