@@ -37,13 +37,6 @@
         "babelUpwardRootMode": true
       }
     },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/ds-core-utils"],
-      "options": {
-        "jestConfig": "libs/ds-core-utils/jest.config.ts"
-      }
-    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],
@@ -77,6 +70,13 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish dist/libs/ds-core-utils {args.switches}"
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/libs/ds-core-utils"
       }
     }
   }

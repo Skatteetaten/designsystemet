@@ -1,4 +1,4 @@
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
+import storybookTest from '@storybook/addon-vitest/vitest-plugin';
 import { defineConfig } from 'vitest/config';
 
 import path from 'node:path';
@@ -11,10 +11,13 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  passWithNoTests: true,
   optimizeDeps: {
     include: ['react/jsx-dev-runtime'],
   },
   test: {
+    passWithNoTests: true,
+    watch: false,
     projects: [
       {
         extends: true,
@@ -28,6 +31,7 @@ export default defineConfig({
           }),
         ],
         test: {
+          passWithNoTests: true,
           name: 'storybook',
           browser: {
             enabled: true,
