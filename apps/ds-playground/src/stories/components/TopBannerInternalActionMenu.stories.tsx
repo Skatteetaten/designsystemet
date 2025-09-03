@@ -16,8 +16,8 @@ const meta = {
   args: {
     children: 'Menu Content',
   },
-  parameters: {
-    backgrounds: { default: 'themePrimary' },
+  globals: {
+    backgrounds: { value: 'themePrimary' },
   },
 } satisfies Meta<typeof TopBannerInternal.ActionMenu>;
 
