@@ -12,6 +12,26 @@
     margin-bottom: var(--spacing-l);
   }
 
+  &_hideBorder {
+    border-left: none;
+  }
+
+  &_borderColorForest {
+    border-left-color: var(--palette-forest-50);
+  }
+
+  &_borderColorOchre {
+    border-left-color: var(--palette-ochre-50);
+  }
+
+  &_borderColorGraphite {
+    border-left-color: var(--palette-graphite-50);
+  }
+
+  &_borderColorAzure {
+    border-left-color: var(--palette-azure-70);
+  }
+
   strong {
     font-weight: var(--font-weight-bold);
   }

@@ -19,6 +19,17 @@ const meta = {
       table: { category: category.props },
     },
     hasSpacing: { table: { category: category.props } },
+    borderColor: {
+      control: 'select',
+      options: ['Forest', 'Ochre', 'Graphite', 'Azure'],
+      table: { category: category.props },
+      description: 'Farge venstre border',
+    },
+    hideBorder: {
+      control: 'boolean',
+      table: { category: category.props },
+      description: 'Skjul venstre border',
+    },
   },
   args: {
     children: loremIpsum,
