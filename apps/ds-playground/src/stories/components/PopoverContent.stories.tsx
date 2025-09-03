@@ -22,14 +22,7 @@ export const Preview: StoryObj<typeof Popover> = {
       </Popover>
     </div>
   ),
-
   args: {
     children: loremIpsum,
-  },
-
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
   },
 };

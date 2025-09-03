@@ -183,11 +183,6 @@ export const WithAs = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading');

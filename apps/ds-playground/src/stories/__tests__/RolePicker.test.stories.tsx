@@ -258,9 +258,6 @@ const meta = {
   tags: ['test'],
   parameters: {
     chromatic: { disableSnapshot: false },
-    viewport: {
-      viewPortHeight: 1400,
-    },
   },
 } satisfies Meta<typeof RolePicker>;
 export default meta;

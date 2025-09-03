@@ -49,9 +49,4 @@ export const Preview: StoryObj<typeof Popover.Trigger> = {
     </div>
   ),
   args: {},
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
-  },
 };
