@@ -2,7 +2,10 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Blockquote } from '@skatteetaten/ds-typography';
+import {
+  Blockquote,
+  getBlockquoteBorderColorDefault,
+} from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -20,15 +23,10 @@ const meta = {
     },
     hasSpacing: { table: { category: category.props } },
     borderColor: {
-      control: 'select',
-      options: ['Forest', 'Ochre', 'Graphite', 'Azure'],
-      table: { category: category.props },
-      description: 'Farge venstre border',
-    },
-    hideBorder: {
-      control: 'boolean',
-      table: { category: category.props },
-      description: 'Skjul venstre border',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getBlockquoteBorderColorDefault() },
+      },
     },
   },
   args: {

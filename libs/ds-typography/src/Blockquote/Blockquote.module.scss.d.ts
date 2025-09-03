@@ -1,10 +1,9 @@
 declare const classNames: {
   readonly blockquote: 'blockquote';
   readonly blockquote_hasSpacing: 'blockquote_hasSpacing';
-  readonly blockquote_hideBorder: 'blockquote_hideBorder';
-  readonly blockquote_borderColorForest: 'blockquote_borderColorForest';
-  readonly blockquote_borderColorOchre: 'blockquote_borderColorOchre';
-  readonly blockquote_borderColorGraphite: 'blockquote_borderColorGraphite';
-  readonly blockquote_borderColorAzure: 'blockquote_borderColorAzure';
+  readonly blockquote_forest: 'blockquote_forest';
+  readonly blockquote_ochre: 'blockquote_ochre';
+  readonly blockquote_graphite: 'blockquote_graphite';
+  readonly blockquote_azure: 'blockquote_azure';
 };
 export default classNames;

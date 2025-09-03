@@ -2,7 +2,7 @@
 
 .blockquote {
   padding-left: var(--spacing-m);
-  border-left: 4px solid var(--palette-ochre-50);
+  border-left: var(--spacing-xs) solid var(--palette-ochre-50);
   margin: 0 0 0 var(--spacing-m);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
@@ -12,23 +12,19 @@
     margin-bottom: var(--spacing-l);
   }
 
-  &_hideBorder {
-    border-left: none;
-  }
-
-  &_borderColorForest {
+  &_forest {
     border-left-color: var(--palette-forest-50);
   }
 
-  &_borderColorOchre {
+  &_ochre {
     border-left-color: var(--palette-ochre-50);
   }
 
-  &_borderColorGraphite {
+  &_graphite {
     border-left-color: var(--palette-graphite-50);
   }
 
-  &_borderColorAzure {
+  &_azure {
     border-left-color: var(--palette-azure-70);
   }
 
