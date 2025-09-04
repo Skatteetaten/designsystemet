@@ -91,6 +91,7 @@
   &:disabled:active {
     --icon-button-border-color: transparent;
     --icon-button-icon-color: var(--semantic-disabled-foreground);
+    --icon-button-background-color: transparent;
 
     cursor: not-allowed;
     transform: none;
@@ -144,6 +145,7 @@
     &:disabled:hover,
     &:disabled:active {
       --icon-button-border-color: var(--semantic-disabled-foreground);
+      --icon-button-background-color: transparent;
 
       &::before {
         border: none;
