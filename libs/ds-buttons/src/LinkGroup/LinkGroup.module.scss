@@ -1,5 +1,5 @@
 // ikonet er plassert over listens bullets dvs flyttet -20px og så utvidet med ytterligere avstand tilsvarende i skissen mellom pil og link
-$spacing-arrow-link: calc(-20px - var(--spacing-s));
+$spacing-arrow-link: calc(-1 * 1.25rem - var(--spacing-s));
 
 .linkGroup {
   padding-left: calc(-1 * $spacing-arrow-link);
