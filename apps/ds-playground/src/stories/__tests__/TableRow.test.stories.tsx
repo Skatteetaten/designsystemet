@@ -240,16 +240,19 @@ export const WithExpandTextLeft = {
     expandButtonTitle: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_tables:tablerow.ExpandText'),
     });
     await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
-    // await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
+    await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(inlineButton);
     await expect(args.onExpand).toHaveBeenCalled();
-    // await expect(inlineButton).toHaveAttribute('aria-expanded', 'true');
+    await expect(inlineButton).toHaveAttribute('aria-expanded', 'true');
   },
 } satisfies Story;
 
@@ -270,16 +273,19 @@ export const WithExpandTextRight = {
     expandButtonTitle: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_tables:tablerow.ExpandText'),
     });
     await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
-    // await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
+    await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(inlineButton);
     await expect(args.onExpand).toHaveBeenCalled();
-    // await expect(inlineButton).toHaveAttribute('aria-expanded', 'true');
+    await expect(inlineButton).toHaveAttribute('aria-expanded', 'true');
   },
 } satisfies Story;
 
