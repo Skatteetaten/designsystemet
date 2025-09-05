@@ -1,13 +1,18 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @use 'libs/ds-core-utils/src/mixins/styles';
 
 .blockquote {
   padding-left: var(--spacing-m);
   border-left-width: var(--spacing-xs);
   border-left-style: solid;
-  margin: 0 0 0 var(--spacing-m);
+  margin: 0 0 0 var(--spacing-xs);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-article);
+
+  @media (min-width: breakpoints.$breakpoint-s) {
+    margin-left: var(--spacing-m);
+  }
 
   &:where([data-has-spacing='true']) {
     margin-bottom: var(--spacing-l);
