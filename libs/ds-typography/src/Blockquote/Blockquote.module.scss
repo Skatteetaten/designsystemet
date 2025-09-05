@@ -2,30 +2,31 @@
 
 .blockquote {
   padding-left: var(--spacing-m);
-  border-left: var(--spacing-xs) solid var(--palette-ochre-50);
+  border-left-width: var(--spacing-xs);
+  border-left-style: solid;
   margin: 0 0 0 var(--spacing-m);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-article);
 
-  &_hasSpacing {
+  &:where([data-has-spacing='true']) {
     margin-bottom: var(--spacing-l);
   }
 
-  &_forest {
+  &:where([data-border-color='forest']) {
     border-left-color: var(--palette-forest-50);
   }
 
-  &_ochre {
+  &:where([data-border-color='ochre']) {
     border-left-color: var(--palette-ochre-50);
   }
 
-  &_graphite {
+  &:where([data-border-color='graphite']) {
     border-left-color: var(--palette-graphite-50);
   }
 
-  &_azure {
-    border-left-color: var(--palette-azure-70);
+  &:where([data-border-color='denim']) {
+    border-left-color: var(--palette-denim-70);
   }
 
   strong {

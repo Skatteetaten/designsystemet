@@ -169,7 +169,7 @@ const TemplateAllColors: StoryFn<BlockquoteProps> = (args) => (
     <Blockquote {...args} borderColor={'forest'} hasSpacing />
     <Blockquote {...args} borderColor={'ochre'} hasSpacing />
     <Blockquote {...args} borderColor={'graphite'} hasSpacing />
-    <Blockquote {...args} borderColor={'azure'} hasSpacing />
+    <Blockquote {...args} borderColor={'denim'} hasSpacing />
   </>
 );
 
@@ -178,8 +178,5 @@ export const WithColors = {
   name: 'With All Colors (A3, A4)',
   args: {
     ...defaultArgs,
-  },
-  argTypes: {
-    borderColor: { table: { disable: false } },
   },
 } satisfies Story;

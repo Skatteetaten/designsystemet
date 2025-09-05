@@ -18,18 +18,16 @@ export const Blockquote = ({
   borderColor = getBlockquoteBorderColorDefault(),
   children,
 }: BlockquoteProps): JSX.Element => {
-  const spacingClassName = hasSpacing ? styles.blockquote_hasSpacing : '';
-  const borderColorClassName = borderColor
-    ? styles[`blockquote_${borderColor}`]
-    : '';
   return (
     <blockquote
       ref={ref}
       id={id}
-      className={`${styles.blockquote} ${spacingClassName} ${borderColorClassName} ${className}`.trim()}
+      className={`${styles.blockquote} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
       tabIndex={canBeManuallyFocused ? -1 : undefined}
+      data-border-color={borderColor}
+      data-has-spacing={hasSpacing ? true : undefined}
     >
       {children}
     </blockquote>
