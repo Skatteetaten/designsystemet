@@ -11,13 +11,17 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  passWithNoTests: true,
   optimizeDeps: {
     include: ['react/jsx-dev-runtime'],
   },
   test: {
     passWithNoTests: true,
     watch: false,
+    coverage: {
+      reporter: ['json'],
+      reportsDirectory: 'coverage/storybook',
+      provider: 'v8' as const,
+    },
     projects: [
       {
         extends: true,
@@ -31,26 +35,14 @@ export default defineConfig({
           }),
         ],
         test: {
-          passWithNoTests: true,
           name: 'storybook',
           browser: {
             enabled: true,
             headless: true,
             provider: 'playwright',
-            api: {
-              //port: 13337,
-              // host: 'host.docker.internal',
-            },
             instances: [
               {
                 browser: 'chromium',
-                // connect: {
-                //   wsEndpoint: 'ws://127.0.0.1:3000/playwright',
-                //   exposeNetwork: '*',
-                // },
-                // context: {
-                //   baseURL: 'http://host.docker.internal:63315',
-                // },
               },
             ],
           },

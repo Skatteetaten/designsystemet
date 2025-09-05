@@ -19,6 +19,7 @@ export default defineConfig(() => ({
     include: ['{src,tests}/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
     coverage: {
+      reporter: ['json'],
       reportsDirectory: '../../coverage/libs/ds-progress',
       provider: 'v8' as const,
     },
