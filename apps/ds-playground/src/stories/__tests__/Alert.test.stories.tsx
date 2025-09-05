@@ -272,9 +272,9 @@ export const AllLightVariants = {
     showAlert: true,
     backgroundBrightness: 'light',
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'grey',
+      value: 'grey',
     },
   },
   argTypes: {

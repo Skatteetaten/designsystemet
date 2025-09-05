@@ -27,7 +27,7 @@ export default async function (
     style: 'scss',
     skipTsConfig: false,
     skipFormat: false,
-    unitTestRunner: 'jest',
+    unitTestRunner: 'vitest',
     linter: Linter.EsLint,
     publishable: schema.publishable,
     importPath: schema.importPath,

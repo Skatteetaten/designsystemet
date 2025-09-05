@@ -32,8 +32,10 @@ const meta = {
   tags: ['test'],
   parameters: {
     chromatic: { disableSnapshot: false },
+  },
+  globals: {
     backgrounds: {
-      default: 'grey',
+      value: 'grey',
     },
   },
 } satisfies Meta<typeof ScrollToTopButton>;

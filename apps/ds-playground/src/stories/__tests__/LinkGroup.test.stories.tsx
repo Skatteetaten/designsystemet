@@ -210,13 +210,15 @@ export const WithColor = {
     },
   },
   parameters: {
-    backgrounds: {
-      default: 'themePrimary',
-    },
     imageSnapshot: {
       hover: `${wrapper} > ul > li:first-child > a`,
       focus: `${wrapper} > ul > li:first-child > a`,
       click: `${wrapper} > ul > li:first-child > a`,
+    },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
     },
   },
 } satisfies Story;

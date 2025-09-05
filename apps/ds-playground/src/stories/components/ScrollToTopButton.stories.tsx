@@ -46,9 +46,9 @@ const meta = {
     },
   },
   args: {},
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'grey',
+      value: 'grey',
     },
   },
 } satisfies Meta<typeof ScrollToTopButton>;

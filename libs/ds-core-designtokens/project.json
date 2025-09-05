@@ -36,13 +36,6 @@
         "babelUpwardRootMode": true
       }
     },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/ds-core-designtokens"],
-      "options": {
-        "jestConfig": "libs/ds-core-designtokens/jest.config.ts"
-      }
-    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],

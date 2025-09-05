@@ -12,7 +12,7 @@
 .topContainer {
   max-width: 25rem;
 
-  --clear-button-top: 5px;
+  --clear-button-top: 0.3125rem;
   --clear-button-right: var(--spacing-s);
   --search-result-padding: var(--spacing-xs) var(--spacing-s);
   --input-padding: var(--spacing-xs) var(--spacing-s);
@@ -188,7 +188,7 @@
   }
 
   &:has(> svg):not(&_large, &_extraLarge) {
-    padding: calc(var(--spacing-xs) + 1px) var(--spacing-s); // +1 pga ikon er litt lavere enn tekst
+    padding: calc(var(--spacing-xs) + 0.0625rem) var(--spacing-s); // +1 pga ikon er litt lavere enn tekst
   }
 
   &:enabled:hover {

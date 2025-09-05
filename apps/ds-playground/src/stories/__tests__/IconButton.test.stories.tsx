@@ -488,13 +488,15 @@ export const WithBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
-    backgrounds: {
-      default: 'themePrimary',
-    },
     imageSnapshot: {
       hover: `${wrapper} > button`,
       focus: `${wrapper} > button`,
       click: `${wrapper} > button`,
+    },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
@@ -511,13 +513,15 @@ export const WithBrightnessAndOutline = {
     isOutlined: { table: { disable: false } },
   },
   parameters: {
-    backgrounds: {
-      default: 'themePrimary',
-    },
     imageSnapshot: {
       hover: `${wrapper} > button`,
       focus: `${wrapper} > button`,
       click: `${wrapper} > button`,
+    },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
@@ -534,13 +538,15 @@ export const WithBrightnessAndSpinner = {
     hasSpinner: { table: { disable: false } },
   },
   parameters: {
-    backgrounds: {
-      default: 'themePrimary',
-    },
     imageSnapshot: {
       hover: `${wrapper} > button`,
       focus: `${wrapper} > button`,
       click: `${wrapper} > button`,
+    },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
@@ -558,9 +564,9 @@ export const WithBrightnessAndDisabled = {
     isOutlined: { table: { disable: false } },
     disabled: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'themePrimary',
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
