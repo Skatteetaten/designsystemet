@@ -256,9 +256,9 @@ export const WithDisabledAndBrightness = {
     svgPath: { table: { disable: false } },
     brightness: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'themePrimary',
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
@@ -412,13 +412,15 @@ export const WithBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
-    backgrounds: {
-      default: 'themePrimary',
-    },
     imageSnapshot: {
       hover: `${wrapper} > button`,
       focus: `${wrapper} > button`,
       click: `${wrapper} > button`,
+    },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
     },
   },
 } satisfies Story;

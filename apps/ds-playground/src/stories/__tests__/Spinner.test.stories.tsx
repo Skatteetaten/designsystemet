@@ -185,9 +185,9 @@ export const WithColorsDarkBackground = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'dark',
+      value: 'dark',
     },
   },
 } satisfies Story;

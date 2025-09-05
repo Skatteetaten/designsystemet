@@ -111,25 +111,12 @@ const parameters = {
   },
 
   backgrounds: {
-    default: 'light',
-    values: [
-      {
-        name: 'light',
-        value: 'var(--palette-graphite-0)',
-      },
-      {
-        name: 'dark',
-        value: 'var(--palette-graphite-100)',
-      },
-      {
-        name: 'grey',
-        value: 'var(--palette-graphite-70)',
-      },
-      {
-        name: 'themePrimary',
-        value: 'var(--theme-primary)',
-      },
-    ],
+    options: {
+      light: { name: 'Light', value: 'var(--palette-graphite-0)' },
+      dark: { name: 'Dark', value: 'var(--palette-graphite-100)' },
+      grey: { name: 'Grey', value: 'var(--palette-graphite-70)' },
+      themePrimary: { name: 'Theme Primary', value: 'var(--theme-primary)' },
+    },
   },
 
   a11y: {
@@ -246,6 +233,7 @@ const preview = {
     a11y: {
       manual: true,
     },
+    backgrounds: { value: 'light' },
   },
   tags: ['autodocs', '!test', '!snapshot'],
 } satisfies Preview;

@@ -243,12 +243,14 @@ export const WithColor = {
     },
   },
   parameters: {
-    backgrounds: {
-      default: 'themePrimary',
-    },
     imageSnapshot: {
       hover: `${wrapper} > a`,
       focus: `${wrapper} > a`,
+    },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
     },
   },
 } satisfies Story;

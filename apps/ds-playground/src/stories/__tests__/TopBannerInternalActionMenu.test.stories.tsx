@@ -29,7 +29,11 @@ const meta = {
   tags: ['test'],
   parameters: {
     chromatic: { disableSnapshot: false },
-    backgrounds: { default: 'themePrimary' },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
+    },
   },
 } satisfies Meta<typeof TopBannerInternal.ActionMenu>;
 
