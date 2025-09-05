@@ -576,9 +576,9 @@ export const WithDefaultRowInEditMode = {
 export const WithWideScreen = {
   render: TemplateExpandEditSort,
   name: 'With Wide screen (Table A1, A2)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;

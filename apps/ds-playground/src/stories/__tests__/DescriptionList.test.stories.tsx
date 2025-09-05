@@ -205,9 +205,9 @@ export const WithIsVerticalOnMobile = {
       control: { disable: true },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;

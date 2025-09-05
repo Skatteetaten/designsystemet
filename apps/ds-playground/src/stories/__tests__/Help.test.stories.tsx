@@ -124,11 +124,13 @@ export const WithLongHelpTextAndDescription = {
     helpText: { table: { disable: false } },
   },
   parameters: {
-    viewport: {
-      defaultViewport: '--mobile',
-    },
     imageSnapshot: {
       click: `${wrapper} > button`,
+    },
+  },
+  globals: {
+    viewport: {
+      value: '--mobile',
     },
   },
 } satisfies Story;

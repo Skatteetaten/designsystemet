@@ -176,9 +176,9 @@ export const WithMobileScreen = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -189,9 +189,9 @@ export const WithBreakpointXS = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -202,9 +202,9 @@ export const WithBreakpointS = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -215,9 +215,9 @@ export const WithBreakpointM = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;

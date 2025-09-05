@@ -452,9 +452,9 @@ export const WithLongTitle = {
   argTypes: {
     title: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;

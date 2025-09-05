@@ -1,8 +1,15 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { StoryObj, Meta } from '@storybook/react-vite';
 import { useArgs } from 'storybook/preview-api';
-import { fn, expect, fireEvent, waitFor, within } from 'storybook/test';
+import {
+  fn,
+  expect,
+  fireEvent,
+  waitFor,
+  within,
+  userEvent,
+} from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
@@ -331,6 +338,9 @@ export const WithListLimit: Story = {
     sibling: getDefaultSibling(),
     currentPage: 1,
   },
+  argTypes: {
+    currentPage: { table: { disable: false } },
+  },
   render: (args): JSX.Element => {
     const [{ currentPage }, updateArgs] = useArgs();
     const pageSize = 5;
@@ -429,29 +439,35 @@ export const WithControlled: Story = {
   argTypes: {
     currentPage: { table: { disable: false } },
   },
-  // play: async ({ canvasElement, args }): Promise<void> => {
-  //   const canvas = within(canvasElement);
-  //   // Antall elementer på side OG antall sider representert med siste page-button
-  //   const paginationStatus = canvas.getByText('Viser 1–5 av 30');
-  //   await expect(paginationStatus).toBeInTheDocument();
-  //   const nextButton = canvas.getByRole('button', {
-  //     name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
-  //   });
-  //   await userEvent.click(nextButton);
-  //   await waitFor(() => expect(args.onChange).toHaveBeenCalled);
-  //   const currentButton = await canvas.findByRole('button', {
-  //     name: '2',
-  //     current: true,
-  //   });
-  //   await expect(currentButton).toBeInTheDocument();
-  // },
-  render: (args): JSX.Element => {
-    const [{ currentPage }, setPage] = useArgs();
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // Antall elementer på side OG antall sider representert med siste page-button
+    const paginationStatus = canvas.getByText('Viser 1–5 av 30');
+    await expect(paginationStatus).toBeInTheDocument();
+    const nextButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
+    });
+    await userEvent.click(nextButton);
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled);
+    const currentButton = await canvas.findByRole('button', {
+      name: '2',
+      current: true,
+    });
+    await expect(currentButton).toBeInTheDocument();
+  },
+  render: (): JSX.Element => {
+    const [currentPage, setCurrentPage] = useState(1);
     const onChange = (page: number): void => {
-      setPage({ currentPage: page });
+      setCurrentPage(page);
     };
     return (
-      <Pagination {...args} currentPage={currentPage} onChange={onChange} />
+      <Pagination
+        totalItems={30}
+        sibling={1}
+        pageSize={5}
+        currentPage={currentPage}
+        onChange={onChange}
+      />
     );
   },
 } satisfies Story;

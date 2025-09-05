@@ -196,9 +196,9 @@ export const WithMobileScreen = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -209,9 +209,9 @@ export const WithWideScreen = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xl',
+      value: '--breakpoint-xl',
     },
   },
 } satisfies Story;
@@ -227,13 +227,15 @@ export const WithVisibilityThreshold = {
     visibilityThreshold: { table: { disable: false } },
   },
   parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-xl',
-    },
     imageSnapshot: {
       scroll: {
         yPixels: 10,
       },
+    },
+  },
+  globals: {
+    viewport: {
+      value: '--breakpoint-xl',
     },
   },
 } satisfies Story;

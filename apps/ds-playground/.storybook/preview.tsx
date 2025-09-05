@@ -94,7 +94,7 @@ const parameters = {
     hideNoControlsWarning: true,
   },
 
-  viewport: { viewports: DSViewports },
+  viewport: { options: DSViewports },
 
   options: {
     storySort: {

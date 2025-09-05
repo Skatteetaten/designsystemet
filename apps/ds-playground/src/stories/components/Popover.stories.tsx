@@ -61,11 +61,6 @@ export const Preview: Story = {
       </Popover>
     </div>
   ),
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
-  },
 } satisfies Story;
 
 export const Example: Story = {

@@ -127,9 +127,9 @@ export const DefaultsMobile = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -160,9 +160,9 @@ export const LevelsWithSpacingMobile = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -182,11 +182,6 @@ export const WithAs = {
   name: 'With As (B1)',
   args: {
     ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

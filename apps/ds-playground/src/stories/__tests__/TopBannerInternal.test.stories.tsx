@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, fn, within } from 'storybook/test';
+import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -165,9 +165,9 @@ export const WithChildren = {
 
 export const SkipLinkFocusedMobileScreen = {
   name: 'SkipLink Focused On Mobile Screen (B2)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -181,9 +181,9 @@ export const SkipLinkFocusedMobileScreen = {
 
 export const SkipLinkFocusedBreakpointL = {
   name: 'SkipLink Focused On Breakpoint-l (B2)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-l',
+      value: '--breakpoint-l',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -208,11 +208,13 @@ export const WithTitleDescriptionUser = {
     user: { table: { disable: false } },
   },
   parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-l',
-    },
     imageSnapshot: {
       focus: `${wrapper} > header > div > div > a`,
+    },
+  },
+  globals: {
+    viewport: {
+      value: '--breakpoint-l',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -236,9 +238,9 @@ export const WithLongTitleDescriptionMobile = {
     description: 'kaka er en løgn'.repeat(4),
     user: 'Sandra Saksbehandler',
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -341,9 +343,9 @@ export const WithOneChildMobile = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -366,9 +368,9 @@ export const WithLongDescriptionAndThreeChildrenMobile = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -391,9 +393,9 @@ export const WithThreeChildrenBreakpointS = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -416,9 +418,9 @@ export const WithThreeChildrenBreakpointM = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -441,9 +443,9 @@ export const WithLongTitleAndLongDescriptionAndThreeChildrenBreakpointM = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -456,22 +458,22 @@ export const WithHideLogoOnMobile = {
   args: {
     hideLogoOnMobile: true,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--mobile',
     },
   },
-  // play: async ({ canvasElement }): Promise<void> => {
-  //   const canvas = within(canvasElement);
-  //   const link = await canvas.findByRole('link', {
-  //     name: 'MVA',
-  //   });
-  //   await expect(link).toBeInTheDocument();
-  //   await waitFor(() => {
-  //     const logo = link.querySelector('img');
-  //     expect(logo).not.toBeInTheDocument();
-  //   });
-  // },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = await canvas.findByRole('link', {
+      name: 'MVA',
+    });
+    await expect(link).toBeInTheDocument();
+    await waitFor(() => {
+      const logo = link.querySelector('img');
+      expect(logo).not.toBeInTheDocument();
+    });
+  },
 } satisfies Story;
 
 export const WithHideLogoOnDesktop = {
@@ -482,21 +484,21 @@ export const WithHideLogoOnDesktop = {
   args: {
     hideLogoOnMobile: true,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
-  // play: async ({ canvasElement }): Promise<void> => {
-  //   const canvas = within(canvasElement);
-  //   const link = await canvas.findByRole('link', {
-  //     name: 'MVA',
-  //   });
-  //   await expect(link).toBeInTheDocument();
-  //
-  //   await waitFor(() => {
-  //     const logo = link.querySelector('img');
-  //     expect(logo).toBeInTheDocument();
-  //   });
-  // },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = await canvas.findByRole('link', {
+      name: 'MVA',
+    });
+    await expect(link).toBeInTheDocument();
+
+    await waitFor(() => {
+      const logo = link.querySelector('img');
+      expect(logo).toBeInTheDocument();
+    });
+  },
 } satisfies Story;

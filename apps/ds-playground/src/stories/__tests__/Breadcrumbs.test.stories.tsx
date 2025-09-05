@@ -138,9 +138,9 @@ const WithoutCollapseTemplate = (): JSX.Element => {
 
 export const WithCollapse = {
   name: 'With Collapse (A1)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   render: DefaultTemplate,
@@ -173,9 +173,9 @@ export const WithAriaLabel = {
 
 export const WithoutCollapse = {
   name: 'Without Collapse (A2)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   render: WithoutCollapseTemplate,
@@ -188,9 +188,9 @@ export const WithoutCollapse = {
 
 export const WithExpandClickAndFocus = {
   name: 'With Expand Click And Focus(A4 delvis, C1)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   render: DefaultTemplate,

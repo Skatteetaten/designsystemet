@@ -209,9 +209,9 @@ export const WithLongChildren = {
   argTypes: {
     children: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

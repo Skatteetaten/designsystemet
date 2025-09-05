@@ -160,20 +160,14 @@ const TemplateExample: StoryFn<StepListProps> = () => {
 export const WithVariants = {
   name: 'With step Variants (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
-  },
 } satisfies Story;
 
 export const WithBreakPointS = {
   name: 'With step Variants breakpoint-s (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
-      viewPortHeight: 1200,
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -181,10 +175,9 @@ export const WithBreakPointS = {
 export const WithBreakPointXS = {
   name: 'With step Variants breakpoint-xs (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
-      viewPortHeight: 1200,
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -192,10 +185,9 @@ export const WithBreakPointXS = {
 export const WithBreakPointMobile = {
   name: 'With step Variants mobile (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
-      viewPortHeight: 1550,
+      value: '--mobile',
     },
   },
 } satisfies Story;

@@ -262,9 +262,9 @@ export const WithBreakpointMobile = {
     ...defaultArgs,
   },
   argTypes: {},
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
