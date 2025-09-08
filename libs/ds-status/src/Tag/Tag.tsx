@@ -20,17 +20,16 @@ export const Tag = ({
   svgPath,
   children,
 }: TagProps): JSX.Element => {
-  const variantClassName = styles[`tag_${color}`];
-  const sizeClassName = styles[`tag_${size}`];
-
   return (
     <div
       ref={ref}
       id={id}
       lang={lang}
       data-testid={dataTestId}
-      className={`${styles.tag} ${variantClassName} ${sizeClassName} ${className}`.trim()}
+      className={`${styles.tag} ${className}`.trim()}
       tabIndex={canBeManuallyFocused ? -1 : undefined}
+      data-color={color}
+      data-size={size}
     >
       {svgPath && (
         <div className={styles.iconWrapper} aria-hidden>
