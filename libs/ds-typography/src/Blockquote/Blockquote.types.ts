@@ -1,6 +1,11 @@
 import { ReactNode, Ref } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Color } from '@skatteetaten/ds-core-utils';
+
+export type BlockquoteColor = Extract<
+  Color,
+  'forest' | 'ochre' | 'graphite' | 'denim'
+>;
 
 export interface BlockquoteProps extends BaseProps {
   ref?: Ref<HTMLQuoteElement>;
@@ -10,4 +15,6 @@ export interface BlockquoteProps extends BaseProps {
   hasSpacing?: boolean;
   /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
   canBeManuallyFocused?: boolean;
+  /** Farge på border */
+  borderColor?: BlockquoteColor;
 }
