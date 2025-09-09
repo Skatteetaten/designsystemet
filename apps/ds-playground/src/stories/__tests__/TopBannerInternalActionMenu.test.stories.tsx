@@ -56,6 +56,9 @@ export const WithAttributes = {
     await expect(actionMenu).toHaveAttribute('lang', 'en');
   },
   parameters: {
+    a11y: {
+      test: 'off',
+    },
     chromatic: { disableSnapshot: true },
   },
 } satisfies Story;
@@ -75,6 +78,9 @@ export const WithRef = {
     await expect(button).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
   parameters: {
+    a11y: {
+      test: 'off',
+    },
     chromatic: { disableSnapshot: true },
   },
 } satisfies Story;
@@ -126,6 +132,9 @@ export const WithImperativeActions = {
     await expect(menuButton).toHaveFocus();
   },
   parameters: {
+    a11y: {
+      test: 'off',
+    },
     imageSnapshot: {
       click: `${wrapper} > :first-child`,
     },

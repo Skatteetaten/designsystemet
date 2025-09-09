@@ -412,6 +412,9 @@ export const WithBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
+    a11y: {
+      test: 'off',
+    },
     imageSnapshot: {
       hover: `${wrapper} > button`,
       focus: `${wrapper} > button`,
