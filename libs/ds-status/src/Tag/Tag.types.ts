@@ -6,7 +6,7 @@ export type TagSize = Extract<Size, 'medium' | 'small'>;
 
 export type TagColor = Extract<
   Color,
-  'ochre' | 'forest' | 'burgundy' | 'graphite'
+  'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim' | 'white'
 >;
 
 export interface TagProps extends BaseProps {

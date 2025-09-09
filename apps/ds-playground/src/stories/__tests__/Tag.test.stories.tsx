@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
@@ -82,6 +84,9 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -104,43 +109,21 @@ export const DefaultYellow = {
   },
 } satisfies Story;
 
-export const DefaultGreen = {
-  name: 'Variant (forest) (A3)',
+export const AllVariants = {
+  name: 'All color variants (A3)',
   args: {
     ...defaultArgs,
-    color: 'forest',
   },
-  argTypes: {
-    color: {
-      table: { disable: false },
-    },
-  },
-} satisfies Story;
-
-export const DefaultRed = {
-  name: 'Variant (burgundy) (A3)',
-  args: {
-    ...defaultArgs,
-    color: 'burgundy',
-  },
-  argTypes: {
-    color: {
-      table: { disable: false },
-    },
-  },
-} satisfies Story;
-
-export const DefaultGrey: Story = {
-  name: 'Variant (graphite) (A3)',
-  args: {
-    ...defaultArgs,
-    color: 'graphite',
-  },
-  argTypes: {
-    color: {
-      table: { disable: false },
-    },
-  },
+  render: ({ children }): JSX.Element => (
+    <>
+      <Tag color={'ochre'}>{children}</Tag>
+      <Tag color={'forest'}>{children}</Tag>
+      <Tag color={'burgundy'}>{children}</Tag>
+      <Tag color={'graphite'}>{children}</Tag>
+      <Tag color={'denim'}>{children}</Tag>
+      <Tag color={'white'}>{children}</Tag>
+    </>
+  ),
 } satisfies Story;
 
 export const Small = {
