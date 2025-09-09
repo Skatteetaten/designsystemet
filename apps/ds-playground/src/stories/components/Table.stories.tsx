@@ -1135,6 +1135,7 @@ export const AddRow: Story = {
                     true
                   );
                 }}
+                isNew
               >
                 <Table.DataCell colSpan={4}>
                   <div
