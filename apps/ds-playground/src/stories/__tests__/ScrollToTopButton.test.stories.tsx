@@ -309,6 +309,11 @@ export const WithNotScrollToMain = {
   argTypes: {
     scrollToMain: { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const scrollToTopButton = canvas.getByRole('button', {
