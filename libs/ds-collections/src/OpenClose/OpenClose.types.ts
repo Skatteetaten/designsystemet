@@ -27,6 +27,8 @@ export interface OpenCloseProps extends BaseProps {
   isOnClickOnlyFiredOnOpen?: boolean;
   /** Om teksten på knappen skal ha understrek */
   showUnderline?: boolean;
+  /** Om innholdet skal forbli i DOM når skjult (true) eller fjernes helt (false). Standard: false */
+  keepMounted?: boolean;
   /** Callback når knappen OpenClose trykkes på */
   onClick?: MouseEventHandler<HTMLButtonElement>;
   /** Tekst eller markup som vises/skjules. */

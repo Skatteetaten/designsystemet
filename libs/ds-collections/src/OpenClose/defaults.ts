@@ -5,3 +5,4 @@ import { IconPosition } from '../Accordion/Accordion.types';
 export const getOpenCloseIconPositionDefault = (): IconPosition => 'left';
 export const getOpenCloseUnderlineDefault = (): boolean => true;
 export const getOpenCloseVariantDefault = (): Density => 'standard';
+export const getOpenCloseKeepMountedDefault = (): boolean => false;

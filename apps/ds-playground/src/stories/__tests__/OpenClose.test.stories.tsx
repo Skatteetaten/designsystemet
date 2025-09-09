@@ -41,6 +41,7 @@ const meta = {
       table: { disable: true },
     },
     title: { table: { disable: true } },
+    keepMounted: { table: { disable: true } },
     showUnderline: { table: { disable: true } },
     onClick: { table: { disable: true } },
   },
@@ -483,5 +484,42 @@ export const IsDefaultExpanded = {
     await expect(content).toBeInTheDocument();
     const button = canvas.getByRole('button');
     await expect(button).toHaveAttribute('aria-expanded', 'true');
+  },
+} satisfies Story;
+
+export const WithKeepMountedTrue = {
+  name: 'With KeepMounted True (A9)',
+  args: {
+    ...defaultArgs,
+    keepMounted: true,
+  },
+  argTypes: {
+    keepMounted: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+
+    // Initially content should be in DOM but hidden when keepMounted=true
+    await expect(button).toHaveAttribute('aria-expanded', 'false');
+    const content = canvas.getByText(defaultContent);
+    await expect(content).toBeInTheDocument();
+    await expect(content).not.toBeVisible();
+
+    // Expand OpenClose
+    await fireEvent.click(button);
+    await expect(button).toHaveAttribute('aria-expanded', 'true');
+    await expect(content).toBeVisible();
+
+    // Collapse OpenClose
+    await fireEvent.click(button);
+    await expect(button).toHaveAttribute('aria-expanded', 'false');
+
+    // Content should still be in DOM but hidden when keepMounted=true
+    await expect(content).toBeInTheDocument();
+    await expect(content).not.toBeVisible();
   },
 } satisfies Story;

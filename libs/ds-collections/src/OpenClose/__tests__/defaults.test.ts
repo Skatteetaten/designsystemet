@@ -1,5 +1,6 @@
 import {
   getOpenCloseIconPositionDefault,
+  getOpenCloseKeepMountedDefault,
   getOpenCloseUnderlineDefault,
   getOpenCloseVariantDefault,
 } from '../defaults';
@@ -16,5 +17,10 @@ describe('OpenClose defaults', () => {
   it('Når getOpenCloseVariantDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getOpenCloseVariantDefault();
     expect(renderDefault).toBe('standard');
+  });
+
+  it('Når getOpenCloseKeepMountedDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getOpenCloseKeepMountedDefault();
+    expect(renderDefault).toBe(false);
   });
 });
