@@ -37,7 +37,7 @@
     "test:storybook": "vitest --project=storybook",
     "test:coverage": "FORCE_COLOR=false nx run-many --target=test -- --coverage && node --no-warnings=ExperimentalWarning --loader ts-node/esm libs/ds-dev-config/src/scripts/mergeCoverage.ts",
     "generate:coverage": "nyc report --report-dir=coverage/apps/stories --reporter=html --reporter=lcov",
-    "chromatic": "chromatic --storybookBuildDir dist/storybook/ds-playground",
+    "chromatic": "chromatic",
     "typecheck": "nx run-many --target=tsc --parallel=8",
     "clean": "nx clear-cache",
     "lint": "nx run-many --target=lint --parallel=8",
