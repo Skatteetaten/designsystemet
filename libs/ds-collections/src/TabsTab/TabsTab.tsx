@@ -1,4 +1,11 @@
-import { KeyboardEvent, useCallback, useContext, JSX } from 'react';
+import {
+  KeyboardEvent,
+  useCallback,
+  useContext,
+  JSX,
+  useId,
+  useEffect,
+} from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
@@ -11,6 +18,7 @@ import styles from './TabsTab.module.scss';
 
 export const TabsTab = ({
   ref,
+  id: externalId,
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
@@ -19,13 +27,27 @@ export const TabsTab = ({
   onClick,
   children,
 }: TabsTabProps): JSX.Element => {
-  const { activeTab, baseId, hasBorder, variant, setInternalActiveTab } =
-    useContext(TabsContext);
+  const generatedId = `ds-tab-id-${useId()}`;
+  const internalTabId = externalId ?? generatedId;
+
+  const {
+    activeTab,
+    tabId,
+    setTabId,
+    panelId,
+    hasBorder,
+    variant,
+    setInternalActiveTab,
+  } = useContext(TabsContext);
   const tabClassName = styles.tab;
   const variantClassName = variant === 'compact' ? styles.tab_compact : '';
   const activeClassName = activeTab === value ? styles.tab_active : '';
   const borderClassName = hasBorder ? styles.tab_border : '';
   const withIconClassName = svgPath ? styles.tab_icon : '';
+
+  useEffect(() => {
+    setTabId(internalTabId);
+  }, [internalTabId, setTabId]);
 
   if (!valueRegex.test(value)) {
     throw new Error('Value kan kun inneholde tegn som er gyldig i en html id.');
@@ -63,7 +85,7 @@ export const TabsTab = ({
   return (
     <button
       ref={ref}
-      id={`ds-tab-id-${baseId}-${value}`}
+      id={tabId}
       className={`${tabClassName} ${variantClassName} ${borderClassName} ${activeClassName} ${withIconClassName} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
@@ -71,7 +93,7 @@ export const TabsTab = ({
       type={'button'}
       tabIndex={activeTab !== value ? -1 : 0}
       aria-selected={activeTab === value}
-      aria-controls={`ds-tab-panel-${baseId}-${value}`}
+      aria-controls={panelId}
       onClick={(): void => {
         if (onClick) {
           onClick(value);

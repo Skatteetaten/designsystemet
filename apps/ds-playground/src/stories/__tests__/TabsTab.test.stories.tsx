@@ -151,6 +151,7 @@ export const WithAttributes = {
   args: {
     ...defaultArgs,
     className: 'dummyClassname',
+    id: 'tab-id-tab2',
     lang: 'nb',
     'data-testid': '123ID',
     value: 'TabValue',
@@ -165,18 +166,10 @@ export const WithAttributes = {
     HTMLSnapshot: { disable: true },
     imageSnapshot: { disable: false },
   },
-  play: async ({ canvasElement, step }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const tab = canvas.getByRole('tab', { name: 'Bedrift' });
-    await step(
-      'Autogenerert id-attributt basert på tab name "tab2"',
-      async () => {
-        await expect(tab).toHaveAttribute(
-          'id',
-          expect.stringMatching(/^ds-tab-id-.*-tab2$/)
-        );
-      }
-    );
+    await expect(tab).toHaveAttribute('id', 'tab-id-tab2');
     await expect(tab).toHaveClass('dummyClassname');
     await expect(tab).toHaveAttribute('lang', 'nb');
     await expect(tab).toHaveAttribute('data-testid', '123ID');

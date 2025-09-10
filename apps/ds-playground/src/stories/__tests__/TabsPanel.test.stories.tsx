@@ -31,8 +31,12 @@ const TemplateTabs: StoryFn<typeof Tabs.Panel> = (args) => {
         <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
         <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
       </Tabs.List>
-      <Tabs.Panel {...args}>{'PanelInnhold'}</Tabs.Panel>
-      <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
+      <Tabs.Panel {...args} value={'tab1'}>
+        {'PanelInnhold'}
+      </Tabs.Panel>
+      <Tabs.Panel {...args} value={'tab2'}>
+        {'Tabs.Panel Bedrift'}
+      </Tabs.Panel>
     </Tabs>
   );
 };
@@ -42,6 +46,7 @@ export const WithAttributes = {
   render: TemplateTabs,
   args: {
     className: 'dummyClassname',
+    id: 'tab-panel-tab1',
     lang: 'nb',
     'data-testid': '123ID',
     children: 'PanelInnhold',
@@ -58,21 +63,13 @@ export const WithAttributes = {
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
-    await step(
-      'Autogenerert id-attributt basert på tab name "tab1"',
-      async () => {
-        const tabpanel = canvas.getByRole('tabpanel', {
-          name: 'Person',
-          hidden: true,
-        });
-        await expect(tabpanel).toHaveAttribute(
-          'id',
-          expect.stringMatching(/^ds-tab-panel-.*-tab1$/)
-        );
-        await expect(tabpanel).toHaveClass('dummyClassname');
-        await expect(tabpanel).toHaveAttribute('lang', 'nb');
-        await expect(tabpanel).toHaveAttribute('data-testid', '123ID');
-      }
-    );
+    const tabpanel = canvas.getByRole('tabpanel', {
+      name: 'Person',
+      hidden: true,
+    });
+    await expect(tabpanel).toHaveAttribute('id', 'tab-panel-tab1');
+    await expect(tabpanel).toHaveClass('dummyClassname');
+    await expect(tabpanel).toHaveAttribute('lang', 'nb');
+    await expect(tabpanel).toHaveAttribute('data-testid', '123ID');
   },
 } satisfies Story;
