@@ -599,6 +599,8 @@ export const WithFullWidthAndRightButtonPosition = {
   name: 'With FullWidth And Right Button Position',
   args: {
     hasFullWidth: true,
+    // add rowInEditModeId to check for correct amount of colSpan
+    rowInEditModeId: '3vesy',
   },
   argTypes: {
     hasFullWidth: { table: { disable: false } },
