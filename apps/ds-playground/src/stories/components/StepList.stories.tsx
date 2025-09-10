@@ -124,7 +124,7 @@ export const Examples: Story = {
                 </OpenClose>
                 <RadioGroup
                   legend={
-                    'Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko?'
+                    'Selger du varer og tjenester for egen regning og risiko?'
                   }
                   errorMessage={
                     hasStep3Error
