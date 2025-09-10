@@ -8,6 +8,12 @@ const meta = {
   component: Tabs.Panel,
   title: 'Komponenter/Tabs/Panel',
   argTypes: {
+    // Baseprops
+    id: {
+      description:
+        // eslint-disable-next-line no-template-curly-in-string
+        'Id til Tabs.Panel genereres automatisk for å sikre korrekt kobling til aria-controls i Tabs.Tab. Denne id-en kan ikke overskrives direkte. Ved å sette id på Tabs-komponenten, brukes den som base slik at id-en til Tabs.Panel blir *ds-tab-panel-${id Tabs}-${value Tabs.Panel}*.',
+    },
     // Props
     children: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },

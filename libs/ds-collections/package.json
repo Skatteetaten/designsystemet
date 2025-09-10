@@ -21,8 +21,7 @@
     "@skatteetaten/ds-buttons": "2.2.0",
     "@skatteetaten/ds-content": "2.2.0",
     "@skatteetaten/ds-typography": "2.2.0",
-    "@skatteetaten/ds-progress": "2.2.0",
-    "date-fns": "4.1.0"
+    "@skatteetaten/ds-progress": "2.2.0"
   },
   "scripts": {}
 }

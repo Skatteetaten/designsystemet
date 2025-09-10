@@ -3,13 +3,19 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { Tabs } from '@skatteetaten/ds-collections';
 import { BriefcaseSVGpath } from '@skatteetaten/ds-icons';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: Tabs.Tab,
   title: 'Komponenter/Tabs/Tab',
   argTypes: {
+    // Baseprops
+    id: {
+      description:
+        // eslint-disable-next-line no-template-curly-in-string
+        'Id til Tabs.Tab genereres automatisk for å sikre korrekt kobling til aria-labelledby i Tabs.Panel. Denne id-en kan ikke overskrives direkte. Ved å sette id på Tabs-komponenten, brukes den som base slik at id-en til Tabs.Tab blir *ds-tab-id-${id Tabs}-${value Tabs.Tab}*.',
+    },
     // Props
     children: { control: 'text', table: { category: category.props } },
     svgPath: {
@@ -18,6 +24,8 @@ const meta = {
       table: { category: category.props },
     },
     value: { control: 'text', table: { category: category.props } },
+    // Events
+    onClick: { ...htmlEventDescription },
   },
   args: {
     children: 'TabKnapp',

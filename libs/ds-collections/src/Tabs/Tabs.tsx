@@ -1,7 +1,5 @@
 import { useState, useId, JSX, useMemo, useEffect } from 'react';
 
-import { set } from 'date-fns';
-
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getTabsVariantDefault } from './defaults';
@@ -26,8 +24,6 @@ export const Tabs = (({
   children,
 }: TabsProps): JSX.Element => {
   const [activeTab, setActiveTab] = useState(value ?? defaultValue);
-  const [tabId, setTabId] = useState<string>('');
-  const [panelId, setPanelId] = useState<string>('');
   useEffect(() => {
     if (!value) return;
     setActiveTab(value);
@@ -36,13 +32,11 @@ export const Tabs = (({
   if (activeTab === undefined) {
     throw new Error(`prop 'defaultValue' eller 'value' må ha en satt verdi`);
   }
+  const baseId = useId();
   const contextValue = useMemo(
     () => ({
       activeTab,
-      panelId,
-      setPanelId,
-      tabId,
-      setTabId,
+      baseId: id ?? baseId,
       hasBorder,
       setInternalActiveTab: (value: string): void => {
         setActiveTab(value);
@@ -53,18 +47,7 @@ export const Tabs = (({
       index,
       setIndex,
     }),
-    [
-      activeTab,
-      hasBorder,
-      variant,
-      isMultiline,
-      index,
-      onChange,
-      panelId,
-      tabId,
-      setPanelId,
-      setTabId,
-    ]
+    [activeTab, id, baseId, hasBorder, variant, isMultiline, index, onChange]
   );
   return (
     <div

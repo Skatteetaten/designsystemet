@@ -17,6 +17,12 @@ const meta = {
   component: Tabs,
   title: 'Komponenter/Tabs/Tabs',
   argTypes: {
+    // Baseprops
+    id: {
+      description:
+        // eslint-disable-next-line no-template-curly-in-string
+        'Unik id for Tabs-komponenten. Dersom id settes, brukes denne som base for å generere id-er til Tabs.Tab og Tabs.Panel, slik at id-en til Tabs.Tab blir *ds-tab-id-${id}-${value Tabs.Tab}* og id-en til Tabs.Panel blir *ds-tab-panel-${id}-${value Tabs.Panel}*. Dette sikrer at aria-attributes kobler tabs og paneler riktig sammen for tilgjengelighet.',
+    },
     // Props
     children: { control: false, table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
