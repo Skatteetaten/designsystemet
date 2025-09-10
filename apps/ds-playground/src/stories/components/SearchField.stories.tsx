@@ -1,4 +1,4 @@
-import React, { JSX, useMemo, useState } from 'react';
+import { JSX, useMemo, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 

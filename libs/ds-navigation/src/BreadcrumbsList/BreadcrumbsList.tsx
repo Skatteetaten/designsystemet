@@ -1,4 +1,4 @@
-import React, { JSX, useImperativeHandle, useRef, useState } from 'react';
+import { Children, JSX, useImperativeHandle, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
@@ -48,7 +48,7 @@ export const BreadcrumbsList = ({
     }, 0);
   };
 
-  const childrenAsArray = React.Children.toArray(children);
+  const childrenAsArray = Children.toArray(children);
 
   const concatenatedClassNames =
     `${styles.breadcrumbsList} ${className}`.trim();

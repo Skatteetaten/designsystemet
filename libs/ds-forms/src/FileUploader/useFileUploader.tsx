@@ -1,4 +1,4 @@
-import React, { ReactNode, useReducer, useState } from 'react';
+import { Fragment, ReactNode, useReducer, useState } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { List } from '@skatteetaten/ds-typography';
@@ -119,7 +119,7 @@ export const useFileUploader = <T,>(
     }
     if (status.hasUploadFailed && isUploadError(status.data)) {
       return status.data?.map((error) => (
-        <React.Fragment key={error.error}>
+        <Fragment key={error.error}>
           <span>{`${error.error}:`}</span>
           <List>
             {error.files.map((file) => (
@@ -128,7 +128,7 @@ export const useFileUploader = <T,>(
               </List.Element>
             ))}
           </List>
-        </React.Fragment>
+        </Fragment>
       ));
     } else {
       return status.uploadedFilesMessage;
