@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within } from 'storybook/test';
 

@@ -4,7 +4,7 @@ import theme from './theme';
 
 import '@skatteetaten/ds-core-designtokens/index.css';
 
-const getTestStoryFilters = () => {
+const getStoryFilters = () => {
   const isDevOrSnapshot =
     process.env.NODE_ENV === 'development' ||
     process.env.STORYBOOK_BUILD_VERSION?.includes('-SNAPSHOT');
@@ -13,7 +13,11 @@ const getTestStoryFilters = () => {
   } else {
     return {
       tests: (item) => {
+        console.log(item);
         return !item.title.startsWith('Tester/');
+      },
+      chromatic: (item) => {
+        return !item.tags.includes('chromatic');
       },
     };
   }
@@ -26,7 +30,7 @@ addons.setConfig({
       patterns: (item) => {
         return !item.tags.includes('isHidden');
       },
-      ...getTestStoryFilters(),
+      ...getStoryFilters(),
     },
   },
 });
