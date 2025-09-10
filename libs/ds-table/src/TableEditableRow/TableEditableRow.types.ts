@@ -27,6 +27,12 @@ export interface TableEditableRowProps extends BaseProps {
   editButtonAriaDescribedby?: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   editButtonPosition?: EditButtonPosition;
+  /**
+   * Angir om raden er en ny rad for å legge til data i tabellen.
+   * Når `true`, rendres raden med tilpasset utseende for å legge til nye data,
+   * og fjerner skjult hjelpetekst til skjermleser om redigering av raden og redigering av data.
+   */
+  isNew?: boolean;
   /** Callback når redigerknappen trykkes. */
   onEdit?: () => void;
   /** Innhold i raden */

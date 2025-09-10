@@ -25,6 +25,7 @@ const meta = {
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
       },
     },
+    isNew: { table: { category: category.props } },
     // Aria
     editButtonAriaDescribedby: { table: { category: category.aria } },
     // Event
