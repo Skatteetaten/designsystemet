@@ -39,7 +39,7 @@ export function createSingleStory<
           {Object.entries(stories)
             .filter(
               ([_storyName, story]) =>
-                !story.parameters?.chromatic?.disableSnapshot
+                !story.parameters?.imageSnapshot?.disableSnapshot
             )
             .map(([storyName, story]) => {
               const { story: storyStyles, ...style } =

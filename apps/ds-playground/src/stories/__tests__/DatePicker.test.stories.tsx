@@ -97,7 +97,7 @@ const meta = {
   tags: ['test'],
   parameters: {
     mockDate: today,
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof DatePicker>;
 export default meta;
@@ -125,7 +125,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
 } satisfies Story;
@@ -276,7 +276,7 @@ export const WithValue = {
     value: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('value', '01.02.2024'),
 } satisfies Story;
@@ -291,7 +291,7 @@ export const WithRequired = {
     required: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -334,7 +334,7 @@ export const WithoutErrorMessage = {
     await expect(textbox).not.toHaveAttribute('aria-describedby');
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
 } satisfies Story;
@@ -542,7 +542,7 @@ export const GenerouslyWithFormatFromUser = {
   },
   argTypes: {},
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -597,7 +597,7 @@ export const WithEventHandlers = {
     onChange: fn(),
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
@@ -622,7 +622,7 @@ export const ClickCalendarButton = {
     onFocus: fn(),
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -643,7 +643,7 @@ export const ClickCalendarDateButton = {
     value: valueDate,
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -667,7 +667,7 @@ export const ClickOutsideCalendar = {
     value: valueDate,
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -694,7 +694,7 @@ export const OpenCalendarEscape = {
     value: valueDate,
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -752,7 +752,7 @@ export const WithShadowDom = {
   },
   decorators: [webComponent],
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
     customElementName: 'calendar-customelement',
   },
@@ -802,7 +802,7 @@ export const HideCalendarOnResizeWidth = {
     value: valueDate,
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -846,7 +846,7 @@ export const TabNavigationWithAllDatesDisabled = {
     initialPickerDate: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
     mockDate: new Date('2024-01-15'),
   },
