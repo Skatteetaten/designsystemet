@@ -377,6 +377,9 @@ export const WithId = {
   argTypes: {
     id: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];

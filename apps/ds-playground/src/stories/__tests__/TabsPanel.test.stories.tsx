@@ -59,7 +59,7 @@ export const WithAttributes = {
   },
   parameters: {
     HTMLSnapshot: { disable: true },
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
