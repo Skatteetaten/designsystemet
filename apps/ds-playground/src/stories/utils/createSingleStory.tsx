@@ -53,15 +53,6 @@ export function createSingleStory<
                     ...style,
                     ...storyStyles,
                   }}
-                  data-pseudo-state={
-                    story.parameters?.pseudo?.hover
-                      ? 'hover'
-                      : story.parameters?.pseudo?.active
-                        ? 'active'
-                        : story.parameters?.pseudo?.focusVisible
-                          ? 'focusVisible'
-                          : undefined
-                  }
                 >
                   {children}
                 </div>
