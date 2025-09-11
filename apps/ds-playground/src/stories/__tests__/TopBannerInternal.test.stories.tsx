@@ -50,7 +50,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
     layout: 'fullscreen',
   },
 } satisfies Meta<typeof TopBannerInternal>;
@@ -85,7 +85,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -121,7 +121,7 @@ export const WithAttributes = {
 export const WithDefaults = {
   name: 'With Defaults (B1)',
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -296,7 +296,7 @@ export const WithLogoClick = {
     }),
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -32,7 +32,7 @@ const meta = {
   ],
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof DescriptionList.Element>;
 export default meta;

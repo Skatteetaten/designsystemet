@@ -1,4 +1,4 @@
-import React, { ChangeEvent, DragEvent } from 'react';
+import { ChangeEvent, DragEvent } from 'react';
 
 const dragEvents = ['dragover', 'dragenter', 'drop'];
 export function isDragEvent(

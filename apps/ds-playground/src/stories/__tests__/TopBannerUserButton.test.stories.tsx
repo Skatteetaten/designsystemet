@@ -37,7 +37,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } as Meta<typeof TopBannerUserButton>;
 export default meta;
@@ -63,7 +63,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;

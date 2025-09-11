@@ -28,7 +28,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
   globals: {
     backgrounds: {
@@ -59,7 +59,7 @@ export const WithAttributes = {
     a11y: {
       test: 'off',
     },
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -81,7 +81,7 @@ export const WithRef = {
     a11y: {
       test: 'off',
     },
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
