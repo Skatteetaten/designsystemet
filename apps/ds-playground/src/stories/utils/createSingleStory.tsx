@@ -28,57 +28,69 @@ export function createSingleStory<
   return {
     render: (_, context): JSX.Element => {
       return (
-        <>
-          {Object.entries(stories).map(([storyName, story]) => {
-            const { story: storyStyles, ...style } =
-              story.parameters?.customStyles ?? {};
-            const StoryStyles = ({
-              children,
-            }: PropsWithChildren): JSX.Element => (
-              <div
-                // eslint-disable-next-line react/forbid-dom-props
-                style={{
-                  ...style,
-                  ...storyStyles,
-                }}
-                data-pseudo-state={
-                  story.parameters?.pseudo?.hover
-                    ? 'hover'
-                    : story.parameters?.pseudo?.active
-                      ? 'active'
-                      : story.parameters?.pseudo?.focusVisible
-                        ? 'focusVisible'
-                        : undefined
-                }
-              >
-                {children}
-              </div>
-            );
-            const args = { ...story.args, key: storyName };
-            if (typeof story === 'function') {
-              return (
-                <StoryStyles key={storyName}>
-                  {story(args, context)}
-                </StoryStyles>
+        <div
+          // eslint-disable-next-line react/forbid-dom-props
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 'var(--spacing-m)',
+          }}
+        >
+          {Object.entries(stories)
+            .filter(
+              ([_storyName, story]) =>
+                !story.parameters?.chromatic?.disableSnapshot
+            )
+            .map(([storyName, story]) => {
+              const { story: storyStyles, ...style } =
+                story.parameters?.customStyles ?? {};
+              const StoryStyles = ({
+                children,
+              }: PropsWithChildren): JSX.Element => (
+                <div
+                  // eslint-disable-next-line react/forbid-dom-props
+                  style={{
+                    ...style,
+                    ...storyStyles,
+                  }}
+                  data-pseudo-state={
+                    story.parameters?.pseudo?.hover
+                      ? 'hover'
+                      : story.parameters?.pseudo?.active
+                        ? 'active'
+                        : story.parameters?.pseudo?.focusVisible
+                          ? 'focusVisible'
+                          : undefined
+                  }
+                >
+                  {children}
+                </div>
               );
-            }
-            if (story.render) {
-              return (
-                <StoryStyles key={storyName}>
-                  {story.render(args, context)}
-                </StoryStyles>
-              );
-            }
-            if (meta.component) {
-              return (
-                <StoryStyles key={storyName}>
-                  {createElement(meta.component, args)}
-                </StoryStyles>
-              );
-            }
-            return null;
-          })}
-        </>
+              const args = { ...story.args };
+              if (typeof story === 'function') {
+                return (
+                  <StoryStyles key={storyName}>
+                    {story(args, context)}
+                  </StoryStyles>
+                );
+              }
+              if (story.render) {
+                return (
+                  <StoryStyles key={storyName}>
+                    {story.render(args, context)}
+                  </StoryStyles>
+                );
+              }
+              if (meta.component) {
+                return (
+                  <StoryStyles key={storyName}>
+                    {createElement(meta.component, args)}
+                  </StoryStyles>
+                );
+              }
+              return null;
+            })}
+        </div>
       );
     },
     parameters: {
