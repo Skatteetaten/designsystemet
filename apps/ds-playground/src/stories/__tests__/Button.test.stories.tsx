@@ -13,7 +13,6 @@ import { SendSVGpath } from '@skatteetaten/ds-icons';
 import {
   getPseudoParameters,
   StoryWithPseudoStates,
-  wrapper,
 } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -111,19 +110,9 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
   },
-  parameters: {
-    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
-  },
-  render: (args, context): JSX.Element => (
-    <StoryWithPseudoStates
-      component={context.component}
-      args={args}
-      parameters={context.parameters}
-    />
-  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getAllByRole('button')[0];
+    const button = canvas.getByRole('button');
     await expect(button).toHaveAttribute('id', 'htmlid');
     await expect(button).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('lang', 'nb');

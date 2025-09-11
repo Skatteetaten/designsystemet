@@ -61,7 +61,7 @@ export const StoryWithPseudoStates = (
   ];
 
   return (
-    <div className={'paddingXS'}>
+    <div className={'paddingM'}>
       {states.map((state: string) => (
         <div key={state}>
           <Paragraph className={'topSpacingL bottomSpacingS bold'}>

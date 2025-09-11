@@ -294,6 +294,10 @@ svg.blueIcon {
   padding: var(--spacing-xs);
 }
 
+.paddingM {
+  padding: var(--spacing-m);
+}
+
 .cardWidth {
   width: 254px;
   min-width: 254px;
