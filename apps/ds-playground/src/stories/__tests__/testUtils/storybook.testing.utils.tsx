@@ -22,14 +22,14 @@ export const getPseudoParameters = (
   states: ('normal' | 'hover' | 'focus' | 'active')[],
   selector: string
 ): {
-  chromatic: { disableSnapshot: false };
+  imageSnapshot: { disableSnapshot: false };
   pseudo: {
     hover: string[] | undefined;
     focus: string[] | undefined;
     active: string[] | undefined;
   };
 } => ({
-  chromatic: { disableSnapshot: false as const },
+  imageSnapshot: { disableSnapshot: false as const },
   pseudo: {
     hover: states.includes('hover')
       ? [`[data-pseudo-state="hover"] ${selector}`]

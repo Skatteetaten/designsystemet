@@ -403,7 +403,7 @@ export const WithShowInactiveOrganizations = {
     showInactiveBusinesses: true,
     showSubunits: false,
   },
-  parameters: { chromatic: { disableSnapshot: true } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   render: DefaultTemplate,
   argTypes: {
     showInactiveBusinesses: { table: { disable: false } },
