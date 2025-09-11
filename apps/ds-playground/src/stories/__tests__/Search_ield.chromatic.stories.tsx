@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react-vite';
 
 import { SearchField } from '@skatteetaten/ds-forms';
 
-import * as SearchfieldStories from './SearchField.test.stories';
+import * as SearchFieldStories from './SearchField.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
@@ -11,4 +11,4 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof SearchField>;
 export default meta;
-export const Snapshots = createSingleStory(SearchfieldStories, meta);
+export const Snapshots = createSingleStory(SearchFieldStories, meta);
