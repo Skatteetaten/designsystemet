@@ -1,4 +1,4 @@
-import { FocusEvent, MouseEvent, useState } from 'react';
+import { FocusEvent, JSX, MouseEvent, useState } from 'react';
 
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
@@ -10,7 +10,11 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import {
+  getPseudoParameters,
+  StoryWithPseudoStates,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultButtonText = 'Klikk her';
@@ -108,15 +112,18 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
   },
+  render: (args, context): JSX.Element => (
+    <StoryWithPseudoStates
+      component={context.component}
+      args={args}
+      parameters={context.parameters}
+    />
+  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
+    const button = canvas.getAllByRole('button')[0];
     await expect(button).toHaveAttribute('id', 'htmlid');
     await expect(button).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('lang', 'nb');
@@ -134,15 +141,18 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
   },
+  render: (args, context): JSX.Element => (
+    <StoryWithPseudoStates
+      component={context.component}
+      args={args}
+      parameters={context.parameters}
+    />
+  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
+    const button = canvas.getAllByRole('button')[0];
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
@@ -158,15 +168,18 @@ export const VariantSecondary = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
   },
+  render: (args, context): JSX.Element => (
+    <StoryWithPseudoStates
+      component={context.component}
+      args={args}
+      parameters={context.parameters}
+    />
+  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
+    const button = canvas.getAllByRole('button')[0];
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
@@ -182,15 +195,18 @@ export const VariantTertiary = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
   },
+  render: (args, context): JSX.Element => (
+    <StoryWithPseudoStates
+      component={context.component}
+      args={args}
+      parameters={context.parameters}
+    />
+  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
+    const button = canvas.getAllByRole('button')[0];
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
@@ -203,15 +219,18 @@ export const VariantDanger = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
   },
+  render: (args, context): JSX.Element => (
+    <StoryWithPseudoStates
+      component={context.component}
+      args={args}
+      parameters={context.parameters}
+    />
+  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
+    const button = canvas.getAllByRole('button')[0];
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
@@ -275,14 +294,18 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-    },
+    ...getPseudoParameters(['hover', 'focus'], '> button'),
   },
+  render: (args, context): JSX.Element => (
+    <StoryWithPseudoStates
+      component={context.component}
+      args={args}
+      parameters={context.parameters}
+    />
+  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    expect(canvas.getByRole('button')).toBeDisabled();
+    expect(canvas.getAllByRole('button')[0]).toBeDisabled();
   },
 } satisfies Story;
 
@@ -298,11 +321,15 @@ export const WithDisabledAndIcon = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-    },
+    ...getPseudoParameters(['hover', 'focus'], '> button'),
   },
+  render: (args, context): JSX.Element => (
+    <StoryWithPseudoStates
+      component={context.component}
+      args={args}
+      parameters={context.parameters}
+    />
+  ),
 } satisfies Story;
 
 export const WithType = {
