@@ -1,4 +1,4 @@
-import React, { JSX, useEffect, useImperativeHandle, useRef } from 'react';
+import { JSX, useEffect, useImperativeHandle, useRef } from 'react';
 
 import { SearchFieldResultProps } from './SearchFieldResult.types';
 

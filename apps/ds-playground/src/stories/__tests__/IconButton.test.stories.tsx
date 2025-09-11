@@ -67,7 +67,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof IconButton>;
 export default meta;
@@ -387,7 +387,7 @@ export const WithEventHandlers = {
     onClick: fn(),
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

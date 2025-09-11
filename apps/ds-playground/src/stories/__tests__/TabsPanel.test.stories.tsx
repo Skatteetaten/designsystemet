@@ -18,7 +18,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Tabs.Panel>;
 export default meta;

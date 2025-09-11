@@ -85,7 +85,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Panel>;
 export default meta;
@@ -688,7 +688,7 @@ const TemplateResponsivePadding: StoryFn<typeof Panel> = (args) => (
   <>
     <Panel {...args} title={`Med responsive padding `}>
       <Paragraph>{`
-      Her har vi satt hasResponsivePadding:true og endret følgende tokens for responsive visning. 
+      Her har vi satt hasResponsivePadding:true og endret følgende tokens for responsive visning.
       --pandel-padding-xs, --pandel-padding-m og --pandel-padding-l
       `}</Paragraph>
     </Panel>

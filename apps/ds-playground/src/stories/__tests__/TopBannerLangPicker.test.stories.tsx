@@ -46,7 +46,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } as Meta<typeof TopBannerLangPicker>;
 export default meta;
@@ -76,7 +76,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -194,7 +194,7 @@ export const CloseMenuWhenClickOnLangButton = {
     ...defaultArgs,
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -241,6 +241,6 @@ export const WithKeyboardNavigation = {
 
   parameters: {
     HTMLSnapshot: { disable: true },
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;

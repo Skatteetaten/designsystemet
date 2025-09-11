@@ -25,7 +25,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Blockquote>;
 export default meta;
@@ -49,7 +49,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -80,7 +80,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof TextField>;
 export default meta;
@@ -108,7 +108,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
 } satisfies Story;
@@ -252,7 +252,7 @@ export const WithValue = {
     value: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('value', valueText),
 } satisfies Story;
@@ -267,7 +267,7 @@ export const WithDefaultValue = {
     defaultValue: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('value', valueText),
 } satisfies Story;
@@ -283,7 +283,7 @@ export const WithDefaultValueAndThousandSeparator = {
     defaultValue: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('value', '10 000'),
 } satisfies Story;
@@ -340,7 +340,7 @@ export const WithRequired = {
     required: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -374,7 +374,7 @@ export const WithMinAndMaxLength = {
     minLength: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -394,7 +394,7 @@ export const WithPattern = {
     pattern: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -425,7 +425,7 @@ export const WithoutError = {
     await expect(textbox).not.toHaveAttribute('aria-describedby');
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
 } satisfies Story;
@@ -522,7 +522,7 @@ export const WithThousandSeparatorAndNegativeValue = {
     thousandSeparator: { table: { disable: true } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -612,7 +612,7 @@ export const WithEventHandlers = {
     onChange: fn(),
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

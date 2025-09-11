@@ -47,7 +47,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Icon>;
 export default meta;
@@ -71,7 +71,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -173,7 +173,7 @@ export const WithTitle = {
     title: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -202,7 +202,7 @@ export const WithAriaLabel = {
     ariaLabel: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

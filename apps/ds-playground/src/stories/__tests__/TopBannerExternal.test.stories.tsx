@@ -56,7 +56,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
     layout: 'fullscreen',
   },
 } satisfies Meta<typeof TopBannerExternal>;
@@ -90,7 +90,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -274,7 +274,7 @@ export const ClickMainMenuOpenAndClose = {
     ),
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -622,7 +622,7 @@ export const WithThreeColumnsBreakpointXS = {
 export const ClickLangPickerOpenAndClose = {
   name: 'Click LanguagePicker Open And Close (LanguagePicker C2)',
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -746,7 +746,7 @@ export const WithExtraLangs = {
     defaultLocale: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -784,7 +784,7 @@ export const ClickSearchOpenAndClose = {
     ),
   },
   parameters: {
-    // chromatic: { disableSnapshot: true },
+    // imageSnapshot: { disableSnapshot: true },
     imageSnapshot: {
       click: [`xpath=//span[text()='Søk']`],
     },
@@ -820,7 +820,7 @@ export const LangPickerInMenuWhenLoggedInOnMobile = {
     user: { role: 'meg' },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   globals: {
     viewport: {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within } from 'storybook/test';
 
@@ -48,7 +46,7 @@ const meta = {
   tags: ['test'],
   parameters: {
     mockDate: today,
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof DatePickerCalendar>;
 export default meta;
@@ -75,7 +73,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -276,7 +274,7 @@ export const ClickAndChangeMonthAndYear = {
   },
   argTypes: {},
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {

@@ -57,7 +57,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } as Meta<typeof StepList.Step>;
 export default meta;
@@ -89,7 +89,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -176,7 +176,7 @@ export const WithShouldAutoFocusWhenActiveFalse = {
     await expect(focused).not.toHaveFocus();
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
     HTMLSnapshot: { disable: true },
   },
 } satisfies Story;
@@ -217,7 +217,7 @@ export const WithEditAccessibleDescription = {
     expect(endreButton).toHaveAccessibleDescription('tittel');
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 

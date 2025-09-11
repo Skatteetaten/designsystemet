@@ -257,7 +257,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof RolePicker>;
 export default meta;
@@ -875,7 +875,7 @@ export const WithNoDoubleUnitTypes = {
     businesses: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -920,7 +920,7 @@ export const WithCloseError = {
     ...defaultArgs,
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   render: ErrorTemplate,
   argTypes: {

@@ -56,7 +56,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof InlineButton>;
 export default meta;
@@ -80,7 +80,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
@@ -273,7 +273,7 @@ export const WithType = {
     type: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
@@ -288,7 +288,7 @@ export const WithAriaDescribedby = {
     ariaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('aria-describedby', 'testid1234'),
 } satisfies Story;
@@ -303,7 +303,7 @@ export const WithAccesskey = {
     accessKey: { table: { disable: false } },
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('accessKey', 'j'),
 } satisfies Story;
@@ -341,7 +341,7 @@ export const WithEventHandlers = {
     onBlur: fn(),
   },
   parameters: {
-    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -1,4 +1,4 @@
-import React, {
+import {
   ChangeEvent,
   FocusEvent,
   JSX,
@@ -81,7 +81,7 @@ export const DatePicker = ({
   useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
   const [showCalendar, setShowCalendar] = useState(false);
 
-  const [inputValue, setInputValue] = React.useState(
+  const [inputValue, setInputValue] = useState(
     formatDateForInput(dateFormat, value)
   );
 
