@@ -367,3 +367,34 @@ export const WithTabOnClickEvent = {
     await expect(firstTab).toHaveAttribute('tabIndex', '-1');
   },
 } satisfies Story;
+
+export const WithId = {
+  render: TemplateTabs,
+  args: {
+    id: 'skatt',
+    defaultValue: 'tab1',
+  },
+  argTypes: {
+    id: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(container).toHaveAttribute('id', 'skatt');
+    const tab = canvas.getByRole('tab', { name: 'Person' });
+    await expect(tab).toHaveAttribute(
+      'aria-controls',
+      'ds-tab-panel-skatt-tab1'
+    );
+    await expect(tab).toHaveAttribute('id', 'ds-tab-id-skatt-tab1');
+    const tabPanel = canvas.getByRole('tabpanel');
+    await expect(tabPanel).toHaveAttribute('id', 'ds-tab-panel-skatt-tab1');
+    await expect(tabPanel).toHaveAttribute(
+      'aria-labelledby',
+      'ds-tab-id-skatt-tab1'
+    );
+  },
+} satisfies Story;

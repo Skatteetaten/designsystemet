@@ -31,8 +31,12 @@ const TemplateTabs: StoryFn<typeof Tabs.Panel> = (args) => {
         <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
         <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
       </Tabs.List>
-      <Tabs.Panel {...args}>{'PanelInnhold'}</Tabs.Panel>
-      <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
+      <Tabs.Panel {...args} value={'tab1'}>
+        {'PanelInnhold'}
+      </Tabs.Panel>
+      <Tabs.Panel {...args} value={'tab2'}>
+        {'Tabs.Panel Bedrift'}
+      </Tabs.Panel>
     </Tabs>
   );
 };
@@ -55,6 +59,7 @@ export const WithAttributes = {
   },
   parameters: {
     HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);

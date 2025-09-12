@@ -72,6 +72,6 @@ export interface TabsContextProps
   index?: number;
   /** Setter for Index */
   setIndex: Dispatch<SetStateAction<number>>;
-  /** Unik id pr tab */
+  /** Unik id for Tabs */
   baseId: string;
 }

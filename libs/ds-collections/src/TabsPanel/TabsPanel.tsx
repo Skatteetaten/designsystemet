@@ -10,7 +10,6 @@ import styles from './TabsPanel.module.scss';
 
 export const TabsPanel = ({
   ref,
-  // id,
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,

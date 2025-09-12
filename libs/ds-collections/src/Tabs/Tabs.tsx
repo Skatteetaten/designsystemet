@@ -36,7 +36,7 @@ export const Tabs = (({
   const contextValue = useMemo(
     () => ({
       activeTab,
-      baseId,
+      baseId: id ?? baseId,
       hasBorder,
       setInternalActiveTab: (value: string): void => {
         setActiveTab(value);
@@ -47,7 +47,7 @@ export const Tabs = (({
       index,
       setIndex,
     }),
-    [activeTab, baseId, hasBorder, variant, isMultiline, index, onChange]
+    [activeTab, id, baseId, hasBorder, variant, isMultiline, index, onChange]
   );
   return (
     <div
