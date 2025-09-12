@@ -12,6 +12,8 @@ import type {
   StoryAnnotationsOrFn,
 } from 'storybook/internal/types';
 
+import { Paragraph } from '@skatteetaten/ds-typography';
+
 type Story<T> = StoryObj<T> | StoryFn<T>;
 
 // "any" type is used to align with Storybook's usage
@@ -53,24 +55,42 @@ export function createSingleStory<
                     ...style,
                     ...storyStyles,
                   }}
-                  data-pseudo-state={
-                    story.parameters?.pseudo?.hover
-                      ? 'hover'
-                      : story.parameters?.pseudo?.active
-                        ? 'active'
-                        : story.parameters?.pseudo?.focusVisible
-                          ? 'focusVisible'
-                          : undefined
-                  }
                 >
                   {children}
                 </div>
               );
+
+              const StoryPseudoStates = ({
+                children,
+              }: PropsWithChildren): JSX.Element => {
+                const pseudoStates =
+                  story.parameters?.imageSnapshot?.pseudoStates || [];
+                return (
+                  <div className={'paddingM'}>
+                    {pseudoStates.map((state: string) => (
+                      <div key={state}>
+                        <Paragraph
+                          className={'topSpacingM bottomSpacingS bold'}
+                        >
+                          {state.charAt(0).toUpperCase() + state.slice(1)}
+                        </Paragraph>
+                        <div data-pseudo-state={state}>{children}</div>
+                      </div>
+                    ))}
+                  </div>
+                );
+              };
+
               const args = { ...story.args };
               if (typeof story === 'function') {
                 return (
                   <StoryStyles key={storyName}>
                     {story(args, context)}
+                    {story.parameters?.imageSnapshot?.pseudoStates && (
+                      <StoryPseudoStates>
+                        {story(args, context)}
+                      </StoryPseudoStates>
+                    )}
                   </StoryStyles>
                 );
               }
@@ -78,6 +98,11 @@ export function createSingleStory<
                 return (
                   <StoryStyles key={storyName}>
                     {story.render(args, context)}
+                    {story.parameters?.imageSnapshot?.pseudoStates && (
+                      <StoryPseudoStates>
+                        {story.render(args, context)}
+                      </StoryPseudoStates>
+                    )}
                   </StoryStyles>
                 );
               }
@@ -85,6 +110,11 @@ export function createSingleStory<
                 return (
                   <StoryStyles key={storyName}>
                     {createElement(meta.component, args)}
+                    {story.parameters?.imageSnapshot?.pseudoStates && (
+                      <StoryPseudoStates>
+                        {createElement(meta.component, args)}
+                      </StoryPseudoStates>
+                    )}
                   </StoryStyles>
                 );
               }
@@ -103,9 +133,15 @@ export function createSingleStory<
         gap: 'var(--spacing-m)',
       },
       pseudo: {
-        hover: ['[data-pseudo-state="hover"] > *'],
-        active: ['[data-pseudo-state="active"] > *'],
-        focusVisible: ['[data-pseudo-state="focusVisible"] > *'],
+        hover: [
+          `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
+        ],
+        active: [
+          `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
+        ],
+        focus: [
+          `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
+        ],
       },
     },
   };

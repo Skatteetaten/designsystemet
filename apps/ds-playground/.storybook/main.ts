@@ -41,6 +41,7 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-vitest',
     '@chromatic-com/storybook',
+    'storybook-addon-pseudo-states',
   ],
   core: {
     disableTelemetry: true,

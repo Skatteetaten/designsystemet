@@ -10,7 +10,6 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultButtonText = 'Klikk her';
@@ -107,13 +106,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -134,11 +126,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -158,11 +146,7 @@ export const VariantSecondary = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -182,11 +166,7 @@ export const VariantTertiary = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -203,11 +183,7 @@ export const VariantDanger = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -275,10 +251,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -298,10 +271,7 @@ export const WithDisabledAndIcon = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
 } satisfies Story;
 

@@ -67,6 +67,10 @@ code {
   margin-top: var(--spacing-l) !important;
 }
 
+.topSpacingM {
+  margin-top: var(--spacing-m);
+}
+
 .topSpacingS {
   margin-top: var(--spacing-s);
 }
@@ -292,6 +296,10 @@ svg.blueIcon {
 
 .paddingXS {
   padding: var(--spacing-xs);
+}
+
+.paddingM {
+  padding: var(--spacing-m);
 }
 
 .cardWidth {
