@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/Accordion/Item',
   component: Accordion.Item,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'button',
+  },
 } satisfies Meta<typeof Accordion.Item>;
 export default meta;
 export const Snapshots = createSingleStory(AccordionItemStories, meta);

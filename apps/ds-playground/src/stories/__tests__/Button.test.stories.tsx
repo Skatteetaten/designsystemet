@@ -1,4 +1,4 @@
-import { FocusEvent, JSX, MouseEvent, useState } from 'react';
+import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
@@ -10,10 +10,6 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 
-import {
-  getPseudoParameters,
-  StoryWithPseudoStates,
-} from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultButtonText = 'Klikk her';
@@ -130,18 +126,11 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
-  render: (args, context): JSX.Element => (
-    <StoryWithPseudoStates
-      component={context.component}
-      args={args}
-      parameters={context.parameters}
-    />
-  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getAllByRole('button')[0];
+    const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
@@ -157,18 +146,11 @@ export const VariantSecondary = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
-  render: (args, context): JSX.Element => (
-    <StoryWithPseudoStates
-      component={context.component}
-      args={args}
-      parameters={context.parameters}
-    />
-  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getAllByRole('button')[0];
+    const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
@@ -184,18 +166,11 @@ export const VariantTertiary = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
-  render: (args, context): JSX.Element => (
-    <StoryWithPseudoStates
-      component={context.component}
-      args={args}
-      parameters={context.parameters}
-    />
-  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getAllByRole('button')[0];
+    const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
@@ -208,18 +183,11 @@ export const VariantDanger = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    ...getPseudoParameters(['hover', 'focus', 'active'], '> button'),
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
-  render: (args, context): JSX.Element => (
-    <StoryWithPseudoStates
-      component={context.component}
-      args={args}
-      parameters={context.parameters}
-    />
-  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getAllByRole('button')[0];
+    const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
@@ -283,18 +251,11 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    ...getPseudoParameters(['hover', 'focus'], '> button'),
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
-  render: (args, context): JSX.Element => (
-    <StoryWithPseudoStates
-      component={context.component}
-      args={args}
-      parameters={context.parameters}
-    />
-  ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    expect(canvas.getAllByRole('button')[0]).toBeDisabled();
+    expect(canvas.getByRole('button')).toBeDisabled();
   },
 } satisfies Story;
 
@@ -310,15 +271,8 @@ export const WithDisabledAndIcon = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    ...getPseudoParameters(['hover', 'focus'], '> button'),
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
-  render: (args, context): JSX.Element => (
-    <StoryWithPseudoStates
-      component={context.component}
-      args={args}
-      parameters={context.parameters}
-    />
-  ),
 } satisfies Story;
 
 export const WithType = {

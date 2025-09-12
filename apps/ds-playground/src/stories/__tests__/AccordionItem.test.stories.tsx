@@ -15,8 +15,6 @@ import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const elementId = 'htmlId';
 const defaultTitle = 'Meg selv';
 const defaultSubtitle = 'Beskrivelse';
@@ -148,9 +146,7 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-      click: `${wrapper} button`,
+      pseudoStates: ['hover', 'focus', 'active'],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
