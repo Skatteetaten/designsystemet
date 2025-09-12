@@ -93,11 +93,6 @@ export function createSingleStory<
         flexDirection: 'column',
         gap: 'var(--spacing-m)',
       },
-      pseudo: {
-        hover: ['[data-pseudo-state="hover"] > *'],
-        active: ['[data-pseudo-state="active"] > *'],
-        focusVisible: ['[data-pseudo-state="focusVisible"] > *'],
-      },
     },
   };
 }
