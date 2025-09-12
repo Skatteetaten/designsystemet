@@ -203,7 +203,6 @@ export const RowWithRightSideExpandButton = ({
   };
 
   const handleClick = (): void => {
-    setRowLength(rowRef?.current?.cells.length ?? 999);
     onExpandClick();
   };
 
@@ -214,6 +213,10 @@ export const RowWithRightSideExpandButton = ({
       buttonRef.current.ariaExpanded = isExpanded.toString();
     }
   }, [isExpanded]);
+
+  useEffect(() => {
+    setRowLength(rowRef?.current?.cells.length ?? 999);
+  }, [rowRef]);
 
   return (
     <>
