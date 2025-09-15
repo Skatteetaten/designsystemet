@@ -1,11 +1,4 @@
-import {
-  isValidElement,
-  JSX,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from 'react';
+import { JSX, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton, InlineButton } from '@skatteetaten/ds-buttons';
@@ -22,7 +15,6 @@ import {
   getTableRowIsExpandedDefault,
 } from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
-import { TableRow } from '../TableRow/TableRow';
 
 import styles from './TableRowWithIconButton.module.scss';
 
@@ -173,6 +165,7 @@ export const RowWithRightSideExpandButton = ({
   expandButtonAriaDescribedby,
   isExpanded = getTableRowIsExpandedDefault(),
   isExpandButtonDisabled,
+  shouldInsertExpandAreaMarkers,
   onExpandClick,
   hideIconButton,
   children,
@@ -190,23 +183,9 @@ export const RowWithRightSideExpandButton = ({
   const [rowLength, setRowLength] = useState<number>(999);
   const isDesktop = useMediaQuery('(min-width: 1024px)');
 
-  const isExpandableContentRows = (): boolean => {
-    if (Array.isArray(expandableContent)) {
-      return !expandableContent?.some(
-        (element) => !isValidElement(element) || element.type !== TableRow
-      );
-    } else {
-      return (
-        isValidElement(expandableContent) && expandableContent.type === TableRow
-      );
-    }
-  };
-
   const handleClick = (): void => {
     onExpandClick();
   };
-
-  const shouldInsertExpandAreaMarkers = isExpandableContentRows();
 
   useEffect(() => {
     if (buttonRef.current) {

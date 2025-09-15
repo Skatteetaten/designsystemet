@@ -5,6 +5,8 @@ import {
   useRef,
   useState,
   JSX,
+  ReactNode,
+  isValidElement,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -22,6 +24,18 @@ import {
   RowWithLeftSideExpandButton,
   RowWithRightSideExpandButton,
 } from '../TableRowWithIconButton/TableRowWithIconButton';
+
+const isExpandableContentRows = (expandableContent: ReactNode): boolean => {
+  if (Array.isArray(expandableContent)) {
+    return !expandableContent?.some(
+      (element) => !isValidElement(element) || element.type !== TableRow
+    );
+  } else {
+    return (
+      isValidElement(expandableContent) && expandableContent.type === TableRow
+    );
+  }
+};
 
 export const TableRow = ({
   ref,
@@ -102,6 +116,9 @@ export const TableRow = ({
         expandButtonAriaDescribedby={expandButtonAriaDescribedby}
         expandableContent={expandableContent}
         showExpandButtonTitle={showExpandButtonTitle}
+        shouldInsertExpandAreaMarkers={isExpandableContentRows(
+          expandableContent
+        )}
         context={context}
         svgPath={isExpanded ? ChevronUpSVGpath : ChevronDownSVGpath}
         onExpandClick={onExpandClick}
