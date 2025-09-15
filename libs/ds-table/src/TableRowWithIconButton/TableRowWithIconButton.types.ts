@@ -28,5 +28,7 @@ export interface ExpandableRowProps extends BaseProps {
   hideIconButton?: boolean;
   iconButtonAriaExpanded?: IconButtonProps['ariaExpanded'];
   isExpandButtonDisabled?: boolean;
+  /** Om komponenten skal sette in ekstra markører for skjermleser som indikerer start og slutt  på ekpandert område.*/
+  shouldInsertExpandAreaMarkers?: boolean;
   onExpandClick: () => void;
 }

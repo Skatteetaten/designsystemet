@@ -132,6 +132,13 @@ const createRollupConfig = (
       addStyleImportPlugin(),
       visualizer({ filename: `${outputDir.split('/').pop()}-stats.html` }),
     ],
+    onwarn(warning, defaultHandler) {
+      if (warning.code === 'CIRCULAR_DEPENDENCY') {
+        console.error('🔁 Circular:', warning.importer || warning.message);
+        process.exit(-1);
+      }
+      defaultHandler(warning);
+    },
   };
 };
 
