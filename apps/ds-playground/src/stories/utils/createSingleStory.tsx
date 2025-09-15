@@ -48,17 +48,23 @@ export function createSingleStory<
                 story.parameters?.customStyles ?? {};
               const StoryStyles = ({
                 children,
-              }: PropsWithChildren): JSX.Element => (
-                <div
-                  // eslint-disable-next-line react/forbid-dom-props
-                  style={{
-                    ...style,
-                    ...storyStyles,
-                  }}
-                >
-                  {children}
-                </div>
-              );
+              }: PropsWithChildren): JSX.Element => {
+                const backgroundColor =
+                  story.globals?.backgrounds?.value ?? undefined;
+
+                return (
+                  <div
+                    className={backgroundColor}
+                    // eslint-disable-next-line react/forbid-dom-props
+                    style={{
+                      ...style,
+                      ...storyStyles,
+                    }}
+                  >
+                    {children}
+                  </div>
+                );
+              };
 
               const StoryPseudoStates = ({
                 children,
@@ -85,6 +91,9 @@ export function createSingleStory<
               if (typeof story === 'function') {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {story(args, context)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>
@@ -97,6 +106,9 @@ export function createSingleStory<
               if (story.render) {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {story.render(args, context)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>
@@ -109,6 +121,9 @@ export function createSingleStory<
               if (meta.component) {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {createElement(meta.component, args)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>

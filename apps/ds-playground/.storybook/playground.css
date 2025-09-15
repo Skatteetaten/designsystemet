@@ -419,3 +419,28 @@ dl.descriptionListTwoColumns {
 .interactiveColor:hover {
   color: var(--semantic-page-background);
 }
+
+.light {
+  background-color: var(--palette-graphite-0);
+}
+
+.dark {
+  background-color: var(--palette-graphite-100);
+  > p {
+    color: var(--palette-graphite-10);
+  }
+}
+
+.grey {
+  background-color: var(--palette-graphite-70);
+  > p {
+    color: var(--palette-graphite-10);
+  }
+}
+
+.themePrimary {
+  background-color: var(--theme-primary);
+  > p {
+    color: var(--palette-graphite-10);
+  }
+}
