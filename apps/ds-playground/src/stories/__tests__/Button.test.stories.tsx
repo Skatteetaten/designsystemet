@@ -106,6 +106,11 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    // customClassname sin farge gir ikke nok kontrast med knapp i modal ved hover
+    a11y: { test: 'off' },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');

@@ -56,7 +56,7 @@
     "docker:start:linux": "docker run -d --rm --name snapshotscontainer -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true --net=host browserless/chrome:1.59.0-chrome-stable",
     "docker:stop": "docker stop snapshotscontainer",
     "downloadTranslations": "TEKSTLISTEKATALOG=designsystemet TEKSTLISTER='Shared,ds-buttons,ds-forms,ds-navigation,ds-layout,ds-tables,ds-status,ds-collections,ds-overlays,ds-progress' TRANSLATIONS_FOLDER='./libs/ds-core-utils/src/translations' node --no-warnings=ExperimentalWarning --loader ts-node/esm ./libs/ds-dev-config/src/scripts/downloadTranslations.ts",
-    "postinstall": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./libs/ds-dev-config/src/scripts/fix-lib-types.ts"
+    "postinstall": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./libs/ds-dev-config/src/scripts/fix-lib-types.ts && playwright install chromium"
   },
   "dependencies": {
     "@floating-ui/react": "0.26.28",
@@ -150,7 +150,7 @@
     "nx-stylelint": "18.0.0",
     "nyc": "17.1.0",
     "playroom": "0.43.1",
-    "playwright": "1.31.1",
+    "playwright": "1.55.0",
     "postcss-js": "4.0.1",
     "prettier": "3.4.2",
     "rollup-plugin-visualizer": "5.14.0",
