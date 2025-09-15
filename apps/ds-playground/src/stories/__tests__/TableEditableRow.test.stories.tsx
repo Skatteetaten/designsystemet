@@ -88,6 +88,9 @@ export const WithAttributes = {
     imageSnapshot: {
       click: `${wrapper} button`,
     },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

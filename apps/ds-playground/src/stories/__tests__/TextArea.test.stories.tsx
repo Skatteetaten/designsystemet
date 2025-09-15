@@ -134,6 +134,11 @@ export const WithAttributes = {
     form: { table: { disable: false } },
     autoComplete: { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');

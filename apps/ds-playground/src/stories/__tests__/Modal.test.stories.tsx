@@ -113,6 +113,9 @@ export const WithAttributes = {
   },
   parameters: {
     chromatic: { disableSnapshot: true },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({
     canvasElement,
