@@ -13,7 +13,6 @@ const getStoryFilters = () => {
   } else {
     return {
       tests: (item) => {
-        console.log(item);
         return !item.title.startsWith('Tester/');
       },
       chromatic: (item) => {
