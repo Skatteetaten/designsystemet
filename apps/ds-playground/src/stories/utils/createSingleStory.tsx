@@ -85,6 +85,9 @@ export function createSingleStory<
               if (typeof story === 'function') {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {story(args, context)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>
@@ -97,6 +100,9 @@ export function createSingleStory<
               if (story.render) {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {story.render(args, context)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>
@@ -109,6 +115,9 @@ export function createSingleStory<
               if (meta.component) {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {createElement(meta.component, args)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>
