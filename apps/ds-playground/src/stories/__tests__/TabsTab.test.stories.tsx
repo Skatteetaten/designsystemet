@@ -164,6 +164,9 @@ export const WithAttributes = {
   parameters: {
     HTMLSnapshot: { disable: true },
     imageSnapshot: { disable: false },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);

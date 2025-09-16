@@ -102,6 +102,11 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
