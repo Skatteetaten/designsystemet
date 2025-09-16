@@ -12,3 +12,18 @@ const meta = {
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
 export const Snapshots = createSingleStory(TopBannerExternalStories, meta);
+export const Mobile = createSingleStory(TopBannerExternalStories, meta, {
+  viewport: '--mobile',
+});
+export const BreakpointXS = createSingleStory(TopBannerExternalStories, meta, {
+  viewport: '--breakpoint-xs',
+});
+export const BreakpointS = createSingleStory(TopBannerExternalStories, meta, {
+  viewport: '--breakpoint-s',
+});
+export const BreakpointM = createSingleStory(TopBannerExternalStories, meta, {
+  viewport: '--breakpoint-m',
+});
+export const BreakpointL = createSingleStory(TopBannerExternalStories, meta, {
+  viewport: '--breakpoint-l',
+});

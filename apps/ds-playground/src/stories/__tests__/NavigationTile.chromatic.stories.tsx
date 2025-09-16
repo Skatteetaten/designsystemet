@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof NavigationTile>;
 export default meta;
 export const Snapshots = createSingleStory(NavigationTileStories, meta);
+export const Mobile = createSingleStory(NavigationTileStories, meta, {
+  viewport: '--mobile',
+});

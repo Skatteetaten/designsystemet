@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof Alert>;
 export default meta;
 export const Snapshots = createSingleStory(AlertStories, meta);
+export const Mobile = createSingleStory(AlertStories, meta, {
+  viewport: '--mobile',
+});

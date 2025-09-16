@@ -14,3 +14,6 @@ const meta = {
 } satisfies Meta<typeof LabelWithHelp>;
 export default meta;
 export const Snapshots = createSingleStory(LabelWithHelpStories, meta);
+export const Mobile = createSingleStory(LabelWithHelpStories, meta, {
+  viewport: '--mobile',
+});

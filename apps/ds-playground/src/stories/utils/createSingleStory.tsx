@@ -12,6 +12,7 @@ import type {
   StoryAnnotationsOrFn,
 } from 'storybook/internal/types';
 
+import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 type Story<T> = StoryObj<T> | StoryFn<T>;
@@ -25,9 +26,35 @@ export function createSingleStory<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   S extends Store_CSFExports<ReactRenderer, any>,
   M extends Meta,
->(rawStories: S, meta: M): StoryAnnotationsOrFn<ReactRenderer> {
+>(
+  rawStories: S,
+  meta: M,
+  options?: {
+    viewport?: keyof typeof breakpoints | '--mobile';
+    runPlayFunctions?: boolean;
+  }
+): StoryAnnotationsOrFn<ReactRenderer> {
   const stories = composeStories(rawStories) as StoryExports;
+
+  const { viewport, runPlayFunctions = false } = options || {};
+
+  // filter stories object by viewPort
+  Object.keys(stories).forEach((storyName) => {
+    const story = stories[storyName];
+    if (story.globals?.viewport?.value !== viewport) {
+      delete stories[storyName];
+    }
+  });
+
   return {
+    globals: {
+      ...meta.globals,
+      viewport: viewport
+        ? {
+            value: viewport,
+          }
+        : undefined,
+    },
     render: (_, context): JSX.Element => {
       return (
         <div
@@ -48,17 +75,33 @@ export function createSingleStory<
                 story.parameters?.customStyles ?? {};
               const StoryStyles = ({
                 children,
-              }: PropsWithChildren): JSX.Element => (
-                <div
-                  // eslint-disable-next-line react/forbid-dom-props
-                  style={{
-                    ...style,
-                    ...storyStyles,
-                  }}
-                >
-                  {children}
-                </div>
-              );
+              }: PropsWithChildren): JSX.Element => {
+                const backgroundColor =
+                  story.globals?.backgrounds?.value ?? undefined;
+
+                const refCallBack = (node: HTMLDivElement): void => {
+                  if (!node) return;
+                  runPlayFunctions &&
+                    story.play?.({
+                      ...context,
+                      canvasElement: node,
+                    });
+                };
+
+                return (
+                  <div
+                    ref={refCallBack}
+                    className={backgroundColor}
+                    // eslint-disable-next-line react/forbid-dom-props
+                    style={{
+                      ...style,
+                      ...storyStyles,
+                    }}
+                  >
+                    {children}
+                  </div>
+                );
+              };
 
               const StoryPseudoStates = ({
                 children,
@@ -85,6 +128,9 @@ export function createSingleStory<
               if (typeof story === 'function') {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {story(args, context)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>
@@ -97,6 +143,9 @@ export function createSingleStory<
               if (story.render) {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {story.render(args, context)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>
@@ -109,6 +158,9 @@ export function createSingleStory<
               if (meta.component) {
                 return (
                   <StoryStyles key={storyName}>
+                    <Paragraph className={'bold'} hasSpacing>
+                      {storyName}
+                    </Paragraph>
                     {createElement(meta.component, args)}
                     {story.parameters?.imageSnapshot?.pseudoStates && (
                       <StoryPseudoStates>
@@ -132,16 +184,26 @@ export function createSingleStory<
         flexDirection: 'column',
         gap: 'var(--spacing-m)',
       },
-      pseudo: {
-        hover: [
-          `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
-        active: [
-          `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
-        focus: [
-          `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
+      parameters: {
+        chromatic: {
+          disableSnapshot: false,
+        },
+        customStyles: {
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 'var(--spacing-m)',
+        },
+        pseudo: {
+          hover: [
+            `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
+          ],
+          active: [
+            `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
+          ],
+          focus: [
+            `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
+          ],
+        },
       },
     },
   };

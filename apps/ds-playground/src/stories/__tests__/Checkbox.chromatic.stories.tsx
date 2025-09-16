@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof Checkbox>;
 export default meta;
 export const Snapshots = createSingleStory(CheckboxStories, meta);
+export const BreakpointXS = createSingleStory(CheckboxStories, meta, {
+  viewport: '--breakpoint-xs',
+});
