@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof SearchField>;
 export default meta;
 export const Snapshots = createSingleStory(SearchFieldStories, meta);
+export const Mobile = createSingleStory(SearchFieldStories, meta, {
+  viewport: '--mobile',
+});

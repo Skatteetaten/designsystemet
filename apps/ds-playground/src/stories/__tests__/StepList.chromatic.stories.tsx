@@ -12,3 +12,12 @@ const meta = {
 } satisfies Meta<typeof StepList>;
 export default meta;
 export const Snapshots = createSingleStory(StepListStories, meta);
+export const Mobile = createSingleStory(StepListStories, meta, {
+  viewport: '--mobile',
+});
+export const BreakpointXS = createSingleStory(StepListStories, meta, {
+  viewport: '--breakpoint-xs',
+});
+export const BreakpointS = createSingleStory(StepListStories, meta, {
+  viewport: '--breakpoint-s',
+});

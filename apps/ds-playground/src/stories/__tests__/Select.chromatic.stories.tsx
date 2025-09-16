@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof Select>;
 export default meta;
 export const Snapshots = createSingleStory(SelectStories, meta);
+export const Mobile = createSingleStory(SelectStories, meta, {
+  viewport: '--mobile',
+});

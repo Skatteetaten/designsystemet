@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof Tabs>;
 export default meta;
 export const Snapshots = createSingleStory(TabsStories, meta);
+export const Mobile = createSingleStory(TabsStories, meta, {
+  viewport: '--mobile',
+});

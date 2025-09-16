@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof Table>;
 export default meta;
 export const Snapshots = createSingleStory(TableStories, meta);
+export const BreakpointM = createSingleStory(TableStories, meta, {
+  viewport: '--breakpoint-m',
+});

@@ -14,3 +14,9 @@ const meta = {
 } satisfies Meta<typeof TopBannerButton>;
 export default meta;
 export const Snapshots = createSingleStory(TopBannerButtonStories, meta);
+export const Mobile = createSingleStory(TopBannerButtonStories, meta, {
+  viewport: '--mobile',
+});
+export const BreakpointM = createSingleStory(TopBannerButtonStories, meta, {
+  viewport: '--breakpoint-m',
+});

@@ -12,3 +12,9 @@ const meta = {
 } satisfies Meta<typeof Panel>;
 export default meta;
 export const Snapshots = createSingleStory(PanelStories, meta);
+export const Mobile = createSingleStory(PanelStories, meta, {
+  viewport: '--mobile',
+});
+export const BreakpointXS = createSingleStory(PanelStories, meta, {
+  viewport: '--breakpoint-xs',
+});

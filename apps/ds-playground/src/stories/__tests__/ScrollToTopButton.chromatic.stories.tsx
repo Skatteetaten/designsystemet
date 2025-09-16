@@ -12,3 +12,9 @@ const meta = {
 } satisfies Meta<typeof ScrollToTopButton>;
 export default meta;
 export const Snapshots = createSingleStory(ScrollToTopButtonStories, meta);
+export const BreakpointXS = createSingleStory(ScrollToTopButtonStories, meta, {
+  viewport: '--breakpoint-xs',
+});
+export const BreakpointXL = createSingleStory(ScrollToTopButtonStories, meta, {
+  viewport: '--breakpoint-xl',
+});
