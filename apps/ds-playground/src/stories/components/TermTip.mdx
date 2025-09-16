@@ -1,0 +1,30 @@
+import { Meta, Primary, Controls } from '@storybook/addon-docs/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
+import * as TermTipStories from './TermTip.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
+
+<Meta of={TermTipStories} />
+
+<DocHeaderWrapper componentName="TermTip">
+
+# TermTip
+
+<VersionBadge packageName={'overlays'} />
+
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/termtip" />
+
+</DocHeaderWrapper>
+
+<Primary />
+
+```tsx
+import { TermTip } from '@skatteetaten/ds-overlays';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={TermTipStories.Examples} />

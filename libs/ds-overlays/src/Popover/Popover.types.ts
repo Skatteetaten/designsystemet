@@ -1,7 +1,7 @@
 import {
   Dispatch,
   FunctionComponent,
-  MutableRefObject,
+  RefObject,
   ReactNode,
   SetStateAction,
 } from 'react';
@@ -50,7 +50,7 @@ export interface PopoverComponent extends FunctionComponent<PopoverProps> {
 }
 
 export interface PopoverContextProps extends Exclude<PopoverProps, 'children'> {
-  arrowRef: MutableRefObject<HTMLDivElement | null>;
+  arrowRef: RefObject<HTMLDivElement | null>;
   floatingData: UseFloatingReturn<HTMLButtonElement>;
   interactions: ReturnType<typeof useInteractions>;
   isOpen: boolean;
