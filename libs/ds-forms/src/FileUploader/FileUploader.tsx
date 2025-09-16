@@ -61,7 +61,6 @@ export const FileUploader = (({
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const inputRef = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const afterDeleteFocusRef = useRef<HTMLDivElement>(null);
   const [srOnlyText, setSrOnlyText] = useState<string>();
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const generatedId = useId();
@@ -151,7 +150,31 @@ export const FileUploader = (({
     event.stopPropagation();
   };
 
-  const handleDeleteFile = async (file: UploadedFile): Promise<void> => {
+  const deleteButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  const UpdateFocusAfterDelete = (
+    uploadedFiles: UploadedFile[] | undefined,
+    deletedFileIndex: number
+  ): void => {
+    let previousFileKey: string | undefined;
+    if (deletedFileIndex > 0 && uploadedFiles) {
+      const prevFile = uploadedFiles[deletedFileIndex - 1];
+      previousFileKey = prevFile?.id ?? prevFile?.name;
+    }
+
+    if (previousFileKey) {
+      setTimeout(() => {
+        deleteButtonRefs.current[previousFileKey]?.focus();
+      }, 0);
+    } else {
+      buttonRef.current?.focus();
+    }
+  };
+
+  const handleDeleteFile = async (
+    file: UploadedFile,
+    index: number
+  ): Promise<void> => {
     if (!onFileDelete) {
       return;
     }
@@ -172,7 +195,7 @@ export const FileUploader = (({
     clearTimeout(timeoutId);
 
     if (deleted) {
-      afterDeleteFocusRef.current?.focus();
+      UpdateFocusAfterDelete(uploadedFiles, index);
       setSrOnlyText(t('fileuploader.DeleteConfirmation'));
     } else {
       setSrOnlyText(t('fileuploader.GeneralDeleteError'));
@@ -214,7 +237,6 @@ export const FileUploader = (({
         </LabelWithHelp>
       )}
 
-      <div ref={afterDeleteFocusRef} tabIndex={-1} />
       <button
         ref={buttonRef}
         type={'button'}
@@ -289,21 +311,25 @@ export const FileUploader = (({
       </Alert>
       {uploadedFiles && (
         <ul className={styles.fileList}>
-          {uploadedFiles?.map((file) => {
+          {uploadedFiles?.map((file, index) => {
             const isNewFile = newFiles.some(
               (newFile) => newFile.id === file.id
             );
+            const fileKey = file.id ?? file.name;
             return (
               <FileUploaderFile
-                key={file.id ?? file.name}
+                key={fileKey}
                 href={file.href}
                 fileIconTitle={fileIconTitle}
                 shouldAnimate={isNewFile}
-                showSpinner={filesPendingDelete[file.id ?? file.name]}
+                showSpinner={filesPendingDelete[fileKey]}
+                deleteButtonRef={(el) => {
+                  deleteButtonRefs.current[fileKey] = el;
+                }}
                 onClick={(event): void => {
                   onFileDownload?.(event, file);
                 }}
-                onClickDelete={() => handleDeleteFile(file)}
+                onClickDelete={() => handleDeleteFile(file, index)}
               >
                 {file.name}
               </FileUploaderFile>
