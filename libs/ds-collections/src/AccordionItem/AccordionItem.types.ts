@@ -27,6 +27,8 @@ export interface AccordionItemProps extends BaseProps {
   svgPath?: ReactElement<SVGPathElement>;
   /** Callback når AccordionItem trykkes på */
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  /** Om innholdet skal forbli i DOM når skjult (true) eller fjernes helt (false). Standard: true */
+  keepMounted?: boolean;
   /** Tekst eller markup som vises/skjules. */
   children?: ReactNode;
 }

@@ -1,6 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Tabs } from '@skatteetaten/ds-collections';
+import {
+  getTabsPanelKeepMountedDefault,
+  Tabs,
+} from '@skatteetaten/ds-collections';
 
 import { category } from '../../../.storybook/helpers';
 
@@ -17,6 +20,12 @@ const meta = {
     // Props
     children: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
+    keepMounted: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTabsPanelKeepMountedDefault().toString() },
+      },
+    },
   },
   args: {
     children: 'Innhold',

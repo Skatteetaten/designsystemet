@@ -2,6 +2,7 @@ import { JSX, useContext } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
+import { getTabsPanelKeepMountedDefault } from './defaults';
 import { TabsPanelProps } from './TabsPanel.types';
 import { valueRegex } from '../Tabs/utils';
 import { TabsContext } from '../TabsContext/TabsContext';
@@ -14,15 +15,21 @@ export const TabsPanel = ({
   lang,
   'data-testid': dataTestId,
   value,
+  keepMounted = getTabsPanelKeepMountedDefault(),
   children,
-}: TabsPanelProps): JSX.Element => {
+}: TabsPanelProps): JSX.Element | null => {
   const { activeTab, baseId } = useContext(TabsContext);
+  const isActive = activeTab === value;
   const panelClassName = `${styles.panel} ${
-    activeTab === value ? styles.panel_active : ''
+    isActive ? styles.panel_active : ''
   }`.trim();
 
   if (!valueRegex.test(value)) {
     throw new Error('Value kan kun inneholde tegn som er gyldig i en html id.');
+  }
+
+  if (!keepMounted && !isActive) {
+    return null;
   }
 
   return (
@@ -34,7 +41,7 @@ export const TabsPanel = ({
       data-testid={dataTestId}
       role={'tabpanel'}
       aria-labelledby={`ds-tab-id-${baseId}-${value}`}
-      hidden={activeTab !== value}
+      hidden={keepMounted ? !isActive : undefined}
     >
       {children}
     </div>
@@ -42,3 +49,5 @@ export const TabsPanel = ({
 };
 
 TabsPanel.displayName = 'TabsPanel';
+
+export { getTabsPanelKeepMountedDefault };
