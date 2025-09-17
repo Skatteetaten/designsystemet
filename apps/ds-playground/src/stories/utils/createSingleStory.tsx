@@ -63,6 +63,7 @@ export function createSingleStory<
             display: 'flex',
             flexDirection: 'column',
             gap: 'var(--spacing-m)',
+            padding: 'var(--spacing-m)',
           }}
         >
           {Object.entries(stories)
@@ -109,7 +110,7 @@ export function createSingleStory<
                 const pseudoStates =
                   story.parameters?.imageSnapshot?.pseudoStates || [];
                 return (
-                  <div className={'paddingM'}>
+                  <>
                     {pseudoStates.map((state: string) => (
                       <div key={state}>
                         <Paragraph
@@ -120,7 +121,7 @@ export function createSingleStory<
                         <div data-pseudo-state={state}>{children}</div>
                       </div>
                     ))}
-                  </div>
+                  </>
                 );
               };
 
@@ -184,26 +185,16 @@ export function createSingleStory<
         flexDirection: 'column',
         gap: 'var(--spacing-m)',
       },
-      parameters: {
-        chromatic: {
-          disableSnapshot: false,
-        },
-        customStyles: {
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 'var(--spacing-m)',
-        },
-        pseudo: {
-          hover: [
-            `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
-          ],
-          active: [
-            `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
-          ],
-          focus: [
-            `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
-          ],
-        },
+      pseudo: {
+        hover: [
+          `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
+        ],
+        active: [
+          `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
+        ],
+        focus: [
+          `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
+        ],
       },
     },
   };
