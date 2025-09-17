@@ -1,14 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, within } from 'storybook/test';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import {
-  loremIpsumWithoutSpaces,
-  wrapper,
-} from './testUtils/storybook.testing.utils';
+import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -250,11 +247,6 @@ export const WithHelpTextSvgPathAndTitle = {
     helpSvgPath: { table: { disable: false } },
     titleHelpSvg: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} > fieldset > button`,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
@@ -265,6 +257,7 @@ export const WithHelpTextSvgPathAndTitle = {
     await expect(svgNode).toBeInTheDocument();
     const legend = canvas.getAllByText(defaultLegendText)[0];
     await expect(helpButton).toHaveAttribute('aria-describedby', legend.id);
+    await userEvent.click(helpButton);
   },
 } satisfies Story;
 

@@ -7,10 +7,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
-import {
-  loremIpsumWithoutSpaces,
-  wrapper,
-} from './testUtils/storybook.testing.utils';
+import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Help } from '../../../../../libs/ds-forms/src/Help/Help';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -62,13 +59,6 @@ export const WithHelptext = {
   argTypes: {
     helpText: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button');
@@ -106,12 +96,6 @@ export const WithHelpTextAndDescription = {
     helpText: { table: { disable: false } },
     description: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-  },
 } satisfies Story;
 
 export const WithLongHelpTextAndDescription = {
@@ -123,15 +107,15 @@ export const WithLongHelpTextAndDescription = {
   argTypes: {
     helpText: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} > button`,
-    },
-  },
   globals: {
     viewport: {
       value: '--mobile',
     },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
   },
 } satisfies Story;
 

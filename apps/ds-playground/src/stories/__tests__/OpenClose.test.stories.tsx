@@ -6,8 +6,6 @@ import { expect, fireEvent, within, waitFor, fn } from 'storybook/test';
 import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const elementId = 'htmlId';
 const defaultTitle = 'Er jeg pendler?';
 const defaultContent =
@@ -170,11 +168,7 @@ export const Defaults = {
     title: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-      click: `${wrapper} button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

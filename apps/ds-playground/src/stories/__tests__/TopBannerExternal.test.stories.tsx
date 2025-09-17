@@ -777,6 +777,24 @@ export const WithExtraLangs = {
   },
 } satisfies Story;
 
+export const ClickSearchOpen = {
+  name: 'Click Search Open',
+  args: {
+    ...defaultArgs,
+    searchContent: 'hei hei',
+    firstColumn: (
+      <Link href={'#storybook-root'}>
+        {'Meny-knapp blir synlig når den har innhold'}
+      </Link>
+    ),
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchButton = canvas.getByRole('button', { name: searchText });
+    await userEvent.click(searchButton);
+  },
+} satisfies Story;
+
 export const ClickSearchOpenAndClose = {
   name: 'Click Search Open And Close (Search B2, B1, B3, A2, A1)',
   args: {
@@ -787,12 +805,6 @@ export const ClickSearchOpenAndClose = {
         {'Meny-knapp blir synlig når den har innhold'}
       </Link>
     ),
-  },
-  parameters: {
-    // imageSnapshot: { disableSnapshot: true },
-    imageSnapshot: {
-      click: [`xpath=//span[text()='Søk']`],
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

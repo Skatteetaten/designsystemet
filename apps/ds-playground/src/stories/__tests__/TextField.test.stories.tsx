@@ -76,7 +76,8 @@ const meta = {
     onBlur: { table: { disable: true, category: category.event } },
     onChange: { table: { disable: true, category: category.event } },
     onFocus: { table: { disable: true, category: category.event } },
-    onHelpToggle: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true, category: category.event } },
+    onKeyDown: { table: { disable: true, category: category.event } },
   },
   tags: ['test'],
   parameters: {
@@ -196,10 +197,7 @@ export const Defaults = {
     label: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} input`,
-      focus: `${wrapper} input`,
-    },
+    pseudoStates: ['hover', 'focus'],
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -240,6 +238,7 @@ export const WithDisabled = {
   argTypes: {
     disabled: { table: { disable: false } },
   },
+  parameters: { imageSnapshot: { pseudoStates: ['hover', 'focus'] } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -327,6 +326,9 @@ export const WithReadOnly = {
   },
   argTypes: {
     readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -445,10 +447,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} input`,
-      focus: `${wrapper} input`,
-    },
+    pseudoStates: ['hover', 'focus'],
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -550,12 +549,6 @@ export const WithHelpText = {
   argTypes: {
     helpText: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > div > button`,
-      click: `${wrapper} > div > button`,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
@@ -576,12 +569,6 @@ export const WithHelpTextAndDescription = {
   argTypes: {
     helpText: { table: { disable: false } },
     description: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > div > button`,
-      click: `${wrapper} > div > button`,
-    },
   },
 } satisfies Story;
 

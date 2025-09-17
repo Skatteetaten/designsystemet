@@ -10,6 +10,9 @@ const meta = {
   title: 'Chromatic/TopBanner/TopBannerSkipLink',
   component: TopBannerSkipLink,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'a',
+  },
 } satisfies Meta<typeof TopBannerSkipLink>;
 export default meta;
 export const Snapshots = createSingleStory(TopBannerSkipLinkStories, meta);

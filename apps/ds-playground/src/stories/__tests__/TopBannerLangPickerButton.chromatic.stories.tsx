@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/TopBanner/LangPickerButton',
   component: TopBannerLangPickerButton,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: '> button',
+  },
 } satisfies Meta<typeof TopBannerLangPickerButton>;
 export default meta;
 export const Snapshots = createSingleStory(

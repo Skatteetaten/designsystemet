@@ -11,6 +11,9 @@ const meta = {
   title: 'Chromatic/Help',
   component: Help,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: '> button',
+  },
 } satisfies Meta<typeof Help>;
 export default meta;
 export const Snapshots = createSingleStory(HelpStories, meta);

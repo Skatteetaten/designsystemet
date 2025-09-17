@@ -165,11 +165,7 @@ export const Defaults = {
     visibilityThreshold: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > div > main > div:nth-child(2) > button`,
-      focus: `${wrapper} > div > main > div:nth-child(2) > button`,
-      click: `${wrapper} > div > main > div:nth-child(2) > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

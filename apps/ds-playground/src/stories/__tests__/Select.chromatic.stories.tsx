@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/Select',
   component: Select,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'select',
+  },
 } satisfies Meta<typeof Select>;
 export default meta;
 export const Snapshots = createSingleStory(SelectStories, meta);
