@@ -1,3 +1,5 @@
+import { JSX, useState } from 'react';
+
 import { StoryObj, Meta, StoryFn } from '@storybook/react-vite';
 // eslint-disable-next-line storybook/use-storybook-testing-library
 import { PointerEventsCheckLevel } from '@testing-library/user-event';
@@ -345,3 +347,63 @@ export const WithCustomClassNames = {
     await expect(container).toHaveClass('dummyClassname');
   },
 } satisfies Story;
+
+export const WithFocusManagement: StoryObj<FileUploaderProps> = {
+  name: 'With Focus Management (B7)',
+  render: () => {
+    const FocusManagementWrapper = (): JSX.Element => {
+      const [files, setFiles] = useState([
+        { name: 'first.pdf' },
+        { name: 'second.pdf' },
+        { name: 'third.pdf' },
+      ]);
+      return (
+        <FileUploader
+          uploadedFiles={files}
+          onFileDelete={(file) => {
+            setFiles((prev) => prev.filter((f) => f.name !== file.name));
+            return true; // indicate successful delete
+          }}
+        />
+      );
+    };
+    return <FocusManagementWrapper />;
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const deleteTitle = dsI18n.t('ds_forms:fileuploader.DeleteLabel');
+    const uploadButtonName = dsI18n.t('ds_forms:fileuploader.AddSingleLabel');
+    const user = userEvent.setup({
+      pointerEventsCheck: PointerEventsCheckLevel.Never,
+    });
+
+    const initialDeleteButtons = canvas.getAllByRole('button', {
+      name: deleteTitle,
+    });
+    expect(initialDeleteButtons).toHaveLength(3);
+    const firstButton = initialDeleteButtons[0];
+    const secondButton = initialDeleteButtons[1];
+
+    // Delete the second file -> focus should move to previous (first) file's delete button
+    await user.click(secondButton);
+    await expect(canvas.queryByText('second.pdf')).not.toBeInTheDocument();
+    await expect(firstButton).toHaveFocus();
+
+    // Delete the first file (now list has first.pdf & third.pdf -> after deletion only third.pdf). No previous file, focus should move to upload button.
+    const firstButtonAfter = canvas.getAllByTitle(deleteTitle)[0];
+    await user.click(firstButtonAfter);
+    await expect(canvas.queryByText('first.pdf')).not.toBeInTheDocument();
+    const uploadButton = canvas.getByRole('button', { name: uploadButtonName });
+    await expect(uploadButton).toHaveFocus();
+
+    // Delete the last remaining file -> still focus on upload button and no delete buttons remain
+    const lastDeleteButton = canvas.getAllByTitle(deleteTitle)[0];
+    await user.click(lastDeleteButton);
+    await expect(canvas.queryByText('third.pdf')).not.toBeInTheDocument();
+    await expect(canvas.queryAllByTitle(deleteTitle).length).toBe(0);
+    await expect(uploadButton).toHaveFocus();
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+};
