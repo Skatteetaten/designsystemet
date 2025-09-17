@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/ScrollToTopButton',
   component: ScrollToTopButton,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'div > main:nth-child(1) > div:nth-child(2) > button',
+  },
 } satisfies Meta<typeof ScrollToTopButton>;
 export default meta;
 export const Snapshots = createSingleStory(ScrollToTopButtonStories, meta);
