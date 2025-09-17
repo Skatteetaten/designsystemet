@@ -180,11 +180,6 @@ export function createSingleStory<
       chromatic: {
         disableSnapshot: false,
       },
-      customStyles: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 'var(--spacing-m)',
-      },
       pseudo: {
         hover: [
           `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
