@@ -1,6 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Accordion } from '@skatteetaten/ds-collections';
+import {
+  Accordion,
+  getAccordionItemKeepMountedDefault,
+} from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 
 import { category } from '../../../.storybook/helpers';
@@ -39,6 +42,14 @@ const meta = {
     isExpanded: {
       table: {
         category: category.props,
+      },
+    },
+    keepMounted: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getAccordionItemKeepMountedDefault().toString(),
+        },
       },
     },
     svgPath: {

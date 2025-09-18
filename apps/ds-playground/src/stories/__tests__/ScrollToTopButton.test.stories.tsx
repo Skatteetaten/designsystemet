@@ -43,7 +43,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof ScrollToTopButton> = (args) => (
-  <div className={'height100vh'}>
+  <div className={'height120vh'}>
     <main className={'scrollToTopContainer'} tabIndex={-1}>
       <ExternalLayout />
       <ScrollToTopButton {...args} />
@@ -71,7 +71,7 @@ export const WithRef = {
   },
   parameters: {
     imageSnapshot: {
-      disable: true,
+      disableSnapshot: true,
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -103,6 +103,7 @@ export const WithAttributes = {
     a11y: {
       test: 'off',
     },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -135,6 +136,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -185,6 +189,9 @@ export const WithChildren = {
   argTypes: {
     children: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText(args.children ?? '')).toBeInTheDocument();
@@ -196,6 +203,9 @@ export const WithMobileScreen = {
   name: 'With Small Screen (A5)',
   args: {
     ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     viewport: {
@@ -229,15 +239,31 @@ export const WithVisibilityThreshold = {
   },
   parameters: {
     imageSnapshot: {
-      scroll: {
-        yPixels: 10,
+      disableSnapshot: true,
+    },
+    viewport: {
+      options: {
+        maxHeight: {
+          maxHeight: { name: 'maxHeight', styles: { height: '500px' } },
+        },
       },
     },
-  },
-  globals: {
-    viewport: {
-      value: '--breakpoint-xl',
+    chromatic: {
+      modes: { maxHeight: { viewport: 'maxHeight' } },
     },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const scrollToTopButton = canvas.getByRole('button', {
+      hidden: true,
+    });
+    await expect(scrollToTopButton).not.toBeVisible();
+    window.scrollTo(0, 10);
+    await expect(await canvas.findByRole('button')).toBeVisible();
+    await expect(scrollToTopButton).toBeInTheDocument();
+    await userEvent.click(scrollToTopButton);
+    await expect(canvasElement.querySelector('main')).toHaveFocus();
+    await expect(window.scrollY).toBe(0);
   },
 } satisfies Story;
 
@@ -263,7 +289,7 @@ export const WithShadowDom = {
   decorators: [webComponent],
   parameters: {
     imageSnapshot: {
-      disable: true,
+      disableSnapshot: true,
     },
     customElementName: 'scrolltotop-customelement',
   },
@@ -314,6 +340,7 @@ export const WithNotScrollToMain = {
     a11y: {
       test: 'off',
     },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -323,5 +350,6 @@ export const WithNotScrollToMain = {
     await expect(scrollToTopButton).toBeInTheDocument();
     await userEvent.click(scrollToTopButton);
     await expect(canvasElement.querySelector('main')).toHaveFocus();
+    await expect(window.scrollY).toBe(0);
   },
 } satisfies Story;
