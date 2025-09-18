@@ -43,7 +43,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof ScrollToTopButton> = (args) => (
-  <div className={'height100vh'}>
+  <div className={'height120vh'}>
     <main className={'scrollToTopContainer'} tabIndex={-1}>
       <ExternalLayout />
       <ScrollToTopButton {...args} />
@@ -238,6 +238,16 @@ export const WithVisibilityThreshold = {
     imageSnapshot: {
       disableSnapshot: true,
     },
+    viewport: {
+      options: {
+        maxHeight: {
+          maxHeight: { name: 'maxHeight', styles: { height: '500px' } },
+        },
+      },
+    },
+    chromatic: {
+      modes: { maxHeight: { viewport: 'maxHeight' } },
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -246,7 +256,7 @@ export const WithVisibilityThreshold = {
     });
     await expect(scrollToTopButton).not.toBeVisible();
     window.scrollTo(0, 10);
-    await expect(await canvas.findByRole('button', {})).toBeVisible();
+    await expect(await canvas.findByRole('button')).toBeVisible();
     await expect(scrollToTopButton).toBeInTheDocument();
     await userEvent.click(scrollToTopButton);
     await expect(canvasElement.querySelector('main')).toHaveFocus();
