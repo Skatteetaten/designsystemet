@@ -19,6 +19,8 @@ export interface FileUploaderFileProps extends BaseProps, LinkHTMLAttributes {
   shouldAnimate?: boolean;
   /** Skal det vises spinner i stedet for hakeikon ved filen */
   showSpinner?: boolean;
+  /** Ref til slett-knapp for fokus-håndtering */
+  deleteButtonRef?: Ref<HTMLButtonElement>;
   /** Filnavn */
   children: string;
 }
