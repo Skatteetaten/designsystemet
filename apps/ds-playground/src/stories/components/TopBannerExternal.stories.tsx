@@ -7,13 +7,10 @@ import { Card } from '@skatteetaten/ds-content';
 import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
 import {
   AccountMultipleIcon,
-  ArrowUpDownSVGpath,
   BriefcaseIcon,
-  ChatBubbleOutlineSVGpath,
   FavoriteIcon,
   LockOutlineSVGpath,
   PersonIcon,
-  ShareSVGpath,
 } from '@skatteetaten/ds-icons';
 import {
   TopBannerExternal,
@@ -123,14 +120,6 @@ export const ExampleWithRolePicker: Story = {
     const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
       const lang = e.currentTarget.lang;
       dsI18n.changeLanguage(langToLocale[lang]);
-    };
-
-    const handleLogOut = (): void => {
-      setUser(undefined);
-    };
-
-    const handleLogIn = (): void => {
-      modalRef.current?.showModal();
     };
 
     const me: Person = {
@@ -398,7 +387,12 @@ export const ExampleWithRolePicker: Story = {
                 >
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
-                <Button svgPath={LockOutlineSVGpath}>{'Logg inn'}</Button>
+                <Button
+                  svgPath={LockOutlineSVGpath}
+                  onClick={() => modalRef.current?.showModal()}
+                >
+                  {'Logg inn'}
+                </Button>
               </>
             )
           }
@@ -499,8 +493,8 @@ export const ExampleWithRolePicker: Story = {
             </>
           }
           onLanguageClick={handleLanguageClick}
-          onLogInClick={handleLogIn}
-          onLogOutClick={handleLogOut}
+          onLogInClick={() => modalRef.current?.showModal()}
+          onLogOutClick={() => setUser(undefined)}
           onUserClick={(): void => modalRef.current?.showModal()}
           onSearch={(e, value) => {
             alert(`søker etter ${value}`);
@@ -812,7 +806,12 @@ export const ExampleWithUserMenu: Story = {
                 >
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
-                <Button svgPath={LockOutlineSVGpath}>{'Logg inn'}</Button>
+                <Button
+                  svgPath={LockOutlineSVGpath}
+                  onClick={() => modalRef.current?.showModal()}
+                >
+                  {'Logg inn'}
+                </Button>
               </>
             )
           }
