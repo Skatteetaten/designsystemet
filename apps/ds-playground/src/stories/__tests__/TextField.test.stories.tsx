@@ -197,7 +197,7 @@ export const Defaults = {
     label: { table: { disable: false } },
   },
   parameters: {
-    pseudoStates: ['hover', 'focus'],
+    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -10,7 +10,7 @@ const meta = {
   component: ScrollToTopButton,
   tags: ['chromatic', '!autodocs'],
   parameters: {
-    pseudoSelector: 'button',
+    pseudoSelector: 'div > main:nth-child(1) > div:nth-child(2) > button',
   },
 } satisfies Meta<typeof ScrollToTopButton>;
 export default meta;

@@ -204,9 +204,6 @@ export const WithMobileScreen = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
-  },
   globals: {
     viewport: {
       value: '--breakpoint-xs',
