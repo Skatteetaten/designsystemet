@@ -307,7 +307,12 @@ export function TopBannerExternalAndFooter({
               >
                 {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
               </Paragraph>
-              <Button svgPath={LockOutlineSVGpath}>{'Logg inn'}</Button>
+              <Button
+                svgPath={LockOutlineSVGpath}
+                onClick={() => modalRef.current?.showModal()}
+              >
+                {'Logg inn'}
+              </Button>
             </>
           )
         }
