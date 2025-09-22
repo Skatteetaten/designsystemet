@@ -27,6 +27,8 @@ export interface DescriptionListCommonProps extends BaseProps {
   size?: DescriptionListSize;
   /** Styrer om komponenten automatisk bytter til vertikal variant på mobil. */
   isVerticalOnMobile?: boolean;
+  /** Styrer om descriptionDirection automatisk bytter til vertikal på mobil. */
+  isDescriptionVerticalOnMobile?: boolean;
 }
 
 export type DescriptionListProps = DescriptionListCommonProps;

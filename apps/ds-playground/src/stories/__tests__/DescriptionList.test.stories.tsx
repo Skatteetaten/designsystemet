@@ -20,6 +20,9 @@ const meta = {
     descriptionDirection: { table: { disable: true } },
     hasSpacing: { table: { disable: true } },
     size: { table: { disable: true } },
+    descriptionWeight: { table: { disable: true } },
+    isDescriptionVerticalOnMobile: { table: { disable: true } },
+    termWeight: { table: { disable: true } },
   },
   args: {
     children: [
@@ -206,6 +209,26 @@ export const WithIsVerticalOnMobile = {
   },
   argTypes: {
     variant: {
+      table: { disable: false },
+      control: { disable: true },
+    },
+  },
+  globals: {
+    viewport: {
+      value: '--breakpoint-xs',
+    },
+  },
+} satisfies Story;
+
+export const WithHasVerticalDescriptionDirectionOnMobile = {
+  name: 'With isDescriptionVerticalOnMobile (A9)',
+  args: {
+    ...defaultArgs,
+    descriptionDirection: 'horizontal',
+    isDescriptionVerticalOnMobile: true,
+  },
+  argTypes: {
+    isDescriptionVerticalOnMobile: {
       table: { disable: false },
       control: { disable: true },
     },

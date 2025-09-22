@@ -7,6 +7,8 @@ import {
 export const getDescriptionListSizeDefault = (): DescriptionListSize =>
   'medium';
 export const getDescriptionListIsVerticalOnMobileDefault = (): boolean => true;
+export const getDescriptionListIsDescriptionVerticalOnMobileDefault =
+  (): boolean => false;
 export const getDescriptionDirectionDefault = (): Orientation => 'horizontal';
 export const getDescriptionWeightDefault = (): DescriptionListWeight =>
   'regular';
