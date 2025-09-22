@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/SearchField',
   component: SearchField,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: ['input', 'button'],
+  },
 } satisfies Meta<typeof SearchField>;
 export default meta;
 export const Snapshots = createSingleStory(SearchFieldStories, meta);

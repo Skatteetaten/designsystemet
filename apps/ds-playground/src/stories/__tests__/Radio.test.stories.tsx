@@ -148,13 +148,8 @@ export const WithDescription = {
     description: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} input[type='radio']`,
-      focus: `${wrapper} input[type='radio']`,
-      click: `${wrapper} input[type='radio']`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');

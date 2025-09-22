@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/Checkbox',
   component: Checkbox,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'input',
+  },
 } satisfies Meta<typeof Checkbox>;
 export default meta;
 export const Snapshots = createSingleStory(CheckboxStories, meta);
