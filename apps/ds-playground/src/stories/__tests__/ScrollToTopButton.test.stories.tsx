@@ -168,9 +168,6 @@ export const Defaults = {
   argTypes: {
     visibilityThreshold: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const scrollToTopButton = canvas.getByText(defaultButtonText);
@@ -203,6 +200,9 @@ export const WithMobileScreen = {
   name: 'With Small Screen (A5)',
   args: {
     ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     viewport: {
