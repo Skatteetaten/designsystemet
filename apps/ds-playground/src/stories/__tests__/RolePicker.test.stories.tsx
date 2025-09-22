@@ -1,7 +1,14 @@
 import { useRef } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, userEvent, waitFor, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -959,5 +966,35 @@ export const WithCloseError = {
     await waitFor(() => expect(alert).not.toBeInTheDocument());
 
     expect(firstLink).toHaveFocus();
+  },
+} satisfies Story;
+
+export const WithOnCloseCallback = {
+  name: 'With OnClose Callback (A20)',
+  args: {
+    ...defaultArgs,
+    onClose: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  render: DefaultTemplate,
+  argTypes: {
+    onClose: { table: { disable: false } },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const avbrytButton = within(modal).getByRole('button', {
+      name: dsI18n.t('ds_overlays:rolepicker.Cancel'),
+    });
+
+    await userEvent.click(avbrytButton);
+
+    await waitFor(() => expect(args.onClose).toHaveBeenCalled());
   },
 } satisfies Story;
