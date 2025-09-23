@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/Table/HeaderCell',
   component: Table.HeaderCell,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'button',
+  },
 } satisfies Meta<typeof Table.HeaderCell>;
 export default meta;
 export const Snapshots = createSingleStory(TableHeaderCellStories, meta);

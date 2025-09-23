@@ -192,10 +192,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} select`,
-      focus: `${wrapper} select`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -260,6 +257,9 @@ export const WithDisabled = {
   },
   argTypes: {
     disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -390,12 +390,8 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} select`,
-      focus: `${wrapper} select`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const selectNode = canvas.getByRole('combobox', {

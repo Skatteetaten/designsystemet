@@ -8,7 +8,6 @@ import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -372,12 +371,6 @@ export const WithCloseButton = {
     ...defaultArgs,
     showAlert: true,
     onClose: fn(),
-  },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-    },
   },
 } satisfies Story;
 

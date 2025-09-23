@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/Radio',
   component: Radio,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'input',
+  },
 } satisfies Meta<typeof Radio>;
 export default meta;
 export const Snapshots = createSingleStory(RadioStories, meta);

@@ -84,6 +84,11 @@ export const RolePicker = ({
     onClose?.();
   };
 
+  const handleCancel = (): void => {
+    modalRef.current?.close();
+    handleClose();
+  };
+
   const getRepresentationText = (): JSX.Element | null => {
     if (people && people.total > 0 && businesses && businesses.total > 0) {
       return (
@@ -227,10 +232,7 @@ export const RolePicker = ({
                 </Button>
 
                 {!hideCloseButton ? (
-                  <Button
-                    variant={'secondary'}
-                    onClick={() => modalRef.current?.close()}
-                  >
+                  <Button variant={'secondary'} onClick={handleCancel}>
                     {t('rolepicker.Cancel')}
                   </Button>
                 ) : null}

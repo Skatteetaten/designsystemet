@@ -3,9 +3,8 @@ import { JSX } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Table.EditableRow,
@@ -25,6 +24,7 @@ const meta = {
     editableContentRef: { table: { disable: true } },
     onEdit: { table: { disable: true } },
     children: { table: { disable: true } },
+    isNew: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
@@ -85,9 +85,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      click: `${wrapper} button`,
-    },
     a11y: {
       test: 'off',
     },
@@ -171,10 +168,12 @@ export const WithEditableContent = {
       </span>
     ),
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} button`,
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.Editable'),
+    });
+    await fireEvent.click(inlineButton);
   },
 } satisfies Story;
 
@@ -196,9 +195,11 @@ export const WithEditButtonPositionRight = {
   argTypes: {
     editButtonPosition: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} button`,
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.Editable'),
+    });
+    await fireEvent.click(inlineButton);
   },
 } satisfies Story;

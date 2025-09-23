@@ -3,7 +3,7 @@ import { expect, within } from 'storybook/test';
 
 import { Paragraph, ParagraphProps } from '@skatteetaten/ds-typography';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Paragraph,
@@ -144,12 +144,6 @@ export const WithMarkup = {
     children: {
       table: { disable: false },
       control: { disable: true },
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > p a`,
-      focus: `${wrapper} > p a`,
     },
   },
 } satisfies Story;

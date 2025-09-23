@@ -3,8 +3,6 @@ import { expect, within } from 'storybook/test';
 
 import { List, ListProps, Paragraph } from '@skatteetaten/ds-typography';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const meta = {
   component: List,
   title: 'Tester/List/List',
@@ -188,12 +186,6 @@ export const WithMarkup = {
     children: {
       table: { disable: false },
       control: { disable: true },
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > ul > li a`,
-      focus: `${wrapper} > ul > li a`,
     },
   },
 } satisfies Story;

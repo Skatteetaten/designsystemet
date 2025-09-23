@@ -145,11 +145,11 @@ export const TopBannerExternalUserMenu = ({
             )}
             <Divider spacingTop={'m'}></Divider>
             <div className={styles.link}>
-              {(user.role === 'virksomhet' || user.role === 'meg') && (
+              {user && (
                 <Link
                   className={styles.marginRightS}
                   svgPath={BellSVGpath}
-                  href={`https://skatteetaten.no/web/minside/${user.role === 'meg' ? 'person' : 'virksomhet'}/varsler`}
+                  href={`https://skatt.skatteetaten.no/web/minside/${user.role === 'meg' ? 'person' : 'virksomhet'}/varsler`}
                   ariaDescribedby={'notificationCount'}
                 >
                   {t('ds_overlays:topbannerexternalusermenu.Notification')}
@@ -170,7 +170,7 @@ export const TopBannerExternalUserMenu = ({
             <div className={styles.link}>
               <Link
                 svgPath={PersonSVGpath}
-                href={'https://skatteetaten.no/web/minside'}
+                href={'https://skatt.skatteetaten.no/web/minside'}
               >
                 {t('ds_overlays:topbannerexternalusermenu.MyPage')}
               </Link>
@@ -180,7 +180,7 @@ export const TopBannerExternalUserMenu = ({
                 <Link
                   svgPath={InfoSquareSVGpath}
                   href={
-                    'https://skatteetaten.no/web/minside/virksomhet/omvirksomheten'
+                    'https://skatt.skatteetaten.no/web/minside/virksomhet/omvirksomheten'
                   }
                 >
                   {t(
@@ -193,7 +193,9 @@ export const TopBannerExternalUserMenu = ({
               <div className={styles.link}>
                 <Link
                   svgPath={InfoSquareSVGpath}
-                  href={'https://skatteetaten.no/web/minside/person/ommeg'}
+                  href={
+                    'https://skatt.skatteetaten.no/web/minside/person/ommeg'
+                  }
                 >
                   {t('ds_overlays:topbannerexternalusermenu.AboutMe')}
                 </Link>

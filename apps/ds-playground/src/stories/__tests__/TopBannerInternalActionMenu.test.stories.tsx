@@ -10,8 +10,6 @@ import {
   TopBannerInternal,
 } from '@skatteetaten/ds-layout';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const meta = {
   component: TopBannerInternal.ActionMenu,
   title: 'Tester/TopBanner/TopBannerInternalActionMenu',
@@ -85,6 +83,22 @@ export const WithRef = {
   },
 } satisfies Story;
 
+export const WithDefaults = {
+  name: 'Defaults',
+  args: {},
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button');
+    await fireEvent.click(menuButton);
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+} satisfies Story;
+
 export const WithImperativeActions = {
   name: 'With Imperative Actions (A2, A3, A5, A6, B1, C2)',
   render: (_args): JSX.Element => {
@@ -134,9 +148,6 @@ export const WithImperativeActions = {
   parameters: {
     a11y: {
       test: 'off',
-    },
-    imageSnapshot: {
-      click: `${wrapper} > :first-child`,
     },
   },
 } satisfies Story;

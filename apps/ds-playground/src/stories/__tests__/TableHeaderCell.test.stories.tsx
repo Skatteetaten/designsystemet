@@ -3,8 +3,6 @@ import { expect, within } from 'storybook/test';
 
 import { Table } from '@skatteetaten/ds-table';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const meta = {
   component: Table.HeaderCell,
   title: 'Tester/Table/HeaderCell',
@@ -124,6 +122,22 @@ export const WithChildren = {
   },
 } satisfies Story;
 
+export const WithSortable = {
+  render: Template,
+  name: 'With Sortable',
+  args: {
+    children: 'columnheader',
+    isSortable: true,
+    sortKey: 'columnheader',
+  },
+  argTypes: {
+    isSortable: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+} satisfies Story;
+
 export const WithDisabled = {
   render: Template,
   name: 'With Disabled (Table Header A8)',
@@ -137,10 +151,7 @@ export const WithDisabled = {
     isSortDisabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

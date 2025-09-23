@@ -8,7 +8,6 @@ import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   loremIpsum,
   loremIpsumWithoutSpaces,
-  wrapper,
 } from './testUtils/storybook.testing.utils';
 import { htmlEventDescription } from '../../../.storybook/helpers';
 
@@ -123,11 +122,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} input[type='radio']`,
-      focus: `${wrapper} input[type='radio']`,
-      click: `${wrapper} input[type='radio']`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

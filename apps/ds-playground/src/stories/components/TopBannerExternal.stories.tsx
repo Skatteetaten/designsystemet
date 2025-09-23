@@ -7,13 +7,10 @@ import { Card } from '@skatteetaten/ds-content';
 import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
 import {
   AccountMultipleIcon,
-  ArrowUpDownSVGpath,
   BriefcaseIcon,
-  ChatBubbleOutlineSVGpath,
   FavoriteIcon,
   LockOutlineSVGpath,
   PersonIcon,
-  ShareSVGpath,
 } from '@skatteetaten/ds-icons';
 import {
   TopBannerExternal,
@@ -123,14 +120,6 @@ export const ExampleWithRolePicker: Story = {
     const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
       const lang = e.currentTarget.lang;
       dsI18n.changeLanguage(langToLocale[lang]);
-    };
-
-    const handleLogOut = (): void => {
-      setUser(undefined);
-    };
-
-    const handleLogIn = (): void => {
-      modalRef.current?.showModal();
     };
 
     const me: Person = {
@@ -398,7 +387,12 @@ export const ExampleWithRolePicker: Story = {
                 >
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
-                <Button svgPath={LockOutlineSVGpath}>{'Logg inn'}</Button>
+                <Button
+                  svgPath={LockOutlineSVGpath}
+                  onClick={() => modalRef.current?.showModal()}
+                >
+                  {'Logg inn'}
+                </Button>
               </>
             )
           }
@@ -499,8 +493,8 @@ export const ExampleWithRolePicker: Story = {
             </>
           }
           onLanguageClick={handleLanguageClick}
-          onLogInClick={handleLogIn}
-          onLogOutClick={handleLogOut}
+          onLogInClick={() => modalRef.current?.showModal()}
+          onLogOutClick={() => setUser(undefined)}
           onUserClick={(): void => modalRef.current?.showModal()}
           onSearch={(e, value) => {
             alert(`søker etter ${value}`);
@@ -595,11 +589,9 @@ export const ExampleWithUserMenu: Story = {
       VIRKSOMHET_UTENLANDSK = 'https://www.skatteetaten.no/bedrift-og-organisasjon/utenlandsk/',
       VIRKSOMHET_FORSIDE = 'https://www.skatteetaten.no/bedrift-og-organisasjon/',
       RETTSKILDER = 'https://www.skatteetaten.no/rettskilder/',
-      RETTSKILDER_PER_EMNE = 'https://www.skatteetaten.no/rettskilder/emne/',
-      RETTSKILDER_PER_TYPE = 'https://www.skatteetaten.no/rettskilder/type/',
-      OM_OSS_KONTAKT = 'https://www.skatteetaten.no/kontakt/',
-      OM_OSS_DELING_AV_DATA = 'https://www.skatteetaten.no/deling/',
-      OM_OSS_PRESSE = 'https://www.skatteetaten.no/presse/',
+      PRESSE = 'https://www.skatteetaten.no/presse/',
+      SAMARBEIDSPARTNERE = 'https://www.skatteetaten.no/samarbeidspartnere/',
+      KONTAKT = 'https://www.skatteetaten.no/kontakt/',
     }
 
     enum LenkerInnloggetIkkeMinSide {
@@ -666,10 +658,6 @@ export const ExampleWithUserMenu: Story = {
 
     const personlinks = [
       {
-        href: LenkerUinnlogget.PERSON_FORSIDE,
-        text: 'Person forside',
-      },
-      {
         href: LenkerUinnlogget.PERSON_SKATT,
         text: 'Skatt',
       },
@@ -706,7 +694,7 @@ export const ExampleWithUserMenu: Story = {
       },
       {
         href: LenkerUinnlogget.VIRKSOMHET_STARTE_OG_DRIVE,
-        text: 'Starte og drive',
+        text: 'Starte, drive og avslutte',
       },
       {
         href: LenkerUinnlogget.VIRKSOMHET_ARBEIDSGIVER,
@@ -738,24 +726,6 @@ export const ExampleWithUserMenu: Story = {
       {
         href: LenkerInnloggetIkkeMinSide.INNBOKS,
         text: 'Innboks',
-      },
-    ];
-
-    const omOssLinks = [
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Kontakt oss',
-        svgPath: ChatBubbleOutlineSVGpath,
-      },
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Deling av data',
-        svgPath: ArrowUpDownSVGpath,
-      },
-      {
-        href: LenkerUinnlogget.OM_OSS_KONTAKT,
-        text: 'Presse',
-        svgPath: ShareSVGpath,
       },
     ];
 
@@ -834,10 +804,13 @@ export const ExampleWithUserMenu: Story = {
                 <Paragraph
                   className={topBannerExternalExampleStyles.marginBottomS}
                 >
-                  {'Se dine oppgaver og oversikt. Les og svar på meldinger'}
+                  {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
-                <Button svgPath={LockOutlineSVGpath}>
-                  {'Logg inn på min side'}
+                <Button
+                  svgPath={LockOutlineSVGpath}
+                  onClick={() => modalRef.current?.showModal()}
+                >
+                  {'Logg inn'}
                 </Button>
               </>
             )
@@ -893,51 +866,24 @@ export const ExampleWithUserMenu: Story = {
                   </LinkGroup>
                 </div>
                 <div>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} level={4} hasSpacing>
                     <a href={LenkerUinnlogget.RETTSKILDER}>{'Rettskilder'}</a>
                   </Heading>
-                  <LinkGroup
+                  <Heading as={'h3'} level={4} hasSpacing>
+                    <a href={LenkerUinnlogget.PRESSE}>{'Presse'}</a>
+                  </Heading>
+                  <Heading
+                    as={'h3'}
+                    level={4}
                     className={topBannerExternalExampleStyles.marginBottomXL}
                   >
-                    <LinkGroup.Link
-                      href={LenkerUinnlogget.RETTSKILDER_PER_EMNE}
-                    >
-                      {'Rettskilder per emne'}
-                    </LinkGroup.Link>
-                    <LinkGroup.Link
-                      href={LenkerUinnlogget.RETTSKILDER_PER_TYPE}
-                      onClick={(e): void => {
-                        e.preventDefault();
-                        topBannerRef.current?.closeMenu?.();
-                      }}
-                    >
-                      {'Rettskilder per type'}
-                    </LinkGroup.Link>
-                  </LinkGroup>
-                  <Heading as={'h3'} level={3} hasSpacing>
-                    {'Om oss'}
+                    <a href={LenkerUinnlogget.SAMARBEIDSPARTNERE}>
+                      {'Samarbeidspartner'}
+                    </a>
                   </Heading>
-                  <ul
-                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.noPadding}`}
-                  >
-                    {omOssLinks.map((link, index) => (
-                      <li
-                        key={index}
-                        className={topBannerExternalExampleStyles.marginBottomS}
-                      >
-                        <Link
-                          href={link.href}
-                          svgPath={link.svgPath}
-                          onClick={(e): void => {
-                            e.preventDefault();
-                            topBannerRef.current?.closeMenu?.();
-                          }}
-                        >
-                          {link.text}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  <Heading as={'h3'} level={4} hasSpacing>
+                    <a href={LenkerUinnlogget.KONTAKT}>{'Kontakt oss'}</a>
+                  </Heading>
                 </div>
               </div>
             </>

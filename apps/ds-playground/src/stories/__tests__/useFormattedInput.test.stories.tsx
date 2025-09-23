@@ -9,6 +9,7 @@ import { TextField } from '@skatteetaten/ds-forms';
 
 const meta = {
   title: 'Tester/useFormattedInput',
+  tags: ['test'],
   parameters: {
     controls: {
       disable: true,
