@@ -145,7 +145,7 @@ export const TopBannerExternalUserMenu = ({
             )}
             <Divider spacingTop={'m'}></Divider>
             <div className={styles.link}>
-              {(user.role === 'virksomhet' || user.role === 'meg') && (
+              {user && (
                 <Link
                   className={styles.marginRightS}
                   svgPath={BellSVGpath}
