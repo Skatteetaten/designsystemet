@@ -64,7 +64,7 @@ export interface RolePickerProps
 }
 
 export type RolePickerContextProps = {
-  onEntitySelect?: OnEntitySelectHandler;
+  onEntitySelect?: (entity: Entity) => void;
   error?: { entityId: string; message: string };
   setError: (error?: { entityId: string; message: string }) => void;
   loadingEntityId?: string;

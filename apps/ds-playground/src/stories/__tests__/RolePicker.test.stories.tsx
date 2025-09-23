@@ -321,6 +321,41 @@ const ErrorTemplate: StoryFn<typeof RolePicker> = (args) => {
   );
 };
 
+const ErrorThenSuccessTemplate: StoryFn<typeof RolePicker> = (args) => {
+  const rolePickerRef = useRef<HTMLDialogElement>(null);
+
+  const handleEntitySelect: OnEntitySelectHandler = async (entity: Entity) => {
+    // First entity (me) fails, all others succeed
+    if (
+      entity.type === 'Person' &&
+      'personId' in entity &&
+      entity.personId === me.personId
+    ) {
+      return {
+        error:
+          'Du har ikke tilgang til skjemaet på vegne av denne personen. Kontakt personen hvis du trenger tilgang.',
+      };
+    }
+
+    // Other entities succeed (close modal)
+    rolePickerRef.current?.close();
+    return undefined;
+  };
+
+  return (
+    <>
+      <Button onClick={() => rolePickerRef.current?.showModal()}>
+        {'Vis representasjonsvelger'}
+      </Button>
+      <RolePicker
+        {...args}
+        ref={rolePickerRef}
+        onEntitySelect={handleEntitySelect}
+      ></RolePicker>
+    </>
+  );
+};
+
 const SlowTemplate: StoryFn<typeof RolePicker> = (args) => {
   const rolePickerRef = useRef<HTMLDialogElement>(null);
 
@@ -1013,32 +1048,46 @@ export const WithCloseError = {
   },
 } satisfies Story;
 
-export const WithOnCloseCallback = {
-  name: 'With OnClose Callback (A20)',
+export const WithErrorReset = {
+  name: 'With Error Reset After Valid Selection',
   args: {
     ...defaultArgs,
-    onClose: fn(),
   },
+  render: ErrorThenSuccessTemplate,
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    imageSnapshot: { disable: true },
   },
-  render: DefaultTemplate,
-  argTypes: {
-    onClose: { table: { disable: false } },
-  },
-  play: async ({ args, canvasElement }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
     await userEvent.click(openButton);
 
     const modal = await canvas.findByRole('dialog');
 
-    const avbrytButton = within(modal).getByRole('button', {
-      name: dsI18n.t('ds_overlays:rolepicker.Cancel'),
+    // Click on "me" (first role) which should fail
+    const meLink = within(modal).getAllByRole('link')[0];
+    await fireEvent.click(meLink);
+
+    // Verify error appears
+    const errorAlert = await within(modal).findByText(
+      'Du har ikke tilgang til skjemaet på vegne av denne personen. Kontakt personen hvis du trenger tilgang.'
+    );
+    expect(errorAlert).toBeInTheDocument();
+
+    // Click on a different person (should succeed and clear error)
+    const validPersonLink = within(modal).getByRole('link', {
+      name: /antikvitet presis/i,
     });
+    // Find a link that's not the "me" link (look for a person from the people list)
+    await userEvent.click(validPersonLink);
 
-    await userEvent.click(avbrytButton);
+    // Wait for the error to be removed and modal to close
+    await waitFor(() => expect(modal).not.toBeVisible());
 
-    await waitFor(() => expect(args.onClose).toHaveBeenCalled());
+    // Open modal again
+    userEvent.click(openButton);
+
+    // Check that error message is gone
+    expect(errorAlert).not.toBeInTheDocument();
   },
 } satisfies Story;
