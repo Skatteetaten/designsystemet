@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/TextField',
   component: TextField,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'input',
+  },
 } satisfies Meta<typeof TextField>;
 export default meta;
 export const Snapshots = createSingleStory(TextFieldStories, meta);

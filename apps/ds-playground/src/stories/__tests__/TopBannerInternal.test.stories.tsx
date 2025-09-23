@@ -12,7 +12,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 import demoLogo from '../../assets/demo-logo-white.svg';
 
 const meta = {
@@ -213,9 +213,7 @@ export const WithTitleDescriptionUser = {
     user: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > header > div > div > a`,
-    },
+    imageSnapshot: { pseudoStates: ['focus'] },
   },
   globals: {
     viewport: {

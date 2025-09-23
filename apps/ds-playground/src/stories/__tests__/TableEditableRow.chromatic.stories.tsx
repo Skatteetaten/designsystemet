@@ -11,4 +11,6 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Table.EditableRow>;
 export default meta;
-export const Snapshots = createSingleStory(TableEditableRowStories, meta);
+export const Snapshots = createSingleStory(TableEditableRowStories, meta, {
+  runPlayFunctions: true,
+});

@@ -7,7 +7,6 @@ import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { dsI18n, linkColorArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const elementId = 'htmlId';
@@ -142,11 +141,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > a`,
-      focus: `${wrapper} > a`,
-      click: `${wrapper} > a`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -248,10 +243,7 @@ export const WithColor = {
     },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > a`,
-      focus: `${wrapper} > a`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     backgrounds: {

@@ -11,7 +11,9 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
-export const Snapshots = createSingleStory(TopBannerExternalStories, meta);
+export const Snapshots = createSingleStory(TopBannerExternalStories, meta, {
+  runPlayFunctions: true,
+});
 export const Mobile = createSingleStory(TopBannerExternalStories, meta, {
   viewport: '--mobile',
 });

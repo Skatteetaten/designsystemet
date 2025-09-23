@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/TopBanner/TopBannerInternal',
   component: TopBannerInternal,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'a',
+  },
 } satisfies Meta<typeof TopBannerInternal>;
 export default meta;
 export const Snapshots = createSingleStory(TopBannerInternalStories, meta);

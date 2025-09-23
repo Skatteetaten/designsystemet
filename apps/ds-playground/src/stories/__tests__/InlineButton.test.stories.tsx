@@ -7,7 +7,6 @@ import { InlineButton } from '@skatteetaten/ds-buttons';
 import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultButtonText = 'Legg til rapport';
@@ -127,11 +126,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -165,6 +160,9 @@ export const WithIcon = {
   },
   argTypes: {
     svgPath: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -229,6 +227,9 @@ export const WithDisabled = {
   argTypes: {
     disabled: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     expect(canvas.getByRole('button')).toBeDisabled();
@@ -246,6 +247,9 @@ export const WithDisabledAndIcon = {
     disabled: { table: { disable: false } },
     svgPath: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
 } satisfies Story;
 
 export const WithDisabledAndBrightness = {
@@ -260,6 +264,9 @@ export const WithDisabledAndBrightness = {
     disabled: { table: { disable: false } },
     svgPath: { table: { disable: false } },
     brightness: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     backgrounds: {
@@ -420,11 +427,7 @@ export const WithBrightness = {
     a11y: {
       test: 'off',
     },
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     backgrounds: {

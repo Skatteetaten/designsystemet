@@ -9,9 +9,13 @@ const meta = {
   title: 'Chromatic/TopBanner/TopBannerInternalActionMenu',
   component: TopBannerInternal.ActionMenu,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: '> button',
+  },
 } satisfies Meta<typeof TopBannerInternal.ActionMenu>;
 export default meta;
 export const Snapshots = createSingleStory(
   TopBannerInternalActionMenuStories,
-  meta
+  meta,
+  { runPlayFunctions: true }
 );

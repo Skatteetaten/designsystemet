@@ -11,7 +11,9 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Fieldset>;
 export default meta;
-export const Snapshots = createSingleStory(FieldsetStories, meta);
+export const Snapshots = createSingleStory(FieldsetStories, meta, {
+  runPlayFunctions: true,
+});
 export const Mobile = createSingleStory(FieldsetStories, meta, {
   viewport: '--mobile',
 });
