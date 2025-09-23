@@ -6,6 +6,7 @@ import styles from './SearchFieldResult.module.scss';
 
 const SearchFieldResult = ({
   ref,
+  className,
   title,
   hasFocus,
   setFocus,
@@ -25,7 +26,7 @@ const SearchFieldResult = ({
   return (
     <li
       ref={liRef}
-      className={styles.searchResult}
+      className={`${styles.searchResult} ${className ?? ''}`.trim()}
       tabIndex={hasFocus ? 0 : -1}
       role={'option'}
       aria-selected={hasFocus}
