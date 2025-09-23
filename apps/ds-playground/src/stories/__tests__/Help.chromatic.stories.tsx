@@ -19,4 +19,5 @@ export default meta;
 export const Snapshots = createSingleStory(HelpStories, meta);
 export const Mobile = createSingleStory(HelpStories, meta, {
   viewport: '--mobile',
+  runPlayFunctions: true,
 });

@@ -16,5 +16,6 @@ const meta = {
 export default meta;
 export const Snapshots = createSingleStory(
   TopBannerInternalActionMenuStories,
-  meta
+  meta,
+  { runPlayFunctions: true }
 );

@@ -13,7 +13,9 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof LabelWithHelp>;
 export default meta;
-export const Snapshots = createSingleStory(LabelWithHelpStories, meta);
+export const Snapshots = createSingleStory(LabelWithHelpStories, meta, {
+  runPlayFunctions: true,
+});
 export const Mobile = createSingleStory(LabelWithHelpStories, meta, {
   viewport: '--mobile',
 });
