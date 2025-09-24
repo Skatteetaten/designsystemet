@@ -30,7 +30,10 @@ export interface FieldsetProps
   helpSvgPath?: HelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: HelpProps['titleHelpSvg'];
-  /** Om legend skal markeres med stjerne */
+  /**
+   * Om legend skal markeres med stjerne.
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon.
+   */
   showRequiredMark?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: HelpProps['onHelpToggle'];

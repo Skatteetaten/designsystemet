@@ -37,7 +37,10 @@ interface CheckboxGroupCommonProps
   helpSvgPath?: FieldsetProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: FieldsetProps['titleHelpSvg'];
-  /** Om obligatorisk gruppe skal markeres med stjerne */
+  /**
+   * Om obligatorisk gruppe skal markeres med stjerne.
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon.
+   */
   showRequiredMark?: FieldsetProps['showRequiredMark'];
   /* Hvis innføring av required på Group, se commit 05e7ac89ac3b132d37d18aed55a933573b3beb70 */
 
