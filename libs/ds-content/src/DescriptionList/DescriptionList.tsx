@@ -7,6 +7,7 @@ import {
 
 import {
   getDescriptionDirectionDefault,
+  getDescriptionListIsDescriptionVerticalOnMobileDefault,
   getDescriptionListIsVerticalOnMobileDefault,
   getDescriptionListSizeDefault,
   getDescriptionListVariantDefault,
@@ -34,16 +35,19 @@ export const DescriptionList = (({
   termWeight = getTermWeightDefault(),
   hasSpacing,
   isVerticalOnMobile = getDescriptionListIsVerticalOnMobileDefault(),
+  isDescriptionVerticalOnMobile = getDescriptionListIsDescriptionVerticalOnMobileDefault(),
   children,
 }: DescriptionListProps) => {
   const isMobile = !useMediaQuery('(min-width: 640px)');
   const isHorizontal =
     variant === 'horizontal' && (!isMobile || !isVerticalOnMobile);
 
-  const verticalClassName =
-    descriptionDirection === 'vertical'
-      ? styles.descriptionList_verticalVertical
-      : styles.descriptionList_vertical;
+  const isDescriptionHorizontal =
+    descriptionDirection === 'horizontal' &&
+    (!isMobile || !isDescriptionVerticalOnMobile);
+  const verticalClassName = isDescriptionHorizontal
+    ? styles.descriptionList_vertical
+    : styles.descriptionList_verticalVertical;
 
   const variantClassName = isHorizontal
     ? styles.descriptionList_horizontal
@@ -72,9 +76,7 @@ export const DescriptionList = (({
         ? Children.map(children, (child) => (
             <div
               className={
-                descriptionDirection === 'horizontal'
-                  ? styles.childWrapper
-                  : undefined
+                isDescriptionHorizontal ? styles.childWrapper : undefined
               }
             >
               {child}
@@ -93,6 +95,7 @@ export {
   getDescriptionListSizeDefault,
   getDescriptionDirectionDefault,
   getDescriptionListIsVerticalOnMobileDefault,
+  getDescriptionListIsDescriptionVerticalOnMobileDefault,
   getDescriptionWeightDefault,
   getTermWeightDefault,
   getDescriptionListVariantDefault,

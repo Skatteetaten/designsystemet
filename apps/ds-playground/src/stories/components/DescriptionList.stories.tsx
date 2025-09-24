@@ -8,6 +8,7 @@ import {
   getDescriptionListSizeDefault,
   getDescriptionDirectionDefault,
   getDescriptionListIsVerticalOnMobileDefault,
+  getDescriptionListIsDescriptionVerticalOnMobileDefault,
   getDescriptionListVariantDefault,
   getTermWeightDefault,
   getDescriptionWeightDefault,
@@ -55,6 +56,15 @@ const meta = {
         category: category.props,
         defaultValue: {
           summary: getDescriptionListIsVerticalOnMobileDefault().toString(),
+        },
+      },
+    },
+    isDescriptionVerticalOnMobile: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary:
+            getDescriptionListIsDescriptionVerticalOnMobileDefault().toString(),
         },
       },
     },
