@@ -207,10 +207,7 @@ export const Defaults = {
     label: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: [`${wrapper} input`, `${wrapper} button`],
-      focus: [`${wrapper} input`, `${wrapper} button`],
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -354,10 +351,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: [`${wrapper} input`, `${wrapper} button`],
-      focus: [`${wrapper} input`, `${wrapper} button`],
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

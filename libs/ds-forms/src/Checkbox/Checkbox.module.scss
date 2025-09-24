@@ -115,7 +115,8 @@
     --description-color: var(--semantic-interactive-foreground);
   }
 
-  .input:disabled + .label {
+  .input:disabled + .label,
+  .input:disabled + .label .labelCheckbox {
     --checkbox-border-color: var(--semantic-disabled-foreground);
     --checkbox-background-color: var(--semantic-disabled-background);
     --check-color: var(--semantic-disabled-background);
@@ -146,8 +147,10 @@
 
   .input:checked:disabled + .label,
   .input:checked:disabled + .label .labelCheckbox {
+    --checkbox-border-color: var(--semantic-disabled-foreground);
     --checkbox-background-color: var(--semantic-disabled-background);
     --check-color: var(--semantic-disabled-foreground);
+    --label-color: var(--semantic-disabled-foreground);
   }
 
   .input:disabled:focus + .label .labelCheckbox {

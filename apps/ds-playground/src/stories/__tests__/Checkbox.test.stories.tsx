@@ -5,8 +5,6 @@ import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Checkbox } from '@skatteetaten/ds-forms';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
   async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
@@ -125,11 +123,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} label`,
-      focus: `${wrapper} input`,
-      click: `${wrapper} label`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -156,11 +150,7 @@ export const WithDescription = {
     description: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} label`,
-      focus: `${wrapper} input`,
-      click: `${wrapper} label`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -261,11 +251,7 @@ export const WithChecked = {
     checked: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} label`,
-      focus: `${wrapper} input`,
-      click: `${wrapper} label`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -284,6 +270,9 @@ export const WithDisabled = {
   argTypes: {
     disabled: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -301,6 +290,9 @@ export const WithDisabledAndChecked = {
   argTypes: {
     checked: { table: { disable: false } },
     disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -378,11 +370,7 @@ export const WithError = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} label`,
-      focus: `${wrapper} input`,
-      click: `${wrapper} label`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -430,10 +418,7 @@ export const WithErrorAndRequired = {
     showRequiredMark: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} label`,
-      focus: `${wrapper} input`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

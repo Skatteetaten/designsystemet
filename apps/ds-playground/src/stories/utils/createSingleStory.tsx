@@ -181,15 +181,27 @@ export function createSingleStory<
         disableSnapshot: false,
       },
       pseudo: {
-        hover: [
-          `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
-        active: [
-          `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
-        focus: [
-          `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
+        hover: Array.isArray(meta.parameters?.pseudoSelector)
+          ? meta.parameters.pseudoSelector.map(
+              (sel: string) => `[data-pseudo-state="hover"] ${sel}`
+            )
+          : [
+              `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
+            ],
+        active: Array.isArray(meta.parameters?.pseudoSelector)
+          ? meta.parameters.pseudoSelector.map(
+              (sel: string) => `[data-pseudo-state="active"] ${sel}`
+            )
+          : [
+              `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
+            ],
+        focus: Array.isArray(meta.parameters?.pseudoSelector)
+          ? meta.parameters.pseudoSelector.map(
+              (sel: string) => `[data-pseudo-state="focus"] ${sel}`
+            )
+          : [
+              `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
+            ],
       },
     },
   };

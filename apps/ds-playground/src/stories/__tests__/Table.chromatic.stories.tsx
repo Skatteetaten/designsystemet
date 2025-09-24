@@ -11,7 +11,9 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Table>;
 export default meta;
-export const Snapshots = createSingleStory(TableStories, meta);
+export const Snapshots = createSingleStory(TableStories, meta, {
+  runPlayFunctions: true,
+});
 export const BreakpointM = createSingleStory(TableStories, meta, {
   viewport: '--breakpoint-m',
 });
