@@ -290,6 +290,7 @@ export const AsLinkExternal = {
     ...defaultArgs,
     href: 'https://www.skatteetaten.no',
     isExternal: true,
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     href: { table: { disable: false } },

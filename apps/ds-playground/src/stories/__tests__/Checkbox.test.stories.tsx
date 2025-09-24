@@ -270,6 +270,9 @@ export const WithDisabled = {
   argTypes: {
     disabled: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -287,6 +290,9 @@ export const WithDisabledAndChecked = {
   argTypes: {
     checked: { table: { disable: false } },
     disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
