@@ -56,7 +56,10 @@ export interface FileUploaderCommonProps
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Om FileUploader skal markeres med stjerne */
+  /**
+   * Om FileUploader skal markeres med stjerne.
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon.
+   */
   showRequiredMark?: LabelWithHelpProps['showRequiredMark'];
   /** Brukes i kombinasjon med shouldNormalizeFileName til å styre hvilke tegn som skal erstattes  */
   invalidCharacterRegexp?: RegExp;
