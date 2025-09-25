@@ -30,6 +30,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
+import { getTopBannerExternalUserMenuHostnameDefault } from './defaults';
 import { TopBannerExternalUserMenuProps } from './TopBannerExternalUserMenu.types';
 import { TopBannerUserMenuButton } from '../TopBannerUserMenuButton/TopBannerUserMenuButton';
 
@@ -49,6 +50,8 @@ export const TopBannerExternalUserMenu = ({
   onLogOutClick,
   onSwitchUserClick,
   children,
+  hostname = getTopBannerExternalUserMenuHostnameDefault(),
+  hideDefaultLinks,
 }: TopBannerExternalUserMenuProps): JSX.Element => {
   const arrowRef = useRef<HTMLDivElement>(null);
   const arrowLen = arrowRef.current?.offsetWidth ?? 0;
@@ -144,44 +147,46 @@ export const TopBannerExternalUserMenu = ({
               </InlineButton>
             )}
             <Divider spacingTop={'m'}></Divider>
-            <div className={styles.link}>
-              {user && (
-                <Link
-                  className={styles.marginRightS}
-                  svgPath={BellSVGpath}
-                  href={`https://skatt.skatteetaten.no/web/minside/${user.role === 'meg' ? 'person' : 'virksomhet'}/varsler`}
-                  ariaDescribedby={'notificationCount'}
-                >
-                  {t('ds_overlays:topbannerexternalusermenu.Notification')}
-                </Link>
-              )}
-              {!!notificationCount && notificationCount > 0 && (
-                <span
-                  id={'notificationCount'}
-                  className={styles.notificationBadge}
-                  data-testid={'varsel-circle'}
-                >
-                  {notificationCount > 99
-                    ? '99+'
-                    : notificationCount > 0 && notificationCount}
-                </span>
-              )}
-            </div>
-            <div className={styles.link}>
-              <Link
-                svgPath={PersonSVGpath}
-                href={'https://skatt.skatteetaten.no/web/minside'}
-              >
-                {t('ds_overlays:topbannerexternalusermenu.MyPage')}
-              </Link>
-            </div>
-            {user.role === 'virksomhet' && (
+            {!hideDefaultLinks && (
+              <>
+                <div className={styles.link}>
+                  {user && (
+                    <Link
+                      className={styles.marginRightS}
+                      svgPath={BellSVGpath}
+                      href={`https://${hostname}/web/minside/${user.role === 'meg' ? 'person' : 'virksomhet'}/varsler`}
+                      ariaDescribedby={'notificationCount'}
+                    >
+                      {t('ds_overlays:topbannerexternalusermenu.Notification')}
+                    </Link>
+                  )}
+                  {!!notificationCount && notificationCount > 0 && (
+                    <span
+                      id={'notificationCount'}
+                      className={styles.notificationBadge}
+                      data-testid={'varsel-circle'}
+                    >
+                      {notificationCount > 99
+                        ? '99+'
+                        : notificationCount > 0 && notificationCount}
+                    </span>
+                  )}
+                </div>
+                <div className={styles.link}>
+                  <Link
+                    svgPath={PersonSVGpath}
+                    href={`https://${hostname}/web/minside`}
+                  >
+                    {t('ds_overlays:topbannerexternalusermenu.MyPage')}
+                  </Link>
+                </div>
+              </>
+            )}
+            {!hideDefaultLinks && user.role === 'virksomhet' && (
               <div className={styles.link}>
                 <Link
                   svgPath={InfoSquareSVGpath}
-                  href={
-                    'https://skatt.skatteetaten.no/web/minside/virksomhet/omvirksomheten'
-                  }
+                  href={`https://${hostname}/web/minside/virksomhet/omvirksomheten`}
                 >
                   {t(
                     'ds_overlays:topbannerexternalusermenu.AboutTheOrganisation'
@@ -189,13 +194,11 @@ export const TopBannerExternalUserMenu = ({
                 </Link>
               </div>
             )}
-            {user.role === 'meg' && (
+            {!hideDefaultLinks && user.role === 'meg' && (
               <div className={styles.link}>
                 <Link
                   svgPath={InfoSquareSVGpath}
-                  href={
-                    'https://skatt.skatteetaten.no/web/minside/person/ommeg'
-                  }
+                  href={`https://${hostname}/web/minside/person/ommeg`}
                 >
                   {t('ds_overlays:topbannerexternalusermenu.AboutMe')}
                 </Link>
@@ -222,3 +225,5 @@ export const TopBannerExternalUserMenu = ({
 };
 
 TopBannerExternalUserMenu.displayName = 'TopBannerExternalUserMenu';
+
+export { getTopBannerExternalUserMenuHostnameDefault };
