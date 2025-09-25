@@ -13,4 +13,5 @@ const meta = {
 export default meta;
 export const Snapshots = createSingleStory(TableRowStories, meta, {
   runPlayFunctions: true,
+  delay: 100,
 });
