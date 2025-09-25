@@ -1,4 +1,8 @@
 {
+  "combobox.Loading": "Viežžamin",
+  "combobox.NoResults": "Ii gávnnat «{{searchTerm}}» várás. Geahčča eará ohcamiin.",
+  "combobox.OptionsAvailable": "{{count}} molsaeavttu gávdno. Geavat čuokkáid navigeret.",
+  "combobox.TypeOrSelect": "Čále dahje vállje",
   "datepicker.April": "Cuoŋománnu",
   "datepicker.August": "Borgemánnu",
   "datepicker.CalenderDisplay": "Kaleanddarčájeheapmi",
@@ -26,7 +30,6 @@
   "datepicker.TypeOrSelect": "Čále dahje vállje",
   "datepicker.Wed": "Gas",
   "datepicker.Year": "Jahki",
-  "errorsummary.Title": "Jus áigut viidáset de fertet divvut {{errorAmount}} boasttuvuođa:",
   "fileuploader.AddMultipleLabel": "Lasit fiilla/fiillaid",
   "fileuploader.AddSingleLabel": "Lasit fiilla",
   "fileuploader.DeleteConfirmation": "Fiila lea sihkkojuvvon",

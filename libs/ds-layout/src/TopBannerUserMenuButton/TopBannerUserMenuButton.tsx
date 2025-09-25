@@ -91,9 +91,16 @@ export const TopBannerUserMenuButton = ({
       {!!notificationCount && notificationCount > 0 && (
         <span className={'srOnly'}>
           &nbsp;
-          {t('ds_overlays:topbannerexternalusermenu.NotificationCountMessage', {
-            count: notificationCount,
-          })}
+          {notificationCount === 1
+            ? t(
+                'ds_overlays:topbannerexternalusermenu.NotificationCountMessageSingular'
+              )
+            : t(
+                'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+                {
+                  count: notificationCount,
+                }
+              )}
         </span>
       )}
       <Icon

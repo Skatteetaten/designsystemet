@@ -15,7 +15,6 @@
   "rolepicker.Deleted": "\tHeaittihuvvon",
   "rolepicker.GoToMyPage": "Vuolgge Mu siidui",
   "rolepicker.Heading": "\tGean áiggut ovddastit?",
-  "rolepicker.InactiveBusinessPostfix": "\t(Heaittihuvvon)",
   "rolepicker.Logout": "Čálit olggos",
   "rolepicker.MainBusiness": "Váldodoaibma",
   "rolepicker.MeHeading": "\tMu",
@@ -45,6 +44,7 @@
   "topbannerexternalusermenu.MyPage": "Mu siidui",
   "topbannerexternalusermenu.Notification": "Várrehus",
   "topbannerexternalusermenu.NotificationCountMessage": "Várrehus, {{count}} ođđa",
+  "topbannerexternalusermenu.NotificationCountMessageSingular": "(Várrehus, 1 ođđa)",
   "topbannerexternalusermenu.OnBehalfOf": "Bealis",
   "topbannerexternalusermenu.SwitchUser": "Molsso geavaheaddji"
 }

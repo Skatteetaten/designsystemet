@@ -104,6 +104,31 @@ export const WithNoNotifications: Story = {
   },
 };
 
+export const WithOneNotification: Story = {
+  name: 'One Notification',
+  args: {
+    notificationCount: 1,
+  },
+  argTypes: {
+    notificationCount: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const menuButton = canvas.getByRole('button', {
+      name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
+        'ds_overlays:topbannerexternalusermenu.NotificationCountMessageSingular'
+      )}`,
+    });
+
+    await expect(menuButton).toBeInTheDocument();
+    await userEvent.click(menuButton);
+
+    const notificationAmount = canvas.getByText('1');
+    await expect(notificationAmount).toBeInTheDocument();
+  },
+};
+
 export const WithMoreThan99Notifications: Story = {
   name: 'More Than 99 Notifications (A3)',
   args: {
