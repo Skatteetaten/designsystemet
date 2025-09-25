@@ -229,12 +229,12 @@ export const Examples: Story = {
     };
 
     const handleChange = async (files: File[]): Promise<void> => {
-      setLoading();
       setError('');
       if (files.some((file) => file.size > 900_000)) {
         setError('Filen er for stor');
         return;
       }
+      setLoading();
 
       const succeeded: Array<UploadedFile> = [];
       const failed: Array<{ name: string; reason: string; id?: string }> = [];
