@@ -11,9 +11,7 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
-export const Snapshots = createSingleStory(TopBannerExternalStories, meta, {
-  runPlayFunctions: true,
-});
+export const Snapshots = createSingleStory(TopBannerExternalStories, meta, {});
 export const Mobile = createSingleStory(TopBannerExternalStories, meta, {
   viewport: '--mobile',
 });
@@ -29,3 +27,12 @@ export const BreakpointM = createSingleStory(TopBannerExternalStories, meta, {
 export const BreakpointL = createSingleStory(TopBannerExternalStories, meta, {
   viewport: '--breakpoint-l',
 });
+
+export const SearchOpen = createSingleStory(
+  {
+    ClickSearchOpen: TopBannerExternalStories.ClickSearchOpen,
+    default: TopBannerExternalStories.default,
+  },
+  meta,
+  { runPlayFunctions: true }
+);

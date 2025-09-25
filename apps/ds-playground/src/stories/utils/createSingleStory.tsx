@@ -32,11 +32,12 @@ export function createSingleStory<
   options?: {
     viewport?: keyof typeof breakpoints | '--mobile';
     runPlayFunctions?: boolean;
+    delay?: number;
   }
 ): StoryAnnotationsOrFn<ReactRenderer> {
   const stories = composeStories(rawStories) as StoryExports;
 
-  const { viewport, runPlayFunctions = false } = options || {};
+  const { viewport, runPlayFunctions = false, delay } = options || {};
 
   // filter stories object by viewPort
   Object.keys(stories).forEach((storyName) => {
@@ -45,6 +46,9 @@ export function createSingleStory<
       delete stories[storyName];
     }
   });
+  const hasPseudo = Object.entries(stories).some(
+    ([_storyName, story]) => story.parameters?.imageSnapshot?.pseudoStates
+  );
 
   return {
     globals: {
@@ -179,6 +183,7 @@ export function createSingleStory<
     parameters: {
       chromatic: {
         disableSnapshot: false,
+        delay: delay ?? (hasPseudo ? 100 : undefined),
       },
       pseudo: {
         hover: Array.isArray(meta.parameters?.pseudoSelector)

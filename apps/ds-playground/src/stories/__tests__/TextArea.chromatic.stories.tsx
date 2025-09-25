@@ -17,4 +17,5 @@ export default meta;
 export const Snapshots = createSingleStory(TextAreaStories, meta);
 export const BreakpointXS = createSingleStory(TextAreaStories, meta, {
   viewport: '--breakpoint-xs',
+  delay: 100,
 });
