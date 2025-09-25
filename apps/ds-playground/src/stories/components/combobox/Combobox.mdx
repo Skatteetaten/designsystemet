@@ -1,0 +1,211 @@
+import {
+  Meta,
+  Primary,
+  Controls,
+  ArgTypes,
+} from '@storybook/addon-docs/blocks';
+import { PlayroomCanvas as Canvas } from '../../../playroom/utils';
+import * as ComboboxStories from './Combobox.stories';
+import { VersionBadge } from '../../utils/VersionBadge';
+import { DocIntro } from '../../utils/DocIntro';
+import { DocHeaderWrapper } from '../../utils/DocHeaderWrapper';
+
+<Meta of={ComboboxStories} />
+
+<DocHeaderWrapper componentName="Combobox">
+
+# Combobox
+
+<VersionBadge packageName={'forms'} />
+
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/Combobox/" />
+
+</DocHeaderWrapper>
+
+Combobox er en interaktiv komponent som kombinerer funksjonaliteten til en dropdown og et tekstfelt. Brukere kan enten velge fra en liste med forhåndsdefinerte alternativer eller skrive inn egen tekst for å filtrere og søke gjennom alternativene.
+
+Komponenten støtter både enkelt- og flervalg, og kan brukes i både kontrollert og ukontrollert modus.
+
+<Primary />
+
+```tsx
+import { Combobox } from '@skatteetaten/ds-forms';
+```
+
+## Props
+
+<Controls />
+
+## Event Handlers
+
+Combobox tilbyr flere event handlers for å håndtere brukerinteraksjon:
+
+### onSelectionChange
+
+Kalles når brukeren endrer valget sitt. Parameteren varierer basert på modus:
+
+```tsx
+// Enkeltvalg - mottar ComboboxOption | null
+<Combobox
+  onSelectionChange={(option) => {
+    console.log('Valgt:', option?.label); // "Valgt: Norge" eller null
+  }}
+/>
+
+// Flervalg - mottar ComboboxOption[]
+<Combobox
+  multiple
+  onSelectionChange={(options) => {
+    console.log('Antall valgte:', options.length);
+    console.log('Valgte verdier:', options.map(o => o.value));
+  }}
+/>
+```
+
+### onInputChange
+
+Kalles når input-teksten endres (kun i ukontrollert modus). Nyttig for asynkron søk:
+
+```tsx
+<Combobox
+  onInputChange={(inputValue) => {
+    console.log('Søketekst:', inputValue);
+    // Utfør asynkron søk basert på inputValue
+    searchAsync(inputValue).then(setFilteredOptions);
+  }}
+/>
+```
+
+#### Asynkron søk i kontrollert modus
+
+I kontrollert modus har du ikke tilgang til `onInputChange`, men kan fortsatt implementere asynkron søk ved å bruke TanStack Query (anbefalt):
+
+```tsx
+import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
+
+const SearchCombobox = () => {
+  const [searchValue, setSearchValue] = useState('');
+
+  // TanStack Query håndterer caching, deduplication og error states
+  const { data: options = [], isLoading } = useQuery({
+    queryKey: ['combobox-search', searchValue],
+    queryFn: () => searchAPI(searchValue),
+    enabled: !!searchValue,
+    staleTime: 5 * 60 * 1000, // Cache i 5 minutter
+  });
+
+  return (
+    <Combobox
+      label="Søk i database"
+      value={searchValue}
+      options={options}
+      isLoading={isLoading}
+      onSelectionChange={(option) => {
+        if (option) {
+          setSearchValue(option.value);
+          handleSelection(option);
+        }
+      }}
+    />
+  );
+};
+```
+
+### onHelpToggle
+
+Kalles når hjelpeteksten åpnes eller lukkes:
+
+```tsx
+<Combobox
+  helpText="Dette er hjelpetekst"
+  onHelpToggle={(isOpen) => {
+    console.log('Hjelpetekst er', isOpen ? 'åpen' : 'lukket');
+    // Spor bruk av hjelpefunksjonalitet
+    analytics.track('help_toggled', { component: 'combobox', isOpen });
+  }}
+/>
+```
+
+## Bruksmønstre
+
+### Enkeltvalg (Single Select)
+
+```tsx
+// Kontrollert modus - du styrer verdien selv
+<Combobox
+  label="Velg land"
+  options={countryOptions}
+  value={selectedCountry}
+  onSelectionChange={(option) => {
+    // option er ComboboxOption | null
+    setSelectedCountry(option?.value || '');
+    console.log('Nytt valg:', option?.label);
+  }}
+/>
+
+// Ukontrollert modus - komponenten styrer sin egen tilstand
+<Combobox
+  label="Velg land"
+  options={countryOptions}
+  onSelectionChange={(option) => {
+    // Kun for overvåking/logging av valg
+    console.log('Bruker valgte:', option?.label);
+    analytics.track('country_selected', { country: option?.value });
+  }}
+/>
+```
+
+### Flervalg (Multi Select)
+
+```tsx
+<Combobox
+  multiple
+  variant="large"
+  label="Velg kommuner"
+  options={municipalityOptions}
+  value={selectedMunicipalities}
+  onSelectionChange={(options) => {
+    // options er ComboboxOption[] array
+    const values = options.map((o) => o.value);
+    setSelectedMunicipalities(values);
+
+    // Vis bruker feedback
+    console.log(`${options.length} kommuner valgt`);
+    if (options.length >= 5) {
+      showMessage('Maksimalt antall kommuner valgt');
+    }
+  }}
+  maxSelected={5}
+/>
+```
+
+## Examples
+
+### Enkeltvalg
+
+<Canvas of={ComboboxStories.Primary} />
+
+### Flervalg
+
+<Canvas of={ComboboxStories.Multiple} />
+
+### Med skjemavalidering
+
+<Canvas of={ComboboxStories.WithValidation} />
+
+### Begrenset antall valg
+
+<Canvas of={ComboboxStories.MaxSelected} />
+
+### Skjemaeksempel
+
+<Canvas of={ComboboxStories.MultipleWithFormExample} />
+
+### Tastaturnavigasjon
+
+<Canvas of={ComboboxStories.KeyboardNavigation} />
+
+### Tastaturnavigasjon for flervalg
+
+<Canvas of={ComboboxStories.MultipleKeyboardNavigation} />

@@ -368,6 +368,10 @@ a.resetLinkStyling {
   }
 }
 
+.itemsCenter {
+  align-items: center;
+}
+
 .componentIcon {
   width: 11rem;
 

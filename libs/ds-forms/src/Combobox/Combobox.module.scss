@@ -1,0 +1,345 @@
+.comboboxWrapper {
+  position: relative;
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
+}
+
+.srOnly {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.inputContainer {
+  position: relative;
+  display: grid;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border: none;
+  border-radius: 0;
+  background: var(--semantic-page-background);
+  box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
+  gap: var(--spacing-xs);
+  grid-template-areas: 'content button';
+  grid-template-columns: 1fr auto;
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
+
+  &:has(.input:hover) {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:has(.input:focus),
+  &:has(.input:active) {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 1px solid var(--semantic-interactive-main);
+  }
+
+  &:has(.input:disabled) {
+    background: var(--semantic-disabled-background);
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+  }
+
+  &_large {
+    min-height: 32px;
+  }
+
+  &.inputContainerMultiple {
+    gap: var(--spacing-s);
+  }
+}
+
+.inputContentArea {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-xs);
+  grid-area: content;
+}
+
+.inputButtonArea {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: start;
+  justify-content: flex-start;
+  padding: var(--spacing-xxs);
+  grid-area: button;
+}
+
+.inputContainer.inputContainerMultiple .inputContentArea {
+  gap: var(--spacing-s);
+}
+
+.input {
+  min-width: 120px;
+  flex: 1;
+  padding: 0;
+  border: none;
+
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-input);
+  outline: none;
+
+  &::placeholder {
+    color: var(--palette-graphite-50);
+  }
+
+  &:focus {
+    &::selection {
+      background: var(--semantic-interactive-background);
+    }
+  }
+
+  &:disabled {
+    background: var(--semantic-disabled-background);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+  }
+}
+
+.chevronButton {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:disabled,
+  &[data-disabled='true'] {
+    background: var(--semantic-disabled-background);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+    outline: 0;
+    pointer-events: none;
+  }
+
+  &:is(:hover, :focus-visible):enabled {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:hover:enabled {
+    z-index: 10;
+    background-color: var(--semantic-interactive-background);
+  }
+
+  // Size variants for chevron button
+  &_large {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.chevronButton svg {
+  fill: var(--semantic-interactive-main);
+}
+
+.chevronButton:disabled svg,
+.chevronButton[data-disabled='true'] svg {
+  fill: var(--semantic-disabled-foreground);
+}
+
+.chipsInline {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1px;
+  gap: var(--spacing-xs);
+}
+
+.chipsContainer {
+  margin-bottom: 0;
+}
+
+.optionsList {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  max-height: none; /* TODO: User should be able to set a maximum height for the options list */
+  padding: 0;
+  border: 1px solid var(--palette-graphite-100);
+  border-top: none;
+  margin: 1px 0 0;
+  background: var(--semantic-page-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
+  list-style: none;
+  overflow-y: auto;
+
+  &WithError {
+    border-top: 1px solid var(--palette-graphite-100);
+  }
+}
+
+.option {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border: none;
+  border-bottom: 1px solid var(--palette-graphite-100);
+  background: transparent;
+  color: var(--semantic-page-foreground);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+
+  &:where(:hover, .focused):not(.disabled) {
+    background: var(--semantic-interactive-background);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &.selected {
+    background: var(--palette-accent-50);
+    color: var(--palette-accent-800);
+  }
+
+  // Fokus-tilstand skal alltid overskrive selected-tilstand
+  &.selected:where(:hover, .focused):not(.disabled) {
+    background: var(--semantic-interactive-background);
+    color: var(--semantic-page-foreground);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--palette-accent-300);
+    outline-offset: -2px;
+  }
+
+  &WithCheckbox {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-s);
+    gap: var(--spacing-xs);
+  }
+
+  &.disabled {
+    background: var(--semantic-disabled-background);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+
+    .optionLabel {
+      color: var(--semantic-disabled-foreground);
+    }
+  }
+}
+
+.checkboxIcon {
+  position: relative;
+  width: var(--size-medium);
+  min-width: var(--size-medium);
+  height: var(--size-medium);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border: var(--spacing-xxs) solid var(--semantic-page-foreground);
+  background-color: var(--semantic-page-background);
+
+  &.checked {
+    border-color: var(--semantic-interactive-main);
+    background-color: var(--semantic-interactive-main);
+  }
+
+  &Check {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.0625rem;
+    width: 0.71875rem;
+    height: 0.3125rem;
+    border-bottom: var(--spacing-xxs) solid var(--palette-graphite-0);
+    border-left: var(--spacing-xxs) solid var(--palette-graphite-0);
+    transform: rotate(-45deg);
+  }
+
+  &.disabled {
+    border-color: var(--semantic-border);
+    background-color: var(--semantic-disabled-background);
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: var(--semantic-border);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    .optionLabel {
+      color: var(--semantic-disabled-foreground);
+    }
+  }
+}
+
+.option.disabled .checkboxIcon {
+  border-color: var(--semantic-disabled-foreground);
+  background-color: var(--semantic-disabled-background);
+
+  &.checked {
+    border-color: var(--semantic-disabled-foreground);
+    background-color: var(--semantic-disabled-background);
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.optionLabel {
+  min-width: 0;
+  flex: 1;
+}
+
+.emptyResult {
+  padding: var(--spacing-xs) var(--spacing-s);
+  color: var(--semantic-page-foreground);
+  opacity: 0.8;
+  text-align: left;
+}
+
+.loadingContainer {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.maxSelectedMessage {
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-bottom: 1px solid var(--palette-graphite-100);
+  background-color: var(--semantic-page-background);
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  font-style: italic;
+  opacity: 0.8;
+
+  &:first-child {
+    border-top: 1px solid var(--palette-graphite-100);
+  }
+}
