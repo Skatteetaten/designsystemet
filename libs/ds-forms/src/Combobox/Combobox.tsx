@@ -116,8 +116,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
     handleButtonFocus,
   } = coreState;
 
-  // enabledIndices is now calculated inside useComboboxCore
-
   // Expose the input element to parent component via ref prop
   useImperativeHandle(ref, () => inputRef.current as HTMLInputElement, [
     inputRef,
