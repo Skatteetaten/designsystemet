@@ -30,6 +30,11 @@
     "@skatteetaten/ds-collections": "2.2.0",
     "vitest": "3.2.3"
   },
+  "peerDependenciesMeta": {
+    "vitest": {
+      "optional": true
+    }
+  },
   "scripts": {},
   "dependencies": {},
   "devDependencies": {}
