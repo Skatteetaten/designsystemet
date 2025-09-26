@@ -63,7 +63,7 @@ const defaultArgs = {
 };
 
 export const SelectOptionInteraction = {
-  name: 'Åpne dropdown og velg alternativ',
+  name: 'Åpne dropdown og velg alternativ (A4)',
   args: {
     ...defaultArgs,
   },
@@ -97,7 +97,7 @@ export const SelectOptionInteraction = {
 } satisfies Story;
 
 export const KeyboardNavigation = {
-  name: 'Tastaturnavigasjon med piltaster',
+  name: 'Tastaturnavigasjon med piltaster (B1)',
   args: {
     ...defaultArgs,
   },
@@ -139,7 +139,7 @@ export const KeyboardNavigation = {
 } satisfies Story;
 
 export const MultipleSelectionMouse = {
-  name: 'Flervalg med mus',
+  name: 'Flervalg med mus (A11)',
   args: {
     ...defaultArgs,
     multiple: true,
@@ -186,7 +186,7 @@ export const MultipleSelectionMouse = {
 } satisfies Story;
 
 export const MultipleSelectionKeyboard = {
-  name: 'Flervalg med tastatur',
+  name: 'Flervalg med tastatur (A11)',
   args: {
     ...defaultArgs,
     multiple: true,
@@ -258,7 +258,7 @@ const ProgrammaticFocusTemplate: StoryFn<typeof Combobox> = () => {
 };
 
 export const SearchFiltering = {
-  name: 'Søk og filtrering av alternativer',
+  name: 'Søk og filtrering av alternativer (A5)',
   args: {
     ...defaultArgs,
   },
@@ -344,7 +344,7 @@ export const LoadingStates = {
 } satisfies Story;
 
 export const ErrorStates = {
-  name: 'Error states og error melding',
+  name: 'Error states og error melding (A2)',
   args: {
     ...defaultArgs,
     errorMessage: 'Dette feltet er påkrevd',
@@ -382,7 +382,7 @@ export const ErrorStates = {
 } satisfies Story;
 
 export const EscapeKeyBehavior = {
-  name: 'Escape key lukker dropdown',
+  name: 'Escape key lukker dropdown (A5)',
   args: {
     ...defaultArgs,
   },
@@ -432,7 +432,7 @@ export const EscapeKeyBehavior = {
 } satisfies Story;
 
 export const ClickOutsideToClose = {
-  name: 'Klikk utenfor lukker dropdown',
+  name: 'Klikk utenfor lukker dropdown (A5)',
   args: {
     ...defaultArgs,
   },
