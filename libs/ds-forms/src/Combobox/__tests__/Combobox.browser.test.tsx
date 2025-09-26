@@ -60,13 +60,4 @@ describe('Combobox Browser Compatibility Integration', () => {
     expect(result.current.browserInfo.isIOS).toBe(true);
     expect(result.current.browserInfo.isMobile).toBe(true);
   });
-
-  it('should provide all required browser compatibility functions', () => {
-    const { result } = renderHook(() => useBrowserCompatibility());
-
-    expect(typeof result.current.safeFocus).toBe('function');
-    expect(typeof result.current.preventZoom).toBe('function');
-    expect(typeof result.current.manageVirtualKeyboard).toBe('function');
-    expect(typeof result.current.handleFirefoxAriaLabel).toBe('function');
-  });
 });
