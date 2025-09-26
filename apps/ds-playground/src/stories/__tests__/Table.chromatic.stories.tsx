@@ -13,7 +13,9 @@ const meta = {
 export default meta;
 export const Snapshots = createSingleStory(TableStories, meta, {
   runPlayFunctions: true,
+  delay: 100,
 });
 export const BreakpointM = createSingleStory(TableStories, meta, {
   viewport: '--breakpoint-m',
+  delay: 100,
 });
