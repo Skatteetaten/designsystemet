@@ -34,52 +34,34 @@ import styles from './Combobox.module.scss';
 
 const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
   const {
-    // Core functionality
-    ref, // Ref to input element for parent component access
-    options, // Array of selectable options {label, value}
-    value, // Controlled value (string for single, array for multi)
-    onSelectionChange, // Called when selection changes
+    ref,
+    options,
+    value,
+    onSelectionChange,
+    placeholder = getComboboxPlaceholderDefault(),
+    variant,
+    multiple = false,
+    label,
+    hideLabel = false,
+    description,
+    required,
+    minSearchLength = 0,
+    isLoading = false,
+    loadingMessage = getComboboxLoadingMessageDefault(),
+    onInputChange,
+    onBlur,
+    onFocus,
+    onHelpToggle,
+    classNames,
+    hasSpacing = false,
+    disabled = false,
+    name,
+    errorMessage,
+    spinnerProps,
+    helpText,
+    helpSvgPath,
+    titleHelpSvg,
 
-    // UI configuration
-    placeholder = getComboboxPlaceholderDefault(), // Input placeholder text
-    variant, // Size variant (medium/large) - auto-set for multi-select
-    multiple = false, // Enable multi-select mode with chips
-
-    // Accessibility & labels
-    label, // Required label for accessibility
-    hideLabel = false, // Hide label visually (still accessible to screen readers)
-    description, // Additional description text below label
-    required, // Mark field as required
-
-    // Advanced behavior
-    minSearchLength = 0, // Min chars before showing dropdown (0 = show immediately)
-    isLoading = false, // Show loading spinner instead of options
-    loadingMessage = getComboboxLoadingMessageDefault(), // Message shown during loading state
-
-    // Event handlers
-    onInputChange, // Input value change (uncontrolled mode only)
-    onBlur, // Input blur event
-    onFocus, // Input focus event
-    onHelpToggle, // Help text toggle callback
-
-    // Styling
-    classNames, // Custom CSS classes for different parts
-    hasSpacing = false, // Add margin below component
-    disabled = false, // Disable entire component
-    name, // Input name attribute for form submission
-
-    // Error handling
-    errorMessage, // Error message to display below component
-
-    // Loading state configuration
-    spinnerProps, // Custom spinner appearance
-
-    // Help system
-    helpText, // Help text content
-    helpSvgPath, // Custom help icon SVG path
-    titleHelpSvg, // Custom tooltip text for help icon
-
-    // Standard HTML input attributes
     ...htmlAttributes
   } = props;
   const { safeFocus } = useBrowserCompatibility();
