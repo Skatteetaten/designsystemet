@@ -462,6 +462,7 @@ describe('useComboboxKeyboard', () => {
       const { mockProps, mockAddEventListener } = setupKeyboardTest({
         isOpen: true,
         allOptions: mockOptions,
+        displayOptions: mockOptions,
         focusedIndex: 1, // Belgium option
         multiple: false,
         onOptionSelect: vi.fn(), // Required callback
@@ -488,6 +489,7 @@ describe('useComboboxKeyboard', () => {
       const { mockProps, mockAddEventListener } = setupKeyboardTest({
         isOpen: true,
         allOptions: mockOptions,
+        displayOptions: mockOptions,
         focusedIndex: 1, // Belgium option
         multiple: true,
         selectedValues: [{ value: 'albania', label: 'Albania' }],
@@ -515,6 +517,7 @@ describe('useComboboxKeyboard', () => {
       const { mockProps, mockAddEventListener } = setupKeyboardTest({
         isOpen: true,
         allOptions: mockOptions,
+        displayOptions: mockOptions,
         focusedIndex: 0, // Albania - already selected
         multiple: true,
         selectedValues: [{ value: 'albania', label: 'Albania' }],
@@ -542,6 +545,7 @@ describe('useComboboxKeyboard', () => {
       const { mockProps, mockAddEventListener } = setupKeyboardTest({
         isOpen: true,
         allOptions: mockOptions,
+        displayOptions: mockOptions,
         focusedIndex: 1, // Belgium option
         inputRef: { current: mockInput },
       });
@@ -561,12 +565,13 @@ describe('useComboboxKeyboard', () => {
       expect(mockProps.onSelectionChange).not.toHaveBeenCalled();
     });
 
-    it('should call onOptionSelect with exact match when focusedIndex is -1', () => {
+    it('should call onOptionSelect with exact match when focusedIndex is -1 and dropdown is open', () => {
       // Arrange: Setup mock input with exact text match
       const mockInput = createMockInputElement('Albania'); // Exact match
       const { mockProps, mockAddEventListener } = setupKeyboardTest({
-        isOpen: false,
+        isOpen: true, // Dropdown must be open for exact match to work
         allOptions: mockOptions,
+        displayOptions: mockOptions,
         focusedIndex: -1, // No option focused
         inputRef: { current: mockInput },
       });

@@ -187,6 +187,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
   useComboboxKeyboard({
     isOpen,
     allOptions: options,
+    displayOptions,
     enabledIndices,
     focusedIndex,
     setFocusedIndex,

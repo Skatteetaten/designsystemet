@@ -11,6 +11,7 @@ import type { ComboboxOption } from '../Combobox.types';
 export interface UseComboboxKeyboardProps {
   isOpen: boolean;
   allOptions: ComboboxOption[];
+  displayOptions: ComboboxOption[];
   enabledIndices: number[];
   focusedIndex: number;
   setFocusedIndex: (index: number) => void;
@@ -78,13 +79,13 @@ const closePopup = (
 // Handle exact text match when no option is focused
 const handleExactMatch = (
   inputRef: RefObject<HTMLInputElement | null>,
-  allOptions: ComboboxOption[],
+  displayOptions: ComboboxOption[],
   onOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void
 ): void => {
   const searchValue = inputRef.current?.value.trim();
   if (!searchValue) return;
 
-  const exactMatch = allOptions.find(
+  const exactMatch = displayOptions.find(
     (option) => option.label.toLowerCase() === searchValue.toLowerCase()
   );
 
@@ -189,7 +190,7 @@ const handleEnter = (
   const {
     isOpen,
     focusedIndex,
-    allOptions,
+    displayOptions,
     enabledIndices,
     inputRef,
     onOptionSelect,
@@ -201,16 +202,16 @@ const handleEnter = (
   if (
     isOpen &&
     isIndexEnabled(focusedIndex, enabledIndices) &&
-    allOptions[focusedIndex]
+    displayOptions[focusedIndex]
   ) {
-    const selectedOption = allOptions[focusedIndex];
+    const selectedOption = displayOptions[focusedIndex];
 
     onOptionSelect(selectedOption, true); // true = fromKeyboard
     return;
   }
 
   // Handle exact text match when no option is focused
-  handleExactMatch(inputRef, allOptions, onOptionSelect);
+  handleExactMatch(inputRef, displayOptions, onOptionSelect);
 };
 
 // Escape key handler

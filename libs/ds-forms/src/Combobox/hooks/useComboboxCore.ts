@@ -122,22 +122,31 @@ export function useComboboxCore({
     previousOptionsRef.current = options;
   }, [options, isLoading]);
 
+  // Calculate display options based on dropdown state
+  const displayOptions = useMemo(() => {
+    if (!isOpen) return []; // No options when dropdown is closed
+    if (isLoading) return []; // Empty list while loading (spinner shows instead)
+    return filterOptions(options, searchTerm, selectedValues, multiple);
+  }, [options, searchTerm, isOpen, multiple, selectedValues, isLoading]);
+
   // Calculate enabled indices for keyboard navigation
+  // Use allOptions when closed (for keyboard opening), displayOptions when open (for navigation)
   const enabledIndices = useMemo(() => {
+    const optionsToUse = isOpen ? displayOptions : options;
     return getEnabledIndices({
-      options: options,
+      options: optionsToUse,
       selectedValues,
       multiple,
       maxSelected,
     });
-  }, [options, selectedValues, multiple, maxSelected]);
+  }, [isOpen, displayOptions, options, selectedValues, multiple, maxSelected]);
 
   // Get currently focused option
   const focusedOption = useMemo(() => {
-    return focusedIndex >= 0 && focusedIndex < options.length
-      ? options[focusedIndex]
+    return focusedIndex >= 0 && focusedIndex < displayOptions.length
+      ? displayOptions[focusedIndex]
       : null;
-  }, [focusedIndex, options]);
+  }, [focusedIndex, displayOptions]);
 
   // Core actions
   const openDropdown = useCallback(
@@ -350,10 +359,10 @@ export function useComboboxCore({
 
   // Reset focus when options change significantly
   useEffect(() => {
-    if (focusedIndex >= options.length) {
+    if (focusedIndex >= displayOptions.length) {
       setFocusedIndex(-1);
     }
-  }, [options.length, focusedIndex]);
+  }, [displayOptions.length, focusedIndex]);
 
   // Reset focus when options change during loading
   useEffect(() => {
@@ -370,14 +379,6 @@ export function useComboboxCore({
       }
     };
   }, []);
-
-  // Calculate display options based on dropdown state
-  // Centralized filtering logic to reduce re-calculations in parent component
-  const displayOptions = useMemo(() => {
-    if (!isOpen) return []; // No options when dropdown is closed
-    if (isLoading) return []; // Empty list while loading (spinner shows instead)
-    return filterOptions(options, searchTerm, selectedValues, multiple);
-  }, [options, searchTerm, isOpen, multiple, selectedValues, isLoading]);
 
   return {
     // State

@@ -183,8 +183,13 @@ describe('useComboboxCore', () => {
   });
 
   describe('Focus management', () => {
-    it('should set focused index', () => {
+    it('should set focused index when dropdown is open', () => {
       const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+      // First open dropdown to enable focus setting
+      act(() => {
+        result.current.openDropdown('', 'click');
+      });
 
       act(() => {
         result.current.setFocusedIndex(2);
@@ -193,19 +198,24 @@ describe('useComboboxCore', () => {
       expect(result.current.focusedIndex).toBe(2);
     });
 
-    it('should reset focus', () => {
+    it('should automatically reset focus when dropdown is closed', () => {
       const { result } = renderHook(() => useComboboxCore(defaultProps));
 
-      // Set focus
+      // First open dropdown
+      act(() => {
+        result.current.openDropdown('', 'click');
+      });
+
+      // Set focus while open
       act(() => {
         result.current.setFocusedIndex(1);
       });
 
       expect(result.current.focusedIndex).toBe(1);
 
-      // Reset focus
+      // Close dropdown - this should automatically reset focus to -1
       act(() => {
-        result.current.resetFocus();
+        result.current.closeDropdown();
       });
 
       expect(result.current.focusedIndex).toBe(-1);

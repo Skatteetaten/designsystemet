@@ -46,6 +46,7 @@ export const createMockProps = (
   return {
     isOpen: false,
     allOptions: defaultOptions,
+    displayOptions: [], // Default empty - tests should set explicitly
     enabledIndices: [0, 1, 2], // All options enabled by default
     focusedIndex: -1,
     setFocusedIndex: vi.fn(),
