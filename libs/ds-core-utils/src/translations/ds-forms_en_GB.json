@@ -1,4 +1,8 @@
 {
+  "combobox.Loading": "Loading",
+  "combobox.NoResults": "No results for «{{searchTerm}}». Try a different search.",
+  "combobox.OptionsAvailable": "{{count}} options available. Use arrow keys to navigate.",
+  "combobox.TypeOrSelect": "Type or select",
   "datepicker.April": "April",
   "datepicker.August": "August",
   "datepicker.CalenderDisplay": "Calender display for",
