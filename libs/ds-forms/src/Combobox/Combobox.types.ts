@@ -57,7 +57,7 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   /** Tekst på feilmelding */
   errorMessage?: string;
   /** Margin under komponenten */
-  hasSpacing: boolean;
+  hasSpacing?: boolean;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
   /** Ledetekst */
@@ -83,9 +83,6 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   /** Om skjemafeltet er obligatorisk */
   required?: boolean;
-
-  // Standard HTML input attributes that were excluded from ComboboxPropsHTMLAttributes
-  // but are needed by the component
   /** Input placeholder text */
   placeholder?: string;
   /** Input name attribute for form submission */
@@ -98,63 +95,33 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   onFocus?: ComponentPropsWithoutRef<'input'>['onFocus'];
 }
 
-interface SingleComboboxControlledProps extends ComboboxCommonProps {
+interface SingleComboboxProps extends ComboboxCommonProps {
   multiple?: false;
   /** Størrelsen på combobox */
   variant?: ComboboxSize;
-  /** Controlled mode - value is managed by parent */
-  value: string | number;
+  /** Current value - optional for both controlled and uncontrolled modes */
+  value?: string | number;
   /** Callback når en enkelt option velges eller fjernes */
   onSelectionChange?: (selectedOption: ComboboxOption | null) => void;
-  /** onInputChange is not allowed in controlled mode */
-  onInputChange?: never;
+  /** Callback når input-verdien endres - optional for live search functionality */
+  onInputChange?: (searchTerm: string) => void;
 }
 
-interface SingleComboboxUncontrolledProps extends ComboboxCommonProps {
-  multiple?: false;
-  /** Størrelsen på combobox */
-  variant?: ComboboxSize;
-  /** Uncontrolled mode - no value prop */
-  value?: never;
-  /** Callback når en enkelt option velges eller fjernes */
-  onSelectionChange?: (selectedOption: ComboboxOption | null) => void;
-  /** Callback når input-verdien endres (kun i uncontrolled mode) */
-  onInputChange?: (value: string) => void;
-}
-
-interface MultiComboboxControlledProps extends ComboboxCommonProps {
+interface MultiComboboxProps extends ComboboxCommonProps {
   multiple: true;
   /** Størrelsen på combobox - automatisk satt til 'large' for multi-select */
   variant?: 'large';
-  /** Controlled mode - value is managed by parent */
-  value: (string | number)[];
+  /** Current values - optional for both controlled and uncontrolled modes */
+  value?: (string | number)[];
   /** Callback når options velges eller fjernes i multi-select mode */
   onSelectionChange?: (selectedOptions: ComboboxOption[]) => void;
-  /** onInputChange is not allowed in controlled mode */
-  onInputChange?: never;
+  /** Callback når input-verdien endres - optional for live search functionality */
+  onInputChange?: (searchTerm: string) => void;
   /** Maximum number of options that can be selected. Shows "X of Y selected" message when limit is reached */
   maxSelected?: number;
 }
 
-interface MultiComboboxUncontrolledProps extends ComboboxCommonProps {
-  multiple: true;
-  /** Størrelsen på combobox - automatisk satt til 'large' for multi-select */
-  variant?: 'large';
-  /** Uncontrolled mode - no value prop */
-  value?: never;
-  /** Callback når options velges eller fjernes i multi-select mode */
-  onSelectionChange?: (selectedOptions: ComboboxOption[]) => void;
-  /** Callback når input-verdien endres (kun i uncontrolled mode) */
-  onInputChange?: (value: string) => void;
-  /** Maximum number of options that can be selected. Shows "X of Y selected" message when limit is reached */
-  maxSelected?: number;
-}
-
-export type ComboboxProps =
-  | SingleComboboxControlledProps
-  | SingleComboboxUncontrolledProps
-  | MultiComboboxControlledProps
-  | MultiComboboxUncontrolledProps;
+export type ComboboxProps = SingleComboboxProps | MultiComboboxProps;
 
 export interface ComboboxComponent extends React.FC<ComboboxProps> {
   Button: typeof ComboboxButton;
