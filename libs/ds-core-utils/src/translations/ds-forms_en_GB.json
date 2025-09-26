@@ -30,6 +30,7 @@
   "datepicker.TypeOrSelect": "Type or select",
   "datepicker.Wed": "Wed",
   "datepicker.Year": "Year",
+  "errorsummary.Title": "To continue you must correct {{errorAmount}} error(s):",
   "fileuploader.AddMultipleLabel": "Add file(s)",
   "fileuploader.AddSingleLabel": "Add file",
   "fileuploader.DeleteConfirmation": "The file has been removed",

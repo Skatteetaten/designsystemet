@@ -44,7 +44,7 @@
   "topbannerexternalusermenu.MyPage": "Mu siidui",
   "topbannerexternalusermenu.Notification": "Várrehus",
   "topbannerexternalusermenu.NotificationCountMessage": "Várrehus, {{count}} ođđa",
-  "topbannerexternalusermenu.NotificationCountMessageSingular": "(Várrehus, 1 ođđa)",
   "topbannerexternalusermenu.OnBehalfOf": "Bealis",
+  "topbannerexternalusermenu.OneNotificationMessage": "(Várrehus, 1 ođđa)",
   "topbannerexternalusermenu.SwitchUser": "Molsso geavaheaddji"
 }

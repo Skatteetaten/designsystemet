@@ -117,7 +117,7 @@ export const WithOneNotification: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.NotificationCountMessageSingular'
+        'ds_overlays:topbannerexternalusermenu.OneNotificationMessage'
       )}`,
     });
 

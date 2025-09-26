@@ -44,7 +44,7 @@
   "topbannerexternalusermenu.MyPage": "Min side",
   "topbannerexternalusermenu.Notification": "Varsel",
   "topbannerexternalusermenu.NotificationCountMessage": "Varsler, {{count}} uleste",
-  "topbannerexternalusermenu.NotificationCountMessageSingular": "Varsel, 1 ulest",
   "topbannerexternalusermenu.OnBehalfOf": "På vegne av",
+  "topbannerexternalusermenu.OneNotificationMessage": "Varsel, 1 ulest",
   "topbannerexternalusermenu.SwitchUser": "Bytt bruker"
 }

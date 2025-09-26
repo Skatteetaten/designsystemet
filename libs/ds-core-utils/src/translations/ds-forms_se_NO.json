@@ -1,7 +1,7 @@
 {
-  "combobox.Loading": "Viežžamin",
-  "combobox.NoResults": "Ii gávnnat «{{searchTerm}}» várás. Geahčča eará ohcamiin.",
-  "combobox.OptionsAvailable": "{{count}} molsaeavttu gávdno. Geavat čuokkáid navigeret.",
+  "combobox.Loading": "Bargamin",
+  "combobox.NoResults": "Eai gávdno ohcanbohtosat «{{searchTerm}}» várás. Geahččal eará ohcansáni.",
+  "combobox.OptionsAvailable": "{{count}} molssaeavttu olámuttos. Geavat njuolla-boaluid navigeret.",
   "combobox.TypeOrSelect": "Čále dahje vállje",
   "datepicker.April": "Cuoŋománnu",
   "datepicker.August": "Borgemánnu",
