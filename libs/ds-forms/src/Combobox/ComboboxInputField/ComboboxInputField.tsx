@@ -31,6 +31,8 @@ interface ComboboxInputFieldProps {
     input?: string;
   };
   name?: string;
+  'data-testid'?: string;
+  lang?: string;
   handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
   handleInputFocus: (e: FocusEvent<HTMLInputElement>) => void;
   handleInputBlur: (e: FocusEvent<HTMLInputElement>) => void;
@@ -54,6 +56,8 @@ const ComboboxInputFieldComponent = ({
   selectedValues,
   classNames,
   name,
+  'data-testid': dataTestId,
+  lang,
   handleInputChange,
   handleInputFocus,
   handleInputBlur,
@@ -78,6 +82,8 @@ const ComboboxInputFieldComponent = ({
       aria-describedby={ariaDescribedBy}
       aria-invalid={!!errorMessage || undefined}
       aria-busy={isLoading || undefined}
+      data-testid={dataTestId}
+      lang={lang}
       onChange={handleInputChange}
       onFocus={handleInputFocus}
       onBlur={handleInputBlur}

@@ -61,6 +61,10 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
     helpText,
     helpSvgPath,
     titleHelpSvg,
+    id,
+    className,
+    'data-testid': dataTestId,
+    lang,
 
     ...htmlAttributes
   } = props;
@@ -86,7 +90,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
     multiple,
     value,
     minSearchLength,
-    htmlAttributes,
+    htmlAttributes: { id },
     isLoading,
     safeFocus,
     maxSelected,
@@ -224,7 +228,10 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
   }, [label, hideLabel, multiple, resolvedVariant]);
 
   return (
-    <ComboboxWrapper hasSpacing={hasSpacing} className={classNames?.container}>
+    <ComboboxWrapper
+      hasSpacing={hasSpacing}
+      className={`${classNames?.container || ''} ${className || ''}`.trim()}
+    >
       <LabelWithHelp
         htmlFor={comboboxId}
         hideLabel={hideLabel}
@@ -271,6 +278,8 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
             handleInputChange={handleInputChange}
             handleInputFocus={handleInputFocus}
             handleInputBlur={handleInputBlur}
+            data-testid={dataTestId}
+            lang={lang}
             htmlAttributes={htmlAttributes}
           />
         </div>
