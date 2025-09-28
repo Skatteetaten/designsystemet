@@ -296,6 +296,7 @@ export const WithNoOnSwitchUserClick: Story = {
 };
 
 export const WithCustomHostname: Story = {
+  name: 'With Custom Hostname (A7)',
   args: {
     hostname: 'test.skatteetaten.no',
     notificationCount: 0,
@@ -324,6 +325,7 @@ export const WithCustomHostname: Story = {
 };
 
 export const WithHiddenLinks: Story = {
+  name: 'With Hidden Default Links (A8)',
   args: {
     hideDefaultLinks: true,
     user: {
