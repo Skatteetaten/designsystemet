@@ -32,6 +32,22 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './Combobox.module.scss';
 
+// eslint-disable-next-line jsdoc/require-returns, jsdoc/require-param
+/**
+ * Combobox allows users to select from a list of predefined options with search functionality.
+ * Supports both single and multi-select modes, with controlled and uncontrolled variants.
+ *
+ * ## Single Select Usage:
+ * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection events
+ * - **Controlled**: Provide `value` prop, use `onSelectionChange` to update state
+ * - **With search**: Use `onInputChange` for live search/filtering functionality
+ *
+ * ## Multi Select Usage:
+ * - Set `multiple={true}` prop
+ * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection events
+ * - **Controlled**: Provide `value` as array, use `onSelectionChange` to update state
+ * - Automatically uses 'large' variant for chip display space
+ */
 const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
   const {
     ref,
