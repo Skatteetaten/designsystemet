@@ -40,8 +40,6 @@ export const Spinner = ({
     }, 0);
   }, []);
 
-  const sizeClassname = size ? styles[`spinner_${size}`] : undefined;
-  const colorClassname = color ? styles[`spinner_${color}`] : undefined;
   const positionClassname =
     titlePosition === 'right'
       ? styles.spinner_flexRow
@@ -49,9 +47,7 @@ export const Spinner = ({
 
   const concatenatedClassnames = `${
     styles.spinner
-  } ${colorClassname} ${positionClassname} ${sizeClassname} ${className} ${
-    classNames?.container ?? ''
-  }`.trim();
+  } ${positionClassname} ${className} ${classNames?.container ?? ''}`.trim();
   const isInPercentageMode = percentComplete !== undefined;
 
   const getAriaBusyStatus = (): 'true' | 'false' | undefined => {
@@ -79,6 +75,8 @@ export const Spinner = ({
         className={concatenatedClassnames}
         lang={lang}
         data-testid={dataTestId}
+        data-size={size}
+        data-color={color}
       >
         <div
           className={`${styles.spinnerAnimation} ${
