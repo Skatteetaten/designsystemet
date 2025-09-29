@@ -534,7 +534,7 @@ export const ExampleWithRolePicker: Story = {
             modalRef.current?.close();
           }}
         />
-        <main>
+        <main className={'breadcrumbs--external'}>
           <Paragraph variant={'ingress'} hasSpacing>
             {'Utgående mønster. Se "Example With User Menu" i stedet.'}
           </Paragraph>
