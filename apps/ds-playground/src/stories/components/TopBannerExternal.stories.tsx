@@ -4,7 +4,11 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, Link, LinkGroup } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
-import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  langToLocale,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 import {
   AccountMultipleIcon,
   ArrowUpDownSVGpath,
@@ -530,6 +534,11 @@ export const ExampleWithRolePicker: Story = {
             modalRef.current?.close();
           }}
         />
+        <main className={'breadcrumbs--external'}>
+          <Paragraph variant={'ingress'} hasSpacing>
+            {'Utgående mønster. Se "Example With User Menu" i stedet.'}
+          </Paragraph>
+        </main>
       </>
     );
   },
@@ -541,6 +550,8 @@ export const ExampleWithUserMenu: Story = {
     const modalRef = useRef<HTMLDialogElement>(null);
     const topBannerRef = useRef<TopBannerExternalHandle>(null);
     const [user, setUser] = useState<User>();
+
+    const isDesktop = useMediaQuery('(min-width: 640px)');
 
     const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
       const lang = e.currentTarget.lang;
@@ -964,6 +975,8 @@ export const ExampleWithUserMenu: Story = {
               </LinkGroup>
             </>
           }
+          user={user}
+          onLogOutClick={isDesktop ? (): void => setUser(undefined) : undefined}
           onLanguageClick={handleLanguageClick}
           onLogInClick={
             !user ? (): void => modalRef.current?.showModal() : undefined
