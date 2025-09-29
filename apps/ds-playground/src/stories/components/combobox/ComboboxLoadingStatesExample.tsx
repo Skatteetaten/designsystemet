@@ -3,13 +3,13 @@ import { JSX, useState } from 'react';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { comboboxStoryOptions } from './combobox.stories.utils';
+import { generatePerformanceTestData } from './combobox.stories.utils';
 
 export const ComboboxLoadingStatesExample = (): JSX.Element => {
   const [asyncLoading, setAsyncLoading] = useState(false);
-  const [asyncOptions, setAsyncOptions] = useState<typeof comboboxStoryOptions>(
-    []
-  );
+  const [asyncOptions, setAsyncOptions] = useState<
+    ReturnType<typeof generatePerformanceTestData>
+  >([]);
   const [searchValue, setSearchValue] = useState('');
 
   console.info('Søkeverdi:', searchValue);
@@ -18,14 +18,21 @@ export const ComboboxLoadingStatesExample = (): JSX.Element => {
     setAsyncLoading(true);
     setAsyncOptions([]);
 
-    // Simuler API-kall
+    const startTime = performance.now();
+
+    const performanceData = generatePerformanceTestData(5000);
+    const filteredOptions = performanceData.filter((option) =>
+      option.label.toLowerCase().includes(value.toLowerCase())
+    );
+
+    const processingTime = performance.now() - startTime;
+
+    const loadingDuration = Math.max(processingTime + 100, 500); // Minimum 500ms for UX
+
     setTimeout(() => {
-      const filteredOptions = comboboxStoryOptions.filter((option) =>
-        option.label.toLowerCase().includes(value.toLowerCase())
-      );
       setAsyncOptions(filteredOptions);
       setAsyncLoading(false);
-    }, 1500);
+    }, loadingDuration);
   };
 
   const handleInputChange = (value: string): void => {
@@ -42,15 +49,15 @@ export const ComboboxLoadingStatesExample = (): JSX.Element => {
     <div>
       <Paragraph hasSpacing>
         {
-          'Eksempel på bruk av combobox med lastetilstander og asynkront søk. Skriv minst 2 tegn i søkefeltet for å simulere et API-kall som henter alternativer.'
+          'Eksempel på bruk av combobox med lastetilstander og asynkront søk med 5000 elementer. Skriv minst 2 tegn i søkefeltet for å simulere et API-kall som henter og filtrerer alternativer.'
         }
       </Paragraph>
 
       <Combobox
-        label={'Søk i database'}
-        placeholder={'Skriv minst 2 tegn for å søke...'}
+        label={'Søk i database (5000 elementer)'}
+        placeholder={'Skriv minst 2 tegn for å søke blant 5000 elementer'}
         isLoading={asyncLoading}
-        loadingMessage={'Søker i database...'}
+        loadingMessage={'Søker'}
         options={asyncOptions}
         hasSpacing
         onInputChange={handleInputChange}

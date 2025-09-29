@@ -16,6 +16,11 @@ import { ComboboxMaxSelectedExample } from './ComboboxMaxSelectedExample';
 import comboboxMaxSelectedExampleSource from './ComboboxMaxSelectedExample.tsx?raw';
 import { ComboboxMultipleKeyboardNavigationExample } from './ComboboxMultipleKeyboardNavigationExample';
 import comboboxMultipleKeyboardNavigationExampleSource from './ComboboxMultipleKeyboardNavigationExample.tsx?raw';
+import {
+  ComboboxPerformanceExample,
+  ComboboxPerformanceMultipleExample,
+} from './ComboboxPerformanceExample';
+import comboboxPerformanceExampleSource from './ComboboxPerformanceExample.tsx?raw';
 import { ComboboxTypedOptionsExample } from './ComboboxTypedOptionsExample';
 import comboboxTypedOptionsExampleSource from './ComboboxTypedOptionsExample.tsx?raw';
 import { ComboboxValidationExample } from './ComboboxValidationExample';
@@ -333,6 +338,46 @@ WithTypedOptions.parameters = {
     },
     source: {
       code: comboboxTypedOptionsExampleSource,
+      language: 'tsx',
+    },
+  },
+  controls: {
+    exclude: /.*/,
+  },
+};
+
+export const PerformanceTest: StoryFunction = () => {
+  return <ComboboxPerformanceExample />;
+};
+PerformanceTest.storyName = 'Ytelse - Enkeltvalg med store datamengder';
+PerformanceTest.parameters = {
+  docs: {
+    description: {
+      story:
+        'Demonstrerer korrekt real-world pattern for håndtering av store datamengder (5000 elementer). Viser hvordan du bør wrappe Combobox i loading states når du arbeider med store datasett. Dette forhindrer at nettleseren henger seg opp under data-generering og gir en bedre brukeropplevelse.',
+    },
+    source: {
+      code: comboboxPerformanceExampleSource,
+      language: 'tsx',
+    },
+  },
+  controls: {
+    exclude: /.*/,
+  },
+};
+
+export const PerformanceTestMultiple: StoryFunction = () => {
+  return <ComboboxPerformanceMultipleExample />;
+};
+PerformanceTestMultiple.storyName = 'Ytelse - Flervalg med store datamengder';
+PerformanceTestMultiple.parameters = {
+  docs: {
+    description: {
+      story:
+        'Demonstrerer ytelsen til flervalg-modus med 5000 elementer. Tester spesielt scenarioer som å velge mange elementer, fjerne valgte chips, og håndtere store resultatlister samtidig som flere elementer er valgt. Viser korrekt implementation pattern med loading wrapper.',
+    },
+    source: {
+      code: comboboxPerformanceExampleSource,
       language: 'tsx',
     },
   },

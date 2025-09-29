@@ -57,3 +57,50 @@ export const comboboxStoryOptions: ComboboxOption[] = [
   { label: 'Åkerbønne', value: 'akerbonne' },
   { label: 'Ølgress', value: 'olgress' },
 ];
+
+export const generatePerformanceTestData = (
+  count: number
+): ComboboxOption[] => {
+  const categories = [
+    'Kommune',
+    'Fylke',
+    'Organisasjon',
+    'Avdeling',
+    'Enhet',
+    'Tjeneste',
+  ];
+  const suffixes = [
+    'Nord',
+    'Sør',
+    'Øst',
+    'Vest',
+    'Sentral',
+    'Regional',
+    'Lokal',
+  ];
+
+  return Array.from({ length: count }, (_, index) => {
+    const category = categories[Math.floor(index / 100) % categories.length];
+    const suffix = suffixes[index % suffixes.length];
+    const number = (index + 1).toString().padStart(4, '0');
+
+    let label: string;
+    const variation = index % 3;
+
+    switch (variation) {
+      case 0:
+        label = `${category} ${number.slice(-2)}`;
+        break;
+      case 1:
+        label = `${category} ${suffix} ${number}`;
+        break;
+      default:
+        label = `${category} for ${suffix} region - ${number}`;
+    }
+
+    return {
+      label,
+      value: `item-${index + 1}`,
+    };
+  });
+};
