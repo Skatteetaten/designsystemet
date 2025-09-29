@@ -58,6 +58,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     if (isLoading) {
       return (
         <div
+          id={listId}
           className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames?.options || ''}`}
         >
           <LoadingMessage
