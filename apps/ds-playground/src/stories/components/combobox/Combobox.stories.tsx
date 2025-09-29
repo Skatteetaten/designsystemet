@@ -12,6 +12,8 @@ import { ComboboxKeyboardNavigationExample } from './ComboboxKeyboardNavigationE
 import comboboxKeyboardNavigationExampleSource from './ComboboxKeyboardNavigationExample.tsx?raw';
 import { ComboboxLoadingStatesExample } from './ComboboxLoadingStatesExample';
 import comboboxLoadingStatesExampleSource from './ComboboxLoadingStatesExample.tsx?raw';
+import { ComboboxMaxHeightExample } from './ComboboxMaxHeightExample';
+import comboboxMaxHeightExampleSource from './ComboboxMaxHeightExample.tsx?raw';
 import { ComboboxMaxSelectedExample } from './ComboboxMaxSelectedExample';
 import comboboxMaxSelectedExampleSource from './ComboboxMaxSelectedExample.tsx?raw';
 import { ComboboxMultipleKeyboardNavigationExample } from './ComboboxMultipleKeyboardNavigationExample';
@@ -378,6 +380,26 @@ PerformanceTestMultiple.parameters = {
     },
     source: {
       code: comboboxPerformanceExampleSource,
+      language: 'tsx',
+    },
+  },
+  controls: {
+    exclude: /.*/,
+  },
+};
+
+export const MaxHeight: StoryFunction = () => {
+  return <ComboboxMaxHeightExample />;
+};
+MaxHeight.storyName = 'Begrenset høyde på liste';
+MaxHeight.parameters = {
+  docs: {
+    description: {
+      story:
+        'Viser hvordan du kan begrense høyden på dropdown-listen ved å bruke classNames.options med max-height CSS. Listen vil få scrollbar automatisk når innholdet overskrider max-height.',
+    },
+    source: {
+      code: comboboxMaxHeightExampleSource,
       language: 'tsx',
     },
   },
