@@ -255,7 +255,7 @@ export const TopBannerExternal = (({
             {userMenu}
             {onLogOutClick && user && (
               <>
-                {!userMenu && (
+                {!hasUserMenuAsChild && (
                   <TopBannerUserButton user={user} onClick={onUserClick} />
                 )}
                 <TopBannerButton
