@@ -94,7 +94,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             const isFocused = index === focusedIndex;
 
             return (
-              <li //NOSONAR
+              <li
                 key={option.value}
                 id={`${comboboxId}-option-${index}`}
                 role={'option'} // We need to use <li> for screenreader support, even though sonarqube complains
@@ -152,7 +152,13 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           aria-multiselectable={'false'}
           className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames?.options || ''}`}
         >
-          <li className={styles.emptyResult}>
+          <li
+            id={`${comboboxId}-option-no-results`}
+            role={'option'}
+            aria-selected={'false'}
+            aria-disabled={'true'}
+            className={styles.emptyResult}
+          >
             {'Ingen treff for "'}
             {searchTerm}
             {'"'}
