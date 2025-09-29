@@ -91,7 +91,17 @@ export const ComboboxMaxHeightExample = (): JSX.Element => {
 
 .maxHeight200 {
   max-height: 200px;
-}`}</code>
+}
+
+/* Bruk i Combobox */
+<Combobox
+  label="Velg grønnsak"
+  options={options}
+  classNames={{
+    options: 'maxHeight300',
+  }}
+  // ... andre props
+/>`}</code>
         </pre>
       </div>
     </div>
