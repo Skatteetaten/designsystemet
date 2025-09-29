@@ -17,6 +17,8 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
     // Props
     user: { table: { disable: true } },
     notificationCount: { table: { disable: true } },
+    hostname: { table: { disable: true } },
+    hideDefaultLinks: { table: { disable: true } },
     children: { table: { disable: true } },
     // Events
     onLogOutClick: { table: { disable: true } },
@@ -290,5 +292,76 @@ export const WithNoOnSwitchUserClick: Story = {
     });
 
     await expect(switchUserButton).not.toBeInTheDocument();
+  },
+};
+
+export const WithCustomHostname: Story = {
+  name: 'With Custom Hostname (A7)',
+  args: {
+    hostname: 'test.skatteetaten.no',
+    notificationCount: 0,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const menuButton = canvas.getByRole('button', {
+      name: `${userIconTitle} ${defaultUserName} ${menuText}`,
+    });
+
+    await expect(menuButton).toBeInTheDocument();
+    await userEvent.click(menuButton);
+
+    const notificationLink = canvas.getByRole('link', {
+      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.Notification'),
+    });
+    await expect(notificationLink).toHaveAttribute(
+      'href',
+      'https://test.skatteetaten.no/web/minside/virksomhet/varsler'
+    );
+  },
+};
+
+export const WithHiddenLinks: Story = {
+  name: 'With Hidden Default Links (A8)',
+  args: {
+    hideDefaultLinks: true,
+    user: {
+      name: 'Buljo Tulljo',
+      role: 'meg',
+    },
+    notificationCount: 0,
+    onSwitchUserClick: undefined,
+    children: 'Child',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const menuButton = canvas.getByRole('button', {
+      name: `${dsI18n.t('ds_layout:topbannerbutton.MyselfTitle')} ${dsI18n.t('ds_layout:topbannerbutton.Myself')} ${menuText}`,
+    });
+
+    await expect(menuButton).toBeInTheDocument();
+    await userEvent.click(menuButton);
+
+    // Check that notifications link is hidden
+    const notificationLink = canvas.queryByRole('link', {
+      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.Notifications'),
+    });
+    await expect(notificationLink).not.toBeInTheDocument();
+
+    // Check that myPage link is hidden
+    const myPageLink = canvas.queryByRole('link', {
+      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.MyPage'),
+    });
+    await expect(myPageLink).not.toBeInTheDocument();
+
+    // Check that about link is hidden
+    const aboutLink = canvas.queryByRole('link', {
+      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.AboutOrganization'),
+    });
+    await expect(aboutLink).not.toBeInTheDocument();
   },
 };
