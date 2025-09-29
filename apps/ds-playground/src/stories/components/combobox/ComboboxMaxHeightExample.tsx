@@ -31,6 +31,25 @@ const manyOptions: ComboboxOption[] = [
   { label: 'Radicchio', value: 'radicchio' },
 ];
 
+const codeExample = `/* ComboboxMaxHeightExample.scss */
+.maxHeight300 {
+  max-height: 300px;
+}
+
+.maxHeight200 {
+  max-height: 200px;
+}
+
+/* Bruk i Combobox */
+<Combobox
+  label="Velg grønnsak"
+  options={options}
+  classNames={{
+    options: 'maxHeight300',
+  }}
+  // ... andre props
+/>`;
+
 export const ComboboxMaxHeightExample = (): JSX.Element => {
   const [selectedValue, setSelectedValue] = useState<ComboboxOption | null>(
     null
@@ -84,24 +103,7 @@ export const ComboboxMaxHeightExample = (): JSX.Element => {
       <div className={'example-section'}>
         <h3>{'Eksempel på CSS-implementering'}</h3>
         <pre>
-          <code>{`/* ComboboxMaxHeightExample.scss */
-.maxHeight300 {
-  max-height: 300px;
-}
-
-.maxHeight200 {
-  max-height: 200px;
-}
-
-/* Bruk i Combobox */
-<Combobox
-  label="Velg grønnsak"
-  options={options}
-  classNames={{
-    options: 'maxHeight300',
-  }}
-  // ... andre props
-/>`}</code>
+          <code>{codeExample}</code>
         </pre>
       </div>
     </div>
