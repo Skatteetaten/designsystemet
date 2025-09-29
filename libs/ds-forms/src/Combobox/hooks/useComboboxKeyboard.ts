@@ -182,8 +182,8 @@ const handleArrowUp = (
   }
 };
 
-// Enter key handler
-const handleEnter = (
+// Common selection logic for Enter and Space keys
+const handleSelection = (
   e: KeyboardEvent,
   props: UseComboboxKeyboardProps
 ): void => {
@@ -212,6 +212,22 @@ const handleEnter = (
 
   // Handle exact text match when no option is focused
   handleExactMatch(inputRef, displayOptions, onOptionSelect);
+};
+
+// Enter key handler
+const handleEnter = (
+  e: KeyboardEvent,
+  props: UseComboboxKeyboardProps
+): void => {
+  handleSelection(e, props);
+};
+
+// Space key handler
+const handleSpace = (
+  e: KeyboardEvent,
+  props: UseComboboxKeyboardProps
+): void => {
+  handleSelection(e, props);
 };
 
 // Escape key handler
@@ -279,6 +295,7 @@ export function useComboboxKeyboard(props: UseComboboxKeyboardProps): void {
         ArrowDown: handleArrowDown,
         ArrowUp: handleArrowUp,
         Enter: handleEnter,
+        ' ': handleSpace,
         Escape: handleEscape,
         Tab: handleTab,
         Backspace: handleBackspace,

@@ -455,6 +455,142 @@ describe('useComboboxKeyboard', () => {
     });
   });
 
+  describe('Space key selection behavior', () => {
+    it('should call setSearchTerm, setIsOpen(false), setFocusedIndex(-1) and onSelectionChange in single-select', () => {
+      // Arrange: Setup mock input for single-select with focused option
+      const mockInput = createMockInputElement('search');
+      const { mockProps, mockAddEventListener } = setupKeyboardTest({
+        isOpen: true,
+        allOptions: mockOptions,
+        displayOptions: mockOptions,
+        focusedIndex: 1, // Belgium option
+        multiple: false,
+        onOptionSelect: vi.fn(), // Required callback
+        inputRef: { current: mockInput },
+      });
+
+      renderHook(() => useComboboxKeyboard(mockProps));
+      const keydownHandler = getKeydownHandler(mockAddEventListener);
+
+      // Act: Simulate Space keypress
+      const mockEvent = simulateKeyboardEvent(keydownHandler, ' ');
+
+      // Assert: Verify onOptionSelect called
+      expect(mockEvent.preventDefault).toHaveBeenCalled();
+      expect(mockProps.onOptionSelect).toHaveBeenCalledWith(
+        mockOptions[1], // Belgium option
+        true // fromKeyboard
+      );
+    });
+
+    it("should call setSearchTerm('') and onSelectionChange with array in multi-select", () => {
+      // Arrange: Setup mock input for multi-select with existing selection
+      const mockInput = createMockInputElement('search');
+      const { mockProps, mockAddEventListener } = setupKeyboardTest({
+        isOpen: true,
+        allOptions: mockOptions,
+        displayOptions: mockOptions,
+        focusedIndex: 1, // Belgium option
+        multiple: true,
+        selectedValues: [{ value: 'albania', label: 'Albania' }],
+        onOptionSelect: vi.fn(), // Required callback
+        inputRef: { current: mockInput },
+      });
+
+      renderHook(() => useComboboxKeyboard(mockProps));
+      const keydownHandler = getKeydownHandler(mockAddEventListener);
+
+      // Act: Simulate Space keypress in multi-select
+      const mockEvent = simulateKeyboardEvent(keydownHandler, ' ');
+
+      // Assert: Verify onOptionSelect called
+      expect(mockEvent.preventDefault).toHaveBeenCalled();
+      expect(mockProps.onOptionSelect).toHaveBeenCalledWith(
+        mockOptions[1], // Belgium option
+        true // fromKeyboard
+      );
+    });
+
+    it('should toggle off (remove) when selecting already selected option in multi-select with keyboard', () => {
+      // Arrange: Setup mock input with already selected option focused
+      const mockInput = createMockInputElement('search');
+      const { mockProps, mockAddEventListener } = setupKeyboardTest({
+        isOpen: true,
+        allOptions: mockOptions,
+        displayOptions: mockOptions,
+        focusedIndex: 0, // Albania - already selected
+        multiple: true,
+        selectedValues: [{ value: 'albania', label: 'Albania' }],
+        onOptionSelect: vi.fn(),
+        inputRef: { current: mockInput },
+      });
+
+      renderHook(() => useComboboxKeyboard(mockProps));
+      const keydownHandler = getKeydownHandler(mockAddEventListener);
+
+      // Act: Simulate Space keypress on already selected option (should toggle off)
+      const mockEvent = simulateKeyboardEvent(keydownHandler, ' ');
+
+      // Assert: Verify onOptionSelect called
+      expect(mockEvent.preventDefault).toHaveBeenCalled();
+      expect(mockProps.onOptionSelect).toHaveBeenCalledWith(
+        mockOptions[0], // Albania option
+        true // fromKeyboard
+      );
+    });
+
+    it('should call onOptionSelect instead of onSelectionChange when onOptionSelect provided', () => {
+      // Arrange: Setup mock input with onOptionSelect callback
+      const mockInput = createMockInputElement('search');
+      const { mockProps, mockAddEventListener } = setupKeyboardTest({
+        isOpen: true,
+        allOptions: mockOptions,
+        displayOptions: mockOptions,
+        focusedIndex: 1, // Belgium option
+        inputRef: { current: mockInput },
+      });
+
+      renderHook(() => useComboboxKeyboard(mockProps));
+      const keydownHandler = getKeydownHandler(mockAddEventListener);
+
+      // Act: Simulate Space keypress with onOptionSelect
+      const mockEvent = simulateKeyboardEvent(keydownHandler, ' ');
+
+      // Assert: Verify onOptionSelect called instead of onChange
+      expect(mockEvent.preventDefault).toHaveBeenCalled();
+      expect(mockProps.onOptionSelect).toHaveBeenCalledWith(
+        mockOptions[1],
+        true
+      );
+      expect(mockProps.onSelectionChange).not.toHaveBeenCalled();
+    });
+
+    it('should call onOptionSelect with exact match when focusedIndex is -1 and dropdown is open', () => {
+      // Arrange: Setup mock input with exact text match
+      const mockInput = createMockInputElement('Albania'); // Exact match
+      const { mockProps, mockAddEventListener } = setupKeyboardTest({
+        isOpen: true, // Dropdown must be open for exact match to work
+        allOptions: mockOptions,
+        displayOptions: mockOptions,
+        focusedIndex: -1, // No option focused
+        inputRef: { current: mockInput },
+      });
+
+      renderHook(() => useComboboxKeyboard(mockProps));
+      const keydownHandler = getKeydownHandler(mockAddEventListener);
+
+      // Act: Simulate Space keypress with exact text match
+      const mockEvent = simulateKeyboardEvent(keydownHandler, ' ');
+
+      // Assert: Verify exact match handling
+      expect(mockEvent.preventDefault).toHaveBeenCalled();
+      expect(mockProps.onOptionSelect).toHaveBeenCalledWith(
+        mockOptions[0],
+        true
+      );
+    });
+  });
+
   describe('Enter key selection behavior', () => {
     it('should call setSearchTerm, setIsOpen(false), setFocusedIndex(-1) and onSelectionChange in single-select', () => {
       // Arrange: Setup mock input for single-select with focused option
