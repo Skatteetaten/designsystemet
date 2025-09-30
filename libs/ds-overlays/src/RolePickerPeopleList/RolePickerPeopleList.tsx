@@ -43,16 +43,7 @@ export const RolePickerPeopleList = ({
   };
 
   const handleEntityClicked = async (entity: Person): Promise<void> => {
-    ctx?.setLoadingEntityId(entity.personId);
-    ctx?.onEntitySelect?.(entity).then((res) => {
-      if (res?.error) {
-        ctx?.setError({
-          entityId: entity.personId,
-          message: res.error,
-        });
-      }
-      ctx.setLoadingEntityId(undefined);
-    });
+    ctx?.onEntitySelect?.(entity);
   };
 
   const visibleItems = useMemo(() => {
