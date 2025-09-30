@@ -175,7 +175,7 @@ export const TopBannerExternalUserMenu = ({
                 <div className={styles.link}>
                   <Link
                     svgPath={PersonSVGpath}
-                    href={`https://${hostname}/web/minside`}
+                    href={`https://${hostname}/web/minside/`}
                   >
                     {t('ds_overlays:topbannerexternalusermenu.MyPage')}
                   </Link>
