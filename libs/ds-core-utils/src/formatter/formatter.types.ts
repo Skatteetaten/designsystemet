@@ -21,7 +21,7 @@ export type FormattingResponseWithTail = FormattingResponse & {
 };
 
 export type FormatOptions<T extends FormatTypes = FormatTypes> = {
-  /* nummberlignende streng som parses av formateringsrutinen etter bestemte regler */
+  /* nummerlignende streng som parses av formateringsrutinen etter bestemte regler */
   value: string;
   /* bestemmer formatet og noen ganger maksimium-lengden på verdien som returneres */
   type: T;
