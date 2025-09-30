@@ -4,5 +4,6 @@ export * from './Popover/Popover';
 export * from './Popover/Popover.types';
 export * from './RolePicker/RolePicker';
 export * from './RolePicker/RolePicker.types';
-export * from './TermTip/TermTip';
-export * from './TermTip/TermTip.types';
+export * from './WordInfo/WordInfo';
+export * from './WordInfo/WordInfo.types';
+export * from './WordInfoTrigger/WordInfoTrigger';

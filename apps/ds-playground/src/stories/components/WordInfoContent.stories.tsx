@@ -1,25 +1,25 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { TermTip } from '@skatteetaten/ds-overlays';
+import { WordInfo } from '@skatteetaten/ds-overlays';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 
 export default {
-  component: TermTip.Content,
-  title: 'Komponenter/TermTip/Content',
+  component: WordInfo.Content,
+  title: 'Komponenter/WordInfo/Content',
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
   },
-} satisfies Meta<typeof TermTip.Content>;
+} satisfies Meta<typeof WordInfo.Content>;
 
-export const Preview: StoryObj<typeof TermTip> = {
+export const Preview: StoryObj<typeof WordInfo.Content> = {
   render: (args) => (
     <div className={'centerContent'}>
-      <TermTip isOpen>
-        <TermTip.Content {...args}>{loremIpsum}</TermTip.Content>
-      </TermTip>
+      <WordInfo isOpen>
+        <WordInfo.Content {...args}>{loremIpsum}</WordInfo.Content>
+      </WordInfo>
     </div>
   ),
   args: {

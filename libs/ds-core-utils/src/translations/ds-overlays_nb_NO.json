@@ -15,7 +15,6 @@
   "rolepicker.Deleted": "Avviklet",
   "rolepicker.GoToMyPage": "Gå til Min side",
   "rolepicker.Heading": "Hvem ønsker du å representere?",
-  "rolepicker.InactiveBusinessPostfix": "(Avviklet)",
   "rolepicker.Logout": "Logg ut",
   "rolepicker.MainBusiness": "Hovedenhet",
   "rolepicker.MeHeading": "Meg selv",
@@ -46,5 +45,7 @@
   "topbannerexternalusermenu.Notification": "Varsel",
   "topbannerexternalusermenu.NotificationCountMessage": "Varsler, {{count}} uleste",
   "topbannerexternalusermenu.OnBehalfOf": "På vegne av",
-  "topbannerexternalusermenu.SwitchUser": "Bytt bruker"
+  "topbannerexternalusermenu.OneNotificationMessage": "Varsel, 1 ulest",
+  "topbannerexternalusermenu.SwitchUser": "Bytt bruker",
+  "wordinfo.WordExplanation": "ordforklaring"
 }

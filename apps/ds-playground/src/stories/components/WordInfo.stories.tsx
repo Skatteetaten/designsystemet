@@ -5,7 +5,7 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import {
   getPopoverPositionDefault,
   getPopoverRestoreFocusDefault,
-  TermTip,
+  WordInfo,
 } from '@skatteetaten/ds-overlays';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -13,8 +13,8 @@ import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
-  component: TermTip,
-  title: 'Komponenter/TermTip',
+  component: WordInfo,
+  title: 'Komponenter/WordInfo',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
@@ -36,19 +36,19 @@ const meta = {
     //Events
     onClose: { ...htmlEventDescription, table: { disable: true } },
   },
-} satisfies Meta<typeof TermTip>;
+} satisfies Meta<typeof WordInfo>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
   render: (args) => (
     <div className={'centerContent'}>
-      <TermTip {...args}>
-        <TermTip.Term>{'arkskrift'}</TermTip.Term>
-        <TermTip.Content>
+      <WordInfo {...args}>
+        <WordInfo.Trigger>{'arkskrift'}</WordInfo.Trigger>
+        <WordInfo.Content>
           {'En arkskrift er en skrift som er skrevet på et ark.'}
-        </TermTip.Content>
-      </TermTip>
+        </WordInfo.Content>
+      </WordInfo>
     </div>
   ),
 } satisfies Story;
@@ -63,15 +63,15 @@ export const Examples: Story = {
         <List>
           <List.Element>
             {'Det er legen som melder dødsfall i Norge til '}
-            <TermTip>
-              <TermTip.Term>{'Folkeregisteret'}</TermTip.Term>
-              <TermTip.Content>
+            <WordInfo>
+              <WordInfo.Trigger>{'Folkeregisteret'}</WordInfo.Trigger>
+              <WordInfo.Content>
                 <Heading as={'h2'} level={4}>
                   {'Folkeregisteret'}
                 </Heading>
                 <Paragraph>{'Forklaring på Folkeregisteret'}</Paragraph>
-              </TermTip.Content>
-            </TermTip>
+              </WordInfo.Content>
+            </WordInfo>
             {'. Du trenger ikke å melde noe selv.'}
           </List.Element>
           <List.Element>

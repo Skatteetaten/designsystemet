@@ -1,0 +1,12 @@
+.wordInfoContent {
+  --background-color: var(--palette-denim-10);
+  --border-color: var(--palette-denim-100);
+
+  > div > div {
+    padding: var(--spacing-s);
+  }
+
+  > div > button {
+    margin: var(--spacing-xs);
+  }
+}

@@ -1,4 +1,6 @@
-.termTipTerm {
+@use 'libs/ds-core-utils/src/mixins/styles';
+
+.wordInfoTrigger {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -45,15 +47,6 @@
   }
 }
 
-.termTipContent {
-  --background-color: var(--palette-denim-10);
-  --border-color: var(--palette-denim-100);
-
-  > div > div {
-    padding: var(--spacing-s);
-  }
-
-  > div > button {
-    margin: var(--spacing-xs);
-  }
+.srOnly {
+  @include styles.sr-only;
 }

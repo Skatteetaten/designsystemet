@@ -1,36 +1,40 @@
 import { useContext, JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useMergeRefs } from '@floating-ui/react';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { BookOpenIcon } from '@skatteetaten/ds-icons';
 
-import { TermTipTermProps } from './TermTipTerm.types';
+import { getWordInfoHasIconDefault } from './defaults';
+import { WordInfoTriggerProps } from './WordInfoTrigger.types';
 import { PopoverContext } from '../PopoverContext/PopoverContext';
 
-import styles from './TermTip.module.scss';
+import styles from './WordInfoTrigger.module.scss';
 
-export const TermTipTerm = ({
+export const WordInfoTrigger = ({
   ref,
   id,
   className,
   lang,
   'data-testid': dataTestId,
-  hasIcon,
+  hasIcon = true,
   children,
   onClick,
-}: TermTipTermProps): JSX.Element => {
+}: WordInfoTriggerProps): JSX.Element => {
   const { floatingData, setIsOpen, isOpen } = useContext(PopoverContext);
   const { setReference } = floatingData.refs;
   const mergedRef = useMergeRefs([setReference, ref]);
+
+  const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
 
   return (
     <button
       ref={mergedRef}
       id={id}
-      className={`${styles.termTipTerm} ${className}`.trim()}
+      className={`${styles.wordInfoTrigger} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
-      title={'Ordforklaring'}
       aria-expanded={isOpen}
       onClick={(event): void => {
         onClick?.(event);
@@ -38,9 +42,14 @@ export const TermTipTerm = ({
       }}
     >
       {children}
+      <span className={styles.srOnly}>
+        &nbsp;{t('wordinfo.WordExplanation')}
+      </span>
       {hasIcon && <BookOpenIcon className={styles.icon} />}
     </button>
   );
 };
 
-TermTipTerm.displayName = 'TermTipTerm';
+export { getWordInfoHasIconDefault };
+
+WordInfoTrigger.displayName = 'WordInfoTrigger';

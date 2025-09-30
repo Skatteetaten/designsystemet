@@ -3,9 +3,9 @@ import { Ref } from 'react';
 import { ButtonProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-type PropsFromLink = Pick<ButtonProps, 'onClick'>;
+type PropsFromButton = Pick<ButtonProps, 'onClick'>;
 
-type TermTipTermCommonProps = BaseProps & {
+type WordInfoTriggerCommonProps = BaseProps & {
   ref?: Ref<HTMLButtonElement>;
   /** Om bok-ikonet er synlig */
   hasIcon?: boolean;
@@ -13,6 +13,6 @@ type TermTipTermCommonProps = BaseProps & {
   children: string;
 };
 
-export interface TermTipTermProps
-  extends TermTipTermCommonProps,
-    Partial<PropsFromLink> {}
+export interface WordInfoTriggerProps
+  extends WordInfoTriggerCommonProps,
+    Partial<PropsFromButton> {}
