@@ -126,7 +126,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu Default play-test 1`] = `
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://skatt.skatteetaten.no/web/minside"
+           href="https://skatt.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -355,7 +355,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu LogOut play-test 1`] = `
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://skatt.skatteetaten.no/web/minside"
+           href="https://skatt.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -523,7 +523,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu NoPaaVegneAv play-test 1`] =
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://skatt.skatteetaten.no/web/minside"
+           href="https://skatt.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -710,7 +710,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu SwitchUser play-test 1`] = `
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://skatt.skatteetaten.no/web/minside"
+           href="https://skatt.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -884,7 +884,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithChildren play-test 1`] =
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://skatt.skatteetaten.no/web/minside"
+           href="https://skatt.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -1061,7 +1061,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithCustomHostname play-test
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://test.skatteetaten.no/web/minside"
+           href="https://test.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -1409,7 +1409,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithMoreThan99Notifications 
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://skatt.skatteetaten.no/web/minside"
+           href="https://skatt.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -1583,7 +1583,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoNotifications play-tes
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://skatt.skatteetaten.no/web/minside"
+           href="https://skatt.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
@@ -1739,7 +1739,7 @@ exports[`Tester/TopBanner/TopBannerExternalUserMenu WithNoOnSwitchUserClick play
       </div>
       <div class="_link_11fw5_48">
         <a class="_link_z7jba_1"
-           href="https://skatt.skatteetaten.no/web/minside"
+           href="https://skatt.skatteetaten.no/web/minside/"
         >
           <svg class="_systemIcon_o38m2_2 _systemIcon_medium_o38m2_10 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                viewbox="0 0 24 24"
