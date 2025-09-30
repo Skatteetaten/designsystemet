@@ -3,7 +3,7 @@
 .spinner {
   --spinner-size: var(--size-small);
   --spinner-color: var(--semantic-page-foreground);
-  --spinner-border-width: 3px;
+  --spinner-border-width: 0.1875rem;
   --spinner-max-width: 9rem;
 
   display: flex;
@@ -32,12 +32,12 @@
 
   &:where([data-size='large']) {
     --spinner-size: var(--size-medium);
-    --spinner-border-width: 5px;
+    --spinner-border-width: 0.3125rem;
   }
 
   &:where([data-size='extraLarge']) {
     --spinner-size: var(--size-large-plus);
-    --spinner-border-width: 8px;
+    --spinner-border-width: 0.5rem;
     --spinner-max-width: 10rem;
   }
 
