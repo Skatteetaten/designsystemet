@@ -93,6 +93,9 @@ export type Spacing = (typeof spacingArr)[number];
 
 export interface FormRequiredProps {
   required?: boolean;
-  /** Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
+  /**
+   * Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk.
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon.
+   */
   showRequiredMark?: boolean;
 }

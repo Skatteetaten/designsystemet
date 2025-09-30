@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof Heading>;
 export default meta;
 export const Snapshots = createSingleStory(HeadingStories, meta);
+export const BreakpointXS = createSingleStory(HeadingStories, meta, {
+  viewport: '--breakpoint-xs',
+});

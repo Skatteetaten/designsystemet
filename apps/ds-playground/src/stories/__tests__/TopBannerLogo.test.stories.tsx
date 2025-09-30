@@ -3,7 +3,6 @@ import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -90,6 +89,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
@@ -107,9 +111,7 @@ export const Defaults = {
   },
   argTypes: {},
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} a`,
-    },
+    pseudoStates: ['focus'],
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

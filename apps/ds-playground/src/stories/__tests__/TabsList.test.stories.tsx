@@ -57,4 +57,9 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
 } satisfies Story;

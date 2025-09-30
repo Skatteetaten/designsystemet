@@ -12,6 +12,7 @@ import type {
   StoryAnnotationsOrFn,
 } from 'storybook/internal/types';
 
+import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 type Story<T> = StoryObj<T> | StoryFn<T>;
@@ -25,9 +26,39 @@ export function createSingleStory<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   S extends Store_CSFExports<ReactRenderer, any>,
   M extends Meta,
->(rawStories: S, meta: M): StoryAnnotationsOrFn<ReactRenderer> {
+>(
+  rawStories: S,
+  meta: M,
+  options?: {
+    viewport?: keyof typeof breakpoints | '--mobile';
+    runPlayFunctions?: boolean;
+    delay?: number;
+  }
+): StoryAnnotationsOrFn<ReactRenderer> {
   const stories = composeStories(rawStories) as StoryExports;
+
+  const { viewport, runPlayFunctions = false, delay } = options || {};
+
+  // filter stories object by viewPort
+  Object.keys(stories).forEach((storyName) => {
+    const story = stories[storyName];
+    if (story.globals?.viewport?.value !== viewport) {
+      delete stories[storyName];
+    }
+  });
+  const hasPseudo = Object.entries(stories).some(
+    ([_storyName, story]) => story.parameters?.imageSnapshot?.pseudoStates
+  );
+
   return {
+    globals: {
+      ...meta.globals,
+      viewport: viewport
+        ? {
+            value: viewport,
+          }
+        : undefined,
+    },
     render: (_, context): JSX.Element => {
       return (
         <div
@@ -36,6 +67,7 @@ export function createSingleStory<
             display: 'flex',
             flexDirection: 'column',
             gap: 'var(--spacing-m)',
+            padding: 'var(--spacing-m)',
           }}
         >
           {Object.entries(stories)
@@ -48,17 +80,33 @@ export function createSingleStory<
                 story.parameters?.customStyles ?? {};
               const StoryStyles = ({
                 children,
-              }: PropsWithChildren): JSX.Element => (
-                <div
-                  // eslint-disable-next-line react/forbid-dom-props
-                  style={{
-                    ...style,
-                    ...storyStyles,
-                  }}
-                >
-                  {children}
-                </div>
-              );
+              }: PropsWithChildren): JSX.Element => {
+                const backgroundColor =
+                  story.globals?.backgrounds?.value ?? undefined;
+
+                const refCallBack = (node: HTMLDivElement): void => {
+                  if (!node) return;
+                  runPlayFunctions &&
+                    story.play?.({
+                      ...context,
+                      canvasElement: node,
+                    });
+                };
+
+                return (
+                  <div
+                    ref={refCallBack}
+                    className={backgroundColor}
+                    // eslint-disable-next-line react/forbid-dom-props
+                    style={{
+                      ...style,
+                      ...storyStyles,
+                    }}
+                  >
+                    {children}
+                  </div>
+                );
+              };
 
               const StoryPseudoStates = ({
                 children,
@@ -66,7 +114,7 @@ export function createSingleStory<
                 const pseudoStates =
                   story.parameters?.imageSnapshot?.pseudoStates || [];
                 return (
-                  <div className={'paddingM'}>
+                  <>
                     {pseudoStates.map((state: string) => (
                       <div key={state}>
                         <Paragraph
@@ -77,7 +125,7 @@ export function createSingleStory<
                         <div data-pseudo-state={state}>{children}</div>
                       </div>
                     ))}
-                  </div>
+                  </>
                 );
               };
 
@@ -135,22 +183,30 @@ export function createSingleStory<
     parameters: {
       chromatic: {
         disableSnapshot: false,
-      },
-      customStyles: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 'var(--spacing-m)',
+        delay: delay ?? (hasPseudo ? 100 : undefined),
       },
       pseudo: {
-        hover: [
-          `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
-        active: [
-          `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
-        focus: [
-          `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
-        ],
+        hover: Array.isArray(meta.parameters?.pseudoSelector)
+          ? meta.parameters.pseudoSelector.map(
+              (sel: string) => `[data-pseudo-state="hover"] ${sel}`
+            )
+          : [
+              `[data-pseudo-state="hover"] ${meta.parameters?.pseudoSelector || '> *'}`,
+            ],
+        active: Array.isArray(meta.parameters?.pseudoSelector)
+          ? meta.parameters.pseudoSelector.map(
+              (sel: string) => `[data-pseudo-state="active"] ${sel}`
+            )
+          : [
+              `[data-pseudo-state="active"] ${meta.parameters?.pseudoSelector || '> *'}`,
+            ],
+        focus: Array.isArray(meta.parameters?.pseudoSelector)
+          ? meta.parameters.pseudoSelector.map(
+              (sel: string) => `[data-pseudo-state="focus"] ${sel}`
+            )
+          : [
+              `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
+            ],
       },
     },
   };

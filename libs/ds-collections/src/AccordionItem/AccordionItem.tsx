@@ -4,6 +4,7 @@ import { Size, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { AccordionItemProps } from './AccordionItem.types';
+import { getAccordionItemKeepMountedDefault } from './defaults';
 import { getAccordionSizeDefault } from '../Accordion/defaults';
 import { AccordionContext } from '../AccordionContext/AccordionContext';
 import styles from '../AccordionItem/AccordionItem.module.scss';
@@ -20,6 +21,7 @@ export const AccordionItem = ({
   titleAs,
   isDefaultExpanded,
   isExpanded: isExpandedExternal,
+  keepMounted = getAccordionItemKeepMountedDefault(),
   svgPath,
   onClick,
   children,
@@ -109,13 +111,19 @@ export const AccordionItem = ({
           </div>
         </button>
       </Tag>
-      <div
-        className={isExpanded ? contentClassNames : styles.content_collapsed}
-      >
-        {children}
-      </div>
+      {keepMounted ? (
+        <div
+          className={isExpanded ? contentClassNames : styles.content_collapsed}
+        >
+          {children}
+        </div>
+      ) : (
+        isExpanded && <div className={contentClassNames}>{children}</div>
+      )}
     </div>
   );
 };
 
 AccordionItem.displayName = 'AccordionItem';
+
+export { getAccordionItemKeepMountedDefault };

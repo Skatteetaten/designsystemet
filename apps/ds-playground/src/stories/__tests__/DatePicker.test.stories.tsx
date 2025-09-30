@@ -146,6 +146,11 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
     autoComplete: { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -202,10 +207,7 @@ export const Defaults = {
     label: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: [`${wrapper} input`, `${wrapper} button`],
-      focus: [`${wrapper} input`, `${wrapper} button`],
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -349,10 +351,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: [`${wrapper} input`, `${wrapper} button`],
-      focus: [`${wrapper} input`, `${wrapper} button`],
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

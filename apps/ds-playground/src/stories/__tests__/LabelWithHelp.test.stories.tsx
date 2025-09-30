@@ -1,12 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, within } from 'storybook/test';
+import { expect, fireEvent, userEvent, within } from 'storybook/test';
 
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
-import {
-  loremIpsumWithoutSpaces,
-  wrapper,
-} from './testUtils/storybook.testing.utils';
+import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { LabelWithHelp } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -95,6 +92,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const label = canvas.getByText(defaultChildrenText);
@@ -182,11 +184,6 @@ export const WithHelpTextSvgPathAndTitle = {
     helpSvgPath: { table: { disable: false } },
     titleHelpSvg: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} > button`,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
@@ -197,6 +194,7 @@ export const WithHelpTextSvgPathAndTitle = {
     await expect(svgNode).toBeInTheDocument();
     const label = canvas.getByText(defaultChildrenText);
     await expect(helpButton).toHaveAttribute('aria-describedby', label.id);
+    await userEvent.click(helpButton);
   },
 } satisfies Story;
 

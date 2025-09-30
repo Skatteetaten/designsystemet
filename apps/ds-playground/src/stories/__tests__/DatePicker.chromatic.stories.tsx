@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/DatePicker',
   component: DatePicker,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: ['input', 'button'],
+  },
 } satisfies Meta<typeof DatePicker>;
 export default meta;
 export const Snapshots = createSingleStory(DatePickerStories, meta);

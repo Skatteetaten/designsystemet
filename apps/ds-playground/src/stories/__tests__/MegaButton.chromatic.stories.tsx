@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/MegaButton',
   component: MegaButton,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: '[data-testid="pseudoStates"]',
+  },
 } satisfies Meta<typeof MegaButton>;
 export default meta;
 export const Snapshots = createSingleStory(MegaButtonStories, meta);

@@ -12,3 +12,9 @@ const meta = {
 } satisfies Meta<typeof ErrorSummary>;
 export default meta;
 export const Snapshots = createSingleStory(ErrorSummaryStories, meta);
+export const BreakpointXS = createSingleStory(ErrorSummaryStories, meta, {
+  viewport: '--breakpoint-xs',
+});
+export const Mobile = createSingleStory(ErrorSummaryStories, meta, {
+  viewport: '--mobile',
+});

@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof DescriptionList>;
 export default meta;
 export const Snapshots = createSingleStory(DescriptionListStories, meta);
+export const BreakpointXS = createSingleStory(DescriptionListStories, meta, {
+  viewport: '--breakpoint-xs',
+});

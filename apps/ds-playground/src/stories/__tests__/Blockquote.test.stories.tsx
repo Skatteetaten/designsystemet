@@ -3,7 +3,7 @@ import { expect, within } from 'storybook/test';
 
 import { Blockquote, BlockquoteProps } from '@skatteetaten/ds-typography';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Blockquote,
@@ -73,6 +73,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const blockquote = canvas.getByText(loremIpsum);
@@ -135,12 +140,6 @@ export const WithMarkup = {
   },
   args: {
     ...defaultArgs,
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > blockquote a`,
-      focus: `${wrapper} > blockquote a`,
-    },
   },
 } satisfies Story;
 

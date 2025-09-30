@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/Link',
   component: Link,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: '> a',
+  },
 } satisfies Meta<typeof Link>;
 export default meta;
 export const Snapshots = createSingleStory(LinkStories, meta);

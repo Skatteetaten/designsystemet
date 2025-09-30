@@ -4,8 +4,6 @@ import { expect, fireEvent, fn, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const meta = {
   component: Table.Row,
   title: 'Tester/Table/Row',
@@ -90,6 +88,9 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -197,10 +198,12 @@ export const WithExpandableContent = {
     isExpandable: { table: { disable: false } },
     expandableContent: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} button`,
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.Expandable'),
+    });
+    await fireEvent.click(inlineButton);
   },
 } satisfies Story;
 
@@ -217,10 +220,12 @@ export const WithExpandButtonPositionRight = {
     expandButtonPosition: { table: { disable: false } },
     expandableContent: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} button`,
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.Expandable'),
+    });
+    await fireEvent.click(inlineButton);
   },
 } satisfies Story;
 

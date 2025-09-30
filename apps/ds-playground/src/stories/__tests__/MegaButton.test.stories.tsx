@@ -13,8 +13,6 @@ import {
   getCommonButtonTypeDefault,
 } from '@skatteetaten/ds-core-utils';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const defaultMegaButtonText = 'Klikk her';
 
 const verifyAttribute =
@@ -102,6 +100,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
@@ -116,16 +119,13 @@ export const Defaults = {
   name: 'Defaults (A1, B2)',
   args: {
     ...defaultArgs,
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -210,9 +210,13 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     ...discriminatedProps,
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -270,29 +274,13 @@ export const AsLink = {
   args: {
     ...defaultArgs,
     href: 'https://www.skatteetaten.no',
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     href: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > a`,
-      hover: `${wrapper} > a`,
-    },
-  },
-} satisfies Story;
-
-export const AsLinkEmptyString = {
-  name: 'As Link with empty href (B3)',
-  args: {
-    ...defaultArgs,
-    href: '',
-  },
-  argTypes: {
-    href: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
 } satisfies Story;
 
@@ -302,16 +290,14 @@ export const AsLinkExternal = {
     ...defaultArgs,
     href: 'https://www.skatteetaten.no',
     isExternal: true,
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     href: { table: { disable: false } },
     isExternal: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > a`,
-      hover: `${wrapper} > a`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

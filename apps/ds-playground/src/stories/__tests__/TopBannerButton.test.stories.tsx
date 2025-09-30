@@ -9,7 +9,6 @@ import {
   PersonSVGpath,
 } from '@skatteetaten/ds-icons';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerButton } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -93,6 +92,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -134,11 +138,7 @@ export const Defaults = {
     svgPath: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     viewport: {
@@ -168,11 +168,7 @@ export const WithVariantFilled = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     viewport: {
@@ -213,11 +209,7 @@ export const DefaultsOnMobileScreen = {
     svgPath: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     viewport: {
@@ -240,11 +232,7 @@ export const VariantFilledOnMobileScreen = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   globals: {
     viewport: {

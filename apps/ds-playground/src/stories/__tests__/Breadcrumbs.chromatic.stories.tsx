@@ -11,4 +11,9 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Breadcrumbs>;
 export default meta;
+
 export const Snapshots = createSingleStory(BreadcrumbsStories, meta);
+export const BreakpointXS = createSingleStory(BreadcrumbsStories, meta, {
+  viewport: '--breakpoint-xs',
+  runPlayFunctions: true,
+});

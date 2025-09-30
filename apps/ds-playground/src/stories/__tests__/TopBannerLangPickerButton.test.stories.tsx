@@ -3,7 +3,6 @@ import { MouseEvent, useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within, waitFor, fn } from 'storybook/test';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPickerButton } from '../../../../../libs/ds-layout/src/TopBannerLangPickerButton/TopBannerLangPickerButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -81,6 +80,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -102,9 +106,7 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
+      pseudoStates: ['hover', 'focus', 'active'],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

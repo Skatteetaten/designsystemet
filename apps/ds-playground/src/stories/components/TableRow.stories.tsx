@@ -16,14 +16,6 @@ const meta = {
   component: Table.Row,
   title: 'Komponenter/Table/Row',
   argTypes: {
-    // @ts-expect-error - Props til TableRowWithIconButton kommer med på storybook pga Table.Row i isExpandableContentRows og skal disables.
-    classNames: { table: { disable: true } },
-    context: { table: { disable: true } },
-    svgPath: { table: { disable: true } },
-    hideIconButton: { table: { disable: true } },
-    iconButtonAriaExpanded: { table: { disable: true } },
-    isExpandButtonDisabled: { table: { disable: true } },
-    onExpandClick: { table: { disable: true } },
     // Props
     children: { control: false, table: { category: category.props } },
     isExpandable: {

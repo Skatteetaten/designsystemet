@@ -12,3 +12,15 @@ const meta = {
 } satisfies Meta<typeof Footer>;
 export default meta;
 export const Snapshots = createSingleStory(FooterStories, meta);
+export const BreakpointXS = createSingleStory(FooterStories, meta, {
+  viewport: '--breakpoint-xs',
+});
+export const BreakpointS = createSingleStory(FooterStories, meta, {
+  viewport: '--breakpoint-s',
+});
+export const BreakpointM = createSingleStory(FooterStories, meta, {
+  viewport: '--breakpoint-m',
+});
+export const BreakpointL = createSingleStory(FooterStories, meta, {
+  viewport: '--breakpoint-l',
+});

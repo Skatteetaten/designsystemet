@@ -11,4 +11,5 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Accordion>;
 export default meta;
+
 export const Snapshots = createSingleStory(AccordionStories, meta);

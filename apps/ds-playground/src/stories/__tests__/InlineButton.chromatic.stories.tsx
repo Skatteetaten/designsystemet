@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/InlineButton',
   component: InlineButton,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: '> button',
+  },
 } satisfies Meta<typeof InlineButton>;
 export default meta;
 export const Snapshots = createSingleStory(InlineButtonStories, meta);

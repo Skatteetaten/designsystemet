@@ -28,7 +28,6 @@ export default defineConfig({
         plugins: [
           // The plugin will run tests for the stories defined in your Storybook config
           // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
-          //TODO bedre config av tags. Exclude vs skip
           storybookTest({
             configDir: path.join(dirname, 'apps/ds-playground/.storybook'),
             storybookUrl: 'http://127.0.0.1:4400',
@@ -36,6 +35,7 @@ export default defineConfig({
         ],
         test: {
           name: 'storybook',
+          exclude: ['apps/ds-playground/src/stories/**/!(*.test).stories.tsx'],
           browser: {
             enabled: true,
             headless: true,

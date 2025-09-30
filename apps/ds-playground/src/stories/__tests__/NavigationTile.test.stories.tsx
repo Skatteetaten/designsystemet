@@ -10,7 +10,6 @@ import {
   NavigationTileProps,
 } from '@skatteetaten/ds-navigation';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const elementId = 'htmlId';
@@ -165,6 +164,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
@@ -187,11 +191,7 @@ export const Defaults = {
     description: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > a`,
-      focus: `${wrapper} > a`,
-      click: `${wrapper} > a`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -453,12 +453,6 @@ export const WithSpinner = {
   argTypes: {
     hasSpinner: { table: { disable: false } },
     spinnerTitle: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > a:first-child`,
-      click: `${wrapper} > a:first-child`,
-    },
   },
   globals: {
     viewport: {

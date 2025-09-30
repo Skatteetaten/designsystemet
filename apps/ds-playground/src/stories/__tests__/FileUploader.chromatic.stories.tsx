@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/FileUploader',
   component: FileUploader,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'button',
+  },
 } satisfies Meta<typeof FileUploader>;
 export default meta;
 export const Snapshots = createSingleStory(FileUploaderStories, meta);

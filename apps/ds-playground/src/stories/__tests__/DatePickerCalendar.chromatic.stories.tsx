@@ -12,3 +12,6 @@ const meta = {
 } satisfies Meta<typeof DatePickerCalendar>;
 export default meta;
 export const Snapshots = createSingleStory(DatePickerCalendarStories, meta);
+export const Mobile = createSingleStory(DatePickerCalendarStories, meta, {
+  viewport: '--mobile',
+});

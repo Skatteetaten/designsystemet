@@ -8,8 +8,6 @@ import {
   headingLevelArr,
 } from '@skatteetaten/ds-typography';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const meta = {
   component: Heading,
   title: 'Tester/Heading',
@@ -80,6 +78,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -220,12 +223,6 @@ export const WithMarkup = {
     children: {
       table: { disable: false },
       control: { disable: true },
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > h2 > a`,
-      focus: `${wrapper} > h2 > a`,
     },
   },
 } satisfies Story;

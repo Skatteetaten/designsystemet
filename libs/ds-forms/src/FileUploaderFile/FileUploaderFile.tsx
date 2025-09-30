@@ -20,6 +20,7 @@ export const FileUploaderFile = ({
   href,
   shouldAnimate,
   showSpinner,
+  deleteButtonRef,
   onClick,
   onClickDelete,
   children,
@@ -47,6 +48,7 @@ export const FileUploaderFile = ({
           }}
           rightContent={
             <IconButton
+              ref={deleteButtonRef}
               className={styles.fileDeleteButton}
               svgPath={CancelSVGpath}
               size={'extraSmall'}

@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/IconButton',
   component: IconButton,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: '> button',
+  },
 } satisfies Meta<typeof IconButton>;
 export default meta;
 export const Snapshots = createSingleStory(IconButtonStories, meta);

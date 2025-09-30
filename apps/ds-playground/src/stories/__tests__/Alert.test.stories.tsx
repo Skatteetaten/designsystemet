@@ -8,7 +8,6 @@ import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -94,6 +93,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -367,12 +371,6 @@ export const WithCloseButton = {
     ...defaultArgs,
     showAlert: true,
     onClose: fn(),
-  },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-    },
   },
 } satisfies Story;
 

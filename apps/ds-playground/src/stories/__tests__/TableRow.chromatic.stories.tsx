@@ -11,4 +11,7 @@ const meta = {
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Table.Row>;
 export default meta;
-export const Snapshots = createSingleStory(TableRowStories, meta);
+export const Snapshots = createSingleStory(TableRowStories, meta, {
+  runPlayFunctions: true,
+  delay: 100,
+});

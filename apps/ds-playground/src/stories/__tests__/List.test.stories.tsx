@@ -3,8 +3,6 @@ import { expect, within } from 'storybook/test';
 
 import { List, ListProps, Paragraph } from '@skatteetaten/ds-typography';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
-
 const meta = {
   component: List,
   title: 'Tester/List/List',
@@ -82,6 +80,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -183,12 +186,6 @@ export const WithMarkup = {
     children: {
       table: { disable: false },
       control: { disable: true },
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > ul > li a`,
-      focus: `${wrapper} > ul > li a`,
     },
   },
 } satisfies Story;

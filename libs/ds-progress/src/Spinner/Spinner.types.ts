@@ -2,12 +2,10 @@ import { Ref } from 'react';
 
 import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
 
-export const spinnerSizeArr = [
-  'small',
-  'medium',
-  'large',
-] as const satisfies readonly Size[];
-export type SpinnerSize = (typeof spinnerSizeArr)[number];
+export type SpinnerSize = Extract<
+  Size,
+  'small' | 'medium' | 'large' | 'extraLarge'
+>;
 
 export const spinnerColorArr = ['white', 'black', 'blue'] as const;
 export type SpinnerColor = (typeof spinnerColorArr)[number];

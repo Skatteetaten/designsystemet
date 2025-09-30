@@ -9,6 +9,12 @@ const meta = {
   title: 'Chromatic/NavigationTile',
   component: NavigationTile,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: '> a',
+  },
 } satisfies Meta<typeof NavigationTile>;
 export default meta;
 export const Snapshots = createSingleStory(NavigationTileStories, meta);
+export const Mobile = createSingleStory(NavigationTileStories, meta, {
+  viewport: '--mobile',
+});

@@ -7,7 +7,10 @@ import {
   getAccordionSizeDefault,
 } from './defaults';
 import { AccordionContext } from '../AccordionContext/AccordionContext';
-import { AccordionItem } from '../AccordionItem/AccordionItem';
+import {
+  AccordionItem,
+  getAccordionItemKeepMountedDefault,
+} from '../AccordionItem/AccordionItem';
 
 import styles from './Accordion.module.scss';
 
@@ -48,4 +51,5 @@ export {
   getAccordionIconPositionDefault,
   getAccordionBackgroundColorDefault,
   getAccordionSizeDefault,
+  getAccordionItemKeepMountedDefault,
 };
