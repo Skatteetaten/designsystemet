@@ -1,0 +1,6 @@
+import{j as o}from"./jsx-runtime-BjG_zV1W.js";import{C as e}from"./index-CWrHDE5u.js";import{c as t}from"./helpers-B90wjoUE.js";import"./index-CGk5cNE3.js";import"./index-D_ouKaeX.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DfnG5Ebn.js";import"./index-DAV9Xejq.js";import"./index-uxUkjR_c.js";import"./index-DXWIZOJk.js";e.Header.displayName="Card.Header";const i="Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.",m={children:i,rightContent:"høyrejustert innhold"},j={component:e.Header,title:"Komponenter/Card/Header",argTypes:{children:{control:"text",table:{category:t.props}},classNames:{control:!1,table:{category:t.props}},rightContent:{control:"text",table:{category:t.props}}},args:{...m}},r={render:p=>o.jsx(e,{children:o.jsx(e.Header,{...p})})};var a,s,n;r.parameters={...r.parameters,docs:{...(a=r.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  render: args => <Card>
+      <Card.Header {...args} />
+    </Card>
+} satisfies Story`,...(n=(s=r.parameters)==null?void 0:s.docs)==null?void 0:n.source}}};const H=["Preview"];export{r as Preview,H as __namedExportsOrder,j as default};
+//# sourceMappingURL=CardHeader.stories-DugugI0z.js.map
