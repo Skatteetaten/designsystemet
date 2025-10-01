@@ -10,6 +10,10 @@ export interface TopBannerExternalUserMenuProps extends BaseProps {
   user: User;
   /** Antall ubehandlede varsler */
   notificationCount?: number;
+  /** Base hostname/domain for lenkene til minside. */
+  hostname?: string;
+  /** Skal de innebyde lenkene skjules? */
+  hideDefaultLinks?: boolean;
   /** Funksjon som kalles når brukeren klikker på logge ut knappen */
   onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
   /** Funksjon som kalles når brukeren klikker på bytt bruker knappen */
