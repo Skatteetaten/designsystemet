@@ -207,6 +207,13 @@ export function createSingleStory<
           : [
               `[data-pseudo-state="focus"] ${meta.parameters?.pseudoSelector || '> *'}`,
             ],
+        focusVisible: Array.isArray(meta.parameters?.pseudoSelector)
+          ? meta.parameters.pseudoSelector.map(
+              (sel: string) => `[data-pseudo-state="focus-visible"] ${sel}`
+            )
+          : [
+              `[data-pseudo-state="focus-visible"] ${meta.parameters?.pseudoSelector || '> *'}`,
+            ],
       },
     },
   };

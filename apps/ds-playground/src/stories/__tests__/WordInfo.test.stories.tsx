@@ -51,7 +51,7 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
-      pseudoStates: ['hover', 'focus', 'active'],
+      pseudoStates: ['hover', 'focus-visible', 'active'],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -77,7 +77,34 @@ export const IsOpen = {
   },
 } satisfies Story;
 
-const TemplateWithText: StoryFn<typeof WordInfo> = () => (
+const TemplateWithParagraph: StoryFn<typeof WordInfo> = () => (
+  <Paragraph>
+    {'Det er legen som melder dødsfall i Norge til '}
+    <WordInfo>
+      <WordInfo.Trigger>{'Folkeregisteret'}</WordInfo.Trigger>
+      <WordInfo.Content>
+        <Heading as={'h3'} level={4}>
+          {'Folkeregisteret'}
+        </Heading>
+        <Paragraph>{'Forklaring på Folkeregisteret'}</Paragraph>
+      </WordInfo.Content>
+    </WordInfo>
+    {'. Du trenger ikke å melde noe selv.'}
+  </Paragraph>
+);
+
+export const WithinParagraph = {
+  name: 'Within Paragraph (A4)',
+  render: TemplateWithParagraph,
+  args: {},
+  parameters: {
+    imageSnapshot: {
+      pseudoStates: ['hover', 'focus-visible', 'active'],
+    },
+  },
+} satisfies Story;
+
+const TemplateWithHeading: StoryFn<typeof WordInfo> = () => (
   <Heading as={'h2'} level={2}>
     {'Det er legen som melder dødsfall i Norge til '}
     <WordInfo>
@@ -93,13 +120,13 @@ const TemplateWithText: StoryFn<typeof WordInfo> = () => (
   </Heading>
 );
 
-export const WithinText = {
-  name: 'Within Text (A4)',
-  render: TemplateWithText,
+export const WithinHeading = {
+  name: 'Within Heading (A4)',
+  render: TemplateWithHeading,
   args: {},
   parameters: {
     imageSnapshot: {
-      pseudoStates: ['hover', 'focus', 'active'],
+      pseudoStates: ['hover', 'focus-visible', 'active'],
     },
   },
 } satisfies Story;

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useMergeRefs } from '@floating-ui/react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { BookOpenIcon } from '@skatteetaten/ds-icons';
 
 import { WordInfoTriggerProps } from './WordInfoTrigger.types';
@@ -14,7 +14,7 @@ import styles from './WordInfoTrigger.module.scss';
 export const WordInfoTrigger = ({
   ref,
   id,
-  className,
+  className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
   hasIcon = true,

@@ -99,7 +99,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -128,7 +128,7 @@ export const WithoutIcon = {
     hasIcon: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
 

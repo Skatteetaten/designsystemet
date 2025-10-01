@@ -19,7 +19,7 @@ export const WordInfoContent = ({
     <PopoverContent
       ref={ref}
       id={id}
-      className={`${styles.wordInfoContent} ${className.trim()}`}
+      className={`${styles.wordInfoContent} ${className}`.trim()}
       classNames={{
         contentWrapper: styles.contentWrapper,
         closeButton: styles.closeButton,
