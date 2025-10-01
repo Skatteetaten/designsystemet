@@ -100,6 +100,7 @@ const meta = {
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
     onHelpToggle: { ...htmlEventDescription },
+    onKeyDown: { ...htmlEventDescription },
   },
   args: {
     label: 'Navn',
