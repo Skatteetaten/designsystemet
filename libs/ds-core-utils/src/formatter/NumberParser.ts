@@ -21,7 +21,6 @@ export class NumberParser {
       `[${parts.find((d) => d.type === 'decimal')?.value}]`
     );
     this._numeral = new RegExp(`[${numerals.join('')}]`, 'g');
-    //TODO: må jeg tenke på exponentMinusSign
     this._minusSign = new RegExp(
       `[${parts.find((d) => d.type === 'minusSign')?.value}]`,
       'g'
