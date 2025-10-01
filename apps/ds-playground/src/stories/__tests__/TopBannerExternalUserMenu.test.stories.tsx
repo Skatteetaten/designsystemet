@@ -331,7 +331,7 @@ export const WithCustomHostname: Story = {
     notificationCount: 0,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

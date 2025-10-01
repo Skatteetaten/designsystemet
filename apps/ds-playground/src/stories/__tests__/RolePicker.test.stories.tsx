@@ -1,14 +1,7 @@
 import { useRef } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-import {
-  expect,
-  fireEvent,
-  fn,
-  userEvent,
-  waitFor,
-  within,
-} from 'storybook/test';
+import { expect, fireEvent, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -1055,7 +1048,9 @@ export const WithErrorReset = {
   },
   render: ErrorThenSuccessTemplate,
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: {
+      disableSnapshot: true,
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
