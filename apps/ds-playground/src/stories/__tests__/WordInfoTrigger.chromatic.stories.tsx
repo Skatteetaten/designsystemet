@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react-vite';
 
 import { WordInfo } from '@skatteetaten/ds-overlays';
 
-import * as WordInfoTriggerStories from '../components/WordInfoTrigger.stories';
+import * as WordInfoTriggerStories from './WordInfoTrigger.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
