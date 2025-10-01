@@ -13,6 +13,7 @@ export type PopoverPosition = (typeof popoverPositionArr)[number];
 
 export interface PopoverContentProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
+  classNames?: { contentWrapper?: string; closeButton?: string };
   /** Tekst */
   children: ReactNode;
 }

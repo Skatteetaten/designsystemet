@@ -36,6 +36,9 @@ const meta = {
     </WordInfo>
   ),
   tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof WordInfo.Trigger>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -51,6 +54,9 @@ export const WithRef = {
   },
   argTypes: {
     ref: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -73,6 +79,9 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -90,8 +99,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
-    pseudoStates: ['hover', 'focus', 'active'],
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -120,8 +128,7 @@ export const WithoutIcon = {
     hasIcon: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
-    pseudoStates: ['hover', 'focus', 'active'],
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
 } satisfies Story;
 

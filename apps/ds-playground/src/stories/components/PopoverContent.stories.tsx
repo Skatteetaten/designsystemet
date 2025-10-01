@@ -11,6 +11,7 @@ export default {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
   },
 } satisfies Meta<typeof Popover.Content>;
 

@@ -11,7 +11,7 @@ export interface WordInfoProps extends Omit<PopoverProps, 'color'> {
   onClose?: () => void;
   /** Plassering av popup-boksen i forhold til teksten */
   position?: PopoverPosition;
-  /** WordInfo.Term og WordInfo.Content */
+  /** WordInfo.Trigger og WordInfo.Content */
   children?: ReactNode;
 }
 

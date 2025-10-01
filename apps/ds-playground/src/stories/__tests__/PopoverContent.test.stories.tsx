@@ -23,7 +23,7 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    // Aria
+    classNames: { table: { disable: true } },
   },
   render: (args): JSX.Element => (
     <Popover isOpen>

@@ -20,6 +20,10 @@ export const WordInfoContent = ({
       ref={ref}
       id={id}
       className={`${styles.wordInfoContent} ${className.trim()}`}
+      classNames={{
+        contentWrapper: styles.contentWrapper,
+        closeButton: styles.closeButton,
+      }}
       lang={lang}
       data-testid={dataTestId}
     >

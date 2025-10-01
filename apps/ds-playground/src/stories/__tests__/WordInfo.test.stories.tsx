@@ -1,7 +1,7 @@
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
-import { Popover, WordInfo } from '@skatteetaten/ds-overlays';
+import { WordInfo } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 const defaultText = 'arkskrift';
@@ -25,7 +25,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: { table: { disable: true } },
+    children: { control: false, table: { disable: true } },
     disableAutoDismiss: { table: { disable: true } },
     disableAutoDismissOnMobile: { table: { disable: true } },
     isOpen: { table: { disable: true } },
@@ -36,7 +36,10 @@ const meta = {
   },
   render: Template,
   tags: ['test'],
-} satisfies Meta<typeof Popover>;
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
+} satisfies Meta<typeof WordInfo>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
@@ -48,7 +51,6 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
-      disableSnapshot: false,
       pseudoStates: ['hover', 'focus', 'active'],
     },
   },
@@ -66,9 +68,6 @@ export const IsOpen = {
   },
   argTypes: {
     isOpen: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: false },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -97,16 +96,10 @@ const TemplateWithText: StoryFn<typeof WordInfo> = () => (
 export const WithinText = {
   name: 'Within Text (A4)',
   render: TemplateWithText,
-  args: {
-    isOpen: true,
-  },
-  argTypes: {
-    isOpen: { table: { disable: false } },
-  },
+  args: {},
   parameters: {
     imageSnapshot: {
-      disableSnapshot: false,
+      pseudoStates: ['hover', 'focus', 'active'],
     },
-    pseudoStates: ['hover', 'focus', 'active'],
   },
 } satisfies Story;
