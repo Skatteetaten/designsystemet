@@ -6,7 +6,6 @@ import { useMergeRefs } from '@floating-ui/react';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { BookOpenIcon } from '@skatteetaten/ds-icons';
 
-import { getWordInfoHasIconDefault } from './defaults';
 import { WordInfoTriggerProps } from './WordInfoTrigger.types';
 import { PopoverContext } from '../PopoverContext/PopoverContext';
 
@@ -49,7 +48,5 @@ export const WordInfoTrigger = ({
     </button>
   );
 };
-
-export { getWordInfoHasIconDefault };
 
 WordInfoTrigger.displayName = 'WordInfoTrigger';
