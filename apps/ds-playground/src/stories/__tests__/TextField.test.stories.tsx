@@ -292,6 +292,22 @@ export const WithDefaultValueAndThousandSeparator = {
   play: verifyAttribute('value', '10 000'),
 } satisfies Story;
 
+export const WithValueAndThousandSeparator = {
+  name: 'With Value and ThousandSeparator',
+  args: {
+    ...defaultArgs,
+    value: 10000,
+    thousandSeparator: true,
+  },
+  argTypes: {
+    value: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: verifyAttribute('value', '10 000'),
+} satisfies Story;
+
 export const WithAutoCompleteInputModeNameAndPlaceholder = {
   name: 'With AutoComplete InputMode Name And Placeholder (A3, A6, B1)',
   args: {
