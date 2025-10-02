@@ -1,6 +1,7 @@
 {
   "combobox.Loading": "Loading",
   "combobox.NoResults": "No results for «{{searchTerm}}». Try a different search.",
+  "combobox.OneOptionAvailable": "One option available. Use arrow keys to navigate.",
   "combobox.OptionsAvailable": "{{count}} options available. Use arrow keys to navigate.",
   "combobox.TypeOrSelect": "Type or select",
   "datepicker.April": "April",

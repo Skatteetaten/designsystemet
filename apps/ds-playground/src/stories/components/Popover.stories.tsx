@@ -26,13 +26,10 @@ const meta = {
         category: category.props,
         defaultValue: { summary: getPopoverColorDefault() },
       },
-      control: 'radio',
     },
-
     disableAutoDismiss: { table: { category: category.props } },
     disableAutoDismissOnMobile: { table: { category: category.props } },
     position: {
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getPopoverPositionDefault().toString() },

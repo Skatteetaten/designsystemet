@@ -46,5 +46,6 @@
   "topbannerexternalusermenu.NotificationCountMessage": "Varslar, {{count}} ulesne",
   "topbannerexternalusermenu.OnBehalfOf": "På vegner av",
   "topbannerexternalusermenu.OneNotificationMessage": "(Varsel, 1 ulesen)",
-  "topbannerexternalusermenu.SwitchUser": "Byt brukar"
+  "topbannerexternalusermenu.SwitchUser": "Byt brukar",
+  "wordinfo.WordExplanation": "(ordforklaring)"
 }

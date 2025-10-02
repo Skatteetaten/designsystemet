@@ -1,26 +1,25 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Popover } from '@skatteetaten/ds-overlays';
+import { WordInfo } from '@skatteetaten/ds-overlays';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 
 export default {
-  component: Popover.Content,
-  title: 'Komponenter/Popover/Content',
+  component: WordInfo.Content,
+  title: 'Komponenter/WordInfo/Content',
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    classNames: { control: false, table: { category: category.props } },
   },
-} satisfies Meta<typeof Popover.Content>;
+} satisfies Meta<typeof WordInfo.Content>;
 
-export const Preview: StoryObj<typeof Popover> = {
+export const Preview: StoryObj<typeof WordInfo.Content> = {
   render: (args) => (
     <div className={'centerContent'}>
-      <Popover isOpen>
-        <Popover.Content {...args}>{loremIpsum}</Popover.Content>
-      </Popover>
+      <WordInfo isOpen>
+        <WordInfo.Content {...args}>{loremIpsum}</WordInfo.Content>
+      </WordInfo>
     </div>
   ),
   args: {

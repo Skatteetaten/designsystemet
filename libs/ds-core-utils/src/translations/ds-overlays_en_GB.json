@@ -46,5 +46,6 @@
   "topbannerexternalusermenu.NotificationCountMessage": "Notifications, {{count}} unread",
   "topbannerexternalusermenu.OnBehalfOf": "On behalf of",
   "topbannerexternalusermenu.OneNotificationMessage": "Notification, 1 unread",
-  "topbannerexternalusermenu.SwitchUser": "Switch user"
+  "topbannerexternalusermenu.SwitchUser": "Switch user",
+  "wordinfo.WordExplanation": "(word explanation)"
 }
