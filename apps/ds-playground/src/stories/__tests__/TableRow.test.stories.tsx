@@ -302,10 +302,12 @@ export const WithExpandButtonTitle = {
     showExpandButtonTitle: true,
     expandButtonTitle: 'Vis mer',
     expandableContent: 'Ekstra innhold',
+    expandButtonPosition: 'right',
   },
   argTypes: {
     isExpandable: { table: { disable: false } },
     showExpandButtonTitle: { table: { disable: false } },
     expandButtonTitle: { table: { disable: false } },
+    expandButtonPosition: { table: { disable: false } },
   },
 } satisfies Story;
