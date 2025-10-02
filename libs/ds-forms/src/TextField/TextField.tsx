@@ -8,15 +8,14 @@ import {
 } from 'react';
 
 import {
-  dsI18n,
   getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
-  Languages,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
 import { TextFieldProps } from './TextField.types';
+import { addSpacesOrCommas, removeNonNumeric } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { InputCounter } from '../InputCounter/InputCounter';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -71,16 +70,6 @@ export const TextField = ({
   const textboxRef = useRef<HTMLInputElement>(null);
   useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
-  const separator = dsI18n.language === Languages.Engelsk ? ',' : ' ';
-  const addSpacesOrCommas = (value: string): string =>
-    value.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
-  const removeNonNumeric = (value: string): string => {
-    const trimmed = value.trim();
-    const isNegative = /^-/.test(trimmed);
-    const numberOnly = trimmed.replaceAll(/\D+/g, '');
-    return isNegative ? `-${numberOnly}` : numberOnly;
-  };
-
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
     if (onKeyDown) {
       onKeyDown(e);
@@ -93,8 +82,10 @@ export const TextField = ({
 
     const input = e.currentTarget;
     const cursorPosition = input.selectionStart || 0;
-    const value = input.value;
-    const isPreviousCharacterSeparator = /[, ]/.test(value[cursorPosition - 1]);
+    const inputValue = input.value;
+    const isPreviousCharacterSeparator = /[, ]/.test(
+      inputValue[cursorPosition - 1]
+    );
     const selectionLength =
       (input.selectionEnd || 0) - (input.selectionStart || 0);
 
@@ -121,11 +112,12 @@ export const TextField = ({
       const deletePosition = cursorPosition - 1;
 
       const newValue =
-        value.slice(0, deletePosition - 1) + value.slice(cursorPosition);
+        inputValue.slice(0, deletePosition - 1) +
+        inputValue.slice(cursorPosition);
 
       const formattedValue = addSpacesOrCommas(removeNonNumeric(newValue));
 
-      const separatorsInOldValue = value.match(/[, ]/g)?.length || 0;
+      const separatorsInOldValue = inputValue.match(/[, ]/g)?.length || 0;
       const separatorsInNewValue = formattedValue.match(/[, ]/g)?.length || 0;
 
       // hvis det ble fjernet en separator, må vi flytte markøren et ekstra hopp til venstre, med mindre vi sletter den første separatoren.
@@ -174,13 +166,14 @@ export const TextField = ({
   };
 
   /* Slik at value har riktig format også før bruker begynner å skrive i feltet */
-  if (thousandSeparator && value) {
-    value = addSpacesOrCommas(removeNonNumeric(value.toString()));
-  }
-
-  if (thousandSeparator && defaultValue) {
-    defaultValue = addSpacesOrCommas(removeNonNumeric(defaultValue.toString()));
-  }
+  const formattedValue =
+    thousandSeparator && value
+      ? addSpacesOrCommas(removeNonNumeric(value.toString()))
+      : value;
+  const formattedDefaultValue =
+    thousandSeparator && defaultValue
+      ? addSpacesOrCommas(removeNonNumeric(defaultValue.toString()))
+      : defaultValue;
 
   const textboxClassName =
     `${styles.textbox} $ ${label && !hideLabel ? styles.textboxMarginTop : ''} ${
@@ -218,7 +211,7 @@ export const TextField = ({
         data-testid={dataTestId}
         data-variant={variant}
         autoComplete={autoComplete}
-        defaultValue={defaultValue}
+        defaultValue={formattedDefaultValue}
         disabled={disabled}
         form={form}
         inputMode={inputMode}
@@ -230,7 +223,7 @@ export const TextField = ({
         placeholder={placeholder}
         readOnly={readOnly}
         required={required}
-        value={value}
+        value={formattedValue}
         aria-describedby={ariaDescribedBy}
         aria-invalid={!!errorMessage || undefined}
         onBlur={onBlur}
@@ -243,7 +236,7 @@ export const TextField = ({
           inputRef={textboxRef}
           id={characterCounterId}
           characterLimit={characterLimit}
-          value={value ? String(value) : undefined}
+          value={formattedValue ? String(formattedValue) : undefined}
         />
       ) : null}
       <ErrorMessage
