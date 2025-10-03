@@ -4,17 +4,19 @@ Norwegian Tax Administration's official design system - an accessible React comp
 
 ## Tech Stack
 
-- **Framework**: React 19.0.0
-- **Language**: TypeScript 5.8.3 (ESM modules - `"type": "module"` in package.json)
-- **Build Tool**: Nx 21.2.0 (monorepo with multiple packages)
-- **Styling**: SCSS Modules (Sass 1.89.2)
+**Version Information**: Always check `package.json` in the project root for current versions of all dependencies.
+
+- **Framework**: React (ESM modules - `"type": "module"` in package.json)
+- **Language**: TypeScript (ESM modules)
+- **Build Tool**: Nx (monorepo with multiple packages)
+- **Styling**: SCSS Modules (Sass)
 - **Package Manager**: npm >=8.3.0
-- **Testing**: Vitest 3.2.3 with @testing-library/react 16.2.0
-- **Documentation**: Storybook 9.0.18
+- **Testing**: Vitest with @testing-library/react
+- **Documentation**: Storybook
 - **Key Dependencies**:
-  - @floating-ui/react 0.26.28 (tooltips, popovers)
-  - date-fns 4.1.0 (date utilities)
-  - i18next 25.4.2, react-i18next 15.7.2 (internationalization)
+  - @floating-ui/react (tooltips, popovers)
+  - date-fns (date utilities)
+  - i18next, react-i18next (internationalization)
 
 ## Core Commands
 
@@ -33,8 +35,8 @@ npx nx run ds-buttons:test -- Button.test.tsx
 # Stylelint single file
 npx stylelint path/to/Component.module.scss --fix
 
-# Accessibility audit single component (Storybook)
-npm run test:storybook -- --grep "Component accessibility"
+# Test specific component in Storybook (replace "Button" with component name)
+npm run test:storybook -- -t "Button"
 
 # Bundle size impact check
 npx nx run ds-buttons:build -- --analyze
@@ -179,7 +181,7 @@ npx nx run ds-buttons:lint -- --fix libs/ds-buttons/src/Button/Button.tsx
 npx stylelint libs/ds-buttons/src/Button/Button.module.scss --fix
 
 # Test specific component in Storybook
-npm run test:storybook -- --grep "Button"
+npm run test:storybook -- -t "Button"
 
 # Check bundle impact
 npx nx run ds-buttons:build -- --analyze
@@ -198,14 +200,21 @@ npm run typecheck && npm run lint && npm test && npm run build
 # Find component usage across codebase
 rg "Button" --type ts --type tsx
 
-# Check design token usage
-rg "var\(--ds-" --type scss
+# Check design token usage (find all files using a specific token)
+# Simple list view:
+grep -rl --include='*.scss' --include='*.css' --exclude-dir=dist --exclude-dir=node_modules --exclude-dir=.nx -e '--spacing-mega' .
+
+# Tree view (requires tree command, shows file structure):
+grep -rl --include='*.scss' --include='*.css' --exclude-dir=dist --exclude-dir=node_modules --exclude-dir=.nx -e '--spacing-mega' . | tree --fromfile .
+
+# Replace '--spacing-mega' with any token pattern to search:
+# Examples: '--palette-', '--spacing-', '--font-size-', '--semantic-'
 
 # Verify Storybook is working
 npm start
 
-# Check accessibility in specific component
-npm run test:storybook -- --grep "accessibility"
+# Test specific component (includes accessibility checks)
+npm run test:storybook -- -t "Button"
 ```
 
 ## Accessibility Requirements
@@ -221,7 +230,7 @@ npm run test:storybook -- --grep "accessibility"
 - Color contrast ≥4.5:1 (≥3:1 large text) + text alternatives
 - Error messages and validation feedback
 
-**Testing:** `npm run test:storybook -- --grep "accessibility"` + manual keyboard/screen reader testing
+**Testing:** `npm run test:storybook` (includes automated accessibility checks) + manual keyboard/screen reader testing
 
 ## Code Style
 
@@ -429,14 +438,14 @@ export const Component = ({ data, isLoading, error }) => (
 ```scss
 // ✅ CORRECT - Use design tokens
 .component {
-  color: var(--ds-color-text-primary);
-  padding: var(--ds-spacing-medium);
-  font-size: var(--ds-typography-body-large-font-size);
+  color: var(--semantic-page-foreground);
+  padding: var(--spacing-m);
+  font-size: var(--font-size-l);
 }
 
 // ✅ CORRECT - Custom extensions
 .custom {
-  --custom-primary: var(--ds-color-accent-denim);
+  --custom-primary: var(--palette-denim-50);
 }
 
 // ❌ WRONG - Hardcoded values
@@ -446,7 +455,7 @@ export const Component = ({ data, isLoading, error }) => (
 }
 ```
 
-**Categories:** `--ds-color-*`, `--ds-spacing-*`, `--ds-typography-*`, `--ds-border-*`, `--ds-shadow-*`
+**Categories:** `--palette-*`, `--spacing-*`, `--font-size-*`, `--font-weight-*`, `--semantic-*`
 
 ## Internationalization
 
@@ -663,7 +672,7 @@ ls libs/ds-buttons/src/Button/
 
 - Read existing component files first (understand patterns)
 - Follow naming conventions (`variant`, `size`, `color` not `type`)
-- Use design tokens (`var(--ds-*)`) never hardcode values
+- Use design tokens (`var(--palette-*)`, `var(--spacing-*)`, `var(--semantic-*)`) never hardcode values
 - Write Storybook test stories for new behavior
 
 **Step 4: Validation**
@@ -671,7 +680,7 @@ ls libs/ds-buttons/src/Button/
 ```bash
 # Always run these before saying "done"
 npx tsc --noEmit [changed-file].tsx
-npm run test:storybook -- --grep "ComponentName"
+npm run test:storybook -- -t "ComponentName"
 ```
 
 ### Multi-Package Projects
@@ -695,7 +704,7 @@ npm run test:storybook -- --grep "ComponentName"
 
 - Import tokens: `import '@skatteetaten/ds-core-designtokens';`
 - Check available tokens in `libs/ds-core-designtokens/lib/`
-- Use CSS custom properties: `var(--ds-color-accent-denim)`
+- Use CSS custom properties: `var(--palette-denim-50)`, `var(--spacing-m)`, `var(--semantic-*)`
 
 **Test failures:**
 
@@ -737,7 +746,17 @@ import { BaseProps, dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-c
 **Import icons:**
 
 ```typescript
-import { Icon, ExternalIcon } from '@skatteetaten/ds-icons';
+// Option 1: Import pre-built icon components (convenience wrappers)
+import { AccountBoxIcon, ExternalIcon } from '@skatteetaten/ds-icons';
+
+// Option 2: Import SVG paths for use with Icon component (more flexible)
+import { Icon, AccountBoxSVGpath, ExternalSVGpath } from '@skatteetaten/ds-icons';
+
+// Usage with pre-built component
+<AccountBoxIcon ariaLabel="Account" size="medium" />
+
+// Usage with SVG path (allows custom Icon props and variant control)
+<Icon svgPath={AccountBoxSVGpath} ariaLabel="Account" size="medium" variant="systemIcon" />
 ```
 
 **Check component package location:**
