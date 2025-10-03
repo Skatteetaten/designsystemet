@@ -628,7 +628,6 @@ export const ClickLangPickerOpenAndClose = {
   name: 'Click LanguagePicker Open And Close (LanguagePicker C2)',
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -752,7 +751,6 @@ export const WithExtraLangs = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -183,10 +183,7 @@ export const WithOnClick = {
     }),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disable: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

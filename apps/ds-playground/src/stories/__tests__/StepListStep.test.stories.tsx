@@ -182,7 +182,6 @@ export const WithShouldAutoFocusWhenActiveFalse = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
 } satisfies Story;
 
