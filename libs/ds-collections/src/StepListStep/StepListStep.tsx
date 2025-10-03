@@ -145,10 +145,7 @@ export const StepListStep = ({
       )}
 
       <div
-        className={`${styles.stepContent} ${
-          onEdit ? '' : styles.stepContent_noButton
-        } ${stepContentVariantClassName}
-        `.trim()}
+        className={`${styles.stepContent} ${stepContentVariantClassName}`.trim()}
       >
         <div>{children}</div>
         {onEdit && (
