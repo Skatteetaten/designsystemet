@@ -24,13 +24,7 @@
     "@skatteetaten/ds-status": "2.2.0",
     "date-fns": "^4",
     "@skatteetaten/ds-content": "2.2.0",
-    "@skatteetaten/ds-collections": "2.2.0",
-    "vitest": "3.2.3"
-  },
-  "peerDependenciesMeta": {
-    "vitest": {
-      "optional": true
-    }
+    "@skatteetaten/ds-collections": "2.2.0"
   },
   "scripts": {}
 }

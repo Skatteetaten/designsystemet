@@ -28,13 +28,7 @@
     "@skatteetaten/ds-content": "2.2.0",
     "@skatteetaten/ds-overlays": "2.2.0",
     "@skatteetaten/ds-navigation": "2.2.0",
-    "@skatteetaten/ds-collections": "2.2.0",
-    "vitest": "3.2.3"
-  },
-  "peerDependenciesMeta": {
-    "vitest": {
-      "optional": true
-    }
+    "@skatteetaten/ds-collections": "2.2.0"
   },
   "scripts": {},
   "dependencies": {},
