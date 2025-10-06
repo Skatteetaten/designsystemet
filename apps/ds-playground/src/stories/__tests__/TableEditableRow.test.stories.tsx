@@ -114,7 +114,6 @@ export const WithEditButtonRef = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -139,7 +138,6 @@ export const WithEditableContentRef = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

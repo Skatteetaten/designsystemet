@@ -470,7 +470,6 @@ export const IsDefaultExpanded = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
