@@ -114,6 +114,7 @@ export const WithSizeAndPosition = {
         <Spinner className={'bottomSpacingXL'} size={'small'} {...args} />
         <Spinner className={'bottomSpacingXL'} size={'medium'} {...args} />
         <Spinner className={'bottomSpacingXL'} size={'large'} {...args} />
+        <Spinner className={'bottomSpacingXL'} size={'extraLarge'} {...args} />
 
         <Spinner
           className={'bottomSpacingXL'}
@@ -131,6 +132,12 @@ export const WithSizeAndPosition = {
           className={'bottomSpacingXL'}
           titlePosition={'right'}
           size={'large'}
+          {...args}
+        />
+        <Spinner
+          className={'bottomSpacingXL'}
+          titlePosition={'right'}
+          size={'extraLarge'}
           {...args}
         />
       </>

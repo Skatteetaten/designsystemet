@@ -46,5 +46,6 @@
   "topbannerexternalusermenu.NotificationCountMessage": "Varsler, {{count}} uleste",
   "topbannerexternalusermenu.OnBehalfOf": "På vegne av",
   "topbannerexternalusermenu.OneNotificationMessage": "Varsel, 1 ulest",
-  "topbannerexternalusermenu.SwitchUser": "Bytt bruker"
+  "topbannerexternalusermenu.SwitchUser": "Bytt bruker",
+  "wordinfo.WordExplanation": "ordforklaring"
 }

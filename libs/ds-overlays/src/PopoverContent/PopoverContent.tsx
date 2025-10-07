@@ -21,6 +21,7 @@ export const PopoverContent = ({
   ref,
   id,
   className = getCommonClassNameDefault(),
+  classNames,
   lang,
   'data-testid': dataTestId,
   children,
@@ -68,9 +69,13 @@ export const PopoverContent = ({
       className={`${styles.popover} ${colorClassName} ${className}`.trim()}
     >
       <div className={styles.popoverContent}>
-        <div className={styles.popoverContentWrapper}>{children}</div>
+        <div
+          className={`${styles.popoverContentWrapper} ${classNames?.contentWrapper ?? ''}`.trim()}
+        >
+          {children}
+        </div>
         <IconButton
-          className={styles.popoverContentCloseButton}
+          className={`${styles.popoverContentCloseButton} ${classNames?.closeButton ?? ''}`.trim()}
           svgPath={CancelSVGpath}
           title={t('shared.Close')}
           onClick={() => {

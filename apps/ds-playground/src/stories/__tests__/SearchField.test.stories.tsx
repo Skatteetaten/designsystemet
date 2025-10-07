@@ -655,10 +655,7 @@ export const WithControlled = {
   },
   name: 'With Controlled',
   parameters: {
-    HTMLSnapshot: { disable: true },
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

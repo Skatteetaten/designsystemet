@@ -2,7 +2,6 @@ declare const classNames: {
   readonly stepLine_positiveResult: 'stepLine_positiveResult';
   readonly stepLine_neutralResult: 'stepLine_neutralResult';
   readonly step: 'step';
-  readonly stepContent: 'stepContent';
   readonly stepContent_noButton: 'stepContent_noButton';
   readonly stepContent_positiveResult: 'stepContent_positiveResult';
   readonly stepContent_neutralResult: 'stepContent_neutralResult';
@@ -21,6 +20,7 @@ declare const classNames: {
   readonly stepEditButton: 'stepEditButton';
   readonly step_active: 'step_active';
   readonly step_passive: 'step_passive';
+  readonly stepContent: 'stepContent';
   readonly stepSideWrapper: 'stepSideWrapper';
   readonly stepCircle_passive: 'stepCircle_passive';
   readonly stepCircle_active: 'stepCircle_active';

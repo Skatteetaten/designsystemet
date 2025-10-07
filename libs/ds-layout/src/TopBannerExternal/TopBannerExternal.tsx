@@ -255,7 +255,9 @@ export const TopBannerExternal = (({
             {userMenu}
             {onLogOutClick && user && (
               <>
-                <TopBannerUserButton user={user} onClick={onUserClick} />
+                {!hasUserMenuAsChild && (
+                  <TopBannerUserButton user={user} onClick={onUserClick} />
+                )}
                 <TopBannerButton
                   svgPath={LogOutSVGpath}
                   onClick={onLogOutClick}

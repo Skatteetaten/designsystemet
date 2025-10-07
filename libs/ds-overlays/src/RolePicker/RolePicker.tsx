@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
   JSX,
+  useCallback,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -24,7 +25,7 @@ import {
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
 } from './defaults';
-import { RolePickerProps } from './RolePicker.types';
+import { Business, Entity, RolePickerProps } from './RolePicker.types';
 import {
   getModalDismissOnEscDefault,
   getModalDismissOnOutsideClickDefault,
@@ -128,16 +129,38 @@ export const RolePicker = ({
   if (noValidBusinesses) {
     internalTitle = t('rolepicker.NoBusinessesErrorTitle');
   }
+  const handleEntitySelect = useCallback(
+    (entity: Entity): void => {
+      const entityId =
+        'personId' in entity
+          ? (entity.personId as string)
+          : (entity as Business).organizationNumber;
+
+      setLoadingEntityId(entityId);
+      onEntitySelect?.(entity).then((res) => {
+        setError(
+          res?.error
+            ? {
+                entityId,
+                message: res.error,
+              }
+            : undefined
+        );
+        setLoadingEntityId(undefined);
+      });
+    },
+    [onEntitySelect]
+  );
 
   const contextValue = useMemo(
     () => ({
-      onEntitySelect,
+      onEntitySelect: handleEntitySelect,
       error,
       setError,
       loadingEntityId,
       setLoadingEntityId,
     }),
-    [error, loadingEntityId, onEntitySelect]
+    [error, handleEntitySelect, loadingEntityId]
   );
 
   return (
@@ -163,18 +186,7 @@ export const RolePicker = ({
                 description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(me.personId)}`}
                 svgPath={FavoriteSVGpath}
                 titleAs={'h2'}
-                onClick={() => {
-                  setLoadingEntityId(me.personId);
-                  onEntitySelect?.(me).then((res) => {
-                    if (res?.error) {
-                      setError({
-                        entityId: me.personId,
-                        message: res.error,
-                      });
-                    }
-                    setLoadingEntityId(undefined);
-                  });
-                }}
+                onClick={() => handleEntitySelect(me)}
               />
             ) : null}
             {getRepresentationText()}

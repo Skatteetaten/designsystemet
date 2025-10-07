@@ -116,7 +116,6 @@ export const WithExpandable = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -161,7 +160,6 @@ export const WithExpandableExtraRows = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -302,10 +300,12 @@ export const WithExpandButtonTitle = {
     showExpandButtonTitle: true,
     expandButtonTitle: 'Vis mer',
     expandableContent: 'Ekstra innhold',
+    expandButtonPosition: 'right',
   },
   argTypes: {
     isExpandable: { table: { disable: false } },
     showExpandButtonTitle: { table: { disable: false } },
     expandButtonTitle: { table: { disable: false } },
+    expandButtonPosition: { table: { disable: false } },
   },
 } satisfies Story;

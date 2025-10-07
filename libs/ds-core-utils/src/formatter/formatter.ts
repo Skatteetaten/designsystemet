@@ -1,9 +1,10 @@
 import {
   FormattingResponse,
   FormatTypes,
-  FormatOptions,
   FormatNumberFullProps,
   FormatNumberOptions,
+  Formatter,
+  FormattingResponseWithTail,
 } from './formatter.types';
 import { NumberParser } from './NumberParser';
 import { cleanInput, insertSpaces, minusToHyphen } from './utils';
@@ -27,14 +28,13 @@ const formatGeneric = ({
   };
 };
 
-export const formatter = ({
-  value,
-  type,
-  locale,
-  options,
-}: FormatOptions): FormattingResponse => {
+export const formatter: Formatter = ({ value, type, locale, options }) => {
   if (type === 'number') {
-    return formatNumberFull({ input: value, locale, options });
+    return formatNumberFull({
+      input: value,
+      locale,
+      options,
+    }) satisfies FormattingResponseWithTail;
   }
 
   if (type === 'nationalIdentityNumber') {
@@ -42,13 +42,13 @@ export const formatter = ({
       value,
       type,
       positions: [6],
-    });
+    }) satisfies FormattingResponse;
   } else if (type === 'organisationNumber') {
     return formatGeneric({
       value,
       type,
       positions: [3, 6],
-    });
+    }) satisfies FormattingResponse;
   } else if (type === 'bankAccountNumber') {
     return formatGeneric({ value, type, positions: [4, 6] });
   } else if (type === 'phoneNumber') {
@@ -56,10 +56,10 @@ export const formatter = ({
       value,
       type,
       positions: [2, 4, 6, 8],
-    });
+    }) satisfies FormattingResponse;
   }
 
-  return { value: value };
+  return { value: value } satisfies FormattingResponse;
 };
 
 export const formatOrganisationNumber = (
@@ -101,10 +101,9 @@ const numberOptions: Intl.NumberFormatOptions = {
 
 const formatNumberFull = ({
   input,
-  //TODO: ønsker at den skal være koblet til valget som er gjort i språkvelgeren?
   locale = 'nb-NO',
   options = {},
-}: FormatNumberFullProps): FormattingResponse => {
+}: FormatNumberFullProps): FormattingResponseWithTail => {
   const inputAsString = input.toString();
   const InputAsNumber =
     typeof input === 'number'
@@ -120,7 +119,6 @@ const formatNumberFull = ({
 
   const numberFormatter = new Intl.NumberFormat(locale, {
     ...numberOptions,
-    //maximumFractionDigits: 19, TODO: Hvofor har Olav satt 19 her?
     ...options,
   });
   let formatted = numberFormatter.format(InputAsNumber);

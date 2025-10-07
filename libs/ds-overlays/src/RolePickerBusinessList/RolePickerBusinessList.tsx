@@ -50,16 +50,7 @@ export const RolePickerBusinessList = ({
   };
 
   const handleEntityClicked = async (entity: Business): Promise<void> => {
-    ctx?.setLoadingEntityId(entity.organizationNumber);
-    ctx?.onEntitySelect?.(entity).then((res) => {
-      if (res?.error) {
-        ctx?.setError({
-          entityId: entity.organizationNumber,
-          message: res.error,
-        });
-      }
-      ctx.setLoadingEntityId(undefined);
-    });
+    ctx?.onEntitySelect?.(entity);
   };
 
   const visibleItems = useMemo(() => {

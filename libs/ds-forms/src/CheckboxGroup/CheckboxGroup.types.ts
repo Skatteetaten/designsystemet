@@ -39,7 +39,7 @@ interface CheckboxGroupCommonProps
   titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /**
    * Om obligatorisk gruppe skal markeres med stjerne.
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon.
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på [stil og tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
    */
   showRequiredMark?: FieldsetProps['showRequiredMark'];
   /* Hvis innføring av required på Group, se commit 05e7ac89ac3b132d37d18aed55a933573b3beb70 */

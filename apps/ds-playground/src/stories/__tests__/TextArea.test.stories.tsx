@@ -293,6 +293,9 @@ export const WithDefaultValueAndAutoSize = {
       value: '--breakpoint-xs',
     },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -450,7 +453,6 @@ export const WithoutError = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
 } satisfies Story;
 
@@ -677,6 +679,9 @@ export const WithControlledValueAndAutoSize = {
     viewport: {
       value: '--breakpoint-xs',
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

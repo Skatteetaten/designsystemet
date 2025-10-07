@@ -59,7 +59,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    HTMLSnapshot: { disable: true },
     imageSnapshot: { disableSnapshot: true },
     a11y: {
       test: 'off',

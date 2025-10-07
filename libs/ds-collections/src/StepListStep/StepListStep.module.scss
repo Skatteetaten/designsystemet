@@ -96,7 +96,7 @@
   &Content {
     display: flex;
     flex-direction: column;
-    padding-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-m);
     gap: var(--spacing-xs);
     grid-area: 2/ 2 / 3 / 3;
     line-height: var(--semantic-line-height-article);
@@ -106,9 +106,6 @@
     }
 
     @media (min-width: breakpoints.$breakpoint-xs) {
-      flex-direction: row;
-      gap: var(--spacing-s);
-
       &_noButton {
         display: block;
       }

@@ -227,7 +227,6 @@ export const WithKeyboardNavigation = {
     ...defaultArgs,
     openMenu: 'Lang',
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const menuButton = canvas.getByRole('button');
@@ -243,9 +242,7 @@ export const WithKeyboardNavigation = {
     await userEvent.keyboard('[ArrowUp]');
     await expect(listItems[1].firstChild).toHaveFocus();
   },
-
   parameters: {
-    HTMLSnapshot: { disable: true },
     imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;

@@ -337,7 +337,6 @@ export const WithoutErrorMessage = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
 } satisfies Story;
 
@@ -542,7 +541,6 @@ export const GenerouslyWithFormatFromUser = {
   argTypes: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -597,7 +595,6 @@ export const WithEventHandlers = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -622,7 +619,6 @@ export const ClickCalendarButton = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -643,7 +639,6 @@ export const ClickCalendarDateButton = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -667,7 +662,6 @@ export const ClickOutsideCalendar = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -694,7 +688,6 @@ export const OpenCalendarEscape = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -730,9 +723,6 @@ export const OpenCalendarMovesOver = {
     value: valueDate,
     hasSpacing: true,
   },
-  parameters: {
-    HTMLSnapshot: { disable: true },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarButton = canvas.getByRole('button');
@@ -752,7 +742,6 @@ export const WithShadowDom = {
   decorators: [webComponent],
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
     customElementName: 'calendar-customelement',
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -802,7 +791,6 @@ export const HideCalendarOnResizeWidth = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -846,7 +834,6 @@ export const TabNavigationWithAllDatesDisabled = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    HTMLSnapshot: { disable: true },
     mockDate: new Date('2024-01-15'),
   },
   play: async ({ canvasElement }): Promise<void> => {

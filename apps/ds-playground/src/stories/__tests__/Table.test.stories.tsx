@@ -125,6 +125,7 @@ export const WithAttributes = {
     a11y: {
       test: 'off',
     },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -515,6 +516,9 @@ export const WithVariantCompact = {
   argTypes: {
     variant: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const editableRow = canvas.getByTestId('row-0');
@@ -549,6 +553,9 @@ export const WithVariantCompactAndRightButtonPosition = {
 export const WithExpandEditSort = {
   render: TemplateExpandEditSort,
   name: 'With Expand Edit Sort (Table A9, A11, A14, A15, TableHeader A4, A5, A6, A7, B2, TableRow B3, A14, A15, A19)',
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const editableRow = canvas.getByTestId('row-0');
@@ -561,15 +568,18 @@ export const WithExpandEditSort = {
 } satisfies Story;
 
 export const WithDefaultRowInEditMode = {
-  render: TemplateExpandEditSort,
+  render: TemplateWithRightButtonPosition,
   name: 'With Default Row In Edit Mode',
   args: {
     rowInEditModeId: '3vesy',
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Story;
 
 export const WithWideScreen = {
-  render: TemplateExpandEditSort,
+  render: TemplateWithRightButtonPosition,
   name: 'With Wide screen (Table A1, A2)',
   globals: {
     viewport: {
@@ -587,6 +597,9 @@ export const WithFullWidthExpandableEdit = {
   argTypes: {
     hasFullWidth: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
 } satisfies Story;
 
 export const WithFullWidthAndRightButtonPosition = {
@@ -594,8 +607,6 @@ export const WithFullWidthAndRightButtonPosition = {
   name: 'With FullWidth And Right Button Position',
   args: {
     hasFullWidth: true,
-    // add rowInEditModeId to check for correct amount of colSpan
-    rowInEditModeId: '3vesy',
   },
   argTypes: {
     hasFullWidth: { table: { disable: false } },
@@ -609,6 +620,9 @@ export const WithCanBeManuallyFocused: Story = {
   },
   argTypes: {
     canBeManuallyFocused: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

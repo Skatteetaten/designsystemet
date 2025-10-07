@@ -452,3 +452,8 @@ dl.descriptionListTwoColumns {
     color: var(--palette-graphite-10);
   }
 }
+
+.docblock-argstable table {
+  /* for å skjule deprecated varsler */
+  display: none;
+}
