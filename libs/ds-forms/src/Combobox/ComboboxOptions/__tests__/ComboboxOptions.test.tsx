@@ -4,6 +4,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+
 import type { ComboboxOption } from '../../Combobox.types';
 import { ComboboxOptions } from '../ComboboxOptions';
 
@@ -45,17 +47,13 @@ describe('ComboboxOptions', () => {
   });
 
   it('should show loading state with spinner', async () => {
-    render(
-      <ComboboxOptions
-        {...defaultProps}
-        loadingMessage={'Laster data...'}
-        isLoading
-      />
-    );
+    render(<ComboboxOptions {...defaultProps} isLoading />);
 
     expect(screen.getByTestId('combobox-loading-spinner')).toBeInTheDocument();
     await waitFor(() => {
-      expect(screen.getByText('Laster data...')).toBeInTheDocument();
+      expect(
+        screen.getByText(dsI18n.t('ds_progress:spinner.LoadingLabel'))
+      ).toBeInTheDocument();
     });
     expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
   });

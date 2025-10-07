@@ -33,7 +33,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
   ({
     isOpen,
     isLoading = false,
-    loadingMessage = 'Laster...',
     spinnerProps,
     displayOptions,
     searchTerm,
@@ -61,11 +60,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           id={listId}
           className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames?.options || ''}`}
         >
-          <LoadingMessage
-            message={loadingMessage}
-            comboboxId={comboboxId}
-            spinnerProps={spinnerProps}
-          />
+          <LoadingMessage comboboxId={comboboxId} spinnerProps={spinnerProps} />
         </div>
       );
     }

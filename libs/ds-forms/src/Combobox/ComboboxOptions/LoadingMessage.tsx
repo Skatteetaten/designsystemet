@@ -12,7 +12,6 @@ interface LoadingMessageProps {
 }
 
 export const LoadingMessage = ({
-  message = 'Laster...',
   comboboxId,
   spinnerProps,
 }: LoadingMessageProps): JSX.Element => {
@@ -28,9 +27,7 @@ export const LoadingMessage = ({
         titlePosition={'right'}
         {...spinnerProps}
         data-testid={'combobox-loading-spinner'}
-      >
-        {message}
-      </Spinner>
+      />
     </output>
   );
 };
