@@ -5,7 +5,6 @@
   display: inline-block;
   padding: 0;
   border: none;
-  border: 2px solid transparent;
   background: none;
   color: inherit;
   font-size: inherit;
@@ -27,7 +26,6 @@
 
   &:hover {
     background-color: var(--semantic-interactive-background);
-    box-shadow: 0 2px 0 0 var(--semantic-interactive-main);
     text-decoration: none;
   }
 

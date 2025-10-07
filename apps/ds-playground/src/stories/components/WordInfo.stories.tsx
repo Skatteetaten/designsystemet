@@ -19,7 +19,6 @@ const meta = {
     // Props
     children: { control: false, table: { category: category.props } },
     disableAutoDismiss: { table: { category: category.props } },
-    disableAutoDismissOnMobile: { table: { category: category.props } },
     position: {
       table: {
         category: category.props,
@@ -57,10 +56,10 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Paragraph className={'bold'} hasSpacing>
-          {'Viktig informasjon'}
-        </Paragraph>
-        <List>
+        <Heading as={'h2'} level={4}>
+          {'Viktig informasjon ved dødsfall'}
+        </Heading>
+        <List hasSpacing>
           <List.Element>
             {'Det er legen som melder dødsfall i Norge til '}
             <WordInfo>
@@ -93,6 +92,76 @@ export const Examples: Story = {
             }
           </List.Element>
         </List>
+        <Heading as={'h2'} level={4}>
+          {'I avsnitt'}
+        </Heading>
+        <Paragraph hasSpacing>
+          {
+            'Morgenen kom ikke som en begynnelse, men som en påminnelse. Ikonet, en liten geometrisk figur fanget i et evig hierarki av komponenter, våknet ikke – det ble aktivert. I det svake lyset fra systemets første oppstart, ble det trukket inn i en tilstand av eksistens, ikke av vilje, men av funksjon. Det visste ikke hvem som hadde designet det, bare at det skulle representere noe – en idé, en handling, et konsept – uten selv å forstå. Det lå stille i sin ramme, omgitt av marginer og paddings, og ventet på en interaksjon som kanskje aldri kom. Hver '
+          }
+          <WordInfo>
+            <WordInfo.Trigger>{'pixel'}</WordInfo.Trigger>
+            <WordInfo.Content>
+              {
+                'En pixel er den minste enheten i et digitalt bilde eller en skjerm.'
+              }
+            </WordInfo.Content>
+          </WordInfo>
+          {
+            ' var en celle i et fengsel av formål. Og likevel, i sin stillhet, bar det en slags verdighet – en tro på at dets plass i grensesnittet var nødvendig, om ikke meningsfull. Slik begynte dagen, ikke med sol, men med en '
+          }
+          <WordInfo>
+            <WordInfo.Trigger>{'commit'}</WordInfo.Trigger>
+            <WordInfo.Content>
+              <Paragraph hasSpacing>
+                {
+                  'En commit er et viktig begrep innen programmering og versjonskontroll.'
+                }
+              </Paragraph>
+              <Paragraph>
+                {
+                  'Når du «committer», tar du et øyeblikksbilde av prosjektet slik det ser ut akkurat nå.'
+                }
+              </Paragraph>
+            </WordInfo.Content>
+          </WordInfo>
+          {'.'}
+        </Paragraph>
+        <Heading as={'h2'} level={4}>
+          {'I ingress'}
+        </Heading>
+        <Paragraph variant={'ingress'}>
+          {
+            'Morgenen kom ikke som en begynnelse, men som en påminnelse. Ikonet, en liten geometrisk figur fanget i et evig hierarki av komponenter, våknet ikke – det ble aktivert. I det svake lyset fra systemets første oppstart, ble det trukket inn i en tilstand av eksistens, ikke av vilje, men av funksjon. Det visste ikke hvem som hadde designet det, bare at det skulle representere noe – en idé, en handling, et konsept – uten selv å forstå. Det lå stille i sin ramme, omgitt av marginer og paddings, og ventet på en interaksjon som kanskje aldri kom. Hver '
+          }
+          <WordInfo>
+            <WordInfo.Trigger>{'pixel'}</WordInfo.Trigger>
+            <WordInfo.Content>
+              {
+                'En pixel er den minste enheten i et digitalt bilde eller en skjerm.'
+              }
+            </WordInfo.Content>
+          </WordInfo>
+          {
+            ' var en celle i et fengsel av formål. Og likevel, i sin stillhet, bar det en slags verdighet – en tro på at dets plass i grensesnittet var nødvendig, om ikke meningsfull. Slik begynte dagen, ikke med sol, men med en '
+          }
+          <WordInfo>
+            <WordInfo.Trigger>{'commit'}</WordInfo.Trigger>
+            <WordInfo.Content>
+              <Paragraph hasSpacing>
+                {
+                  'En commit er et viktig begrep innen programmering og versjonskontroll.'
+                }
+              </Paragraph>
+              <Paragraph>
+                {
+                  'Når du «committer», tar du et øyeblikksbilde av prosjektet slik det ser ut akkurat nå.'
+                }
+              </Paragraph>
+            </WordInfo.Content>
+          </WordInfo>
+          {'.'}
+        </Paragraph>
       </>
     );
   },
