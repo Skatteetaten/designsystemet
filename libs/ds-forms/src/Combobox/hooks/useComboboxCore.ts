@@ -311,10 +311,14 @@ export function useComboboxCore({
       } else {
         const currentValue = inputRef.current?.value || '';
         openDropdown(currentValue, 'chevron');
+
+        if (inputRef.current) {
+          safeFocus(inputRef.current);
+        }
       }
       resetFocus();
     },
-    [isOpen, openDropdown, closeDropdown, inputRef, resetFocus]
+    [isOpen, openDropdown, closeDropdown, inputRef, resetFocus, safeFocus]
   );
 
   const handleContainerClick = useCallback(
