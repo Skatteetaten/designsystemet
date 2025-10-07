@@ -18,7 +18,9 @@ export type TypedComboboxOption<TData> = ComboboxOption & {
   data: TData;
 };
 
-export type ComboboxPropsHTMLAttributes = Omit<
+type SafeOmit<T, K extends keyof T> = Omit<T, K>;
+
+export type ComboboxPropsHTMLAttributes = SafeOmit<
   ComponentPropsWithoutRef<'input'>,
   | 'value'
   | 'onChange'
@@ -39,6 +41,16 @@ export type ComboboxPropsHTMLAttributes = Omit<
   | 'aria-describedby'
   | 'aria-invalid'
   | 'aria-busy'
+  | 'aria-label'
+  | 'aria-labelledby'
+  | 'aria-required'
+  | 'aria-disabled'
+  | 'aria-readonly'
+  | 'aria-hidden'
+  | 'aria-live'
+  | 'aria-atomic'
+  | 'aria-relevant'
+  | 'aria-haspopup'
   | 'placeholder'
   | 'min'
   | 'max'
