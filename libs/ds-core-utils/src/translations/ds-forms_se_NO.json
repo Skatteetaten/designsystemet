@@ -3,6 +3,7 @@
   "combobox.NoResults": "Eai gávdno ohcanbohtosat «{{searchTerm}}» várás. Geahččal eará ohcansáni.",
   "combobox.OneOptionAvailable": "Okta molsaeavttu gávdno. Geavat čuokkáid navigeret.",
   "combobox.OptionsAvailable": "{{count}} molssaeavttu olámuttos. Geavat njuolla-boaluid navigeret.",
+  "combobox.SelectedOfTotal": "{{selected},{total}}:s válljejuvvon",
   "combobox.TypeOrSelect": "Čále dahje vállje",
   "datepicker.April": "Cuoŋománnu",
   "datepicker.August": "Borgemánnu",

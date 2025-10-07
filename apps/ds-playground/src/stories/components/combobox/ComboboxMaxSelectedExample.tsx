@@ -14,7 +14,6 @@ export const ComboboxMaxSelectedExample = (): JSX.Element => {
       <Combobox
         name={'favoriteColors'}
         label={'Velg dine 3 favorittfarger'}
-        placeholder={'Skriv eller velg farger'}
         variant={'large'}
         options={[
           { label: 'Rød', value: 'red' },

@@ -3,6 +3,7 @@
   "combobox.NoResults": "Ingen treff for «{{searchTerm}}». Prøv eit anna søk.",
   "combobox.OneOptionAvailable": "Ett alternativ tilgjengeleg. Bruk piltastane for å navigere.",
   "combobox.OptionsAvailable": "{{count}} alternativ tilgjengeleg. Bruk piltastane for å navigere.",
+  "combobox.SelectedOfTotal": "{{selected}} av {{total}} valde",
   "combobox.TypeOrSelect": "Skriv eller vel",
   "datepicker.April": "April",
   "datepicker.August": "August",
