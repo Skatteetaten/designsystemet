@@ -106,57 +106,6 @@ export const TextField = ({
       };
     }
 
-    // Handle undo (Ctrl+Z / Command+Z)
-    if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
-      if (historyRef.current.past.length > 0) {
-        e.preventDefault();
-
-        // Move current value to future stack
-        const currentState = {
-          value: historyRef.current.current.value,
-          cursorPosition,
-        };
-
-        const newFuture = [currentState, ...historyRef.current.future];
-
-        // Get the last item from past
-        const previousState = historyRef.current.past.pop();
-
-        // Update history ref
-        historyRef.current = {
-          past: [...historyRef.current.past],
-          future: newFuture,
-          current: previousState || { value: '', cursorPosition: 0 },
-        };
-
-        // Update input value
-        if (textboxRef.current && previousState !== undefined) {
-          textboxRef.current.value = previousState.value || '';
-
-          // Set cursor position
-          requestAnimationFrame(() => {
-            if (textboxRef.current) {
-              const pos = Math.min(
-                previousState.cursorPosition,
-                previousState.value?.length || 0
-              );
-              textboxRef.current.setSelectionRange(pos, pos);
-            }
-          });
-
-          // Trigger onChange to keep external state in sync
-          if (onChange) {
-            const syntheticEvent = {
-              target: textboxRef.current,
-              currentTarget: textboxRef.current,
-            } as ChangeEvent<HTMLInputElement>;
-            onChange(syntheticEvent);
-          }
-        }
-      }
-      return;
-    }
-
     // Handle redo (Ctrl+Y / Command+Y or Ctrl+Shift+Z / Command+Shift+Z)
     if (
       (e.ctrlKey || e.metaKey) &&
@@ -193,6 +142,56 @@ export const TextField = ({
               const pos = Math.min(
                 nextState.cursorPosition,
                 nextState.value?.length || 0
+              );
+              textboxRef.current.setSelectionRange(pos, pos);
+            }
+          });
+
+          // Trigger onChange to keep external state in sync
+          if (onChange) {
+            const syntheticEvent = {
+              target: textboxRef.current,
+              currentTarget: textboxRef.current,
+            } as ChangeEvent<HTMLInputElement>;
+            onChange(syntheticEvent);
+          }
+        }
+      }
+      return;
+    }
+
+    // Handle undo (Ctrl+Z / Command+Z)
+    if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+      if (historyRef.current.past.length > 0) {
+        e.preventDefault();
+
+        // Move current value to future stack
+        const currentState = {
+          value: historyRef.current.current.value,
+          cursorPosition,
+        };
+
+        const newFuture = [currentState, ...historyRef.current.future];
+
+        const previousState = historyRef.current.past.pop();
+
+        // Update history ref
+        historyRef.current = {
+          past: [...historyRef.current.past],
+          future: newFuture,
+          current: previousState || { value: '', cursorPosition: 0 },
+        };
+
+        // Update input value
+        if (textboxRef.current && previousState !== undefined) {
+          textboxRef.current.value = previousState.value || '';
+
+          // Set cursor position
+          requestAnimationFrame(() => {
+            if (textboxRef.current) {
+              const pos = Math.min(
+                previousState.cursorPosition,
+                previousState.value?.length || 0
               );
               textboxRef.current.setSelectionRange(pos, pos);
             }
@@ -283,6 +282,8 @@ export const TextField = ({
         input.setSelectionRange(newPosition, newPosition);
       });
     }
+    //Update cursor position in case of arrow keys or other movement
+    historyRef.current.current.cursorPosition = cursorPosition;
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
