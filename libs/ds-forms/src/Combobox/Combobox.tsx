@@ -13,7 +13,6 @@ import {
 import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer/ComboboxAccessibilityAnnouncer';
 import { ComboboxButton } from './ComboboxButton/ComboboxButton';
-import { ComboboxInputContainer } from './ComboboxInputContainer';
 import { ComboboxInputField } from './ComboboxInputField/ComboboxInputField';
 import { ComboboxOptions } from './ComboboxOptions/ComboboxOptions';
 import { ComboboxWrapper } from './ComboboxWrapper';
@@ -260,11 +259,10 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
         {label}
       </LabelWithHelp>
 
-      <ComboboxInputContainer
+      <div
         className={containerClassNames}
-        disabled={disabled}
-        handleContainerClick={handleContainerClick}
-        handleContainerKeyDown={handleContainerKeyDown}
+        onClick={!disabled ? handleContainerClick : undefined}
+        onKeyDown={!disabled ? handleContainerKeyDown : undefined}
       >
         <div className={styles.inputContentArea}>
           <ComboboxChips
@@ -311,7 +309,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
             onClick={handleChevronClick}
           />
         </div>
-      </ComboboxInputContainer>
+      </div>
 
       <ComboboxAccessibilityAnnouncer
         comboboxId={comboboxId}
