@@ -15,7 +15,6 @@ import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer
 import { ComboboxButton } from './ComboboxButton/ComboboxButton';
 import { ComboboxInputField } from './ComboboxInputField/ComboboxInputField';
 import { ComboboxOptions } from './ComboboxOptions/ComboboxOptions';
-import { ComboboxWrapper } from './ComboboxWrapper';
 import {
   getComboboxPlaceholderDefault,
   getComboboxLoadingMessageDefault,
@@ -243,9 +242,9 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
   }, [label, hideLabel, multiple, resolvedVariant]);
 
   return (
-    <ComboboxWrapper
-      hasSpacing={hasSpacing}
-      className={`${classNames?.container || ''} ${className || ''}`.trim()}
+    <div
+      data-has-spacing={hasSpacing}
+      className={`${styles.comboboxWrapper} ${classNames?.container || ''} ${className || ''}`.trim()}
     >
       <LabelWithHelp
         htmlFor={comboboxId}
@@ -348,7 +347,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
       >
         {errorMessage}
       </ErrorMessage>
-    </ComboboxWrapper>
+    </div>
   );
 }) as ComboboxComponent;
 
