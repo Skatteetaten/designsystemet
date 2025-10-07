@@ -40,6 +40,15 @@ export type ComboboxPropsHTMLAttributes = Omit<
   | 'aria-invalid'
   | 'aria-busy'
   | 'placeholder'
+  | 'min'
+  | 'max'
+  | 'step'
+  | 'accept'
+  | 'capture'
+  | 'checked'
+  | 'multiple'
+  | 'list'
+  | 'results'
 >;
 
 interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {

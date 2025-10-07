@@ -139,8 +139,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
     inputRef,
   ]);
 
-  // displayOptions is now calculated inside useComboboxCore for better performance
-
   // Use selection handlers hook
   const { handleRemoveLastValue, handleOptionSelect, handleRemoveValue } =
     useComboboxSelection({
