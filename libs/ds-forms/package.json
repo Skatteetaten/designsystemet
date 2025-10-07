@@ -23,8 +23,7 @@
     "@skatteetaten/ds-progress": "2.2.2",
     "@skatteetaten/ds-status": "2.2.2",
     "date-fns": "^4",
-    "@skatteetaten/ds-content": "2.2.2",
-    "@skatteetaten/ds-collections": "2.2.2"
+    "@skatteetaten/ds-content": "2.2.2"
   },
   "scripts": {}
 }

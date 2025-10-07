@@ -27,8 +27,7 @@
     "@skatteetaten/ds-status": "2.2.2",
     "@skatteetaten/ds-content": "2.2.2",
     "@skatteetaten/ds-overlays": "2.2.2",
-    "@skatteetaten/ds-navigation": "2.2.2",
-    "@skatteetaten/ds-collections": "2.2.2"
+    "@skatteetaten/ds-navigation": "2.2.2"
   },
   "scripts": {},
   "dependencies": {},

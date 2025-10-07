@@ -26,8 +26,7 @@
     "@skatteetaten/ds-status": "2.2.2",
     "date-fns": "^4",
     "@skatteetaten/ds-content": "2.2.2",
-    "@floating-ui/react": "0.26.28",
-    "@skatteetaten/ds-collections": "2.2.2"
+    "@floating-ui/react": "0.26.28"
   },
   "scripts": {},
   "dependencies": {},

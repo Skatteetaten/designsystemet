@@ -27,10 +27,15 @@ export const MaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
         aria-live={'polite'}
         aria-atomic={'true'}
       >
-        {t('combobox.SelectedOfTotal', {
-          selected: selectedCount,
-          total: maxSelected,
-        })}
+        {selectedCount === 1
+          ? t('combobox.SelectedOfTotalSingular', {
+              selected: selectedCount,
+              total: maxSelected,
+            })
+          : t('combobox.SelectedOfTotalPlural', {
+              selected: selectedCount,
+              total: maxSelected,
+            })}
       </li>
     );
   }
