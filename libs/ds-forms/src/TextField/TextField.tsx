@@ -238,21 +238,6 @@ export const TextField = ({
     ) {
       e.preventDefault();
 
-      // Save the current value to history before making changes
-      if (historyRef.current.current.value !== inputValue) {
-        historyRef.current = {
-          past: [
-            ...historyRef.current.past,
-            {
-              value: historyRef.current.current.value || '',
-              cursorPosition: cursorPosition,
-            },
-          ],
-          future: [],
-          current: { value: inputValue, cursorPosition },
-        };
-      }
-
       const deletePosition = cursorPosition - 1;
 
       const newValue =
@@ -270,14 +255,25 @@ export const TextField = ({
 
       const newPosition = deletePosition - 1 - (separatorWasRemoved ? 1 : 0);
 
+      // Save the current value to history before making changes
+      if (historyRef.current.current.value !== formattedValue) {
+        historyRef.current = {
+          past: [
+            ...historyRef.current.past,
+            {
+              value: historyRef.current.current.value || '',
+              cursorPosition: cursorPosition,
+            },
+          ],
+          future: [],
+          current: {
+            value: formattedValue,
+            cursorPosition: newPosition,
+          },
+        };
+      }
+
       input.value = formattedValue;
-
-      // Update current in history
-      historyRef.current.current = {
-        value: formattedValue,
-        cursorPosition: newPosition,
-      };
-
       requestAnimationFrame(() => {
         input.setSelectionRange(newPosition, newPosition);
       });
