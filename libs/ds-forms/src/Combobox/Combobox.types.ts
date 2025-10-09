@@ -75,45 +75,48 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
     } & LabelWithHelpProps['classNames']
   >;
 
+  /** Tilleggstekst */
+  description?: LabelWithHelpProps['description'];
   /** Tekst på feilmelding */
   errorMessage?: string;
+  /** Overskriver default hjelpeikon */
+  helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
+  /** Hjelpetekst */
+  helpText?: LabelWithHelpProps['helpText'];
+  /** Ledetekst */
+  label: string;
+  /** Tilpasset melding som vises under loading */
+  loadingMessage?: string;
+  /** Minimum antall tegn som må tastes før søkeresultater vises */
+  minSearchLength?: number;
+  options: ComboboxOption[];
+  /** Input placeholder text */
+  placeholder?: string;
+  /** Props for å tilpasse spinner utseende */
+  spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
+  /** Overskriver default tooltip-tekst til hjelpeikon */
+  titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
+
+  /** Input name attribute for form submission */
+  name?: string;
+
+  /** Whether the input is disabled */
+  disabled?: boolean;
   /** Margin under komponenten */
   hasSpacing?: boolean;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
-  /** Ledetekst */
-  label: string;
-  /** Tilleggstekst */
-  description?: LabelWithHelpProps['description'];
-  /** Hjelpetekst */
-  helpText?: LabelWithHelpProps['helpText'];
-  /** Overskriver default hjelpeikon */
-  helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
-  /** Overskriver default tooltip-tekst til hjelpeikon */
-  titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Callback som kalles når hjelpetekst vises/skjules */
-  onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
-  /** Minimum antall tegn som må tastes før søkeresultater vises */
-  minSearchLength?: number;
-  options: ComboboxOption[];
   /** Viser loading state med spinner */
   isLoading?: boolean;
-  /** Tilpasset melding som vises under loading */
-  loadingMessage?: string;
-  /** Props for å tilpasse spinner utseende */
-  spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   /** Om skjemafeltet er obligatorisk */
   required?: boolean;
-  /** Input placeholder text */
-  placeholder?: string;
-  /** Input name attribute for form submission */
-  name?: string;
-  /** Whether the input is disabled */
-  disabled?: boolean;
+
   /** Callback fired when input loses focus */
   onBlur?: ComponentPropsWithoutRef<'input'>['onBlur'];
   /** Callback fired when input gains focus */
   onFocus?: ComponentPropsWithoutRef<'input'>['onFocus'];
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
 interface SingleComboboxProps extends ComboboxCommonProps {
