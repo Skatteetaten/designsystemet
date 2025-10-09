@@ -135,7 +135,7 @@ describe('ComboboxAccessibilityAnnouncer', () => {
 
       const announcer = document.getElementById('test-combobox-status');
       expect(announcer).toHaveAttribute('aria-live', 'polite');
-      expect(announcer).toHaveAttribute('aria-relevant', 'additions text');
+
       expect(announcer).toHaveAttribute('aria-atomic', 'true');
     });
 

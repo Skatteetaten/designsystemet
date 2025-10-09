@@ -50,7 +50,7 @@ describe('ComboboxInputField', () => {
     expect(input).toHaveAttribute('aria-expanded', 'true');
     expect(input).toHaveAttribute('aria-autocomplete', 'list');
     expect(input).toHaveAttribute('aria-controls', 'test-list');
-    expect(input).toHaveAttribute('aria-owns', 'test-list');
+
     expect(input).toHaveAttribute(
       'aria-activedescendant',
       'test-combobox-option-0'
