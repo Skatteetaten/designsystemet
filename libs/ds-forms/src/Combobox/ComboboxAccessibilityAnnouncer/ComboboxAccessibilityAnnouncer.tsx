@@ -1,11 +1,10 @@
-import { JSX, useEffect, useRef, memo } from 'react';
+import { JSX, useRef, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import styles from '../Combobox.module.scss';
 import type { ComboboxOption } from '../Combobox.types';
-import { useBrowserCompatibility } from '../hooks/useBrowserCompatibility';
 
 interface ComboboxAccessibilityAnnouncerProps {
   comboboxId: string;
@@ -50,7 +49,6 @@ const ComboboxAccessibilityAnnouncerComponent = ({
   searchTerm,
 }: ComboboxAccessibilityAnnouncerProps): JSX.Element => {
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
-  const { handleFirefoxAriaLabel } = useBrowserCompatibility();
   const announcerRef = useRef<HTMLDivElement>(null);
 
   const message = getAnnouncementMessage(
@@ -62,19 +60,9 @@ const ComboboxAccessibilityAnnouncerComponent = ({
     t
   );
 
-  // Handle Firefox aria-label updates when message changes
-  useEffect(() => {
-    if (announcerRef.current && message) {
-      handleFirefoxAriaLabel(announcerRef.current, () => {
-        // Callback executed when Firefox has processed the aria-label update
-      });
-    }
-  }, [message, handleFirefoxAriaLabel]);
-
   return (
     <div
       ref={announcerRef}
-      aria-label={message}
       aria-live={'polite'}
       aria-relevant={'additions text'}
       className={styles.srOnly}

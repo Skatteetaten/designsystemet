@@ -1,17 +1,9 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { render } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom/vitest';
 
 import type { ComboboxOption } from '../../Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from '../ComboboxAccessibilityAnnouncer';
-
-// Mock the useBrowserCompatibility hook
-vi.mock('../../hooks/useBrowserCompatibility', () => ({
-  useBrowserCompatibility: () => ({
-    handleFirefoxAriaLabel: vi.fn(),
-  }),
-}));
 
 describe('ComboboxAccessibilityAnnouncer', () => {
   const defaultProps = {
@@ -40,9 +32,7 @@ describe('ComboboxAccessibilityAnnouncer', () => {
       );
 
       const announcer = document.getElementById('test-combobox-status');
-      expect(announcer).toBeInTheDocument();
       expect(announcer).toHaveTextContent('Laster alternativer...');
-      expect(announcer).toHaveAttribute('aria-label', 'Laster alternativer...');
     });
 
     it('should prioritize loading message over other states', () => {
@@ -59,7 +49,6 @@ describe('ComboboxAccessibilityAnnouncer', () => {
 
       const announcer = document.getElementById('test-combobox-status');
       expect(announcer).toHaveTextContent('Loading...');
-      expect(announcer).toHaveAttribute('aria-label', 'Loading...');
     });
   });
 
@@ -74,7 +63,6 @@ describe('ComboboxAccessibilityAnnouncer', () => {
       );
 
       const announcer = document.getElementById('test-combobox-status');
-      expect(announcer).toBeInTheDocument();
       expect(announcer).toHaveAttribute('aria-live', 'polite');
       // The exact text depends on i18n translation
       expect(announcer?.textContent).toContain('alternativer tilgjengelig');
@@ -92,27 +80,7 @@ describe('ComboboxAccessibilityAnnouncer', () => {
       );
 
       const announcer = document.getElementById('test-combobox-status');
-      expect(announcer).toBeInTheDocument();
       expect(announcer?.textContent).toContain('Ett alternativ tilgjengelig');
-    });
-
-    it('should handle many options correctly', () => {
-      const manyOptions = Array.from({ length: 50 }, (_, i) => ({
-        label: `Option ${i + 1}`,
-        value: `${i + 1}`,
-      }));
-
-      render(
-        <ComboboxAccessibilityAnnouncer
-          {...defaultProps}
-          displayOptions={manyOptions}
-          isOpen
-        />
-      );
-
-      const announcer = document.getElementById('test-combobox-status');
-      expect(announcer).toBeInTheDocument();
-      expect(announcer?.textContent).toContain('alternativer tilgjengelig');
     });
   });
 
@@ -128,7 +96,6 @@ describe('ComboboxAccessibilityAnnouncer', () => {
       );
 
       const announcer = document.getElementById('test-combobox-status');
-      expect(announcer).toBeInTheDocument();
       expect(announcer).toHaveAttribute('aria-live', 'polite');
       expect(announcer?.textContent).toContain('Ingen treff');
     });
@@ -145,7 +112,6 @@ describe('ComboboxAccessibilityAnnouncer', () => {
 
       const announcer = document.getElementById('test-combobox-status');
       expect(announcer).toHaveTextContent('');
-      expect(announcer).toHaveAttribute('aria-label', '');
     });
 
     it('should not announce no results when no search term', () => {
@@ -182,7 +148,6 @@ describe('ComboboxAccessibilityAnnouncer', () => {
       );
 
       const announcer = document.getElementById('country-selector-status');
-      expect(announcer).toBeInTheDocument();
       expect(announcer).toHaveAttribute('id', 'country-selector-status');
     });
 
@@ -212,7 +177,6 @@ describe('ComboboxAccessibilityAnnouncer', () => {
       );
 
       announcer = document.getElementById('test-combobox-status');
-      expect(announcer).toHaveAttribute('aria-live', 'polite');
       expect(announcer?.textContent).toContain('alternativer tilgjengelig');
     });
 
@@ -226,7 +190,6 @@ describe('ComboboxAccessibilityAnnouncer', () => {
       );
 
       let announcer = document.getElementById('test-combobox-status');
-      expect(announcer).toHaveAttribute('aria-label', 'Loading...');
       expect(announcer).toHaveTextContent('Loading...');
 
       rerender(
