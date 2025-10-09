@@ -207,6 +207,8 @@
 
   &:where(:hover, .focused):not(.disabled) {
     background: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-main);
+    text-decoration: underline;
   }
 
   &:last-child {
