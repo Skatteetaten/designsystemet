@@ -47,7 +47,7 @@
   }
 
   &_large {
-    min-height: 32px;
+    min-height: var(--size-large-plus);
   }
 
   &.inputContainerMultiple {
