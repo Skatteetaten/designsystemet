@@ -210,34 +210,25 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
     }
   }, [value, multiple, options, setSearchTerm, setSelectedValues]);
 
-  const focusedOptionId = useMemo(
-    () =>
-      focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined,
-    [focusedIndex, comboboxId]
-  );
+  const focusedOptionId =
+    focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined;
 
-  const ariaDescribedBy = useMemo(
-    () => [errorMessage && errorId].filter(Boolean).join(' ') || undefined,
-    [errorMessage, errorId]
-  );
+  const ariaDescribedBy =
+    [errorMessage && errorId].filter(Boolean).join(' ') || undefined;
 
-  const containerClassNames = useMemo(() => {
-    let className = styles.inputContainer;
+  let containerClassNames = styles.inputContainer;
 
-    if (label && !hideLabel) {
-      className += ` ${styles.inputContainerMarginTop}`;
-    }
+  if (label && !hideLabel) {
+    containerClassNames += ` ${styles.inputContainerMarginTop}`;
+  }
 
-    if (multiple) {
-      className += ` ${styles.inputContainerMultiple}`;
-    }
+  if (multiple) {
+    containerClassNames += ` ${styles.inputContainerMultiple}`;
+  }
 
-    if (resolvedVariant === 'large') {
-      className += ` ${styles.inputContainer_large}`;
-    }
-
-    return className;
-  }, [label, hideLabel, multiple, resolvedVariant]);
+  if (resolvedVariant === 'large') {
+    containerClassNames += ` ${styles.inputContainer_large}`;
+  }
 
   return (
     <div
