@@ -172,7 +172,7 @@ const meta = {
     },
   },
   args: {
-    label: 'Velg land',
+    label: 'Velg grønnsak',
     hasSpacing: false,
     variant: 'medium',
     options: comboboxStoryOptions,
