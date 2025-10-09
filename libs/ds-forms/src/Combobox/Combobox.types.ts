@@ -81,11 +81,8 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   errorMessage?: string;
   /** Overskriver default hjelpeikon */
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
-  /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
-  /** Ledetekst */
   label: string;
-  /** Tilpasset melding som vises under loading */
   loadingMessage?: string;
   /** Minimum antall tegn som må tastes før søkeresultater vises */
   minSearchLength?: number;
@@ -96,19 +93,12 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-
   /** Input name attribute for form submission */
   name?: string;
-
-  /** Whether the input is disabled */
   disabled?: boolean;
-  /** Margin under komponenten */
   hasSpacing?: boolean;
-  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
-  /** Viser loading state med spinner */
   isLoading?: boolean;
-  /** Om skjemafeltet er obligatorisk */
   required?: boolean;
 
   /** Callback fired when input loses focus */
