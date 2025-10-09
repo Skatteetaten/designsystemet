@@ -77,7 +77,6 @@ const ComboboxInputFieldComponent = ({
       aria-expanded={isOpen}
       aria-autocomplete={'list'}
       aria-controls={listId}
-      aria-owns={listId}
       aria-activedescendant={focusedOptionId}
       aria-describedby={ariaDescribedBy}
       aria-invalid={!!errorMessage || undefined}
