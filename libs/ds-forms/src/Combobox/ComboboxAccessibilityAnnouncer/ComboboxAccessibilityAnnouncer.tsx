@@ -64,7 +64,6 @@ const ComboboxAccessibilityAnnouncerComponent = ({
     <div
       ref={announcerRef}
       aria-live={'polite'}
-      aria-relevant={'additions text'}
       className={styles.srOnly}
       id={`${comboboxId}-status`}
       aria-atomic
