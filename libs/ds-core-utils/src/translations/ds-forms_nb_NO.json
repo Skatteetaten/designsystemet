@@ -1,8 +1,8 @@
 {
   "combobox.Loading": "Laster",
   "combobox.NoResults": "Ingen treff for «{{searchTerm}}». Prøv et annet søk.",
-  "combobox.OneOptionAvailable": "Ett alternativ tilgjengelig. Bruk pil-taster for å navigere.",
-  "combobox.OptionsAvailable": "{{count}} alternativer tilgjengelig. Bruk pil-taster for å navigere.",
+  "combobox.OneOptionAvailable": "Ett alternativ tilgjengelig.",
+  "combobox.OptionsAvailable": "{{count}} alternativer tilgjengelig.",
   "combobox.SelectedOfTotalPlural": "{{selected}} av {{total}} valgt",
   "combobox.SelectedOfTotalSingular": "{{selected}} av {{total}} valgt",
   "combobox.TypeOrSelect": "Skriv eller velg",

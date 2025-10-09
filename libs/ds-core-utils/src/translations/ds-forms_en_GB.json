@@ -1,8 +1,8 @@
 {
   "combobox.Loading": "Loading",
   "combobox.NoResults": "No results for «{{searchTerm}}». Try a different search.",
-  "combobox.OneOptionAvailable": "One option available. Use arrow keys to navigate.",
-  "combobox.OptionsAvailable": "{{count}} options available. Use arrow keys to navigate.",
+  "combobox.OneOptionAvailable": "One option available.",
+  "combobox.OptionsAvailable": "{{count}} options available.",
   "combobox.SelectedOfTotalPlural": "{{selected}} of {{total}} selected",
   "combobox.SelectedOfTotalSingular": "{{selected}} of {{total}} selected",
   "combobox.TypeOrSelect": "Type or select",

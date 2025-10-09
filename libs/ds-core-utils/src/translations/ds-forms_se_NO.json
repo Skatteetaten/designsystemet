@@ -1,8 +1,8 @@
 {
   "combobox.Loading": "Bargamin",
   "combobox.NoResults": "Eai gávdno ohcanbohtosat «{{searchTerm}}» várás. Geahččal eará ohcansáni.",
-  "combobox.OneOptionAvailable": "Okta molsaeavttu gávdno. Geavat čuokkáid navigeret.",
-  "combobox.OptionsAvailable": "{{count}} molssaeavttu olámuttos. Geavat njuolla-boaluid navigeret.",
+  "combobox.OneOptionAvailable": "Okta molsaeavttu gávdno.",
+  "combobox.OptionsAvailable": "{{count}} molssaeavttu olámuttos.",
   "combobox.SelectedOfTotalPlural": "{{selected}}, {{total}}:s válljejuvvon",
   "combobox.SelectedOfTotalSingular": "{{selected}}, {{total}}:s válljejuvvon",
   "combobox.TypeOrSelect": "Čále dahje vállje",
