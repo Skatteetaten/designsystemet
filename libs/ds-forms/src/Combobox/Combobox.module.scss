@@ -6,6 +6,13 @@
 
 .comboboxWrapper {
   position: relative;
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 
   &[data-has-spacing='true'] {
     margin-bottom: var(--spacing-m);
@@ -177,7 +184,6 @@
   top: 100%;
   right: 0;
   left: 0;
-  overflow: hidden;
   padding: 0;
   border: 1px solid var(--palette-graphite-100);
   border-top: none;
@@ -185,7 +191,6 @@
   background: var(--semantic-page-background);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
   list-style: none;
-  overflow-y: auto;
 
   &WithError {
     border-top: 1px solid var(--palette-graphite-100);
@@ -205,14 +210,28 @@
   font-size: inherit;
   text-align: left;
 
-  &:where(:hover, .focused):not(.disabled) {
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:focus-visible {
+    z-index: 10;
+    outline: 3px solid var(--semantic-interactive-main);
+    outline-offset: 0;
+  }
+
+  &:hover:not(.disabled) {
+    z-index: 0;
     background: var(--semantic-interactive-background);
     color: var(--semantic-interactive-main);
     text-decoration: underline;
   }
 
-  &:last-child {
+  &.focused:not(.disabled) {
+    z-index: 10;
     border-bottom: none;
+    outline: 3px solid var(--semantic-interactive-main);
+    outline-offset: 0;
   }
 
   &.selected {
@@ -220,15 +239,17 @@
     color: var(--palette-accent-800);
   }
 
-  // Fokus-tilstand skal alltid overskrive selected-tilstand
-  &.selected:where(:hover, .focused):not(.disabled) {
+  &.selected:hover:not(.disabled) {
     background: var(--semantic-interactive-background);
     color: var(--semantic-page-foreground);
   }
 
-  &:focus-visible {
-    outline: 2px solid var(--palette-accent-300);
-    outline-offset: -2px;
+  &.selected.focused:not(.disabled) {
+    z-index: 10;
+    background: var(--palette-accent-50);
+    color: var(--palette-accent-800);
+    outline: 3px solid var(--semantic-interactive-main);
+    outline-offset: 0;
   }
 
   &WithCheckbox {
@@ -254,7 +275,6 @@
   width: var(--size-medium);
   min-width: var(--size-medium);
   height: var(--size-medium);
-  box-sizing: border-box;
   flex-shrink: 0;
   border: var(--spacing-xxs) solid var(--semantic-page-foreground);
   background-color: var(--semantic-page-background);

@@ -15,8 +15,8 @@ declare const classNames: {
   readonly optionsList: 'optionsList';
   readonly optionsListWithError: 'optionsListWithError';
   readonly option: 'option';
-  readonly focused: 'focused';
   readonly disabled: 'disabled';
+  readonly focused: 'focused';
   readonly selected: 'selected';
   readonly optionWithCheckbox: 'optionWithCheckbox';
   readonly optionLabel: 'optionLabel';

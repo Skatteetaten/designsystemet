@@ -107,7 +107,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
                     }
                   }
                 }}
-                onMouseEnter={() => setFocusedIndex(index)}
                 onClick={() => {
                   if (!isDisabled) {
                     handleOptionSelect(option, false); // false = fromMouse
