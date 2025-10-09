@@ -95,7 +95,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
                 id={`${comboboxId}-option-${index}`}
                 role={'option'} // We need to use <li> for screenreader support, even though sonarqube complains
                 aria-selected={isSelected}
-                aria-checked={multiple ? isSelected : undefined}
                 aria-disabled={isDisabled ? 'true' : undefined}
                 className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isFocused ? styles.focused : ''} ${isSelected ? styles.selected : ''} ${isDisabled ? styles.disabled : ''}`}
                 tabIndex={-1}
