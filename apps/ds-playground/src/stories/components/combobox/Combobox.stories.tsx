@@ -206,7 +206,6 @@ export const Multiple: Story = {
   args: {
     name: 'vegetables',
     multiple: true,
-    variant: 'large',
     options: [
       { label: 'Agurk', value: 'agurk' },
       { label: 'Tomat', value: 'tomat' },

@@ -131,7 +131,7 @@ interface SingleComboboxProps extends ComboboxCommonProps {
 interface MultiComboboxProps extends ComboboxCommonProps {
   multiple: true;
   /** Størrelsen på combobox - automatisk satt til 'large' for multi-select */
-  variant?: 'large';
+  variant?: never;
   /** Current values - optional for both controlled and uncontrolled modes */
   value?: (string | number)[];
   /** Callback når options velges eller fjernes i multi-select mode */

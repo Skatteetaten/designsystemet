@@ -95,7 +95,6 @@ export const ComboboxMultipleKeyboardNavigationExample = (): JSX.Element => {
       </div>
 
       <Combobox
-        variant={'large'}
         label={'Test tastaturnavigasjon for flervalg'}
         placeholder={'Klikk her og bruk tastaturet for å velge flere'}
         options={comboboxStoryOptions.slice(0, 10)}

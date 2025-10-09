@@ -185,7 +185,6 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
               }
               placeholder={'Søk etter frukt eller sort'}
               options={fruitOptions}
-              variant={'large'}
               value={selectedFruits}
               errorMessage={
                 submissionMessage && !isSubmitted

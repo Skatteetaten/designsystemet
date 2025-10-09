@@ -84,11 +84,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
   } = props;
   const { safeFocus } = useBrowserCompatibility();
 
-  // Resolve variant with smart defaults
-  // Multi-select ALWAYS uses 'large' variant for chip display space
-  const resolvedVariant = multiple
-    ? 'large' // Required for multi-select chips
-    : (variant ?? 'medium'); // Default single-select size
+  const resolvedVariant = multiple ? 'large' : (variant ?? 'medium');
 
   // Extract maxSelected safely from union type props
   // Only available in multi-select mode, undefined otherwise

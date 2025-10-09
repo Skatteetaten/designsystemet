@@ -57,7 +57,6 @@ export const ComboboxFormExample = (): JSX.Element => {
         name={'vegetables'}
         label={'Velg grønnsaker'}
         placeholder={'Skriv eller velg grønnsaker'}
-        variant={'large'}
         errorMessage={
           !state.success && state.message ? state.message : undefined
         }
