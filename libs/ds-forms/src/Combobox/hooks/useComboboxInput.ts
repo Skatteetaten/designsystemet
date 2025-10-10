@@ -36,6 +36,28 @@ interface UseComboboxInputReturn {
   handleClearValue: () => void;
 }
 
+/**
+ * Input field event handling hook for combobox.
+ *
+ * What: Handles input changes, focus management, value clearing, and integrates
+ * with browser compatibility features.
+ *
+ * Why: Input field behavior needs careful coordination with dropdown state and
+ * cross-browser compatibility (especially iOS/Safari focus issues).
+ * @param props - The configuration object for input handling
+ * @param props.multiple - Whether multiple selections are allowed
+ * @param props.setSelectedValues - Function to update selected values
+ * @param props.setSearchTerm - Function to update search term
+ * @param props.inputRef - Reference to the input element
+ * @param props.onSelectionChange - Optional callback for selection changes
+ * @param props.onInputChange - Optional callback for input value changes
+ * @param props.onBlur - Optional callback for input blur events
+ * @param props.onFocus - Optional callback for input focus events
+ * @param props.value - Current value(s) of the combobox
+ * @param props.openDropdown - Function to open the dropdown
+ * @param props.closeDropdown - Function to close the dropdown
+ * @returns Object containing input event handlers
+ */
 export function useComboboxInput({
   multiple,
   setSelectedValues,
@@ -51,6 +73,13 @@ export function useComboboxInput({
 }: UseComboboxInputProps): UseComboboxInputReturn {
   const { safeFocus, preventZoom, manageVirtualKeyboard } =
     useBrowserCompatibility();
+  /**
+   * Handles text input changes and triggers dropdown opening.
+   *
+   * What: Clears selection in single-select mode when input is emptied.
+   *
+   * Why: Typing should open dropdown and clear conflicting selections in single-select mode.
+   */
   const handleInputChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>): void => {
       const newValue = e.target.value;
@@ -82,6 +111,14 @@ export function useComboboxInput({
     ]
   );
 
+  /**
+   * Handles input focus with mobile compatibility and smart dropdown opening.
+   *
+   * What: Prevents iOS zoom and manages virtual keyboard display.
+   *
+   * Why: Focus should open dropdown except when coming from chevron button.
+   * Mobile devices need special handling for zoom and virtual keyboard.
+   */
   const handleInputFocus = useCallback(
     (e: FocusEvent<HTMLInputElement>): void => {
       const currentValue = e.target.value;
@@ -107,6 +144,14 @@ export function useComboboxInput({
     [openDropdown, onFocus, preventZoom, manageVirtualKeyboard]
   );
 
+  /**
+   * Handles input blur with delayed dropdown closing.
+   *
+   * What: Delays closing to allow focus to move to dropdown options.
+   *
+   * Why: Immediate closing on blur would prevent option selection via mouse/touch.
+   * Delay allows focus to move within the combobox component.
+   */
   const handleInputBlur = useCallback(
     (e: FocusEvent<HTMLInputElement>): void => {
       // Hide virtual keyboard on mobile devices when losing focus
@@ -132,6 +177,13 @@ export function useComboboxInput({
     [closeDropdown, onBlur, manageVirtualKeyboard]
   );
 
+  /**
+   * Clears the input value and closes dropdown.
+   *
+   * What: Triggers selection change callbacks for uncontrolled components.
+   *
+   * Why: Clear button should reset the component to empty state and refocus input.
+   */
   const handleClearValue = useCallback((): void => {
     setSearchTerm('');
     closeDropdown();

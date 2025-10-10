@@ -75,6 +75,16 @@ const detectBrowser = (): BrowserInfo => {
   };
 };
 
+/**
+ * Cross-browser compatibility utilities hook for combobox.
+ *
+ * What: Provides browser detection and compatibility utilities for safe focus,
+ * iOS zoom prevention, virtual keyboard management, and Firefox aria-label handling.
+ *
+ * Why: Different browsers (especially mobile Safari, Firefox) have unique quirks that
+ * break standard combobox functionality without specific workarounds.
+ * @returns Browser compatibility features including detection and utility functions
+ */
 export const useBrowserCompatibility = (): BrowserCompatibilityFeatures => {
   const browserInfo = useMemo(() => detectBrowser(), []);
 

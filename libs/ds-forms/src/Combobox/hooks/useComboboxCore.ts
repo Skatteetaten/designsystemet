@@ -78,6 +78,25 @@ export interface UseComboboxCoreReturn {
   handleButtonFocus: (index: number) => void;
 }
 
+/**
+ * Central coordination hook for combobox functionality.
+ *
+ * What: Provides centralized state for dropdown open/close, focus management,
+ * option filtering, keyboard navigation, and scroll behavior.
+ *
+ * Why: The combobox needs a single source of truth for state management to prevent
+ * race conditions and ensure consistent behavior across all sub-hooks.
+ * @param props - The configuration object for the combobox core hook
+ * @param props.options - Array of options available for selection
+ * @param props.multiple - Whether multiple selections are allowed
+ * @param props.value - Current value(s) of the combobox
+ * @param props.minSearchLength - Minimum characters before showing options
+ * @param props.htmlAttributes - HTML attributes including id
+ * @param props.isLoading - Whether options are currently loading
+ * @param props.safeFocus - Browser-safe focus function
+ * @param props.maxSelected - Maximum number of selected options (for multiple)
+ * @returns Object containing all combobox state, refs, handlers, and utilities
+ */
 export function useComboboxCore({
   options,
   multiple,
@@ -149,6 +168,14 @@ export function useComboboxCore({
   }, [focusedIndex, displayOptions]);
 
   // Core actions
+  /**
+   * Opens the dropdown with different behavior based on trigger source.
+   *
+   * What: Respects manual close state and minimum search length requirements.
+   *
+   * Why: Different triggers (click, typing, keyboard) should behave differently
+   * to match user expectations and accessibility standards.
+   */
   const openDropdown = useCallback(
     (
       searchValue: string,
@@ -176,6 +203,13 @@ export function useComboboxCore({
     [manuallyClosed, minSearchLength]
   );
 
+  /**
+   * Closes the dropdown and resets focus state.
+   *
+   * What: Tracks whether user manually closed to prevent unwanted re-opening.
+   *
+   * Why: Manual closes should be respected until user explicitly interacts again.
+   */
   const closeDropdown = useCallback((manual = false): void => {
     setIsOpen(false);
     setFocusedIndex(-1); // Reset focus when closing
@@ -189,6 +223,14 @@ export function useComboboxCore({
   }, []);
 
   // Scroll to focused element with debouncing
+  /**
+   * Smoothly scrolls focused option into view with debouncing.
+   *
+   * What: Prevents performance issues from rapid focus changes during navigation.
+   *
+   * Why: Focused options must be visible for accessibility, but rapid scrolling
+   * can cause performance issues and visual jank.
+   */
   const scrollToFocused = useCallback(() => {
     if (!containerRef.current || focusedIndex < 0) return;
 
@@ -221,7 +263,23 @@ export function useComboboxCore({
     }, 16);
   }, [comboboxId, focusedIndex]);
 
-  // Enhanced setFocusedIndex with validation
+  /**
+   * Enhanced focus setter with validation and edge case handling.
+   *
+   * What: Validates and corrects focus indices before setting them, handling disabled options,
+   * out-of-bounds indices, and options list changes.
+   *
+   * Why: Raw focus indices can be invalid due to disabled options, dynamic option changes,
+   * or out-of-bounds values, causing accessibility failures and broken keyboard navigation.
+   *
+   * Behavior:
+   * - If options changed: Reset focus to -1 (no focus)
+   * - If index is -1: Set directly (valid unfocused state)
+   * - If no enabled options: Force to -1
+   * - If index points to disabled option: Find nearest enabled option
+   * - If index out of bounds: Clamp to valid enabled range
+   * @param index - The desired focus index to set
+   */
   const setFocusedIndexEnhanced = useCallback(
     (index: number) => {
       if (optionsChanged) {
