@@ -16,6 +16,7 @@ export * from './Fieldset/Fieldset';
 export * from './Fieldset/Fieldset.types';
 export * from './FileUploader/FileUploader';
 export * from './FileUploader/FileUploader.types';
+export * from './FileUploader/defaults';
 export * from './Radio/Radio';
 export * from './Radio/Radio.types';
 export * from './RadioGroup/RadioGroup';
