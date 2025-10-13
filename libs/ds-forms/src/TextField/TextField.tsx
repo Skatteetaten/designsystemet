@@ -95,7 +95,7 @@ export const TextField = ({
     }
 
     const input = e.currentTarget;
-    const cursorPosition = input.selectionStart || 0;
+    const cursorPosition = input.selectionEnd || 0;
     const inputValue = input.value;
 
     // Initialize history if empty (first interaction)
@@ -284,25 +284,7 @@ export const TextField = ({
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const input = e.target as HTMLInputElement;
-    const oldValue = historyRef.current.current?.value || '';
     const newValue = input.value;
-    const cursorPosition = input.selectionStart || 0;
-
-    // Only add to history if value actually changed
-    if (oldValue !== newValue) {
-      // Add the previous value to the past stack
-      historyRef.current = {
-        past: [
-          ...historyRef.current.past,
-          {
-            value: oldValue || '',
-            cursorPosition: historyRef.current.current.cursorPosition,
-          },
-        ],
-        future: [], // Clear future stack on new changes
-        current: { value: newValue || '', cursorPosition },
-      };
-    }
 
     if (thousandSeparator) {
       const cursorPosition = input.selectionStart || 0;
@@ -332,13 +314,31 @@ export const TextField = ({
       input.setSelectionRange(newPosition, newPosition);
 
       // Update current in history after formatting and positioning cursor
-      historyRef.current.current = {
-        value: input.value,
-        cursorPosition: newPosition,
-      };
-    }
+      // Only update if value actually changed and if thousandSeparator is set
+      const oldValue = historyRef.current.current?.value || '';
+      if (oldValue !== formattedValue) {
+        // Add the previous value to the past stack
+        historyRef.current = {
+          past: [
+            ...historyRef.current.past,
+            {
+              value: oldValue || '',
+              cursorPosition: historyRef.current.current.cursorPosition,
+            },
+          ],
+          future: [], // Clear future stack on new changes
+          current: { value: input.value || '', cursorPosition: newPosition },
+        };
+      }
 
-    onChange?.(e);
+      // Vi trenger ikke å kalle onChange dersom bruker har
+      // skrevet inn ikke numeriske symboler som er filtrert bort igjen.
+      if (oldValue !== formattedValue) {
+        onChange?.(e);
+      }
+    } else {
+      onChange?.(e);
+    }
   };
 
   /* Slik at value har riktig format også før bruker begynner å skrive i feltet */

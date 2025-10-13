@@ -523,6 +523,7 @@ export const WithThousandSeparator = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox.tagName).toBe('INPUT');
+
     textbox.focus();
     await userEvent.type(textbox, 'A10000');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
@@ -603,6 +604,7 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
         args.onBlur && args.onBlur(event);
       }}
       onChange={(event: ChangeEvent<HTMLInputElement>): void => {
+        args?.onChange?.(event);
         setLabelText('TextField har blitt klikket på');
         args.onChange && args.onChange(event);
       }}
@@ -755,5 +757,40 @@ export const WithCharacterLimitAndError = {
   },
   argTypes: {
     characterLimit: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithThousandSeparatorAndUndoRedo = {
+  name: 'With ThousandSeparator and undo redo',
+  render: EventHandlersTemplate,
+  args: {
+    ...defaultArgs,
+    thousandSeparator: true,
+    onChange: fn(),
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    thousandSeparator: { table: { disable: true } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox.tagName).toBe('INPUT');
+    textbox.focus();
+    await userEvent.type(textbox, '-A111-222333-');
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+    await expect(textbox).toHaveValue('-111 222 333');
+    await userEvent.type(textbox, '111');
+
+    // Undo last input step (Cmd+Z)
+    await userEvent.keyboard('{Meta>}z{/Meta}');
+    await expect(textbox).toHaveValue('-11 122 233 311');
+
+    // Redo (Cmd+Shift+Z)
+    await userEvent.keyboard('{Meta>}{Shift>}z{/Shift}{/Meta}');
+    await expect(textbox).toHaveValue('-111 222 333 111');
   },
 } satisfies Story;
