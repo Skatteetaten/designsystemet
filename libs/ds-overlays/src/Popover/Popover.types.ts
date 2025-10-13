@@ -36,7 +36,7 @@ export interface PopoverProps {
   disableAutoDismissOnMobile?: boolean;
   /** Om Popover er synlig */
   isOpen?: boolean;
-  /** Om focus skal settes tilbake til trigger ved bruk av lukkekrysset. Hvis denne settes til false, så må fokus håndteres manuelt. */
+  /** Om fokus skal settes tilbake til trigger ved bruk av lukkekrysset. Hvis denne settes til false, så må fokus håndteres manuelt. */
   shouldRestoreFocus?: boolean;
   /** Callback når Popover lukkes */
   onClose?: () => void;

@@ -74,6 +74,9 @@ export const IsOpen = {
     const term = canvas.getByText(defaultText);
     await expect(term).toBeInTheDocument();
     await expect(term).toHaveAttribute('aria-expanded', 'true');
+    const content = canvas.getByText(defaultContent);
+    await expect(content).toBeInTheDocument();
+    await expect(content.tagName.toLowerCase()).toBe('span');
   },
 } satisfies Story;
 

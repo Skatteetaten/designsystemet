@@ -9,11 +9,16 @@ export const popoverPositionArr = [
   'bottom-end',
 ] as const;
 
+export const popoverContentAsArr = ['div', 'span'] as const;
+export type PopoverContentAs = (typeof popoverContentAsArr)[number];
+
 export type PopoverPosition = (typeof popoverPositionArr)[number];
 
 export interface PopoverContentProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
   classNames?: { contentWrapper?: string; closeButton?: string };
-  /** Tekst */
+  /** Innhold i popup-boksen. MB. Hvis as-prop er satt til span, må innholdet være en string eller et HTML-element som er tillatt i en span. */
   children: ReactNode;
+  /** HTML-element til innholdet. */
+  as?: PopoverContentAs;
 }

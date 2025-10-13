@@ -65,10 +65,7 @@ export const Examples: Story = {
             <WordInfo>
               <WordInfo.Trigger>{'Folkeregisteret'}</WordInfo.Trigger>
               <WordInfo.Content>
-                <Heading as={'h2'} level={4}>
-                  {'Folkeregisteret'}
-                </Heading>
-                <Paragraph>{'Forklaring på Folkeregisteret'}</Paragraph>
+                {'Forklaring på Folkeregisteret'}
               </WordInfo.Content>
             </WordInfo>
             {'. Du trenger ikke å melde noe selv.'}
@@ -113,16 +110,13 @@ export const Examples: Story = {
           <WordInfo>
             <WordInfo.Trigger>{'commit'}</WordInfo.Trigger>
             <WordInfo.Content>
-              <Paragraph hasSpacing>
-                {
-                  'En commit er et viktig begrep innen programmering og versjonskontroll.'
-                }
-              </Paragraph>
-              <Paragraph>
-                {
-                  'Når du «committer», tar du et øyeblikksbilde av prosjektet slik det ser ut akkurat nå.'
-                }
-              </Paragraph>
+              {
+                'En commit er et viktig begrep innen programmering og versjonskontroll.'
+              }
+              <br />
+              {
+                'Når du «committer», tar du et øyeblikksbilde av prosjektet slik det ser ut akkurat nå.'
+              }
             </WordInfo.Content>
           </WordInfo>
           {'.'}
@@ -148,16 +142,13 @@ export const Examples: Story = {
           <WordInfo>
             <WordInfo.Trigger>{'commit'}</WordInfo.Trigger>
             <WordInfo.Content>
-              <Paragraph hasSpacing>
-                {
-                  'En commit er et viktig begrep innen programmering og versjonskontroll.'
-                }
-              </Paragraph>
-              <Paragraph>
-                {
-                  'Når du «committer», tar du et øyeblikksbilde av prosjektet slik det ser ut akkurat nå.'
-                }
-              </Paragraph>
+              {
+                'En commit er et viktig begrep innen programmering og versjonskontroll.'
+              }
+              <br />
+              {
+                'Når du «committer», tar du et øyeblikksbilde av prosjektet slik det ser ut akkurat nå.'
+              }
             </WordInfo.Content>
           </WordInfo>
           {'.'}
