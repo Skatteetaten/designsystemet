@@ -7,7 +7,7 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import type { ComboboxOption } from '@skatteetaten/ds-forms';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { ComboboxAccessibilityAnnouncer } from '../../../../../libs/ds-forms/src/Combobox/ComboboxAccessibilityAnnouncer/ComboboxAccessibilityAnnouncer';
+import { ComboboxAccessibilityAnnouncer } from '../../../../../libs/ds-forms/src/Combobox/ComboboxAccessibilityAnnouncer';
 
 type ComboboxAccessibilityAnnouncerProps = React.ComponentProps<
   typeof ComboboxAccessibilityAnnouncer

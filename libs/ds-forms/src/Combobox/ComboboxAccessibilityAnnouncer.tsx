@@ -3,8 +3,9 @@ import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import styles from '../Combobox.module.scss';
-import type { ComboboxOption } from '../Combobox.types';
+import type { ComboboxOption } from './Combobox.types';
+
+import styles from './Combobox.module.scss';
 
 interface ComboboxAccessibilityAnnouncerProps {
   comboboxId: string;
