@@ -6,6 +6,8 @@ import {
   type JSX,
 } from 'react';
 
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+
 import {
   getSelectedValuesFromValue,
   getSearchTermFromValue,
@@ -13,7 +15,6 @@ import {
 import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer/ComboboxAccessibilityAnnouncer';
 import { ComboboxButton } from './ComboboxButton/ComboboxButton';
-import { ComboboxInputField } from './ComboboxInputField/ComboboxInputField';
 import { ComboboxOptions } from './ComboboxOptions/ComboboxOptions';
 import {
   getComboboxPlaceholderDefault,
@@ -236,7 +237,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
       className={`${styles.comboboxWrapper} ${classNames?.container || ''} ${className || ''}`.trim()}
     >
       <LabelWithHelp
-      classNames={classNames}
+        classNames={classNames}
         htmlFor={comboboxId}
         hideLabel={hideLabel}
         description={description}
@@ -261,30 +262,42 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
             onRemoveValue={handleRemoveValue}
           />
 
-          <ComboboxInputField
-            inputRef={inputRef}
-            comboboxId={comboboxId}
-            searchTerm={searchTerm}
+          <input
+            ref={inputRef}
+            id={comboboxId}
+            type={'text'}
+            value={searchTerm}
             placeholder={placeholder}
             disabled={disabled}
-            required={required || false}
-            isOpen={isOpen}
-            listId={listId}
-            focusedOptionId={focusedOptionId}
-            ariaDescribedBy={ariaDescribedBy}
-            errorMessage={errorMessage}
-            isLoading={isLoading}
-            multiple={multiple}
-            selectedValues={selectedValues}
-            classNames={classNames}
-            name={name}
-            handleInputChange={handleInputChange}
-            handleInputFocus={handleInputFocus}
-            handleInputBlur={handleInputBlur}
+            required={required}
+            role={'combobox'}
+            className={`${styles.input} ${classNames?.input || ''}`}
+            aria-expanded={isOpen}
+            aria-autocomplete={'list'}
+            aria-controls={listId}
+            aria-activedescendant={focusedOptionId}
+            aria-describedby={ariaDescribedBy}
+            aria-invalid={!!errorMessage || undefined}
+            aria-busy={isLoading || undefined}
             data-testid={dataTestId}
             lang={lang}
-            htmlAttributes={htmlAttributes}
+            onChange={handleInputChange}
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
+            {...(multiple ? { name: undefined } : { name })}
+            {...htmlAttributes}
           />
+
+          {/* Hidden inputs for form submission in multiple mode */}
+          {multiple &&
+            selectedValues.map((selectedValue) => (
+              <input
+                key={selectedValue.value}
+                type={'hidden'}
+                name={name}
+                value={selectedValue.value}
+              />
+            ))}
         </div>
 
         <div className={styles.inputButtonArea}>

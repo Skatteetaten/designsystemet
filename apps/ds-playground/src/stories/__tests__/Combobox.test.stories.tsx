@@ -259,6 +259,123 @@ const ProgrammaticFocusTemplate: StoryFn<typeof Combobox> = () => {
   );
 };
 
+export const AriaAttributesTest = {
+  name: 'ARIA-attributter for combobox',
+  args: {
+    ...defaultArgs,
+    helpText: 'Dette er hjelpetekst',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Verifiser grunnleggende ARIA-attributter
+    await expect(inputElement).toBeInTheDocument();
+    await expect(inputElement).toHaveAttribute('aria-autocomplete', 'list');
+    await expect(inputElement).toHaveAttribute('aria-expanded', 'false');
+
+    // Åpne dropdown
+    await userEvent.click(inputElement);
+
+    // Verifiser at ARIA-attributter oppdateres når dropdown åpnes
+    await expect(inputElement).toHaveAttribute('aria-expanded', 'true');
+    await expect(inputElement).toHaveAttribute('aria-controls');
+
+    // Verifiser at options får korrekte IDs
+    const options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+
+    // Naviger til første option med piltast
+    await userEvent.keyboard('{ArrowDown}');
+
+    // Verifiser aria-activedescendant
+    const activeDescendant = inputElement.getAttribute('aria-activedescendant');
+    await expect(activeDescendant).toBeTruthy();
+    await expect(options[0]).toHaveAttribute('id', activeDescendant);
+
+    // Verifiser aria-describedby hvis hjelpetekst finnes
+    const describedBy = inputElement.getAttribute('aria-describedby');
+    if (describedBy) {
+      const helpElement = canvas.getByText('Dette er hjelpetekst');
+      await expect(helpElement).toBeInTheDocument();
+    }
+  },
+} satisfies Story;
+
+export const HiddenInputsMultipleTest = {
+  name: 'Skjulte input-felt for flervalg',
+  args: {
+    ...defaultArgs,
+    multiple: true,
+    name: 'categories',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Verifiser at hovedinput ikke har name-attributt i flervalgs-modus
+    await expect(inputElement).not.toHaveAttribute('name');
+
+    // Åpne dropdown og velg to alternativer
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]); // Norge
+    await userEvent.click(options[1]); // Sverige
+
+    // Verifiser at skjulte input-felt er opprettet
+    const hiddenInputs = canvasElement.querySelectorAll('input[type="hidden"]');
+    await expect(hiddenInputs).toHaveLength(2);
+
+    // Verifiser at skjulte input-felt har korrekte verdier
+    await expect(hiddenInputs[0]).toHaveAttribute('name', 'categories');
+    await expect(hiddenInputs[0]).toHaveAttribute('value', 'no');
+    await expect(hiddenInputs[1]).toHaveAttribute('name', 'categories');
+    await expect(hiddenInputs[1]).toHaveAttribute('value', 'se');
+
+    // Fjern ett valg og verifiser at skjult input også fjernes
+    const selectedChips = canvas.getAllByRole('button', { name: /fjern/i });
+    await userEvent.click(selectedChips[0]); // Fjern Norge
+
+    const updatedHiddenInputs = canvasElement.querySelectorAll(
+      'input[type="hidden"]'
+    );
+    await expect(updatedHiddenInputs).toHaveLength(1);
+    await expect(updatedHiddenInputs[0]).toHaveAttribute('value', 'se');
+  },
+} satisfies Story;
+
+export const LoadingAndErrorStatesTest = {
+  name: 'Loading og feilstatus-attributter',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+    errorMessage: 'Dette feltet er påkrevd',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Verifiser loading-status
+    await expect(inputElement).toHaveAttribute('aria-busy', 'true');
+
+    // Verifiser feilstatus
+    await expect(inputElement).toHaveAttribute('aria-invalid', 'true');
+
+    // Verifiser at feilmelding vises
+    const errorElement = canvas.getByText('Dette feltet er påkrevd');
+    await expect(errorElement).toBeInTheDocument();
+  },
+} satisfies Story;
+
 export const SearchFiltering = {
   name: 'Søk og filtrering av alternativer (A5)',
   args: {
