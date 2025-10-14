@@ -233,6 +233,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
 
   return (
     <div
+      lang={lang}
       data-has-spacing={hasSpacing}
       className={`${styles.comboboxWrapper} ${classNames?.container || ''} ${className || ''}`.trim()}
     >
@@ -280,7 +281,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
             aria-invalid={!!errorMessage || undefined}
             aria-busy={isLoading || undefined}
             data-testid={dataTestId}
-            lang={lang}
             onChange={handleInputChange}
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
