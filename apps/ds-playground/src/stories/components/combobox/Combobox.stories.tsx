@@ -8,16 +8,12 @@ import {
 import { comboboxStoryOptions } from './combobox.stories.utils';
 import { ComboboxFormExample } from './ComboboxFormExample';
 import comboboxFormExampleSource from './ComboboxFormExample.tsx?raw';
-import { ComboboxKeyboardNavigationExample } from './ComboboxKeyboardNavigationExample';
-import comboboxKeyboardNavigationExampleSource from './ComboboxKeyboardNavigationExample.tsx?raw';
 import { ComboboxLoadingStatesExample } from './ComboboxLoadingStatesExample';
 import comboboxLoadingStatesExampleSource from './ComboboxLoadingStatesExample.tsx?raw';
 import { ComboboxMaxHeightExample } from './ComboboxMaxHeightExample';
 import comboboxMaxHeightExampleSource from './ComboboxMaxHeightExample.tsx?raw';
 import { ComboboxMaxSelectedExample } from './ComboboxMaxSelectedExample';
 import comboboxMaxSelectedExampleSource from './ComboboxMaxSelectedExample.tsx?raw';
-import { ComboboxMultipleKeyboardNavigationExample } from './ComboboxMultipleKeyboardNavigationExample';
-import comboboxMultipleKeyboardNavigationExampleSource from './ComboboxMultipleKeyboardNavigationExample.tsx?raw';
 import {
   ComboboxPerformanceExample,
   ComboboxPerformanceMultipleExample,
@@ -277,46 +273,6 @@ LoadingStates.parameters = {
     },
     source: {
       code: comboboxLoadingStatesExampleSource,
-      language: 'tsx',
-    },
-  },
-  controls: {
-    exclude: /.*/,
-  },
-};
-
-export const KeyboardNavigation: StoryFunction = () => {
-  return <ComboboxKeyboardNavigationExample />;
-};
-KeyboardNavigation.storyName = 'Tastaturnavigasjon';
-KeyboardNavigation.parameters = {
-  docs: {
-    description: {
-      story:
-        'Demonstrerer alle tastaturnavigasjonsfunksjoner som støttes av Combobox, inkludert piltaster, Enter, Escape og Alt-kombinasjoner. Denne storyen viser hvordan komponenten møter tilgjengelighetskrav for keyboard-only bruk.',
-    },
-    source: {
-      code: comboboxKeyboardNavigationExampleSource,
-      language: 'tsx',
-    },
-  },
-  controls: {
-    exclude: /.*/,
-  },
-};
-
-export const MultipleKeyboardNavigation: StoryFunction = () => {
-  return <ComboboxMultipleKeyboardNavigationExample />;
-};
-MultipleKeyboardNavigation.storyName = 'Tastaturnavigasjon for flervalg';
-MultipleKeyboardNavigation.parameters = {
-  docs: {
-    description: {
-      story:
-        'Demonstrerer alle tastaturnavigasjonsfunksjoner som støttes av Combobox i flervalg-modus, inkludert piltaster, Enter for toggle-valg, Escape, Backspace for fjerning av valg og Delete for chip-fjerning. Denne storyen viser hvordan komponenten møter tilgjengelighetskrav for keyboard-only bruk ved flere valg.',
-    },
-    source: {
-      code: comboboxMultipleKeyboardNavigationExampleSource,
       language: 'tsx',
     },
   },
