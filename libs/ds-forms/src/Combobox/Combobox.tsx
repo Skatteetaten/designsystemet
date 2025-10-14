@@ -6,7 +6,10 @@ import {
   type JSX,
 } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonClassNameDefault,
+  getHasSpacingDefault,
+} from '@skatteetaten/ds-core-utils';
 
 import {
   getSelectedValuesFromValue,
@@ -19,6 +22,9 @@ import { ComboboxOptions } from './ComboboxOptions/ComboboxOptions';
 import {
   getComboboxPlaceholderDefault,
   getComboboxLoadingMessageDefault,
+  getCombobboxMinSearchLengthDefault,
+  getComboboxIsMultiSelectDefault,
+  getComboboxIsLoadingDefault,
 } from './defaults';
 import { useBrowserCompatibility } from './hooks/useBrowserCompatibility';
 import { useComboboxCore } from './hooks/useComboboxCore';
@@ -54,31 +60,27 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
     className = getCommonClassNameDefault(),
     lang,
     'data-testid': dataTestId,
-
     classNames,
     description,
     errorMessage,
-    hasSpacing = false,
+    hasSpacing = getHasSpacingDefault(),
     helpSvgPath,
     helpText,
-    hideLabel = false,
-    isLoading = false,
+    hideLabel,
+    isLoading = getComboboxIsLoadingDefault(),
     label,
     loadingMessage = getComboboxLoadingMessageDefault(),
-    minSearchLength = 0,
-    multiple = false,
+    minSearchLength = getCombobboxMinSearchLengthDefault(),
+    multiple = getComboboxIsMultiSelectDefault(),
     options,
     placeholder = getComboboxPlaceholderDefault(),
     spinnerProps,
     titleHelpSvg,
     value,
     variant,
-
     name,
-
-    disabled = false,
+    disabled,
     required,
-
     onBlur,
     onFocus,
     onHelpToggle,
@@ -249,7 +251,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
       >
         {label}
       </LabelWithHelp>
-
       <div
         className={containerClassNames}
         onClick={!disabled ? handleContainerClick : undefined}
@@ -262,7 +263,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
             classNames={classNames}
             onRemoveValue={handleRemoveValue}
           />
-
           <input
             ref={inputRef}
             id={comboboxId}
@@ -287,7 +287,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
             {...(multiple ? { name: undefined } : { name })}
             {...htmlAttributes}
           />
-
           {/* Hidden inputs for form submission in multiple mode */}
           {multiple &&
             selectedValues.map((selectedValue) => (
@@ -299,7 +298,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
               />
             ))}
         </div>
-
         <div className={styles.inputButtonArea}>
           <ComboboxButton
             isOpen={isOpen}
@@ -312,7 +310,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
           />
         </div>
       </div>
-
       <ComboboxAccessibilityAnnouncer
         comboboxId={comboboxId}
         isLoading={isLoading}
@@ -321,7 +318,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
         displayOptions={displayOptions}
         searchTerm={searchTerm}
       />
-
       <ComboboxOptions
         isOpen={isOpen}
         isLoading={isLoading}
@@ -342,7 +338,6 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
         hasError={!!errorMessage}
         maxSelected={maxSelected}
       />
-
       <ErrorMessage
         id={errorId}
         showError={!!errorMessage}

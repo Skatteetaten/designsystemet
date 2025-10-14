@@ -5,3 +5,7 @@ export const getComboboxPlaceholderDefault = (): string =>
 
 export const getComboboxLoadingMessageDefault = (): string =>
   dsI18n.t('ds_forms:combobox.Loading');
+
+export const getComboboxIsMultiSelectDefault = (): boolean => false;
+export const getComboboxIsLoadingDefault = (): boolean => false;
+export const getCombobboxMinSearchLengthDefault = (): number => 0;
