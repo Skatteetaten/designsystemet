@@ -154,7 +154,7 @@ export const NoResultsMessage = {
     const listbox = canvas.getByRole('listbox');
 
     await expect(listbox).toBeInTheDocument();
-    await expect(canvas.getByText(/Ingen treff for "xyz"/)).toBeInTheDocument();
+    await expect(canvas.getByText(/Ingen treff for «xyz»/)).toBeInTheDocument();
   },
 } satisfies Story;
 

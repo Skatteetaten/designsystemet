@@ -1,4 +1,4 @@
-import type { ComboboxProps, ComboboxOption } from './Combobox.types';
+import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 
 /**
  * Filters combobox options based on search term and selection state.

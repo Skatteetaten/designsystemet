@@ -1,11 +1,16 @@
 import React, { type JSX, RefObject } from 'react';
+import { useTranslation } from 'react-i18next';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
-import { getOptionState, type ComboboxState } from './combobox-state-utils';
 import type { ComboboxOption } from './Combobox.types';
 import { ComboboxLoadingMessage } from './ComboboxLoadingMessage';
 import { ComboboxMaxSelectedMessage } from './ComboboxMaxSelectedMessage';
+import {
+  getOptionState,
+  type ComboboxState,
+} from './utils/combobox-state-utils';
 
 import styles from './Combobox.module.scss';
 
@@ -50,6 +55,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     hasError = false,
     maxSelected,
   }: ComboboxOptionsProps): JSX.Element | null => {
+    const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     if (!isOpen) {
       return null;
     }
@@ -157,9 +163,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             aria-disabled={'true'}
             className={styles.emptyResult}
           >
-            {'Ingen treff for "'}
-            {searchTerm}
-            {'"'}
+            {t('combobox.NoResults', { searchTerm })}
           </li>
         </ul>
       );

@@ -139,7 +139,7 @@ export type ComboboxProps = SingleComboboxProps | MultiComboboxProps;
 
 export interface ComboboxComponent extends React.FC<ComboboxProps> {
   Button: typeof ComboboxButton;
-  Chips: React.ComponentType<{
+  SelectedOptions: React.ComponentType<{
     multiple: boolean;
     selectedValues: ComboboxOption[];
     onRemoveValue: (value: ComboboxOption) => void;

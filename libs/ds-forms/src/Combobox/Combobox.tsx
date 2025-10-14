@@ -11,14 +11,11 @@ import {
   getHasSpacingDefault,
 } from '@skatteetaten/ds-core-utils';
 
-import {
-  getSelectedValuesFromValue,
-  getSearchTermFromValue,
-} from './combobox-utils';
 import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer';
 import { ComboboxButton } from './ComboboxButton';
 import { ComboboxOptions } from './ComboboxOptions';
+import { ComboboxSelectedOptions } from './ComboboxSelectedOptions';
 import {
   getComboboxPlaceholderDefault,
   getComboboxLoadingMessageDefault,
@@ -31,7 +28,10 @@ import { useComboboxCore } from './hooks/useComboboxCore';
 import { useComboboxInput } from './hooks/useComboboxInput';
 import { useComboboxKeyboard } from './hooks/useComboboxKeyboard';
 import { useComboboxSelection } from './hooks/useComboboxSelection';
-import { ComboboxChips } from './SelectedOptions/SelectedOptions';
+import {
+  getSelectedValuesFromValue,
+  getSearchTermFromValue,
+} from './utils/combobox-utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
@@ -257,7 +257,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
         onKeyDown={!disabled ? handleContainerKeyDown : undefined}
       >
         <div className={styles.inputContentArea}>
-          <ComboboxChips
+          <ComboboxSelectedOptions
             multiple={multiple}
             selectedValues={selectedValues}
             classNames={classNames}
@@ -354,8 +354,8 @@ Combobox.displayName = 'Combobox';
 Combobox.Button = ComboboxButton;
 Combobox.Button.displayName = 'Combobox.Button';
 
-Combobox.Chips = ComboboxChips;
-Combobox.Chips.displayName = 'Combobox.Chips';
+Combobox.SelectedOptions = ComboboxSelectedOptions;
+Combobox.SelectedOptions.displayName = 'Combobox.SelectedOptions';
 
 Combobox.Options = ComboboxOptions;
 Combobox.Options.displayName = 'Combobox.Options';

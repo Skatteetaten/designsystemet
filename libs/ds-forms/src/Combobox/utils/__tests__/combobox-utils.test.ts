@@ -1,5 +1,6 @@
 import { createRef } from 'react';
 
+import type { ComboboxOption } from '../../Combobox.types';
 import {
   filterOptions,
   getSelectedValuesFromValue,
@@ -8,7 +9,6 @@ import {
   selectOption,
   removeOption,
 } from '../combobox-utils';
-import type { ComboboxOption } from '../Combobox.types';
 
 describe('combobox-utils', () => {
   const mockOptions: ComboboxOption[] = [

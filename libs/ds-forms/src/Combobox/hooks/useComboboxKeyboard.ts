@@ -5,7 +5,7 @@ import {
   getPreviousEnabledIndex,
   getFirstEnabledIndex,
   isIndexEnabled,
-} from '../combobox-state-utils';
+} from '../utils/combobox-state-utils';
 import type { ComboboxOption } from '../Combobox.types';
 
 export interface UseComboboxKeyboardProps {

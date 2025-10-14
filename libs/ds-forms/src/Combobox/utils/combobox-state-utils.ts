@@ -1,4 +1,4 @@
-import type { ComboboxOption } from './Combobox.types';
+import type { ComboboxOption } from '../Combobox.types';
 
 /**
  * Global state interface representing the current combobox configuration.

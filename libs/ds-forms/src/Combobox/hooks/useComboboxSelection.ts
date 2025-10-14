@@ -4,7 +4,7 @@ import {
   selectOption,
   removeOption,
   SELECTION_BEHAVIORS,
-} from '../combobox-utils';
+} from '../utils/combobox-utils';
 import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 
 interface UseComboboxSelectionProps {

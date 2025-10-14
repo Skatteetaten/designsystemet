@@ -2,23 +2,24 @@ import React, { type JSX } from 'react';
 
 import { Chips } from '@skatteetaten/ds-collections';
 
-import styles from '../Combobox.module.scss';
-import type { ComboboxOption } from '../Combobox.types';
+import type { ComboboxOption } from './Combobox.types';
 
-interface ComboboxChipsProps {
+import styles from './Combobox.module.scss';
+
+interface ComboboxSelectedOptionsProps {
   multiple: boolean;
   selectedValues: ComboboxOption[];
   onRemoveValue: (value: ComboboxOption) => void;
   classNames?: { chips?: string };
 }
 
-export const ComboboxChips = React.memo<ComboboxChipsProps>(
+export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
   ({
     multiple,
     selectedValues,
     onRemoveValue,
     classNames,
-  }: ComboboxChipsProps): JSX.Element | null => {
+  }: ComboboxSelectedOptionsProps): JSX.Element | null => {
     if (!multiple || selectedValues.length === 0) {
       return null;
     }
@@ -41,4 +42,4 @@ export const ComboboxChips = React.memo<ComboboxChipsProps>(
   }
 );
 
-ComboboxChips.displayName = 'Combobox.Chips';
+ComboboxSelectedOptions.displayName = 'Combobox.ComboboxSelectedOptions';

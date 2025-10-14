@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
+import type { ComboboxOption } from '../../Combobox.types';
 import type { ComboboxState } from '../combobox-state-utils';
 import {
   getEnabledIndices,
@@ -11,7 +12,6 @@ import {
   isOptionDisabled,
   isOptionSelected,
 } from '../combobox-state-utils';
-import type { ComboboxOption } from '../Combobox.types';
 
 const mockOptions: ComboboxOption[] = [
   { label: 'Første alternativ', value: '1' },

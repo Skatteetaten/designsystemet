@@ -12,12 +12,12 @@ import {
   getPreviousEnabledIndex,
   isIndexEnabled,
   getEnabledIndices,
-} from '../combobox-state-utils';
+} from '../utils/combobox-state-utils';
 import {
   getSelectedValuesFromValue,
   getSearchTermFromValue,
   filterOptions,
-} from '../combobox-utils';
+} from '../utils/combobox-utils';
 import type { ComboboxOption, ComboboxProps } from '../Combobox.types';
 
 export type DropdownTrigger =
