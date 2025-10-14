@@ -50,7 +50,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
   const {
     ref,
     id,
-    className,
+    className = getCommonClassNameDefault(),
     lang,
     'data-testid': dataTestId,
 
