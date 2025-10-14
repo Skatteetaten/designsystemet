@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import styles from '../Combobox.module.scss';
+import styles from './Combobox.module.scss';
 
 interface MaxSelectedMessageProps {
   selectedCount: number;
@@ -11,7 +11,7 @@ interface MaxSelectedMessageProps {
   comboboxId: string;
 }
 
-export const MaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
+export const ComboboxMaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
   ({
     selectedCount,
     maxSelected,
@@ -41,4 +41,4 @@ export const MaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
   }
 );
 
-MaxSelectedMessage.displayName = 'MaxSelectedMessage';
+ComboboxMaxSelectedMessage.displayName = 'ComboboxMaxSelectedMessage';

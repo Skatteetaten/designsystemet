@@ -18,7 +18,7 @@ import {
 import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer';
 import { ComboboxButton } from './ComboboxButton';
-import { ComboboxOptions } from './ComboboxOptions/ComboboxOptions';
+import { ComboboxOptions } from './ComboboxOptions';
 import {
   getComboboxPlaceholderDefault,
   getComboboxLoadingMessageDefault,

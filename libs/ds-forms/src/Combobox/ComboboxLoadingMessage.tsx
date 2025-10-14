@@ -3,7 +3,7 @@ import type { JSX } from 'react';
 import { Spinner } from '@skatteetaten/ds-progress';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
-import styles from '../Combobox.module.scss';
+import styles from './Combobox.module.scss';
 
 interface LoadingMessageProps {
   message?: string;
@@ -11,7 +11,7 @@ interface LoadingMessageProps {
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
 }
 
-export const LoadingMessage = ({
+export const ComboboxLoadingMessage = ({
   comboboxId,
   spinnerProps,
 }: LoadingMessageProps): JSX.Element => {
@@ -32,4 +32,4 @@ export const LoadingMessage = ({
   );
 };
 
-LoadingMessage.displayName = 'LoadingMessage';
+ComboboxLoadingMessage.displayName = 'ComboboxLoadingMessage';

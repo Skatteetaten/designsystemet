@@ -4,7 +4,7 @@ import type { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
 import { ComboboxButton } from './ComboboxButton';
-import type { ComboboxOptions } from './ComboboxOptions/ComboboxOptions';
+import type { ComboboxOptions } from './ComboboxOptions';
 import type { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
 export type ComboboxSize = Extract<Size, 'medium' | 'large'>;

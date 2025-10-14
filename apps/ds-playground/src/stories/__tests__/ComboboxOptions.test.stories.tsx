@@ -7,9 +7,9 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import type { ComboboxOption } from '@skatteetaten/ds-forms';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { ComboboxOptions } from '../../../../../libs/ds-forms/src/Combobox/ComboboxOptions/ComboboxOptions';
+import { ComboboxLoadingMessage } from '../../../../../libs/ds-forms/src/Combobox/ComboboxLoadingMessage';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { LoadingMessage } from '../../../../../libs/ds-forms/src/Combobox/ComboboxOptions/LoadingMessage';
+import { ComboboxOptions } from '../../../../../libs/ds-forms/src/Combobox/ComboboxOptions';
 
 type ComboboxOptionsProps = React.ComponentProps<typeof ComboboxOptions>;
 
@@ -161,7 +161,9 @@ export const NoResultsMessage = {
 export const LoadingMessageDefaultText = {
   name: 'Loading message with default text',
   args: defaultArgs,
-  render: (): JSX.Element => <LoadingMessage comboboxId={'test-combobox'} />,
+  render: (): JSX.Element => (
+    <ComboboxLoadingMessage comboboxId={'test-combobox'} />
+  ),
   parameters: {
     imageSnapshot: { disableSnapshot: true },
     a11y: { disable: true }, // Disable a11y checks for tests

@@ -2,11 +2,12 @@ import React, { type JSX, RefObject } from 'react';
 
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
-import { getOptionState, type ComboboxState } from '../combobox-state-utils';
-import styles from '../Combobox.module.scss';
-import type { ComboboxOption } from '../Combobox.types';
-import { LoadingMessage } from './LoadingMessage';
-import { MaxSelectedMessage } from '../MaxSelectedMessage/MaxSelectedMessage';
+import { getOptionState, type ComboboxState } from './combobox-state-utils';
+import type { ComboboxOption } from './Combobox.types';
+import { ComboboxLoadingMessage } from './ComboboxLoadingMessage';
+import { ComboboxMaxSelectedMessage } from './ComboboxMaxSelectedMessage';
+
+import styles from './Combobox.module.scss';
 
 interface ComboboxOptionsProps {
   isOpen: boolean;
@@ -60,7 +61,10 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           id={listId}
           className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames?.options || ''}`}
         >
-          <LoadingMessage comboboxId={comboboxId} spinnerProps={spinnerProps} />
+          <ComboboxLoadingMessage
+            comboboxId={comboboxId}
+            spinnerProps={spinnerProps}
+          />
         </div>
       );
     }
@@ -126,7 +130,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           })}
           {/* Add max selected message when selections are made */}
           {multiple && maxSelected && selectedValues.length > 0 && (
-            <MaxSelectedMessage
+            <ComboboxMaxSelectedMessage
               selectedCount={selectedValues.length}
               maxSelected={maxSelected}
               comboboxId={comboboxId}
