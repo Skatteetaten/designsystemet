@@ -10,7 +10,7 @@ const meta = {
   component: WordInfo,
   tags: ['chromatic', '!autodocs'],
   parameters: {
-    pseudoSelector: 'button',
+    pseudoSelector: ['button', 'a'],
   },
 } satisfies Meta<typeof WordInfo>;
 export default meta;

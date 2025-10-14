@@ -19,6 +19,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    as: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: 'text',
@@ -84,6 +85,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
+    imageSnapshot: { disableSnapshot: true },
     a11y: {
       test: 'off',
     },
@@ -98,8 +100,20 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const Defaults = {
+  name: 'Defaults',
+  args: {
+    ...defaultArgs,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(container.tagName.toLowerCase()).toBe('div');
+  },
+} satisfies Story;
+
 export const WithMarkup = {
-  name: 'With Markup (A2)',
+  name: 'With Markup (A6)',
   args: {
     ...defaultArgs,
     children: (
@@ -126,5 +140,24 @@ export const VerticalScroll = {
   name: 'With Scroll (A7)',
   args: {
     children: loremIpsum.repeat(100),
+  },
+} satisfies Story;
+
+export const AsSpan = {
+  name: 'As Span (A11)',
+  args: {
+    ...defaultArgs,
+    as: 'span',
+  },
+  argTypes: {
+    as: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(container.tagName.toLowerCase()).toBe('span');
   },
 } satisfies Story;

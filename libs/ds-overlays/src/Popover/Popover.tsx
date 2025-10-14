@@ -16,6 +16,7 @@ import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 
 import {
   getPopoverColorDefault,
+  getPopoverContentAsDefault,
   getPopoverPositionDefault,
   getPopoverRestoreFocusDefault,
 } from './defaults';
@@ -123,6 +124,7 @@ export {
   getPopoverColorDefault,
   getPopoverPositionDefault,
   getPopoverRestoreFocusDefault,
+  getPopoverContentAsDefault,
 };
 
 Popover.Content = PopoverContent;
