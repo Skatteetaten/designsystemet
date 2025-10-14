@@ -25,10 +25,10 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
   ({
     isOpen,
     onClick,
-    hasValue = false,
+    hasValue,
     onClear,
-    multiple = false,
-    disabled = false,
+    multiple,
+    disabled,
     variant = 'medium',
   }: ComboboxButtonProps): JSX.Element => {
     const buttonClassName = `${styles.chevronButton} ${variant === 'large' ? styles.chevronButton_large : ''}`;
