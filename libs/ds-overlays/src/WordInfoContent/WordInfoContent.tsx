@@ -26,6 +26,7 @@ export const WordInfoContent = ({
       }}
       lang={lang}
       data-testid={dataTestId}
+      as={'span'}
     >
       {children}
     </PopoverContent>

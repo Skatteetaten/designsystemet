@@ -1,6 +1,7 @@
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { Link } from '@skatteetaten/ds-buttons';
 import { WordInfo } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -27,7 +28,6 @@ const meta = {
     // Props
     children: { control: false, table: { disable: true } },
     disableAutoDismiss: { table: { disable: true } },
-    disableAutoDismissOnMobile: { table: { disable: true } },
     isOpen: { table: { disable: true } },
     position: { table: { disable: true } },
     shouldRestoreFocus: { table: { disable: true } },
@@ -74,6 +74,9 @@ export const IsOpen = {
     const term = canvas.getByText(defaultText);
     await expect(term).toBeInTheDocument();
     await expect(term).toHaveAttribute('aria-expanded', 'true');
+    const content = canvas.getByText(defaultContent);
+    await expect(content).toBeInTheDocument();
+    await expect(content.tagName.toLowerCase()).toBe('span');
   },
 } satisfies Story;
 
@@ -127,6 +130,35 @@ export const WithinHeading = {
   parameters: {
     imageSnapshot: {
       pseudoStates: ['hover', 'focus-visible', 'active'],
+    },
+  },
+} satisfies Story;
+
+const TemplateWithLink: StoryFn<typeof WordInfo> = () => (
+  <Paragraph>
+    {'Det er legen som melder dødsfall i Norge til '}
+    <WordInfo>
+      <WordInfo.Trigger>{'Folkeregisteret'}</WordInfo.Trigger>
+      <WordInfo.Content>
+        <Heading as={'h3'} level={4}>
+          {'Folkeregisteret'}
+        </Heading>
+        <Paragraph>{'Forklaring på Folkeregisteret'}</Paragraph>
+      </WordInfo.Content>
+    </WordInfo>
+    {'. Du trenger ikke å melde noe selv til '}
+    <Link href={'#'}>{'Folkeregisteret'}</Link>
+    {'.'}
+  </Paragraph>
+);
+
+export const ParagraphWithLinkAndWordInfo = {
+  name: 'Paragraph with Link and WordInfo',
+  render: TemplateWithLink,
+  args: {},
+  parameters: {
+    imageSnapshot: {
+      pseudoStates: ['hover', 'focus', 'focus-visible', 'active'],
     },
   },
 } satisfies Story;
