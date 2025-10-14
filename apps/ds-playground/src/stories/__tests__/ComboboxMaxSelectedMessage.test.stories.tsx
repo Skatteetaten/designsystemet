@@ -2,6 +2,7 @@ import React, { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect } from 'storybook/test';
+
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries

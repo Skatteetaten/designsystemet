@@ -53,42 +53,40 @@ import styles from './Combobox.module.scss';
  * - **Controlled**: Provide `value` as array, use `onSelectionChange` to update state
  * - Automatically uses 'large' variant for chip display space
  */
-const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
-  const {
-    ref,
-    id,
-    className = getCommonClassNameDefault(),
-    lang,
-    'data-testid': dataTestId,
-    classNames,
-    description,
-    errorMessage,
-    hasSpacing = getHasSpacingDefault(),
-    helpSvgPath,
-    helpText,
-    hideLabel,
-    isLoading = getComboboxIsLoadingDefault(),
-    label,
-    loadingMessage = getComboboxLoadingMessageDefault(),
-    minSearchLength = getCombobboxMinSearchLengthDefault(),
-    multiple = getComboboxIsMultiSelectDefault(),
-    options,
-    placeholder = getComboboxPlaceholderDefault(),
-    spinnerProps,
-    titleHelpSvg,
-    value,
-    variant,
-    name,
-    disabled,
-    required,
-    onBlur,
-    onFocus,
-    onHelpToggle,
-    onInputChange,
-    onSelectionChange,
-
-    ...htmlAttributes
-  } = props;
+const Combobox = (({
+  ref,
+  id,
+  className = getCommonClassNameDefault(),
+  lang,
+  'data-testid': dataTestId,
+  classNames,
+  description,
+  errorMessage,
+  hasSpacing = getHasSpacingDefault(),
+  helpSvgPath,
+  helpText,
+  hideLabel,
+  isLoading = getComboboxIsLoadingDefault(),
+  label,
+  loadingMessage = getComboboxLoadingMessageDefault(),
+  minSearchLength = getCombobboxMinSearchLengthDefault(),
+  multiple = getComboboxIsMultiSelectDefault(),
+  options,
+  placeholder = getComboboxPlaceholderDefault(),
+  spinnerProps,
+  titleHelpSvg,
+  value,
+  variant,
+  name,
+  disabled,
+  required,
+  onBlur,
+  onFocus,
+  onHelpToggle,
+  onInputChange,
+  onSelectionChange,
+  ...htmlAttributes
+}: Readonly<ComboboxProps>): JSX.Element => {
   const { safeFocus } = useBrowserCompatibility();
 
   const resolvedVariant = multiple ? 'large' : (variant ?? 'medium');
@@ -96,10 +94,10 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
   // Extract maxSelected safely from union type props
   // Only available in multi-select mode, undefined otherwise
   const maxSelected = useMemo(() => {
-    return multiple && 'maxSelected' in props
-      ? (props as { maxSelected?: number }).maxSelected // Type assertion needed for union
-      : undefined; // Single-select has no limit
-  }, [multiple, props]);
+    return multiple && 'maxSelected' in htmlAttributes
+      ? htmlAttributes.maxSelected
+      : undefined;
+  }, [multiple, htmlAttributes]);
 
   // UNIFIED CORE HOOK - consolidates dropdown + focus + state management
   const coreState = useComboboxCore({

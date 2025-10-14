@@ -1,5 +1,6 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react/*';
 
+import { getHasSpacingDefault } from '@skatteetaten/ds-core-utils';
 import {
   Combobox,
   getComboboxPlaceholderDefault,
@@ -50,7 +51,7 @@ const meta = {
       },
     },
     options: {
-      control: { type: 'object' },
+      control: false,
       description: 'Array av valg som kan velges fra',
       table: { category: category.props },
     },
@@ -58,12 +59,15 @@ const meta = {
       control: { type: 'select' },
       options: ['medium', 'large'],
       description: 'Størrelsen på combobox. Må være "large" for multi-select',
-      table: { category: category.props },
+      table: { category: category.props, defaultValue: { summary: 'medium' } },
     },
     hasSpacing: {
       control: { type: 'boolean' },
       description: 'Legger til margin under komponenten',
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getHasSpacingDefault().toString() },
+      },
     },
     hideLabel: {
       control: { type: 'boolean' },
@@ -74,17 +78,24 @@ const meta = {
     multiple: {
       control: { type: 'boolean' },
       description: 'Tillater valg av flere alternativer',
-      table: { category: category.props },
+      table: {
+        category: category.props,
+      },
     },
     minSearchLength: {
       control: { type: 'number', min: 0, max: 10, step: 1 },
       description: 'Minimum antall tegn før søkeresultater vises',
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: {},
+      },
     },
     isLoading: {
       control: { type: 'boolean' },
       description: 'Viser loading state med spinner',
-      table: { category: category.props },
+      table: {
+        category: category.props,
+      },
     },
     loadingMessage: {
       control: { type: 'text' },
@@ -117,29 +128,36 @@ const meta = {
     disabled: {
       control: { type: 'boolean' },
       description: 'Deaktiverer komponenten',
-      table: { category: category.htmlAttribute },
+      table: {
+        category: category.htmlAttribute,
+      },
     },
     required: {
       control: { type: 'boolean' },
       description: 'Markerer feltet som obligatorisk',
-      table: { category: category.htmlAttribute },
+      table: {
+        category: category.htmlAttribute,
+      },
     },
 
     // Events
     onSelectionChange: {
       action: 'selection-changed',
+      control: false,
       description:
         'Kalles når valget endres. Enkeltvalg: mottar ComboboxOption | null. Flervalg: mottar ComboboxOption[] array. Brukes både i kontrollert og ukontrollert modus.',
       table: { category: category.event },
     },
     onInputChange: {
       action: 'input-changed',
+      control: false,
       description:
         'Kalles når input-teksten endres (kun ukontrollert modus). Mottar den nåværende input-teksten som string. Nyttig for asynkron søk og filtrering.',
       table: { category: category.event },
     },
     onHelpToggle: {
       action: 'help-toggled',
+      control: false,
       description:
         'Kalles når hjelpeteksten vises/skjules. Mottar boolean: true når hjelpeteksten åpnes, false når den lukkes. Brukes for å spore bruk av hjelpefunksjonalitet.',
       table: { category: category.event },
