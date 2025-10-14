@@ -3,7 +3,7 @@ import type { ComponentPropsWithoutRef, Ref } from 'react';
 import type { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
-import type { ComboboxButton } from './ComboboxButton/ComboboxButton';
+import { ComboboxButton } from './ComboboxButton';
 import type { ComboboxOptions } from './ComboboxOptions/ComboboxOptions';
 import type { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
