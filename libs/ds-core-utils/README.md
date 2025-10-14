@@ -15,5 +15,5 @@ npm i @skatteetaten/ds-core-utils
 ## Innhold
 
 - interfaces og types
-- felles CSS
+- felles CSS/mixins
 - Tekster og oversettelser

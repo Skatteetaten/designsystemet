@@ -14,5 +14,8 @@ npm i @skatteetaten/ds-collections
 
 ## Innhold
 
+- Accordion
+- Chips
 - OpenClose
 - StepList
+- Tabs

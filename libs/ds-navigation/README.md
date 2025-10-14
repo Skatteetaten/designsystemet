@@ -11,3 +11,9 @@ På [kom i gang for utviklere](https://www.skatteetaten.no/stilogtone/designsyst
 ```
 npm i @skatteetaten/ds-navigation
 ```
+
+## Innhold
+
+- Breadcrumbs
+- NavigationTile
+- Pagination
