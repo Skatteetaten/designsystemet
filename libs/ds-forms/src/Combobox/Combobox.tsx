@@ -236,6 +236,7 @@ const Combobox = ((props: Readonly<ComboboxProps>): JSX.Element => {
       className={`${styles.comboboxWrapper} ${classNames?.container || ''} ${className || ''}`.trim()}
     >
       <LabelWithHelp
+      classNames={classNames}
         htmlFor={comboboxId}
         hideLabel={hideLabel}
         description={description}
