@@ -9,6 +9,6 @@ describe('defaults', () => {
   });
 
   it('Når getComboboxLoadingMessageDefault kalles, så returnerer den riktig verdi', () => {
-    expect(getComboboxLoadingMessageDefault()).toBe('Laster');
+    expect(getComboboxLoadingMessageDefault()).toBe(dsI18n.t('ds_forms:combobox.Loading'));
   });
 });
