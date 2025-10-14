@@ -45,11 +45,7 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
           data-chevron-button
           onClick={onClear}
         >
-          <Icon
-            svgPath={CancelSVGpath}
-            size={iconSize}
-            title={dsI18n.t('ds_forms:combobox.ResetSuggestion')}
-          />
+          <Icon svgPath={CancelSVGpath} size={iconSize} />
         </button>
       );
     }
