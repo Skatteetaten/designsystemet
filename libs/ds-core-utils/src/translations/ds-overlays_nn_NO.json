@@ -43,9 +43,9 @@
   "topbannerexternalusermenu.AboutTheOrganisation": "Om verksemda",
   "topbannerexternalusermenu.MyPage": "Mi side",
   "topbannerexternalusermenu.Notification": "Varsel",
-  "topbannerexternalusermenu.NotificationCountMessage": "Varslar, {{count}} ulesne",
+  "topbannerexternalusermenu.NotificationCountMessage": "{{count}} ulesne varslar",
   "topbannerexternalusermenu.OnBehalfOf": "På vegner av",
-  "topbannerexternalusermenu.OneNotificationMessage": "(Varsel, 1 ulesen)",
+  "topbannerexternalusermenu.OneNotificationMessage": "1 ulese varsel",
   "topbannerexternalusermenu.SwitchUser": "Byt brukar",
-  "wordinfo.WordExplanation": "(ordforklaring)"
+  "wordinfo.WordExplanation": "ordforklaring"
 }

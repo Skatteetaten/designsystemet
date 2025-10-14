@@ -2,6 +2,7 @@ import React, { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect } from 'storybook/test';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ComboboxMaxSelectedMessage } from '../../../../../libs/ds-forms/src/Combobox/ComboboxMaxSelectedMessage';
@@ -52,7 +53,12 @@ export const BasicRendering = {
     const message =
       canvasElement.ownerDocument.querySelector('[role="status"]');
     await expect(message).toBeInTheDocument();
-    await expect(message).toHaveTextContent('2 av 5 valgt');
+    await expect(message).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.SelectedOfTotalPlural', {
+        selected: 2,
+        total: 5,
+      })
+    );
   },
 } satisfies Story;
 
@@ -73,7 +79,12 @@ export const DifferentCountValues = {
   }): Promise<void> => {
     const message =
       canvasElement.ownerDocument.querySelector('[role="status"]');
-    await expect(message).toHaveTextContent('1 av 3 valgt');
+    await expect(message).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.SelectedOfTotalSingular', {
+        selected: 1,
+        total: 3,
+      })
+    );
   },
 } satisfies Story;
 
@@ -196,7 +207,12 @@ export const LargeNumbers = {
   }): Promise<void> => {
     const message =
       canvasElement.ownerDocument.querySelector('[role="status"]');
-    await expect(message).toHaveTextContent('999 av 1000 valgt');
+    await expect(message).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.SelectedOfTotalPlural', {
+        selected: 999,
+        total: 1000,
+      })
+    );
   },
 } satisfies Story;
 
@@ -217,7 +233,12 @@ export const ZeroMaxSelected = {
   }): Promise<void> => {
     const message =
       canvasElement.ownerDocument.querySelector('[role="status"]');
-    await expect(message).toHaveTextContent('0 av 0 valgt');
+    await expect(message).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.SelectedOfTotalPlural', {
+        selected: 0,
+        total: 0,
+      })
+    );
   },
 } satisfies Story;
 
@@ -238,6 +259,11 @@ export const SelectedEqualsMax = {
   }): Promise<void> => {
     const message =
       canvasElement.ownerDocument.querySelector('[role="status"]');
-    await expect(message).toHaveTextContent('10 av 10 valgt');
+    await expect(message).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.SelectedOfTotalPlural', {
+        selected: 10,
+        total: 10,
+      })
+    );
   },
 } satisfies Story;

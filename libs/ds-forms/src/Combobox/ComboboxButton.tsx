@@ -1,5 +1,6 @@
 import React, { type JSX } from 'react';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ChevronDownSVGpath,
   ChevronUpSVGpath,
@@ -39,7 +40,7 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
         <button
           type={'button'}
           className={buttonClassName}
-          aria-label={'Nullstill valg'}
+          aria-label={dsI18n.t('ds_forms:combobox.ResetSuggestion')}
           disabled={disabled}
           data-chevron-button
           onClick={onClear}
@@ -47,7 +48,7 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
           <Icon
             svgPath={CancelSVGpath}
             size={iconSize}
-            title={'Nullstill valg'}
+            title={dsI18n.t('ds_forms:combobox.ResetSuggestion')}
           />
         </button>
       );
@@ -64,7 +65,11 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
         <Icon
           svgPath={isOpen ? ChevronUpSVGpath : ChevronDownSVGpath}
           size={iconSize}
-          title={isOpen ? 'Lukk forslag' : 'Åpne forslag'}
+          title={
+            isOpen
+              ? dsI18n.t('ds_forms:combobox.CloseSuggestion')
+              : dsI18n.t('ds_forms:combobox.OpenSuggestion')
+          }
         />
       </div>
     );
