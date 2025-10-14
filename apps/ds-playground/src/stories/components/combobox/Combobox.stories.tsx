@@ -148,8 +148,6 @@ const meta = {
         'Kalles når hjelpeteksten vises/skjules. Mottar boolean: true når hjelpeteksten åpnes, false når den lukkes. Brukes for å spore bruk av hjelpefunksjonalitet.',
       table: { category: category.event },
     },
-
-    // Advanced/Internal props - hide from controls
     value: {
       table: { disable: true },
       description: 'Controlled value (use stories for different modes)',
