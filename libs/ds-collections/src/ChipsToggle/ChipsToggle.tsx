@@ -57,9 +57,3 @@ export const ChipsToggle = ({
 };
 
 ChipsToggle.displayName = 'ChipsToggle';
-
-export {
-  getChipsToggleDefaultShowCheckmark,
-  getChipsToggleDefaultIsSelected,
-  getChipDefaultSize,
-};

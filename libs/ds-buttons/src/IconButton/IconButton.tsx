@@ -79,5 +79,3 @@ export const IconButton = ({
 };
 
 IconButton.displayName = 'IconButton';
-
-export { getIconButtonSizeDefault, getIconButtonBrightnessDefault };

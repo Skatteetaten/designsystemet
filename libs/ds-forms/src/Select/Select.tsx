@@ -154,5 +154,3 @@ export const Select = (({
 Select.displayName = 'Select';
 Select.Option = SelectOption;
 Select.Option.displayName = 'Select.Option';
-
-export { getSelectPlaceholderDefault };

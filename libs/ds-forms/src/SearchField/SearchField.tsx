@@ -330,10 +330,3 @@ ${classNames?.searchContainer ?? ''}`.trim()}
 SearchField.displayName = 'SearchField';
 SearchField.Result = SearchFieldResult;
 SearchField.Result.displayName = 'SearchField.Result';
-
-export {
-  searchInList,
-  getSearchFieldHasSearchButtonIconDefault,
-  getEnableSRNavigationHintDefault,
-  getSearchFieldHideLabelDefault,
-};

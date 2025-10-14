@@ -42,5 +42,3 @@ export const Tag = ({
 };
 
 Tag.displayName = 'Tag';
-
-export { getTagColorDefault, getTagSizeDefault };
