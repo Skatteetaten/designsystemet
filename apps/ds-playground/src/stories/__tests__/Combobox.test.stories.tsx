@@ -5,6 +5,7 @@ import { expect, userEvent, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
 
+import { wrapper } from './testUtils/storybook.testing.utils';
 import { generatePerformanceTestData } from '../components/combobox/combobox.stories.utils';
 
 const meta = {
@@ -63,6 +64,111 @@ const defaultArgs = {
   options: defaultOptions,
   hasSpacing: false,
 };
+
+export const WithRef = {
+  name: 'With Ref (FA1)',
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLInputElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
+  },
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await expect(inputElement).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
+
+export const WithAttributes = {
+  name: 'With Attributes (FA2-5)',
+  args: {
+    ...defaultArgs,
+    id: 'htmlid',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    a11y: { test: 'off' },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Test className - bruker standard querySelector mønster
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    await expect(container).toHaveClass('dummyClassname');
+
+    await expect(inputElement).toHaveAttribute('id', 'htmlid');
+    await expect(container).toHaveAttribute('lang', 'nb');
+    await expect(inputElement).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithValidHTML = {
+  name: 'With Valid HTML (FB1)',
+  args: {
+    ...defaultArgs,
+    id: 'test-combobox',
+    'data-testid': 'valid-combobox',
+  },
+  argTypes: {
+    id: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // WCAG 4.1.1 Parsing - Test unique IDs
+    const allElementsWithId = canvasElement.querySelectorAll('[id]');
+    const ids = Array.from(allElementsWithId).map((el) => el.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length); // No duplicate IDs
+
+    // Test proper element structure and attributes
+    expect(inputElement).toHaveAttribute('id');
+    expect(inputElement).toHaveAttribute('role', 'combobox');
+    expect(inputElement).toHaveAttribute('aria-autocomplete', 'list');
+    expect(inputElement).toHaveAttribute('aria-expanded');
+
+    // Test that all required attributes are present (no duplicates)
+    const requiredAttributes = [
+      'id',
+      'role',
+      'aria-autocomplete',
+      'aria-expanded',
+    ];
+    for (const attr of requiredAttributes) {
+      const attrValue = inputElement.getAttribute(attr);
+      expect(attrValue).toBeTruthy();
+    }
+
+    // Test proper nesting - combobox should be inside container
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    expect(container).toContainElement(inputElement);
+  },
+} satisfies Story;
 
 export const SelectOptionInteraction = {
   name: 'Åpne dropdown og velg alternativ (A4)',
