@@ -7,8 +7,9 @@ import {
   Icon,
 } from '@skatteetaten/ds-icons';
 
-import styles from '../Combobox.module.scss';
-import type { ComboboxSize } from '../Combobox.types';
+import { ComboboxSize } from './Combobox.types';
+
+import styles from './Combobox.module.scss';
 
 interface ComboboxButtonProps {
   isOpen: boolean;
