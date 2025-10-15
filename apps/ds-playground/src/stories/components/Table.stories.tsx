@@ -684,7 +684,7 @@ export const Selectable: Story = {
       <Table caption={'avgiftsstatus'}>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>
+            <Table.HeaderCell as={'td'}>
               <Checkbox
                 checked={isAllChecked}
                 hideLabel
