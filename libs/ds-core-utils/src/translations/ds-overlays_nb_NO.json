@@ -43,9 +43,9 @@
   "topbannerexternalusermenu.AboutTheOrganisation": "Om virksomheten",
   "topbannerexternalusermenu.MyPage": "Min side",
   "topbannerexternalusermenu.Notification": "Varsel",
-  "topbannerexternalusermenu.NotificationCountMessage": "Varsler, {{count}} uleste",
+  "topbannerexternalusermenu.NotificationCountMessage": "{{count}} uleste varsler",
   "topbannerexternalusermenu.OnBehalfOf": "På vegne av",
-  "topbannerexternalusermenu.OneNotificationMessage": "Varsel, 1 ulest",
+  "topbannerexternalusermenu.OneNotificationMessage": "1 ulest varsel",
   "topbannerexternalusermenu.SwitchUser": "Bytt bruker",
   "wordinfo.WordExplanation": "ordforklaring"
 }
