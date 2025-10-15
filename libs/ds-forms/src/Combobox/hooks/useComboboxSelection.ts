@@ -1,11 +1,11 @@
 import { useCallback, type RefObject } from 'react';
 
+import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 import {
   selectOption,
   removeOption,
   SELECTION_BEHAVIORS,
 } from '../utils/combobox-utils';
-import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 
 interface UseComboboxSelectionProps {
   multiple: boolean;

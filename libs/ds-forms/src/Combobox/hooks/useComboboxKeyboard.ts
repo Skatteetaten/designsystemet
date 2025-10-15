@@ -1,12 +1,12 @@
 import { useEffect, type RefObject } from 'react';
 
+import type { ComboboxOption } from '../Combobox.types';
 import {
   getNextEnabledIndex,
   getPreviousEnabledIndex,
   getFirstEnabledIndex,
   isIndexEnabled,
 } from '../utils/combobox-state-utils';
-import type { ComboboxOption } from '../Combobox.types';
 
 export interface UseComboboxKeyboardProps {
   isOpen: boolean;

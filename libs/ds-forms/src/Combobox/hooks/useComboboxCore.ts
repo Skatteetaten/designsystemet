@@ -7,6 +7,7 @@ import {
   useMemo,
 } from 'react';
 
+import type { ComboboxOption, ComboboxProps } from '../Combobox.types';
 import {
   getNextEnabledIndex,
   getPreviousEnabledIndex,
@@ -18,7 +19,6 @@ import {
   getSearchTermFromValue,
   filterOptions,
 } from '../utils/combobox-utils';
-import type { ComboboxOption, ComboboxProps } from '../Combobox.types';
 
 export type DropdownTrigger =
   | 'focus'
