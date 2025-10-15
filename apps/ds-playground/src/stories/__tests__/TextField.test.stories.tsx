@@ -604,7 +604,6 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
         args.onBlur && args.onBlur(event);
       }}
       onChange={(event: ChangeEvent<HTMLInputElement>): void => {
-        args?.onChange?.(event);
         setLabelText('TextField har blitt klikket på');
         args.onChange && args.onChange(event);
       }}
