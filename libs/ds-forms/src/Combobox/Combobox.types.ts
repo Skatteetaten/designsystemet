@@ -110,7 +110,7 @@ interface MultiComboboxProps extends ComboboxCommonProps {
   /** Størrelsen på combobox - automatisk satt til 'large' for multi-select */
   variant?: never;
   /** Current values - optional for both controlled and uncontrolled modes */
-  value?: (string | number)[];
+  value?: ComponentPropsWithoutRef<'input'>['value'];
   /** Callback når options velges eller fjernes i multi-select mode */
   onSelectionChange?: (selectedOptions: ComboboxOption[]) => void;
   /** Callback når input-verdien endres - optional for live search functionality */

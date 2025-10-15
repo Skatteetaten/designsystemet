@@ -36,7 +36,7 @@ export const filterOptions = (
  * @returns Array of ComboboxOption objects matching the provided values
  */
 export const getSelectedValuesFromValue = (
-  value: string | number | (string | number)[] | undefined,
+  value: string | number | readonly string[] | undefined,
   options: ComboboxOption[],
   multiple: boolean
 ): ComboboxOption[] => {
@@ -56,7 +56,7 @@ export const getSelectedValuesFromValue = (
  * @returns String to display in the input field
  */
 export const getSearchTermFromValue = (
-  value: string | number | (string | number)[] | undefined,
+  value: string | number | readonly string[] | undefined,
   options: ComboboxOption[],
   multiple: boolean
 ): string => {
@@ -64,7 +64,7 @@ export const getSearchTermFromValue = (
     return '';
   }
 
-  if (value !== undefined) {
+  if (value !== undefined && !Array.isArray(value)) {
     const matchingOption = options.find((option) => option.value === value);
     return matchingOption ? matchingOption.label : String(value);
   }
