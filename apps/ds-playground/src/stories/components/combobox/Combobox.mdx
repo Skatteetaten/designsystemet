@@ -200,3 +200,161 @@ Kalles når hjelpeteksten åpnes eller lukkes:
 ### Skjemaeksempel
 
 <Canvas of={ComboboxStories.MultipleWithFormExample} />
+
+## React Hook Form integrasjon
+
+Combobox kan enkelt integreres med react-hook-form ved å bruke `Controller` komponenten. Dette er nødvendig fordi Combobox bruker ikke-standard prop-navn (`onSelectionChange` i stedet for `onChange`).
+
+### Hvorfor Controller er nødvendig
+
+React Hook Form forventer standard HTML form-konvensjoner, men Combobox har :
+
+- `onSelectionChange` (i stedet for `onChange`)
+- Sender `ComboboxOption` objekter (i stedet for primitive verdier)
+
+Det har vi gjort for å unngå navneforvirring gjennom å gjøre API-et mer beskrivende.
+
+`Controller` gjør det mulig å mappe mellom react-hook-form sitt API og Combobox sitt API.
+
+### Enkeltvalg med react-hook-form
+
+```tsx
+import { Controller, useForm } from 'react-hook-form';
+import { Combobox } from '@skatteetaten/ds-forms';
+
+const MyForm = () => {
+  const { control, handleSubmit } = useForm({
+    defaultValues: {
+      vegetable: '',
+    },
+  });
+
+  const onSubmit = (data) => {
+    console.log('Valgt grønnsak:', data.vegetable);
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Controller
+        name="vegetable"
+        control={control}
+        rules={{ required: 'Du må velge en grønnsak' }}
+        render={({
+          field: { onChange, value, name },
+          fieldState: { error },
+        }) => (
+          <Combobox
+            name={name}
+            label="Velg grønnsak"
+            value={value}
+            options={vegetableOptions}
+            errorMessage={error?.message}
+            onSelectionChange={(option) => onChange(option?.value || '')}
+          />
+        )}
+      />
+    </form>
+  );
+};
+```
+
+### Flervalg med react-hook-form
+
+```tsx
+import { Controller, useForm } from 'react-hook-form';
+import { Combobox } from '@skatteetaten/ds-forms';
+
+const MyForm = () => {
+  const { control, handleSubmit } = useForm({
+    defaultValues: {
+      fruits: [],
+    },
+  });
+
+  const onSubmit = (data) => {
+    console.log('Valgte frukter:', data.fruits);
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Controller
+        name="fruits"
+        control={control}
+        rules={{
+          validate: (value) => value.length > 0 || 'Du må velge minst én frukt',
+        }}
+        render={({
+          field: { onChange, value, name },
+          fieldState: { error },
+        }) => (
+          <Combobox
+            name={name}
+            label="Velg frukter"
+            value={value}
+            options={fruitOptions}
+            errorMessage={error?.message}
+            multiple
+            onSelectionChange={(options) =>
+              onChange(options.map((opt) => opt.value))
+            }
+          />
+        )}
+      />
+    </form>
+  );
+};
+```
+
+### API-søk med debouncing i react-hook-form
+
+For API-søk kan du kombinere `onInputChange` med `minSearchLength` for å unngå for mange kall. Her er et eksempel med debouncing:
+
+```tsx
+import { Controller, useForm } from 'react-hook-form';
+import { Combobox } from '@skatteetaten/ds-forms';
+import { useState } from 'react';
+
+const MyForm = () => {
+  const { control } = useForm({
+    defaultValues: { user: '' },
+  });
+
+  const [searchResults, setSearchResults] = useState([]);
+
+  // Mock API-funksjon
+  const searchUsers = async (searchTerm) => {
+    const response = await fetch(`/api/users?search=${searchTerm}`);
+    return response.json();
+  };
+
+  return (
+    <Controller
+      name="user"
+      control={control}
+      render={({ field: { onChange, value, name }, fieldState: { error } }) => {
+        let debounceTimer;
+
+        return (
+          <Combobox
+            name={name}
+            label="Søk etter bruker"
+            value={value}
+            options={[...userOptions, ...searchResults]}
+            errorMessage={error?.message}
+            minSearchLength={2}
+            onSelectionChange={(option) => onChange(option?.value || '')}
+            onInputChange={(searchTerm) => {
+              clearTimeout(debounceTimer);
+              debounceTimer = setTimeout(() => {
+                if (searchTerm.length >= 2) {
+                  searchUsers(searchTerm).then(setSearchResults);
+                }
+              }, 300);
+            }}
+          />
+        );
+      }}
+    />
+  );
+};
+```
