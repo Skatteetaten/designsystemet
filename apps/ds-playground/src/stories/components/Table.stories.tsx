@@ -701,8 +701,10 @@ export const Selectable: Story = {
             </Table.HeaderCell>
             <Table.HeaderCell>{'Fastsatt'}</Table.HeaderCell>
             <Table.HeaderCell>{'avgiftstype'}</Table.HeaderCell>
-            <Table.HeaderCell>{'avgiftsgruppe'}</Table.HeaderCell>
-            <Table.HeaderCell>{'Beløp'}</Table.HeaderCell>
+            <Table.HeaderCell alignment={'right'}>
+              {'avgiftsgruppe'}
+            </Table.HeaderCell>
+            <Table.HeaderCell alignment={'right'}>{'Beløp'}</Table.HeaderCell>
             <Table.HeaderCell>{'Status'}</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
@@ -737,8 +739,10 @@ export const Selectable: Story = {
                 {item.fastsatt}
               </Table.DataCell>
               <Table.DataCell>{item.avgiftstype}</Table.DataCell>
-              <Table.DataCell>{item.avgiftsgruppe}</Table.DataCell>
-              <Table.DataCell>{item.beloep}</Table.DataCell>
+              <Table.DataCell alignment={'right'}>
+                {item.avgiftsgruppe}
+              </Table.DataCell>
+              <Table.DataCell alignment={'right'}>{item.beloep}</Table.DataCell>
               <Table.DataCell>{item.status}</Table.DataCell>
             </Table.Row>
           ))}
