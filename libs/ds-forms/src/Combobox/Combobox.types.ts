@@ -24,12 +24,7 @@ export type ComboboxPropsHTMLAttributes = SafeOmit<
   ComponentPropsWithoutRef<'input'>,
   | 'value'
   | 'onChange'
-  | 'onFocus'
-  | 'onBlur'
   | 'id'
-  | 'name'
-  | 'disabled'
-  | 'required'
   | 'type'
   | 'role'
   | 'className'
@@ -51,7 +46,6 @@ export type ComboboxPropsHTMLAttributes = SafeOmit<
   | 'aria-atomic'
   | 'aria-relevant'
   | 'aria-haspopup'
-  | 'placeholder'
   | 'min'
   | 'max'
   | 'step'
@@ -87,24 +81,14 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   /** Minimum antall tegn som må tastes før søkeresultater vises */
   minSearchLength?: number;
   options: ComboboxOption[];
-  /** Input placeholder text */
-  placeholder?: string;
   /** Props for å tilpasse spinner utseende */
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Input name attribute for form submission */
-  name?: string;
-  disabled?: boolean;
+  /** If true, adds spacing under the combobox */
   hasSpacing?: boolean;
   hideLabel?: boolean;
   isLoading?: boolean;
-  required?: boolean;
-
-  /** Callback fired when input loses focus */
-  onBlur?: ComponentPropsWithoutRef<'input'>['onBlur'];
-  /** Callback fired when input gains focus */
-  onFocus?: ComponentPropsWithoutRef<'input'>['onFocus'];
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
