@@ -246,7 +246,7 @@ describe('useComboboxCore', () => {
     });
   });
 
-  describe('Consolidated functionality (Phase 3)', () => {
+  describe('Consolidated functionality', () => {
     it('should provide all dropdown and focus functionality in one hook', () => {
       const { result } = renderHook(() => useComboboxCore(defaultProps));
 
