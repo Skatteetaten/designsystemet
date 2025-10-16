@@ -53,7 +53,9 @@ const meta = {
         <Table.Row>
           <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
           <Table.HeaderCell scope={'col'}>{'Items'}</Table.HeaderCell>
-          <Table.HeaderCell scope={'col'}>{'Expenditure'}</Table.HeaderCell>
+          <Table.HeaderCell scope={'col'} alignment={'left'}>
+            {'Expenditure'}
+          </Table.HeaderCell>
         </Table.Row>
       </Table.Header>,
       <Table.Body key={'body'}>
@@ -62,25 +64,25 @@ const meta = {
             {'Edible'}
           </Table.DataCell>
           <Table.DataCell>{'Donuts'}</Table.DataCell>
-          <Table.DataCell>{'3,000'}</Table.DataCell>
+          <Table.DataCell alignment={'right'}>{'3,000'}</Table.DataCell>
         </Table.Row>
         <Table.Row>
           <Table.DataCell>{'Cake'}</Table.DataCell>
-          <Table.DataCell>{'3,000'}</Table.DataCell>
+          <Table.DataCell alignment={'right'}>{'3,000'}</Table.DataCell>
         </Table.Row>
         <Table.Row>
           <Table.DataCell rowSpan={2} className={'rowSpanRight'}>
             {'Non-Edible'}
           </Table.DataCell>
           <Table.DataCell>{'Stationery'}</Table.DataCell>
-          <Table.DataCell>{'18,000'}</Table.DataCell>
+          <Table.DataCell alignment={'right'}>{'18,000'}</Table.DataCell>
         </Table.Row>
         <Table.Row>
           <Table.DataCell>{'Batteries'}</Table.DataCell>
-          <Table.DataCell>{'9,000'}</Table.DataCell>
+          <Table.DataCell alignment={'right'}>{'9,000'}</Table.DataCell>
         </Table.Row>
       </Table.Body>,
-      <Table.Sum key={'sum'} valueAlignment={'left'} colSpan={2}>
+      <Table.Sum key={'sum'} valueAlignment={'right'} colSpan={2}>
         {'32,000'}
       </Table.Sum>,
     ],
