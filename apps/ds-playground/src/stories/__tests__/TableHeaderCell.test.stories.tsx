@@ -1,9 +1,7 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Table } from '@skatteetaten/ds-table';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Table.HeaderCell,
@@ -24,6 +22,10 @@ const meta = {
     isSortable: { table: { disable: true } },
     scope: { table: { disable: true } },
     sortKey: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Table.HeaderCell>;
 export default meta;
@@ -59,7 +61,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -86,7 +88,10 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -108,12 +113,28 @@ export const WithChildren = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const dataCell = canvas.getByText('columnheader');
     await expect(dataCell).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithSortable = {
+  render: Template,
+  name: 'With Sortable',
+  args: {
+    children: 'columnheader',
+    isSortable: true,
+    sortKey: 'columnheader',
+  },
+  argTypes: {
+    isSortable: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
 } satisfies Story;
 
@@ -130,10 +151,7 @@ export const WithDisabled = {
     isSortDisabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

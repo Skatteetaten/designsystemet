@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Accordion, AccordionProps } from '@skatteetaten/ds-collections';
 
@@ -29,6 +29,10 @@ const meta = {
     children: (
       <Accordion.Item title={defaultTitle}>{defaultContent}</Accordion.Item>
     ),
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Accordion>;
 export default meta;
@@ -89,7 +93,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -112,6 +116,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

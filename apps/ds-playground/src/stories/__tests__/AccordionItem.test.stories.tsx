@@ -1,6 +1,6 @@
 import { MouseEvent, JSX, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
   expect,
   fireEvent,
@@ -8,14 +8,12 @@ import {
   userEvent,
   waitFor,
   within,
-} from '@storybook/test';
+} from 'storybook/test';
 
 import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const elementId = 'htmlId';
 const defaultTitle = 'Meg selv';
@@ -38,12 +36,17 @@ const meta = {
     children: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
     isDefaultExpanded: { table: { disable: true } },
+    keepMounted: { table: { disable: true } },
     svgPath: { table: { disable: true } },
     titleAs: { table: { disable: true } },
     title: { table: { disable: true } },
     subtitle: { table: { disable: true } },
     // Events
     onClick: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Accordion.Item>;
 export default meta;
@@ -98,7 +101,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -124,6 +127,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -144,9 +152,7 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-      click: `${wrapper} button`,
+      pseudoStates: ['hover', 'focus', 'active'],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -389,5 +395,45 @@ export const WithPersistedState = {
     checkbox = canvas.getByRole('checkbox');
 
     await waitFor(() => expect(checkbox).toBeChecked());
+  },
+} satisfies Story;
+
+export const WithKeepMountedFalse = {
+  name: 'With KeepMounted False (A11)',
+  args: {
+    ...defaultArgs,
+    keepMounted: false,
+  },
+  argTypes: {
+    keepMounted: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+
+    // Initially content should not be in DOM when keepMounted=false and collapsed
+    await expect(button).toHaveAttribute('aria-expanded', 'false');
+    let content = canvas.queryByText(defaultContent);
+    await expect(content).not.toBeInTheDocument();
+
+    // Expand accordion
+    await userEvent.click(button);
+    await expect(button).toHaveAttribute('aria-expanded', 'true');
+
+    // Content should now be in DOM
+    content = canvas.getByText(defaultContent);
+    await expect(content).toBeInTheDocument();
+    await expect(content).toBeVisible();
+
+    // Collapse accordion
+    await userEvent.click(button);
+    await expect(button).toHaveAttribute('aria-expanded', 'false');
+
+    // Content should be removed from DOM when keepMounted=false
+    content = canvas.queryByText(defaultContent);
+    await expect(content).not.toBeInTheDocument();
   },
 } satisfies Story;

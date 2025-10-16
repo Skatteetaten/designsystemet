@@ -1,6 +1,6 @@
 import { useState, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
@@ -33,7 +33,11 @@ const meta = {
     helpText: { table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
-    showRequiredMark: { table: { category: category.props } },
+    showRequiredMark: {
+      table: { category: category.props },
+      description:
+        'Om obligatorisk gruppe skal markeres med stjerne. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
+    },
     titleHelpSvg: {
       table: {
         category: category.props,

@@ -1,7 +1,7 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
 import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
@@ -12,7 +12,6 @@ import {
   DeleteSVGpath,
 } from '@skatteetaten/ds-icons';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultSVGPath = AttachFileSVGpath;
@@ -44,9 +43,7 @@ const meta = {
     hasSpinner: { table: { disable: true } },
     spinnerTitle: { table: { disable: true } },
     isOutlined: { table: { disable: true } },
-    size: {
-      control: 'radio',
-    },
+    size: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -64,6 +61,10 @@ const meta = {
     onBlur: { table: { disable: true } },
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof IconButton>;
 export default meta;
@@ -112,6 +113,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
@@ -132,11 +138,7 @@ export const Defaults = {
     title: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -161,11 +163,7 @@ export const WithOutline = {
     isOutlined: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
 } satisfies Story;
 
@@ -263,6 +261,9 @@ export const WithDisabled = {
   },
   argTypes: {
     disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -383,7 +384,7 @@ export const WithEventHandlers = {
     onClick: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -484,13 +485,11 @@ export const WithBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  globals: {
     backgrounds: {
-      default: 'themePrimary',
-    },
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
@@ -507,13 +506,11 @@ export const WithBrightnessAndOutline = {
     isOutlined: { table: { disable: false } },
   },
   parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  globals: {
     backgrounds: {
-      default: 'themePrimary',
-    },
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
@@ -529,14 +526,9 @@ export const WithBrightnessAndSpinner = {
     brightness: { table: { disable: false } },
     hasSpinner: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'themePrimary',
-    },
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
@@ -555,8 +547,11 @@ export const WithBrightnessAndDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  globals: {
     backgrounds: {
-      default: 'themePrimary',
+      value: 'themePrimary',
     },
   },
 } satisfies Story;

@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, within } from 'storybook/test';
 
 import {
   dsI18n,
@@ -7,10 +7,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
-import {
-  loremIpsumWithoutSpaces,
-  wrapper,
-} from './testUtils/storybook.testing.utils';
+import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Help } from '../../../../../libs/ds-forms/src/Help/Help';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -33,6 +30,10 @@ const meta = {
     targetId: { table: { disable: true } },
     // Events
     onHelpToggle: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Help>;
 export default meta;
@@ -57,13 +58,6 @@ export const WithHelptext = {
   },
   argTypes: {
     helpText: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -102,12 +96,6 @@ export const WithHelpTextAndDescription = {
     helpText: { table: { disable: false } },
     description: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-  },
 } satisfies Story;
 
 export const WithLongHelpTextAndDescription = {
@@ -119,13 +107,15 @@ export const WithLongHelpTextAndDescription = {
   argTypes: {
     helpText: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
-    imageSnapshot: {
-      click: `${wrapper} > button`,
-    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
   },
 } satisfies Story;
 

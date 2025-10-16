@@ -1,6 +1,6 @@
 import { useState, JSX } from 'react';
 
-import { StoryObj, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react-vite';
 
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
@@ -38,7 +38,11 @@ const meta = {
     label: { table: { category: category.props } },
     acceptedFileFormats: { table: { category: category.props } },
     shouldNormalizeFileName: { table: { category: category.props } },
-    showRequiredMark: { table: { category: category.props } },
+    showRequiredMark: {
+      table: { category: category.props },
+      description:
+        'Om FileUploader skal markeres med stjerne. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
+    },
     titleHelpSvg: {
       table: {
         category: category.props,
@@ -229,12 +233,12 @@ export const Examples: Story = {
     };
 
     const handleChange = async (files: File[]): Promise<void> => {
-      setLoading();
       setError('');
       if (files.some((file) => file.size > 900_000)) {
         setError('Filen er for stor');
         return;
       }
+      setLoading();
 
       const succeeded: Array<UploadedFile> = [];
       const failed: Array<{ name: string; reason: string; id?: string }> = [];

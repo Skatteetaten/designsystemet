@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
@@ -16,8 +16,8 @@ const meta = {
   args: {
     children: 'Menu Content',
   },
-  parameters: {
-    backgrounds: { default: 'themePrimary' },
+  globals: {
+    backgrounds: { value: 'themePrimary' },
   },
 } satisfies Meta<typeof TopBannerInternal.ActionMenu>;
 

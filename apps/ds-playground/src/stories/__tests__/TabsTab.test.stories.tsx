@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Tabs } from '@skatteetaten/ds-collections';
 import {
@@ -22,6 +22,10 @@ const meta = {
     children: { table: { disable: true } },
     svgPath: { table: { disable: true } },
     value: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Tabs.Tab>;
 export default meta;
@@ -158,8 +162,10 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    HTMLSnapshot: { disable: true },
     imageSnapshot: { disable: false },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);

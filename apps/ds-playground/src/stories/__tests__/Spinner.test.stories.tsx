@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Spinner } from '@skatteetaten/ds-progress';
 
@@ -36,6 +36,10 @@ const meta = {
     percentComplete: { table: { disable: true } },
     hideTitle: { table: { disable: true } },
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Spinner>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -53,7 +57,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -75,6 +79,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -105,6 +114,7 @@ export const WithSizeAndPosition = {
         <Spinner className={'bottomSpacingXL'} size={'small'} {...args} />
         <Spinner className={'bottomSpacingXL'} size={'medium'} {...args} />
         <Spinner className={'bottomSpacingXL'} size={'large'} {...args} />
+        <Spinner className={'bottomSpacingXL'} size={'extraLarge'} {...args} />
 
         <Spinner
           className={'bottomSpacingXL'}
@@ -122,6 +132,12 @@ export const WithSizeAndPosition = {
           className={'bottomSpacingXL'}
           titlePosition={'right'}
           size={'large'}
+          {...args}
+        />
+        <Spinner
+          className={'bottomSpacingXL'}
+          titlePosition={'right'}
+          size={'extraLarge'}
           {...args}
         />
       </>
@@ -181,9 +197,9 @@ export const WithColorsDarkBackground = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'dark',
+      value: 'dark',
     },
   },
 } satisfies Story;

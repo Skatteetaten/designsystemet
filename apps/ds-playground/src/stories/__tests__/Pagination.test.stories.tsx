@@ -1,7 +1,7 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
-import { StoryObj, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react-vite';
+import { useArgs } from 'storybook/preview-api';
 import {
   fn,
   expect,
@@ -9,7 +9,7 @@ import {
   waitFor,
   within,
   userEvent,
-} from '@storybook/test';
+} from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
@@ -45,6 +45,10 @@ const meta = {
     defaultCurrent: undefined,
     currentPage: undefined,
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Pagination>;
 
 export default meta;
@@ -72,7 +76,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -91,6 +95,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -205,7 +214,7 @@ export const WithNavigation: Story = {
     defaultCurrent: 2,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -256,8 +265,7 @@ export const WithPrevNextLabel: Story = {
     hidePrevNextButtonTitle: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -334,6 +342,9 @@ export const WithListLimit: Story = {
     sibling: getDefaultSibling(),
     currentPage: 1,
   },
+  argTypes: {
+    currentPage: { table: { disable: false } },
+  },
   render: (args): JSX.Element => {
     const [{ currentPage }, updateArgs] = useArgs();
     const pageSize = 5;
@@ -372,7 +383,7 @@ export const WithCustomAriaLabel: Story = {
     ariaLabel: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -391,7 +402,7 @@ export const WithPageSummary: Story = {
     defaultCurrent: 1,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -426,7 +437,7 @@ export const WithHiddenPageSummary: Story = {
 
 export const WithControlled: Story = {
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   args: { totalItems: 30, sibling: 1, pageSize: 5, currentPage: 1 },
   argTypes: {
@@ -448,13 +459,19 @@ export const WithControlled: Story = {
     });
     await expect(currentButton).toBeInTheDocument();
   },
-  render: (args): JSX.Element => {
-    const [{ currentPage }, setPage] = useArgs();
+  render: (): JSX.Element => {
+    const [currentPage, setCurrentPage] = useState(1);
     const onChange = (page: number): void => {
-      setPage({ currentPage: page });
+      setCurrentPage(page);
     };
     return (
-      <Pagination {...args} currentPage={currentPage} onChange={onChange} />
+      <Pagination
+        totalItems={30}
+        sibling={1}
+        pageSize={5}
+        currentPage={currentPage}
+        onChange={onChange}
+      />
     );
   },
 } satisfies Story;

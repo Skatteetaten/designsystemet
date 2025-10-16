@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
@@ -21,8 +21,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
-  parameters: {
-    backgrounds: { default: 'themePrimary' },
+  globals: {
+    backgrounds: { value: 'themePrimary' },
   },
   render: (args) => <Footer.Link {...args}>{args.children}</Footer.Link>,
 } satisfies Story;

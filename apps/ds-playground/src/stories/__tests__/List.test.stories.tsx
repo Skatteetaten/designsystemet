@@ -1,9 +1,7 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { List, ListProps, Paragraph } from '@skatteetaten/ds-typography';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: List,
@@ -24,6 +22,10 @@ const meta = {
       table: { disable: true },
       control: 'inline-radio',
     },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof List>;
 export default meta;
@@ -55,7 +57,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -78,6 +80,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -179,12 +186,6 @@ export const WithMarkup = {
     children: {
       table: { disable: false },
       control: { disable: true },
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > ul > li a`,
-      focus: `${wrapper} > ul > li a`,
     },
   },
 } satisfies Story;

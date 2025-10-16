@@ -1,4 +1,4 @@
-import React, {
+import {
   useId,
   useState,
   JSX,
@@ -261,6 +261,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
                   return (
                     <SearchFieldResult
                       key={result.key ?? result.description}
+                      className={classNames?.searchResult}
                       hasFocus={hasFocus}
                       aria-selected={hasFocus}
                       role={'option'}

@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -19,17 +19,22 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    as: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: 'text',
     },
-    // Aria
+    classNames: { table: { disable: true } },
   },
   render: (args): JSX.Element => (
     <Popover isOpen>
       <Popover.Content {...args} />
     </Popover>
   ),
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Popover.Content>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -55,12 +60,11 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
-    console.log(canvas.getAllByRole('generic'));
     await expect(container).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
 } satisfies Story;
@@ -80,6 +84,12 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -90,8 +100,20 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const Defaults = {
+  name: 'Defaults',
+  args: {
+    ...defaultArgs,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(container.tagName.toLowerCase()).toBe('div');
+  },
+} satisfies Story;
+
 export const WithMarkup = {
-  name: 'With Markup (A2)',
+  name: 'With Markup (A6)',
   args: {
     ...defaultArgs,
     children: (
@@ -118,5 +140,24 @@ export const VerticalScroll = {
   name: 'With Scroll (A7)',
   args: {
     children: loremIpsum.repeat(100),
+  },
+} satisfies Story;
+
+export const AsSpan = {
+  name: 'As Span (A11)',
+  args: {
+    ...defaultArgs,
+    as: 'span',
+  },
+  argTypes: {
+    as: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(container.tagName.toLowerCase()).toBe('span');
   },
 } satisfies Story;

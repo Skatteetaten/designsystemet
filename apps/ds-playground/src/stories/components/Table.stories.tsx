@@ -1,6 +1,6 @@
 import { ReactNode, useState, JSX, useRef } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
@@ -1135,6 +1135,7 @@ export const AddRow: Story = {
                     true
                   );
                 }}
+                isNew
               >
                 <Table.DataCell colSpan={4}>
                   <div

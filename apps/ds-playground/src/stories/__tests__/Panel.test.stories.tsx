@@ -1,7 +1,7 @@
 import { Fragment, JSX, useEffect, useRef } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import {
@@ -83,6 +83,10 @@ const meta = {
       control: 'inline-radio',
     },
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Panel>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -131,6 +135,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -350,9 +359,9 @@ export const WithImageMobile = {
   argTypes: {
     imageSource: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -386,9 +395,9 @@ export const WithIconMobile = {
   argTypes: {
     renderIcon: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -404,9 +413,9 @@ export const WithHideGraphicMobileAndIcon = {
   argTypes: {
     hideGraphicMobile: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -422,9 +431,9 @@ export const WithHideGraphicMobileAndImage = {
   argTypes: {
     hideGraphicMobile: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -555,9 +564,9 @@ export const WithPadding = {
       control: { disable: true },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -684,7 +693,7 @@ const TemplateResponsivePadding: StoryFn<typeof Panel> = (args) => (
   <>
     <Panel {...args} title={`Med responsive padding `}>
       <Paragraph>{`
-      Her har vi satt hasResponsivePadding:true og endret følgende tokens for responsive visning. 
+      Her har vi satt hasResponsivePadding:true og endret følgende tokens for responsive visning.
       --pandel-padding-xs, --pandel-padding-m og --pandel-padding-l
       `}</Paragraph>
     </Panel>
@@ -716,9 +725,9 @@ export const WithResponsivePadding = {
       control: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

@@ -5,6 +5,7 @@ import { Icon, ChevronDownSVGpath } from '@skatteetaten/ds-icons';
 
 import {
   getOpenCloseIconPositionDefault,
+  getOpenCloseKeepMountedDefault,
   getOpenCloseUnderlineDefault,
   getOpenCloseVariantDefault,
 } from './defaults';
@@ -26,6 +27,7 @@ export const OpenClose = ({
   isDefaultExpanded,
   isOnClickOnlyFiredOnOpen,
   showUnderline = getOpenCloseUnderlineDefault(),
+  keepMounted = getOpenCloseKeepMountedDefault(),
   onClick,
   children,
 }: OpenCloseProps): JSX.Element => {
@@ -62,6 +64,9 @@ export const OpenClose = ({
   const contentClassName = `${styles.content} ${
     isCompact ? styles.content_compact : ''
   } ${hasIconRight ? styles.content_hasIconRight : ''}`.trim();
+  const hiddenContentClassName = `${contentClassName} ${
+    keepMounted && !isExpanded ? styles.content_hidden : ''
+  }`.trim();
 
   return (
     <div className={className}>
@@ -85,7 +90,11 @@ export const OpenClose = ({
           <span className={titleClassName}>{title}</span>
         </button>
       </Tag>
-      {isExpanded && <div className={contentClassName}>{children}</div>}
+      {keepMounted ? (
+        <div className={hiddenContentClassName}>{children}</div>
+      ) : (
+        isExpanded && <div className={contentClassName}>{children}</div>
+      )}
     </div>
   );
 };
@@ -96,4 +105,5 @@ export {
   getOpenCloseIconPositionDefault,
   getOpenCloseUnderlineDefault,
   getOpenCloseVariantDefault,
+  getOpenCloseKeepMountedDefault,
 };

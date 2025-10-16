@@ -10,19 +10,21 @@ import { CancelSVGpath } from '@skatteetaten/ds-icons';
 import { PopoverContentProps } from './PopoverContent.types';
 import {
   getPopoverColorDefault,
+  getPopoverContentAsDefault,
   getPopoverRestoreFocusDefault,
 } from '../Popover/defaults';
 import { PopoverContext } from '../PopoverContext/PopoverContext';
 
 import styles from './PopoverContent.module.scss';
-/* eslint-disable react/forbid-dom-props */
 
 export const PopoverContent = ({
   ref,
   id,
   className = getCommonClassNameDefault(),
+  classNames,
   lang,
   'data-testid': dataTestId,
+  as: Tag = getPopoverContentAsDefault(),
   children,
 }: PopoverContentProps): JSX.Element | null => {
   const {
@@ -58,19 +60,24 @@ export const PopoverContent = ({
   }
 
   return (
-    <div
+    <Tag
       {...getFloatingProps()}
       ref={mergedRef}
+      // eslint-disable-next-line react/forbid-component-props
       style={floatingStyles}
       id={id}
       lang={lang}
       data-testid={dataTestId}
       className={`${styles.popover} ${colorClassName} ${className}`.trim()}
     >
-      <div className={styles.popoverContent}>
-        <div className={styles.popoverContentWrapper}>{children}</div>
+      <Tag className={styles.popoverContent}>
+        <Tag
+          className={`${styles.popoverContentWrapper} ${classNames?.contentWrapper ?? ''}`.trim()}
+        >
+          {children}
+        </Tag>
         <IconButton
-          className={styles.popoverContentCloseButton}
+          className={`${styles.popoverContentCloseButton} ${classNames?.closeButton ?? ''}`.trim()}
           svgPath={CancelSVGpath}
           title={t('shared.Close')}
           onClick={() => {
@@ -81,9 +88,10 @@ export const PopoverContent = ({
             }
           }}
         />
-      </div>
-      <div
+      </Tag>
+      <Tag
         ref={arrowRef}
+        // eslint-disable-next-line react/forbid-component-props
         style={{
           left: middlewareData.arrow?.x,
           top: middlewareData.arrow?.y,
@@ -94,8 +102,8 @@ export const PopoverContent = ({
             : {}),
         }}
         className={`${styles.popoverArrow} ${arrowPositionClassName}`.trim()}
-      ></div>
-    </div>
+      ></Tag>
+    </Tag>
   );
 };
 

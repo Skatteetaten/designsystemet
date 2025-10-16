@@ -1,0 +1,13 @@
+.wordInfoContent {
+  --background-color: var(--palette-denim-10);
+  --border-color: var(--palette-denim-100);
+}
+
+.contentWrapper {
+  // Øke vertikal padding med 1px for å unngå vertikal scrollbar
+  padding: 0.5625rem var(--spacing-s);
+}
+
+.closeButton {
+  margin: var(--spacing-xs);
+}

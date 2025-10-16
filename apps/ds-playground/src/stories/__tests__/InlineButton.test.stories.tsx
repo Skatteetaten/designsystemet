@@ -1,13 +1,12 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultButtonText = 'Legg til rapport';
@@ -54,6 +53,10 @@ const meta = {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof InlineButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -76,7 +79,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
@@ -98,6 +101,11 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
@@ -118,11 +126,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -156,6 +160,9 @@ export const WithIcon = {
   },
   argTypes: {
     svgPath: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -220,6 +227,9 @@ export const WithDisabled = {
   argTypes: {
     disabled: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     expect(canvas.getByRole('button')).toBeDisabled();
@@ -237,6 +247,9 @@ export const WithDisabledAndIcon = {
     disabled: { table: { disable: false } },
     svgPath: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
 } satisfies Story;
 
 export const WithDisabledAndBrightness = {
@@ -253,8 +266,11 @@ export const WithDisabledAndBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  globals: {
     backgrounds: {
-      default: 'themePrimary',
+      value: 'themePrimary',
     },
   },
 } satisfies Story;
@@ -269,7 +285,7 @@ export const WithType = {
     type: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
@@ -284,7 +300,7 @@ export const WithAriaDescribedby = {
     ariaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('aria-describedby', 'testid1234'),
 } satisfies Story;
@@ -299,7 +315,7 @@ export const WithAccesskey = {
     accessKey: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('accessKey', 'j'),
 } satisfies Story;
@@ -337,7 +353,7 @@ export const WithEventHandlers = {
     onBlur: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -408,13 +424,14 @@ export const WithBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
-    backgrounds: {
-      default: 'themePrimary',
+    a11y: {
+      test: 'off',
     },
-    imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
-      click: `${wrapper} > button`,
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
     },
   },
 } satisfies Story;

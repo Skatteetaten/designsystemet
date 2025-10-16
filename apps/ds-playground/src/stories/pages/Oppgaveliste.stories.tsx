@@ -1,4 +1,4 @@
-import { Fragment, JSX } from 'react';
+import { JSX } from 'react';
 
 import { linkTo } from '@storybook/addon-links';
 

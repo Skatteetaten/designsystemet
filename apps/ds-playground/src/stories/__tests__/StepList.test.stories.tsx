@@ -1,7 +1,7 @@
 import { useId, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { StepList, StepListProps } from '@skatteetaten/ds-collections';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -26,7 +26,11 @@ const meta = {
       table: { disable: true, category: category.props },
     },
   },
-  parameters: { a11y: { disable: true } },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+    a11y: { disable: true },
+  },
 } satisfies Meta<typeof StepList>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -45,7 +49,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -67,6 +71,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -156,20 +165,14 @@ const TemplateExample: StoryFn<StepListProps> = () => {
 export const WithVariants = {
   name: 'With step Variants (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
-  },
 } satisfies Story;
 
 export const WithBreakPointS = {
   name: 'With step Variants breakpoint-s (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
-      viewPortHeight: 1200,
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -177,10 +180,9 @@ export const WithBreakPointS = {
 export const WithBreakPointXS = {
   name: 'With step Variants breakpoint-xs (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
-      viewPortHeight: 1200,
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -188,10 +190,9 @@ export const WithBreakPointXS = {
 export const WithBreakPointMobile = {
   name: 'With step Variants mobile (A1, A2, A3)',
   render: TemplateExample,
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
-      viewPortHeight: 1550,
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -315,7 +316,7 @@ export const WithMultipleSteps = {
   name: 'With steps (A6, A8, A9)',
   render: TemplateMultipleSteps,
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

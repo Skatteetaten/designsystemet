@@ -1,11 +1,9 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { LinkGroup, LinkGroupProps } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: LinkGroup,
@@ -32,6 +30,10 @@ const meta = {
       table: { disable: true },
       control: 'inline-radio',
     },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof LinkGroup>;
 export default meta;
@@ -98,6 +100,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const linkGroup = canvas.getByRole('list');
@@ -118,13 +125,6 @@ export const Defaults = {
       table: { disable: false },
     },
   },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > ul > li:first-child > a`,
-      focus: `${wrapper} > ul > li:first-child > a`,
-      click: `${wrapper} > ul > li:first-child > a`,
-    },
-  },
 } satisfies Story;
 
 export const VariantAnchors = {
@@ -138,11 +138,6 @@ export const VariantAnchors = {
       table: {
         disable: false,
       },
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > ul > li:first-child > a`,
     },
   },
 } satisfies Story;
@@ -205,14 +200,9 @@ export const WithColor = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'themePrimary',
-    },
-    imageSnapshot: {
-      hover: `${wrapper} > ul > li:first-child > a`,
-      focus: `${wrapper} > ul > li:first-child > a`,
-      click: `${wrapper} > ul > li:first-child > a`,
+      value: 'themePrimary',
     },
   },
 } satisfies Story;

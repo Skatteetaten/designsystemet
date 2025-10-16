@@ -1,7 +1,7 @@
 import { useRef, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, userEvent, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -9,8 +9,6 @@ import {
   ActionMenuActionsRef,
   TopBannerInternal,
 } from '@skatteetaten/ds-layout';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: TopBannerInternal.ActionMenu,
@@ -26,8 +24,14 @@ const meta = {
   args: {
     children: 'Menu Content',
   },
+  tags: ['test'],
   parameters: {
-    backgrounds: { default: 'themePrimary' },
+    imageSnapshot: { disableSnapshot: false },
+  },
+  globals: {
+    backgrounds: {
+      value: 'themePrimary',
+    },
   },
 } satisfies Meta<typeof TopBannerInternal.ActionMenu>;
 
@@ -50,7 +54,10 @@ export const WithAttributes = {
     await expect(actionMenu).toHaveAttribute('lang', 'en');
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    a11y: {
+      test: 'off',
+    },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -69,7 +76,26 @@ export const WithRef = {
     await expect(button).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    a11y: {
+      test: 'off',
+    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+} satisfies Story;
+
+export const WithDefaults = {
+  name: 'Defaults',
+  args: {},
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button');
+    await fireEvent.click(menuButton);
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
 } satisfies Story;
 
@@ -120,8 +146,8 @@ export const WithImperativeActions = {
     await expect(menuButton).toHaveFocus();
   },
   parameters: {
-    imageSnapshot: {
-      click: `${wrapper} > :first-child`,
+    a11y: {
+      test: 'off',
     },
   },
 } satisfies Story;

@@ -26,6 +26,7 @@ export const TableEditableRow = ({
   editableContent,
   editButtonAriaDescribedby,
   editButtonPosition = getTableRowExpandButtonPositionDefault(),
+  isNew,
   onEdit,
   children,
 }: TableEditableRowProps): JSX.Element => {
@@ -77,7 +78,7 @@ export const TableEditableRow = ({
       classNames={{ expandedContent: styles.expandableContent }}
       isExpandButtonDisabled={!!context?.rowInEditModeId}
       isExpanded={isExpanded}
-      expandButtonTitle={t('tablerow.Editable')}
+      expandButtonTitle={isNew ? '' : t('tablerow.Editable')}
       expandButtonAriaDescribedby={editButtonAriaDescribedby}
       expandableContent={
         <>
@@ -104,9 +105,11 @@ export const TableEditableRow = ({
               strokeWidth={'1'}
             />
           </svg>
-          <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
-            {t('tablerow.EditData')}
-          </span>
+          {!isNew && (
+            <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
+              {t('tablerow.EditData')}
+            </span>
+          )}
           {/* eslint-disable-next-line react-compiler/react-compiler */}
           {editableContent?.(closeEditableContent)}
         </>

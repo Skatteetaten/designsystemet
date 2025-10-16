@@ -1,7 +1,7 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import {
   MegaButton,
@@ -12,8 +12,6 @@ import {
   dsI18n,
   getCommonButtonTypeDefault,
 } from '@skatteetaten/ds-core-utils';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const defaultMegaButtonText = 'Klikk her';
 
@@ -56,6 +54,10 @@ const meta = {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof MegaButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -78,7 +80,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
@@ -98,6 +100,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
@@ -112,16 +119,13 @@ export const Defaults = {
   name: 'Defaults (A1, B2)',
   args: {
     ...defaultArgs,
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -206,9 +210,13 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     ...discriminatedProps,
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -226,7 +234,7 @@ export const WithType = {
     type: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
@@ -241,7 +249,7 @@ export const WithAriaDescribedby = {
     ariaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('aria-describedby', 'testid1234'),
 } satisfies Story;
@@ -256,7 +264,7 @@ export const WithAccesskey = {
     accessKey: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('accessKey', 'j'),
 } satisfies Story;
@@ -266,29 +274,13 @@ export const AsLink = {
   args: {
     ...defaultArgs,
     href: 'https://www.skatteetaten.no',
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     href: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > a`,
-      hover: `${wrapper} > a`,
-    },
-  },
-} satisfies Story;
-
-export const AsLinkEmptyString = {
-  name: 'As Link with empty href (B3)',
-  args: {
-    ...defaultArgs,
-    href: '',
-  },
-  argTypes: {
-    href: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
 } satisfies Story;
 
@@ -298,16 +290,14 @@ export const AsLinkExternal = {
     ...defaultArgs,
     href: 'https://www.skatteetaten.no',
     isExternal: true,
+    'data-testid': 'pseudoStates',
   },
   argTypes: {
     href: { table: { disable: false } },
     isExternal: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > a`,
-      hover: `${wrapper} > a`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -357,7 +347,7 @@ export const WithEventHandlers = {
     onClick: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

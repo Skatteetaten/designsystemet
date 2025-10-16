@@ -1,14 +1,11 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import {
-  loremIpsumWithoutSpaces,
-  wrapper,
-} from './testUtils/storybook.testing.utils';
+import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -42,6 +39,10 @@ const meta = {
     // Events
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Fieldset>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -69,7 +70,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -94,6 +95,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -219,7 +225,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -241,11 +247,6 @@ export const WithHelpTextSvgPathAndTitle = {
     helpSvgPath: { table: { disable: false } },
     titleHelpSvg: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} > fieldset > button`,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
@@ -256,6 +257,7 @@ export const WithHelpTextSvgPathAndTitle = {
     await expect(svgNode).toBeInTheDocument();
     const legend = canvas.getAllByText(defaultLegendText)[0];
     await expect(helpButton).toHaveAttribute('aria-describedby', legend.id);
+    await userEvent.click(helpButton);
   },
 } satisfies Story;
 
@@ -268,9 +270,9 @@ export const WithLongLegend = {
   argTypes: {
     legend: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;

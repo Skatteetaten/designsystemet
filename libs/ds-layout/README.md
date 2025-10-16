@@ -15,3 +15,4 @@ npm i @skatteetaten/ds-layout
 ## Innhold
 
 - Footer
+- TopBanner

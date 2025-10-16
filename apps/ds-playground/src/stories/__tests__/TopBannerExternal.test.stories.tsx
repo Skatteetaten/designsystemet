@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -54,7 +54,9 @@ const meta = {
     onLogOutClick: { table: { disable: true } },
     onUserClick: { table: { disable: true } },
   },
+  tags: ['test'],
   parameters: {
+    imageSnapshot: { disableSnapshot: false },
     layout: 'fullscreen',
   },
 } satisfies Meta<typeof TopBannerExternal>;
@@ -88,7 +90,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -110,6 +112,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -154,9 +161,9 @@ export const WithChildren = {
   argTypes: {
     children: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -171,9 +178,9 @@ export const SkipLinkFocusedMobileScreen = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -190,9 +197,9 @@ export const SkipLinkFocusedBreakpointXS = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -209,9 +216,9 @@ export const SkipLinkFocusedBreakpointS = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -228,9 +235,9 @@ export const SkipLinkFocusedBreakpointM = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -247,9 +254,9 @@ export const SkipLinkFocusedBreakpointL = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-l',
+      value: '--breakpoint-l',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -272,7 +279,7 @@ export const ClickMainMenuOpenAndClose = {
     ),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -342,9 +349,9 @@ export const WithOneColumnBreakpointS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -367,9 +374,9 @@ export const WithOneColumnBreakpointXS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -445,9 +452,9 @@ export const WithTwoColumnsBreakpointS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -475,9 +482,9 @@ export const WithTwoColumnsBreakpointXS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -568,9 +575,9 @@ export const WithThreeColumnsBreakpointS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -603,9 +610,9 @@ export const WithThreeColumnsBreakpointXS = {
       </div>
     ),
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -620,8 +627,7 @@ export const WithThreeColumnsBreakpointXS = {
 export const ClickLangPickerOpenAndClose = {
   name: 'Click LanguagePicker Open And Close (LanguagePicker C2)',
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -744,8 +750,7 @@ export const WithExtraLangs = {
     defaultLocale: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -770,6 +775,24 @@ export const WithExtraLangs = {
   },
 } satisfies Story;
 
+export const ClickSearchOpen = {
+  name: 'Click Search Open',
+  args: {
+    ...defaultArgs,
+    searchContent: 'hei hei',
+    firstColumn: (
+      <Link href={'#storybook-root'}>
+        {'Meny-knapp blir synlig når den har innhold'}
+      </Link>
+    ),
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchButton = canvas.getByRole('button', { name: searchText });
+    await userEvent.click(searchButton);
+  },
+} satisfies Story;
+
 export const ClickSearchOpenAndClose = {
   name: 'Click Search Open And Close (Search B2, B1, B3, A2, A1)',
   args: {
@@ -780,12 +803,6 @@ export const ClickSearchOpenAndClose = {
         {'Meny-knapp blir synlig når den har innhold'}
       </Link>
     ),
-  },
-  parameters: {
-    // imageSnapshot: { disable: true },
-    imageSnapshot: {
-      click: [`xpath=//span[text()='Søk']`],
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -818,9 +835,11 @@ export const LangPickerInMenuWhenLoggedInOnMobile = {
     user: { role: 'meg' },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

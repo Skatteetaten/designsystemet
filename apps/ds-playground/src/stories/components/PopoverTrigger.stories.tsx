@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
@@ -49,9 +49,4 @@ export const Preview: StoryObj<typeof Popover.Trigger> = {
     </div>
   ),
   args: {},
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
-  },
 };

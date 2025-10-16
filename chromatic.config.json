@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.chromatic.com/config-file.schema.json",
+  "projectId": "Project:68ad8bf775fcb9aa19b070e9",
+  "storybookConfigDir": "apps/ds-playground/.storybook",
+  "storybookBuildDir": "dist/storybook/ds-playground",
+  "traceChanged": true,
+  "externals": [
+    "libs/ds-core-designtokens/**/*.css",
+    "../../**/*.svg",
+    "../../**/*.png"
+  ],
+  "untraced": ["apps/ds-playground/.storybook/pagelayout-decorator.tsx"],
+  "onlyChanged": true,
+  "buildScriptName": "build:playground",
+  "zip": true
+}

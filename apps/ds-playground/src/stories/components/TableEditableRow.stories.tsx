@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   Table,
@@ -25,6 +25,7 @@ const meta = {
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
       },
     },
+    isNew: { table: { category: category.props } },
     // Aria
     editButtonAriaDescribedby: { table: { category: category.aria } },
     // Event

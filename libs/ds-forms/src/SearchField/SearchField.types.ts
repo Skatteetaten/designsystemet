@@ -62,6 +62,7 @@ interface SearchFieldCommonProps
       errorMessage?: string;
       textbox?: string;
       searchContainer?: string;
+      searchResult?: string;
     } & LabelWithHelpProps['classNames']
   >;
   /** Overskriver default  tooltip-tekst til nullstill-knappen */

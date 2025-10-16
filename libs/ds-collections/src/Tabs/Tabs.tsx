@@ -6,7 +6,10 @@ import { getTabsVariantDefault } from './defaults';
 import { TabsProps, TabsComponent } from './Tabs.types';
 import { TabsContext } from '../TabsContext/TabsContext';
 import { TabsList } from '../TabsList/TabsList';
-import { TabsPanel } from '../TabsPanel/TabsPanel';
+import {
+  getTabsPanelKeepMountedDefault,
+  TabsPanel,
+} from '../TabsPanel/TabsPanel';
 import { TabsTab } from '../TabsTab/TabsTab';
 
 export const Tabs = (({
@@ -36,7 +39,7 @@ export const Tabs = (({
   const contextValue = useMemo(
     () => ({
       activeTab,
-      baseId,
+      baseId: id ?? baseId,
       hasBorder,
       setInternalActiveTab: (value: string): void => {
         setActiveTab(value);
@@ -47,7 +50,7 @@ export const Tabs = (({
       index,
       setIndex,
     }),
-    [activeTab, baseId, hasBorder, variant, isMultiline, index, onChange]
+    [activeTab, id, baseId, hasBorder, variant, isMultiline, index, onChange]
   );
   return (
     <div
@@ -72,4 +75,4 @@ Tabs.Panel.displayName = 'Tabs.Panel';
 Tabs.Tab = TabsTab;
 Tabs.Tab.displayName = 'Tabs.Tab';
 
-export { getTabsVariantDefault };
+export { getTabsVariantDefault, getTabsPanelKeepMountedDefault };

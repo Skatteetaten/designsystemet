@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 import { TopBannerMenu } from '@skatteetaten/ds-layout';
@@ -44,6 +44,10 @@ const meta = {
     // Events
     onLanguageClick: { table: { disable: true } },
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } as Meta<typeof TopBannerLangPicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -72,7 +76,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -95,6 +99,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -190,7 +199,7 @@ export const CloseMenuWhenClickOnLangButton = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -218,7 +227,6 @@ export const WithKeyboardNavigation = {
     ...defaultArgs,
     openMenu: 'Lang',
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const menuButton = canvas.getByRole('button');
@@ -234,9 +242,7 @@ export const WithKeyboardNavigation = {
     await userEvent.keyboard('[ArrowUp]');
     await expect(listItems[1].firstChild).toHaveFocus();
   },
-
   parameters: {
-    HTMLSnapshot: { disable: true },
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;

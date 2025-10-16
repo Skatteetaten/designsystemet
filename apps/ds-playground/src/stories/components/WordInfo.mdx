@@ -1,0 +1,45 @@
+import {
+  Meta,
+  Primary,
+  Controls,
+  ArgTypes,
+} from '@storybook/addon-docs/blocks';
+import { PlayroomCanvas as Canvas } from '../../playroom/utils';
+import * as WordInfoStories from './WordInfo.stories';
+import * as WordInfoTrigger from './WordInfoTrigger.stories';
+import * as WordInfoContent from './WordInfoContent.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
+
+<Meta of={WordInfoStories} />
+
+<DocHeaderWrapper componentName="WordInfo">
+
+# WordInfo
+
+<VersionBadge packageName={'overlays'} />
+
+<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/wordinfo" />
+
+</DocHeaderWrapper>
+
+<Primary />
+
+```tsx
+import { WordInfo } from '@skatteetaten/ds-overlays';
+```
+
+<Controls />
+
+## `WordInfo.Trigger`
+
+<ArgTypes of={WordInfoTrigger} />
+
+## `WordInfo.Content`
+
+<ArgTypes of={WordInfoContent} />
+
+## Examples
+
+<Canvas of={WordInfoStories.Examples} />

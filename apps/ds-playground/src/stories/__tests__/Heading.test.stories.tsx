@@ -1,5 +1,5 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
@@ -7,8 +7,6 @@ import {
   HeadingProps,
   headingLevelArr,
 } from '@skatteetaten/ds-typography';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Heading,
@@ -29,6 +27,10 @@ const meta = {
     hasSpacing: { table: { disable: true } },
     as: { table: { disable: true } },
     level: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Heading>;
 export default meta;
@@ -54,7 +56,7 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -76,6 +78,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -123,9 +130,9 @@ export const DefaultsMobile = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -156,9 +163,9 @@ export const LevelsWithSpacingMobile = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -178,11 +185,6 @@ export const WithAs = {
   name: 'With As (B1)',
   args: {
     ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -221,12 +223,6 @@ export const WithMarkup = {
     children: {
       table: { disable: false },
       control: { disable: true },
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > h2 > a`,
-      focus: `${wrapper} > h2 > a`,
     },
   },
 } satisfies Story;

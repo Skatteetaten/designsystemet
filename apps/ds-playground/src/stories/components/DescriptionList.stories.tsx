@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { InlineButton, IconButton } from '@skatteetaten/ds-buttons';
 import {
@@ -8,6 +8,7 @@ import {
   getDescriptionListSizeDefault,
   getDescriptionDirectionDefault,
   getDescriptionListIsVerticalOnMobileDefault,
+  getDescriptionListIsDescriptionVerticalOnMobileDefault,
   getDescriptionListVariantDefault,
   getTermWeightDefault,
   getDescriptionWeightDefault,
@@ -55,6 +56,15 @@ const meta = {
         category: category.props,
         defaultValue: {
           summary: getDescriptionListIsVerticalOnMobileDefault().toString(),
+        },
+      },
+    },
+    isDescriptionVerticalOnMobile: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary:
+            getDescriptionListIsDescriptionVerticalOnMobileDefault().toString(),
         },
       },
     },

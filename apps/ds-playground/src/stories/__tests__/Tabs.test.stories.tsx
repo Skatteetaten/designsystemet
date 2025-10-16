@@ -1,8 +1,7 @@
 import { JSX, useState } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
@@ -26,6 +25,10 @@ const meta = {
     hasBorder: { table: { disable: true } },
     // Events
     onChange: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Tabs>;
 export default meta;
@@ -92,11 +95,6 @@ export const Defaults = {
   argTypes: {
     defaultValue: { table: { disable: false } },
   },
-  parameters: {
-    viewport: {
-      defaultViewport: undefined,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const tab = canvas.getByRole('tab', { name: 'Person' });
@@ -141,6 +139,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -175,7 +178,7 @@ export const WithDefaultValue = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -198,12 +201,12 @@ export const WithValue = {
     value: { table: { disable: false } },
   },
   render: (args): JSX.Element => {
-    const [{ value }, updateArgs] = useArgs();
+    const [value, setValue] = useState('tab2');
     const toggleTab = (): void => {
       if (value === 'tab1') {
-        updateArgs({ value: 'tab2' });
+        setValue('tab2');
       } else {
-        updateArgs({ value: 'tab1' });
+        setValue('tab1');
       }
     };
     return (
@@ -221,40 +224,25 @@ export const WithValue = {
     );
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
-  play: async ({ canvasElement, step }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    await step(
-      'Sjekker om Bedrift-tab finnes og har attribut aria-selected:true',
-      async () => {
-        const secondTab = await canvas.findByRole('tab', {
-          name: 'Bedrift',
-          selected: true,
-        });
-        await expect(secondTab).toBeInTheDocument();
-      }
-    );
+    const secondTab = await canvas.findByRole('tab', {
+      name: 'Bedrift',
+    });
+    await expect(secondTab).toHaveAttribute('aria-selected', 'true');
 
-    await step(
-      'Endrer value-prop utenfra og forventer at Person-tab er aktiv',
-      async () => {
-        const button = await canvas.findByRole('button', { name: 'ToggleTab' });
-        await userEvent.click(button);
-        const firsttab = await canvas.findByRole('tab', {
-          name: 'Person',
-          selected: true,
-        });
-        await expect(firsttab).toBeInTheDocument();
-      }
+    const button = await canvas.findByRole('button', { name: 'ToggleTab' });
+    await userEvent.click(button);
+    const firstTab = await canvas.findByRole('tab', {
+      name: 'Person',
+    });
+    await waitFor(() =>
+      expect(firstTab).toHaveAttribute('aria-selected', 'true')
     );
-
-    await step(
-      'Ingen test - Nullstiller - Toggler aktiv tab tilbake til tab2/Bedrift for å kunne kjøre test i nettelser flere ganger',
-      async () => {
-        const button = await canvas.findByRole('button', { name: 'ToggleTab' });
-        await userEvent.click(button);
-      }
+    await waitFor(() =>
+      expect(secondTab).toHaveAttribute('aria-selected', 'false')
     );
   },
 } satisfies Story;
@@ -267,7 +255,7 @@ export const WithAriaRolesTabindex = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -305,8 +293,10 @@ export const WithMultiline = {
   },
   parameters: {
     imageSnapshot: { disable: false },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   render: (args): JSX.Element => {
@@ -337,7 +327,7 @@ export const WithTabClick = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -364,7 +354,7 @@ export const WithTabOnClickEvent = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -380,5 +370,36 @@ export const WithTabOnClickEvent = {
     await userEvent.click(secondTab);
     await expect(firstTab).toHaveAttribute('aria-selected', 'false');
     await expect(firstTab).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const WithId = {
+  render: TemplateTabs,
+  args: {
+    id: 'skatt',
+    defaultValue: 'tab1',
+  },
+  argTypes: {
+    id: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(container).toHaveAttribute('id', 'skatt');
+    const tab = canvas.getByRole('tab', { name: 'Person' });
+    await expect(tab).toHaveAttribute(
+      'aria-controls',
+      'ds-tab-panel-skatt-tab1'
+    );
+    await expect(tab).toHaveAttribute('id', 'ds-tab-id-skatt-tab1');
+    const tabPanel = canvas.getByRole('tabpanel');
+    await expect(tabPanel).toHaveAttribute('id', 'ds-tab-panel-skatt-tab1');
+    await expect(tabPanel).toHaveAttribute(
+      'aria-labelledby',
+      'ds-tab-id-skatt-tab1'
+    );
   },
 } satisfies Story;

@@ -1,12 +1,10 @@
 import { MouseEvent, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within, waitFor, fn } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, within, waitFor, fn } from 'storybook/test';
 
 import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const elementId = 'htmlId';
 const defaultTitle = 'Er jeg pendler?';
@@ -41,8 +39,13 @@ const meta = {
       table: { disable: true },
     },
     title: { table: { disable: true } },
+    keepMounted: { table: { disable: true } },
     showUnderline: { table: { disable: true } },
     onClick: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof OpenClose>;
 export default meta;
@@ -115,7 +118,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -141,6 +144,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -161,11 +169,7 @@ export const Defaults = {
     title: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-      click: `${wrapper} button`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -448,9 +452,9 @@ export const WithLongTitle = {
   argTypes: {
     title: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -465,8 +469,7 @@ export const IsDefaultExpanded = {
     isDefaultExpanded: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -474,5 +477,42 @@ export const IsDefaultExpanded = {
     await expect(content).toBeInTheDocument();
     const button = canvas.getByRole('button');
     await expect(button).toHaveAttribute('aria-expanded', 'true');
+  },
+} satisfies Story;
+
+export const WithKeepMountedTrue = {
+  name: 'With KeepMounted True (A9)',
+  args: {
+    ...defaultArgs,
+    keepMounted: true,
+  },
+  argTypes: {
+    keepMounted: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+
+    // Initially content should be in DOM but hidden when keepMounted=true
+    await expect(button).toHaveAttribute('aria-expanded', 'false');
+    const content = canvas.getByText(defaultContent);
+    await expect(content).toBeInTheDocument();
+    await expect(content).not.toBeVisible();
+
+    // Expand OpenClose
+    await fireEvent.click(button);
+    await expect(button).toHaveAttribute('aria-expanded', 'true');
+    await expect(content).toBeVisible();
+
+    // Collapse OpenClose
+    await fireEvent.click(button);
+    await expect(button).toHaveAttribute('aria-expanded', 'false');
+
+    // Content should still be in DOM but hidden when keepMounted=true
+    await expect(content).toBeInTheDocument();
+    await expect(content).not.toBeVisible();
   },
 } satisfies Story;

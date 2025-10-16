@@ -11,7 +11,12 @@ export default [
   reactCompiler.configs.recommended,
   ...devConfig,
   {
-    ignores: ['**/.*', '**/node_modules/*'],
+    ignores: [
+      '**/.*',
+      '**/node_modules/*',
+      '**/vite.config.*.timestamp*',
+      '**/vitest.config.*.timestamp*',
+    ],
   },
   {
     plugins: {},
@@ -73,6 +78,7 @@ export default [
             '@skatteetaten/ds-dev-config',
             '@nx/eslint-plugin',
           ],
+          ignoredFiles: ['**/vite.config.ts'],
           includeTransitiveDependencies: true,
         },
       ],

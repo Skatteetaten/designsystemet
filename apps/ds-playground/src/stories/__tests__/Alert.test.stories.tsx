@@ -1,15 +1,13 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -40,6 +38,10 @@ const meta = {
     // Aria
     ariaLive: { table: { disable: true } },
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Alert>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -67,7 +69,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -91,6 +93,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -254,9 +261,9 @@ export const AllVariantsMobile = {
     ...defaultArgs,
     showAlert: true,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -269,9 +276,9 @@ export const AllLightVariants = {
     showAlert: true,
     backgroundBrightness: 'light',
   },
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'grey',
+      value: 'grey',
     },
   },
   argTypes: {
@@ -365,12 +372,6 @@ export const WithCloseButton = {
     showAlert: true,
     onClose: fn(),
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-    },
-  },
 } satisfies Story;
 
 export const WithCloseOnClickButton = {
@@ -380,15 +381,16 @@ export const WithCloseOnClickButton = {
     showAlert: true,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   render: (args): JSX.Element => {
-    const [, setArgs] = useArgs();
+    const [showAlert, setShowAlert] = useState(true);
     return (
       <Alert
         {...args}
+        showAlert={showAlert}
         onClose={() => {
-          setArgs({ showAlert: false });
+          setShowAlert(false);
         }}
       >
         {args.children}
@@ -421,7 +423,7 @@ export const WithAriaLiveOff = {
     ariaLive: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

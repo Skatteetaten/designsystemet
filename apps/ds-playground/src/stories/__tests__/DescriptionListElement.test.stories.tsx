@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { DescriptionList } from '@skatteetaten/ds-content';
 
@@ -30,6 +30,10 @@ const meta = {
       </dl>
     ),
   ],
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof DescriptionList.Element>;
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,4 +1,4 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 
 import { Tabs } from '@skatteetaten/ds-collections';
 
@@ -13,6 +13,10 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: false } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Tabs.List>;
 export default meta;
@@ -52,5 +56,10 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
 } satisfies Story;

@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TopBannerExternalUserMenu } from '@skatteetaten/ds-layout';
@@ -37,6 +37,10 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
       },
     },
     notificationCount: 5,
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof TopBannerExternalUserMenu>;
 export default meta;
@@ -102,6 +106,31 @@ export const WithNoNotifications: Story = {
   },
 };
 
+export const WithOneNotification: Story = {
+  name: 'One Notification',
+  args: {
+    notificationCount: 1,
+  },
+  argTypes: {
+    notificationCount: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const menuButton = canvas.getByRole('button', {
+      name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
+        'ds_overlays:topbannerexternalusermenu.OneNotificationMessage'
+      )}`,
+    });
+
+    await expect(menuButton).toBeInTheDocument();
+    await userEvent.click(menuButton);
+
+    const notificationAmount = canvas.getByText('1');
+    await expect(notificationAmount).toBeInTheDocument();
+  },
+};
+
 export const WithMoreThan99Notifications: Story = {
   name: 'More Than 99 Notifications (A3)',
   args: {
@@ -133,7 +162,7 @@ export const SwitchUser: Story = {
     onSwitchUserClick: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
@@ -165,7 +194,7 @@ export const LogOut: Story = {
     notificationCount: 0,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
@@ -249,7 +278,7 @@ export const EscapeKeyFocusReturn: Story = {
     notificationCount: 0,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -302,7 +331,7 @@ export const WithCustomHostname: Story = {
     notificationCount: 0,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

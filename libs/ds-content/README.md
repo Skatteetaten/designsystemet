@@ -14,4 +14,7 @@ npm i @skatteetaten/ds-content
 
 ## Innhold
 
+- Card
+- DescriptionList
+- Divider
 - Panel

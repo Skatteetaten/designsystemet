@@ -1,4 +1,4 @@
-import { expect } from '@storybook/test';
+import { expect } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 

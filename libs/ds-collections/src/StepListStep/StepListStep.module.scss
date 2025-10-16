@@ -96,7 +96,7 @@
   &Content {
     display: flex;
     flex-direction: column;
-    padding-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-m);
     gap: var(--spacing-xs);
     grid-area: 2/ 2 / 3 / 3;
     line-height: var(--semantic-line-height-article);
@@ -106,9 +106,6 @@
     }
 
     @media (min-width: breakpoints.$breakpoint-xs) {
-      flex-direction: row;
-      gap: var(--spacing-s);
-
       &_noButton {
         display: block;
       }
@@ -180,10 +177,10 @@
     min-height: 26px;
     flex-grow: 1;
     border-right: 2px solid var(--semantic-divider-30);
-    margin-right: 11px;
+    margin-right: 0.6875rem;
 
     @media (min-width: breakpoints.$breakpoint-s) {
-      margin-right: 19px;
+      margin-right: 1.1875rem;
     }
 
     &_neutralResult {
@@ -306,7 +303,7 @@
 
 .nextLine {
   position: relative;
-  width: 11px;
+  width: 0.6875rem;
   height: 50%;
   border-bottom: 2px solid var(--semantic-divider-30);
   border-left: 2px solid var(--semantic-divider-30);
@@ -315,7 +312,7 @@
   justify-self: end;
 
   @media (min-width: breakpoints.$breakpoint-s) {
-    width: 19px;
+    width: 1.1875rem;
     margin-left: 27px;
   }
 

@@ -6,13 +6,11 @@ import {
   useState,
 } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, within } from 'storybook/test';
 
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const caption = 'tabellcaption';
 const meta = {
@@ -38,6 +36,10 @@ const meta = {
   },
   args: {
     caption: caption,
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Table>;
 export default meta;
@@ -94,7 +96,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -118,6 +120,12 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -509,12 +517,16 @@ export const WithVariantCompact = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      click: [
-        `${wrapper} [data-testid="row-0"] button`,
-        `${wrapper} [data-testid="row-expand-3"] button`,
-      ],
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const editableRow = canvas.getByTestId('row-0');
+    const editButton = within(editableRow).getByRole('button');
+    await fireEvent.click(editButton);
+    const expandableRow = canvas.getByTestId('row-expand-3');
+    const expandButton = within(expandableRow).getByRole('button');
+    await fireEvent.click(expandButton);
   },
 } satisfies Story;
 
@@ -527,13 +539,14 @@ export const WithVariantCompactAndRightButtonPosition = {
   argTypes: {
     variant: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: [
-        `${wrapper} [data-testid="row-0"] button`,
-        `${wrapper} [data-testid="row-expand-3"] button`,
-      ],
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const editableRow = canvas.getByTestId('row-0');
+    const editButton = within(editableRow).getByRole('button');
+    await fireEvent.click(editButton);
+    const expandableRow = canvas.getByTestId('row-expand-3');
+    const expandButton = within(expandableRow).getByRole('button');
+    await fireEvent.click(expandButton);
   },
 } satisfies Story;
 
@@ -541,40 +554,36 @@ export const WithExpandEditSort = {
   render: TemplateExpandEditSort,
   name: 'With Expand Edit Sort (Table A9, A11, A14, A15, TableHeader A4, A5, A6, A7, B2, TableRow B3, A14, A15, A19)',
   parameters: {
-    imageSnapshot: {
-      hover: [
-        `${wrapper} [data-testid="row-0"]`,
-        `${wrapper} [data-testid="header-belop"] button`,
-      ],
-      focus: [
-        `${wrapper} [data-testid="header-belop"] button`,
-        `${wrapper} [data-testid="row-0"] button`,
-      ],
-      click: [
-        `${wrapper} [data-testid="row-0"] button`,
-        `${wrapper} [data-testid="row-expand-3"] button`,
-        `${wrapper} [data-testid="header-belop"] button`,
-        `${wrapper} [data-testid="header-belop"] button`,
-        `${wrapper} [data-testid="header-avkastning"] button`,
-      ],
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const editableRow = canvas.getByTestId('row-0');
+    const editButton = within(editableRow).getByRole('button');
+    await fireEvent.click(editButton);
+    const expandableRow = canvas.getByTestId('row-expand-3');
+    const expandButton = within(expandableRow).getByRole('button');
+    await fireEvent.click(expandButton);
   },
 } satisfies Story;
 
 export const WithDefaultRowInEditMode = {
-  render: TemplateExpandEditSort,
+  render: TemplateWithRightButtonPosition,
   name: 'With Default Row In Edit Mode',
   args: {
     rowInEditModeId: '3vesy',
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Story;
 
 export const WithWideScreen = {
-  render: TemplateExpandEditSort,
+  render: TemplateWithRightButtonPosition,
   name: 'With Wide screen (Table A1, A2)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -587,6 +596,9 @@ export const WithFullWidthExpandableEdit = {
   },
   argTypes: {
     hasFullWidth: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -608,6 +620,9 @@ export const WithCanBeManuallyFocused: Story = {
   },
   argTypes: {
     canBeManuallyFocused: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -1,9 +1,9 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Paragraph, ParagraphProps } from '@skatteetaten/ds-typography';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Paragraph,
@@ -23,6 +23,10 @@ const meta = {
     },
     hasSpacing: { table: { disable: true } },
     variant: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Paragraph>;
 export default meta;
@@ -68,6 +72,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const paragraph = canvas.getByText(loremIpsum);
@@ -84,7 +93,7 @@ export const IsPElement = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -135,12 +144,6 @@ export const WithMarkup = {
     children: {
       table: { disable: false },
       control: { disable: true },
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > p a`,
-      focus: `${wrapper} > p a`,
     },
   },
 } satisfies Story;

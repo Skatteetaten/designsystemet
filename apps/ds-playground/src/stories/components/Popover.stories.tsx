@@ -1,6 +1,6 @@
 import { useState, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   getPopoverColorDefault,
@@ -26,13 +26,10 @@ const meta = {
         category: category.props,
         defaultValue: { summary: getPopoverColorDefault() },
       },
-      control: 'radio',
     },
-
     disableAutoDismiss: { table: { category: category.props } },
     disableAutoDismissOnMobile: { table: { category: category.props } },
     position: {
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getPopoverPositionDefault().toString() },
@@ -61,11 +58,6 @@ export const Preview: Story = {
       </Popover>
     </div>
   ),
-  parameters: {
-    viewport: {
-      viewPortHeight: 1200,
-    },
-  },
 } satisfies Story;
 
 export const Example: Story = {

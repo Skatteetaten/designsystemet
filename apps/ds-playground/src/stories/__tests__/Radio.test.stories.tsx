@@ -1,14 +1,13 @@
 import { useState, FocusEvent, ChangeEvent } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { RadioGroup } from '@skatteetaten/ds-forms';
 
 import {
   loremIpsum,
   loremIpsumWithoutSpaces,
-  wrapper,
 } from './testUtils/storybook.testing.utils';
 import { htmlEventDescription } from '../../../.storybook/helpers';
 
@@ -34,6 +33,10 @@ const meta = {
     onBlur: { ...htmlEventDescription, table: { disable: true } },
     onChange: { ...htmlEventDescription, table: { disable: true } },
     onFocus: { ...htmlEventDescription, table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof RadioGroup.Radio>;
 export default meta;
@@ -65,7 +68,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -92,6 +95,11 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[3];
@@ -114,11 +122,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} input[type='radio']`,
-      focus: `${wrapper} input[type='radio']`,
-      click: `${wrapper} input[type='radio']`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -139,13 +143,8 @@ export const WithDescription = {
     description: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} input[type='radio']`,
-      focus: `${wrapper} input[type='radio']`,
-      click: `${wrapper} input[type='radio']`,
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
@@ -190,7 +189,7 @@ export const WithValue = {
     value: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -211,7 +210,7 @@ export const WithAriaDescribedby = {
     ariaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -255,7 +254,7 @@ export const WithEventHandlers = {
     onFocus: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);

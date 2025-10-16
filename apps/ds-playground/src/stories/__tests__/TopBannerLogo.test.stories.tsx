@@ -1,9 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, waitFor, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -40,6 +39,10 @@ const meta = {
     alt: { table: { disable: true } },
     href: { table: { disable: true } },
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof TopBannerLogo>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -62,7 +65,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -86,6 +89,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
@@ -103,9 +111,7 @@ export const Defaults = {
   },
   argTypes: {},
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} a`,
-    },
+    pseudoStates: ['focus'],
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -129,7 +135,7 @@ export const WithAs = {
     as: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -177,10 +183,7 @@ export const WithOnClick = {
     }),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disable: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -1,6 +1,6 @@
 import { useState, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { Checkbox } from '@skatteetaten/ds-forms';
@@ -20,7 +20,11 @@ const meta = {
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
-    showRequiredMark: { table: { category: category.props } },
+    showRequiredMark: {
+      table: { category: category.props },
+      description:
+        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
+    },
     // HTML
     checked: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },

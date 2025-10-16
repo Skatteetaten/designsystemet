@@ -1,7 +1,5 @@
-import React from 'react';
-
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
@@ -44,10 +42,12 @@ const meta = {
     onSelectDate: { table: { disable: true } },
     onTabKeyOut: { table: { disable: true } },
   },
+  render: DatesTemplate,
+  tags: ['test'],
   parameters: {
     mockDate: today,
+    imageSnapshot: { disableSnapshot: false },
   },
-  render: DatesTemplate,
 } satisfies Meta<typeof DatePickerCalendar>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -73,7 +73,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -96,6 +96,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -260,9 +265,9 @@ export const WithBreakpointMobile = {
     ...defaultArgs,
   },
   argTypes: {},
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -274,8 +279,7 @@ export const ClickAndChangeMonthAndYear = {
   },
   argTypes: {},
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

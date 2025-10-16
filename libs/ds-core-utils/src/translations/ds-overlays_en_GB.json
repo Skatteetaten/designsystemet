@@ -15,7 +15,6 @@
   "rolepicker.Deleted": "Discontinued",
   "rolepicker.GoToMyPage": "Go to My page",
   "rolepicker.Heading": "Who do you wish to represent?",
-  "rolepicker.InactiveBusinessPostfix": "(Discontinued)",
   "rolepicker.Logout": "Log out",
   "rolepicker.MainBusiness": "Main unit",
   "rolepicker.MeHeading": "Myself",
@@ -44,7 +43,9 @@
   "topbannerexternalusermenu.AboutTheOrganisation": "About the enterprise",
   "topbannerexternalusermenu.MyPage": "My page",
   "topbannerexternalusermenu.Notification": "Notification",
-  "topbannerexternalusermenu.NotificationCountMessage": "Notifications, {{count}} unread",
+  "topbannerexternalusermenu.NotificationCountMessage": "{{count}} unread notifications",
   "topbannerexternalusermenu.OnBehalfOf": "On behalf of",
-  "topbannerexternalusermenu.SwitchUser": "Switch user"
+  "topbannerexternalusermenu.OneNotificationMessage": "1 unread notification ",
+  "topbannerexternalusermenu.SwitchUser": "Switch user",
+  "wordinfo.WordExplanation": "word explanation"
 }

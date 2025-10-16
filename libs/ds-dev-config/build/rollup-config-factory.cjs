@@ -44,7 +44,7 @@ const bundleCss = (pathToCSS, outputDir) => {
   const config = [];
   const files = glob.sync(pathToCSS);
   files.forEach((file) => {
-    let scoppedSubFolder;
+    let scopedSubFolder;
     const parts = path.dirname(file).split(path.sep);
     const srcIndex = parts.indexOf('src');
     if (srcIndex === -1) {
@@ -58,6 +58,16 @@ const bundleCss = (pathToCSS, outputDir) => {
         include: file,
         extract: `${outputDir}/${scopedSubFolder}/styles.css`,
         minimize: true,
+        use: {
+          sass: {
+            api: 'modern-compiler',
+            includePaths: [
+              //'.',
+              // './libs/ds-core-designtokens/lib/designtokens',
+              // './libs/ds-core-utils/src',
+            ],
+          },
+        },
       })
     );
   });
@@ -122,6 +132,13 @@ const createRollupConfig = (
       addStyleImportPlugin(),
       visualizer({ filename: `${outputDir.split('/').pop()}-stats.html` }),
     ],
+    onwarn(warning, defaultHandler) {
+      if (warning.code === 'CIRCULAR_DEPENDENCY') {
+        console.error('🔁 Circular:', warning.importer || warning.message);
+        process.exit(-1);
+      }
+      defaultHandler(warning);
+    },
   };
 };
 

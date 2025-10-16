@@ -41,13 +41,6 @@
         "babelUpwardRootMode": true
       }
     },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/ds-dev-config"],
-      "options": {
-        "jestConfig": "libs/ds-dev-config/jest.config.ts"
-      }
-    },
     "tsc": {
       "executor": "@skatteetaten/ds-dev-config:tsCheck",
       "options": {

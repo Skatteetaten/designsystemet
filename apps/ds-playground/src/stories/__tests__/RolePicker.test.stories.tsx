@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -255,10 +255,9 @@ const meta = {
       control: 'object',
     },
   },
+  tags: ['test'],
   parameters: {
-    viewport: {
-      viewPortHeight: 1400,
-    },
+    chromatic: { disableSnapshot: false },
   },
 } satisfies Meta<typeof RolePicker>;
 export default meta;
@@ -384,11 +383,6 @@ export const Defaults = {
     people,
   },
   render: DefaultTemplate,
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -417,6 +411,12 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+    chromatic: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -439,6 +439,7 @@ export const WithShowInactiveOrganizations = {
     showInactiveBusinesses: true,
     showSubunits: false,
   },
+  parameters: { chromatic: { disableSnapshot: true } },
   render: DefaultTemplate,
   argTypes: {
     showInactiveBusinesses: { table: { disable: false } },
@@ -464,7 +465,9 @@ export const WithShowInactiveOrganizations = {
     const links = await within(modal).findAllByRole('link');
     expect(links.length).toEqual(args.businesses?.list.length);
     expect(showMoreButton).toBeInTheDocument();
-    const showLessButton = await within(modal).findByText(/færre/i);
+    const showLessButton = await within(modal).findByText(
+      dsI18n.t('ds_overlays:rolepicker.ShowLess')
+    );
     expect(showLessButton).toBeInTheDocument();
   },
 } satisfies Story;
@@ -481,6 +484,7 @@ export const WithShowAllClicked = {
     people: { table: { disable: false } },
     businesses: { table: { disable: false } },
   },
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -500,8 +504,8 @@ export const WithShowAllClicked = {
   },
 } satisfies Story;
 
-export const WithoutHideCloseIcon = {
-  name: 'Without Hide Close Icon (A3)',
+export const WithHideCloseIcon = {
+  name: 'With Hide Close Icon (A3)',
   args: {
     ...defaultArgs,
     hideCloseButton: true,
@@ -510,6 +514,7 @@ export const WithoutHideCloseIcon = {
   argTypes: {
     hideCloseButton: { table: { disable: false } },
   },
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -529,6 +534,7 @@ export const WithCustomTitle = {
   argTypes: {
     title: { table: { disable: false } },
   },
+  parameters: { chromatic: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -552,7 +558,6 @@ export const WithChildren = {
   argTypes: {
     children: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -578,10 +583,20 @@ export const WithOnlyPeopleSearch = {
     people: { table: { disable: false } },
     businesses: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+    const button = within(modal).queryByRole('button', {
+      name: /vis alle personer/i,
+    });
+
+    expect(button).toBeInTheDocument();
+
+    const searchFields = within(modal).queryAllByRole('searchbox');
+    expect(searchFields.length).toBe(1);
   },
 } satisfies Story;
 
@@ -597,10 +612,20 @@ export const WithOnlyBusinessSearch = {
     people: { table: { disable: false } },
     businesses: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+    const button = within(modal).queryByRole('button', {
+      name: /vis alle virksomheter/i,
+    });
+
+    expect(button).toBeInTheDocument();
+
+    const searchFields = within(modal).queryAllByRole('searchbox');
+    expect(searchFields.length).toBe(1);
   },
 } satisfies Story;
 
@@ -617,6 +642,11 @@ export const WithoutSearch = {
     people: { table: { disable: false } },
     businesses: { table: { disable: false } },
   },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -624,18 +654,13 @@ export const WithoutSearch = {
 
     const modal = await canvas.findByRole('dialog');
     const buttons = within(modal).queryAllByRole('button', {
-      name: /vis alle/i,
+      name: dsI18n.t('ds_overlays:rolepicker.ShowAll'),
     });
 
     expect(buttons.length).toBe(0);
 
-    const textInputs = within(modal).queryAllByRole('textbox');
-    expect(textInputs.length).toBe(0);
-  },
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    const searchFields = within(modal).queryAllByRole('searchbox');
+    expect(searchFields.length).toBe(0);
   },
 } satisfies Story;
 
@@ -683,6 +708,11 @@ export const WithNoBusinesses = {
     people: { table: { disable: false } },
     businesses: { table: { disable: false } },
   },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -709,8 +739,8 @@ export const WithSpinner = {
     businesses: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
+    chromatic: {
+      disableSnapshot: true,
     },
   },
 } satisfies Story;
@@ -740,8 +770,8 @@ export const With10000Businesses = {
     businesses: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
+    chromatic: {
+      disableSnapshot: true,
     },
   },
 } satisfies Story;
@@ -785,6 +815,11 @@ export const WithNoDeletedBusinesses = {
     me: { table: { disable: false } },
     people: { table: { disable: false } },
     businesses: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -832,6 +867,11 @@ export const WithNoSubunits = {
     people: { table: { disable: false } },
     businesses: { table: { disable: false } },
   },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -869,8 +909,8 @@ export const WithDeceasedPeople = {
     showDeceasedPeople: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
+    chromatic: {
+      disableSnapshot: true,
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -911,7 +951,9 @@ export const WithNoDoubleUnitTypes = {
     businesses: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: {
+      disableSnapshot: true,
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -938,6 +980,11 @@ export const WithMinimumEntitiesForSearch = {
     minimumEntitiesForSearch: 17, // Det finnes 16 personer/virksomheter i rollevelgeren, så søkefeltet vises ikke
   },
   render: DefaultTemplate,
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openButton = canvas.getByRole('button');
@@ -955,14 +1002,16 @@ export const WithCloseError = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
   render: ErrorTemplate,
   argTypes: {
     me: { table: { disable: false } },
     people: { table: { disable: false } },
     businesses: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -999,7 +1048,9 @@ export const WithErrorReset = {
   },
   render: ErrorThenSuccessTemplate,
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: {
+      disableSnapshot: true,
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

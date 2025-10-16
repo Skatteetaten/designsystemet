@@ -1,6 +1,6 @@
 import { JSX, useRef } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { MegaButton, Link, Button } from '@skatteetaten/ds-buttons';
 import {
@@ -191,8 +191,10 @@ export const PanelPadding = {
     controls: {
       include: ['hasResponsivePadding', 'classNames', 'renderIcon'],
     },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   tags: ['!dev'],

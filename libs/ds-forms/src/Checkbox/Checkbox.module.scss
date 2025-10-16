@@ -20,8 +20,8 @@
 
   .input {
     position: absolute;
-    top: 2px;
-    left: -2px;
+    top: var(--spacing-xxs);
+    left: calc(-1 * var(--spacing-xxs));
     width: var(--size-large);
     height: var(--size-large);
     cursor: pointer;
@@ -51,18 +51,18 @@
       min-width: var(--size-medium);
       height: var(--size-medium);
       box-sizing: border-box;
-      border: 2px solid var(--checkbox-border-color);
+      border: var(--spacing-xxs) solid var(--checkbox-border-color);
       margin-top: var(--spacing-xxs);
       background-color: var(--checkbox-background-color);
 
       &Check {
         position: absolute;
-        top: 3px;
-        left: 1px;
-        width: 11.5px;
-        height: 5px;
-        border-bottom: 2px solid var(--check-color);
-        border-left: 2px solid var(--check-color);
+        top: 0.1875rem;
+        left: 0.0625rem;
+        width: 0.71875rem;
+        height: 0.3125rem;
+        border-bottom: var(--spacing-xxs) solid var(--check-color);
+        border-left: var(--spacing-xxs) solid var(--check-color);
         transform: rotate(-45deg);
       }
 
@@ -104,7 +104,7 @@
   }
 
   .input:focus + .label .labelCheckbox {
-    outline: 2px solid var(--semantic-interactive-main);
+    outline: var(--spacing-xxs) solid var(--semantic-interactive-main);
     outline-offset: var(--spacing-xxs);
   }
 
@@ -115,7 +115,8 @@
     --description-color: var(--semantic-interactive-foreground);
   }
 
-  .input:disabled + .label {
+  .input:disabled + .label,
+  .input:disabled + .label .labelCheckbox {
     --checkbox-border-color: var(--semantic-disabled-foreground);
     --checkbox-background-color: var(--semantic-disabled-background);
     --check-color: var(--semantic-disabled-background);
@@ -146,8 +147,10 @@
 
   .input:checked:disabled + .label,
   .input:checked:disabled + .label .labelCheckbox {
+    --checkbox-border-color: var(--semantic-disabled-foreground);
     --checkbox-background-color: var(--semantic-disabled-background);
     --check-color: var(--semantic-disabled-foreground);
+    --label-color: var(--semantic-disabled-foreground);
   }
 
   .input:disabled:focus + .label .labelCheckbox {

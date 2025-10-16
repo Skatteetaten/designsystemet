@@ -1,9 +1,9 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { within as shadowWithin } from 'shadow-dom-testing-library';
+import { useArgs } from 'storybook/preview-api';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -54,6 +54,10 @@ const meta = {
     onChange: { table: { disable: true } },
     onBlur: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
@@ -108,7 +112,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -134,6 +138,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -325,7 +334,7 @@ export const WithName = {
     name: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -357,7 +366,7 @@ export const WithoutErrorMessage = {
     });
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -407,7 +416,7 @@ export const WithErrorMessageAndAriaDescribedby = {
   },
   argTypes: {},
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -514,7 +523,7 @@ export const WithEventHandlers = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -542,7 +551,7 @@ export const WithOnBlurEvent = {
     onBlur: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
     customElementName: 'radiogroup-customelement',
   },
   play: async ({ args, canvasElement }): Promise<void> => {

@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   getScrollToMainDefault,
@@ -46,9 +46,9 @@ const meta = {
     },
   },
   args: {},
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'grey',
+      value: 'grey',
     },
   },
 } satisfies Meta<typeof ScrollToTopButton>;

@@ -1,4 +1,4 @@
-import React, { JSX, useEffect, useImperativeHandle, useRef } from 'react';
+import { JSX, useEffect, useImperativeHandle, useRef } from 'react';
 
 import { SearchFieldResultProps } from './SearchFieldResult.types';
 
@@ -6,6 +6,7 @@ import styles from './SearchFieldResult.module.scss';
 
 const SearchFieldResult = ({
   ref,
+  className,
   title,
   hasFocus,
   setFocus,
@@ -25,7 +26,7 @@ const SearchFieldResult = ({
   return (
     <li
       ref={liRef}
-      className={styles.searchResult}
+      className={`${styles.searchResult} ${className ?? ''}`.trim()}
       tabIndex={hasFocus ? 0 : -1}
       role={'option'}
       aria-selected={hasFocus}

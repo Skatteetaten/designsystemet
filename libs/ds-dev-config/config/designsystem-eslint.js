@@ -1,8 +1,6 @@
 import eslint from '@eslint/js';
 import tseslintParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
-import jestPlugin from 'eslint-plugin-jest';
-import jestDomPlugin from 'eslint-plugin-jest-dom';
 import jsdoc from 'eslint-plugin-jsdoc';
 //import sonarjsPlugin from 'eslint-plugin-sonarjs';
 import reactPlugin from 'eslint-plugin-react';
@@ -25,9 +23,6 @@ export default [
 
   {
     files: ['__tests__/**/*'],
-    ...jestPlugin.configs['flat/recommended'],
-    ...jestPlugin.configs['flat/style'],
-    ...jestDomPlugin.configs['flat/recommended'],
     ...testingLibraryPlugin.configs['flat/react'],
   },
 
@@ -36,8 +31,6 @@ export default [
     ...reactPlugin.configs.flat.recommended,
     ...reactPlugin.configs.flat['jsx-runtime'],
     plugins: {
-      jest: jestPlugin,
-      'jest-dom': jestDomPlugin,
       'testing-library': testingLibraryPlugin,
       'react-hooks': reactHooks,
       react: reactPlugin,
@@ -57,15 +50,11 @@ export default [
       globals: {
         ...GLOBALS_BROWSER_FIX,
         ...globals.node,
-        ...globals.jest,
       },
     },
     settings: {
       react: {
         version: 'detect',
-      },
-      jest: {
-        version: 29,
       },
     },
     rules: {

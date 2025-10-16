@@ -1,10 +1,8 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, fn, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
-
-import { wrapper } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Table.Row,
@@ -27,6 +25,10 @@ const meta = {
     children: { table: { disable: true } },
     onClose: { table: { disable: true } },
     onExpand: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Table.Row>;
 export default meta;
@@ -59,7 +61,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -85,7 +87,10 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -110,8 +115,7 @@ export const WithExpandable = {
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -155,8 +159,7 @@ export const WithExpandableExtraRows = {
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -193,10 +196,12 @@ export const WithExpandableContent = {
     isExpandable: { table: { disable: false } },
     expandableContent: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} button`,
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.Expandable'),
+    });
+    await fireEvent.click(inlineButton);
   },
 } satisfies Story;
 
@@ -213,10 +218,12 @@ export const WithExpandButtonPositionRight = {
     expandButtonPosition: { table: { disable: false } },
     expandableContent: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      click: `${wrapper} button`,
-    },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.Expandable'),
+    });
+    await fireEvent.click(inlineButton);
   },
 } satisfies Story;
 
@@ -236,9 +243,14 @@ export const WithExpandTextLeft = {
     expandButtonTitle: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-    const inlineButton = canvas.getByRole('button');
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.ExpandText'),
+    });
     await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
     await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(inlineButton);
@@ -264,9 +276,14 @@ export const WithExpandTextRight = {
     expandButtonTitle: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-    const inlineButton = canvas.getByRole('button');
+    const inlineButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_tables:tablerow.ExpandText'),
+    });
     await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
     await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(inlineButton);
@@ -283,10 +300,12 @@ export const WithExpandButtonTitle = {
     showExpandButtonTitle: true,
     expandButtonTitle: 'Vis mer',
     expandableContent: 'Ekstra innhold',
+    expandButtonPosition: 'right',
   },
   argTypes: {
     isExpandable: { table: { disable: false } },
     showExpandButtonTitle: { table: { disable: false } },
     expandButtonTitle: { table: { disable: false } },
+    expandButtonPosition: { table: { disable: false } },
   },
 } satisfies Story;

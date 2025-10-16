@@ -14,5 +14,6 @@ declare const classNames: {
   readonly content: 'content';
   readonly content_compact: 'content_compact';
   readonly content_hasIconRight: 'content_hasIconRight';
+  readonly content_hidden: 'content_hidden';
 };
 export default classNames;

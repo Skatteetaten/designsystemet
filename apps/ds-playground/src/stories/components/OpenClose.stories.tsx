@@ -1,10 +1,11 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   OpenClose,
   getOpenCloseIconPositionDefault,
+  getOpenCloseKeepMountedDefault,
   getOpenCloseUnderlineDefault,
   getOpenCloseVariantDefault,
 } from '@skatteetaten/ds-collections';
@@ -35,6 +36,12 @@ const meta = {
     isDefaultExpanded: {
       table: {
         category: category.props,
+      },
+    },
+    keepMounted: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getOpenCloseKeepMountedDefault().toString() },
       },
     },
     showUnderline: {

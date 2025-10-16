@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Footer } from '@skatteetaten/ds-layout';
 
@@ -22,7 +22,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
-  parameters: {
-    backgrounds: { default: 'themePrimary' },
+  globals: {
+    backgrounds: { value: 'themePrimary' },
   },
 } satisfies Story;

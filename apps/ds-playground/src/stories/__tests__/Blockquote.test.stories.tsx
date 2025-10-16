@@ -1,9 +1,9 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Blockquote, BlockquoteProps } from '@skatteetaten/ds-typography';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Blockquote,
@@ -22,6 +22,10 @@ const meta = {
       control: 'text',
     },
     hasSpacing: { table: { disable: true } },
+  },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Blockquote>;
 export default meta;
@@ -45,7 +49,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -68,6 +72,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -132,31 +141,6 @@ export const WithMarkup = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} > blockquote a`,
-      focus: `${wrapper} > blockquote a`,
-    },
-  },
-} satisfies Story;
-
-const TemplateWithTwoBlockquotes: StoryFn<BlockquoteProps> = (args) => (
-  <>
-    <Blockquote {...args} />
-    <Blockquote {...args} />
-  </>
-);
-
-export const WithSpacing = {
-  render: TemplateWithTwoBlockquotes,
-  name: 'With Spacing (A3)',
-  args: {
-    ...defaultArgs,
-    hasSpacing: true,
-  },
-  argTypes: {
-    hasSpacing: { table: { disable: false } },
-  },
 } satisfies Story;
 
 export const WithCanBeManuallyFocused: Story = {
@@ -174,6 +158,24 @@ export const WithCanBeManuallyFocused: Story = {
     const blockquote = canvas.getByText('Litt fylltekst');
     blockquote.focus();
     await expect(blockquote).toBeInTheDocument();
+    await expect(blockquote).toHaveFocus();
     await expect(blockquote).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+const TemplateAllColors: StoryFn<BlockquoteProps> = (args) => (
+  <>
+    <Blockquote {...args} borderColor={'forest'} hasSpacing />
+    <Blockquote {...args} borderColor={'ochre'} hasSpacing />
+    <Blockquote {...args} borderColor={'graphite'} hasSpacing />
+    <Blockquote {...args} borderColor={'denim'} hasSpacing />
+  </>
+);
+
+export const WithColors = {
+  render: TemplateAllColors,
+  name: 'With All Colors (A3, A4)',
+  args: {
+    ...defaultArgs,
   },
 } satisfies Story;

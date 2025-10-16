@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { useFormattedInput } from '@skatteetaten/ds-core-utils';
 import { formatNBS } from '@skatteetaten/ds-core-utils';
@@ -9,8 +9,8 @@ import { TextField } from '@skatteetaten/ds-forms';
 
 const meta = {
   title: 'Tester/useFormattedInput',
+  tags: ['test'],
   parameters: {
-    imageSnapshot: { disable: true },
     controls: {
       disable: true,
     },

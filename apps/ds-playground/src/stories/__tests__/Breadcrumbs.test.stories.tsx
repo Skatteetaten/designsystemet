@@ -1,7 +1,7 @@
 import { useState, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, waitFor, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
@@ -43,6 +43,10 @@ const meta = {
       </Breadcrumbs.List>
     ),
   },
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Breadcrumbs>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -60,7 +64,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -82,6 +86,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -134,9 +143,9 @@ const WithoutCollapseTemplate = (): JSX.Element => {
 
 export const WithCollapse = {
   name: 'With Collapse (A1)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   render: DefaultTemplate,
@@ -169,9 +178,9 @@ export const WithAriaLabel = {
 
 export const WithoutCollapse = {
   name: 'Without Collapse (A2)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   render: WithoutCollapseTemplate,
@@ -184,9 +193,9 @@ export const WithoutCollapse = {
 
 export const WithExpandClickAndFocus = {
   name: 'With Expand Click And Focus(A4 delvis, C1)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
   render: DefaultTemplate,
@@ -207,7 +216,7 @@ export const WithExpandClickAndFocus = {
 export const WithNavigation = {
   name: 'With Navigation',
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   render: (): JSX.Element => {
     const [breadcrumbs, setBreadcrumbs] = useState(breadcrumbsData);

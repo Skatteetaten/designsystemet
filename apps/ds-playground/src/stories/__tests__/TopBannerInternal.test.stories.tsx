@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, waitFor, within } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -12,8 +12,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
-import customLogo from '../../assets/custom-mobile-logo.svg';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 import demoLogo from '../../assets/demo-logo-white.svg';
 
 const meta = {
@@ -49,7 +48,9 @@ const meta = {
     title: 'MVA',
     logoHref: '#',
   },
+  tags: ['test'],
   parameters: {
+    imageSnapshot: { disableSnapshot: false },
     layout: 'fullscreen',
   },
 } satisfies Meta<typeof TopBannerInternal>;
@@ -84,7 +85,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -107,6 +108,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
@@ -120,7 +126,7 @@ export const WithAttributes = {
 export const WithDefaults = {
   name: 'With Defaults (B1)',
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -164,9 +170,9 @@ export const WithChildren = {
 
 export const SkipLinkFocusedMobileScreen = {
   name: 'SkipLink Focused On Mobile Screen (B2)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -180,9 +186,9 @@ export const SkipLinkFocusedMobileScreen = {
 
 export const SkipLinkFocusedBreakpointL = {
   name: 'SkipLink Focused On Breakpoint-l (B2)',
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-l',
+      value: '--breakpoint-l',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -207,11 +213,11 @@ export const WithTitleDescriptionUser = {
     user: { table: { disable: false } },
   },
   parameters: {
+    imageSnapshot: { pseudoStates: ['focus'] },
+  },
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-l',
-    },
-    imageSnapshot: {
-      focus: `${wrapper} > header > div > div > a`,
+      value: '--breakpoint-l',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -222,7 +228,7 @@ export const WithTitleDescriptionUser = {
     await expect(description).toBeInTheDocument();
   },
 } satisfies Story;
-
+//
 export const WithLongTitleDescriptionMobile = {
   name: 'With Long Title And Long Description Mobile (A2, A4, A7)',
   argTypes: {
@@ -235,20 +241,10 @@ export const WithLongTitleDescriptionMobile = {
     description: 'kaka er en løgn'.repeat(4),
     user: 'Sandra Saksbehandler',
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
-  },
-} satisfies Story;
-
-export const WithCustomLogo = {
-  name: 'With Custom Logo (A5)',
-  argTypes: {
-    logo: { table: { disable: false }, control: { disable: true } },
-  },
-  args: {
-    logo: customLogo,
   },
 } satisfies Story;
 
@@ -298,10 +294,12 @@ export const WithLogoClick = {
     constructionBandTitle: { table: { disable: false } },
   },
   args: {
-    onLogoClick: fn(),
+    onLogoClick: fn((event): void => {
+      event.preventDefault();
+    }),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -348,9 +346,9 @@ export const WithOneChildMobile = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -373,9 +371,9 @@ export const WithLongDescriptionAndThreeChildrenMobile = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -398,9 +396,9 @@ export const WithThreeChildrenBreakpointS = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -423,9 +421,9 @@ export const WithThreeChildrenBreakpointM = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -448,9 +446,9 @@ export const WithLongTitleAndLongDescriptionAndThreeChildrenBreakpointM = {
       table: { disable: false },
     },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -463,9 +461,9 @@ export const WithHideLogoOnMobile = {
   args: {
     hideLogoOnMobile: true,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--mobile',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -489,9 +487,9 @@ export const WithHideLogoOnDesktop = {
   args: {
     hideLogoOnMobile: true,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

@@ -1,6 +1,6 @@
 import { useId, useState, JSX } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { OpenClose, StepList } from '@skatteetaten/ds-collections';
 import { Card } from '@skatteetaten/ds-content';
@@ -124,7 +124,7 @@ export const Examples: Story = {
                 </OpenClose>
                 <RadioGroup
                   legend={
-                    'Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko?'
+                    'Selger du varer og tjenester for egen regning og risiko?'
                   }
                   errorMessage={
                     hasStep3Error

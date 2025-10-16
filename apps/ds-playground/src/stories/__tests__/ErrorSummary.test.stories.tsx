@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
@@ -38,6 +38,7 @@ const meta = {
       table: { disable: true },
     },
   },
+  tags: ['test'],
 } satisfies Meta<typeof ErrorSummary>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -88,6 +89,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -174,9 +180,9 @@ export const WithChildrenAndContentMobile = {
     children: { table: { disable: false } },
     content: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--mobile',
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -192,9 +198,9 @@ export const WithChildrenAndContentBreakpointXs = {
     children: { table: { disable: false } },
     content: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;

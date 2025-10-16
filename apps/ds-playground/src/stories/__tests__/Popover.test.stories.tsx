@@ -1,5 +1,5 @@
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, userEvent, within } from '@storybook/test';
+import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
+import { expect, fireEvent, fn, userEvent, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Popover } from '@skatteetaten/ds-overlays';
@@ -41,6 +41,10 @@ const meta = {
     onClose: { table: { disable: true } },
   },
   render: Template,
+  tags: ['test'],
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Popover>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -98,8 +102,7 @@ export const WithOnClickTriggerAndCloseButton = {
   },
 
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -127,8 +130,7 @@ export const WithAutoClose = {
     disableAutoDismiss: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -151,8 +153,7 @@ export const WithAutoCloseDisabled = {
     disableAutoDismiss: true,
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

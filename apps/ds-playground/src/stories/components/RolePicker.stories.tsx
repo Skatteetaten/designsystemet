@@ -1,6 +1,6 @@
 import { JSX, useRef, useState, MouseEvent } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
@@ -293,14 +293,6 @@ export const WithExternalTopBanner: Story = {
       dsI18n.changeLanguage(langToLocale[lang]);
     };
 
-    const handleLogOut = (): void => {
-      setUser(undefined);
-    };
-
-    const handleLogIn = (): void => {
-      modalRef.current?.showModal();
-    };
-
     const me: Person = {
       name: 'Ola Nordmann',
       personId: '10101012345',
@@ -436,10 +428,19 @@ export const WithExternalTopBanner: Story = {
         <TopBannerExternal
           user={user}
           onLanguageClick={handleLanguageClick}
-          onLogInClick={handleLogIn}
-          onLogOutClick={handleLogOut}
-          onUserClick={(): void => modalRef.current?.showModal()}
-        />
+          onLogInClick={
+            !user ? (): void => modalRef.current?.showModal() : undefined
+          }
+        >
+          {user && (
+            <TopBannerExternal.UserMenu
+              user={user}
+              notificationCount={1}
+              onLogOutClick={() => setUser(undefined)}
+              onSwitchUserClick={() => modalRef.current?.showModal()}
+            />
+          )}
+        </TopBannerExternal>
         <RolePicker
           ref={modalRef}
           me={me}

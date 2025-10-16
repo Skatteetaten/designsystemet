@@ -1,5 +1,5 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -34,8 +34,10 @@ const meta = {
     thirdColumn: { table: { disable: true } },
     openDefaultLinksInNewTab: { table: { disable: true } },
   },
+  tags: ['test'],
   parameters: {
     layout: 'fullscreen',
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Footer>;
 export default meta;
@@ -109,7 +111,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -132,6 +134,11 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -219,7 +226,7 @@ export const WithHideDefaultLinks = {
   },
 
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -340,9 +347,9 @@ export const WithThreeColumnsBreakpointXs = {
     titleSecondColumn: { table: { disable: false } },
     titleThirdColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -365,9 +372,9 @@ export const WithThreeColumnsBreakpointS = {
     titleSecondColumn: { table: { disable: false } },
     titleThirdColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -390,9 +397,9 @@ export const WithThreeColumnsBreakpointM = {
     titleSecondColumn: { table: { disable: false } },
     titleThirdColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -415,9 +422,9 @@ export const WithThreeColumnsBreakpointL = {
     titleSecondColumn: { table: { disable: false } },
     titleThirdColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-l',
+      value: '--breakpoint-l',
     },
   },
 } satisfies Story;
@@ -436,9 +443,9 @@ export const WithTwoColumnsBreakpointXs = {
     secondColumn: { table: { disable: false } },
     titleSecondColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -457,9 +464,9 @@ export const WithTwoColumnsBreakpointS = {
     secondColumn: { table: { disable: false } },
     titleSecondColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -478,9 +485,9 @@ export const WithTwoColumnsBreakpointM = {
     secondColumn: { table: { disable: false } },
     titleSecondColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;
@@ -495,9 +502,9 @@ export const WithOneColumnBreakpointXs = {
   argTypes: {
     firstColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      value: '--breakpoint-xs',
     },
   },
 } satisfies Story;
@@ -512,9 +519,9 @@ export const WithOneColumnBreakpointS = {
   argTypes: {
     firstColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      value: '--breakpoint-s',
     },
   },
 } satisfies Story;
@@ -529,9 +536,9 @@ export const WithOneColumnBreakpointM = {
   argTypes: {
     firstColumn: { table: { disable: false } },
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      value: '--breakpoint-m',
     },
   },
 } satisfies Story;

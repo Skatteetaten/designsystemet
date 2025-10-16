@@ -1,7 +1,7 @@
 import { useRef, JSX, useState, useEffect } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, fireEvent, within, waitFor } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -60,6 +60,10 @@ const meta = {
     children: 'Modal innhold',
     title: defaultTitle,
   },
+  tags: ['test'],
+  parameters: {
+    chromatic: { disableSnapshot: false },
+  },
 } satisfies Meta<typeof Modal>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -106,6 +110,12 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({
     canvasElement,
@@ -268,6 +278,18 @@ export const WithVerticalScrolling = {
   argTypes: {
     children: { table: { disable: false } },
   },
+  parameters: {
+    viewport: {
+      options: {
+        maxHeight: {
+          maxHeight: { name: 'maxHeight', styles: { height: '500px' } },
+        },
+      },
+    },
+    chromatic: {
+      modes: { maxHeight: { viewport: 'maxHeight' } },
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -286,7 +308,7 @@ export const ClickCloseButton = {
     },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -309,7 +331,7 @@ export const WithAutoClose = {
     },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -331,7 +353,7 @@ export const WithAutoCloseDisabled = {
     dismissOnOutsideClick: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -393,8 +415,8 @@ export const WithShadowDom = {
   name: 'With ShadowDom Click Outside',
   decorators: [webComponent],
   parameters: {
-    imageSnapshot: {
-      disable: true,
+    chromatic: {
+      disableSnapshot: true,
     },
     a11y: { disable: true },
     customElementName: 'modal-customelement',
@@ -477,8 +499,8 @@ const TemplateModalWithStateChange: StoryFn<typeof Modal> = (args) => {
 export const WithStateChangeAndFocus = {
   render: TemplateModalWithStateChange,
   parameters: {
-    imageSnapshot: {
-      disable: true,
+    chromatic: {
+      disableSnapshot: true,
     },
   },
   name: 'With State Change and Focus Modal',
@@ -507,8 +529,8 @@ export const WithStateChangeAndFocus = {
 export const WithStateChangeAndTextFieldFocus = {
   render: TemplateModalWithStateChangeAndFocusedInput,
   parameters: {
-    imageSnapshot: {
-      disable: true,
+    chromatic: {
+      disableSnapshot: true,
     },
   },
   name: 'With State Change and Focus TextField',
@@ -584,6 +606,9 @@ export const AutoOpen = {
   name: 'With Auto Open Close ',
   args: {
     variant: 'plain',
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -671,6 +696,9 @@ export const AutoOpenAndCloseOnEscape = {
   argTypes: {
     dismissOnEsc: { table: { disable: false } },
   },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const openmodal = await canvas.findByRole('dialog', { hidden: false });
@@ -717,7 +745,7 @@ export const AutoOpenAndCloseOnUserInput = {
     dismissOnEsc: false,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   argTypes: {
     dismissOnEsc: { table: { disable: false } },
@@ -753,7 +781,7 @@ export const WithFormValidationFocusRetention = {
     dismissOnOutsideClick: false,
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    chromatic: { disableSnapshot: true },
   },
   argTypes: {
     dismissOnEsc: { table: { disable: false } },

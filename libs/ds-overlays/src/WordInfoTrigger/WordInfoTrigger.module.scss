@@ -1,0 +1,50 @@
+@use 'libs/ds-core-utils/src/mixins/styles';
+
+.wordInfoTrigger {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+
+  .icon {
+    width: var(--size-extra-small);
+    min-width: var(--size-extra-small);
+    height: var(--size-extra-small);
+    margin-left: 2px;
+    fill: var(--semantic-interactive-main);
+    vertical-align: top !important;
+  }
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--semantic-interactive-main);
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: var(--semantic-interactive-main);
+    color: var(--palette-graphite-0);
+    text-decoration: none;
+
+    .icon {
+      fill: var(--palette-graphite-0);
+    }
+  }
+}
+
+.srOnly {
+  @include styles.sr-only;
+}

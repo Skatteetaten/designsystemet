@@ -1,6 +1,6 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
   expect,
   fireEvent,
@@ -8,7 +8,7 @@ import {
   userEvent,
   waitFor,
   within,
-} from '@storybook/test';
+} from 'storybook/test';
 
 import {
   dsI18n,
@@ -94,8 +94,10 @@ const meta = {
     onSelectDate: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
+  tags: ['test'],
   parameters: {
     mockDate: today,
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof DatePicker>;
 export default meta;
@@ -123,7 +125,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
 } satisfies Story;
@@ -143,6 +145,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
     autoComplete: { table: { disable: false } },
+  },
+  parameters: {
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -200,10 +207,7 @@ export const Defaults = {
     label: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: [`${wrapper} input`, `${wrapper} button`],
-      focus: [`${wrapper} input`, `${wrapper} button`],
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -274,7 +278,7 @@ export const WithValue = {
     value: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('value', '01.02.2024'),
 } satisfies Story;
@@ -289,7 +293,7 @@ export const WithRequired = {
     required: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -332,8 +336,7 @@ export const WithoutErrorMessage = {
     await expect(textbox).not.toHaveAttribute('aria-describedby');
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -347,10 +350,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      hover: [`${wrapper} input`, `${wrapper} button`],
-      focus: [`${wrapper} input`, `${wrapper} button`],
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -540,8 +540,7 @@ export const GenerouslyWithFormatFromUser = {
   },
   argTypes: {},
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -595,8 +594,7 @@ export const WithEventHandlers = {
     onChange: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -620,8 +618,7 @@ export const ClickCalendarButton = {
     onFocus: fn(),
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -641,8 +638,7 @@ export const ClickCalendarDateButton = {
     value: valueDate,
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -665,8 +661,7 @@ export const ClickOutsideCalendar = {
     value: valueDate,
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -692,8 +687,7 @@ export const OpenCalendarEscape = {
     value: valueDate,
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -729,9 +723,6 @@ export const OpenCalendarMovesOver = {
     value: valueDate,
     hasSpacing: true,
   },
-  parameters: {
-    HTMLSnapshot: { disable: true },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarButton = canvas.getByRole('button');
@@ -750,8 +741,7 @@ export const WithShadowDom = {
   },
   decorators: [webComponent],
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
     customElementName: 'calendar-customelement',
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -800,8 +790,7 @@ export const HideCalendarOnResizeWidth = {
     value: valueDate,
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -844,8 +833,7 @@ export const TabNavigationWithAllDatesDisabled = {
     initialPickerDate: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
     mockDate: new Date('2024-01-15'),
   },
   play: async ({ canvasElement }): Promise<void> => {
