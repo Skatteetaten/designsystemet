@@ -362,7 +362,9 @@ export function useComboboxCore({
   // Event handlers from dropdown
   const handleChevronClick = useCallback(
     (e?: React.MouseEvent): void => {
-      e?.stopPropagation();
+      if (e) {
+        e.stopPropagation();
+      }
 
       if (isOpen) {
         closeDropdown(true);
