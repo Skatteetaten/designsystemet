@@ -269,7 +269,10 @@ describe('useComboboxCore', () => {
       expect(result.current.isOpen).toBe(false);
 
       // Mock event
-      const mockEvent = { stopPropagation: vi.fn() };
+      const mockEvent = {
+        stopPropagation: vi.fn(),
+        preventDefault: vi.fn(),
+      };
 
       act(() => {
         result.current.handleChevronClick(mockEvent as any);
