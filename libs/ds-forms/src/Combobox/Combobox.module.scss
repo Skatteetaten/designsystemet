@@ -144,6 +144,7 @@
     pointer-events: none;
   }
 
+  // Only apply hover styles to actual button elements (clear button)
   &:is(:hover, :focus-visible):enabled {
     border-radius: 50%;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
@@ -155,6 +156,23 @@
     background-color: var(--semantic-interactive-background);
   }
 
+  // Hover styles for chevron div (not button)
+  &:not(button):hover:not([data-disabled='true']) {
+    position: relative;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: var(--semantic-interactive-background);
+    outline: none;
+
+    &::before {
+      position: absolute;
+      border: 2px solid var(--semantic-interactive-main);
+      border-radius: 12rem;
+      content: '';
+      inset: 2px;
+    }
+  }
+
   // Size variants for chevron button
   &_large {
     width: 28px;
@@ -164,6 +182,7 @@
 
 .chevronButton svg {
   fill: var(--semantic-interactive-main);
+  pointer-events: none;
 }
 
 .chevronButton:disabled svg,
@@ -196,7 +215,6 @@
   background: var(--semantic-page-background);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
   list-style: none;
-  overflow-y: auto;
 
   &WithError {
     border-top: 1px solid var(--palette-graphite-100);
