@@ -29,7 +29,6 @@ interface ComboboxOptionsProps {
   classNames?: { options?: string };
   handleButtonFocus: (index: number) => void;
   handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
-  setFocusedIndex: (index: number) => void;
   customListRef: RefObject<HTMLUListElement | null>;
   hasError?: boolean;
   maxSelected?: number;
@@ -50,7 +49,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     classNames,
     handleButtonFocus,
     handleOptionSelect,
-    setFocusedIndex,
     customListRef,
     hasError = false,
     maxSelected,

@@ -331,7 +331,6 @@ const Combobox = (({
         classNames={classNames}
         handleButtonFocus={handleButtonFocus}
         handleOptionSelect={handleOptionSelect}
-        setFocusedIndex={setFocusedIndex}
         customListRef={containerRef}
         hasError={!!errorMessage}
         maxSelected={maxSelected}
