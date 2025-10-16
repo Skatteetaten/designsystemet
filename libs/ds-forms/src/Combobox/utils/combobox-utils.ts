@@ -5,15 +5,11 @@ import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
  * In multi-select mode, all options remain visible to show checkboxes for selected items.
  * @param options - Array of all available options to filter
  * @param searchTerm - Current search input value to match against option labels
- * @param selectedValues - Currently selected options (used for future filtering logic)
- * @param multiple - Whether combobox is in multi-select mode
  * @returns Filtered array of options matching the search criteria
  */
 export const filterOptions = (
   options: ComboboxOption[],
-  searchTerm: string,
-  selectedValues: ComboboxOption[],
-  multiple: boolean
+  searchTerm: string
 ): ComboboxOption[] => {
   const filteredOptions = options;
 
