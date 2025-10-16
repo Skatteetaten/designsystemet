@@ -3,18 +3,12 @@ import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import type { ComboboxOption } from './Combobox.types';
+import type {
+  ComboboxAccessibilityAnnouncerProps,
+  ComboboxOption,
+} from './Combobox.types';
 
 import styles from './Combobox.module.scss';
-
-interface ComboboxAccessibilityAnnouncerProps {
-  comboboxId: string;
-  isLoading: boolean;
-  loadingMessage: string;
-  isOpen: boolean;
-  displayOptions: ComboboxOption[];
-  searchTerm: string;
-}
 
 const getAnnouncementMessage = (
   isLoading: boolean,

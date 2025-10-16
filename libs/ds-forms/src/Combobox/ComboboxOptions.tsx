@@ -1,10 +1,9 @@
-import React, { type JSX, RefObject } from 'react';
+import React, { type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
-import type { ComboboxOption } from './Combobox.types';
+import type { ComboboxOptionsProps } from './Combobox.types';
 import { ComboboxLoadingMessage } from './ComboboxLoadingMessage';
 import { ComboboxMaxSelectedMessage } from './ComboboxMaxSelectedMessage';
 import {
@@ -13,26 +12,6 @@ import {
 } from './utils/combobox-state-utils';
 
 import styles from './Combobox.module.scss';
-
-interface ComboboxOptionsProps {
-  isOpen: boolean;
-  isLoading?: boolean;
-  loadingMessage?: string;
-  spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
-  displayOptions: ComboboxOption[];
-  searchTerm: string;
-  multiple: boolean;
-  selectedValues: ComboboxOption[];
-  comboboxId: string;
-  listId: string;
-  focusedIndex: number;
-  classNames?: { options?: string };
-  handleButtonFocus: (index: number) => void;
-  handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
-  customListRef: RefObject<HTMLUListElement | null>;
-  hasError?: boolean;
-  maxSelected?: number;
-}
 
 export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
   ({

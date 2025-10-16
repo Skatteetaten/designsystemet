@@ -2,16 +2,9 @@ import React, { type JSX } from 'react';
 
 import { Chips } from '@skatteetaten/ds-collections';
 
-import type { ComboboxOption } from './Combobox.types';
+import type { ComboboxSelectedOptionsProps } from './Combobox.types';
 
 import styles from './Combobox.module.scss';
-
-interface ComboboxSelectedOptionsProps {
-  multiple: boolean;
-  selectedValues: ComboboxOption[];
-  onRemoveValue: (value: ComboboxOption) => void;
-  classNames?: { chips?: string };
-}
 
 export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
   ({

@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, Ref } from 'react';
+import type { ComponentPropsWithoutRef, Ref, RefObject } from 'react';
 
 import type { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
@@ -27,7 +27,6 @@ export type ComboboxPropsHTMLAttributes = SafeOmit<
   | 'id'
   | 'type'
   | 'role'
-  | 'className'
   | 'aria-expanded'
   | 'aria-autocomplete'
   | 'aria-controls'
@@ -131,3 +130,61 @@ export interface ComboboxComponent extends React.FC<ComboboxProps> {
   }>;
   Options: typeof ComboboxOptions;
 }
+
+export type ComboboxSelectedOptionsProps = {
+  multiple: boolean;
+  selectedValues: ComboboxOption[];
+  onRemoveValue: (value: ComboboxOption) => void;
+  classNames?: { chips?: string };
+};
+
+export type ComboboxOptionsProps = {
+  isOpen: boolean;
+  isLoading?: boolean;
+  loadingMessage?: string;
+  spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
+  displayOptions: ComboboxOption[];
+  searchTerm: string;
+  multiple: boolean;
+  selectedValues: ComboboxOption[];
+  comboboxId: string;
+  listId: string;
+  focusedIndex: number;
+  classNames?: { options?: string };
+  handleButtonFocus: (index: number) => void;
+  handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
+  customListRef: RefObject<HTMLUListElement | null>;
+  hasError?: boolean;
+  maxSelected?: number;
+};
+
+export type MaxSelectedMessageProps = {
+  selectedCount: number;
+  maxSelected: number;
+  comboboxId: string;
+};
+
+export type LoadingMessageProps = {
+  message?: string;
+  comboboxId: string;
+  spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
+};
+
+export type ComboboxButtonProps = {
+  isOpen: boolean;
+  onClick: (e?: React.MouseEvent) => void;
+  hasValue?: boolean;
+  onClear?: () => void;
+  multiple?: boolean;
+  disabled?: boolean;
+  variant?: ComboboxSize;
+};
+
+export type ComboboxAccessibilityAnnouncerProps = {
+  comboboxId: string;
+  isLoading: boolean;
+  loadingMessage: string;
+  isOpen: boolean;
+  displayOptions: ComboboxOption[];
+  searchTerm: string;
+};

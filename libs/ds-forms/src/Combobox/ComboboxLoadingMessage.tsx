@@ -1,15 +1,10 @@
 import type { JSX } from 'react';
 
 import { Spinner } from '@skatteetaten/ds-progress';
-import type { SpinnerProps } from '@skatteetaten/ds-progress';
+
+import { LoadingMessageProps } from './Combobox.types';
 
 import styles from './Combobox.module.scss';
-
-interface LoadingMessageProps {
-  message?: string;
-  comboboxId: string;
-  spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
-}
 
 export const ComboboxLoadingMessage = ({
   comboboxId,

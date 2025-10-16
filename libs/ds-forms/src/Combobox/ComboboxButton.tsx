@@ -8,19 +8,9 @@ import {
   Icon,
 } from '@skatteetaten/ds-icons';
 
-import { ComboboxSize } from './Combobox.types';
+import { ComboboxButtonProps } from './Combobox.types';
 
 import styles from './Combobox.module.scss';
-
-interface ComboboxButtonProps {
-  isOpen: boolean;
-  onClick: (e?: React.MouseEvent) => void;
-  hasValue?: boolean;
-  onClear?: () => void;
-  multiple?: boolean;
-  disabled?: boolean;
-  variant?: ComboboxSize;
-}
 
 export const ComboboxButton = React.memo<ComboboxButtonProps>(
   ({
