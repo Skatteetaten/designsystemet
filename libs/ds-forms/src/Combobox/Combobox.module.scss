@@ -215,6 +215,7 @@
   background: var(--semantic-page-background);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
   list-style: none;
+  overflow-y: auto;
 
   &WithError {
     border-top: 1px solid var(--palette-graphite-100);
@@ -225,9 +226,8 @@
   display: block;
   width: 100%;
   padding: var(--spacing-xs) var(--spacing-s);
-  border: none;
-  border-bottom: 1px solid var(--palette-graphite-100);
   background: transparent;
+  box-shadow: inset 0 -1px 0 0 var(--palette-graphite-100);
   color: var(--semantic-page-foreground);
   cursor: pointer;
   font-family: inherit;
@@ -235,12 +235,12 @@
   text-align: left;
 
   &:last-child {
-    border-bottom: none;
+    box-shadow: none;
   }
 
   &:focus-visible {
     z-index: 10;
-    outline: 3px solid var(--semantic-interactive-main);
+    border: 3px solid var(--semantic-interactive-main);
     outline-offset: 0;
   }
 
@@ -253,9 +253,15 @@
 
   &.focused:not(.disabled) {
     z-index: 10;
-    border-bottom: none;
-    outline: 3px solid var(--semantic-interactive-main);
+    padding: calc(var(--spacing-xs) - 3px) calc(var(--spacing-s) - 3px); // Kompenser for 3px border
+    border: 3px solid var(--semantic-interactive-main);
+    box-shadow: none;
     outline-offset: 0;
+  }
+
+  // Skjul separator på elementet som kommer rett før det fokuserte elementet
+  &:has(+ &.focused:not(.disabled)) {
+    box-shadow: none;
   }
 
   &.selected {
@@ -270,9 +276,11 @@
 
   &.selected.focused:not(.disabled) {
     z-index: 10;
+    padding: calc(var(--spacing-xs) - 3px) calc(var(--spacing-s) - 3px); // Kompenser for 3px border
+    border: 3px solid var(--semantic-interactive-main);
     background: var(--palette-accent-50);
+    box-shadow: none;
     color: var(--palette-accent-800);
-    outline: 3px solid var(--semantic-interactive-main);
     outline-offset: 0;
   }
 
@@ -281,6 +289,14 @@
     align-items: center;
     padding: var(--spacing-xs) var(--spacing-s);
     gap: var(--spacing-xs);
+
+    &.focused:not(.disabled) {
+      padding: calc(var(--spacing-xs) - 3px) calc(var(--spacing-s) - 3px); // Kompenser for 3px border i checkbox-modus
+    }
+
+    &.selected.focused:not(.disabled) {
+      padding: calc(var(--spacing-xs) - 3px) calc(var(--spacing-s) - 3px); // Kompenser for 3px border i checkbox-modus
+    }
   }
 
   &.disabled {
