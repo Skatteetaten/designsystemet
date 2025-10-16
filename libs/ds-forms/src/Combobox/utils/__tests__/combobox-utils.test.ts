@@ -20,12 +20,12 @@ describe('combobox-utils', () => {
 
   describe('filterOptions', () => {
     it('Når searchTerm er tom, så returnerer den alle options', () => {
-      const result = filterOptions(mockOptions, '', [], false);
+      const result = filterOptions(mockOptions, '');
       expect(result).toEqual(mockOptions);
     });
 
     it('Når searchTerm matcher noen options, så filtrerer den riktig', () => {
-      const result = filterOptions(mockOptions, 'a', [], false);
+      const result = filterOptions(mockOptions, 'a');
       expect(result).toEqual([
         { label: 'Apple', value: 'apple' },
         { label: 'Banana', value: 'banana' },
@@ -34,18 +34,17 @@ describe('combobox-utils', () => {
     });
 
     it('Når searchTerm er case-insensitive, så filtrerer den riktig', () => {
-      const result = filterOptions(mockOptions, 'APPLE', [], false);
+      const result = filterOptions(mockOptions, 'APPLE');
       expect(result).toEqual([{ label: 'Apple', value: 'apple' }]);
     });
 
     it('Når searchTerm ikke matcher noen options, så returnerer den tom array', () => {
-      const result = filterOptions(mockOptions, 'xyz', [], false);
+      const result = filterOptions(mockOptions, 'xyz');
       expect(result).toEqual([]);
     });
 
     it('Når multiple er true, så returnerer den alle options uavhengig av selectedValues', () => {
-      const selectedValues = [mockOptions[0]];
-      const result = filterOptions(mockOptions, 'a', selectedValues, true);
+      const result = filterOptions(mockOptions, 'a');
       expect(result).toEqual([
         { label: 'Apple', value: 'apple' },
         { label: 'Banana', value: 'banana' },

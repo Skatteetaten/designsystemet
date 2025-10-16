@@ -145,7 +145,7 @@ export function useComboboxCore({
   const displayOptions = useMemo(() => {
     if (!isOpen) return []; // No options when dropdown is closed
     if (isLoading) return []; // Empty list while loading (spinner shows instead)
-    return filterOptions(options, searchTerm, selectedValues, multiple);
+    return filterOptions(options, searchTerm);
   }, [options, searchTerm, isOpen, multiple, selectedValues, isLoading]);
 
   // Calculate enabled indices for keyboard navigation
