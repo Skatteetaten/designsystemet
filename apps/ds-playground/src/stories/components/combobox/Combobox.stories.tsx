@@ -1,10 +1,6 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react/*';
 
-import { getHasSpacingDefault } from '@skatteetaten/ds-core-utils';
-import {
-  Combobox,
-  getComboboxPlaceholderDefault,
-} from '@skatteetaten/ds-forms';
+import { Combobox } from '@skatteetaten/ds-forms';
 
 import { comboboxStoryOptions } from './combobox.stories.utils';
 import { ComboboxFormExample } from './ComboboxFormExample';
@@ -24,6 +20,10 @@ import { ComboboxTypedOptionsExample } from './ComboboxTypedOptionsExample';
 import comboboxTypedOptionsExampleSource from './ComboboxTypedOptionsExample.tsx?raw';
 import { ComboboxValidationExample } from './ComboboxValidationExample';
 import comboboxValidationExampleSource from './ComboboxValidationExample.tsx?raw';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { getHasSpacingDefault } from '../../../../../../libs/ds-core-utils/src/defaults';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { getComboboxPlaceholderDefault } from '../../../../../../libs/ds-forms/src/Combobox/defaults';
 import { category } from '../../../../.storybook/helpers';
 
 const meta = {

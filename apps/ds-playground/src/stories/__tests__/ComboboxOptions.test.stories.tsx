@@ -20,7 +20,6 @@ const meta = {
   argTypes: {
     isOpen: { table: { disable: true } },
     isLoading: { table: { disable: true } },
-    loadingMessage: { table: { disable: true } },
     spinnerProps: { table: { disable: true } },
     displayOptions: { table: { disable: true } },
     searchTerm: { table: { disable: true } },
@@ -32,7 +31,6 @@ const meta = {
     classNames: { table: { disable: true } },
     handleButtonFocus: { table: { disable: true } },
     handleOptionSelect: { table: { disable: true } },
-    setFocusedIndex: { table: { disable: true } },
     customListRef: { table: { disable: true } },
     hasError: { table: { disable: true } },
     maxSelected: { table: { disable: true } },
@@ -63,7 +61,6 @@ const defaultArgs: ComboboxOptionsProps = {
   focusedIndex: -1,
   handleButtonFocus: fn(),
   handleOptionSelect: fn(),
-  setFocusedIndex: fn(),
   customListRef: undefined as any, // Will be overridden in render
 };
 
