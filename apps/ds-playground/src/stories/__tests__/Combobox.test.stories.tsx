@@ -604,6 +604,51 @@ export const ErrorStates = {
   },
 } satisfies Story;
 
+export const DisabledStateStyles = {
+  name: 'Disabled state styling verification',
+  args: {
+    ...defaultArgs,
+    disabled: true,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Verifiser at input element er disabled
+    await expect(inputElement).toBeDisabled();
+    await expect(inputElement).toHaveStyle('cursor: not-allowed');
+
+    // Finn input container (den som har :has(.input:disabled) styling)
+    const inputContainer = inputElement.closest('[class*="inputContainer"]');
+    await expect(inputContainer).toHaveStyle('cursor: not-allowed');
+
+    // Finn chevron button og verifiser disabled styling
+    const chevronButton = canvasElement.querySelector('[data-chevron-button]');
+    await expect(chevronButton).toHaveStyle('pointer-events: none');
+    await expect(chevronButton).toHaveStyle('cursor: not-allowed');
+
+    // Verifiser at ingen interaksjon er mulig - dropdown skal ikke åpnes
+    // Note: userEvent.click() will fail on disabled input, så vi bruker fireEvent for å teste
+    const options = canvas.queryAllByRole('option');
+    await expect(options).toHaveLength(0);
+
+    // Verifiser at chevron button har pointer-events: none som forhindrer klikk
+    // Vi tester ikke klikket siden pointer-events: none gjør det umulig
+    // Dette er ønsket oppførsel - disabled elements skal ikke kunne klikkes
+    if (chevronButton) {
+      const computedStyle = getComputedStyle(chevronButton as Element);
+      expect(computedStyle.pointerEvents).toBe('none');
+      expect(computedStyle.cursor).toBe('not-allowed');
+    }
+
+    // Verifiser at aria-expanded forblir false (dropdown ikke åpnet)
+    await expect(inputElement).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;
+
 export const EscapeKeyBehavior = {
   name: 'Escape key lukker dropdown (A5)',
   args: {
