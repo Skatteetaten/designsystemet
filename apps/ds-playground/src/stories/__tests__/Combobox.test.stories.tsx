@@ -26,7 +26,6 @@ const meta = {
     variant: { table: { disable: true } },
     multiple: { table: { disable: true } },
     value: { table: { disable: true } },
-    defaultValue: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     helpText: { table: { disable: true } },
