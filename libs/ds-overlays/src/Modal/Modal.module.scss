@@ -1,12 +1,17 @@
 @use 'libs/ds-core-utils/src/mixins/styles' as styles;
 
 .modal {
+  --ds-modal-footer-height: 0px;
+
   position: fixed;
   min-width: calc(300px - 2 * var(--spacing-m));
   max-width: calc(var(--semantic-responsive-article) - 2 * var(--spacing-m));
-  max-height: calc(100vh - 2 * var(--spacing-m));
+  max-height: calc(100dvh - 2 * var(--spacing-m));
   box-sizing: border-box;
   padding: 0;
+  padding-bottom: calc(
+    env(safe-area-inset-bottom, 0px) + var(--ds-modal-footer-height)
+  );
   border: 0.25rem solid var(--theme-primary);
   background-color: var(--palette-graphite-0);
   box-shadow:
@@ -16,6 +21,10 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-article);
   overflow-y: auto;
+
+  @supports not (height: 100dvh) {
+    max-height: calc(100vh - 2 * var(--spacing-m));
+  }
 
   &::backdrop {
     background: rgb(255 255 255 / 80%);
