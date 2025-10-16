@@ -124,6 +124,7 @@ export function useComboboxCore({
   const containerRef = useRef<HTMLUListElement>(null);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const previousOptionsRef = useRef<ComboboxOption[]>(options);
+  const chevronClickedRef = useRef(false);
 
   // Generate stable IDs
   const generatedId = `combobox-${useId()}`;
@@ -362,9 +363,12 @@ export function useComboboxCore({
   // Event handlers from dropdown
   const handleChevronClick = useCallback(
     (e?: React.MouseEvent): void => {
+      // Set flag to prevent container click handler from firing
+      chevronClickedRef.current = true;
+
       if (e) {
         e.stopPropagation();
-        e.preventDefault(); // Prevent potential phantom clicks on high refresh rate displays
+        e.preventDefault();
       }
 
       if (isOpen) {
@@ -378,6 +382,11 @@ export function useComboboxCore({
         }
       }
       resetFocus();
+
+      // Reset flag after sufficient delay to handle mousedown/mouseup/click sequence
+      setTimeout(() => {
+        chevronClickedRef.current = false;
+      }, 100);
     },
     [isOpen, openDropdown, closeDropdown, inputRef, resetFocus, safeFocus]
   );
@@ -385,6 +394,13 @@ export function useComboboxCore({
   const handleContainerClick = useCallback(
     (e: React.MouseEvent): void => {
       const target = e.target as HTMLElement;
+
+      // If chevron was just clicked, ignore this container click
+      if (chevronClickedRef.current) {
+        return;
+      }
+
+      // Check for buttons first
       if (target.closest('button')) {
         return;
       }
