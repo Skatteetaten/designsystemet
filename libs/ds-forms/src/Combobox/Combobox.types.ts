@@ -18,40 +18,17 @@ export type TypedComboboxOption<TData> = ComboboxOption & {
 
 type SafeOmit<T, K extends keyof T> = Omit<T, K>;
 
-export type ComboboxPropsHTMLAttributes = SafeOmit<
+export type ComboboxPropsHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
-  | 'value'
-  | 'onChange'
-  | 'id'
-  | 'type'
-  | 'role'
-  | 'aria-expanded'
-  | 'aria-autocomplete'
-  | 'aria-controls'
-  | 'aria-owns'
-  | 'aria-activedescendant'
-  | 'aria-describedby'
-  | 'aria-invalid'
-  | 'aria-busy'
-  | 'aria-label'
-  | 'aria-labelledby'
-  | 'aria-required'
-  | 'aria-disabled'
-  | 'aria-readonly'
-  | 'aria-hidden'
-  | 'aria-live'
-  | 'aria-atomic'
-  | 'aria-relevant'
-  | 'aria-haspopup'
-  | 'min'
-  | 'max'
-  | 'step'
-  | 'accept'
-  | 'capture'
-  | 'checked'
-  | 'multiple'
-  | 'list'
-  | 'results'
+  | 'name'
+  | 'disabled'
+  | 'required'
+  | 'placeholder'
+  | 'onBlur'
+  | 'onFocus'
+  | 'autoComplete'
+  | 'form'
+  | 'tabIndex'
 >;
 
 interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
@@ -100,6 +77,8 @@ interface SingleComboboxProps extends ComboboxCommonProps {
   onSelectionChange?: (selectedOption: ComboboxOption | null) => void;
   /** Callback når input-verdien endres - optional for live search functionality */
   onInputChange?: (searchTerm: string) => void;
+  /** Not available in single-select mode */
+  maxSelected?: never;
 }
 
 interface MultiComboboxProps extends ComboboxCommonProps {

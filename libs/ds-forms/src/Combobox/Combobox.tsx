@@ -85,19 +85,12 @@ const Combobox = (({
   onHelpToggle,
   onInputChange,
   onSelectionChange,
+  maxSelected,
   ...htmlAttributes
 }: Readonly<ComboboxProps>): JSX.Element => {
   const { safeFocus } = useBrowserCompatibility();
 
   const resolvedVariant = multiple ? 'large' : (variant ?? 'medium');
-
-  // Extract maxSelected safely from union type props
-  // Only available in multi-select mode, undefined otherwise
-  const maxSelected = useMemo(() => {
-    return multiple && 'maxSelected' in htmlAttributes
-      ? htmlAttributes.maxSelected
-      : undefined;
-  }, [multiple, htmlAttributes]);
 
   // UNIFIED CORE HOOK - consolidates dropdown + focus + state management
   const coreState = useComboboxCore({
