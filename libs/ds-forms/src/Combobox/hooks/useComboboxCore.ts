@@ -364,6 +364,7 @@ export function useComboboxCore({
     (e?: React.MouseEvent): void => {
       if (e) {
         e.stopPropagation();
+        e.preventDefault(); // Prevent potential phantom clicks on high refresh rate displays
       }
 
       if (isOpen) {
