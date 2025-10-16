@@ -319,7 +319,6 @@ const Combobox = (({
       <ComboboxOptions
         isOpen={isOpen}
         isLoading={isLoading}
-        loadingMessage={loadingMessage}
         spinnerProps={spinnerProps}
         displayOptions={displayOptions}
         searchTerm={searchTerm}
@@ -348,17 +347,4 @@ const Combobox = (({
 
 Combobox.displayName = 'Combobox';
 
-Combobox.Button = ComboboxButton;
-Combobox.Button.displayName = 'Combobox.Button';
-
-Combobox.SelectedOptions = ComboboxSelectedOptions;
-Combobox.SelectedOptions.displayName = 'Combobox.SelectedOptions';
-
-Combobox.Options = ComboboxOptions;
-Combobox.Options.displayName = 'Combobox.Options';
-
-export {
-  Combobox,
-  getComboboxPlaceholderDefault,
-  getComboboxLoadingMessageDefault,
-};
+export { Combobox };

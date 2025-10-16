@@ -141,7 +141,6 @@ export type ComboboxSelectedOptionsProps = {
 export type ComboboxOptionsProps = {
   isOpen: boolean;
   isLoading?: boolean;
-  loadingMessage?: string;
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   displayOptions: ComboboxOption[];
   searchTerm: string;
@@ -165,7 +164,6 @@ export type MaxSelectedMessageProps = {
 };
 
 export type LoadingMessageProps = {
-  message?: string;
   comboboxId: string;
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
 };
