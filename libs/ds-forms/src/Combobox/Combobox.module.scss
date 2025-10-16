@@ -191,6 +191,7 @@
   background: var(--semantic-page-background);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
   list-style: none;
+  overflow-y: auto;
 
   &WithError {
     border-top: 1px solid var(--palette-graphite-100);
