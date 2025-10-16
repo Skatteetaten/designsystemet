@@ -15,3 +15,4 @@ npm i @skatteetaten/ds-status
 ## Innhold
 
 - Alert
+- Tag

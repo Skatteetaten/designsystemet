@@ -4,7 +4,8 @@
 }
 
 .contentWrapper {
-  padding: var(--spacing-s);
+  // Øke vertikal padding med 1px for å unngå vertikal scrollbar
+  padding: 0.5625rem var(--spacing-s);
 }
 
 .closeButton {
