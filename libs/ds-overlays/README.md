@@ -15,3 +15,6 @@ npm i @skatteetaten/ds-overlays
 ## Innhold
 
 - Modal
+- Popover
+- RolePicker
+- WordInfo

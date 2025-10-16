@@ -11,6 +11,7 @@ import {
 import {
   getEnableSRNavigationHintDefault,
   getSearchFieldHasSearchButtonIconDefault,
+  getSearchFieldHideLabelDefault,
   SearchField,
   searchInList,
 } from '@skatteetaten/ds-forms';
@@ -50,7 +51,10 @@ const meta = {
       },
     },
     helpText: { control: 'text', table: { category: category.props } },
-    hideLabel: { table: { category: category.props } },
+    hideLabel: {
+      table: { category: category.props },
+      defaultValue: { summary: getSearchFieldHideLabelDefault().toString() },
+    },
     enableSRNavigationHint: {
       table: {
         category: category.props,

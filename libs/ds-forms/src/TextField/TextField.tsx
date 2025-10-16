@@ -70,6 +70,20 @@ export const TextField = ({
   const textboxRef = useRef<HTMLInputElement>(null);
   useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
+  // History stack for undo/redo functionality
+  const historyRef = useRef<{
+    past: { value: string; cursorPosition: number }[];
+    future: { value: string; cursorPosition: number }[];
+    current: { value: string; cursorPosition: number };
+  }>({
+    past: [],
+    future: [],
+    current: {
+      value: value?.toString() || defaultValue?.toString() || '',
+      cursorPosition: 0,
+    },
+  });
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
     if (onKeyDown) {
       onKeyDown(e);
@@ -81,8 +95,123 @@ export const TextField = ({
     }
 
     const input = e.currentTarget;
-    const cursorPosition = input.selectionStart || 0;
+    const cursorPosition = input.selectionEnd || 0;
     const inputValue = input.value;
+
+    // Initialize history if empty (first interaction)
+    if (!historyRef.current.past.length && !historyRef.current.future.length) {
+      historyRef.current.current = {
+        value: inputValue,
+        cursorPosition,
+      };
+    }
+
+    // Handle redo (Ctrl+Y / Command+Y or Ctrl+Shift+Z / Command+Shift+Z)
+    if (
+      (e.ctrlKey || e.metaKey) &&
+      (e.key === 'y' || (e.shiftKey && e.key === 'z'))
+    ) {
+      if (historyRef.current.future.length > 0) {
+        e.preventDefault();
+
+        // Get the first item from future
+        const nextState = historyRef.current.future.shift();
+
+        // Move current value to past stack
+        const currentState = {
+          value: historyRef.current.current.value,
+          cursorPosition,
+        };
+
+        const newPast = [...historyRef.current.past, currentState];
+
+        // Update history ref
+        historyRef.current = {
+          past: newPast,
+          future: [...historyRef.current.future],
+          current: nextState || { value: '', cursorPosition: 0 },
+        };
+
+        // Update input value
+        if (textboxRef.current && nextState !== undefined) {
+          textboxRef.current.value = nextState.value || '';
+
+          // Set cursor position
+          requestAnimationFrame(() => {
+            if (textboxRef.current) {
+              const pos = Math.min(
+                nextState.cursorPosition,
+                nextState.value?.length || 0
+              );
+              textboxRef.current.setSelectionRange(pos, pos);
+            }
+          });
+
+          // Trigger onChange to keep external state in sync
+          if (onChange) {
+            const syntheticEvent = {
+              target: textboxRef.current,
+              currentTarget: textboxRef.current,
+            } as ChangeEvent<HTMLInputElement>;
+            onChange(syntheticEvent);
+          }
+        }
+      }
+      return;
+    }
+
+    // Handle undo (Ctrl+Z / Command+Z)
+    if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+      if (historyRef.current.past.length > 0) {
+        e.preventDefault();
+
+        // Move current value to future stack
+        const currentState = {
+          value: historyRef.current.current.value,
+          cursorPosition,
+        };
+
+        const newFuture = [currentState, ...historyRef.current.future];
+
+        const previousState = historyRef.current.past.pop();
+
+        // Update history ref
+        historyRef.current = {
+          past: [...historyRef.current.past],
+          future: newFuture,
+          current: previousState || { value: '', cursorPosition: 0 },
+        };
+
+        // Update input value
+        if (textboxRef.current && previousState !== undefined) {
+          textboxRef.current.value = previousState.value || '';
+
+          // Set cursor position
+          requestAnimationFrame(() => {
+            if (textboxRef.current) {
+              const pos = Math.min(
+                previousState.cursorPosition,
+                previousState.value?.length || 0
+              );
+              textboxRef.current.setSelectionRange(pos, pos);
+            }
+          });
+
+          // Trigger onChange to keep external state in sync
+          if (onChange) {
+            const syntheticEvent = {
+              target: textboxRef.current,
+              currentTarget: textboxRef.current,
+            } as ChangeEvent<HTMLInputElement>;
+            onChange(syntheticEvent);
+          }
+        }
+      }
+      return;
+    }
+
+    if (!thousandSeparator) return;
+
     const isPreviousCharacterSeparator = /[, ]/.test(
       inputValue[cursorPosition - 1]
     );
@@ -124,31 +253,54 @@ export const TextField = ({
       const separatorWasRemoved =
         separatorsInOldValue > separatorsInNewValue && cursorPosition > 2;
 
-      input.value = formattedValue;
-
       const newPosition = deletePosition - 1 - (separatorWasRemoved ? 1 : 0);
 
+      // Save the current value to history before making changes
+      if (historyRef.current.current.value !== formattedValue) {
+        historyRef.current = {
+          past: [
+            ...historyRef.current.past,
+            {
+              value: historyRef.current.current.value || '',
+              cursorPosition: cursorPosition,
+            },
+          ],
+          future: [],
+          current: {
+            value: formattedValue,
+            cursorPosition: newPosition,
+          },
+        };
+      }
+
+      input.value = formattedValue;
       requestAnimationFrame(() => {
         input.setSelectionRange(newPosition, newPosition);
       });
     }
+    //Update cursor position in case of arrow keys or other movement
+    historyRef.current.current.cursorPosition = cursorPosition;
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    if (thousandSeparator) {
-      const input = e.target as HTMLInputElement;
-      const cursorPosition = input.selectionStart || 0;
-      const oldValue = input.value;
+    const input = e.target as HTMLInputElement;
+    const newValue = input.value;
 
-      const digitsBeforeCursor = oldValue
+    if (thousandSeparator) {
+      const cursorPosition = input.selectionStart || 0;
+
+      const digitsBeforeCursor = newValue
         .substring(0, cursorPosition)
         .replace(/\D/g, '').length;
 
       const formattedValue = addSpacesOrCommas(removeNonNumeric(input.value));
       input.value = formattedValue;
 
-      let newPosition = 0;
       let digitCount = 0;
+
+      // Calculate new cursor position
+
+      let newPosition = 0;
       for (let i = 0; i < formattedValue.length; i++) {
         if (/\d/.test(formattedValue[i])) {
           digitCount++;
@@ -160,9 +312,33 @@ export const TextField = ({
       }
 
       input.setSelectionRange(newPosition, newPosition);
-    }
 
-    onChange?.(e);
+      // Update current in history after formatting and positioning cursor
+      // Only update if value actually changed and if thousandSeparator is set
+      const oldValue = historyRef.current.current?.value || '';
+      if (oldValue !== formattedValue) {
+        // Add the previous value to the past stack
+        historyRef.current = {
+          past: [
+            ...historyRef.current.past,
+            {
+              value: oldValue || '',
+              cursorPosition: historyRef.current.current.cursorPosition,
+            },
+          ],
+          future: [], // Clear future stack on new changes
+          current: { value: input.value || '', cursorPosition: newPosition },
+        };
+      }
+
+      // Vi trenger ikke å kalle onChange dersom bruker har
+      // skrevet inn ikke numeriske symboler som er filtrert bort igjen.
+      if (oldValue !== formattedValue) {
+        onChange?.(e);
+      }
+    } else {
+      onChange?.(e);
+    }
   };
 
   /* Slik at value har riktig format også før bruker begynner å skrive i feltet */
@@ -205,7 +381,15 @@ export const TextField = ({
         {label}
       </LabelWithHelp>
       <input
-        ref={textboxRef}
+        ref={(node) => {
+          // Handle both the external ref and our internal ref
+          if (typeof ref === 'function') {
+            ref(node);
+          } else if (ref) {
+            ref.current = node;
+          }
+          textboxRef.current = node;
+        }}
         id={textboxId}
         className={textboxClassName}
         data-testid={dataTestId}
