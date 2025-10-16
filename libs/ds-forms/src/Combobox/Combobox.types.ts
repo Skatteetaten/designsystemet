@@ -3,8 +3,6 @@ import type { ComponentPropsWithoutRef, Ref, RefObject } from 'react';
 import type { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
-import { ComboboxButton } from './ComboboxButton';
-import type { ComboboxOptions } from './ComboboxOptions';
 import type { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
 export type ComboboxSize = Extract<Size, 'medium' | 'large'>;
@@ -120,16 +118,7 @@ interface MultiComboboxProps extends ComboboxCommonProps {
 
 export type ComboboxProps = SingleComboboxProps | MultiComboboxProps;
 
-export interface ComboboxComponent extends React.FC<ComboboxProps> {
-  Button: typeof ComboboxButton;
-  SelectedOptions: React.ComponentType<{
-    multiple: boolean;
-    selectedValues: ComboboxOption[];
-    onRemoveValue: (value: ComboboxOption) => void;
-    classNames?: { chips?: string };
-  }>;
-  Options: typeof ComboboxOptions;
-}
+export type ComboboxComponent = React.FC<ComboboxProps>;
 
 export type ComboboxSelectedOptionsProps = {
   multiple: boolean;

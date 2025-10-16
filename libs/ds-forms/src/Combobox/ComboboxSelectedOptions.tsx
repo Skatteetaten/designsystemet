@@ -35,4 +35,4 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
   }
 );
 
-ComboboxSelectedOptions.displayName = 'Combobox.ComboboxSelectedOptions';
+ComboboxSelectedOptions.displayName = 'ComboboxComboboxSelectedOptions';

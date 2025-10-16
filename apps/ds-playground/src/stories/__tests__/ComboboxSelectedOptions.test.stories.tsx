@@ -421,7 +421,7 @@ export const ComponentDisplayName = {
   play: async (): Promise<void> => {
     // Should have correct displayName
     await expect(ComboboxSelectedOptions.displayName).toBe(
-      'Combobox.ComboboxSelectedOptions'
+      'ComboboxComboboxSelectedOptions'
     );
   },
 } satisfies Story;

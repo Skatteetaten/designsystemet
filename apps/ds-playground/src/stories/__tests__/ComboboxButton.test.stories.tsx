@@ -3,12 +3,13 @@ import React, { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
-import { Combobox } from '@skatteetaten/ds-forms';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { ComboboxButton } from '../../../../../libs/ds-forms/src/Combobox/ComboboxButton';
 
-type ComboboxButtonProps = React.ComponentProps<typeof Combobox.Button>;
+type ComboboxButtonProps = React.ComponentProps<typeof ComboboxButton>;
 
 const meta = {
-  component: Combobox.Button,
+  component: ComboboxButton,
   title: 'Tester/Combobox/Button',
   decorators: [(Story): JSX.Element => <Story />],
   argTypes: {
@@ -25,7 +26,7 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
-} satisfies Meta<typeof Combobox.Button>;
+} satisfies Meta<typeof ComboboxButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

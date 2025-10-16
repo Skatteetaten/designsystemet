@@ -62,4 +62,4 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
   }
 );
 
-ComboboxButton.displayName = 'Combobox.Button';
+ComboboxButton.displayName = 'ComboboxButton';
