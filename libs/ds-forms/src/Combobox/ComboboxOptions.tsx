@@ -42,7 +42,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       return (
         <div
           id={listId}
-          className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames?.options || ''}`}
+          className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames || ''}`}
         >
           <ComboboxLoadingMessage
             comboboxId={comboboxId}
@@ -60,7 +60,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           id={listId}
           role={'listbox'}
           aria-multiselectable={multiple ? 'true' : 'false'}
-          className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames?.options || ''}`}
+          className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames || ''}`}
         >
           {displayOptions.map((option, index) => {
             const comboboxState: ComboboxState = {
@@ -131,7 +131,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           id={listId}
           role={'listbox'}
           aria-multiselectable={'false'}
-          className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames?.options || ''}`}
+          className={`${styles.optionsList} ${hasError ? styles.optionsListWithError : ''} ${classNames || ''}`}
         >
           <li
             id={`${comboboxId}-option-no-results`}

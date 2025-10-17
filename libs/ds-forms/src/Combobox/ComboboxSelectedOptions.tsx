@@ -18,7 +18,7 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
     }
 
     return (
-      <div className={`${styles.chipsInline} ${classNames?.chips || ''}`}>
+      <div className={`${styles.chipsInline} ${classNames || ''}`}>
         <Chips>
           {selectedValues.map((selectedValue) => (
             <Chips.Removable
