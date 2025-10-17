@@ -388,8 +388,4 @@
   font-size: var(--font-size-m);
   font-style: italic;
   opacity: 0.8;
-
-  &:first-child {
-    border-top: 1px solid var(--palette-graphite-100);
-  }
 }
