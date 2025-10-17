@@ -252,7 +252,31 @@ const handleSpace = (
   e: KeyboardEvent,
   props: UseComboboxKeyboardProps
 ): void => {
-  handleSelection(e, props);
+  const { isOpen, focusedIndex, enabledIndices, inputRef, displayOptions } =
+    props;
+
+  // If dropdown is open and an option is focused, handle selection and prevent space from reaching input
+  if (isOpen && isIndexEnabled(focusedIndex, enabledIndices)) {
+    handleSelection(e, props);
+    return;
+  }
+
+  // If dropdown is open but no option is focused, check for exact text match
+  if (isOpen && focusedIndex === -1) {
+    const searchValue = inputRef.current?.value.trim();
+    const hasExactMatch =
+      searchValue &&
+      displayOptions.find(
+        (option) => option.label.toLowerCase() === searchValue.toLowerCase()
+      );
+
+    if (hasExactMatch) {
+      handleSelection(e, props);
+      return;
+    }
+  }
+
+  // Otherwise, let the input handle the space normally
 };
 
 // Escape key handler
@@ -328,7 +352,12 @@ export function useComboboxKeyboard(props: UseComboboxKeyboardProps): void {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent): void => {
-      if (!isInputFocused(inputRef)) return;
+      // Allow space key handling even when input is not focused if dropdown is open and option is focused
+      const { isOpen, focusedIndex, enabledIndices } = props;
+      const isSpaceWithOptionFocused =
+        e.key === ' ' && isOpen && isIndexEnabled(focusedIndex, enabledIndices);
+
+      if (!isInputFocused(inputRef) && !isSpaceWithOptionFocused) return;
 
       // Key handler mapping to replace switch statement
       const keyHandlers: Record<

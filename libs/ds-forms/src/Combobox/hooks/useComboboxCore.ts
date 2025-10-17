@@ -421,7 +421,7 @@ export function useComboboxCore({
         return;
       }
 
-      if (e.key === 'Enter' || e.key === ' ') {
+      if (e.key === 'Enter') {
         e.preventDefault();
         if (inputRef.current) {
           inputRef.current.focus();
