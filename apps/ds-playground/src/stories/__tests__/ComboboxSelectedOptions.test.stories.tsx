@@ -343,7 +343,7 @@ export const CustomClassNamesCustom = {
   name: 'Custom classNames - custom class',
   args: {
     ...defaultProps,
-    classNames: { chips: 'custom-chips-class' },
+    classNames: 'custom-chips-class',
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -367,7 +367,7 @@ export const CustomClassNamesEmpty = {
   name: 'Custom classNames - empty class',
   args: {
     ...defaultProps,
-    classNames: { chips: '' },
+    classNames: '',
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
