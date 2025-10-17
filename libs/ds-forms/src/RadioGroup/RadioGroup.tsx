@@ -136,5 +136,3 @@ export const RadioGroup = (({
 
 RadioGroup.displayName = 'RadioGroup';
 RadioGroup.Radio = Radio;
-
-export { getRadioGroupVariantDefault };

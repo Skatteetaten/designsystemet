@@ -225,5 +225,3 @@ export const TopBannerExternalUserMenu = ({
 };
 
 TopBannerExternalUserMenu.displayName = 'TopBannerExternalUserMenu';
-
-export { getTopBannerExternalUserMenuHostnameDefault };

@@ -10,8 +10,6 @@ export const WordInfo = ((props: WordInfoProps): JSX.Element => {
   return <Popover {...props} />;
 }) as WordInfoComponent;
 
-export { getWordInfoHasIconDefault };
-
 WordInfo.displayName = 'WordInfo';
 
 WordInfo.Content = WordInfoContent;

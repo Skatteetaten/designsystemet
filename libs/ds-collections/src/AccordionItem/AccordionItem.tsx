@@ -125,5 +125,3 @@ export const AccordionItem = ({
 };
 
 AccordionItem.displayName = 'AccordionItem';
-
-export { getAccordionItemKeepMountedDefault };
