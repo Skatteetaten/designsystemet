@@ -71,7 +71,7 @@
   min-width: 0;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-s);
   grid-area: content;
 }
 
@@ -84,10 +84,6 @@
   justify-content: flex-start;
   padding: var(--spacing-xxs);
   grid-area: button;
-}
-
-.inputContainer.inputContainerMultiple .inputContentArea {
-  gap: var(--spacing-s);
 }
 
 .input {
