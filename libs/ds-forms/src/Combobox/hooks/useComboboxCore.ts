@@ -147,7 +147,7 @@ export function useComboboxCore({
     if (!isOpen) return []; // No options when dropdown is closed
     if (isLoading) return []; // Empty list while loading (spinner shows instead)
     return filterOptions(options, searchTerm);
-  }, [options, searchTerm, isOpen, multiple, selectedValues, isLoading]);
+  }, [options, searchTerm, isOpen, isLoading]);
 
   // Calculate enabled indices for keyboard navigation
   // Use allOptions when closed (for keyboard opening), displayOptions when open (for navigation)
