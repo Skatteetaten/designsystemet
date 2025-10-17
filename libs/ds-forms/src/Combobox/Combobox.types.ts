@@ -101,7 +101,7 @@ export type ComboboxSelectedOptionsProps = {
   multiple: boolean;
   selectedValues: ComboboxOption[];
   onRemoveValue: (value: ComboboxOption) => void;
-  classNames?: { chips?: string };
+  classNames?: string;
 };
 
 export type ComboboxOptionsProps = {
@@ -115,7 +115,7 @@ export type ComboboxOptionsProps = {
   comboboxId: string;
   listId: string;
   focusedIndex: number;
-  classNames?: { options?: string };
+  classNames?: string;
   handleButtonFocus: (index: number) => void;
   handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
   customListRef: RefObject<HTMLUListElement | null>;
