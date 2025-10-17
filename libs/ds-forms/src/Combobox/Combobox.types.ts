@@ -16,8 +16,6 @@ export type TypedComboboxOption<TData> = ComboboxOption & {
   data: TData;
 };
 
-type SafeOmit<T, K extends keyof T> = Omit<T, K>;
-
 export type ComboboxPropsHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
   | 'name'

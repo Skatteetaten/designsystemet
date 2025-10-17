@@ -163,23 +163,23 @@ const meta = {
       table: { category: category.event },
     },
     value: {
-      table: { disable: true },
+      table: { category: category.props },
       description: 'Controlled value (use stories for different modes)',
     },
     classNames: {
-      table: { disable: true },
+      table: { category: category.props },
       description: 'Custom CSS class names for styling',
     },
     helpSvgPath: {
-      table: { disable: true },
+      table: { category: category.props },
       description: 'Custom SVG path for help icon',
     },
     titleHelpSvg: {
-      table: { disable: true },
+      table: { category: category.props },
       description: 'Custom tooltip text for help icon',
     },
     spinnerProps: {
-      table: { disable: true },
+      table: { category: category.props },
       description: 'Props for customizing spinner appearance',
     },
   },
