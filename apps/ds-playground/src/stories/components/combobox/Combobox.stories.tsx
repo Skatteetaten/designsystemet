@@ -39,12 +39,10 @@ const meta = {
     // Props
     label: {
       control: { type: 'text' },
-      description: 'Ledetekst som vises over komponenten',
       table: { category: category.props },
     },
     placeholder: {
       control: { type: 'text' },
-      description: 'Placeholder-tekst som vises i input-feltet',
       table: {
         category: category.props,
         defaultValue: { summary: getComboboxPlaceholderDefault() },
@@ -52,18 +50,16 @@ const meta = {
     },
     options: {
       control: false,
-      description: 'Array av valg som kan velges fra',
+
       table: { category: category.props },
     },
     variant: {
       control: { type: 'select' },
       options: ['medium', 'large'],
-      description: 'Størrelsen på combobox. Må være "large" for multi-select',
       table: { category: category.props, defaultValue: { summary: 'medium' } },
     },
     hasSpacing: {
       control: { type: 'boolean' },
-      description: 'Legger til margin under komponenten',
       table: {
         category: category.props,
         defaultValue: { summary: getHasSpacingDefault().toString() },
@@ -71,20 +67,16 @@ const meta = {
     },
     hideLabel: {
       control: { type: 'boolean' },
-      description:
-        'Skjuler label visuelt, men er fortsatt synlig for skjermleser',
       table: { category: category.props },
     },
     multiple: {
       control: { type: 'boolean' },
-      description: 'Tillater valg av flere alternativer',
       table: {
         category: category.props,
       },
     },
     minSearchLength: {
       control: { type: 'number', min: 0, max: 10, step: 1 },
-      description: 'Minimum antall tegn før søkeresultater vises',
       table: {
         category: category.props,
         defaultValue: {},
@@ -92,49 +84,40 @@ const meta = {
     },
     isLoading: {
       control: { type: 'boolean' },
-      description: 'Viser loading state med spinner',
       table: {
         category: category.props,
       },
     },
     loadingMessage: {
       control: { type: 'text' },
-      description: 'Tilpasset melding som vises under loading',
       table: { category: category.props },
-      if: { arg: 'isLoading', eq: true },
     },
     description: {
       control: { type: 'text' },
-      description: 'Tilleggstekst som vises under label',
       table: { category: category.props },
     },
     helpText: {
       control: { type: 'text' },
-      description: 'Hjelpetekst som vises i tooltip',
       table: { category: category.props },
     },
     errorMessage: {
       control: { type: 'text' },
-      description: 'Feilmelding som vises under komponenten',
       table: { category: category.props },
     },
 
     // HTML-attributes
     name: {
       control: { type: 'text' },
-      description: 'Navn på input-feltet (for skjemaintegrasjon)',
       table: { category: category.htmlAttribute },
     },
     disabled: {
       control: { type: 'boolean' },
-      description: 'Deaktiverer komponenten',
       table: {
         category: category.htmlAttribute,
       },
     },
     required: {
       control: { type: 'boolean' },
-      description: 'Markerer feltet som obligatorisk',
       table: {
         category: category.htmlAttribute,
       },
@@ -144,43 +127,32 @@ const meta = {
     onSelectionChange: {
       action: 'selection-changed',
       control: false,
-      description:
-        'Kalles når valget endres. Enkeltvalg: mottar ComboboxOption | null. Flervalg: mottar ComboboxOption[] array. Brukes både i kontrollert og ukontrollert modus.',
       table: { category: category.event },
     },
     onInputChange: {
       action: 'input-changed',
       control: false,
-      description:
-        'Kalles når input-teksten endres (kun ukontrollert modus). Mottar den nåværende input-teksten som string. Nyttig for asynkron søk og filtrering.',
       table: { category: category.event },
     },
     onHelpToggle: {
       action: 'help-toggled',
       control: false,
-      description:
-        'Kalles når hjelpeteksten vises/skjules. Mottar boolean: true når hjelpeteksten åpnes, false når den lukkes. Brukes for å spore bruk av hjelpefunksjonalitet.',
       table: { category: category.event },
     },
     value: {
       table: { category: category.props },
-      description: 'Controlled value (use stories for different modes)',
     },
     classNames: {
       table: { category: category.props },
-      description: 'Custom CSS class names for styling',
     },
     helpSvgPath: {
       table: { category: category.props },
-      description: 'Custom SVG path for help icon',
     },
     titleHelpSvg: {
       table: { category: category.props },
-      description: 'Custom tooltip text for help icon',
     },
     spinnerProps: {
       table: { category: category.props },
-      description: 'Props for customizing spinner appearance',
     },
   },
   args: {

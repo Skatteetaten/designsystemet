@@ -42,55 +42,62 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
     } & LabelWithHelpProps['classNames']
   >;
 
-  /** Tilleggstekst */
+  /** Tilleggstekst som vises under label */
   description?: LabelWithHelpProps['description'];
-  /** Tekst på feilmelding */
+  /** Feilmelding som vises under komponenten */
   errorMessage?: string;
   /** Overskriver default hjelpeikon */
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
+  /** Hjelpetekst som vises i tooltip */
   helpText?: LabelWithHelpProps['helpText'];
+  /** Ledetekst som vises over komponenten */
   label: string;
+  /** Tilpasset melding som leses av skjermleser under loading */
   loadingMessage?: string;
-  /** Minimum antall tegn som må tastes før søkeresultater vises */
+  /** Minimum antall tegn før søkeresultater vises */
   minSearchLength?: number;
+  /** Array av valg som kan velges fra */
   options: ComboboxOption[];
   /** Props for å tilpasse spinner utseende */
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** If true, adds spacing under the combobox */
+  /** Legger til margin under komponenten */
   hasSpacing?: boolean;
+  /** Skjuler label visuelt, men er fortsatt synlig for skjermleser */
   hideLabel?: boolean;
+  /** Viser loading state med spinner */
   isLoading?: boolean;
-  /** Callback som kalles når hjelpetekst vises/skjules */
+  /** Kalles når hjelpeteksten vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
 interface SingleComboboxProps extends ComboboxCommonProps {
+  /** Tillater valg av flere alternativer */
   multiple?: false;
-  /** Størrelsen på combobox */
+  /** Størrelsen på combobox. Må være 'large' for multi-select */
   variant?: ComboboxSize;
-  /** Current value - optional for both controlled and uncontrolled modes */
+  /** Kontrollert verdi - valgfri for både kontrollert og ukontrollert modus */
   value?: string | number;
-  /** Callback når en enkelt option velges eller fjernes */
+  /** Kalles når valget endres. Enkeltvalg: mottar ComboboxOption | null */
   onSelectionChange?: (selectedOption: ComboboxOption | null) => void;
-  /** Callback når input-verdien endres - optional for live search functionality */
+  /** Kalles når input-teksten endres. Mottar søketekst som string. Nyttig for asynkron søk og filtrering */
   onInputChange?: (searchTerm: string) => void;
-  /** Not available in single-select mode */
   maxSelected?: never;
 }
 
 interface MultiComboboxProps extends ComboboxCommonProps {
+  /** Tillater valg av flere alternativer */
   multiple: true;
   /** Størrelsen på combobox - automatisk satt til 'large' for multi-select */
   variant?: never;
-  /** Current values - optional for both controlled and uncontrolled modes */
+  /** Kontrollerte verdier - valgfri for både kontrollert og ukontrollert modus */
   value?: ComponentPropsWithoutRef<'input'>['value'];
-  /** Callback når options velges eller fjernes i multi-select mode */
+  /** Kalles når valget endres. Flervalg: mottar ComboboxOption[] array */
   onSelectionChange?: (selectedOptions: ComboboxOption[]) => void;
-  /** Callback når input-verdien endres - optional for live search functionality */
+  /** Kalles når input-teksten endres. Mottar søketekst som string. Nyttig for asynkron søk og filtrering */
   onInputChange?: (searchTerm: string) => void;
-  /** Maximum number of options that can be selected. Shows "X of Y selected" message when limit is reached */
+  /** Maksimalt antall valg i flervalg-modus. Viser "X av Y valgt" melding når grensen nås. Ikke tilgjengelig i enkeltvalg-modus. */
   maxSelected?: number;
 }
 
