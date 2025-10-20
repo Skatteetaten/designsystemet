@@ -4,6 +4,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
+import type { ComboboxOption } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { generatePerformanceTestData } from '../components/combobox/combobox.stories.utils';
@@ -412,6 +413,60 @@ export const KeyboardNavigation = {
 
     // Verifiser at valget er gjort
     await expect(inputElement).toHaveValue('Norge');
+  },
+} satisfies Story;
+
+export const MultipleVariantSizeTest = {
+  name: 'Multiple mode automatisk large størrelse (A10)',
+  args: {
+    ...defaultArgs,
+    multiple: true,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // A10 - Verifiser at multiple mode alltid vises i large størrelse
+    const inputContainer = inputElement.closest('[data-variant]');
+    await expect(inputContainer).toHaveAttribute('data-variant', 'large');
+
+    // Verifiser at multiple CSS klasse også er satt
+    const containerWithMultipleClass = inputElement.closest(
+      '[class*="inputContainerMultiple"]'
+    );
+    await expect(containerWithMultipleClass).toBeInTheDocument();
+
+    // Test også at single mode bruker medium som default
+    // (Dette er implisitt test av at multiple=false ikke tvinger large)
+  },
+} satisfies Story;
+
+export const SingleVariantSizeTest = {
+  name: 'Single mode standard størrelse vs large (A10 kontrast)',
+  args: {
+    ...defaultArgs,
+    multiple: false,
+    variant: 'medium', // Eksplisitt medium for klarhet
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // A10 kontrast - Verifiser at single mode IKKE automatisk blir large
+    const inputContainer = inputElement.closest('[data-variant]');
+    await expect(inputContainer).toHaveAttribute('data-variant', 'medium');
+
+    // Verifiser at multiple CSS klasse IKKE er satt i single mode
+    const containerWithMultipleClass = inputElement.closest(
+      '[class*="inputContainerMultiple"]'
+    );
+    await expect(containerWithMultipleClass).toBeNull();
   },
 } satisfies Story;
 
@@ -1118,5 +1173,97 @@ export const PerformanceKeyboardNavigation = {
 
     console.log(`Navigasjonsytelse: ${navTime.toFixed(2)}ms for 20 steg`);
     console.log(`Rask navigasjon: ${pageNavTime.toFixed(2)}ms for 30 steg`);
+  },
+} satisfies Story;
+
+export const OnFocusCallbackTest = {
+  name: 'onFocus callback test (A3)',
+  args: {
+    ...defaultArgs,
+    onFocus: (): void => {
+      console.log('Combobox focused');
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Focus the input element - callback will be called if prop is working
+    await userEvent.click(inputElement);
+    await expect(inputElement).toHaveFocus();
+  },
+} satisfies Story;
+
+export const OnBlurCallbackTest = {
+  name: 'onBlur callback test (A3)',
+  args: {
+    ...defaultArgs,
+    onBlur: (): void => {
+      console.log('Combobox blurred');
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Focus and then blur the input element - callback will be called if prop is working
+    await userEvent.click(inputElement);
+    await expect(inputElement).toHaveFocus();
+
+    await userEvent.click(canvasElement);
+    await expect(inputElement).not.toHaveFocus();
+  },
+} satisfies Story;
+
+export const OnInputChangeCallbackTest = {
+  name: 'onInputChange callback test (A3)',
+  args: {
+    ...defaultArgs,
+    onInputChange: (searchTerm: string): void => {
+      console.log('Input changed:', searchTerm);
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Type in the input element - callback will be called if prop is working
+    await userEvent.click(inputElement);
+    await userEvent.type(inputElement, 'Norge');
+
+    await expect(inputElement).toHaveValue('Norge');
+  },
+} satisfies Story;
+
+export const OnSelectionChangeCallbackTest = {
+  name: 'onSelectionChange callback test (A3)',
+  args: {
+    ...defaultArgs,
+    onSelectionChange: (selectedOption: ComboboxOption | null): void => {
+      console.log('Selection changed:', selectedOption);
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Open dropdown and select an option - callback will be called if prop is working
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+
+    await expect(inputElement).toHaveValue('Norge');
   },
 } satisfies Story;

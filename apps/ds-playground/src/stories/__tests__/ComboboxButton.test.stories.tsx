@@ -37,7 +37,7 @@ const defaultArgs = {
 };
 
 export const ClearButtonFunctionality = {
-  name: 'Clear button functionality (single select)',
+  name: 'Clear button functionality (single select) (A7, A8, A9)',
   args: {
     ...defaultArgs,
     multiple: false,
@@ -65,7 +65,7 @@ export const ClearButtonFunctionality = {
 } satisfies Story;
 
 export const ClearButtonClick = {
-  name: 'Clear button click handler',
+  name: 'Clear button click handler (A9, B2)',
   args: {
     ...defaultArgs,
     multiple: false,
@@ -97,7 +97,7 @@ export const ClearButtonClick = {
 } satisfies Story;
 
 export const LargeVariantStyles = {
-  name: 'Large variant styles',
+  name: 'Large variant styles (A7)',
   args: {
     ...defaultArgs,
     variant: 'large',
@@ -115,13 +115,15 @@ export const LargeVariantStyles = {
     const openButton = canvas.getByLabelText('Åpne forslag');
     const buttonContainer = openButton.closest('[data-chevron-button]');
 
-    // Verifiser at large variant styles er anvendt
-    await expect(buttonContainer?.className).toMatch(/chevronButton_large/);
+    // Verifiser at large variant styles er anvendt - sjekk faktisk størrelse
+    const computedStyles = getComputedStyle(buttonContainer as Element);
+    await expect(computedStyles.width).toBe('28px');
+    await expect(computedStyles.height).toBe('28px');
   },
 } satisfies Story;
 
 export const MultipleSelectNoClearButton = {
-  name: 'Multiple select - no clear button',
+  name: 'Multiple select - no clear button (A9)',
   args: {
     ...defaultArgs,
     hasValue: true,
@@ -138,7 +140,7 @@ export const MultipleSelectNoClearButton = {
   }): Promise<void> => {
     const canvas = within(canvasElement);
 
-    // Verifiser at clear button IKKE vises for multiple select
+    // A9 - Verifiser at clear button IKKE vises for multiple select
     await expect(
       canvas.queryByRole('button', { name: /nullstill valg/i })
     ).not.toBeInTheDocument();

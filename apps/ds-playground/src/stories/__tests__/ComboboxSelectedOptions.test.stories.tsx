@@ -212,7 +212,7 @@ export const ChipsRenderingSingleChip = {
 } satisfies Story;
 
 export const OnRemoveValueCallbackCorrectOption = {
-  name: 'onRemoveValue callback - correct option',
+  name: 'onRemoveValue callback - correct option (A11)',
   args: {
     ...defaultProps,
     onRemoveValue: fn(),
@@ -242,7 +242,7 @@ export const OnRemoveValueCallbackCorrectOption = {
 } satisfies Story;
 
 export const OnRemoveValueCallbackDifferentChips = {
-  name: 'onRemoveValue callback - different chips',
+  name: 'onRemoveValue callback - different chips (A11)',
   args: {
     ...defaultProps,
     onRemoveValue: fn(),
@@ -282,7 +282,7 @@ export const OnRemoveValueCallbackDifferentChips = {
 } satisfies Story;
 
 export const OnRemoveValueCallbackMultipleClicks = {
-  name: 'onRemoveValue callback - multiple clicks',
+  name: 'onRemoveValue callback - multiple clicks (A11)',
   args: {
     ...defaultProps,
     onRemoveValue: fn(),

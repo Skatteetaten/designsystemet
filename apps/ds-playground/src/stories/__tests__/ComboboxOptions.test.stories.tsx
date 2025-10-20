@@ -61,11 +61,12 @@ const defaultArgs: ComboboxOptionsProps = {
   focusedIndex: -1,
   handleButtonFocus: fn(),
   handleOptionSelect: fn(),
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   customListRef: undefined as any, // Will be overridden in render
 };
 
 export const OptionsListWithARIAAttributes = {
-  name: 'Options list with correct ARIA attributes',
+  name: 'Options list with correct ARIA attributes (B2)',
   args: defaultArgs,
   render: (args: ComboboxOptionsProps): JSX.Element => (
     <ComboboxOptions {...args} customListRef={createRef<HTMLUListElement>()} />
@@ -95,7 +96,7 @@ export const OptionsListWithARIAAttributes = {
 } satisfies Story;
 
 export const LoadingStateWithSpinner = {
-  name: 'Loading state with spinner',
+  name: 'Loading state with spinner (A13)',
   args: {
     ...defaultArgs,
     isLoading: true,
@@ -129,7 +130,7 @@ export const LoadingStateWithSpinner = {
 } satisfies Story;
 
 export const NoResultsMessage = {
-  name: 'No results message when search has no matches',
+  name: 'No results message when search has no matches (A6)',
   args: {
     ...defaultArgs,
     searchTerm: 'xyz',

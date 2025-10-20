@@ -19,12 +19,12 @@ describe('combobox-utils', () => {
   ];
 
   describe('filterOptions', () => {
-    it('Når searchTerm er tom, så returnerer den alle options', () => {
+    it('Når searchTerm er tom, så returnerer den alle options (A5)', () => {
       const result = filterOptions(mockOptions, '');
       expect(result).toEqual(mockOptions);
     });
 
-    it('Når searchTerm matcher noen options, så filtrerer den riktig', () => {
+    it('Når searchTerm matcher noen options, så filtrerer den riktig (A5)', () => {
       const result = filterOptions(mockOptions, 'a');
       expect(result).toEqual([
         { label: 'Apple', value: 'apple' },
@@ -33,12 +33,12 @@ describe('combobox-utils', () => {
       ]);
     });
 
-    it('Når searchTerm er case-insensitive, så filtrerer den riktig', () => {
+    it('Når searchTerm er case-insensitive, så filtrerer den riktig (A5)', () => {
       const result = filterOptions(mockOptions, 'APPLE');
       expect(result).toEqual([{ label: 'Apple', value: 'apple' }]);
     });
 
-    it('Når searchTerm ikke matcher noen options, så returnerer den tom array', () => {
+    it('Når searchTerm ikke matcher noen options, så returnerer den tom array (A5)', () => {
       const result = filterOptions(mockOptions, 'xyz');
       expect(result).toEqual([]);
     });

@@ -712,7 +712,7 @@ describe('useComboboxKeyboard', () => {
   });
 
   describe('Escape key behavior', () => {
-    it('should call setIsOpen(false) and setFocusedIndex(-1) when popup open', () => {
+    it('should call setIsOpen(false) and setFocusedIndex(-1) when popup open (A5)', () => {
       // Arrange: Setup mock input with popup open
       const mockInput = createMockInputElement('search');
       const { mockProps, mockAddEventListener } = setupKeyboardTest({
@@ -733,7 +733,7 @@ describe('useComboboxKeyboard', () => {
       expect(mockProps.setFocusedIndex).toHaveBeenCalledWith(-1);
     });
 
-    it("should call setSearchTerm('') when popup closed", () => {
+    it("should call setSearchTerm('') when popup closed (A5)", () => {
       // Arrange: Setup mock input with popup closed
       const mockInput = createMockInputElement('search');
       const { mockProps, mockAddEventListener } = setupKeyboardTest({

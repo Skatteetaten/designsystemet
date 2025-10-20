@@ -246,6 +246,7 @@ const Combobox = memo(
         </LabelWithHelp>
         <div
           className={containerClassNames}
+          data-variant={resolvedVariant}
           onClick={!disabled ? handleContainerClick : undefined}
           onKeyDown={!disabled ? handleContainerKeyDown : undefined}
         >

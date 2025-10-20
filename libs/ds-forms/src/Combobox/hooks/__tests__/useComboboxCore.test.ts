@@ -33,7 +33,7 @@ describe('useComboboxCore', () => {
       expect(result.current.containerRef.current).toBeNull();
     });
 
-    it('should initialize with controlled value for single select', () => {
+    it('should initialize with controlled value for single select (A3, A7)', () => {
       const { result } = renderHook(() =>
         useComboboxCore({
           ...defaultProps,
@@ -45,7 +45,7 @@ describe('useComboboxCore', () => {
       expect(result.current.selectedValues).toEqual([]);
     });
 
-    it('should initialize with controlled value for multi select', () => {
+    it('should initialize with controlled value for multi select (A3)', () => {
       const { result } = renderHook(() =>
         useComboboxCore({
           ...defaultProps,
@@ -83,7 +83,7 @@ describe('useComboboxCore', () => {
   });
 
   describe('Dropdown state management', () => {
-    it('should open dropdown when minimum search length is met', () => {
+    it('should open dropdown when minimum search length is met (A5)', () => {
       const { result } = renderHook(() =>
         useComboboxCore({
           ...defaultProps,
@@ -98,7 +98,7 @@ describe('useComboboxCore', () => {
       expect(result.current.isOpen).toBe(true);
     });
 
-    it('should not open dropdown when minimum search length is not met', () => {
+    it('should not open dropdown when minimum search length is not met (A5)', () => {
       const { result } = renderHook(() =>
         useComboboxCore({
           ...defaultProps,
@@ -113,7 +113,7 @@ describe('useComboboxCore', () => {
       expect(result.current.isOpen).toBe(false);
     });
 
-    it('should allow click to bypass minimum search length', () => {
+    it('should allow click to bypass minimum search length (A5)', () => {
       const { result } = renderHook(() =>
         useComboboxCore({
           ...defaultProps,

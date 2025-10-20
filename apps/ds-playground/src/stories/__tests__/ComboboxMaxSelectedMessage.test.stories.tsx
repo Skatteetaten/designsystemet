@@ -39,7 +39,7 @@ const defaultArgs: ComboboxMaxSelectedMessageProps = {
 };
 
 export const BasicRendering = {
-  name: 'Renders the message with correct text',
+  name: 'Renders the message with correct text (A12)',
   args: {
     ...defaultArgs,
   },
@@ -64,7 +64,7 @@ export const BasicRendering = {
 } satisfies Story;
 
 export const DifferentCountValues = {
-  name: 'Renders correct text for different count values',
+  name: 'Renders correct text for different count values (A12)',
   args: {
     ...defaultArgs,
     selectedCount: 1,
@@ -244,7 +244,7 @@ export const ZeroMaxSelected = {
 } satisfies Story;
 
 export const SelectedEqualsMax = {
-  name: 'Handles selectedCount equal to maxSelected',
+  name: 'Handles selectedCount equal to maxSelected (A12)',
   args: {
     ...defaultArgs,
     selectedCount: 10,

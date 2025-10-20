@@ -51,7 +51,7 @@ const defaultArgs: ComboboxAccessibilityAnnouncerProps = {
 };
 
 export const LoadingStateAnnouncement = {
-  name: 'Loading message when isLoading is true',
+  name: 'Loading message when isLoading is true (A13)',
   args: {
     ...defaultArgs,
     loadingMessage: dsI18n.t('ds_progress:spinner.LoadingLabel'),
@@ -75,7 +75,7 @@ export const LoadingStateAnnouncement = {
 } satisfies Story;
 
 export const LoadingPriority = {
-  name: 'Loading message prioritized over other states',
+  name: 'Loading message prioritized over other states (A13)',
   args: {
     ...defaultArgs,
     loadingMessage: dsI18n.t('ds_progress:spinner.LoadingLabel'),
@@ -102,7 +102,7 @@ export const LoadingPriority = {
 } satisfies Story;
 
 export const OptionsAvailableAnnouncement = {
-  name: 'Available options count when open with options',
+  name: 'Available options count when open with options (B1)',
   args: {
     ...defaultArgs,
     displayOptions: mockOptions,
@@ -127,7 +127,7 @@ export const OptionsAvailableAnnouncement = {
 } satisfies Story;
 
 export const SingleOptionAnnouncement = {
-  name: 'Single option announcement',
+  name: 'Single option announcement (B1)',
   args: {
     ...defaultArgs,
     displayOptions: [{ label: 'Single Option', value: '1' }],
@@ -151,7 +151,7 @@ export const SingleOptionAnnouncement = {
 } satisfies Story;
 
 export const NoResultsAnnouncement = {
-  name: 'No results when open with search term but no options',
+  name: 'No results when open with search term but no options (B1)',
   args: {
     ...defaultArgs,
     displayOptions: [],
@@ -387,7 +387,7 @@ export const StateTransitionLoadedState = {
 } satisfies Story;
 
 export const StateChangeClosedToOpen = {
-  name: 'Message updates when changing from closed to open state',
+  name: 'Message updates when changing from closed to open state (B1)',
   args: {
     ...defaultArgs,
     isOpen: false,
@@ -425,7 +425,7 @@ export const StateChangeClosedToOpen = {
 } satisfies Story;
 
 export const StateChangeLoadingToLoaded = {
-  name: 'Message updates when transitioning from loading to loaded',
+  name: 'Message updates when transitioning from loading to loaded (B1)',
   args: {
     ...defaultArgs,
     isLoading: true,
