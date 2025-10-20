@@ -2,34 +2,8 @@ import { useState, type JSX } from 'react';
 
 import { Combobox, type ComboboxOption } from '@skatteetaten/ds-forms';
 
+import { comboboxStoryOptions } from './combobox.stories.utils';
 import './ComboboxMaxHeightExample.scss';
-
-const manyOptions: ComboboxOption[] = [
-  { label: 'Agurk', value: 'agurk' },
-  { label: 'Tomat', value: 'tomat' },
-  { label: 'Mais', value: 'mais' },
-  { label: 'Paprika', value: 'paprika' },
-  { label: 'Squash', value: 'squash' },
-  { label: 'Rucola', value: 'rucola' },
-  { label: 'Spinat', value: 'spinat' },
-  { label: 'Søtpotet', value: 'sotpotet' },
-  { label: 'Brokkoli', value: 'brokkoli' },
-  { label: 'Blomkål', value: 'blomkal' },
-  { label: 'Gulrot', value: 'gulrot' },
-  { label: 'Løk', value: 'lok' },
-  { label: 'Hvitløk', value: 'hvitlok' },
-  { label: 'Selleri', value: 'selleri' },
-  { label: 'Aubergine', value: 'aubergine' },
-  { label: 'Zucchini', value: 'zucchini' },
-  { label: 'Hodekål', value: 'hodekal' },
-  { label: 'Rosenkål', value: 'rosenkal' },
-  { label: 'Grønnkål', value: 'gronnkal' },
-  { label: 'Salat', value: 'salat' },
-  { label: 'Isbergsalat', value: 'isbergsalat' },
-  { label: 'Feldsalat', value: 'feldsalat' },
-  { label: 'Endivie', value: 'endivie' },
-  { label: 'Radicchio', value: 'radicchio' },
-];
 
 const codeExample = `/* ComboboxMaxHeightExample.scss */
 .maxHeight300 {
@@ -42,7 +16,7 @@ const codeExample = `/* ComboboxMaxHeightExample.scss */
 
 /* Bruk i Combobox */
 <Combobox
-  label="Velg grønnsak"
+  label="Velg kommune"
   options={options}
   classNames={{
     options: 'maxHeight300',
@@ -63,8 +37,8 @@ export const ComboboxMaxHeightExample = (): JSX.Element => {
       <div className={'example-section'}>
         <h3>{'Standard høyde (ingen begrensning)'}</h3>
         <Combobox
-          label={'Velg grønnsak'}
-          options={manyOptions}
+          label={'Velg kommune'}
+          options={comboboxStoryOptions}
           value={selectedValue?.value}
           hasSpacing
           onSelectionChange={setSelectedValue}
@@ -74,8 +48,8 @@ export const ComboboxMaxHeightExample = (): JSX.Element => {
       <div className={'example-section'}>
         <h3>{'Begrenset høyde - 300px'}</h3>
         <Combobox
-          label={'Velg grønnsak (maks 300px høyde)'}
-          options={manyOptions}
+          label={'Velg kommune (maks 300px høyde)'}
+          options={comboboxStoryOptions}
           value={selectedValue?.value}
           classNames={{
             options: 'maxHeight300',
@@ -88,8 +62,8 @@ export const ComboboxMaxHeightExample = (): JSX.Element => {
       <div className={'example-section'}>
         <h3>{'Flervalg med begrenset høyde - 200px'}</h3>
         <Combobox
-          label={'Velg grønnsaker (maks 200px høyde)'}
-          options={manyOptions}
+          label={'Velg kommuner (maks 200px høyde)'}
+          options={comboboxStoryOptions}
           value={selectedMultiple.map((opt) => opt.value)}
           classNames={{
             options: 'maxHeight200',

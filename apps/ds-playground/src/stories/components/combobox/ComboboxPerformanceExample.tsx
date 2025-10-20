@@ -11,10 +11,11 @@ export const ComboboxPerformanceExample = (): JSX.Element => {
     ReturnType<typeof generatePerformanceTestData>
   >([]);
   const [loading, setLoading] = useState(true);
+  const dataCount = generatePerformanceTestData().length;
 
   useEffect(() => {
     setTimeout(() => {
-      const performanceData = generatePerformanceTestData(5000);
+      const performanceData = generatePerformanceTestData();
       setOptions(performanceData);
       setLoading(false);
     }, 100); // Kort delay for å vise loading state
@@ -23,9 +24,9 @@ export const ComboboxPerformanceExample = (): JSX.Element => {
   if (loading) {
     return (
       <div>
-        <Spinner size={'medium'}>{'Laster 5000 elementer...'}</Spinner>
+        <Spinner size={'medium'}>{`Laster ${dataCount} elementer...`}</Spinner>
         <Paragraph>
-          {'Laster 5000 elementer... Dette er hvordan du bør håndtere store'}
+          {`Laster ${dataCount} elementer... Dette er hvordan du bør håndtere store`}
           {'datamengder i virkeligheten.'}
         </Paragraph>
       </div>
@@ -35,10 +36,10 @@ export const ComboboxPerformanceExample = (): JSX.Element => {
   return (
     <div>
       <Combobox
-        label={'Store datamengder (5000 elementer)'}
-        placeholder={'Søk blant 5000 elementer...'}
+        label={`Store datamengder (${dataCount} elementer)`}
+        placeholder={`Søk blant ${dataCount} elementer...`}
         options={options}
-        description={`Test med store datamengder. Søk på "Kommune", "Nord" eller "01"`}
+        description={`Test med store datamengder. Søk på kommunenavn eller "område"`}
         hasSpacing
       />
     </div>
@@ -50,10 +51,11 @@ export const ComboboxPerformanceMultipleExample = (): JSX.Element => {
     ReturnType<typeof generatePerformanceTestData>
   >([]);
   const [loading, setLoading] = useState(true);
+  const dataCount = generatePerformanceTestData().length;
 
   useEffect(() => {
     setTimeout(() => {
-      const performanceData = generatePerformanceTestData(5000);
+      const performanceData = generatePerformanceTestData();
       setOptions(performanceData);
       setLoading(false);
     }, 100);
@@ -63,9 +65,9 @@ export const ComboboxPerformanceMultipleExample = (): JSX.Element => {
     return (
       <div>
         <Spinner size={'medium'}>
-          {'Laster 5000 elementer for flervalg'}
+          {`Laster ${dataCount} elementer for flervalg`}
         </Spinner>
-        <Paragraph>{'Laster 5000 elementer for flervalg-testing'}</Paragraph>
+        <Paragraph>{`Laster ${dataCount} elementer for flervalg-testing`}</Paragraph>
       </div>
     );
   }
@@ -73,10 +75,10 @@ export const ComboboxPerformanceMultipleExample = (): JSX.Element => {
   return (
     <div>
       <Combobox
-        label={'Store datamengder med flervalg (5000 elementer)'}
-        placeholder={'Søk og velg flere blant 5000 elementer'}
+        label={`Store datamengder med flervalg (${dataCount} elementer)`}
+        placeholder={`Søk og velg flere blant ${dataCount} elementer`}
         options={options}
-        description={`Test flervalg med store datamengder. Søk på "Kommune", "Nord" eller "01"`}
+        description={`Test flervalg med store datamengder. Søk på kommunenavn eller "område"`}
         multiple
         hasSpacing
       />

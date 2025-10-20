@@ -4,6 +4,8 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
+import { getComboboxStoryOptions } from './combobox.stories.utils';
+
 type FormActionState = {
   success: boolean;
   message?: string;
@@ -24,19 +26,19 @@ export const ComboboxFormExample = (): JSX.Element => {
 
       await new Promise((resolve) => setTimeout(resolve, 200));
 
-      const selectedVegetables = formData.getAll('vegetables') as string[];
+      const selectedKommuner = formData.getAll('kommuner') as string[];
 
-      if (selectedVegetables.length === 0) {
+      if (selectedKommuner.length === 0) {
         return {
           success: false,
-          message: 'Du må velge minst én grønnsak',
+          message: 'Du må velge minst én kommune',
         };
       }
 
       return {
         success: true,
-        message: `Du valgte: ${selectedVegetables.join(', ')}`,
-        selectedItems: selectedVegetables,
+        message: `Du valgte: ${selectedKommuner.join(', ')}`,
+        selectedItems: selectedKommuner,
       };
     },
     { success: false }
@@ -54,24 +56,13 @@ export const ComboboxFormExample = (): JSX.Element => {
     <form action={formAction}>
       <Combobox
         key={resetKey}
-        name={'vegetables'}
-        label={'Velg grønnsaker'}
-        placeholder={'Skriv eller velg grønnsaker'}
+        name={'kommuner'}
+        label={'Velg kommuner'}
+        placeholder={'Skriv eller velg kommuner'}
         errorMessage={
           !state.success && state.message ? state.message : undefined
         }
-        options={[
-          { label: 'Agurk', value: 'agurk' },
-          { label: 'Tomat', value: 'tomat' },
-          { label: 'Mais', value: 'mais' },
-          { label: 'Paprika', value: 'paprika' },
-          { label: 'Squash', value: 'squash' },
-          { label: 'Rucola', value: 'rucola' },
-          { label: 'Spinat', value: 'spinat' },
-          { label: 'Søtpotet', value: 'sotpotet' },
-          { label: 'Brokkoli', value: 'brokkoli' },
-          { label: 'Gulrot', value: 'gulrot' },
-        ]}
+        options={getComboboxStoryOptions()}
         multiple
         hasSpacing
       />

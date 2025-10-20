@@ -4,7 +4,11 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/react/*';
 
 import { Combobox } from '@skatteetaten/ds-forms';
 
-import { comboboxStoryOptions } from './combobox.stories.utils';
+import {
+  comboboxStoryOptions,
+  getComboboxStoryOptions,
+  generatePerformanceTestData,
+} from './combobox.stories.utils';
 import { ComboboxFormExample } from './ComboboxFormExample';
 import comboboxFormExampleSource from './ComboboxFormExample.tsx?raw';
 import { ComboboxLoadingStatesExample } from './ComboboxLoadingStatesExample';
@@ -31,13 +35,6 @@ import { category } from '../../../../.storybook/helpers';
 const meta = {
   title: 'Komponenter/Combobox',
   component: Combobox,
-  decorators: [
-    (Story): JSX.Element => (
-      <div className={'width400'}>
-        <Story />
-      </div>
-    ),
-  ],
   parameters: {
     docs: {
       codePanel: true,
@@ -165,7 +162,7 @@ const meta = {
     },
   },
   args: {
-    label: 'Velg grønnsak',
+    label: 'Velg kommune',
     hasSpacing: false,
     variant: 'medium',
     options: comboboxStoryOptions,
@@ -176,39 +173,28 @@ export default meta;
 type Story = StoryObj<typeof Combobox>;
 type StoryFunction = StoryFn<typeof meta>;
 
+const width400Decorator = (Story: React.ComponentType): JSX.Element => (
+  <div className={'width400'}>
+    <Story />
+  </div>
+);
+
 export const Primary: Story = {
-  name: 'Enkelt valg',
+  decorators: [width400Decorator],
   args: {
-    name: 'vegetable',
-    options: [
-      { label: 'Agurk', value: 'agurk' },
-      { label: 'Tomat', value: 'tomat' },
-      { label: 'Mais', value: 'mais' },
-      { label: 'Paprika', value: 'paprika' },
-      { label: 'Squash', value: 'squash' },
-      { label: 'Rucola', value: 'rucola' },
-      { label: 'Spinat', value: 'spinat' },
-      { label: 'Søtpotet', value: 'sotpotet' },
-    ],
+    name: 'kommune',
+    options: getComboboxStoryOptions(8),
     multiple: false,
   },
 };
 
 export const Multiple: Story = {
   name: 'Flere valg',
+  decorators: [width400Decorator],
   args: {
-    name: 'vegetables',
+    name: 'kommuner',
     multiple: true,
-    options: [
-      { label: 'Agurk', value: 'agurk' },
-      { label: 'Tomat', value: 'tomat' },
-      { label: 'Mais', value: 'mais' },
-      { label: 'Paprika', value: 'paprika' },
-      { label: 'Squash', value: 'squash' },
-      { label: 'Rucola', value: 'rucola' },
-      { label: 'Spinat', value: 'spinat' },
-      { label: 'Søtpotet', value: 'sotpotet' },
-    ],
+    options: getComboboxStoryOptions(8),
   },
 };
 
@@ -216,6 +202,7 @@ export const MultipleWithFormExample: StoryFunction = () => {
   return <ComboboxFormExample />;
 };
 MultipleWithFormExample.storyName = 'Flere valg med skjemaeksempel';
+MultipleWithFormExample.decorators = [width400Decorator];
 MultipleWithFormExample.parameters = {
   docs: {
     source: {
@@ -232,6 +219,7 @@ export const WithValidation: StoryFunction = () => {
   return <ComboboxValidationExample />;
 };
 WithValidation.storyName = 'Validering og feilhåndtering';
+WithValidation.decorators = [width400Decorator];
 WithValidation.parameters = {
   docs: {
     source: {
@@ -248,6 +236,7 @@ export const MaxSelected: StoryFunction = () => {
   return <ComboboxMaxSelectedExample />;
 };
 MaxSelected.storyName = 'Begrenset antall valg';
+MaxSelected.decorators = [width400Decorator];
 MaxSelected.parameters = {
   docs: {
     source: {
@@ -264,6 +253,7 @@ export const LoadingStates: StoryFunction = () => {
   return <ComboboxLoadingStatesExample />;
 };
 LoadingStates.storyName = 'Loading og asynkron søk';
+LoadingStates.decorators = [width400Decorator];
 LoadingStates.parameters = {
   docs: {
     description: {
@@ -288,7 +278,7 @@ WithTypedOptions.parameters = {
   docs: {
     description: {
       story:
-        'Demonstrerer bruk av TypedComboboxOption<TData> for å knytte metadata til hver option. Velg frukter fra butikken og se hvordan additional data som opprinnelsesland og best-før-dato lagres direkte på options og vises når du gjør valg. TypedComboboxOption gir full TypeScript type-sikkerhet og IntelliSense for metadata, og fungerer med alle Combobox-varianter (single/multi-select, controlled/uncontrolled).',
+        'Demonstrerer bruk av TypedComboboxOption<TData> for å knytte metadata til hver option. Velg tidligere norske kommuner og se hvordan informasjon om sammenslåing og resulterende kommune lagres direkte på options og vises når du gjør valg. TypedComboboxOption gir full TypeScript type-sikkerhet og IntelliSense for metadata, og fungerer med alle Combobox-varianter (single/multi-select, controlled/uncontrolled).',
     },
     source: {
       code: comboboxTypedOptionsExampleSource,
@@ -304,11 +294,13 @@ export const PerformanceTest: StoryFunction = () => {
   return <ComboboxPerformanceExample />;
 };
 PerformanceTest.storyName = 'Ytelse - Enkeltvalg med store datamengder';
+PerformanceTest.decorators = [width400Decorator];
 PerformanceTest.parameters = {
   docs: {
     description: {
-      story:
-        'Demonstrerer korrekt real-world pattern for håndtering av store datamengder (5000 elementer). Viser hvordan du bør wrappe Combobox i loading states når du arbeider med store datasett. Dette forhindrer at nettleseren henger seg opp under data-generering og gir en bedre brukeropplevelse.',
+      story: `Demonstrerer korrekt real-world pattern for håndtering av store datamengder (${
+        generatePerformanceTestData().length
+      } elementer). Viser hvordan du bør wrappe Combobox i loading states når du arbeider med store datasett. Dette forhindrer at nettleseren henger seg opp under data-generering og gir en bedre brukeropplevelse.`,
     },
     source: {
       code: comboboxPerformanceExampleSource,
@@ -324,11 +316,13 @@ export const PerformanceTestMultiple: StoryFunction = () => {
   return <ComboboxPerformanceMultipleExample />;
 };
 PerformanceTestMultiple.storyName = 'Ytelse - Flervalg med store datamengder';
+PerformanceTestMultiple.decorators = [width400Decorator];
 PerformanceTestMultiple.parameters = {
   docs: {
     description: {
-      story:
-        'Demonstrerer ytelsen til flervalg-modus med 5000 elementer. Tester spesielt scenarioer som å velge mange elementer, fjerne valgte chips, og håndtere store resultatlister samtidig som flere elementer er valgt. Viser korrekt implementation pattern med loading wrapper.',
+      story: `Demonstrerer ytelsen til flervalg-modus med ${
+        generatePerformanceTestData().length
+      } elementer. Tester spesielt scenarioer som å velge mange elementer, fjerne valgte chips, og håndtere store resultatlister samtidig som flere elementer er valgt. Viser korrekt implementation pattern med loading wrapper.`,
     },
     source: {
       code: comboboxPerformanceExampleSource,
@@ -344,6 +338,7 @@ export const MaxHeight: StoryFunction = () => {
   return <ComboboxMaxHeightExample />;
 };
 MaxHeight.storyName = 'Begrenset høyde på liste';
+MaxHeight.decorators = [width400Decorator];
 MaxHeight.parameters = {
   docs: {
     description: {

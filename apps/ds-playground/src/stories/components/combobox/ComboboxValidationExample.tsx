@@ -4,6 +4,8 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { Combobox, type ComboboxOption } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
+import { getComboboxStoryOptions } from './combobox.stories.utils';
+
 export const ComboboxValidationExample = (): ReactNode => {
   const [selectedValue, setSelectedValue] = useState<ComboboxOption | null>(
     null
@@ -15,7 +17,7 @@ export const ComboboxValidationExample = (): ReactNode => {
       setShowError(true);
     } else {
       setShowError(false);
-      alert(`Valgt fylke: ${selectedValue.label}`);
+      alert(`Valgt kommune: ${selectedValue.label}`);
     }
   };
 
@@ -30,32 +32,14 @@ export const ComboboxValidationExample = (): ReactNode => {
     <div>
       <Paragraph hasSpacing>
         {
-          'Eksempel på bruk av combobox med validering og feilmelding ved innsending. Trykk på "Send inn" uten å velge et fylke for å se feilmeldingen.'
+          'Eksempel på bruk av combobox med validering og feilmelding ved innsending. Trykk på "Send inn" uten å velge en kommune for å se feilmeldingen.'
         }
       </Paragraph>
       <Combobox
-        label={'Velg ditt fylke'}
-        placeholder={'Søk eller velg fylke'}
-        errorMessage={showError ? 'Du må velge et fylke' : undefined}
-        options={[
-          { label: 'Oslo', value: 'oslo' },
-          { label: 'Akershus', value: 'akershus' },
-          { label: 'Østfold', value: 'østfold' },
-          { label: 'Buskerud', value: 'buskerud' },
-          { label: 'Vestfold', value: 'vestfold' },
-          { label: 'Telemark', value: 'telemark' },
-          { label: 'Aust-Agder', value: 'aust-agder' },
-          { label: 'Vest-Agder', value: 'vest-agder' },
-          { label: 'Rogaland', value: 'rogaland' },
-          { label: 'Hordaland', value: 'hordaland' },
-          { label: 'Sogn og Fjordane', value: 'sogn-og-fjordane' },
-          { label: 'Møre og Romsdal', value: 'more-og-romsdal' },
-          { label: 'Sør-Trøndelag', value: 'sor-trondelag' },
-          { label: 'Nord-Trøndelag', value: 'nord-trondelag' },
-          { label: 'Nordland', value: 'nordland' },
-          { label: 'Troms', value: 'troms' },
-          { label: 'Finnmark', value: 'finnmark' },
-        ]}
+        label={'Velg din kommune'}
+        placeholder={'Søk eller velg kommune'}
+        errorMessage={showError ? 'Du må velge en kommune' : undefined}
+        options={getComboboxStoryOptions()}
         hasSpacing
         required
         onSelectionChange={handleSelectionChange}
