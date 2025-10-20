@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { ComboboxButton } from '../../../../../libs/ds-forms/src/Combobox/ComboboxButton';
+import { ComboboxButton } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxButton';
 
 type ComboboxButtonProps = React.ComponentProps<typeof ComboboxButton>;
 

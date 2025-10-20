@@ -1,3 +1,4 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 import React, { JSX, createRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
@@ -6,10 +7,8 @@ import { expect, fn, waitFor, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import type { ComboboxOption } from '@skatteetaten/ds-forms';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { ComboboxLoadingMessage } from '../../../../../libs/ds-forms/src/Combobox/ComboboxLoadingMessage';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { ComboboxOptions } from '../../../../../libs/ds-forms/src/Combobox/ComboboxOptions';
+import { ComboboxLoadingMessage } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxLoadingMessage';
+import { ComboboxOptions } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxOptions';
 
 type ComboboxOptionsProps = React.ComponentProps<typeof ComboboxOptions>;
 

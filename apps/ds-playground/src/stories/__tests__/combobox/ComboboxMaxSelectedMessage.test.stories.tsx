@@ -6,7 +6,7 @@ import { expect } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { ComboboxMaxSelectedMessage } from '../../../../../libs/ds-forms/src/Combobox/ComboboxMaxSelectedMessage';
+import { ComboboxMaxSelectedMessage } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxMaxSelectedMessage';
 
 type ComboboxMaxSelectedMessageProps = React.ComponentProps<
   typeof ComboboxMaxSelectedMessage

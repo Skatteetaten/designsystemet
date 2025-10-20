@@ -3,10 +3,10 @@ import React, { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, within } from 'storybook/test';
 
+import type { ComboboxOption } from '@skatteetaten/ds-forms';
+
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import type { ComboboxOption } from '../../../../../libs/ds-forms/src/Combobox/Combobox.types';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { ComboboxSelectedOptions } from '../../../../../libs/ds-forms/src/Combobox/ComboboxSelectedOptions';
+import { ComboboxSelectedOptions } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxSelectedOptions';
 
 type ComboboxSelectedOptionsProps = React.ComponentProps<
   typeof ComboboxSelectedOptions
