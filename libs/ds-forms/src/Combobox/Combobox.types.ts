@@ -27,6 +27,7 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'autoComplete'
   | 'form'
   | 'tabIndex'
+  | 'accessKey'
 >;
 
 interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
