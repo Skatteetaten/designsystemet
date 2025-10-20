@@ -180,6 +180,7 @@ const width400Decorator = (Story: React.ComponentType): JSX.Element => (
 );
 
 export const Primary: Story = {
+  name: 'Enkeltvalg',
   decorators: [width400Decorator],
   args: {
     name: 'kommune',
@@ -195,6 +196,44 @@ export const Multiple: Story = {
     name: 'kommuner',
     multiple: true,
     options: getComboboxStoryOptions(8),
+  },
+};
+
+export const MaxSelected: StoryFunction = () => {
+  return <ComboboxMaxSelectedExample />;
+};
+MaxSelected.storyName = 'Begrenset antall valg';
+MaxSelected.decorators = [width400Decorator];
+MaxSelected.parameters = {
+  docs: {
+    source: {
+      code: comboboxMaxSelectedExampleSource,
+      language: 'tsx',
+    },
+  },
+  controls: {
+    exclude: /.*/,
+  },
+};
+
+export const MaxHeight: StoryFunction = () => {
+  return <ComboboxMaxHeightExample />;
+};
+MaxHeight.storyName = 'Begrenset høyde på liste';
+MaxHeight.decorators = [width400Decorator];
+MaxHeight.parameters = {
+  docs: {
+    description: {
+      story:
+        'Viser hvordan du kan begrense høyden på dropdown-listen ved å bruke classNames.options med max-height CSS. Listen vil få scrollbar automatisk når innholdet overskrider max-height.',
+    },
+    source: {
+      code: comboboxMaxHeightExampleSource,
+      language: 'tsx',
+    },
+  },
+  controls: {
+    exclude: /.*/,
   },
 };
 
@@ -224,23 +263,6 @@ WithValidation.parameters = {
   docs: {
     source: {
       code: comboboxValidationExampleSource,
-      language: 'tsx',
-    },
-  },
-  controls: {
-    exclude: /.*/,
-  },
-};
-
-export const MaxSelected: StoryFunction = () => {
-  return <ComboboxMaxSelectedExample />;
-};
-MaxSelected.storyName = 'Begrenset antall valg';
-MaxSelected.decorators = [width400Decorator];
-MaxSelected.parameters = {
-  docs: {
-    source: {
-      code: comboboxMaxSelectedExampleSource,
       language: 'tsx',
     },
   },
@@ -326,27 +348,6 @@ PerformanceTestMultiple.parameters = {
     },
     source: {
       code: comboboxPerformanceExampleSource,
-      language: 'tsx',
-    },
-  },
-  controls: {
-    exclude: /.*/,
-  },
-};
-
-export const MaxHeight: StoryFunction = () => {
-  return <ComboboxMaxHeightExample />;
-};
-MaxHeight.storyName = 'Begrenset høyde på liste';
-MaxHeight.decorators = [width400Decorator];
-MaxHeight.parameters = {
-  docs: {
-    description: {
-      story:
-        'Viser hvordan du kan begrense høyden på dropdown-listen ved å bruke classNames.options med max-height CSS. Listen vil få scrollbar automatisk når innholdet overskrider max-height.',
-    },
-    source: {
-      code: comboboxMaxHeightExampleSource,
       language: 'tsx',
     },
   },
