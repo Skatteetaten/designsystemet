@@ -25,6 +25,12 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
     const buttonClassName = `${styles.chevronButton} ${variant === 'large' ? styles.chevronButton_large : ''}`;
     const iconSize = variant === 'large' ? 'medium' : 'small';
 
+    const handleMouseDown = (e: React.MouseEvent<HTMLElement>): void => {
+      // Prevent focus from going to input
+      e.preventDefault();
+      onClick?.(e);
+    };
+
     if (!multiple && hasValue && onClear) {
       return (
         <button
@@ -46,7 +52,7 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
         data-disabled={disabled}
         aria-hidden={'true'}
         data-chevron-button
-        onClick={disabled ? undefined : onClick}
+        onMouseDown={disabled ? undefined : handleMouseDown}
       >
         <Icon
           svgPath={isOpen ? ChevronUpSVGpath : ChevronDownSVGpath}

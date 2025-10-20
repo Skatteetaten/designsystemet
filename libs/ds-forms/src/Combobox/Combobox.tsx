@@ -126,6 +126,7 @@ const Combobox = memo(
       handleContainerClick,
       handleContainerKeyDown,
       handleButtonFocus,
+      chevronClickedRef,
     } = coreState;
 
     // Expose the input element to parent component via ref prop
@@ -165,6 +166,7 @@ const Combobox = memo(
       onBlur,
       onFocus,
       value,
+      chevronClickedRef,
     });
 
     // Memoize keyboard dropdown handler to prevent unnecessary re-creations

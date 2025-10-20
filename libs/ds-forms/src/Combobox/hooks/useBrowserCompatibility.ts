@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useCallback } from 'react';
 
 interface BrowserInfo {
   isSafari: boolean;
@@ -95,25 +95,28 @@ export const useBrowserCompatibility = (): BrowserCompatibilityFeatures => {
    * @param element - The HTML element to focus
    * @param options - Focus options (preventScroll, etc.)
    */
-  const safeFocus = (element: HTMLElement, options?: FocusOptions): void => {
-    if (!element?.focus) return;
+  const safeFocus = useCallback(
+    (element: HTMLElement, options?: FocusOptions): void => {
+      if (!element?.focus) return;
 
-    try {
-      if (browserInfo.isIOS || browserInfo.isSafari) {
-        setTimeout(() => {
-          element.focus(options);
-        }, 0);
-      } else {
-        element.focus(options);
-      }
-    } catch {
       try {
-        element.focus();
+        if (browserInfo.isIOS || browserInfo.isSafari) {
+          setTimeout(() => {
+            element.focus(options);
+          }, 0);
+        } else {
+          element.focus(options);
+        }
       } catch {
-        // Ignore focus errors
+        try {
+          element.focus();
+        } catch {
+          // Ignore focus errors
+        }
       }
-    }
-  };
+    },
+    [browserInfo.isIOS, browserInfo.isSafari]
+  );
 
   /**
    * Prevents unwanted zoom on iOS when focusing input elements.
@@ -121,23 +124,26 @@ export const useBrowserCompatibility = (): BrowserCompatibilityFeatures => {
    * then restores original font-size on blur. Only applies to iOS devices.
    * @param inputElement - The input element to prevent zoom on
    */
-  const preventZoom = (inputElement: HTMLInputElement): void => {
-    if (!browserInfo.isIOS || !inputElement) return;
+  const preventZoom = useCallback(
+    (inputElement: HTMLInputElement): void => {
+      if (!browserInfo.isIOS || !inputElement) return;
 
-    const currentFontSize = window.getComputedStyle(inputElement).fontSize;
-    const fontSize = parseFloat(currentFontSize);
+      const currentFontSize = window.getComputedStyle(inputElement).fontSize;
+      const fontSize = parseFloat(currentFontSize);
 
-    if (fontSize < 16) {
-      inputElement.style.fontSize = '16px';
-      inputElement.addEventListener(
-        'blur',
-        () => {
-          inputElement.style.fontSize = currentFontSize;
-        },
-        { once: true }
-      );
-    }
-  };
+      if (fontSize < 16) {
+        inputElement.style.fontSize = '16px';
+        inputElement.addEventListener(
+          'blur',
+          () => {
+            inputElement.style.fontSize = currentFontSize;
+          },
+          { once: true }
+        );
+      }
+    },
+    [browserInfo.isIOS]
+  );
 
   /**
    * Manages virtual keyboard display on mobile devices by controlling inputmode attribute.
@@ -146,18 +152,18 @@ export const useBrowserCompatibility = (): BrowserCompatibilityFeatures => {
    * @param input - The input element to manage virtual keyboard for
    * @param show - Whether to show (true) or hide (false) the virtual keyboard
    */
-  const manageVirtualKeyboard = (
-    input: HTMLInputElement,
-    show: boolean
-  ): void => {
-    if (!browserInfo.isMobile) return;
+  const manageVirtualKeyboard = useCallback(
+    (input: HTMLInputElement, show: boolean): void => {
+      if (!browserInfo.isMobile) return;
 
-    if (show) {
-      input.setAttribute('inputmode', 'text');
-    } else {
-      input.setAttribute('inputmode', 'none');
-    }
-  };
+      if (show) {
+        input.setAttribute('inputmode', 'text');
+      } else {
+        input.setAttribute('inputmode', 'none');
+      }
+    },
+    [browserInfo.isMobile]
+  );
 
   /**
    * Handles Firefox-specific aria-label update workaround.
@@ -166,20 +172,20 @@ export const useBrowserCompatibility = (): BrowserCompatibilityFeatures => {
    * @param element - The HTML element that needs aria-label handling
    * @param callback - Function to execute after aria-label is processed
    */
-  const handleFirefoxAriaLabel = (
-    element: HTMLElement,
-    callback: () => void
-  ): void => {
-    if (browserInfo.isFirefoxDesktop) {
-      const handleBlur = (): void => {
-        callback();
-        element.removeEventListener('blur', handleBlur);
-      };
-      element.addEventListener('blur', handleBlur);
-    } else {
-      setTimeout(callback, 100);
-    }
-  };
+  const handleFirefoxAriaLabel = useCallback(
+    (element: HTMLElement, callback: () => void): void => {
+      if (browserInfo.isFirefoxDesktop) {
+        const handleBlur = (): void => {
+          callback();
+          element.removeEventListener('blur', handleBlur);
+        };
+        element.addEventListener('blur', handleBlur);
+      } else {
+        setTimeout(callback, 100);
+      }
+    },
+    [browserInfo.isFirefoxDesktop]
+  );
 
   return {
     browserInfo,

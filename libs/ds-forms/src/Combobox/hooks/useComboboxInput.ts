@@ -27,6 +27,7 @@ interface UseComboboxInputProps {
   value?: ComboboxProps['value'];
   openDropdown: (searchTerm: string, trigger: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
+  chevronClickedRef: React.RefObject<boolean>;
 }
 
 interface UseComboboxInputReturn {
@@ -56,20 +57,22 @@ interface UseComboboxInputReturn {
  * @param props.value - Current value(s) of the combobox
  * @param props.openDropdown - Function to open the dropdown
  * @param props.closeDropdown - Function to close the dropdown
+ * @param props.chevronClickedRef - Ref to track if chevron was recently clicked
  * @returns Object containing input event handlers
  */
 export function useComboboxInput({
   multiple,
   setSelectedValues,
   setSearchTerm,
+  openDropdown,
+  closeDropdown,
   inputRef,
   onSelectionChange,
   onInputChange,
   onBlur,
   onFocus,
   value,
-  openDropdown,
-  closeDropdown,
+  chevronClickedRef,
 }: UseComboboxInputProps): UseComboboxInputReturn {
   const { safeFocus, preventZoom, manageVirtualKeyboard } =
     useBrowserCompatibility();
@@ -131,8 +134,9 @@ export function useComboboxInput({
 
       // Check if focus is coming from chevron button
       const isFromChevron =
-        e.relatedTarget instanceof Element &&
-        e.relatedTarget.hasAttribute('data-chevron-button');
+        (e.relatedTarget instanceof Element &&
+          e.relatedTarget.hasAttribute('data-chevron-button')) ||
+        chevronClickedRef.current;
 
       // Only auto-open dropdown if focus is not from chevron button
       if (!isFromChevron) {
@@ -141,7 +145,13 @@ export function useComboboxInput({
 
       onFocus?.(e);
     },
-    [openDropdown, onFocus, preventZoom, manageVirtualKeyboard]
+    [
+      openDropdown,
+      onFocus,
+      preventZoom,
+      manageVirtualKeyboard,
+      chevronClickedRef,
+    ]
   );
 
   /**
@@ -174,7 +184,13 @@ export function useComboboxInput({
       }, 100);
       onBlur?.(e);
     },
-    [closeDropdown, onBlur, manageVirtualKeyboard]
+    [
+      openDropdown,
+      onFocus,
+      preventZoom,
+      manageVirtualKeyboard,
+      chevronClickedRef,
+    ]
   );
 
   /**

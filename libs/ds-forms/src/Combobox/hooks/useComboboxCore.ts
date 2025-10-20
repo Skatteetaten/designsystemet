@@ -76,6 +76,9 @@ export interface UseComboboxCoreReturn {
   getFocusedElementId: () => string | undefined;
   scrollToFocused: () => void;
   handleButtonFocus: (index: number) => void;
+
+  // Internal refs for coordination
+  chevronClickedRef: React.RefObject<boolean>;
 }
 
 /**
@@ -125,6 +128,7 @@ export function useComboboxCore({
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const previousOptionsRef = useRef<ComboboxOption[]>(options);
   const chevronClickedRef = useRef(false);
+  const chevronActionTimeRef = useRef(0);
 
   // Generate stable IDs
   const generatedId = `combobox-${useId()}`;
@@ -182,6 +186,20 @@ export function useComboboxCore({
       searchValue: string,
       trigger: 'focus' | 'input' | 'click' | 'keyboard' | 'chevron'
     ): void => {
+      const now = Date.now();
+
+      // Block any openDropdown calls for 150ms after chevron action
+      if (trigger !== 'chevron' && now - chevronActionTimeRef.current < 150) {
+        return;
+      }
+
+      // Reset manually closed flag for explicit user actions
+      if (trigger === 'chevron' || trigger === 'click' || trigger === 'input') {
+        if (manuallyClosed) {
+          setManuallyClosed(false);
+        }
+      }
+
       // If manually closed, only allow input, chevron, keyboard or click to reopen
       if (
         manuallyClosed &&
@@ -194,11 +212,12 @@ export function useComboboxCore({
       }
 
       // Check minimum search length, but allow click to bypass
-      if (searchValue.length >= minSearchLength || trigger === 'click') {
+      if (
+        searchValue.length >= minSearchLength ||
+        trigger === 'click' ||
+        trigger === 'chevron'
+      ) {
         setIsOpen(true);
-        if (trigger === 'input') {
-          setManuallyClosed(false); // Reset when user types
-        }
       }
     },
     [manuallyClosed, minSearchLength]
@@ -363,8 +382,9 @@ export function useComboboxCore({
   // Event handlers from dropdown
   const handleChevronClick = useCallback(
     (e?: React.MouseEvent): void => {
-      // Set flag to prevent container click handler from firing
+      // Set flag IMMEDIATELY to prevent other handlers
       chevronClickedRef.current = true;
+      chevronActionTimeRef.current = Date.now();
 
       if (e) {
         e.stopPropagation();
@@ -499,5 +519,8 @@ export function useComboboxCore({
     getFocusedElementId,
     scrollToFocused,
     handleButtonFocus,
+
+    // Internal refs for coordination
+    chevronClickedRef,
   };
 }
