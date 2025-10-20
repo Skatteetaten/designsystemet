@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import type { Meta, StoryFn, StoryObj } from '@storybook/react/*';
 
 import { Combobox } from '@skatteetaten/ds-forms';
@@ -29,6 +31,13 @@ import { category } from '../../../../.storybook/helpers';
 const meta = {
   title: 'Komponenter/Combobox',
   component: Combobox,
+  decorators: [
+    (Story): JSX.Element => (
+      <div className={'width400'}>
+        <Story />
+      </div>
+    ),
+  ],
   parameters: {
     docs: {
       codePanel: true,
@@ -164,7 +173,7 @@ const meta = {
 } satisfies Meta<typeof Combobox>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Combobox>;
 type StoryFunction = StoryFn<typeof meta>;
 
 export const Primary: Story = {
