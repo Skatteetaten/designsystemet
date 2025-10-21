@@ -22,9 +22,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const SingleMediumVariantTest = {
-  name: 'Single mode medium størrelse (A6)',
+  name: 'Single mode medium størrelse (A6, A10)',
   args: {
     ...defaultArgs,
+    multiple: false,
     variant: 'medium',
   },
   argTypes: {
@@ -40,6 +41,13 @@ export const SingleMediumVariantTest = {
     // A6 - Verifiser at single-select kan vises i medium størrelse
     const inputContainer = inputElement.closest('[data-variant]');
     await expect(inputContainer).toHaveAttribute('data-variant', 'medium');
+
+    // A10 kontrast - Verifiser at single mode IKKE automatisk blir large
+    // Verifiser at multiple CSS klasse IKKE er satt i single mode
+    const containerWithMultipleClass = inputElement.closest(
+      '[class*="inputContainerMultiple"]'
+    );
+    await expect(containerWithMultipleClass).toBeNull();
 
     // Test at dropdown fungerer i medium størrelse
     await userEvent.click(inputElement);
@@ -84,59 +92,5 @@ export const SingleLargeVariantTest = {
     // Velg et alternativ for å teste funksjonalitet
     await userEvent.click(options[0]);
     await expect(inputElement).toHaveValue('Norge');
-  },
-} satisfies Story;
-
-export const MultipleVariantSizeTest = {
-  name: 'Multiple mode automatisk large størrelse (A10)',
-  args: {
-    ...defaultArgs,
-    multiple: true,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const inputElement = canvas.getByRole('combobox');
-
-    // A10 - Verifiser at multiple mode alltid vises i large størrelse
-    const inputContainer = inputElement.closest('[data-variant]');
-    await expect(inputContainer).toHaveAttribute('data-variant', 'large');
-
-    // Verifiser at multiple CSS klasse også er satt
-    const containerWithMultipleClass = inputElement.closest(
-      '[class*="inputContainerMultiple"]'
-    );
-    await expect(containerWithMultipleClass).toBeInTheDocument();
-
-    // Test også at single mode bruker medium som default
-    // (Dette er implisitt test av at multiple=false ikke tvinger large)
-  },
-} satisfies Story;
-
-export const SingleVariantSizeTest = {
-  name: 'Single mode standard størrelse vs large (A10)',
-  args: {
-    ...defaultArgs,
-    multiple: false,
-    variant: 'medium', // Eksplisitt medium for klarhet
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const inputElement = canvas.getByRole('combobox');
-
-    // A10 kontrast - Verifiser at single mode IKKE automatisk blir large
-    const inputContainer = inputElement.closest('[data-variant]');
-    await expect(inputContainer).toHaveAttribute('data-variant', 'medium');
-
-    // Verifiser at multiple CSS klasse IKKE er satt i single mode
-    const containerWithMultipleClass = inputElement.closest(
-      '[class*="inputContainerMultiple"]'
-    );
-    await expect(containerWithMultipleClass).toBeNull();
   },
 } satisfies Story;

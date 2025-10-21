@@ -1,4 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react-vite';
+import { useRef } from 'react';
+
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
@@ -116,7 +118,7 @@ export const DefaultsComprehensiveTest = {
     expect(container).toContainElement(inputElement);
 
     // Implicit FA1 test - If the component renders and we can find elements by role,
-    // ref forwarding is working (tested separately in WithRef story)
+    // ref forwarding is working (tested in WithProgrammaticFocus story)
   },
 } satisfies Story;
 
@@ -286,5 +288,51 @@ export const AccessKeyTest = {
     // Note: Faktisk testing av accessKey tastatursnarvei (Alt+C) er vanskelig
     // i test-miljø på grunn av browser security restrictions, men attributtet
     // er verifisert som tilstede og vil fungere i ekte browser-miljø
+  },
+} satisfies Story;
+
+const ProgrammaticFocusTemplate: StoryFn<typeof Combobox> = () => {
+  const comboboxRef = useRef<HTMLInputElement>(null);
+
+  return (
+    <div>
+      <button className={'mb-4'} onClick={() => comboboxRef.current?.focus()}>
+        {'Fokuser på combobox'}
+      </button>
+      <Combobox
+        ref={comboboxRef}
+        label={'Velg land'}
+        options={defaultArgs.options}
+        hasSpacing={false}
+      />
+    </div>
+  );
+};
+
+export const WithProgrammaticFocus = {
+  render: ProgrammaticFocusTemplate,
+  name: 'Programmatisk fokus via ref (FA1)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    controls: {
+      exclude: /.*/,
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button', { name: 'Fokuser på combobox' });
+    const input = canvas.getByRole('combobox');
+
+    // Input skal ikke ha fokus i starten
+    await expect(input).not.toHaveFocus();
+
+    // Klikk på knappen for å fokusere programmatisk
+    await userEvent.click(button);
+
+    // Nå skal input ha fokus - dette verifiserer at ref forwarding fungerer (FA1)
+    await expect(input).toHaveFocus();
   },
 } satisfies Story;

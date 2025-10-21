@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
-import type { ComboboxOption } from '@skatteetaten/ds-forms';
 
 import { defaultArgs } from './utils/combobox.test.utils';
 
@@ -54,20 +53,21 @@ export const OnFocusCallbackTest = {
   name: 'onFocus callback test (A3)',
   args: {
     ...defaultArgs,
-    onFocus: (): void => {
-      console.log('Combobox focused');
-    },
+    onFocus: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
 
     // Focus the input element - callback will be called if prop is working
     await userEvent.click(inputElement);
     await expect(inputElement).toHaveFocus();
+
+    // Verify that the callback was called
+    await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -75,14 +75,12 @@ export const OnBlurCallbackTest = {
   name: 'onBlur callback test (A3)',
   args: {
     ...defaultArgs,
-    onBlur: (): void => {
-      console.log('Combobox blurred');
-    },
+    onBlur: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
 
@@ -92,6 +90,9 @@ export const OnBlurCallbackTest = {
 
     await userEvent.click(canvasElement);
     await expect(inputElement).not.toHaveFocus();
+
+    // Verify that the callback was called
+    await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -99,14 +100,12 @@ export const OnInputChangeCallbackTest = {
   name: 'onInputChange callback test (A3)',
   args: {
     ...defaultArgs,
-    onInputChange: (searchTerm: string): void => {
-      console.log('Input changed:', searchTerm);
-    },
+    onInputChange: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
 
@@ -115,6 +114,9 @@ export const OnInputChangeCallbackTest = {
     await userEvent.type(inputElement, 'Norge');
 
     await expect(inputElement).toHaveValue('Norge');
+
+    // Verify that the callback was called (should be called for each character typed)
+    await waitFor(() => expect(args.onInputChange).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -122,14 +124,12 @@ export const OnSelectionChangeCallbackTest = {
   name: 'onSelectionChange callback test (A3)',
   args: {
     ...defaultArgs,
-    onSelectionChange: (selectedOption: ComboboxOption | null): void => {
-      console.log('Selection changed:', selectedOption);
-    },
+    onSelectionChange: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
 
@@ -139,5 +139,8 @@ export const OnSelectionChangeCallbackTest = {
     await userEvent.click(options[0]);
 
     await expect(inputElement).toHaveValue('Norge');
+
+    // Verify that the callback was called
+    await waitFor(() => expect(args.onSelectionChange).toHaveBeenCalled());
   },
 } satisfies Story;
