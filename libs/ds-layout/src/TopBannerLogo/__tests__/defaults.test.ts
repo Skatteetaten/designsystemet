@@ -1,3 +1,5 @@
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+
 import {
   getTopBannerLogoAsDefault,
   getTopBannerLogoHrefDefault,
@@ -8,6 +10,8 @@ describe('TopBannerLogo default', () => {
     expect(getTopBannerLogoAsDefault()).toBe('a');
   });
   it('når getTopBannerLogoHrefDefault kalles, så returnerer den riktig verdi', () => {
-    expect(getTopBannerLogoHrefDefault()).toBe('https://www.skatteetaten.no/');
+    expect(getTopBannerLogoHrefDefault()).toBe(
+      dsI18n.t('Shared:shared.SkeLogoURL')
+    );
   });
 });
