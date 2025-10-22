@@ -5,7 +5,8 @@ import {
   getComboboxLoadingMessageDefault,
   getComboboxIsMultiSelectDefault,
   getComboboxIsLoadingDefault,
-  getCombobboxMinSearchLengthDefault,
+  getComboboxMinSearchLengthDefault,
+  getComboboxVariantDefault,
 } from '../defaults';
 
 describe('defaults', () => {
@@ -29,7 +30,11 @@ describe('defaults', () => {
     expect(getComboboxIsLoadingDefault()).toBe(false);
   });
 
-  it('Når getCombobboxMinSearchLengthDefault kalles, så returnerer den riktig verdi', () => {
-    expect(getCombobboxMinSearchLengthDefault()).toBe(0);
+  it('Når getComboboxMinSearchLengthDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getComboboxMinSearchLengthDefault()).toBe(0);
+  });
+
+  it('Når getComboboxVariantDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getComboboxVariantDefault()).toBe('medium');
   });
 });

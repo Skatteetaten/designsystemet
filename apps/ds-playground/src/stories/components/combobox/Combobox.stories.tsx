@@ -2,7 +2,16 @@ import { JSX } from 'react';
 
 import type { Meta, StoryFn, StoryObj } from '@storybook/react/*';
 
-import { Combobox } from '@skatteetaten/ds-forms';
+import {
+  getAutoCompletePropDescription,
+  getCommonAutoCompleteDefault,
+} from '@skatteetaten/ds-core-utils';
+import {
+  Combobox,
+  getComboboxMinSearchLengthDefault,
+  getComboboxPlaceholderDefault,
+  getComboboxVariantDefault,
+} from '@skatteetaten/ds-forms';
 
 import {
   comboboxStoryOptions,
@@ -26,11 +35,8 @@ import { ComboboxTypedOptionsExample } from './ComboboxTypedOptionsExample';
 import comboboxTypedOptionsExampleSource from './ComboboxTypedOptionsExample.tsx?raw';
 import { ComboboxValidationExample } from './ComboboxValidationExample';
 import comboboxValidationExampleSource from './ComboboxValidationExample.tsx?raw';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { getHasSpacingDefault } from '../../../../../../libs/ds-core-utils/src/defaults';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { getComboboxPlaceholderDefault } from '../../../../../../libs/ds-forms/src/Combobox/defaults';
-import { category } from '../../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../../.storybook/helpers';
+import { SystemSVGPaths } from '../../utils/icon.systems';
 
 const meta = {
   title: 'Komponenter/Combobox',
@@ -43,128 +49,74 @@ const meta = {
   },
   argTypes: {
     // Props
-    label: {
-      control: { type: 'text' },
-      table: { category: category.props },
-    },
-    placeholder: {
-      control: { type: 'text' },
+    label: { table: { category: category.props } },
+    options: { control: false, table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
+    description: { table: { category: category.props } },
+    errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
+    helpSvgPath: {
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
       table: {
         category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
+    },
+    helpText: { control: 'text', table: { category: category.props } },
+    hideLabel: { table: { category: category.props } },
+    isLoading: { table: { category: category.props } },
+    loadingMessage: { table: { category: category.props } },
+    maxSelected: { table: { category: category.props } },
+    minSearchLength: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getComboboxMinSearchLengthDefault().toString(),
+        },
+      },
+    },
+    multiple: { table: { category: category.props } },
+    spinnerProps: { control: false, table: { category: category.props } },
+    titleHelpSvg: { table: { category: category.props } },
+    value: { control: 'text', table: { category: category.props } },
+    variant: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getComboboxVariantDefault() },
+      },
+    },
+    // HTML
+    accessKey: { table: { category: category.htmlAttribute } },
+    autoComplete: {
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonAutoCompleteDefault() },
+        type: { summary: 'string' },
+      },
+      type: 'string',
+      description: getAutoCompletePropDescription(),
+    },
+    form: { table: { category: category.htmlAttribute } },
+    name: { table: { category: category.htmlAttribute } },
+    disabled: { table: { category: category.htmlAttribute } },
+    placeholder: {
+      table: {
+        category: category.htmlAttribute,
         defaultValue: { summary: getComboboxPlaceholderDefault() },
       },
     },
-    options: {
-      control: false,
-
-      table: { category: category.props },
-    },
-    variant: {
-      control: { type: 'select' },
-      options: ['medium', 'large'],
-      table: { category: category.props, defaultValue: { summary: 'medium' } },
-    },
-    hasSpacing: {
-      control: { type: 'boolean' },
-      table: {
-        category: category.props,
-        defaultValue: { summary: getHasSpacingDefault().toString() },
-      },
-    },
-    hideLabel: {
-      control: { type: 'boolean' },
-      table: { category: category.props },
-    },
-    multiple: {
-      control: { type: 'boolean' },
-      table: {
-        category: category.props,
-      },
-    },
-    minSearchLength: {
-      control: { type: 'number', min: 0, max: 10, step: 1 },
-      table: {
-        category: category.props,
-        defaultValue: {},
-      },
-    },
-    isLoading: {
-      control: { type: 'boolean' },
-      table: {
-        category: category.props,
-      },
-    },
-    loadingMessage: {
-      control: { type: 'text' },
-      table: { category: category.props },
-    },
-    description: {
-      control: { type: 'text' },
-      table: { category: category.props },
-    },
-    helpText: {
-      control: { type: 'text' },
-      table: { category: category.props },
-    },
-    errorMessage: {
-      control: { type: 'text' },
-      table: { category: category.props },
-    },
-
-    // HTML-attributes
-    name: {
-      control: { type: 'text' },
-      table: { category: category.htmlAttribute },
-    },
-    disabled: {
-      control: { type: 'boolean' },
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
-    required: {
-      control: { type: 'boolean' },
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
-
+    required: { table: { category: category.htmlAttribute } },
+    tabIndex: { table: { category: category.htmlAttribute } },
     // Events
-    onSelectionChange: {
-      action: 'selection-changed',
-      control: false,
-      table: { category: category.event },
-    },
-    onInputChange: {
-      action: 'input-changed',
-      control: false,
-      table: { category: category.event },
-    },
-    onHelpToggle: {
-      action: 'help-toggled',
-      control: false,
-      table: { category: category.event },
-    },
-    value: {
-      table: { category: category.props },
-    },
-    classNames: {
-      table: { category: category.props },
-    },
-    helpSvgPath: {
-      table: { category: category.props },
-    },
-    titleHelpSvg: {
-      table: { category: category.props },
-    },
-    spinnerProps: {
-      table: { category: category.props },
-    },
+    onBlur: { ...htmlEventDescription },
+    onFocus: { ...htmlEventDescription },
+    onSelectionChange: { ...htmlEventDescription },
+    onInputChange: { ...htmlEventDescription },
+    onHelpToggle: { ...htmlEventDescription, action: 'help-toggled' },
   },
   args: {
     label: 'Velg kommune',
-    hasSpacing: false,
-    variant: 'medium',
     options: comboboxStoryOptions,
   },
 } satisfies Meta<typeof Combobox>;

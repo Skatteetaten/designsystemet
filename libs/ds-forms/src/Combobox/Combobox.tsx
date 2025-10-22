@@ -7,8 +7,8 @@ import {
 } from 'react';
 
 import {
+  getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
-  getHasSpacingDefault,
 } from '@skatteetaten/ds-core-utils';
 
 import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
@@ -19,9 +19,10 @@ import { ComboboxSelectedOptions } from './ComboboxSelectedOptions';
 import {
   getComboboxPlaceholderDefault,
   getComboboxLoadingMessageDefault,
-  getCombobboxMinSearchLengthDefault,
+  getComboboxMinSearchLengthDefault,
   getComboboxIsMultiSelectDefault,
   getComboboxIsLoadingDefault,
+  getComboboxVariantDefault,
 } from './defaults';
 import { useBrowserCompatibility } from './hooks/useBrowserCompatibility';
 import { useComboboxCore } from './hooks/useComboboxCore';
@@ -62,21 +63,23 @@ const Combobox = memo(
     classNames,
     description,
     errorMessage,
-    hasSpacing = getHasSpacingDefault(),
+    hasSpacing,
     helpSvgPath,
     helpText,
     hideLabel,
     isLoading = getComboboxIsLoadingDefault(),
     label,
     loadingMessage = getComboboxLoadingMessageDefault(),
-    minSearchLength = getCombobboxMinSearchLengthDefault(),
+    minSearchLength = getComboboxMinSearchLengthDefault(),
     multiple = getComboboxIsMultiSelectDefault(),
     options,
     placeholder = getComboboxPlaceholderDefault(),
     spinnerProps,
     titleHelpSvg,
     value,
-    variant,
+    variant = getComboboxVariantDefault(),
+    // TODO lage test for å sjekke om denne er satt
+    autoComplete = getCommonAutoCompleteDefault(),
     name,
     disabled,
     required,
@@ -90,7 +93,7 @@ const Combobox = memo(
   }: Readonly<ComboboxProps>): JSX.Element => {
     const { safeFocus } = useBrowserCompatibility();
 
-    const resolvedVariant = multiple ? 'large' : (variant ?? 'medium');
+    const resolvedVariant = multiple ? 'large' : variant;
 
     // UNIFIED CORE HOOK - consolidates dropdown + focus + state management
     const coreState = useComboboxCore({

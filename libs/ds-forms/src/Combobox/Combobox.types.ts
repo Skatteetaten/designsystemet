@@ -58,8 +58,8 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   minSearchLength?: number;
   /** Array av valg som kan velges fra */
   options: ComboboxOption[];
-  /** Props for å tilpasse spinner utseende */
-  spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
+  /** For å tilpasse 'color' eller 'size' til spinner */
+  spinnerProps?: Prettify<Partial<Pick<SpinnerProps, 'size' | 'color'>>>;
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Legger til margin under komponenten */
@@ -75,9 +75,9 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
 interface SingleComboboxProps extends ComboboxCommonProps {
   /** Tillater valg av flere alternativer */
   multiple?: false;
-  /** Størrelsen på combobox. Må være 'large' for multi-select */
+  /** Størrelsen på combobox. For multi-select er størrelsen automatisk satt til 'large'. */
   variant?: ComboboxSize;
-  /** Kontrollert verdi - valgfri for både kontrollert og ukontrollert modus */
+  /** Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert modus */
   value?: string | number;
   /** Kalles når valget endres. Enkeltvalg: mottar ComboboxOption | null */
   onSelectionChange?: (selectedOption: ComboboxOption | null) => void;
@@ -89,9 +89,9 @@ interface SingleComboboxProps extends ComboboxCommonProps {
 interface MultiComboboxProps extends ComboboxCommonProps {
   /** Tillater valg av flere alternativer */
   multiple: true;
-  /** Størrelsen på combobox - automatisk satt til 'large' for multi-select */
+  /** Størrelsen på combobox. For multi-select er størrelsen automatisk satt til 'large'. */
   variant?: never;
-  /** Kontrollerte verdier - valgfri for både kontrollert og ukontrollert modus */
+  /** Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert modus */
   value?: ComponentPropsWithoutRef<'input'>['value'];
   /** Kalles når valget endres. Flervalg: mottar ComboboxOption[] array */
   onSelectionChange?: (selectedOptions: ComboboxOption[]) => void;
