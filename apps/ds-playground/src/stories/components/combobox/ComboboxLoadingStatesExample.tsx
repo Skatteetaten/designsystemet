@@ -59,6 +59,7 @@ export const ComboboxLoadingStatesExample = (): JSX.Element => {
         isLoading={asyncLoading}
         loadingMessage={'Søker'}
         options={asyncOptions}
+        minSearchLength={2}
         hasSpacing
         onInputChange={handleInputChange}
       />

@@ -118,6 +118,7 @@ export type ComboboxOptionsProps = {
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   displayOptions: ComboboxOption[];
   searchTerm: string;
+  minSearchLength: number;
   multiple: boolean;
   selectedValues: ComboboxOption[];
   comboboxId: string;

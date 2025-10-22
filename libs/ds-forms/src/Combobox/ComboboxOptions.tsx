@@ -20,6 +20,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     spinnerProps,
     displayOptions,
     searchTerm,
+    minSearchLength,
     multiple,
     selectedValues,
     comboboxId,
@@ -34,6 +35,12 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     if (!isOpen) {
+      return null;
+    }
+
+    /* Ikke vis liste hvis søketerm er kortere enn minSearchLength
+    TODO: Implementer løsning for FRONT-2179 */
+    if (searchTerm.length < minSearchLength) {
       return null;
     }
 
