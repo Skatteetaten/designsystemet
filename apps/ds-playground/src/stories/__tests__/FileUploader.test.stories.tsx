@@ -9,7 +9,11 @@ import {
   dsI18n,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
-import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
+import {
+  FileUploader,
+  FileUploaderProps,
+  getFileUploaderGetSpinnerLabelDefault,
+} from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -60,6 +64,11 @@ const meta = {
     invalidCharacterRegexp: {
       control: 'text',
       table: { disable: true },
+    },
+    spinnerLabel: {
+      table: {
+        disable: true,
+      },
     },
     acceptedFileFormats: { table: { disable: true } },
     // HTML
@@ -404,3 +413,23 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
     imageSnapshot: { disableSnapshot: true },
   },
 };
+
+const spinnerLabel = 'Opplasting pågår, kan ta et par minutter.';
+
+export const WithCustomSpinnerLabel = {
+  name: 'With Custom Spinner Label',
+  args: {
+    spinnerLabel,
+    isUploading: true,
+  },
+  argTypes: {
+    spinnerLabel: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    const button = within(container as HTMLElement).getByRole('button');
+    await expect(button).toHaveTextContent(spinnerLabel);
+  },
+} satisfies Story;

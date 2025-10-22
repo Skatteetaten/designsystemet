@@ -81,6 +81,8 @@ export interface FileUploaderCommonProps
    * uploadResult.statusMessage brukes til å vise en melding om hvordan det gikk med opplastingen.
    */
   uploadResult?: UploadResult;
+  /** Tekst som vises med spinner når isUploading = true. */
+  spinnerLabel?: string;
   /** Om opplasting er underveis. */
   isUploading?: boolean;
   /** Erstatter tegn som er ugyldige. Bruk invalidCharacterRegexp for å overstyre hvilke tegn som skal erstattes. */

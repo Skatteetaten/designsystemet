@@ -52,11 +52,3 @@ Card.Alert = CardAlert;
 Card.Actions = CardActions;
 Card.Content = CardContent;
 Card.Header = CardHeader;
-
-export {
-  getCardColorDefault,
-  getCardSpacingDefault,
-  getCardAlertVariantDefault,
-  getCardAlertSvgPathDefault,
-  getCardAlertTitleAsDefault,
-};

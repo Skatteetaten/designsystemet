@@ -6,3 +6,4 @@ export * from './RolePicker/RolePicker';
 export * from './RolePicker/RolePicker.types';
 export * from './WordInfo/WordInfo';
 export * from './WordInfo/WordInfo.types';
+export * from './WordInfo/defaults';

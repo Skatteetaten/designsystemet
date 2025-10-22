@@ -83,9 +83,3 @@ export const ScrollToTopButton = ({
   );
 };
 ScrollToTopButton.displayName = 'ScrollToTopButton';
-
-export {
-  getVisibilityThresholdDefault,
-  getScrollToMainDefault,
-  getScrollToTopButtonTextDefault,
-} from './defaults';

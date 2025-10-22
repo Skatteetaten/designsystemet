@@ -1,5 +1,7 @@
 # Coding Guidelines for Design System Components
 
+> **⚠️ Note:** This project now uses **AGENTS.md** as the primary configuration file for all AI coding assistants (Claude Code, GitHub Copilot, Cursor, Cline, etc.). See [AGENTS.md](../AGENTS.md) in the repository root for the complete, up-to-date configuration.
+
 This document describes the coding standards and patterns to be used when developing components for the design system. These guidelines ensure consistency, maintainability, and adherence to React best practices across the codebase.
 
 ## Table of Contents
