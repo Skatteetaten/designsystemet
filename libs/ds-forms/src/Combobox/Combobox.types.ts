@@ -127,8 +127,7 @@ export type ComboboxOptionsProps = {
   classNames?: string;
   handleButtonFocus: (index: number) => void;
   handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
-  customListRef: RefObject<HTMLUListElement | null>;
-  hasError?: boolean;
+  customListRef: RefObject<HTMLDivElement | null>;
   maxSelected?: number;
 };
 

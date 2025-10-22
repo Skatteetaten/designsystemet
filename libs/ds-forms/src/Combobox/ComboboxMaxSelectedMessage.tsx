@@ -16,7 +16,7 @@ export const ComboboxMaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
     return (
-      <li
+      <div
         id={`${comboboxId}-max-selected-message`}
         className={styles.maxSelectedMessage}
         role={'status'}
@@ -32,7 +32,7 @@ export const ComboboxMaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
               selected: selectedCount,
               total: maxSelected,
             })}
-      </li>
+      </div>
     );
   }
 );

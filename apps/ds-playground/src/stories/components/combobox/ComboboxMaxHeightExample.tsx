@@ -68,6 +68,7 @@ export const ComboboxMaxHeightExample = (): JSX.Element => {
           classNames={{
             options: 'maxHeight200',
           }}
+          maxSelected={2}
           hasSpacing
           multiple
           onSelectionChange={setSelectedMultiple}

@@ -197,25 +197,27 @@
   margin-bottom: 0;
 }
 
-.optionsList {
+.optionsListContainer {
   position: absolute;
   z-index: 1000;
   top: 100%;
   right: 0;
   left: 0;
+  display: flex;
   box-sizing: border-box;
-  padding: var(--spacing-xs) var(--spacing-s) var(--spacing-s);
+  flex-direction: column;
   border: 1px solid var(--palette-graphite-100);
   border-top: none;
   margin: 1px 0 0;
   background: var(--semantic-page-background);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
+}
+
+.optionsList {
+  padding: var(--spacing-xs) var(--spacing-s);
+  margin: 0;
   list-style: none;
   overflow-y: auto;
-
-  &WithError {
-    border-top: 1px solid var(--palette-graphite-100);
-  }
 }
 
 .option {
@@ -381,7 +383,8 @@
 }
 
 .maxSelectedMessage {
-  padding-left: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-top: 1px solid var(--semantic-divider-30);
   margin-top: var(--spacing-xs);
   background-color: var(--semantic-page-background);
   color: var(--semantic-page-foreground);

@@ -319,7 +319,6 @@ const Combobox = memo(
             handleButtonFocus={handleButtonFocus}
             handleOptionSelect={handleOptionSelect}
             customListRef={containerRef}
-            hasError={!!errorMessage}
             maxSelected={maxSelected}
           />
         </div>
