@@ -52,6 +52,7 @@ const mockOptions: ComboboxOption[] = [
 const defaultArgs: ComboboxOptionsProps = {
   isOpen: true,
   displayOptions: mockOptions,
+  minSearchLength: 0,
   searchTerm: '',
   multiple: false,
   selectedValues: [],

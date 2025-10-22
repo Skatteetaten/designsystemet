@@ -318,6 +318,7 @@ const Combobox = memo(
           spinnerProps={spinnerProps}
           displayOptions={displayOptions}
           searchTerm={searchTerm}
+          minSearchLength={minSearchLength}
           multiple={multiple}
           selectedValues={selectedValues}
           comboboxId={comboboxId}
