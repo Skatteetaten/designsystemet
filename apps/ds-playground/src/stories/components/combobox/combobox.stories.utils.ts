@@ -344,7 +344,7 @@ export const typedKommuneOptions: TypedComboboxOption<KommuneTestMetaData>[] = [
   },
 ];
 
-export const getComboboxStoryOptions = (count = 10): ComboboxOption[] => {
+export const getComboboxStoryOptions = (count = 15): ComboboxOption[] => {
   const shuffled = [...comboboxStoryOptions].sort(() => 0.5 - Math.random());
   return shuffled
     .slice(0, count)
