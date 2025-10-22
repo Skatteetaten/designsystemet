@@ -1,0 +1,11 @@
+import{j as n}from"./iframe-BoxHncFg.js";import{useMDXComponents as e}from"./index-DtBYrEcS.js";import{M as a,P as m,C as i,A as p}from"./blocks-DKV7dMyv.js";import{P as s}from"./utils-B66TS2eR.js";import{T as l,E as c}from"./TopBannerInternal.stories-C8ZGhZXX.js";import{T as x}from"./TopBannerInternalActionMenu.stories-BbxKTpqc.js";import{V as d}from"./VersionBadge-wytnVFot.js";import{D as j}from"./DocIntro-C4Nfx7x7.js";import{D as h}from"./DocHeaderWrapper-CoLMB1JM.js";import"./index-BWe3UoPQ.js";import"./index-BHwnoM9V.js";import"./lz-string-CuPZokM5.js";import"./index-DyY5joHW.js";import"./index-Mlou2Fgf.js";import"./index-CvbIYQ1J.js";import"./index-d7h_eiwz.js";import"./DatePickerCalendar-NBFB_hA6.js";import"./LabelWithHelp-CeoEDrnt.js";import"./Help-DtlVvBAO.js";import"./index-COS0aIOi.js";import"./index-k61vOTBl.js";import"./index-CxRKwedM.js";import"./index-z4c3QXb-.js";import"./TopBannerButton-C3rtnis-.js";import"./floating-ui.react-Cx2bJYit.js";import"./TopBannerLangPicker-uoLEUZhA.js";import"./TopBannerLangPickerButton-ELq5E0QT.js";import"./TopBannerLogo-BeX8MPXd.js";import"./TopBannerSkipLink-DAAkcUni.js";import"./TopBannerUserButton-D_jNR-zE.js";import"./demo-logo-white-B10UwYoZ.js";import"./stories.utils-CZ5hej_8.js";function t(r){const o={code:"code",h1:"h1",h2:"h2",pre:"pre",...e(),...r.components};return n.jsxs(n.Fragment,{children:[n.jsx(a,{of:l}),`
+`,n.jsxs(h,{componentName:"TopBannerInternal",children:[n.jsx(o.h1,{id:"topbannerinternal",children:"TopBannerInternal"}),n.jsx(d,{packageName:"layout"}),n.jsx(j,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbanner-internal/"})]}),`
+`,n.jsx(m,{}),`
+`,n.jsx(o.pre,{children:n.jsx(o.code,{className:"language-tsx",children:`import { TopBannerInternal } from '@skatteetaten/ds-layout';
+`})}),`
+`,n.jsx(i,{}),`
+`,n.jsx(o.h2,{id:"topbannerinternalactionmenu",children:n.jsx(o.code,{children:"TopBannerInternal.ActionMenu"})}),`
+`,n.jsx(p,{of:x}),`
+`,n.jsx(o.h2,{id:"examples",children:"Examples"}),`
+`,n.jsx(s,{of:c})]})}function O(r={}){const{wrapper:o}={...e(),...r.components};return o?n.jsx(o,{...r,children:n.jsx(t,{...r})}):t(r)}export{O as default};
+//# sourceMappingURL=TopBannerInternal-DtqVMcRy.js.map
