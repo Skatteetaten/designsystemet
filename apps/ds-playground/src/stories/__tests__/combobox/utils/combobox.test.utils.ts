@@ -14,7 +14,6 @@ export const defaultOptions = [
 export const defaultArgs = {
   label: 'Velg land',
   options: defaultOptions,
-  hasSpacing: false,
 };
 
 export const wrapper = '.docs-story > div';

@@ -24,7 +24,6 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'placeholder'
   | 'onBlur'
   | 'onFocus'
-  | 'autoComplete'
   | 'form'
   | 'tabIndex'
   | 'accessKey'
