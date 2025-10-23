@@ -9,7 +9,6 @@ import {
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
-import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Alert,
@@ -48,34 +47,44 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-export const Examples: Story = {
-  render: (_args): JSX.Element => {
-    return (
-      <>
-        <Alert variant={'info'} className={'bottomSpacingXL'} showAlert>
-          {
-            'Disse feltene er låst for redigering fordi du har fått et varsel fra oss'
-          }
-        </Alert>
-        <Alert variant={'success'} className={'bottomSpacingXL'} showAlert>
-          {'Filen ble lastet opp'}
-        </Alert>
+const ExampleStory = (): JSX.Element => {
+  return (
+    <>
+      <Alert variant={'info'} className={'bottomSpacingXL'} showAlert>
+        {
+          'Disse feltene er låst for redigering fordi du har fått et varsel fra oss'
+        }
+      </Alert>
+      <Alert variant={'success'} className={'bottomSpacingXL'} showAlert>
+        {'Filen ble lastet opp'}
+      </Alert>
 
-        <Alert variant={'warning'} className={'bottomSpacingXL'} showAlert>
-          {
-            'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.'
-          }
-        </Alert>
-        <Alert variant={'error'} className={'bottomSpacingXL'} showAlert>
-          {
-            'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.'
-          }
-        </Alert>
-        <Alert variant={'danger'} showAlert>
-          {'Strengt fortrolig (Kode 6)'}
-        </Alert>
-      </>
-    );
+      <Alert variant={'warning'} className={'bottomSpacingXL'} showAlert>
+        {
+          'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.'
+        }
+      </Alert>
+      <Alert variant={'error'} className={'bottomSpacingXL'} showAlert>
+        {
+          'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.'
+        }
+      </Alert>
+      <Alert variant={'danger'} showAlert>
+        {'Strengt fortrolig (Kode 6)'}
+      </Alert>
+    </>
+  );
+};
+
+export const Examples: Story = {
+  parameters: {
+    docs: {
+      codePanel: true,
+      source: { type: ExampleStory, language: 'tsx' },
+    },
+    controls: {
+      exclude: /.*/,
+    },
   },
+  render: (_args): JSX.Element => ExampleStory(),
 } satisfies Story;
-Examples.parameters = exampleParameters;
