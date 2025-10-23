@@ -414,6 +414,11 @@ export function useComboboxCore({
         return;
       }
 
+      // Check for option elements to prevent reopening after selection
+      if (target.closest('[role="option"]')) {
+        return;
+      }
+
       const currentValue = inputRef.current?.value || '';
       openDropdown(currentValue, 'click');
 
