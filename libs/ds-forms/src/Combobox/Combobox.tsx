@@ -212,6 +212,8 @@ const Combobox = memo(
     const focusedOptionId =
       focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined;
 
+    const labelId = `${comboboxId}-label`;
+
     const ariaDescribedBy =
       [errorMessage && errorId].filter(Boolean).join(' ') || undefined;
 
@@ -236,6 +238,7 @@ const Combobox = memo(
         className={`${styles.comboboxWrapper} ${classNames?.container || ''} ${className || ''}`.trim()}
       >
         <LabelWithHelp
+          id={labelId}
           classNames={classNames}
           htmlFor={comboboxId}
           hideLabel={hideLabel}
@@ -273,7 +276,7 @@ const Combobox = memo(
               aria-expanded={isOpen}
               aria-autocomplete={'list'}
               aria-controls={listId}
-              aria-activedescendant={focusedOptionId}
+              aria-activedescendant={focusedIndex >= 0 ? focusedOptionId : ''}
               aria-describedby={ariaDescribedBy}
               aria-invalid={!!errorMessage || undefined}
               aria-busy={isLoading || undefined}
@@ -317,6 +320,7 @@ const Combobox = memo(
             selectedValues={selectedValues}
             comboboxId={comboboxId}
             listId={listId}
+            labelId={labelId}
             focusedIndex={focusedIndex}
             classNames={classNames?.options}
             handleButtonFocus={handleButtonFocus}
