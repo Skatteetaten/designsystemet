@@ -25,7 +25,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     selectedValues,
     comboboxId,
     listId,
-    labelId,
     focusedIndex,
     classNames,
     handleButtonFocus,
@@ -71,7 +70,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             id={listId}
             role={'listbox'}
             aria-multiselectable={multiple ? 'true' : 'false'}
-            aria-labelledby={labelId}
             className={styles.optionsList}
           >
             {displayOptions.map((option, index) => {
@@ -157,7 +155,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             id={listId}
             role={'listbox'}
             aria-multiselectable={'false'}
-            aria-labelledby={labelId}
             className={styles.optionsList}
           >
             <li
