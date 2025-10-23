@@ -12,14 +12,21 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
     selectedValues,
     onRemoveValue,
     classNames,
+    labelId,
   }: ComboboxSelectedOptionsProps): JSX.Element | null => {
+    const setChipsRef = (element: HTMLUListElement | null): void => {
+      if (element && labelId) {
+        element.setAttribute('aria-labelledby', labelId);
+      }
+    };
+
     if (!multiple || selectedValues.length === 0) {
       return null;
     }
 
     return (
       <div className={`${styles.chipsInline} ${classNames || ''}`}>
-        <Chips>
+        <Chips ref={setChipsRef}>
           {selectedValues.map((selectedValue) => (
             <Chips.Removable
               key={selectedValue.value}

@@ -261,6 +261,7 @@ const Combobox = memo(
               multiple={multiple}
               selectedValues={selectedValues}
               classNames={classNames?.chips}
+              labelId={labelId}
               onRemoveValue={handleRemoveValue}
             />
             <input
@@ -320,7 +321,6 @@ const Combobox = memo(
             selectedValues={selectedValues}
             comboboxId={comboboxId}
             listId={listId}
-            labelId={labelId}
             focusedIndex={focusedIndex}
             classNames={classNames?.options}
             handleButtonFocus={handleButtonFocus}
