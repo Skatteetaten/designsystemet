@@ -25,6 +25,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     selectedValues,
     comboboxId,
     listId,
+    labelId,
     focusedIndex,
     classNames,
     handleButtonFocus,
@@ -70,6 +71,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             id={listId}
             role={'listbox'}
             aria-multiselectable={multiple ? 'true' : 'false'}
+            aria-labelledby={labelId}
             className={styles.optionsList}
           >
             {displayOptions.map((option, index) => {
@@ -91,7 +93,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
                   key={option.value}
                   id={`${comboboxId}-option-${index}`}
                   role={'option'} // We need to use <li> for screenreader support, even though sonarqube complains
-                  aria-selected={isSelected}
+                  aria-selected={isSelected ? 'true' : 'false'}
                   aria-disabled={isDisabled ? 'true' : undefined}
                   className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isFocused ? styles.focused : ''} ${isSelected ? styles.selected : ''} ${isDisabled ? styles.disabled : ''}`}
                   tabIndex={-1}
@@ -146,6 +148,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             id={listId}
             role={'listbox'}
             aria-multiselectable={'false'}
+            aria-labelledby={labelId}
             className={styles.optionsList}
           >
             <li

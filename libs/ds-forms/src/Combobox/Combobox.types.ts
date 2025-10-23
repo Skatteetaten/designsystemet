@@ -123,6 +123,7 @@ export type ComboboxOptionsProps = {
   selectedValues: ComboboxOption[];
   comboboxId: string;
   listId: string;
+  labelId: string;
   focusedIndex: number;
   classNames?: string;
   handleButtonFocus: (index: number) => void;

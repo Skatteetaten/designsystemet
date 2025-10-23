@@ -57,6 +57,7 @@ const defaultArgs: ComboboxOptionsProps = {
   selectedValues: [],
   comboboxId: 'test-combobox',
   listId: 'test-list',
+  labelId: 'test-label',
   focusedIndex: -1,
   handleButtonFocus: fn(),
   handleOptionSelect: fn(),
