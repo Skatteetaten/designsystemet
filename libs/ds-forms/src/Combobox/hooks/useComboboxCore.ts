@@ -263,22 +263,11 @@ export function useComboboxCore({
         `[id="${comboboxId}-option-${focusedIndex}"]`
       ) as HTMLElement;
 
-      if (focusedElement) {
-        const rect = focusedElement.getBoundingClientRect();
-        const containerRect = containerRef.current?.getBoundingClientRect();
-
-        if (containerRect) {
-          const isVisible =
-            rect.top >= containerRect.top &&
-            rect.bottom <= containerRect.bottom;
-
-          if (!isVisible) {
-            focusedElement.scrollIntoView({
-              block: 'nearest',
-              inline: 'nearest',
-            });
-          }
-        }
+      if (focusedElement && containerRef.current) {
+        focusedElement.scrollIntoView({
+          block: 'nearest',
+          inline: 'nearest',
+        });
       }
     }, 16);
   }, [comboboxId, focusedIndex]);
