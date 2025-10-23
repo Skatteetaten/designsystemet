@@ -32,6 +32,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     handleOptionSelect,
     customListRef,
     maxSelected,
+    ariaBusy,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     if (!isOpen) {
@@ -70,6 +71,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           <ul
             id={listId}
             role={'listbox'}
+            aria-busy={ariaBusy}
             aria-multiselectable={multiple ? 'true' : 'false'}
             aria-labelledby={labelId}
             className={styles.optionsList}

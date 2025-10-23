@@ -66,7 +66,7 @@ const meta = {
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     isLoading: { table: { category: category.props } },
-    loadingMessage: { table: { category: category.props } },
+    loadingLabel: { table: { category: category.props } },
     maxSelected: { table: { category: category.props } },
     minSearchLength: {
       table: {

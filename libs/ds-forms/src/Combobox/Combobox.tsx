@@ -18,7 +18,6 @@ import { ComboboxOptions } from './ComboboxOptions';
 import { ComboboxSelectedOptions } from './ComboboxSelectedOptions';
 import {
   getComboboxPlaceholderDefault,
-  getComboboxLoadingMessageDefault,
   getComboboxMinSearchLengthDefault,
   getComboboxIsMultiSelectDefault,
   getComboboxIsLoadingDefault,
@@ -69,7 +68,7 @@ const Combobox = memo(
     hideLabel,
     isLoading = getComboboxIsLoadingDefault(),
     label,
-    loadingMessage = getComboboxLoadingMessageDefault(),
+    loadingLabel,
     minSearchLength = getComboboxMinSearchLengthDefault(),
     multiple = getComboboxIsMultiSelectDefault(),
     options,
@@ -279,7 +278,6 @@ const Combobox = memo(
               aria-activedescendant={focusedIndex >= 0 ? focusedOptionId : ''}
               aria-describedby={ariaDescribedBy}
               aria-invalid={!!errorMessage || undefined}
-              aria-busy={isLoading || undefined}
               data-testid={dataTestId}
               onChange={handleInputChange}
               onFocus={handleInputFocus}
@@ -327,6 +325,7 @@ const Combobox = memo(
             handleOptionSelect={handleOptionSelect}
             customListRef={containerRef}
             maxSelected={maxSelected}
+            ariaBusy={isLoading || undefined}
           />
         </div>
         <ErrorMessage
@@ -338,8 +337,6 @@ const Combobox = memo(
         </ErrorMessage>
         <ComboboxAccessibilityAnnouncer
           comboboxId={comboboxId}
-          isLoading={isLoading}
-          loadingMessage={loadingMessage}
           isOpen={isOpen}
           displayOptions={displayOptions}
           searchTerm={searchTerm}

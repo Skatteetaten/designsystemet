@@ -30,7 +30,7 @@ const meta = {
     hideLabel: { table: { disable: true } },
     minSearchLength: { table: { disable: true } },
     isLoading: { table: { disable: true } },
-    loadingMessage: { table: { disable: true } },
+    loadingLabel: { table: { disable: true } },
     // HTML attributes
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },
@@ -54,7 +54,7 @@ export const LoadingStates = {
   args: {
     ...defaultArgs,
     isLoading: true,
-    loadingMessage: 'Laster alternativer...',
+    loadingLabel: 'Laster alternativer...',
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -67,8 +67,8 @@ export const LoadingStates = {
     await userEvent.click(inputElement);
 
     // Verifiser at loading melding vises
-    const loadingMessage = canvas.getByTestId('combobox-loading-spinner');
-    await expect(loadingMessage).toBeInTheDocument();
+    const loadingLabel = canvas.getByTestId('combobox-loading-spinner');
+    await expect(loadingLabel).toBeInTheDocument();
 
     // Verifiser at normale alternativer ikke vises når loading er true
     const options = canvas.queryAllByRole('option');

@@ -21,7 +21,7 @@ const meta = {
     // Props
     comboboxId: { table: { disable: true } },
     isLoading: { table: { disable: true } },
-    loadingMessage: { table: { disable: true } },
+    loadingLabel: { table: { disable: true } },
     isOpen: { table: { disable: true } },
     displayOptions: { table: { disable: true } },
     searchTerm: { table: { disable: true } },
@@ -44,7 +44,7 @@ const mockOptions: ComboboxOption[] = [
 const defaultArgs: ComboboxAccessibilityAnnouncerProps = {
   comboboxId: 'test-combobox',
   isLoading: false,
-  loadingMessage: dsI18n.t('ds_progress:spinner.LoadingLabel'),
+  loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
   isOpen: false,
   displayOptions: [],
   searchTerm: '',
@@ -54,7 +54,7 @@ export const LoadingStateAnnouncement = {
   name: 'Loading message when isLoading is true (A13)',
   args: {
     ...defaultArgs,
-    loadingMessage: dsI18n.t('ds_progress:spinner.LoadingLabel'),
+    loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
     isLoading: true,
   },
   parameters: {
@@ -78,7 +78,7 @@ export const LoadingPriority = {
   name: 'Loading message prioritized over other states (A13)',
   args: {
     ...defaultArgs,
-    loadingMessage: dsI18n.t('ds_progress:spinner.LoadingLabel'),
+    loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
     displayOptions: mockOptions,
     searchTerm: 'test',
     isOpen: true,
@@ -337,7 +337,7 @@ export const StateTransitionLoadingState = {
   args: {
     ...defaultArgs,
     isLoading: true,
-    loadingMessage: dsI18n.t('ds_progress:spinner.LoadingLabel'),
+    loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
     displayOptions: [],
   },
   parameters: {
@@ -429,7 +429,7 @@ export const StateChangeLoadingToLoaded = {
   args: {
     ...defaultArgs,
     isLoading: true,
-    loadingMessage: dsI18n.t('ds_progress:spinner.LoadingLabel'),
+    loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
     displayOptions: [],
   },
   parameters: {

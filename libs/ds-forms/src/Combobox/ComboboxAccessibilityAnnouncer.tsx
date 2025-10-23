@@ -11,17 +11,11 @@ import type {
 import styles from './Combobox.module.scss';
 
 const getAnnouncementMessage = (
-  isLoading: boolean,
-  loadingMessage: string,
   isOpen: boolean,
   displayOptions: ComboboxOption[],
   searchTerm: string,
   t: ReturnType<typeof useTranslation>['t']
 ): string => {
-  if (isLoading) {
-    return loadingMessage;
-  }
-
   if (isOpen && displayOptions.length > 0) {
     return displayOptions.length === 1
       ? t('combobox.OneOptionAvailable')
@@ -37,8 +31,6 @@ const getAnnouncementMessage = (
 
 const ComboboxAccessibilityAnnouncerComponent = ({
   comboboxId,
-  isLoading,
-  loadingMessage,
   isOpen,
   displayOptions,
   searchTerm,
@@ -46,15 +38,8 @@ const ComboboxAccessibilityAnnouncerComponent = ({
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const announcerRef = useRef<HTMLDivElement>(null);
 
-  const message = getAnnouncementMessage(
-    isLoading,
-    loadingMessage,
-    isOpen,
-    displayOptions,
-    searchTerm,
-    t
-  );
-
+  const message = getAnnouncementMessage(isOpen, displayOptions, searchTerm, t);
+  console.log('message', message);
   return (
     <div
       ref={announcerRef}

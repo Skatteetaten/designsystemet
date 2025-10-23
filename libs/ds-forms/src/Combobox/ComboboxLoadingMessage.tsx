@@ -9,6 +9,7 @@ import styles from './Combobox.module.scss';
 export const ComboboxLoadingMessage = ({
   comboboxId,
   spinnerProps,
+  loadingLabel,
 }: LoadingMessageProps): JSX.Element => {
   return (
     <output
@@ -22,7 +23,9 @@ export const ComboboxLoadingMessage = ({
         titlePosition={'right'}
         {...spinnerProps}
         data-testid={'combobox-loading-spinner'}
-      />
+      >
+        {loadingLabel}
+      </Spinner>
     </output>
   );
 };
