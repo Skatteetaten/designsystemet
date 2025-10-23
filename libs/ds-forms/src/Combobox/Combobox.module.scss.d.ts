@@ -12,8 +12,8 @@ declare const classNames: {
   readonly chevronButton_large: 'chevronButton_large';
   readonly chipsInline: 'chipsInline';
   readonly chipsContainer: 'chipsContainer';
+  readonly optionsListContainer: 'optionsListContainer';
   readonly optionsList: 'optionsList';
-  readonly optionsListWithError: 'optionsListWithError';
   readonly option: 'option';
   readonly focused: 'focused';
   readonly disabled: 'disabled';

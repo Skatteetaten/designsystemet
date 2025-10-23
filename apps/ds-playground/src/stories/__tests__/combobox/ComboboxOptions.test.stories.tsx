@@ -31,7 +31,6 @@ const meta = {
     handleButtonFocus: { table: { disable: true } },
     handleOptionSelect: { table: { disable: true } },
     customListRef: { table: { disable: true } },
-    hasError: { table: { disable: true } },
     maxSelected: { table: { disable: true } },
   },
   tags: ['test'],
@@ -69,7 +68,7 @@ export const OptionsListWithARIAAttributes = {
   name: 'Options list with correct ARIA attributes (B2)',
   args: defaultArgs,
   render: (args: ComboboxOptionsProps): JSX.Element => (
-    <ComboboxOptions {...args} customListRef={createRef<HTMLUListElement>()} />
+    <ComboboxOptions {...args} customListRef={createRef<HTMLDivElement>()} />
   ),
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -102,7 +101,7 @@ export const LoadingStateWithSpinner = {
     isLoading: true,
   },
   render: (args: ComboboxOptionsProps): JSX.Element => (
-    <ComboboxOptions {...args} customListRef={createRef<HTMLUListElement>()} />
+    <ComboboxOptions {...args} customListRef={createRef<HTMLDivElement>()} />
   ),
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -137,7 +136,7 @@ export const NoResultsMessage = {
     displayOptions: [],
   },
   render: (args: ComboboxOptionsProps): JSX.Element => (
-    <ComboboxOptions {...args} customListRef={createRef<HTMLUListElement>()} />
+    <ComboboxOptions {...args} customListRef={createRef<HTMLDivElement>()} />
   ),
   parameters: {
     imageSnapshot: { disableSnapshot: true },

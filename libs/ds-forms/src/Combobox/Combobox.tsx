@@ -303,7 +303,32 @@ const Combobox = memo(
               onClick={handleChevronClick}
             />
           </div>
+          <ComboboxOptions
+            isOpen={isOpen}
+            isLoading={isLoading}
+            spinnerProps={spinnerProps}
+            displayOptions={displayOptions}
+            searchTerm={searchTerm}
+            minSearchLength={minSearchLength}
+            multiple={multiple}
+            selectedValues={selectedValues}
+            comboboxId={comboboxId}
+            listId={listId}
+            focusedIndex={focusedIndex}
+            classNames={classNames?.options}
+            handleButtonFocus={handleButtonFocus}
+            handleOptionSelect={handleOptionSelect}
+            customListRef={containerRef}
+            maxSelected={maxSelected}
+          />
         </div>
+        <ErrorMessage
+          id={errorId}
+          showError={!!errorMessage}
+          className={classNames?.errorMessage}
+        >
+          {errorMessage}
+        </ErrorMessage>
         <ComboboxAccessibilityAnnouncer
           comboboxId={comboboxId}
           isLoading={isLoading}
@@ -312,32 +337,6 @@ const Combobox = memo(
           displayOptions={displayOptions}
           searchTerm={searchTerm}
         />
-        <ComboboxOptions
-          isOpen={isOpen}
-          isLoading={isLoading}
-          spinnerProps={spinnerProps}
-          displayOptions={displayOptions}
-          searchTerm={searchTerm}
-          minSearchLength={minSearchLength}
-          multiple={multiple}
-          selectedValues={selectedValues}
-          comboboxId={comboboxId}
-          listId={listId}
-          focusedIndex={focusedIndex}
-          classNames={classNames?.options}
-          handleButtonFocus={handleButtonFocus}
-          handleOptionSelect={handleOptionSelect}
-          customListRef={containerRef}
-          hasError={!!errorMessage}
-          maxSelected={maxSelected}
-        />
-        <ErrorMessage
-          id={errorId}
-          showError={!!errorMessage}
-          className={classNames?.errorMessage}
-        >
-          {errorMessage}
-        </ErrorMessage>
       </div>
     );
   }
