@@ -45,7 +45,7 @@
     box-shadow: none;
   }
 
-  &:focus {
+  &:focus-visible {
     @extend %focus;
   }
 

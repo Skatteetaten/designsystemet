@@ -20,6 +20,10 @@ node_modules
 # IDE - VSCode
 .vscode/*
 
+
+# AI Agent plans
+.plan/
+
 # misc
 /.sass-cache
 .nyc_output

@@ -38,7 +38,7 @@
     background: var(--semantic-interactive-background);
   }
 
-  &:focus {
+  &:focus-visible {
     border: solid 2px var(--semantic-interactive-main);
   }
 

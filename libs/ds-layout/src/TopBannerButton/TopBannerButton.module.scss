@@ -46,7 +46,7 @@
     background-color: var(--semantic-interactive-background);
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: var(--semantic-interactive-main);
     outline: none;
   }
@@ -85,7 +85,7 @@
       background-color: var(--semantic-interactive-background);
     }
 
-    &:focus {
+    &:focus-visible {
       &::before {
         position: absolute;
         border: 2px solid var(--semantic-interactive-main);

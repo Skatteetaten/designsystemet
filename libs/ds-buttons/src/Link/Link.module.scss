@@ -24,7 +24,7 @@
   &_white {
     --semantic-interactive-main: var(--palette-graphite-0);
 
-    &:focus {
+    &:focus-visible {
       @extend %focus;
 
       color: var(--theme-primary);

@@ -17,7 +17,7 @@
   --skip-link-content-max-width: var(--semantic-responsive-container);
   --skip-link-content-margin: auto;
 
-  &:focus {
+  &:focus-visible {
     position: static;
     outline: 0;
     transform: translateY(0);

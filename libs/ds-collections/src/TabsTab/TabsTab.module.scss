@@ -16,10 +16,13 @@
     background-color: var(--semantic-interactive-background);
   }
 
-  &:focus {
+  &:focus-visible {
     background-repeat: no-repeat;
-    background-size: 100% 2px, 2px 100%;
-    box-shadow: 0 0 0 2px var(--palette-graphite-0),
+    background-size:
+      100% 2px,
+      2px 100%;
+    box-shadow:
+      0 0 0 2px var(--palette-graphite-0),
       0 0 0 1px inset var(--semantic-interactive-main);
     outline: var(--semantic-interactive-main) solid 2px;
     outline-offset: 2px;
@@ -37,8 +40,8 @@
     --front-color: var(--palette-graphite-0);
 
     &:hover,
-    &:focus,
-    &:hover:focus {
+    &:focus-visible,
+    &:hover:focus-visible {
       background-color: var(--semantic-interactive-main);
       color: var(--palette-graphite-0);
 
@@ -67,7 +70,7 @@
     margin-top: -1px;
     margin-bottom: -1px;
 
-    &:focus {
+    &:focus-visible {
       box-shadow: 0 0 0 2px var(--palette-graphite-0);
     }
   }

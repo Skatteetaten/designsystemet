@@ -103,7 +103,7 @@
     --description-color: var(--semantic-interactive-main);
   }
 
-  .input:focus + .label .labelCheckbox {
+  .input:focus-visible + .label .labelCheckbox {
     outline: var(--spacing-xxs) solid var(--semantic-interactive-main);
     outline-offset: var(--spacing-xxs);
   }
@@ -153,7 +153,7 @@
     --label-color: var(--semantic-disabled-foreground);
   }
 
-  .input:disabled:focus + .label .labelCheckbox {
+  .input:disabled:focus-visible + .label .labelCheckbox {
     outline: none;
   }
 }

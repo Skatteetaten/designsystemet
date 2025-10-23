@@ -64,7 +64,7 @@
   gap: var(--spacing-s);
   text-decoration: none;
 
-  &:focus {
+  &:focus-visible {
     outline: 2px var(--palette-azure-30) solid;
     outline-offset: 2px;
   }

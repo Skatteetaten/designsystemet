@@ -26,7 +26,7 @@ $radio-transform-x: 2px;
       --radio-background-color: var(--semantic-interactive-main);
     }
 
-    &:focus {
+    &:focus-visible {
       outline: none;
 
       &::before {
