@@ -86,6 +86,15 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
                 option,
                 comboboxState
               );
+
+              /* In single select mode, we want to mark the option as selected with aria-selected
+               when its label matches the search term */
+              const isSelectedInSingleMode =
+                !multiple && option.label === searchTerm;
+              const ariaSelected = multiple
+                ? isSelected
+                : isSelectedInSingleMode;
+
               const isFocused = index === focusedIndex;
 
               return (
@@ -93,7 +102,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
                   key={option.value}
                   id={`${comboboxId}-option-${index}`}
                   role={'option'} // We need to use <li> for screenreader support, even though sonarqube complains
-                  aria-selected={isSelected ? 'true' : 'false'}
+                  aria-selected={ariaSelected ? 'true' : 'false'}
                   aria-disabled={isDisabled ? 'true' : undefined}
                   className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isFocused ? styles.focused : ''} ${isSelected ? styles.selected : ''} ${isDisabled ? styles.disabled : ''}`}
                   tabIndex={-1}
