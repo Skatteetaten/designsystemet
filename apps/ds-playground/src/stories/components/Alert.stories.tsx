@@ -80,7 +80,7 @@ export const Examples: Story = {
   parameters: {
     docs: {
       codePanel: true,
-      source: { type: ExampleStory, language: 'tsx' },
+      source: { type: 'auto', language: 'tsx' },
     },
     controls: {
       exclude: /.*/,
