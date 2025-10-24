@@ -322,6 +322,7 @@ const Combobox = memo(
             customListRef={containerRef}
             maxSelected={maxSelected}
             ariaBusy={isLoading || undefined}
+            loadingLabel={loadingLabel}
           />
         </div>
         <ErrorMessage

@@ -46,53 +46,6 @@ const defaultArgs: ComboboxAccessibilityAnnouncerProps = {
   searchTerm: '',
 };
 
-export const LoadingStateAnnouncement = {
-  name: 'Loading message when isLoading is true (A13)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    await expect(announcer).toHaveTextContent(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
-  },
-} satisfies Story;
-
-export const LoadingPriority = {
-  name: 'Loading message prioritized over other states (A13)',
-  args: {
-    ...defaultArgs,
-    displayOptions: mockOptions,
-    searchTerm: 'test',
-    isOpen: true,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    await expect(announcer).toHaveTextContent(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
-  },
-} satisfies Story;
-
 export const OptionsAvailableAnnouncement = {
   name: 'Available options count when open with options (B1)',
   args: {
@@ -324,57 +277,6 @@ export const StateTransitionOpenState = {
   },
 } satisfies Story;
 
-export const StateTransitionLoadingState = {
-  name: 'State transition test - during loading',
-  args: {
-    ...defaultArgs,
-    displayOptions: [],
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    // During loading, should show loading message
-    await expect(announcer).toHaveTextContent(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
-  },
-} satisfies Story;
-
-export const StateTransitionLoadedState = {
-  name: 'State transition test - after loading complete',
-  args: {
-    ...defaultArgs,
-    displayOptions: mockOptions,
-    isOpen: true,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    // After loading completes, should not show loading and should show options
-    const loadingText = dsI18n.t('ds_progress:spinner.LoadingLabel');
-    await expect(announcer).not.toHaveTextContent(loadingText);
-    await expect(announcer).toHaveTextContent(
-      dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
-    );
-  },
-} satisfies Story;
-
 export const StateChangeClosedToOpen = {
   name: 'Message updates when changing from closed to open state (B1)',
   args: {
@@ -407,49 +309,6 @@ export const StateChangeClosedToOpen = {
     );
 
     // After opening, should show options available message
-    await expect(announcer).toHaveTextContent(
-      dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
-    );
-  },
-} satisfies Story;
-
-export const StateChangeLoadingToLoaded = {
-  name: 'Message updates when transitioning from loading to loaded (B1)',
-  args: {
-    ...defaultArgs,
-    displayOptions: [],
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ args, canvasElement, mount }): Promise<void> => {
-    // First render with loading state
-    await mount();
-    let announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-
-    // Initially loading - should show loading message
-    await expect(announcer).toHaveTextContent(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
-
-    // Re-render with loaded state (no loading, with options, open)
-    await mount(
-      React.createElement(ComboboxAccessibilityAnnouncer, {
-        ...args,
-        displayOptions: mockOptions,
-        isOpen: true,
-      })
-    );
-    announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-
-    // After loading completes, should show options available message and not loading
-    await expect(announcer).not.toHaveTextContent(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
     await expect(announcer).toHaveTextContent(
       dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
     );

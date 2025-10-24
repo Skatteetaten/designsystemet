@@ -15,4 +15,6 @@ const meta = {
 } satisfies Meta<typeof Combobox>;
 export default meta;
 
-export const Snapshots = createSingleStory(ComboboxStories, meta);
+export const Snapshots = createSingleStory(ComboboxStories, meta, {
+  runPlayFunctions: true,
+});

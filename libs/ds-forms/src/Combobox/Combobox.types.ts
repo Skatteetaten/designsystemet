@@ -130,6 +130,7 @@ export type ComboboxOptionsProps = {
   customListRef: RefObject<HTMLDivElement | null>;
   maxSelected?: number;
   ariaBusy?: boolean;
+  loadingLabel?: string;
 };
 
 export type MaxSelectedMessageProps = {

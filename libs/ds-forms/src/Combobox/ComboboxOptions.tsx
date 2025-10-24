@@ -32,6 +32,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     customListRef,
     maxSelected,
     ariaBusy,
+    loadingLabel,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     if (!isOpen) {
@@ -50,10 +51,13 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
         <div
           ref={customListRef}
           id={listId}
+          data-testid={'combobox-options-loading-container'}
           className={`${styles.optionsListContainer} ${classNames || ''}`}
+          aria-busy={ariaBusy}
         >
           <ComboboxLoadingMessage
             comboboxId={comboboxId}
+            loadingLabel={loadingLabel}
             spinnerProps={spinnerProps}
           />
         </div>
@@ -70,7 +74,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           <ul
             id={listId}
             role={'listbox'}
-            aria-busy={ariaBusy}
             aria-multiselectable={multiple ? 'true' : 'false'}
             className={styles.optionsList}
           >
