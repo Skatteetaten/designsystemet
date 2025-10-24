@@ -9,11 +9,7 @@ import {
   dsI18n,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
-import {
-  FileUploader,
-  FileUploaderProps,
-  getFileUploaderGetSpinnerLabelDefault,
-} from '@skatteetaten/ds-forms';
+import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';

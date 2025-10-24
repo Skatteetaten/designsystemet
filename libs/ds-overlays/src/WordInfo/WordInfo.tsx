@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { getWordInfoHasIconDefault } from './defaults';
 import { WordInfoComponent, WordInfoProps } from './WordInfo.types';
 import { Popover } from '../Popover/Popover';
 import { WordInfoContent } from '../WordInfoContent/WordInfoContent';

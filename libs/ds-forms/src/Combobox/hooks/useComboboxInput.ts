@@ -184,13 +184,7 @@ export function useComboboxInput({
       }, 100);
       onBlur?.(e);
     },
-    [
-      openDropdown,
-      onFocus,
-      preventZoom,
-      manageVirtualKeyboard,
-      chevronClickedRef,
-    ]
+    [closeDropdown, onBlur, manageVirtualKeyboard]
   );
 
   /**
