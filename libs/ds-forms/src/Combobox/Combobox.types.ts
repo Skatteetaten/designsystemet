@@ -24,7 +24,6 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'placeholder'
   | 'onBlur'
   | 'onFocus'
-  | 'autoComplete'
   | 'form'
   | 'tabIndex'
   | 'accessKey'
@@ -110,6 +109,7 @@ export type ComboboxSelectedOptionsProps = {
   selectedValues: ComboboxOption[];
   onRemoveValue: (value: ComboboxOption) => void;
   classNames?: string;
+  labelId?: string;
 };
 
 export type ComboboxOptionsProps = {
@@ -123,7 +123,6 @@ export type ComboboxOptionsProps = {
   selectedValues: ComboboxOption[];
   comboboxId: string;
   listId: string;
-  labelId: string;
   focusedIndex: number;
   classNames?: string;
   handleButtonFocus: (index: number) => void;

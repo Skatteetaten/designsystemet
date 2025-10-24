@@ -6,10 +6,7 @@ import {
   type JSX,
 } from 'react';
 
-import {
-  getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer';
@@ -77,8 +74,6 @@ const Combobox = memo(
     titleHelpSvg,
     value,
     variant = getComboboxVariantDefault(),
-    // TODO lage test for å sjekke om denne er satt
-    autoComplete = getCommonAutoCompleteDefault(),
     name,
     disabled,
     required,
@@ -260,6 +255,7 @@ const Combobox = memo(
               multiple={multiple}
               selectedValues={selectedValues}
               classNames={classNames?.chips}
+              labelId={labelId}
               onRemoveValue={handleRemoveValue}
             />
             <input
@@ -274,6 +270,7 @@ const Combobox = memo(
               className={`${styles.input} ${classNames?.input || ''}`}
               aria-expanded={isOpen}
               aria-autocomplete={'list'}
+              autoComplete={'off'}
               aria-controls={listId}
               aria-activedescendant={focusedIndex >= 0 ? focusedOptionId : ''}
               aria-describedby={ariaDescribedBy}
@@ -318,7 +315,6 @@ const Combobox = memo(
             selectedValues={selectedValues}
             comboboxId={comboboxId}
             listId={listId}
-            labelId={labelId}
             focusedIndex={focusedIndex}
             classNames={classNames?.options}
             handleButtonFocus={handleButtonFocus}

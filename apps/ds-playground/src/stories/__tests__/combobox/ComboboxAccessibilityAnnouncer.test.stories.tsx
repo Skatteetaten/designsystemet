@@ -20,8 +20,6 @@ const meta = {
   argTypes: {
     // Props
     comboboxId: { table: { disable: true } },
-    isLoading: { table: { disable: true } },
-    loadingLabel: { table: { disable: true } },
     isOpen: { table: { disable: true } },
     displayOptions: { table: { disable: true } },
     searchTerm: { table: { disable: true } },
@@ -43,8 +41,6 @@ const mockOptions: ComboboxOption[] = [
 
 const defaultArgs: ComboboxAccessibilityAnnouncerProps = {
   comboboxId: 'test-combobox',
-  isLoading: false,
-  loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
   isOpen: false,
   displayOptions: [],
   searchTerm: '',
@@ -54,8 +50,6 @@ export const LoadingStateAnnouncement = {
   name: 'Loading message when isLoading is true (A13)',
   args: {
     ...defaultArgs,
-    loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
-    isLoading: true,
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -78,11 +72,9 @@ export const LoadingPriority = {
   name: 'Loading message prioritized over other states (A13)',
   args: {
     ...defaultArgs,
-    loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
     displayOptions: mockOptions,
     searchTerm: 'test',
     isOpen: true,
-    isLoading: true,
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -336,8 +328,6 @@ export const StateTransitionLoadingState = {
   name: 'State transition test - during loading',
   args: {
     ...defaultArgs,
-    isLoading: true,
-    loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
     displayOptions: [],
   },
   parameters: {
@@ -362,7 +352,6 @@ export const StateTransitionLoadedState = {
   name: 'State transition test - after loading complete',
   args: {
     ...defaultArgs,
-    isLoading: false,
     displayOptions: mockOptions,
     isOpen: true,
   },
@@ -428,8 +417,6 @@ export const StateChangeLoadingToLoaded = {
   name: 'Message updates when transitioning from loading to loaded (B1)',
   args: {
     ...defaultArgs,
-    isLoading: true,
-    loadingLabel: dsI18n.t('ds_progress:spinner.LoadingLabel'),
     displayOptions: [],
   },
   parameters: {
@@ -451,7 +438,6 @@ export const StateChangeLoadingToLoaded = {
     await mount(
       React.createElement(ComboboxAccessibilityAnnouncer, {
         ...args,
-        isLoading: false,
         displayOptions: mockOptions,
         isOpen: true,
       })

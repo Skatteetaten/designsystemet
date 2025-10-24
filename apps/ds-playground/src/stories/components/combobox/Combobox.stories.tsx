@@ -3,10 +3,6 @@ import { JSX } from 'react';
 import type { Meta, StoryFn, StoryObj } from '@storybook/react/*';
 
 import {
-  getAutoCompletePropDescription,
-  getCommonAutoCompleteDefault,
-} from '@skatteetaten/ds-core-utils';
-import {
   Combobox,
   getComboboxMinSearchLengthDefault,
   getComboboxPlaceholderDefault,
@@ -88,15 +84,6 @@ const meta = {
     },
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
-    autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      description: getAutoCompletePropDescription(),
-    },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
