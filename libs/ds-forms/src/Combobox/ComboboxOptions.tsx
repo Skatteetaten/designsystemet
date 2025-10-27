@@ -137,7 +137,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             <ComboboxMaxSelectedMessage
               selectedCount={selectedValues.length}
               maxSelected={maxSelected}
-              comboboxId={comboboxId}
             />
           )}
         </div>

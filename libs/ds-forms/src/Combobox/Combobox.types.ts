@@ -134,7 +134,6 @@ export type ComboboxOptionsProps = {
 export type MaxSelectedMessageProps = {
   selectedCount: number;
   maxSelected: number;
-  comboboxId: string;
 };
 
 export type LoadingMessageProps = {
