@@ -129,7 +129,6 @@ export type ComboboxOptionsProps = {
   handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
   customListRef: RefObject<HTMLDivElement | null>;
   maxSelected?: number;
-  ariaBusy?: boolean;
   loadingLabel?: string;
 };
 

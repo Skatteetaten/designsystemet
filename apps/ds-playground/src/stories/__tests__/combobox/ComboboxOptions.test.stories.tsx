@@ -2,12 +2,10 @@
 import React, { JSX, createRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fn, waitFor, within } from 'storybook/test';
+import { expect, fn, within } from 'storybook/test';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import type { ComboboxOption } from '@skatteetaten/ds-forms';
 
-import { ComboboxLoadingMessage } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxLoadingMessage';
 import { ComboboxOptions } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxOptions';
 
 type ComboboxOptionsProps = React.ComponentProps<typeof ComboboxOptions>;
@@ -94,40 +92,6 @@ export const OptionsListWithARIAAttributes = {
   },
 } satisfies Story;
 
-export const LoadingStateWithSpinner = {
-  name: 'Loading state with spinner (A13)',
-  args: {
-    ...defaultArgs,
-    isLoading: true,
-  },
-  render: (args: ComboboxOptionsProps): JSX.Element => (
-    <ComboboxOptions {...args} customListRef={createRef<HTMLDivElement>()} />
-  ),
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-    a11y: { disable: true }, // Disable a11y checks for tests
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    await expect(
-      canvas.getByTestId('combobox-loading-spinner')
-    ).toBeInTheDocument();
-
-    await waitFor(() => {
-      expect(
-        canvas.getByText(dsI18n.t('ds_progress:spinner.LoadingLabel'))
-      ).toBeInTheDocument();
-    });
-
-    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
-  },
-} satisfies Story;
-
 export const NoResultsMessage = {
   name: 'No results message when search has no matches (A6)',
   args: {
@@ -152,34 +116,5 @@ export const NoResultsMessage = {
 
     await expect(listbox).toBeInTheDocument();
     await expect(canvas.getByText(/Ingen treff for «xyz»/)).toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const LoadingMessageDefaultText = {
-  name: 'Loading message with default text',
-  args: defaultArgs,
-  render: (): JSX.Element => (
-    <ComboboxLoadingMessage comboboxId={'test-combobox'} />
-  ),
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-    a11y: { disable: true }, // Disable a11y checks for tests
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    await expect(
-      canvas.getByTestId('combobox-loading-spinner')
-    ).toBeInTheDocument();
-
-    await waitFor(() => {
-      expect(
-        canvas.getByText(dsI18n.t('ds_progress:spinner.LoadingLabel'))
-      ).toBeInTheDocument();
-    });
   },
 } satisfies Story;

@@ -321,7 +321,6 @@ const Combobox = memo(
             handleOptionSelect={handleOptionSelect}
             customListRef={containerRef}
             maxSelected={maxSelected}
-            ariaBusy={isLoading || undefined}
             loadingLabel={loadingLabel}
           />
         </div>

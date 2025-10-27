@@ -376,15 +376,13 @@ export const WithLoading = {
     const inputElement = canvas.getByRole('combobox');
     await userEvent.click(inputElement);
 
-    const spinnerContainer = canvas.getByTestId(
-      'combobox-options-loading-container'
-    );
-    await expect(spinnerContainer).toBeInTheDocument();
-    await expect(spinnerContainer).toHaveAttribute('aria-busy', 'true');
+    const spinner = canvasElement.querySelector('div[class*="spinner"]');
+    await expect(spinner).toBeInTheDocument();
     // TODO fix this test
-    // await expect(spinnerContainer).toHaveTextContent(
+    // await expect(spinner).toHaveTextContent(
     //   dsI18n.t('ds_progress:spinner.LoadingLabel')
     // );
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -400,12 +398,10 @@ export const WithLoadingLabel = {
     const inputElement = canvas.getByRole('combobox');
     await userEvent.click(inputElement);
 
-    const spinnerContainer = canvas.getByTestId(
-      'combobox-options-loading-container'
-    );
-    await expect(spinnerContainer).toBeInTheDocument();
+    const spinner = canvasElement.querySelector('div[class*="spinner"]');
+    await expect(spinner).toBeInTheDocument();
     // TODO fix this test
-    // await expect(spinnerContainer).toHaveTextContent('Laster alternativer...');
+    // await expect(spinner).toHaveTextContent('Laster alternativer...');
 
     // Verifiser at input fortsatt er tilgjengelig for skriving
     await expect(inputElement).toBeEnabled();

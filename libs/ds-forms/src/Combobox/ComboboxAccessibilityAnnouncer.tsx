@@ -39,7 +39,7 @@ const ComboboxAccessibilityAnnouncerComponent = ({
   const announcerRef = useRef<HTMLDivElement>(null);
 
   const message = getAnnouncementMessage(isOpen, displayOptions, searchTerm, t);
-  console.log('message', message);
+
   return (
     <div
       ref={announcerRef}
