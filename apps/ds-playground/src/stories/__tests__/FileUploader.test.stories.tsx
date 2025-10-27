@@ -144,7 +144,7 @@ export const Defaults: StoryObj<FileUploaderProps> = {
     ).toBeInTheDocument();
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
 

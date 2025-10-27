@@ -192,7 +192,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -259,7 +259,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -390,7 +390,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

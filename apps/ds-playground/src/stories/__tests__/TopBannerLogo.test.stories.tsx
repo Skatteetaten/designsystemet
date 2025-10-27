@@ -111,7 +111,7 @@ export const Defaults = {
   },
   argTypes: {},
   parameters: {
-    pseudoStates: ['focus'],
+    pseudoStates: ['focus-visible'],
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

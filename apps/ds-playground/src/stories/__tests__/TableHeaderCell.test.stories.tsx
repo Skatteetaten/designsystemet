@@ -134,7 +134,7 @@ export const WithSortable = {
     isSortable: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
 
@@ -151,7 +151,7 @@ export const WithDisabled = {
     isSortDisabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

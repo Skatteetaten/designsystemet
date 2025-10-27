@@ -179,6 +179,9 @@ export const Defaults = {
   argTypes: {
     label: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const combobox = canvas.getByLabelText(defaultArgs.label as string);

@@ -126,7 +126,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -162,7 +162,7 @@ export const WithIcon = {
     svgPath: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -228,7 +228,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -248,7 +248,7 @@ export const WithDisabledAndIcon = {
     svgPath: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
 
@@ -266,7 +266,7 @@ export const WithDisabledAndBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   globals: {
     backgrounds: {
@@ -427,7 +427,7 @@ export const WithBrightness = {
     a11y: {
       test: 'off',
     },
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   globals: {
     backgrounds: {

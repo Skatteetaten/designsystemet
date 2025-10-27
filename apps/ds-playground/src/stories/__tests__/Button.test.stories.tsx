@@ -133,7 +133,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -153,7 +153,7 @@ export const VariantSecondary = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -173,7 +173,7 @@ export const VariantTertiary = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -190,7 +190,7 @@ export const VariantDanger = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -258,7 +258,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -278,7 +278,7 @@ export const WithDisabledAndIcon = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
 
