@@ -30,7 +30,7 @@ const meta = {
     hideLabel: { table: { disable: true } },
     minSearchLength: { table: { disable: true } },
     isLoading: { table: { disable: true } },
-    loadingLabel: { table: { disable: true } },
+    spinnerLabel: { table: { disable: true } },
     // HTML attributes
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },

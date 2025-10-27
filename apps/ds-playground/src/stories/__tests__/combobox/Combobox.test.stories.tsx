@@ -31,7 +31,7 @@ const meta = {
     hideLabel: { table: { disable: true } },
     minSearchLength: { table: { disable: true } },
     isLoading: { table: { disable: true } },
-    loadingLabel: { table: { disable: true } },
+    spinnerLabel: { table: { disable: true } },
     helpSvgPath: { table: { disable: true } },
     maxSelected: { table: { disable: true } },
     spinnerProps: { table: { disable: true } },
@@ -386,12 +386,12 @@ export const WithLoading = {
   },
 } satisfies Story;
 
-export const WithLoadingLabel = {
-  name: 'With LoadingLabel',
+export const WithSpinnerLabel = {
+  name: 'With SpinnerLabel',
   args: {
     ...defaultArgs,
     isLoading: true,
-    loadingLabel: 'Laster alternativer...',
+    spinnerLabel: 'Laster alternativer...',
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

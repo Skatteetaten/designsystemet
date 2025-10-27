@@ -8,6 +8,7 @@ import {
   getComboboxPlaceholderDefault,
   getComboboxVariantDefault,
 } from '@skatteetaten/ds-forms';
+import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 
 import {
   comboboxStoryOptions,
@@ -62,7 +63,6 @@ const meta = {
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     isLoading: { table: { category: category.props } },
-    loadingLabel: { table: { category: category.props } },
     maxSelected: { table: { category: category.props } },
     minSearchLength: {
       table: {
@@ -73,6 +73,10 @@ const meta = {
       },
     },
     multiple: { table: { category: category.props } },
+    spinnerLabel: {
+      table: { category: category.props },
+      defaultValue: { summary: getSpinnerLabelDefault() },
+    },
     spinnerProps: { control: false, table: { category: category.props } },
     titleHelpSvg: { table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },

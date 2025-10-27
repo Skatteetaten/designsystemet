@@ -31,7 +31,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     handleOptionSelect,
     customListRef,
     maxSelected,
-    loadingLabel,
+    spinnerLabel,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     if (!isOpen) {
@@ -53,7 +53,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
           className={`${styles.optionsListContainer} ${styles.loadingContainer} ${classNames || ''}`}
         >
           <Spinner titlePosition={'right'} {...spinnerProps}>
-            {loadingLabel}
+            {spinnerLabel}
           </Spinner>
         </div>
       );

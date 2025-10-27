@@ -65,7 +65,7 @@ const Combobox = memo(
     hideLabel,
     isLoading = getComboboxIsLoadingDefault(),
     label,
-    loadingLabel,
+    spinnerLabel,
     minSearchLength = getComboboxMinSearchLengthDefault(),
     multiple = getComboboxIsMultiSelectDefault(),
     options,
@@ -321,7 +321,7 @@ const Combobox = memo(
             handleOptionSelect={handleOptionSelect}
             customListRef={containerRef}
             maxSelected={maxSelected}
-            loadingLabel={loadingLabel}
+            spinnerLabel={spinnerLabel}
           />
         </div>
         <ErrorMessage
