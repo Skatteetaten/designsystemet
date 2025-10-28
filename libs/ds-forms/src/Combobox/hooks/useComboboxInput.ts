@@ -196,7 +196,6 @@ export function useComboboxInput({
    */
   const handleClearValue = useCallback((): void => {
     setSearchTerm('');
-    closeDropdown();
 
     if (inputRef.current) {
       safeFocus(inputRef.current);
@@ -208,15 +207,20 @@ export function useComboboxInput({
           (onSelectionChange as (value: ComboboxOption | null) => void)(null);
         }
       }
+
+      // Reopen dropdown after clearing using keyboard
+      requestAnimationFrame(() => {
+        openDropdown('', 'click');
+      });
     }
   }, [
     setSearchTerm,
-    closeDropdown,
     inputRef,
     safeFocus,
     onSelectionChange,
     multiple,
     value,
+    openDropdown,
   ]);
 
   return {
