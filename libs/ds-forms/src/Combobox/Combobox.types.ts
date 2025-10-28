@@ -51,8 +51,8 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   helpText?: LabelWithHelpProps['helpText'];
   /** Ledetekst som vises over komponenten */
   label: string;
-  /** Tilpasset melding som leses av skjermleser under loading */
-  loadingMessage?: string;
+  /** Overskriver teksten som vises med spinner når isLoading = true. */
+  spinnerLabel?: string;
   /** Minimum antall tegn før søkeresultater vises */
   minSearchLength?: number;
   /** Array av valg som kan velges fra */
@@ -129,6 +129,7 @@ export type ComboboxOptionsProps = {
   handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
   customListRef: RefObject<HTMLDivElement | null>;
   maxSelected?: number;
+  spinnerLabel?: string;
 };
 
 export type MaxSelectedMessageProps = {
@@ -140,6 +141,7 @@ export type MaxSelectedMessageProps = {
 export type LoadingMessageProps = {
   comboboxId: string;
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
+  spinnerLabel?: string;
 };
 
 export type ComboboxButtonProps = {
@@ -154,8 +156,6 @@ export type ComboboxButtonProps = {
 
 export type ComboboxAccessibilityAnnouncerProps = {
   comboboxId: string;
-  isLoading: boolean;
-  loadingMessage: string;
   isOpen: boolean;
   displayOptions: ComboboxOption[];
   searchTerm: string;

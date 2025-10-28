@@ -2,9 +2,9 @@ import React, { type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 import type { ComboboxOptionsProps } from './Combobox.types';
-import { ComboboxLoadingMessage } from './ComboboxLoadingMessage';
 import { ComboboxMaxSelectedMessage } from './ComboboxMaxSelectedMessage';
 import {
   getOptionState,
@@ -31,6 +31,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     handleOptionSelect,
     customListRef,
     maxSelected,
+    spinnerLabel,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     if (!isOpen) {
@@ -49,12 +50,11 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
         <div
           ref={customListRef}
           id={listId}
-          className={`${styles.optionsListContainer} ${classNames || ''}`}
+          className={`${styles.optionsListContainer} ${styles.loadingContainer} ${classNames || ''}`}
         >
-          <ComboboxLoadingMessage
-            comboboxId={comboboxId}
-            spinnerProps={spinnerProps}
-          />
+          <Spinner titlePosition={'right'} {...spinnerProps}>
+            {spinnerLabel}
+          </Spinner>
         </div>
       );
     }
