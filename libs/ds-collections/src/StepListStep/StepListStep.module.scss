@@ -101,16 +101,6 @@
     grid-area: 2/ 2 / 3 / 3;
     line-height: var(--semantic-line-height-article);
 
-    &_noButton {
-      gap: 0;
-    }
-
-    @media (min-width: breakpoints.$breakpoint-xs) {
-      &_noButton {
-        display: block;
-      }
-    }
-
     &_positiveResult,
     &_neutralResult {
       padding-top: var(--spacing-m);
