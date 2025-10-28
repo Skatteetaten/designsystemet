@@ -376,12 +376,11 @@ export const WithLoading = {
     const inputElement = canvas.getByRole('combobox');
     await userEvent.click(inputElement);
 
-    const spinner = canvasElement.querySelector('div[class*="spinner"]');
+    const spinner = await canvas.findByText(
+      dsI18n.t('ds_progress:spinner.LoadingLabel')
+    );
     await expect(spinner).toBeInTheDocument();
-    // TODO fix this test
-    // await expect(spinner).toHaveTextContent(
-    //   dsI18n.t('ds_progress:spinner.LoadingLabel')
-    // );
+
     await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
   },
 } satisfies Story;
@@ -398,10 +397,8 @@ export const WithSpinnerLabel = {
     const inputElement = canvas.getByRole('combobox');
     await userEvent.click(inputElement);
 
-    const spinner = canvasElement.querySelector('div[class*="spinner"]');
+    const spinner = await canvas.findByText('Laster alternativer...');
     await expect(spinner).toBeInTheDocument();
-    // TODO fix this test
-    // await expect(spinner).toHaveTextContent('Laster alternativer...');
 
     // Verifiser at input fortsatt er tilgjengelig for skriving
     await expect(inputElement).toBeEnabled();
