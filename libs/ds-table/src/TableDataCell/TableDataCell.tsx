@@ -51,6 +51,5 @@ export const TableDataCell = ({
     </Tag>
   );
 };
-export { getDataCellAsDefault };
 
 TableDataCell.displayName = 'TableDataCell';

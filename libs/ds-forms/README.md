@@ -14,10 +14,14 @@ npm i @skatteetaten/ds-forms
 
 ## Innhold
 
-- RadioGroup
 - Checkbox/CheckboxGroup
+- DatePicker
 - ErrorMessage
-- TextField
 - ErrorSummary
 - Fieldset
+- FileUploader
+- RadioGroup
+- SearchField
 - Select
+- TextArea
+- TextField

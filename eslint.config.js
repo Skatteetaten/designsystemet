@@ -78,7 +78,11 @@ export default [
             '@skatteetaten/ds-dev-config',
             '@nx/eslint-plugin',
           ],
-          ignoredFiles: ['**/vite.config.ts'],
+          ignoredFiles: [
+            '**/vite.config.ts',
+            '**/libs/ds-forms/**/*test*',
+            '**/libs/ds-forms/**/__tests__/**',
+          ],
           includeTransitiveDependencies: true,
         },
       ],

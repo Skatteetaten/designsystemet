@@ -43,9 +43,9 @@
   "topbannerexternalusermenu.AboutTheOrganisation": "About the enterprise",
   "topbannerexternalusermenu.MyPage": "My page",
   "topbannerexternalusermenu.Notification": "Notification",
-  "topbannerexternalusermenu.NotificationCountMessage": "Notifications, {{count}} unread",
+  "topbannerexternalusermenu.NotificationCountMessage": "{{count}} unread notifications",
   "topbannerexternalusermenu.OnBehalfOf": "On behalf of",
-  "topbannerexternalusermenu.OneNotificationMessage": "Notification, 1 unread",
+  "topbannerexternalusermenu.OneNotificationMessage": "1 unread notification ",
   "topbannerexternalusermenu.SwitchUser": "Switch user",
-  "wordinfo.WordExplanation": "(word explanation)"
+  "wordinfo.WordExplanation": "word explanation"
 }

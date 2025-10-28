@@ -125,12 +125,3 @@ export const Panel = ({
 };
 
 Panel.displayName = 'Panel';
-
-export {
-  getPanelVariantDefault,
-  getPanelSpacingDefault,
-  getPanelColorDefault,
-  getPanelTitleAsDefault,
-  getPanelSubtitleAsDefault,
-  getPanelPaddingDefault,
-};

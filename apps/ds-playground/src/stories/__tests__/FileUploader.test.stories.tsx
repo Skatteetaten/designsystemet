@@ -61,6 +61,11 @@ const meta = {
       control: 'text',
       table: { disable: true },
     },
+    spinnerLabel: {
+      table: {
+        disable: true,
+      },
+    },
     acceptedFileFormats: { table: { disable: true } },
     // HTML
     multiple: { table: { disable: true } },
@@ -404,3 +409,23 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
     imageSnapshot: { disableSnapshot: true },
   },
 };
+
+const spinnerLabel = 'Opplasting pågår, kan ta et par minutter.';
+
+export const WithCustomSpinnerLabel = {
+  name: 'With Custom Spinner Label',
+  args: {
+    spinnerLabel,
+    isUploading: true,
+  },
+  argTypes: {
+    spinnerLabel: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    const button = within(container as HTMLElement).getByRole('button');
+    await expect(button).toHaveTextContent(spinnerLabel);
+  },
+} satisfies Story;

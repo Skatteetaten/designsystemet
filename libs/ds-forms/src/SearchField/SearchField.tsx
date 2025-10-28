@@ -24,7 +24,6 @@ import {
   getSearchFieldHideLabelDefault,
 } from './defaults';
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
-import { searchInList } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
@@ -330,10 +329,3 @@ ${classNames?.searchContainer ?? ''}`.trim()}
 SearchField.displayName = 'SearchField';
 SearchField.Result = SearchFieldResult;
 SearchField.Result.displayName = 'SearchField.Result';
-
-export {
-  searchInList,
-  getSearchFieldHasSearchButtonIconDefault,
-  getEnableSRNavigationHintDefault,
-  getSearchFieldHideLabelDefault,
-};

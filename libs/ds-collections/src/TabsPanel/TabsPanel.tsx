@@ -49,5 +49,3 @@ export const TabsPanel = ({
 };
 
 TabsPanel.displayName = 'TabsPanel';
-
-export { getTabsPanelKeepMountedDefault };

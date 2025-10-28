@@ -13,6 +13,7 @@ import { AttachFileIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 import { Alert } from '@skatteetaten/ds-status';
 
+import { getFileUploaderGetSpinnerLabelDefault } from './defaults';
 import {
   FileUploaderComponent,
   FileUploaderProps,
@@ -46,6 +47,7 @@ export const FileUploader = (({
   uploadResult,
   uploadedFiles,
   invalidCharacterRegexp,
+  spinnerLabel = getFileUploaderGetSpinnerLabelDefault(),
   hasSpacing,
   hideLabel,
   showRequiredMark,
@@ -265,7 +267,7 @@ export const FileUploader = (({
               size={'large'}
               color={'blue'}
             >
-              {t('fileuploader.InProgressLabel')}
+              {spinnerLabel}
             </Spinner>
           ) : (
             <AttachFileIcon className={styles.icon} size={'large'} />

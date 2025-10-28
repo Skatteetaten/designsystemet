@@ -285,5 +285,3 @@ export const DatePicker = ({
 };
 
 DatePicker.displayName = 'DatePicker';
-
-export { getDatePickerDateFormat, getDatePickerPlaceholderDefault };

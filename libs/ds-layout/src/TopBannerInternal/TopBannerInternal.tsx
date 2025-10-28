@@ -107,4 +107,3 @@ export const TopBannerInternal = (({
 TopBannerInternal.displayName = 'TopBannerInternal';
 TopBannerInternal.ActionMenu = TopBannerInternalActionMenu;
 TopBannerInternal.ActionMenu.displayName = 'TopBannerInternal.ActionMenu';
-export { getTopBannerInternalHideLogoOnMobileDefault };

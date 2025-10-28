@@ -274,15 +274,7 @@ export function TopBannerExternalAndFooter({
                       key={index}
                       className={topBannerExternalExampleStyles.marginBottomS}
                     >
-                      <Link
-                        href={link.href}
-                        onClick={(e): void => {
-                          e.preventDefault();
-                          topBannerRef.current?.closeMenu?.();
-                        }}
-                      >
-                        {link.text}
-                      </Link>
+                      <Link href={link.href}>{link.text}</Link>
                     </li>
                   ))}
                 </ul>

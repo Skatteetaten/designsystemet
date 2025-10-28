@@ -1,0 +1,394 @@
+@use 'libs/ds-core-utils/src/mixins/styles';
+
+.srOnly {
+  @include styles.sr-only;
+}
+
+.comboboxWrapper {
+  position: relative;
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
+}
+
+.inputContainer {
+  position: relative;
+  display: grid;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border: none;
+  border-radius: 0;
+  background: var(--semantic-page-background);
+  box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
+  gap: var(--spacing-xs);
+  grid-template-areas: 'content button';
+  grid-template-columns: 1fr auto;
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
+
+  &:has(.input:disabled) {
+    background: var(--semantic-disabled-background);
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+  }
+
+  &:has(.input[aria-invalid='true']) {
+    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
+  }
+
+  &:has(.input:hover):not(:has(.input:disabled)) {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:has(.input:focus):not(:has(.input:disabled)),
+  &:has(.input:active):not(:has(.input:disabled)) {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 1px solid var(--semantic-interactive-main);
+  }
+
+  &_large {
+    min-height: var(--size-large-plus);
+  }
+
+  &.inputContainerMultiple {
+    gap: var(--spacing-s);
+  }
+}
+
+.inputContentArea {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-s);
+  grid-area: content;
+}
+
+.inputButtonArea {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: start;
+  justify-content: flex-start;
+  padding: var(--spacing-xxs);
+  grid-area: button;
+}
+
+.input {
+  min-width: 7rem;
+  flex: 1;
+  padding: 0;
+  border: none;
+
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-input);
+  outline: none;
+
+  &::placeholder {
+    color: var(--palette-graphite-50);
+  }
+
+  &:focus {
+    &::selection {
+      background: var(--semantic-interactive-background);
+    }
+  }
+
+  &:disabled {
+    background: var(--semantic-disabled-background);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+  }
+}
+
+.chevronButton {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:disabled,
+  &[data-disabled='true'] {
+    background: var(--semantic-disabled-background);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+    outline: 0;
+    pointer-events: none;
+  }
+
+  // Only apply hover styles to actual button elements (clear button)
+  &:is(:hover, :focus-visible):enabled {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:hover:enabled {
+    z-index: 10;
+    background-color: var(--semantic-interactive-background);
+  }
+
+  // Hover styles for chevron div (not button)
+  &:not(button):hover:not([data-disabled='true']) {
+    position: relative;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: var(--semantic-interactive-background);
+    outline: none;
+
+    &::before {
+      position: absolute;
+      border: 2px solid var(--semantic-interactive-main);
+      border-radius: 12rem;
+      content: '';
+      inset: 2px;
+    }
+  }
+
+  // Size variants for chevron button
+  &_large {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.chevronButton svg {
+  fill: var(--semantic-interactive-main);
+  pointer-events: none;
+}
+
+.chevronButton:disabled svg,
+.chevronButton[data-disabled='true'] svg {
+  fill: var(--semantic-disabled-foreground);
+}
+
+.chipsInline {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1px;
+  gap: var(--spacing-xs);
+}
+
+.chipsContainer {
+  margin-bottom: 0;
+}
+
+.optionsListContainer {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  right: 0;
+  left: 0;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  border: 1px solid var(--palette-graphite-100);
+  border-top: none;
+  margin: 1px 0 0;
+  background: var(--semantic-page-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
+}
+
+.optionsList {
+  padding: var(--spacing-xs) var(--spacing-s);
+  margin: 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-xs) var(--spacing-s);
+  background: transparent;
+  box-shadow: inset 0 -1px 0 0 var(--semantic-divider-30);
+  color: var(--semantic-page-foreground);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+
+  &:last-child {
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    z-index: 10;
+    outline: 3px solid var(--semantic-interactive-main);
+    outline-offset: -1px;
+  }
+
+  &.focused:not(.disabled) {
+    z-index: 10;
+    padding: var(--spacing-xs) var(--spacing-s);
+    box-shadow: none;
+    outline: 3px solid var(--semantic-interactive-main);
+    outline-offset: -1px;
+  }
+
+  // Skjul separator på elementet som kommer rett før det fokuserte elementet
+  &:not(.disabled):hover {
+    z-index: 10;
+    background: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-main);
+    text-decoration: underline;
+  }
+
+  &:has(+ &.focused:not(.disabled)) {
+    box-shadow: none;
+  }
+
+  &.selected {
+    background: var(--palette-accent-50);
+    color: var(--palette-accent-800);
+  }
+
+  &.selected.focused:not(.disabled) {
+    z-index: 10;
+    padding: var(--spacing-xs) var(--spacing-s);
+    background: var(--palette-accent-50);
+    box-shadow: none;
+    color: var(--palette-accent-800);
+    outline: 3px solid var(--semantic-interactive-main);
+    outline-offset: -1px;
+  }
+
+  &.selected:not(.disabled):hover {
+    color: var(--semantic-page-foreground);
+  }
+
+  &WithCheckbox {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-s);
+    gap: 0 var(--spacing-xs);
+
+    &.focused:not(.disabled) {
+      padding: var(--spacing-xs) var(--spacing-s);
+    }
+
+    &.selected.focused:not(.disabled) {
+      padding: var(--spacing-xs) var(--spacing-s);
+    }
+  }
+
+  &.disabled {
+    background: var(--semantic-disabled-background);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+
+    .optionLabel {
+      color: var(--semantic-disabled-foreground);
+    }
+  }
+}
+
+.checkboxIcon {
+  position: relative;
+  width: var(--size-medium);
+  min-width: var(--size-medium);
+  height: var(--size-medium);
+  flex-shrink: 0;
+  border: var(--spacing-xxs) solid var(--semantic-page-foreground);
+  background-color: var(--semantic-page-background);
+
+  &.checked {
+    border-color: var(--semantic-interactive-main);
+    background-color: var(--semantic-interactive-main);
+  }
+
+  &Check {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.125rem;
+    width: 0.8125rem;
+    height: 0.375rem;
+    border-bottom: var(--spacing-xxs) solid var(--palette-graphite-0);
+    border-left: var(--spacing-xxs) solid var(--palette-graphite-0);
+    transform: rotate(-45deg);
+  }
+
+  &.disabled {
+    border-color: var(--semantic-border);
+    background-color: var(--semantic-disabled-background);
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: var(--semantic-border);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    .optionLabel {
+      color: var(--semantic-disabled-foreground);
+    }
+  }
+}
+
+.option.disabled .checkboxIcon {
+  border-color: var(--semantic-disabled-foreground);
+  background-color: var(--semantic-disabled-background);
+
+  &.checked {
+    border-color: var(--semantic-disabled-foreground);
+    background-color: var(--semantic-disabled-background);
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.optionLabel {
+  min-width: 0;
+  flex: 1;
+}
+
+.emptyResult {
+  padding: var(--spacing-xs) var(--spacing-s);
+  color: var(--semantic-page-foreground);
+  opacity: 0.8;
+  text-align: left;
+}
+
+.loadingContainer {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.maxSelectedMessage {
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-top: 1px solid var(--semantic-divider-30);
+  margin-top: var(--spacing-xs);
+  background-color: var(--semantic-page-background);
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  font-style: italic;
+  opacity: 0.8;
+}

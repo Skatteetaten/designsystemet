@@ -44,5 +44,3 @@ export const Paragraph = ({
 };
 
 Paragraph.displayName = 'Paragraph';
-
-export { getParagraphVariantDefault };
