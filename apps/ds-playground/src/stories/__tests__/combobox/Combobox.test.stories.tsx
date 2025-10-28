@@ -406,3 +406,19 @@ export const WithSpinnerLabel = {
     await expect(inputElement).toHaveValue('test');
   },
 } satisfies Story;
+
+export const WithName = {
+  name: 'With Name',
+  args: {
+    ...defaultArgs,
+    name: 'category',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toHaveAttribute('name', 'category');
+  },
+} satisfies Story;

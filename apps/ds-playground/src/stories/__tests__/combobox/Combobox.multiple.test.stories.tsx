@@ -1,13 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 
 import { defaultArgs } from './utils/combobox.test.utils';
 
 const meta = {
   component: Combobox,
-  title: 'Tester/Combobox/Multiple Selection',
+  title: 'Tester/Combobox/Multiple',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -30,50 +31,127 @@ const meta = {
     hideLabel: { table: { disable: true } },
     minSearchLength: { table: { disable: true } },
     isLoading: { table: { disable: true } },
+    helpSvgPath: { table: { disable: true } },
+    maxSelected: { table: { disable: true } },
+    spinnerProps: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     spinnerLabel: { table: { disable: true } },
     // HTML attributes
+    accessKey: { table: { disable: true } },
+    form: { table: { disable: true } },
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },
     required: { table: { disable: true } },
+    tabIndex: { table: { disable: true } },
     // Events
+    onBlur: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
     onSelectionChange: { table: { disable: true } },
     onInputChange: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    chromatic: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Combobox>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const MultipleVariantSizeTest = {
-  name: 'Multiple mode automatisk large størrelse (A10)',
+export const Defaults = {
+  name: 'Defaults (A1, A10)',
   args: {
     ...defaultArgs,
     multiple: true,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
 
-    // A10 - Verifiser at multiple mode alltid vises i large størrelse
     const inputContainer = inputElement.closest('[data-variant]');
     await expect(inputContainer).toHaveAttribute('data-variant', 'large');
+    await userEvent.click(inputElement);
+  },
+} satisfies Story;
 
-    // Verifiser at multiple CSS klasse også er satt
-    const containerWithMultipleClass = inputElement.closest(
-      '[class*="inputContainerMultiple"]'
+export const WithSelectedValues = {
+  name: 'With Selected Values (A11)',
+  args: {
+    ...defaultArgs,
+    multiple: true,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+    await userEvent.click(options[1]);
+    await expect(options[0]).toHaveAttribute('aria-selected', 'true');
+    await expect(options[1]).toHaveAttribute('aria-selected', 'true');
+
+    const hiddenInputs = canvasElement.querySelectorAll('input[type="hidden"]');
+    await expect(hiddenInputs).toHaveLength(2);
+
+    await expect(inputElement).toBeEnabled();
+  },
+} satisfies Story;
+
+export const WithMaxSelected = {
+  name: 'With MaxSelected (A12)',
+  args: {
+    ...defaultArgs,
+    multiple: true,
+    maxSelected: 3,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+    await expect(options[1]).not.toHaveAttribute('aria-disabled');
+    await expect(options[2]).not.toHaveAttribute('aria-disabled');
+    const maxSelectedMessage = canvasElement.querySelector('[role="status"]');
+    await expect(maxSelectedMessage).toHaveAttribute('aria-live', 'polite');
+    await expect(maxSelectedMessage).toHaveAttribute('aria-atomic', 'true');
+    await expect(maxSelectedMessage).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.SelectedOfTotalSingular', {
+        selected: 1,
+        total: 3,
+      })
     );
-    await expect(containerWithMultipleClass).toBeInTheDocument();
+  },
+} satisfies Story;
 
-    // Test også at single mode bruker medium som default
-    // (Dette er implisitt test av at multiple=false ikke tvinger large)
+export const WithMaxSelectedValues = {
+  name: 'With MaxSelected Values (A12)',
+  args: {
+    ...defaultArgs,
+    multiple: true,
+    maxSelected: 2,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+    await userEvent.click(options[1]);
+    // TODO skal siste option også være disabled?
+    // await expect(options[2]).toBeDisabled();
+    await expect(options[2]).toHaveAttribute('aria-disabled', 'true');
+    // TODO skal det være mulig å søke/skrive mer?
+    const maxSelectedMessage = canvasElement.querySelector('[role="status"]');
+    await expect(maxSelectedMessage).toHaveAttribute('aria-live', 'polite');
+    await expect(maxSelectedMessage).toHaveAttribute('aria-atomic', 'true');
+    await expect(maxSelectedMessage).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.SelectedOfTotalSingular', {
+        selected: 2,
+        total: 2,
+      })
+    );
   },
 } satisfies Story;
 
@@ -84,20 +162,16 @@ export const MultipleSelectionMouse = {
     multiple: true,
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
-
-    // Klikk på input for å åpne dropdown
     await userEvent.click(inputElement);
 
-    // Verifiser at dropdown åpnes
     const options = canvas.getAllByRole('option');
     await expect(options).toHaveLength(3);
 
-    // Velg første alternativ med mus
     await userEvent.click(options[0]);
 
     // Verifiser at første alternativ er valgt og dropdown forblir åpen
@@ -131,7 +205,7 @@ export const MultipleSelectionKeyboard = {
     multiple: true,
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -178,15 +252,15 @@ export const MultipleSelectionKeyboard = {
   },
 } satisfies Story;
 
-export const HiddenInputsMultipleTest = {
-  name: 'Skjulte input-felt for flervalg',
+export const WithName = {
+  name: 'With Name',
   args: {
     ...defaultArgs,
     multiple: true,
     name: 'categories',
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

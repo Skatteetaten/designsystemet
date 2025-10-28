@@ -8,16 +8,11 @@ import { MaxSelectedMessageProps } from './Combobox.types';
 import styles from './Combobox.module.scss';
 
 export const ComboboxMaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
-  ({
-    selectedCount,
-    maxSelected,
-    comboboxId,
-  }: MaxSelectedMessageProps): JSX.Element => {
+  ({ selectedCount, maxSelected }: MaxSelectedMessageProps): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
     return (
       <div
-        id={`${comboboxId}-max-selected-message`}
         className={styles.maxSelectedMessage}
         role={'status'}
         aria-live={'polite'}
