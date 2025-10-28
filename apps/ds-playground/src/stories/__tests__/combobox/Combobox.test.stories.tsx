@@ -211,6 +211,7 @@ export const IsOpen = {
   name: 'IsOpen (A1)',
   args: {
     ...defaultArgs,
+    id: 'test-combobox',
   },
   argTypes: {
     variant: { table: { disable: false } },
@@ -220,6 +221,15 @@ export const IsOpen = {
     const combobox = canvas.getByRole('combobox');
     await userEvent.click(combobox);
     await expect(combobox).toHaveAttribute('aria-expanded', 'true');
+
+    const listbox = canvas.getByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+    await expect(listbox).toHaveAttribute('id', 'test-combobox-list');
+    await expect(listbox).toHaveAttribute('aria-multiselectable', 'false');
+
+    const options = canvas.getAllByRole('option');
+    await expect(options[0]).toHaveAttribute('id', 'test-combobox-option-0');
+    await expect(options[0]).toHaveAttribute('aria-selected', 'false');
   },
 } satisfies Story;
 
@@ -242,6 +252,25 @@ export const WithErrorMessage = {
       description: 'Error melding',
     });
     await expect(inputElement).toHaveAttribute('aria-invalid', 'true');
+  },
+} satisfies Story;
+
+export const NoResults = {
+  name: 'No Results (A6)',
+  args: {
+    ...defaultArgs,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.type(inputElement, 'xyz');
+    await expect(inputElement).toHaveValue('xyz');
+
+    const listbox = canvas.getByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+    await expect(listbox).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.NoResults', { searchTerm: 'xyz' })
+    );
   },
 } satisfies Story;
 
