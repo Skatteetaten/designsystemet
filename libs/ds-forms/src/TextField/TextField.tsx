@@ -5,6 +5,7 @@ import {
   useId,
   useImperativeHandle,
   useRef,
+  KeyboardEvent,
 } from 'react';
 
 import {
@@ -12,6 +13,7 @@ import {
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
   useValidateFormRequiredProps,
+  useInputHistory,
 } from '@skatteetaten/ds-core-utils';
 
 import { TextFieldProps } from './TextField.types';
@@ -70,21 +72,11 @@ export const TextField = ({
   const textboxRef = useRef<HTMLInputElement>(null);
   useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
-  // History stack for undo/redo functionality
-  const historyRef = useRef<{
-    past: { value: string; cursorPosition: number }[];
-    future: { value: string; cursorPosition: number }[];
-    current: { value: string; cursorPosition: number };
-  }>({
-    past: [],
-    future: [],
-    current: {
-      value: value?.toString() || defaultValue?.toString() || '',
-      cursorPosition: 0,
-    },
+  const inputHistory = useInputHistory({
+    initialValue: value?.toString() || defaultValue?.toString() || '',
   });
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>): void => {
     if (onKeyDown) {
       onKeyDown(e);
       return;
@@ -99,62 +91,36 @@ export const TextField = ({
     const inputValue = input.value;
 
     // Initialize history if empty (first interaction)
-    if (!historyRef.current.past.length && !historyRef.current.future.length) {
-      historyRef.current.current = {
-        value: inputValue,
-        cursorPosition,
-      };
-    }
+    inputHistory.initialize(inputValue, cursorPosition);
 
     // Handle redo (Ctrl+Y / Command+Y or Ctrl+Shift+Z / Command+Shift+Z)
     if (
       (e.ctrlKey || e.metaKey) &&
       (e.key === 'y' || (e.shiftKey && e.key === 'z'))
     ) {
-      if (historyRef.current.future.length > 0) {
+      const nextState = inputHistory.redo(cursorPosition);
+      if (nextState && textboxRef.current) {
         e.preventDefault();
+        textboxRef.current.value = nextState.value;
 
-        // Get the first item from future
-        const nextState = historyRef.current.future.shift();
-
-        // Move current value to past stack
-        const currentState = {
-          value: historyRef.current.current.value,
-          cursorPosition,
-        };
-
-        const newPast = [...historyRef.current.past, currentState];
-
-        // Update history ref
-        historyRef.current = {
-          past: newPast,
-          future: [...historyRef.current.future],
-          current: nextState || { value: '', cursorPosition: 0 },
-        };
-
-        // Update input value
-        if (textboxRef.current && nextState !== undefined) {
-          textboxRef.current.value = nextState.value || '';
-
-          // Set cursor position
-          requestAnimationFrame(() => {
-            if (textboxRef.current) {
-              const pos = Math.min(
-                nextState.cursorPosition,
-                nextState.value?.length || 0
-              );
-              textboxRef.current.setSelectionRange(pos, pos);
-            }
-          });
-
-          // Trigger onChange to keep external state in sync
-          if (onChange) {
-            const syntheticEvent = {
-              target: textboxRef.current,
-              currentTarget: textboxRef.current,
-            } as ChangeEvent<HTMLInputElement>;
-            onChange(syntheticEvent);
+        // Set cursor position
+        requestAnimationFrame(() => {
+          if (textboxRef.current) {
+            const pos = Math.min(
+              nextState.cursorPosition,
+              nextState.value.length
+            );
+            textboxRef.current.setSelectionRange(pos, pos);
           }
+        });
+
+        // Trigger onChange to keep external state in sync
+        if (onChange) {
+          const syntheticEvent = {
+            target: textboxRef.current,
+            currentTarget: textboxRef.current,
+          } as ChangeEvent<HTMLInputElement>;
+          onChange(syntheticEvent);
         }
       }
       return;
@@ -162,49 +128,29 @@ export const TextField = ({
 
     // Handle undo (Ctrl+Z / Command+Z)
     if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
-      if (historyRef.current.past.length > 0) {
+      const previousState = inputHistory.undo(cursorPosition);
+      if (previousState && textboxRef.current) {
         e.preventDefault();
+        textboxRef.current.value = previousState.value;
 
-        // Move current value to future stack
-        const currentState = {
-          value: historyRef.current.current.value,
-          cursorPosition,
-        };
-
-        const newFuture = [currentState, ...historyRef.current.future];
-
-        const previousState = historyRef.current.past.pop();
-
-        // Update history ref
-        historyRef.current = {
-          past: [...historyRef.current.past],
-          future: newFuture,
-          current: previousState || { value: '', cursorPosition: 0 },
-        };
-
-        // Update input value
-        if (textboxRef.current && previousState !== undefined) {
-          textboxRef.current.value = previousState.value || '';
-
-          // Set cursor position
-          requestAnimationFrame(() => {
-            if (textboxRef.current) {
-              const pos = Math.min(
-                previousState.cursorPosition,
-                previousState.value?.length || 0
-              );
-              textboxRef.current.setSelectionRange(pos, pos);
-            }
-          });
-
-          // Trigger onChange to keep external state in sync
-          if (onChange) {
-            const syntheticEvent = {
-              target: textboxRef.current,
-              currentTarget: textboxRef.current,
-            } as ChangeEvent<HTMLInputElement>;
-            onChange(syntheticEvent);
+        // Set cursor position
+        requestAnimationFrame(() => {
+          if (textboxRef.current) {
+            const pos = Math.min(
+              previousState.cursorPosition,
+              previousState.value.length
+            );
+            textboxRef.current.setSelectionRange(pos, pos);
           }
+        });
+
+        // Trigger onChange to keep external state in sync
+        if (onChange) {
+          const syntheticEvent = {
+            target: textboxRef.current,
+            currentTarget: textboxRef.current,
+          } as ChangeEvent<HTMLInputElement>;
+          onChange(syntheticEvent);
         }
       }
       return;
@@ -215,6 +161,9 @@ export const TextField = ({
     const isPreviousCharacterSeparator = /[, ]/.test(
       inputValue[cursorPosition - 1]
     );
+
+    const isNextCharacterSeparator = /[, ]/.test(inputValue[cursorPosition]);
+
     const selectionLength =
       (input.selectionEnd || 0) - (input.selectionStart || 0);
 
@@ -256,30 +205,51 @@ export const TextField = ({
       const newPosition = deletePosition - 1 - (separatorWasRemoved ? 1 : 0);
 
       // Save the current value to history before making changes
-      if (historyRef.current.current.value !== formattedValue) {
-        historyRef.current = {
-          past: [
-            ...historyRef.current.past,
-            {
-              value: historyRef.current.current.value || '',
-              cursorPosition: cursorPosition,
-            },
-          ],
-          future: [],
-          current: {
-            value: formattedValue,
-            cursorPosition: newPosition,
-          },
-        };
-      }
+      inputHistory.pushState(formattedValue, newPosition, input);
 
       input.value = formattedValue;
       requestAnimationFrame(() => {
         input.setSelectionRange(newPosition, newPosition);
       });
     }
-    //Update cursor position in case of arrow keys or other movement
-    historyRef.current.current.cursorPosition = cursorPosition;
+
+    if (
+      e.key === 'Delete' &&
+      !isAnyModifierKeyPressed &&
+      selectionLength === 0
+    ) {
+      // If cursor is before a separator, delete the digit after the separator
+      if (isNextCharacterSeparator) {
+        e.preventDefault();
+
+        const deletePosition = cursorPosition + 1;
+
+        const newValue =
+          inputValue.slice(0, cursorPosition) +
+          inputValue.slice(deletePosition + 1);
+
+        const formattedValue = addSpacesOrCommas(removeNonNumeric(newValue));
+
+        const separatorsInOldValue = inputValue.match(/[, ]/g)?.length || 0;
+        const separatorsInNewValue = formattedValue.match(/[, ]/g)?.length || 0;
+
+        // hvis det ble fjernet en separator, må vi flytte markøren et ekstra hopp til høyre, med mindre vi sletter den første separatoren.
+        const separatorWasRemoved = separatorsInOldValue > separatorsInNewValue;
+
+        const newPosition = deletePosition + (separatorWasRemoved ? 1 : 0);
+
+        // Save the current value to history before making changes
+        inputHistory.pushState(formattedValue, newPosition, input);
+
+        input.value = formattedValue;
+        requestAnimationFrame(() => {
+          input.setSelectionRange(newPosition, newPosition);
+        });
+      }
+    }
+
+    // Update cursor position in case of arrow keys or other movement
+    inputHistory.updateCursorPosition(cursorPosition);
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -287,7 +257,7 @@ export const TextField = ({
     const newValue = input.value;
 
     if (thousandSeparator) {
-      const cursorPosition = input.selectionStart || 0;
+      const cursorPosition = input.selectionEnd || 0;
 
       const digitsBeforeCursor = newValue
         .substring(0, cursorPosition)
@@ -315,20 +285,9 @@ export const TextField = ({
 
       // Update current in history after formatting and positioning cursor
       // Only update if value actually changed and if thousandSeparator is set
-      const oldValue = historyRef.current.current?.value || '';
+      const oldValue = inputHistory.getCurrentValue();
       if (oldValue !== formattedValue) {
-        // Add the previous value to the past stack
-        historyRef.current = {
-          past: [
-            ...historyRef.current.past,
-            {
-              value: oldValue || '',
-              cursorPosition: historyRef.current.current.cursorPosition,
-            },
-          ],
-          future: [], // Clear future stack on new changes
-          current: { value: input.value || '', cursorPosition: newPosition },
-        };
+        inputHistory.pushState(formattedValue, newPosition);
       }
 
       // Vi trenger ikke å kalle onChange dersom bruker har

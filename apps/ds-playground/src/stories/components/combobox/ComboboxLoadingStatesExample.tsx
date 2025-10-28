@@ -57,7 +57,7 @@ export const ComboboxLoadingStatesExample = (): JSX.Element => {
         label={'Søk i database (5000 elementer)'}
         placeholder={'Skriv minst 2 tegn for å søke blant 5000 elementer'}
         isLoading={asyncLoading}
-        loadingMessage={'Søker'}
+        spinnerLabel={'Søker'}
         options={asyncOptions}
         minSearchLength={2}
         hasSpacing

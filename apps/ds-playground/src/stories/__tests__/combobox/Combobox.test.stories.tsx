@@ -31,7 +31,7 @@ const meta = {
     hideLabel: { table: { disable: true } },
     minSearchLength: { table: { disable: true } },
     isLoading: { table: { disable: true } },
-    loadingMessage: { table: { disable: true } },
+    spinnerLabel: { table: { disable: true } },
     helpSvgPath: { table: { disable: true } },
     maxSelected: { table: { disable: true } },
     spinnerProps: { table: { disable: true } },
@@ -370,22 +370,35 @@ export const WithLoading = {
   args: {
     ...defaultArgs,
     isLoading: true,
-    loadingMessage: 'Laster alternativer...',
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
-    await expect(inputElement).toHaveAttribute('aria-busy', 'true');
-
     await userEvent.click(inputElement);
 
-    // TODO Sjekk om det skal ligge 2 loading messages her.
-    // Spinner tekst er synlig visuelt
-    const spinnerText = canvas.getByTestId('combobox-loading-spinner');
-    await expect(spinnerText).toBeInTheDocument();
-    // Loading message er kun tilgjengelig for skjermleser
-    const loadingMessage = canvas.getByText('Laster alternativer...');
-    await expect(loadingMessage).toBeInTheDocument();
+    const spinner = await canvas.findByText(
+      dsI18n.t('ds_progress:spinner.LoadingLabel')
+    );
+    await expect(spinner).toBeInTheDocument();
+
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithSpinnerLabel = {
+  name: 'With SpinnerLabel',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+    spinnerLabel: 'Laster alternativer...',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+
+    const spinner = await canvas.findByText('Laster alternativer...');
+    await expect(spinner).toBeInTheDocument();
 
     // Verifiser at input fortsatt er tilgjengelig for skriving
     await expect(inputElement).toBeEnabled();

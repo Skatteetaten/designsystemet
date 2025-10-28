@@ -31,11 +31,11 @@ const meta = {
     hideLabel: { table: { disable: true } },
     minSearchLength: { table: { disable: true } },
     isLoading: { table: { disable: true } },
-    loadingMessage: { table: { disable: true } },
     helpSvgPath: { table: { disable: true } },
     maxSelected: { table: { disable: true } },
     spinnerProps: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
+    spinnerLabel: { table: { disable: true } },
     // HTML attributes
     accessKey: { table: { disable: true } },
     form: { table: { disable: true } },

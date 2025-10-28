@@ -9,3 +9,4 @@ export * from './hooks/hooks';
 export * from './formatter/formatter';
 export * from './formatter/utils';
 export * from './formatter/useFormattedInput';
+export * from './formatter/useInputHistory';
