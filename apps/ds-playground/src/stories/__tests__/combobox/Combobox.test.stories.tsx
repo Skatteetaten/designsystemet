@@ -460,7 +460,7 @@ export const WithName = {
     name: 'category',
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
