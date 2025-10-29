@@ -8,7 +8,11 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { TextArea, TextAreaProps } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import {
+  coolString,
+  loremIpsum,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -700,6 +704,10 @@ export const WithControlledValueAndAutoSize = {
 
 const TemplateWithCharacterCounter = (args: TextAreaProps): JSX.Element => {
   const [value, setValue] = useState('');
+
+  if (value === 'Eivind') {
+    console.log(coolString);
+  }
 
   return (
     <TextArea
