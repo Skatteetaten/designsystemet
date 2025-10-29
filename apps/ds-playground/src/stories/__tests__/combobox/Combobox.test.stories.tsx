@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
@@ -437,5 +437,72 @@ export const WithName = {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toHaveAttribute('name', 'category');
+  },
+} satisfies Story;
+
+export const WithEventHandlers = {
+  name: 'With EventHandlers (A3)',
+  args: {
+    ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onInputChange: fn(),
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    inputElement.focus();
+    await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
+
+    await userEvent.tab();
+    await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+
+    await userEvent.type(inputElement, 'X');
+    await expect(inputElement).toHaveValue('X');
+    await waitFor(() => expect(args.onInputChange).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const OnSelectionChange = {
+  name: 'OnSelectionChange (A3)',
+  args: {
+    ...defaultArgs,
+    onSelectionChange: fn(),
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+
+    await expect(inputElement).toHaveValue('Norge');
+
+    await waitFor(() => expect(args.onSelectionChange).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const OnHelpToggle = {
+  name: 'OnHelpToggle',
+  args: {
+    ...defaultArgs,
+    onHelpToggle: fn(),
+    helpText: 'Dette er hjelpeteksten for comboboxen.',
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await userEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
