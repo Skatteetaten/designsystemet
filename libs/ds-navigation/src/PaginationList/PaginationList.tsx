@@ -9,13 +9,15 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import {
-  canHaveElipsisEnd,
-  canHaveElipsisStart,
+  canHaveEllipsisEnd,
+  canHaveEllipsisStart,
+  ELLIPSIS,
   getRange,
-  isElipsis,
+  isEllipsis,
 } from './utils';
 import {
   FirstLastPageButtonProps,
+  PaginationItem,
   PaginationListProps,
 } from '../Pagination/Pagination.types';
 
@@ -87,32 +89,32 @@ export const PaginationList = ({
   hidePrevNextButtonTitle,
 }: PaginationListProps): JSX.Element => {
   const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
-  const barList = [];
+  const items: PaginationItem[] = [];
   let rangeStart = 2;
   let rangeEnd = lastPage - 1;
-  barList.push(1);
-  if (canHaveElipsisStart(currentPage, sibling)) {
+  items.push(1);
+  if (canHaveEllipsisStart(currentPage, sibling)) {
     if (currentPage > 2) {
       rangeStart = currentPage - sibling;
     }
-    barList.push('elipsbeforeactive');
+    items.push(ELLIPSIS.BEFORE);
   }
   if (rangeStart < currentPage + 1) {
-    barList.push(...getRange(rangeStart, currentPage - 1));
+    items.push(...getRange(rangeStart, currentPage - 1));
   }
   if (currentPage > 1 && currentPage < lastPage) {
-    barList.push(currentPage);
+    items.push(currentPage);
   }
-  if (canHaveElipsisEnd(currentPage, sibling, lastPage)) {
+  if (canHaveEllipsisEnd(currentPage, sibling, lastPage)) {
     rangeEnd = currentPage + sibling;
   }
   if (rangeEnd > currentPage) {
-    barList.push(...getRange(currentPage + 1, rangeEnd));
+    items.push(...getRange(currentPage + 1, rangeEnd));
   }
-  if (canHaveElipsisEnd(currentPage, sibling, lastPage)) {
-    barList.push('elipsafteractive');
+  if (canHaveEllipsisEnd(currentPage, sibling, lastPage)) {
+    items.push(ELLIPSIS.AFTER);
   }
-  barList.push(lastPage);
+  items.push(lastPage);
 
   return (
     <>
@@ -125,9 +127,9 @@ export const PaginationList = ({
           hidePrevNextButtonTitle={hidePrevNextButtonTitle}
         />
       )}
-      {barList.map((paging) => (
+      {items.map((paging) => (
         <li key={paging}>
-          {isElipsis(paging) ? (
+          {isEllipsis(paging) ? (
             <p
               className={styles.elipsis}
               aria-label={dsI18n.t('pagination.EllipsisAltText')}
