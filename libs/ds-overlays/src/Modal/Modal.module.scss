@@ -51,10 +51,6 @@
     border: none;
   }
 
-  &NoPaddingTop {
-    padding-top: 0;
-  }
-
   &Content {
     &[data-padding='none'] {
       padding: 0;
@@ -74,6 +70,10 @@
 
     &[data-padding='mega'] {
       padding: calc(var(--spacing-mega) - 0.25rem);
+    }
+
+    &[data-no-padding-top='true'] {
+      padding-top: 0;
     }
   }
 }

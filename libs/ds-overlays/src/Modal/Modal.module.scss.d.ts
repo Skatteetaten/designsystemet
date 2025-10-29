@@ -4,7 +4,6 @@ declare const classNames: {
   readonly modalHeading: 'modalHeading';
   readonly modalHeadingNoPadding: 'modalHeadingNoPadding';
   readonly modalIllustration: 'modalIllustration';
-  readonly modalNoPaddingTop: 'modalNoPaddingTop';
   readonly modalContent: 'modalContent';
   readonly closeButton: 'closeButton';
   readonly srOnly: 'srOnly';

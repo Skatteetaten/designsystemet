@@ -165,7 +165,6 @@ export const Modal = ({
   };
 
   const hideTitleClassName = hideTitle ? styles.srOnly : '';
-  const noPaddingTop = imageSource ? styles.modalNoPaddingTop : '';
   const headingNoPaddingClassName =
     padding === 'mega' ? styles.modalHeadingNoPadding : '';
 
@@ -218,8 +217,9 @@ export const Modal = ({
           />
         )}
         <div
-          className={`${styles.modalContent} ${noPaddingTop}`.trim()}
+          className={styles.modalContent}
           data-padding={padding}
+          data-no-padding-top={imageSource ? 'true' : undefined}
         >
           {renderIcon && <div>{renderIcon?.()}</div>}
           <Heading
