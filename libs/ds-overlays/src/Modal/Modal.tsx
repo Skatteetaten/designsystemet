@@ -20,7 +20,7 @@ import {
   getModalPaddingDefault,
   getModalVariantDefault,
 } from './defaults';
-import { ModalPadding, ModalProps } from './Modal.types';
+import { ModalProps } from './Modal.types';
 
 import styles from './Modal.module.scss';
 
@@ -165,8 +165,6 @@ export const Modal = ({
   };
 
   const hideTitleClassName = hideTitle ? styles.srOnly : '';
-  const paddingClassName =
-    styles[`modalPadding${padding.toUpperCase() as Uppercase<ModalPadding>}`];
   const noPaddingTop = imageSource ? styles.modalNoPaddingTop : '';
   const headingNoPaddingClassName =
     padding === 'mega' ? styles.modalHeadingNoPadding : '';
@@ -219,7 +217,10 @@ export const Modal = ({
             }`.trim()}
           />
         )}
-        <div className={`${paddingClassName} ${noPaddingTop}`.trim()}>
+        <div
+          className={`${styles.modalContent} ${noPaddingTop}`.trim()}
+          data-padding={padding}
+        >
           {renderIcon && <div>{renderIcon?.()}</div>}
           <Heading
             className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}

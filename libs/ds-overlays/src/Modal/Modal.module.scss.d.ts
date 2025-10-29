@@ -4,12 +4,8 @@ declare const classNames: {
   readonly modalHeading: 'modalHeading';
   readonly modalHeadingNoPadding: 'modalHeadingNoPadding';
   readonly modalIllustration: 'modalIllustration';
-  readonly modalPaddingNONE: 'modalPaddingNONE';
-  readonly modalPaddingS: 'modalPaddingS';
-  readonly modalPaddingM: 'modalPaddingM';
-  readonly modalPaddingL: 'modalPaddingL';
-  readonly modalPaddingMEGA: 'modalPaddingMEGA';
   readonly modalNoPaddingTop: 'modalNoPaddingTop';
+  readonly modalContent: 'modalContent';
   readonly closeButton: 'closeButton';
   readonly srOnly: 'srOnly';
 };
