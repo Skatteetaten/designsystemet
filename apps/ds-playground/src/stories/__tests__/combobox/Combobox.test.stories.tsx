@@ -52,7 +52,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    chromatic: { disableSnapshot: false },
   },
 } satisfies Meta<typeof Combobox>;
 
@@ -73,7 +73,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -101,7 +101,7 @@ export const WithAttributes = {
     a11y: {
       test: 'off',
     },
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -138,7 +138,7 @@ export const WithCustomClassNames = {
     },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -179,9 +179,6 @@ export const Defaults = {
   argTypes: {
     label: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const combobox = canvas.getByLabelText(defaultArgs.label as string);
@@ -204,6 +201,26 @@ export const Defaults = {
       '[id^=comboboxErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHover = {
+  name: 'With Hover (A1)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    pseudo: { hover: true },
+  },
+} satisfies Story;
+
+export const WithFocus = {
+  name: 'With Focus (A1)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    pseudo: { focus: true },
   },
 } satisfies Story;
 
@@ -300,7 +317,7 @@ export const WithRequired = {
     required: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -335,7 +352,7 @@ export const WithPlaceholder = {
     placeholder: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -357,7 +374,7 @@ export const WithAccessKey = {
     accessKey: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
