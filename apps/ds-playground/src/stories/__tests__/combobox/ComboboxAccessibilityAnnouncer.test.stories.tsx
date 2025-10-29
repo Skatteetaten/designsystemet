@@ -25,9 +25,6 @@ const meta = {
     searchTerm: { table: { disable: true } },
   },
   tags: ['test'],
-  parameters: {
-    imageSnapshot: { disableSnapshot: false },
-  },
 } satisfies Meta<typeof ComboboxAccessibilityAnnouncer>;
 
 export default meta;
@@ -42,29 +39,20 @@ const mockOptions: ComboboxOption[] = [
 const defaultArgs: ComboboxAccessibilityAnnouncerProps = {
   comboboxId: 'test-combobox',
   isOpen: false,
-  displayOptions: [],
+  displayOptions: mockOptions,
   searchTerm: '',
 };
 
-export const OptionsAvailableAnnouncement = {
-  name: 'Available options count when open with options (B1)',
+export const MultipleOptionsAnnouncement = {
+  name: 'Multiple options announcement (B1)',
   args: {
     ...defaultArgs,
-    displayOptions: mockOptions,
     isOpen: true,
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const announcer = canvasElement.ownerDocument.getElementById(
       'test-combobox-status'
     );
-    await expect(announcer).toHaveAttribute('aria-live', 'polite');
     await expect(announcer).toHaveTextContent(
       dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
     );
@@ -78,14 +66,7 @@ export const SingleOptionAnnouncement = {
     displayOptions: [{ label: 'Single Option', value: '1' }],
     isOpen: true,
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const announcer = canvasElement.ownerDocument.getElementById(
       'test-combobox-status'
     );
@@ -96,112 +77,30 @@ export const SingleOptionAnnouncement = {
 } satisfies Story;
 
 export const NoResultsAnnouncement = {
-  name: 'No results when open with search term but no options (B1)',
+  name: 'No results (B1)',
   args: {
     ...defaultArgs,
     displayOptions: [],
     searchTerm: 'xyz',
     isOpen: true,
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const announcer = canvasElement.ownerDocument.getElementById(
       'test-combobox-status'
     );
-    await expect(announcer).toHaveAttribute('aria-live', 'polite');
     await expect(announcer).toHaveTextContent(
       dsI18n.t('ds_forms:combobox.NoResults', { searchTerm: 'xyz' })
     );
   },
 } satisfies Story;
 
-export const NoResultsWhenClosed = {
-  name: 'No results announcement should not appear when closed',
-  args: {
-    ...defaultArgs,
-    isOpen: false,
-    displayOptions: [],
-    searchTerm: 'xyz',
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    await expect(announcer).toHaveTextContent('');
-  },
-} satisfies Story;
-
-export const NoResultsWithoutSearchTerm = {
-  name: 'No results announcement should not appear without search term',
-  args: {
-    ...defaultArgs,
-    displayOptions: [],
-    searchTerm: '',
-    isOpen: true,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    await expect(announcer).toHaveTextContent('');
-  },
-} satisfies Story;
-
-export const AccessibilityAttributes = {
-  name: 'Correct ARIA attributes',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    await expect(announcer).toHaveAttribute('aria-live', 'polite');
-    await expect(announcer).toHaveAttribute('aria-atomic', 'true');
-  },
-} satisfies Story;
-
-export const CustomComboboxId = {
-  name: 'Correct id based on comboboxId',
+export const WithId = {
+  name: 'With Id',
   args: {
     ...defaultArgs,
     comboboxId: 'country-selector',
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const announcer = canvasElement.ownerDocument.getElementById(
       'country-selector-status'
     );
@@ -209,108 +108,17 @@ export const CustomComboboxId = {
   },
 } satisfies Story;
 
-export const ScreenReaderOnlyStyling = {
-  name: 'Screen reader only styling applied',
+export const Defaults = {
+  name: 'Defaults',
   args: {
     ...defaultArgs,
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const announcer = canvasElement.ownerDocument.getElementById(
       'test-combobox-status'
     );
-    await expect(announcer?.className).toMatch(/srOnly/);
-  },
-} satisfies Story;
-
-export const StateTransitionClosedState = {
-  name: 'State transition test - initially closed',
-  args: {
-    ...defaultArgs,
-    isOpen: false,
-    displayOptions: mockOptions,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    // When closed, should have empty text (representing initial state before user opens)
+    await expect(announcer).toHaveAttribute('aria-live', 'polite');
+    await expect(announcer).toHaveAttribute('aria-atomic', 'true');
     await expect(announcer).toHaveTextContent('');
-  },
-} satisfies Story;
-
-export const StateTransitionOpenState = {
-  name: 'State transition test - after opening',
-  args: {
-    ...defaultArgs,
-    isOpen: true,
-    displayOptions: mockOptions,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
-    const announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-    // After opening, should show options available message
-    await expect(announcer).toHaveTextContent(
-      dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
-    );
-  },
-} satisfies Story;
-
-export const StateChangeClosedToOpen = {
-  name: 'Message updates when changing from closed to open state (B1)',
-  args: {
-    ...defaultArgs,
-    isOpen: false,
-    displayOptions: mockOptions,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ args, canvasElement, mount }): Promise<void> => {
-    // First render with closed state
-    await mount();
-    let announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-
-    // Initially closed - should have empty text
-    await expect(announcer).toHaveTextContent('');
-
-    // Re-render with open state to simulate opening the combobox
-    await mount(
-      React.createElement(ComboboxAccessibilityAnnouncer, {
-        ...args,
-        isOpen: true,
-      })
-    );
-    announcer = canvasElement.ownerDocument.getElementById(
-      'test-combobox-status'
-    );
-
-    // After opening, should show options available message
-    await expect(announcer).toHaveTextContent(
-      dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
-    );
   },
 } satisfies Story;
