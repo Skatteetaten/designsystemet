@@ -43,7 +43,6 @@
   &_dragging {
     border-style: solid;
     background: var(--semantic-interactive-background);
-    box-shadow: 0 0 0 4px var(--semantic-interactive-background);
   }
 
   &:focus-visible {

@@ -50,8 +50,6 @@
   }
 
   &:active {
-    @extend %focus;
-
     border-color: var(--semantic-interactive-foreground);
     background-color: var(--semantic-interactive-foreground);
     box-shadow: none;

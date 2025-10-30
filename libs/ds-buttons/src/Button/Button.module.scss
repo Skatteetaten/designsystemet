@@ -98,7 +98,6 @@
     }
 
     &:active {
-      @extend %focus;
       @extend %active;
 
       border-color: var(--semantic-interactive-foreground);
@@ -131,7 +130,6 @@
     }
 
     &:active {
-      @extend %focus;
       @extend %active;
 
       border-color: var(--semantic-interactive-main);
@@ -165,7 +163,6 @@
     }
 
     &:active {
-      @extend %focus;
       @extend %active;
 
       border-color: var(--semantic-interactive-main);
@@ -203,7 +200,6 @@
     }
 
     &:active {
-      @extend %focus;
       @extend %active;
 
       & .icon {

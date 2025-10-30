@@ -33,13 +33,12 @@
   }
 
   &:active {
-    background-color: var(--semantic-interactive-background);
-    color: var(--semantic-interactive-foreground);
-    outline: 2px solid var(--semantic-interactive-foreground);
+    background-color: var(--semantic-interactive-foreground);
+    color: var(--palette-graphite-0);
     outline-offset: 2px;
 
     .icon_active {
-      fill: var(--semantic-interactive-foreground);
+      fill: var(--palette-graphite-0);
     }
   }
 }

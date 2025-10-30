@@ -69,8 +69,6 @@
   }
 
   &:active {
-    @extend %focus;
-
     --inline-button-foreground-color: var(--palette-graphite-0);
     --inline-button-background-color: var(--semantic-interactive-foreground);
 

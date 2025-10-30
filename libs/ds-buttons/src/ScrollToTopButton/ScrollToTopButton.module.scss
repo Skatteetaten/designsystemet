@@ -43,7 +43,7 @@
   }
 
   &:active {
-    border: solid 2px var(--semantic-interactive-foreground);
+    border: solid 2px var(--semantic-interactive-background);
     background: var(--semantic-interactive-background);
     color: var(--semantic-interactive-foreground);
     transform: translateY(2px);
@@ -69,10 +69,10 @@
 
   &:active &IconContainer {
     border: solid 2px var(--semantic-interactive-foreground);
-    background: transparent;
+    background-color: var(--semantic-interactive-foreground);
 
     &Icon {
-      fill: var(--semantic-interactive-foreground);
+      fill: var(--palette-graphite-0);
     }
   }
 
