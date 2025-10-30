@@ -1,23 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 600">
-  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
-  <defs>
-    <style>
-      .st0 {
-        fill: #fff;
-      }
-
-      .st1 {
-        fill: #c8102e;
-      }
-
-      .st2 {
-        fill: #012169;
-      }
-    </style>
-  </defs>
-  <g id="Layer_1" focusable="false">
-    <rect class="st0" width="1000" height="600"/>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 600" style="enable-background:new 0 0 1000 600;" xml:space="preserve"
+     focusable="false" aria-hidden="true">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#C8102E;}
+	.st2{fill:#012169;}
+</style>
+<rect class="st0" width="1000" height="600"/>
     <g>
       <polygon class="st2" points="165.8 200 0 200 0 117.1 165.8 200"/>
       <polygon class="st2" points="165.8 400 0 482.9 0 400 165.8 400"/>
@@ -33,5 +23,4 @@
       <polygon class="st1" points="1000 505.3 1000 549.4 701.6 400 789.4 400 1000 505.3"/>
       <polygon class="st1" points="1000 240 1000 360 560 360 560 600 440 600 440 360 0 360 0 240 440 240 440 0 560 0 560 240 1000 240"/>
     </g>
-  </g>
 </svg>
