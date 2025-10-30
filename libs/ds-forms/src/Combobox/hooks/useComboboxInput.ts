@@ -85,7 +85,7 @@ export function useComboboxInput({
    */
   const handleInputChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>): void => {
-      const newValue = e.target.value;
+      const newValue = e.target.value.trimStart();
       setSearchTerm(newValue);
 
       // Clear selection in uncontrolled single-select mode when input is emptied
