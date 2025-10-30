@@ -22,7 +22,6 @@
 .inputContainer {
   position: relative;
   display: grid;
-  align-items: center;
   padding: var(--spacing-xs) var(--spacing-s);
   border: none;
   border-radius: 0;
@@ -70,7 +69,6 @@
   display: flex;
   min-width: 0;
   flex-wrap: wrap;
-  align-items: center;
   gap: var(--spacing-s);
   grid-area: content;
 }
@@ -189,7 +187,7 @@
 .chipsInline {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1px;
+  margin-top: var(--spacing-xs);
   gap: var(--spacing-xs);
 }
 
@@ -286,14 +284,6 @@
     align-items: center;
     padding: var(--spacing-xs) var(--spacing-s);
     gap: 0 var(--spacing-xs);
-
-    &.focused:not(.disabled) {
-      padding: var(--spacing-xs) var(--spacing-s);
-    }
-
-    &.selected.focused:not(.disabled) {
-      padding: var(--spacing-xs) var(--spacing-s);
-    }
   }
 
   &.disabled {
