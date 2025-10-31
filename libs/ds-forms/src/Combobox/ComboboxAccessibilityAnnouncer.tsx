@@ -30,7 +30,6 @@ const getAnnouncementMessage = (
 };
 
 const ComboboxAccessibilityAnnouncerComponent = ({
-  comboboxId,
   isOpen,
   displayOptions,
   searchTerm,
@@ -64,7 +63,6 @@ const ComboboxAccessibilityAnnouncerComponent = ({
       ref={announcerRef}
       aria-live={'polite'}
       className={styles.srOnly}
-      id={`${comboboxId}-status`}
       aria-atomic
     >
       {message}

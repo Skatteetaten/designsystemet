@@ -332,7 +332,6 @@ const Combobox = memo(
           {errorMessage}
         </ErrorMessage>
         <ComboboxAccessibilityAnnouncer
-          comboboxId={comboboxId}
           isOpen={isOpen}
           displayOptions={displayOptions}
           searchTerm={searchTerm}
