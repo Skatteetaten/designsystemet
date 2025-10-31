@@ -8,40 +8,51 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 ## Kommandoer
 
-### Codemod
+### Migrate
 
-Bruk `codemod`-kommandoen for å utføre kode-transformasjoner.
+Bruk `migrate`-kommandoen for å utføre kode-transformasjoner.
 
 ```bash
-npx @skatteetaten/ds-cli codemod <migration_name> <path>
+npx @skatteetaten/ds-cli migrate <migration_name> <path>
 ```
 
 #### Alternativer:
 
-- `--dry, -d`: Kjør uten å gjøre noen endringer.
-- `--exclude, -e`: Ekskluder filer eller mapper.
-- `--list, -l`: Vis tilgjengelige codemods.
-- `--help`: Vis hjelp for `codemod`-kommandoen.
+- `--dry, -d`: Forhåndsvis endringer uten å utføre dem.
+- `--exclude, -e <pattern>`: Ekskluder filer/mapper (kan brukes flere ganger).
+- `--list, -l`: Vis tilgjengelige migreringer.
+- `--help, -h`: Vis hjelp for kommandoen.
 
-#### Eksempel:
-
-```bash
-npx @skatteetaten/ds-cli codemod v2-textarea ./src/web
-```
-
-### Hjelp
-
-For å få en oversikt over tilgjengelige kommandoer og alternativer, bruk `help`-kommandoen:
+#### Eksempler:
 
 ```bash
-npx @skatteetaten/ds-cli help
+# Vis tilgjengelige migreringer
+npx @skatteetaten/ds-cli migrate --list
+
+# Utfør migrering
+npx @skatteetaten/ds-cli migrate v2-alert src/
+
+# Forhåndsvis endringer uten å utføre dem
+npx @skatteetaten/ds-cli migrate v2-textarea src/ --dry
+
+# Ekskluder spesifikke filer/mapper
+npx @skatteetaten/ds-cli migrate v2-alert src/ --exclude "*.test.js" --exclude node_modules
 ```
 
 ### Versjon
 
-For å sjekke hvilken versjon av `ds-cli` du har installert, bruk `-v` eller `--version`:
+For å sjekke hvilken versjon av `ds-cli` du har installert, bruk `version`-kommandoen eller `--version`:
 
 ```bash
-npx @skatteetaten/ds-cli -v
+npx @skatteetaten/ds-cli version
+npx @skatteetaten/ds-cli --version
+```
 
+### Hjelp
+
+For å få en oversikt over tilgjengelige kommandoer og alternativer:
+
+```bash
+npx @skatteetaten/ds-cli --help
+npx @skatteetaten/ds-cli migrate --help
 ```
