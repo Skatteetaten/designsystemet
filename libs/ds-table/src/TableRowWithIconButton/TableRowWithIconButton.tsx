@@ -53,6 +53,10 @@ export const RowWithLeftSideExpandButton = ({
   const cellRef = useRef<HTMLTableCellElement | null>(null);
 
   useEffect(() => {
+    if (!isExpanded) {
+      return;
+    }
+
     const boundingRects = cellRef.current?.getBoundingClientRect();
     cellRef.current?.style.setProperty(
       'max-width',
@@ -61,9 +65,15 @@ export const RowWithLeftSideExpandButton = ({
 
     const observer = new ResizeObserver((entries) => {
       for (const entry of entries) {
+        const currentWidth =
+          expandableWrapperRef?.current?.getBoundingClientRect().width;
+        const targetWidth = Math.round(entry.contentBoxSize[0].inlineSize ?? 0);
+        if (currentWidth === targetWidth) {
+          continue;
+        }
         expandableWrapperRef.current?.style?.setProperty(
           'width',
-          `${Math.round(entry.contentBoxSize[0].inlineSize ?? 0)}px`
+          `${targetWidth}px`
         );
       }
     });
