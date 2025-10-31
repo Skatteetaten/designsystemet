@@ -1,6 +1,0 @@
-import{F as l}from"./index-d7h_eiwz.js";import{F as p}from"./Fieldset.test.stories-Ch0gPYo3.js";import{c}from"./createSingleStory-mDFYHVMl.js";import"./iframe-BoxHncFg.js";import"./DatePickerCalendar-NBFB_hA6.js";import"./index-DyY5joHW.js";import"./index-Mlou2Fgf.js";import"./index-CvbIYQ1J.js";import"./LabelWithHelp-CeoEDrnt.js";import"./Help-DtlVvBAO.js";import"./index-COS0aIOi.js";import"./index-k61vOTBl.js";import"./index-CxRKwedM.js";import"./storybook.testing.utils-CMs160i9.js";import"./icon.systems-qsHVbejn.js";import"./icon.utils-BtWfleA6.js";const n={title:"Chromatic/Fieldset",component:l,tags:["chromatic","!autodocs"]},r=c(p,n,{runPlayFunctions:!0}),t=c(p,n,{viewport:"--mobile"});var e,o,s;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`createSingleStory(FieldsetStories, meta, {
-  runPlayFunctions: true
-})`,...(s=(o=r.parameters)==null?void 0:o.docs)==null?void 0:s.source}}};var i,a,m;t.parameters={...t.parameters,docs:{...(i=t.parameters)==null?void 0:i.docs,source:{originalSource:`createSingleStory(FieldsetStories, meta, {
-  viewport: '--mobile'
-})`,...(m=(a=t.parameters)==null?void 0:a.docs)==null?void 0:m.source}}};const E=["Snapshots","Mobile"];export{t as Mobile,r as Snapshots,E as __namedExportsOrder,n as default};
-//# sourceMappingURL=Fieldset.chromatic.stories-BUveNdte.js.map

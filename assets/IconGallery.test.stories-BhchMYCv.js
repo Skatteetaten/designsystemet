@@ -1,0 +1,8 @@
+import{j as e}from"./iframe-C2uFIQ6s.js";import{c as o}from"./index-Bs2jIcy5.js";import{S as d}from"./icon.systems-CMWPGVc8.js";import{T as b}from"./icon.themes-B2XkBJmT.js";const S={component:o,title:"Tester/Icon Gallery",argTypes:{ref:{table:{disable:!0}},className:{table:{disable:!0}},id:{table:{disable:!0}},lang:{table:{disable:!0}},"data-testid":{table:{disable:!0}},size:{table:{disable:!0}},svgPath:{table:{disable:!0}},title:{table:{disable:!0}},variant:{table:{disable:!0},control:"text"},ariaLabel:{table:{disable:!0}}},tags:["test"],parameters:{imageSnapshot:{disableSnapshot:!1}}},u=()=>e.jsx(e.Fragment,{children:Object.entries(d).map(([s,r])=>e.jsx(o,{svgPath:r,size:"large"},s))}),I=()=>e.jsx(e.Fragment,{children:Object.entries(b).map(([s,r])=>e.jsx(o,{svgPath:r,variant:"themeIcon"},s))}),t={render:u,name:"SystemIcons Image Snaphot"},a={render:I,name:"ThemeIcons Image Snaphot"};var n,m,l;t.parameters={...t.parameters,docs:{...(n=t.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  render: TemplateSystemIcons,
+  name: 'SystemIcons Image Snaphot'
+} as Story`,...(l=(m=t.parameters)==null?void 0:m.docs)==null?void 0:l.source}}};var c,i,p;a.parameters={...a.parameters,docs:{...(c=a.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  render: TemplateThemeIcons,
+  name: 'ThemeIcons Image Snaphot'
+} as Story`,...(p=(i=a.parameters)==null?void 0:i.docs)==null?void 0:p.source}}};const h=["SystemIcons","ThemeIcons"],f=Object.freeze(Object.defineProperty({__proto__:null,SystemIcons:t,ThemeIcons:a,__namedExportsOrder:h,default:S},Symbol.toStringTag,{value:"Module"}));export{f as I};
+//# sourceMappingURL=IconGallery.test.stories-BhchMYCv.js.map
