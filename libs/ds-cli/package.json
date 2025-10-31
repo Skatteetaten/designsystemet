@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-cli",
   "groupId": "no.skatteetaten.aurora",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "license": "Apache-2.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "repository": {
@@ -12,8 +12,15 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "scripts": {},
-  "dependencies": {},
+  "dependencies": {
+    "ts-morph": "^27.0.2",
+    "chalk": "^5.6.2",
+    "meow": "^14.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.0.0"
+  },
   "devDependencies": {},
   "type": "module",
-  "bin": "./index.esm.js"
+  "bin": "./cli.esm.js"
 }

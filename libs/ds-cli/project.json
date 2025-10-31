@@ -12,10 +12,12 @@
         "outputPath": "dist/libs/ds-cli",
         "tsConfig": "libs/ds-cli/tsconfig.lib.json",
         "project": "libs/ds-cli/package.json",
-        "entryFile": "libs/ds-cli/src/index.ts",
-        "external": ["react/jsx-runtime"],
+        "entryFile": "libs/ds-cli/src/cli.ts",
+        "external": ["typescript"],
         "rollupConfig": "@nx/react/plugins/bundle-rollup",
         "compiler": "swc",
+        "format": ["esm"],
+        "additionalEntryPoints": [],
         "assets": [
           {
             "glob": "libs/ds-cli/README.md",
@@ -24,8 +26,8 @@
           },
           {
             "glob": "*",
-            "input": "libs/ds-cli/src/codemods/",
-            "output": "src/codemods"
+            "input": "libs/ds-cli/src/codemorph/",
+            "output": "src/codemorph"
           },
           {
             "glob": "LICENSE",
