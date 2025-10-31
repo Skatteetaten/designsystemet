@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
@@ -228,6 +228,7 @@ export const IsOpen = {
   name: 'IsOpen (A1)',
   args: {
     ...defaultArgs,
+    id: 'test-combobox',
   },
   argTypes: {
     variant: { table: { disable: false } },
@@ -237,6 +238,15 @@ export const IsOpen = {
     const combobox = canvas.getByRole('combobox');
     await userEvent.click(combobox);
     await expect(combobox).toHaveAttribute('aria-expanded', 'true');
+
+    const listbox = canvas.getByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+    await expect(listbox).toHaveAttribute('id', 'test-combobox-list');
+    await expect(listbox).toHaveAttribute('aria-multiselectable', 'false');
+
+    const options = canvas.getAllByRole('option');
+    await expect(options[0]).toHaveAttribute('id', 'test-combobox-option-0');
+    await expect(options[0]).toHaveAttribute('aria-selected', 'false');
   },
 } satisfies Story;
 
@@ -259,6 +269,25 @@ export const WithErrorMessage = {
       description: 'Error melding',
     });
     await expect(inputElement).toHaveAttribute('aria-invalid', 'true');
+  },
+} satisfies Story;
+
+export const NoResults = {
+  name: 'No Results (A6)',
+  args: {
+    ...defaultArgs,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.type(inputElement, 'xyz');
+    await expect(inputElement).toHaveValue('xyz');
+
+    const listbox = canvas.getByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+    await expect(listbox).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.NoResults', { searchTerm: 'xyz' })
+    );
   },
 } satisfies Story;
 
@@ -431,11 +460,78 @@ export const WithName = {
     name: 'category',
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toHaveAttribute('name', 'category');
+  },
+} satisfies Story;
+
+export const WithEventHandlers = {
+  name: 'With EventHandlers (A3)',
+  args: {
+    ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onInputChange: fn(),
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    inputElement.focus();
+    await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
+
+    await userEvent.tab();
+    await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+
+    await userEvent.type(inputElement, 'X');
+    await expect(inputElement).toHaveValue('X');
+    await waitFor(() => expect(args.onInputChange).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const OnSelectionChange = {
+  name: 'OnSelectionChange (A3)',
+  args: {
+    ...defaultArgs,
+    onSelectionChange: fn(),
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+
+    await expect(inputElement).toHaveValue('Norge');
+
+    await waitFor(() => expect(args.onSelectionChange).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const OnHelpToggle = {
+  name: 'OnHelpToggle',
+  args: {
+    ...defaultArgs,
+    onHelpToggle: fn(),
+    helpText: 'Dette er hjelpeteksten for comboboxen.',
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await userEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
