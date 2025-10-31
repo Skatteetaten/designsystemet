@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 import meow from 'meow';
 
+import { realpathSync } from 'fs';
+import { fileURLToPath } from 'url';
+
 import { handleMigrate } from './commands/migrate.js';
 import { handleVersion } from './commands/version.js';
 import { listMigrations } from './migrate/migrations.js';
@@ -207,7 +210,9 @@ export async function runCLI(cli: CLI): Promise<void> {
 }
 
 // Only run CLI if this file is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+const scriptPath = fileURLToPath(import.meta.url);
+const argvPath = realpathSync(process.argv[1]);
+if (scriptPath === argvPath) {
   const cli = createCLI(import.meta);
   runCLI(cli);
 }
