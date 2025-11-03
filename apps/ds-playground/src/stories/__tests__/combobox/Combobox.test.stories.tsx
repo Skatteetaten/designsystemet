@@ -179,9 +179,6 @@ export const Defaults = {
   argTypes: {
     label: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const combobox = canvas.getByLabelText(defaultArgs.label as string);
@@ -214,16 +211,6 @@ export const WithHover = {
   },
   parameters: {
     pseudo: { hover: true },
-  },
-} satisfies Story;
-
-export const WithFocus = {
-  name: 'With Focus (A1)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    pseudo: { focus: true },
   },
 } satisfies Story;
 
