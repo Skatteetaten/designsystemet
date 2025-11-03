@@ -207,9 +207,12 @@ const Combobox = memo(
       focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined;
 
     const labelId = `${comboboxId}-label`;
+    const descriptionId = `${comboboxId}-description`;
 
     const ariaDescribedBy =
-      [errorMessage && errorId].filter(Boolean).join(' ') || undefined;
+      [description && descriptionId, errorMessage && errorId]
+        .filter(Boolean)
+        .join(' ') || undefined;
 
     let containerClassNames = styles.inputContainer;
 
@@ -237,6 +240,7 @@ const Combobox = memo(
           htmlFor={comboboxId}
           hideLabel={hideLabel}
           description={description}
+          descriptionId={descriptionId}
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}

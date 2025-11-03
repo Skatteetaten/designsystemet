@@ -94,6 +94,7 @@ export const FileUploader = (({
 
   const id = externalId ?? generatedId;
 
+  const descriptionId = `descId-${useId()}`;
   const errorId = `${useId()}-fileuploader-error`;
   const fileformatsId = `${id}-accepted-formats`;
 
@@ -212,8 +213,14 @@ export const FileUploader = (({
     classNames?.container ?? ''
   }`.trim();
 
-  const ariaDescribedBy =
-    `${errorMessage ? errorId : ''} ${acceptedFileFormats ? fileformatsId : ''}`.trim();
+  const ariaDescribedBy = [
+    description && descriptionId,
+    errorMessage && errorId,
+    acceptedFileFormats && fileformatsId,
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .trim();
 
   return (
     <div
@@ -230,6 +237,7 @@ export const FileUploader = (({
           hideLabel={hideLabel}
           showRequiredMark={showRequiredMark}
           description={description}
+          descriptionId={descriptionId}
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}

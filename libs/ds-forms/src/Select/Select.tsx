@@ -61,6 +61,7 @@ export const Select = (({
 
   const errorId = `selectErrorId-${useId()}`;
   const generatedId = `selectId-${useId()}`;
+  const descriptionId = `descId-${useId()}`;
   const selectId = externalId ?? generatedId;
 
   const isLarge = variant === 'large';
@@ -105,6 +106,7 @@ export const Select = (({
         hideLabel={hideLabel}
         showRequiredMark={showRequiredMark}
         description={description}
+        descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
@@ -129,7 +131,11 @@ export const Select = (({
           required={required}
           value={value}
           defaultValue={defaultValue}
-          aria-describedby={errorMessage ? errorId : undefined}
+          aria-describedby={
+            [description && descriptionId, errorMessage && errorId]
+              .filter(Boolean)
+              .join(' ') || undefined
+          }
           aria-invalid={!!errorMessage || undefined}
           onBlur={onBlur}
           onChange={handleChange}

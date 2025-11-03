@@ -61,6 +61,7 @@ export const TextArea = ({
   const errorId = `textAreaErrorId-${useId()}`;
   const generatedId = `textAreaTextboxId-${useId()}`;
   const characterCounterId = `textAreaCharacterCounter-${useId()}`;
+  const descriptionId = `descId-${useId()}`;
   const textboxId = externalId ?? generatedId;
 
   const textboxRef = useRef<HTMLTextAreaElement>(null);
@@ -94,7 +95,11 @@ export const TextArea = ({
     }`.trim();
 
   const ariaDescribedBy =
-    [errorMessage && errorId, characterLimit && characterCounterId]
+    [
+      description && descriptionId,
+      errorMessage && errorId,
+      characterLimit && characterCounterId,
+    ]
       .filter(Boolean)
       .join(' ') || undefined;
 
@@ -110,6 +115,7 @@ export const TextArea = ({
         hideLabel={hideLabel}
         showRequiredMark={showRequiredMark}
         description={description}
+        descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}

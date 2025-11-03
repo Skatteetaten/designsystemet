@@ -15,6 +15,7 @@ export const LabelWithHelp = ({
   lang,
   'data-testid': dataTestId,
   description,
+  descriptionId,
   helpText,
   helpSvgPath,
   titleHelpSvg,
@@ -56,6 +57,7 @@ export const LabelWithHelp = ({
         targetId={labelId}
         titleHelpSvg={titleHelpSvg}
         description={description}
+        descriptionId={descriptionId}
         onHelpToggle={onHelpToggle}
       />
     </>
