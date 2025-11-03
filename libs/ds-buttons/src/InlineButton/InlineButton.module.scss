@@ -103,7 +103,7 @@
 
     &:active {
       --inline-button-foreground-color: var(--semantic-interactive-foreground);
-      --inline-button-background-color: var(--palette-graphite-0);
+      --inline-button-background-color: var(--semantic-interactive-background);
     }
 
     &:disabled,

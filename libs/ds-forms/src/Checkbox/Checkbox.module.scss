@@ -111,7 +111,7 @@
   .input:active + .label,
   .input:active + .label .labelCheckbox {
     --checkbox-border-color: var(--semantic-interactive-foreground);
-    --checkbox-background-color: transparent;
+    --checkbox-background-color: var(--palette-graphite-0);
     --check-color: transparent;
     --label-color: var(--semantic-interactive-foreground);
     --description-color: var(--semantic-interactive-foreground);
