@@ -201,6 +201,13 @@ export const Defaults = {
       '[id^=comboboxErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+
+    const accessibilityAnnouncer = canvasElement.querySelector(
+      'div[class*="srOnly"]'
+    );
+    await expect(accessibilityAnnouncer).toHaveAttribute('aria-live', 'polite');
+    await expect(accessibilityAnnouncer).toHaveAttribute('aria-atomic', 'true');
+    await expect(accessibilityAnnouncer).toHaveTextContent('');
   },
 } satisfies Story;
 
@@ -225,7 +232,7 @@ export const WithFocus = {
 } satisfies Story;
 
 export const IsOpen = {
-  name: 'IsOpen (A1)',
+  name: 'IsOpen (A1, B1)',
   args: {
     ...defaultArgs,
     id: 'test-combobox',
@@ -247,6 +254,13 @@ export const IsOpen = {
     const options = canvas.getAllByRole('option');
     await expect(options[0]).toHaveAttribute('id', 'test-combobox-option-0');
     await expect(options[0]).toHaveAttribute('aria-selected', 'false');
+
+    const accessibilityAnnouncer = canvasElement.querySelector(
+      'div[class*="srOnly"]'
+    );
+    await expect(accessibilityAnnouncer).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
+    );
   },
 } satisfies Story;
 
@@ -288,6 +302,13 @@ export const NoResults = {
     await expect(listbox).toHaveTextContent(
       dsI18n.t('ds_forms:combobox.NoResults', { searchTerm: 'xyz' })
     );
+
+    const accessibilityAnnouncer = canvasElement.querySelector(
+      'div[class*="srOnly"]'
+    );
+    await expect(accessibilityAnnouncer).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.NoResults', { searchTerm: 'xyz' })
+    );
   },
 } satisfies Story;
 
@@ -304,6 +325,29 @@ export const VariantLarge = {
     const canvas = within(canvasElement);
     const combobox = canvas.getByRole('combobox');
     await userEvent.click(combobox);
+  },
+} satisfies Story;
+
+export const SingleOptionAnnouncement = {
+  name: 'Single Option Announcement (B1)',
+  args: {
+    ...defaultArgs,
+    options: [{ label: 'Single Option', value: '1' }],
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+
+    const accessibilityAnnouncer = canvasElement.querySelector(
+      'div[class*="srOnly"]'
+    );
+    await expect(accessibilityAnnouncer).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.OneOptionAvailable')
+    );
   },
 } satisfies Story;
 
