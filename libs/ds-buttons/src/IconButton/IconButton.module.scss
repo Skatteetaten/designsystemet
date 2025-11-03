@@ -49,7 +49,7 @@
   &_medium {
     padding: var(--spacing-xs) var(--spacing-xs);
 
-    &:focus::before,
+    &:focus-visible::before,
     &:active::before {
       inset: -6px;
     }
@@ -58,7 +58,7 @@
   &_large {
     padding: var(--spacing-s) var(--spacing-s);
 
-    &:focus::before,
+    &:focus-visible::before,
     &:active::before {
       inset: -6px;
     }
@@ -69,18 +69,16 @@
     --icon-button-background-color: var(--semantic-interactive-background);
   }
 
-  &:focus {
+  &:focus-visible {
     @extend %focus;
 
     --icon-button-border-color: transparent;
   }
 
   &:active {
-    @extend %focus;
-
-    --icon-button-icon-color: var(--semantic-interactive-foreground);
-    --icon-button-border-color: var(--semantic-interactive-background);
-    --icon-button-background-color: var(--semantic-interactive-background);
+    --icon-button-icon-color: var(--palette-graphite-0);
+    --icon-button-border-color: var(--semantic-interactive-foreground);
+    --icon-button-background-color: var(--semantic-interactive-foreground);
 
     transform: translateY(2px);
     transition: 0.15s;
@@ -108,7 +106,7 @@
     --icon-button-outline-color: var(--palette-graphite-0);
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       --icon-button-icon-color: var(--semantic-interactive-main);
       --icon-button-background-color: var(--palette-graphite-0);
       --icon-button-border-color: var(--palette-graphite-0);
@@ -116,8 +114,8 @@
 
     &:active {
       --icon-button-icon-color: var(--semantic-interactive-foreground);
-      --icon-button-background-color: var(--palette-graphite-0);
-      --icon-button-border-color: var(--palette-graphite-0);
+      --icon-button-background-color: var(--semantic-interactive-background);
+      --icon-button-border-color: var(--semantic-interactive-background);
     }
 
     &:disabled,
@@ -133,7 +131,7 @@
     --icon-button-border-color: var(--semantic-interactive-main);
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       --icon-button-border-color: var(--semantic-interactive-main);
     }
 

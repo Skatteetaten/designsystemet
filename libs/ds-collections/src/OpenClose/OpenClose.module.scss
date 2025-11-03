@@ -27,19 +27,17 @@
     background-color: var(--semantic-interactive-background);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid var(--semantic-interactive-main);
     outline-offset: 2px;
   }
 
   &:active {
-    background-color: var(--semantic-interactive-background);
-    color: var(--semantic-interactive-foreground);
-    outline: 2px solid var(--semantic-interactive-foreground);
-    outline-offset: 2px;
+    background-color: var(--semantic-interactive-foreground);
+    color: var(--palette-graphite-0);
 
     .icon_active {
-      fill: var(--semantic-interactive-foreground);
+      fill: var(--palette-graphite-0);
     }
   }
 }

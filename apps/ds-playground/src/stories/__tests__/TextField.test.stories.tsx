@@ -197,7 +197,7 @@ export const Defaults = {
     label: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -238,7 +238,7 @@ export const WithDisabled = {
   argTypes: {
     disabled: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { pseudoStates: ['hover', 'focus'] } },
+  parameters: { imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -344,7 +344,7 @@ export const WithReadOnly = {
     readOnly: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -462,7 +462,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    pseudoStates: ['hover', 'focus'],
+    pseudoStates: ['hover', 'focus-visible'],
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

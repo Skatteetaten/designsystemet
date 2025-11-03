@@ -14,7 +14,7 @@
 .tag {
   margin: 0;
 
-  &:has(.header:focus) {
+  &:has(.header:focus-visible) {
     outline: 2px solid var(--palette-graphite-0);
   }
 }
@@ -61,7 +61,7 @@
     background-color: var(--semantic-interactive-background);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid var(--semantic-interactive-main);
     outline-offset: 2px;
   }

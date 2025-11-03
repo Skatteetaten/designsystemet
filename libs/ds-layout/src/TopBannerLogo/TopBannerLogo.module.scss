@@ -15,7 +15,7 @@
   display: inline-block;
   text-decoration: none;
 
-  &:focus {
+  &:focus-visible {
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: none;
   }

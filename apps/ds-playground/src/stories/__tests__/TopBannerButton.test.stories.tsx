@@ -138,7 +138,7 @@ export const Defaults = {
     svgPath: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   globals: {
     viewport: {
@@ -168,7 +168,7 @@ export const WithVariantFilled = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   globals: {
     viewport: {
@@ -209,7 +209,7 @@ export const DefaultsOnMobileScreen = {
     svgPath: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   globals: {
     viewport: {
@@ -232,7 +232,7 @@ export const VariantFilledOnMobileScreen = {
     variant: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   globals: {
     viewport: {

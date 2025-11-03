@@ -108,7 +108,7 @@
   }
 
   &:has(~ div :focus-within),
-  &:enabled:focus,
+  &:enabled:focus-visible,
   &:enabled:active {
     z-index: 1;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
@@ -170,7 +170,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: 2px solid var(--semantic-interactive-background);
   }

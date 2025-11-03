@@ -16,7 +16,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid var(--palette-azure-70);
     outline-offset: 2px;
 

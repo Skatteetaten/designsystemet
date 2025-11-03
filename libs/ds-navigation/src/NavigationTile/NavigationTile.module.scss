@@ -79,7 +79,7 @@
     background-color: var(--semantic-interactive-background);
   }
 
-  &:focus {
+  &:focus-visible {
     box-shadow:
       inset 0 -2px 0 0 var(--semantic-interactive-main),
       0 0 0 2px var(--palette-graphite-0);

@@ -93,12 +93,11 @@
       background-color: var(--semantic-interactive-foreground);
     }
 
-    &:focus {
+    &:focus-visible {
       @extend %focus;
     }
 
     &:active {
-      @extend %focus;
       @extend %active;
 
       border-color: var(--semantic-interactive-foreground);
@@ -126,12 +125,11 @@
       background-color: var(--semantic-interactive-background);
     }
 
-    &:focus {
+    &:focus-visible {
       @extend %focus;
     }
 
     &:active {
-      @extend %focus;
       @extend %active;
 
       border-color: var(--semantic-interactive-main);
@@ -160,12 +158,11 @@
       background-color: var(--semantic-interactive-background);
     }
 
-    &:focus {
+    &:focus-visible {
       @extend %focus;
     }
 
     &:active {
-      @extend %focus;
       @extend %active;
 
       border-color: var(--semantic-interactive-main);
@@ -198,12 +195,11 @@
       }
     }
 
-    &:focus {
+    &:focus-visible {
       @extend %focus;
     }
 
     &:active {
-      @extend %focus;
       @extend %active;
 
       & .icon {

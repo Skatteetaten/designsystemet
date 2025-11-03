@@ -221,16 +221,6 @@ export const WithHover = {
   },
 } satisfies Story;
 
-export const WithFocus = {
-  name: 'With Focus (A1)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    pseudo: { focus: true },
-  },
-} satisfies Story;
-
 export const IsOpen = {
   name: 'IsOpen (A1, B1)',
   args: {

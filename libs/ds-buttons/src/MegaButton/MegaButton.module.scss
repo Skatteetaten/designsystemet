@@ -45,13 +45,11 @@
     box-shadow: none;
   }
 
-  &:focus {
+  &:focus-visible {
     @extend %focus;
   }
 
   &:active {
-    @extend %focus;
-
     border-color: var(--semantic-interactive-foreground);
     background-color: var(--semantic-interactive-foreground);
     box-shadow: none;

@@ -106,7 +106,7 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
-      pseudoStates: ['hover', 'focus', 'active'],
+      pseudoStates: ['hover', 'focus-visible', 'active'],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
