@@ -63,7 +63,6 @@ $radio-transform-x: 2px;
 
     &:checked {
       --radio-background-color: var(--semantic-page-foreground);
-      --radio-border-color: var(--semantic-page-background);
 
       &:hover {
         --radio-box-shadow-color: var(--semantic-interactive-main);
