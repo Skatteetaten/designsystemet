@@ -30,6 +30,7 @@
   color: var(--semantic-page-foreground);
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
+  opacity: 1; // override built-in opacity for disabled selects
   outline: none;
   outline-offset: 0;
   text-overflow: ellipsis;
