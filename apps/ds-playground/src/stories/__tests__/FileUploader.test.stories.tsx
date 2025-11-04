@@ -429,3 +429,23 @@ export const WithCustomSpinnerLabel = {
     await expect(button).toHaveTextContent(spinnerLabel);
   },
 } satisfies Story;
+
+export const WithDescription = {
+  name: 'With Description',
+  args: {
+    label: 'Last opp filer',
+    description: 'En liten beskrivelse tekst',
+  },
+  argTypes: {
+    description: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const description = canvas.getByText('En liten beskrivelse tekst');
+    await expect(description).toBeInTheDocument();
+    const button = canvas.getByRole('button');
+    await expect(button).toHaveAttribute('aria-describedby');
+    const describedbyValue = button.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
+  },
+} satisfies Story;

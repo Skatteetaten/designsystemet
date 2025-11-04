@@ -156,6 +156,10 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const description = canvas.getByText('En beskrivelse av punktet');
     await expect(description).toBeInTheDocument();
+    const checkbox = canvas.getByRole('checkbox');
+    await expect(checkbox).toHaveAttribute('aria-describedby');
+    const describedbyValue = checkbox.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
   },
 } satisfies Story;
 
