@@ -2,6 +2,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { Card, cardColorArr } from '@skatteetaten/ds-content';
+import { Heading } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: Card,
@@ -150,5 +151,39 @@ export const WithAriaLabelledBy = {
     const canvas = within(canvasElement);
     const cardNote = canvas.getByRole('region');
     await expect(cardNote).toHaveAttribute('aria-labelledby', 'dummyId');
+  },
+} satisfies Story;
+
+const TemplateWithAlert: StoryFn<typeof Card> = (args) => (
+  <Card {...args}>
+    <Card.Alert title={'Informasjon'}>{'Alert message content'}</Card.Alert>
+    <Card.Header>
+      <Heading id={args.ariaLabelledBy} as={'h3'} level={3}>
+        {'Card Heading'}
+      </Heading>
+    </Card.Header>
+    <Card.Content>{args.children}</Card.Content>
+  </Card>
+);
+
+export const WithAriaLabelledByAndCardAlert = {
+  render: TemplateWithAlert,
+  name: 'With ariaLabelledBy and Card.Alert',
+  args: {
+    ...defaultArgs,
+    ariaLabelledBy: 'dummyId',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const cardSection = canvas.getByRole('region');
+    const alertHeading = within(cardSection).getByRole('heading', {
+      name: 'Informasjon',
+    });
+
+    await expect(alertHeading).toBeInTheDocument();
+    await expect(cardSection).toHaveAttribute(
+      'aria-labelledby',
+      `${alertHeading.id} dummyId`
+    );
   },
 } satisfies Story;
