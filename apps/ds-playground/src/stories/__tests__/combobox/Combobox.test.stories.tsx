@@ -197,6 +197,10 @@ export const Defaults = {
       dsI18n.t('ds_forms:combobox.TypeOrSelect')
     );
 
+    const chevron = canvasElement.querySelector('div[class*="chevronButton"]');
+    await expect(chevron).toBeInTheDocument();
+    await expect(chevron).toHaveAttribute('aria-hidden', 'true');
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=comboboxErrorId]'
     );
@@ -315,6 +319,38 @@ export const VariantLarge = {
     const canvas = within(canvasElement);
     const combobox = canvas.getByRole('combobox');
     await userEvent.click(combobox);
+  },
+} satisfies Story;
+
+export const WithValue = {
+  name: 'With Value And Clear Value (A8, B2)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+
+    const listbox = canvas.getByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await expect(combobox).toHaveValue('Sverige');
+    await expect(listbox).not.toBeInTheDocument();
+
+    const clearButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:combobox.ResetSuggestion'),
+    });
+    await expect(clearButton).toBeInTheDocument();
+    await expect(clearButton).toHaveAttribute('type', 'button');
+
+    await userEvent.click(clearButton);
+    await expect(combobox).toHaveValue('');
   },
 } satisfies Story;
 
