@@ -13,6 +13,7 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
     onRemoveValue,
     classNames,
     labelId,
+    disabled,
   }: ComboboxSelectedOptionsProps): JSX.Element | null => {
     const setChipsRef = (element: HTMLUListElement | null): void => {
       if (element && labelId) {
@@ -31,6 +32,7 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
             <Chips.Removable
               key={selectedValue.value}
               size={'small'}
+              disabled={disabled}
               onClose={() => onRemoveValue(selectedValue)}
             >
               {selectedValue.label}

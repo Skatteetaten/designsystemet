@@ -110,6 +110,7 @@ export type ComboboxSelectedOptionsProps = {
   onRemoveValue: (value: ComboboxOption) => void;
   classNames?: string;
   labelId?: string;
+  disabled?: boolean;
 };
 
 export type ComboboxOptionsProps = {
