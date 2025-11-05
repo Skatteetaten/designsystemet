@@ -25,7 +25,6 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'onBlur'
   | 'onFocus'
   | 'form'
-  | 'tabIndex'
   | 'accessKey'
 >;
 

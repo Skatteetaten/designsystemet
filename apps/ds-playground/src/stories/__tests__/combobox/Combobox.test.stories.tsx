@@ -42,7 +42,6 @@ const meta = {
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },
     required: { table: { disable: true } },
-    tabIndex: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onFocus: { table: { disable: true } },
