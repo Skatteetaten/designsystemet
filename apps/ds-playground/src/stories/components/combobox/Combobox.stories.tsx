@@ -98,7 +98,6 @@ const meta = {
       },
     },
     required: { table: { category: category.htmlAttribute } },
-    tabIndex: { table: { category: category.htmlAttribute } },
     // Events
     onBlur: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
