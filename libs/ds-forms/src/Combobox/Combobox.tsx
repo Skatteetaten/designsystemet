@@ -256,6 +256,7 @@ const Combobox = memo(
               selectedValues={selectedValues}
               classNames={classNames?.chips}
               labelId={labelId}
+              disabled={disabled}
               onRemoveValue={handleRemoveValue}
             />
             <input
