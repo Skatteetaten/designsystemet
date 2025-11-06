@@ -1,83 +1,119 @@
-import { JSX, useActionState, useState } from 'react';
+import { JSX, useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { Combobox } from '@skatteetaten/ds-forms';
-import { Paragraph } from '@skatteetaten/ds-typography';
+import { Divider } from '@skatteetaten/ds-content';
+import { Combobox, ComboboxOption } from '@skatteetaten/ds-forms';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { getComboboxStoryOptions } from './combobox.stories.utils';
 
-type FormActionState = {
-  success: boolean;
-  message?: string;
-  selectedItems?: string[];
-};
-
 export const ComboboxFormExample = (): JSX.Element => {
   const [resetKey, setResetKey] = useState(0);
+  const [controlledValue, setControlledValue] = useState<ComboboxOption[]>([]);
+  const [uncontrolledError, setUncontrolledError] = useState<string>('');
+  const [controlledError, setControlledError] = useState<string>('');
 
-  const [state, formAction, isPending] = useActionState(
-    async (
-      _prevState: FormActionState,
-      formData: FormData
-    ): Promise<FormActionState> => {
-      if (formData.get('action') === 'reset') {
-        return { success: false };
-      }
+  const handleUncontrolledSubmit = (
+    e: React.FormEvent<HTMLFormElement>
+  ): void => {
+    e.preventDefault();
+    setUncontrolledError(''); // Clear previous error
 
-      await new Promise((resolve) => setTimeout(resolve, 200));
+    const formData = new FormData(e.currentTarget);
+    const selectedKommuner = formData.getAll('kommuner') as string[];
 
-      const selectedKommuner = formData.getAll('kommuner') as string[];
+    if (selectedKommuner.length === 0) {
+      setUncontrolledError('Du må velge minst én kommune');
+      return;
+    }
 
-      if (selectedKommuner.length === 0) {
-        return {
-          success: false,
-          message: 'Du må velge minst én kommune',
-        };
-      }
-
-      return {
-        success: true,
-        message: `Du valgte: ${selectedKommuner.join(', ')}`,
-        selectedItems: selectedKommuner,
-      };
-    },
-    { success: false }
-  );
+    alert(`Ukontrollert skjema sendt med: ${selectedKommuner.join(', ')}`);
+  };
 
   const handleReset = (): void => {
     setResetKey((prev) => prev + 1);
+    setControlledValue([]); // Reset controlled value
+    setUncontrolledError(''); // Reset uncontrolled error state
+    setControlledError(''); // Reset controlled error state
+  };
 
-    const resetFormData = new FormData();
-    resetFormData.set('action', 'reset');
-    formAction(resetFormData);
+  const handleControlledSubmit = (
+    e: React.FormEvent<HTMLFormElement>
+  ): void => {
+    e.preventDefault();
+    setControlledError(''); // Clear previous error
+
+    if (controlledValue.length === 0) {
+      setControlledError('Du må velge minst én kommune');
+      return;
+    }
+
+    alert(
+      `Kontrollert skjema sendt med: ${controlledValue.map((option) => option.label).join(', ')}`
+    );
   };
 
   return (
-    <form action={formAction}>
-      <Combobox
-        key={resetKey}
-        name={'kommuner'}
-        label={'Velg kommuner'}
-        placeholder={'Skriv eller velg kommuner'}
-        errorMessage={
-          !state.success && state.message ? state.message : undefined
-        }
-        options={getComboboxStoryOptions()}
-        multiple
-        hasSpacing
-      />
-
-      <Button className={'bottomSpacingS'} type={'submit'} disabled={isPending}>
-        {isPending ? 'Sender...' : 'Send inn'}
-      </Button>
-      {state.success && state.message && (
-        <div className={'flex gapS itemsCenter'}>
-          <Paragraph>{state.message}</Paragraph>
-          <Button variant={'danger'} type={'button'} onClick={handleReset}>
-            {'Nullstill'}
-          </Button>
+    <div>
+      <Heading as={'h3'} level={4} hasSpacing>
+        {'Uncontrolled Combobox (kun form state)'}
+      </Heading>
+      <form onSubmit={handleUncontrolledSubmit}>
+        <Combobox
+          key={resetKey}
+          name={'kommuner'}
+          label={'Velg kommuner'}
+          placeholder={'Skriv eller velg kommuner'}
+          errorMessage={uncontrolledError || undefined}
+          options={getComboboxStoryOptions()}
+          multiple
+          onSelectionChange={() => setUncontrolledError('')}
+          onInputChange={() => setUncontrolledError('')}
+        />
+        <div className={'flex topSpacingS bottomSpacingS gapXs'}>
+          <Button type={'submit'}>{'Send inn ukontrollert'}</Button>
+          {uncontrolledError && (
+            <Button variant={'danger'} type={'button'} onClick={handleReset}>
+              {'Nullstill'}
+            </Button>
+          )}
         </div>
-      )}
-    </form>
+      </form>
+      <Divider spacingBottom={'xs'} spacingTop={'l'} />
+      <Heading as={'h3'} level={4} hasSpacing>
+        {'Controlled Combobox (med state i komponent)'}
+      </Heading>
+      <form onSubmit={handleControlledSubmit}>
+        <Combobox
+          key={`controlled-${resetKey}`}
+          name={'kommuner-controlled'}
+          label={'Velg kommuner (kontrollert)'}
+          placeholder={'Skriv eller velg kommuner'}
+          errorMessage={controlledError || undefined}
+          options={getComboboxStoryOptions()}
+          multiple
+          hasSpacing
+          onSelectionChange={(value) => {
+            setControlledError('');
+            setControlledValue(value);
+          }}
+          onInputChange={() => setControlledError('')}
+        />
+        <div className={'flex topSpacingS bottomSpacingS gapXs'}>
+          <Button type={'submit'}>{'Send inn kontrollert'}</Button>
+          {controlledError && (
+            <Button variant={'danger'} type={'button'} onClick={handleReset}>
+              {'Nullstill'}
+            </Button>
+          )}
+        </div>
+        {controlledValue.length > 0 && (
+          <Paragraph hasSpacing>
+            {'Valgte verdier: '}
+            {controlledValue.map((option) => option.label).join(', ')}
+          </Paragraph>
+        )}
+      </form>
+    </div>
   );
 };

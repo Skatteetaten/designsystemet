@@ -190,7 +190,7 @@ export function useComboboxInput({
   /**
    * Clears the input value and closes dropdown.
    *
-   * What: Triggers selection change callbacks for uncontrolled components.
+   * What: Triggers selection change callbacks
    *
    * Why: Clear button should reset the component to empty state and refocus input.
    */
@@ -200,7 +200,7 @@ export function useComboboxInput({
     if (inputRef.current) {
       safeFocus(inputRef.current);
 
-      if (onSelectionChange && value === undefined) {
+      if (onSelectionChange) {
         if (multiple) {
           (onSelectionChange as (values: ComboboxOption[]) => void)([]);
         } else {
@@ -219,7 +219,6 @@ export function useComboboxInput({
     safeFocus,
     onSelectionChange,
     multiple,
-    value,
     openDropdown,
   ]);
 
