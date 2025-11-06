@@ -1,9 +1,7 @@
 {
-  "combobox.CloseSuggestion": "Gidde evttohusaid",
   "combobox.Loading": "Bargamin",
   "combobox.NoResults": "Eai gávdno ohcanbohtosat «{{searchTerm}}» várás. Geahččal eará ohcansáni.",
   "combobox.OneOptionAvailable": "Okta molsaeavttu gávdno.",
-  "combobox.OpenSuggestion": "Raba evttohusaid",
   "combobox.OptionsAvailable": "{{count}} molssaeavttu olámuttos.",
   "combobox.ResetSuggestion": "Máhcat válljema",
   "combobox.SelectedOfTotalPlural": "{{selected}}, {{total}}:s válljejuvvon",

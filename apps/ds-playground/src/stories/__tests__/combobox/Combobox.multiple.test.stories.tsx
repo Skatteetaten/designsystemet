@@ -71,6 +71,10 @@ export const Defaults = {
     const inputContainer = inputElement.closest('[data-variant]');
     await expect(inputContainer).toHaveAttribute('data-variant', 'large');
     await userEvent.click(inputElement);
+
+    const chevron = canvasElement.querySelector('div[class*="chevronButton"]');
+    await expect(chevron).toBeInTheDocument();
+    await expect(chevron).toHaveAttribute('aria-hidden', 'true');
   },
 } satisfies Story;
 
@@ -94,6 +98,12 @@ export const WithSelectedValues = {
     await expect(hiddenInputs).toHaveLength(2);
 
     await expect(inputElement).toBeEnabled();
+
+    await expect(
+      canvas.queryByRole('button', {
+        name: dsI18n.t('ds_forms:combobox.ResetSuggestion'),
+      })
+    ).not.toBeInTheDocument();
   },
 } satisfies Story;
 
