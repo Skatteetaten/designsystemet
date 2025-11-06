@@ -57,7 +57,6 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
         <Icon
           svgPath={isOpen ? ChevronUpSVGpath : ChevronDownSVGpath}
           size={iconSize}
-          aria-hidden={'true'}
         />
       </div>
     );
