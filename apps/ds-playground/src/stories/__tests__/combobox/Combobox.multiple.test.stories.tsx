@@ -95,6 +95,9 @@ export const WithSelectedValues = {
     await expect(hiddenInputs).toHaveLength(2);
 
     await expect(inputElement).toBeEnabled();
+
+    const chipsList = canvas.getByRole('list');
+    await expect(chipsList).toBeInTheDocument();
   },
 } satisfies Story;
 
