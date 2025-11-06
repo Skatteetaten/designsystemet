@@ -1,9 +1,7 @@
 {
-  "combobox.CloseSuggestion": "Lukk forslag",
   "combobox.Loading": "Lastar",
   "combobox.NoResults": "Ingen treff for «{{searchTerm}}». Prøv eit anna søk.",
   "combobox.OneOptionAvailable": "Ett alternativ tilgjengeleg.",
-  "combobox.OpenSuggestion": "Opne forslag",
   "combobox.OptionsAvailable": "{{count}} alternativ tilgjengeleg.",
   "combobox.ResetSuggestion": "Nullstill val",
   "combobox.SelectedOfTotalPlural": "{{selected}} av {{total}} er valde",
@@ -36,6 +34,7 @@
   "datepicker.TypeOrSelect": "Skriv eller vel",
   "datepicker.Wed": "On.",
   "datepicker.Year": "Årstal",
+  "errorsummary.Title": "For å gå vidare må du rette opp {{errorAmount}} feil:",
   "fileuploader.AddMultipleLabel": "Legg til fil(er)",
   "fileuploader.AddSingleLabel": "Legg til fil",
   "fileuploader.DeleteConfirmation": "Fila er fjerna",

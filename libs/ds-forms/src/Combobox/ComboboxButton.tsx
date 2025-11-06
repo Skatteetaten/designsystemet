@@ -4,8 +4,8 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ChevronDownSVGpath,
   ChevronUpSVGpath,
-  CancelSVGpath,
   Icon,
+  CancelIcon,
 } from '@skatteetaten/ds-icons';
 
 import { ComboboxButtonProps } from './Combobox.types';
@@ -41,7 +41,7 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
           data-chevron-button
           onClick={onClear}
         >
-          <Icon svgPath={CancelSVGpath} size={iconSize} />
+          <CancelIcon size={iconSize} />
         </button>
       );
     }
@@ -57,11 +57,6 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
         <Icon
           svgPath={isOpen ? ChevronUpSVGpath : ChevronDownSVGpath}
           size={iconSize}
-          title={
-            isOpen
-              ? dsI18n.t('ds_forms:combobox.CloseSuggestion')
-              : dsI18n.t('ds_forms:combobox.OpenSuggestion')
-          }
         />
       </div>
     );

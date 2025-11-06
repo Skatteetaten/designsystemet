@@ -42,7 +42,6 @@ const meta = {
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },
     required: { table: { disable: true } },
-    tabIndex: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onFocus: { table: { disable: true } },
@@ -72,6 +71,10 @@ export const Defaults = {
     const inputContainer = inputElement.closest('[data-variant]');
     await expect(inputContainer).toHaveAttribute('data-variant', 'large');
     await userEvent.click(inputElement);
+
+    const chevron = canvasElement.querySelector('div[class*="chevronButton"]');
+    await expect(chevron).toBeInTheDocument();
+    await expect(chevron).toHaveAttribute('aria-hidden', 'true');
   },
 } satisfies Story;
 
@@ -98,6 +101,12 @@ export const WithSelectedValues = {
 
     const chipsList = canvas.getByRole('list');
     await expect(chipsList).toBeInTheDocument();
+
+    await expect(
+      canvas.queryByRole('button', {
+        name: dsI18n.t('ds_forms:combobox.ResetSuggestion'),
+      })
+    ).not.toBeInTheDocument();
   },
 } satisfies Story;
 
