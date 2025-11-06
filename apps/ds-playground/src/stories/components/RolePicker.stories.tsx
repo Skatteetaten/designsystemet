@@ -20,6 +20,7 @@ import {
   getRolePickerShowDeceasedPeopleDefault,
   getRolePickerMinimumEntitiesForSearchDefault,
 } from '@skatteetaten/ds-overlays';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -469,3 +470,16 @@ export const WithExternalTopBanner: Story = {
 } satisfies Story;
 
 WithExternalTopBanner.parameters = exampleParameters;
+
+export const WithAlert: Story = {
+  args: {
+    businesses: undefined,
+    children: (
+      <Alert variant={'warning'} showAlert>
+        {
+          'Vi kan dessverre ikke vise alle tilgangene dine nå. Vi jobber med å løse feilen. Prøv igjen eller kom tilbake senere.'
+        }
+      </Alert>
+    ),
+  },
+} satisfies Story;
