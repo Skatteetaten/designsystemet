@@ -125,7 +125,7 @@ export function useComboboxCore({
   // DOM refs - centralized in core hook
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const previousOptionsRef = useRef<ComboboxOption[]>(options);
   const chevronClickedRef = useRef(false);
   const chevronActionTimeRef = useRef(0);

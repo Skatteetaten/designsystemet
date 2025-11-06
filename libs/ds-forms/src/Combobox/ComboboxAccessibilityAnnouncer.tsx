@@ -7,6 +7,7 @@ import type {
   ComboboxAccessibilityAnnouncerProps,
   ComboboxOption,
 } from './Combobox.types';
+import { useDebounce } from './hooks/useDebounce';
 
 import styles from './Combobox.module.scss';
 
@@ -38,10 +39,25 @@ const ComboboxAccessibilityAnnouncerComponent = ({
   const announcerRef = useRef<HTMLDivElement>(null);
   const [message, setMessage] = useState<string>();
 
+  // Only debounce when user is actively searching, with multiple results found
+  // Don't debounce when dropdown opening, no results, or single result
+  // This ensures immediate announcements for important accessibility events
+  const shouldDebounce =
+    isOpen && searchTerm.length > 0 && displayOptions.length > 1;
+  const debouncedDisplayOptions = useDebounce(
+    displayOptions,
+    shouldDebounce ? 500 : 0
+  );
+
+  // Use immediate options when not debouncing to avoid async delay
+  const effectiveDisplayOptions = shouldDebounce
+    ? debouncedDisplayOptions
+    : displayOptions;
+
   useEffect(() => {
     const newMessage = getAnnouncementMessage(
       isOpen,
-      displayOptions,
+      effectiveDisplayOptions,
       searchTerm,
       t
     );
@@ -56,7 +72,7 @@ const ComboboxAccessibilityAnnouncerComponent = ({
       };
     }
     return undefined;
-  }, [isOpen, displayOptions, searchTerm, t]);
+  }, [isOpen, effectiveDisplayOptions, searchTerm, t]);
 
   return (
     <div
