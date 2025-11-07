@@ -99,6 +99,9 @@ export const WithSelectedValues = {
 
     await expect(inputElement).toBeEnabled();
 
+    const chipsList = canvas.getByRole('list');
+    await expect(chipsList).toBeInTheDocument();
+
     await expect(
       canvas.queryByRole('button', {
         name: dsI18n.t('ds_forms:combobox.ResetSuggestion'),
