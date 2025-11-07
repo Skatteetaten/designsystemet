@@ -78,6 +78,32 @@ export const Defaults = {
   },
 } satisfies Story;
 
+export const WithLongText = {
+  name: 'With Long Text (A1)',
+  args: {
+    className: 'width200',
+    multiple: true,
+    label: 'Combobox with long option values',
+    options: [
+      { label: 'Averylongoptionvaluethatexceedsnormallength', value: '1' },
+      {
+        label: 'Another extremely lengthy option value for testing',
+        value: '2',
+      },
+      { label: 'Short', value: '3' },
+    ],
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+    await userEvent.click(options[1]);
+  },
+} satisfies Story;
+
 export const WithSelectedValues = {
   name: 'With Selected Values (A11)',
   args: {

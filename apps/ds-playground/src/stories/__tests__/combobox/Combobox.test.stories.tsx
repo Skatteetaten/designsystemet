@@ -224,6 +224,51 @@ export const WithHover = {
   },
 } satisfies Story;
 
+export const WithLongOption = {
+  name: 'With Long Option (A1)',
+  args: {
+    className: 'width200',
+    label: 'Combobox with long option values',
+    options: [
+      { label: 'Averylongoptionvaluethatexceedsnormallength', value: '1' },
+      {
+        label: 'Another extremely lengthy option value for testing',
+        value: '2',
+      },
+      { label: 'Short', value: '3' },
+    ],
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+  },
+} satisfies Story;
+
+export const WithLongValue = {
+  name: 'With Long Value (A1)',
+  args: {
+    className: 'width200',
+    label: 'Combobox with long option values',
+    options: [
+      { label: 'Averylongoptionvaluethatexceedsnormallength', value: '1' },
+      {
+        label: 'Another extremely lengthy option value for testing',
+        value: '2',
+      },
+      { label: 'Short', value: '3' },
+    ],
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+  },
+} satisfies Story;
+
 export const IsOpen = {
   name: 'IsOpen (A1, B1)',
   args: {

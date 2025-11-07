@@ -286,6 +286,10 @@ p.bold {
   height: 3rem;
 }
 
+.width200 {
+  max-width: 200px;
+}
+
 .width400 {
   max-width: 400px;
 }

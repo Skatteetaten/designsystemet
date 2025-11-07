@@ -85,11 +85,11 @@
 }
 
 .input {
+  overflow: hidden;
   min-width: 7rem;
   flex: 1;
   padding: 0;
   border: none;
-
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
@@ -99,6 +99,8 @@
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
   outline: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &::placeholder {
     color: var(--palette-graphite-50);
@@ -355,6 +357,7 @@
 .optionLabel {
   min-width: 0;
   flex: 1;
+  overflow-wrap: anywhere;
 }
 
 .emptyResult {
