@@ -273,7 +273,9 @@ const Combobox = memo(
               aria-autocomplete={'list'}
               autoComplete={'off'}
               aria-controls={listId}
-              aria-activedescendant={focusedIndex >= 0 ? focusedOptionId : ''}
+              aria-activedescendant={
+                focusedIndex >= 0 ? focusedOptionId : undefined
+              }
               aria-describedby={ariaDescribedBy}
               aria-invalid={!!errorMessage || undefined}
               data-testid={dataTestId}
