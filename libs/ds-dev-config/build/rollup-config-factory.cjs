@@ -114,10 +114,7 @@ function handleSassOutput(_styles, styleNodes) {
 
         // Bygg sti til output-katalog basert på faktisk prosjektstruktur
         const outputPath = id
-          .replace(
-            /.*\/libs\/([^/]+)\/src\//,
-            '/Users/august.soberg-klyver/Code/DS/designsystemet/dist/libs/$1/'
-          )
+          .replace(/\/libs\/([^\/]+)\/src/, '/dist/libs/$1')
           .replace('.scss', '.css');
 
         try {
