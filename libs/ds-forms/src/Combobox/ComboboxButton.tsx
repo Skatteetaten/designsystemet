@@ -22,7 +22,7 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
     disabled,
     variant,
   }: ComboboxButtonProps): JSX.Element => {
-    const buttonClassName = `${styles.chevronButton} ${variant === 'large' ? styles.chevronButton_large : ''}`;
+    const buttonClassName = `${styles.chevronButton} ${variant === 'large' ? styles.chevronButtonLarge : ''}`;
     const iconSize = variant === 'large' ? 'medium' : 'small';
 
     const handleMouseDown = (e: React.MouseEvent<HTMLElement>): void => {

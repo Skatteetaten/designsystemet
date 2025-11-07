@@ -7,9 +7,8 @@ declare const classNames: {
   readonly inputContainer_large: 'inputContainer_large';
   readonly inputContainerMultiple: 'inputContainerMultiple';
   readonly inputContentArea: 'inputContentArea';
-  readonly inputButtonArea: 'inputButtonArea';
   readonly chevronButton: 'chevronButton';
-  readonly chevronButton_large: 'chevronButton_large';
+  readonly chevronButtonLarge: 'chevronButtonLarge';
   readonly chipsInline: 'chipsInline';
   readonly chipsContainer: 'chipsContainer';
   readonly optionsListContainer: 'optionsListContainer';

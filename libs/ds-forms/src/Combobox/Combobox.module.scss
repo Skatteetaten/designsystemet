@@ -73,17 +73,6 @@
   grid-area: content;
 }
 
-.inputButtonArea {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  align-items: center;
-  align-self: start;
-  justify-content: flex-start;
-  padding: var(--spacing-xxs);
-  grid-area: button;
-}
-
 .input {
   overflow: hidden;
   min-width: 7rem;
@@ -121,69 +110,54 @@
 
 .chevronButton {
   display: flex;
-  width: 24px;
-  height: 24px;
+  width: var(--size-large);
+  height: var(--size-large);
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  padding: 0;
   border: none;
+  border-radius: 50%;
   background: transparent;
   cursor: pointer;
+  grid-area: button;
 
-  &:disabled,
-  &[data-disabled='true'] {
-    background: var(--semantic-disabled-background);
-    color: var(--semantic-disabled-foreground);
-    cursor: not-allowed;
-    outline: 0;
+  svg {
+    fill: var(--semantic-interactive-main);
     pointer-events: none;
   }
 
-  // Only apply hover styles to actual button elements (clear button)
-  &:is(:hover, :focus-visible):enabled {
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
-    outline: 2px solid var(--semantic-interactive-background);
-  }
-
-  &:hover:enabled {
-    z-index: 10;
+  &:hover {
     background-color: var(--semantic-interactive-background);
   }
 
-  // Hover styles for chevron div (not button)
-  &:not(button):hover:not([data-disabled='true']) {
-    position: relative;
-    z-index: 10;
-    border-radius: 50%;
-    background-color: var(--semantic-interactive-background);
-    outline: none;
+  &:focus-visible {
+    outline: 2px solid var(--semantic-interactive-main);
+  }
 
-    &::before {
-      position: absolute;
-      border: 2px solid var(--semantic-interactive-main);
-      border-radius: 12rem;
-      content: '';
-      inset: 2px;
+  &:active {
+    background-color: var(--semantic-interactive-foreground);
+    transform: translateY(2px);
+    transition: 0.15s;
+
+    svg {
+      fill: var(--semantic-page-background);
     }
   }
 
-  // Size variants for chevron button
-  &_large {
-    width: 28px;
-    height: 28px;
+  &:disabled,
+  &[data-disabled='true'] {
+    pointer-events: none;
+
+    svg {
+      fill: var(--semantic-disabled-foreground);
+    }
   }
-}
 
-.chevronButton svg {
-  fill: var(--semantic-interactive-main);
-  pointer-events: none;
-}
-
-.chevronButton:disabled svg,
-.chevronButton[data-disabled='true'] svg {
-  fill: var(--semantic-disabled-foreground);
+  &Large {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: var(--spacing-xxs);
+  }
 }
 
 .chipsInline {
