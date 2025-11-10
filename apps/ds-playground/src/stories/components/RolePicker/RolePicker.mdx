@@ -1,9 +1,9 @@
 import { Meta, Primary, Controls } from '@storybook/addon-docs/blocks';
-import { PlayroomCanvas as Canvas } from '../../playroom/utils';
+import { PlayroomCanvas as Canvas } from '../../../playroom/utils';
 import * as RolePickerStories from './RolePicker.stories';
-import { VersionBadge } from '../utils/VersionBadge';
-import { DocIntro } from '../utils/DocIntro';
-import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
+import { VersionBadge } from '../../utils/VersionBadge';
+import { DocIntro } from '../../utils/DocIntro';
+import { DocHeaderWrapper } from '../../utils/DocHeaderWrapper';
 
 <Meta of={RolePickerStories} />
 
@@ -27,4 +27,10 @@ import { RolePicker } from '@skatteetaten/ds-overlays';
 
 ## Examples
 
+### With External TopBanner
+
 <Canvas of={RolePickerStories.WithExternalTopBanner} />
+
+### With Alert
+
+<Canvas of={RolePickerStories.WithAlert} />

@@ -1,10 +1,9 @@
-import { JSX, useRef, useState, MouseEvent } from 'react';
+import { JSX, useRef, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
-import { User, TopBannerExternal } from '@skatteetaten/ds-layout';
+import { User } from '@skatteetaten/ds-layout';
 import {
   Business,
   Entity,
@@ -20,10 +19,12 @@ import {
   getRolePickerShowDeceasedPeopleDefault,
   getRolePickerMinimumEntitiesForSearchDefault,
 } from '@skatteetaten/ds-overlays';
-import { Alert } from '@skatteetaten/ds-status';
 
-import { category } from '../../../.storybook/helpers';
-import { exampleParameters } from '../utils/stories.utils';
+import { RolePickerWithAlertExample } from './RolePickerWithAlertExample';
+import rolePickerWithAlertExample from './RolePickerWithAlertExample?raw';
+import { RolePickerWithTopBannerExternalExample } from './RolePickerWithTopBannerExternalExample';
+import rolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample?raw';
+import { category } from '../../../../.storybook/helpers';
 
 const me: Person = {
   name: 'Ola Nordmann',
@@ -285,201 +286,35 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const WithExternalTopBanner: Story = {
-  render: (_args): JSX.Element => {
-    const modalRef = useRef<HTMLDialogElement>(null);
-    const [user, setUser] = useState<User>();
-
-    const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
-      const lang = e.currentTarget.lang;
-      dsI18n.changeLanguage(langToLocale[lang]);
-    };
-
-    const me: Person = {
-      name: 'Ola Nordmann',
-      personId: '10101012345',
-      type: 'Person',
-    };
-
-    const businesses: Paginated<Business> = {
-      total: 12,
-      list: [
-        {
-          name: 'Costco AS',
-          organizationNumber: '123456777',
-          isDeleted: false,
-          unitType: 'AS',
-          type: 'Organization',
-          subunits: [
-            {
-              name: 'Google ASA',
-              organizationNumber: '123456789',
-              isDeleted: false,
-              type: 'Organization',
-              unitType: 'ASA',
-            },
-            {
-              name: 'Facebook RHF',
-              organizationNumber: '123456790',
-              isDeleted: true,
-              type: 'Organization',
-              unitType: 'RHF',
-            },
-          ],
-        },
-        {
-          name: 'Instagram AS',
-          organizationNumber: '312843211',
-          isDeleted: true,
-          unitType: 'AS',
-          type: 'Organization',
-          subunits: [
-            {
-              name: 'Snapchat AS',
-              organizationNumber: '123456623',
-              isDeleted: true,
-              type: 'Organization',
-              unitType: 'AS',
-            },
-            {
-              name: 'Statoil ASA',
-              organizationNumber: '312849218',
-              isDeleted: false,
-              type: 'Organization',
-              unitType: 'ASA',
-            },
-          ],
-        },
-        {
-          name: 'Samsung DA',
-          organizationNumber: '312943218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'DA',
-        },
-        {
-          name: 'Toshiba AS',
-          organizationNumber: '312643218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'AS',
-        },
-        {
-          name: 'Hitachi AS',
-          organizationNumber: '312743218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'AS',
-        },
-        {
-          name: 'Vanguard AS',
-          organizationNumber: '332843218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'AS',
-        },
-        {
-          name: 'Amazon ASA',
-          organizationNumber: '112843218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'ASA',
-        },
-        {
-          name: 'Meta ANS',
-          organizationNumber: '212843218',
-          isDeleted: false,
-          type: 'Organization',
-          unitType: 'ANS',
-        },
-      ],
-    };
-
-    const people: Paginated<Person> = {
-      total: 4,
-      list: [
-        {
-          name: 'Antikvitet presis',
-          personId: '13889999726',
-          type: 'Person',
-          isDeleted: false,
-        },
-        {
-          name: 'Bønne elegant',
-          personId: '18849574503',
-          type: 'Person',
-          isDeleted: true,
-        },
-        {
-          name: 'Lomme filosofisk',
-          personId: '08889674513',
-          type: 'Person',
-          isDeleted: true,
-        },
-        {
-          name: 'Adelsmann varm',
-          personId: '14892449911',
-          type: 'Person',
-          isDeleted: false,
-        },
-      ],
-    };
-
-    return (
-      <>
-        <TopBannerExternal
-          user={user}
-          onLanguageClick={handleLanguageClick}
-          onLogInClick={
-            !user ? (): void => modalRef.current?.showModal() : undefined
-          }
-        >
-          {user && (
-            <TopBannerExternal.UserMenu
-              user={user}
-              notificationCount={1}
-              onLogOutClick={() => setUser(undefined)}
-              onSwitchUserClick={() => modalRef.current?.showModal()}
-            />
-          )}
-        </TopBannerExternal>
-        <RolePicker
-          ref={modalRef}
-          me={me}
-          businesses={businesses}
-          people={people}
-          onEntitySelect={async (entity) => {
-            let role: User['role'];
-            if (entity.name === me.name) {
-              role = 'meg';
-            } else if (entity.type === 'Organization') {
-              role = 'virksomhet';
-            } else {
-              role = 'andre';
-            }
-
-            setUser({
-              role: role,
-              name: entity.name,
-            });
-            modalRef.current?.close();
-          }}
-        />
-      </>
-    );
+  parameters: {
+    docs: {
+      codePanel: true,
+      source: {
+        code: rolePickerWithTopBannerExternalExample,
+        type: 'auto',
+        language: 'tsx',
+      },
+    },
+    controls: {
+      exclude: /.*/,
+    },
   },
+  render: (_args): JSX.Element => <RolePickerWithTopBannerExternalExample />,
 } satisfies Story;
 
-WithExternalTopBanner.parameters = exampleParameters;
-
 export const WithAlert: Story = {
-  args: {
-    businesses: undefined,
-    children: (
-      <Alert variant={'warning'} showAlert>
-        {
-          'Vi kan dessverre ikke vise alle tilgangene dine nå. Vi jobber med å løse feilen. Prøv igjen eller kom tilbake senere.'
-        }
-      </Alert>
-    ),
+  parameters: {
+    docs: {
+      codePanel: true,
+      source: {
+        code: rolePickerWithAlertExample,
+        type: 'auto',
+        language: 'tsx',
+      },
+    },
+    controls: {
+      exclude: /.*/,
+    },
   },
+  render: (_args): JSX.Element => <RolePickerWithAlertExample />,
 } satisfies Story;
