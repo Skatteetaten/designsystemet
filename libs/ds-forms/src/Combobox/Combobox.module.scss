@@ -4,19 +4,8 @@
   @include styles.sr-only;
 }
 
-.comboboxWrapper {
-  position: relative;
-  box-sizing: border-box;
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-
-  &[data-has-spacing='true'] {
-    margin-bottom: var(--spacing-m);
-  }
+[data-has-spacing='true'] {
+  margin-bottom: var(--spacing-m);
 }
 
 .inputContainer {
@@ -33,6 +22,10 @@
 
   &MarginTop {
     margin-top: var(--spacing-xs);
+  }
+
+  &Large {
+    min-height: var(--size-large-plus);
   }
 
   &:has(.input:disabled) {
@@ -55,14 +48,6 @@
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: 1px solid var(--semantic-interactive-main);
   }
-
-  &_large {
-    min-height: var(--size-large-plus);
-  }
-
-  &.inputContainerMultiple {
-    gap: var(--spacing-s);
-  }
 }
 
 .inputContentArea {
@@ -71,6 +56,11 @@
   flex-wrap: wrap;
   gap: var(--spacing-s);
   grid-area: content;
+
+  .chips {
+    margin-top: var(--spacing-xs);
+    gap: var(--spacing-xs);
+  }
 }
 
 .input {
@@ -158,17 +148,6 @@
     height: 1.75rem;
     margin: var(--spacing-xxs);
   }
-}
-
-.chipsInline {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--spacing-xs);
-  gap: var(--spacing-xs);
-}
-
-.chipsContainer {
-  margin-bottom: 0;
 }
 
 .optionsListContainer {
