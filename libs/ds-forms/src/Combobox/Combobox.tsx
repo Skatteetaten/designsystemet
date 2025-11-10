@@ -220,19 +220,15 @@ const Combobox = memo(
       containerClassNames += ` ${styles.inputContainerMarginTop}`;
     }
 
-    if (multiple) {
-      containerClassNames += ` ${styles.inputContainerMultiple}`;
-    }
-
     if (resolvedVariant === 'large') {
-      containerClassNames += ` ${styles.inputContainer_large}`;
+      containerClassNames += ` ${styles.inputContainerLarge}`;
     }
 
     return (
       <div
         lang={lang}
         data-has-spacing={hasSpacing}
-        className={`${styles.comboboxWrapper} ${classNames?.container || ''} ${className || ''}`.trim()}
+        className={`${styles.comboboxWrapper} ${className}`.trim()}
       >
         <LabelWithHelp
           id={labelId}
@@ -258,7 +254,6 @@ const Combobox = memo(
             <ComboboxSelectedOptions
               multiple={multiple}
               selectedValues={selectedValues}
-              classNames={classNames?.chips}
               labelId={labelId}
               disabled={disabled}
               onRemoveValue={handleRemoveValue}
@@ -272,7 +267,7 @@ const Combobox = memo(
               disabled={disabled}
               required={required}
               role={'combobox'}
-              className={`${styles.input} ${classNames?.input || ''}`}
+              className={styles.input}
               aria-expanded={isOpen}
               aria-autocomplete={'list'}
               autoComplete={'off'}
@@ -321,7 +316,7 @@ const Combobox = memo(
             comboboxId={comboboxId}
             listId={listId}
             focusedIndex={focusedIndex}
-            classNames={classNames?.options}
+            className={classNames?.options}
             handleButtonFocus={handleButtonFocus}
             handleOptionSelect={handleOptionSelect}
             customListRef={containerRef}
