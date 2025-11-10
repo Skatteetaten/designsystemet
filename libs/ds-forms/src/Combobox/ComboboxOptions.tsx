@@ -71,6 +71,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             role={'listbox'}
             aria-multiselectable={multiple ? 'true' : 'false'}
             className={styles.optionsList}
+            onMouseDown={(e) => e.preventDefault()}
           >
             {displayOptions.map((option, index) => {
               const comboboxState: ComboboxState = {

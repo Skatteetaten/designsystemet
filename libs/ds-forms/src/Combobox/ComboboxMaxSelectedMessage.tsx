@@ -17,6 +17,7 @@ export const ComboboxMaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
         role={'status'}
         aria-live={'polite'}
         aria-atomic={'true'}
+        onMouseDown={(e) => e.preventDefault()}
       >
         {selectedCount === 1
           ? t('combobox.SelectedOfTotalSingular', {
