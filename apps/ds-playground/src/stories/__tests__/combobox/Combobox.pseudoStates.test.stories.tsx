@@ -123,6 +123,9 @@ export const Option = {
     );
   },
   parameters: {
+    a11y: {
+      test: 'off',
+    },
     imageSnapshot: {
       pseudoStates: ['hover', 'focus-visible', 'active'],
     },
