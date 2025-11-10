@@ -60,18 +60,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Input = {
-  name: 'Input',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    imageSnapshot: {
-      pseudoStates: ['hover', 'focus-visible'],
-    },
-  },
-} satisfies Story;
-
 export const Chevron = {
   name: 'Chevron',
   args: {
