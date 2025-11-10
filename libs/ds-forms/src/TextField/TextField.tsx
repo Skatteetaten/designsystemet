@@ -67,6 +67,7 @@ export const TextField = ({
   const errorId = `textFieldErrorId-${useId()}`;
   const generatedId = `textFieldTextboxId-${useId()}`;
   const characterCounterId = `textFieldCharacterCounter-${useId()}`;
+  const descriptionId = `descId-${useId()}`;
   const textboxId = externalId ?? generatedId;
 
   const textboxRef = useRef<HTMLInputElement>(null);
@@ -316,7 +317,11 @@ export const TextField = ({
     }`.trim();
 
   const ariaDescribedBy =
-    [errorMessage && errorId, characterLimit && characterCounterId]
+    [
+      description && descriptionId,
+      errorMessage && errorId,
+      characterLimit && characterCounterId,
+    ]
       .filter(Boolean)
       .join(' ') || undefined;
 
@@ -332,6 +337,7 @@ export const TextField = ({
         hideLabel={hideLabel}
         showRequiredMark={showRequiredMark}
         description={description}
+        descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}

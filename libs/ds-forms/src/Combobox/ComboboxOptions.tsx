@@ -26,7 +26,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     comboboxId,
     listId,
     focusedIndex,
-    classNames,
+    className,
     handleButtonFocus,
     handleOptionSelect,
     customListRef,
@@ -50,7 +50,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
         <div
           ref={customListRef}
           id={listId}
-          className={`${styles.optionsListContainer} ${styles.loadingContainer} ${classNames || ''}`.trim()}
+          className={`${styles.optionsListContainer} ${styles.loadingContainer} ${className || ''}`.trim()}
         >
           <Spinner titlePosition={'right'} {...spinnerProps}>
             {spinnerLabel}
@@ -64,7 +64,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       return (
         <div
           ref={customListRef}
-          className={`${styles.optionsListContainer} ${classNames || ''}`.trim()}
+          className={`${styles.optionsListContainer} ${className || ''}`.trim()}
         >
           <ul
             id={listId}
@@ -153,7 +153,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       return (
         <div
           ref={customListRef}
-          className={`${styles.optionsListContainer} ${classNames || ''}`.trim()}
+          className={`${styles.optionsListContainer} ${className || ''}`.trim()}
         >
           <ul
             id={listId}
@@ -178,5 +178,3 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     return null;
   }
 );
-
-ComboboxOptions.displayName = 'ComboboxOptions';

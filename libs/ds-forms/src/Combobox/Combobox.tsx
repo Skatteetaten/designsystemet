@@ -207,9 +207,12 @@ const Combobox = memo(
       focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined;
 
     const labelId = `${comboboxId}-label`;
+    const descriptionId = `${comboboxId}-description`;
 
     const ariaDescribedBy =
-      [errorMessage && errorId].filter(Boolean).join(' ') || undefined;
+      [description && descriptionId, errorMessage && errorId]
+        .filter(Boolean)
+        .join(' ') || undefined;
 
     let containerClassNames = styles.inputContainer;
 
@@ -217,12 +220,8 @@ const Combobox = memo(
       containerClassNames += ` ${styles.inputContainerMarginTop}`;
     }
 
-    if (multiple) {
-      containerClassNames += ` ${styles.inputContainerMultiple}`;
-    }
-
     if (resolvedVariant === 'large') {
-      containerClassNames += ` ${styles.inputContainer_large}`;
+      containerClassNames += ` ${styles.inputContainerLarge}`;
     }
 
     return (
@@ -233,6 +232,7 @@ const Combobox = memo(
           htmlFor={comboboxId}
           hideLabel={hideLabel}
           description={description}
+          descriptionId={descriptionId}
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
@@ -250,7 +250,6 @@ const Combobox = memo(
             <ComboboxSelectedOptions
               multiple={multiple}
               selectedValues={selectedValues}
-              classNames={classNames?.chips}
               labelId={labelId}
               disabled={disabled}
               onRemoveValue={handleRemoveValue}
@@ -264,7 +263,7 @@ const Combobox = memo(
               disabled={disabled}
               required={required}
               role={'combobox'}
-              className={`${styles.input} ${classNames?.input || ''}`}
+              className={styles.input}
               aria-expanded={isOpen}
               aria-autocomplete={'list'}
               autoComplete={'off'}
@@ -313,7 +312,7 @@ const Combobox = memo(
             comboboxId={comboboxId}
             listId={listId}
             focusedIndex={focusedIndex}
-            classNames={classNames?.options}
+            className={classNames?.options}
             handleButtonFocus={handleButtonFocus}
             handleOptionSelect={handleOptionSelect}
             customListRef={containerRef}

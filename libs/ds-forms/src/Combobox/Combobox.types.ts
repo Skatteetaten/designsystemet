@@ -32,10 +32,7 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement | null>;
   classNames?: Prettify<
     {
-      container?: string;
-      input?: string;
       options?: string;
-      chips?: string;
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
@@ -107,7 +104,6 @@ export type ComboboxSelectedOptionsProps = {
   multiple: boolean;
   selectedValues: ComboboxOption[];
   onRemoveValue: (value: ComboboxOption) => void;
-  classNames?: string;
   labelId?: string;
   disabled?: boolean;
 };
@@ -124,7 +120,7 @@ export type ComboboxOptionsProps = {
   comboboxId: string;
   listId: string;
   focusedIndex: number;
-  classNames?: string;
+  className?: string;
   handleButtonFocus: (index: number) => void;
   handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
   customListRef: RefObject<HTMLDivElement | null>;

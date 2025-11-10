@@ -20,7 +20,6 @@ const meta = {
     multiple: { table: { disable: true } },
     selectedValues: { table: { disable: true } },
     onRemoveValue: { table: { disable: true } },
-    classNames: { table: { disable: true } },
   },
   tags: ['test'],
 } satisfies Meta<typeof ComboboxSelectedOptions>;

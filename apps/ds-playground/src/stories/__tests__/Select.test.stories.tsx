@@ -417,6 +417,10 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
     await expect(labelWithDescription).toBeInTheDocument();
+    const selectNode = canvas.getByRole('combobox');
+    await expect(selectNode).toHaveAttribute('aria-describedby');
+    const describedbyValue = selectNode.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
   },
 } satisfies Story;
 

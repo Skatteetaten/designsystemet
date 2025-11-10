@@ -11,7 +11,6 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
     multiple,
     selectedValues,
     onRemoveValue,
-    classNames,
     labelId,
     disabled,
   }: ComboboxSelectedOptionsProps): JSX.Element | null => {
@@ -26,20 +25,18 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
     }
 
     return (
-      <div className={`${styles.chipsInline} ${classNames || ''}`}>
-        <Chips ref={setChipsRef}>
-          {selectedValues.map((selectedValue) => (
-            <Chips.Removable
-              key={selectedValue.value}
-              size={'small'}
-              disabled={disabled}
-              onClose={() => onRemoveValue(selectedValue)}
-            >
-              {selectedValue.label}
-            </Chips.Removable>
-          ))}
-        </Chips>
-      </div>
+      <Chips ref={setChipsRef} className={styles.chips}>
+        {selectedValues.map((selectedValue) => (
+          <Chips.Removable
+            key={selectedValue.value}
+            size={'small'}
+            disabled={disabled}
+            onClose={() => onRemoveValue(selectedValue)}
+          >
+            {selectedValue.label}
+          </Chips.Removable>
+        ))}
+      </Chips>
     );
   }
 );

@@ -149,6 +149,10 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
     await expect(labelWithDescription).toBeInTheDocument();
+    const radio = canvas.getByRole('radio');
+    await expect(radio).toHaveAttribute('aria-describedby');
+    const describedbyValue = radio.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
   },
 } satisfies Story;
 

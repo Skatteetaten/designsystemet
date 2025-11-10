@@ -71,6 +71,7 @@ export const DatePicker = ({
   useValidateFormRequiredProps({ required, showRequiredMark });
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
+  const descriptionId = `descId-${useId()}`;
   const errorId = `datepickerErrorId-${useId()}`;
   const generatedId = `datepickerInputId-${useId()}`;
   const datePickerId = externalId ?? generatedId;
@@ -213,6 +214,7 @@ export const DatePicker = ({
         hideLabel={hideLabel}
         showRequiredMark={showRequiredMark}
         description={description}
+        descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
@@ -237,7 +239,12 @@ export const DatePicker = ({
           readOnly={readOnly}
           required={required}
           value={inputValue}
-          aria-describedby={errorMessage ? errorId : undefined}
+          aria-describedby={
+            [description && descriptionId, errorMessage && errorId]
+              .filter(Boolean)
+              .join(' ')
+              .trim() || undefined
+          }
           aria-invalid={!!errorMessage || undefined}
           onBlur={handleBlur}
           onChange={handleChange}

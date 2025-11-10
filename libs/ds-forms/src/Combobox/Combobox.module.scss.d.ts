@@ -2,14 +2,12 @@ declare const classNames: {
   readonly srOnly: 'srOnly';
   readonly inputContainer: 'inputContainer';
   readonly inputContainerMarginTop: 'inputContainerMarginTop';
+  readonly inputContainerLarge: 'inputContainerLarge';
   readonly input: 'input';
-  readonly inputContainer_large: 'inputContainer_large';
-  readonly inputContainerMultiple: 'inputContainerMultiple';
   readonly inputContentArea: 'inputContentArea';
+  readonly chips: 'chips';
   readonly chevronButton: 'chevronButton';
   readonly chevronButtonLarge: 'chevronButtonLarge';
-  readonly chipsInline: 'chipsInline';
-  readonly chipsContainer: 'chipsContainer';
   readonly optionsListContainer: 'optionsListContainer';
   readonly optionsList: 'optionsList';
   readonly option: 'option';

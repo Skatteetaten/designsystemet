@@ -17,6 +17,8 @@ export interface HelpProps {
   targetId?: string;
   /** Beskrivelse */
   description?: string;
+  /** Id til beskrivelse */
+  descriptionId?: string;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: OnHelpToggleHandler;
   className?: BaseProps['className'];

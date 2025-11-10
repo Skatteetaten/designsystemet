@@ -377,6 +377,10 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
     await expect(labelWithDescription).toBeInTheDocument();
+    const searchbox = canvas.getByRole('searchbox');
+    await expect(searchbox).toHaveAttribute('aria-describedby');
+    const describedbyValue = searchbox.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
   },
 } satisfies Story;
 
