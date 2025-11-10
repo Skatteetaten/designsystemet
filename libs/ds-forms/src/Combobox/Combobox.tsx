@@ -296,17 +296,15 @@ const Combobox = memo(
                 />
               ))}
           </div>
-          <div className={styles.inputButtonArea}>
-            <ComboboxButton
-              isOpen={isOpen}
-              hasValue={!multiple && !!searchTerm}
-              multiple={multiple}
-              disabled={disabled}
-              variant={resolvedVariant}
-              onClear={!multiple ? handleClearValue : undefined}
-              onClick={handleChevronClick}
-            />
-          </div>
+          <ComboboxButton
+            isOpen={isOpen}
+            hasValue={!multiple && !!searchTerm}
+            multiple={multiple}
+            disabled={disabled}
+            variant={resolvedVariant}
+            onClear={!multiple ? handleClearValue : undefined}
+            onClick={handleChevronClick}
+          />
           <ComboboxOptions
             isOpen={isOpen}
             isLoading={isLoading}
