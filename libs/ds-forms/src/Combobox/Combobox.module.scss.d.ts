@@ -1,5 +1,6 @@
 declare const classNames: {
   readonly srOnly: 'srOnly';
+  readonly comboboxWrapper: 'comboboxWrapper';
   readonly inputContainer: 'inputContainer';
   readonly inputContainerMarginTop: 'inputContainerMarginTop';
   readonly inputContainerLarge: 'inputContainerLarge';

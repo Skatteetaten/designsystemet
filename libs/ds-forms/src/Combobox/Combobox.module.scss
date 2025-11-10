@@ -4,8 +4,19 @@
   @include styles.sr-only;
 }
 
-[data-has-spacing='true'] {
-  margin-bottom: var(--spacing-m);
+.comboboxWrapper {
+  position: relative;
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
 }
 
 .inputContainer {

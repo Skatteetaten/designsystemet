@@ -222,7 +222,11 @@ const Combobox = memo(
     }
 
     return (
-      <div lang={lang} data-has-spacing={hasSpacing} className={className}>
+      <div
+        lang={lang}
+        data-has-spacing={hasSpacing}
+        className={`${styles.comboboxWrapper} ${className}`.trim()}
+      >
         <LabelWithHelp
           id={labelId}
           classNames={classNames}
