@@ -461,3 +461,7 @@ dl.descriptionListTwoColumns {
   /* for å skjule deprecated varsler */
   display: none;
 }
+
+.positionRelative {
+  position: relative !important;
+}
