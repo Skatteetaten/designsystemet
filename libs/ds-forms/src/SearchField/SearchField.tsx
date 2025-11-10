@@ -78,6 +78,7 @@ export const SearchField = (({
 
   const generatedId = useId();
   const searchFieldId = externalId ?? `searchField-${generatedId}`;
+  const descriptionId = `descId-${useId()}`;
   const errorId = `searchFieldErrorId-${useId()}`;
   const inputId = `${searchFieldId}-input`;
   const resultsId = `${searchFieldId}-results`;
@@ -186,6 +187,7 @@ export const SearchField = (({
         htmlFor={inputId}
         hideLabel={hideLabel}
         description={description}
+        descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
@@ -219,7 +221,16 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             value={value}
             autoComplete={autoComplete}
             required={required}
-            aria-describedby={`${errorMessage ? `${errorId} ` : ''}${enableSRNavigationHint ? srFocusId : ''}`.trim()}
+            aria-describedby={
+              [
+                description && descriptionId,
+                errorMessage && errorId,
+                enableSRNavigationHint && srFocusId,
+              ]
+                .filter(Boolean)
+                .join(' ')
+                .trim() || undefined
+            }
             aria-invalid={!!errorMessage || undefined}
             aria-owns={shouldShowResults ? resultsId : undefined}
             type={'search'}

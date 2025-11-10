@@ -14,6 +14,7 @@ import styles from './Help.module.scss';
 
 export const Help = ({
   description,
+  descriptionId,
   helpText,
   helpSvgPath,
   hideHelp,
@@ -77,6 +78,7 @@ export const Help = ({
       )}
       {description && (
         <div
+          id={descriptionId}
           className={`${
             styles.description
           } ${marginTopClassName} ${hideHelpClassName} ${

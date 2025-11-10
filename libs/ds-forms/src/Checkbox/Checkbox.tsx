@@ -44,6 +44,7 @@ export const Checkbox = ({
   const inputIdInternal = idExternal ?? uniqueInputId;
   const uniqueErrorId = `checkboxErrorId-${useId()}`;
   const errorIdInternal = errorIdExternal ?? uniqueErrorId;
+  const descriptionId = `descId-${useId()}`;
   const hasErrorInternal = errorIdExternal && !checked ? true : !!errorMessage;
   const isRequired = required && !checked;
 
@@ -57,9 +58,14 @@ export const Checkbox = ({
     !context && showRequiredMark ? styles.labelContent_required : '';
   const hideLabelClassName = hideLabel ? styles.srOnly : '';
 
-  const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
-    hasErrorInternal ? errorIdInternal : ''
-  }`.trim();
+  const ariaDescribedbyInput = [
+    description && descriptionId,
+    ariaDescribedby,
+    hasErrorInternal && errorIdInternal,
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .trim();
 
   return (
     <div
@@ -103,7 +109,7 @@ export const Checkbox = ({
             {description && <>&nbsp;</>}
           </span>
           {description && (
-            <span className={styles.labelContentDescription}>
+            <span id={descriptionId} className={styles.labelContentDescription}>
               {description}
             </span>
           )}

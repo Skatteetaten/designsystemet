@@ -27,10 +27,17 @@ export const Radio = ({
   const uniqueInputId = `radioInputId-${useId()}`;
   const inputId = externalId ?? uniqueInputId;
 
+  const descriptionId = `descId-${useId()}`;
+
   const concatenatedClassName = `${styles.radio} ${className}`.trim();
-  const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
-    context?.errorId ?? ''
-  }`.trim();
+  const ariaDescribedbyInput = [
+    description && descriptionId,
+    ariaDescribedby,
+    context?.errorId,
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .trim();
   const onChangeInput = (event: ChangeEvent<HTMLInputElement>): void => {
     context?.onChange && context.onChange(event);
     onChange && onChange(event);
@@ -77,7 +84,9 @@ export const Radio = ({
         {description && (
           <>
             &nbsp;
-            <span className={styles.radioLabelDescription}>{description}</span>
+            <span id={descriptionId} className={styles.radioLabelDescription}>
+              {description}
+            </span>
           </>
         )}
       </label>
