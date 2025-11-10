@@ -50,7 +50,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
         <div
           ref={customListRef}
           id={listId}
-          className={`${styles.optionsListContainer} ${styles.loadingContainer} ${classNames || ''}`}
+          className={`${styles.optionsListContainer} ${styles.loadingContainer} ${classNames || ''}`.trim()}
         >
           <Spinner titlePosition={'right'} {...spinnerProps}>
             {spinnerLabel}
@@ -64,7 +64,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       return (
         <div
           ref={customListRef}
-          className={`${styles.optionsListContainer} ${classNames || ''}`}
+          className={`${styles.optionsListContainer} ${classNames || ''}`.trim()}
         >
           <ul
             id={listId}
@@ -103,7 +103,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
                   role={'option'} // We need to use <li> for screenreader support, even though sonarqube complains
                   aria-selected={ariaSelected ? 'true' : 'false'}
                   aria-disabled={isDisabled ? 'true' : undefined}
-                  className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isFocused ? styles.focused : ''} ${isSelected ? styles.selected : ''} ${isDisabled ? styles.disabled : ''}`}
+                  className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isFocused ? styles.focused : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
                   tabIndex={-1}
                   onFocus={() => handleButtonFocus(index)}
                   onKeyDown={(e) => {
@@ -122,14 +122,18 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
                 >
                   {multiple && (
                     <div
-                      className={`${styles.checkboxIcon} ${isSelected ? styles.checked : ''} ${isDisabled ? styles.disabled : ''}`}
+                      className={`${styles.checkboxIcon} ${isSelected ? styles.checked : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
                     >
                       {isSelected && (
                         <div className={styles.checkboxIconCheck} />
                       )}
                     </div>
                   )}
-                  <span className={styles.optionLabel}>{option.label}</span>
+                  <span
+                    className={`${styles.optionLabel} ${isDisabled ? styles.disabled : ''}`.trim()}
+                  >
+                    {option.label}
+                  </span>
                 </li>
               );
             })}
@@ -149,7 +153,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       return (
         <div
           ref={customListRef}
-          className={`${styles.optionsListContainer} ${classNames || ''}`}
+          className={`${styles.optionsListContainer} ${classNames || ''}`.trim()}
         >
           <ul
             id={listId}

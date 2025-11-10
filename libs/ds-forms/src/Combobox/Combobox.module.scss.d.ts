@@ -1,6 +1,5 @@
 declare const classNames: {
   readonly srOnly: 'srOnly';
-  readonly comboboxWrapper: 'comboboxWrapper';
   readonly inputContainer: 'inputContainer';
   readonly inputContainerMarginTop: 'inputContainerMarginTop';
   readonly input: 'input';
@@ -14,14 +13,13 @@ declare const classNames: {
   readonly optionsListContainer: 'optionsListContainer';
   readonly optionsList: 'optionsList';
   readonly option: 'option';
+  readonly optionWithCheckbox: 'optionWithCheckbox';
   readonly focused: 'focused';
   readonly disabled: 'disabled';
-  readonly selected: 'selected';
-  readonly optionWithCheckbox: 'optionWithCheckbox';
-  readonly optionLabel: 'optionLabel';
   readonly checkboxIcon: 'checkboxIcon';
   readonly checked: 'checked';
   readonly checkboxIconCheck: 'checkboxIconCheck';
+  readonly optionLabel: 'optionLabel';
   readonly emptyResult: 'emptyResult';
   readonly loadingContainer: 'loadingContainer';
   readonly maxSelectedMessage: 'maxSelectedMessage';
