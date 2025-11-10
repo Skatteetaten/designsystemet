@@ -120,7 +120,7 @@ export type ComboboxOptionsProps = {
   comboboxId: string;
   listId: string;
   focusedIndex: number;
-  classNames?: string;
+  className?: string;
   handleButtonFocus: (index: number) => void;
   handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
   customListRef: RefObject<HTMLDivElement | null>;
