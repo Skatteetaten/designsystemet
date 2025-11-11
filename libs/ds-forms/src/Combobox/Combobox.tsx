@@ -214,16 +214,6 @@ const Combobox = memo(
         .filter(Boolean)
         .join(' ') || undefined;
 
-    let containerClassNames = styles.inputContainer;
-
-    if (label && !hideLabel) {
-      containerClassNames += ` ${styles.inputContainerMarginTop}`;
-    }
-
-    if (resolvedVariant === 'large') {
-      containerClassNames += ` ${styles.inputContainerLarge}`;
-    }
-
     return (
       <div lang={lang} data-has-spacing={hasSpacing} className={className}>
         <LabelWithHelp
@@ -241,8 +231,7 @@ const Combobox = memo(
           {label}
         </LabelWithHelp>
         <div
-          className={containerClassNames}
-          data-variant={resolvedVariant}
+          className={`${styles.inputContainer} ${label && !hideLabel ? styles.inputContainerMarginTop : ''}`.trim()}
           onClick={!disabled ? handleContainerClick : undefined}
           onKeyDown={!disabled ? handleContainerKeyDown : undefined}
         >
