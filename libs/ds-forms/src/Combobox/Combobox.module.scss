@@ -4,19 +4,8 @@
   @include styles.sr-only;
 }
 
-.comboboxWrapper {
-  position: relative;
-  box-sizing: border-box;
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-
-  &[data-has-spacing='true'] {
-    margin-bottom: var(--spacing-m);
-  }
+[data-has-spacing='true'] {
+  margin-bottom: var(--spacing-m);
 }
 
 .inputContainer {
@@ -27,7 +16,7 @@
   border-radius: 0;
   background: var(--semantic-page-background);
   box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
-  gap: var(--spacing-xs);
+  column-gap: var(--spacing-xs);
   grid-template-areas: 'content button';
   grid-template-columns: 1fr auto;
 
@@ -56,6 +45,7 @@
 
   &:has(.input:focus-visible):not(:has(.input:disabled)),
   &:has(.input:active):not(:has(.input:disabled)) {
+    z-index: 1001;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: 1px solid var(--semantic-interactive-main);
   }
@@ -168,13 +158,13 @@
   right: 0;
   left: 0;
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
+  padding-bottom: var(--spacing-xs);
   border: 1px solid var(--palette-graphite-100);
   border-top: none;
   margin: 1px 0 0;
   background: var(--semantic-page-background);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
+  box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 10%);
 }
 
 .optionsList {
@@ -185,36 +175,28 @@
 }
 
 .option {
-  display: block;
-  width: 100%;
-  padding: var(--spacing-xs) var(--spacing-s);
-  background: transparent;
+  padding: var(--spacing-xs);
   box-shadow: inset 0 -1px 0 0 var(--semantic-divider-30);
   color: var(--semantic-page-foreground);
   cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
-  text-align: left;
 
   &:last-child {
     box-shadow: none;
   }
 
-  &:focus-visible {
-    z-index: 10;
-    outline: 3px solid var(--semantic-interactive-main);
-    outline-offset: -1px;
+  &WithCheckbox {
+    display: flex;
+    align-items: center;
+    column-gap: var(--spacing-s);
   }
 
+  &:focus-visible,
   &.focused:not(.disabled) {
     z-index: 10;
-    padding: var(--spacing-xs) var(--spacing-s);
-    box-shadow: none;
     outline: 3px solid var(--semantic-interactive-main);
     outline-offset: -1px;
   }
 
-  // Skjul separator på elementet som kommer rett før det fokuserte elementet
   &:not(.disabled):hover {
     z-index: 10;
     background: var(--semantic-interactive-background);
@@ -222,44 +204,10 @@
     text-decoration: underline;
   }
 
-  &:has(+ &.focused:not(.disabled)) {
-    box-shadow: none;
-  }
-
-  &.selected {
-    background: var(--palette-accent-50);
-    color: var(--palette-accent-800);
-  }
-
-  &.selected.focused:not(.disabled) {
-    z-index: 10;
-    padding: var(--spacing-xs) var(--spacing-s);
-    background: var(--palette-accent-50);
-    box-shadow: none;
-    color: var(--palette-accent-800);
-    outline: 3px solid var(--semantic-interactive-main);
-    outline-offset: -1px;
-  }
-
-  &.selected:not(.disabled):hover {
-    color: var(--semantic-page-foreground);
-  }
-
-  &WithCheckbox {
-    display: flex;
-    align-items: center;
-    padding: var(--spacing-xs) var(--spacing-s);
-    gap: 0 var(--spacing-xs);
-  }
-
   &.disabled {
     background: var(--semantic-disabled-background);
     color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
-
-    .optionLabel {
-      color: var(--semantic-disabled-foreground);
-    }
   }
 }
 
@@ -268,7 +216,7 @@
   width: var(--size-medium);
   min-width: var(--size-medium);
   height: var(--size-medium);
-  flex-shrink: 0;
+  box-sizing: border-box;
   border: var(--spacing-xxs) solid var(--semantic-page-foreground);
   background-color: var(--semantic-page-background);
 
@@ -280,69 +228,47 @@
   &Check {
     position: absolute;
     top: 0.1875rem;
-    left: 0.125rem;
-    width: 0.8125rem;
-    height: 0.375rem;
+    left: 0.0625rem;
+    width: 0.71875rem;
+    height: 0.3125rem;
     border-bottom: var(--spacing-xxs) solid var(--palette-graphite-0);
     border-left: var(--spacing-xxs) solid var(--palette-graphite-0);
     transform: rotate(-45deg);
   }
 
   &.disabled {
-    border-color: var(--semantic-border);
-    background-color: var(--semantic-disabled-background);
-    cursor: not-allowed;
-
-    &:hover {
-      border-color: var(--semantic-border);
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
-
-    .optionLabel {
-      color: var(--semantic-disabled-foreground);
-    }
-  }
-}
-
-.option.disabled .checkboxIcon {
-  border-color: var(--semantic-disabled-foreground);
-  background-color: var(--semantic-disabled-background);
-
-  &.checked {
     border-color: var(--semantic-disabled-foreground);
     background-color: var(--semantic-disabled-background);
+    pointer-events: none;
   }
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .optionLabel {
-  min-width: 0;
-  flex: 1;
   overflow-wrap: anywhere;
+
+  .disabled {
+    color: var(--semantic-disabled-foreground);
+  }
 }
 
 .emptyResult {
-  padding: var(--spacing-xs) var(--spacing-s);
+  padding-top: var(--spacing-xs);
   color: var(--semantic-page-foreground);
   opacity: 0.8;
-  text-align: left;
 }
 
 .loadingContainer {
   display: flex;
   min-height: 40px;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-xs) var(--spacing-s);
 }
 
 .maxSelectedMessage {
-  padding: var(--spacing-xs) var(--spacing-s);
+  padding: var(--spacing-s) var(--spacing-s-plus);
   border-top: 1px solid var(--semantic-divider-30);
-  margin-top: var(--spacing-xs);
   background-color: var(--semantic-page-background);
   color: var(--semantic-page-foreground);
   font-size: var(--font-size-m);
