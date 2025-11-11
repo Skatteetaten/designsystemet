@@ -165,3 +165,13 @@ export const WithOnClose = {
     });
   },
 } satisfies Story;
+
+export const WithCloseButtonPseudoStates = {
+  name: 'With CloseButton Pseudo States',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+} satisfies Story;

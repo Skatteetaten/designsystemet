@@ -53,8 +53,10 @@
     margin-top: calc(var(--spacing-xs) * -1);
     margin-left: auto;
 
-    &:not(:active) > svg {
-      fill: var(--palette-graphite-100);
+    --icon-button-icon-color: var(--palette-graphite-100);
+
+    &:hover:not(:active) {
+      --icon-button-icon-color: var(--semantic-interactive-main);
     }
   }
 
