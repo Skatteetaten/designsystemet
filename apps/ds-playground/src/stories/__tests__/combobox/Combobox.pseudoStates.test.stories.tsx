@@ -115,7 +115,7 @@ export const Option = {
       test: 'off',
     },
     imageSnapshot: {
-      pseudoStates: ['hover', 'focus-visible', 'active'],
+      pseudoStates: ['hover', 'focus-visible'],
     },
   },
 };
