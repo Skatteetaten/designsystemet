@@ -208,16 +208,6 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithHover = {
-  name: 'With Hover (A1)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    pseudo: { hover: true },
-  },
-} satisfies Story;
-
 export const WithLongOption = {
   name: 'With Long Option (A1)',
   args: {
