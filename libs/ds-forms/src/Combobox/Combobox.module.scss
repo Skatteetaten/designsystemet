@@ -52,9 +52,14 @@
   grid-area: content;
 
   .chips {
+    max-width: 100%;
     margin-top: var(--spacing-xs);
     gap: var(--spacing-s) var(--spacing-xs);
   }
+}
+
+.chip {
+  overflow-wrap: anywhere;
 }
 
 .input {

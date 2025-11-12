@@ -5,6 +5,7 @@ declare const classNames: {
   readonly input: 'input';
   readonly inputContentArea: 'inputContentArea';
   readonly chips: 'chips';
+  readonly chip: 'chip';
   readonly chevronButton: 'chevronButton';
   readonly chevronButtonLarge: 'chevronButtonLarge';
   readonly optionsListContainer: 'optionsListContainer';
