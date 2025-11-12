@@ -12,8 +12,6 @@
   position: relative;
   display: grid;
   padding: var(--spacing-xs) var(--spacing-s);
-  border: none;
-  border-radius: 0;
   background: var(--semantic-page-background);
   box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
   column-gap: var(--spacing-xs);
@@ -22,10 +20,6 @@
 
   &MarginTop {
     margin-top: var(--spacing-xs);
-  }
-
-  &Large {
-    min-height: var(--size-large-plus);
   }
 
   &:has(.input:disabled) {
@@ -45,7 +39,6 @@
 
   &:has(.input:focus-visible):not(:has(.input:disabled)),
   &:has(.input:active):not(:has(.input:disabled)) {
-    z-index: 1001;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: 1px solid var(--semantic-interactive-main);
   }
@@ -66,15 +59,12 @@
 
 .input {
   overflow: hidden;
-  min-width: 7rem;
-  flex: 1;
+  min-width: 0;
   padding: 0;
   border: none;
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
-  background: transparent;
-  box-shadow: none;
   color: var(--semantic-page-foreground);
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
@@ -86,14 +76,11 @@
     color: var(--palette-graphite-50);
   }
 
-  &:focus-visible {
-    &::selection {
-      background: var(--semantic-interactive-background);
-    }
+  &:focus-visible::selection {
+    background: var(--semantic-interactive-background);
   }
 
   &:disabled {
-    background: var(--semantic-disabled-background);
     color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
   }

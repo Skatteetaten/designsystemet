@@ -68,8 +68,6 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
 
-    const inputContainer = inputElement.closest('[data-variant]');
-    await expect(inputContainer).toHaveAttribute('data-variant', 'large');
     await userEvent.click(inputElement);
 
     const chevron = canvasElement.querySelector('div[class*="chevronButton"]');
@@ -177,8 +175,6 @@ export const WithMaxSelectedValues = {
     const options = canvas.getAllByRole('option');
     await userEvent.click(options[0]);
     await userEvent.click(options[1]);
-    // TODO skal siste option også være disabled?
-    // await expect(options[2]).toBeDisabled();
     await expect(options[2]).toHaveAttribute('aria-disabled', 'true');
     // TODO skal det være mulig å søke/skrive mer?
     const maxSelectedMessage = canvasElement.querySelector('[role="status"]');
