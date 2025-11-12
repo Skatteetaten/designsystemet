@@ -158,7 +158,7 @@
     "sass-embedded": "1.89.2",
     "sass-loader": "16.0.5",
     "shadow-dom-testing-library": "1.11.3",
-    "sonarqube-scanner": "4.2.6",
+    "sonarqube-scanner": "4.3.2",
     "storybook-addon-pseudo-states": "10.0.7",
     "style-loader": "3.3.4",
     "stylelint": "16.14.1",
