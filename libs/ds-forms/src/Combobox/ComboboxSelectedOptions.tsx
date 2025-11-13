@@ -29,6 +29,7 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
         {selectedValues.map((selectedValue) => (
           <Chips.Removable
             key={selectedValue.value}
+            className={styles.chip}
             size={'small'}
             disabled={disabled}
             onClose={() => onRemoveValue(selectedValue)}
