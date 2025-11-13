@@ -90,7 +90,7 @@ export const Option = {
     const customListRef = useRef<HTMLDivElement | null>(null);
     return (
       <ComboboxOptions
-        classNames={'positionRelative'}
+        className={'positionRelative'}
         displayOptions={[
           { label: 'Norge', value: 'Norge' },
           { label: 'Sverige', value: 'Sverige' },

@@ -54,9 +54,8 @@ export const RolePickerWithAlertExample = (): JSX.Element => {
       <RolePicker ref={rolePickerRef} me={me} people={people}>
         <Alert variant={'warning'} showAlert>
           {
-            'Vi kan dessverre ikke vise alle tilgangene dine nå. Vi jobber med å'
+            'Vi kan dessverre ikke vise alle tilgangene dine nå. Vi jobber med å løse feilen. Prøv igjen eller kom tilbake senere.'
           }
-          {'løse feilen. Prøv igjen eller kom tilbake senere.'}
         </Alert>
       </RolePicker>
     </>
