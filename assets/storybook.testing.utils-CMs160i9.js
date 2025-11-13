@@ -1,2 +1,0 @@
-const e="[data-test-block]",t="Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.",s="Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.";export{s as a,t as l,e as w};
-//# sourceMappingURL=storybook.testing.utils-CMs160i9.js.map

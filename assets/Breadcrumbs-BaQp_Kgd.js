@@ -1,0 +1,11 @@
+import{j as r}from"./iframe-CdXtTKZQ.js";import{useMDXComponents as m}from"./index-Fodq6baY.js";import{M as e,P as s,C as a}from"./blocks-BsozQqO1.js";import{P as n}from"./utils-Ct-tsx4J.js";import{B as p,E as c,I as d}from"./Breadcrumbs.stories-B99HIoQJ.js";import{V as l}from"./VersionBadge-BT9Fb_Ir.js";import{D as x}from"./DocIntro-SDUDjmUj.js";import{D as u}from"./DocHeaderWrapper-Dl1QP3pC.js";import"./index-GtA9f0CN.js";import"./index-DIHq9ZfV.js";import"./lz-string-CuPZokM5.js";import"./index-BLYtAcfF.js";import"./index-CDWtp_lT.js";import"./index-D0xxaDHU.js";import"./index-CVW4skVE.js";import"./index-DUrzBgqO.js";import"./index-CLKUz3Po.js";import"./DatePickerCalendar-ByRci1Oe.js";import"./LabelWithHelp-Bcy4lovc.js";import"./Help-BJCAuNeo.js";import"./Combobox.module-DGtBY5ID.js";import"./ComboboxButton-xo5xtxE5.js";import"./ComboboxSelectedOptions-BdSatC4Q.js";import"./index-C6J3KzFu.js";import"./index-BEPTjI1-.js";import"./index-D-15xU56.js";import"./TopBannerButton-DSftRgCM.js";import"./floating-ui.react-DyQ3q89_.js";import"./TopBannerLangPicker-BA4zyFFj.js";import"./TopBannerLangPickerButton-DGQp7MlF.js";import"./TopBannerLogo-Bk2rV1UJ.js";import"./TopBannerSkipLink-DfnwD-uV.js";import"./TopBannerUserButton-B44bBFs8.js";import"./index-DgjBZIlJ.js";import"./stories.utils-CZ5hej_8.js";function i(o){const t={code:"code",h1:"h1",h2:"h2",pre:"pre",...m(),...o.components};return r.jsxs(r.Fragment,{children:[r.jsx(e,{of:p}),`
+`,r.jsxs(u,{componentName:"Breadcrumbs",children:[r.jsx(t.h1,{id:"breadcrumbs",children:"Breadcrumbs"}),r.jsx(l,{packageName:"navigation"}),r.jsx(x,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/"})]}),`
+`,r.jsx(s,{}),`
+`,r.jsx(t.pre,{children:r.jsx(t.code,{className:"language-tsx",children:`import { Breadcrumbs } from '@skatteetaten/ds-navigation';
+`})}),`
+`,r.jsx(a,{}),`
+`,r.jsx(t.h2,{id:"i-publikumsløsning",children:"I publikumsløsning"}),`
+`,r.jsx(n,{of:c}),`
+`,r.jsx(t.h2,{id:"i-intern-løsning",children:"I intern løsning"}),`
+`,r.jsx(n,{of:d})]})}function U(o={}){const{wrapper:t}={...m(),...o.components};return t?r.jsx(t,{...o,children:r.jsx(i,{...o})}):i(o)}export{U as default};
+//# sourceMappingURL=Breadcrumbs-BaQp_Kgd.js.map

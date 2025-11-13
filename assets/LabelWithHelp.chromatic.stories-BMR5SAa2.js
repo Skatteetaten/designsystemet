@@ -1,6 +1,0 @@
-import{L as l}from"./LabelWithHelp-dgWfzcXf.js";import{L as p}from"./LabelWithHelp.test.stories-4m-ectko.js";import{c}from"./createSingleStory-Ds5Zdh7d.js";import"./iframe-C2uFIQ6s.js";import"./Help-D5uDa-qt.js";import"./index-C2_9aJjw.js";import"./index-Bs2jIcy5.js";import"./index-wTBO3won.js";import"./storybook.testing.utils-CMs160i9.js";import"./icon.systems-CMWPGVc8.js";import"./icon.utils-bUdFevfs.js";import"./index-BEXGZWqo.js";const n={title:"Chromatic/LabelWithHelp",component:l,tags:["chromatic","!autodocs"]},e=c(p,n,{runPlayFunctions:!0}),r=c(p,n,{viewport:"--mobile"});var t,o,a;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`createSingleStory(LabelWithHelpStories, meta, {
-  runPlayFunctions: true
-})`,...(a=(o=e.parameters)==null?void 0:o.docs)==null?void 0:a.source}}};var i,s,m;r.parameters={...r.parameters,docs:{...(i=r.parameters)==null?void 0:i.docs,source:{originalSource:`createSingleStory(LabelWithHelpStories, meta, {
-  viewport: '--mobile'
-})`,...(m=(s=r.parameters)==null?void 0:s.docs)==null?void 0:m.source}}};const w=["Snapshots","Mobile"];export{r as Mobile,e as Snapshots,w as __namedExportsOrder,n as default};
-//# sourceMappingURL=LabelWithHelp.chromatic.stories-BMR5SAa2.js.map
