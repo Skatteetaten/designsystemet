@@ -5,6 +5,7 @@ import { TFunction } from 'i18next';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { PaginationList } from '../PaginationList/PaginationList';
+import { ELLIPSIS } from '../PaginationList/utils';
 
 export interface PaginationCommonProps extends BaseProps {
   ref?: Ref<HTMLElement>;
@@ -75,3 +76,6 @@ export type FirstLastPageButtonProps = {
   t: TFunction<'ds_navigation', undefined>;
   handleChange: (page: number) => void;
 };
+
+export type EllipsisType = (typeof ELLIPSIS)[keyof typeof ELLIPSIS];
+export type PaginationItem = number | EllipsisType;

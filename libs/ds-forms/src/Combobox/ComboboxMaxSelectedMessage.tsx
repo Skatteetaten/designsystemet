@@ -1,0 +1,36 @@
+import React, { type JSX } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+
+import { MaxSelectedMessageProps } from './Combobox.types';
+
+import styles from './Combobox.module.scss';
+
+export const ComboboxMaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
+  ({ selectedCount, maxSelected }: MaxSelectedMessageProps): JSX.Element => {
+    const { t } = useTranslation('ds_forms', { i18n: dsI18n });
+
+    return (
+      <div
+        className={styles.maxSelectedMessage}
+        role={'status'}
+        aria-live={'polite'}
+        aria-atomic={'true'}
+        onMouseDown={(e) => e.preventDefault()}
+      >
+        {selectedCount === 1
+          ? t('combobox.SelectedOfTotalSingular', {
+              selected: selectedCount,
+              total: maxSelected,
+            })
+          : t('combobox.SelectedOfTotalPlural', {
+              selected: selectedCount,
+              total: maxSelected,
+            })}
+      </div>
+    );
+  }
+);
+
+ComboboxMaxSelectedMessage.displayName = 'ComboboxMaxSelectedMessage';

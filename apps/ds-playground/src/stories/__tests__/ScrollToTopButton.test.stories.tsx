@@ -202,7 +202,7 @@ export const WithMobileScreen = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   globals: {
     viewport: {

@@ -3,7 +3,12 @@ import { useState, JSX } from 'react';
 import { StoryObj, Meta } from '@storybook/react-vite';
 
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
-import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
+import {
+  Checkbox,
+  FileUploader,
+  getFileUploaderGetSpinnerLabelDefault,
+  UploadedFile,
+} from '@skatteetaten/ds-forms';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -36,6 +41,12 @@ const meta = {
     },
     isUploading: { table: { category: category.props } },
     label: { table: { category: category.props } },
+    spinnerLabel: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getFileUploaderGetSpinnerLabelDefault() },
+      },
+    },
     acceptedFileFormats: { table: { category: category.props } },
     shouldNormalizeFileName: { table: { category: category.props } },
     showRequiredMark: {

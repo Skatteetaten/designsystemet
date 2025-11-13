@@ -7,10 +7,7 @@ import {
   getAccordionSizeDefault,
 } from './defaults';
 import { AccordionContext } from '../AccordionContext/AccordionContext';
-import {
-  AccordionItem,
-  getAccordionItemKeepMountedDefault,
-} from '../AccordionItem/AccordionItem';
+import { AccordionItem } from '../AccordionItem/AccordionItem';
 
 import styles from './Accordion.module.scss';
 
@@ -46,10 +43,3 @@ export const Accordion = (({
 Accordion.displayName = 'Accordion';
 Accordion.Item = AccordionItem;
 Accordion.Item.displayName = 'Accordion.Item';
-
-export {
-  getAccordionIconPositionDefault,
-  getAccordionBackgroundColorDefault,
-  getAccordionSizeDefault,
-  getAccordionItemKeepMountedDefault,
-};

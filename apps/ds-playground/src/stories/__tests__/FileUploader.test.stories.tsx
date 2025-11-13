@@ -61,6 +61,11 @@ const meta = {
       control: 'text',
       table: { disable: true },
     },
+    spinnerLabel: {
+      table: {
+        disable: true,
+      },
+    },
     acceptedFileFormats: { table: { disable: true } },
     // HTML
     multiple: { table: { disable: true } },
@@ -139,7 +144,7 @@ export const Defaults: StoryObj<FileUploaderProps> = {
     ).toBeInTheDocument();
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
 
@@ -404,3 +409,43 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
     imageSnapshot: { disableSnapshot: true },
   },
 };
+
+const spinnerLabel = 'Opplasting pågår, kan ta et par minutter.';
+
+export const WithCustomSpinnerLabel = {
+  name: 'With Custom Spinner Label',
+  args: {
+    spinnerLabel,
+    isUploading: true,
+  },
+  argTypes: {
+    spinnerLabel: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    const button = within(container as HTMLElement).getByRole('button');
+    await expect(button).toHaveTextContent(spinnerLabel);
+  },
+} satisfies Story;
+
+export const WithDescription = {
+  name: 'With Description',
+  args: {
+    label: 'Last opp filer',
+    description: 'En liten beskrivelse tekst',
+  },
+  argTypes: {
+    description: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const description = canvas.getByText('En liten beskrivelse tekst');
+    await expect(description).toBeInTheDocument();
+    const button = canvas.getByRole('button');
+    await expect(button).toHaveAttribute('aria-describedby');
+    const describedbyValue = button.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
+  },
+} satisfies Story;

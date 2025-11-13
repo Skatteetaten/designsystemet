@@ -4,23 +4,23 @@
      focusable="false" aria-hidden="true">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
-	.st1{fill:#012169;}
-	.st2{fill:#C8102E;}
+	.st1{fill:#C8102E;}
+	.st2{fill:#012169;}
 </style>
 <rect class="st0" width="1000" height="600"/>
-<g>
-	<polygon class="st1" points="165.8,200 0,200 0,117.1 	"/>
-	<polygon class="st1" points="165.8,400 0,482.9 0,400 	"/>
-	<polygon class="st1" points="600,600 965.8,600 600,417.1 	"/>
-	<polygon class="st1" points="34.2,600 400,600 400,417.1 	"/>
-	<polygon class="st1" points="400,0 34.2,0 400,182.9 	"/>
-	<polygon class="st1" points="1000,400 1000,482.9 834.2,400 	"/>
-	<polygon class="st1" points="965.8,0 600,0 600,182.9 	"/>
-	<polygon class="st1" points="1000,117.1 1000,200 834.2,200 	"/>
-	<polygon class="st2" points="1000,5.3 1000,50 700,200 610.6,200 	"/>
-	<polygon class="st2" points="389.4,200 210.6,200 0,94.7 0,5.3 	"/>
-	<polygon class="st2" points="389.4,400 0,594.7 0,505.3 210.6,400 	"/>
-	<polygon class="st2" points="1000,505.3 1000,594.7 610.6,400 789.4,400 	"/>
-	<polygon class="st2" points="1000,240 1000,360 560,360 560,600 440,600 440,360 0,360 0,240 440,240 440,0 560,0 560,240 	"/>
-</g>
+    <g>
+      <polygon class="st2" points="165.8 200 0 200 0 117.1 165.8 200"/>
+      <polygon class="st2" points="165.8 400 0 482.9 0 400 165.8 400"/>
+      <polygon class="st2" points="600 600 965.8 600 600 417.1 600 600"/>
+      <polygon class="st2" points="34.2 600 400 600 400 417.1 34.2 600"/>
+      <polygon class="st2" points="400 0 34.2 0 400 182.9 400 0"/>
+      <polygon class="st2" points="1000 400 1000 482.9 834.2 400 1000 400"/>
+      <polygon class="st2" points="965.8 0 600 0 600 182.9 965.8 0"/>
+      <polygon class="st2" points="1000 117.1 1000 200 834.2 200 1000 117.1"/>
+      <polygon class="st1" points="1000 5.3 1000 50 700 200 610.6 200 1000 5.3"/>
+      <polygon class="st1" points="299.6 200 210.6 200 0 94.7 0 49.5 299.6 200"/>
+      <polygon class="st1" points="389.4 400 0 594.7 0 549.4 300.4 400 389.4 400"/>
+      <polygon class="st1" points="1000 505.3 1000 549.4 701.6 400 789.4 400 1000 505.3"/>
+      <polygon class="st1" points="1000 240 1000 360 560 360 560 600 440 600 440 360 0 360 0 240 440 240 440 0 560 0 560 240 1000 240"/>
+    </g>
 </svg>

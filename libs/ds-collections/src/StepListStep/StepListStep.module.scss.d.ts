@@ -2,7 +2,6 @@ declare const classNames: {
   readonly stepLine_positiveResult: 'stepLine_positiveResult';
   readonly stepLine_neutralResult: 'stepLine_neutralResult';
   readonly step: 'step';
-  readonly stepContent_noButton: 'stepContent_noButton';
   readonly stepContent_positiveResult: 'stepContent_positiveResult';
   readonly stepContent_neutralResult: 'stepContent_neutralResult';
   readonly stepCircle_positiveResult: 'stepCircle_positiveResult';

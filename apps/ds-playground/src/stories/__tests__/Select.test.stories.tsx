@@ -192,7 +192,7 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -259,7 +259,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -390,7 +390,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -417,6 +417,10 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
     await expect(labelWithDescription).toBeInTheDocument();
+    const selectNode = canvas.getByRole('combobox');
+    await expect(selectNode).toHaveAttribute('aria-describedby');
+    const describedbyValue = selectNode.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
   },
 } satisfies Story;
 

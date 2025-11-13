@@ -100,10 +100,3 @@ export const OpenClose = ({
 };
 
 OpenClose.displayName = 'OpenClose';
-
-export {
-  getOpenCloseIconPositionDefault,
-  getOpenCloseUnderlineDefault,
-  getOpenCloseVariantDefault,
-  getOpenCloseKeepMountedDefault,
-};

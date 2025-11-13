@@ -158,7 +158,7 @@ export const ParagraphWithLinkAndWordInfo = {
   args: {},
   parameters: {
     imageSnapshot: {
-      pseudoStates: ['hover', 'focus', 'focus-visible', 'active'],
+      pseudoStates: ['hover', 'focus-visible', 'active'],
     },
   },
 } satisfies Story;

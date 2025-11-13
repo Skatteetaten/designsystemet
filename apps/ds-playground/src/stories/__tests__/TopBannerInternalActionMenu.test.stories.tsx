@@ -95,7 +95,7 @@ export const WithDefaults = {
     a11y: {
       test: 'off',
     },
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
 

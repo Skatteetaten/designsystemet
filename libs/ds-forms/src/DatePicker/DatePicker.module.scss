@@ -23,7 +23,7 @@
   box-shadow: inset 0 0 0 1px var(--semantic-danger-foreground);
 
   &:hover,
-  &:focus,
+  &:focus-visible,
   &:active {
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
   }
@@ -73,7 +73,7 @@
     outline: 0;
   }
 
-  &:enabled:focus,
+  &:enabled:focus-visible,
   &:enabled:active {
     z-index: 1;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
@@ -117,7 +117,7 @@
     padding: var(--spacing-s);
   }
 
-  &:focus,
+  &:focus-visible,
   &:hover {
     z-index: 1;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);

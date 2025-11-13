@@ -92,5 +92,3 @@ export const InlineButton = ({
 };
 
 InlineButton.displayName = 'InlineButton';
-
-export { getInlineButtonPositionDefault, getInlineButtonBrightnessDefault };

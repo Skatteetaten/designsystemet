@@ -177,8 +177,6 @@ export const Footer = (({
   );
 }) as FooterComponent;
 
-export { getOpenDefaultLinksInNewTabDefault };
-
 Footer.displayName = 'Footer';
 Footer.Logo = FooterLogo;
 Footer.Link = FooterLink;

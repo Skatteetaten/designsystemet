@@ -40,3 +40,7 @@ export interface CardComponent extends React.FC<CardProps> {
   Content: typeof CardContent;
   Header: typeof CardHeader;
 }
+
+export type CardContextProps = {
+  alertHeadingId?: string;
+};

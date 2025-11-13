@@ -1,9 +1,7 @@
 {
-  "combobox.CloseSuggestion": "Lukk forslag",
   "combobox.Loading": "Laster",
   "combobox.NoResults": "Ingen treff for «{{searchTerm}}». Prøv et annet søk.",
   "combobox.OneOptionAvailable": "Ett alternativ tilgjengelig.",
-  "combobox.OpenSuggestion": "Åpne forslag",
   "combobox.OptionsAvailable": "{{count}} alternativer tilgjengelig.",
   "combobox.ResetSuggestion": "Nullstill valg",
   "combobox.SelectedOfTotalPlural": "{{selected}} av {{total}} er valgt",

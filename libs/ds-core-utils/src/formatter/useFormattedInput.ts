@@ -3,6 +3,7 @@ import type { ChangeEvent, KeyboardEvent } from 'react';
 
 import { formatter } from './formatter';
 import { FormatTypes } from './formatter.types';
+import { useInputHistory } from './useInputHistory';
 import { maxLengths } from './utils';
 
 type InputFormatTypes = Exclude<FormatTypes, 'number'>;
@@ -46,18 +47,26 @@ interface UseFormattedInputReturn {
   rawValue: string;
 }
 
+const checkIfAnyModifierKeyPressed = (
+  event: KeyboardEvent<HTMLInputElement>
+): boolean => {
+  const modifierKeys = ['Alt', 'AltGraph', 'Control', 'Meta', 'Shift'] as const;
+  return modifierKeys.some((key) => event.getModifierState(key));
+};
+
 /**
  * Posisjonerer markøren etter et bestemt antall siffer i et formatert input.
  * Bruker requestAnimationFrame for å sikre riktig timing med DOM-oppdateringer.
  * @param input - HTML input-elementet
  * @param formattedValue - Den formaterte strengverdien
  * @param targetDigitCount - Antall siffer markøren skal posisjoneres etter
+ * @returns new cursor position
  */
 const positionCursorAfterDigits = (
   input: HTMLInputElement,
   formattedValue: string,
   targetDigitCount: number
-): void => {
+): number => {
   let newPosition = 0;
   let digitCount = 0;
   for (let i = 0; i < formattedValue.length; i++) {
@@ -73,6 +82,7 @@ const positionCursorAfterDigits = (
   requestAnimationFrame(() => {
     input.setSelectionRange(newPosition, newPosition);
   });
+  return newPosition;
 };
 
 /**
@@ -121,11 +131,70 @@ export const useFormattedInput = ({
     type,
   }).value;
 
+  const inputHistory = useInputHistory({
+    initialValue: displayValue,
+  });
+
+  const handleUndo = useCallback(
+    (
+      event: KeyboardEvent<HTMLInputElement>,
+      input: HTMLInputElement,
+      cursorPosition: number
+    ) => {
+      const previousState = inputHistory.undo(cursorPosition);
+      if (previousState) {
+        event.preventDefault();
+
+        // Extract raw value from formatted value
+        const newRawValue = previousState.value.replace(/[^\d]/g, '');
+        setRawValue(newRawValue);
+
+        // Set cursor position
+        requestAnimationFrame(() => {
+          const pos = Math.min(
+            previousState.cursorPosition,
+            previousState.value.length
+          );
+          input.setSelectionRange(pos, pos);
+        });
+      }
+    },
+    [inputHistory]
+  );
+
+  const handleRedo = useCallback(
+    (
+      event: KeyboardEvent<HTMLInputElement>,
+      input: HTMLInputElement,
+      cursorPosition: number
+    ) => {
+      const nextState = inputHistory.redo(cursorPosition);
+      if (nextState) {
+        event.preventDefault();
+
+        // Extract raw value from formatted value
+        const newRawValue = nextState.value.replace(/[^\d]/g, '');
+        setRawValue(newRawValue);
+
+        // Set cursor position
+        requestAnimationFrame(() => {
+          const pos = Math.min(
+            nextState.cursorPosition,
+            nextState.value.length
+          );
+          input.setSelectionRange(pos, pos);
+        });
+      }
+    },
+    [inputHistory]
+  );
+
   const handleBackspaceAtSeparator = useCallback(
-    (input: HTMLInputElement, digitCount: number) => {
-      if (digitCount > 0) {
+    (input: HTMLInputElement, digitsBeforeSeparator: number) => {
+      if (digitsBeforeSeparator > 0) {
         const newDigits =
-          rawValue.slice(0, digitCount - 1) + rawValue.slice(digitCount);
+          rawValue.slice(0, digitsBeforeSeparator - 1) +
+          rawValue.slice(digitsBeforeSeparator);
         setRawValue(newDigits);
 
         const formattedValue = formatter({
@@ -133,10 +202,17 @@ export const useFormattedInput = ({
           type,
         }).value;
 
-        positionCursorAfterDigits(input, formattedValue, digitCount - 1);
+        const newPosition = positionCursorAfterDigits(
+          input,
+          formattedValue,
+          digitsBeforeSeparator - 1
+        );
+
+        // Save to history after formatting
+        inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type]
+    [rawValue, type, inputHistory]
   );
 
   const handleDeleteAtSeparator = useCallback(
@@ -152,10 +228,17 @@ export const useFormattedInput = ({
           type,
         }).value;
 
-        positionCursorAfterDigits(input, formattedValue, digitsBeforeSeparator);
+        const newPosition = positionCursorAfterDigits(
+          input,
+          formattedValue,
+          digitsBeforeSeparator
+        );
+
+        // Save to history after formatting
+        inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type]
+    [rawValue, type, inputHistory]
   );
 
   const handleDeleteAtDigit = useCallback(
@@ -171,16 +254,23 @@ export const useFormattedInput = ({
           type,
         }).value;
 
-        positionCursorAfterDigits(input, formattedValue, digitsBeforeCursor);
+        const newPosition = positionCursorAfterDigits(
+          input,
+          formattedValue,
+          digitsBeforeCursor
+        );
+
+        // Save to history after formatting
+        inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type]
+    [rawValue, type, inputHistory]
   );
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent<HTMLInputElement>) => {
       const input = event.currentTarget;
-      const cursorPosition = input.selectionStart || 0;
+      const cursorPosition = input.selectionEnd || 0;
       const value = input.value;
       const isPreviousCharacterSeparator =
         value[cursorPosition - 1] === NON_BREAKING_SPACE;
@@ -190,16 +280,29 @@ export const useFormattedInput = ({
       const selectionLength =
         (input.selectionEnd || 0) - (input.selectionStart || 0);
 
-      const modifierKeys = [
-        'Alt',
-        'AltGraph',
-        'Control',
-        'Meta',
-        'Shift',
-      ] as const;
-      const isAnyModifierKeyPressed = modifierKeys.some((key) =>
-        event.getModifierState(key)
-      );
+      const isAnyModifierKeyPressed = checkIfAnyModifierKeyPressed(event);
+
+      // Initialize history if empty (first interaction)
+      inputHistory.initialize(value, cursorPosition);
+
+      // Handle redo (Ctrl+Y / Command+Y or Ctrl+Shift+Z / Command+Shift+Z)
+      if (
+        (event.ctrlKey || event.metaKey) &&
+        (event.key === 'y' || (event.shiftKey && event.key === 'z'))
+      ) {
+        handleRedo(event, input, cursorPosition);
+        return;
+      }
+
+      // Handle undo (Ctrl+Z / Command+Z)
+      if (
+        (event.ctrlKey || event.metaKey) &&
+        event.key === 'z' &&
+        !event.shiftKey
+      ) {
+        handleUndo(event, input, cursorPosition);
+        return;
+      }
 
       if (
         event.key === 'Backspace' &&
@@ -224,6 +327,7 @@ export const useFormattedInput = ({
         else if (cursorPosition > 0 && !isPreviousCharacterSeparator) {
           // Let default behavior handle this case for digits
           if (/\d/.test(value[cursorPosition - 1])) {
+            inputHistory.updateCursorPosition(cursorPosition);
             // This will be handled by the default browser behavior and onChange
             return;
           }
@@ -235,35 +339,25 @@ export const useFormattedInput = ({
         !isAnyModifierKeyPressed &&
         selectionLength === 0
       ) {
+        // Count digits up to the cursor position (before separator)
+        let digitsBeforeCursor = 0;
+        for (let i = 0; i < cursorPosition; i++) {
+          if (/\d/.test(value[i])) {
+            digitsBeforeCursor++;
+          }
+        }
+
         // If cursor is before a separator, delete the digit after the separator
         if (isNextCharacterSeparator) {
           event.preventDefault();
-
-          // Count digits up to the cursor position (before separator)
-          let digitsBeforeSeparator = 0;
-          for (let i = 0; i < cursorPosition; i++) {
-            if (/\d/.test(value[i])) {
-              digitsBeforeSeparator++;
-            }
-          }
-
-          handleDeleteAtSeparator(input, digitsBeforeSeparator);
+          handleDeleteAtSeparator(input, digitsBeforeCursor);
         }
-        // If cursor is after a digit and delete is pressed, delete the next digit
+        // If cursor is before a digit and delete is pressed, delete the next digit
         else if (
           cursorPosition < value.length &&
           /\d/.test(value[cursorPosition])
         ) {
           event.preventDefault();
-
-          // Count digits up to the cursor position
-          let digitsBeforeCursor = 0;
-          for (let i = 0; i < cursorPosition; i++) {
-            if (/\d/.test(value[i])) {
-              digitsBeforeCursor++;
-            }
-          }
-
           handleDeleteAtDigit(input, digitsBeforeCursor);
         }
       }
@@ -283,6 +377,9 @@ export const useFormattedInput = ({
     [
       rawValue,
       type,
+      inputHistory,
+      handleUndo,
+      handleRedo,
       handleBackspaceAtSeparator,
       handleDeleteAtSeparator,
       handleDeleteAtDigit,
@@ -295,9 +392,8 @@ export const useFormattedInput = ({
       const inputValue = input.value;
 
       const cursorPosition = input.selectionStart || 0;
-      const oldValue = inputValue;
 
-      const digitsBeforeCursor = oldValue
+      const digitsBeforeCursor = inputValue
         .substring(0, cursorPosition)
         .replace(/[^\d]/g, '').length;
 
@@ -316,9 +412,19 @@ export const useFormattedInput = ({
         type,
       }).value;
 
-      positionCursorAfterDigits(input, formattedValue, digitsBeforeCursor);
+      const newPosition = positionCursorAfterDigits(
+        input,
+        formattedValue,
+        digitsBeforeCursor
+      );
+
+      // Update history after formatting and positioning cursor
+      const previousFormattedValue = inputHistory.getCurrentValue();
+      if (previousFormattedValue !== formattedValue) {
+        inputHistory.pushState(formattedValue, newPosition);
+      }
     },
-    [type]
+    [type, inputHistory]
   );
 
   return {

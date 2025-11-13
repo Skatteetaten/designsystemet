@@ -60,7 +60,7 @@
     --inline-button-foreground-color: var(--semantic-interactive-main);
   }
 
-  &:focus {
+  &:focus-visible {
     @extend %focus;
 
     &[data-brightness='default']:hover:not(:active) {
@@ -69,8 +69,6 @@
   }
 
   &:active {
-    @extend %focus;
-
     --inline-button-foreground-color: var(--palette-graphite-0);
     --inline-button-background-color: var(--semantic-interactive-foreground);
 
@@ -98,14 +96,14 @@
       --inline-button-background-color: var(--palette-graphite-0);
     }
 
-    &:focus {
+    &:focus-visible {
       --inline-button-foreground-color: var(--semantic-interactive-main);
       --inline-button-background-color: var(--palette-graphite-0);
     }
 
     &:active {
       --inline-button-foreground-color: var(--semantic-interactive-foreground);
-      --inline-button-background-color: var(--palette-graphite-0);
+      --inline-button-background-color: var(--semantic-interactive-background);
     }
 
     &:disabled,

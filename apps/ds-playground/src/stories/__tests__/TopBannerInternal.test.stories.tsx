@@ -213,7 +213,7 @@ export const WithTitleDescriptionUser = {
     user: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['focus'] },
+    imageSnapshot: { pseudoStates: ['focus-visible'] },
   },
   globals: {
     viewport: {

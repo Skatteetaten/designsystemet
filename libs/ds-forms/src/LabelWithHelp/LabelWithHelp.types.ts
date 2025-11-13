@@ -22,6 +22,8 @@ export interface LabelWithHelpProps
   hideLabel?: boolean;
   /** Tilleggstekst */
   description?: string;
+  /** Id til tilleggstekst */
+  descriptionId?: string;
   /** Hjelpetekst */
   helpText?: HelpProps['helpText'];
   /** Overskriver default hjelpeikon */

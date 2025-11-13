@@ -121,7 +121,7 @@
         content: '';
       }
 
-      &:focus {
+      &:focus-visible {
         background-color: var(--semantic-page-background);
         color: var(--semantic-interactive-main);
         outline: 2px solid var(--semantic-interactive-main);
@@ -166,7 +166,7 @@
         border-color: var(--palette-graphite-0);
       }
 
-      &_today[aria-current='true']:focus::after {
+      &_today[aria-current='true']:focus-visible::after {
         border-color: var(--palette-azure-70);
       }
     }

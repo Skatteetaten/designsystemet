@@ -37,7 +37,7 @@
     text-decoration: underline;
   }
 
-  &:focus {
+  &:focus-visible {
     z-index: 1200;
     box-shadow: 0 0 0 2px var(--semantic-interactive-main);
     outline: none;

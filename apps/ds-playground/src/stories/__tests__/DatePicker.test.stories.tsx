@@ -207,7 +207,7 @@ export const Defaults = {
     label: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -350,7 +350,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -377,6 +377,10 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
     await expect(labelWithDescription).toBeInTheDocument();
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+    const describedbyValue = textbox.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
   },
 } satisfies Story;
 

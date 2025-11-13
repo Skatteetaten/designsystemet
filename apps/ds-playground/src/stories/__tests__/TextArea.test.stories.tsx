@@ -8,7 +8,11 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { TextArea, TextAreaProps } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import {
+  coolString,
+  loremIpsum,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -199,7 +203,7 @@ export const Defaults = {
     label: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -230,7 +234,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -351,7 +355,7 @@ export const WithReadOnly = {
     readOnly: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -466,7 +470,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    pseudoStates: ['hover', 'focus'],
+    pseudoStates: ['hover', 'focus-visible'],
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -493,6 +497,10 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
     await expect(labelWithDescription).toBeInTheDocument();
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+    const describedbyValue = textbox.getAttribute('aria-describedby');
+    await expect(describedbyValue).toMatch(/descId-/);
   },
 } satisfies Story;
 
@@ -700,6 +708,10 @@ export const WithControlledValueAndAutoSize = {
 
 const TemplateWithCharacterCounter = (args: TextAreaProps): JSX.Element => {
   const [value, setValue] = useState('');
+
+  if (value === 'Eivind') {
+    console.log(coolString);
+  }
 
   return (
     <TextArea

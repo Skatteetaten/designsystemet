@@ -103,7 +103,7 @@
     --description-color: var(--semantic-interactive-main);
   }
 
-  .input:focus + .label .labelCheckbox {
+  .input:focus-visible + .label .labelCheckbox {
     outline: var(--spacing-xxs) solid var(--semantic-interactive-main);
     outline-offset: var(--spacing-xxs);
   }
@@ -111,6 +111,8 @@
   .input:active + .label,
   .input:active + .label .labelCheckbox {
     --checkbox-border-color: var(--semantic-interactive-foreground);
+    --checkbox-background-color: var(--palette-graphite-0);
+    --check-color: transparent;
     --label-color: var(--semantic-interactive-foreground);
     --description-color: var(--semantic-interactive-foreground);
   }
@@ -153,7 +155,7 @@
     --label-color: var(--semantic-disabled-foreground);
   }
 
-  .input:disabled:focus + .label .labelCheckbox {
+  .input:disabled:focus-visible + .label .labelCheckbox {
     outline: none;
   }
 }

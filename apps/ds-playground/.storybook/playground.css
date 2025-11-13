@@ -286,6 +286,10 @@ p.bold {
   height: 3rem;
 }
 
+.width200 {
+  max-width: 200px;
+}
+
 .width400 {
   max-width: 400px;
 }
@@ -366,6 +370,10 @@ a.resetLinkStyling {
   h1 {
     margin-bottom: 0;
   }
+}
+
+.itemsCenter {
+  align-items: center;
 }
 
 .componentIcon {
@@ -452,4 +460,8 @@ dl.descriptionListTwoColumns {
 .docblock-argstable table {
   /* for å skjule deprecated varsler */
   display: none;
+}
+
+.positionRelative {
+  position: relative !important;
 }

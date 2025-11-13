@@ -35,5 +35,3 @@ export const Blockquote = ({
 };
 
 Blockquote.displayName = 'Blockquote';
-
-export { getBlockquoteBorderColorDefault };

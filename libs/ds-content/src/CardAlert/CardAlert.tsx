@@ -1,4 +1,4 @@
-import { useState, JSX } from 'react';
+import { useState, JSX, useId, useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
@@ -12,6 +12,7 @@ import {
   getCardAlertTitleAsDefault,
   getCardAlertVariantDefault,
 } from './defaults';
+import { CardContext } from '../CardContext/CardContext';
 
 import styles from './CardAlert.module.scss';
 
@@ -32,6 +33,8 @@ export const CardAlert = ({
   const { t } = useTranslation('Shared', { i18n: dsI18n });
   const [showAlertInternal, setShowAlertInternal] = useState<boolean>(true);
 
+  const { alertHeadingId } = useContext(CardContext);
+
   const showAlert =
     showAlertExternal !== undefined ? showAlertExternal : showAlertInternal;
 
@@ -50,7 +53,7 @@ export const CardAlert = ({
     >
       <div className={styles.cardAlertHeadingContainer}>
         <Icon className={styles.cardAlertIcon} svgPath={svgPath} />
-        <Heading level={5} as={titleAs}>
+        <Heading id={alertHeadingId} level={5} as={titleAs}>
           {title}
         </Heading>
         <IconButton

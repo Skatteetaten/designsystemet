@@ -31,7 +31,12 @@
     background-color: var(--semantic-interactive-background);
   }
 
-  &:focus {
+  &:active {
+    background-color: var(--semantic-interactive-main);
+    color: var(--palette-graphite-0);
+  }
+
+  &:focus-visible {
     outline: 2px solid var(--semantic-interactive-main);
     outline-offset: 3px;
   }

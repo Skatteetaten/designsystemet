@@ -216,7 +216,7 @@ export const AlertExample: Story = {
 
     return (
       <div className={'flex flexWrap gapS'}>
-        <Card className={'cardWidth'}>
+        <Card className={'cardWidth'} ariaLabelledBy={'card-heading-1'}>
           <Card.Alert
             variant={'info'}
             title={'Informasjon'}
@@ -229,7 +229,13 @@ export const AlertExample: Story = {
             <Link href={'#'}>{'Navn på et annet kort'}</Link>
           </Card.Alert>
           <Card.Header>
-            <Heading ref={headingRef} as={'h3'} level={3} canBeManuallyFocused>
+            <Heading
+              ref={headingRef}
+              id={'card-heading-1'}
+              as={'h3'}
+              level={3}
+              canBeManuallyFocused
+            >
               {'Andre inntekter'}
             </Heading>
           </Card.Header>
@@ -245,7 +251,7 @@ export const AlertExample: Story = {
           </Card.Actions>
         </Card>
 
-        <Card className={'cardWidth'}>
+        <Card className={'cardWidth'} ariaLabelledBy={'card-heading-2'}>
           <Card.Alert
             variant={'warning'}
             title={'Merknad'}
@@ -260,7 +266,13 @@ export const AlertExample: Story = {
             <Link href={'#'}>{'Navn på et annet kort'}</Link>
           </Card.Alert>
           <Card.Header>
-            <Heading ref={headingRef} as={'h3'} level={3} canBeManuallyFocused>
+            <Heading
+              ref={headingRef}
+              id={'card-heading-2'}
+              as={'h3'}
+              level={3}
+              canBeManuallyFocused
+            >
               {'Andre inntekter'}
             </Heading>
           </Card.Header>
@@ -276,7 +288,7 @@ export const AlertExample: Story = {
           </Card.Actions>
         </Card>
 
-        <Card className={'cardWidth'}>
+        <Card className={'cardWidth'} ariaLabelledBy={'card-heading-3'}>
           <Card.Alert
             variant={'danger'}
             title={'Å nei, ikke bra!'}
@@ -291,7 +303,13 @@ export const AlertExample: Story = {
             <Link href={'#'}>{'Navn på et annet kort'}</Link>
           </Card.Alert>
           <Card.Header>
-            <Heading ref={headingRef} as={'h3'} level={3} canBeManuallyFocused>
+            <Heading
+              ref={headingRef}
+              id={'card-heading-3'}
+              as={'h3'}
+              level={3}
+              canBeManuallyFocused
+            >
               {'Andre inntekter'}
             </Heading>
           </Card.Header>

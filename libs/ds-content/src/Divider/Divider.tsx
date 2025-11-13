@@ -37,9 +37,3 @@ export const Divider = ({
     />
   );
 };
-
-export {
-  getDividerSpacingTopDefault,
-  getDividerSpacingBottomDefault,
-  getDividerVariantDefault,
-};

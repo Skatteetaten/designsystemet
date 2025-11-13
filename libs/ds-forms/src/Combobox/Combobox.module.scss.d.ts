@@ -1,0 +1,25 @@
+declare const classNames: {
+  readonly srOnly: 'srOnly';
+  readonly inputContainer: 'inputContainer';
+  readonly inputContainerMarginTop: 'inputContainerMarginTop';
+  readonly input: 'input';
+  readonly inputContentArea: 'inputContentArea';
+  readonly chips: 'chips';
+  readonly chip: 'chip';
+  readonly chevronButton: 'chevronButton';
+  readonly chevronButtonLarge: 'chevronButtonLarge';
+  readonly optionsListContainer: 'optionsListContainer';
+  readonly optionsList: 'optionsList';
+  readonly option: 'option';
+  readonly optionWithCheckbox: 'optionWithCheckbox';
+  readonly focused: 'focused';
+  readonly disabled: 'disabled';
+  readonly checkboxIcon: 'checkboxIcon';
+  readonly checked: 'checked';
+  readonly checkboxIconCheck: 'checkboxIconCheck';
+  readonly optionLabel: 'optionLabel';
+  readonly emptyResult: 'emptyResult';
+  readonly loadingContainer: 'loadingContainer';
+  readonly maxSelectedMessage: 'maxSelectedMessage';
+};
+export default classNames;

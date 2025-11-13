@@ -93,7 +93,7 @@ export const Defaults = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['focus'] },
+    imageSnapshot: { pseudoStates: ['focus-visible'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

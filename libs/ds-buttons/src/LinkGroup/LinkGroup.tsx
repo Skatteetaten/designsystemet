@@ -64,5 +64,3 @@ export const LinkGroup = (({
 
 LinkGroup.displayName = 'LinkGroup';
 LinkGroup.Link = Link;
-
-export { getLinkGroupVariantDefault };

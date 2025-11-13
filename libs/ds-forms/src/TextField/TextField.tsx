@@ -5,6 +5,7 @@ import {
   useId,
   useImperativeHandle,
   useRef,
+  KeyboardEvent,
 } from 'react';
 
 import {
@@ -12,6 +13,7 @@ import {
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
   useValidateFormRequiredProps,
+  useInputHistory,
 } from '@skatteetaten/ds-core-utils';
 
 import { TextFieldProps } from './TextField.types';
@@ -65,12 +67,17 @@ export const TextField = ({
   const errorId = `textFieldErrorId-${useId()}`;
   const generatedId = `textFieldTextboxId-${useId()}`;
   const characterCounterId = `textFieldCharacterCounter-${useId()}`;
+  const descriptionId = `descId-${useId()}`;
   const textboxId = externalId ?? generatedId;
 
   const textboxRef = useRef<HTMLInputElement>(null);
   useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
+  const inputHistory = useInputHistory({
+    initialValue: value?.toString() || defaultValue?.toString() || '',
+  });
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>): void => {
     if (onKeyDown) {
       onKeyDown(e);
       return;
@@ -81,11 +88,83 @@ export const TextField = ({
     }
 
     const input = e.currentTarget;
-    const cursorPosition = input.selectionStart || 0;
+    const cursorPosition = input.selectionEnd || 0;
     const inputValue = input.value;
+
+    // Initialize history if empty (first interaction)
+    inputHistory.initialize(inputValue, cursorPosition);
+
+    // Handle redo (Ctrl+Y / Command+Y or Ctrl+Shift+Z / Command+Shift+Z)
+    if (
+      (e.ctrlKey || e.metaKey) &&
+      (e.key === 'y' || (e.shiftKey && e.key === 'z'))
+    ) {
+      const nextState = inputHistory.redo(cursorPosition);
+      if (nextState && textboxRef.current) {
+        e.preventDefault();
+        textboxRef.current.value = nextState.value;
+
+        // Set cursor position
+        requestAnimationFrame(() => {
+          if (textboxRef.current) {
+            const pos = Math.min(
+              nextState.cursorPosition,
+              nextState.value.length
+            );
+            textboxRef.current.setSelectionRange(pos, pos);
+          }
+        });
+
+        // Trigger onChange to keep external state in sync
+        if (onChange) {
+          const syntheticEvent = {
+            target: textboxRef.current,
+            currentTarget: textboxRef.current,
+          } as ChangeEvent<HTMLInputElement>;
+          onChange(syntheticEvent);
+        }
+      }
+      return;
+    }
+
+    // Handle undo (Ctrl+Z / Command+Z)
+    if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+      const previousState = inputHistory.undo(cursorPosition);
+      if (previousState && textboxRef.current) {
+        e.preventDefault();
+        textboxRef.current.value = previousState.value;
+
+        // Set cursor position
+        requestAnimationFrame(() => {
+          if (textboxRef.current) {
+            const pos = Math.min(
+              previousState.cursorPosition,
+              previousState.value.length
+            );
+            textboxRef.current.setSelectionRange(pos, pos);
+          }
+        });
+
+        // Trigger onChange to keep external state in sync
+        if (onChange) {
+          const syntheticEvent = {
+            target: textboxRef.current,
+            currentTarget: textboxRef.current,
+          } as ChangeEvent<HTMLInputElement>;
+          onChange(syntheticEvent);
+        }
+      }
+      return;
+    }
+
+    if (!thousandSeparator) return;
+
     const isPreviousCharacterSeparator = /[, ]/.test(
       inputValue[cursorPosition - 1]
     );
+
+    const isNextCharacterSeparator = /[, ]/.test(inputValue[cursorPosition]);
+
     const selectionLength =
       (input.selectionEnd || 0) - (input.selectionStart || 0);
 
@@ -124,31 +203,75 @@ export const TextField = ({
       const separatorWasRemoved =
         separatorsInOldValue > separatorsInNewValue && cursorPosition > 2;
 
-      input.value = formattedValue;
-
       const newPosition = deletePosition - 1 - (separatorWasRemoved ? 1 : 0);
 
+      // Save the current value to history before making changes
+      inputHistory.pushState(formattedValue, newPosition, input);
+
+      input.value = formattedValue;
       requestAnimationFrame(() => {
         input.setSelectionRange(newPosition, newPosition);
       });
     }
+
+    if (
+      e.key === 'Delete' &&
+      !isAnyModifierKeyPressed &&
+      selectionLength === 0
+    ) {
+      // If cursor is before a separator, delete the digit after the separator
+      if (isNextCharacterSeparator) {
+        e.preventDefault();
+
+        const deletePosition = cursorPosition + 1;
+
+        const newValue =
+          inputValue.slice(0, cursorPosition) +
+          inputValue.slice(deletePosition + 1);
+
+        const formattedValue = addSpacesOrCommas(removeNonNumeric(newValue));
+
+        const separatorsInOldValue = inputValue.match(/[, ]/g)?.length || 0;
+        const separatorsInNewValue = formattedValue.match(/[, ]/g)?.length || 0;
+
+        // hvis det ble fjernet en separator, må vi flytte markøren et ekstra hopp til høyre, med mindre vi sletter den første separatoren.
+        const separatorWasRemoved = separatorsInOldValue > separatorsInNewValue;
+
+        const newPosition = deletePosition + (separatorWasRemoved ? 1 : 0);
+
+        // Save the current value to history before making changes
+        inputHistory.pushState(formattedValue, newPosition, input);
+
+        input.value = formattedValue;
+        requestAnimationFrame(() => {
+          input.setSelectionRange(newPosition, newPosition);
+        });
+      }
+    }
+
+    // Update cursor position in case of arrow keys or other movement
+    inputHistory.updateCursorPosition(cursorPosition);
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    if (thousandSeparator) {
-      const input = e.target as HTMLInputElement;
-      const cursorPosition = input.selectionStart || 0;
-      const oldValue = input.value;
+    const input = e.target as HTMLInputElement;
+    const newValue = input.value;
 
-      const digitsBeforeCursor = oldValue
+    if (thousandSeparator) {
+      const cursorPosition = input.selectionEnd || 0;
+
+      const digitsBeforeCursor = newValue
         .substring(0, cursorPosition)
         .replace(/\D/g, '').length;
 
       const formattedValue = addSpacesOrCommas(removeNonNumeric(input.value));
       input.value = formattedValue;
 
-      let newPosition = 0;
       let digitCount = 0;
+
+      // Calculate new cursor position
+
+      let newPosition = 0;
       for (let i = 0; i < formattedValue.length; i++) {
         if (/\d/.test(formattedValue[i])) {
           digitCount++;
@@ -160,9 +283,22 @@ export const TextField = ({
       }
 
       input.setSelectionRange(newPosition, newPosition);
-    }
 
-    onChange?.(e);
+      // Update current in history after formatting and positioning cursor
+      // Only update if value actually changed and if thousandSeparator is set
+      const oldValue = inputHistory.getCurrentValue();
+      if (oldValue !== formattedValue) {
+        inputHistory.pushState(formattedValue, newPosition);
+      }
+
+      // Vi trenger ikke å kalle onChange dersom bruker har
+      // skrevet inn ikke numeriske symboler som er filtrert bort igjen.
+      if (oldValue !== formattedValue) {
+        onChange?.(e);
+      }
+    } else {
+      onChange?.(e);
+    }
   };
 
   /* Slik at value har riktig format også før bruker begynner å skrive i feltet */
@@ -181,7 +317,11 @@ export const TextField = ({
     }`.trim();
 
   const ariaDescribedBy =
-    [errorMessage && errorId, characterLimit && characterCounterId]
+    [
+      description && descriptionId,
+      errorMessage && errorId,
+      characterLimit && characterCounterId,
+    ]
       .filter(Boolean)
       .join(' ') || undefined;
 
@@ -197,6 +337,7 @@ export const TextField = ({
         hideLabel={hideLabel}
         showRequiredMark={showRequiredMark}
         description={description}
+        descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
@@ -205,7 +346,15 @@ export const TextField = ({
         {label}
       </LabelWithHelp>
       <input
-        ref={textboxRef}
+        ref={(node) => {
+          // Handle both the external ref and our internal ref
+          if (typeof ref === 'function') {
+            ref(node);
+          } else if (ref) {
+            ref.current = node;
+          }
+          textboxRef.current = node;
+        }}
         id={textboxId}
         className={textboxClassName}
         data-testid={dataTestId}

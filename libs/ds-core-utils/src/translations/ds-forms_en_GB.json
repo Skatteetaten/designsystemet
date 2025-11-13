@@ -1,9 +1,7 @@
 {
-  "combobox.CloseSuggestion": "Close suggestions",
   "combobox.Loading": "Loading",
   "combobox.NoResults": "No results for «{{searchTerm}}». Try a different search.",
   "combobox.OneOptionAvailable": "One option available.",
-  "combobox.OpenSuggestion": "Open suggestions",
   "combobox.OptionsAvailable": "{{count}} options available.",
   "combobox.ResetSuggestion": "Reset selection",
   "combobox.SelectedOfTotalPlural": "{{selected}} of {{total}} are selected",
@@ -36,7 +34,6 @@
   "datepicker.TypeOrSelect": "Type or select",
   "datepicker.Wed": "Wed",
   "datepicker.Year": "Year",
-  "errorsummary.Title": "To continue you must correct {{errorAmount}} error(s):",
   "fileuploader.AddMultipleLabel": "Add file(s)",
   "fileuploader.AddSingleLabel": "Add file",
   "fileuploader.DeleteConfirmation": "The file has been removed",

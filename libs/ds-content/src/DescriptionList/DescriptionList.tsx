@@ -90,13 +90,3 @@ export const DescriptionList = (({
 DescriptionList.displayName = 'DescriptionList';
 DescriptionList.Element = DescriptionListElement;
 DescriptionList.Element.displayName = 'DescriptionList.Element';
-
-export {
-  getDescriptionListSizeDefault,
-  getDescriptionDirectionDefault,
-  getDescriptionListIsVerticalOnMobileDefault,
-  getDescriptionListIsDescriptionVerticalOnMobileDefault,
-  getDescriptionWeightDefault,
-  getTermWeightDefault,
-  getDescriptionListVariantDefault,
-};

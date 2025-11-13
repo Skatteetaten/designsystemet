@@ -1,0 +1,269 @@
+@use 'libs/ds-core-utils/src/mixins/styles';
+
+.srOnly {
+  @include styles.sr-only;
+}
+
+[data-has-spacing='true'] {
+  margin-bottom: var(--spacing-m);
+}
+
+.inputContainer {
+  position: relative;
+  display: grid;
+  padding: var(--spacing-xs) var(--spacing-s);
+  background: var(--semantic-page-background);
+  box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
+  column-gap: var(--spacing-xs);
+  grid-template-areas: 'content button';
+  grid-template-columns: 1fr auto;
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
+
+  &:has(.input:disabled) {
+    background: var(--semantic-disabled-background);
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+  }
+
+  &:has(.input[aria-invalid='true']) {
+    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
+  }
+
+  &:has(.input:hover):not(:has(.input:disabled)) {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:has(.input:focus-visible):not(:has(.input:disabled)),
+  &:has(.input:active):not(:has(.input:disabled)) {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 1px solid var(--semantic-interactive-main);
+  }
+}
+
+.inputContentArea {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: var(--spacing-s);
+  grid-area: content;
+
+  .chips {
+    max-width: 100%;
+    margin-top: var(--spacing-xs);
+    gap: var(--spacing-s) var(--spacing-xs);
+  }
+}
+
+.chip {
+  overflow-wrap: anywhere;
+}
+
+.input {
+  overflow: hidden;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-input);
+  outline: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &::placeholder {
+    color: var(--palette-graphite-50);
+  }
+
+  &:focus-visible::selection {
+    background: var(--semantic-interactive-background);
+  }
+
+  &:disabled {
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+  }
+}
+
+.chevronButton {
+  display: flex;
+  width: var(--size-large);
+  height: var(--size-large);
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  grid-area: button;
+
+  svg {
+    fill: var(--semantic-interactive-main);
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--semantic-interactive-main);
+  }
+
+  &:active {
+    background-color: var(--semantic-interactive-foreground);
+    transform: translateY(2px);
+    transition: 0.15s;
+
+    svg {
+      fill: var(--semantic-page-background);
+    }
+  }
+
+  &:disabled,
+  &[data-disabled='true'] {
+    pointer-events: none;
+
+    svg {
+      fill: var(--semantic-disabled-foreground);
+    }
+  }
+
+  &Large {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: var(--spacing-xxs);
+  }
+}
+
+.optionsListContainer {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--spacing-xs);
+  border: 1px solid var(--palette-graphite-100);
+  border-top: none;
+  margin: 1px 0 0;
+  background: var(--semantic-page-background);
+  box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 10%);
+}
+
+.optionsList {
+  padding: var(--spacing-xs) var(--spacing-s);
+  margin: 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.option {
+  padding: var(--spacing-xs);
+  box-shadow: inset 0 -1px 0 0 var(--semantic-divider-30);
+  color: var(--semantic-page-foreground);
+  cursor: pointer;
+
+  &:last-child {
+    box-shadow: none;
+  }
+
+  &WithCheckbox {
+    display: flex;
+    align-items: center;
+    column-gap: var(--spacing-s);
+  }
+
+  &:focus-visible,
+  &.focused:not(.disabled) {
+    z-index: 10;
+    outline: 3px solid var(--semantic-interactive-main);
+    outline-offset: -1px;
+  }
+
+  &:not(.disabled):hover {
+    z-index: 10;
+    background: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-main);
+    text-decoration: underline;
+  }
+
+  &.disabled {
+    background: var(--semantic-disabled-background);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+  }
+}
+
+.checkboxIcon {
+  position: relative;
+  width: var(--size-medium);
+  min-width: var(--size-medium);
+  height: var(--size-medium);
+  box-sizing: border-box;
+  border: var(--spacing-xxs) solid var(--semantic-page-foreground);
+  background-color: var(--semantic-page-background);
+
+  &.checked {
+    border-color: var(--semantic-interactive-main);
+    background-color: var(--semantic-interactive-main);
+  }
+
+  &Check {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.0625rem;
+    width: 0.71875rem;
+    height: 0.3125rem;
+    border-bottom: var(--spacing-xxs) solid var(--palette-graphite-0);
+    border-left: var(--spacing-xxs) solid var(--palette-graphite-0);
+    transform: rotate(-45deg);
+  }
+
+  &.disabled {
+    border-color: var(--semantic-disabled-foreground);
+    background-color: var(--semantic-disabled-background);
+    pointer-events: none;
+  }
+}
+
+.optionLabel {
+  overflow-wrap: anywhere;
+
+  .disabled {
+    color: var(--semantic-disabled-foreground);
+  }
+}
+
+.emptyResult {
+  padding-top: var(--spacing-xs);
+  color: var(--semantic-page-foreground);
+  opacity: 0.8;
+}
+
+.loadingContainer {
+  display: flex;
+  min-height: 40px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.maxSelectedMessage {
+  padding: var(--spacing-s) var(--spacing-s-plus);
+  border-top: 1px solid var(--semantic-divider-30);
+  background-color: var(--semantic-page-background);
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  font-style: italic;
+  opacity: 0.8;
+}
