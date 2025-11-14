@@ -54,6 +54,7 @@ export const FileUploader = (({
   shouldNormalizeFileName,
   multiple,
   isUploading,
+  isRequired,
   onFileChange,
   onFileDelete,
   onFileDownload,
@@ -286,6 +287,7 @@ export const FileUploader = (({
           )}
           <label className={styles.innerLabel} htmlFor={id}>
             {!isUploading && buttonText}
+            {isRequired && <span className={styles.srOnly}>{'påkrevd'}</span>}
           </label>
           <input
             ref={inputRef}

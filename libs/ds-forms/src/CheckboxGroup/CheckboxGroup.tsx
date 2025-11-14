@@ -57,6 +57,7 @@ export const CheckboxGroup = (({
       helpText={helpText}
       titleHelpSvg={titleHelpSvg}
       hasSpacing={hasSpacing}
+      hideDescriptionForScreenReader
       onHelpToggle={onHelpToggle}
     >
       <CheckboxContext.Provider
