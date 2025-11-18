@@ -444,20 +444,17 @@ export const WithPlaceholder = {
   name: 'With Placeholder (B6)',
   args: {
     ...defaultArgs,
-    placeholder: 'Søk etter land...',
+    placeholder: 'Søk etter kommune, fylke eller land',
   },
   argTypes: {
     placeholder: { table: { disable: false } },
-  },
-  parameters: {
-    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toHaveAttribute(
       'placeholder',
-      'Søk etter land...'
+      'Søk etter kommune, fylke eller land'
     );
   },
 } satisfies Story;
