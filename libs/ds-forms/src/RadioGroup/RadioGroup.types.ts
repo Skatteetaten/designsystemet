@@ -56,7 +56,10 @@ interface RadioGroupComponentCommonProps
   children: ReactNode;
   /** Tekst på feilmelding */
   errorMessage?: string;
-  /** Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
+  /**
+   * Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt
+   * synlig for skjermleser
+   */
   hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */
   legend: FieldsetProps['legend'];
@@ -84,13 +87,19 @@ type RadioGroupDiscriminatedCheckedProps =
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
       selectedValue?: string | number;
-      /** Hvilke value som skal være satt til default checked (uncontrolled state) */
+      /**
+       * Hvilke value som skal være satt til default checked (uncontrolled
+       * state)
+       */
       defaultValue?: never;
     }
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
       selectedValue?: never;
-      /** Hvilke value som skal være satt til default checked (uncontrolled state) */
+      /**
+       * Hvilke value som skal være satt til default checked (uncontrolled
+       * state)
+       */
       defaultValue?: string | number;
     };
 

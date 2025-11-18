@@ -53,13 +53,19 @@ export interface TextFieldCommonProps
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
-  /** Viser teller over antall tillatte tegn i feltet. Du må fortsatt håndtere faktiske tegnbegrensninger/validering ved behov. */
+  /**
+   * Viser teller over antall tillatte tegn i feltet. Du må fortsatt håndtere
+   * faktiske tegnbegrensninger/validering ved behov.
+   */
   characterLimit?: number;
   /** Tekst på feilmelding */
   errorMessage?: string;
   /** Margin under komponenten */
   hasSpacing?: boolean;
-  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
+  /**
+   * Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for
+   * skjermleser.
+   */
   hideLabel?: boolean;
   /** Input eller textarea ledetekst */
   label: string;
@@ -73,7 +79,10 @@ export interface TextFieldCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Definerer stilen til TextField */
   variant?: FormSize;
-  /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
+  /**
+   * Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn
+   * avhengig av språket som er valgt og fjerner ikke numeriske tegn
+   */
   thousandSeparator?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];

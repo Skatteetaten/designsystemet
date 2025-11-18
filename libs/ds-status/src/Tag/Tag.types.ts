@@ -13,7 +13,10 @@ export interface TagProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
   /** Tekst for meldingen */
   children: string;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
+  /**
+   * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke.
+   * Alternativt kan custom path sendes.
+   */
   svgPath?: ReactElement<SVGPathElement>;
   /** Definerer fargen */
   color?: TagColor;

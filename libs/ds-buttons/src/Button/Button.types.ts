@@ -33,21 +33,33 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 
 interface ButtonAsLink {
   ref?: Ref<HTMLAnchorElement>;
-  /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
+  /**
+   * Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href
+   * attributtet på lenken.
+   */
   href: string;
   disabled?: never | false;
   form?: never;
-  /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
+  /**
+   * Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis
+   * knappen er en lenke til en side på et annet domene.
+   */
   isExternal?: boolean;
   type?: never;
 }
 
 type ButtonAsButton = {
   ref?: Ref<HTMLButtonElement>;
-  /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
+  /**
+   * Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href
+   * attributtet på lenken.
+   */
   href?: never;
   disabled?: boolean;
-  /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
+  /**
+   * Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis
+   * knappen er en lenke til en side på et annet domene.
+   */
   isExternal?: never | false;
 } & Pick<ComponentPropsWithoutRef<'button'>, 'type' | 'form'>;
 
@@ -58,13 +70,19 @@ export interface ButtonCommonProps
     BaseProps {
   /** Tekst på knapp. */
   children: string;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
+  /**
+   * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke.
+   * Alternativt kan custom path sendes.
+   */
   svgPath?: ReactElement<SVGPathElement>;
   /** Definerer stilen til knappen. */
   variant?: ButtonVariant;
   /** Om knappen skal inneholde Spinner. */
   hasSpinner?: boolean;
-  /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
+  /**
+   * Overskriver default tekst som leses opp av skjermleser når Spinner snurrer
+   * i knappen.
+   */
   spinnerTitle?: string;
 }
 

@@ -22,7 +22,10 @@ export interface FooterProps extends BaseProps {
   titleSecondColumn?: string;
   /** Tittel til tredje kolonne */
   titleThirdColumn?: string;
-  /** Innhold i første kolonne under Kontakt oss, Sikkerhet og personvern, Tilgjengelighetserklæring */
+  /**
+   * Innhold i første kolonne under Kontakt oss, Sikkerhet og personvern,
+   * Tilgjengelighetserklæring
+   */
   firstColumn?: ReactNode;
   /** Innhold i andre kolonne */
   secondColumn?: ReactNode;
@@ -34,8 +37,8 @@ export interface FooterProps extends BaseProps {
   openDefaultLinksInNewTab?: boolean;
   /**
    * Footer.LinkFirstColumn, Footer.Logo eller Footer.Link:
-   * Footer.LinkFirstColumn blir plassert under de første tre lenkene i første kolonne.
-   * Footer.Logo blir plassert ved siden av Skatteetatens logo.
+   * Footer.LinkFirstColumn blir plassert under de første tre lenkene i første
+   * kolonne. Footer.Logo blir plassert ved siden av Skatteetatens logo.
    * Footer.Link blir plassert under logoen horisontalt.
    */
   children?: ReactNode;

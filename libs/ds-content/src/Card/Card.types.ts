@@ -28,7 +28,10 @@ export interface CardComponentCommonProps extends BaseProps {
   /** Farge på border og bakgrunn. */
   color?: CardColor;
   ariaLabelledBy?: ComponentPropsWithoutRef<'section'>['aria-labelledby'];
-  /** Luft til innholdet i Card. For at den skal ta effekt må man bruke minst én av underkomponentene: Card.Header, Card.Content, Card.Actions. */
+  /**
+   * Luft til innholdet i Card. For at den skal ta effekt må man bruke minst én
+   * av underkomponentene: Card.Header, Card.Content, Card.Actions.
+   */
   spacing?: CardSpacing;
 }
 
