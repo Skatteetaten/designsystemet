@@ -11,10 +11,13 @@ const addStyleImportPlugin = require('./rollup-plugin-addstyleimport.cjs');
 
 /**
  * Lager tilpasset Rollup config med Sass og plugin håndtering
+ *
  * @param config - Base Rollup config fra Nx
  * @param srcDir - Kildekatalog sti
- * @param _pathToTsConfig - Sti til TypeScript config (ikke brukt, men beholdt for bakoverkompatibilitet)
- * @param _pathToCSS - Sti til CSS filer (ikke brukt, men beholdt for bakoverkompatibilitet)
+ * @param _pathToTsConfig - Sti til TypeScript config (ikke brukt, men beholdt
+ *   for bakoverkompatibilitet)
+ * @param _pathToCSS - Sti til CSS filer (ikke brukt, men beholdt for
+ *   bakoverkompatibilitet)
  * @param outputDir - Utdata katalog sti
  * @returns Tilpasset Rollup config
  */
@@ -32,8 +35,9 @@ function createRollupConfig(
 
   /**
    * Filters out plugins that conflict with custom Sass/PostCSS setup.
-   * @param  pluginArray - Array of Rollup plugins.
-   * @returns  Filtered plugins array without conflicting plugins.
+   *
+   * @param pluginArray - Array of Rollup plugins.
+   * @returns Filtered plugins array without conflicting plugins.
    */
   function filterConflictingPlugins(pluginArray) {
     const conflictingPluginNames = new Set(['postcss', 'sass', 'url']);
@@ -96,9 +100,11 @@ function createRollupConfig(
 
 /**
  * Håndterer utskrift av CSS-filer fra kompilerte SCSS-filer
- * @param _styles - Kompilerte CSS-stiler (ikke brukt men må beholdes for signatur)
+ *
+ * @param _styles - Kompilerte CSS-stiler (ikke brukt men må beholdes for
+ *   signatur)
  * @param styleNodes - Array av stilnoder med id og innhold
- * @returns false - Forhindrer plugin fra å lage kombinert CSS-fil
+ * @returns False - Forhindrer plugin fra å lage kombinert CSS-fil
  */
 function handleSassOutput(_styles, styleNodes) {
   if (styleNodes && styleNodes.length > 0) {
@@ -153,7 +159,8 @@ function handleSassOutput(_styles, styleNodes) {
 
 /**
  * Konfigurerer Sass plugin med moderne API og Autoprefixer
- * @returns  Konfigurert Sass plugin
+ *
+ * @returns Konfigurert Sass plugin
  */
 function configureSassPlugin() {
   return sass({
@@ -204,8 +211,9 @@ function configureSassPlugin() {
 
 /**
  * Henter Rollup input entries fra kildekatalog
- * @param  sourcePath - Kildekatalog sti
- * @returns  Input entries objekt
+ *
+ * @param sourcePath - Kildekatalog sti
+ * @returns Input entries objekt
  */
 function getRollupInputs(sourcePath) {
   const inputNamesAndPaths = {
