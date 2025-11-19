@@ -18,7 +18,10 @@ export interface FieldsetProps
   children: ReactNode;
   /** Ledetekst */
   legend: ReactNode;
-  /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
+  /**
+   * Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for
+   * skjermleser
+   */
   hideLegend?: boolean;
   /** Tilleggstekst */
   description?: string;
@@ -32,7 +35,10 @@ export interface FieldsetProps
   titleHelpSvg?: HelpProps['titleHelpSvg'];
   /**
    * Om legend skal markeres med stjerne.
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på [stil og tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
+   *
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer
+   *   om mønstre for obligatoriske felt på [stil og
+   *   tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
    */
   showRequiredMark?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */

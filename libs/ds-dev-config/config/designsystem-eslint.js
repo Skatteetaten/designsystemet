@@ -109,6 +109,7 @@ export default [
         },
       ],
       'jsdoc/require-jsdoc': 'off',
+      'jsdoc/tag-lines': 'off', // Disabled to avoid conflict with prettier-plugin-jsdoc
     },
   },
   {

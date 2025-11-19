@@ -153,6 +153,7 @@
     "playwright": "1.55.0",
     "postcss-js": "4.0.1",
     "prettier": "3.4.2",
+    "prettier-plugin-jsdoc": "1.5.0",
     "rollup-plugin-visualizer": "5.14.0",
     "sass": "1.89.2",
     "sass-embedded": "1.89.2",

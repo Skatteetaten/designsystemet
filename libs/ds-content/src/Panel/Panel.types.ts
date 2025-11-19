@@ -42,8 +42,7 @@ export type CSSVariables = CSSProperties & {
 export interface PanelComponentCommonProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
   /**
-   * Lar heading i komponenten være fokuserbar.
-   * Sørger for at tabIndex: -1
+   * Lar heading i komponenten være fokuserbar. Sørger for at tabIndex: -1
    * Brukes sammen med prop 'headingRef' og 'title'
    */
   canManuallySetTitleFocus?: boolean;
@@ -74,10 +73,9 @@ export interface PanelComponentCommonProps extends BaseProps {
   /** Definerer stilen til Panel. */
   variant?: PanelVariant;
   /**
-   * Ref for Panel Header (H1-H6).
-   * Kan brukes til å sette fokus på header i Panel.
-   * 'canManuallySetTitleFocus' må være satt til true og
-   * 'title' må ha en verdi.
+   * Ref for Panel Header (H1-H6). Kan brukes til å sette fokus på header i
+   * Panel. 'canManuallySetTitleFocus' må være satt til true og 'title' må ha en
+   * verdi.
    */
   headingRef?: Ref<HTMLHeadingElement>;
 }
@@ -86,13 +84,19 @@ export type PanelDiscriminatedPadding =
   | {
       /** Padding rundt Panel. Se også hasResponsivePadding */
       padding?: PanelPadding;
-      /** Legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
+      /**
+       * Legger til media query slik at man kan styre padding pr brekkpunkt. Se
+       * også padding-prop
+       */
       hasResponsivePadding?: never;
     }
   | {
-      /** Padding rundt Panel. Se også hasResponsivePadding  */
+      /** Padding rundt Panel. Se også hasResponsivePadding */
       padding?: never;
-      /** Legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
+      /**
+       * Legger til media query slik at man kan styre padding pr brekkpunkt. Se
+       * også padding-prop
+       */
       hasResponsivePadding?: boolean;
     };
 
@@ -100,7 +104,10 @@ export type PanelDiscriminatedGraphicProps =
   | {
       /** Source til illustrasjonsbilde */
       imageSource?: string;
-      /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
+      /**
+       * Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg
+       * på alt tekst.
+       */
       imageSourceAltText?: string;
       /** Icon-komponent som en funksjon */
       renderIcon?: never;
@@ -108,7 +115,10 @@ export type PanelDiscriminatedGraphicProps =
   | {
       /** Source til illustrasjonsbilde */
       imageSource?: never;
-      /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
+      /**
+       * Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg
+       * på alt tekst.
+       */
       imageSourceAltText?: never;
       /** Icon-komponent som en funksjon */
       renderIcon?: () => ReactElement<IconProps>;
