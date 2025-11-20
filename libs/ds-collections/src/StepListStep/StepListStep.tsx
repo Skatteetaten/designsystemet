@@ -59,22 +59,7 @@ export const StepListStep = ({
     }
   }, [variant, shouldAutoFocusWhenActive]);
 
-  const circleClassName = `${styles.stepCircle}
-      ${styles[`stepCircle_${variant}`]}`;
-
-  const stepVariantClassName = styles[`step_${variant}`];
-
-  const [stepLineVariantClassName, stepContentVariantClassName] =
-    variant === 'positiveResult' || variant === 'neutralResult'
-      ? [
-          styles[`stepLine_${variant}`],
-          `${styles[`stepContent_${variant}`]} ${
-            hasResultContentFullWidth ? styles.stepContent_fullWidth : ''
-          }`,
-        ]
-      : ['', ''];
-  const concatenatedClassName =
-    `${styles.step} ${stepVariantClassName} ${className}`.trim();
+  const concatenatedClassName = `${styles.step} ${className}`.trim();
 
   const getCircleContent = (): JSX.Element | number => {
     if (svgPath) {
@@ -107,6 +92,7 @@ export const StepListStep = ({
       className={concatenatedClassName}
       lang={lang}
       data-testid={dataTestId}
+      data-variant={variant}
     >
       <div
         ref={innerRef}
@@ -119,10 +105,8 @@ export const StepListStep = ({
         tabIndex={-1}
         aria-current={variant !== 'passive' ? 'step' : undefined}
       >
-        <span className={circleClassName}>{getCircleContent()}</span>
-        <div
-          className={`${styles.stepLine} ${stepLineVariantClassName}`.trim()}
-        />
+        <span className={styles.stepCircle}>{getCircleContent()}</span>
+        <div className={styles.stepLine} />
       </div>
       <Heading
         id={titleId}
@@ -145,7 +129,8 @@ export const StepListStep = ({
       )}
 
       <div
-        className={`${styles.stepContent} ${stepContentVariantClassName}`.trim()}
+        className={styles.stepContent}
+        data-full-width={hasResultContentFullWidth || undefined}
       >
         <div>{children}</div>
         {onEdit && (
