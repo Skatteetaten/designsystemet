@@ -29,7 +29,7 @@ describe('Table defaults', () => {
     expect(getTableCellAlignmentDefault()).toBe('left');
   });
   it('Når getTableSumAlignmentDefault kalles, så returnerer den riktig verdi', () => {
-    expect(getTableSumAlignmentDefault()).toBe('right');
+    expect(getTableSumAlignmentDefault()).toBe('left');
   });
   it('Når getTableRowIsExpandedDefault kalles, så returnerer den riktig verdi', () => {
     expect(getTableRowIsExpandedDefault()).toBe(false);
