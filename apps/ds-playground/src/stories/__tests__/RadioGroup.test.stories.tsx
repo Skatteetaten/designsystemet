@@ -177,6 +177,7 @@ export const Defaults = {
     await expect(legend.tagName).toBe('LEGEND');
     radios.forEach((input) => {
       expect(input).toHaveAttribute('name');
+      expect(input).toHaveAttribute('aria-invalid', 'false');
     });
   },
 } satisfies Story;

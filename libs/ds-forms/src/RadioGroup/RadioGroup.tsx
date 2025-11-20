@@ -112,7 +112,7 @@ export const RadioGroup = (({
             errorId: errorMessage ? errorId : '',
             selectedValue,
             name: nameId,
-            hasError: !!errorMessage || undefined,
+            hasError: !!errorMessage,
             required,
             onChange: handleChange,
             onBlur: handleBlur,
