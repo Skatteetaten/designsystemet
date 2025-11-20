@@ -130,7 +130,7 @@ export const Defaults = {
     const inputNode = canvas.getByLabelText(defaultLabelText);
     await expect(inputNode).toBeInTheDocument();
     await expect(inputNode.tagName).toBe('INPUT');
-    await expect(inputNode).not.toHaveAttribute('aria-invalid');
+    await expect(inputNode).toHaveAttribute('aria-invalid', 'false');
     await expect(inputNode).not.toBeChecked();
     await expect(inputNode).not.toBeRequired();
     await expect(inputNode).toBeEnabled();
@@ -261,7 +261,7 @@ export const WithChecked = {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
     await expect(inputNode).toBeChecked();
-    await expect(inputNode).not.toHaveAttribute('aria-invalid');
+    await expect(inputNode).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
