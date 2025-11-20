@@ -1,9 +1,7 @@
-// This file has been automatically migrated to valid ESM format by Storybook.
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { StorybookConfig } from '@storybook/react-vite';
 import svgr from '@svgr/rollup';
 import sassDts from 'vite-plugin-sass-dts';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 import { readdirSync, readFileSync } from 'fs';
 import path, { dirname } from 'node:path';
@@ -101,9 +99,6 @@ const config: StorybookConfig = {
       },
       plugins: [
         svgr(),
-        tsconfigPaths({
-          root: '../../',
-        }),
         nxViteTsPaths(),
         sassDts({
           esmExport: true,
@@ -116,6 +111,6 @@ const config: StorybookConfig = {
 
 export default config;
 
-function getAbsolutePath(value: string): any {
+function getAbsolutePath(value: string): string {
   return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
 }
