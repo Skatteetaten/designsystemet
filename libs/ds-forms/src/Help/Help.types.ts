@@ -19,7 +19,7 @@ export interface HelpProps {
   description?: string;
   /** Id til beskrivelse */
   descriptionId?: string;
-  /**  Skjuler beskrivelse for skjermleser */
+  /** Skjuler beskrivelse for skjermleser */
   hideDescriptionForScreenReader?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: OnHelpToggleHandler;

@@ -103,7 +103,6 @@ export const RadioGroup = (({
       helpText={helpText}
       titleHelpSvg={titleHelpSvg}
       hasSpacing={hasSpacing}
-      hideDescriptionForScreenReader
       onHelpToggle={onHelpToggle}
     >
       <div className={radioGroupItemContainer}>
