@@ -50,6 +50,9 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    expandButtonProps: {
+      table: { category: category.props },
+    },
     showExpandButtonTitle: { table: { category: category.props } },
     // Event
     onExpand: {

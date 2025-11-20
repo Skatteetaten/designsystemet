@@ -19,6 +19,7 @@ const meta = {
     expandButtonAriaDescribedby: { table: { disable: true } },
     expandButtonPosition: { table: { disable: true } },
     expandButtonTitle: { table: { disable: true } },
+    expandButtonProps: { table: { disable: true } },
     showExpandButtonTitle: { table: { disable: true } },
     isExpandable: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
