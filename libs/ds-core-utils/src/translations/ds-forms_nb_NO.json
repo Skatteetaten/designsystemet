@@ -49,6 +49,7 @@
   "fileuploader.InProgressLabel": "Opplasting pågår",
   "fileuploader.NoRightsToDeleteError": "Du har ikke rettigheter til å slette filer",
   "fileuploader.NoRightsUploadError": "Du har ikke rettigheter til å laste opp filer",
+  "fileuploader.required": "påkrevd",
   "fileuploader.SuccessIconLabel": "Fullført",
   "fileuploader.UploadedHeading": "Lastet opp:",
   "fileuploader.UploadedSummary": "{{fileCount}} fil(er) lastet opp",

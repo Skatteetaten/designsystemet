@@ -287,7 +287,11 @@ export const FileUploader = (({
           )}
           <label className={styles.innerLabel} htmlFor={id}>
             {!isUploading && buttonText}
-            {isRequired && <span className={styles.srOnly}>{'påkrevd'}</span>}
+            {isRequired && (
+              <span className={styles.srOnly}>
+                {t('fileuploader.required')}
+              </span>
+            )}
           </label>
           <input
             ref={inputRef}

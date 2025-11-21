@@ -39,6 +39,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    isRequired: { table: { category: category.props } },
     isUploading: { table: { category: category.props } },
     label: { table: { category: category.props } },
     spinnerLabel: {
