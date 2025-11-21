@@ -310,7 +310,9 @@ export const WithDescription = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const description = canvas.getByText('Vi trenger å vite om du har barn.');
+    const description = canvas.getByText('Vi trenger å vite om du har barn.', {
+      selector: ":not([aria-hidden='true'])",
+    });
     await expect(description).toBeInTheDocument();
   },
 } satisfies Story;
@@ -357,6 +359,10 @@ export const WithCustomClassNames = {
       '[id^=checkboxGroupErrorId]>div'
     );
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
-    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
+    await expect(
+      canvas.getByText('beskrivelse', {
+        selector: "[aria-hidden='true']",
+      })
+    ).toHaveClass('dummyClassname');
   },
 } satisfies Story;

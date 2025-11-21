@@ -68,6 +68,7 @@ export const Fieldset = ({
     >
       <legend id={legendId} className={styles.srOnly}>
         {legend}
+        {description && <span> {description}</span>}
       </legend>
 
       <div className={legendClassName} aria-hidden={'true'}>
@@ -81,6 +82,7 @@ export const Fieldset = ({
         targetId={legendId}
         titleHelpSvg={titleHelpSvg}
         description={description}
+        hideDescriptionForScreenReader
         onHelpToggle={onHelpToggle}
       />
       <div

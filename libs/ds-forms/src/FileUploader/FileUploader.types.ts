@@ -108,6 +108,9 @@ export interface FileUploaderCommonProps
    * hvilke tegn som skal erstattes.
    */
   shouldNormalizeFileName?: boolean;
+
+  /** Gir ekstra informasjon til skjermleser om at filopplasting er obligatorisk. */
+  isRequired?: boolean;
   /**
    * Callback som inneholder liste med filer som ble lagt til av bruker.
    *
