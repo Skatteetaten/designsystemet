@@ -1,4 +1,40 @@
 <style>
+  h1#combobox,
+  h1#rolepicker,
+  h1#wordinfo,
+  h3#beløp,
+  h1#useformattedinput-hook {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: 'Beta';
+      background: #9f7509;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.125rem 0.75rem;
+      border-radius: 1rem;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  h1#topbannerexternal {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: 'Oppdatert';
+      background: #9f7509;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.125rem 0.75rem;
+      border-radius: 1rem;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+  }
+
   [data-test-block] *,
   [data-test-block] *::before,
   [data-test-block] *::after {

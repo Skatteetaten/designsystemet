@@ -14,4 +14,34 @@
   div[data-parent-id='components'] {
     display: none;
   }
+  button#komponenter-combobox,
+  button#komponenter-rolepicker,
+  button#komponenter-wordinfo {
+    align-items: center;
+
+    &::after {
+      content: 'Beta';
+      background: #9f7509;
+      color: #fff;
+      font-size: 0.875rem;
+      padding: 0.125rem 0.75rem;
+      border-radius: 1rem;
+      margin-left: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  button#komponenter-topbannerexternal {
+    align-items: center;
+
+    &::after {
+      content: 'Oppdatert';
+      background: #9f7509;
+      color: #fff;
+      font-size: 0.875rem;
+      padding: 0.125rem 0.75rem;
+      border-radius: 1rem;
+      margin-left: 0.5rem;
+      font-weight: bold;
+    }
+  }
 </style>
