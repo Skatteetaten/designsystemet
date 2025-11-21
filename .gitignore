@@ -60,3 +60,6 @@ vitest.config.*.timestamp*
 # storybook
 debug-storybook.log
 build-storybook.log
+
+# environment files
+.env

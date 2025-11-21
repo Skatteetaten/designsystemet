@@ -30,6 +30,10 @@ import ds_progress_en_GB from './translations/ds-progress_en_GB.json';
 import ds_progress_nb_NO from './translations/ds-progress_nb_NO.json';
 import ds_progress_nn_NO from './translations/ds-progress_nn_NO.json';
 import ds_progress_se_NO from './translations/ds-progress_se_NO.json';
+import Shared_en_GB from './translations/ds-shared_en_GB.json';
+import Shared_nb_NO from './translations/ds-shared_nb_NO.json';
+import Shared_nn_NO from './translations/ds-shared_nn_NO.json';
+import Shared_se_NO from './translations/ds-shared_se_NO.json';
 import ds_status_en_GB from './translations/ds-status_en_GB.json';
 import ds_status_nb_NO from './translations/ds-status_nb_NO.json';
 import ds_status_nn_NO from './translations/ds-status_nn_NO.json';
@@ -38,10 +42,6 @@ import ds_tables_en_GB from './translations/ds-tables_en_GB.json';
 import ds_tables_nb_NO from './translations/ds-tables_nb_NO.json';
 import ds_tables_nn_NO from './translations/ds-tables_nn_NO.json';
 import ds_tables_se_NO from './translations/ds-tables_se_NO.json';
-import Shared_en_GB from './translations/Shared_en_GB.json';
-import Shared_nb_NO from './translations/Shared_nb_NO.json';
-import Shared_nn_NO from './translations/Shared_nn_NO.json';
-import Shared_se_NO from './translations/Shared_se_NO.json';
 
 export enum Languages {
   Bokmal = 'nb_NO',

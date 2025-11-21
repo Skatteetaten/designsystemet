@@ -8,9 +8,9 @@
   "table.Sortable": "Sortable",
   "table.SortedAscending": "Sorted ascending",
   "table.SortedDescending": "Sorted descending",
-  "tablerow.Editable": "Edit row",
   "tablerow.EditData": "Edit data",
-  "tablerow.Expandable": "More information",
+  "tablerow.Editable": "Edit row",
   "tablerow.ExpandText": "Details",
+  "tablerow.Expandable": "More information",
   "tablesum.Sum": "Sum"
 }
