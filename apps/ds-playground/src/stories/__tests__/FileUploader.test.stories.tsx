@@ -449,3 +449,65 @@ export const WithDescription = {
     await expect(describedbyValue).toMatch(/descId-/);
   },
 } satisfies Story;
+
+export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
+  name: 'With Focus Management on Delete Failure',
+  render: () => {
+    const FocusManagementFailureWrapper = (): JSX.Element => {
+      const [files, setFiles] = useState([
+        { name: 'first.pdf' },
+        { name: 'second.pdf' },
+        { name: 'third.pdf' },
+      ]);
+      return (
+        <FileUploader
+          uploadedFiles={files}
+          onFileDelete={(file) => {
+            // Simulate deletion failure for 'second.pdf'
+            if (file.name === 'second.pdf') {
+              return false; // indicate failed delete
+            }
+            // Successful deletion for other files
+            setFiles((prev) => prev.filter((f) => f.name !== file.name));
+            return true;
+          }}
+        />
+      );
+    };
+    return <FocusManagementFailureWrapper />;
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const deleteTitle = dsI18n.t('ds_forms:fileuploader.DeleteLabel');
+    const user = userEvent.setup({
+      pointerEventsCheck: PointerEventsCheckLevel.Never,
+    });
+
+    const initialDeleteButtons = canvas.getAllByRole('button', {
+      name: deleteTitle,
+    });
+    expect(initialDeleteButtons).toHaveLength(3);
+    const secondButton = initialDeleteButtons[1];
+
+    // Try to delete the second file -> deletion fails
+    await user.click(secondButton);
+    // File should still be in the document
+    await expect(canvas.queryByText('second.pdf')).toBeInTheDocument();
+    // Focus should remain on the same delete button
+    await expect(secondButton).toHaveFocus();
+    // SR announcement should be made (error message)
+    await waitFor(
+      () => {
+        const srOnlyDiv = canvas.queryByText(
+          dsI18n.t('ds_forms:fileuploader.GeneralDeleteError')
+        );
+
+        expect(srOnlyDiv).toBeInTheDocument();
+      },
+      { timeout: 2000 }
+    );
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+};
