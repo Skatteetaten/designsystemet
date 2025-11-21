@@ -511,3 +511,22 @@ export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
     imageSnapshot: { disableSnapshot: true },
   },
 };
+export const WithIsRequired = {
+  name: 'With IsRequired',
+  args: {
+    label: 'Last opp dokumenter',
+    isRequired: true,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const requiredText = canvas.getByText(
+      dsI18n.t('ds_forms:fileuploader.required')
+    );
+    await expect(requiredText).toBeInTheDocument();
+    const className = requiredText.getAttribute('class');
+    await expect(className).toContain('srOnly');
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+} satisfies Story;
