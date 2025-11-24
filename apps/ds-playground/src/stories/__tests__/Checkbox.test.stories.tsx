@@ -352,15 +352,13 @@ export const WithRequiredAndChecked = {
     required: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
     await expect(inputNode).toBeChecked();
-    await expect(inputNode).not.toBeRequired();
+    await expect(inputNode).toBeRequired();
   },
 } satisfies Story;
 
@@ -429,25 +427,6 @@ export const WithErrorAndRequired = {
     const inputNode = canvas.getByRole('checkbox');
     await expect(inputNode).toHaveAttribute('aria-invalid', 'true');
     await expect(inputNode).toBeRequired();
-  },
-} satisfies Story;
-
-export const WithCheckedAndRequired = {
-  name: 'With Checked And Required (B3)',
-  args: {
-    ...defaultArgs,
-    checked: true,
-    required: true,
-  },
-  argTypes: {
-    checked: { table: { disable: false } },
-    required: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const inputNode = canvas.getByRole('checkbox');
-    await expect(inputNode).toBeChecked();
-    await expect(inputNode).not.toBeRequired();
   },
 } satisfies Story;
 
