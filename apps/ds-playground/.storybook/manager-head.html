@@ -14,4 +14,19 @@
   div[data-parent-id='components'] {
     display: none;
   }
+  button#komponenter-combobox,
+  button#komponenter-wordinfo {
+    align-items: center;
+
+    &::after {
+      content: 'Beta';
+      background: var(--semantic-warning-foreground);
+      color: var(--palette-graphite-0);
+      font-size: var(--font-size-s);
+      padding: var(--spacing-xxs) var(--spacing-s-plus);
+      border-radius: 1rem;
+      margin-left: var(--spacing-s);
+      font-weight: bold;
+    }
+  }
 </style>
