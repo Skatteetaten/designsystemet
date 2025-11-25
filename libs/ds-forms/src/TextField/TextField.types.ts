@@ -73,7 +73,12 @@ export interface TextFieldCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Definerer stilen til TextField */
   variant?: FormSize;
-  /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
+  /**
+   * Setter inn tusenskilletegn for heltall og fjerner ikke-numeriske tegn.
+   * Mellomrom eller komma brukes som skilletegn avhengig av språket som er
+   * valgt OBS: husk at parsing av tallet må ta høyde for at skilletegn vil være
+   * ulikt på norsk og engelsk.
+   */
   thousandSeparator?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
