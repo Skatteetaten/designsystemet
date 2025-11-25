@@ -796,3 +796,86 @@ export const WithThousandSeparatorAndUndoRedo = {
     await expect(textbox).toHaveValue('-111 222 333 111');
   },
 } satisfies Story;
+
+// Controlled template to verify that backspace near a thousands separator
+// triggers a change event that external code can observe.
+const ControlledTemplate = (args: TextFieldProps): JSX.Element => {
+  const [value, setValue] = useState<string>('10 000');
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setValue(e.target.value);
+    args.onChange?.(e);
+  };
+  return (
+    <>
+      <TextField
+        {...args}
+        value={value}
+        thousandSeparator
+        onChange={handleChange}
+      />
+      <pre>{`value: ${value}`}</pre>
+    </>
+  );
+};
+
+export const FiresOnChangeWhenBackspaceAtSeparator = {
+  name: 'With Fires onChange when Backspace at separator',
+  render: ControlledTemplate,
+  args: {
+    ...defaultArgs,
+    onChange: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+
+    // Initial formatted value
+    await expect(textbox).toHaveValue('10 000');
+    await expect(args.onChange).not.toHaveBeenCalled();
+
+    // Move cursor to just after the space separator: from end (index 6) to index 3
+    textbox.focus();
+    await userEvent.keyboard('{ArrowLeft}{ArrowLeft}{ArrowLeft}');
+    await expect(args.onChange).not.toHaveBeenCalled(); // Arrow keys should not trigger change
+
+    // Press Backspace (custom logic should fire synthetic onChange)
+    await userEvent.keyboard('{Backspace}');
+
+    await expect(textbox).toHaveValue('1 000');
+    await expect(args.onChange).toHaveBeenCalledTimes(1);
+  },
+} satisfies Story;
+
+export const FiresOnChangeWhenDeleteAtSeparator = {
+  name: 'With Fires onChange when Delete at separator',
+  render: ControlledTemplate,
+  args: {
+    ...defaultArgs,
+    onChange: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+
+    // Initial formatted value
+    await expect(textbox).toHaveValue('10 000');
+    await expect(args.onChange).not.toHaveBeenCalled();
+
+    // Move cursor to just after the before separator: from end (index 6) to index 2
+    textbox.focus();
+    await userEvent.keyboard('{ArrowLeft}{ArrowLeft}{ArrowLeft}{ArrowLeft}');
+    await expect(args.onChange).not.toHaveBeenCalled(); // Arrow keys should not trigger change
+
+    // Press Delete (custom logic should fire synthetic onChange)
+    await userEvent.keyboard('{Delete}');
+
+    await expect(textbox).toHaveValue('1 000');
+    await expect(args.onChange).toHaveBeenCalledTimes(1);
+  },
+} satisfies Story;
