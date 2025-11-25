@@ -27,9 +27,6 @@ const getAnnouncementMessage = (
       !selectedValues.some((item) => item.value === removed?.value) &&
       displayOptions[focusedIndex]?.value !== removed?.value
     ) {
-      console.log(
-        t('combobox.DeleteConfirmation', { element: removed?.label })
-      );
       return t('combobox.DeleteConfirmation', { element: removed?.label });
     }
   }
