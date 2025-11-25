@@ -1,6 +1,0 @@
-import{j as o}from"./jsx-runtime-BYYWji4R.js";import{C as t}from"./index-Dpx64Uiu.js";import{c as r}from"./helpers-Q4uYuiE4.js";import"./index-ClcD9ViR.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-BYKicpQW.js";import"./index-CEFmy_Ic.js";import"./index-C8q4C1To.js";import"./index-BuQZV-my.js";import"./index-7bHEsQL_.js";t.Header.displayName="Card.Header";const i="Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.",m={children:i,rightContent:"høyrejustert innhold"},j={component:t.Header,title:"Komponenter/Card/Header",argTypes:{children:{control:"text",table:{category:r.props}},spacingVertical:{table:{category:r.props}},classNames:{table:{category:r.props}},rightContent:{control:"text",table:{category:r.props}}},args:{...m}},e={render:n=>o.jsx(t,{children:o.jsx(t.Header,{...n})})};var a,s,p;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
-  render: args => <Card>
-      <Card.Header {...args} />
-    </Card>
-} satisfies Story`,...(p=(s=e.parameters)==null?void 0:s.docs)==null?void 0:p.source}}};const H=["Preview"];export{e as Preview,H as __namedExportsOrder,j as default};
-//# sourceMappingURL=CardHeader.stories-BWeTByYm.js.map

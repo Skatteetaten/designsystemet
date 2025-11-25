@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #cde1f9;
+      }
+
+      .cls-5 {
+        fill: url(#New_Pattern_Swatch_1-3);
+      }
+
+      .cls-6 {
+        fill: url(#New_Pattern_Swatch_1-2);
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #093e61;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-8 {
+        fill: #093e61;
+      }
+
+      .cls-3 {
+        stroke-width: 6px;
+      }
+
+      .cls-9 {
+        fill: url(#New_Pattern_Swatch_4);
+      }
+
+      .cls-10 {
+        fill: url(#New_Pattern_Swatch_1);
+      }
+    </style>
+    <pattern id="New_Pattern_Swatch_4" data-name="New Pattern Swatch 4" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-2439.55 -1473.94) scale(.7)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-4" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1" data-name="New Pattern Swatch 1" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-283.68 825.85)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-8" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1-2" data-name="New Pattern Swatch 1" patternTransform="translate(-281.68 861.07)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-3" data-name="New Pattern Swatch 1" patternTransform="translate(-283.68 859.07)" xlink:href="#New_Pattern_Swatch_1"/>
+  </defs>
+  <circle class="cls-9" cx="99" cy="100" r="55.44"/>
+  <g>
+    <g>
+      <rect class="cls-10" x="19.75" y="73.35" width="162.5" height="55.31"/>
+      <path class="cls-6" d="M180.25,75.35v51.31H21.75v-51.31h158.5M182.25,73.35H19.75v55.31h162.5v-55.31h0Z"/>
+    </g>
+    <g>
+      <rect class="cls-7" x="17.75" y="71.35" width="162.5" height="55.31"/>
+      <path class="cls-5" d="M178.25,73.35v51.31H19.75v-51.31h158.5M180.25,71.35H17.75v55.31h162.5v-55.31h0Z"/>
+    </g>
+    <line class="cls-3" x1="29.94" y1="98.76" x2="92.67" y2="98.76"/>
+  </g>
+  <line class="cls-2" x1="101" y1="85" x2="101" y2="112.87"/>
+</svg>

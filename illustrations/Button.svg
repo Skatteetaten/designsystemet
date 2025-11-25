@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #cde1f9;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #093e61;
+      }
+
+      .cls-7 {
+        fill: #1362ae;
+      }
+
+      .cls-3 {
+        stroke: #093e61;
+      }
+
+      .cls-8 {
+        fill: url(#New_Pattern_Swatch_4);
+      }
+
+      .cls-9 {
+        fill: url(#New_Pattern_Swatch_2);
+      }
+    </style>
+    <pattern id="New_Pattern_Swatch_4" data-name="New Pattern Swatch 4" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-2164.79 -644.4) scale(.7)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-4" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_2" data-name="New Pattern Swatch 2" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-30 1730)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-7" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+  </defs>
+  <circle class="cls-8" cx="130.27" cy="117.91" r="55.44"/>
+  <rect class="cls-9" x="22.29" y="38.66" width="144" height="48" rx="24" ry="24"/>
+  <line class="cls-2" x1="51.78" y1="62.66" x2="136.81" y2="62.66"/>
+  <g>
+    <path class="cls-5" d="M46.29,141.87c-11.58,0-21-9.42-21-21s9.42-21,21-21h96c11.58,0,21,9.42,21,21s-9.42,21-21,21H46.29Z"/>
+    <path class="cls-6" d="M142.29,102.87c9.93,0,18,8.07,18,18s-8.07,18-18,18H46.29c-9.93,0-18-8.07-18-18s8.07-18,18-18h96M142.29,96.87H46.29c-13.25,0-24,10.75-24,24h0c0,13.25,10.75,24,24,24h96c13.25,0,24-10.75,24-24h0c0-13.25-10.75-24-24-24h0Z"/>
+  </g>
+  <line class="cls-3" x1="51.78" y1="120.87" x2="136.81" y2="120.87"/>
+</svg>

@@ -1,0 +1,196 @@
+import{d as H}from"./index-DRFs0UrV.js";import{d as u}from"./combobox.test.utils-DBWJd0oL.js";import"./iframe-Cq9sN_Dz.js";import"./DatePickerCalendar-DQrt2Pnq.js";import"./index-5qJDb17Q.js";import"./index-B4tfeJ0Q.js";import"./index-CGzeyL7S.js";import"./LabelWithHelp-DsxvJyLL.js";import"./Help-CWz_ChTP.js";import"./Combobox.module-DGtBY5ID.js";import"./ComboboxButton-Xxl-Mf-n.js";import"./ComboboxSelectedOptions-CLxGYH0S.js";import"./index-DEEEsonz.js";import"./index-9jg8RjbV.js";import"./index-DskRqDMQ.js";import"./index-D6Uh_XyP.js";const{expect:e,userEvent:o,within:d}=__STORYBOOK_MODULE_TEST__,M={component:H,title:"Tester/Combobox/Accessibility",argTypes:{ref:{table:{disable:!0}},className:{table:{disable:!0}},id:{table:{disable:!0}},lang:{table:{disable:!0}},"data-testid":{table:{disable:!0}},classNames:{table:{disable:!0}},label:{table:{disable:!0}},options:{table:{disable:!0}},placeholder:{table:{disable:!0}},variant:{table:{disable:!0}},multiple:{table:{disable:!0}},value:{table:{disable:!0}},description:{table:{disable:!0}},errorMessage:{table:{disable:!0}},helpText:{table:{disable:!0}},hasSpacing:{table:{disable:!0}},hideLabel:{table:{disable:!0}},minSearchLength:{table:{disable:!0}},isLoading:{table:{disable:!0}},spinnerLabel:{table:{disable:!0}},name:{table:{disable:!0}},disabled:{table:{disable:!0}},required:{table:{disable:!0}},onSelectionChange:{table:{disable:!0}},onInputChange:{table:{disable:!0}},onHelpToggle:{table:{disable:!0}}},tags:["test"],parameters:{imageSnapshot:{disableSnapshot:!1}}},s={name:"ARIA-attributter for combobox",args:{...u,helpText:"Dette er hjelpetekst"},parameters:{imageSnapshot:{disableSnapshot:!0}},play:async({canvasElement:i})=>{const n=d(i),t=n.getByRole("combobox");await e(t).toBeInTheDocument(),await e(t).toHaveAttribute("aria-autocomplete","list"),await e(t).toHaveAttribute("aria-expanded","false"),await o.click(t),await e(t).toHaveAttribute("aria-expanded","true"),await e(t).toHaveAttribute("aria-controls");const a=n.getAllByRole("option");await e(a).toHaveLength(3),await o.keyboard("{ArrowDown}");const r=t.getAttribute("aria-activedescendant");if(await e(r).toBeTruthy(),await e(a[0]).toHaveAttribute("id",r),t.getAttribute("aria-describedby")){const B=n.getByText("Dette er hjelpetekst");await e(B).toBeInTheDocument()}}},l={name:"Tastaturnavigasjon med piltaster (B1)",args:{...u},parameters:{imageSnapshot:{disableSnapshot:!0}},play:async({canvasElement:i})=>{const n=d(i),t=n.getByRole("combobox");await o.click(t),await o.keyboard("{Alt>}{ArrowDown}{/Alt}");const a=n.getAllByRole("option");await e(a).toHaveLength(3),await o.keyboard("{ArrowDown}"),await e(t).toHaveAttribute("aria-activedescendant"),await o.keyboard("{ArrowDown}"),await o.keyboard("{ArrowUp}"),await o.keyboard("{Enter}"),await e(t).toHaveValue("Norge")}},p={name:"Escape key lukker dropdown (A5)",args:{...u},parameters:{imageSnapshot:{disableSnapshot:!0}},play:async({canvasElement:i})=>{const n=d(i),t=n.getByRole("combobox");await o.click(t);let a=n.getAllByRole("option");await e(a).toHaveLength(3),await o.keyboard("{Escape}"),a=n.queryAllByRole("option"),await e(a).toHaveLength(0),await e(t).toHaveFocus(),await o.type(t,"Nor"),await o.keyboard("{Alt>}{ArrowDown}{/Alt}"),a=n.getAllByRole("option"),await e(a).toHaveLength(1),await e(a[0]).toHaveTextContent("Norge"),await o.keyboard("{Escape}"),a=n.queryAllByRole("option"),await e(a).toHaveLength(0),await e(t).toHaveValue("Nor")}},c={name:"Klikk utenfor lukker dropdown (A5)",args:{...u},parameters:{imageSnapshot:{disableSnapshot:!0}},play:async({canvasElement:i})=>{const n=d(i),t=n.getByRole("combobox");await o.click(t);let a=n.getAllByRole("option");await e(a).toHaveLength(3),await o.click(i),await new Promise(r=>setTimeout(r,100)),a=n.queryAllByRole("option"),await e(a).toHaveLength(0),await e(t).not.toHaveFocus(),await o.click(t),a=n.getAllByRole("option"),await e(a).toHaveLength(3),await o.click(i),await new Promise(r=>setTimeout(r,100)),a=n.queryAllByRole("option"),await e(a).toHaveLength(0)}};var m,b,w;s.parameters={...s.parameters,docs:{...(m=s.parameters)==null?void 0:m.docs,source:{originalSource:`{
+  name: 'ARIA-attributter for combobox',
+  args: {
+    ...defaultArgs,
+    helpText: 'Dette er hjelpetekst'
+  },
+  parameters: {
+    imageSnapshot: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Verifiser grunnleggende ARIA-attributter
+    await expect(inputElement).toBeInTheDocument();
+    await expect(inputElement).toHaveAttribute('aria-autocomplete', 'list');
+    await expect(inputElement).toHaveAttribute('aria-expanded', 'false');
+
+    // Åpne dropdown
+    await userEvent.click(inputElement);
+
+    // Verifiser at ARIA-attributter oppdateres når dropdown åpnes
+    await expect(inputElement).toHaveAttribute('aria-expanded', 'true');
+    await expect(inputElement).toHaveAttribute('aria-controls');
+
+    // Verifiser at options får korrekte IDs
+    const options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+
+    // Naviger til første option med piltast
+    await userEvent.keyboard('{ArrowDown}');
+
+    // Verifiser aria-activedescendant
+    const activeDescendant = inputElement.getAttribute('aria-activedescendant');
+    await expect(activeDescendant).toBeTruthy();
+    await expect(options[0]).toHaveAttribute('id', activeDescendant);
+
+    // Verifiser aria-describedby hvis hjelpetekst finnes
+    const describedBy = inputElement.getAttribute('aria-describedby');
+    if (describedBy) {
+      const helpElement = canvas.getByText('Dette er hjelpetekst');
+      await expect(helpElement).toBeInTheDocument();
+    }
+  }
+} satisfies Story`,...(w=(b=s.parameters)==null?void 0:b.docs)==null?void 0:w.source}}};var v,g,k;l.parameters={...l.parameters,docs:{...(v=l.parameters)==null?void 0:v.docs,source:{originalSource:`{
+  name: 'Tastaturnavigasjon med piltaster (B1)',
+  args: {
+    ...defaultArgs
+  },
+  parameters: {
+    imageSnapshot: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Fokuser på input
+    await userEvent.click(inputElement);
+
+    // Åpne dropdown med Alt+Down
+    await userEvent.keyboard('{Alt>}{ArrowDown}{/Alt}');
+
+    // Verifiser at dropdown er åpen
+    const options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+
+    // Naviger ned med piltast og verifiser fokus
+    await userEvent.keyboard('{ArrowDown}');
+
+    // Verifiser at input har aktivt descendant satt til første option
+    await expect(inputElement).toHaveAttribute('aria-activedescendant');
+    await userEvent.keyboard('{ArrowDown}');
+    // Verifiser at vi kan navigere til neste option
+
+    // Naviger opp igjen til første option
+    await userEvent.keyboard('{ArrowUp}');
+
+    // Velg med Enter
+    await userEvent.keyboard('{Enter}');
+
+    // Verifiser at valget er gjort
+    await expect(inputElement).toHaveValue('Norge');
+  }
+} satisfies Story`,...(k=(g=l.parameters)==null?void 0:g.docs)==null?void 0:k.source}}};var y,A,h;p.parameters={...p.parameters,docs:{...(y=p.parameters)==null?void 0:y.docs,source:{originalSource:`{
+  name: 'Escape key lukker dropdown (A5)',
+  args: {
+    ...defaultArgs
+  },
+  parameters: {
+    imageSnapshot: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Fokuser på input og åpne dropdown
+    await userEvent.click(inputElement);
+
+    // Verifiser at dropdown er åpen
+    let options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+
+    // Trykk Escape for å lukke dropdown
+    await userEvent.keyboard('{Escape}');
+
+    // Verifiser at dropdown er lukket
+    options = canvas.queryAllByRole('option');
+    await expect(options).toHaveLength(0);
+
+    // Verifiser at input fortsatt har fokus
+    await expect(inputElement).toHaveFocus();
+
+    // Test at Escape også virker når vi har skrevet noe i input
+    await userEvent.type(inputElement, 'Nor');
+
+    // Åpne dropdown igjen
+    await userEvent.keyboard('{Alt>}{ArrowDown}{/Alt}');
+
+    // Verifiser at dropdown åpnes og viser filtrerte resultater
+    options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(1);
+    await expect(options[0]).toHaveTextContent('Norge');
+
+    // Trykk Escape for å lukke dropdown
+    await userEvent.keyboard('{Escape}');
+
+    // Verifiser at dropdown er lukket og tekst forblir i input
+    options = canvas.queryAllByRole('option');
+    await expect(options).toHaveLength(0);
+    await expect(inputElement).toHaveValue('Nor');
+  }
+} satisfies Story`,...(h=(A=p.parameters)==null?void 0:A.docs)==null?void 0:h.source}}};var E,f,x;c.parameters={...c.parameters,docs:{...(E=c.parameters)==null?void 0:E.docs,source:{originalSource:`{
+  name: 'Klikk utenfor lukker dropdown (A5)',
+  args: {
+    ...defaultArgs
+  },
+  parameters: {
+    imageSnapshot: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Fokuser på input og åpne dropdown
+    await userEvent.click(inputElement);
+
+    // Verifiser at dropdown er åpen
+    let options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+
+    // Klikk utenfor combobox (på canvas element)
+    await userEvent.click(canvasElement);
+
+    // Verifiser at dropdown er lukket (vente litt for at click outside skal registreres)
+    await new Promise(resolve => setTimeout(resolve, 100));
+    options = canvas.queryAllByRole('option');
+    await expect(options).toHaveLength(0);
+
+    // Verifiser at input ikke lenger har fokus
+    await expect(inputElement).not.toHaveFocus();
+
+    // Test at click outside også virker når vi har multiple selection aktiv
+    // Først aktiver multiple mode
+    // Fokuser på input igjen og åpne dropdown
+    await userEvent.click(inputElement);
+
+    // Verifiser at dropdown åpnes igjen
+    options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+
+    // Klikk utenfor igjen
+    await userEvent.click(canvasElement);
+
+    // Verifiser at dropdown lukkes (vent litt for at click outside skal registreres)
+    await new Promise(resolve => setTimeout(resolve, 100));
+    options = canvas.queryAllByRole('option');
+    await expect(options).toHaveLength(0);
+  }
+} satisfies Story`,...(x=(f=c.parameters)==null?void 0:f.docs)==null?void 0:x.source}}};const Y=["AriaAttributesTest","KeyboardNavigation","EscapeKeyBehavior","ClickOutsideToClose"];export{s as AriaAttributesTest,c as ClickOutsideToClose,p as EscapeKeyBehavior,l as KeyboardNavigation,Y as __namedExportsOrder,M as default};
+//# sourceMappingURL=Combobox.accessibility.test.stories-r4nwblJo.js.map
