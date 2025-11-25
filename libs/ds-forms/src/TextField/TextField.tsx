@@ -212,6 +212,14 @@ export const TextField = ({
       requestAnimationFrame(() => {
         input.setSelectionRange(newPosition, newPosition);
       });
+
+      if (onChange && formattedValue !== inputValue) {
+        const syntheticEvent = {
+          target: input,
+          currentTarget: input,
+        } as ChangeEvent<HTMLInputElement>;
+        onChange(syntheticEvent);
+      }
     }
 
     if (
@@ -246,6 +254,14 @@ export const TextField = ({
         requestAnimationFrame(() => {
           input.setSelectionRange(newPosition, newPosition);
         });
+
+        if (onChange && formattedValue !== inputValue) {
+          const syntheticEvent = {
+            target: input,
+            currentTarget: input,
+          } as ChangeEvent<HTMLInputElement>;
+          onChange(syntheticEvent);
+        }
       }
     }
 
