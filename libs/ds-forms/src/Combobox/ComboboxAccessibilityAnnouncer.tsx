@@ -22,7 +22,7 @@ const getAnnouncementMessage = (
 ): string => {
   if (previousSelectedValues.length >= selectedValues.length) {
     const removed = previousSelectedValues.at(-1);
-    //Hvis fokus stod på den som ble fjernet så leser skjermleser allerde opp og vi trenger ikke ekstra melding
+    //Hvis fokus stod på den som ble fjernet så leser skjermleser allerede opp og vi trenger ikke ekstra melding
     if (
       !selectedValues.some((item) => item.value === removed?.value) &&
       displayOptions[focusedIndex]?.value !== removed?.value
