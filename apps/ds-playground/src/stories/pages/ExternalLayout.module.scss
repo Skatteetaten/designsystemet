@@ -1,0 +1,96 @@
+@use '@skatteetaten/ds-core-designtokens/designtokens/breakpoints' as *;
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainContent {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: var(--spacing-m) auto;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.responsiveContainer {
+  display: flex;
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--spacing-m);
+  margin: 0 auto;
+  background-color: var(--palette-burgundy-5);
+}
+
+.responsiveWideContent {
+  display: flex;
+  width: var(--semantic-responsive-wide-content);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--spacing-m);
+  margin: 0 auto;
+  background-color: var(--palette-burgundy-10);
+}
+
+.responsiveArticle {
+  display: flex;
+  width: var(--semantic-responsive-article);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--spacing-m);
+  margin: 0 auto;
+  background-color: var(--palette-burgundy-30);
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.block {
+  display: block;
+}
+
+.marginTopL {
+  margin-top: var(--spacing-l);
+}
+
+.linkWrapper {
+  padding: 0 var(--spacing-s-plus);
+  list-style-type: none;
+}
+
+.marginBottomXL {
+  margin-bottom: var(--spacing-xl);
+}
+
+.marginBottomS {
+  margin-bottom: var(--spacing-s);
+}
+
+.marginRightS {
+  margin-right: var(--spacing-s);
+}
+
+.flex {
+  display: flex;
+}
+
+@media (min-width: $breakpoint-m) {
+  .columns.columns {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .secondColumn {
+    display: flex;
+    gap: var(--spacing-xxl);
+  }
+}
