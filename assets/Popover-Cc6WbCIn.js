@@ -1,9 +1,0 @@
-import{j as o}from"./iframe-CdXtTKZQ.js";import{useMDXComponents as m}from"./index-Fodq6baY.js";import{M as p,P as n,C as s}from"./blocks-BsozQqO1.js";import{P as i}from"./utils-Ct-tsx4J.js";import{P as a,E as c}from"./Popover.stories-BkItSIsq.js";import{V as x}from"./VersionBadge-BT9Fb_Ir.js";import{D as l}from"./DocIntro-SDUDjmUj.js";import{D as d}from"./DocHeaderWrapper-Dl1QP3pC.js";import"./index-GtA9f0CN.js";import"./index-DIHq9ZfV.js";import"./lz-string-CuPZokM5.js";import"./index-6vEA_ZXZ.js";import"./index-CDWtp_lT.js";import"./index-D0xxaDHU.js";import"./index-CVW4skVE.js";import"./index-DUrzBgqO.js";import"./floating-ui.react-DyQ3q89_.js";import"./index-CLKUz3Po.js";import"./DatePickerCalendar-ByRci1Oe.js";import"./LabelWithHelp-Bcy4lovc.js";import"./Help-BJCAuNeo.js";import"./Combobox.module-DGtBY5ID.js";import"./ComboboxButton-xo5xtxE5.js";import"./ComboboxSelectedOptions-BdSatC4Q.js";import"./index-C6J3KzFu.js";import"./index-BEPTjI1-.js";import"./index-D-15xU56.js";import"./index-DgjBZIlJ.js";import"./index-D_51gR3W.js";import"./storybook.testing.utils-BgHZnMzD.js";import"./stories.utils-CZ5hej_8.js";function e(t){const r={code:"code",h1:"h1",h2:"h2",pre:"pre",...m(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(p,{of:a}),`
-`,o.jsxs(d,{componentName:"Popover",children:[o.jsx(r.h1,{id:"popover",children:"Popover"}),o.jsx(x,{packageName:"overlays"}),o.jsx(l,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/popover/"})]}),`
-`,o.jsx(n,{}),`
-`,o.jsx(r.pre,{children:o.jsx(r.code,{className:"language-tsx",children:`import { Popover } from '@skatteetaten/ds-overlays';
-`})}),`
-`,o.jsx(s,{}),`
-`,o.jsx(r.h2,{id:"example",children:"Example"}),`
-`,o.jsx(i,{of:c})]})}function J(t={}){const{wrapper:r}={...m(),...t.components};return r?o.jsx(r,{...t,children:o.jsx(e,{...t})}):e(t)}export{J as default};
-//# sourceMappingURL=Popover-Cc6WbCIn.js.map
