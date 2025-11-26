@@ -1,4 +1,5 @@
 {
+  "combobox.DeleteConfirmation": "{{element}} fjernet",
   "combobox.Loading": "Laster",
   "combobox.NoResults": "Ingen treff for «{{searchTerm}}». Prøv et annet søk.",
   "combobox.OneOptionAvailable": "Ett alternativ tilgjengelig.",

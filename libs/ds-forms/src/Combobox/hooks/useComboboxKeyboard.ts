@@ -97,9 +97,12 @@ const handleExactMatch = (
 /**
  * Handles Arrow Down key with Alt modifier support.
  *
- * What: Alt+Down opens dropdown, Down moves focus or opens with first option focused.
+ * What: Alt+Down opens dropdown, Down moves focus or opens with first option
+ * focused.
  *
- * Why: ARIA pattern requires Alt+Down to open dropdown, regular Down to navigate.
+ * Why: ARIA pattern requires Alt+Down to open dropdown, regular Down to
+ * navigate.
+ *
  * @param e - The keyboard event
  * @param props - Configuration object containing combobox state and handlers
  */
@@ -149,7 +152,9 @@ const handleArrowDown = (
  *
  * What: Alt+Up closes dropdown, Up navigates or closes when at first option.
  *
- * Why: ARIA pattern requires Alt+Up to close dropdown, Up at first option should close.
+ * Why: ARIA pattern requires Alt+Up to close dropdown, Up at first option
+ * should close.
+ *
  * @param e - The keyboard event
  * @param props - Configuration object containing combobox state and handlers
  */
@@ -201,10 +206,12 @@ const handleArrowUp = (
 /**
  * Handles option selection for both Enter and Space keys.
  *
- * What: Selects focused option or attempts exact text match if no option focused.
+ * What: Selects focused option or attempts exact text match if no option
+ * focused.
  *
- * Why: Both Enter and Space should select options per ARIA guidelines.
- * Exact text matching allows typing complete values without dropdown navigation.
+ * Why: Both Enter and Space should select options per ARIA guidelines. Exact
+ * text matching allows typing complete values without dropdown navigation.
+ *
  * @param e - The keyboard event
  * @param props - Configuration object containing combobox state and handlers
  */
@@ -314,7 +321,9 @@ const handleTab = (
  *
  * What: Removes last selected value when input is empty.
  *
- * Why: Users expect Backspace to remove tags when input is empty, like many tag inputs.
+ * Why: Users expect Backspace to remove tags when input is empty, like many tag
+ * inputs.
+ *
  * @param e - The keyboard event
  * @param props - Configuration object containing combobox state and handlers
  */
@@ -343,8 +352,10 @@ const handleBackspace = (
  * What: Handles all keyboard events with proper ARIA pattern implementation,
  * smart dropdown opening/closing, and option selection via keyboard.
  *
- * Why: Comboboxes must support keyboard navigation for accessibility compliance.
- * Complex key combinations (Alt+Arrow, Enter, Space, etc.) need proper handling.
+ * Why: Comboboxes must support keyboard navigation for accessibility
+ * compliance. Complex key combinations (Alt+Arrow, Enter, Space, etc.) need
+ * proper handling.
+ *
  * @param props - Configuration object containing combobox state and handlers
  */
 export function useComboboxKeyboard(props: UseComboboxKeyboardProps): void {

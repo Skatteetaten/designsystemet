@@ -173,5 +173,7 @@ export type ComboboxButtonProps = {
 export type ComboboxAccessibilityAnnouncerProps = {
   isOpen: boolean;
   displayOptions: ComboboxOption[];
+  selectedValues: ComboboxOption[];
   searchTerm: string;
+  focusedIndex: number;
 };
