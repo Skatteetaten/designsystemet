@@ -16,7 +16,7 @@ import {
   getTableVariantDefault,
 } from '../Table/defaults';
 import { sortDirection } from '../Table/Table.types';
-import { TableContext } from '../TableContext/TableContext';
+import { TableContext } from '../Table/TableContext';
 
 import styles from './TableHeaderCell.module.scss';
 

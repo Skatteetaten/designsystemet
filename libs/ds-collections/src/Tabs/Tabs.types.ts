@@ -2,9 +2,9 @@ import { Dispatch, ReactNode, Ref, SetStateAction } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { TabsList } from '../TabsList/TabsList';
-import { TabsPanel } from '../TabsPanel/TabsPanel';
-import { TabsTab } from '../TabsTab/TabsTab';
+import { TabsList } from './TabsList/TabsList';
+import { TabsPanel } from './TabsPanel/TabsPanel';
+import { TabsTab } from './TabsTab/TabsTab';
 
 export const tabsVariantArr = ['standard', 'compact'] as const;
 export type TabsVariant = (typeof tabsVariantArr)[number];

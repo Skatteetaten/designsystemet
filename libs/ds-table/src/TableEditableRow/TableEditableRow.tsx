@@ -7,7 +7,7 @@ import { EditSVGpath } from '@skatteetaten/ds-icons';
 import { TableEditableRowProps } from './TableEditableRow.types';
 import { getTableRowExpandButtonPositionDefault } from '../Table/defaults';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
-import { TableContext } from '../TableContext/TableContext';
+import { TableContext } from '../Table/TableContext';
 import {
   RowWithLeftSideExpandButton,
   RowWithRightSideExpandButton,

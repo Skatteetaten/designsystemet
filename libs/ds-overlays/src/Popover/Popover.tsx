@@ -25,9 +25,9 @@ import {
   PopoverPosition,
   PopoverProps,
 } from './Popover.types';
-import { PopoverContent } from '../PopoverContent/PopoverContent';
-import { PopoverContext } from '../PopoverContext/PopoverContext';
-import { PopoverTrigger } from '../PopoverTrigger/PopoverTrigger';
+import { PopoverContent } from './PopoverContent/PopoverContent';
+import { PopoverContext } from './PopoverContext';
+import { PopoverTrigger } from './PopoverTrigger/PopoverTrigger';
 
 export const Popover = ((props: PopoverProps): JSX.Element => {
   const {

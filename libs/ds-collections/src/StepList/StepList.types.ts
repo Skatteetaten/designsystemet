@@ -2,7 +2,7 @@ import { ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { StepListStep } from '../StepListStep/StepListStep';
+import { StepListStep } from './StepListStep/StepListStep';
 
 export interface StepListProps extends BaseProps {
   ref?: Ref<HTMLOListElement>;

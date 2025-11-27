@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { BreadcrumbsComponent, BreadcrumbsProps } from './Breadcrumbs.types';
-import { BreadcrumbsItem } from '../BreadcrumbsItem/BreadcrumbsItem';
-import { BreadcrumbsLink } from '../BreadcrumbsLink/BreadcrumbsLink';
-import { BreadcrumbsList } from '../BreadcrumbsList/BreadcrumbsList';
+import { BreadcrumbsItem } from './BreadcrumbsItem/BreadcrumbsItem';
+import { BreadcrumbsLink } from './BreadcrumbsLink/BreadcrumbsLink';
+import { BreadcrumbsList } from './BreadcrumbsList/BreadcrumbsList';
 
 export const Breadcrumbs = (({
   ref,

@@ -4,10 +4,10 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getTabsVariantDefault } from './defaults';
 import { TabsProps, TabsComponent } from './Tabs.types';
-import { TabsContext } from '../TabsContext/TabsContext';
-import { TabsList } from '../TabsList/TabsList';
-import { TabsPanel } from '../TabsPanel/TabsPanel';
-import { TabsTab } from '../TabsTab/TabsTab';
+import { TabsContext } from './TabsContext';
+import { TabsList } from './TabsList/TabsList';
+import { TabsPanel } from './TabsPanel/TabsPanel';
+import { TabsTab } from './TabsTab/TabsTab';
 
 export const Tabs = (({
   ref,

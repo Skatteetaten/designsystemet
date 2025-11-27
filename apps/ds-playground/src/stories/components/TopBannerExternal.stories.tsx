@@ -33,7 +33,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import {
   getTopBannerLangPickerLocaleDefault,
   getTopBannerLangPickerShowSamiDefault,
-} from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
+} from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/defaults';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';

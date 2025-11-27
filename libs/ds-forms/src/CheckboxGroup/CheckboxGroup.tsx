@@ -5,12 +5,12 @@ import {
   getHasSpacingDefault,
 } from '@skatteetaten/ds-core-utils';
 
+import { CheckboxContext } from './CheckboxContext';
 import {
   CheckboxGroupComponent,
   CheckboxGroupProps,
 } from './CheckboxGroup.types';
 import { Checkbox } from '../Checkbox/Checkbox';
-import { CheckboxContext } from '../CheckboxContext/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { Fieldset } from '../Fieldset/Fieldset';
 

@@ -6,7 +6,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from './Checkbox.types';
-import { CheckboxContext } from '../CheckboxContext/CheckboxContext';
+import { CheckboxContext } from '../CheckboxGroup/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
 import styles from './Checkbox.module.scss';
