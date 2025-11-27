@@ -117,9 +117,10 @@ export const Modal = ({
 
   useEffect(() => {
     /**
-     * Hvis konsument endrer children i en åpen modal, vil fokus settes til body og dismissOnEsc vil slutte å fungere.
-     * Setter derfor fokus tilbake til modalen.
-     * Legger på en timeout for å sikre at innholdet i modalen er oppdatert før fokus eventuelt settes tilbake.
+     * Hvis konsument endrer children i en åpen modal, vil fokus settes til body
+     * og dismissOnEsc vil slutte å fungere. Setter derfor fokus tilbake til
+     * modalen. Legger på en timeout for å sikre at innholdet i modalen er
+     * oppdatert før fokus eventuelt settes tilbake.
      */
     const timeoutId = setTimeout(() => {
       if (
@@ -239,10 +240,3 @@ export const Modal = ({
 };
 
 Modal.displayName = 'Modal';
-
-export {
-  getModalPaddingDefault,
-  getModalVariantDefault,
-  getModalDismissOnOutsideClickDefault,
-  getModalDismissOnEscDefault,
-};

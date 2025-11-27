@@ -139,7 +139,7 @@ function handleSassOutput(_styles, styleNodes) {
           // For CSS modules (.module.scss), opprett også en styles.css i komponentkatalogen
           // Dette sikrer bakoverkompatibilitet med eksisterende import-struktur
           if (componentDir && fileName.includes('.module.scss')) {
-            const stylesPath = `${outputDir}/styles.css`;
+            const stylesPath = `${outputDir}/${fileName.split('.')[0]}.css`;
             fs.writeFileSync(stylesPath, content);
           }
         } catch (error) {

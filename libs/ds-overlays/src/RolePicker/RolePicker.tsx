@@ -29,8 +29,8 @@ import { Business, Entity, RolePickerProps } from './RolePicker.types';
 import {
   getModalDismissOnEscDefault,
   getModalDismissOnOutsideClickDefault,
-  Modal,
-} from '../Modal/Modal';
+} from '../Modal/defaults';
+import { Modal } from '../Modal/Modal';
 import { RolePickerBusinessList } from '../RolePickerBusinessList/RolePickerBusinessList';
 import { RolePickerContext } from '../RolePickerContext/RolePickerContext';
 import { RolePickerFilterInput } from '../RolePickerFilterInput/RolePickerFilterInput';
@@ -258,11 +258,3 @@ export const RolePicker = ({
 };
 
 RolePicker.displayName = 'RolePicker';
-
-export {
-  getRolePickerHideCloseButtonDefault,
-  getRolePickerShowInactiveBusinessesDefault,
-  getRolePickerShowSubunitsDefault,
-  getRolePickerShowDeceasedPeopleDefault,
-  getRolePickerMinimumEntitiesForSearchDefault,
-};
