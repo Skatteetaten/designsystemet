@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "module": "commonjs",
+    "module": "esnext",
     "types": ["node"]
   },
   "include": ["**/__tests__/*.test.ts", "**/__tests__/*.test.tsx", "**/*.d.ts"]

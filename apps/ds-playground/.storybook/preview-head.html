@@ -1,4 +1,29 @@
 <style>
+  h1#combobox,
+  h1#wordinfo,
+  h3#beløp,
+  h1#useformattedinput-hook {
+    width: fit-content;
+    position: relative;
+
+    &::before {
+      content: 'Beta';
+      background: var(--semantic-warning-foreground);
+      color: var(--palette-graphite-0);
+      font-size: var(--font-size-m);
+      padding: var(--spacing-xxs) var(--spacing-s-plus);
+      border-radius: 1rem;
+      font-weight: bold;
+      position: absolute;
+      right: -4.5rem;
+      top: 0.625rem;
+    }
+  }
+
+  h3#beløp::before {
+    top: 0;
+  }
+
   [data-test-block] *,
   [data-test-block] *::before,
   [data-test-block] *::after {

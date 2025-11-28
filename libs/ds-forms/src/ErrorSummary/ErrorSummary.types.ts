@@ -12,7 +12,10 @@ export interface ErrorSummaryProps extends BaseProps {
   content?: ReactNode;
   /** Margin under komponenten */
   hasSpacing?: boolean;
-  /** Mulighet til å angi shadowRootNode slik at fokus kan settes når elementet feilen hører til ligger i shadowDOM */
+  /**
+   * Mulighet til å angi shadowRootNode slik at fokus kan settes når elementet
+   * feilen hører til ligger i shadowDOM
+   */
   shadowRootNode?: Document | ShadowRoot;
   /** Om komponenten skal vises */
   showErrorSummary?: boolean;

@@ -1,4 +1,5 @@
 {
+  "combobox.DeleteConfirmation": "{{element}} fjerna",
   "combobox.Loading": "Lastar",
   "combobox.NoResults": "Ingen treff for «{{searchTerm}}». Prøv eit anna søk.",
   "combobox.OneOptionAvailable": "Ett alternativ tilgjengeleg.",
@@ -49,6 +50,7 @@
   "fileuploader.InProgressLabel": "Opplasting pågår",
   "fileuploader.NoRightsToDeleteError": "Du har ikkje rett til å slette filer",
   "fileuploader.NoRightsUploadError": "Du har ikkje rett til å laste opp filer",
+  "fileuploader.required": "påkravd",
   "fileuploader.SuccessIconLabel": "Fullført",
   "fileuploader.UploadedHeading": "Lasta opp:",
   "fileuploader.UploadedSummary": "{{fileCount}} fil(er) lasta opp",

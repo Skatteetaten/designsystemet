@@ -1,4 +1,5 @@
 {
+  "combobox.DeleteConfirmation": "{{element}} removed",
   "combobox.Loading": "Loading",
   "combobox.NoResults": "No results for «{{searchTerm}}». Try a different search.",
   "combobox.OneOptionAvailable": "One option available.",
@@ -49,6 +50,7 @@
   "fileuploader.InProgressLabel": "Upload in progress",
   "fileuploader.NoRightsToDeleteError": "You do not have permission to delete files",
   "fileuploader.NoRightsUploadError": "You do not have permission to upload files",
+  "fileuploader.required": "required",
   "fileuploader.SuccessIconLabel": "Completed",
   "fileuploader.UploadedHeading": "Uploaded:",
   "fileuploader.UploadedSummary": "{{fileCount}} file(s) uploaded",

@@ -21,7 +21,10 @@ export interface TableHeaderCellCommonProps
   as?: TableCellAs;
   /** Innhold i cellen */
   children?: ReactNode;
-  /** Angir om sorteringsknappen er disabled. Gjelder kun når isSortable er satt til true. */
+  /**
+   * Angir om sorteringsknappen er disabled. Gjelder kun når isSortable er satt
+   * til true.
+   */
   isSortDisabled?: boolean;
 }
 

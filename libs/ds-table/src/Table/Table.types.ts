@@ -20,9 +20,9 @@ export type TextAlignment = Extract<Position, 'left' | 'right' | 'center'>;
 
 export type sortDirection = 'none' | 'ascending' | 'descending';
 export interface SortState {
-  /** stigende eller synkende sortering */
+  /** Stigende eller synkende sortering */
   direction: sortDirection;
-  /** Holder styr på hvilken kolonne som skal sortering*/
+  /** Holder styr på hvilken kolonne som skal sortering */
   sortKey?: string;
 }
 
@@ -42,13 +42,16 @@ export type RowWithExpandButtonHandle = {
 
 export interface TableProps extends BaseProps {
   ref?: Ref<HTMLTableElement>;
-  /** Table caption  */
+  /** Table caption */
   caption: string;
   /** Definerer stilen til tabellen. */
   variant?: Density;
   /** Holder styr på sortering av kolonner */
   sortState?: SortState;
-  /** Styrer om tabellen skal ta opp full bredde eller tilpasse seg størrelsen på innholdet */
+  /**
+   * Styrer om tabellen skal ta opp full bredde eller tilpasse seg størrelsen på
+   * innholdet
+   */
   hasFullWidth?: boolean;
   /** Gjør caption synlig */
   showCaption?: boolean;
@@ -56,7 +59,7 @@ export interface TableProps extends BaseProps {
   setSortState?: Dispatch<SetStateAction<SortState>>;
   /** Id til rad som skal være i redigeringsmodus når tabellen rendres. */
   rowInEditModeId?: string;
-  /**  Innholdet i tabellen  */
+  /** Innholdet i tabellen */
   children?: ReactNode;
   /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
   canBeManuallyFocused?: boolean;

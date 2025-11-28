@@ -1,8 +1,6 @@
 const path = require('path');
 
-/**
- * @returns rollup plugin
- */
+/** @returns Rollup plugin */
 function addStyleImportPlugin() {
   return {
     name: 'add-style-import',
@@ -13,15 +11,20 @@ function addStyleImportPlugin() {
             if (!importValue.includes('.scss')) {
               return false;
             }
+            const imports = bundle[key].imports;
+            const lastImport = imports[imports.length - 1];
+            if (!lastImport.includes('.scss')) {
+              throw Error(`Last import is not a scss file, ${lastImport}`);
+            }
+            const cssFileName = `${path.basename(lastImport).split('.')[0]}.css`;
+
             const filename = bundle[key].fileName;
             const replacementValue = filename.includes('/')
-              ? "$1\nimport './styles.css';\n"
+              ? `$1\nimport './${cssFileName}';\n`
               : `$1\nimport './${filename.substr(
                   0,
                   filename.search(/([.-])/)
-                )}/styles.css';\n`;
-            const imports = bundle[key].imports;
-            const lastImport = imports[imports.length - 1];
+                )}/${cssFileName}';\n`;
 
             const searchRegex = new RegExp(
               `(^import.*${path.basename(lastImport)}';$)`,

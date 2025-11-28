@@ -54,6 +54,7 @@ export const FileUploader = (({
   shouldNormalizeFileName,
   multiple,
   isUploading,
+  isRequired,
   onFileChange,
   onFileDelete,
   onFileDownload,
@@ -129,8 +130,8 @@ export const FileUploader = (({
 
     if (isChangeEvent(event)) {
       /**
-       * Resetter verdien slik at Chrome tillatter å laste opp samme fil flere ganger.
-       * Det skal være mulig å laste opp slettede filer på nytt.
+       * Resetter verdien slik at Chrome tillatter å laste opp samme fil flere
+       * ganger. Det skal være mulig å laste opp slettede filer på nytt.
        */
       event.target.value = '';
     }
@@ -184,8 +185,9 @@ export const FileUploader = (({
 
     const key = file.id ?? file.name;
     /**
-     * Her er det viktig at en funksjon sendes inn til setState for å få tak i prevState.
-     * Hvis dette ikke gjøres oppstår en race-condition dersom man sletter to filer samtidig.
+     * Her er det viktig at en funksjon sendes inn til setState for å få tak i
+     * prevState. Hvis dette ikke gjøres oppstår en race-condition dersom man
+     * sletter to filer samtidig.
      */
 
     const timeoutId = setTimeout((): void => {
@@ -202,6 +204,9 @@ export const FileUploader = (({
       setSrOnlyText(t('fileuploader.DeleteConfirmation'));
     } else {
       setSrOnlyText(t('fileuploader.GeneralDeleteError'));
+
+      // Behold fokus på nåværende knapp dersom sletting feiler
+      deleteButtonRefs.current[key]?.focus();
     }
     setTimeout(() => {
       setSrOnlyText('');
@@ -282,6 +287,11 @@ export const FileUploader = (({
           )}
           <label className={styles.innerLabel} htmlFor={id}>
             {!isUploading && buttonText}
+            {isRequired && (
+              <span className={styles.srOnly}>
+                {t('fileuploader.required')}
+              </span>
+            )}
           </label>
           <input
             ref={inputRef}

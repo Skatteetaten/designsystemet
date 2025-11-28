@@ -27,11 +27,17 @@ export interface LinkComponentCommonProps
   extends LinkPropsHTMLAttributes,
     BaseProps {
   ref?: Ref<HTMLAnchorElement>;
-  /** Viser ikon etter lenketeksten som indikerer at lenken er til en side på et annet domene. */
+  /**
+   * Viser ikon etter lenketeksten som indikerer at lenken er til en side på et
+   * annet domene.
+   */
   isExternal?: boolean;
   /** Farge på ikon og tekst */
   color?: LinkColor;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
+  /**
+   * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke.
+   * Alternativt kan custom path sendes.
+   */
   svgPath?: ReactElement<SVGPathElement>;
   /** Lenketekst. */
   children: string;

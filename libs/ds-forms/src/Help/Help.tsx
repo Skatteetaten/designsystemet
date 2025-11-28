@@ -18,6 +18,7 @@ export const Help = ({
   helpText,
   helpSvgPath,
   hideHelp,
+  hideDescriptionForScreenReader,
   targetId,
   titleHelpSvg = getHelpTitleHelpSvgDefault(),
   onHelpToggle,
@@ -79,6 +80,7 @@ export const Help = ({
       {description && (
         <div
           id={descriptionId}
+          aria-hidden={hideDescriptionForScreenReader}
           className={`${
             styles.description
           } ${marginTopClassName} ${hideHelpClassName} ${

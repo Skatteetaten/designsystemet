@@ -27,7 +27,7 @@ export default [
   },
 
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,cjs,jsx,ts,tsx}'],
     ...reactPlugin.configs.flat.recommended,
     ...reactPlugin.configs.flat['jsx-runtime'],
     plugins: {
@@ -109,6 +109,7 @@ export default [
         },
       ],
       'jsdoc/require-jsdoc': 'off',
+      'jsdoc/tag-lines': 'off', // Disabled to avoid conflict with prettier-plugin-jsdoc
     },
   },
   {

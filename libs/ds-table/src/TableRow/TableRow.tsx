@@ -45,6 +45,7 @@ export const TableRow = ({
   'data-testid': dataTestId,
   expandButtonTitle,
   expandButtonPosition = getTableRowExpandButtonPositionDefault(),
+  expandButtonProps,
   expandableContent,
   expandButtonAriaDescribedby,
   showExpandButtonTitle,
@@ -115,6 +116,7 @@ export const TableRow = ({
         expandButtonTitle={getButtonTitle()}
         expandButtonAriaDescribedby={expandButtonAriaDescribedby}
         expandableContent={expandableContent}
+        expandButtonProps={expandButtonProps}
         showExpandButtonTitle={showExpandButtonTitle}
         shouldInsertExpandAreaMarkers={isExpandableContentRows(
           expandableContent
