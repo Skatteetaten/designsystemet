@@ -19,7 +19,7 @@ import {
   getTableRowExpandButtonTitleDefault,
 } from '../Table/defaults';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
-import { TableContext } from '../TableContext/TableContext';
+import { TableContext } from '../Table/TableContext';
 import {
   RowWithLeftSideExpandButton,
   RowWithRightSideExpandButton,

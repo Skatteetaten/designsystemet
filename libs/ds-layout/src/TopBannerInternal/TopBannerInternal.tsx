@@ -12,7 +12,7 @@ import {
   TopBannerInternalComponent,
   TopBannerInternalProps,
 } from './TopBannerInternal.types';
-import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
+import { TopBannerInternalActionMenu } from './TopBannerInternalActionMenu/TopBannerInternalActionMenu';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 
 import styles from './TopBannerInternal.module.scss';

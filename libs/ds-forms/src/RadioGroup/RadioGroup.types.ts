@@ -13,7 +13,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
-import { Radio } from '../Radio/Radio';
+import { Radio } from './Radio/Radio';
 
 export const radioGroupVariantArr = ['standard', 'horizontal'] as const;
 export type RadioGroupVariant = (typeof radioGroupVariantArr)[number];

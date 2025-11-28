@@ -22,7 +22,7 @@ import {
 import { useFileUploader } from './useFileUploader';
 import { getFiles, isChangeEvent, normalize } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
-import { FileUploaderFile } from '../FileUploaderFile/FileUploaderFile';
+import { FileUploaderFile } from './FileUploaderFile/FileUploaderFile';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './FileUploader.module.scss';

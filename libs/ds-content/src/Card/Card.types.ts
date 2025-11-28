@@ -2,10 +2,10 @@ import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Color, Spacing } from '@skatteetaten/ds-core-utils';
 
-import { CardActions } from '../CardActions/CardActions';
-import { CardAlert } from '../CardAlert/CardAlert';
-import { CardContent } from '../CardContent/CardContent';
-import { CardHeader } from '../CardHeader/CardHeader';
+import { CardActions } from './CardActions/CardActions';
+import { CardAlert } from './CardAlert/CardAlert';
+import { CardContent } from './CardContent/CardContent';
+import { CardHeader } from './CardHeader/CardHeader';
 
 export type CardSpacing =
   | Extract<Spacing, 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'mega'>

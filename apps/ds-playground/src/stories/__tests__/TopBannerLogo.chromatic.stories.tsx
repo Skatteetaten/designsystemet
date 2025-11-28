@@ -2,7 +2,7 @@
 import { Meta } from '@storybook/react-vite';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo';
+import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLogo/TopBannerLogo';
 
 import * as TopBannerLogoStories from './TopBannerLogo.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';

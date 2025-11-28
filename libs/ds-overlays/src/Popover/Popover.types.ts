@@ -10,8 +10,8 @@ import { UseFloatingReturn, useInteractions } from '@floating-ui/react';
 
 import { Color, positionArr } from '@skatteetaten/ds-core-utils';
 
-import { PopoverContent } from '../PopoverContent/PopoverContent';
-import { PopoverTrigger } from '../PopoverTrigger/PopoverTrigger';
+import { PopoverContent } from './PopoverContent/PopoverContent';
+import { PopoverTrigger } from './PopoverTrigger/PopoverTrigger';
 
 export type PopoverPosition = Extract<
   (typeof positionArr)[number],

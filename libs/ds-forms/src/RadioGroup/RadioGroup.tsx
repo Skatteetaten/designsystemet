@@ -10,8 +10,8 @@ import { getRadioGroupVariantDefault } from './defaults';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { Fieldset } from '../Fieldset/Fieldset';
-import { Radio } from '../Radio/Radio';
-import { RadioGroupContext } from '../RadioGroupContext/RadioGroupContext';
+import { Radio } from './Radio/Radio';
+import { RadioGroupContext } from './RadioGroupContext';
 
 import styles from './RadioGroup.module.scss';
 

@@ -2,8 +2,8 @@ import { JSX, useId } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
+import { Help } from './Help/Help';
 import { LabelWithHelpProps } from './LabelWithHelp.types';
-import { Help } from '../Help/Help';
 
 import styles from './LabelWithHelp.module.scss';
 

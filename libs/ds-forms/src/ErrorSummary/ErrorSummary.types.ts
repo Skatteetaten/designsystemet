@@ -2,7 +2,7 @@ import { ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
-import { ErrorSummaryError } from '../ErrorSummaryError/ErrorSummaryError';
+import { ErrorSummaryError } from './ErrorSummaryError/ErrorSummaryError';
 
 export interface ErrorSummaryProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;

@@ -2,7 +2,7 @@ import { ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { ListElement } from '../ListElement/ListElement';
+import { ListElement } from './ListElement/ListElement';
 
 export const listAsArr = ['ul', 'ol'] as const;
 export type ListAs = (typeof listAsArr)[number];

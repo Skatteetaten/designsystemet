@@ -31,11 +31,11 @@ import {
   getModalDismissOnOutsideClickDefault,
 } from '../Modal/defaults';
 import { Modal } from '../Modal/Modal';
-import { RolePickerBusinessList } from '../RolePickerBusinessList/RolePickerBusinessList';
-import { RolePickerContext } from '../RolePickerContext/RolePickerContext';
-import { RolePickerFilterInput } from '../RolePickerFilterInput/RolePickerFilterInput';
-import { RolePickerPeopleList } from '../RolePickerPeopleList/RolePickerPeopleList';
-import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
+import { RolePickerBusinessList } from './RolePickerBusinessList/RolePickerBusinessList';
+import { RolePickerContext } from './RolePickerContext';
+import { RolePickerFilterInput } from './RolePickerFilterInput/RolePickerFilterInput';
+import { RolePickerPeopleList } from './RolePickerPeopleList/RolePickerPeopleList';
+import { RolePickerRow } from './RolePickerRow/RolePickerRow';
 
 import styles from './RolePicker.module.scss';
 

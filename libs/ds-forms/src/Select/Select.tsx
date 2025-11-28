@@ -18,7 +18,7 @@ import { getSelectPlaceholderDefault } from './defaults';
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
-import { SelectOption } from '../SelectOption/SelectOption';
+import { SelectOption } from './SelectOption/SelectOption';
 
 import styles from './Select.module.scss';
 

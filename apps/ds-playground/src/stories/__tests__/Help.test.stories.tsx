@@ -9,7 +9,7 @@ import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { Help } from '../../../../../libs/ds-forms/src/Help/Help';
+import { Help } from '../../../../../libs/ds-forms/src/LabelWithHelp/Help/Help';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {

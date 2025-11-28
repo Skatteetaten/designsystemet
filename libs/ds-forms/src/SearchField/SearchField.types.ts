@@ -16,7 +16,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
-import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
+import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
 
 export const searchArrSize = [
   'medium',
@@ -65,9 +65,12 @@ interface SearchFieldCommonProps
       searchResult?: string;
     } & LabelWithHelpProps['classNames']
   >;
-  /** Overskriver default  tooltip-tekst til nullstill-knappen */
+  /** Overskriver default tooltip-tekst til nullstill-knappen */
   clearButtonTitle?: string;
-  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
+  /**
+   * Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for
+   * skjermleser.
+   */
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
@@ -83,7 +86,7 @@ interface SearchFieldCommonProps
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Overskriver default title på søkeknappen*/
+  /** Overskriver default title på søkeknappen */
   searchButtonTitle?: string;
   /** Definerer stilen til SearchField */
   variant?: SearchSize;
@@ -105,8 +108,11 @@ interface SearchFieldCommonProps
   /** Om søkeknappen skal vises med ikon eller tekst */
   hasSearchButtonIcon?: boolean;
   /**
-    Hvis søkefeltet skal vise resultater med results propen så skal denne settes til true for å gi en ekstra instruksjon til skjermleser.
-    Hvis komponenten skal ta deg til en egen side for å vise resultater i stedet for å bruke results-propen så skal denne settes til false fordi skjermleserteksten ikke er relevant.
+   * Hvis søkefeltet skal vise resultater med results propen så skal denne
+   * settes til true for å gi en ekstra instruksjon til skjermleser. Hvis
+   * komponenten skal ta deg til en egen side for å vise resultater i stedet for
+   * å bruke results-propen så skal denne settes til false fordi
+   * skjermleserteksten ikke er relevant.
    */
   enableSRNavigationHint?: boolean;
 }

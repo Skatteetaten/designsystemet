@@ -4,9 +4,9 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { SearchFieldProps } from '@skatteetaten/ds-forms';
 import { Person } from '@skatteetaten/ds-overlays';
 
-import { TopBannerExternalUserMenu } from '../TopBannerExternalUserMenu/TopBannerExternalUserMenu';
-import { TopBannerLangPickerProps } from '../TopBannerLangPicker/TopBannerLangPicker.types';
-import { TopBannerLogoProps } from '../TopBannerLogo/TopBannerLogo.types';
+import { TopBannerExternalUserMenu } from './TopBannerExternalUserMenu/TopBannerExternalUserMenu';
+import { TopBannerLangPickerProps } from './TopBannerLangPicker/TopBannerLangPicker.types';
+import { TopBannerLogoProps } from './TopBannerLogo/TopBannerLogo.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
 type UserMyself = {

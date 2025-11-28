@@ -2,7 +2,7 @@ import { ReactNode, Ref } from 'react';
 
 import { BaseProps, Size, Weight } from '@skatteetaten/ds-core-utils';
 
-import { DescriptionListElement } from '../DescriptionListElement/DescriptionListElement';
+import { DescriptionListElement } from './DescriptionListElement/DescriptionListElement';
 
 export type DescriptionListSize = Extract<Size, 'small' | 'medium'>;
 export type Orientation = 'vertical' | 'horizontal';

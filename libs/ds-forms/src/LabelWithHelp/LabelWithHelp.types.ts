@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { HelpProps } from '../Help/Help.types';
+import { HelpProps } from './Help/Help.types';
 
 type RequiredLabelHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'label'>,
@@ -32,6 +32,7 @@ export interface LabelWithHelpProps
   titleHelpSvg?: HelpProps['titleHelpSvg'];
   /**
    * Om obligatorisk label skal markeres med stjerne.
+   *
    * @deprecated Prop skal fjernes ved lansering av neste major versjon.
    */
   showRequiredMark?: boolean;

@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react-vite';
 
 import * as TopBannerLangPickerStories from './TopBannerLangPicker.test.stories';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/TopBannerLangPicker';
+import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/TopBannerLangPicker';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {

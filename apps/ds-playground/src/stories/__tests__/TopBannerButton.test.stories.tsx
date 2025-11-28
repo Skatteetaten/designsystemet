@@ -10,9 +10,9 @@ import {
 } from '@skatteetaten/ds-icons';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerButton } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton';
+import { TopBannerButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerButton/TopBannerButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerButtonProps } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton.types';
+import { TopBannerButtonProps } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerButton/TopBannerButton.types';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {

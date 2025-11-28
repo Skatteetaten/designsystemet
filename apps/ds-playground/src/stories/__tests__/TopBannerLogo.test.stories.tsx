@@ -4,9 +4,9 @@ import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo';
+import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLogo/TopBannerLogo';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLogoProps } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
+import { TopBannerLogoProps } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLogo/TopBannerLogo.types';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
 

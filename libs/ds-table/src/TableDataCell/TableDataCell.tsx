@@ -8,7 +8,7 @@ import {
   getTableCellAlignmentDefault,
   getTableVariantDefault,
 } from '../Table/defaults';
-import { TableContext } from '../TableContext/TableContext';
+import { TableContext } from '../Table/TableContext';
 
 import styles from './TableDataCell.module.scss';
 
