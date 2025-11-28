@@ -35,11 +35,23 @@ const convertTSXToJSX = (code: string): string => {
 
 const processCode = (code: string): string => {
   const jsx = convertTSXToJSX(extractArrowFunctionContent(code));
-  const source = convertReactHooks(jsx);
+  let source = convertReactHooks(jsx);
+
+  // remove import statements
+  source = source.replace(/import\s+.*?from\s+['"].*?['"];?\s*/g, '');
+
+  // need to remove default export statements like this: export default AlertExample;
+  source = source.replace(/^.*export\s+default\s+.*$/gm, '');
+
+  // get name of component if it starts with const ComponentName = () => {}
+  const componentName = source.match(
+    /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/
+  )?.[1];
 
   return `{
   (() => {
     ${source}
+   ${componentName ? `return <${componentName} />` : ''}
   })()
 }`;
 };
@@ -101,7 +113,11 @@ export const PlayroomCanvas: typeof Canvas = ({ of }): JSX.Element => {
         {
           title: 'Open in Playroom',
           onClick: (): void => {
-            const code = processCode(of.parameters.docs.source.originalSource);
+            const sourceCode =
+              of.parameters.docs.source.code ??
+              of.parameters.docs.source.originalSource;
+            const code = processCode(sourceCode);
+
             const url = getPlayroomUrlFromSource(code);
             window.open(url, '_blank');
           },

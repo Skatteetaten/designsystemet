@@ -20,9 +20,9 @@ import {
   getRolePickerMinimumEntitiesForSearchDefault,
 } from '@skatteetaten/ds-overlays';
 
-import { RolePickerWithAlertExample } from './RolePickerWithAlertExample';
+import RolePickerWithAlertExample from './RolePickerWithAlertExample';
 import rolePickerWithAlertExample from './RolePickerWithAlertExample?raw';
-import { RolePickerWithTopBannerExternalExample } from './RolePickerWithTopBannerExternalExample';
+import RolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample';
 import rolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample?raw';
 import { category } from '../../../../.storybook/helpers';
 

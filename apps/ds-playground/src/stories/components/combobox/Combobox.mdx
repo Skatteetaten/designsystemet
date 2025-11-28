@@ -1,10 +1,10 @@
 import {
-  Canvas,
   Meta,
   Primary,
   Controls,
   ArgTypes,
 } from '@storybook/addon-docs/blocks';
+import { PlayroomCanvas as Canvas } from '../../../playroom/utils';
 import * as ComboboxStories from './Combobox.stories';
 import { VersionBadge } from '../../utils/VersionBadge';
 import { DocIntro } from '../../utils/DocIntro';
@@ -183,7 +183,7 @@ Kalles når hjelpeteksten åpnes eller lukkes:
 
 ### Enkeltvalg
 
-<Canvas of={ComboboxStories.Primary} />
+<Canvas of={ComboboxStories.Single} />
 
 ### Flervalg
 
