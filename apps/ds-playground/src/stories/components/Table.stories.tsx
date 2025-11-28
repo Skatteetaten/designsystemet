@@ -1,6 +1,8 @@
 import { ReactNode, useState, JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { TableRowProps } from 'libs/ds-table/src/TableRow/TableRow.types';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
@@ -9,6 +11,7 @@ import {
   CopySVGpath,
   DeleteSVGpath,
   EditSVGpath,
+  SaveSVGpath,
 } from '@skatteetaten/ds-icons';
 import {
   Table,
@@ -366,6 +369,155 @@ export const Expandable: Story = {
                 <Table.DataCell>{row.status}</Table.DataCell>
                 <Table.DataCell>{row.eta}</Table.DataCell>
               </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </Table>
+    );
+  },
+} satisfies Story;
+Expandable.parameters = exampleParameters;
+
+const CustomExpandableRow = (props: TableRowProps): JSX.Element => {
+  const [isExpanded, setIsExpanded] = useState(props.isExpanded);
+  const [isSaving, setIsSaving] = useState(false);
+
+  const handleSave = async (): Promise<void> => {
+    setIsSaving(true);
+    await new Promise<void>((resolve) => {
+      setTimeout(() => {
+        setIsSaving(false);
+        setIsExpanded(false);
+        resolve();
+      }, 2000);
+    });
+  };
+
+  return (
+    <Table.Row
+      expandButtonPosition={'right'}
+      expandableContent={<div className={'emptyExpandedTableRow'}></div>}
+      expandButtonAriaDescribedby={props.expandButtonAriaDescribedby}
+      expandButtonTitle={isExpanded ? 'Lagre og lukk' : 'Åpne oppgave'}
+      expandButtonProps={{
+        svgPath: isExpanded ? SaveSVGpath : EditSVGpath,
+        hasSpinner: isSaving,
+        disabled: isSaving,
+      }}
+      isExpanded={isExpanded}
+      isExpandable
+      onExpand={() => setIsExpanded(true)}
+      onClose={handleSave}
+    >
+      {props.children}
+    </Table.Row>
+  );
+};
+
+export const ExpandableWithCustomExpandButtonProps: Story = {
+  render: (_args): JSX.Element => {
+    const data = [
+      {
+        id: 'abcd',
+        firma: 'Bluth Company',
+        timestamp: '08.04.2020 11:31:57',
+        status: 'Under behandling',
+        eta: 'Mer enn 1 dag',
+        ansatte: [
+          {
+            id: 'efgh',
+            navn: 'Per Olsen',
+            fnr: '11012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'ijkl',
+        firma: 'Business Engros',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Under behandling',
+        eta: '23 min',
+        ansatte: [
+          {
+            id: 'mnop',
+            navn: 'Bryce Navnesen',
+            fnr: '02012020 99999',
+            beskrivelse: 'noen flere opplysninger',
+          },
+          {
+            id: 'qrst',
+            navn: 'Alice Middleman',
+            fnr: '03012020 99999',
+            beskrivelse: 'mange flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'uvwx',
+        firma: 'Corwood Industries',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'yzab',
+            navn: 'Kai Mossige',
+            fnr: '01012020 99999',
+            beskrivelse: 'finnes flere opplysninger?',
+          },
+        ],
+      },
+      {
+        id: 'cdef',
+        firma: 'Limerick Partner',
+        timestamp: '08.04.2020 11:32:47',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'ghij',
+            navn: 'Kari Saksbehandler',
+            fnr: '01012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+          {
+            id: 'klmn',
+            navn: 'Bob Egil Hansen',
+            fnr: '04012020 99999',
+            beskrivelse: 'Ingen andre opplysninger',
+          },
+        ],
+      },
+    ];
+
+    return (
+      <Table caption={'Oppgaver'}>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell sortKey={'firma'} scope={'col'} isSortable>
+              {'Firma'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Startet'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>
+              {'Forventet behandlet'}
+            </Table.HeaderCell>
+            <Table.HeaderCell as={'td'} />
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {data.map((row) => {
+            return (
+              <CustomExpandableRow
+                key={row.id}
+                expandButtonAriaDescribedby={row.id}
+              >
+                <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
+                <Table.DataCell>{row.timestamp}</Table.DataCell>
+                <Table.DataCell>{row.status}</Table.DataCell>
+                <Table.DataCell>{row.eta}</Table.DataCell>
+              </CustomExpandableRow>
             );
           })}
         </Table.Body>

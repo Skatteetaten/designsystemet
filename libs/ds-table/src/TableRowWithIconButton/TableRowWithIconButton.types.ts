@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode, RefObject } from 'react';
 
-import { IconButtonProps } from '@skatteetaten/ds-buttons';
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { IconButtonProps, ButtonProps } from '@skatteetaten/ds-buttons';
+import { BaseProps, DistributiveOmit } from '@skatteetaten/ds-core-utils';
 
 import {
   RowWithExpandButtonHandle,
@@ -31,6 +31,15 @@ export interface ExpandableRowProps extends BaseProps {
    * tydeliggjøre hvilken rad som ekspanderes.
    */
   expandButtonAriaDescribedby?: string;
+  /**
+   * Andre props som sendes videre expandButton. Se Button-komponenten for
+   * api-dokumentasjon.
+   */
+  expandButtonProps?: DistributiveOmit<
+    ButtonProps,
+    'onClick' | 'children' | 'ref'
+  >;
+
   /** Brukes til å styre ekspandert tilstand utenfor komponenten. */
   isExpanded?: boolean;
   /** Innholdet i raden. Bruk Table.DataCell for celler. */
