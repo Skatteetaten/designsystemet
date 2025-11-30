@@ -16,7 +16,7 @@ RadioGroup.Radio.displayName = 'RadioGroup.Radio';
 
 const meta = {
   component: RadioGroup,
-  title: 'Komponenter/RadioGroup/RadioGroup',
+  title: 'Komponenter/RadioGroup',
   argTypes: {
     // Props
     classNames: { control: false, table: { category: category.props } },

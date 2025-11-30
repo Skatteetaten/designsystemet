@@ -17,7 +17,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Popover,
-  title: 'Komponenter/Popover/Popover',
+  title: 'Komponenter/Popover',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },

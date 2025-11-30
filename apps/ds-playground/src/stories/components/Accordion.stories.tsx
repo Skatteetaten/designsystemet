@@ -35,7 +35,7 @@ const defaultContent =
 
 const meta = {
   component: Accordion,
-  title: 'Komponenter/Accordion/Accordion',
+  title: 'Komponenter/Accordion',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },

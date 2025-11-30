@@ -13,7 +13,7 @@ Chips.Removable.displayName = 'Chips.Removable';
 
 const meta = {
   component: Chips,
-  title: 'Komponenter/Chips/Chips',
+  title: 'Komponenter/Chips',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
