@@ -4,8 +4,8 @@
   --ds-modal-footer-height: 0px;
 
   position: fixed;
-  min-width: calc(300px - 2 * var(--spacing-m));
-  max-width: calc(var(--semantic-responsive-article) - 2 * var(--spacing-m));
+  min-width: 18rem;
+  max-width: var(--semantic-responsive-article);
   max-height: calc(100dvh - 2 * var(--spacing-m));
   box-sizing: border-box;
   padding: 0;
@@ -19,6 +19,7 @@
     0 2px 4px -4px rgb(0 0 0 / 16%);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
+  inset: var(--spacing-m);
   line-height: var(--semantic-line-height-article);
   overflow-y: auto;
 
