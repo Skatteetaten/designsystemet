@@ -21,8 +21,8 @@
   @media (min-width: breakpoints.$breakpoint-m) {
     position: fixed;
     z-index: 100;
-    right: calc(((100vw) - var(--semantic-responsive-container)) / 2);
     bottom: 0;
+    left: calc((100vw + var(--semantic-responsive-container)) / 2);
   }
 
   &_visible {
