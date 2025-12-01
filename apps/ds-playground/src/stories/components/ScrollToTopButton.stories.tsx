@@ -60,10 +60,8 @@ export const Preview: Story = {
   decorators: [
     (Story): JSX.Element => (
       <div className={'height100vh'}>
-        <main className={'scrollToTopContainer'} tabIndex={-1}>
-          <ExternalLayout />
-          <Story />
-        </main>
+        <ExternalLayout />
+        <Story />
       </div>
     ),
   ],

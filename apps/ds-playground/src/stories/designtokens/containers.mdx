@@ -13,12 +13,81 @@ import { ContainersTokenExamplesGenerator } from './ContainersTokenExamplesGener
 
 <div className={'layoutContainer'}>
   <ExternalLayout />
+  <div class="external">
+    <p>{'Oppsettet til publikumsløsninger består av følgende deler:'}</p>
+    <p>
+      {'<TopBannerExternal />'}
+      <br />
+      {'<main></main>'}
+      <br />
+      {'<Footer />'}
+    </p>
+    <p>
+      {
+        'TopBanner og Footer har en bredde på --semantic-responsive-container. Main-elementet burde få samme bredde:'
+      }
+    </p>
+    <p>
+      {'.main {'}
+      <br />
+      {'width: var(--semantic-responsive-container);'}
+      <br />
+      {'box-sizing: border-box;'}
+      <br />
+      {'padding: var(--semantic-responsive-container-spacing);'}
+      <br />
+      {'margin: auto;'}
+      <br />
+      {'}'}
+    </p>
+    <p>
+      {
+        'Innholdet i main-elementet bør følge en av de tre responsive breddene definert i designsystemet: --semantic-responsive-container, --semantic-responsive-wide-content eller --semantic-responsive-article.'
+      }
+    </p>
+  </div>
 </div>
 
 ## Internal layout
 
 <div className={'layoutContainer'}>
   <InternalLayout />
+  <div class="internal">
+    <p>
+      {
+        'Wrapperen bruker flexbox og håndterer organiseringen av aside og main, samt avstanden mellom dem. Den bruker:'
+      }
+    </p>
+    <p>
+      {'.wrapper {'}
+      <br />
+      {'display: var(--semantic-responsive-internal-container-display);'}
+      <br />
+      {
+        'flex-direction: var(--semantic-responsive-internal-container-flex-direction);'
+      }
+      <br />
+      {'gap: var(--semantic-responsive-internal-container-spacing);'}
+      <br />
+      {'padding: var(--semantic-responsive-internal-container-spacing);'}
+      <br />
+      {'}'}
+    </p>
+    <p>
+      {'.aside {'}
+      <br />
+      {'flex: 0 0 var(--semantic-responsive-internal-aside);'}
+      <br />
+      {'}'}
+    </p>
+    <p>
+      {'.main {'}
+      <br />
+      {'flex: 1;'}
+      <br />
+      {'}'}
+    </p>
+  </div>
 </div>
 
 <ContainersTokenExamplesGenerator />
