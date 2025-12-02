@@ -1,12 +1,5 @@
 @use '@skatteetaten/ds-core-designtokens/designtokens/breakpoints' as *;
 
-.page {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .mainContent {
   width: var(--semantic-responsive-container);
   box-sizing: border-box;

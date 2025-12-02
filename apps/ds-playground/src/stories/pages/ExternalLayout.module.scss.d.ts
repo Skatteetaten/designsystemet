@@ -1,5 +1,4 @@
 declare const classNames: {
-  readonly page: 'page';
   readonly mainContent: 'mainContent';
   readonly article: 'article';
   readonly responsiveContainer: 'responsiveContainer';
