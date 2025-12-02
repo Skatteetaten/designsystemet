@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
-import { HelpProps } from '../Help/Help.types';
+import { HelpProps } from '../LabelWithHelp/Help/Help.types';
 
 type RequiredFieldsetHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'fieldset'>,

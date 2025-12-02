@@ -2,8 +2,8 @@ import { JSX } from 'react';
 
 import { WordInfoComponent, WordInfoProps } from './WordInfo.types';
 import { Popover } from '../Popover/Popover';
-import { WordInfoContent } from '../WordInfoContent/WordInfoContent';
-import { WordInfoTrigger } from '../WordInfoTrigger/WordInfoTrigger';
+import { WordInfoContent } from './WordInfoContent/WordInfoContent';
+import { WordInfoTrigger } from './WordInfoTrigger/WordInfoTrigger';
 
 export const WordInfo = ((props: WordInfoProps): JSX.Element => {
   return <Popover {...props} />;

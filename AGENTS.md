@@ -234,6 +234,9 @@ npm run test:storybook -- -t "Button"
 
 ## Code Style
 
+- Keep comments to a minimum.
+- Code comments should preferably be in Norwegian.
+
 ### React Patterns
 
 **ALWAYS use:**

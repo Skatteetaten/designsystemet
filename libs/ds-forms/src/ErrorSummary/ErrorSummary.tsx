@@ -8,8 +8,8 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 import { getErrorSummaryTitleAsDefault } from './defaults';
 import { ErrorSummaryComponent, ErrorSummaryProps } from './ErrorSummary.types';
-import { ErrorSummaryContext } from '../ErrorSummaryContext/ErrorSummaryContext';
-import { ErrorSummaryError } from '../ErrorSummaryError/ErrorSummaryError';
+import { ErrorSummaryContext } from './ErrorSummaryContext';
+import { ErrorSummaryError } from './ErrorSummaryError/ErrorSummaryError';
 
 import styles from './ErrorSummary.module.scss';
 

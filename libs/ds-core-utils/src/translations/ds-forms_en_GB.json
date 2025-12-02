@@ -1,4 +1,5 @@
 {
+  "combobox.DeleteConfirmation": "{{element}} removed",
   "combobox.Loading": "Loading",
   "combobox.NoResults": "No results for «{{searchTerm}}». Try a different search.",
   "combobox.OneOptionAvailable": "One option available.",
@@ -34,6 +35,7 @@
   "datepicker.TypeOrSelect": "Type or select",
   "datepicker.Wed": "Wed",
   "datepicker.Year": "Year",
+  "errorsummary.Title": "To continue you must correct {{errorAmount}} error(s):",
   "fileuploader.AddMultipleLabel": "Add file(s)",
   "fileuploader.AddSingleLabel": "Add file",
   "fileuploader.DeleteConfirmation": "The file has been removed",
@@ -48,6 +50,7 @@
   "fileuploader.InProgressLabel": "Upload in progress",
   "fileuploader.NoRightsToDeleteError": "You do not have permission to delete files",
   "fileuploader.NoRightsUploadError": "You do not have permission to upload files",
+  "fileuploader.required": "required",
   "fileuploader.SuccessIconLabel": "Completed",
   "fileuploader.UploadedHeading": "Uploaded:",
   "fileuploader.UploadedSummary": "{{fileCount}} file(s) uploaded",

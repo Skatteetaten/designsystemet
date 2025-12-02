@@ -32,6 +32,7 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement | null>;
   classNames?: Prettify<
     {
+      container?: string;
       options?: string;
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
@@ -173,5 +174,7 @@ export type ComboboxButtonProps = {
 export type ComboboxAccessibilityAnnouncerProps = {
   isOpen: boolean;
   displayOptions: ComboboxOption[];
+  selectedValues: ComboboxOption[];
   searchTerm: string;
+  focusedIndex: number;
 };

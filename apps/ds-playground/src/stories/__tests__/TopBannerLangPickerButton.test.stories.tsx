@@ -4,9 +4,9 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within, waitFor, fn } from 'storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLangPickerButton } from '../../../../../libs/ds-layout/src/TopBannerLangPickerButton/TopBannerLangPickerButton';
+import { TopBannerLangPickerButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPickerButton/TopBannerLangPickerButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLangPickerButtonProps } from '../../../../../libs/ds-layout/src/TopBannerLangPickerButton/TopBannerLangPickerButton.types';
+import { TopBannerLangPickerButtonProps } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPickerButton/TopBannerLangPickerButton.types';
 import { ReactComponent as NorwegianFlagIcon } from '../../assets/no-flag.svg';
 
 const meta = {

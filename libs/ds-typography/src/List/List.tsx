@@ -4,7 +4,7 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getListAsDefault } from './defaults';
 import { ListProps, ListComponent, AnyHTMLListElement } from './List.types';
-import { ListElement } from '../ListElement/ListElement';
+import { ListElement } from './ListElement/ListElement';
 
 import styles from './List.module.scss';
 

@@ -2,8 +2,8 @@ import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
 
-import { ChipsRemovable } from '../ChipsRemovable/ChipsRemovable';
-import { ChipsToggle } from '../ChipsToggle/ChipsToggle';
+import { ChipsRemovable } from './ChipsRemovable/ChipsRemovable';
+import { ChipsToggle } from './ChipsToggle/ChipsToggle';
 
 export type ChipSize = Extract<Size, 'small' | 'medium'>;
 

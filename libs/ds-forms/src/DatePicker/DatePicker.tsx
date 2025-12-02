@@ -22,12 +22,12 @@ import {
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 
 import { DatePickerProps } from './DatePicker.types';
+import { DatePickerCalendar } from './DatePickerCalendar/DatePickerCalendar';
 import {
   getDatePickerDateFormat,
   getDatePickerPlaceholderDefault,
 } from './defaults';
 import { formatDateForInput, parseDateFromInput } from './utils';
-import { DatePickerCalendar } from '../DatePickerCalendar/DatePickerCalendar';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
@@ -94,7 +94,9 @@ export const DatePicker = ({
     );
 
     /**
-     * Oppdaterer verdien i inputfeltet hvis én av følgende betingelser er oppfylt:
+     * Oppdaterer verdien i inputfeltet hvis én av følgende betingelser er
+     * oppfylt:
+     *
      * 1. Eksisterende tekstverdi er en gyldig dato
      * 2. Inputfeltet er tomt
      * 3. En gyldig dato sendes inn via 'value'-prop

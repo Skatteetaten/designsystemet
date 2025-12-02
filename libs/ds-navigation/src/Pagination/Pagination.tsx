@@ -10,7 +10,7 @@ import {
   getDefaultHidePrevNextButtonTitle,
 } from './defaults';
 import { PaginationProps, PaginationComponent } from './Pagination.types';
-import { PaginationList } from '../PaginationList/PaginationList';
+import { PaginationList } from './PaginationList/PaginationList';
 
 import styles from './Pagination.module.scss';
 

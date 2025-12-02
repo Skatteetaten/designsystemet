@@ -2,9 +2,9 @@ import { ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { BreadcrumbsItem } from '../BreadcrumbsItem/BreadcrumbsItem';
-import { BreadcrumbsLink } from '../BreadcrumbsLink/BreadcrumbsLink';
-import { BreadcrumbsList } from '../BreadcrumbsList/BreadcrumbsList';
+import { BreadcrumbsItem } from './BreadcrumbsItem/BreadcrumbsItem';
+import { BreadcrumbsLink } from './BreadcrumbsLink/BreadcrumbsLink';
+import { BreadcrumbsList } from './BreadcrumbsList/BreadcrumbsList';
 
 export interface BreadcrumbsProps extends BaseProps {
   ref?: React.Ref<HTMLElement>;

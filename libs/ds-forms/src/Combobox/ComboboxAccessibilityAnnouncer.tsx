@@ -15,8 +15,21 @@ const getAnnouncementMessage = (
   isOpen: boolean,
   displayOptions: ComboboxOption[],
   searchTerm: string,
+  previousSelectedValues: ComboboxOption[],
+  selectedValues: ComboboxOption[],
+  focusedIndex: number,
   t: ReturnType<typeof useTranslation>['t']
 ): string => {
+  if (previousSelectedValues.length >= selectedValues.length) {
+    const removed = previousSelectedValues.at(-1);
+    //Hvis fokus stod på den som ble fjernet så leser skjermleser allerede opp og vi trenger ikke ekstra melding
+    if (
+      !selectedValues.some((item) => item.value === removed?.value) &&
+      displayOptions[focusedIndex]?.value !== removed?.value
+    ) {
+      return t('combobox.DeleteConfirmation', { element: removed?.label });
+    }
+  }
   if (isOpen && displayOptions.length > 0) {
     return displayOptions.length === 1
       ? t('combobox.OneOptionAvailable')
@@ -34,10 +47,13 @@ const ComboboxAccessibilityAnnouncerComponent = ({
   isOpen,
   displayOptions,
   searchTerm,
+  selectedValues,
+  focusedIndex,
 }: ComboboxAccessibilityAnnouncerProps): JSX.Element => {
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const announcerRef = useRef<HTMLDivElement>(null);
   const [message, setMessage] = useState<string>();
+  const previousSelectedValuesRef = useRef<ComboboxOption[]>([]);
 
   // Only debounce when user is actively searching, with multiple results found
   // Don't debounce when dropdown opening, no results, or single result
@@ -59,9 +75,14 @@ const ComboboxAccessibilityAnnouncerComponent = ({
       isOpen,
       effectiveDisplayOptions,
       searchTerm,
+      previousSelectedValuesRef.current ?? [],
+      selectedValues,
+      focusedIndex,
       t
     );
     setMessage(newMessage);
+
+    previousSelectedValuesRef.current = selectedValues;
 
     if (newMessage) {
       const timeout = setTimeout(() => {
@@ -71,8 +92,9 @@ const ComboboxAccessibilityAnnouncerComponent = ({
         clearTimeout(timeout);
       };
     }
+
     return undefined;
-  }, [isOpen, effectiveDisplayOptions, searchTerm, t]);
+  }, [isOpen, effectiveDisplayOptions, searchTerm, t, selectedValues]);
 
   return (
     <div

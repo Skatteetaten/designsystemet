@@ -24,19 +24,19 @@ import {
   SearchSVGpath,
 } from '@skatteetaten/ds-icons';
 
+import { TopBannerButton } from './TopBannerButton/TopBannerButton';
 import {
   TopBannerExternalProps,
   TopBannerMenu,
   TopBannerExternalComponent,
 } from './TopBannerExternal.types';
-import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
-import { TopBannerExternalUserMenu } from '../TopBannerExternalUserMenu/TopBannerExternalUserMenu';
-import { getTopBannerLangPickerLocaleDefault } from '../TopBannerLangPicker/defaults';
-import { TopBannerLangPicker } from '../TopBannerLangPicker/TopBannerLangPicker';
-import { convertLocaleToLang, isLanguages } from '../TopBannerLangPicker/utils';
-import { TopBannerLogo } from '../TopBannerLogo/TopBannerLogo';
+import { TopBannerExternalUserMenu } from './TopBannerExternalUserMenu/TopBannerExternalUserMenu';
+import { getTopBannerLangPickerLocaleDefault } from './TopBannerLangPicker/defaults';
+import { TopBannerLangPicker } from './TopBannerLangPicker/TopBannerLangPicker';
+import { convertLocaleToLang, isLanguages } from './TopBannerLangPicker/utils';
+import { TopBannerLogo } from './TopBannerLogo/TopBannerLogo';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
-import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton';
+import { TopBannerUserButton } from './TopBannerUserButton/TopBannerUserButton';
 
 import styles from './TopBannerExternal.module.scss';
 
@@ -139,8 +139,8 @@ export const TopBannerExternal = (({
     };
 
     /**
-     * Setter fokusflagg i en ref i stedet for å bruke contains(event.target) slik at detektering
-     * også fungerer i tilfelle med createPortal
+     * Setter fokusflagg i en ref i stedet for å bruke contains(event.target)
+     * slik at detektering også fungerer i tilfelle med createPortal
      */
 
     const handleFocusOutside: EventListener = (_): void => {

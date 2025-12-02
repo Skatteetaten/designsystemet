@@ -15,8 +15,8 @@ import {
   getTableRowExpandButtonTitleDefault,
 } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
+import { TableContext } from './TableContext';
 import { TableBody } from '../TableBody/TableBody';
-import { TableContext } from '../TableContext/TableContext';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 import { TableEditableRow } from '../TableEditableRow/TableEditableRow';
 import { TableHeader } from '../TableHeader/TableHeader';
@@ -72,9 +72,9 @@ export const Table = (({
   }`.trim();
 
   /**
-   * Når tabellen har scrollbar vises en fade-effekt for å indikere at
-   * tabellen har mer innhold. Her sjekker vi hvor lang det er scrollet
-   * for å finne ut om det er høyre eller venstre som skal fades.
+   * Når tabellen har scrollbar vises en fade-effekt for å indikere at tabellen
+   * har mer innhold. Her sjekker vi hvor lang det er scrollet for å finne ut om
+   * det er høyre eller venstre som skal fades.
    */
   useEffect(() => {
     const wrapper = wrapperRef.current;

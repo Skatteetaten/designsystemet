@@ -1,5 +1,5 @@
 import { PopoverPosition, PopoverColor } from './Popover.types';
-import { PopoverContentAs } from '../PopoverContent/PopoverContent.types';
+import { PopoverContentAs } from './PopoverContent/PopoverContent.types';
 
 export const getPopoverColorDefault = (): PopoverColor => 'forest';
 export const getPopoverPositionDefault = (): PopoverPosition => 'bottomStart';

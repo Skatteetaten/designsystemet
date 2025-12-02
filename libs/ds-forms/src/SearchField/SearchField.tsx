@@ -26,7 +26,7 @@ import {
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
-import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
+import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
 
 import styles from './SearchField.module.scss';
 

@@ -1,5 +1,10 @@
 import { HTMLAttributes } from 'react';
 
+//eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type DistributiveOmit<T, K extends PropertyKey> = T extends any
+  ? Omit<T, K>
+  : never;
+
 export type Prettify<T> = {
   [K in keyof T]: T[K];
 } & unknown;
@@ -94,8 +99,12 @@ export type Spacing = (typeof spacingArr)[number];
 export interface FormRequiredProps {
   required?: boolean;
   /**
-   * Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk.
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på [stil og tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
+   * Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at
+   * required er tatt i bruk.
+   *
+   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer
+   *   om mønstre for obligatoriske felt på [stil og
+   *   tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
    */
   showRequiredMark?: boolean;
 }

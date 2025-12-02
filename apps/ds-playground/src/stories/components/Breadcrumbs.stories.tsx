@@ -14,7 +14,7 @@ Breadcrumbs.Link.displayName = 'Breadcrumbs.Link';
 
 const meta = {
   component: Breadcrumbs,
-  title: 'Komponenter/Breadcrumbs/Breadcrumbs',
+  title: 'Komponenter/Breadcrumbs',
   argTypes: {
     children: { control: false, table: { category: category.props } },
   },

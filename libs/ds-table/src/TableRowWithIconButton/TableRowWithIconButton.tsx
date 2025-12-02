@@ -32,6 +32,7 @@ export const RowWithLeftSideExpandButton = ({
   expandableContent,
   expandButtonTitle = getTableRowExpandButtonTitleDefault(),
   expandButtonAriaDescribedby,
+  expandButtonProps,
   showExpandButtonTitle,
   isExpanded = getTableRowIsExpandedDefault(),
   isExpandButtonDisabled,
@@ -126,6 +127,7 @@ export const RowWithLeftSideExpandButton = ({
             ariaDescribedby={expandButtonAriaDescribedby}
             disabled={isExpandButtonDisabled}
             onClick={handleClick}
+            {...expandButtonProps}
           >
             {expandButtonTitle}
           </InlineButton>
@@ -140,6 +142,7 @@ export const RowWithLeftSideExpandButton = ({
             ariaExpanded={iconButtonAriaExpanded}
             disabled={isExpandButtonDisabled}
             onClick={handleClick}
+            {...expandButtonProps}
           />
         )}
         {isExpanded && (
@@ -173,6 +176,7 @@ export const RowWithRightSideExpandButton = ({
   iconButtonAriaExpanded,
   svgPath,
   expandButtonAriaDescribedby,
+  expandButtonProps,
   isExpanded = getTableRowIsExpandedDefault(),
   isExpandButtonDisabled,
   shouldInsertExpandAreaMarkers,
@@ -233,6 +237,7 @@ export const RowWithRightSideExpandButton = ({
               ariaDescribedby={expandButtonAriaDescribedby}
               disabled={isExpandButtonDisabled}
               onClick={handleClick}
+              {...expandButtonProps}
             >
               {expandButtonTitle}
             </InlineButton>
@@ -247,6 +252,7 @@ export const RowWithRightSideExpandButton = ({
               ariaExpanded={iconButtonAriaExpanded}
               disabled={isExpandButtonDisabled}
               onClick={handleClick}
+              {...expandButtonProps}
             />
           )}
         </TableDataCell>

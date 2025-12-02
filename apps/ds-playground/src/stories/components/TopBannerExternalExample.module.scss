@@ -1,15 +1,8 @@
 @use '@skatteetaten/ds-core-designtokens/designtokens/breakpoints' as *;
 
 .linkWrapper {
+  padding: 0 var(--spacing-s-plus);
   list-style-type: none;
-
-  &Padding {
-    padding: 0 var(--spacing-s-plus);
-  }
-}
-
-.noPadding {
-  padding: 0;
 }
 
 .marginBottomXL {
