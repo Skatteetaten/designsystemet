@@ -40,7 +40,7 @@
 
   @media (min-width: breakpoints.$breakpoint-m) {
     grid-template-columns:
-      1fr var(--semantic-responsive-article)
+      1fr minmax(40px, var(--semantic-responsive-article))
       1fr;
   }
 
