@@ -25,7 +25,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Table,
-  title: 'Komponenter/Table/Table',
+  title: 'Komponenter/Table',
   argTypes: {
     // Props
     canBeManuallyFocused: { table: { category: category.props } },

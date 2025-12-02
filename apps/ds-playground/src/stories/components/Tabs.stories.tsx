@@ -15,7 +15,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Tabs,
-  title: 'Komponenter/Tabs/Tabs',
+  title: 'Komponenter/Tabs',
   argTypes: {
     // Baseprops
     id: {

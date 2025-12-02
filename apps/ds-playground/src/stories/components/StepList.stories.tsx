@@ -12,7 +12,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: StepList,
-  title: 'Komponenter/StepList/StepList',
+  title: 'Komponenter/StepList',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
