@@ -61,6 +61,29 @@ const responsiveTokens = Object.fromEntries(
   )
 );
 
+const externalTokenOrder = [
+  '--semantic-responsive-container',
+  '--semantic-responsive-container-spacing',
+  '--semantic-responsive-wide-content',
+  '--semantic-responsive-article',
+];
+
+const internalTokenOrder = [
+  '--semantic-responsive-internal-container-display',
+  '--semantic-responsive-internal-container-flex-direction',
+  '--semantic-responsive-internal-container-spacing',
+  '--semantic-responsive-internal-aside',
+  '--semantic-responsive-wide-content',
+];
+
+const externalTokens = Object.fromEntries(
+  externalTokenOrder.map((key) => [key, responsiveTokens[key]])
+);
+
+const internalTokens = Object.fromEntries(
+  internalTokenOrder.map((key) => [key, responsiveTokens[key]])
+);
+
 export const ContainersTokenExamplesGenerator = (): JSX.Element => {
   return (
     <>
@@ -88,8 +111,20 @@ export const ContainersTokenExamplesGenerator = (): JSX.Element => {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {generateTableRows(responsiveTokens, breakpoints, 'External', 0, 3)}
-          {generateTableRows(responsiveTokens, breakpoints, 'Internal', 3, 8)}
+          {generateTableRows(
+            externalTokens,
+            breakpoints,
+            'External',
+            0,
+            externalTokenOrder.length
+          )}
+          {generateTableRows(
+            internalTokens,
+            breakpoints,
+            'Internal',
+            0,
+            internalTokenOrder.length
+          )}
         </Table.Body>
       </Table>
     </>
