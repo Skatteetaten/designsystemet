@@ -44,10 +44,8 @@ type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof ScrollToTopButton> = (args) => (
   <div className={'height120vh'}>
-    <main className={'scrollToTopContainer'} tabIndex={-1}>
-      <ExternalLayout />
-      <ScrollToTopButton {...args} />
-    </main>
+    <ExternalLayout />
+    <ScrollToTopButton {...args} />
   </div>
 );
 
@@ -113,7 +111,7 @@ export const WithAttributes = {
     await expect(scrollToTopButton).toHaveAttribute('data-testid', '123ID');
 
     const container = canvasElement.querySelector(
-      `${wrapper} > div > main > div:nth-child(2)`
+      `${wrapper} > div > div:nth-child(2)`
     );
     await expect(container).toHaveClass('dummyClassname');
   },
@@ -144,7 +142,7 @@ export const WithCustomClassNames = {
     const canvas = within(canvasElement);
 
     const container = canvasElement.querySelector(
-      `${wrapper} > div > main > div:nth-child(2)`
+      `${wrapper} > div > div:nth-child(2)`
     );
     const button = canvas.getByRole('button');
     const iconContainer = button.querySelector('div');
@@ -269,10 +267,8 @@ const TemplateWithShadowDom: StoryFn<typeof ScrollToTopButton> = (args) => {
   const shadowRoot = element?.shadowRoot;
   return (
     <div className={'height100vh'}>
-      <main className={'scrollToTopContainer'} tabIndex={-1}>
-        <ExternalLayout />
-        <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />
-      </main>
+      <ExternalLayout />
+      <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />
     </div>
   );
 };
@@ -316,10 +312,8 @@ export const WithShadowDom = {
 const TemplateMainFarDown: StoryFn<typeof ScrollToTopButton> = (args) => (
   <div className={'height200vh'}>
     <div className={'scrollToTopMainPusher'}>{'Mainpusher'}</div>
-    <main className={'scrollToTopContainer'} tabIndex={-1}>
-      <ExternalLayout />
-      <ScrollToTopButton {...args} />
-    </main>
+    <ExternalLayout />
+    <ScrollToTopButton {...args} />
   </div>
 );
 

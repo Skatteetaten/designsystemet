@@ -32,10 +32,6 @@ code {
   width: 100%;
 }
 
-.scrollToTopContainer:focus {
-  background: var(--semantic-interactive-main);
-}
-
 .exampleSpacing {
   margin-right: var(--spacing-m);
   margin-bottom: var(--spacing-m);
