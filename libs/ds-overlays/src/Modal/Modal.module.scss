@@ -1,3 +1,4 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @use 'libs/ds-core-utils/src/mixins/styles' as styles;
 
 .modal {
@@ -5,7 +6,7 @@
 
   position: fixed;
   min-width: 18rem;
-  max-width: var(--semantic-responsive-article);
+  max-width: calc(100vw - 2 * var(--spacing-m));
   max-height: calc(100dvh - 2 * var(--spacing-m));
   box-sizing: border-box;
   padding: 0;
@@ -19,9 +20,12 @@
     0 2px 4px -4px rgb(0 0 0 / 16%);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
-  inset: var(--spacing-m);
   line-height: var(--semantic-line-height-article);
   overflow-y: auto;
+
+  @media (min-width: breakpoints.$breakpoint-s) {
+    max-width: var(--semantic-responsive-article);
+  }
 
   @supports not (height: 100dvh) {
     max-height: calc(100vh - 2 * var(--spacing-m));
