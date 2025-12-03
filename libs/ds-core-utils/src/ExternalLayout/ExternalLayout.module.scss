@@ -7,14 +7,12 @@
 }
 
 .header {
-  padding: var(--semantic-responsive-container-spacing);
-  padding-top: var(--spacing-s);
-  padding-bottom: var(--spacing-s);
+  padding: var(--spacing-s) var(--spacing-m);
   border-bottom: 3px solid var(--palette-graphite-100);
 
   &Container {
     display: flex;
-    width: var(--semantic-responsive-container);
+    max-width: var(--semantic-responsive-container);
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -43,7 +41,7 @@
 }
 
 .main {
-  width: var(--semantic-responsive-container);
+  max-width: var(--semantic-responsive-container);
   box-sizing: border-box;
   padding: var(--semantic-responsive-container-spacing);
   margin: var(--spacing-xl) auto;
@@ -51,6 +49,7 @@
 
 .responsiveContainer {
   width: var(--semantic-responsive-container);
+  max-width: 100%;
   box-sizing: border-box;
   padding: var(--spacing-m);
   margin: 0 auto;
@@ -77,14 +76,12 @@
 }
 
 .footer {
-  padding: var(--semantic-responsive-container-spacing);
-  padding-top: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
+  padding: var(--spacing-xl) var(--spacing-m);
   background-color: var(--theme-primary);
 
   &Grid {
     display: grid;
-    width: var(--semantic-responsive-container);
+    max-width: var(--semantic-responsive-container);
     margin: auto !important;
     gap: var(--spacing-xl);
     grid-template-columns: 1fr;
