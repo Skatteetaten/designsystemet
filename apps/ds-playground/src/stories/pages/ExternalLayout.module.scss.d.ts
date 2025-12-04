@@ -1,18 +1,11 @@
 declare const classNames: {
   readonly mainContent: 'mainContent';
   readonly article: 'article';
+  readonly wideContent: 'wideContent';
   readonly responsiveContainer: 'responsiveContainer';
   readonly responsiveWideContent: 'responsiveWideContent';
   readonly responsiveArticle: 'responsiveArticle';
-  readonly noPadding: 'noPadding';
-  readonly block: 'block';
-  readonly marginTopL: 'marginTopL';
-  readonly linkWrapper: 'linkWrapper';
   readonly marginBottomXL: 'marginBottomXL';
-  readonly marginBottomS: 'marginBottomS';
-  readonly marginRightS: 'marginRightS';
-  readonly flex: 'flex';
-  readonly columns: 'columns';
-  readonly secondColumn: 'secondColumn';
+  readonly marginTopS: 'marginTopS';
 };
 export default classNames;
