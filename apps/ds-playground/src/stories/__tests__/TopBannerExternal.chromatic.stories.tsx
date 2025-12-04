@@ -6,7 +6,7 @@ import * as TopBannerExternalStories from './TopBannerExternal.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/TopBannerExternal',
+  title: 'Chromatic/TopBannerExternal',
   component: TopBannerExternal,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof TopBannerExternal>;

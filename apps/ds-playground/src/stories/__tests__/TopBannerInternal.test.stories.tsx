@@ -17,7 +17,7 @@ import demoLogo from '../../assets/demo-logo-white.svg';
 
 const meta = {
   component: TopBannerInternal,
-  title: 'Tester/TopBanner/TopBannerInternal',
+  title: 'Tester/TopBannerInternal',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

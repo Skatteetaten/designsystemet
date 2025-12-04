@@ -15,7 +15,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 const caption = 'tabellcaption';
 const meta = {
   component: Table,
-  title: 'Tester/Table/Table',
+  title: 'Tester/Table',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

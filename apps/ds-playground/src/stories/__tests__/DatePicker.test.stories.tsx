@@ -38,7 +38,7 @@ const verifyAttribute =
 const today = new Date('2024-01-15');
 const meta = {
   component: DatePicker,
-  title: 'Tester/DatePicker/DatePicker',
+  title: 'Tester/DatePicker',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

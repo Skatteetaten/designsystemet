@@ -8,7 +8,7 @@ import * as TopBannerLogoStories from './TopBannerLogo.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/Logo',
+  title: 'Chromatic/TopBannerExternal/Logo (intern)',
   component: TopBannerLogo,
   tags: ['chromatic', '!autodocs'],
   parameters: {

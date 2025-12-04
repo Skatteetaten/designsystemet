@@ -6,7 +6,7 @@ import * as DescriptionListElementStories from './DescriptionListElement.test.st
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/DescriptionListElement',
+  title: 'Chromatic/DescriptionList/Element',
   component: DescriptionList.Element,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof DescriptionList.Element>;

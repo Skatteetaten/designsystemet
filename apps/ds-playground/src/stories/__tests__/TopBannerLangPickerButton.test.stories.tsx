@@ -11,7 +11,7 @@ import { ReactComponent as NorwegianFlagIcon } from '../../assets/no-flag.svg';
 
 const meta = {
   component: TopBannerLangPickerButton,
-  title: 'Tester/TopBanner/TopBannerLangPickerButton (intern)',
+  title: 'Tester/TopBannerExternal/LangPickerButton (intern)',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

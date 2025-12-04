@@ -17,7 +17,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: Select,
-  title: 'Tester/Select/Select',
+  title: 'Tester/Select',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

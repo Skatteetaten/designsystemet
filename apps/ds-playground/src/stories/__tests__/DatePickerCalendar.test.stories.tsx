@@ -25,7 +25,7 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
 const today = new Date('2024-01-15');
 const meta = {
   component: DatePickerCalendar,
-  title: 'Tester/DatePicker/DatePickerCalendar',
+  title: 'Tester/DatePicker/Calendar',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

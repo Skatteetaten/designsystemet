@@ -6,7 +6,7 @@ import { DatePickerCalendar } from '../../../../../libs/ds-forms/src/DatePicker/
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/DatePickerCalendar',
+  title: 'Chromatic/DatePicker/Calendar',
   component: DatePickerCalendar,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof DatePickerCalendar>;

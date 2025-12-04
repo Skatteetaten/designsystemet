@@ -6,7 +6,7 @@ import * as ListStories from './List.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/List/List',
+  title: 'Chromatic/List',
   component: List,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof List>;

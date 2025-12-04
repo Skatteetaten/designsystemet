@@ -6,7 +6,7 @@ import * as BreadcrumbsStories from './Breadcrumbs.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/Breadcrumbs/Breadcrumbs',
+  title: 'Chromatic/Breadcrumbs',
   component: Breadcrumbs,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Breadcrumbs>;

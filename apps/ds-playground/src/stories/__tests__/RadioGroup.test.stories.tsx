@@ -14,7 +14,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: RadioGroup,
-  title: 'Tester/RadioGroup/RadioGroup',
+  title: 'Tester/RadioGroup',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

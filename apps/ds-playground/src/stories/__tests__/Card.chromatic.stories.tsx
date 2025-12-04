@@ -6,7 +6,7 @@ import * as CardStories from './Card.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/Card/Card',
+  title: 'Chromatic/Card',
   component: Card,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Card>;
