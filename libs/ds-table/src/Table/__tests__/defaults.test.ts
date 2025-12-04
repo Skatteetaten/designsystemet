@@ -7,7 +7,8 @@ import {
   getTableRowExpandButtonPositionDefault,
   getTableRowExpandButtonTitleDefault,
   getTableRowIsExpandedDefault,
-  getTableSumAlignmentDefault,
+  getTableSumLabelAlignmentDefault,
+  getTableSumValueAlignmentDefault,
   getTableSumTextDefault,
   getTableVariantDefault,
 } from '../defaults';
@@ -28,8 +29,11 @@ describe('Table defaults', () => {
   it('Når getTableCellAlignmentDefault kalles, så returnerer den riktig verdi', () => {
     expect(getTableCellAlignmentDefault()).toBe('left');
   });
-  it('Når getTableSumAlignmentDefault kalles, så returnerer den riktig verdi', () => {
-    expect(getTableSumAlignmentDefault()).toBe('left');
+  it('Når getTableSumLabelAlignmentDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getTableSumLabelAlignmentDefault()).toBe('left');
+  });
+  it('Når getTableSumValueAlignmentDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getTableSumValueAlignmentDefault()).toBe('right');
   });
   it('Når getTableRowIsExpandedDefault kalles, så returnerer den riktig verdi', () => {
     expect(getTableRowIsExpandedDefault()).toBe(false);

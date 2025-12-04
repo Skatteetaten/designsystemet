@@ -4,8 +4,9 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   Table,
-  getTableSumAlignmentDefault,
+  getTableSumLabelAlignmentDefault,
   getTableSumTextDefault,
+  getTableSumValueAlignmentDefault,
 } from '@skatteetaten/ds-table';
 
 import { category } from '../../../.storybook/helpers';
@@ -28,13 +29,13 @@ const meta = {
     labelAlignment: {
       table: {
         category: category.props,
-        defaultValue: { summary: getTableSumAlignmentDefault() },
+        defaultValue: { summary: getTableSumLabelAlignmentDefault() },
       },
     },
     valueAlignment: {
       table: {
         category: category.props,
-        defaultValue: { summary: getTableSumAlignmentDefault() },
+        defaultValue: { summary: getTableSumValueAlignmentDefault() },
       },
     },
     hasTopSeparator: { table: { category: category.props } },

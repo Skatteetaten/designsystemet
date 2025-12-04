@@ -9,7 +9,8 @@ export const getTableVariantDefault = (): Density => 'standard';
 export const getTableRowExpandButtonPositionDefault = (): EditButtonPosition =>
   'left';
 export const getTableCellAlignmentDefault = (): TextAlignment => 'left';
-export const getTableSumAlignmentDefault = (): TextAlignment => 'left';
+export const getTableSumLabelAlignmentDefault = (): TextAlignment => 'left';
+export const getTableSumValueAlignmentDefault = (): TextAlignment => 'right';
 export const getTableRowIsExpandedDefault = (): boolean => false;
 export const getTableSumTextDefault = (): string =>
   dsI18n.t('ds_tables:tablesum.Sum');
