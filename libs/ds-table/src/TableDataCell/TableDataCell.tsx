@@ -27,7 +27,9 @@ export const TableDataCell = ({
 }: TableDataCellProps): JSX.Element => {
   const context = useContext(TableContext);
   const variant = context?.variant ?? getTableVariantDefault();
-  const variantClassName = styles[`dataCell_${variant}`];
+  const variantClassName = context?.size
+    ? styles[`dataCell_${context.size}`]
+    : styles[`dataCell_${variant}`];
   const alignmentClassName = styles[`dataCell_${alignment}`];
 
   const concatenatedClassName = `${

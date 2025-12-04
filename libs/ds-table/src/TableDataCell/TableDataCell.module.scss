@@ -12,6 +12,18 @@
     padding-left: var(--spacing-l);
   }
 
+  &_small {
+    padding: var(--spacing-xs) var(--spacing-s);
+  }
+
+  &_medium {
+    padding: var(--spacing-s-plus) var(--spacing-s);
+  }
+
+  &_large {
+    padding: var(--spacing-m);
+  }
+
   &_standard {
     @extend %cell-padding;
   }
@@ -28,6 +40,7 @@
     text-align: center;
   }
 
+  &_extraSmall,
   &_compact {
     padding: var(--spacing-xs) var(--spacing-s);
     font-size: var(--font-size-s);

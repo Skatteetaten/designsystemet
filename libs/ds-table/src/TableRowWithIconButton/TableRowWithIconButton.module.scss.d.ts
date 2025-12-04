@@ -1,10 +1,16 @@
 declare const classNames: {
   readonly buttonCell: 'buttonCell';
+  readonly buttonCell_small: 'buttonCell_small';
+  readonly buttonCell_medium: 'buttonCell_medium';
+  readonly buttonCell_large: 'buttonCell_large';
+  readonly buttonCell_extraSmall: 'buttonCell_extraSmall';
   readonly buttonCell_expanded: 'buttonCell_expanded';
   readonly buttonCell_compact: 'buttonCell_compact';
   readonly expandButton: 'expandButton';
+  readonly expandButton_extraSmall: 'expandButton_extraSmall';
   readonly expandButton_compact: 'expandButton_compact';
   readonly expandableContent: 'expandableContent';
+  readonly expandableContent_extraSmall: 'expandableContent_extraSmall';
   readonly expandableContent_compact: 'expandableContent_compact';
   readonly expandedRowRight: 'expandedRowRight';
   readonly row_noBorder: 'row_noBorder';

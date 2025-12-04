@@ -37,6 +37,7 @@ export const Table = (({
   caption,
   rowInEditModeId: externalRowInEditModeId,
   variant = getTableVariantDefault(),
+  size,
   sortState,
   canBeManuallyFocused,
   hasFullWidth,
@@ -60,8 +61,12 @@ export const Table = (({
   }
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
 
-  const variantClassName = styles[`table_${variant}`];
-  const captionVariantClassName = styles[`tableCaption_${variant}`];
+  const variantClassName = size
+    ? styles[`table_${size}`]
+    : styles[`table_${variant}`];
+  const captionVariantClassName = size
+    ? styles[`tableCaption_${size}`]
+    : styles[`tableCaption_${variant}`];
   const concatenatedClassName = `${styles.table} ${
     hasFullWidth ? styles.table_fullWidth : ''
   } ${variantClassName} ${className}`.trim();
@@ -137,6 +142,7 @@ export const Table = (({
         sortState,
         setSortState,
         variant,
+        size,
         rowInEditModeId,
         setRowInEditModeId: setInternalRowInEditModeId,
       }}

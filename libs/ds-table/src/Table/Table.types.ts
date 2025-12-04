@@ -1,6 +1,11 @@
 import { Dispatch, ReactNode, Ref, RefObject, SetStateAction, FC } from 'react';
 
-import { BaseProps, Density, Position } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  Density,
+  Position,
+  Size,
+} from '@skatteetaten/ds-core-utils';
 
 import { TableBody } from '../TableBody/TableBody';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
@@ -12,6 +17,11 @@ import { TableSum } from '../TableSum/TableSum';
 
 export const tableVariantArr = ['standard', 'compact'] as const;
 export type TableVariant = (typeof tableVariantArr)[number];
+
+export type TableSize = Extract<
+  Size,
+  'extraSmall' | 'small' | 'medium' | 'large'
+>;
 
 export const tableCellAsArr = ['td', 'th'] as const;
 export type TableCellAs = (typeof tableCellAsArr)[number];
@@ -30,6 +40,7 @@ export interface TableContextProps {
   sortState?: SortState;
   setSortState?: Dispatch<SetStateAction<SortState>>;
   variant: Density;
+  size?: TableSize;
   rowInEditModeId?: string;
   setRowInEditModeId: Dispatch<SetStateAction<string | undefined>>;
 }
@@ -44,8 +55,14 @@ export interface TableProps extends BaseProps {
   ref?: Ref<HTMLTableElement>;
   /** Table caption */
   caption: string;
-  /** Definerer stilen til tabellen. */
+  /**
+   * @deprecated Erstattes as 'size' i neste major versjon.
+   *
+   *   Definerer stilen til tabellen.
+   */
   variant?: Density;
+  /** Definerer størrelse på tabellen. */
+  size?: TableSize;
   /** Holder styr på sortering av kolonner */
   sortState?: SortState;
   /**

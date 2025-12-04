@@ -3,6 +3,19 @@
 .buttonCell {
   padding: var(--spacing-xs);
 
+  &_small {
+    padding: 0.375rem var(--spacing-s) 0 var(--spacing-s);
+  }
+
+  &_medium {
+    padding: var(--spacing-s);
+  }
+
+  &_large {
+    padding: 0.375rem var(--spacing-xs) 0 var(--spacing-xs);
+  }
+
+  &_extraSmall,
   &_expanded,
   &_compact {
     padding: var(--spacing-xs) var(--spacing-xs) 0;
@@ -17,6 +30,7 @@
     --semantic-line-height-buttons: var(--semantic-line-height-table);
   }
 
+  &_extraSmall,
   &_compact {
     font-size: var(--font-size-s);
 
@@ -36,6 +50,7 @@
   margin-top: var(--spacing-xs);
   margin-left: calc(var(--spacing-xs) * -1);
 
+  &_extraSmall,
   &_compact {
     margin-top: 0;
   }
