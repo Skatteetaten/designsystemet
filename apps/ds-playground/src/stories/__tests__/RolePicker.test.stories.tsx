@@ -1086,3 +1086,19 @@ export const WithErrorReset = {
     expect(errorAlert).not.toBeInTheDocument();
   },
 } satisfies Story;
+
+export const OnMobile = {
+  render: DefaultTemplate,
+  name: 'On Mobile',
+  args: { ...defaultArgs },
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+  },
+} satisfies Story;
