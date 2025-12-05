@@ -6,7 +6,7 @@ import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBanner
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/LangPicker',
+  title: 'Chromatic/TopBannerExternal/LangPicker (intern)',
   component: TopBannerLangPicker,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof TopBannerLangPicker>;

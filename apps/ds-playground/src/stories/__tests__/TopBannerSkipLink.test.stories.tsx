@@ -11,7 +11,7 @@ import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const meta = {
   component: TopBannerSkipLink,
-  title: 'Tester/TopBanner/TopBannerSkipLink (intern)',
+  title: 'Tester/TopBannerSkipLink (intern)',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

@@ -12,7 +12,7 @@ import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: StepList,
-  title: 'Tester/StepList/StepList',
+  title: 'Tester/StepList',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

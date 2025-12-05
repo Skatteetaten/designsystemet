@@ -6,7 +6,7 @@ import * as ChipsRemovableStories from './ChipsRemovable.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/ChipsRemovable',
+  title: 'Chromatic/Chips/Removable',
   component: ChipsRemovable,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof ChipsRemovable>;

@@ -17,7 +17,7 @@ const Template: StoryFn<typeof Popover> = (args) => (
 
 const meta = {
   component: Popover,
-  title: 'Tester/Popover/Popover',
+  title: 'Tester/Popover',
   argTypes: {
     // Baseprops
     // @ts-expect-error disable baseprops gir error fordi denne komponenten ikke støtter baseprops, men de skal disables alikevel

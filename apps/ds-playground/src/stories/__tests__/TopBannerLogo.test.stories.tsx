@@ -12,7 +12,7 @@ import customMobileLogo from '../../assets/custom-mobile-logo.svg';
 
 const meta = {
   component: TopBannerLogo,
-  title: 'Tester/TopBanner/TopBannerLogo (intern)',
+  title: 'Tester/TopBannerExternal/Logo (intern)',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

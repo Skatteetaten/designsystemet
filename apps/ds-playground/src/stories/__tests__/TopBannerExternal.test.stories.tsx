@@ -18,7 +18,7 @@ import skeLogo from '../../assets/ske-logo.svg';
 
 const meta = {
   component: TopBannerExternal,
-  title: 'Tester/TopBanner/TopBannerExternal',
+  title: 'Tester/TopBannerExternal',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

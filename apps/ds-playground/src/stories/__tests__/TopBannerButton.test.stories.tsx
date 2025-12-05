@@ -17,7 +17,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: TopBannerButton,
-  title: 'Tester/TopBanner/TopBannerButton (intern)',
+  title: 'Tester/TopBannerExternal/Button (intern)',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

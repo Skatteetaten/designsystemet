@@ -11,7 +11,7 @@ const defaultContent =
 
 const meta = {
   component: Accordion,
-  title: 'Tester/Accordion/Accordion',
+  title: 'Tester/Accordion',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

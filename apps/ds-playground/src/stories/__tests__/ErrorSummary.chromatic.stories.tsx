@@ -6,7 +6,7 @@ import * as ErrorSummaryStories from './ErrorSummary.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/ErrorSummary/ErrorSummary',
+  title: 'Chromatic/ErrorSummary',
   component: ErrorSummary,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof ErrorSummary>;

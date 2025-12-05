@@ -6,7 +6,7 @@ import * as ChipsToggleStories from './ChipsToggle.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/ChipsToggle',
+  title: 'Chromatic/Chips/Toggle',
   component: ChipsToggle,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof ChipsToggle>;

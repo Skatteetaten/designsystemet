@@ -6,7 +6,7 @@ import { TopBannerLangPickerButton } from '../../../../../libs/ds-layout/src/Top
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/LangPickerButton',
+  title: 'Chromatic/TopBannerExternal/LangPickerButton (intern)',
   component: TopBannerLangPickerButton,
   tags: ['chromatic', '!autodocs'],
   parameters: {

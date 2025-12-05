@@ -10,7 +10,7 @@ const elementId = 'htmlId';
 
 const meta = {
   component: Breadcrumbs,
-  title: 'Tester/Breadcrumbs/Breadcrumbs',
+  title: 'Tester/Breadcrumbs',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

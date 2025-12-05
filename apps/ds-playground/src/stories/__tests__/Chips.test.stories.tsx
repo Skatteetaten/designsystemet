@@ -10,7 +10,7 @@ const elementId = 'htmlId';
 
 const meta = {
   component: Chips,
-  title: 'Tester/Chips/Chips',
+  title: 'Tester/Chips',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

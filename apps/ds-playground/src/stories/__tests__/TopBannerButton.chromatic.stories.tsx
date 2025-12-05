@@ -8,7 +8,7 @@ import * as TopBannerButtonStories from './TopBannerButton.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/Button',
+  title: 'Chromatic/TopBannerExternal/Button (intern)',
   component: TopBannerButton,
   tags: ['chromatic', '!autodocs'],
   parameters: {

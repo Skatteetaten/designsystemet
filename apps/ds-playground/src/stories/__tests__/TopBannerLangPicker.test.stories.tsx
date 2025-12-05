@@ -25,7 +25,7 @@ const LangPickerTemplate: StoryFn<typeof TopBannerLangPicker> = (args) => {
 
 const meta = {
   component: TopBannerLangPicker,
-  title: 'Tester/TopBanner/TopBannerLangPicker (intern)',
+  title: 'Tester/TopBannerExternal/LangPicker (intern)',
   render: LangPickerTemplate,
   argTypes: {
     // Baseprops
