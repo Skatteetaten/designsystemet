@@ -60,22 +60,22 @@ const Template: StoryFn<typeof Table> = (args) => (
           {'Edible'}
         </Table.DataCell>
         <Table.DataCell>{'Donuts'}</Table.DataCell>
-        <Table.DataCell>{'3,000'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'3,000'}</Table.DataCell>
       </Table.Row>
       <Table.Row>
         <Table.DataCell>{'Cake'}</Table.DataCell>
-        <Table.DataCell>{'3,000'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'3,000'}</Table.DataCell>
       </Table.Row>
       <Table.Row>
         <Table.DataCell rowSpan={2} className={'rowSpanRight'}>
           {'Non-Edible'}
         </Table.DataCell>
         <Table.DataCell>{'Stationery'}</Table.DataCell>
-        <Table.DataCell>{'18,000'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'18,000'}</Table.DataCell>
       </Table.Row>
       <Table.Row>
         <Table.DataCell>{'Batteries'}</Table.DataCell>
-        <Table.DataCell>{'9,000'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'9,000'}</Table.DataCell>
       </Table.Row>
     </Table.Body>
     <Table.Sum colSpan={2}>{'32,000'}</Table.Sum>
