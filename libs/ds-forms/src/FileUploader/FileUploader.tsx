@@ -64,8 +64,10 @@ export const FileUploader = (({
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const inputRef = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const deleteButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const [srOnlyText, setSrOnlyText] = useState<string>();
   const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [shouldRenderStatus, setShouldrenderStatus] = useState<boolean>(false);
   const generatedId = useId();
   const [filesPendingDelete, setFilesPendingDelete] = useState<
     Record<string, boolean>
@@ -73,6 +75,14 @@ export const FileUploader = (({
 
   const [newFiles, setNewFiles] = useState<UploadedFile[]>([]);
   const prevFilesRef = useRef<UploadedFile[] | undefined>(undefined);
+
+  useEffect(() => {
+    //NOTE: hvis vi får samme statusmelding to ganger på rad så vil ikke skjermen lese det opp igjen med mindre vi tømmer den først
+    setShouldrenderStatus(false);
+    setTimeout(() => {
+      setShouldrenderStatus(true);
+    }, 120);
+  }, [uploadResult]);
 
   useEffect(() => {
     if (uploadedFiles) {
@@ -116,6 +126,8 @@ export const FileUploader = (({
     if (isUploading) {
       return;
     }
+    //NOTE: med Mac og VoiceOVer havner focus riktig på knappen automatisk, men for windows med jaws/NVDA er det nødvendig å bruke .focus()
+    buttonRef.current?.focus();
 
     const files = getFiles(event);
     if (shouldNormalizeFileName) {
@@ -153,8 +165,6 @@ export const FileUploader = (({
     event.preventDefault();
     event.stopPropagation();
   };
-
-  const deleteButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const UpdateFocusAfterDelete = (
     uploadedFiles: UploadedFile[] | undefined,
@@ -327,7 +337,7 @@ export const FileUploader = (({
         className={styles.alert}
         variant={uploadResult?.hasUploadFailed ? 'error' : 'success'}
       >
-        {uploadResult?.statusMessage}
+        {shouldRenderStatus && uploadResult?.statusMessage}
       </Alert>
       {uploadedFiles && (
         <ul className={styles.fileList}>
