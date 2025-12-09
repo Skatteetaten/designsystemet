@@ -123,7 +123,7 @@ export const Examples: Story = {
       <form noValidate>
         <TextField
           label={'Ønsket kredittgrense'}
-          className={'textField300'}
+          className={'textField300 bottomSpacingL'}
           description={'Gjennomsnittlig oppgjør for fire dager'}
           value={creditInput}
           hasSpacing
@@ -166,6 +166,47 @@ Examples.parameters = exampleParameters;
 
 export const WithDataList: Story = {
   render: (_args): JSX.Element => {
+    const [timeValue, setTimeValue] = useState('');
+
+    // Eksempel på formateringsfunksjon
+    const formatTimeOnBlur = (raw: string): string => {
+      const digits = raw.replace(/\D/g, '');
+
+      if (digits.length === 0) return '';
+
+      let hh = 0;
+      let mm = 0;
+
+      if (digits.length === 1) {
+        hh = Number(digits);
+        mm = 0;
+      } else if (digits.length === 2) {
+        hh = Number(digits.slice(0, 2));
+        mm = 0;
+      } else if (digits.length === 3) {
+        hh = Number(digits.slice(0, 1));
+        mm = Number(digits.slice(1, 3));
+      } else {
+        hh = Number(digits.slice(0, 2));
+        mm = Number(digits.slice(2, 4));
+      }
+
+      const HH = String(hh).padStart(2, '0');
+      const MM = String(mm).padStart(2, '0');
+      return `${HH}:${MM}`;
+    };
+
+    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+      setTimeValue(e.target.value);
+    };
+
+    const handleBlur: React.FocusEventHandler<HTMLInputElement> = (e) => {
+      setTimeValue((prev) => {
+        const formatted = formatTimeOnBlur(prev);
+        return formatted;
+      });
+    };
+
     const countries = [
       { text: 'Afghanistan', key: 'AF' },
       { text: 'Åland Islands', key: 'AX' },
@@ -414,15 +455,39 @@ export const WithDataList: Story = {
 
     return (
       <form noValidate>
-        <TextField label={'Nettleser'} list={'browsers'} />
-        <datalist id={'browsers'}>
-          <option value={'Edge'} />
-          <option value={'Firefox'} />
-          <option value={'Chrome'} />
-          <option value={'Opera'} />
-          <option value={'Safari'} />
+        <TextField
+          className={'bottomSpacingL textField150'}
+          label={'Tid (tt:mm)'}
+          list={'time-suggestions'}
+          value={timeValue}
+          inputMode={'numeric'}
+          onBlur={handleBlur}
+          onChange={handleChange}
+        />
+        <datalist id={'time-suggestions'}>
+          <option value={'08:00'} />
+          <option value={'08:30'} />
+          <option value={'09:00'} />
+          <option value={'09:30'} />
+          <option value={'10:00'} />
+          <option value={'10:30'} />
+          <option value={'11:00'} />
+          <option value={'11:30'} />
+          <option value={'12:00'} />
+          <option value={'12:30'} />
+          <option value={'13:00'} />
+          <option value={'13:30'} />
+          <option value={'14:00'} />
+          <option value={'14:30'} />
+          <option value={'15:00'} />
+          <option value={'15:30'} />
+          <option value={'16:00'} />
         </datalist>
-        <TextField label={'Land'} list={'countries'} />
+        <TextField
+          className={'textField300'}
+          label={'Land'}
+          list={'countries'}
+        />
         <datalist id={'countries'}>
           {countries.map(({ text, key }) => (
             <option key={key} value={text} />
