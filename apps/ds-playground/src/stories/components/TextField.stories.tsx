@@ -193,6 +193,9 @@ export const WithDataList: Story = {
 
       const HH = String(hh).padStart(2, '0');
       const MM = String(mm).padStart(2, '0');
+
+      if (hh > 23 || mm > 59) return raw;
+
       return `${HH}:${MM}`;
     };
 
