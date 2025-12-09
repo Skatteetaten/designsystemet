@@ -179,10 +179,8 @@ export const WithDataList: Story = {
 
       if (digits.length === 1) {
         hh = Number(digits);
-        mm = 0;
       } else if (digits.length === 2) {
         hh = Number(digits.slice(0, 2));
-        mm = 0;
       } else if (digits.length === 3) {
         hh = Number(digits.slice(0, 1));
         mm = Number(digits.slice(1, 3));
