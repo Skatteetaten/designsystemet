@@ -113,6 +113,7 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
+  name: 'Beløp og postnummer',
   render: (_args): JSX.Element => {
     const [creditInput, setCreditInput] = useState('10000');
 
@@ -122,7 +123,7 @@ export const Examples: Story = {
     return (
       <form noValidate>
         <TextField
-          label={'Ønsket kredittgrense'}
+          label={'Ønsket kredittgrense (NOK)'}
           className={'textField300 bottomSpacingL'}
           description={'Gjennomsnittlig oppgjør for fire dager'}
           value={creditInput}
@@ -154,7 +155,7 @@ export const Examples: Story = {
               setErrorMessage('Postnummer må inneholde fire tall.');
             }
             if (e.target.validity.valueMissing) {
-              setErrorMessage('Postnummer er påkrevd.');
+              setErrorMessage('Postnummer må fylles ut.');
             }
           }}
         />
@@ -164,9 +165,11 @@ export const Examples: Story = {
 } satisfies Story;
 Examples.parameters = exampleParameters;
 
-export const WithDataList: Story = {
+export const WithTimeInput: Story = {
+  name: 'Tidspunkt',
   render: (_args): JSX.Element => {
     const [timeValue, setTimeValue] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     // Eksempel på formateringsfunksjon
     const formatTimeOnBlur = (raw: string): string => {
@@ -198,16 +201,70 @@ export const WithDataList: Story = {
     };
 
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+      setErrorMessage('');
       setTimeValue(e.target.value);
     };
 
     const handleBlur: React.FocusEventHandler<HTMLInputElement> = (e) => {
       setTimeValue((prev) => {
         const formatted = formatTimeOnBlur(prev);
+
+        const isValid = /^\d{1,2}:\d{2}$/.test(formatted);
+
+        if (!isValid) {
+          setErrorMessage(
+            'Skriv tiden med 24-timersformat, for eksempel 14:30.'
+          );
+        } else {
+          setErrorMessage('');
+        }
+
         return formatted;
       });
     };
 
+    return (
+      <form noValidate>
+        <TextField
+          className={'textField150'}
+          errorMessage={errorMessage}
+          inputMode={'numeric'}
+          label={'Tid (tt:mm)'}
+          list={'time-suggestions'}
+          value={timeValue}
+          required
+          onBlur={handleBlur}
+          onChange={handleChange}
+        />
+        <datalist id={'time-suggestions'}>
+          <option value={'08:00'} />
+          <option value={'08:30'} />
+          <option value={'09:00'} />
+          <option value={'09:30'} />
+          <option value={'10:00'} />
+          <option value={'10:30'} />
+          <option value={'11:00'} />
+          <option value={'11:30'} />
+          <option value={'12:00'} />
+          <option value={'12:30'} />
+          <option value={'13:00'} />
+          <option value={'13:30'} />
+          <option value={'14:00'} />
+          <option value={'14:30'} />
+          <option value={'15:00'} />
+          <option value={'15:30'} />
+          <option value={'16:00'} />
+        </datalist>
+      </form>
+    );
+  },
+} satisfies Story;
+WithTimeInput.parameters = exampleParameters;
+
+export const WithDataList: Story = {
+  name: 'Liste med land',
+
+  render: (_args): JSX.Element => {
     const countries = [
       { text: 'Afghanistan', key: 'AF' },
       { text: 'Åland Islands', key: 'AX' },
@@ -456,34 +513,6 @@ export const WithDataList: Story = {
 
     return (
       <form noValidate>
-        <TextField
-          className={'bottomSpacingL textField150'}
-          label={'Tid (tt:mm)'}
-          list={'time-suggestions'}
-          value={timeValue}
-          inputMode={'numeric'}
-          onBlur={handleBlur}
-          onChange={handleChange}
-        />
-        <datalist id={'time-suggestions'}>
-          <option value={'08:00'} />
-          <option value={'08:30'} />
-          <option value={'09:00'} />
-          <option value={'09:30'} />
-          <option value={'10:00'} />
-          <option value={'10:30'} />
-          <option value={'11:00'} />
-          <option value={'11:30'} />
-          <option value={'12:00'} />
-          <option value={'12:30'} />
-          <option value={'13:00'} />
-          <option value={'13:30'} />
-          <option value={'14:00'} />
-          <option value={'14:30'} />
-          <option value={'15:00'} />
-          <option value={'15:30'} />
-          <option value={'16:00'} />
-        </datalist>
         <TextField
           className={'textField300'}
           label={'Land'}
