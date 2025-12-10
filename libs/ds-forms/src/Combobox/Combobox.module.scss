@@ -4,7 +4,7 @@
   @include styles.sr-only;
 }
 
-[data-has-spacing='true'] {
+.wrapper[data-has-spacing='true'] {
   margin-bottom: var(--spacing-m);
 }
 
