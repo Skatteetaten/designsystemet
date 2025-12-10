@@ -344,9 +344,9 @@ export const typedKommuneOptions: TypedComboboxOption<KommuneTestMetaData>[] = [
   },
 ];
 
+//Returns the first 15 elements sorted alphabetically non randomly
 export const getComboboxStoryOptions = (count = 15): ComboboxOption[] => {
-  const shuffled = [...comboboxStoryOptions].sort(() => 0.5 - Math.random());
-  return shuffled
+  return comboboxStoryOptions
     .slice(0, count)
     .sort((a, b) => a.label.localeCompare(b.label));
 };
