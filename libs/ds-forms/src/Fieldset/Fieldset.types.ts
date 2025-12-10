@@ -13,7 +13,9 @@ export interface FieldsetProps
   extends RequiredFieldsetHTMLAttributes,
     BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
-  classNames?: Prettify<{ legend?: string } & HelpProps['classNames']>;
+  classNames?: Prettify<
+    { legend?: string; contentContainer?: string } & HelpProps['classNames']
+  >;
   /** Innhold */
   children: ReactNode;
   /** Ledetekst */

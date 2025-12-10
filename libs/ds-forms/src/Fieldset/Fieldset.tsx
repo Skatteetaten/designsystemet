@@ -44,14 +44,12 @@ export const Fieldset = ({
         : styles.legendWithMarkup_required;
   }
   const hideLegendClassName = hideLegend ? styles.srOnly : '';
-  const noMarginBottomLegendClassName =
-    description || helpText ? styles.legendNoMarginBottom : '';
   const noMarginTopContentContainerClassName = hideLegend
     ? styles.contentContainerNoMarginTop
     : '';
   const legendClassName = `${
     styles.legend
-  } ${requiredMarkClassName} ${hideLegendClassName} ${noMarginBottomLegendClassName} ${
+  } ${requiredMarkClassName} ${hideLegendClassName} ${
     classNames?.legend ?? ''
   }`.trim();
 
@@ -86,7 +84,7 @@ export const Fieldset = ({
         onHelpToggle={onHelpToggle}
       />
       <div
-        className={`${styles.contentContainer} ${noMarginTopContentContainerClassName}`.trim()}
+        className={`${styles.contentContainer} ${noMarginTopContentContainerClassName} ${classNames?.contentContainer ?? ''}`.trim()}
       >
         {children}
       </div>
