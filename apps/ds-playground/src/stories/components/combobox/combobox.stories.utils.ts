@@ -344,11 +344,28 @@ export const typedKommuneOptions: TypedComboboxOption<KommuneTestMetaData>[] = [
   },
 ];
 
-//Returns the first 15 elements sorted alphabetically non randomly
 export const getComboboxStoryOptions = (count = 15): ComboboxOption[] => {
-  return comboboxStoryOptions
-    .slice(0, count)
-    .sort((a, b) => a.label.localeCompare(b.label));
+  const seenLetters = new Set<string>();
+  const result: ComboboxOption[] = [];
+
+  const sortedOptions = [...comboboxStoryOptions].sort((a, b) =>
+    a.label.localeCompare(b.label, 'nb')
+  );
+
+  for (const option of sortedOptions) {
+    const firstLetter = option.label[0].toUpperCase();
+
+    if (!seenLetters.has(firstLetter)) {
+      seenLetters.add(firstLetter);
+      result.push(option);
+
+      if (result.length >= count) {
+        break;
+      }
+    }
+  }
+
+  return result;
 };
 
 export const generatePerformanceTestData = (
