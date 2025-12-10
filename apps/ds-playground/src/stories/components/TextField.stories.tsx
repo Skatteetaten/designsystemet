@@ -124,7 +124,7 @@ export const Examples: Story = {
       <form noValidate>
         <TextField
           label={'Ønsket kredittgrense (NOK)'}
-          className={'textField300 bottomSpacingL'}
+          className={'textField300'}
           description={'Gjennomsnittlig oppgjør for fire dager'}
           value={creditInput}
           hasSpacing
@@ -171,7 +171,7 @@ export const WithTimeInput: Story = {
     const [timeValue, setTimeValue] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
-    // Eksempel på formateringsfunksjon
+    // Eksempel på enkel formateringsfunksjon
     const formatTimeOnBlur = (raw: string): string => {
       const digits = raw.replace(/\D/g, '');
 
@@ -206,21 +206,17 @@ export const WithTimeInput: Story = {
     };
 
     const handleBlur: React.FocusEventHandler<HTMLInputElement> = (e) => {
-      setTimeValue((prev) => {
-        const formatted = formatTimeOnBlur(prev);
+      const raw = e.currentTarget.value.trim();
+      const formatted = formatTimeOnBlur(raw);
+      const isValid = /^([01]?\d|2[0-3]):([0-5]\d)$/.test(formatted);
 
-        const isValid = /^\d{1,2}:\d{2}$/.test(formatted);
-
-        if (!isValid) {
-          setErrorMessage(
-            'Skriv tiden med 24-timersformat, for eksempel 14:30.'
-          );
-        } else {
-          setErrorMessage('');
-        }
-
-        return formatted;
-      });
+      if (!isValid) {
+        setTimeValue(raw);
+        setErrorMessage('Skriv tiden med 24-timersformat, for eksempel 14:30.');
+      } else {
+        setTimeValue(formatted);
+        setErrorMessage('');
+      }
     };
 
     return (
