@@ -247,6 +247,7 @@ const Combobox = memo(
         >
           <div className={styles.inputContentArea}>
             <ComboboxSelectedOptions
+              className={classNames?.selectedOptions}
               multiple={multiple}
               selectedValues={selectedValues}
               labelId={labelId}
