@@ -34,6 +34,7 @@ import { ComboboxValidationExample } from './ComboboxValidationExample';
 import comboboxValidationExampleSource from './ComboboxValidationExample.tsx?raw';
 import { category, htmlEventDescription } from '../../../../.storybook/helpers';
 import { SystemSVGPaths } from '../../utils/icon.systems';
+import './ComboboxMaxHeightExample.scss';
 
 const meta = {
   title: 'Komponenter/Combobox',
@@ -126,8 +127,11 @@ export const Primary: Story = {
   decorators: [width400Decorator],
   args: {
     name: 'kommune',
-    options: getComboboxStoryOptions(8),
+    options: getComboboxStoryOptions(),
     multiple: false,
+    classNames: {
+      options: 'maxHeight300',
+    },
   },
 };
 
@@ -137,7 +141,10 @@ export const Multiple: Story = {
   args: {
     name: 'kommuner',
     multiple: true,
-    options: getComboboxStoryOptions(8),
+    options: getComboboxStoryOptions(),
+    classNames: {
+      options: 'maxHeight300',
+    },
   },
 };
 
