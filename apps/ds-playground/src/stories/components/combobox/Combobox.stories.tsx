@@ -126,7 +126,7 @@ export const Primary: Story = {
   decorators: [width400Decorator],
   args: {
     name: 'kommune',
-    options: getComboboxStoryOptions(8),
+    options: getComboboxStoryOptions(),
     multiple: false,
   },
 };
@@ -137,7 +137,7 @@ export const Multiple: Story = {
   args: {
     name: 'kommuner',
     multiple: true,
-    options: getComboboxStoryOptions(8),
+    options: getComboboxStoryOptions(),
   },
 };
 

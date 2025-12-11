@@ -344,28 +344,10 @@ export const typedKommuneOptions: TypedComboboxOption<KommuneTestMetaData>[] = [
   },
 ];
 
-export const getComboboxStoryOptions = (count = 15): ComboboxOption[] => {
-  const seenLetters = new Set<string>();
-  const result: ComboboxOption[] = [];
-
-  const sortedOptions = [...comboboxStoryOptions].sort((a, b) =>
+export const getComboboxStoryOptions = (): ComboboxOption[] => {
+  return [...comboboxStoryOptions].sort((a, b) =>
     a.label.localeCompare(b.label, 'nb')
   );
-
-  for (const option of sortedOptions) {
-    const firstLetter = option.label[0].toUpperCase();
-
-    if (!seenLetters.has(firstLetter)) {
-      seenLetters.add(firstLetter);
-      result.push(option);
-
-      if (result.length >= count) {
-        break;
-      }
-    }
-  }
-
-  return result;
 };
 
 export const generatePerformanceTestData = (
