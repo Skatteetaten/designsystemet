@@ -21,8 +21,8 @@ import { ComboboxLoadingStatesExample } from './ComboboxLoadingStatesExample';
 import comboboxLoadingStatesExampleSource from './ComboboxLoadingStatesExample.tsx?raw';
 import { ComboboxMaxHeightExample } from './ComboboxMaxHeightExample';
 import comboboxMaxHeightExampleSource from './ComboboxMaxHeightExample.tsx?raw';
-import { ComboboxMaxHeightInputsExample } from './ComboboxMaxHeightInputsExample';
-import comboboxMaxHeightInputsExampleSource from './ComboboxMaxHeightInputsExample.tsx?raw';
+import { ComboboxMaxHeightInputListExample } from './ComboboxMaxHeightInputListExample';
+import comboboxMaxHeightInputListExampleSource from './ComboboxMaxHeightInputListExample.tsx?raw';
 import { ComboboxMaxSelectedExample } from './ComboboxMaxSelectedExample';
 import comboboxMaxSelectedExampleSource from './ComboboxMaxSelectedExample.tsx?raw';
 import {
@@ -160,15 +160,15 @@ MaxSelected.parameters = {
   },
 };
 
-export const MaxHeightInputs: StoryFunction = () => {
-  return <ComboboxMaxHeightInputsExample />;
+export const MaxHeightInputList: StoryFunction = () => {
+  return <ComboboxMaxHeightInputListExample />;
 };
-MaxHeightInputs.storyName = 'Begrenset høyde på input liste';
-MaxHeightInputs.decorators = [width400Decorator];
-MaxHeightInputs.parameters = {
+MaxHeightInputList.storyName = 'Begrenset høyde på input liste';
+MaxHeightInputList.decorators = [width400Decorator];
+MaxHeightInputList.parameters = {
   docs: {
     source: {
-      code: comboboxMaxHeightInputsExampleSource,
+      code: comboboxMaxHeightInputListExampleSource,
       language: 'tsx',
     },
   },
@@ -180,7 +180,7 @@ MaxHeightInputs.parameters = {
 export const MaxHeight: StoryFunction = () => {
   return <ComboboxMaxHeightExample />;
 };
-MaxHeight.storyName = 'Begrenset høyde på liste';
+MaxHeight.storyName = 'Begrenset høyde på options liste';
 MaxHeight.decorators = [width400Decorator];
 MaxHeight.parameters = {
   docs: {

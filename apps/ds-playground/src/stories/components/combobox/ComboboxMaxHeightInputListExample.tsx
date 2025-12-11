@@ -5,11 +5,11 @@ import { Combobox, type ComboboxOption } from '@skatteetaten/ds-forms';
 import { comboboxStoryOptions } from './combobox.stories.utils';
 import './ComboboxMaxHeightExample.scss';
 
-const codeExample = `/* ComboboxMaxHeightExample.scss */
-.maxHeight100 {
-  max-height: 100px;
-  overflow-y: auto;
+const codeExample = `.maxHeight {
+  max-height: 7rem;
   padding: 2px;
+  border-bottom: 1px solid var(--palette-graphite-50);
+  overflow-y: auto;
 
   -webkit-mask-image: linear-gradient(
     to bottom,
@@ -23,18 +23,17 @@ const codeExample = `/* ComboboxMaxHeightExample.scss */
   );
 }
 
-/* Bruk i Combobox */
 <Combobox
   label="Velg kommuner"
   options={options}
   multiple
   classNames={{
-    selectedOptions: 'maxHeight100',
+    inputList: 'maxHeight',
   }}
   // ... andre props
 />`;
 
-export const ComboboxMaxHeightInputsExample = (): JSX.Element => {
+export const ComboboxMaxHeightInputListExample = (): JSX.Element => {
   const [selectedMultiple, setSelectedMultiple] = useState<ComboboxOption[]>(
     comboboxStoryOptions.slice(0, 20)
   );
@@ -48,7 +47,7 @@ export const ComboboxMaxHeightInputsExample = (): JSX.Element => {
           options={comboboxStoryOptions}
           value={selectedMultiple.map((opt) => opt.value)}
           classNames={{
-            selectedOptions: 'maxHeight100',
+            inputList: 'maxHeight',
           }}
           hasSpacing
           multiple

@@ -34,7 +34,7 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
     {
       container?: string;
       options?: string;
-      selectedOptions?: string;
+      inputList?: string;
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
