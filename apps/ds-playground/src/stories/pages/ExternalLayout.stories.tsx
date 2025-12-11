@@ -2,7 +2,7 @@ import { JSX, useState, useId } from 'react';
 
 import { linkTo } from '@storybook/addon-links';
 
-import { Link, ScrollToTopButton } from '@skatteetaten/ds-buttons';
+import { Link, LinkGroup, ScrollToTopButton } from '@skatteetaten/ds-buttons';
 import { StepList } from '@skatteetaten/ds-collections';
 import { Card, Panel } from '@skatteetaten/ds-content';
 import { Checkbox, ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
@@ -32,7 +32,7 @@ export default {
   },
 };
 
-export const Layout = (): JSX.Element => {
+export const StandardLayout = (): JSX.Element => {
   const stepId = useId();
   const [activeStep, setActiveStep] = useState(1);
   const [step2, setStep2] = useState<string | undefined>(undefined);
@@ -218,7 +218,35 @@ export const Layout = (): JSX.Element => {
               </Paragraph>
             }
           >
-            <Paragraph>{'Her ligger innholdet til resultatet.'}</Paragraph>
+            <Paragraph hasSpacing>
+              {
+                'Her ligger mer utfyllende informasjon om resultatet. I veiledere pleier vi å vise resultatet sammen med StepList. I skjemaer for privatpersoner og virksomheter sender vi brukeren til en egen kvitteringsside.'
+              }
+            </Paragraph>
+            <LinkGroup>
+              <LinkGroup.Link
+                href={'#'}
+                onClick={(e) => {
+                  e.preventDefault();
+                  linkTo('Sidetyper/Ekstern/Kvittering', 'Kvittering')();
+                }}
+              >
+                {'Eksempel på kvittering'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={
+                  'https://www.skatteetaten.no/stilogtone/monster/skjemadesign/skjema-med-steplist/'
+                }
+                target={'_blank'}
+              >
+                {'Skjema med StepList'}
+              </LinkGroup.Link>
+            </LinkGroup>
+            <Paragraph>
+              {
+                'Resultatet er sentrert. Rammen har fått en maksbredde på --container-m, mens innholdet har en bredde på --semantic-responsive-article for å venstre- og høyrejustere teksten med resten av siden.'
+              }
+            </Paragraph>
           </StepList.Step>
         )}
 
@@ -236,7 +264,35 @@ export const Layout = (): JSX.Element => {
               </Paragraph>
             }
           >
-            <Paragraph>{'Her ligger innholdet til resultatet.'}</Paragraph>
+            <Paragraph hasSpacing>
+              {
+                'Her ligger mer utfyllende informasjon om resultatet. I veiledere pleier vi å vise resultatet sammen med StepList. I skjemaer for privatpersoner og virksomheter sender vi brukeren til en egen kvitteringsside.'
+              }
+            </Paragraph>
+            <LinkGroup hasSpacing>
+              <LinkGroup.Link
+                href={'#'}
+                onClick={(e) => {
+                  e.preventDefault();
+                  linkTo('Sidetyper/Ekstern/Kvittering', 'Kvittering')();
+                }}
+              >
+                {'Eksempel på kvittering'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={
+                  'https://www.skatteetaten.no/stilogtone/monster/skjemadesign/skjema-med-steplist/'
+                }
+                target={'_blank'}
+              >
+                {'Skjema med StepList'}
+              </LinkGroup.Link>
+            </LinkGroup>
+            <Paragraph>
+              {
+                'Resultatet er sentrert. Rammen har fått en maksbredde på --container-m, mens innholdet har en bredde på --semantic-responsive-article for å venstre- og høyrejustere teksten med resten av siden.'
+              }
+            </Paragraph>
           </StepList.Step>
         )}
       </StepList>
@@ -253,3 +309,4 @@ export const Layout = (): JSX.Element => {
     </main>
   );
 };
+StandardLayout.storyName = 'Standard sentrert';
