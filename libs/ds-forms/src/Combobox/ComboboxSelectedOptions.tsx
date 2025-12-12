@@ -8,6 +8,7 @@ import styles from './Combobox.module.scss';
 
 export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
   ({
+    className,
     multiple,
     selectedValues,
     onRemoveValue,
@@ -25,7 +26,10 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
     }
 
     return (
-      <Chips ref={setChipsRef} className={styles.chips}>
+      <Chips
+        ref={setChipsRef}
+        className={`${styles.chips} ${className ?? ''}`.trim()}
+      >
         {selectedValues.map((selectedValue) => (
           <Chips.Removable
             key={selectedValue.value}

@@ -34,6 +34,7 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
     {
       container?: string;
       options?: string;
+      inputList?: string;
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
@@ -123,6 +124,7 @@ export type ComboboxProps = SingleComboboxProps | MultiComboboxProps;
 export type ComboboxComponent = React.FC<ComboboxProps>;
 
 export type ComboboxSelectedOptionsProps = {
+  className?: string;
   multiple: boolean;
   selectedValues: ComboboxOption[];
   onRemoveValue: (value: ComboboxOption) => void;
