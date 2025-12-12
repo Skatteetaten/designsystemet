@@ -16,11 +16,15 @@ import { ContainersTokenExamplesGenerator } from './ContainersTokenExamplesGener
   <div className="external">
     <p>{'Oppsettet til publikumsløsninger består av følgende deler:'}</p>
     <p>
+      {'<div className="pageWrapper" />'}
+      <br />
       {'<TopBannerExternal />'}
       <br />
       {'<main></main>'}
       <br />
       {'<Footer />'}
+      <br />
+      {'<div />'}
     </p>
     <p>
       {
@@ -28,11 +32,26 @@ import { ContainersTokenExamplesGenerator } from './ContainersTokenExamplesGener
       }
     </p>
     <p>
+      {'.pageWrapper {'}
+      <br />
+      {'display: flex;'}
+      <br />
+      {'height: 100vh;'}
+      <br />
+      {'flex-direction: column;'}
+      <br />
+      {'justify-content: space-between;'}
+      <br />
+      {'}'}
+    </p>
+    <p>
       {'.main {'}
       <br />
       {'width: var(--semantic-responsive-container);'}
       <br />
       {'box-sizing: border-box;'}
+      <br />
+      {'flex: 1;'}
       <br />
       {'padding: var(--semantic-responsive-container-spacing);'}
       <br />
