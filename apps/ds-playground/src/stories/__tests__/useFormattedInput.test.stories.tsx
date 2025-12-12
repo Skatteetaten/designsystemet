@@ -31,18 +31,22 @@ const TestFormattedInput = ({
   type,
   initialValue,
   label,
+  locale,
 }: {
   type:
     | 'nationalIdentityNumber'
     | 'organisationNumber'
     | 'bankAccountNumber'
-    | 'phoneNumber';
+    | 'phoneNumber'
+    | 'number';
   initialValue?: string;
   label: string;
+  locale?: string;
 }): JSX.Element => {
   const formatter = useFormattedInput({
     type,
     initialValue,
+    locale,
   });
 
   return (
@@ -431,17 +435,11 @@ export const UndoRedoWithDelete = {
 
     // Move cursor to position after "1234 " and delete
     textbox.setSelectionRange(5, 5);
-    //NOTE: testen blir ustabil hvis man bruker userEvent.keyboard for delete i stedet for userEvent.type
-    await userEvent.type(textbox, '{Delete}', {
-      initialSelectionStart: 5,
-      initialSelectionEnd: 5,
-    });
+    await userEvent.keyboard('{Delete}');
     await expect(textbox).toHaveValue(formatNBS('1234 67 8901'));
 
-    await userEvent.type(textbox, '{Delete}', {
-      initialSelectionStart: 5,
-      initialSelectionEnd: 5,
-    });
+    textbox.setSelectionRange(5, 5);
+    await userEvent.keyboard('{Delete}');
     await expect(textbox).toHaveValue(formatNBS('1234 78 901'));
 
     // Undo the deletes
@@ -619,5 +617,269 @@ export const UndoRedoEmptyHistory = {
     // Try to undo past the beginning
     await userEvent.keyboard('{Meta>}z{/Meta}');
     await expect(textbox).toHaveValue('');
+  },
+} satisfies Story;
+
+// Test component for number type that displays rawValue and numberValue
+const TestNumberInput = ({
+  initialValue,
+  label,
+  locale,
+}: {
+  initialValue?: string;
+  label: string;
+  locale?: string;
+}): JSX.Element => {
+  const formatter = useFormattedInput({
+    type: 'number',
+    initialValue,
+    locale,
+    allowDecimals: true,
+  });
+
+  return (
+    <>
+      <TextField
+        label={label}
+        value={formatter.value}
+        data-testid={'formatted-input-number'}
+        onChange={formatter.onChange}
+        onKeyDown={formatter.onKeyDown}
+      />
+      <div data-testid={'raw-value'}>
+        {'Raw: '}
+        {formatter.rawValue}
+      </div>
+      <div data-testid={'number-value'}>
+        {'Number: '}
+        {formatter.numberValue}
+      </div>
+    </>
+  );
+};
+
+export const NumberFormatting = {
+  name: 'Number - Basic Formatting',
+  render: (): JSX.Element => (
+    <TestNumberInput initialValue={'1234567'} label={'Tall'} />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    // Skal formatere med tusen-skilletegn (non-breaking space i nb-NO)
+    await expect(textbox).toHaveValue(formatNBS('1 234 567'));
+
+    // Test typing
+    textbox.focus();
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '9876543');
+    await expect(textbox).toHaveValue(formatNBS('9 876 543'));
+  },
+} satisfies Story;
+
+export const NumberWithDecimal = {
+  name: 'Number - Decimal Input',
+  render: (): JSX.Element => (
+    <TestNumberInput initialValue={'1234,56'} label={'Tall med desimaler'} />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    // Skal vise med desimalkomma (nb-NO)
+    await expect(textbox).toHaveValue(formatNBS('1 234,56'));
+
+    // Skriv ny verdi med desimaler
+    textbox.focus();
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '9999,99');
+    await expect(textbox).toHaveValue(formatNBS('9 999,99'));
+  },
+} satisfies Story;
+
+export const NumberNegativeValue = {
+  name: 'Number - Negative Value',
+  render: (): JSX.Element => (
+    <TestNumberInput initialValue={'-1234'} label={'Negativt tall'} />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    // Negative tall skal beholde minus-tegn
+    await expect(textbox).toHaveValue(formatNBS('-1 234'));
+
+    textbox.focus();
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '-5678,90');
+    await expect(textbox).toHaveValue(formatNBS('-5 678,90'));
+  },
+} satisfies Story;
+
+export const NumberValueExtraction = {
+  name: 'Number - Value Extraction',
+  render: (): JSX.Element => (
+    <TestNumberInput initialValue={'1234,56'} label={'Verdiuttrekking'} />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const rawValueDisplay = canvas.getByTestId('raw-value');
+    const numberValueDisplay = canvas.getByTestId('number-value');
+
+    await expect(textbox).toHaveValue(formatNBS('1 234,56'));
+    // rawValue skal inneholde tall og desimalkomma uten tusen-skilletegn
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 1234,56');
+    // numberValue skal være et JavaScript-tall
+    await expect(numberValueDisplay).toHaveTextContent('Number: 1234.56');
+
+    textbox.focus();
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '9876,54');
+
+    await waitFor(() => {
+      expect(rawValueDisplay).toHaveTextContent('Raw: 9876,54');
+    });
+    await waitFor(() => {
+      expect(numberValueDisplay).toHaveTextContent('Number: 9876.54');
+    });
+  },
+} satisfies Story;
+
+export const NumberTypingDecimal = {
+  name: 'Number - Typing Decimal Separator',
+  render: (): JSX.Element => <TestNumberInput label={'Skriv desimaltall'} />,
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    textbox.focus();
+    await userEvent.type(textbox, '123,45');
+    await expect(textbox).toHaveValue('123,45');
+
+    // Flere desimalkomma skal ignoreres, og max 2 desimaler vises
+    await userEvent.type(textbox, ',67');
+    await expect(textbox).toHaveValue('123,45');
+  },
+} satisfies Story;
+
+export const NumberFilterNonNumeric = {
+  name: 'Number - Filter Non-Numeric Characters',
+  render: (): JSX.Element => (
+    <TestNumberInput label={'Filtrer ugyldige tegn'} />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    textbox.focus();
+    // Bokstaver og spesialtegn skal filtreres bort, men desimalkomma og minus beholdes
+    await userEvent.type(textbox, 'abc123def,45ghi');
+    await expect(textbox).toHaveValue('123,45');
+  },
+} satisfies Story;
+
+export const NumberBackspaceAtThousandSeparator = {
+  name: 'Number - Backspace at Thousand Separator',
+  render: (): JSX.Element => (
+    <TestNumberInput
+      initialValue={'1234567'}
+      label={'Backspace ved tusen-skilletegn'}
+    />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    textbox.focus();
+    // Formatert: "1 234 567"
+    await expect(textbox).toHaveValue(formatNBS('1 234 567'));
+
+    // Plasser markør etter første tusen-skilletegn (etter "1 ")
+    textbox.setSelectionRange(2, 2);
+
+    // Backspace skal slette sifferet før skilletegnet
+    await userEvent.keyboard('{Backspace}');
+    await expect(textbox).toHaveValue(formatNBS('234 567'));
+  },
+} satisfies Story;
+
+export const NumberDeleteAtThousandSeparator = {
+  name: 'Number - Delete at Thousand Separator',
+  render: (): JSX.Element => (
+    <TestNumberInput
+      initialValue={'1234567'}
+      label={'Delete ved tusen-skilletegn'}
+    />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    textbox.focus();
+    // Formatert: "1 234 567"
+    await expect(textbox).toHaveValue(formatNBS('1 234 567'));
+
+    // Plasser markør før første tusen-skilletegn (etter "1")
+    textbox.setSelectionRange(1, 1);
+
+    // Delete skal slette sifferet etter skilletegnet
+    await userEvent.keyboard('{Delete}');
+    await expect(textbox).toHaveValue(formatNBS('134 567'));
+  },
+} satisfies Story;
+
+export const NumberWithEnglishLocale = {
+  name: 'Number - English Locale (en-GB)',
+  render: (): JSX.Element => (
+    <TestNumberInput
+      initialValue={'1234.56'}
+      label={'Number with English locale'}
+      locale={'en-GB'}
+    />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const numberValueDisplay = canvas.getByTestId('number-value');
+
+    // en-GB bruker punktum som desimalskilletegn
+    await expect(textbox).toHaveValue('1,234.56');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 1234.56');
+
+    textbox.focus();
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '9876.54');
+    await expect(textbox).toHaveValue('9,876.54');
+  },
+} satisfies Story;
+
+export const NumberUndoRedo = {
+  name: 'Number - Undo/Redo',
+  render: (): JSX.Element => <TestNumberInput label={'Angre/Gjenta'} />,
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    textbox.focus();
+
+    await userEvent.type(textbox, '1234');
+    await expect(textbox).toHaveValue(formatNBS('1 234'));
+
+    await userEvent.type(textbox, ',56');
+    await expect(textbox).toHaveValue(formatNBS('1 234,56'));
+
+    // Angre
+    await userEvent.keyboard('{Meta>}z{/Meta}');
+    await userEvent.keyboard('{Meta>}z{/Meta}');
+    await userEvent.keyboard('{Meta>}z{/Meta}');
+    await expect(textbox).toHaveValue(formatNBS('1 234'));
+
+    // Gjenta
+    await userEvent.keyboard('{Meta>}{Shift>}z{/Shift}{/Meta}');
+    await userEvent.keyboard('{Meta>}{Shift>}z{/Shift}{/Meta}');
+    await userEvent.keyboard('{Meta>}{Shift>}z{/Shift}{/Meta}');
+    await expect(textbox).toHaveValue(formatNBS('1 234,56'));
   },
 } satisfies Story;

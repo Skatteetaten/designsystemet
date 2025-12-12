@@ -12,6 +12,7 @@ export const maxLengths: ValidData = {
   organisationNumber: 9,
   bankAccountNumber: 11,
   phoneNumber: 10,
+  number: 13,
 };
 
 type ValidLengths = keyof typeof maxLengths;
@@ -23,12 +24,16 @@ export const minusToHyphen = (input: string): string => {
   return valueAsString.replace(/\u2212/g, '-');
 };
 
+const escapeRegExp = (str: string): string => {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+};
+
 export const removeDuplicateCharsExceptFirstOccurrence = (
   input: string,
   char: string
 ): string => {
   let firstFound = false;
-  const regex = new RegExp(char, 'g');
+  const regex = new RegExp(escapeRegExp(char), 'g');
   return input.replace(regex, (match: string) => {
     if (!firstFound) {
       firstFound = true;
