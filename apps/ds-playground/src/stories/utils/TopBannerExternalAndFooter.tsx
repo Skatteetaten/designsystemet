@@ -231,7 +231,7 @@ export function TopBannerExternalAndFooter({
   ];
 
   return (
-    <>
+    <div className={styles.pageWrapper}>
       <TopBannerExternal
         ref={topBannerRef}
         classNames={{
@@ -504,6 +504,6 @@ export function TopBannerExternalAndFooter({
           {'Koronatiltak'}
         </Footer.Link>
       </Footer>
-    </>
+    </div>
   );
 }
