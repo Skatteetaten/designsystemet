@@ -43,10 +43,14 @@
     font-style: italic;
     text-align: left;
 
+    &_small,
+    &_medium,
+    &_large,
     &_standard {
       padding: var(--spacing-s) var(--spacing-m);
     }
 
+    &_extraSmall,
     &_compact {
       padding: 0 var(--spacing-s);
       font-size: var(--font-size-s);
@@ -57,10 +61,14 @@
     width: 100%;
   }
 
+  &_medium,
+  &_large,
   &_standard {
     margin-bottom: var(--spacing-l);
   }
 
+  &_extraSmall,
+  &_small,
   &_compact {
     margin-bottom: var(--spacing-m);
   }

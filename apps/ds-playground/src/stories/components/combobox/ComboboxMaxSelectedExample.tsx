@@ -3,9 +3,50 @@ import { JSX } from 'react';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { getComboboxStoryOptions } from './combobox.stories.utils';
+const options = [
+  {
+    label: 'Agdenes',
+    value: 'agdenes',
+  },
+  {
+    label: 'Balestrand',
+    value: 'balestrand',
+  },
+  {
+    label: 'Finnøy',
+    value: 'finnoy',
+  },
+  {
+    label: 'Forsand',
+    value: 'forsand',
+  },
+  {
+    label: 'Kvalsund',
+    value: 'kvalsund',
+  },
+  {
+    label: 'Mandal',
+    value: 'mandal',
+  },
+  {
+    label: 'Midsund',
+    value: 'midsund',
+  },
+  {
+    label: 'Rennesøy',
+    value: 'rennesoy',
+  },
+  {
+    label: 'Songdalen',
+    value: 'songdalen',
+  },
+  {
+    label: 'Tysfjord',
+    value: 'tysfjord',
+  },
+];
 
-export const ComboboxMaxSelectedExample = (): JSX.Element => {
+const ComboboxMaxSelectedExample = (): JSX.Element => {
   return (
     <>
       <Paragraph hasSpacing>
@@ -16,7 +57,7 @@ export const ComboboxMaxSelectedExample = (): JSX.Element => {
       <Combobox
         name={'favoriteKommuner'}
         label={'Velg dine 3 favorittkommuner'}
-        options={getComboboxStoryOptions()}
+        options={options}
         maxSelected={3}
         multiple
         hasSpacing
@@ -24,3 +65,5 @@ export const ComboboxMaxSelectedExample = (): JSX.Element => {
     </>
   );
 };
+
+export default ComboboxMaxSelectedExample;
