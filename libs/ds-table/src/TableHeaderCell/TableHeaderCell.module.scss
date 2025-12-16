@@ -79,20 +79,24 @@
   }
 
   &_extraSmall {
-    padding: var(--spacing-s);
+    padding: var(--spacing-s) var(--spacing-s)
+      calc(var(--spacing-s) - var(--table-header-border-width));
     font-size: var(--font-size-s);
   }
 
   &_small {
-    padding: var(--spacing-s);
+    padding: var(--spacing-s) var(--spacing-s)
+      calc(var(--spacing-s) - var(--table-header-border-width));
   }
 
   &_medium {
-    padding: var(--spacing-s-plus) var(--spacing-s);
+    padding: var(--spacing-s-plus) var(--spacing-s)
+      calc(var(--spacing-s-plus) - var(--table-header-border-width));
   }
 
   &_large {
-    padding: var(--spacing-m);
+    padding: var(--spacing-m) var(--spacing-m)
+      calc(var(--spacing-m) - var(--table-header-border-width));
   }
 
   &_standard {

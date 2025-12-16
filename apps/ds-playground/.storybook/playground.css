@@ -461,3 +461,7 @@ dl.descriptionListTwoColumns {
 .positionRelative {
   position: relative !important;
 }
+
+.checkboxInTable {
+  padding: 0 !important;
+}

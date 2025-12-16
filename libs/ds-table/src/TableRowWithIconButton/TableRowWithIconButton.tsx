@@ -227,8 +227,19 @@ export const RowWithRightSideExpandButton = ({
   }, [isExpanded]);
 
   useEffect(() => {
-    setRowLength(rowRef?.current?.cells.length ?? 999);
-  }, [rowRef]);
+    if (!isExpanded) return;
+
+    const cells = rowRef.current?.cells;
+
+    if (!cells) return;
+
+    let totalColumns = 0;
+    for (let i = 0; i < cells.length; i++) {
+      totalColumns += cells[i].colSpan || 1;
+    }
+
+    setRowLength(totalColumns);
+  }, [rowRef, isExpanded]);
 
   const cellSizeClassName = context?.size
     ? styles[`buttonCell_${context?.size}`]
