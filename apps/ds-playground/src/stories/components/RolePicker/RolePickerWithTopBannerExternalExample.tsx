@@ -9,7 +9,7 @@ import {
   RolePicker,
 } from '@skatteetaten/ds-overlays';
 
-export const RolePickerWithTopBannerExternalExample = (): JSX.Element => {
+const RolePickerWithTopBannerExternalExample = (): JSX.Element => {
   const modalRef = useRef<HTMLDialogElement>(null);
   const [user, setUser] = useState<User>();
 
@@ -191,3 +191,5 @@ export const RolePickerWithTopBannerExternalExample = (): JSX.Element => {
     </>
   );
 };
+
+export default RolePickerWithTopBannerExternalExample;

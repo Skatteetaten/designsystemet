@@ -5,7 +5,7 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { generatePerformanceTestData } from './combobox.stories.utils';
 
-export const ComboboxLoadingStatesExample = (): JSX.Element => {
+const ComboboxLoadingStatesExample = (): JSX.Element => {
   const [asyncLoading, setAsyncLoading] = useState(false);
   const [asyncOptions, setAsyncOptions] = useState<
     ReturnType<typeof generatePerformanceTestData>
@@ -66,3 +66,5 @@ export const ComboboxLoadingStatesExample = (): JSX.Element => {
     </div>
   );
 };
+
+export default ComboboxLoadingStatesExample;

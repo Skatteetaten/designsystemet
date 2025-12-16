@@ -1,12 +1,53 @@
-import { ReactNode, useState } from 'react';
+import { JSX, useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { Combobox, type ComboboxOption } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { getComboboxStoryOptions } from './combobox.stories.utils';
+const options = [
+  {
+    label: 'Agdenes',
+    value: 'agdenes',
+  },
+  {
+    label: 'Balestrand',
+    value: 'balestrand',
+  },
+  {
+    label: 'Finnøy',
+    value: 'finnoy',
+  },
+  {
+    label: 'Forsand',
+    value: 'forsand',
+  },
+  {
+    label: 'Kvalsund',
+    value: 'kvalsund',
+  },
+  {
+    label: 'Mandal',
+    value: 'mandal',
+  },
+  {
+    label: 'Midsund',
+    value: 'midsund',
+  },
+  {
+    label: 'Rennesøy',
+    value: 'rennesoy',
+  },
+  {
+    label: 'Songdalen',
+    value: 'songdalen',
+  },
+  {
+    label: 'Tysfjord',
+    value: 'tysfjord',
+  },
+];
 
-export const ComboboxValidationExample = (): ReactNode => {
+const ComboboxValidationExample = (): JSX.Element => {
   const [selectedValue, setSelectedValue] = useState<ComboboxOption | null>(
     null
   );
@@ -39,7 +80,7 @@ export const ComboboxValidationExample = (): ReactNode => {
         label={'Velg din kommune'}
         placeholder={'Søk eller velg kommune'}
         errorMessage={showError ? 'Du må velge en kommune' : undefined}
-        options={getComboboxStoryOptions()}
+        options={options}
         hasSpacing
         required
         onSelectionChange={handleSelectionChange}
@@ -57,3 +98,5 @@ export const ComboboxValidationExample = (): ReactNode => {
     </div>
   );
 };
+
+export default ComboboxValidationExample;
