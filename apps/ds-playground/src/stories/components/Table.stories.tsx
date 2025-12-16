@@ -1396,7 +1396,7 @@ export const AddRow: Story = {
           className={'bottomSpacingL'}
           onClick={(): void => {
             setAddRow(true);
-            setTimeout(() => addPersonRef.current?.focus(), 1000);
+            setTimeout(() => addPersonRef.current?.focus(), 0);
           }}
         >
           {'Legg til person'}
