@@ -50,6 +50,7 @@
   "fileuploader.InProgressLabel": "Viežžamin",
   "fileuploader.NoRightsToDeleteError": "Dus eai leat vuoigatvuođat sihkkot fiillaid",
   "fileuploader.NoRightsUploadError": "Dus ii leat vuoigatvuohta lasihit fiillaid",
+  "fileuploader.required": "geatnegahtton",
   "fileuploader.SuccessIconLabel": "Dievasmahtton",
   "fileuploader.UploadedHeading": "Lasihuvvon:",
   "fileuploader.UploadedSummary": "{{fileCount}} fiilla lasihuvvon",
