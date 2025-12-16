@@ -27,6 +27,7 @@ const meta = {
     canBeManuallyFocused: { table: { disable: true } },
     caption: { table: { disable: true } },
     variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     hasFullWidth: { table: { disable: true } },
     showCaption: { table: { disable: true } },
     sortState: { table: { disable: true } },
@@ -630,5 +631,61 @@ export const WithCanBeManuallyFocused: Story = {
     table.focus();
     await expect(table).toBeInTheDocument();
     await expect(table).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const WithSizeExtraSmall = {
+  render: TemplateExpandEditSort,
+  name: 'Size ExtraSmall',
+  args: {
+    size: 'extraSmall',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
+} satisfies Story;
+
+export const WithSizeSmall = {
+  render: TemplateExpandEditSort,
+  name: 'Size Small',
+  args: {
+    size: 'small',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
+} satisfies Story;
+
+export const WithSizeMedium = {
+  render: TemplateExpandEditSort,
+  name: 'Size Medium',
+  args: {
+    size: 'medium',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
+} satisfies Story;
+
+export const WithSizeLarge = {
+  render: TemplateExpandEditSort,
+  name: 'Size Large',
+  args: {
+    size: 'large',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Story;

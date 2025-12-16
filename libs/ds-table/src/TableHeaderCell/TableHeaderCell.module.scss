@@ -78,6 +78,23 @@
     border-bottom: solid 1px var(--semantic-divider-30);
   }
 
+  &_extraSmall {
+    padding: var(--spacing-s);
+    font-size: var(--font-size-s);
+  }
+
+  &_small {
+    padding: var(--spacing-s);
+  }
+
+  &_medium {
+    padding: var(--spacing-s-plus) var(--spacing-s);
+  }
+
+  &_large {
+    padding: var(--spacing-m);
+  }
+
   &_standard {
     @extend %cell-padding;
   }
