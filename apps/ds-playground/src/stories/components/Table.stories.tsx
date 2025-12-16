@@ -1001,6 +1001,7 @@ export const Selectable: Story = {
           <Table.Row>
             <Table.HeaderCell as={'td'}>
               <Checkbox
+                classNames={{ label: 'checkboxInTable' }}
                 checked={isAllChecked}
                 hideLabel
                 onChange={() => {
@@ -1028,6 +1029,7 @@ export const Selectable: Story = {
             <Table.Row key={item.id}>
               <Table.DataCell>
                 <Checkbox
+                  classNames={{ label: 'checkboxInTable' }}
                   checked={
                     isAllChecked || checkedState.some((it) => it === index)
                   }
@@ -1394,7 +1396,7 @@ export const AddRow: Story = {
           className={'bottomSpacingL'}
           onClick={(): void => {
             setAddRow(true);
-            setTimeout(() => addPersonRef.current?.focus(), 0);
+            setTimeout(() => addPersonRef.current?.focus(), 1000);
           }}
         >
           {'Legg til person'}
