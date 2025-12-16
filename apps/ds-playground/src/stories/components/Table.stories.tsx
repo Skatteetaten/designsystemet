@@ -112,7 +112,7 @@ export const Variants: Story = {
       <>
         <Alert variant={'info'} className={'bottomSpacingXL'} showAlert>
           {
-            'variant er deprecated og vil bli erstattet av "size" i neste major release. Bruk size="large" for standard tabell og size="extraSmall" for kompakt tabell.'
+            '"variant" er deprecated og vil bli erstattet av "size" i neste major release. Bruk size="large" for standard tabell og size="extraSmall" for kompakt tabell.'
           }
         </Alert>
         <div>
