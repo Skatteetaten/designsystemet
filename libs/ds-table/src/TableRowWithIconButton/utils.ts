@@ -6,18 +6,9 @@ export const getIconButtonSize = (
   isDesktop: boolean,
   variant?: TableVariant,
   size?: TableSize
-): Extract<Size, 'extraSmall' | 'medium' | 'large'> => {
-  switch (size) {
-    case 'extraSmall':
-      return 'extraSmall';
-    case 'small':
-      return 'extraSmall';
-    case 'medium':
-      return 'medium';
-    case 'large':
-      return 'large';
-    default:
-      break;
+): Extract<Size, 'extraSmall' | 'small' | 'medium' | 'large'> => {
+  if (size) {
+    return size;
   }
 
   if (variant === 'compact') {
