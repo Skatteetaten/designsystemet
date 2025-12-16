@@ -4,18 +4,25 @@
   padding: var(--spacing-xs);
 
   &_small {
-    padding: var(--spacing-xs) var(--spacing-s) 0 var(--spacing-s);
+    padding: var(--spacing-xs) var(--spacing-s)
+      calc(var(--spacing-xs) - var(--table-cell-border-width)) var(--spacing-s);
   }
 
   &_medium {
-    padding: var(--spacing-s);
+    padding: var(--spacing-s) var(--spacing-s)
+      calc(var(--spacing-s) - var(--table-cell-border-width));
   }
 
   &_large {
-    padding: 0.375rem var(--spacing-xs) 0 var(--spacing-xs);
+    padding: 0.375rem var(--spacing-xs)
+      calc(0.375rem - var(--table-cell-border-width)) var(--spacing-xs);
   }
 
-  &_extraSmall,
+  &_extraSmall {
+    padding: var(--spacing-xs) var(--spacing-xs)
+      calc(var(--spacing-xs) - var(--table-cell-border-width));
+  }
+
   &_expanded,
   &_compact {
     padding: var(--spacing-xs) var(--spacing-xs) 0;
