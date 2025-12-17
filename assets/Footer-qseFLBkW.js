@@ -1,0 +1,13 @@
+import{j as o}from"./iframe-VHQh6taY.js";import{useMDXComponents as i}from"./index-CQqiVeBm.js";import{M as n,P as s,C as p,A as e}from"./WithTooltip-SK46ZJ2J-Bg2alfyC.js";import{P as a}from"./utils-CYxPs9RB.js";import{F as c,E as x}from"./Footer.stories-BGHuFUor.js";import{F as d}from"./FooterLink.stories-BbF0W7_0.js";import{F as l}from"./FooterLogo.stories-C6LWUzjA.js";import{V as f}from"./VersionBadge-Gts-sC0t.js";import{D as j}from"./DocIntro-Bbe2zWe5.js";import{D as h}from"./DocHeaderWrapper-DydI0LU6.js";import"./preload-helper-PPVm8Dsz.js";import"./index-C1tDoD4z.js";import"./index-CPemCIdg.js";import"./index-C6ntdsyl.js";import"./lz-string-m9jzapWX.js";import"./index-C8wxqHpZ.js";import"./index-Di_7ammq.js";import"./index-DALzD4Pw.js";import"./index-B_yqNyPt.js";import"./index-Don9wpRQ.js";import"./index-lB78RBB2.js";import"./DatePickerCalendar-fvOeZNLZ.js";import"./LabelWithHelp-By58SB7B.js";import"./Help-DcN2X4V-.js";import"./Combobox.module-CSHfGvVK.js";import"./ComboboxButton-DM_xyLsF.js";import"./ComboboxSelectedOptions-BxHsyaCT.js";import"./index-DgU9os4N.js";import"./index-CEjXTNb1.js";import"./index-BJkQPiPu.js";import"./TopBannerButton-CyO2leJr.js";import"./floating-ui.react-CubAuxUS.js";import"./TopBannerLangPicker-ByIsuxlN.js";import"./TopBannerLangPickerButton-CSOQUeNc.js";import"./TopBannerLogo-DBta5hf-.js";import"./TopBannerSkipLink-Br1ef_2-.js";import"./TopBannerUserButton-CpmZJ9Rk.js";import"./ske-logo-horizontal-white-4s-xHxit.js";import"./stories.utils-BTGWRhRm.js";import"./Link.stories-xpGmLYfR.js";import"./icon.systems-pjRjKMCZ.js";import"./icon.utils-BES2EtCM.js";import"./base-props.types-B340BQPQ.js";function m(t){const r={code:"code",h1:"h1",h2:"h2",pre:"pre",...i(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(n,{of:c}),`
+`,o.jsxs(h,{componentName:"Footer",children:[o.jsx(r.h1,{id:"footer",children:"Footer"}),o.jsx(f,{packageName:"layout"}),o.jsx(j,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/footer/"})]}),`
+`,o.jsx(s,{}),`
+`,o.jsx(r.pre,{children:o.jsx(r.code,{className:"language-tsx",children:`import { Footer } from '@skatteetaten/ds-layout';
+`})}),`
+`,o.jsx(p,{}),`
+`,o.jsx(r.h2,{id:"footerlink",children:o.jsx(r.code,{children:"Footer.Link"})}),`
+`,o.jsx(e,{of:d}),`
+`,o.jsx(r.h2,{id:"footerlogo",children:o.jsx(r.code,{children:"Footer.Logo"})}),`
+`,o.jsx(e,{of:l}),`
+`,o.jsx(r.h2,{id:"examples",children:"Examples"}),`
+`,o.jsx(a,{of:x})]})}function no(t={}){const{wrapper:r}={...i(),...t.components};return r?o.jsx(r,{...t,children:o.jsx(m,{...t})}):m(t)}export{no as default};
+//# sourceMappingURL=Footer-qseFLBkW.js.map

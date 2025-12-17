@@ -1,7 +1,7 @@
 <!doctype html>
 <!--suppress HtmlUnknownTarget -->
 <html lang="en">
-  <head>
+  <head><script type="module" src="./vite-inject-mocker-entry.js"></script>
     <meta charset="utf-8" />
     <title>Storybook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -48,7 +48,7 @@
       window.FEATURES = {"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false,"disallowImplicitActionsInRenderV8":true,"viewport":true,"highlight":true,"controls":true,"interactions":true,"actions":true,"backgrounds":true,"outline":true,"measure":true};
       window.STORIES = [{"titlePrefix":"","directory":"./apps/ds-playground/src/stories","files":"**/*.mdx","importPathMatcher":"^\\.[\\\\/](?:apps\\/ds-playground\\/src\\/stories(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.mdx)$"},{"titlePrefix":"","directory":"./apps/ds-playground/src/stories","files":"**/*.stories.@(js|jsx|ts|tsx)","importPathMatcher":"^\\.[\\\\/](?:apps\\/ds-playground\\/src\\/stories(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|ts|tsx))$"}];
       window.DOCS_OPTIONS = {"defaultName":"Docs"};
-      window.TAGS_OPTIONS = {"dev-only":{"excludeFromDocsStories":true},"docs-only":{"excludeFromSidebar":true},"test-only":{"excludeFromSidebar":true,"excludeFromDocsStories":true}};
+      window.TAGS_OPTIONS = {};
 
       
 
@@ -529,6 +529,31 @@
   }
 </script>
 <style>
+  h1#combobox,
+  h1#wordinfo,
+  h3#beløp,
+  h1#useformattedinput-hook {
+    width: fit-content;
+    position: relative;
+
+    &::before {
+      content: 'Beta';
+      background: var(--semantic-warning-foreground);
+      color: var(--palette-graphite-0);
+      font-size: var(--font-size-m);
+      padding: var(--spacing-xxs) var(--spacing-s-plus);
+      border-radius: 1rem;
+      font-weight: bold;
+      position: absolute;
+      right: -4.5rem;
+      top: 0.625rem;
+    }
+  }
+
+  h3#beløp::before {
+    top: 0;
+  }
+
   [data-test-block] *,
   [data-test-block] *::before,
   [data-test-block] *::after {
@@ -596,8 +621,9 @@
   }
 </style>
 
-    <script type="module" crossorigin src="./assets/iframe-Cq9sN_Dz.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/iframe-C8rhVoVh.css">
+    <script type="module" crossorigin src="./assets/iframe-VHQh6taY.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-PPVm8Dsz.js">
+    <link rel="stylesheet" crossorigin href="./assets/iframe-BAANg6G0.css">
   </head>
 
   <body>
@@ -621,10 +647,6 @@
     background-color: darkblue;
   }
 
-  .scrollToTopContainer svg.dummyClassname {
-    background-color: lightgoldenrodyellow;
-  }
-
   div#storybook-root .dummyClassname svg {
     fill: darkblue;
   }
@@ -640,12 +662,6 @@
   div#storybook-root .dummyClassname:hover svg,
   div#storybook-root .dummyClassname:focus svg {
     fill: lightskyblue;
-  }
-
-  div#storybook-root .scrollToTopContainer .dummyClassname:disabled svg,
-  div#storybook-root .scrollToTopContainer .dummyClassname:hover svg,
-  div#storybook-root .scrollToTopContainer .dummyClassname:focus svg {
-    fill: darkblue;
   }
 
   .dummyClassnameFormContainer {

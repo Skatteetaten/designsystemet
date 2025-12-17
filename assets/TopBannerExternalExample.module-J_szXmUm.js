@@ -1,2 +1,0 @@
-const n="_linkWrapper_ax540_1",o="_linkWrapperPadding_ax540_4",a="_marginBottomXL_ax540_12",t="_marginBottomS_ax540_16",r="_marginRightS_ax540_20",_="_flex_ax540_24",m="_columns_ax540_29",i="_secondColumn_ax540_32",l={linkWrapper:n,linkWrapperPadding:o,marginBottomXL:a,marginBottomS:t,marginRightS:r,flex:_,columns:m,secondColumn:i};export{l as t};
-//# sourceMappingURL=TopBannerExternalExample.module-J_szXmUm.js.map
