@@ -81,7 +81,18 @@
 }
 
 .layoutContainer {
+  width: 100%;
   background-color: var(--palette-burgundy-10);
+
+  .external {
+    margin-left: var(--spacing-m) !important;
+  }
+
+  .internal {
+    margin-left: var(
+      --semantic-responsive-internal-container-spacing
+    ) !important;
+  }
 }
 
 .rowLeftBorder {

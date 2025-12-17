@@ -808,3 +808,53 @@ export const WithFormValidationFocusRetention = {
     await expect(closeButton).toHaveFocus();
   },
 } satisfies Story;
+
+export const MinimumWidth = {
+  render: (args): JSX.Element => {
+    const ref = useRef<HTMLDialogElement>(null);
+    return (
+      <>
+        <Paragraph hasSpacing>{loremIpsum}</Paragraph>
+        <Button onClick={(): void => ref.current?.showModal()}>
+          {'Åpne modal'}
+        </Button>
+        <Modal {...args} ref={ref}>
+          <div className={'flex'}>
+            <Button className={'marginRightM'}>{'Ja'}</Button>
+            <Button
+              variant={'tertiary'}
+              onClick={(): void => ref.current?.close()}
+            >
+              {'Nei'}
+            </Button>
+          </div>
+        </Modal>
+      </>
+    );
+  },
+  name: 'Minimum width',
+  args: {
+    title: 'Er du her?',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+  },
+} satisfies Story;
+
+export const OnMobile = {
+  render: TemplateModal,
+  name: 'On Mobile',
+  args: {},
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+  },
+} satisfies Story;

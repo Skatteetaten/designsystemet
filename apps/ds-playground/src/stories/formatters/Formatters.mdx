@@ -59,7 +59,7 @@ console.log(phoneNumber.value);
 // 11 22 33 44
 ```
 
-### Beløp (Beta)
+### Beløp
 
 Formatering av beløp er basert på [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat). Formateringsfunksjonen vil som standard følge [Skatteetatens skriveregler](https://www.skatteetaten.no/stilogtone/skrive/skriveregler/tall/), men det er også mulig å sende inn et options object som overstyrer instillingene til Intl.NumberFormat.
 
@@ -152,7 +152,7 @@ export const formatter = ({ value, type, locale, options }: FormatOptions): Form
 }
 ```
 
-# useFormattedInput Hook (Beta)
+# useFormattedInput Hook
 
 Hook for håndtering av formaterte input-felt med automatisk formatering og markørposisjonering. Støtter norske telefonnummer, organisasjonsnummer, fødselsnummer og kontonummer.
 

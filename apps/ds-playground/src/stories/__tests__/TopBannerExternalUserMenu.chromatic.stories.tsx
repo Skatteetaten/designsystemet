@@ -1,15 +1,15 @@
 import { Meta } from '@storybook/react-vite';
 
-import { TopBannerExternalUserMenu } from '@skatteetaten/ds-layout';
+import { TopBannerExternal } from '@skatteetaten/ds-layout';
 
 import * as TopBannerExternalUserMenuStories from './TopBannerExternalUserMenu.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/TopBannerExternalUserMenu',
-  component: TopBannerExternalUserMenu,
+  title: 'Chromatic/TopBannerExternal/UserMenu',
+  component: TopBannerExternal.UserMenu,
   tags: ['chromatic', '!autodocs'],
-} satisfies Meta<typeof TopBannerExternalUserMenu>;
+} satisfies Meta<typeof TopBannerExternal.UserMenu>;
 export default meta;
 export const Snapshots = createSingleStory(
   TopBannerExternalUserMenuStories,

@@ -54,18 +54,24 @@ export type FailureMethod<T> = (
 export type RemoveMethod = (file: UploadedFile) => void;
 
 /**
- * T kan brukes om man ønsker å definere en egen type til data som brukes til å rendre
- * innholdet i allerten som oppsummerer resultat av opplastingen
+ * T kan brukes om man ønsker å definere en egen type til data som brukes til å
+ * rendre innholdet i allerten som oppsummerer resultat av opplastingen
  */
 export type UseFileUploaderReturn<T> = [
-  /** Holder tilstand om filer som er lastet opp, data til statusmelding som beskriver resultat av opplasting og om opplasting pågår*/
+  /**
+   * Holder tilstand om filer som er lastet opp, data til statusmelding som
+   * beskriver resultat av opplasting og om opplasting pågår
+   */
   state: FileUploaderState,
   /** Bruker for å legge til filer i lista over opplastedete filer */
   SuccessMethod<T>,
   /** Setter tilstand om at opplasting pågår. */
   LoadingMethod,
-  /** Brukes når opplasting av en eller flere filer var helt eller delvis mislykket. */
+  /**
+   * Brukes når opplasting av en eller flere filer var helt eller delvis
+   * mislykket.
+   */
   FailureMethod<T>,
   /** Brukes for fjerning av filer i lista */
-  RemoveMethod
+  RemoveMethod,
 ];

@@ -1,4 +1,5 @@
 {
+  "combobox.DeleteConfirmation": "{{element}} sihkkojuvvon",
   "combobox.Loading": "Bargamin",
   "combobox.NoResults": "Eai gávdno ohcanbohtosat «{{searchTerm}}» várás. Geahččal eará ohcansáni.",
   "combobox.OneOptionAvailable": "Okta molsaeavttu gávdno.",
@@ -49,6 +50,7 @@
   "fileuploader.InProgressLabel": "Viežžamin",
   "fileuploader.NoRightsToDeleteError": "Dus eai leat vuoigatvuođat sihkkot fiillaid",
   "fileuploader.NoRightsUploadError": "Dus ii leat vuoigatvuohta lasihit fiillaid",
+  "fileuploader.required": "geatnegahtton",
   "fileuploader.SuccessIconLabel": "Dievasmahtton",
   "fileuploader.UploadedHeading": "Lasihuvvon:",
   "fileuploader.UploadedSummary": "{{fileCount}} fiilla lasihuvvon",

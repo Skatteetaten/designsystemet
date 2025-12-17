@@ -12,7 +12,7 @@ import {
 
 const meta = {
   component: TopBannerInternal.ActionMenu,
-  title: 'Tester/TopBanner/TopBannerInternalActionMenu',
+  title: 'Tester/TopBannerInternal/ActionMenu',
   argTypes: {
     children: { control: 'text', table: { disable: true } },
     id: { table: { disable: true } },

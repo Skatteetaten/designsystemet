@@ -1,8 +1,8 @@
 import { FunctionComponent, ReactNode } from 'react';
 
 import { PopoverPosition, PopoverProps } from '../Popover/Popover.types';
-import { WordInfoContent } from '../WordInfoContent/WordInfoContent';
-import { WordInfoTrigger } from '../WordInfoTrigger/WordInfoTrigger';
+import { WordInfoContent } from './WordInfoContent/WordInfoContent';
+import { WordInfoTrigger } from './WordInfoTrigger/WordInfoTrigger';
 
 export interface WordInfoProps
   extends Omit<PopoverProps, 'color' | 'disableAutoDismissOnMobile'> {

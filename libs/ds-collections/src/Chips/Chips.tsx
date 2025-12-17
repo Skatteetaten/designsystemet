@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { ChipsComponent, ChipsProps } from './Chips.types';
-import { ChipsContext } from '../ChipsContext/ChipsContext';
-import { ChipsRemovable } from '../ChipsRemovable/ChipsRemovable';
-import { ChipsToggle } from '../ChipsToggle/ChipsToggle';
+import { ChipsContext } from './ChipsContext';
+import { ChipsRemovable } from './ChipsRemovable/ChipsRemovable';
+import { ChipsToggle } from './ChipsToggle/ChipsToggle';
 
 import styles from './Chips.module.scss';
 

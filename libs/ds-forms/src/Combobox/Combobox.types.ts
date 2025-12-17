@@ -32,7 +32,9 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement | null>;
   classNames?: Prettify<
     {
+      container?: string;
       options?: string;
+      inputList?: string;
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
@@ -70,13 +72,22 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
 interface SingleComboboxProps extends ComboboxCommonProps {
   /** Tillater valg av flere alternativer */
   multiple?: false;
-  /** Størrelsen på combobox. For multi-select er størrelsen automatisk satt til 'large'. */
+  /**
+   * Størrelsen på combobox. For multi-select er størrelsen automatisk satt til
+   * 'large'.
+   */
   variant?: ComboboxSize;
-  /** Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert modus */
+  /**
+   * Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert
+   * modus
+   */
   value?: string | number;
   /** Kalles når valget endres. Enkeltvalg: mottar ComboboxOption | null */
   onSelectionChange?: (selectedOption: ComboboxOption | null) => void;
-  /** Kalles når input-teksten endres. Mottar søketekst som string. Nyttig for asynkron søk og filtrering */
+  /**
+   * Kalles når input-teksten endres. Mottar søketekst som string. Nyttig for
+   * asynkron søk og filtrering
+   */
   onInputChange?: (searchTerm: string) => void;
   maxSelected?: never;
 }
@@ -84,15 +95,27 @@ interface SingleComboboxProps extends ComboboxCommonProps {
 interface MultiComboboxProps extends ComboboxCommonProps {
   /** Tillater valg av flere alternativer */
   multiple: true;
-  /** Størrelsen på combobox. For multi-select er størrelsen automatisk satt til 'large'. */
+  /**
+   * Størrelsen på combobox. For multi-select er størrelsen automatisk satt til
+   * 'large'.
+   */
   variant?: never;
-  /** Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert modus */
+  /**
+   * Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert
+   * modus
+   */
   value?: ComponentPropsWithoutRef<'input'>['value'];
   /** Kalles når valget endres. Flervalg: mottar ComboboxOption[] array */
   onSelectionChange?: (selectedOptions: ComboboxOption[]) => void;
-  /** Kalles når input-teksten endres. Mottar søketekst som string. Nyttig for asynkron søk og filtrering */
+  /**
+   * Kalles når input-teksten endres. Mottar søketekst som string. Nyttig for
+   * asynkron søk og filtrering
+   */
   onInputChange?: (searchTerm: string) => void;
-  /** Maksimalt antall valg i flervalg-modus. Viser "X av Y valgt" melding når grensen nås. Ikke tilgjengelig i enkeltvalg-modus. */
+  /**
+   * Maksimalt antall valg i flervalg-modus. Viser "X av Y valgt" melding når
+   * grensen nås. Ikke tilgjengelig i enkeltvalg-modus.
+   */
   maxSelected?: number;
 }
 
@@ -101,6 +124,7 @@ export type ComboboxProps = SingleComboboxProps | MultiComboboxProps;
 export type ComboboxComponent = React.FC<ComboboxProps>;
 
 export type ComboboxSelectedOptionsProps = {
+  className?: string;
   multiple: boolean;
   selectedValues: ComboboxOption[];
   onRemoveValue: (value: ComboboxOption) => void;
@@ -152,5 +176,7 @@ export type ComboboxButtonProps = {
 export type ComboboxAccessibilityAnnouncerProps = {
   isOpen: boolean;
   displayOptions: ComboboxOption[];
+  selectedValues: ComboboxOption[];
   searchTerm: string;
+  focusedIndex: number;
 };

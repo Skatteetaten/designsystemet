@@ -19,7 +19,7 @@ import {
   getTableRowExpandButtonTitleDefault,
 } from '../Table/defaults';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
-import { TableContext } from '../TableContext/TableContext';
+import { TableContext } from '../Table/TableContext';
 import {
   RowWithLeftSideExpandButton,
   RowWithRightSideExpandButton,
@@ -45,6 +45,7 @@ export const TableRow = ({
   'data-testid': dataTestId,
   expandButtonTitle,
   expandButtonPosition = getTableRowExpandButtonPositionDefault(),
+  expandButtonProps,
   expandableContent,
   expandButtonAriaDescribedby,
   showExpandButtonTitle,
@@ -115,6 +116,7 @@ export const TableRow = ({
         expandButtonTitle={getButtonTitle()}
         expandButtonAriaDescribedby={expandButtonAriaDescribedby}
         expandableContent={expandableContent}
+        expandButtonProps={expandButtonProps}
         showExpandButtonTitle={showExpandButtonTitle}
         shouldInsertExpandAreaMarkers={isExpandableContentRows(
           expandableContent

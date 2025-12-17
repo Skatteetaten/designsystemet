@@ -5,7 +5,7 @@ import { DescriptionList } from '@skatteetaten/ds-content';
 
 const meta = {
   component: DescriptionList,
-  title: 'Tester/DescriptionList/DescriptionList',
+  title: 'Tester/DescriptionList',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

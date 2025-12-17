@@ -9,26 +9,40 @@ export const ExternalLayout: (props: BaseProps) => JSX.Element = ({
   className = '',
   'data-testid': dataTestId,
 }) => {
-  const storyBookCSSOverride = `
-  div.css-1gh4yjl { max-width: none}
-  `;
   return (
     <div
       id={id}
       data-testid={dataTestId}
-      className={`${styles.layout} ${className}`.trim()}
+      className={`${styles.externalLayout} ${className}`.trim()}
     >
-      <style>{storyBookCSSOverride}</style>
-      <p>
-        <strong>{'Responsive container'}</strong>
-      </p>
-      <article className={styles.article}>
-        <p>
-          <strong>{'Responsive article'}</strong>
-        </p>
-        <p>{'(uses --semantic-responsive-article)'}</p>
-      </article>
-      <p>{'(uses --semantic-responsive-container)'}</p>
+      <header className={styles.header}>
+        <div className={styles.headerContainer}>
+          <div className={styles.headerLogo}></div>
+          <div className={styles.headerGrid}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </header>
+      <main className={styles.main} tabIndex={-1}>
+        <section className={styles.responsiveContainer}>
+          {'--semantic-responsive-container'}
+        </section>
+        <section className={styles.responsiveWideContent}>
+          {'--semantic-responsive-wide-content'}
+        </section>
+        <section className={styles.responsiveArticle}>
+          {'--semantic-responsive-article'}
+        </section>
+      </main>
+      <footer className={styles.footer}>
+        <div className={styles.footerGrid}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -2,8 +2,9 @@ import { Children, JSX } from 'react';
 
 import { TableSumProps } from './TableSum.types';
 import {
-  getTableSumAlignmentDefault,
+  getTableSumLabelAlignmentDefault,
   getTableSumTextDefault,
+  getTableSumValueAlignmentDefault,
 } from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 import { TableRow } from '../TableRow/TableRow';
@@ -16,8 +17,8 @@ export const TableSum = ({
   className,
   lang,
   'data-testid': dataTestId,
-  labelAlignment = getTableSumAlignmentDefault(),
-  valueAlignment = getTableSumAlignmentDefault(),
+  labelAlignment = getTableSumLabelAlignmentDefault(),
+  valueAlignment = getTableSumValueAlignmentDefault(),
   colSpan,
   hasTopSeparator,
   sumText = getTableSumTextDefault(),

@@ -5,8 +5,7 @@ import { Combobox, type ComboboxOption } from '@skatteetaten/ds-forms';
 import { comboboxStoryOptions } from './combobox.stories.utils';
 import './ComboboxMaxHeightExample.scss';
 
-const codeExample = `/* ComboboxMaxHeightExample.scss */
-.maxHeight300 {
+const codeExample = `.maxHeight300 {
   max-height: 300px;
 }
 
@@ -14,7 +13,6 @@ const codeExample = `/* ComboboxMaxHeightExample.scss */
   max-height: 200px;
 }
 
-/* Bruk i Combobox */
 <Combobox
   label="Velg kommune"
   options={options}

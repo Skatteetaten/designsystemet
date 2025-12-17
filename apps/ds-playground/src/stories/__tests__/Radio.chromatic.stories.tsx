@@ -6,7 +6,7 @@ import * as RadioStories from './Radio.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/Radio',
+  title: 'Chromatic/RadioGroup/Radio',
   component: Radio,
   tags: ['chromatic', '!autodocs'],
   parameters: {

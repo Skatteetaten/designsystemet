@@ -31,7 +31,10 @@
 
 .table {
   --table-cell-background: transparent;
-  --table-cell-border-bottom: solid 1px var(--semantic-divider-30);
+  --table-cell-border-width: 1px;
+  --table-header-border-width: 2px;
+  --table-cell-border-bottom: solid var(--table-cell-border-width)
+    var(--semantic-divider-30);
 
   border-collapse: collapse;
   line-height: var(--semantic-line-height-table);
@@ -43,10 +46,14 @@
     font-style: italic;
     text-align: left;
 
+    &_small,
+    &_medium,
+    &_large,
     &_standard {
       padding: var(--spacing-s) var(--spacing-m);
     }
 
+    &_extraSmall,
     &_compact {
       padding: 0 var(--spacing-s);
       font-size: var(--font-size-s);
@@ -57,10 +64,14 @@
     width: 100%;
   }
 
+  &_medium,
+  &_large,
   &_standard {
     margin-bottom: var(--spacing-l);
   }
 
+  &_extraSmall,
+  &_small,
   &_compact {
     margin-bottom: var(--spacing-m);
   }

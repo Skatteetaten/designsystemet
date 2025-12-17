@@ -141,7 +141,9 @@ export const WithDescription = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const descriptionNode = canvas.getByText(defaultDescription);
+    const descriptionNode = canvas.getByText(defaultDescription, {
+      selector: ":not([aria-hidden='true'])",
+    });
     await expect(descriptionNode).toBeInTheDocument();
   },
 } satisfies Story;
@@ -196,7 +198,9 @@ export const WithHideLegend = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const legend = canvas.getAllByText(defaultLegendText)[0];
-    const descriptionNode = canvas.getByText(defaultDescription);
+    const descriptionNode = canvas.getByText(defaultDescription, {
+      selector: "[aria-hidden='true']",
+    });
     const helpButtonNode = canvas.getByRole('button');
     await expect(legend).toBeInTheDocument();
     await expect(descriptionNode).toBeInTheDocument();

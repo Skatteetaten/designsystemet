@@ -12,7 +12,7 @@ import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const meta = {
   component: ErrorSummary,
-  title: 'Tester/ErrorSummary/ErrorSummary',
+  title: 'Tester/ErrorSummary',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

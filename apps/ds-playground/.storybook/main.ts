@@ -2,11 +2,14 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { StorybookConfig } from '@storybook/react-vite';
 import svgr from '@svgr/rollup';
 import sassDts from 'vite-plugin-sass-dts';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 import { readdirSync, readFileSync } from 'fs';
-import path from 'node:path';
+import path, { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const readJsonFile = (path: string): Record<string, string> => {
   const file = readFileSync(path, 'utf8');
@@ -35,13 +38,13 @@ const config: StorybookConfig = {
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    '@storybook/addon-coverage',
-    '@storybook/addon-a11y',
-    '@storybook/addon-links',
-    '@storybook/addon-docs',
-    '@storybook/addon-vitest',
-    '@chromatic-com/storybook',
-    'storybook-addon-pseudo-states',
+    getAbsolutePath('@storybook/addon-coverage'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-vitest'),
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('storybook-addon-pseudo-states'),
   ],
   core: {
     disableTelemetry: true,
@@ -60,7 +63,7 @@ const config: StorybookConfig = {
     },
   },
   framework: {
-    name: '@storybook/react-vite',
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {
       strictMode: false,
     },
@@ -96,9 +99,6 @@ const config: StorybookConfig = {
       },
       plugins: [
         svgr(),
-        tsconfigPaths({
-          root: '../../',
-        }),
         nxViteTsPaths(),
         sassDts({
           esmExport: true,
@@ -110,3 +110,7 @@ const config: StorybookConfig = {
 };
 
 export default config;
+
+function getAbsolutePath(value: string): string {
+  return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
+}

@@ -1,6 +1,8 @@
 import { ReactNode, useState, JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { TableRowProps } from 'libs/ds-table/src/TableRow/TableRow.types';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
@@ -9,7 +11,9 @@ import {
   CopySVGpath,
   DeleteSVGpath,
   EditSVGpath,
+  SaveSVGpath,
 } from '@skatteetaten/ds-icons';
+import { Alert } from '@skatteetaten/ds-status';
 import {
   Table,
   getTableVariantDefault,
@@ -22,7 +26,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Table,
-  title: 'Komponenter/Table/Table',
+  title: 'Komponenter/Table',
   argTypes: {
     // Props
     canBeManuallyFocused: { table: { category: category.props } },
@@ -31,6 +35,12 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getTableVariantDefault() },
+      },
+    },
+    size: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'undefined' },
       },
     },
     showCaption: { table: { category: category.props } },
@@ -47,6 +57,7 @@ const meta = {
     rowInEditModeId: { table: { category: category.props } },
   },
   args: {
+    size: 'large',
     caption: 'Dette er en tabell.',
     children: [
       <Table.Header key={'header'}>
@@ -99,9 +110,14 @@ export const Variants: Story = {
     const klage = 'Klage på vedtak';
     return (
       <>
+        <Alert variant={'info'} className={'bottomSpacingXL'} showAlert>
+          {
+            '"variant" er deprecated og vil bli erstattet av "size" i neste major release. Bruk size="large" for standard tabell og size="extraSmall" for kompakt tabell.'
+          }
+        </Alert>
         <div>
           {'Standard table'}
-          <Table caption={'Dette er en standard tabell'} variant={'standard'}>
+          <Table caption={'Dette er en standard tabell'} size={'large'}>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
@@ -133,7 +149,151 @@ export const Variants: Story = {
         </div>
         <div>
           {'Compact table'}
-          <Table caption={'Dette er en kompakt tabell.'} variant={'compact'}>
+          <Table caption={'Dette er en kompakt tabell.'} size={'extraSmall'}>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>
+                  {'Arbeidsoppgave'}
+                </Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+            </Table.Body>
+          </Table>
+        </div>
+      </>
+    );
+  },
+} satisfies Story;
+Variants.parameters = exampleParameters;
+
+export const Sizes: Story = {
+  render: (_args): JSX.Element => {
+    const klage = 'Klage på vedtak';
+    return (
+      <>
+        <div>
+          {'Extra small'}
+          <Table
+            caption={'Dette er en ekstra liten tabell'}
+            size={'extraSmall'}
+          >
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>
+                  {'Arbeidsoppgave'}
+                </Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.DataCell>{'10.03.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 2'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'HAIKU HEDGE ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+              <Table.Row>
+                <Table.DataCell>{'11.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 4'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'ATMOSPHERIC EXPLORER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+            </Table.Body>
+          </Table>
+        </div>
+        <div>
+          {'Small'}
+          <Table caption={'Dette er en liten tabell.'} size={'small'}>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>
+                  {'Arbeidsoppgave'}
+                </Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+            </Table.Body>
+          </Table>
+        </div>
+
+        <div>
+          {'Medium'}
+          <Table caption={'Dette er en medium tabell.'} size={'medium'}>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>
+                  {'Arbeidsoppgave'}
+                </Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+            </Table.Body>
+          </Table>
+        </div>
+
+        <div>
+          {'Large'}
+          <Table caption={'Dette er en stor tabell.'} size={'large'}>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
@@ -209,6 +369,7 @@ export const Sortable: Story = {
         sortState={sortState}
         setSortState={setSortState}
         caption={'High scores'}
+        size={'large'}
       >
         <Table.Header>
           <Table.Row>
@@ -335,6 +496,7 @@ export const Expandable: Story = {
         caption={'Firmaoversikt'}
         sortState={sortState}
         setSortState={setSortState}
+        size={'large'}
       >
         <Table.Header>
           <Table.Row>
@@ -360,6 +522,167 @@ export const Expandable: Story = {
                 }
                 expandButtonAriaDescribedby={row.id}
                 isExpandable
+              >
+                <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
+                <Table.DataCell>{row.timestamp}</Table.DataCell>
+                <Table.DataCell>{row.status}</Table.DataCell>
+                <Table.DataCell>{row.eta}</Table.DataCell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </Table>
+    );
+  },
+} satisfies Story;
+Expandable.parameters = exampleParameters;
+
+export const ExpandableWithCustomExpandButtonProps: Story = {
+  render: (_args): JSX.Element => {
+    const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
+    const [savingRows, setSavingRows] = useState<Set<string>>(new Set());
+
+    const data = [
+      {
+        id: 'abcd',
+        firma: 'Bluth Company',
+        timestamp: '08.04.2020 11:31:57',
+        status: 'Under behandling',
+        eta: 'Mer enn 1 dag',
+        ansatte: [
+          {
+            id: 'efgh',
+            navn: 'Per Olsen',
+            fnr: '11012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'ijkl',
+        firma: 'Business Engros',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Under behandling',
+        eta: '23 min',
+        ansatte: [
+          {
+            id: 'mnop',
+            navn: 'Bryce Navnesen',
+            fnr: '02012020 99999',
+            beskrivelse: 'noen flere opplysninger',
+          },
+          {
+            id: 'qrst',
+            navn: 'Alice Middleman',
+            fnr: '03012020 99999',
+            beskrivelse: 'mange flere opplysninger',
+          },
+        ],
+      },
+      {
+        id: 'uvwx',
+        firma: 'Corwood Industries',
+        timestamp: '08.04.2020 11:32:16',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'yzab',
+            navn: 'Kai Mossige',
+            fnr: '01012020 99999',
+            beskrivelse: 'finnes flere opplysninger?',
+          },
+        ],
+      },
+      {
+        id: 'cdef',
+        firma: 'Limerick Partner',
+        timestamp: '08.04.2020 11:32:47',
+        status: 'Ferdig',
+        eta: '–',
+        ansatte: [
+          {
+            id: 'ghij',
+            navn: 'Kari Saksbehandler',
+            fnr: '01012020 99999',
+            beskrivelse: 'Ingen flere opplysninger',
+          },
+          {
+            id: 'klmn',
+            navn: 'Bob Egil Hansen',
+            fnr: '04012020 99999',
+            beskrivelse: 'Ingen andre opplysninger',
+          },
+        ],
+      },
+    ];
+
+    const handleExpand = (rowId: string): void => {
+      setExpandedRows((prev) => new Set(prev).add(rowId));
+    };
+
+    const handleClose = async (rowId: string): Promise<void> => {
+      setSavingRows((prev) => new Set(prev).add(rowId));
+
+      await new Promise<void>((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 2000);
+      });
+
+      setSavingRows((prev) => {
+        const next = new Set(prev);
+        next.delete(rowId);
+        return next;
+      });
+
+      setExpandedRows((prev) => {
+        const next = new Set(prev);
+        next.delete(rowId);
+        return next;
+      });
+    };
+
+    return (
+      <Table caption={'Oppgaver'} size={'large'}>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell sortKey={'firma'} scope={'col'} isSortable>
+              {'Firma'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Startet'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>
+              {'Forventet behandlet'}
+            </Table.HeaderCell>
+            <Table.HeaderCell as={'td'} />
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {data.map((row) => {
+            const isExpanded = expandedRows.has(row.id);
+            const isSaving = savingRows.has(row.id);
+
+            return (
+              <Table.Row
+                key={row.id}
+                expandButtonPosition={'right'}
+                expandableContent={
+                  <div className={'emptyExpandedTableRow'}></div>
+                }
+                expandButtonAriaDescribedby={row.id}
+                expandButtonTitle={
+                  isExpanded ? 'Lagre og lukk' : 'Åpne oppgave'
+                }
+                expandButtonProps={{
+                  svgPath: isExpanded ? SaveSVGpath : EditSVGpath,
+                  hasSpinner: isSaving,
+                  disabled: isSaving,
+                }}
+                isExpanded={isExpanded}
+                isExpandable
+                onExpand={() => handleExpand(row.id)}
+                onClose={() => handleClose(row.id)}
               >
                 <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
                 <Table.DataCell>{row.timestamp}</Table.DataCell>
@@ -432,6 +755,7 @@ export const Editable: Story = {
         sortState={sortState}
         setSortState={setSortState}
         caption={'Månedoversikt'}
+        size={'large'}
       >
         <Table.Header>
           <Table.Row>
@@ -568,6 +892,7 @@ export const WithEmptyHeaders: Story = {
           caption={'Arbeidsoppgaver'}
           sortState={sortState}
           setSortState={setSortState}
+          size={'large'}
         >
           <Table.Header>
             <Table.Row>
@@ -683,11 +1008,12 @@ export const Selectable: Story = {
     const [isAllChecked, setIsAllChecked] = useState<boolean>(false);
 
     return (
-      <Table caption={'avgiftsstatus'}>
+      <Table caption={'avgiftsstatus'} size={'large'}>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell as={'td'}>
               <Checkbox
+                classNames={{ label: 'checkboxInTable' }}
                 checked={isAllChecked}
                 hideLabel
                 onChange={() => {
@@ -715,6 +1041,7 @@ export const Selectable: Story = {
             <Table.Row key={item.id}>
               <Table.DataCell>
                 <Checkbox
+                  classNames={{ label: 'checkboxInTable' }}
                   checked={
                     isAllChecked || checkedState.some((it) => it === index)
                   }
@@ -834,7 +1161,7 @@ export const WithStripes: Story = {
 
     return (
       <>
-        <Table caption={'Firmaoversikt'}>
+        <Table caption={'Firmaoversikt'} size={'large'}>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell scope={'col'}>{'Firma'}</Table.HeaderCell>
@@ -868,7 +1195,7 @@ export const WithStripes: Story = {
             })}
           </Table.Body>
         </Table>
-        <Table caption={'Firmaoversikt'}>
+        <Table caption={'Firmaoversikt'} size={'large'}>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell scope={'col'}>{'Firma'}</Table.HeaderCell>
@@ -1088,10 +1415,10 @@ export const AddRow: Story = {
         </Button>
         <Table
           caption={'Personoversikt'}
-          variant={'compact'}
           rowInEditModeId={addRow ? 'addPerson' : undefined}
           sortState={sortState}
           setSortState={setSortState}
+          size={'extraSmall'}
         >
           <Table.Header>
             <Table.Row>

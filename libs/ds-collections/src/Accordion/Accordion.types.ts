@@ -2,7 +2,7 @@ import { ReactNode, Ref } from 'react';
 
 import { BaseProps, Color, Position, Size } from '@skatteetaten/ds-core-utils';
 
-import { AccordionItem } from '../AccordionItem/AccordionItem';
+import { AccordionItem } from './AccordionItem/AccordionItem';
 
 export type AccordionColor =
   | Extract<Color, 'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'>

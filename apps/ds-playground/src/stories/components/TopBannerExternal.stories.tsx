@@ -33,7 +33,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import {
   getTopBannerLangPickerLocaleDefault,
   getTopBannerLangPickerShowSamiDefault,
-} from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
+} from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/defaults';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
@@ -221,7 +221,7 @@ export const ExampleWithRolePicker: Story = {
       },
       {
         href: MinsideLenker.PERSON_KRAVOVERSIKT,
-        text: 'Krav og betalinger',
+        text: 'Krav og betaling',
       },
       {
         href: LenkerInnloggetIkkeMinSide.KJORETOY,
@@ -302,7 +302,7 @@ export const ExampleWithRolePicker: Story = {
       },
       {
         href: MinsideLenker.VIRKSOMHET_KRAVOVERSIKT,
-        text: 'Krav og betalinger',
+        text: 'Krav og betaling',
       },
       {
         href: MinsideLenker.VIRKSOMHET_SAKSTATUS,
@@ -347,9 +347,7 @@ export const ExampleWithRolePicker: Story = {
                   <Paragraph variant={'ingress'}>
                     {'Se, endre og send inn'}
                   </Paragraph>
-                  <ul
-                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.linkWrapperPadding}`}
-                  >
+                  <ul className={topBannerExternalExampleStyles.linkWrapper}>
                     {(user.role === 'virksomhet'
                       ? virksomhetLinks
                       : loggedInLinks
@@ -647,7 +645,7 @@ export const ExampleWithUserMenu: Story = {
       },
       {
         href: MinsideLenker.PERSON_KRAVOVERSIKT,
-        text: 'Krav og betalinger',
+        text: 'Krav og betaling',
       },
       {
         href: LenkerInnloggetIkkeMinSide.KJORETOY,
@@ -728,7 +726,7 @@ export const ExampleWithUserMenu: Story = {
       },
       {
         href: MinsideLenker.VIRKSOMHET_KRAVOVERSIKT,
-        text: 'Krav og betalinger',
+        text: 'Krav og betaling',
       },
       {
         href: MinsideLenker.VIRKSOMHET_SAKSTATUS,
@@ -773,9 +771,7 @@ export const ExampleWithUserMenu: Story = {
                   <Paragraph variant={'ingress'}>
                     {'Se, endre og send inn'}
                   </Paragraph>
-                  <ul
-                    className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.linkWrapperPadding}`}
-                  >
+                  <ul className={topBannerExternalExampleStyles.linkWrapper}>
                     {(user.role === 'virksomhet'
                       ? virksomhetLinks
                       : loggedInLinks

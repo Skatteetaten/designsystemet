@@ -2,40 +2,49 @@ import { Dispatch, ReactNode, Ref, SetStateAction } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { TabsList } from '../TabsList/TabsList';
-import { TabsPanel } from '../TabsPanel/TabsPanel';
-import { TabsTab } from '../TabsTab/TabsTab';
+import { TabsList } from './TabsList/TabsList';
+import { TabsPanel } from './TabsPanel/TabsPanel';
+import { TabsTab } from './TabsTab/TabsTab';
 
 export const tabsVariantArr = ['standard', 'compact'] as const;
 export type TabsVariant = (typeof tabsVariantArr)[number];
 
 type TabsDiscriminatedValueProps =
   | {
-      /** Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er controlled */
+      /**
+       * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
+       * komponenten er controlled
+       */
       value: string;
       /**
-       * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er uncontrolled.
-       * value må oppdateres via onChange-eventet
+       * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
+       * komponenten er uncontrolled. value må oppdateres via onChange-eventet
        */
       defaultValue?: string;
     }
   | {
-      /** Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er controlled */
+      /**
+       * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
+       * komponenten er controlled
+       */
       value?: string;
       /**
-       * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er uncontrolled.
-       * value må oppdateres via onChange-eventet
+       * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
+       * komponenten er uncontrolled. value må oppdateres via onChange-eventet
        */
       defaultValue: string;
     };
 
 interface TabsCommonProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
-  /** Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er controlled */
+  /**
+   * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
+   * komponenten er controlled
+   */
   value?: string;
   /**
-   * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er uncontrolled.
-   * value må oppdateres via onChange-eventet
+   * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
+   * komponenten er uncontrolled. value må oppdateres via onChange-eventet
    */
   defaultValue?: string;
   /** Lar listen med tab'er flyte over flere linje hvis ikke plass på en linje */
@@ -44,7 +53,7 @@ interface TabsCommonProps extends BaseProps {
   variant?: TabsVariant;
   /** Border på tab-elementen */
   hasBorder?: boolean;
-  /** onChange callback hvor value har verdien til aktiv Tab-element */
+  /** OnChange callback hvor value har verdien til aktiv Tab-element */
   onChange?: (value: string) => void;
   /** Tabs.List og Tabs.Panel */
   children?: ReactNode;

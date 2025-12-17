@@ -2,13 +2,13 @@
 import { Meta } from '@storybook/react-vite';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerButton } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton';
+import { TopBannerButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerButton/TopBannerButton';
 
 import * as TopBannerButtonStories from './TopBannerButton.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/Button',
+  title: 'Chromatic/TopBannerExternal/Button (intern)',
   component: TopBannerButton,
   tags: ['chromatic', '!autodocs'],
   parameters: {

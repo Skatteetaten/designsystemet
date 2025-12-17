@@ -10,8 +10,8 @@ import { getRadioGroupVariantDefault } from './defaults';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { Fieldset } from '../Fieldset/Fieldset';
-import { Radio } from '../Radio/Radio';
-import { RadioGroupContext } from '../RadioGroupContext/RadioGroupContext';
+import { Radio } from './Radio/Radio';
+import { RadioGroupContext } from './RadioGroupContext';
 
 import styles from './RadioGroup.module.scss';
 
@@ -90,7 +90,11 @@ export const RadioGroup = (({
       ref={ref}
       id={id}
       className={className}
-      classNames={classNames}
+      classNames={{
+        ...classNames,
+        contentContainer:
+          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer}`.trim(),
+      }}
       lang={lang}
       data-testid={dataTestId}
       disabled={disabled}
@@ -112,7 +116,7 @@ export const RadioGroup = (({
             errorId: errorMessage ? errorId : '',
             selectedValue,
             name: nameId,
-            hasError: !!errorMessage || undefined,
+            hasError: !!errorMessage,
             required,
             onChange: handleChange,
             onBlur: handleBlur,

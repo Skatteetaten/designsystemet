@@ -40,7 +40,7 @@ const me: Person = {
   type: 'Person',
 };
 
-export const RolePickerWithAlertExample = (): JSX.Element => {
+const RolePickerWithAlertExample = (): JSX.Element => {
   const rolePickerRef = useRef<HTMLDialogElement>(null);
   return (
     <>
@@ -61,3 +61,5 @@ export const RolePickerWithAlertExample = (): JSX.Element => {
     </>
   );
 };
+
+export default RolePickerWithAlertExample;

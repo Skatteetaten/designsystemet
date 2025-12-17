@@ -3,7 +3,7 @@ import { useId, JSX } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from './Fieldset.types';
-import { Help } from '../Help/Help';
+import { Help } from '../LabelWithHelp/Help/Help';
 
 import styles from './Fieldset.module.scss';
 
@@ -44,14 +44,12 @@ export const Fieldset = ({
         : styles.legendWithMarkup_required;
   }
   const hideLegendClassName = hideLegend ? styles.srOnly : '';
-  const noMarginBottomLegendClassName =
-    description || helpText ? styles.legendNoMarginBottom : '';
   const noMarginTopContentContainerClassName = hideLegend
     ? styles.contentContainerNoMarginTop
     : '';
   const legendClassName = `${
     styles.legend
-  } ${requiredMarkClassName} ${hideLegendClassName} ${noMarginBottomLegendClassName} ${
+  } ${requiredMarkClassName} ${hideLegendClassName} ${
     classNames?.legend ?? ''
   }`.trim();
 
@@ -68,6 +66,7 @@ export const Fieldset = ({
     >
       <legend id={legendId} className={styles.srOnly}>
         {legend}
+        {description && <span> {description}</span>}
       </legend>
 
       <div className={legendClassName} aria-hidden={'true'}>
@@ -81,10 +80,11 @@ export const Fieldset = ({
         targetId={legendId}
         titleHelpSvg={titleHelpSvg}
         description={description}
+        hideDescriptionForScreenReader
         onHelpToggle={onHelpToggle}
       />
       <div
-        className={`${styles.contentContainer} ${noMarginTopContentContainerClassName}`.trim()}
+        className={`${styles.contentContainer} ${noMarginTopContentContainerClassName} ${classNames?.contentContainer ?? ''}`.trim()}
       >
         {children}
       </div>

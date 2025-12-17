@@ -14,7 +14,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: RadioGroup,
-  title: 'Tester/RadioGroup/RadioGroup',
+  title: 'Tester/RadioGroup',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -177,6 +177,7 @@ export const Defaults = {
     await expect(legend.tagName).toBe('LEGEND');
     radios.forEach((input) => {
       expect(input).toHaveAttribute('name');
+      expect(input).toHaveAttribute('aria-invalid', 'false');
     });
   },
 } satisfies Story;
@@ -461,7 +462,8 @@ export const WithDescription = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const description = canvas.getByText(
-      'Vi trenger å vite din type virksomhet.'
+      'Vi trenger å vite din type virksomhet.',
+      { selector: ":not([aria-hidden='true'])" }
     );
     await expect(description).toBeInTheDocument();
   },
@@ -624,6 +626,11 @@ export const WithCustomClassNames = {
       '[id^= radioErrorId]>div'
     );
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
-    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
+
+    await expect(
+      canvas.getByText('beskrivelse', {
+        selector: "[aria-hidden='true']",
+      })
+    ).toHaveClass('dummyClassname');
   },
 } satisfies Story;

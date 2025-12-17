@@ -16,7 +16,7 @@ import {
   getTableVariantDefault,
 } from '../Table/defaults';
 import { sortDirection } from '../Table/Table.types';
-import { TableContext } from '../TableContext/TableContext';
+import { TableContext } from '../Table/TableContext';
 
 import styles from './TableHeaderCell.module.scss';
 
@@ -40,7 +40,10 @@ export const TableHeaderCell = ({
 
   const variant = context?.variant ?? getTableVariantDefault();
   const alignmentClassName = styles[`headerCell_${alignment}`];
-  const variantClassName = styles[`headerCell_${variant}`];
+
+  const variantClassName = context?.size
+    ? styles[`headerCell_${context.size}`]
+    : styles[`headerCell_${variant}`];
   const concatenatedClassNames = `${styles.headerCell} ${
     isSortable ? styles.headerCell_noPadding : variantClassName
   } ${

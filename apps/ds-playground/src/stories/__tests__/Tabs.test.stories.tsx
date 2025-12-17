@@ -8,7 +8,7 @@ import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
 
 const meta = {
   component: Tabs,
-  title: 'Tester/Tabs/Tabs',
+  title: 'Tester/Tabs',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

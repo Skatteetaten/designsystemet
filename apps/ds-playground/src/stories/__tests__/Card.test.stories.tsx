@@ -6,7 +6,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: Card,
-  title: 'Tester/Card/Card',
+  title: 'Tester/Card',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

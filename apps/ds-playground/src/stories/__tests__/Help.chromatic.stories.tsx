@@ -2,7 +2,7 @@
 import { Meta } from '@storybook/react-vite';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { Help } from '../../../../../libs/ds-forms/src/Help/Help';
+import { Help } from '../../../../../libs/ds-forms/src/LabelWithHelp/Help/Help';
 
 import * as HelpStories from './Help.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';

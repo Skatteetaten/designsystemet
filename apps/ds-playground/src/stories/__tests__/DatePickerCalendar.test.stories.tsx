@@ -4,9 +4,9 @@ import { expect, fireEvent, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { DatePickerCalendar } from '../../../../../libs/ds-forms/src/DatePickerCalendar/DatePickerCalendar';
+import { DatePickerCalendar } from '../../../../../libs/ds-forms/src/DatePicker/DatePickerCalendar/DatePickerCalendar';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { DatePickerCalendarProps } from '../../../../../libs/ds-forms/src/DatePickerCalendar/DatePickerCalendar.types';
+import { DatePickerCalendarProps } from '../../../../../libs/ds-forms/src/DatePicker/DatePickerCalendar/DatePickerCalendar.types';
 
 const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
   /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
@@ -25,7 +25,7 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
 const today = new Date('2024-01-15');
 const meta = {
   component: DatePickerCalendar,
-  title: 'Tester/DatePicker/DatePickerCalendar',
+  title: 'Tester/DatePicker/Calendar',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

@@ -6,7 +6,7 @@ import * as TopBannerInternalActionMenuStories from './TopBannerInternalActionMe
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/TopBannerInternalActionMenu',
+  title: 'Chromatic/TopBannerInternal/ActionMenu',
   component: TopBannerInternal.ActionMenu,
   tags: ['chromatic', '!autodocs'],
   parameters: {

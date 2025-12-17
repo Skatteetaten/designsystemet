@@ -4,12 +4,12 @@ import { expect, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerUserButton } from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton';
+import { TopBannerUserButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerUserButton/TopBannerUserButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   TopBannerUserButtonProps,
   userRoleArr,
-} from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
+} from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerUserButton/TopBannerUserButton.types';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -22,7 +22,7 @@ const verifyAttribute =
 
 const meta = {
   component: TopBannerUserButton,
-  title: 'Tester/TopBanner/TopBannerUserButton (intern)',
+  title: 'Tester/TopBannerExternal/UserButton (intern)',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

@@ -33,7 +33,7 @@ Card.Alert.displayName = 'Card.Alert';
 
 const meta = {
   component: Card,
-  title: 'Komponenter/Card/Card',
+  title: 'Komponenter/Card',
   argTypes: {
     // Props
     children: {

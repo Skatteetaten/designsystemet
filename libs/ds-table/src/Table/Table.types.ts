@@ -1,6 +1,11 @@
 import { Dispatch, ReactNode, Ref, RefObject, SetStateAction, FC } from 'react';
 
-import { BaseProps, Density, Position } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  Density,
+  Position,
+  Size,
+} from '@skatteetaten/ds-core-utils';
 
 import { TableBody } from '../TableBody/TableBody';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
@@ -13,6 +18,11 @@ import { TableSum } from '../TableSum/TableSum';
 export const tableVariantArr = ['standard', 'compact'] as const;
 export type TableVariant = (typeof tableVariantArr)[number];
 
+export type TableSize = Extract<
+  Size,
+  'extraSmall' | 'small' | 'medium' | 'large'
+>;
+
 export const tableCellAsArr = ['td', 'th'] as const;
 export type TableCellAs = (typeof tableCellAsArr)[number];
 
@@ -20,9 +30,9 @@ export type TextAlignment = Extract<Position, 'left' | 'right' | 'center'>;
 
 export type sortDirection = 'none' | 'ascending' | 'descending';
 export interface SortState {
-  /** stigende eller synkende sortering */
+  /** Stigende eller synkende sortering */
   direction: sortDirection;
-  /** Holder styr på hvilken kolonne som skal sortering*/
+  /** Holder styr på hvilken kolonne som skal sortering */
   sortKey?: string;
 }
 
@@ -30,6 +40,7 @@ export interface TableContextProps {
   sortState?: SortState;
   setSortState?: Dispatch<SetStateAction<SortState>>;
   variant: Density;
+  size?: TableSize;
   rowInEditModeId?: string;
   setRowInEditModeId: Dispatch<SetStateAction<string | undefined>>;
 }
@@ -42,13 +53,22 @@ export type RowWithExpandButtonHandle = {
 
 export interface TableProps extends BaseProps {
   ref?: Ref<HTMLTableElement>;
-  /** Table caption  */
+  /** Table caption */
   caption: string;
-  /** Definerer stilen til tabellen. */
+  /**
+   * @deprecated Erstattes as 'size' i neste major versjon.
+   *
+   *   Definerer stilen til tabellen.
+   */
   variant?: Density;
+  /** Definerer størrelse på tabellen. */
+  size?: TableSize;
   /** Holder styr på sortering av kolonner */
   sortState?: SortState;
-  /** Styrer om tabellen skal ta opp full bredde eller tilpasse seg størrelsen på innholdet */
+  /**
+   * Styrer om tabellen skal ta opp full bredde eller tilpasse seg størrelsen på
+   * innholdet
+   */
   hasFullWidth?: boolean;
   /** Gjør caption synlig */
   showCaption?: boolean;
@@ -56,7 +76,7 @@ export interface TableProps extends BaseProps {
   setSortState?: Dispatch<SetStateAction<SortState>>;
   /** Id til rad som skal være i redigeringsmodus når tabellen rendres. */
   rowInEditModeId?: string;
-  /**  Innholdet i tabellen  */
+  /** Innholdet i tabellen */
   children?: ReactNode;
   /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
   canBeManuallyFocused?: boolean;

@@ -39,6 +39,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    isRequired: { table: { category: category.props } },
     isUploading: { table: { category: category.props } },
     label: { table: { category: category.props } },
     spinnerLabel: {
@@ -198,15 +199,16 @@ export const Examples: Story = {
       href?: string;
     }
     const createMockPromises = (
-      amount: number
+      amount: number,
+      shouldFail: boolean
     ): Promise<MockUploadedFile>[] => {
       const promises: Promise<MockUploadedFile>[] = [];
       for (let i = 0; i < amount; i++) {
         const promise = new Promise<MockUploadedFile>((resolve, reject) => {
-          if (Math.random() < 0.5) {
-            resolve({ href: 'https://skatteetaten.github.io/designsystemet/' });
-          } else {
+          if (shouldFail) {
             reject('Promise rejected');
+          } else {
+            resolve({ href: 'https://skatteetaten.github.io/designsystemet/' });
           }
         });
 
@@ -219,28 +221,15 @@ export const Examples: Story = {
       FileUploader.useFileUploader();
 
     const [error, setError] = useState<string>();
-    const [shouldMockUpload, setShouldMockUpload] = useState<boolean>(true);
-
-    const uploadUrl = 'http://localhost:9090/test';
+    const [shouldUploadFail, setShouldUploadFail] = useState<boolean>(false);
 
     const handleDelete = async (file: UploadedFile): Promise<boolean> => {
       await new Promise((_) => setTimeout(_, 1500));
-      if (shouldMockUpload) {
+      if (!shouldUploadFail) {
         remove(file);
         return true;
       }
-      let deleteStatus = true;
-
-      await fetch(uploadUrl, {
-        method: 'DELETE',
-      }).then((response) => {
-        if (!response.ok) {
-          deleteStatus = false;
-        } else {
-          remove(file);
-        }
-      });
-      return deleteStatus;
+      return false;
     };
 
     const handleChange = async (files: File[]): Promise<void> => {
@@ -254,24 +243,7 @@ export const Examples: Story = {
       const succeeded: Array<UploadedFile> = [];
       const failed: Array<{ name: string; reason: string; id?: string }> = [];
 
-      let uploadPromises: Promise<MockUploadedFile>[] = [];
-
-      if (shouldMockUpload) {
-        uploadPromises = createMockPromises(files.length);
-      } else {
-        uploadPromises = files.map((file) =>
-          fetch(uploadUrl, {
-            method: 'POST',
-            body: file,
-          }).then((response) => {
-            console.log(response);
-            if (!response.ok) {
-              return Promise.reject(response);
-            }
-            return response.json();
-          })
-        );
-      }
+      const uploadPromises = createMockPromises(files.length, shouldUploadFail);
 
       const results = await Promise.allSettled(uploadPromises);
 
@@ -294,6 +266,7 @@ export const Examples: Story = {
       });
 
       if (failed.length) {
+        console.log(failed);
         const error = `${failed.length} av ${files.length} filer ble ikke lastet Opp`;
         setFailure(
           failed.map(({ name, reason }) => ({
@@ -319,10 +292,10 @@ export const Examples: Story = {
     return (
       <>
         <Checkbox
-          checked={shouldMockUpload}
-          onChange={() => setShouldMockUpload(!shouldMockUpload)}
+          checked={shouldUploadFail}
+          onChange={() => setShouldUploadFail(!shouldUploadFail)}
         >
-          {'Bruk mockUpload'}
+          {'la opplasting feile'}
         </Checkbox>
         <FileUploader
           label={'Dokumentasjon og grunnlag'}

@@ -32,6 +32,7 @@ export const RowWithLeftSideExpandButton = ({
   expandableContent,
   expandButtonTitle = getTableRowExpandButtonTitleDefault(),
   expandButtonAriaDescribedby,
+  expandButtonProps,
   showExpandButtonTitle,
   isExpanded = getTableRowIsExpandedDefault(),
   isExpandButtonDisabled,
@@ -102,6 +103,25 @@ export const RowWithLeftSideExpandButton = ({
     }, 0);
   };
 
+  const cellSizeClassName = context?.size
+    ? styles[`buttonCell_${context?.size}`]
+    : '';
+
+  const cellVariantClassName =
+    context?.variant === 'compact' ? styles.buttonCell_compact : '';
+
+  const expandButtonSizeClassName =
+    context?.size === 'extraSmall' ? styles.expandButton_extraSmall : '';
+
+  const expandButtonVariantClassName =
+    context?.variant === 'compact' ? styles.expandButton_compact : '';
+
+  const expandableContentSizeClassName =
+    context?.size === 'extraSmall' ? styles.expandableContent_extraSmall : '';
+
+  const expandableContentVariantClassName =
+    context?.variant === 'compact' ? styles.expandableContent_compact : '';
+
   return (
     <tr
       ref={rowRef}
@@ -113,19 +133,20 @@ export const RowWithLeftSideExpandButton = ({
       <TableDataCell
         ref={cellRef}
         className={`${!showExpandButtonTitle ? styles.buttonCell : ''} ${
-          context?.variant === 'compact' && !showExpandButtonTitle
-            ? styles.buttonCell_compact
+          !showExpandButtonTitle
+            ? cellSizeClassName || cellVariantClassName
             : ''
         } ${isExpanded && hideIconButton ? styles.buttonCell_expanded : ''}`.trim()}
       >
         {showExpandButtonTitle ? (
           <InlineButton
             ref={buttonRef}
-            className={`${styles.expandButton} ${context?.variant === 'compact' ? styles.expandButton_compact : ''}`.trim()}
+            className={`${styles.expandButton} ${expandButtonSizeClassName || expandButtonVariantClassName}`.trim()}
             svgPath={svgPath}
             ariaDescribedby={expandButtonAriaDescribedby}
             disabled={isExpandButtonDisabled}
             onClick={handleClick}
+            {...expandButtonProps}
           >
             {expandButtonTitle}
           </InlineButton>
@@ -135,17 +156,18 @@ export const RowWithLeftSideExpandButton = ({
             className={hideIconButton ? styles.hideIcon : ''}
             svgPath={svgPath}
             title={expandButtonTitle}
-            size={getIconButtonSize(isDesktop, context?.variant)}
+            size={getIconButtonSize(isDesktop, context?.variant, context?.size)}
             ariaDescribedby={expandButtonAriaDescribedby}
             ariaExpanded={iconButtonAriaExpanded}
             disabled={isExpandButtonDisabled}
             onClick={handleClick}
+            {...expandButtonProps}
           />
         )}
         {isExpanded && (
           <div
             ref={expandableWrapperRef}
-            className={`${styles.expandableContent} ${context?.variant === 'compact' ? styles.expandableContent_compact : ''} ${
+            className={`${styles.expandableContent} ${expandableContentSizeClassName || expandableContentVariantClassName} ${
               classNames?.expandedContent ?? ''
             }`.trim()}
           >
@@ -173,6 +195,7 @@ export const RowWithRightSideExpandButton = ({
   iconButtonAriaExpanded,
   svgPath,
   expandButtonAriaDescribedby,
+  expandButtonProps,
   isExpanded = getTableRowIsExpandedDefault(),
   isExpandButtonDisabled,
   shouldInsertExpandAreaMarkers,
@@ -204,8 +227,31 @@ export const RowWithRightSideExpandButton = ({
   }, [isExpanded]);
 
   useEffect(() => {
-    setRowLength(rowRef?.current?.cells.length ?? 999);
-  }, [rowRef]);
+    if (!isExpanded) return;
+
+    const cells = rowRef.current?.cells;
+
+    if (!cells) return;
+
+    let totalColumns = 0;
+    for (let i = 0; i < cells.length; i++) {
+      totalColumns += cells[i].colSpan || 1;
+    }
+
+    setRowLength(totalColumns);
+  }, [rowRef, isExpanded]);
+
+  const cellSizeClassName = context?.size
+    ? styles[`buttonCell_${context?.size}`]
+    : '';
+  const cellVariantClassName =
+    context?.variant === 'compact' ? styles.buttonCell_compact : '';
+
+  const expandButtonSizeClassName =
+    context?.size === 'extraSmall' ? styles.expandButton_extraSmall : '';
+
+  const expandButtonVariantClassName =
+    context?.variant === 'compact' ? styles.expandButton_compact : '';
 
   return (
     <>
@@ -219,8 +265,8 @@ export const RowWithRightSideExpandButton = ({
         {children}
         <TableDataCell
           className={`${!showExpandButtonTitle ? styles.buttonCell : ''} ${
-            context?.variant === 'compact' && !showExpandButtonTitle
-              ? styles.buttonCell_compact
+            !showExpandButtonTitle
+              ? cellSizeClassName || cellVariantClassName
               : ''
           }`.trim()}
           alignment={'right'}
@@ -228,11 +274,12 @@ export const RowWithRightSideExpandButton = ({
           {showExpandButtonTitle ? (
             <InlineButton
               ref={buttonRef}
-              className={`${styles.expandButton} ${context?.variant === 'compact' ? styles.expandButton_compact : ''}`.trim()}
+              className={`${styles.expandButton} ${expandButtonSizeClassName || expandButtonVariantClassName}`.trim()}
               svgPath={svgPath}
               ariaDescribedby={expandButtonAriaDescribedby}
               disabled={isExpandButtonDisabled}
               onClick={handleClick}
+              {...expandButtonProps}
             >
               {expandButtonTitle}
             </InlineButton>
@@ -242,15 +289,21 @@ export const RowWithRightSideExpandButton = ({
               className={hideIconButton ? styles.hideIcon : ''}
               svgPath={svgPath}
               title={expandButtonTitle}
-              size={getIconButtonSize(isDesktop, context?.variant)}
+              size={getIconButtonSize(
+                isDesktop,
+                context?.variant,
+                context?.size
+              )}
               ariaDescribedby={expandButtonAriaDescribedby}
               ariaExpanded={iconButtonAriaExpanded}
               disabled={isExpandButtonDisabled}
               onClick={handleClick}
+              {...expandButtonProps}
             />
           )}
         </TableDataCell>
       </tr>
+
       {isExpanded && !shouldInsertExpandAreaMarkers && (
         <tr className={`${styles.expandedRowRight} ${className}`.trim()}>
           <td colSpan={rowLength}>

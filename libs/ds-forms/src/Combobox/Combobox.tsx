@@ -35,18 +35,24 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 import styles from './Combobox.module.scss';
 
 /**
- * Combobox allows users to select from a list of predefined options with search functionality.
- * Supports both single and multi-select modes, with controlled and uncontrolled variants.
+ * Combobox allows users to select from a list of predefined options with search
+ * functionality. Supports both single and multi-select modes, with controlled
+ * and uncontrolled variants.
  *
  * #### Single Select Usage:
- * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection events
+ *
+ * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection
+ *   events
  * - **Controlled**: Provide `value` prop, use `onSelectionChange` to update state
  * - **With search**: Use `onInputChange` for live search/filtering functionality
  *
  * #### Multi Select Usage:
+ *
  * - Set `multiple={true}` prop
- * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection events
- * - **Controlled**: Provide `value` as array, use `onSelectionChange` to update state
+ * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection
+ *   events
+ * - **Controlled**: Provide `value` as array, use `onSelectionChange` to update
+ *   state
  * - Automatically uses 'large' variant for chip display space
  */
 const Combobox = memo(
@@ -215,7 +221,11 @@ const Combobox = memo(
         .join(' ') || undefined;
 
     return (
-      <div lang={lang} data-has-spacing={hasSpacing} className={className}>
+      <div
+        lang={lang}
+        data-has-spacing={hasSpacing}
+        className={`${styles.wrapper} ${className} ${classNames?.container || ''}`.trim()}
+      >
         <LabelWithHelp
           id={labelId}
           classNames={classNames}
@@ -237,6 +247,7 @@ const Combobox = memo(
         >
           <div className={styles.inputContentArea}>
             <ComboboxSelectedOptions
+              className={classNames?.inputList}
               multiple={multiple}
               selectedValues={selectedValues}
               labelId={labelId}
@@ -320,6 +331,8 @@ const Combobox = memo(
           isOpen={isOpen}
           displayOptions={displayOptions}
           searchTerm={searchTerm}
+          selectedValues={selectedValues}
+          focusedIndex={focusedIndex}
         />
       </div>
     );

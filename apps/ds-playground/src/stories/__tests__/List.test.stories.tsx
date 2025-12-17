@@ -5,7 +5,7 @@ import { List, ListProps, Paragraph } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: List,
-  title: 'Tester/List/List',
+  title: 'Tester/List',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },

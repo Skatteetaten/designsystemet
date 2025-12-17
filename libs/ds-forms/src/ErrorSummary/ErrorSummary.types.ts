@@ -2,7 +2,7 @@ import { ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
-import { ErrorSummaryError } from '../ErrorSummaryError/ErrorSummaryError';
+import { ErrorSummaryError } from './ErrorSummaryError/ErrorSummaryError';
 
 export interface ErrorSummaryProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
@@ -12,7 +12,10 @@ export interface ErrorSummaryProps extends BaseProps {
   content?: ReactNode;
   /** Margin under komponenten */
   hasSpacing?: boolean;
-  /** Mulighet til å angi shadowRootNode slik at fokus kan settes når elementet feilen hører til ligger i shadowDOM */
+  /**
+   * Mulighet til å angi shadowRootNode slik at fokus kan settes når elementet
+   * feilen hører til ligger i shadowDOM
+   */
   shadowRootNode?: Document | ShadowRoot;
   /** Om komponenten skal vises */
   showErrorSummary?: boolean;

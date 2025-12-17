@@ -14,7 +14,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
-import { SelectOption } from '../SelectOption/SelectOption';
+import { SelectOption } from './SelectOption/SelectOption';
 
 type RequiredSelectHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'select'>,
@@ -45,7 +45,10 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
-  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
+  /**
+   * Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for
+   * skjermleser.
+   */
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;

@@ -18,3 +18,21 @@
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
 }
+
+.maxHeight {
+  max-height: 7rem;
+  padding: 2px;
+  border-bottom: 1px solid var(--palette-graphite-50);
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 100%) 80%,
+    rgb(0 0 0 / 0%)
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 100%) 80%,
+    rgb(0 0 0 / 20%)
+  );
+  overflow-y: auto;
+}

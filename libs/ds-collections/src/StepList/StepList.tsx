@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { StepListComponent, StepListProps } from './StepList.types';
-import { StepListStep } from '../StepListStep/StepListStep';
+import { StepListStep } from './StepListStep/StepListStep';
 
 import styles from './StepList.module.scss';
 

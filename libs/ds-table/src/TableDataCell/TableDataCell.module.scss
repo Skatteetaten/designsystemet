@@ -12,6 +12,21 @@
     padding-left: var(--spacing-l);
   }
 
+  &_small {
+    padding: var(--spacing-xs) var(--spacing-s)
+      calc(var(--spacing-xs) - var(--table-cell-border-width));
+  }
+
+  &_medium {
+    padding: var(--spacing-s-plus) var(--spacing-s)
+      calc(var(--spacing-s-plus) - var(--table-cell-border-width));
+  }
+
+  &_large {
+    padding: var(--spacing-m) var(--spacing-m)
+      calc(var(--spacing-m) - var(--table-cell-border-width));
+  }
+
   &_standard {
     @extend %cell-padding;
   }
@@ -26,6 +41,12 @@
 
   &_center {
     text-align: center;
+  }
+
+  &_extraSmall {
+    padding: var(--spacing-xs) var(--spacing-s)
+      calc(var(--spacing-xs) - var(--table-cell-border-width));
+    font-size: var(--font-size-s);
   }
 
   &_compact {

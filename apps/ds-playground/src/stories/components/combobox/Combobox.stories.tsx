@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import type { Meta, StoryFn, StoryObj } from '@storybook/react/*';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   Combobox,
@@ -12,16 +12,17 @@ import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 
 import {
   comboboxStoryOptions,
-  getComboboxStoryOptions,
   generatePerformanceTestData,
 } from './combobox.stories.utils';
-import { ComboboxFormExample } from './ComboboxFormExample';
+import ComboboxFormExample from './ComboboxFormExample';
 import comboboxFormExampleSource from './ComboboxFormExample.tsx?raw';
-import { ComboboxLoadingStatesExample } from './ComboboxLoadingStatesExample';
+import ComboboxLoadingStatesExample from './ComboboxLoadingStatesExample';
 import comboboxLoadingStatesExampleSource from './ComboboxLoadingStatesExample.tsx?raw';
 import { ComboboxMaxHeightExample } from './ComboboxMaxHeightExample';
 import comboboxMaxHeightExampleSource from './ComboboxMaxHeightExample.tsx?raw';
-import { ComboboxMaxSelectedExample } from './ComboboxMaxSelectedExample';
+// import { ComboboxMaxHeightInputListExample } from './ComboboxMaxHeightInputListExample';
+// import comboboxMaxHeightInputListExampleSource from './ComboboxMaxHeightInputListExample.tsx?raw';
+import ComboboxMaxSelectedExample from './ComboboxMaxSelectedExample';
 import comboboxMaxSelectedExampleSource from './ComboboxMaxSelectedExample.tsx?raw';
 import {
   ComboboxPerformanceExample,
@@ -30,10 +31,17 @@ import {
 import comboboxPerformanceExampleSource from './ComboboxPerformanceExample.tsx?raw';
 import { ComboboxTypedOptionsExample } from './ComboboxTypedOptionsExample';
 import comboboxTypedOptionsExampleSource from './ComboboxTypedOptionsExample.tsx?raw';
-import { ComboboxValidationExample } from './ComboboxValidationExample';
+import ComboboxValidationExample from './ComboboxValidationExample';
 import comboboxValidationExampleSource from './ComboboxValidationExample.tsx?raw';
 import { category, htmlEventDescription } from '../../../../.storybook/helpers';
 import { SystemSVGPaths } from '../../utils/icon.systems';
+import './ComboboxMaxHeightExample.scss';
+
+const defaultArgs = {
+  name: 'kommune',
+  label: 'Velg kommune',
+  options: comboboxStoryOptions,
+};
 
 const meta = {
   title: 'Komponenter/Combobox',
@@ -105,15 +113,11 @@ const meta = {
     onInputChange: { ...htmlEventDescription },
     onHelpToggle: { ...htmlEventDescription, action: 'help-toggled' },
   },
-  args: {
-    label: 'Velg kommune',
-    options: comboboxStoryOptions,
-  },
+  args: defaultArgs,
 } satisfies Meta<typeof Combobox>;
 
 export default meta;
 type Story = StoryObj<typeof Combobox>;
-type StoryFunction = StoryFn<typeof meta>;
 
 const width400Decorator = (Story: React.ComponentType): JSX.Element => (
   <div className={'width400'}>
@@ -121,179 +125,287 @@ const width400Decorator = (Story: React.ComponentType): JSX.Element => (
   </div>
 );
 
-export const Primary: Story = {
+export const Preview: Story = {};
+
+export const Single: Story = {
   name: 'Enkeltvalg',
-  decorators: [width400Decorator],
-  args: {
-    name: 'kommune',
-    options: getComboboxStoryOptions(8),
-    multiple: false,
+  render: (_args): JSX.Element => {
+    return (
+      <Combobox
+        options={[
+          {
+            label: 'Agdenes',
+            value: 'agdenes',
+          },
+          {
+            label: 'Balestrand',
+            value: 'balestrand',
+          },
+          {
+            label: 'Finnøy',
+            value: 'finnoy',
+          },
+          {
+            label: 'Forsand',
+            value: 'forsand',
+          },
+          {
+            label: 'Kvalsund',
+            value: 'kvalsund',
+          },
+          {
+            label: 'Mandal',
+            value: 'mandal',
+          },
+          {
+            label: 'Midsund',
+            value: 'midsund',
+          },
+          {
+            label: 'Rennesøy',
+            value: 'rennesoy',
+          },
+          {
+            label: 'Songdalen',
+            value: 'songdalen',
+          },
+          {
+            label: 'Tysfjord',
+            value: 'tysfjord',
+          },
+        ]}
+        classNames={{ container: 'width400', options: 'maxHeight300' }}
+        label={'Velg kommune'}
+      />
+    );
   },
 };
 
 export const Multiple: Story = {
   name: 'Flere valg',
+  render: (_args): JSX.Element => {
+    return (
+      <Combobox
+        options={[
+          {
+            label: 'Agdenes',
+            value: 'agdenes',
+          },
+          {
+            label: 'Balestrand',
+            value: 'balestrand',
+          },
+          {
+            label: 'Finnøy',
+            value: 'finnoy',
+          },
+          {
+            label: 'Forsand',
+            value: 'forsand',
+          },
+          {
+            label: 'Kvalsund',
+            value: 'kvalsund',
+          },
+          {
+            label: 'Mandal',
+            value: 'mandal',
+          },
+          {
+            label: 'Midsund',
+            value: 'midsund',
+          },
+          {
+            label: 'Rennesøy',
+            value: 'rennesoy',
+          },
+          {
+            label: 'Songdalen',
+            value: 'songdalen',
+          },
+          {
+            label: 'Tysfjord',
+            value: 'tysfjord',
+          },
+        ]}
+        classNames={{ container: 'width400', options: 'maxHeight300' }}
+        label={'Velg kommune'}
+        multiple
+      />
+    );
+  },
+};
+
+export const MaxSelected: Story = {
+  name: 'Begrenset antall valg',
   decorators: [width400Decorator],
-  args: {
-    name: 'kommuner',
-    multiple: true,
-    options: getComboboxStoryOptions(8),
+  render: (): JSX.Element => <ComboboxMaxSelectedExample />,
+  parameters: {
+    docs: {
+      source: {
+        code: comboboxMaxSelectedExampleSource,
+        language: 'tsx',
+      },
+    },
+    controls: {
+      exclude: /.*/,
+    },
   },
-};
+} satisfies Story;
 
-export const MaxSelected: StoryFunction = () => {
-  return <ComboboxMaxSelectedExample />;
-};
-MaxSelected.storyName = 'Begrenset antall valg';
-MaxSelected.decorators = [width400Decorator];
-MaxSelected.parameters = {
-  docs: {
-    source: {
-      code: comboboxMaxSelectedExampleSource,
-      language: 'tsx',
-    },
-  },
-  controls: {
-    exclude: /.*/,
-  },
-};
+// export const MaxHeightInputList: Story = {
+//   name: 'Begrenset høyde på input liste',
+//   decorators: [width400Decorator],
+//   render: (): JSX.Element => <ComboboxMaxHeightInputListExample />,
+//   parameters: {
+//     docs: {
+//       source: {
+//         code: comboboxMaxHeightInputListExampleSource,
+//         language: 'tsx',
+//       },
+//     },
+//     controls: {
+//       exclude: /.*/,
+//     },
+//   },
+// } satisfies Story;
 
-export const MaxHeight: StoryFunction = () => {
-  return <ComboboxMaxHeightExample />;
-};
-MaxHeight.storyName = 'Begrenset høyde på liste';
-MaxHeight.decorators = [width400Decorator];
-MaxHeight.parameters = {
-  docs: {
-    description: {
-      story:
-        'Viser hvordan du kan begrense høyden på dropdown-listen ved å bruke classNames.options med max-height CSS. Listen vil få scrollbar automatisk når innholdet overskrider max-height.',
+export const MaxHeight: Story = {
+  name: 'Begrenset høyde på options liste',
+  decorators: [width400Decorator],
+  render: (): JSX.Element => <ComboboxMaxHeightExample />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Viser hvordan du kan begrense høyden på dropdown-listen ved å bruke classNames.options med max-height CSS. Listen vil få scrollbar automatisk når innholdet overskrider max-height.',
+      },
+      source: {
+        code: comboboxMaxHeightExampleSource,
+        language: 'tsx',
+      },
     },
-    source: {
-      code: comboboxMaxHeightExampleSource,
-      language: 'tsx',
+    controls: {
+      exclude: /.*/,
     },
   },
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;
 
-export const MultipleWithFormExample: StoryFunction = () => {
-  return <ComboboxFormExample />;
-};
-MultipleWithFormExample.storyName = 'Flere valg med skjemaeksempel';
-MultipleWithFormExample.decorators = [width400Decorator];
-MultipleWithFormExample.parameters = {
-  docs: {
-    source: {
-      code: comboboxFormExampleSource,
-      language: 'tsx',
+export const MultipleWithFormExample: Story = {
+  name: 'Flere valg med skjemaeksempel',
+  decorators: [width400Decorator],
+  render: (): JSX.Element => <ComboboxFormExample />,
+  parameters: {
+    docs: {
+      source: {
+        code: comboboxFormExampleSource,
+        language: 'tsx',
+      },
+    },
+    controls: {
+      exclude: /.*/,
     },
   },
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;
 
-export const WithValidation: StoryFunction = () => {
-  return <ComboboxValidationExample />;
-};
-WithValidation.storyName = 'Validering og feilhåndtering';
-WithValidation.decorators = [width400Decorator];
-WithValidation.parameters = {
-  docs: {
-    source: {
-      code: comboboxValidationExampleSource,
-      language: 'tsx',
+export const WithValidation: Story = {
+  name: 'Validering og feilhåndtering',
+  decorators: [width400Decorator],
+  render: (): JSX.Element => <ComboboxValidationExample />,
+  parameters: {
+    docs: {
+      source: {
+        code: comboboxValidationExampleSource,
+        language: 'tsx',
+      },
+    },
+    controls: {
+      exclude: /.*/,
     },
   },
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;
 
-export const LoadingStates: StoryFunction = () => {
-  return <ComboboxLoadingStatesExample />;
-};
-LoadingStates.storyName = 'Loading og asynkron søk';
-LoadingStates.decorators = [width400Decorator];
-LoadingStates.parameters = {
-  docs: {
-    description: {
-      story:
-        'Viser hvordan Combobox håndterer loading states og asynkrone søkeoperasjoner. Demonstrerer isLoading prop, tilpassede loading-meldinger og forskjellen mellom disabled og loading states.',
+export const LoadingStates: Story = {
+  name: 'Loading og asynkron søk',
+  decorators: [width400Decorator],
+  render: (): JSX.Element => <ComboboxLoadingStatesExample />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Viser hvordan Combobox håndterer loading states og asynkrone søkeoperasjoner. Demonstrerer isLoading prop, tilpassede loading-meldinger og forskjellen mellom disabled og loading states.',
+      },
+      source: {
+        code: comboboxLoadingStatesExampleSource,
+        language: 'tsx',
+      },
     },
-    source: {
-      code: comboboxLoadingStatesExampleSource,
-      language: 'tsx',
+    controls: {
+      exclude: /.*/,
     },
   },
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;
 
-export const WithTypedOptions: StoryFunction = () => {
-  return <ComboboxTypedOptionsExample />;
-};
-WithTypedOptions.storyName = 'TypedComboboxOption med metadata';
-WithTypedOptions.parameters = {
-  docs: {
-    description: {
-      story:
-        'Demonstrerer bruk av TypedComboboxOption<TData> for å knytte metadata til hver option. Velg tidligere norske kommuner og se hvordan informasjon om sammenslåing og resulterende kommune lagres direkte på options og vises når du gjør valg. TypedComboboxOption gir full TypeScript type-sikkerhet og IntelliSense for metadata, og fungerer med alle Combobox-varianter (single/multi-select, controlled/uncontrolled).',
+export const WithTypedOptions: Story = {
+  name: 'TypedComboboxOption med metadata',
+  render: (): JSX.Element => <ComboboxTypedOptionsExample />,
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Demonstrerer bruk av TypedComboboxOption<TData> for å knytte metadata til hver option. Velg tidligere norske kommuner og se hvordan informasjon om sammenslåing og resulterende kommune lagres direkte på options og vises når du gjør valg. TypedComboboxOption gir full TypeScript type-sikkerhet og IntelliSense for metadata, og fungerer med alle Combobox-varianter (single/multi-select, controlled/uncontrolled).',
+      },
+      source: {
+        code: comboboxTypedOptionsExampleSource,
+        language: 'tsx',
+      },
     },
-    source: {
-      code: comboboxTypedOptionsExampleSource,
-      language: 'tsx',
+    controls: {
+      exclude: /.*/,
     },
   },
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;
 
-export const PerformanceTest: StoryFunction = () => {
-  return <ComboboxPerformanceExample />;
-};
-PerformanceTest.storyName = 'Ytelse - Enkeltvalg med store datamengder';
-PerformanceTest.decorators = [width400Decorator];
-PerformanceTest.parameters = {
-  docs: {
-    description: {
-      story: `Demonstrerer korrekt real-world pattern for håndtering av store datamengder (${
-        generatePerformanceTestData().length
-      } elementer). Viser hvordan du bør wrappe Combobox i loading states når du arbeider med store datasett. Dette forhindrer at nettleseren henger seg opp under data-generering og gir en bedre brukeropplevelse.`,
+export const PerformanceTest: Story = {
+  name: 'Ytelse - Enkeltvalg med store datamengder',
+  decorators: [width400Decorator],
+  render: (): JSX.Element => <ComboboxPerformanceExample />,
+  parameters: {
+    docs: {
+      description: {
+        story: `Demonstrerer korrekt real-world pattern for håndtering av store datamengder (${
+          generatePerformanceTestData().length
+        } elementer). Viser hvordan du bør wrappe Combobox i loading states når du arbeider med store datasett. Dette forhindrer at nettleseren henger seg opp under data-generering og gir en bedre brukeropplevelse.`,
+      },
+      source: {
+        code: comboboxPerformanceExampleSource,
+        language: 'tsx',
+      },
     },
-    source: {
-      code: comboboxPerformanceExampleSource,
-      language: 'tsx',
+    controls: {
+      exclude: /.*/,
     },
   },
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;
 
-export const PerformanceTestMultiple: StoryFunction = () => {
-  return <ComboboxPerformanceMultipleExample />;
-};
-PerformanceTestMultiple.storyName = 'Ytelse - Flervalg med store datamengder';
-PerformanceTestMultiple.decorators = [width400Decorator];
-PerformanceTestMultiple.parameters = {
-  docs: {
-    description: {
-      story: `Demonstrerer ytelsen til flervalg-modus med ${
-        generatePerformanceTestData().length
-      } elementer. Tester spesielt scenarioer som å velge mange elementer, fjerne valgte chips, og håndtere store resultatlister samtidig som flere elementer er valgt. Viser korrekt implementation pattern med loading wrapper.`,
+export const PerformanceTestMultiple: Story = {
+  name: 'Ytelse - Flervalg med store datamengder',
+  decorators: [width400Decorator],
+  render: (): JSX.Element => <ComboboxPerformanceMultipleExample />,
+  parameters: {
+    docs: {
+      description: {
+        story: `Demonstrerer ytelsen til flervalg-modus med ${
+          generatePerformanceTestData().length
+        } elementer. Tester spesielt scenarioer som å velge mange elementer, fjerne valgte chips, og håndtere store resultatlister samtidig som flere elementer er valgt. Viser korrekt implementation pattern med loading wrapper.`,
+      },
+      source: {
+        code: comboboxPerformanceExampleSource,
+        language: 'tsx',
+      },
     },
-    source: {
-      code: comboboxPerformanceExampleSource,
-      language: 'tsx',
+    controls: {
+      exclude: /.*/,
     },
   },
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;

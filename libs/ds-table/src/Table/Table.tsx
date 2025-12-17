@@ -9,14 +9,15 @@ import {
   getHeaderCellAsDefault,
   getTableRowExpandButtonPositionDefault,
   getTableCellAlignmentDefault,
-  getTableSumAlignmentDefault,
+  getTableSumLabelAlignmentDefault,
+  getTableSumValueAlignmentDefault,
   getTableRowIsExpandedDefault,
   getTableSumTextDefault,
   getTableRowExpandButtonTitleDefault,
 } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
+import { TableContext } from './TableContext';
 import { TableBody } from '../TableBody/TableBody';
-import { TableContext } from '../TableContext/TableContext';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 import { TableEditableRow } from '../TableEditableRow/TableEditableRow';
 import { TableHeader } from '../TableHeader/TableHeader';
@@ -36,6 +37,7 @@ export const Table = (({
   caption,
   rowInEditModeId: externalRowInEditModeId,
   variant = getTableVariantDefault(),
+  size,
   sortState,
   canBeManuallyFocused,
   hasFullWidth,
@@ -59,8 +61,12 @@ export const Table = (({
   }
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
 
-  const variantClassName = styles[`table_${variant}`];
-  const captionVariantClassName = styles[`tableCaption_${variant}`];
+  const variantClassName = size
+    ? styles[`table_${size}`]
+    : styles[`table_${variant}`];
+  const captionVariantClassName = size
+    ? styles[`tableCaption_${size}`]
+    : styles[`tableCaption_${variant}`];
   const concatenatedClassName = `${styles.table} ${
     hasFullWidth ? styles.table_fullWidth : ''
   } ${variantClassName} ${className}`.trim();
@@ -72,9 +78,9 @@ export const Table = (({
   }`.trim();
 
   /**
-   * Når tabellen har scrollbar vises en fade-effekt for å indikere at
-   * tabellen har mer innhold. Her sjekker vi hvor lang det er scrollet
-   * for å finne ut om det er høyre eller venstre som skal fades.
+   * Når tabellen har scrollbar vises en fade-effekt for å indikere at tabellen
+   * har mer innhold. Her sjekker vi hvor lang det er scrollet for å finne ut om
+   * det er høyre eller venstre som skal fades.
    */
   useEffect(() => {
     const wrapper = wrapperRef.current;
@@ -136,6 +142,7 @@ export const Table = (({
         sortState,
         setSortState,
         variant,
+        size,
         rowInEditModeId,
         setRowInEditModeId: setInternalRowInEditModeId,
       }}
@@ -183,7 +190,8 @@ export {
   getTableCellAlignmentDefault,
   getTableRowExpandButtonPositionDefault,
   getTableVariantDefault,
-  getTableSumAlignmentDefault,
+  getTableSumLabelAlignmentDefault,
+  getTableSumValueAlignmentDefault,
   getTableRowIsExpandedDefault,
   getTableSumTextDefault,
   getTableRowExpandButtonTitleDefault,

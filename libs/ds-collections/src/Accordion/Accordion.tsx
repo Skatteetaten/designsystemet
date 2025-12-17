@@ -1,13 +1,13 @@
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { AccordionComponent, AccordionProps } from './Accordion.types';
+import { AccordionContext } from './AccordionContext';
+import { AccordionItem } from './AccordionItem/AccordionItem';
 import {
   getAccordionBackgroundColorDefault,
   getAccordionIconPositionDefault,
   getAccordionSizeDefault,
 } from './defaults';
-import { AccordionContext } from '../AccordionContext/AccordionContext';
-import { AccordionItem } from '../AccordionItem/AccordionItem';
 
 import styles from './Accordion.module.scss';
 

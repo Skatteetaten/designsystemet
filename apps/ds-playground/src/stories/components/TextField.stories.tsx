@@ -113,6 +113,7 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
+  name: 'Beløp og postnummer',
   render: (_args): JSX.Element => {
     const [creditInput, setCreditInput] = useState('10000');
 
@@ -122,7 +123,7 @@ export const Examples: Story = {
     return (
       <form noValidate>
         <TextField
-          label={'Ønsket kredittgrense'}
+          label={'Ønsket kredittgrense (NOK)'}
           className={'textField300'}
           description={'Gjennomsnittlig oppgjør for fire dager'}
           value={creditInput}
@@ -154,7 +155,7 @@ export const Examples: Story = {
               setErrorMessage('Postnummer må inneholde fire tall.');
             }
             if (e.target.validity.valueMissing) {
-              setErrorMessage('Postnummer er påkrevd.');
+              setErrorMessage('Postnummer må fylles ut.');
             }
           }}
         />
@@ -164,7 +165,101 @@ export const Examples: Story = {
 } satisfies Story;
 Examples.parameters = exampleParameters;
 
+export const WithTimeInput: Story = {
+  name: 'Tidspunkt',
+  render: (_args): JSX.Element => {
+    const [timeValue, setTimeValue] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    // Eksempel på enkel formateringsfunksjon
+    const formatTimeOnBlur = (raw: string): string => {
+      const digits = raw.replace(/\D/g, '');
+
+      if (digits.length === 0) return '';
+
+      let hh = 0;
+      let mm = 0;
+
+      if (digits.length === 1) {
+        hh = Number(digits);
+      } else if (digits.length === 2) {
+        hh = Number(digits.slice(0, 2));
+      } else if (digits.length === 3) {
+        hh = Number(digits.slice(0, 1));
+        mm = Number(digits.slice(1, 3));
+      } else {
+        hh = Number(digits.slice(0, 2));
+        mm = Number(digits.slice(2, 4));
+      }
+
+      const HH = String(hh).padStart(2, '0');
+      const MM = String(mm).padStart(2, '0');
+
+      if (hh > 23 || mm > 59) return raw;
+
+      return `${HH}:${MM}`;
+    };
+
+    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+      setErrorMessage('');
+      setTimeValue(e.target.value);
+    };
+
+    const handleBlur: React.FocusEventHandler<HTMLInputElement> = (e) => {
+      const raw = e.currentTarget.value.trim();
+      const formatted = formatTimeOnBlur(raw);
+      const isValid = /^([01]?\d|2[0-3]):([0-5]\d)$/.test(formatted);
+
+      if (!isValid) {
+        setTimeValue(raw);
+        setErrorMessage('Skriv tiden med 24-timersformat, for eksempel 14:30.');
+      } else {
+        setTimeValue(formatted);
+        setErrorMessage('');
+      }
+    };
+
+    return (
+      <form noValidate>
+        <TextField
+          className={'textField150'}
+          errorMessage={errorMessage}
+          inputMode={'numeric'}
+          label={'Tid (tt:mm)'}
+          list={'time-suggestions'}
+          value={timeValue}
+          required
+          onBlur={handleBlur}
+          onChange={handleChange}
+        />
+        <datalist id={'time-suggestions'}>
+          <option value={'08:00'} />
+          <option value={'08:30'} />
+          <option value={'09:00'} />
+          <option value={'09:30'} />
+          <option value={'10:00'} />
+          <option value={'10:30'} />
+          <option value={'11:00'} />
+          <option value={'11:30'} />
+          <option value={'12:00'} />
+          <option value={'12:30'} />
+          <option value={'13:00'} />
+          <option value={'13:30'} />
+          <option value={'14:00'} />
+          <option value={'14:30'} />
+          <option value={'15:00'} />
+          <option value={'15:30'} />
+          <option value={'16:00'} />
+        </datalist>
+      </form>
+    );
+  },
+} satisfies Story;
+WithTimeInput.parameters = exampleParameters;
+
 export const WithDataList: Story = {
+  name: 'Liste med land',
+
   render: (_args): JSX.Element => {
     const countries = [
       { text: 'Afghanistan', key: 'AF' },
@@ -414,15 +509,11 @@ export const WithDataList: Story = {
 
     return (
       <form noValidate>
-        <TextField label={'Nettleser'} list={'browsers'} />
-        <datalist id={'browsers'}>
-          <option value={'Edge'} />
-          <option value={'Firefox'} />
-          <option value={'Chrome'} />
-          <option value={'Opera'} />
-          <option value={'Safari'} />
-        </datalist>
-        <TextField label={'Land'} list={'countries'} />
+        <TextField
+          className={'textField300'}
+          label={'Land'}
+          list={'countries'}
+        />
         <datalist id={'countries'}>
           {countries.map(({ text, key }) => (
             <option key={key} value={text} />

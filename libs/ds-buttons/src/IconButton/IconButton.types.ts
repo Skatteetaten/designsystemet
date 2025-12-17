@@ -33,11 +33,17 @@ export interface IconButtonProps
   isOutlined?: boolean;
   /** Størrelse på knappen. */
   size?: Extract<Size, 'extraSmall' | 'small' | 'medium' | 'large'>;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
+  /**
+   * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke.
+   * Alternativt kan custom path sendes.
+   */
   svgPath: ReactElement<SVGPathElement>;
   /** Om knappen skal inneholde Spinner. */
   hasSpinner?: boolean;
-  /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
+  /**
+   * Overskriver default tekst som leses opp av skjermleser når Spinner snurrer
+   * i knappen.
+   */
   spinnerTitle?: string;
   /** Justerer farge slik at komponenten kan brukes på mørk bakgrunn. */
   brightness?: IconButtonBrightness;

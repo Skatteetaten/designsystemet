@@ -5,12 +5,12 @@ import {
   getHasSpacingDefault,
 } from '@skatteetaten/ds-core-utils';
 
+import { CheckboxContext } from './CheckboxContext';
 import {
   CheckboxGroupComponent,
   CheckboxGroupProps,
 } from './CheckboxGroup.types';
 import { Checkbox } from '../Checkbox/Checkbox';
-import { CheckboxContext } from '../CheckboxContext/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { Fieldset } from '../Fieldset/Fieldset';
 
@@ -44,7 +44,11 @@ export const CheckboxGroup = (({
       ref={ref}
       id={id}
       className={className}
-      classNames={classNames}
+      classNames={{
+        ...classNames,
+        contentContainer:
+          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer}`.trim(),
+      }}
       lang={lang}
       data-testid={dataTestId}
       disabled={disabled}

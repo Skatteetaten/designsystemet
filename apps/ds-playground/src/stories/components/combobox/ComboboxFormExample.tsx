@@ -5,9 +5,50 @@ import { Divider } from '@skatteetaten/ds-content';
 import { Combobox, ComboboxOption } from '@skatteetaten/ds-forms';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import { getComboboxStoryOptions } from './combobox.stories.utils';
+const options = [
+  {
+    label: 'Agdenes',
+    value: 'agdenes',
+  },
+  {
+    label: 'Balestrand',
+    value: 'balestrand',
+  },
+  {
+    label: 'Finnøy',
+    value: 'finnoy',
+  },
+  {
+    label: 'Forsand',
+    value: 'forsand',
+  },
+  {
+    label: 'Kvalsund',
+    value: 'kvalsund',
+  },
+  {
+    label: 'Mandal',
+    value: 'mandal',
+  },
+  {
+    label: 'Midsund',
+    value: 'midsund',
+  },
+  {
+    label: 'Rennesøy',
+    value: 'rennesoy',
+  },
+  {
+    label: 'Songdalen',
+    value: 'songdalen',
+  },
+  {
+    label: 'Tysfjord',
+    value: 'tysfjord',
+  },
+];
 
-export const ComboboxFormExample = (): JSX.Element => {
+const ComboboxFormExample = (): JSX.Element => {
   const [resetKey, setResetKey] = useState(0);
   const [controlledValue, setControlledValue] = useState<ComboboxOption[]>([]);
   const [uncontrolledError, setUncontrolledError] = useState<string>('');
@@ -65,7 +106,7 @@ export const ComboboxFormExample = (): JSX.Element => {
           label={'Velg kommuner'}
           placeholder={'Skriv eller velg kommuner'}
           errorMessage={uncontrolledError || undefined}
-          options={getComboboxStoryOptions()}
+          options={options}
           multiple
           onSelectionChange={() => setUncontrolledError('')}
           onInputChange={() => setUncontrolledError('')}
@@ -90,7 +131,7 @@ export const ComboboxFormExample = (): JSX.Element => {
           label={'Velg kommuner (kontrollert)'}
           placeholder={'Skriv eller velg kommuner'}
           errorMessage={controlledError || undefined}
-          options={getComboboxStoryOptions()}
+          options={options}
           multiple
           hasSpacing
           onSelectionChange={(value) => {
@@ -117,3 +158,5 @@ export const ComboboxFormExample = (): JSX.Element => {
     </div>
   );
 };
+
+export default ComboboxFormExample;

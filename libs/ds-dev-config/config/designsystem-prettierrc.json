@@ -1,4 +1,6 @@
 {
+  "plugins": ["prettier-plugin-jsdoc"],
+  "jsdocPrintWidth": 80,
   "arrowParens": "always",
   "bracketSameLine": false,
   "jsxSingleQuote": false,

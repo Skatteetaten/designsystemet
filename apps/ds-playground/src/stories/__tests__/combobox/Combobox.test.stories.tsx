@@ -118,6 +118,7 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
+      container: 'dummyClassname',
       options: 'dummyClassname',
       errorMessage: 'dummyClassname',
       label: 'dummyClassname',
@@ -144,6 +145,7 @@ export const WithCustomClassNames = {
     const helpButton = canvas.getAllByRole('button')[0];
     await userEvent.click(helpButton);
 
+    const container = canvas.getAllByRole('generic')[1];
     const optionsContainer = canvasElement.querySelector(
       'div[class*="optionsListContainer"]'
     );
@@ -156,6 +158,7 @@ export const WithCustomClassNames = {
     );
     const description = canvas.getByText('Beskrivelse');
 
+    await expect(container).toHaveClass('dummyClassname');
     await expect(optionsContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
@@ -444,20 +447,17 @@ export const WithPlaceholder = {
   name: 'With Placeholder (B6)',
   args: {
     ...defaultArgs,
-    placeholder: 'Søk etter land...',
+    placeholder: 'Søk etter kommune, fylke eller land',
   },
   argTypes: {
     placeholder: { table: { disable: false } },
-  },
-  parameters: {
-    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toHaveAttribute(
       'placeholder',
-      'Søk etter land...'
+      'Søk etter kommune, fylke eller land'
     );
   },
 } satisfies Story;

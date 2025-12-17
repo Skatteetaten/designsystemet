@@ -6,7 +6,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from './Checkbox.types';
-import { CheckboxContext } from '../CheckboxContext/CheckboxContext';
+import { CheckboxContext } from '../CheckboxGroup/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
 import styles from './Checkbox.module.scss';
@@ -46,7 +46,6 @@ export const Checkbox = ({
   const errorIdInternal = errorIdExternal ?? uniqueErrorId;
   const descriptionId = `descId-${useId()}`;
   const hasErrorInternal = errorIdExternal && !checked ? true : !!errorMessage;
-  const isRequired = required && !checked;
 
   const spacingBottomClassName = context ? styles.containerSpacingBottom : '';
   const checkboxErrorClassName = hasErrorInternal
@@ -83,11 +82,11 @@ export const Checkbox = ({
         disabled={disabled}
         form={form}
         name={name}
-        required={isRequired}
+        required={required}
         type={'checkbox'}
         value={value}
         aria-describedby={ariaDescribedbyInput || undefined}
-        aria-invalid={hasErrorInternal || undefined}
+        aria-invalid={hasErrorInternal}
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}

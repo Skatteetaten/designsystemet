@@ -4,8 +4,8 @@ import { TFunction } from 'i18next';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { PaginationList } from '../PaginationList/PaginationList';
-import { ELLIPSIS } from '../PaginationList/utils';
+import { PaginationList } from './PaginationList/PaginationList';
+import { ELLIPSIS } from './PaginationList/utils';
 
 export interface PaginationCommonProps extends BaseProps {
   ref?: Ref<HTMLElement>;
@@ -13,41 +13,51 @@ export interface PaginationCommonProps extends BaseProps {
   pageSize?: number;
   /** Totalt antall elementer i liste */
   totalItems: number;
-  /** Minimum antall navigasjonselementer ved siden av aktiv side. Minimumsverdi er 1 sibling */
+  /**
+   * Minimum antall navigasjonselementer ved siden av aktiv side. Minimumsverdi
+   * er 1 sibling
+   */
   sibling?: number;
   /** Skjul next/prev label */
   hidePrevNextButtonTitle?: boolean;
   /** Skjul område pagesummary */
   hidePageSummary?: boolean;
   /**
-   * Hvis mer enn én komponent pr side så må denne propen sette på minst én av komponentene.
-   * aria-label brukes på nav-elementet. Tekst endres hvis språk endres
+   * Hvis mer enn én komponent pr side så må denne propen sette på minst én av
+   * komponentene. aria-label brukes på nav-elementet. Tekst endres hvis språk
+   * endres
    */
   ariaLabel?: string;
   /**
-   * callback når endring av sidenummer.
-   * Ikke required, men gir ikke mening at en komponent skal endres til en annen page
-   * uten at det påvirker "noe" utenfor
+   * Callback når endring av sidenummer. Ikke required, men gir ikke mening at
+   * en komponent skal endres til en annen page uten at det påvirker "noe"
+   * utenfor
    */
   onChange?: (page: number) => void;
 }
 
 type PaginationDiscriminatedProp =
   | {
-      /** Gjeldende side. Bruk av currentPage ekskluderer bruk av defaultCurrentPage */
+      /**
+       * Gjeldende side. Bruk av currentPage ekskluderer bruk av
+       * defaultCurrentPage
+       */
       currentPage?: number;
       /**
-       * Setter initiell aktiv side hvis komponenten er uncontrolled.
-       * Eksluderer samtidig bruk av currentPage
+       * Setter initiell aktiv side hvis komponenten er uncontrolled. Eksluderer
+       * samtidig bruk av currentPage
        */
       defaultCurrent?: never;
     }
   | {
-      /** Gjeldende side. Bruk av currentPage ekskluderer bruk av defaultCurrentPage */
+      /**
+       * Gjeldende side. Bruk av currentPage ekskluderer bruk av
+       * defaultCurrentPage
+       */
       currentPage?: never;
       /**
-       * Setter initiell aktiv side hvis komponenten er uncontrolled.
-       * Eksluderer samtidig bruk av currentPage
+       * Setter initiell aktiv side hvis komponenten er uncontrolled. Eksluderer
+       * samtidig bruk av currentPage
        */
       defaultCurrent?: number;
     };

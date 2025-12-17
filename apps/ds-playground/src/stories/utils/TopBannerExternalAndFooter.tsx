@@ -137,7 +137,7 @@ export function TopBannerExternalAndFooter({
     },
     {
       href: MinsideLenker.PERSON_KRAVOVERSIKT,
-      text: 'Krav og betalinger',
+      text: 'Krav og betaling',
     },
     {
       href: LenkerInnloggetIkkeMinSide.KJORETOY,
@@ -218,7 +218,7 @@ export function TopBannerExternalAndFooter({
     },
     {
       href: MinsideLenker.VIRKSOMHET_KRAVOVERSIKT,
-      text: 'Krav og betalinger',
+      text: 'Krav og betaling',
     },
     {
       href: MinsideLenker.VIRKSOMHET_SAKSTATUS,
@@ -231,7 +231,7 @@ export function TopBannerExternalAndFooter({
   ];
 
   return (
-    <>
+    <div className={styles.pageWrapper}>
       <TopBannerExternal
         ref={topBannerRef}
         classNames={{
@@ -263,9 +263,7 @@ export function TopBannerExternalAndFooter({
                 <Paragraph variant={'ingress'}>
                   {'Se, endre og send inn'}
                 </Paragraph>
-                <ul
-                  className={`${topBannerExternalExampleStyles.linkWrapper} ${topBannerExternalExampleStyles.linkWrapperPadding}`}
-                >
+                <ul className={topBannerExternalExampleStyles.linkWrapper}>
                   {(user.role === 'virksomhet'
                     ? virksomhetLinks
                     : loggedInLinks
@@ -506,6 +504,6 @@ export function TopBannerExternalAndFooter({
           {'Koronatiltak'}
         </Footer.Link>
       </Footer>
-    </>
+    </div>
   );
 }

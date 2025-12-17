@@ -2,10 +2,10 @@ import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Color, Spacing } from '@skatteetaten/ds-core-utils';
 
-import { CardActions } from '../CardActions/CardActions';
-import { CardAlert } from '../CardAlert/CardAlert';
-import { CardContent } from '../CardContent/CardContent';
-import { CardHeader } from '../CardHeader/CardHeader';
+import { CardActions } from './CardActions/CardActions';
+import { CardAlert } from './CardAlert/CardAlert';
+import { CardContent } from './CardContent/CardContent';
+import { CardHeader } from './CardHeader/CardHeader';
 
 export type CardSpacing =
   | Extract<Spacing, 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'mega'>
@@ -28,7 +28,10 @@ export interface CardComponentCommonProps extends BaseProps {
   /** Farge på border og bakgrunn. */
   color?: CardColor;
   ariaLabelledBy?: ComponentPropsWithoutRef<'section'>['aria-labelledby'];
-  /** Luft til innholdet i Card. For at den skal ta effekt må man bruke minst én av underkomponentene: Card.Header, Card.Content, Card.Actions. */
+  /**
+   * Luft til innholdet i Card. For at den skal ta effekt må man bruke minst én
+   * av underkomponentene: Card.Header, Card.Content, Card.Actions.
+   */
   spacing?: CardSpacing;
 }
 

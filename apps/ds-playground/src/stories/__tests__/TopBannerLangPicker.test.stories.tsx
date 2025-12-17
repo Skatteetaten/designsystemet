@@ -7,9 +7,9 @@ import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 import { TopBannerMenu } from '@skatteetaten/ds-layout';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/TopBannerLangPicker';
+import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/TopBannerLangPicker';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLangPickerProps } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/TopBannerLangPicker.types';
+import { TopBannerLangPickerProps } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/TopBannerLangPicker.types';
 
 const LangPickerTemplate: StoryFn<typeof TopBannerLangPicker> = (args) => {
   const [openMenuState, setOpenMenu] = useState<TopBannerMenu>('None');
@@ -25,7 +25,7 @@ const LangPickerTemplate: StoryFn<typeof TopBannerLangPicker> = (args) => {
 
 const meta = {
   component: TopBannerLangPicker,
-  title: 'Tester/TopBanner/TopBannerLangPicker (intern)',
+  title: 'Tester/TopBannerExternal/LangPicker (intern)',
   render: LangPickerTemplate,
   argTypes: {
     // Baseprops

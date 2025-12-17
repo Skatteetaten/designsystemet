@@ -18,7 +18,7 @@ import {
   DescriptionListComponent,
   DescriptionListProps,
 } from './DescriptionList.types';
-import { DescriptionListElement } from '../DescriptionListElement/DescriptionListElement';
+import { DescriptionListElement } from './DescriptionListElement/DescriptionListElement';
 
 import styles from './DescriptionList.module.scss';
 
