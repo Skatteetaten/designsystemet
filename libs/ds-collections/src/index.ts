@@ -22,3 +22,4 @@ export * from './Tabs/Tabs';
 export * from './Tabs/Tabs.types';
 export * from './Tabs/defaults';
 export * from './Tabs/TabsPanel/defaults';
+export * from './Tabs/TabsPanel/TabsPanel.types';
