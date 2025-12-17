@@ -537,44 +537,11 @@ export const Expandable: Story = {
 } satisfies Story;
 Expandable.parameters = exampleParameters;
 
-const CustomExpandableRow = (props: TableRowProps): JSX.Element => {
-  const [isExpanded, setIsExpanded] = useState(props.isExpanded);
-  const [isSaving, setIsSaving] = useState(false);
-
-  const handleSave = async (): Promise<void> => {
-    setIsSaving(true);
-    await new Promise<void>((resolve) => {
-      setTimeout(() => {
-        setIsSaving(false);
-        setIsExpanded(false);
-        resolve();
-      }, 2000);
-    });
-  };
-
-  return (
-    <Table.Row
-      expandButtonPosition={'right'}
-      expandableContent={<div className={'emptyExpandedTableRow'}></div>}
-      expandButtonAriaDescribedby={props.expandButtonAriaDescribedby}
-      expandButtonTitle={isExpanded ? 'Lagre og lukk' : 'Åpne oppgave'}
-      expandButtonProps={{
-        svgPath: isExpanded ? SaveSVGpath : EditSVGpath,
-        hasSpinner: isSaving,
-        disabled: isSaving,
-      }}
-      isExpanded={isExpanded}
-      isExpandable
-      onExpand={() => setIsExpanded(true)}
-      onClose={handleSave}
-    >
-      {props.children}
-    </Table.Row>
-  );
-};
-
 export const ExpandableWithCustomExpandButtonProps: Story = {
   render: (_args): JSX.Element => {
+    const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
+    const [savingRows, setSavingRows] = useState<Set<string>>(new Set());
+
     const data = [
       {
         id: 'abcd',
@@ -650,6 +617,32 @@ export const ExpandableWithCustomExpandButtonProps: Story = {
       },
     ];
 
+    const handleExpand = (rowId: string): void => {
+      setExpandedRows((prev) => new Set(prev).add(rowId));
+    };
+
+    const handleClose = async (rowId: string): Promise<void> => {
+      setSavingRows((prev) => new Set(prev).add(rowId));
+
+      await new Promise<void>((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 2000);
+      });
+
+      setSavingRows((prev) => {
+        const next = new Set(prev);
+        next.delete(rowId);
+        return next;
+      });
+
+      setExpandedRows((prev) => {
+        const next = new Set(prev);
+        next.delete(rowId);
+        return next;
+      });
+    };
+
     return (
       <Table caption={'Oppgaver'} size={'large'}>
         <Table.Header>
@@ -667,16 +660,35 @@ export const ExpandableWithCustomExpandButtonProps: Story = {
         </Table.Header>
         <Table.Body>
           {data.map((row) => {
+            const isExpanded = expandedRows.has(row.id);
+            const isSaving = savingRows.has(row.id);
+
             return (
-              <CustomExpandableRow
+              <Table.Row
                 key={row.id}
+                expandButtonPosition={'right'}
+                expandableContent={
+                  <div className={'emptyExpandedTableRow'}></div>
+                }
                 expandButtonAriaDescribedby={row.id}
+                expandButtonTitle={
+                  isExpanded ? 'Lagre og lukk' : 'Åpne oppgave'
+                }
+                expandButtonProps={{
+                  svgPath: isExpanded ? SaveSVGpath : EditSVGpath,
+                  hasSpinner: isSaving,
+                  disabled: isSaving,
+                }}
+                isExpanded={isExpanded}
+                isExpandable
+                onExpand={() => handleExpand(row.id)}
+                onClose={() => handleClose(row.id)}
               >
                 <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
                 <Table.DataCell>{row.timestamp}</Table.DataCell>
                 <Table.DataCell>{row.status}</Table.DataCell>
                 <Table.DataCell>{row.eta}</Table.DataCell>
-              </CustomExpandableRow>
+              </Table.Row>
             );
           })}
         </Table.Body>
