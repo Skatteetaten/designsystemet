@@ -20,6 +20,18 @@ $radio-transform-x: 2px;
     cursor: not-allowed;
   }
 
+  &:has(&Input:checked:disabled) {
+    --radio-background-color: var(--semantic-disabled-foreground);
+  }
+
+  &:has(&Input:checked:not(:disabled)) {
+    --radio-background-color: var(--semantic-page-foreground);
+  }
+
+  &:has(&Input[aria-invalid='true']:not(:disabled)) {
+    --radio-box-shadow-color: var(--semantic-danger-foreground);
+  }
+
   &:has(&Input:hover:not(:disabled)) {
     --radio-box-shadow-color: var(--semantic-interactive-main);
     --radio-background-color: var(--semantic-interactive-background);
@@ -35,6 +47,19 @@ $radio-transform-x: 2px;
     --description-color: var(--semantic-interactive-foreground);
   }
 
+  &:has(&Input[aria-invalid='true']:checked:not(:disabled)) {
+    --radio-background-color: var(--semantic-danger-foreground);
+  }
+
+  &:has(&Input:checked:hover:not(:disabled)) {
+    --radio-background-color: var(--semantic-interactive-main);
+    --radio-border-color: var(--semantic-page-background);
+  }
+
+  &:has(&Input:checked:active:not(:disabled)) {
+    --radio-background-color: var(--semantic-interactive-foreground);
+  }
+
   &Input {
     position: relative;
     width: var(--size-small);
@@ -48,23 +73,6 @@ $radio-transform-x: 2px;
     cursor: pointer;
     transform: translate($radio-transform-x, 8px);
 
-    &:checked {
-      --radio-background-color: var(--semantic-page-foreground);
-
-      &:hover {
-        --radio-background-color: var(--semantic-interactive-main);
-        --radio-border-color: var(--semantic-page-background);
-      }
-
-      &:active {
-        --radio-background-color: var(--semantic-interactive-foreground);
-      }
-
-      &:disabled {
-        --radio-background-color: var(--semantic-disabled-foreground);
-      }
-    }
-
     &:focus-visible:not(:disabled) {
       outline: none;
 
@@ -74,29 +82,6 @@ $radio-transform-x: 2px;
         border-radius: 50%;
         content: '';
         inset: -8px;
-      }
-    }
-
-    &[aria-invalid='true']:not(:disabled) {
-      --radio-box-shadow-color: var(--semantic-danger-foreground);
-
-      &:checked {
-        --radio-background-color: var(--semantic-danger-foreground);
-      }
-
-      &:hover {
-        --radio-box-shadow-color: var(--semantic-interactive-main);
-        --radio-background-color: var(--semantic-interactive-background);
-      }
-
-      &:active {
-        --radio-box-shadow-color: var(--semantic-interactive-foreground);
-        --radio-background-color: var(--semantic-interactive-foreground);
-      }
-
-      &:checked:hover {
-        --radio-box-shadow-color: var(--semantic-interactive-main);
-        --radio-background-color: var(--semantic-interactive-main);
       }
     }
   }
