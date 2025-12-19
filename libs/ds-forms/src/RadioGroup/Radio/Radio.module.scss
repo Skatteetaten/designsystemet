@@ -53,6 +53,7 @@ $radio-transform-x: 2px;
 
       &:hover {
         --radio-background-color: var(--semantic-interactive-main);
+        --radio-border-color: var(--semantic-page-background);
       }
 
       &:active {
@@ -85,12 +86,17 @@ $radio-transform-x: 2px;
 
       &:hover {
         --radio-box-shadow-color: var(--semantic-interactive-main);
-        --radio-background-color: var(--semantic-interactive-main);
+        --radio-background-color: var(--semantic-interactive-background);
       }
 
       &:active {
         --radio-box-shadow-color: var(--semantic-interactive-foreground);
         --radio-background-color: var(--semantic-interactive-foreground);
+      }
+
+      &:checked:hover {
+        --radio-box-shadow-color: var(--semantic-interactive-main);
+        --radio-background-color: var(--semantic-interactive-main);
       }
     }
   }
