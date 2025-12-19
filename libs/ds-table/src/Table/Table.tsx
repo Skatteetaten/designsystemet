@@ -114,9 +114,11 @@ export const Table = (({
     };
 
     const observer = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        updateDimensions(entry);
-      }
+      requestAnimationFrame(() => {
+        for (const entry of entries) {
+          updateDimensions(entry);
+        }
+      });
     });
     wrapperRef.current && observer.observe(wrapperRef.current);
     return (): void => {
