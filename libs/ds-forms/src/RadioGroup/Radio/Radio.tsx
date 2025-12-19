@@ -73,6 +73,7 @@ export const Radio = ({
         type={'radio'}
         name={context?.name}
         required={context?.required}
+        data-read-only={context?.readOnly || undefined}
         aria-describedby={ariaDescribedbyInput || undefined}
         aria-invalid={context?.hasError}
         onBlur={onBlurInput}
@@ -81,6 +82,9 @@ export const Radio = ({
       />
       <label className={styles.radioLabel} htmlFor={inputId} tabIndex={-1}>
         {children}
+        {context?.readOnly && (
+          <span className={styles.srOnly}>{', skrivebeskyttet'}</span>
+        )}
         {description && (
           <>
             &nbsp;

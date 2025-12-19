@@ -7,11 +7,11 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 import { getRadioGroupVariantDefault } from './defaults';
+import { Radio } from './Radio/Radio';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
+import { RadioGroupContext } from './RadioGroupContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { Fieldset } from '../Fieldset/Fieldset';
-import { Radio } from './Radio/Radio';
-import { RadioGroupContext } from './RadioGroupContext';
 
 import styles from './RadioGroup.module.scss';
 
@@ -34,6 +34,7 @@ export const RadioGroup = (({
   disabled,
   form,
   name,
+  readOnly,
   required,
   hasSpacing = getHasSpacingDefault(),
   hideLegend,
@@ -117,6 +118,7 @@ export const RadioGroup = (({
             selectedValue,
             name: nameId,
             hasError: !!errorMessage,
+            readOnly,
             required,
             onChange: handleChange,
             onBlur: handleBlur,
