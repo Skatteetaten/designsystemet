@@ -75,7 +75,6 @@ $radio-transform-x: 2px;
   }
 
   &:has(&Input[data-read-only='true']:checked:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-disabled-foreground);
     --radio-border-color: var(--semantic-disabled-foreground);
     --radio-background-color: var(--semantic-page-background);
     --border-width: 5px;

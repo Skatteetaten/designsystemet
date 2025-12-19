@@ -50,6 +50,22 @@ export const Radio = ({
     onFocus && onFocus(event);
   };
 
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ): void => {
+    if (
+      context?.readOnly &&
+      (event.key === ' ' ||
+        event.key === 'Enter' ||
+        event.key === 'ArrowUp' ||
+        event.key === 'ArrowDown' ||
+        event.key === 'ArrowLeft' ||
+        event.key === 'ArrowRight')
+    ) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <div className={concatenatedClassName} lang={lang}>
       {/* eslint-disable-next-line jsx-a11y/role-supports-aria-props */}
@@ -79,6 +95,7 @@ export const Radio = ({
         onBlur={onBlurInput}
         onChange={onChangeInput}
         onFocus={onFocusInput}
+        onKeyDown={handleKeyDown}
       />
       <label className={styles.radioLabel} htmlFor={inputId} tabIndex={-1}>
         {children}
