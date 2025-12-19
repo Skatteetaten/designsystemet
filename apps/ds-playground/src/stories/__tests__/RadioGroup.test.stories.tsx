@@ -261,6 +261,9 @@ export const WithDisabled = {
   argTypes: {
     disabled: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const radios = canvas.getAllByRole('radio');
@@ -382,6 +385,9 @@ export const WithErrorMessage = {
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
