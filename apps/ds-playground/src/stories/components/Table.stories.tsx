@@ -1,8 +1,6 @@
 import { ReactNode, useState, JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { TableRowProps } from 'libs/ds-table/src/TableRow/TableRow.types';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
