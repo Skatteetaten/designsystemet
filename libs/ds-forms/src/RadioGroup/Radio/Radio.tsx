@@ -1,6 +1,7 @@
 import { useId, useContext, JSX, ChangeEvent, FocusEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { RadioProps } from './Radio.types';
 import { RadioGroupContext } from '../RadioGroupContext';
@@ -22,6 +23,7 @@ export const Radio = ({
   onChange,
   onFocus,
 }: RadioProps): JSX.Element => {
+  const { t } = useTranslation('Shared', { i18n: dsI18n });
   const context = useContext(RadioGroupContext);
 
   const uniqueInputId = `radioInputId-${useId()}`;
@@ -100,7 +102,7 @@ export const Radio = ({
       <label className={styles.radioLabel} htmlFor={inputId} tabIndex={-1}>
         {children}
         {context?.readOnly && (
-          <span className={styles.srOnly}>{', skrivebeskyttet'}</span>
+          <span className={styles.srOnly}>{`, ${t('shared.ReadOnly')}`}</span>
         )}
         {description && (
           <>

@@ -665,6 +665,7 @@ export const ReadOnly = {
     const radios = canvas.getAllByRole('radio');
     for (const radio of radios) {
       await expect(radio).toHaveAttribute('data-read-only', 'true');
+      expect(radio).toHaveAccessibleName(/skrivebeskyttet$/);
     }
   },
 } satisfies Story;
