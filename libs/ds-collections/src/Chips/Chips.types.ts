@@ -9,6 +9,7 @@ export type ChipSize = Extract<Size, 'small' | 'medium'>;
 
 interface ChipsHTMLAttributes {
   ariaLabel?: ComponentPropsWithoutRef<'ul'>['aria-label'];
+  ariaLabelledBy?: ComponentPropsWithoutRef<'ul'>['aria-labelledby'];
 }
 
 export interface ChipsProps extends BaseProps, ChipsHTMLAttributes {
