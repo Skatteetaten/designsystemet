@@ -22,6 +22,12 @@ import { DescriptionListElement } from './DescriptionListElement/DescriptionList
 
 import styles from './DescriptionList.module.scss';
 
+/**
+ * DescriptionList
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-descriptionlist--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/descriptionlist/) - Brukerveiledning
+ */
 export const DescriptionList = (({
   ref,
   id,

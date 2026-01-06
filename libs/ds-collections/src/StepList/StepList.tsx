@@ -7,6 +7,12 @@ import { StepListStep } from './StepListStep/StepListStep';
 
 import styles from './StepList.module.scss';
 
+/**
+ * StepList
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-steplist--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/steplist/) - Brukerveiledning
+ */
 export const StepList = (({
   ref,
   id,

@@ -10,6 +10,12 @@ import { ChipsToggle } from './ChipsToggle/ChipsToggle';
 
 import styles from './Chips.module.scss';
 
+/**
+ * Chips
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-chips--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/chips/) - Brukerveiledning
+ */
 export const Chips = (({
   ref,
   id,

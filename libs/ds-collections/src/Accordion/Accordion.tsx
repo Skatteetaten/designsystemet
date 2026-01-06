@@ -11,6 +11,12 @@ import {
 
 import styles from './Accordion.module.scss';
 
+/**
+ * Accordion
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-accordion--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/accordion/) - Brukerveiledning
+ */
 export const Accordion = (({
   ref,
   id,

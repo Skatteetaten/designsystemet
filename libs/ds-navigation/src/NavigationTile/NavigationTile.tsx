@@ -18,6 +18,12 @@ import { NavigationTileProps } from './NavigationTile.types';
 
 import styles from './NavigationTile.module.scss';
 
+/**
+ * NavigationTile
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-navigationtile--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/navigationtile/) - Brukerveiledning
+ */
 export const NavigationTile = ({
   ref,
   id,

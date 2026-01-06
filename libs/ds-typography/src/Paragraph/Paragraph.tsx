@@ -7,6 +7,12 @@ import { ParagraphProps } from './Paragraph.types';
 
 import styles from './Paragraph.module.scss';
 
+/**
+ * Paragraph
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-paragraph--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography/#paragraph) - Brukerveiledning
+ */
 export const Paragraph = ({
   ref,
   id,

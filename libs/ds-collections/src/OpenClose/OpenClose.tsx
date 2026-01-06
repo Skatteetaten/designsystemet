@@ -13,6 +13,12 @@ import { OpenCloseProps } from './OpenClose.types';
 
 import styles from './OpenClose.module.scss';
 
+/**
+ * OpenClose
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-openclose--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/openclose/) - Brukerveiledning
+ */
 export const OpenClose = ({
   ref,
   id,

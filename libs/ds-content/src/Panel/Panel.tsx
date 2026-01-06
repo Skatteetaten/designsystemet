@@ -15,6 +15,12 @@ import { PanelPadding, PanelProps, PanelSpacing } from './Panel.types';
 
 import styles from './Panel.module.scss';
 
+/**
+ * Panel
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-panel--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/panel/) - Brukerveiledning
+ */
 export const Panel = ({
   ref,
   id,

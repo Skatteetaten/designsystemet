@@ -17,6 +17,12 @@ import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 
 import styles from './TopBannerInternal.module.scss';
 
+/**
+ * TopBannerInternal
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-topbannerinternal--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbanner-internal/) - Brukerveiledning
+ */
 export const TopBannerInternal = (({
   ref,
   id,
