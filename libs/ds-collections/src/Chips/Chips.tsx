@@ -17,6 +17,7 @@ export const Chips = (({
   lang,
   'data-testid': dataTestId,
   ariaLabel,
+  ariaLabelledBy,
   children,
 }: ChipsProps): JSX.Element => {
   const { t } = useTranslation('ds_collections', { i18n: dsI18n });
@@ -75,6 +76,7 @@ export const Chips = (({
         lang={lang}
         data-testid={dataTestId}
         aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledBy}
       >
         {childrenAsArray.map((child, index) => {
           return <li key={index}>{child}</li>;
