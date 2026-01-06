@@ -47,16 +47,6 @@ export const Checkbox = ({
   const descriptionId = `descId-${useId()}`;
   const hasErrorInternal = errorIdExternal && !checked ? true : !!errorMessage;
 
-  const spacingBottomClassName = context ? styles.containerSpacingBottom : '';
-  const checkboxErrorClassName = hasErrorInternal
-    ? styles.labelCheckbox_error
-    : '';
-  const labelErrorClassName =
-    hasErrorInternal && !context && required ? styles.label_error : '';
-  const labelRequiredClassName =
-    !context && showRequiredMark ? styles.labelContent_required : '';
-  const hideLabelClassName = hideLabel ? styles.srOnly : '';
-
   const ariaDescribedbyInput = [
     description && descriptionId,
     ariaDescribedby,
@@ -68,52 +58,56 @@ export const Checkbox = ({
 
   return (
     <div
-      className={`${styles.container} ${spacingBottomClassName} ${className}`.trim()}
+      className={`${styles.container} ${className}`.trim()}
       lang={lang}
       data-has-spacing={hasSpacing}
     >
-      <input
-        ref={ref}
-        id={inputIdInternal}
-        className={styles.input}
-        data-testid={dataTestId}
-        checked={checked}
-        defaultChecked={defaultChecked}
-        disabled={disabled}
-        form={form}
-        name={name}
-        required={required}
-        type={'checkbox'}
-        value={value}
-        aria-describedby={ariaDescribedbyInput || undefined}
-        aria-invalid={hasErrorInternal}
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-      />
-      <label
-        htmlFor={inputIdInternal}
-        className={`${styles.label} ${labelErrorClassName} ${
-          classNames?.label ?? ''
-        }`.trim()}
-      >
-        <span
-          className={`${styles.labelCheckbox} ${checkboxErrorClassName}`.trim()}
+      <div className={styles.checkbox}>
+        <input
+          ref={ref}
+          id={inputIdInternal}
+          className={styles.checkboxInput}
+          data-testid={dataTestId}
+          checked={checked}
+          defaultChecked={defaultChecked}
+          disabled={disabled}
+          form={form}
+          name={name}
+          required={required}
+          type={'checkbox'}
+          value={value}
+          aria-describedby={ariaDescribedbyInput || undefined}
+          aria-invalid={hasErrorInternal}
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+        />
+        <label
+          htmlFor={inputIdInternal}
+          className={`${styles.checkboxLabel} ${hideLabel ? styles.srOnly : ''} ${
+            classNames?.label ?? ''
+          }`.trim()}
         >
-          <span className={styles.labelCheckboxCheck}></span>
-        </span>
-        <span className={`${styles.labelContent} ${hideLabelClassName}`.trim()}>
-          <span className={labelRequiredClassName}>
+          <span
+            className={
+              !context && showRequiredMark ? styles.checkboxLabel_required : ''
+            }
+          >
             {children}
-            {description && <>&nbsp;</>}
           </span>
           {description && (
-            <span id={descriptionId} className={styles.labelContentDescription}>
-              {description}
-            </span>
+            <>
+              &nbsp;
+              <span
+                id={descriptionId}
+                className={styles.checkboxLabelDescription}
+              >
+                {description}
+              </span>
+            </>
           )}
-        </span>
-      </label>
+        </label>
+      </div>
       {!context && (
         <ErrorMessage
           id={errorIdInternal}
