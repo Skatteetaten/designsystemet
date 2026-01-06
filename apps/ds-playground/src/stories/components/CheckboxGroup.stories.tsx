@@ -33,6 +33,7 @@ const meta = {
     helpText: { table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
+    readOnly: { table: { category: category.props } },
     showRequiredMark: {
       table: { category: category.props },
       description:

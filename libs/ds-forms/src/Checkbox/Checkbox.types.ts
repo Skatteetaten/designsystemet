@@ -36,4 +36,6 @@ export interface CheckboxProps
   hasSpacing?: boolean;
   /** Skjuler ledeteksten men synlig for skjermleser */
   hideLabel?: boolean;
+  /** Om checkboxen skal være skrivebeskyttet */
+  readOnly?: boolean;
 }

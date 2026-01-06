@@ -578,3 +578,46 @@ export const WithCustomClassNames = {
     await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;
+
+export const WithReadOnly = {
+  name: 'With ReadOnly',
+  args: {
+    ...defaultArgs,
+    readOnly: true,
+    description: 'Dette er en checkbox i read only modus',
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const checkbox = canvas.getByRole('checkbox');
+    await expect(checkbox).toHaveAttribute('data-read-only', 'true');
+    expect(checkbox).toHaveAccessibleName(/,\s*skrivebeskyttet/);
+  },
+} satisfies Story;
+
+export const WithReadOnlyAndChecked = {
+  name: 'With ReadOnly And Checked',
+  args: {
+    ...defaultArgs,
+    readOnly: true,
+    checked: true,
+    description: 'Dette er en checkbox i read only modus',
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const checkbox = canvas.getByRole('checkbox');
+    await expect(checkbox).toHaveAttribute('data-read-only', 'true');
+    expect(checkbox).toHaveAccessibleName(/,\s*skrivebeskyttet/);
+  },
+} satisfies Story;

@@ -1,6 +1,8 @@
 import { useContext, useId, JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import {
+  dsI18n,
   getCommonClassNameDefault,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
@@ -25,6 +27,7 @@ export const Checkbox = ({
   disabled,
   form,
   name,
+  readOnly,
   required,
   value,
   ariaDescribedby,
@@ -36,6 +39,7 @@ export const Checkbox = ({
   onFocus,
   children,
 }: CheckboxProps): JSX.Element => {
+  const { t } = useTranslation('Shared', { i18n: dsI18n });
   useValidateFormRequiredProps({ required, showRequiredMark });
   const context = useContext(CheckboxContext);
   const errorIdExternal = context?.errorId;
@@ -55,6 +59,22 @@ export const Checkbox = ({
     .filter(Boolean)
     .join(' ')
     .trim();
+
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ): void => {
+    if (
+      context?.readOnly &&
+      (event.key === ' ' ||
+        event.key === 'Enter' ||
+        event.key === 'ArrowUp' ||
+        event.key === 'ArrowDown' ||
+        event.key === 'ArrowLeft' ||
+        event.key === 'ArrowRight')
+    ) {
+      event.preventDefault();
+    }
+  };
 
   return (
     <div
@@ -76,11 +96,13 @@ export const Checkbox = ({
           required={required}
           type={'checkbox'}
           value={value}
+          data-read-only={readOnly || context?.readOnly || undefined}
           aria-describedby={ariaDescribedbyInput || undefined}
           aria-invalid={hasErrorInternal}
           onBlur={onBlur}
           onChange={onChange}
           onFocus={onFocus}
+          onKeyDown={handleKeyDown}
         />
         <label
           htmlFor={inputIdInternal}
@@ -94,6 +116,11 @@ export const Checkbox = ({
             }
           >
             {children}
+            {(readOnly || context?.readOnly) && (
+              <span
+                className={styles.srOnly}
+              >{`, ${t('shared.ReadOnly')}`}</span>
+            )}
           </span>
           {description && (
             <>

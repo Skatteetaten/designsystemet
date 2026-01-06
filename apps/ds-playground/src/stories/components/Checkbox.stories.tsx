@@ -20,6 +20,7 @@ const meta = {
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
+    readOnly: { table: { category: category.props } },
     showRequiredMark: {
       table: { category: category.props },
       description:
