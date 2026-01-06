@@ -117,3 +117,44 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const WithContainerQuery: Story = {
+  render: (_args): JSX.Element => {
+    const [width, setWidth] = useState(300);
+    return (
+      <>
+        <p className={'bottomSpacingS'}>
+          {
+            'Juster bredden på containeren for å se responsiv oppførsel basert på container-bredde:'
+          }
+        </p>
+        <input
+          className={'bottomSpacingS containerQuerySlider'}
+          max={800}
+          min={200}
+          type={'range'}
+          value={width}
+          onChange={(e): void => setWidth(Number(e.target.value))}
+        />
+        <p className={'bottomSpacingS'}>{`Bredde: ${width}px`}</p>
+        <div
+          className={'containerQueryWrapper'}
+          // eslint-disable-next-line react/forbid-dom-props -- dynamisk bredde krever inline style
+          style={
+            { '--container-query-width': `${width}px` } as React.CSSProperties
+          }
+        >
+          <ErrorSummary showErrorSummary>
+            <ErrorSummary.Error referenceId={'field1'}>
+              {'Feltet må fylles ut'}
+            </ErrorSummary.Error>
+            <ErrorSummary.Error referenceId={'field2'}>
+              {'Ugyldig verdi'}
+            </ErrorSummary.Error>
+          </ErrorSummary>
+        </div>
+      </>
+    );
+  },
+} satisfies Story;
+WithContainerQuery.parameters = exampleParameters;

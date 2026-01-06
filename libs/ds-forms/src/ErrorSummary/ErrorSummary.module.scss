@@ -1,6 +1,19 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 $border-width: 3px;
+$padding-base: calc(var(--spacing-xs) - $border-width)
+  calc(var(--spacing-xs) - $border-width) var(--spacing-xs);
+$padding-xs: calc(var(--spacing-s) - $border-width)
+  calc(var(--spacing-m) - $border-width) var(--spacing-s);
+$padding-s: calc(var(--spacing-m) - $border-width) var(--spacing-m) 0
+  calc(var(--spacing-m) - $border-width);
+$summary-padding-base: var(--spacing-xs) calc(var(--spacing-s) - $border-width)
+  calc(var(--spacing-m) - $border-width);
+$summary-padding-xs: var(--spacing-m) calc(var(--spacing-m) - $border-width)
+  calc(var(--spacing-m) - $border-width);
+$summary-padding-s: calc(var(--spacing-m) - $border-width)
+  calc(var(--spacing-m) - $border-width) calc(var(--spacing-xl) - $border-width)
+  var(--spacing-m);
 
 .wrapper {
   width: 100%;
@@ -17,6 +30,14 @@ $border-width: 3px;
     flex-direction: row;
   }
 
+  @container (width < #{breakpoints.$breakpoint-s}) {
+    flex-direction: column;
+  }
+
+  @container (width >= #{breakpoints.$breakpoint-s}) {
+    flex-direction: row;
+  }
+
   &[data-has-spacing='true'] {
     margin-bottom: var(--spacing-m);
   }
@@ -24,18 +45,27 @@ $border-width: 3px;
 
 .iconContainer {
   display: flex;
-  padding: calc(var(--spacing-xs) - $border-width)
-    calc(var(--spacing-xs) - $border-width) var(--spacing-xs);
+  padding: $padding-base;
   background-color: var(--semantic-danger-foreground);
 
   @media (min-width: breakpoints.$breakpoint-xs) {
-    padding: calc(var(--spacing-s) - $border-width)
-      calc(var(--spacing-m) - $border-width) var(--spacing-s);
+    padding: $padding-xs;
   }
 
   @media (min-width: breakpoints.$breakpoint-s) {
-    padding: calc(var(--spacing-m) - $border-width) var(--spacing-m) 0
-      calc(var(--spacing-m) - $border-width);
+    padding: $padding-s;
+  }
+
+  @container (width < #{breakpoints.$breakpoint-xs}) {
+    padding: $padding-base;
+  }
+
+  @container (#{breakpoints.$breakpoint-xs} <= width < #{breakpoints.$breakpoint-s}) {
+    padding: $padding-xs;
+  }
+
+  @container (width >= #{breakpoints.$breakpoint-s}) {
+    padding: $padding-s;
   }
 }
 
@@ -45,21 +75,37 @@ $border-width: 3px;
   @media (min-width: breakpoints.$breakpoint-s) {
     height: calc(var(--font-size-l) * var(--semantic-line-height-heading4));
   }
+
+  @container (width < #{breakpoints.$breakpoint-s}) {
+    height: auto;
+  }
+
+  @container (width >= #{breakpoints.$breakpoint-s}) {
+    height: calc(var(--font-size-l) * var(--semantic-line-height-heading4));
+  }
 }
 
 .summaryContainer {
-  padding: var(--spacing-xs) calc(var(--spacing-s) - $border-width)
-    calc(var(--spacing-m) - $border-width);
+  padding: $summary-padding-base;
 
   @media (min-width: breakpoints.$breakpoint-xs) {
-    padding: var(--spacing-m) calc(var(--spacing-m) - $border-width)
-      calc(var(--spacing-m) - $border-width);
+    padding: $summary-padding-xs;
   }
 
   @media (min-width: breakpoints.$breakpoint-s) {
-    padding: calc(var(--spacing-m) - $border-width)
-      calc(var(--spacing-m) - $border-width)
-      calc(var(--spacing-xl) - $border-width) var(--spacing-m);
+    padding: $summary-padding-s;
+  }
+
+  @container (width < #{breakpoints.$breakpoint-xs}) {
+    padding: $summary-padding-base;
+  }
+
+  @container (#{breakpoints.$breakpoint-xs} <= width < #{breakpoints.$breakpoint-s}) {
+    padding: $summary-padding-xs;
+  }
+
+  @container (width >= #{breakpoints.$breakpoint-s}) {
+    padding: $summary-padding-s;
   }
 }
 
