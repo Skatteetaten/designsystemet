@@ -12,6 +12,12 @@ import { SpinnerProps } from './Spinner.types';
 
 import styles from './Spinner.module.scss';
 
+/**
+ * Spinner
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-spinner--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/spinner/) - Brukerveiledning
+ */
 export const Spinner = ({
   ref,
   id,
@@ -31,8 +37,9 @@ export const Spinner = ({
   const titleId = `title-${id ?? generatedId}`;
 
   /**
-   * useEffect sørger for at div med role=status blir rendret før children.
-   * Dette gjør at skjermleser vet at den skal lytte etter tekster som må leses opp.
+   * UseEffect sørger for at div med role=status blir rendret før children.
+   * Dette gjør at skjermleser vet at den skal lytte etter tekster som må leses
+   * opp.
    */
   useEffect(() => {
     setTimeout(() => {

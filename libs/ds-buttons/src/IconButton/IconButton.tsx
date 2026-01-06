@@ -15,6 +15,12 @@ import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
 
+/**
+ * IconButton
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-iconbutton--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/iconbutton/) - Brukerveiledning
+ */
 export const IconButton = ({
   ref,
   id,

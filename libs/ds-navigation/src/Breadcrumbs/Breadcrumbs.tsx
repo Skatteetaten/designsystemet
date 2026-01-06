@@ -8,6 +8,12 @@ import { BreadcrumbsItem } from './BreadcrumbsItem/BreadcrumbsItem';
 import { BreadcrumbsLink } from './BreadcrumbsLink/BreadcrumbsLink';
 import { BreadcrumbsList } from './BreadcrumbsList/BreadcrumbsList';
 
+/**
+ * Breadcrumbs
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-breadcrumbs--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/) - Brukerveiledning
+ */
 export const Breadcrumbs = (({
   ref,
   id,

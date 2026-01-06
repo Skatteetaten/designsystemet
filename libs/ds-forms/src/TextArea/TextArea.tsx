@@ -20,6 +20,12 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './TextArea.module.scss';
 
+/**
+ * TextArea
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-textarea--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textarea/) - Brukerveiledning
+ */
 export const TextArea = ({
   ref,
   id: externalId,

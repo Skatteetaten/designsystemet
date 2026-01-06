@@ -13,6 +13,12 @@ import { MegaButtonProps } from './MegaButton.types';
 
 import styles from './MegaButton.module.scss';
 
+/**
+ * MegaButton
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-megabutton--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/megabutton/) - Brukerveiledning
+ */
 export const MegaButton = ({
   ref,
   id,

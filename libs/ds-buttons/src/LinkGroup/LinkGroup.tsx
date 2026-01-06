@@ -14,6 +14,12 @@ import { Link } from '../Link/Link';
 
 import styles from './LinkGroup.module.scss';
 
+/**
+ * LinkGroup
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-linkgroup--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/linkgroup/) - Brukerveiledning
+ */
 export const LinkGroup = (({
   ref,
   id,

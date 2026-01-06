@@ -6,6 +6,12 @@ import { HeadingProps } from './Heading.types';
 
 import styles from './Heading.module.scss';
 
+/**
+ * Heading
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-heading--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography/#heading) - Brukerveiledning
+ */
 export const Heading = ({
   ref,
   id,

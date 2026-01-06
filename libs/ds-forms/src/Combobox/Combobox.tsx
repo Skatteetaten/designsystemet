@@ -35,25 +35,10 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 import styles from './Combobox.module.scss';
 
 /**
- * Combobox allows users to select from a list of predefined options with search
- * functionality. Supports both single and multi-select modes, with controlled
- * and uncontrolled variants.
+ * Combobox
  *
- * #### Single Select Usage:
- *
- * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection
- *   events
- * - **Controlled**: Provide `value` prop, use `onSelectionChange` to update state
- * - **With search**: Use `onInputChange` for live search/filtering functionality
- *
- * #### Multi Select Usage:
- *
- * - Set `multiple={true}` prop
- * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection
- *   events
- * - **Controlled**: Provide `value` as array, use `onSelectionChange` to update
- *   state
- * - Automatically uses 'large' variant for chip display space
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-combobox--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/combobox/) - Brukerveiledning
  */
 const Combobox = memo(
   ({
