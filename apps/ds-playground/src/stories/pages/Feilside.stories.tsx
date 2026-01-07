@@ -1,5 +1,7 @@
 import { JSX } from 'react';
 
+import { StoryObj } from '@storybook/react-vite';
+
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { OpenClose } from '@skatteetaten/ds-collections';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -26,7 +28,7 @@ export default {
   },
 };
 
-export const Innlogget = (): JSX.Element => {
+const InnloggetTemplate = (): JSX.Element => {
   return (
     <main className={styles.mainContent}>
       <section className={styles.article}>
@@ -63,6 +65,13 @@ export const Innlogget = (): JSX.Element => {
       </section>
     </main>
   );
+};
+
+export const Innlogget: StoryObj = {
+  render: InnloggetTemplate,
+  parameters: {
+    pageLayout: { showAsSignedIn: true },
+  },
 };
 
 export const Uinnlogget = (): JSX.Element => {
