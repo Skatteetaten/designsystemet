@@ -3,7 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { Panel } from '@skatteetaten/ds-content';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 import { CheckIcon, EditSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -46,6 +50,7 @@ export const StepListStep = ({
   const innerRef = useRef<HTMLDivElement>(null);
   const generatedId = useId();
   const titleId = `steptitle-${id ?? generatedId}`;
+  const isMobile = !useMediaQuery('(min-width: 640px)');
 
   useEffect(() => {
     if (
@@ -112,7 +117,7 @@ export const StepListStep = ({
         id={titleId}
         className={styles.stepHeading}
         as={titleAs}
-        level={5}
+        level={isMobile ? 5 : 4}
       >
         {title}
       </Heading>
