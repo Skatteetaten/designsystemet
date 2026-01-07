@@ -2,8 +2,9 @@ import { JSX } from 'react';
 
 import { StoryObj } from '@storybook/react-vite';
 
-import { LinkGroup } from '@skatteetaten/ds-buttons';
+import { Link } from '@skatteetaten/ds-buttons';
 import { OpenClose } from '@skatteetaten/ds-collections';
+import { ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import stylesAsString from './Feilside.module.scss?raw';
@@ -44,14 +45,13 @@ const InnloggetTemplate = (): JSX.Element => {
           }
         </Paragraph>
 
-        <LinkGroup>
-          <LinkGroup.Link href={'https://skatt.skatteetaten.no/web/minside/'}>
-            {'Gå til Min Side'}
-          </LinkGroup.Link>
-          <LinkGroup.Link href={'#'}>
-            {'Meld fra om ødelagt lenke'}
-          </LinkGroup.Link>
-        </LinkGroup>
+        <Link
+          svgPath={ArrowForwardSVGpath}
+          className={styles.link}
+          href={'https://skatt.skatteetaten.no/web/minside/'}
+        >
+          {'Gå til Min Side'}
+        </Link>
 
         <OpenClose
           variant={'compact'}
@@ -90,14 +90,13 @@ export const Uinnlogget = (): JSX.Element => {
           }
         </Paragraph>
 
-        <LinkGroup>
-          <LinkGroup.Link href={'https://skatteetaten.no'}>
-            {'Gå til forsiden'}
-          </LinkGroup.Link>
-          <LinkGroup.Link href={'#'}>
-            {'Meld fra om ødelagt lenke'}
-          </LinkGroup.Link>
-        </LinkGroup>
+        <Link
+          svgPath={ArrowForwardSVGpath}
+          href={'https://skatteetaten.no'}
+          className={styles.link}
+        >
+          {'Gå til forsiden'}
+        </Link>
 
         <OpenClose
           variant={'compact'}
