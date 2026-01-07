@@ -135,8 +135,10 @@ export const Defaults = {
     await expect(inputNode).not.toBeRequired();
     await expect(inputNode).toBeEnabled();
     await expect(inputNode).not.toHaveAttribute('aria-describedby');
-    const errorMessage = canvas.getAllByRole('generic')[6];
-    await expect(errorMessage).toBeInTheDocument();
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=checkboxErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -376,8 +378,10 @@ export const WithError = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageNode = canvas.getAllByRole('generic')[6];
-    await expect(errorMessageNode).toHaveAttribute('id');
+    const errorMessage = canvasElement.querySelector(
+      '[id^=checkboxErrorId]>div'
+    );
+    await expect(errorMessage).toBeInTheDocument();
     const inputNode = canvas.getByRole('checkbox', {
       description: defaultErrorMessage,
     });
@@ -567,12 +571,10 @@ export const WithCustomClassNames = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const label = canvas.getByText(defaultLabelText);
-    const errorMessageContainer = canvasElement.querySelector(
+    const errorMessage = canvasElement.querySelector(
       '[id^=checkboxErrorId]>div'
     );
-    await expect(label?.parentElement?.parentElement).toHaveClass(
-      'dummyClassname'
-    );
-    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+    await expect(label?.parentElement).toHaveClass('dummyClassname');
+    await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;

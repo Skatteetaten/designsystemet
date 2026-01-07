@@ -53,7 +53,7 @@ export const CheckboxGroup = (({
       classNames={{
         ...classNames,
         contentContainer:
-          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer}`.trim(),
+          `${styles.contentContainer} ${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer}`.trim(),
       }}
       lang={lang}
       data-testid={dataTestId}
