@@ -41,7 +41,7 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Flere oppgir kryptoverdier i skattemeldingen'}
         </Heading>
         <Paragraph variant={'ingress'} hasSpacing>

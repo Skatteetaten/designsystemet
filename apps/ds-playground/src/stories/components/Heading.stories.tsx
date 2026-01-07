@@ -33,7 +33,6 @@ const meta = {
   },
   args: {
     as: 'h2',
-    level: 2,
     children: 'Overskrift',
   },
 } satisfies Meta<typeof Heading>;
@@ -47,22 +46,22 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Overskriftsnivå 1'}
         </Heading>
-        <Heading as={'h2'} level={2} hasSpacing>
+        <Heading as={'h2'} hasSpacing>
           {'Overskriftsnivå 2'}
         </Heading>
-        <Heading as={'h3'} level={3} hasSpacing>
+        <Heading as={'h3'} hasSpacing>
           {'Overskriftsnivå 3'}
         </Heading>
-        <Heading as={'h4'} level={4} hasSpacing>
+        <Heading as={'h4'} hasSpacing>
           {'Overskriftsnivå 4'}
         </Heading>
-        <Heading as={'h5'} level={5} hasSpacing>
+        <Heading as={'h5'} hasSpacing>
           {'Overskriftsnivå 5'}
         </Heading>
-        <Heading as={'h6'} level={5} hasSpacing>
+        <Heading as={'h6'} hasSpacing>
           {'Overskriftsnivå 6'}
         </Heading>
       </>

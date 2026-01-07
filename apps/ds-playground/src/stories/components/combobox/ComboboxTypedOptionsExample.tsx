@@ -134,7 +134,7 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
 
           {selectedKommuneObjects.length > 0 && (
             <div className={'flexGrow'}>
-              <Heading as={'h3'} level={3} hasSpacing>
+              <Heading as={'h3'} hasSpacing>
                 {'Valgte kommuner ('}
                 {selectedKommuneObjects.length}
                 {')'}
