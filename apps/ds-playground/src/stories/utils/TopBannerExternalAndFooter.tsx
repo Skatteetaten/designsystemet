@@ -440,6 +440,7 @@ export function TopBannerExternalAndFooter({
       />
       {children}
       <Footer
+        openDefaultLinksInNewTab={false}
         titleFirstColumn={'Skatteetaten'}
         titleSecondColumn={'Følg oss'}
         secondColumn={
