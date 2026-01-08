@@ -158,7 +158,7 @@ export const Defaults = {
     await expect(errorMessageContainer).toBeInTheDocument();
     const inputNodes = canvas.getAllByRole('checkbox');
     for (const input of inputNodes) {
-      await expect(input).toHaveAttribute('aria-invalid', 'false');
+      await expect(input).not.toHaveAttribute('aria-invalid');
       await expect(input).not.toBeRequired();
     }
   },

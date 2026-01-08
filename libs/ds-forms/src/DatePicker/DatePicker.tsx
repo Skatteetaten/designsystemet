@@ -30,6 +30,7 @@ import {
 import { formatDateForInput, parseDateFromInput } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 
 import styles from './DatePicker.module.scss';
 
@@ -253,7 +254,7 @@ export const DatePicker = ({
               .join(' ')
               .trim() || undefined
           }
-          aria-invalid={!!errorMessage || undefined}
+          aria-invalid={getAriaInvalid(errorMessage, required)}
           onBlur={handleBlur}
           onChange={handleChange}
           onFocus={handleFocus}

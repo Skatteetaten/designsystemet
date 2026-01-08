@@ -3,6 +3,7 @@ import { useId, useContext, JSX, ChangeEvent, FocusEvent } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { RadioProps } from './Radio.types';
+import { getAriaInvalid } from '../../utils';
 import { RadioGroupContext } from '../RadioGroupContext';
 
 import styles from './Radio.module.scss';
@@ -74,7 +75,7 @@ export const Radio = ({
         name={context?.name}
         required={context?.required}
         aria-describedby={ariaDescribedbyInput || undefined}
-        aria-invalid={context?.hasError}
+        aria-invalid={getAriaInvalid(context?.hasError, context?.required)}
         onBlur={onBlurInput}
         onChange={onChangeInput}
         onFocus={onFocusInput}

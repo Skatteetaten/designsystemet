@@ -299,6 +299,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toBeRequired();
+    await expect(textbox).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 

@@ -26,6 +26,7 @@ import {
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
 
 import styles from './SearchField.module.scss';
@@ -237,7 +238,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
                 .join(' ')
                 .trim() || undefined
             }
-            aria-invalid={!!errorMessage || undefined}
+            aria-invalid={getAriaInvalid(errorMessage, required)}
             aria-owns={shouldShowResults ? resultsId : undefined}
             type={'search'}
             onKeyDown={(event) => {

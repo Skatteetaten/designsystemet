@@ -31,6 +31,7 @@ import {
 } from './utils/combobox-utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 
 import styles from './Combobox.module.scss';
 
@@ -257,7 +258,7 @@ const Combobox = memo(
                 focusedIndex >= 0 ? focusedOptionId : undefined
               }
               aria-describedby={ariaDescribedBy}
-              aria-invalid={!!errorMessage || undefined}
+              aria-invalid={getAriaInvalid(errorMessage, required)}
               data-testid={dataTestId}
               onChange={handleInputChange}
               onFocus={handleInputFocus}

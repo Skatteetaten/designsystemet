@@ -247,6 +247,7 @@ export const Defaults = {
     await expect(searchbox).toBeEnabled();
     await expect(searchbox).toHaveAttribute('id');
     await expect(searchbox.tagName).toBe('INPUT');
+    await expect(searchbox).not.toHaveAttribute('aria-invalid');
     await expect(searchbox).not.toBeRequired();
     const searchButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_forms:searchfield.ButtonTitle'),
@@ -696,6 +697,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('searchbox');
     await expect(textbox).toBeRequired();
+    await expect(textbox).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
