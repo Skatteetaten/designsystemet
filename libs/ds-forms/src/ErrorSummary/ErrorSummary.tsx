@@ -54,9 +54,7 @@ export const ErrorSummary = (({
       id={id}
       lang={lang}
       data-testid={dataTestId}
-      aria-live={'assertive'}
       tabIndex={-1}
-      aria-atomic
     >
       {showErrorSummary && (
         <div
