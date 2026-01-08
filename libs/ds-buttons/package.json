@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-buttons",
   "groupId": "no.skatteetaten.aurora",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "license": "Apache-2.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "type": "module",
@@ -16,9 +16,9 @@
     "i18next": "^24 || ^25",
     "react": "^19 ",
     "react-i18next": "^15",
-    "@skatteetaten/ds-core-utils": "2.5.1",
-    "@skatteetaten/ds-icons": "2.5.1",
-    "@skatteetaten/ds-progress": "2.5.1"
+    "@skatteetaten/ds-core-utils": "2.5.2",
+    "@skatteetaten/ds-icons": "2.5.2",
+    "@skatteetaten/ds-progress": "2.5.2"
   },
   "scripts": {},
   "dependencies": {},

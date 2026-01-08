@@ -1,6 +1,6 @@
 {
   "name": "@skatteetaten/ds-navigation",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "license": "Apache-2.0",
   "groupId": "no.skatteetaten.aurora",
   "type": "module",
@@ -15,10 +15,10 @@
     "i18next": "^24 || ^25",
     "react": "^19 ",
     "react-i18next": "^15",
-    "@skatteetaten/ds-buttons": "2.5.1",
-    "@skatteetaten/ds-core-utils": "2.5.1",
-    "@skatteetaten/ds-icons": "2.5.1",
-    "@skatteetaten/ds-progress": "2.5.1"
+    "@skatteetaten/ds-buttons": "2.5.2",
+    "@skatteetaten/ds-core-utils": "2.5.2",
+    "@skatteetaten/ds-icons": "2.5.2",
+    "@skatteetaten/ds-progress": "2.5.2"
   },
   "scripts": {},
   "dependencies": {},
