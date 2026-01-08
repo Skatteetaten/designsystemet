@@ -108,7 +108,7 @@ export const resources = {
   },
 };
 
-export const dsI18n = i18n.createInstance({
+export const dsI18n: typeof i18n = i18n.createInstance({
   keySeparator: false,
   nsSeparator: ':',
   fallbackLng: 'nb_NO',
