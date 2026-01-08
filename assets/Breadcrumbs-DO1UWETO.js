@@ -1,0 +1,11 @@
+import{j as r}from"./iframe-s2_bNgHU.js";import{useMDXComponents as m}from"./index-Coc8XlEY.js";import{M as e,P as s,C as p}from"./WithTooltip-SK46ZJ2J-BgQ-UF5v.js";import{P as n}from"./utils-CiE3N6_4.js";import{B as a,E as c,I as d}from"./Breadcrumbs.stories-DwkrKCXA.js";import{V as l}from"./VersionBadge-aMCyLfcW.js";import{D as x}from"./DocIntro-DIjLX9Xz.js";import{D as u}from"./DocHeaderWrapper-C_g6vmEn.js";import"./preload-helper-PPVm8Dsz.js";import"./index-Dl0hHgc-.js";import"./index-CYEZhpn0.js";import"./index-DeRgnwbs.js";import"./lz-string-m9jzapWX.js";import"./index-7wWg-Emv.js";import"./index-Ck1G954W.js";import"./index-CUsfAC9p.js";import"./index-DcFKixUR.js";import"./index-CJpzHRrE.js";import"./index-D9_nlc1h.js";import"./DatePickerCalendar-ePUd64Qm.js";import"./LabelWithHelp-rfkuXU1a.js";import"./Help-DC9TS-B6.js";import"./Combobox.module-CSHfGvVK.js";import"./ComboboxButton-COhLZqHg.js";import"./ComboboxSelectedOptions-DI0eIcsf.js";import"./index-DFs0_No2.js";import"./index-jj9Gfu02.js";import"./index-DdQvxWAg.js";import"./TopBannerButton-DfVK1v-G.js";import"./floating-ui.react-E96A4XpZ.js";import"./TopBannerLangPicker-B12Cqjgb.js";import"./TopBannerLangPickerButton-B89Cuo20.js";import"./TopBannerLogo-2_yXoyy5.js";import"./TopBannerSkipLink-pDXC9-Fu.js";import"./TopBannerUserButton-CgWAyyOh.js";import"./index-BjBiKebW.js";import"./stories.utils-CZ5hej_8.js";function i(o){const t={code:"code",h1:"h1",h2:"h2",pre:"pre",...m(),...o.components};return r.jsxs(r.Fragment,{children:[r.jsx(e,{of:a}),`
+`,r.jsxs(u,{componentName:"Breadcrumbs",children:[r.jsx(t.h1,{id:"breadcrumbs",children:"Breadcrumbs"}),r.jsx(l,{packageName:"navigation"}),r.jsx(x,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/"})]}),`
+`,r.jsx(s,{}),`
+`,r.jsx(t.pre,{children:r.jsx(t.code,{className:"language-tsx",children:`import { Breadcrumbs } from '@skatteetaten/ds-navigation';
+`})}),`
+`,r.jsx(p,{}),`
+`,r.jsx(t.h2,{id:"i-publikumsløsning",children:"I publikumsløsning"}),`
+`,r.jsx(n,{of:c}),`
+`,r.jsx(t.h2,{id:"i-intern-løsning",children:"I intern løsning"}),`
+`,r.jsx(n,{of:d})]})}function Z(o={}){const{wrapper:t}={...m(),...o.components};return t?r.jsx(t,{...o,children:r.jsx(i,{...o})}):i(o)}export{Z as default};
+//# sourceMappingURL=Breadcrumbs-DO1UWETO.js.map

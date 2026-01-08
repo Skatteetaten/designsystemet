@@ -1,0 +1,15 @@
+import{h as p,e,j as r}from"./iframe-s2_bNgHU.js";import{l as n}from"./index-CUsfAC9p.js";import{d as c,e as d,f as m,N as s}from"./index-BjBiKebW.js";import{S as g}from"./icon.systems-DJyjpAy9.js";import{e as f}from"./stories.utils-CZ5hej_8.js";const u="Skatt",k="Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.",v={component:s,title:"Komponenter/NavigationTile",argTypes:{title:{control:"text",table:{category:e.props}},classNames:{control:!1,table:{category:e.props}},titleAs:{table:{category:e.props,defaultValue:{summary:m()}}},description:{control:"text",table:{category:e.props}},hasSpinner:{table:{category:e.props}},isExternal:{table:{category:e.props}},hideArrowIcon:{table:{category:e.props,defaultValue:{summary:d().toString()}}},size:{control:"radio",table:{category:e.props,defaultValue:{summary:c()}}},spinnerTitle:{table:{category:e.props}},svgPath:{options:Object.keys(g),mapping:g,table:{category:e.props}},href:{table:{category:e.htmlAttribute}},target:{table:{category:e.htmlAttribute}},ariaDescribedby:{table:{category:e.aria}},ariaLabel:{table:{category:e.aria}},onClick:{...p}},args:{title:u,description:k,href:"#"}},a={render:i=>r.jsx("nav",{"aria-label":"Beskrivelse av navigasjonsflater",children:r.jsx(s,{...i})})},t={render:i=>{const o="Skatt",l="Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.";return r.jsxs("nav",{className:"flex gapXl","aria-label":"Beskrivelse av navigasjonsflater",children:[r.jsx(s,{title:o,description:l,href:"#",size:"extraLarge",svgPath:n}),r.jsx(s,{title:o,description:l,href:"#",size:"extraLarge",svgPath:n})]})}};t.parameters=f;a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{
+  render: (_args): JSX.Element => <nav aria-label={'Beskrivelse av navigasjonsflater'}>
+      <NavigationTile {..._args} />
+    </nav>
+} satisfies Story`,...a.parameters?.docs?.source}}};t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:`{
+  render: (_args): JSX.Element => {
+    const defaultTitle = 'Skatt';
+    const defaultDescription = 'Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.';
+    return <nav className={'flex gapXl'} aria-label={'Beskrivelse av navigasjonsflater'}>
+        <NavigationTile title={defaultTitle} description={defaultDescription} href={'#'} size={'extraLarge'} svgPath={AccountEnkSVGpath} />
+        <NavigationTile title={defaultTitle} description={defaultDescription} href={'#'} size={'extraLarge'} svgPath={AccountEnkSVGpath} />
+      </nav>;
+  }
+} satisfies Story`,...t.parameters?.docs?.source}}};const b=["Preview","Examples"],T=Object.freeze(Object.defineProperty({__proto__:null,Examples:t,Preview:a,__namedExportsOrder:b,default:v},Symbol.toStringTag,{value:"Module"}));export{t as E,T as N};
+//# sourceMappingURL=NavigationTile.stories-DVpCAj9G.js.map
