@@ -30,12 +30,16 @@ import styles from './TopBannerExternalAndFooter.module.scss';
 
 export function TopBannerExternalAndFooter({
   children,
+  showAsSignedIn,
 }: {
   children: ReactNode;
+  showAsSignedIn?: boolean;
 }): JSX.Element {
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const modalRef = useRef<HTMLDialogElement>(null);
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User | undefined>(
+    showAsSignedIn ? { name: 'Ola Nordmann', role: 'meg' } : undefined
+  );
 
   const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
     const lang = e.currentTarget.lang;
@@ -440,6 +444,7 @@ export function TopBannerExternalAndFooter({
       />
       {children}
       <Footer
+        openDefaultLinksInNewTab={false}
         titleFirstColumn={'Skatteetaten'}
         titleSecondColumn={'Følg oss'}
         secondColumn={

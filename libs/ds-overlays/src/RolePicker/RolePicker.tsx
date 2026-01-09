@@ -39,6 +39,12 @@ import { RolePickerRow } from './RolePickerRow/RolePickerRow';
 
 import styles from './RolePicker.module.scss';
 
+/**
+ * RolePicker
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-rolepicker--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolepicker/) - Brukerveiledning
+ */
 export const RolePicker = ({
   ref,
   id,

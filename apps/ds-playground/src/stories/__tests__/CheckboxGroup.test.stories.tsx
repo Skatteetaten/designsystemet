@@ -152,6 +152,10 @@ export const Defaults = {
     const legendNode = canvas.getAllByText(defaultLegendText)[0];
     await expect(legendNode).toBeInTheDocument();
     await expect(legendNode.tagName).toBe('LEGEND');
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=checkboxGroupErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
     const inputNodes = canvas.getAllByRole('checkbox');
     for (const input of inputNodes) {
       await expect(input).toHaveAttribute('aria-invalid', 'false');
@@ -268,9 +272,10 @@ export const WithError = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[17];
-    await expect(errorMessageContainer).toBeInTheDocument();
-    await expect(errorMessageContainer).toHaveAttribute('id');
+    const errorMessage = canvasElement.querySelector(
+      '[id^=checkboxGroupErrorId]>div'
+    );
+    await expect(errorMessage).toBeInTheDocument();
     const inputNodes = canvas.getAllByRole('checkbox', {
       description: defaultErrorMessage,
     });

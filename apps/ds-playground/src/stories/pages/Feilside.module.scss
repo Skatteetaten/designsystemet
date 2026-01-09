@@ -1,0 +1,28 @@
+.mainContent {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: var(--spacing-xl) auto;
+}
+
+.article {
+  display: flex;
+  width: var(--semantic-responsive-article);
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: var(--spacing-m);
+}
+
+.label {
+  color: var(--palette-graphite-70);
+}
+
+.ingress {
+  padding-bottom: var(--spacing-m);
+}
+
+.openClose {
+  padding-top: var(--spacing-s);
+}

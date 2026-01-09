@@ -15,6 +15,12 @@ import { Fieldset } from '../Fieldset/Fieldset';
 
 import styles from './RadioGroup.module.scss';
 
+/**
+ * RadioGroup
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-radiogroup--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/) - Brukerveiledning
+ */
 export const RadioGroup = (({
   ref,
   id,

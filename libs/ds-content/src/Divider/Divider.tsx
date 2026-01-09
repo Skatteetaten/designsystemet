@@ -11,6 +11,12 @@ import { DividerProps } from './Divider.types';
 
 import styles from './Divider.module.scss';
 
+/**
+ * Divider
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-divider--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/divider/) - Brukerveiledning
+ */
 export const Divider = ({
   ref,
   id,

@@ -5,6 +5,12 @@ import { Popover } from '../Popover/Popover';
 import { WordInfoContent } from './WordInfoContent/WordInfoContent';
 import { WordInfoTrigger } from './WordInfoTrigger/WordInfoTrigger';
 
+/**
+ * WordInfo
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-wordinfo--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/wordinfo/) - Brukerveiledning
+ */
 export const WordInfo = ((props: WordInfoProps): JSX.Element => {
   return <Popover {...props} />;
 }) as WordInfoComponent;

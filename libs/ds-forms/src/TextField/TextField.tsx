@@ -24,6 +24,12 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './TextField.module.scss';
 
+/**
+ * TextField
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-textfield--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/) - Brukerveiledning
+ */
 export const TextField = ({
   ref,
   id: externalId,

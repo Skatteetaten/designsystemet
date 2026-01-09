@@ -1,101 +1,44 @@
 @use 'libs/ds-core-utils/src/mixins/styles' as style;
 
 .container {
+  width: fit-content;
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-m);
+  }
+}
+
+.checkbox {
+  display: flex;
+
   --checkbox-border-color: var(--semantic-page-foreground);
   --checkbox-background-color: var(--semantic-page-background);
   --check-color: var(--palette-graphite-0);
   --label-color: var(--semantic-page-foreground);
   --description-color: var(--palette-graphite-70);
+  --required-color: var(--semantic-danger-foreground);
+  --outline-width: 0;
+  --cursor: pointer;
 
-  position: relative;
-  width: fit-content;
-
-  &SpacingBottom {
-    margin-bottom: var(--spacing-s);
+  &:has(&Input:disabled) {
+    --checkbox-border-color: var(--semantic-disabled-foreground);
+    --checkbox-background-color: var(--semantic-disabled-background);
+    --check-color: var(--semantic-disabled-background);
+    --label-color: var(--semantic-disabled-foreground);
+    --description-color: var(--semantic-disabled-foreground);
+    --required-color: var(--semantic-disabled-foreground);
+    --cursor: not-allowed;
   }
 
-  &[data-has-spacing='true'] {
-    margin-bottom: var(--spacing-m);
+  &:has(&Input:checked:disabled) {
+    --check-color: var(--semantic-disabled-foreground);
   }
 
-  .input {
-    position: absolute;
-    top: var(--spacing-xxs);
-    left: calc(-1 * var(--spacing-xxs));
-    width: var(--size-large);
-    height: var(--size-large);
-    cursor: pointer;
-    opacity: 0;
-
-    &:disabled {
-      cursor: not-allowed;
-    }
+  &:has(&Input[aria-invalid='true']:not(:disabled)) {
+    --checkbox-border-color: var(--semantic-danger-foreground);
   }
 
-  .label {
-    display: flex;
-    padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) 0;
-    color: var(--label-color);
-    cursor: pointer;
-    gap: var(--spacing-s);
-
-    &_error {
-      background-color: var(--semantic-danger-background);
-      box-shadow: calc(-1 * var(--spacing-xs)) 0
-        var(--semantic-danger-background);
-    }
-
-    &Checkbox {
-      position: relative;
-      width: var(--size-medium);
-      min-width: var(--size-medium);
-      height: var(--size-medium);
-      box-sizing: border-box;
-      border: var(--spacing-xxs) solid var(--checkbox-border-color);
-      margin-top: var(--spacing-xxs);
-      background-color: var(--checkbox-background-color);
-
-      &Check {
-        position: absolute;
-        top: 0.1875rem;
-        left: 0.0625rem;
-        width: 0.71875rem;
-        height: 0.3125rem;
-        border-bottom: var(--spacing-xxs) solid var(--check-color);
-        border-left: var(--spacing-xxs) solid var(--check-color);
-        transform: rotate(-45deg);
-      }
-
-      &_error {
-        --checkbox-border-color: var(--semantic-danger-foreground);
-      }
-    }
-
-    &Content {
-      display: flex;
-      flex-direction: column;
-      font-size: var(--font-size-m);
-      line-height: var(--semantic-line-height-input);
-      overflow-wrap: anywhere;
-      word-break: normal;
-
-      &_required {
-        &::after {
-          color: var(--semantic-danger-foreground);
-          content: '*';
-          font-weight: var(--font-weight-bold);
-        }
-      }
-
-      &Description {
-        margin-top: var(--spacing-xs);
-        color: var(--description-color);
-      }
-    }
-  }
-
-  .input:hover + .label,
-  .input:hover + .label .labelCheckbox {
+  &:has(&Input:hover:not(:disabled)) {
     --checkbox-border-color: var(--semantic-interactive-main);
     --checkbox-background-color: var(--semantic-interactive-background);
     --check-color: var(--semantic-interactive-background);
@@ -103,60 +46,86 @@
     --description-color: var(--semantic-interactive-main);
   }
 
-  .input:focus-visible + .label .labelCheckbox {
-    outline: var(--spacing-xxs) solid var(--semantic-interactive-main);
-    outline-offset: var(--spacing-xxs);
+  &:has(&Input:focus-visible:not(:disabled)) {
+    --outline-width: var(--spacing-xxs);
   }
 
-  .input:active + .label,
-  .input:active + .label .labelCheckbox {
+  &:has(&Input:active:not(:disabled)) {
     --checkbox-border-color: var(--semantic-interactive-foreground);
-    --checkbox-background-color: var(--palette-graphite-0);
-    --check-color: transparent;
     --label-color: var(--semantic-interactive-foreground);
     --description-color: var(--semantic-interactive-foreground);
   }
 
-  .input:disabled + .label,
-  .input:disabled + .label .labelCheckbox {
-    --checkbox-border-color: var(--semantic-disabled-foreground);
-    --checkbox-background-color: var(--semantic-disabled-background);
-    --check-color: var(--semantic-disabled-background);
-    --label-color: var(--semantic-disabled-foreground);
-    --description-color: var(--semantic-disabled-foreground);
-    --semantic-danger-foreground: var(--semantic-disabled-foreground);
-    --semantic-interactive-main: var(--semantic-disabled-foreground);
-    --semantic-interactive-background: var(--semantic-disabled-background);
-
-    cursor: not-allowed;
-  }
-
-  .input:checked + .label,
-  .input:checked + .label .labelCheckbox {
+  &:has(&Input:checked:not(:disabled)) {
     --checkbox-border-color: var(--semantic-interactive-main);
     --checkbox-background-color: var(--semantic-interactive-main);
+  }
+
+  &:has(&Input:checked:hover:not(:disabled)) {
     --check-color: var(--palette-graphite-0);
   }
 
-  .input:checked:active + .label,
-  .input:checked:active + .label .labelCheckbox {
+  &:has(&Input:checked:active:not(:disabled)) {
     --checkbox-border-color: var(--semantic-interactive-foreground);
-    --label-color: var(--semantic-interactive-foreground);
-    --description-color: var(--semantic-interactive-foreground);
     --checkbox-background-color: var(--semantic-interactive-foreground);
-    --check-color: var(--palette-graphite-0);
   }
 
-  .input:checked:disabled + .label,
-  .input:checked:disabled + .label .labelCheckbox {
-    --checkbox-border-color: var(--semantic-disabled-foreground);
-    --checkbox-background-color: var(--semantic-disabled-background);
-    --check-color: var(--semantic-disabled-foreground);
-    --label-color: var(--semantic-disabled-foreground);
+  &:has(&Input[aria-invalid='true']:required:not(:disabled)) {
+    background-color: var(--semantic-danger-background);
+    box-shadow: calc(-1 * var(--spacing-xs)) 0 var(--semantic-danger-background);
   }
 
-  .input:disabled:focus-visible + .label .labelCheckbox {
-    outline: none;
+  &Input {
+    position: relative;
+    width: var(--size-medium);
+    height: var(--size-medium);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border: var(--spacing-xxs) solid var(--checkbox-border-color);
+    margin-top: 6px;
+    appearance: none;
+    background-color: var(--checkbox-background-color);
+    cursor: var(--cursor);
+    outline: var(--outline-width) solid var(--semantic-interactive-main);
+    outline-offset: var(--spacing-xxs);
+
+    &::before {
+      position: absolute;
+      top: 0.1875rem;
+      left: 0.0625rem;
+      width: 0.71875rem;
+      height: 0.3125rem;
+      border-bottom: var(--spacing-xxs) solid var(--check-color);
+      border-left: var(--spacing-xxs) solid var(--check-color);
+      content: '';
+      transform: rotate(-45deg);
+    }
+  }
+
+  &Label {
+    padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs)
+      var(--spacing-s);
+    color: var(--label-color);
+    cursor: var(--cursor);
+    font-size: var(--font-size-m);
+    gap: var(--spacing-xs);
+    line-height: var(--semantic-line-height-input);
+    overflow-wrap: anywhere;
+    word-break: normal;
+
+    &_required {
+      &::after {
+        color: var(--required-color);
+        content: '*';
+        font-weight: var(--font-weight-bold);
+      }
+    }
+
+    &Description {
+      display: block;
+      margin-top: var(--spacing-xs);
+      color: var(--description-color);
+    }
   }
 }
 

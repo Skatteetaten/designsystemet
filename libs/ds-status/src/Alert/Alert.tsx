@@ -17,6 +17,12 @@ import { getAlertBackgroundBrightnessDefault } from './defaults';
 
 import styles from './Alert.module.scss';
 
+/**
+ * Alert
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-alert--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/alert/) - Brukerveiledning
+ */
 export const Alert = ({
   ref,
   id,

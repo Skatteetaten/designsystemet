@@ -12,6 +12,12 @@ import { ScrollToTopButtonProps } from './ScrollToTopButton.types';
 
 import styles from './ScrollToTopButton.module.scss';
 
+/**
+ * ScrollToTopButton
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-scrolltotopbutton--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/scrolltotopbutton/) - Brukerveiledning
+ */
 export const ScrollToTopButton = ({
   ref,
   id,
