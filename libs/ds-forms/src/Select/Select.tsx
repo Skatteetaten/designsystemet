@@ -22,6 +22,12 @@ import { SelectOption } from './SelectOption/SelectOption';
 
 import styles from './Select.module.scss';
 
+/**
+ * Select
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-select--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/select/) - Brukerveiledning
+ */
 export const Select = (({
   ref,
   id: externalId,

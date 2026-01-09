@@ -45,6 +45,12 @@ const validPropRanges = ({
   return true;
 };
 
+/**
+ * Pagination
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-pagination--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/) - Brukerveiledning
+ */
 export const Pagination = (({
   ref,
   id,

@@ -33,6 +33,12 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './DatePicker.module.scss';
 
+/**
+ * DatePicker
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-datepicker--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/datepicker/) - Brukerveiledning
+ */
 export const DatePicker = ({
   ref,
   id: externalId,

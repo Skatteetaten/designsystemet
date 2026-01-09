@@ -22,6 +22,7 @@ const meta = {
     children: { table: { disable: true } },
     // Aria
     ariaLabel: { table: { disable: true } },
+    ariaLabelledBy: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
@@ -142,6 +143,27 @@ export const WithAriaLabel = {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('list');
     await expect(container).toHaveAttribute('aria-label', label);
+  },
+} satisfies Story;
+
+const labelId = 'chipsLabelId';
+
+export const WithAriaLabelledBy = {
+  name: 'With AriaLabelledBy',
+  args: {
+    ariaLabelledBy: labelId,
+    ...defaultArgs,
+  },
+  argTypes: {
+    ariaLabelledBy: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('list');
+    await expect(container).toHaveAttribute('aria-labelledby', labelId);
   },
 } satisfies Story;
 

@@ -27,6 +27,12 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './FileUploader.module.scss';
 
+/**
+ * FileUploader
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fileuploader--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fileuploader/) - Brukerveiledning
+ */
 export const FileUploader = (({
   ref,
   id: externalId,

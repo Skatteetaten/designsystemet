@@ -30,6 +30,12 @@ import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
 
 import styles from './SearchField.module.scss';
 
+/**
+ * SearchField
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-searchfield--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/) - Brukerveiledning
+ */
 export const SearchField = (({
   ref,
   id: externalId,

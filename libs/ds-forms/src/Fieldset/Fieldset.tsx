@@ -7,6 +7,12 @@ import { Help } from '../LabelWithHelp/Help/Help';
 
 import styles from './Fieldset.module.scss';
 
+/**
+ * Fieldset
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fieldset--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fieldset/) - Brukerveiledning
+ */
 export const Fieldset = ({
   ref,
   id,

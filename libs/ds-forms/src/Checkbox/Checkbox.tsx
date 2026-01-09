@@ -13,6 +13,12 @@ import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
 import styles from './Checkbox.module.scss';
 
+/**
+ * Checkbox
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-checkbox--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkbox/) - Brukerveiledning
+ */
 export const Checkbox = ({
   ref,
   id: idExternal,

@@ -28,6 +28,12 @@ import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
 
+/**
+ * Table
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-table--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/table/) - Brukerveiledning
+ */
 export const Table = (({
   ref,
   id,
@@ -114,9 +120,11 @@ export const Table = (({
     };
 
     const observer = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        updateDimensions(entry);
-      }
+      requestAnimationFrame(() => {
+        for (const entry of entries) {
+          updateDimensions(entry);
+        }
+      });
     });
     wrapperRef.current && observer.observe(wrapperRef.current);
     return (): void => {

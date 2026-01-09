@@ -16,6 +16,12 @@ import { InlineButtonProps } from './InlineButton.types';
 
 import styles from './InlineButton.module.scss';
 
+/**
+ * InlineButton
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-inlinebutton--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/inlinebutton/) - Brukerveiledning
+ */
 export const InlineButton = ({
   ref,
   id,
