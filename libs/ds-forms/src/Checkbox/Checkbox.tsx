@@ -70,7 +70,7 @@ export const Checkbox = ({
     event: React.KeyboardEvent<HTMLInputElement>
   ): void => {
     if (
-      context?.readOnly &&
+      (context?.readOnly || readOnly) &&
       (event.key === ' ' ||
         event.key === 'Enter' ||
         event.key === 'ArrowUp' ||
