@@ -1,6 +1,7 @@
 import { useId, useContext, JSX, ChangeEvent, FocusEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { RadioProps } from './Radio.types';
 import { RadioGroupContext } from '../RadioGroupContext';
@@ -22,6 +23,7 @@ export const Radio = ({
   onChange,
   onFocus,
 }: RadioProps): JSX.Element => {
+  const { t } = useTranslation('Shared', { i18n: dsI18n });
   const context = useContext(RadioGroupContext);
 
   const uniqueInputId = `radioInputId-${useId()}`;
@@ -50,6 +52,22 @@ export const Radio = ({
     onFocus && onFocus(event);
   };
 
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ): void => {
+    if (
+      context?.readOnly &&
+      (event.key === ' ' ||
+        event.key === 'Enter' ||
+        event.key === 'ArrowUp' ||
+        event.key === 'ArrowDown' ||
+        event.key === 'ArrowLeft' ||
+        event.key === 'ArrowRight')
+    ) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <div className={concatenatedClassName} lang={lang}>
       {/* eslint-disable-next-line jsx-a11y/role-supports-aria-props */}
@@ -73,14 +91,19 @@ export const Radio = ({
         type={'radio'}
         name={context?.name}
         required={context?.required}
+        data-read-only={context?.readOnly || undefined}
         aria-describedby={ariaDescribedbyInput || undefined}
         aria-invalid={context?.hasError}
         onBlur={onBlurInput}
         onChange={onChangeInput}
         onFocus={onFocusInput}
+        onKeyDown={handleKeyDown}
       />
       <label className={styles.radioLabel} htmlFor={inputId} tabIndex={-1}>
         {children}
+        {context?.readOnly && (
+          <span className={styles.srOnly}>{`, ${t('shared.ReadOnly')}`}</span>
+        )}
         {description && (
           <>
             &nbsp;

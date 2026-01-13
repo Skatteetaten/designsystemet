@@ -3,5 +3,6 @@ declare const classNames: {
   readonly radioInput: 'radioInput';
   readonly radioLabel: 'radioLabel';
   readonly radioLabelDescription: 'radioLabelDescription';
+  readonly srOnly: 'srOnly';
 };
 export default classNames;

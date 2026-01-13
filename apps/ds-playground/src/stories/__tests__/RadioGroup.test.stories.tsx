@@ -37,6 +37,7 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     selectedValue: { table: { disable: true } },
@@ -641,5 +642,30 @@ export const WithCustomClassNames = {
         selector: "[aria-hidden='true']",
       })
     ).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
+export const ReadOnly = {
+  name: 'Read Only',
+  args: {
+    ...defaultArgs,
+    readOnly: true,
+    selectedValue: selectedValue,
+    defaultValue: undefined,
+    description: 'Dette er en radiogruppe i read only modus',
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const radios = canvas.getAllByRole('radio');
+    for (const radio of radios) {
+      await expect(radio).toHaveAttribute('data-read-only', 'true');
+      expect(radio).toHaveAccessibleName(/skrivebeskyttet$/);
+    }
   },
 } satisfies Story;

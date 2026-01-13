@@ -38,6 +38,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    readOnly: { table: { category: category.props } },
     shadowRootNode: { control: false, table: { category: category.props } },
     showRequiredMark: {
       table: { category: category.props },

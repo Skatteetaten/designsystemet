@@ -24,6 +24,7 @@ export interface RadioGroupContextProps {
   name: string;
   selectedValue?: string | number;
   hasError?: boolean;
+  readOnly?: boolean;
   required?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   onBlur?: FocusEventHandler<HTMLInputElement>;
@@ -75,6 +76,8 @@ interface RadioGroupComponentCommonProps
   titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /** Overskriver autogenerert name */
   name?: string;
+  /** Om radioknappene skal være skrivebeskyttet */
+  readOnly?: boolean;
   /** Definerer stilen til gruppen. */
   variant?: RadioGroupVariant;
   /** Callback som kalles når hjelpetekst vises/skjules */
