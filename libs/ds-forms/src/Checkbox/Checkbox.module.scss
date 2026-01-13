@@ -56,6 +56,17 @@
     --description-color: var(--semantic-interactive-foreground);
   }
 
+  &:has(&Input[data-read-only='true']:not(:disabled)) {
+    --checkbox-border-color: var(--semantic-page-background);
+    --checkbox-background-color: var(--semantic-page-background);
+    --check-color: var(--palette-graphite-0);
+    --label-color: var(--palette-graphite-70);
+    --description-color: var(--palette-graphite-70);
+    --cursor: default;
+
+    pointer-events: none;
+  }
+
   &:has(&Input:checked:not(:disabled)) {
     --checkbox-border-color: var(--semantic-interactive-main);
     --checkbox-background-color: var(--semantic-interactive-main);
@@ -70,7 +81,18 @@
     --checkbox-background-color: var(--semantic-interactive-foreground);
   }
 
-  &:has(&Input[aria-invalid='true']:required:not(:disabled)) {
+  &:has(&Input:checked[data-read-only='true']:not(:disabled)) {
+    --checkbox-border-color: var(--semantic-page-background);
+    --checkbox-background-color: var(--semantic-page-background);
+    --check-color: var(--palette-graphite-70);
+  }
+
+  &:has(
+      &Input[aria-invalid='true']:required:not(
+          [data-read-only='true'],
+          :disabled
+        )
+    ) {
     background-color: var(--semantic-danger-background);
     box-shadow: calc(-1 * var(--spacing-xs)) 0 var(--semantic-danger-background);
   }

@@ -34,6 +34,7 @@ export const CheckboxGroup = (({
   helpSvgPath,
   helpText,
   legend,
+  readOnly,
   titleHelpSvg,
   disabled,
   form,
@@ -72,6 +73,7 @@ export const CheckboxGroup = (({
       <CheckboxContext.Provider
         value={{
           errorId: errorMessage ? errorId : undefined,
+          readOnly,
         }}
       >
         {children}

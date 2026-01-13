@@ -371,3 +371,23 @@ export const WithCustomClassNames = {
     ).toHaveClass('dummyClassname');
   },
 } satisfies Story;
+
+export const WithReadOnly = {
+  name: 'With ReadOnly',
+  args: {
+    ...defaultArgs,
+    children: childrenWithOneChecked,
+    readOnly: true,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const checkboxes = canvas.getAllByRole('checkbox');
+    for (const checkbox of checkboxes) {
+      await expect(checkbox).toHaveAttribute('data-read-only', 'true');
+      expect(checkbox).toHaveAccessibleName(/skrivebeskyttet$/);
+    }
+  },
+} satisfies Story;

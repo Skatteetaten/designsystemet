@@ -50,6 +50,8 @@ interface CheckboxGroupCommonProps
   showRequiredMark?: FieldsetProps['showRequiredMark'];
   /* Hvis innføring av required på Group, se commit 05e7ac89ac3b132d37d18aed55a933573b3beb70 */
 
+  /** Om checkboxene skal være skrivebeskyttet */
+  readOnly?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: FieldsetProps['onHelpToggle'];
 }
@@ -62,4 +64,5 @@ export interface CheckboxGroupComponent extends React.FC<CheckboxGroupProps> {
 
 export interface CheckboxContextProps {
   errorId?: string;
+  readOnly?: boolean;
 }
