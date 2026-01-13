@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { RadioProps } from './Radio.types';
+import { getAriaInvalid } from '../../utils';
 import { RadioGroupContext } from '../RadioGroupContext';
 
 import styles from './Radio.module.scss';
@@ -93,7 +94,7 @@ export const Radio = ({
         required={context?.required}
         data-read-only={context?.readOnly || undefined}
         aria-describedby={ariaDescribedbyInput || undefined}
-        aria-invalid={context?.hasError}
+        aria-invalid={getAriaInvalid(context?.hasError, context?.required)}
         onBlur={onBlurInput}
         onChange={onChangeInput}
         onFocus={onFocusInput}

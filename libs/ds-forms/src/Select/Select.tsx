@@ -18,6 +18,7 @@ import { getSelectPlaceholderDefault } from './defaults';
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 import { SelectOption } from './SelectOption/SelectOption';
 
 import styles from './Select.module.scss';
@@ -142,7 +143,7 @@ export const Select = (({
               .filter(Boolean)
               .join(' ') || undefined
           }
-          aria-invalid={!!errorMessage || undefined}
+          aria-invalid={getAriaInvalid(errorMessage, required)}
           onBlur={onBlur}
           onChange={handleChange}
           onFocus={onFocus}

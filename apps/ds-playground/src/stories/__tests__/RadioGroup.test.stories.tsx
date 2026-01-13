@@ -178,7 +178,7 @@ export const Defaults = {
     await expect(legend.tagName).toBe('LEGEND');
     radios.forEach((input) => {
       expect(input).toHaveAttribute('name');
-      expect(input).toHaveAttribute('aria-invalid', 'false');
+      expect(input).not.toHaveAttribute('aria-invalid');
     });
   },
 } satisfies Story;
@@ -292,6 +292,7 @@ export const WithRequired = {
     const radios = canvas.getAllByRole('radio');
     radios.forEach((input) => {
       expect(input).toBeRequired();
+      expect(input).toHaveAttribute('aria-invalid', 'false');
     });
   },
 } satisfies Story;

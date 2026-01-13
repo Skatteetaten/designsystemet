@@ -10,6 +10,7 @@ import {
 import { CheckboxProps } from './Checkbox.types';
 import { CheckboxContext } from '../CheckboxGroup/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { getAriaInvalid } from '../utils';
 
 import styles from './Checkbox.module.scss';
 
@@ -104,7 +105,10 @@ export const Checkbox = ({
           value={value}
           data-read-only={readOnly || context?.readOnly || undefined}
           aria-describedby={ariaDescribedbyInput || undefined}
-          aria-invalid={hasErrorInternal}
+          aria-invalid={getAriaInvalid(
+            errorMessage || errorIdExternal,
+            required
+          )}
           onBlur={onBlur}
           onChange={onChange}
           onFocus={onFocus}
