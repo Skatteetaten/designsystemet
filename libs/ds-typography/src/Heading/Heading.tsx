@@ -45,7 +45,7 @@ export const Heading = ({
       lang={lang}
       data-testid={dataTestId}
       data-level={level}
-      data-has-spacing={hasSpacing}
+      data-has-spacing={hasSpacing ? 'true' : undefined}
       tabIndex={canBeManuallyFocused ? -1 : undefined}
     >
       {children}
