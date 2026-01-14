@@ -25,15 +25,15 @@ export const List = (({
   hasSpacing,
   children,
 }: ListProps): JSX.Element => {
-  const bulletClassName = Tag === 'ul' ? styles.list_withBullet : '';
-  const spacingClassName = hasSpacing ? styles.list_hasSpacing : '';
   return (
     <Tag
       ref={ref as (instance: AnyHTMLListElement | null) => void}
       id={id}
-      className={`${styles.list} ${bulletClassName} ${spacingClassName} ${className}`.trim()}
+      className={`${styles.list} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-ul={Tag === 'ul' ? 'true' : undefined}
+      data-has-spacing={hasSpacing ? 'true' : undefined}
       tabIndex={canBeManuallyFocused ? -1 : undefined}
     >
       {children}
