@@ -204,3 +204,51 @@ export const WithContainerQuery: Story = {
   },
 } satisfies Story;
 WithContainerQuery.parameters = exampleParameters;
+export const WithErrorGroups: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <ErrorSummary
+        id={'errorSummaryWithGroups'}
+        title={'For å gå videre må du rette opp i følgende'}
+        hasSpacing
+        showErrorSummary
+      >
+        <ErrorSummary.Error referenceId={'inntekstaaret'}>
+          {'Inntekstsåret må være etter 2008'}
+        </ErrorSummary.Error>
+        <ErrorSummary.Error referenceId={'epost'}>
+          {'E-posten ser ikke riktig ut. Skriv slik: olaug.nordmann@norge.no'}
+        </ErrorSummary.Error>
+
+        <ErrorSummary.Error referenceId={'antallDager'}>
+          {'Antall dager må fylles ut.'}
+        </ErrorSummary.Error>
+
+        <ErrorSummary.Group title={'Mottaker 1 av fullmakt'}>
+          <ErrorSummary.Error referenceId={'navn1'}>
+            {'Navn på person må fylles ut'}
+          </ErrorSummary.Error>
+          <ErrorSummary.Error referenceId={'fnummer1'}>
+            {'Fødselsnummer eller D-nummer må fylles ut'}
+          </ErrorSummary.Error>
+          <ErrorSummary.Error referenceId={'telefon1'}>
+            {'Telefonnummer må fylles ut'}
+          </ErrorSummary.Error>
+        </ErrorSummary.Group>
+
+        <ErrorSummary.Group title={'Mottaker 2 av fullmakt'}>
+          <ErrorSummary.Error referenceId={'navn2'}>
+            {'Navn på person må fylles ut'}
+          </ErrorSummary.Error>
+          <ErrorSummary.Error referenceId={'fnummer2'}>
+            {'Fødselsnummer eller D-nummer må fylles ut'}
+          </ErrorSummary.Error>
+          <ErrorSummary.Error referenceId={'telefon2'}>
+            {'Telefonnummer må fylles ut'}
+          </ErrorSummary.Error>
+        </ErrorSummary.Group>
+      </ErrorSummary>
+    );
+  },
+} satisfies Story;
+WithErrorGroups.parameters = exampleParameters;

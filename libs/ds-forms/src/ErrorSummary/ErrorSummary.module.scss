@@ -116,3 +116,25 @@ $summary-padding-s: calc(var(--spacing-m) - $border-width)
     margin-top: var(--spacing-s);
   }
 }
+
+.group {
+  &:not(:first-child) {
+    margin-top: var(--spacing-s-plus);
+  }
+}
+
+.groupList {
+  @media (min-width: breakpoints.$breakpoint-xs) {
+    margin-left: var(--spacing-s-plus);
+  }
+
+  margin-top: var(--spacing-s-plus);
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.groupTitle {
+  margin-bottom: var(--spacing-xs);
+}
