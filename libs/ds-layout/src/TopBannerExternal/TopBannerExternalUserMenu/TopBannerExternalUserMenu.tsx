@@ -125,7 +125,7 @@ export const TopBannerExternalUserMenu = ({
             ref={refs.setFloating}
             style={floatingStyles}
           >
-            <Heading as={'h4'} level={4}>
+            <Heading as={'h4'}>
               {user.role !== 'meg' && (
                 <div className={styles.namePrefix}>
                   {t('ds_overlays:topbannerexternalusermenu.OnBehalfOf')}

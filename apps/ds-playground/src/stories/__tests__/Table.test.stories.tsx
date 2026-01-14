@@ -391,7 +391,7 @@ const ExpandEditSortTable = (
                   showExpandButtonTitle={showExpandButtonTitle}
                   expandableContent={
                     <div className={'emptyExpandedTableRow'}>
-                      <Heading ref={redigerDataRef} as={'h2'} level={2}>
+                      <Heading ref={redigerDataRef} as={'h2'}>
                         {'data'}
                       </Heading>
                     </div>
@@ -475,9 +475,7 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
                 showExpandButtonTitle={showExpandButtonTitle}
                 expandableContent={
                   <div className={'emptyExpandedTableRow'}>
-                    <Heading as={'h2'} level={2}>
-                      {'data'}
-                    </Heading>
+                    <Heading as={'h2'}>{'data'}</Heading>
                   </div>
                 }
                 isExpandable

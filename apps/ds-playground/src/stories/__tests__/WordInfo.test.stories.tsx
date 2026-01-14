@@ -108,7 +108,7 @@ export const WithinParagraph = {
 } satisfies Story;
 
 const TemplateWithHeading: StoryFn<typeof WordInfo> = () => (
-  <Heading as={'h2'} level={2}>
+  <Heading as={'h2'}>
     {'Det er legen som melder dødsfall i Norge til '}
     <WordInfo>
       <WordInfo.Trigger>{'Folkeregisteret'}</WordInfo.Trigger>

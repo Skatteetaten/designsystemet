@@ -312,12 +312,12 @@ export function TopBannerExternalAndFooter({
         }
         secondColumn={
           <>
-            <Heading as={'h2'} level={2} hasSpacing>
+            <Heading as={'h2'} hasSpacing>
               {'Alle temaer'}
             </Heading>
             <div className={topBannerExternalExampleStyles.secondColumn}>
               <div>
-                <Heading as={'h3'} level={3} hasSpacing>
+                <Heading as={'h3'} hasSpacing>
                   <a href={LenkerUinnlogget.PERSON_FORSIDE}>{'For personer'}</a>
                 </Heading>
                 <LinkGroup
@@ -336,7 +336,7 @@ export function TopBannerExternalAndFooter({
                     </LinkGroup.Link>
                   ))}
                 </LinkGroup>
-                <Heading as={'h3'} level={3} hasSpacing>
+                <Heading as={'h3'} hasSpacing>
                   <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
                     {'For bedrifter og organisasjoner'}
                   </a>

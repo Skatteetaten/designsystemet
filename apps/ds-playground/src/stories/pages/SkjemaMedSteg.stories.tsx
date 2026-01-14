@@ -186,7 +186,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
         <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
       </div>
       <div className={styles.article}>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Skjematittel'}
         </Heading>
         <DescriptionList hasSpacing>
