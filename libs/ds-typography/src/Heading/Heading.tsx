@@ -19,7 +19,7 @@ export const Heading = ({
   lang,
   'data-testid': dataTestId,
   as: Tag,
-  level: internalLevel,
+  level: externalLevel,
   canBeManuallyFocused,
   hasSpacing,
   children,
@@ -35,7 +35,7 @@ export const Heading = ({
 
   const getLevelFromTag = (tag: string): number => TAG_LEVEL_MAP[tag];
 
-  const level = internalLevel ?? getLevelFromTag(Tag);
+  const level = externalLevel ?? getLevelFromTag(Tag);
 
   return (
     <Tag
