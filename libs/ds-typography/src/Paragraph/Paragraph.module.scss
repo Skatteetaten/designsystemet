@@ -2,23 +2,20 @@
 
 .paragraph {
   margin: 0;
+  font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-article);
 
-  &_standard {
-    font-size: var(--font-size-m);
-  }
-
-  &_ingress {
-    font-size: var(--font-size-l);
-  }
-
-  &_hasSpacingLarge {
+  &[data-has-spacing='true'] {
     margin-bottom: var(--spacing-l);
   }
 
-  &_hasSpacingExtraLarge {
-    margin-bottom: var(--spacing-xl);
+  &[data-ingress='true'] {
+    font-size: var(--font-size-l);
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-xl);
+    }
   }
 
   strong {
