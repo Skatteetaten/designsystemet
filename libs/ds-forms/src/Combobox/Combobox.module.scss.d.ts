@@ -22,5 +22,8 @@ declare const classNames: {
   readonly emptyResult: 'emptyResult';
   readonly loadingContainer: 'loadingContainer';
   readonly maxSelectedMessage: 'maxSelectedMessage';
+  readonly optionGroup: 'optionGroup';
+  readonly optionGroupLabel: 'optionGroupLabel';
+  readonly optionGroupList: 'optionGroupList';
 };
 export default classNames;

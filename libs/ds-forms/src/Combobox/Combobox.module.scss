@@ -169,13 +169,8 @@
 
 .option {
   padding: var(--spacing-xs);
-  box-shadow: inset 0 -1px 0 0 var(--semantic-divider-30);
   color: var(--semantic-page-foreground);
   cursor: pointer;
-
-  &:last-child {
-    box-shadow: none;
-  }
 
   &WithCheckbox {
     display: flex;
@@ -267,4 +262,27 @@
   font-size: var(--font-size-m);
   font-style: italic;
   opacity: 0.8;
+}
+
+.optionGroup {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &:not(:first-child) {
+    margin-top: var(--spacing-xs);
+  }
+
+  &Label {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xxs);
+    color: var(--palette-graphite-70);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &List {
+    padding: 0 0 0 var(--spacing-xs);
+    margin: 0;
+    list-style: none;
+  }
 }

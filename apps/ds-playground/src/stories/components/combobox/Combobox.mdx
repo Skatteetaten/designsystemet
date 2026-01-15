@@ -179,6 +179,45 @@ Kalles når hjelpeteksten åpnes eller lukkes:
 />
 ```
 
+## Grupperte alternativer
+
+Combobox støtter gruppering av alternativer ved å legge til et `group`-felt på options. Dette er nyttig for å organisere lange lister og gjøre det lettere for brukeren å finne riktig alternativ.
+
+```tsx
+const groupedOptions = [
+  // Alternativer med samme group-verdi grupperes sammen
+  { label: 'Trondheim', value: 'trondheim', group: 'Trøndelag' },
+  { label: 'Steinkjer', value: 'steinkjer', group: 'Trøndelag' },
+  { label: 'Bergen', value: 'bergen', group: 'Vestland' },
+  { label: 'Voss', value: 'voss', group: 'Vestland' },
+  // Alternativer uten group vises som vanlige options
+  { label: 'Annen kommune', value: 'annen' },
+];
+
+<Combobox label="Velg kommune" options={groupedOptions} />;
+```
+
+### Egenskaper ved gruppering
+
+- **Visuell gruppering**: Alternativer med samme `group`-verdi vises sammen under en felles overskrift
+- **Rekkefølge bevares**: Grupper opprettes basert på rekkefølgen i options-arrayen
+- **Filtrering**: Når brukeren filtrerer, skjules tomme grupper automatisk
+- **Blanding**: Du kan kombinere grupperte og ugrupperte alternativer i samme liste
+- **Tilgjengelighet**: Grupper bruker `role="group"` med `aria-labelledby` for skjermleserstøtte
+- **Flervalg**: Gruppering fungerer også med `multiple`-modus
+
+### Eksempel: Grupperte alternativer
+
+<Canvas of={ComboboxStories.GroupedOptions} />
+
+### Eksempel: Flervalg med grupperte alternativer
+
+<Canvas of={ComboboxStories.GroupedOptionsMultiple} />
+
+### Eksempel: Blandet grupperte og ugrupperte
+
+<Canvas of={ComboboxStories.MixedGroupedOptions} />
+
 ## Examples
 
 ### Enkeltvalg

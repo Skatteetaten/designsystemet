@@ -369,3 +369,51 @@ export const generatePerformanceTestData = (
 
   return result;
 };
+
+/** Eksempel på grupperte options - kommuner gruppert etter fylke */
+export const groupedKommuneOptions: ComboboxOption[] = [
+  // Trøndelag
+  { label: 'Trondheim', value: 'trondheim', group: 'Trøndelag' },
+  { label: 'Steinkjer', value: 'steinkjer', group: 'Trøndelag' },
+  { label: 'Levanger', value: 'levanger', group: 'Trøndelag' },
+  { label: 'Stjørdal', value: 'stjordal', group: 'Trøndelag' },
+  { label: 'Orkland', value: 'orkland', group: 'Trøndelag' },
+  // Nordland
+  { label: 'Bodø', value: 'bodo', group: 'Nordland' },
+  { label: 'Narvik', value: 'narvik', group: 'Nordland' },
+  { label: 'Mo i Rana', value: 'mo-i-rana', group: 'Nordland' },
+  { label: 'Mosjøen', value: 'mosjoen', group: 'Nordland' },
+  // Vestland
+  { label: 'Bergen', value: 'bergen', group: 'Vestland' },
+  { label: 'Voss', value: 'voss', group: 'Vestland' },
+  { label: 'Sogndal', value: 'sogndal', group: 'Vestland' },
+  { label: 'Førde', value: 'forde', group: 'Vestland' },
+  // Rogaland
+  { label: 'Stavanger', value: 'stavanger', group: 'Rogaland' },
+  { label: 'Sandnes', value: 'sandnes', group: 'Rogaland' },
+  { label: 'Haugesund', value: 'haugesund', group: 'Rogaland' },
+  { label: 'Eigersund', value: 'eigersund', group: 'Rogaland' },
+  // Oslo og Viken
+  { label: 'Oslo', value: 'oslo', group: 'Oslo og Viken' },
+  { label: 'Drammen', value: 'drammen', group: 'Oslo og Viken' },
+  { label: 'Fredrikstad', value: 'fredrikstad', group: 'Oslo og Viken' },
+  { label: 'Sarpsborg', value: 'sarpsborg', group: 'Oslo og Viken' },
+  { label: 'Lillestrøm', value: 'lillestrom', group: 'Oslo og Viken' },
+];
+
+/** Eksempel med blanding av grupperte og ugrupperte options */
+export const mixedGroupedOptions: ComboboxOption[] = [
+  // Ugrupperte alternativer først
+  { label: 'Alle kommuner', value: 'alle' },
+  { label: 'Ingen valgt', value: 'ingen' },
+  // Grupperte alternativer
+  { label: 'Trondheim', value: 'trondheim', group: 'Trøndelag' },
+  { label: 'Steinkjer', value: 'steinkjer', group: 'Trøndelag' },
+  { label: 'Bergen', value: 'bergen', group: 'Vestland' },
+  { label: 'Voss', value: 'voss', group: 'Vestland' },
+  // Ugrupperte alternativer mellom grupper
+  { label: 'Annen kommune', value: 'annen' },
+  // Flere grupperte
+  { label: 'Stavanger', value: 'stavanger', group: 'Rogaland' },
+  { label: 'Sandnes', value: 'sandnes', group: 'Rogaland' },
+];
