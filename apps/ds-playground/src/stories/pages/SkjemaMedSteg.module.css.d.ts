@@ -13,6 +13,6 @@ declare const classNames: {
   readonly preLine: 'preLine';
   readonly noWrap: 'noWrap';
   readonly wideContent: 'wideContent';
-  readonly marginBottomL: 'marginBottomL';
+  readonly stepList: 'stepList';
 };
 export default classNames;

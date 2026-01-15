@@ -8,6 +8,7 @@ import {
   TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -121,13 +122,49 @@ Examples.parameters = exampleParameters;
 export const WithContainerQuery: Story = {
   render: (_args): JSX.Element => {
     const [width, setWidth] = useState(300);
+
     return (
       <>
-        <p className={'bottomSpacingS'}>
+        <Heading level={3} as={'h1'} hasSpacing>
+          {'Container Queries i ErrorSummary'}
+        </Heading>
+
+        <Paragraph hasSpacing>
           {
-            'Juster bredden på containeren for å se responsiv oppførsel basert på container-bredde:'
+            'ErrorSummary støtter container queries, som gjør at komponenten tilpasser seg bredden på sin parent-container i stedet for hele viewporten. Dette er nyttig når komponenten brukes i stegliste, modaler eller andre områder med begrenset bredde.'
           }
-        </p>
+        </Paragraph>
+
+        <Heading level={4} as={'h2'} hasSpacing>
+          {'Slik aktiverer du container queries'}
+        </Heading>
+
+        <Paragraph className={'bottomSpacingS'}>
+          {
+            'Sett CSS-egenskapen container-type: inline-size på et parent-element:'
+          }
+        </Paragraph>
+
+        <pre className={'bottomSpacingS'}>
+          {`.error-summary-wrapper {
+  container-type: inline-size;
+}`}
+        </pre>
+
+        <Paragraph className={'bottomSpacingS'}>
+          {
+            'Komponenten responderer på følgende breakpoints og tilpasser padding, ikon-størrelse og layout:'
+          }
+        </Paragraph>
+
+        <Heading level={4} as={'h2'} hasSpacing>
+          {'Interaktiv demo'}
+        </Heading>
+
+        <Paragraph className={'bottomSpacingS'}>
+          {'Juster bredden for å se hvordan layouten endrer seg:'}
+        </Paragraph>
+
         <input
           className={'bottomSpacingS containerQuerySlider'}
           max={800}
@@ -136,7 +173,7 @@ export const WithContainerQuery: Story = {
           value={width}
           onChange={(e): void => setWidth(Number(e.target.value))}
         />
-        <p className={'bottomSpacingS'}>{`Bredde: ${width}px`}</p>
+
         <div
           className={'containerQueryWrapper'}
           // eslint-disable-next-line react/forbid-dom-props -- dynamisk bredde krever inline style

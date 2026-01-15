@@ -203,7 +203,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
           </i>
         </Paragraph>
       </div>
-      <StepList className={styles.marginBottomL}>
+      <StepList className={styles.stepList}>
         {activeStep >= 1 && (
           <StepList.Step
             title={'Kort beskrivelse av steg'}
