@@ -3,12 +3,13 @@ import { useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import breakpointsJson from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import {
   ErrorSummary,
   TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -157,6 +158,12 @@ export const WithContainerQuery: Story = {
           }
         </Paragraph>
 
+        <List hasSpacing>
+          <List.Element>{`${breakpointsJson['--breakpoint-s']} og over: Full layout med horisontal visning`}</List.Element>
+          <List.Element>{`Mellom ${breakpointsJson['--breakpoint-s']} og ${breakpointsJson['--breakpoint-xs']}: Vertikal visning`}</List.Element>
+          <List.Element>{`Under ${breakpointsJson['--breakpoint-xs']}: Vertikal visning med mindre padding`}</List.Element>
+        </List>
+
         <Heading level={4} as={'h2'} hasSpacing>
           {'Interaktiv demo'}
         </Heading>
@@ -164,6 +171,8 @@ export const WithContainerQuery: Story = {
         <Paragraph className={'bottomSpacingS'}>
           {'Juster bredden for å se hvordan layouten endrer seg:'}
         </Paragraph>
+
+        <pre>{`Bredde på container: ${width}px`}</pre>
 
         <input
           className={'bottomSpacingS containerQuerySlider'}
