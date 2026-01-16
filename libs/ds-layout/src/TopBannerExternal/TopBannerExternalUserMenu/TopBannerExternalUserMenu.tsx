@@ -154,7 +154,7 @@ export const TopBannerExternalUserMenu = ({
                     <Link
                       className={styles.marginRightS}
                       svgPath={BellSVGpath}
-                      href={`https://${hostname}/web/minside/${user.role === 'meg' ? 'person' : 'virksomhet'}/varsler`}
+                      href={`https://${hostname}/web/minside/${user.role === 'virksomhet' ? 'virksomhet' : 'person'}/varsler`}
                       ariaDescribedby={'notificationCount'}
                     >
                       {t('ds_overlays:topbannerexternalusermenu.Notification')}
