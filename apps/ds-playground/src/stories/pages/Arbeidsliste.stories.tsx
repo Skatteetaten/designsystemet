@@ -8,9 +8,12 @@ import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { DatePicker, SearchField, Select } from '@skatteetaten/ds-forms';
 import {
   AddSVGpath,
+  ArrowForwardSVGpath,
+  BellIcon,
   CancelSVGpath,
   HelpFilledSVGpath,
   HistorySVGpath,
+  PauseOutlineIcon,
 } from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 import { Breadcrumbs, Pagination } from '@skatteetaten/ds-navigation';
@@ -37,6 +40,86 @@ export default {
   },
 };
 
+const sakstypeOptions = [
+  { value: 'utlegg', label: 'Utlegg' },
+  { value: 'klage', label: 'Klage' },
+];
+
+const arbeidsoppgaveOptions = [
+  { value: 'vurderutlegg', label: 'Vurder utlegg' },
+  { value: 'besluttutlegg', label: 'Beslutt utlegg' },
+  { value: 'vurderunnlattvarsling', label: 'Vurder unnlatt varsling' },
+  { value: 'vurderklage', label: 'Vurder klage' },
+  { value: 'behandleklage', label: 'Behandle klage' },
+];
+
+const kategoriOptions = [
+  'Mva-melding',
+  'Meldingskontroll',
+  'Annen meldingskontroll',
+];
+const oppgaveOptions = [
+  'Vurdere levert mva-melding',
+  'Vurdere meldingskontroll',
+  'Tilfeldig meldingskontroll',
+  'Beslutte meldingskontroll',
+];
+
+const saksbehandlere = [
+  'Siri Saksbehandler',
+  'Ole Samhandlings Arena',
+  'Krystall Pepsi Johnsen',
+];
+
+const dataTilgjengeligeOppgaver = Array.from({ length: 10 }, (_, i) => {
+  const fristPassertOptions = ['Ja', 'Nei'];
+  const fristPassert =
+    fristPassertOptions[Math.floor(Math.random() * fristPassertOptions.length)];
+  const getIcon = (): JSX.Element | null => {
+    if (fristPassert === 'Ja') return <BellIcon />;
+    return Math.random() > 0.5 ? <PauseOutlineIcon /> : null;
+  };
+  return {
+    icon: getIcon(),
+    antall: Math.floor(Math.random() * 20) + 1,
+    fristPassert: fristPassert,
+    kategori:
+      kategoriOptions[Math.floor(Math.random() * kategoriOptions.length)],
+    arbeidsoppgave:
+      oppgaveOptions[Math.floor(Math.random() * oppgaveOptions.length)],
+  };
+});
+
+const data = Array.from({ length: 120 }, (_, i) => {
+  const saldoer = ['NOK 30 000', 'NOK 1 500', 'NOK 500 000'];
+  const fnr = ['010101 12345', '151375 98765', '231590 12345'];
+  const navn = [
+    'WINNIFRED ARCHIPAELAGO JENSEN',
+    'ANNA HØST UTSTILLINGSEN',
+    'HEINRICH VON SCHELLFAHRER',
+  ];
+
+  const dag = Math.floor(Math.random() * 28) + 1;
+  const mnd = Math.floor(Math.random() * 12) + 1;
+  const dato = new Date(2023, mnd - 1, dag);
+
+  return {
+    frist: dato,
+    opprettet: dato,
+    sakstype:
+      sakstypeOptions[Math.floor(Math.random() * sakstypeOptions.length)].label,
+    arbeidsoppgave:
+      arbeidsoppgaveOptions[
+        Math.floor(Math.random() * arbeidsoppgaveOptions.length)
+      ].label,
+    saldo: saldoer[Math.floor(Math.random() * saldoer.length)],
+    fnr: fnr[Math.floor(Math.random() * fnr.length)],
+    navn: navn[Math.floor(Math.random() * navn.length)],
+    saksbehandlere:
+      saksbehandlere[Math.floor(Math.random() * saksbehandlere.length)],
+  };
+});
+
 export const Arbeidsliste = (): JSX.Element => {
   const isMobile = !useMediaQuery('(min-width: 480px)');
   const [visFilter, setVisFilter] = useState<boolean>(false);
@@ -50,45 +133,6 @@ export const Arbeidsliste = (): JSX.Element => {
 
   const minDate = new Date(2023, 0, 1);
   const maxDate = new Date(2023, 11, 31);
-
-  const data = useMemo(
-    () =>
-      Array.from({ length: 120 }, (_, i) => {
-        const oppgaver = [
-          'Vurder utlegg',
-          'Beslutt utlegg',
-          'Vurder unnlatt varsling',
-        ];
-        const saldoer = ['NOK 30 000', 'NOK 1 500', 'NOK 500 000'];
-        const fnr = ['010101 12345', '151375 98765', '231590 12345'];
-        const navn = [
-          'WINNIFRED ARCHIPAELAGO JENSEN',
-          'ANNA HOST UTSTILLINGSEN',
-          'HEINRICH VON SCHELLFAHRER',
-        ];
-
-        // Generate random date in 2023
-        const dag = Math.floor(Math.random() * 28) + 1;
-        const mnd = Math.floor(Math.random() * 12) + 1;
-        const dato = new Date(2023, mnd - 1, dag);
-
-        // Randomize selections
-        const oppgaveIndex = Math.floor(Math.random() * oppgaver.length);
-        const personIndex = Math.floor(Math.random() * navn.length);
-        const saldoIndex = Math.floor(Math.random() * saldoer.length);
-
-        return {
-          frist: dato,
-          opprettet: dato,
-          sakstype: 'Utlegg',
-          arbeidsoppgave: oppgaver[oppgaveIndex],
-          saldo: saldoer[saldoIndex],
-          fnr: fnr[personIndex],
-          navn: navn[personIndex],
-        };
-      }),
-    []
-  );
 
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
@@ -108,8 +152,31 @@ export const Arbeidsliste = (): JSX.Element => {
     return a[sortKey] < b[sortKey] ? 1 : -1;
   });
 
+  const sakstypeMap = useMemo(
+    () =>
+      sakstypeOptions.reduce(
+        (acc, option) => {
+          acc[option.value] = option.label;
+          return acc;
+        },
+        {} as Record<string, string>
+      ),
+    []
+  );
+
+  const arbeidsoppgaveMap = useMemo(
+    () =>
+      arbeidsoppgaveOptions.reduce(
+        (acc, option) => {
+          acc[option.value] = option.label;
+          return acc;
+        },
+        {} as Record<string, string>
+      ),
+    []
+  );
+
   const filteredData = sortedData.filter((item) => {
-    // Filter by date range
     if (fristFra && item.frist < fristFra) {
       return false;
     }
@@ -117,18 +184,23 @@ export const Arbeidsliste = (): JSX.Element => {
       return false;
     }
 
-    // Filter by arbeidsoppgave
+    if (sakstype) {
+      return item.sakstype === sakstypeMap[sakstype];
+    }
+
     if (arbeidsoppgave) {
-      const arbeidsoppgaveMap: Record<string, string> = {
-        vurderutlegg: 'Vurder utlegg',
-        besluttutlegg: 'Beslutt utlegg',
-        vurderunnlattvarsling: 'Vurder unnlatt varsling',
-      };
       return item.arbeidsoppgave === arbeidsoppgaveMap[arbeidsoppgave];
     }
 
     return true;
   });
+
+  const formatDate = (date: Date): string => {
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}.${month}.${year}`;
+  };
 
   useEffect(() => {
     let count = 0;
@@ -182,11 +254,13 @@ export const Arbeidsliste = (): JSX.Element => {
               value={'mineoppgaver'}
             >{`Mine oppgaver (${data.length})`}</Tabs.Tab>
             <Tabs.Tab value={'tilgjengeligeoppgaver'}>
-              {'Tilgjengelige oppgaver'}
+              {'Tilgjengelige oppgaver (10)'}
             </Tabs.Tab>
-            <Tabs.Tab value={'andresoppgaver'}>{'Andres oppgaver'}</Tabs.Tab>
+            <Tabs.Tab value={'andresoppgaver'}>
+              {'Andres oppgaver (10)'}
+            </Tabs.Tab>
             <Tabs.Tab value={'minefullfoerteoppgaver'}>
-              {'Mine fullførte oppgaver'}
+              {'Mine fullførte oppgaver (10)'}
             </Tabs.Tab>
           </Tabs.List>
           <Tabs.Panel value={'mineoppgaver'}>
@@ -234,7 +308,11 @@ export const Arbeidsliste = (): JSX.Element => {
                     setSakstype(e.target.value);
                   }}
                 >
-                  <Select.Option value={'utlegg'}>{'Utlegg'}</Select.Option>
+                  {sakstypeOptions.map((option) => (
+                    <Select.Option key={option.value} value={option.value}>
+                      {option.label}
+                    </Select.Option>
+                  ))}
                 </Select>
                 <Select
                   className={styles.select}
@@ -245,15 +323,11 @@ export const Arbeidsliste = (): JSX.Element => {
                     setCurrentPage(1);
                   }}
                 >
-                  <Select.Option value={'vurderutlegg'}>
-                    {'Vurder utlegg'}
-                  </Select.Option>
-                  <Select.Option value={'besluttutlegg'}>
-                    {'Beslutt utlegg'}
-                  </Select.Option>
-                  <Select.Option value={'vurderunnlattvarsling'}>
-                    {'Vurder unnlatt varsling'}
-                  </Select.Option>
+                  {arbeidsoppgaveOptions.map((option) => (
+                    <Select.Option key={option.value} value={option.value}>
+                      {option.label}
+                    </Select.Option>
+                  ))}
                 </Select>
               </div>
               {isMobile && antallAktiveFilter > 0 && (
@@ -318,14 +392,6 @@ export const Arbeidsliste = (): JSX.Element => {
                   filteredData
                     .slice((currentPage - 1) * pageSize, currentPage * pageSize)
                     .map((item, i) => {
-                      const formatDate = (date: Date): string => {
-                        const day = date.getDate().toString().padStart(2, '0');
-                        const month = (date.getMonth() + 1)
-                          .toString()
-                          .padStart(2, '0');
-                        const year = date.getFullYear();
-                        return `${day}.${month}.${year}`;
-                      };
                       return (
                         <Table.Row key={i}>
                           <Table.DataCell>
@@ -386,13 +452,185 @@ export const Arbeidsliste = (): JSX.Element => {
             />
           </Tabs.Panel>
           <Tabs.Panel value={'tilgjengeligeoppgaver'}>
-            {'Innhold for Tilgjengelige oppgaver'}
+            <OpenClose className={styles.openClose} title={'Vis filter'}>
+              <Paragraph>
+                {'Legg inn ditt eget filterinnhold for Tilgjengelige oppgaver'}
+              </Paragraph>
+            </OpenClose>
+            <Table
+              caption={'Dette er en tabell med tilgjengelige oppgaver'}
+              hasFullWidth
+            >
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell scope={'col'}></Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>{'Antall'}</Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Frist passert'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Kategori'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Arbeidsoppgave'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}></Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body>
+                {dataTilgjengeligeOppgaver.map((item, i) => {
+                  return (
+                    <Table.Row key={i}>
+                      <Table.DataCell>{item.icon}</Table.DataCell>
+                      <Table.DataCell>{item.antall}</Table.DataCell>
+                      <Table.DataCell>{item.fristPassert}</Table.DataCell>
+                      <Table.DataCell>{item.kategori}</Table.DataCell>
+                      <Table.DataCell>{item.arbeidsoppgave}</Table.DataCell>
+                      <Table.DataCell alignment={'right'}>
+                        <InlineButton
+                          svgPath={ArrowForwardSVGpath}
+                          iconPosition={'right'}
+                        >
+                          {'Ta oppgave'}
+                        </InlineButton>
+                      </Table.DataCell>
+                    </Table.Row>
+                  );
+                })}
+              </Table.Body>
+            </Table>
           </Tabs.Panel>
           <Tabs.Panel value={'andresoppgaver'}>
-            {'Innhold for Andres oppgaver'}
+            <OpenClose className={styles.openClose} title={'Vis filter'}>
+              <Paragraph>
+                {'Legg inn ditt eget filterinnhold for Tilgjengelige oppgaver'}
+              </Paragraph>
+            </OpenClose>
+            <Table
+              caption={'Dette er en tabell med andres oppgaver'}
+              hasFullWidth
+            >
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Opprettet'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Sakstype'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Arbeidsoppgave'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'} colSpan={2}>
+                    {'Gjelder'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Saksbehandler'}
+                  </Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body>
+                {filteredData.slice(1, 11).map((item, i) => {
+                  return (
+                    <Table.Row key={i}>
+                      <Table.DataCell>
+                        {formatDate(item.opprettet)}
+                      </Table.DataCell>
+                      <Table.DataCell>{item.sakstype}</Table.DataCell>
+                      <Table.DataCell>
+                        <Link
+                          href={'#'}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            linkTo(
+                              'Sidetyper/Intern/Saksvisning',
+                              'Saksvisning'
+                            )();
+                          }}
+                        >
+                          {item.arbeidsoppgave}
+                        </Link>
+                      </Table.DataCell>
+                      <Table.DataCell>
+                        <Link className={styles.noWrap} href={'#'}>
+                          {item.fnr}
+                        </Link>
+                      </Table.DataCell>
+                      <Table.DataCell>
+                        <Link href={'#'}>{item.navn}</Link>
+                      </Table.DataCell>
+                      <Table.DataCell>{item.saksbehandlere}</Table.DataCell>
+                    </Table.Row>
+                  );
+                })}
+              </Table.Body>
+            </Table>
           </Tabs.Panel>
           <Tabs.Panel value={'minefullfoerteoppgaver'}>
-            {'Innhold for Mine fullførte oppgaver'}
+            <OpenClose className={styles.openClose} title={'Vis filter'}>
+              <Paragraph>
+                {'Legg inn ditt eget filterinnhold for Tilgjengelige oppgaver'}
+              </Paragraph>
+            </OpenClose>
+            <Table
+              caption={'Dette er en tabell med andres oppgaver'}
+              hasFullWidth
+            >
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Opprettet'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Fullført'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Sakstype'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Arbeidsoppgave'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'} colSpan={2}>
+                    {'Gjelder'}
+                  </Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body>
+                {filteredData.slice(1, 11).map((item, i) => {
+                  return (
+                    <Table.Row key={i}>
+                      <Table.DataCell>
+                        {formatDate(item.opprettet)}
+                      </Table.DataCell>
+                      <Table.DataCell>{formatDate(item.frist)}</Table.DataCell>
+                      <Table.DataCell>{item.sakstype}</Table.DataCell>
+                      <Table.DataCell>
+                        <Link
+                          href={'#'}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            linkTo(
+                              'Sidetyper/Intern/Saksvisning',
+                              'Saksvisning'
+                            )();
+                          }}
+                        >
+                          {item.arbeidsoppgave}
+                        </Link>
+                      </Table.DataCell>
+                      <Table.DataCell>
+                        <Link className={styles.noWrap} href={'#'}>
+                          {item.fnr}
+                        </Link>
+                      </Table.DataCell>
+                      <Table.DataCell>
+                        <Link href={'#'}>{item.navn}</Link>
+                      </Table.DataCell>
+                    </Table.Row>
+                  );
+                })}
+              </Table.Body>
+            </Table>
           </Tabs.Panel>
         </Tabs>
       </main>
