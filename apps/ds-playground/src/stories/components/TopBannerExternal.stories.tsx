@@ -556,6 +556,22 @@ export const ExampleWithUserMenu: Story = {
       type: 'Person',
     };
 
+    const others: Paginated<Person> = {
+      total: 2,
+      list: [
+        {
+          name: 'Kari Nordmann',
+          personId: '10107554321',
+          type: 'Person',
+        },
+        {
+          name: 'Ola Hansen',
+          personId: '10108167890',
+          type: 'Person',
+        },
+      ],
+    };
+
     const businesses: Paginated<Business> = {
       total: 3,
       list: [
@@ -942,6 +958,7 @@ export const ExampleWithUserMenu: Story = {
         <RolePicker
           ref={modalRef}
           me={me}
+          people={others}
           businesses={businesses}
           onEntitySelect={async (entity) => {
             let role: User['role'];
