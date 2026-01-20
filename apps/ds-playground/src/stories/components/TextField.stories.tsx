@@ -267,7 +267,7 @@ export const WithDataList: Story = {
       { text: 'Albania', key: 'AL' },
       { text: 'Algeria', key: 'DZ' },
       { text: 'American Samoa', key: 'AS' },
-      { text: 'AndorrA', key: 'AD' },
+      { text: 'Andorra', key: 'AD' },
       { text: 'Angola', key: 'AO' },
       { text: 'Anguilla', key: 'AI' },
       { text: 'Antarctica', key: 'AQ' },

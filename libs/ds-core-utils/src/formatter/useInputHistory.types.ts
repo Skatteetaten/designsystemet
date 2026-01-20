@@ -17,6 +17,7 @@ export type UndoFn = (cursorPosition: number) => HistoryState | null;
 export type RedoFn = (cursorPosition: number) => HistoryState | null;
 export type UpdateCursorPositionFn = (cursorPosition: number) => void;
 export type GetCurrentValueFn = () => string;
+export type GetCurrentPositionFn = () => number;
 
 export interface InputHistoryReturn {
   initialize: InitializeFn;
@@ -25,4 +26,5 @@ export interface InputHistoryReturn {
   redo: RedoFn;
   updateCursorPosition: UpdateCursorPositionFn;
   getCurrentValue: GetCurrentValueFn;
+  getCurrentPosition: GetCurrentPositionFn;
 }
