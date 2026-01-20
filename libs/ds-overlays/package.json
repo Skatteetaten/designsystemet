@@ -14,7 +14,7 @@
   },
   "peerDependencies": {
     "i18next": "^24 || ^25",
-    "react": "^19 ",
+    "react": "^19.2.0",
     "react-i18next": "^15",
     "@skatteetaten/ds-core-utils": "2.5.2",
     "@skatteetaten/ds-buttons": "2.5.2",
