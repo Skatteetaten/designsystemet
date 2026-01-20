@@ -3,11 +3,13 @@ import { useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import breakpointsJson from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import {
   ErrorSummary,
   TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
+import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -117,3 +119,88 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const WithContainerQuery: Story = {
+  render: (_args): JSX.Element => {
+    const [width, setWidth] = useState(300);
+
+    return (
+      <>
+        <Heading level={3} as={'h1'} hasSpacing>
+          {'Container Queries i ErrorSummary'}
+        </Heading>
+
+        <Paragraph hasSpacing>
+          {
+            'ErrorSummary støtter container queries, som gjør at komponenten tilpasser seg bredden på sin parent-container i stedet for hele viewporten. Dette er nyttig når komponenten brukes i stegliste, modaler eller andre områder med begrenset bredde.'
+          }
+        </Paragraph>
+
+        <Heading level={4} as={'h2'} hasSpacing>
+          {'Slik aktiverer du container queries'}
+        </Heading>
+
+        <Paragraph className={'bottomSpacingS'}>
+          {
+            'Sett CSS-egenskapen container-type: inline-size på et parent-element:'
+          }
+        </Paragraph>
+
+        <pre className={'bottomSpacingS'}>
+          {`.error-summary-wrapper {
+  container-type: inline-size;
+}`}
+        </pre>
+
+        <Paragraph className={'bottomSpacingS'}>
+          {
+            'Komponenten responderer på følgende breakpoints og tilpasser padding, ikon-størrelse og layout:'
+          }
+        </Paragraph>
+
+        <List hasSpacing>
+          <List.Element>{`${breakpointsJson['--breakpoint-s']} og over: Full layout med horisontal visning`}</List.Element>
+          <List.Element>{`Mellom ${breakpointsJson['--breakpoint-s']} og ${breakpointsJson['--breakpoint-xs']}: Vertikal visning`}</List.Element>
+          <List.Element>{`Under ${breakpointsJson['--breakpoint-xs']}: Vertikal visning med mindre padding`}</List.Element>
+        </List>
+
+        <Heading level={4} as={'h2'} hasSpacing>
+          {'Interaktiv demo'}
+        </Heading>
+
+        <Paragraph className={'bottomSpacingS'}>
+          {'Juster bredden for å se hvordan layouten endrer seg:'}
+        </Paragraph>
+
+        <pre>{`Bredde på container: ${width}px`}</pre>
+
+        <input
+          className={'bottomSpacingS containerQuerySlider'}
+          max={800}
+          min={200}
+          type={'range'}
+          value={width}
+          onChange={(e): void => setWidth(Number(e.target.value))}
+        />
+
+        <div
+          className={'containerQueryWrapper'}
+          // eslint-disable-next-line react/forbid-dom-props -- dynamisk bredde krever inline style
+          style={
+            { '--container-query-width': `${width}px` } as React.CSSProperties
+          }
+        >
+          <ErrorSummary showErrorSummary>
+            <ErrorSummary.Error referenceId={'field1'}>
+              {'Feltet må fylles ut'}
+            </ErrorSummary.Error>
+            <ErrorSummary.Error referenceId={'field2'}>
+              {'Ugyldig verdi'}
+            </ErrorSummary.Error>
+          </ErrorSummary>
+        </div>
+      </>
+    );
+  },
+} satisfies Story;
+WithContainerQuery.parameters = exampleParameters;

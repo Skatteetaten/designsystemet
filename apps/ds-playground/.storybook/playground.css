@@ -465,3 +465,14 @@ dl.descriptionListTwoColumns {
 .checkboxInTable {
   padding: 0 !important;
 }
+
+.containerQueryWrapper {
+  container-type: inline-size;
+  border: 1px dashed gray;
+  width: var(--container-query-width, 300px);
+}
+
+.containerQuerySlider {
+  width: 100%;
+  max-width: 400px;
+}

@@ -65,6 +65,7 @@
   width: var(--semantic-responsive-wide-content);
 }
 
-.marginBottomL {
+.stepList {
   margin-bottom: var(--spacing-l);
+  container-type: inline-size;
 }
