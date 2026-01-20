@@ -24,7 +24,14 @@ export const minusToHyphen = (input: string): string => {
   return valueAsString.replace(/\u2212/g, '-');
 };
 
-const escapeRegExp = (str: string): string => {
+/**
+ * Escaper spesialtegn i en streng for bruk i regex. F.eks. en-GB bruker "." som
+ * desimalskille, og "." har spesiell betydning i regex.
+ *
+ * @param str - Strengen som skal escapes
+ * @returns Escaped streng klar for regex
+ */
+export const escapeRegExp = (str: string): string => {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 };
 

@@ -13,23 +13,13 @@ import { FormatTypes } from './formatter.types';
 import { NumberParser } from './NumberParser';
 import { useInputHistory } from './useInputHistory';
 import {
+  escapeRegExp,
   maxLengths,
   NON_BREAKING_SPACE,
   removeDuplicateCharsExceptFirstOccurrence,
 } from './utils';
 
 const MAX_FRACTION_DIGITS = 2;
-
-/**
- * Escaper spesialtegn i en streng for bruk i regex. F.eks. en-GB bruker "." som
- * desimalskille, og "." har spesiell betydning i regex.
- *
- * @param str - Strengen som skal escapes
- * @returns Escaped streng klar for regex
- */
-const escapeRegExp = (str: string): string => {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-};
 
 /**
  * Oppretter regex som matcher tillatte symboler i input.
