@@ -112,7 +112,7 @@ export const ErrorSummary = (({
         // Pakk inn ventende feil i en LinkGroup før gruppen
         if (currentErrors.length > 0) {
           result.push(
-            <LinkGroup key={`errors-${index}`}>{currentErrors}</LinkGroup>
+            <LinkGroup key={`error-group-${index}`}>{currentErrors}</LinkGroup>
           );
           currentErrors = [];
         }
