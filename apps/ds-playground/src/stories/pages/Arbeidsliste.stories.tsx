@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, type JSX } from 'react';
+import { useState, useMemo, type JSX } from 'react';
 
 import { linkTo } from '@storybook/addon-links';
 
@@ -123,11 +123,14 @@ const data = Array.from({ length: 120 }, (_, i) => {
 export const Arbeidsliste = (): JSX.Element => {
   const isMobile = !useMediaQuery('(min-width: 480px)');
   const [visFilter, setVisFilter] = useState<boolean>(false);
-  const [antallAktiveFilter, setAntallAktiveFilter] = useState<number>(0);
-  const [fristFra, setFristFra] = useState<Date | null>(null);
-  const [fristTil, setFristTil] = useState<Date | null>(null);
-  const [sakstype, setSakstype] = useState<string>('');
-  const [arbeidsoppgave, setArbeidsoppgave] = useState<string>('');
+  const [filters, setFilters] = useState({
+    fristFra: null as Date | null,
+    fristTil: null as Date | null,
+    sakstype: '',
+    arbeidsoppgave: '',
+  });
+  const antallAktiveFilter = Object.values(filters).filter(Boolean).length;
+
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10;
 
@@ -177,19 +180,19 @@ export const Arbeidsliste = (): JSX.Element => {
   );
 
   const filteredData = sortedData.filter((item) => {
-    if (fristFra && item.frist < fristFra) {
+    if (filters.fristFra && item.frist < filters.fristFra) {
       return false;
     }
-    if (fristTil && item.frist > fristTil) {
+    if (filters.fristTil && item.frist > filters.fristTil) {
       return false;
     }
 
-    if (sakstype) {
-      return item.sakstype === sakstypeMap[sakstype];
+    if (filters.sakstype) {
+      return item.sakstype === sakstypeMap[filters.sakstype];
     }
 
-    if (arbeidsoppgave) {
-      return item.arbeidsoppgave === arbeidsoppgaveMap[arbeidsoppgave];
+    if (filters.arbeidsoppgave) {
+      return item.arbeidsoppgave === arbeidsoppgaveMap[filters.arbeidsoppgave];
     }
 
     return true;
@@ -202,20 +205,13 @@ export const Arbeidsliste = (): JSX.Element => {
     return `${day}.${month}.${year}`;
   };
 
-  useEffect(() => {
-    let count = 0;
-    if (fristFra) count++;
-    if (fristTil) count++;
-    if (sakstype) count++;
-    if (arbeidsoppgave) count++;
-    setAntallAktiveFilter(count);
-  }, [fristFra, fristTil, sakstype, arbeidsoppgave]);
-
   const handleClearFilters = (): void => {
-    setFristFra(null);
-    setFristTil(null);
-    setSakstype('');
-    setArbeidsoppgave('');
+    setFilters({
+      fristFra: null,
+      fristTil: null,
+      sakstype: '',
+      arbeidsoppgave: '',
+    });
   };
 
   return (
@@ -289,23 +285,27 @@ export const Arbeidsliste = (): JSX.Element => {
                   label={'Frist fra (dd.mm.åååå)'}
                   minDate={minDate}
                   maxDate={maxDate}
-                  value={fristFra}
-                  onSelectDate={(date) => setFristFra(date)}
+                  value={filters.fristFra}
+                  onSelectDate={(date) =>
+                    setFilters({ ...filters, fristFra: date })
+                  }
                 />
                 <DatePicker
                   classNames={{ dateContainer: styles.datePicker }}
                   label={'Frist til (dd.mm.åååå)'}
                   minDate={minDate}
                   maxDate={maxDate}
-                  value={fristTil}
-                  onSelectDate={(date) => setFristTil(date)}
+                  value={filters.fristTil}
+                  onSelectDate={(date) =>
+                    setFilters({ ...filters, fristTil: date })
+                  }
                 />
                 <Select
                   className={styles.select}
                   label={'Sakstype'}
-                  value={sakstype}
+                  value={filters.sakstype}
                   onChange={(e) => {
-                    setSakstype(e.target.value);
+                    setFilters({ ...filters, sakstype: e.target.value });
                   }}
                 >
                   {sakstypeOptions.map((option) => (
@@ -317,9 +317,9 @@ export const Arbeidsliste = (): JSX.Element => {
                 <Select
                   className={styles.select}
                   label={'Arbeidsoppgave'}
-                  value={arbeidsoppgave}
+                  value={filters.arbeidsoppgave}
                   onChange={(e) => {
-                    setArbeidsoppgave(e.target.value);
+                    setFilters({ ...filters, arbeidsoppgave: e.target.value });
                     setCurrentPage(1);
                   }}
                 >
