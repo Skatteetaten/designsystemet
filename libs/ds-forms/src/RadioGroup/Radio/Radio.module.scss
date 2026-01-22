@@ -93,7 +93,7 @@ $radio-transform-x: 2px;
     cursor: var(--cursor);
     transform: translate($radio-transform-x, 8px);
 
-    &:focus-visible:not(:disabled) {
+    &:focus:not(:disabled) {
       outline: none;
 
       &::before {
