@@ -6,7 +6,7 @@ $radio-transform-x: 2px;
   display: flex;
   width: fit-content;
 
-  --radio-box-shadow-color: var(--semantic-page-foreground);
+  --radio-outline-color: var(--semantic-page-foreground);
   --radio-border-color: var(--semantic-page-background);
   --radio-background-color: var(--semantic-page-background);
   --label-color: var(--semantic-page-foreground);
@@ -17,7 +17,7 @@ $radio-transform-x: 2px;
   --cursor: pointer;
 
   &:has(&Input:disabled) {
-    --radio-box-shadow-color: var(--semantic-disabled-foreground);
+    --radio-outline-color: var(--semantic-disabled-foreground);
     --radio-background-color: var(--semantic-disabled-background);
     --radio-border-color: var(--semantic-disabled-background);
     --label-color: var(--semantic-disabled-foreground);
@@ -34,11 +34,11 @@ $radio-transform-x: 2px;
   }
 
   &:has(&Input[aria-invalid='true']:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-danger-foreground);
+    --radio-outline-color: var(--semantic-danger-foreground);
   }
 
   &:has(&Input:hover:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-interactive-main);
+    --radio-outline-color: var(--semantic-interactive-main);
     --radio-background-color: var(--semantic-interactive-background);
     --radio-border-color: var(--semantic-interactive-background);
     --label-color: var(--semantic-interactive-main);
@@ -46,14 +46,14 @@ $radio-transform-x: 2px;
   }
 
   &:has(&Input:active:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-interactive-foreground);
+    --radio-outline-color: var(--semantic-interactive-foreground);
     --radio-background-color: var(--semantic-interactive-foreground);
     --label-color: var(--semantic-interactive-foreground);
     --description-color: var(--semantic-interactive-foreground);
   }
 
   &:has(&Input[data-read-only='true']:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-disabled-foreground);
+    --radio-outline-color: var(--semantic-disabled-foreground);
     --radio-border-color: var(--semantic-disabled-foreground);
     --radio-background-color: var(--semantic-disabled-foreground);
     --label-color: var(--semantic-page-foreground);
@@ -94,7 +94,7 @@ $radio-transform-x: 2px;
     appearance: none;
     background-color: var(--radio-background-color);
     cursor: var(--cursor);
-    outline: var(--outline-width) solid var(--radio-box-shadow-color);
+    outline: var(--outline-width) solid var(--radio-outline-color);
     outline-offset: var(--outline-offset);
     transform: translate($radio-transform-x, 8px);
 
