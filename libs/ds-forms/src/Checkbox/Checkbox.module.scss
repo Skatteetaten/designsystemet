@@ -46,7 +46,7 @@
     --description-color: var(--semantic-interactive-main);
   }
 
-  &:has(&Input:focus-visible:not(:disabled)) {
+  &:has(&Input:focus:not(:disabled)) {
     --outline-width: var(--spacing-xxs);
   }
 

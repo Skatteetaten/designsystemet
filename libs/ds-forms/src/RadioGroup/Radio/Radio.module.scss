@@ -98,7 +98,7 @@ $radio-transform-x: 2px;
     outline-offset: var(--outline-offset);
     transform: translate($radio-transform-x, 8px);
 
-    &:focus-visible:not(:disabled)::before {
+    &:focus:not(:disabled)::before {
       position: absolute;
       border: 2px solid var(--semantic-interactive-main);
       border-radius: 50%;

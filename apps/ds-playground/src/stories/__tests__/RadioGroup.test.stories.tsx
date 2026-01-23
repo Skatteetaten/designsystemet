@@ -224,7 +224,7 @@ export const WithSelectedValue = {
     selectedValue: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -266,7 +266,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -392,7 +392,7 @@ export const WithErrorMessage = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -659,7 +659,7 @@ export const ReadOnly = {
     readOnly: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
