@@ -6,16 +6,18 @@ $radio-transform-x: 2px;
   display: flex;
   width: fit-content;
 
-  --radio-box-shadow-color: var(--semantic-page-foreground);
+  --radio-outline-color: var(--semantic-page-foreground);
   --radio-border-color: var(--semantic-page-background);
   --radio-background-color: var(--semantic-page-background);
   --label-color: var(--semantic-page-foreground);
   --description-color: var(--palette-graphite-70);
   --border-width: 2px;
+  --outline-width: 2px;
+  --outline-offset: 0;
   --cursor: pointer;
 
   &:has(&Input:disabled) {
-    --radio-box-shadow-color: var(--semantic-disabled-foreground);
+    --radio-outline-color: var(--semantic-disabled-foreground);
     --radio-background-color: var(--semantic-disabled-background);
     --radio-border-color: var(--semantic-disabled-background);
     --label-color: var(--semantic-disabled-foreground);
@@ -32,11 +34,11 @@ $radio-transform-x: 2px;
   }
 
   &:has(&Input[aria-invalid='true']:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-danger-foreground);
+    --radio-outline-color: var(--semantic-danger-foreground);
   }
 
   &:has(&Input:hover:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-interactive-main);
+    --radio-outline-color: var(--semantic-interactive-main);
     --radio-background-color: var(--semantic-interactive-background);
     --radio-border-color: var(--semantic-interactive-background);
     --label-color: var(--semantic-interactive-main);
@@ -44,18 +46,20 @@ $radio-transform-x: 2px;
   }
 
   &:has(&Input:active:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-interactive-foreground);
+    --radio-outline-color: var(--semantic-interactive-foreground);
     --radio-background-color: var(--semantic-interactive-foreground);
     --label-color: var(--semantic-interactive-foreground);
     --description-color: var(--semantic-interactive-foreground);
   }
 
   &:has(&Input[data-read-only='true']:not(:disabled)) {
-    --radio-box-shadow-color: var(--semantic-disabled-foreground);
+    --radio-outline-color: var(--semantic-disabled-foreground);
     --radio-border-color: var(--semantic-disabled-foreground);
     --radio-background-color: var(--semantic-disabled-foreground);
     --label-color: var(--semantic-page-foreground);
     --description-color: var(--palette-graphite-70);
+    --outline-width: 3px;
+    --outline-offset: -1px;
     --cursor: default;
 
     pointer-events: none;
@@ -89,20 +93,17 @@ $radio-transform-x: 2px;
     border-radius: 50%;
     appearance: none;
     background-color: var(--radio-background-color);
-    box-shadow: 0 0 0 2px var(--radio-box-shadow-color);
     cursor: var(--cursor);
+    outline: var(--outline-width) solid var(--radio-outline-color);
+    outline-offset: var(--outline-offset);
     transform: translate($radio-transform-x, 8px);
 
-    &:focus:not(:disabled) {
-      outline: none;
-
-      &::before {
-        position: absolute;
-        border: 2px solid var(--semantic-interactive-main);
-        border-radius: 50%;
-        content: '';
-        inset: calc(-1 * 6px - var(--border-width));
-      }
+    &:focus:not(:disabled)::before {
+      position: absolute;
+      border: 2px solid var(--semantic-interactive-main);
+      border-radius: 50%;
+      content: '';
+      inset: calc(-1 * 6px - var(--border-width));
     }
   }
 
