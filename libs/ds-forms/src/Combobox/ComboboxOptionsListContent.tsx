@@ -23,6 +23,7 @@ interface ComboboxOptionItemProps {
   comboboxState: ComboboxState;
   searchTerm: string;
   multiple: boolean;
+  isGroupItem: boolean;
   focusedIndex: number;
   handleButtonFocus: (index: number) => void;
   handleOptionSelect: (option: ComboboxOption, fromKeyboard?: boolean) => void;
@@ -38,6 +39,7 @@ const ComboboxOptionItem = ({
   comboboxId,
   comboboxState,
   searchTerm,
+  isGroupItem,
   multiple,
   focusedIndex,
   handleButtonFocus,
@@ -58,7 +60,7 @@ const ComboboxOptionItem = ({
       role={'option'}
       aria-selected={ariaSelected ? 'true' : 'false'}
       aria-disabled={isDisabled ? 'true' : undefined}
-      className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isFocused ? styles.focused : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
+      className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isGroupItem ? styles.optionInGroup : ''} ${isFocused ? styles.focused : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
       tabIndex={-1}
       onFocus={() => handleButtonFocus(flatIndex)}
       onKeyDown={(e) => {
@@ -135,6 +137,7 @@ export const ComboboxOptionsListContent = ({
             comboboxState={comboboxState}
             searchTerm={searchTerm}
             multiple={multiple}
+            isGroupItem={hasGroups}
             focusedIndex={focusedIndex}
             handleButtonFocus={handleButtonFocus}
             handleOptionSelect={handleOptionSelect}
@@ -182,6 +185,7 @@ export const ComboboxOptionsListContent = ({
                 comboboxState={comboboxState}
                 searchTerm={searchTerm}
                 multiple={multiple}
+                isGroupItem={hasGroups}
                 focusedIndex={focusedIndex}
                 handleButtonFocus={handleButtonFocus}
                 handleOptionSelect={handleOptionSelect}
@@ -204,6 +208,7 @@ export const ComboboxOptionsListContent = ({
               comboboxState={comboboxState}
               searchTerm={searchTerm}
               multiple={multiple}
+              isGroupItem={hasGroups}
               focusedIndex={focusedIndex}
               handleButtonFocus={handleButtonFocus}
               handleOptionSelect={handleOptionSelect}

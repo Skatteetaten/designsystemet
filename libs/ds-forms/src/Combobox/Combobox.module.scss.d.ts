@@ -12,6 +12,7 @@ declare const classNames: {
   readonly optionsListContainer: 'optionsListContainer';
   readonly optionsList: 'optionsList';
   readonly option: 'option';
+  readonly optionInGroup: 'optionInGroup';
   readonly optionWithCheckbox: 'optionWithCheckbox';
   readonly focused: 'focused';
   readonly disabled: 'disabled';
