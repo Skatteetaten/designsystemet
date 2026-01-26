@@ -290,23 +290,24 @@ export const SkjemaMedSteg = (): JSX.Element => {
                       onChange={handleInputChange('phone')}
                       onBlur={(e) => handleBlur('phone', e.target.value)}
                     />
-                    <ErrorSummary
-                      showErrorSummary={showErrorSummary}
-                      className={styles.marginTopM}
-                      title={'For å gå videre må du rette opp i følgende:'}
-                      titleAs={'h3'}
-                    >
-                      {Object.entries(contactsError)
-                        .filter(([_, error]) => error)
-                        .map(([field, error]) => (
-                          <ErrorSummary.Error
-                            key={field}
-                            referenceId={`input_${field}`}
-                          >
-                            {error}
-                          </ErrorSummary.Error>
-                        ))}
-                    </ErrorSummary>
+                    <div className={styles.errorSummaryWrapper}>
+                      <ErrorSummary
+                        showErrorSummary={showErrorSummary}
+                        title={'For å gå videre må du rette opp i følgende:'}
+                        titleAs={'h3'}
+                      >
+                        {Object.entries(contactsError)
+                          .filter(([_, error]) => error)
+                          .map(([field, error]) => (
+                            <ErrorSummary.Error
+                              key={field}
+                              referenceId={`input_${field}`}
+                            >
+                              {error}
+                            </ErrorSummary.Error>
+                          ))}
+                      </ErrorSummary>
+                    </div>
                   </>
                 )}
                 {hasLocalAddress === 'nei' && (

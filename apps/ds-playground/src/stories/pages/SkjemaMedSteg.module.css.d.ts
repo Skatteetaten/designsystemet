@@ -14,5 +14,6 @@ declare const classNames: {
   readonly noWrap: 'noWrap';
   readonly wideContent: 'wideContent';
   readonly stepList: 'stepList';
+  readonly errorSummaryWrapper: 'errorSummaryWrapper';
 };
 export default classNames;
