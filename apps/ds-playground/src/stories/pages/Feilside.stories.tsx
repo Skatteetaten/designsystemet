@@ -34,8 +34,8 @@ const InnloggetTemplate = (): JSX.Element => {
     <main className={styles.mainContent}>
       <section className={styles.article}>
         <div>
-          <Paragraph className={styles.label}>{'Statuskode 404'}</Paragraph>
           <Heading as={'h1'} hasSpacing>
+            <span className={styles.label}>{'Statuskode 404'}</span>
             {'Siden finnes ikke'}
           </Heading>
         </div>
@@ -79,8 +79,8 @@ export const Uinnlogget = (): JSX.Element => {
     <main className={styles.mainContent}>
       <section className={styles.article}>
         <div>
-          <Paragraph className={styles.label}>{'Statuskode 404'}</Paragraph>
           <Heading as={'h1'} hasSpacing>
+            <span className={styles.label}>{'Statuskode 404'}</span>
             {'Siden finnes ikke'}
           </Heading>
         </div>
