@@ -883,3 +883,124 @@ export const NumberUndoRedo = {
     await expect(textbox).toHaveValue(formatNBS('1 234,56'));
   },
 } satisfies Story;
+
+export const NumberLeadingZeroes = {
+  name: 'Number - Leading Zeroes',
+  render: (): JSX.Element => <TestNumberInput label={'Ledende nuller'} />,
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const rawValueDisplay = canvas.getByTestId('raw-value');
+    const numberValueDisplay = canvas.getByTestId('number-value');
+
+    textbox.focus();
+
+    // Skriv tall med ledende nuller
+    await userEvent.type(textbox, '007');
+    await expect(textbox).toHaveValue('007');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 007');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 7');
+
+    // Skriv flere ledende nuller (med tusenskiller)
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '00123');
+    await expect(textbox).toHaveValue(formatNBS('00 123'));
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 00123');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 123');
+
+    // Ledende nuller med desimaler
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '007,50');
+    await expect(textbox).toHaveValue('007,50');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 007,50');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 7.5');
+  },
+} satisfies Story;
+
+export const NumberLeadingZeroesNegative = {
+  name: 'Number - Leading Zeroes with Negative',
+  render: (): JSX.Element => (
+    <TestNumberInput label={'Ledende nuller negativt'} />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const rawValueDisplay = canvas.getByTestId('raw-value');
+    const numberValueDisplay = canvas.getByTestId('number-value');
+
+    textbox.focus();
+
+    // Negativt tall med ledende nuller
+    await userEvent.type(textbox, '-007');
+    await expect(textbox).toHaveValue('-007');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: -007');
+    await expect(numberValueDisplay).toHaveTextContent('Number: -7');
+
+    // Negativt tall med ledende nuller og desimaler (med tusenskiller)
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '-00123,45');
+    await expect(textbox).toHaveValue(formatNBS('-00 123,45'));
+    await expect(rawValueDisplay).toHaveTextContent('Raw: -00123,45');
+    await expect(numberValueDisplay).toHaveTextContent('Number: -123.45');
+  },
+} satisfies Story;
+
+export const NumberLeadingZeroesDecimalOnly = {
+  name: 'Number - Leading Zeroes Decimal Only',
+  render: (): JSX.Element => (
+    <TestNumberInput label={'Bare desimal med null'} />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const rawValueDisplay = canvas.getByTestId('raw-value');
+    const numberValueDisplay = canvas.getByTestId('number-value');
+
+    textbox.focus();
+
+    // Skriv kun komma og siffer (skal ikke krasje)
+    await userEvent.type(textbox, ',5');
+    await expect(textbox).toHaveValue('0,5');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: ,5');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 0.5');
+
+    // Negativt bare desimal
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '-,5');
+    await expect(textbox).toHaveValue('-0,5');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: -,5');
+    await expect(numberValueDisplay).toHaveTextContent('Number: -0.5');
+
+    // Null før desimal
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '0,99');
+    await expect(textbox).toHaveValue('0,99');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 0,99');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 0.99');
+  },
+} satisfies Story;
+
+export const NumberLeadingZeroesWithThousandSeparator = {
+  name: 'Number - Leading Zeroes with Thousand Separator',
+  render: (): JSX.Element => (
+    <TestNumberInput label={'Ledende nuller med tusenskille'} />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const rawValueDisplay = canvas.getByTestId('raw-value');
+
+    textbox.focus();
+
+    // Store tall med ledende nuller
+    await userEvent.type(textbox, '001234567');
+    await expect(textbox).toHaveValue(formatNBS('001 234 567'));
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 001234567');
+
+    // Ledende nuller bevares selv med tusenskiller
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '000000123');
+    await expect(textbox).toHaveValue(formatNBS('000 000 123'));
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 000000123');
+  },
+} satisfies Story;
