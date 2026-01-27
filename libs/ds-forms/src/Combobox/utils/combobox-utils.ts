@@ -453,15 +453,15 @@ export const hasGroupedOptions = (options: ComboboxOption[]): boolean => {
 };
 
 /**
- * Bygger en gruppert struktur fra en flat options-liste. Bevarer original
- * rekkefølge - options grupperes kun når de har samme group-verdi og ligger
- * etter hverandre i arrayet.
+ * Bygger en gruppert struktur fra en flat options-liste. Options med samme
+ * group-verdi samles alltid i samme gruppe, uavhengig av posisjon i arrayet.
+ * Gruppene vises i den rekkefølgen de først forekommer.
  *
  * @example
  *   const options = [
  *     { label: 'Trondheim', value: 't', group: 'Trøndelag' },
- *     { label: 'Steinkjer', value: 's', group: 'Trøndelag' },
  *     { label: 'Oslo', value: 'o' },
+ *     { label: 'Steinkjer', value: 's', group: 'Trøndelag' },
  *     { label: 'Bodø', value: 'b', group: 'Nordland' },
  *   ];
  *   // Returnerer:
@@ -482,35 +482,28 @@ export const buildGroupedStructure = (
   }
 
   const result: GroupedItem[] = [];
-  let currentGroup: { groupLabel: string; options: ComboboxOption[] } | null =
-    null;
+  const groupMap = new Map<string, ComboboxOption[]>();
 
   for (const option of options) {
     if (option.group === undefined) {
-      // Ugruppert option - avslutt eventuell pågående gruppe først
-      if (currentGroup !== null) {
-        result.push({ type: 'group', ...currentGroup });
-        currentGroup = null;
-      }
+      // Ugruppert option - legg til direkte i resultatet
       result.push({ type: 'option', option });
-    } else if (
-      currentGroup !== null &&
-      currentGroup.groupLabel === option.group
-    ) {
-      // Samme gruppe som forrige - legg til i eksisterende gruppe
-      currentGroup.options.push(option);
     } else {
-      // Ny gruppe - avslutt eventuell pågående gruppe først
-      if (currentGroup !== null) {
-        result.push({ type: 'group', ...currentGroup });
+      // Gruppert option - samle i map
+      const existingGroup = groupMap.get(option.group);
+      if (existingGroup) {
+        existingGroup.push(option);
+      } else {
+        // Ny gruppe - opprett og legg til placeholder i resultatet
+        const groupOptions: ComboboxOption[] = [option];
+        groupMap.set(option.group, groupOptions);
+        result.push({
+          type: 'group',
+          groupLabel: option.group,
+          options: groupOptions,
+        });
       }
-      currentGroup = { groupLabel: option.group, options: [option] };
     }
-  }
-
-  // Avslutt siste gruppe hvis den finnes
-  if (currentGroup !== null) {
-    result.push({ type: 'group', ...currentGroup });
   }
 
   return result;

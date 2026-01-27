@@ -468,7 +468,7 @@ describe('combobox-utils', () => {
       ]);
     });
 
-    it('Når options har forskjellige grupper, så lages separate grupper', () => {
+    it('Når options har samme group men ikke ligger etter hverandre, så samles de i samme gruppe', () => {
       const groupedOptions: ComboboxOption[] = [
         { label: 'Apple', value: 'apple', group: 'Fruits' },
         { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
@@ -479,17 +479,12 @@ describe('combobox-utils', () => {
         {
           type: 'group',
           groupLabel: 'Fruits',
-          options: [groupedOptions[0]],
+          options: [groupedOptions[0], groupedOptions[2]],
         },
         {
           type: 'group',
           groupLabel: 'Vegetables',
           options: [groupedOptions[1]],
-        },
-        {
-          type: 'group',
-          groupLabel: 'Fruits',
-          options: [groupedOptions[2]],
         },
       ]);
     });
