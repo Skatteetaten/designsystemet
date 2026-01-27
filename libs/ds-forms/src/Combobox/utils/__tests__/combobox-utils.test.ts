@@ -8,6 +8,10 @@ import {
   SELECTION_BEHAVIORS,
   selectOption,
   removeOption,
+  hasGroupedOptions,
+  buildGroupedStructure,
+  getOptionAtFlatIndex,
+  countOptionsInGroupedStructure,
 } from '../combobox-utils';
 
 describe('combobox-utils', () => {
@@ -399,6 +403,178 @@ describe('combobox-utils', () => {
 
       expect(mockSetSelectedValues).toHaveBeenCalledWith([]);
       expect(mockOnSelectionChange).toHaveBeenCalledWith([]);
+    });
+  });
+
+  describe('hasGroupedOptions', () => {
+    it('Når ingen options har group, så returnerer den false', () => {
+      const result = hasGroupedOptions(mockOptions);
+      expect(result).toBe(false);
+    });
+
+    it('Når minst én option har group, så returnerer den true', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+      ];
+      const result = hasGroupedOptions(groupedOptions);
+      expect(result).toBe(true);
+    });
+
+    it('Når alle options har group, så returnerer den true', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+      ];
+      const result = hasGroupedOptions(groupedOptions);
+      expect(result).toBe(true);
+    });
+
+    it('Når options er tom array, så returnerer den false', () => {
+      const result = hasGroupedOptions([]);
+      expect(result).toBe(false);
+    });
+  });
+
+  describe('buildGroupedStructure', () => {
+    it('Når options er tom, så returnerer den tom array', () => {
+      const result = buildGroupedStructure([]);
+      expect(result).toEqual([]);
+    });
+
+    it('Når ingen options har group, så returnerer den alle som enkeltstående options', () => {
+      const result = buildGroupedStructure(mockOptions);
+      expect(result).toEqual([
+        { type: 'option', option: mockOptions[0] },
+        { type: 'option', option: mockOptions[1] },
+        { type: 'option', option: mockOptions[2] },
+        { type: 'option', option: mockOptions[3] },
+      ]);
+    });
+
+    it('Når påfølgende options har samme group, så grupperes de sammen', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+        { label: 'Cherry', value: 'cherry', group: 'Fruits' },
+      ];
+      const result = buildGroupedStructure(groupedOptions);
+      expect(result).toEqual([
+        {
+          type: 'group',
+          groupLabel: 'Fruits',
+          options: groupedOptions,
+        },
+      ]);
+    });
+
+    it('Når options har samme group men ikke ligger etter hverandre, så samles de i samme gruppe', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+      ];
+      const result = buildGroupedStructure(groupedOptions);
+      expect(result).toEqual([
+        {
+          type: 'group',
+          groupLabel: 'Fruits',
+          options: [groupedOptions[0], groupedOptions[2]],
+        },
+        {
+          type: 'group',
+          groupLabel: 'Vegetables',
+          options: [groupedOptions[1]],
+        },
+      ]);
+    });
+
+    it('Når options er blanding av grupperte og ugrupperte, så bevares rekkefølgen', () => {
+      const mixedOptions: ComboboxOption[] = [
+        { label: 'Ungrouped 1', value: 'u1' },
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+        { label: 'Ungrouped 2', value: 'u2' },
+        { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+      ];
+      const result = buildGroupedStructure(mixedOptions);
+      expect(result).toEqual([
+        { type: 'option', option: mixedOptions[0] },
+        {
+          type: 'group',
+          groupLabel: 'Fruits',
+          options: [mixedOptions[1], mixedOptions[2]],
+        },
+        { type: 'option', option: mixedOptions[3] },
+        {
+          type: 'group',
+          groupLabel: 'Vegetables',
+          options: [mixedOptions[4]],
+        },
+      ]);
+    });
+  });
+
+  describe('getOptionAtFlatIndex', () => {
+    const mixedOptions: ComboboxOption[] = [
+      { label: 'Ungrouped 1', value: 'u1' },
+      { label: 'Apple', value: 'apple', group: 'Fruits' },
+      { label: 'Banana', value: 'banana', group: 'Fruits' },
+      { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+    ];
+
+    it('Når index er 0 og første element er ugruppert, så returnerer den riktig option', () => {
+      const structure = buildGroupedStructure(mixedOptions);
+      const result = getOptionAtFlatIndex(0, structure);
+      expect(result).toEqual(mixedOptions[0]);
+    });
+
+    it('Når index peker til element innenfor gruppe, så returnerer den riktig option', () => {
+      const structure = buildGroupedStructure(mixedOptions);
+      expect(getOptionAtFlatIndex(1, structure)).toEqual(mixedOptions[1]);
+      expect(getOptionAtFlatIndex(2, structure)).toEqual(mixedOptions[2]);
+      expect(getOptionAtFlatIndex(3, structure)).toEqual(mixedOptions[3]);
+    });
+
+    it('Når index er utenfor grenser, så returnerer den undefined', () => {
+      const structure = buildGroupedStructure(mixedOptions);
+      expect(getOptionAtFlatIndex(-1, structure)).toBeUndefined();
+      expect(getOptionAtFlatIndex(10, structure)).toBeUndefined();
+    });
+
+    it('Når struktur er tom, så returnerer den undefined', () => {
+      expect(getOptionAtFlatIndex(0, [])).toBeUndefined();
+    });
+  });
+
+  describe('countOptionsInGroupedStructure', () => {
+    it('Når struktur er tom, så returnerer den 0', () => {
+      expect(countOptionsInGroupedStructure([])).toBe(0);
+    });
+
+    it('Når alle er enkeltstående options, så teller den riktig', () => {
+      const structure = buildGroupedStructure(mockOptions);
+      expect(countOptionsInGroupedStructure(structure)).toBe(4);
+    });
+
+    it('Når options er gruppert, så teller den kun options (ikke grupper)', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+        { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+      ];
+      const structure = buildGroupedStructure(groupedOptions);
+      expect(countOptionsInGroupedStructure(structure)).toBe(3);
+    });
+
+    it('Når struktur er blanding, så teller den alle options', () => {
+      const mixedOptions: ComboboxOption[] = [
+        { label: 'Ungrouped', value: 'u1' },
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+      ];
+      const structure = buildGroupedStructure(mixedOptions);
+      expect(countOptionsInGroupedStructure(structure)).toBe(3);
     });
   });
 });

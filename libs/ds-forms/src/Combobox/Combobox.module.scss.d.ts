@@ -12,6 +12,7 @@ declare const classNames: {
   readonly optionsListContainer: 'optionsListContainer';
   readonly optionsList: 'optionsList';
   readonly option: 'option';
+  readonly optionInGroup: 'optionInGroup';
   readonly optionWithCheckbox: 'optionWithCheckbox';
   readonly focused: 'focused';
   readonly disabled: 'disabled';
@@ -22,5 +23,8 @@ declare const classNames: {
   readonly emptyResult: 'emptyResult';
   readonly loadingContainer: 'loadingContainer';
   readonly maxSelectedMessage: 'maxSelectedMessage';
+  readonly optionGroup: 'optionGroup';
+  readonly optionGroupLabel: 'optionGroupLabel';
+  readonly optionGroupList: 'optionGroupList';
 };
 export default classNames;

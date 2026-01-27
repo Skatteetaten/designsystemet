@@ -6,10 +6,8 @@ import { Spinner } from '@skatteetaten/ds-progress';
 
 import type { ComboboxOptionsProps } from './Combobox.types';
 import { ComboboxMaxSelectedMessage } from './ComboboxMaxSelectedMessage';
-import {
-  getOptionState,
-  type ComboboxState,
-} from './utils/combobox-state-utils';
+import { ComboboxOptionsListContent } from './ComboboxOptionsListContent';
+import type { ComboboxState } from './utils/combobox-state-utils';
 
 import styles from './Combobox.module.scss';
 
@@ -59,6 +57,13 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       );
     }
 
+    const comboboxState: ComboboxState = {
+      options: displayOptions,
+      selectedValues,
+      multiple,
+      maxSelected,
+    };
+
     // Vis options når vi har resultater
     if (displayOptions.length > 0) {
       return (
@@ -73,70 +78,16 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             className={styles.optionsList}
             onMouseDown={(e) => e.preventDefault()}
           >
-            {displayOptions.map((option, index) => {
-              const comboboxState: ComboboxState = {
-                options: displayOptions,
-                selectedValues,
-                multiple,
-                maxSelected,
-              };
-
-              const { isSelected, isDisabled } = getOptionState(
-                option,
-                comboboxState
-              );
-
-              /* In single select mode, we want to mark the option as selected with aria-selected
-               when its label matches the search term */
-              const isSelectedInSingleMode =
-                !multiple && option.label === searchTerm;
-              const ariaSelected = multiple
-                ? isSelected
-                : isSelectedInSingleMode;
-
-              const isFocused = index === focusedIndex;
-
-              return (
-                <li
-                  key={option.value}
-                  id={`${comboboxId}-option-${index}`}
-                  role={'option'} // We need to use <li> for screenreader support, even though sonarqube complains
-                  aria-selected={ariaSelected ? 'true' : 'false'}
-                  aria-disabled={isDisabled ? 'true' : undefined}
-                  className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isFocused ? styles.focused : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
-                  tabIndex={-1}
-                  onFocus={() => handleButtonFocus(index)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      if (!isDisabled) {
-                        handleOptionSelect(option, true); // true = fromKeyboard
-                      }
-                    }
-                  }}
-                  onClick={() => {
-                    if (!isDisabled) {
-                      handleOptionSelect(option, false); // false = fromMouse
-                    }
-                  }}
-                >
-                  {multiple && (
-                    <div
-                      className={`${styles.checkboxIcon} ${isSelected ? styles.checked : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
-                    >
-                      {isSelected && (
-                        <div className={styles.checkboxIconCheck} />
-                      )}
-                    </div>
-                  )}
-                  <span
-                    className={`${styles.optionLabel} ${isDisabled ? styles.disabled : ''}`.trim()}
-                  >
-                    {option.label}
-                  </span>
-                </li>
-              );
-            })}
+            <ComboboxOptionsListContent
+              displayOptions={displayOptions}
+              comboboxId={comboboxId}
+              comboboxState={comboboxState}
+              searchTerm={searchTerm}
+              multiple={multiple}
+              focusedIndex={focusedIndex}
+              handleButtonFocus={handleButtonFocus}
+              handleOptionSelect={handleOptionSelect}
+            />
           </ul>
           {multiple && maxSelected && selectedValues.length > 0 && (
             <ComboboxMaxSelectedMessage
