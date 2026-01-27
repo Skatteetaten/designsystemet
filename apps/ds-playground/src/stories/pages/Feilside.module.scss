@@ -16,7 +16,10 @@
 }
 
 .label {
+  display: block;
   color: var(--palette-graphite-70);
+  font-size: initial;
+  font-weight: initial;
 }
 
 .ingress {
@@ -25,4 +28,8 @@
 
 .openClose {
   padding-top: var(--spacing-s);
+}
+
+.link {
+  align-self: flex-start;
 }

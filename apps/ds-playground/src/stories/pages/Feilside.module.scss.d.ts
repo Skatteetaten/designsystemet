@@ -4,5 +4,6 @@ declare const classNames: {
   readonly label: 'label';
   readonly ingress: 'ingress';
   readonly openClose: 'openClose';
+  readonly link: 'link';
 };
 export default classNames;
