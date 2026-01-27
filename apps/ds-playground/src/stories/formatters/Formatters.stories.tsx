@@ -108,6 +108,7 @@ export const Formatters: StoryObj = {
           description={`Formatert etter valgt språk: ${locale}`}
           value={numberFormatter.value}
           className={'textField300'}
+          hasSpacing
           onChange={numberFormatter.onChange}
           onKeyDown={numberFormatter.onKeyDown}
         />
@@ -116,6 +117,7 @@ export const Formatters: StoryObj = {
           description={`Formatert etter valgt språk: ${locale}`}
           value={decimalNumberFormatter.value}
           className={'textField300'}
+          hasSpacing
           onChange={decimalNumberFormatter.onChange}
           onKeyDown={decimalNumberFormatter.onKeyDown}
         />
