@@ -9,14 +9,15 @@ import { DatePicker, SearchField, Select } from '@skatteetaten/ds-forms';
 import {
   AddSVGpath,
   ArrowForwardSVGpath,
-  BellIcon,
+  BellSVGpath,
   CancelSVGpath,
   HelpFilledSVGpath,
   HistorySVGpath,
-  PauseOutlineIcon,
+  PauseOutlineSVGpath,
 } from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 import { Breadcrumbs, Pagination } from '@skatteetaten/ds-navigation';
+import { Tag } from '@skatteetaten/ds-status';
 import { SortState, Table } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -75,12 +76,21 @@ const dataTilgjengeligeOppgaver = Array.from({ length: 10 }, (_, i) => {
   const fristPassertOptions = ['Ja', 'Nei'];
   const fristPassert =
     fristPassertOptions[Math.floor(Math.random() * fristPassertOptions.length)];
-  const getIcon = (): JSX.Element | null => {
-    if (fristPassert === 'Ja') return <BellIcon />;
-    return Math.random() > 0.5 ? <PauseOutlineIcon /> : null;
+  const getTag = (): JSX.Element | null => {
+    if (fristPassert === 'Ja')
+      return (
+        <Tag svgPath={BellSVGpath} color={'burgundy'}>
+          {'Ny aktivitet'}
+        </Tag>
+      );
+    return Math.random() > 0.5 ? (
+      <Tag svgPath={PauseOutlineSVGpath} color={'graphite'}>
+        {'Pauset'}
+      </Tag>
+    ) : null;
   };
   return {
-    icon: getIcon(),
+    tag: getTag(),
     antall: Math.floor(Math.random() * 20) + 1,
     fristPassert: fristPassert,
     kategori:
@@ -122,6 +132,7 @@ const data = Array.from({ length: 120 }, (_, i) => {
 
 export const Arbeidsliste = (): JSX.Element => {
   const isMobile = !useMediaQuery('(min-width: 480px)');
+  const breakpointM = useMediaQuery('(min-width: 1024px)');
   const [visFilter, setVisFilter] = useState<boolean>(false);
   const [filters, setFilters] = useState({
     fristFra: null as Date | null,
@@ -248,15 +259,15 @@ export const Arbeidsliste = (): JSX.Element => {
           <Tabs.List>
             <Tabs.Tab
               value={'mineoppgaver'}
-            >{`Mine oppgaver (${data.length})`}</Tabs.Tab>
+            >{`Mine ${breakpointM ? 'oppgaver ' : ''}(${data.length})`}</Tabs.Tab>
             <Tabs.Tab value={'tilgjengeligeoppgaver'}>
-              {'Tilgjengelige oppgaver (10)'}
+              {`Tilgjengelige ${breakpointM ? 'oppgaver ' : ''}(10)`}
             </Tabs.Tab>
             <Tabs.Tab value={'andresoppgaver'}>
-              {'Andres oppgaver (10)'}
+              {`Andres ${breakpointM ? 'oppgaver ' : ''}(10)`}
             </Tabs.Tab>
             <Tabs.Tab value={'minefullfoerteoppgaver'}>
-              {'Mine fullførte oppgaver (10)'}
+              {`Mine fullførte ${breakpointM ? 'oppgaver ' : ''}(10)`}
             </Tabs.Tab>
           </Tabs.List>
           <Tabs.Panel value={'mineoppgaver'}>
@@ -481,7 +492,7 @@ export const Arbeidsliste = (): JSX.Element => {
                 {dataTilgjengeligeOppgaver.map((item, i) => {
                   return (
                     <Table.Row key={i}>
-                      <Table.DataCell>{item.icon}</Table.DataCell>
+                      <Table.DataCell>{item.tag}</Table.DataCell>
                       <Table.DataCell>{item.antall}</Table.DataCell>
                       <Table.DataCell>{item.fristPassert}</Table.DataCell>
                       <Table.DataCell>{item.kategori}</Table.DataCell>
