@@ -104,7 +104,10 @@
     box-sizing: border-box;
     flex-shrink: 0;
     border: var(--spacing-xxs) solid var(--checkbox-border-color);
+    border-radius: 0;
     margin-top: 6px;
+    // stylelint-disable-next-line property-no-vendor-prefix
+    -webkit-appearance: none;
     appearance: none;
     background-color: var(--checkbox-background-color);
     cursor: var(--cursor);
