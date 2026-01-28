@@ -1,45 +1,94 @@
 const path = require('path');
 
-/** @returns Rollup plugin */
-function addStyleImportPlugin() {
+/**
+ * Rollup plugin som emitterer CSS-filer og injiserer import-statements.
+ *
+ * @param cssAssetState - Shared state med pending CSS fra sass processor
+ * @returns Rollup plugin
+ */
+function addStyleImportPlugin(cssAssetState) {
   return {
     name: 'add-style-import',
     generateBundle(options, bundle) {
-      Object.keys(bundle).forEach(function (key) {
-        if (bundle[key].imports) {
-          bundle[key].imports.some((importValue) => {
-            if (!importValue.includes('.scss')) {
-              return false;
-            }
-            const imports = bundle[key].imports;
-            const lastImport = imports[imports.length - 1];
-            if (!lastImport.includes('.scss')) {
-              throw Error(`Last import is not a scss file, ${lastImport}`);
-            }
-            const cssFileName = `${path.basename(lastImport).split('.')[0]}.css`;
+      const cssPathsByChunkName = new Map();
 
-            const filename = bundle[key].fileName;
-            const replacementValue = filename.includes('/')
-              ? `$1\nimport './${cssFileName}';\n`
-              : `$1\nimport './${filename.substr(
-                  0,
-                  filename.search(/([.-])/)
-                )}/${cssFileName}';\n`;
+      // Iterer over bundle: finn SCSS chunks, emit CSS, bygg mapping
+      for (const [fileName, chunk] of Object.entries(bundle)) {
+        if (chunk.type !== 'chunk') continue;
 
-            const searchRegex = new RegExp(
-              `(^import.*${path.basename(lastImport)}';$)`,
-              'gm'
-            );
-            bundle[key].code = bundle[key].code.replace(
-              searchRegex,
-              replacementValue
-            );
-            return true;
-          });
+        if (chunk.facadeModuleId?.endsWith('.scss')) {
+          const cssData = cssAssetState.pending.get(chunk.facadeModuleId);
+          if (cssData) {
+            const { content, outputPath } = cssData;
+
+            // Emit .module.css filen
+            this.emitFile({
+              type: 'asset',
+              fileName: outputPath,
+              source: content,
+            });
+
+            // Emit forenklet .css fil for bakoverkompatibilitet
+            const pathParts = outputPath.split('/');
+            const componentDir = pathParts.slice(0, -1).join('/');
+            const baseName = pathParts[pathParts.length - 1].split('.')[0];
+            const simpleCssPath = componentDir
+              ? `${componentDir}/${baseName}.css`
+              : `${baseName}.css`;
+
+            this.emitFile({
+              type: 'asset',
+              fileName: simpleCssPath,
+              source: content,
+            });
+
+            cssPathsByChunkName.set(fileName, simpleCssPath);
+            cssAssetState.pending.delete(chunk.facadeModuleId);
+
+            console.log(`Emitted CSS: ${outputPath} and ${simpleCssPath}`);
+          }
         }
-      });
+      }
 
-      return null;
+      // Sanity check: hvis noe gjenstår ble det ikke emittert
+      if (cssAssetState.pending.size > 0) {
+        const unemitted = Array.from(cssAssetState.pending.keys()).join('\n  ');
+        throw new Error(
+          `CSS files were not emitted (no matching chunks in bundle):\n  ${unemitted}`
+        );
+      }
+
+      // Injiser CSS imports i komponent-chunks
+      for (const [fileName, chunk] of Object.entries(bundle)) {
+        if (chunk.type !== 'chunk') continue;
+
+        const scssImport = chunk.imports.find((imp) => imp.includes('.scss.'));
+        if (!scssImport) continue;
+
+        const cssOutputPath = cssPathsByChunkName.get(scssImport);
+        if (!cssOutputPath) continue;
+
+        // Beregn relativ sti fra chunk til CSS-fil
+        const chunkDir = path.dirname(fileName);
+        let relativeCssPath = path.relative(chunkDir, cssOutputPath);
+
+        if (!relativeCssPath.startsWith('.')) {
+          relativeCssPath = `./${relativeCssPath}`;
+        }
+
+        // Finn siste import statement og injiser etter den
+        const lastImportMatch = chunk.code.match(/^import\s+.+;?\s*$/gm);
+        if (lastImportMatch) {
+          const lastImport = lastImportMatch[lastImportMatch.length - 1];
+          chunk.code = chunk.code.replace(
+            lastImport,
+            `${lastImport}\nimport '${relativeCssPath}';`
+          );
+          console.log(
+            `Injected CSS import in ${fileName}: import '${relativeCssPath}'`
+          );
+        }
+      }
     },
   };
 }
