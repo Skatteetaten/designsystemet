@@ -31,7 +31,7 @@
     margin-top: var(--spacing-xs);
   }
 
-  &_error:not(:focus-visible, :hover) {
+  &_error:not(:focus, :hover) {
     border: 3px var(--semantic-danger-foreground) solid;
   }
 
@@ -45,7 +45,7 @@
     background: var(--semantic-interactive-background);
   }
 
-  &:focus-visible {
+  &:focus {
     outline: 2px solid var(--semantic-interactive-main);
     outline-offset: 2px;
   }

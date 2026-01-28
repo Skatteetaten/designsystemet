@@ -16,6 +16,12 @@ import { Fieldset } from '../Fieldset/Fieldset';
 
 import styles from './CheckboxGroup.module.scss';
 
+/**
+ * CheckboxGroup
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-checkboxgroup--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/) - Brukerveiledning
+ */
 export const CheckboxGroup = (({
   ref,
   id,
@@ -28,6 +34,7 @@ export const CheckboxGroup = (({
   helpSvgPath,
   helpText,
   legend,
+  readOnly,
   titleHelpSvg,
   disabled,
   form,
@@ -47,7 +54,7 @@ export const CheckboxGroup = (({
       classNames={{
         ...classNames,
         contentContainer:
-          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer}`.trim(),
+          `${styles.contentContainer} ${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer}`.trim(),
       }}
       lang={lang}
       data-testid={dataTestId}
@@ -66,6 +73,7 @@ export const CheckboxGroup = (({
       <CheckboxContext.Provider
         value={{
           errorId: errorMessage ? errorId : undefined,
+          readOnly,
         }}
       >
         {children}

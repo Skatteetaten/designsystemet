@@ -3,18 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import {
-  getTableVariantDefault,
-  getDataCellAsDefault,
-  getHeaderCellAsDefault,
-  getTableRowExpandButtonPositionDefault,
-  getTableCellAlignmentDefault,
-  getTableSumLabelAlignmentDefault,
-  getTableSumValueAlignmentDefault,
-  getTableRowIsExpandedDefault,
-  getTableSumTextDefault,
-  getTableRowExpandButtonTitleDefault,
-} from './defaults';
+import { getTableVariantDefault } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
 import { TableContext } from './TableContext';
 import { TableBody } from '../TableBody/TableBody';
@@ -28,6 +17,12 @@ import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
 
+/**
+ * Table
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-table--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/table/) - Brukerveiledning
+ */
 export const Table = (({
   ref,
   id,
@@ -185,16 +180,3 @@ Table.Body = TableBody;
 Table.Body.displayName = 'Table.Body';
 Table.Sum = TableSum;
 Table.Sum.displayName = 'Table.Sum';
-
-export {
-  getDataCellAsDefault,
-  getHeaderCellAsDefault,
-  getTableCellAlignmentDefault,
-  getTableRowExpandButtonPositionDefault,
-  getTableVariantDefault,
-  getTableSumLabelAlignmentDefault,
-  getTableSumValueAlignmentDefault,
-  getTableRowIsExpandedDefault,
-  getTableSumTextDefault,
-  getTableRowExpandButtonTitleDefault,
-};

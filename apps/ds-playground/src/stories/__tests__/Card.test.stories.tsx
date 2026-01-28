@@ -158,7 +158,7 @@ const TemplateWithAlert: StoryFn<typeof Card> = (args) => (
   <Card {...args}>
     <Card.Alert title={'Informasjon'}>{'Alert message content'}</Card.Alert>
     <Card.Header>
-      <Heading id={args.ariaLabelledBy} as={'h3'} level={3}>
+      <Heading id={args.ariaLabelledBy} as={'h3'}>
         {'Card Heading'}
       </Heading>
     </Card.Header>

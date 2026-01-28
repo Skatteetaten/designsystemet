@@ -173,7 +173,7 @@ export const Oppgaveliste = (): JSX.Element => {
         </Breadcrumbs.List>
       </Breadcrumbs>
       <div className={styles.article}>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Innrapportering for rytmisk musikkutdanning'}
         </Heading>
         <DescriptionList hasSpacing>
@@ -187,7 +187,7 @@ export const Oppgaveliste = (): JSX.Element => {
             {'2025'}
           </DescriptionList.Element>
         </DescriptionList>
-        <Heading as={'h2'} className={styles.heading} level={2} hasSpacing>
+        <Heading as={'h2'} className={styles.heading} hasSpacing>
           <span className={styles.headingIcon}>
             <CheckIcon />
           </span>
@@ -197,7 +197,6 @@ export const Oppgaveliste = (): JSX.Element => {
         <Heading
           as={'h2'}
           className={`${styles.heading} ${styles.marginTopXl}`}
-          level={2}
           hasSpacing
         >
           <span className={styles.headingIcon}>

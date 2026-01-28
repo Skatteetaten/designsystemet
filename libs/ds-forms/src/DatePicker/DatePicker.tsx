@@ -30,9 +30,16 @@ import {
 import { formatDateForInput, parseDateFromInput } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 
 import styles from './DatePicker.module.scss';
 
+/**
+ * DatePicker
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-datepicker--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/datepicker/) - Brukerveiledning
+ */
 export const DatePicker = ({
   ref,
   id: externalId,
@@ -247,7 +254,7 @@ export const DatePicker = ({
               .join(' ')
               .trim() || undefined
           }
-          aria-invalid={!!errorMessage || undefined}
+          aria-invalid={getAriaInvalid(errorMessage, required)}
           onBlur={handleBlur}
           onChange={handleChange}
           onFocus={handleFocus}

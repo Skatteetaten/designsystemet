@@ -30,12 +30,16 @@ import styles from './TopBannerExternalAndFooter.module.scss';
 
 export function TopBannerExternalAndFooter({
   children,
+  showAsSignedIn,
 }: {
   children: ReactNode;
+  showAsSignedIn?: boolean;
 }): JSX.Element {
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const modalRef = useRef<HTMLDialogElement>(null);
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User | undefined>(
+    showAsSignedIn ? { name: 'Ola Nordmann', role: 'meg' } : undefined
+  );
 
   const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
     const lang = e.currentTarget.lang;
@@ -308,12 +312,12 @@ export function TopBannerExternalAndFooter({
         }
         secondColumn={
           <>
-            <Heading as={'h2'} level={2} hasSpacing>
+            <Heading as={'h2'} hasSpacing>
               {'Alle temaer'}
             </Heading>
             <div className={topBannerExternalExampleStyles.secondColumn}>
               <div>
-                <Heading as={'h3'} level={3} hasSpacing>
+                <Heading as={'h3'} hasSpacing>
                   <a href={LenkerUinnlogget.PERSON_FORSIDE}>{'For personer'}</a>
                 </Heading>
                 <LinkGroup
@@ -332,7 +336,7 @@ export function TopBannerExternalAndFooter({
                     </LinkGroup.Link>
                   ))}
                 </LinkGroup>
-                <Heading as={'h3'} level={3} hasSpacing>
+                <Heading as={'h3'} hasSpacing>
                   <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
                     {'For bedrifter og organisasjoner'}
                   </a>
@@ -440,6 +444,7 @@ export function TopBannerExternalAndFooter({
       />
       {children}
       <Footer
+        openDefaultLinksInNewTab={false}
         titleFirstColumn={'Skatteetaten'}
         titleSecondColumn={'Følg oss'}
         secondColumn={

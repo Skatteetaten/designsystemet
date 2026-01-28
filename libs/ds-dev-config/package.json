@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-dev-config",
   "groupId": "no.skatteetaten.aurora",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "license": "Apache-2.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "repository": {
@@ -12,7 +12,7 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "peerDependencies": {
-    "react": "^19",
+    "react": "^19.2.0",
     "@nx/eslint-plugin": "15.0.0"
   },
   "executors": "executors.json",

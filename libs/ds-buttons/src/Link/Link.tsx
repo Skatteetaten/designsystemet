@@ -9,6 +9,12 @@ import { LinkContext } from '../LinkGroup/LinkContext';
 
 import styles from './Link.module.scss';
 
+/**
+ * Link
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-link--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/link/) - Brukerveiledning
+ */
 export const Link = ({
   ref,
   id,

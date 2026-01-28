@@ -5,11 +5,11 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-article);
 
-  &_withBullet {
+  &:where([data-ul='true']) {
     list-style-type: square;
   }
 
-  &_hasSpacing {
+  &[data-has-spacing='true'] {
     margin-bottom: var(--spacing-l);
   }
 }

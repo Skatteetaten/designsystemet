@@ -26,10 +26,17 @@ import {
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
 
 import styles from './SearchField.module.scss';
 
+/**
+ * SearchField
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-searchfield--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/) - Brukerveiledning
+ */
 export const SearchField = (({
   ref,
   id: externalId,
@@ -231,7 +238,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
                 .join(' ')
                 .trim() || undefined
             }
-            aria-invalid={!!errorMessage || undefined}
+            aria-invalid={getAriaInvalid(errorMessage, required)}
             aria-owns={shouldShowResults ? resultsId : undefined}
             type={'search'}
             onKeyDown={(event) => {

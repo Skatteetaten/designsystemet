@@ -1,9 +1,15 @@
 @use 'libs/ds-core-utils/src/mixins/styles';
 
 .errorMessage {
-  margin-top: var(--spacing-m);
+  margin-top: var(--spacing-s);
 }
 
-.contentContainerSpacing {
-  margin-top: var(--spacing-s);
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+
+  &Spacing {
+    margin-top: var(--spacing-s);
+  }
 }

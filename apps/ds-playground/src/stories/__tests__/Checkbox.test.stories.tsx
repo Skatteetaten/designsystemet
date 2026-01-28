@@ -123,20 +123,22 @@ export const Defaults = {
     children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByLabelText(defaultLabelText);
     await expect(inputNode).toBeInTheDocument();
     await expect(inputNode.tagName).toBe('INPUT');
-    await expect(inputNode).toHaveAttribute('aria-invalid', 'false');
+    await expect(inputNode).not.toHaveAttribute('aria-invalid');
     await expect(inputNode).not.toBeChecked();
     await expect(inputNode).not.toBeRequired();
     await expect(inputNode).toBeEnabled();
     await expect(inputNode).not.toHaveAttribute('aria-describedby');
-    const errorMessage = canvas.getAllByRole('generic')[6];
-    await expect(errorMessage).toBeInTheDocument();
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=checkboxErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -150,7 +152,7 @@ export const WithDescription = {
     description: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -255,13 +257,13 @@ export const WithChecked = {
     checked: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
     await expect(inputNode).toBeChecked();
-    await expect(inputNode).toHaveAttribute('aria-invalid', 'false');
+    await expect(inputNode).not.toHaveAttribute('aria-invalid');
   },
 } satisfies Story;
 
@@ -275,7 +277,7 @@ export const WithDisabled = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -296,7 +298,7 @@ export const WithDisabledAndChecked = {
     disabled: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -319,6 +321,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
     await expect(inputNode).toBeRequired();
+    await expect(inputNode).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -332,11 +335,6 @@ export const WithRequiredAndMark = {
   argTypes: {
     required: { table: { disable: false } },
     showRequiredMark: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const inputNode = canvas.getByRole('checkbox');
-    await expect(inputNode).toBeRequired();
   },
 } satisfies Story;
 
@@ -359,6 +357,7 @@ export const WithRequiredAndChecked = {
     const inputNode = canvas.getByRole('checkbox');
     await expect(inputNode).toBeChecked();
     await expect(inputNode).toBeRequired();
+    await expect(inputNode).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -372,12 +371,14 @@ export const WithError = {
     errorMessage: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageNode = canvas.getAllByRole('generic')[6];
-    await expect(errorMessageNode).toHaveAttribute('id');
+    const errorMessage = canvasElement.querySelector(
+      '[id^=checkboxErrorId]>div'
+    );
+    await expect(errorMessage).toBeInTheDocument();
     const inputNode = canvas.getByRole('checkbox', {
       description: defaultErrorMessage,
     });
@@ -403,6 +404,7 @@ export const WithDisabledAndRequired = {
     const inputNode = canvas.getByRole('checkbox');
     await expect(inputNode).toBeDisabled();
     await expect(inputNode).toBeRequired();
+    await expect(inputNode).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -420,7 +422,7 @@ export const WithErrorAndRequired = {
     showRequiredMark: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -567,12 +569,53 @@ export const WithCustomClassNames = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const label = canvas.getByText(defaultLabelText);
-    const errorMessageContainer = canvasElement.querySelector(
+    const errorMessage = canvasElement.querySelector(
       '[id^=checkboxErrorId]>div'
     );
-    await expect(label?.parentElement?.parentElement).toHaveClass(
-      'dummyClassname'
-    );
-    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+    await expect(label?.parentElement).toHaveClass('dummyClassname');
+    await expect(errorMessage).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
+export const WithReadOnly = {
+  name: 'With ReadOnly',
+  args: {
+    ...defaultArgs,
+    readOnly: true,
+    description: 'Dette er en checkbox i read only modus',
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const checkbox = canvas.getByRole('checkbox');
+    await expect(checkbox).toHaveAttribute('data-read-only', 'true');
+    expect(checkbox).toHaveAccessibleName(/,\s*skrivebeskyttet/);
+  },
+} satisfies Story;
+
+export const WithReadOnlyAndChecked = {
+  name: 'With ReadOnly And Checked',
+  args: {
+    ...defaultArgs,
+    readOnly: true,
+    checked: true,
+    description: 'Dette er en checkbox i read only modus',
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const checkbox = canvas.getByRole('checkbox');
+    await expect(checkbox).toHaveAttribute('data-read-only', 'true');
+    expect(checkbox).toHaveAccessibleName(/,\s*skrivebeskyttet/);
   },
 } satisfies Story;

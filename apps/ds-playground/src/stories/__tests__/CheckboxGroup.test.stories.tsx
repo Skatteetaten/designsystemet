@@ -152,9 +152,13 @@ export const Defaults = {
     const legendNode = canvas.getAllByText(defaultLegendText)[0];
     await expect(legendNode).toBeInTheDocument();
     await expect(legendNode.tagName).toBe('LEGEND');
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=checkboxGroupErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
     const inputNodes = canvas.getAllByRole('checkbox');
     for (const input of inputNodes) {
-      await expect(input).toHaveAttribute('aria-invalid', 'false');
+      await expect(input).not.toHaveAttribute('aria-invalid');
       await expect(input).not.toBeRequired();
     }
   },
@@ -268,9 +272,10 @@ export const WithError = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[17];
-    await expect(errorMessageContainer).toBeInTheDocument();
-    await expect(errorMessageContainer).toHaveAttribute('id');
+    const errorMessage = canvasElement.querySelector(
+      '[id^=checkboxGroupErrorId]>div'
+    );
+    await expect(errorMessage).toBeInTheDocument();
     const inputNodes = canvas.getAllByRole('checkbox', {
       description: defaultErrorMessage,
     });
@@ -364,5 +369,25 @@ export const WithCustomClassNames = {
         selector: "[aria-hidden='true']",
       })
     ).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
+export const WithReadOnly = {
+  name: 'With ReadOnly',
+  args: {
+    ...defaultArgs,
+    children: childrenWithOneChecked,
+    readOnly: true,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const checkboxes = canvas.getAllByRole('checkbox');
+    for (const checkbox of checkboxes) {
+      await expect(checkbox).toHaveAttribute('data-read-only', 'true');
+      expect(checkbox).toHaveAccessibleName(/skrivebeskyttet$/);
+    }
   },
 } satisfies Story;

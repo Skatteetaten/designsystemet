@@ -4,6 +4,8 @@ export class NumberParser {
   _numeral: RegExp;
   _minusSign: RegExp;
   _index: (d: string) => string;
+  _thousandSeparator: string;
+  _decimalSeparator: string;
 
   constructor(locale: string) {
     const parts = new Intl.NumberFormat(locale).formatToParts(-12345.6);
@@ -13,13 +15,14 @@ export class NumberParser {
       ),
     ].reverse();
     const index = new Map(numerals.map((d, i) => [d, i]));
-    this._group = new RegExp(
-      `[${parts.find((d) => d.type === 'group')?.value}]`,
-      'g'
-    );
-    this._decimal = new RegExp(
-      `[${parts.find((d) => d.type === 'decimal')?.value}]`
-    );
+
+    this._thousandSeparator =
+      parts.find((d) => d.type === 'group')?.value ?? '';
+    this._decimalSeparator =
+      parts.find((d) => d.type === 'decimal')?.value ?? '';
+
+    this._group = new RegExp(`[${this._thousandSeparator}]`, 'g');
+    this._decimal = new RegExp(`[${this._decimalSeparator}]`);
     this._numeral = new RegExp(`[${numerals.join('')}]`, 'g');
     this._minusSign = new RegExp(
       `[${parts.find((d) => d.type === 'minusSign')?.value}]`,
@@ -27,6 +30,15 @@ export class NumberParser {
     );
     this._index = (d): string => index.get(d)?.toString() ?? d;
   }
+
+  getThousandSeparator(): string {
+    return this._thousandSeparator;
+  }
+
+  getDecimalSeparator(): string {
+    return this._decimalSeparator;
+  }
+
   parse(input: string): number {
     const result = input
       .trim()

@@ -18,6 +18,8 @@ export * from './ErrorMessage/ErrorMessage.types';
 export * from './ErrorSummary/ErrorSummary';
 export * from './ErrorSummary/ErrorSummary.types';
 export * from './ErrorSummary/defaults';
+export * from './ErrorSummary/ErrorSummaryGroup/ErrorSummaryGroup.types';
+export * from './ErrorSummary/ErrorSummaryGroup/defaults';
 export * from './Fieldset/Fieldset';
 export * from './Fieldset/Fieldset.types';
 export * from './FileUploader/FileUploader';

@@ -19,6 +19,7 @@ const meta = {
     children: { control: false, table: { category: category.props } },
     // Aria
     ariaLabel: { table: { category: category.aria } },
+    ariaLabelledBy: { table: { category: category.aria } },
   },
   args: {
     children: [
@@ -61,10 +62,10 @@ export const Examples: Story = {
     return (
       <div className={'flex flexColumn gapXl'}>
         <div>
-          <Heading level={5} as={'h2'}>
+          <Heading level={5} as={'h2'} id={'kontorsted-heading'}>
             {'Kontorsted'}
           </Heading>
-          <Chips>
+          <Chips ariaLabelledBy={'kontorsted-heading'}>
             {lokasjoner.map((lokasjon) => (
               <Chips.Toggle
                 key={lokasjon}
@@ -85,10 +86,10 @@ export const Examples: Story = {
         </div>
 
         <div>
-          <Heading level={5} as={'h2'}>
+          <Heading level={5} as={'h2'} id={'kontakt-dager-heading'}>
             {'Jeg kan kontaktes på'}
           </Heading>
-          <Chips>
+          <Chips ariaLabelledBy={'kontakt-dager-heading'}>
             {dager.map((dag) => (
               <Chips.Toggle
                 key={dag}
@@ -107,10 +108,10 @@ export const Examples: Story = {
           </Chips>
         </div>
         <div>
-          <Heading level={5} as={'h2'}>
+          <Heading level={5} as={'h2'} id={'saker-fra-heading'}>
             {'Viser saker fra'}
           </Heading>
-          <Chips>
+          <Chips ariaLabelledBy={'saker-fra-heading'}>
             {filter.map((c) => (
               <Chips.Removable
                 key={c}

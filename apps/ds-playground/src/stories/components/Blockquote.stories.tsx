@@ -51,3 +51,19 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const ExampleWithInlineStyling: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Blockquote>
+        {'«God design handler om '}
+        <strong>{'klarhet'}</strong>
+        {', men også om '}
+        <em>{'forståelse'}</em>
+        {' og intensjon.»'}
+      </Blockquote>
+    );
+  },
+} satisfies Story;
+ExampleWithInlineStyling.storyName = 'Blockquote med utheving';
+ExampleWithInlineStyling.parameters = exampleParameters;

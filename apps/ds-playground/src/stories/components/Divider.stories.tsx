@@ -69,9 +69,7 @@ export const Examples: Story = {
         </Paragraph>
         <Card className={'dividerCard'}>
           <Card.Header>
-            <Heading as={'h3'} level={3}>
-              {'Utregning'}
-            </Heading>
+            <Heading as={'h3'}>{'Utregning'}</Heading>
           </Card.Header>
           <Card.Content classNames={{ children: 'flexGrow' }}>
             <DescriptionList
@@ -127,7 +125,7 @@ export const ThemeExample: Story = {
         <Divider spacingTop={'xs'} spacingBottom={'l'} ariaHidden />
         <Card className={'cardWidth'}>
           <Card.Header>
-            <Heading ref={headingRef} as={'h3'} level={3} canBeManuallyFocused>
+            <Heading ref={headingRef} as={'h3'} canBeManuallyFocused>
               {'Andre inntekter'}
             </Heading>
           </Card.Header>

@@ -80,7 +80,7 @@ export const DatePickerCalendar = ({
 
   const [firstValidYear, lastValidYear] = [1, 9999];
   const [january, december] = [0, 11];
-  const { monthNames, dayNames } = getNameOfMonthsAndDays();
+  const { monthNames, dayNames, longDayNames } = getNameOfMonthsAndDays();
 
   const isFirstFocusableDateInView =
     firstFocusableDate.getFullYear() === selectedYear &&
@@ -355,10 +355,11 @@ export const DatePickerCalendar = ({
         >{`${monthNames[selectedMonthIndex]} ${selectedYear}`}</caption>
         <thead>
           <tr>
-            {dayNames.map((day: string): JSX.Element => {
+            {dayNames.map((day: string, index: number): JSX.Element => {
               return (
                 <th key={day} className={styles.calendarTableHeaderCell}>
-                  {day}
+                  <span aria-hidden={'true'}>{day}</span>
+                  <span className={styles.srOnly}>{longDayNames[index]}</span>
                 </th>
               );
             })}

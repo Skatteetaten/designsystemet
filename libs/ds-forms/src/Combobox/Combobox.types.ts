@@ -10,6 +10,11 @@ export type ComboboxSize = Extract<Size, 'medium' | 'large'>;
 export type ComboboxOption = {
   label: string;
   value: string;
+  /**
+   * Gruppe som alternativet tilhører. Alternativer med samme group vises sammen
+   * under en felles overskrift.
+   */
+  group?: string;
 };
 
 export type TypedComboboxOption<TData> = ComboboxOption & {

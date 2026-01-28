@@ -41,7 +41,7 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Flere oppgir kryptoverdier i skattemeldingen'}
         </Heading>
         <Paragraph variant={'ingress'} hasSpacing>
@@ -58,6 +58,8 @@ export const Examples: Story = {
             href={
               'https://www.skatteetaten.no/presse/nyhetsrommet/flere-oppgir-kryptoverdier-i-skattemeldingen/'
             }
+            target={'_blank'}
+            rel={'noreferrer'}
           >
             {'tidligere år'}
           </a>
@@ -70,3 +72,39 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const ExampleWithLink: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Paragraph>
+        {'Dette er et eksempel på et avsnitt med en '}
+        <a
+          href={'https://www.skatteetaten.no/stilogtone/'}
+          target={'_blank'}
+          rel={'noreferrer'}
+        >
+          {'lenke til stil og tone'}
+        </a>
+        {' og som får  designsystemets typografi.'}
+      </Paragraph>
+    );
+  },
+} satisfies Story;
+ExampleWithLink.storyName = 'Paragraf med lenke';
+ExampleWithLink.parameters = exampleParameters;
+
+export const ExampleWithInlineStyling: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Paragraph>
+        {'Noen ganger ønsker vi å fremheve tekst med '}
+        <strong>{'tydelig utheving'}</strong>
+        {', mens andre ganger holder det med '}
+        <em>{'lett betoning'}</em>
+        {'. Begge deler støttes automatisk i Paragraph.'}
+      </Paragraph>
+    );
+  },
+} satisfies Story;
+ExampleWithInlineStyling.storyName = 'Paragraf med utheving';
+ExampleWithInlineStyling.parameters = exampleParameters;

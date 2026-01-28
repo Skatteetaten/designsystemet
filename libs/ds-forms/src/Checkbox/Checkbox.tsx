@@ -1,6 +1,8 @@
 import { useContext, useId, JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import {
+  dsI18n,
   getCommonClassNameDefault,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
@@ -8,9 +10,16 @@ import {
 import { CheckboxProps } from './Checkbox.types';
 import { CheckboxContext } from '../CheckboxGroup/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { getAriaInvalid } from '../utils';
 
 import styles from './Checkbox.module.scss';
 
+/**
+ * Checkbox
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-checkbox--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkbox/) - Brukerveiledning
+ */
 export const Checkbox = ({
   ref,
   id: idExternal,
@@ -25,6 +34,7 @@ export const Checkbox = ({
   disabled,
   form,
   name,
+  readOnly,
   required,
   value,
   ariaDescribedby,
@@ -36,6 +46,7 @@ export const Checkbox = ({
   onFocus,
   children,
 }: CheckboxProps): JSX.Element => {
+  const { t } = useTranslation('Shared', { i18n: dsI18n });
   useValidateFormRequiredProps({ required, showRequiredMark });
   const context = useContext(CheckboxContext);
   const errorIdExternal = context?.errorId;
@@ -47,16 +58,6 @@ export const Checkbox = ({
   const descriptionId = `descId-${useId()}`;
   const hasErrorInternal = errorIdExternal && !checked ? true : !!errorMessage;
 
-  const spacingBottomClassName = context ? styles.containerSpacingBottom : '';
-  const checkboxErrorClassName = hasErrorInternal
-    ? styles.labelCheckbox_error
-    : '';
-  const labelErrorClassName =
-    hasErrorInternal && !context && required ? styles.label_error : '';
-  const labelRequiredClassName =
-    !context && showRequiredMark ? styles.labelContent_required : '';
-  const hideLabelClassName = hideLabel ? styles.srOnly : '';
-
   const ariaDescribedbyInput = [
     description && descriptionId,
     ariaDescribedby,
@@ -66,54 +67,84 @@ export const Checkbox = ({
     .join(' ')
     .trim();
 
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ): void => {
+    if (
+      (context?.readOnly || readOnly) &&
+      (event.key === ' ' ||
+        event.key === 'Enter' ||
+        event.key === 'ArrowUp' ||
+        event.key === 'ArrowDown' ||
+        event.key === 'ArrowLeft' ||
+        event.key === 'ArrowRight')
+    ) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <div
-      className={`${styles.container} ${spacingBottomClassName} ${className}`.trim()}
+      className={`${styles.container} ${className}`.trim()}
       lang={lang}
       data-has-spacing={hasSpacing}
     >
-      <input
-        ref={ref}
-        id={inputIdInternal}
-        className={styles.input}
-        data-testid={dataTestId}
-        checked={checked}
-        defaultChecked={defaultChecked}
-        disabled={disabled}
-        form={form}
-        name={name}
-        required={required}
-        type={'checkbox'}
-        value={value}
-        aria-describedby={ariaDescribedbyInput || undefined}
-        aria-invalid={hasErrorInternal}
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-      />
-      <label
-        htmlFor={inputIdInternal}
-        className={`${styles.label} ${labelErrorClassName} ${
-          classNames?.label ?? ''
-        }`.trim()}
-      >
-        <span
-          className={`${styles.labelCheckbox} ${checkboxErrorClassName}`.trim()}
+      <div className={styles.checkbox}>
+        <input
+          ref={ref}
+          id={inputIdInternal}
+          className={styles.checkboxInput}
+          data-testid={dataTestId}
+          checked={checked}
+          defaultChecked={defaultChecked}
+          disabled={disabled}
+          form={form}
+          name={name}
+          required={required}
+          type={'checkbox'}
+          value={value}
+          data-read-only={readOnly || context?.readOnly || undefined}
+          aria-describedby={ariaDescribedbyInput || undefined}
+          aria-invalid={getAriaInvalid(
+            errorMessage || errorIdExternal,
+            required
+          )}
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+          onKeyDown={handleKeyDown}
+        />
+        <label
+          htmlFor={inputIdInternal}
+          className={`${styles.checkboxLabel} ${hideLabel ? styles.srOnly : ''} ${
+            classNames?.label ?? ''
+          }`.trim()}
         >
-          <span className={styles.labelCheckboxCheck}></span>
-        </span>
-        <span className={`${styles.labelContent} ${hideLabelClassName}`.trim()}>
-          <span className={labelRequiredClassName}>
+          <span
+            className={
+              !context && showRequiredMark ? styles.checkboxLabel_required : ''
+            }
+          >
             {children}
-            {description && <>&nbsp;</>}
+            {(readOnly || context?.readOnly) && (
+              <span
+                className={styles.srOnly}
+              >{`, ${t('shared.ReadOnly')}`}</span>
+            )}
           </span>
           {description && (
-            <span id={descriptionId} className={styles.labelContentDescription}>
-              {description}
-            </span>
+            <>
+              &nbsp;
+              <span
+                id={descriptionId}
+                className={styles.checkboxLabelDescription}
+              >
+                {description}
+              </span>
+            </>
           )}
-        </span>
-      </label>
+        </label>
+      </div>
       {!context && (
         <ErrorMessage
           id={errorIdInternal}

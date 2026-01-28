@@ -12,6 +12,12 @@ import { getCardColorDefault, getCardSpacingDefault } from './defaults';
 
 import styles from './Card.module.scss';
 
+/**
+ * Card
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-card--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/card/) - Brukerveiledning
+ */
 export const Card = (({
   ref,
   id,

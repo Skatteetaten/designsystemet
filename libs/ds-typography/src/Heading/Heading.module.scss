@@ -5,60 +5,64 @@
   margin: 0;
   font-weight: var(--font-weight-bold);
 
-  &_level1 {
+  &:where([data-level='1']) {
     font-size: var(--font-size-xxl);
     line-height: var(--semantic-line-height-heading1);
 
     @media (min-width: breakpoints.$breakpoint-s) {
       font-size: var(--font-size-mega);
     }
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-m);
+    }
   }
 
-  &_level2 {
+  &:where([data-level='2']) {
     font-size: var(--font-size-xl);
     line-height: var(--semantic-line-height-heading2);
 
     @media (min-width: breakpoints.$breakpoint-s) {
       font-size: var(--font-size-xxl);
     }
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-s);
+
+      @media (min-width: breakpoints.$breakpoint-s) {
+        margin-bottom: var(--spacing-m);
+      }
+    }
   }
 
-  &_level3 {
+  &:where([data-level='3']) {
     font-size: var(--font-size-l);
     line-height: var(--semantic-line-height-heading3);
 
     @media (min-width: breakpoints.$breakpoint-s) {
       font-size: var(--font-size-xl);
     }
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-s);
+    }
   }
 
-  &_level4 {
+  &:where([data-level='4']) {
     font-size: var(--font-size-l);
     line-height: var(--semantic-line-height-heading4);
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-s);
+    }
   }
 
-  &_level5 {
+  &:where([data-level='5']) {
     font-size: var(--font-size-m);
     line-height: var(--semantic-line-height-article);
-  }
 
-  &_hasSpacingExtraSmall {
-    margin-bottom: var(--spacing-xs);
-  }
-
-  &_hasSpacingSmall {
-    margin-bottom: var(--spacing-s);
-  }
-
-  &_hasSpacingMedium {
-    margin-bottom: var(--spacing-m);
-  }
-
-  &_hasSpacingSmallMobileMediumOtherwise {
-    margin-bottom: var(--spacing-s);
-
-    @media (min-width: breakpoints.$breakpoint-s) {
-      margin-bottom: var(--spacing-m);
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-xs);
     }
   }
 

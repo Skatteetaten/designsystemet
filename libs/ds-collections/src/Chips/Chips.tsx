@@ -10,6 +10,12 @@ import { ChipsToggle } from './ChipsToggle/ChipsToggle';
 
 import styles from './Chips.module.scss';
 
+/**
+ * Chips
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-chips--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/chips/) - Brukerveiledning
+ */
 export const Chips = (({
   ref,
   id,
@@ -17,6 +23,7 @@ export const Chips = (({
   lang,
   'data-testid': dataTestId,
   ariaLabel,
+  ariaLabelledBy,
   children,
 }: ChipsProps): JSX.Element => {
   const { t } = useTranslation('ds_collections', { i18n: dsI18n });
@@ -75,6 +82,7 @@ export const Chips = (({
         lang={lang}
         data-testid={dataTestId}
         aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledBy}
       >
         {childrenAsArray.map((child, index) => {
           return <li key={index}>{child}</li>;

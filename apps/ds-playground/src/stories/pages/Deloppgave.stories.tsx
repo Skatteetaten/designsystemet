@@ -46,7 +46,7 @@ export const Deloppgave = (): JSX.Element => {
         <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
       </div>
       <div className={styles.article}>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Bekreft opplysninger om virksomheten.'}
         </Heading>
         <Paragraph className={styles.marginBottomXl} hasSpacing>

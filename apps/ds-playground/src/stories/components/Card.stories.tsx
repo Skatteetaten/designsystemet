@@ -83,9 +83,7 @@ export const Examples: Story = {
               <Tag svgPath={InfoOutlineSVGpath}>{'Endret av deg'}</Tag>
             }
           >
-            <Heading as={'h3'} level={3}>
-              {'Andre inntekter'}
-            </Heading>
+            <Heading as={'h3'}>{'Andre inntekter'}</Heading>
           </Card.Header>
           <Card.Content>
             <DescriptionList>
@@ -114,9 +112,7 @@ export const Examples: Story = {
             }
           >
             <ArbeidTrygdPensjonIcon size={'extraLarge'} />
-            <Heading as={'h3'} level={3}>
-              {'Andre inntekter'}
-            </Heading>
+            <Heading as={'h3'}>{'Andre inntekter'}</Heading>
           </Card.Header>
           <Card.Content>
             <DescriptionList>
@@ -144,7 +140,7 @@ export const Examples: Story = {
               </Tag>
             }
           >
-            <Heading as={'h3'} level={3} hasSpacing>
+            <Heading as={'h3'} hasSpacing>
               {'Andre inntekter'}
             </Heading>
           </Card.Header>
@@ -233,7 +229,6 @@ export const AlertExample: Story = {
               ref={headingRef}
               id={'card-heading-1'}
               as={'h3'}
-              level={3}
               canBeManuallyFocused
             >
               {'Andre inntekter'}
@@ -270,7 +265,6 @@ export const AlertExample: Story = {
               ref={headingRef}
               id={'card-heading-2'}
               as={'h3'}
-              level={3}
               canBeManuallyFocused
             >
               {'Andre inntekter'}
@@ -307,7 +301,6 @@ export const AlertExample: Story = {
               ref={headingRef}
               id={'card-heading-3'}
               as={'h3'}
-              level={3}
               canBeManuallyFocused
             >
               {'Andre inntekter'}

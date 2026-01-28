@@ -424,6 +424,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toBeRequired();
+    await expect(inputElement).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 

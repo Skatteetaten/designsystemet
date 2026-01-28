@@ -32,7 +32,10 @@ const meta = {
     },
     variant: { table: { category: category.props } },
     // Aria
-    ariaLive: { table: { category: category.aria } },
+    ariaLive: {
+      table: { category: category.aria },
+      defaultValue: { summary: 'polite' },
+    },
     // Events
     onClose: { table: { category: category.event } },
   },

@@ -7,6 +7,12 @@ import { ParagraphProps } from './Paragraph.types';
 
 import styles from './Paragraph.module.scss';
 
+/**
+ * Paragraph
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-paragraph--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography/#paragraph) - Brukerveiledning
+ */
 export const Paragraph = ({
   ref,
   id,
@@ -18,24 +24,15 @@ export const Paragraph = ({
   hasSpacing,
   children,
 }: ParagraphProps): JSX.Element => {
-  let spacingClassName = '';
-  if (hasSpacing) {
-    if (variant === 'standard') {
-      spacingClassName = styles.paragraph_hasSpacingLarge;
-    } else if (variant === 'ingress') {
-      spacingClassName = styles.paragraph_hasSpacingExtraLarge;
-    }
-  }
-  const concatenatedClassName = `${styles.paragraph} ${
-    styles[`paragraph_${variant}`]
-  } ${spacingClassName} ${className}`.trim();
   return (
     <p
       ref={ref}
       id={id}
-      className={concatenatedClassName}
+      className={`${styles.paragraph} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-ingress={variant === 'ingress' ? 'true' : undefined}
+      data-has-spacing={hasSpacing ? 'true' : undefined}
       tabIndex={canBeManuallyFocused ? -1 : undefined}
     >
       {children}

@@ -1,123 +1,119 @@
+@use 'libs/ds-core-utils/src/mixins/styles' as style;
+
 $radio-transform-x: 2px;
 
 .radio {
   display: flex;
   width: fit-content;
 
-  &Input {
-    --radio-box-shadow-color: var(--semantic-page-foreground);
-    --radio-border-color: var(--semantic-page-background);
-    --radio-background-color: var(--semantic-page-background);
+  --radio-outline-color: var(--semantic-page-foreground);
+  --radio-border-color: var(--semantic-page-background);
+  --radio-background-color: var(--semantic-page-background);
+  --label-color: var(--semantic-page-foreground);
+  --description-color: var(--palette-graphite-70);
+  --border-width: 2px;
+  --outline-width: 2px;
+  --outline-offset: 0;
+  --cursor: pointer;
 
+  &:has(&Input:disabled) {
+    --radio-outline-color: var(--semantic-disabled-foreground);
+    --radio-background-color: var(--semantic-disabled-background);
+    --radio-border-color: var(--semantic-disabled-background);
+    --label-color: var(--semantic-disabled-foreground);
+    --description-color: var(--semantic-disabled-foreground);
+    --cursor: not-allowed;
+  }
+
+  &:has(&Input:checked:disabled) {
+    --radio-background-color: var(--semantic-disabled-foreground);
+  }
+
+  &:has(&Input:checked:not(:disabled)) {
+    --radio-background-color: var(--semantic-page-foreground);
+  }
+
+  &:has(&Input[aria-invalid='true']:not(:disabled)) {
+    --radio-outline-color: var(--semantic-danger-foreground);
+  }
+
+  &:has(&Input:hover:not(:disabled)) {
+    --radio-outline-color: var(--semantic-interactive-main);
+    --radio-background-color: var(--semantic-interactive-background);
+    --radio-border-color: var(--semantic-interactive-background);
+    --label-color: var(--semantic-interactive-main);
+    --description-color: var(--semantic-interactive-main);
+  }
+
+  &:has(&Input:active:not(:disabled)) {
+    --radio-outline-color: var(--semantic-interactive-foreground);
+    --radio-background-color: var(--semantic-interactive-foreground);
+    --label-color: var(--semantic-interactive-foreground);
+    --description-color: var(--semantic-interactive-foreground);
+  }
+
+  &:has(&Input[data-read-only='true']:not(:disabled)) {
+    --radio-outline-color: var(--semantic-disabled-foreground);
+    --radio-border-color: var(--semantic-disabled-foreground);
+    --radio-background-color: var(--semantic-disabled-foreground);
+    --label-color: var(--semantic-page-foreground);
+    --description-color: var(--palette-graphite-70);
+    --outline-width: 3px;
+    --outline-offset: -1px;
+    --cursor: default;
+
+    pointer-events: none;
+  }
+
+  &:has(&Input[aria-invalid='true']:checked:not(:disabled)) {
+    --radio-background-color: var(--semantic-danger-foreground);
+  }
+
+  &:has(&Input:checked:hover:not(:disabled)) {
+    --radio-background-color: var(--semantic-interactive-main);
+    --radio-border-color: var(--semantic-page-background);
+  }
+
+  &:has(&Input:checked:active:not(:disabled)) {
+    --radio-background-color: var(--semantic-interactive-foreground);
+  }
+
+  &:has(&Input[data-read-only='true']:checked:not(:disabled)) {
+    --radio-border-color: var(--semantic-disabled-foreground);
+    --radio-background-color: var(--semantic-page-background);
+    --border-width: 5px;
+  }
+
+  &Input {
     position: relative;
     width: var(--size-small);
     height: var(--size-small);
     flex-shrink: 0;
-    border: 2px solid var(--radio-border-color);
+    border: var(--border-width) solid var(--radio-border-color);
     border-radius: 50%;
     appearance: none;
     background-color: var(--radio-background-color);
-    box-shadow: 0 0 0 2px var(--radio-box-shadow-color);
-    cursor: pointer;
+    cursor: var(--cursor);
+    outline: var(--outline-width) solid var(--radio-outline-color);
+    outline-offset: var(--outline-offset);
     transform: translate($radio-transform-x, 8px);
 
-    &:hover {
-      --radio-box-shadow-color: var(--semantic-interactive-main);
-      --radio-background-color: var(--semantic-interactive-background);
-      --radio-border-color: var(--semantic-interactive-background);
-    }
-
-    &:focus-visible {
-      outline: none;
-
-      &::before {
-        position: absolute;
-        border: 2px solid var(--semantic-interactive-main);
-        border-radius: 50%;
-        content: '';
-        inset: -8px;
-      }
-    }
-
-    &:active {
-      --radio-box-shadow-color: var(--semantic-interactive-foreground);
-      --radio-background-color: var(--semantic-interactive-foreground);
-      --radio-border-color: var(--semantic-page-background);
-
-      &::before {
-        border: none;
-      }
-    }
-
-    &:disabled {
-      --radio-box-shadow-color: var(--semantic-disabled-foreground);
-      --radio-background-color: var(--semantic-disabled-background);
-      --radio-border-color: var(--semantic-disabled-background);
-
-      cursor: not-allowed;
-
-      &::before {
-        border: none;
-      }
-    }
-
-    &:checked {
-      --radio-background-color: var(--semantic-page-foreground);
-
-      &:hover {
-        --radio-box-shadow-color: var(--semantic-interactive-main);
-        --radio-background-color: var(--semantic-interactive-main);
-      }
-
-      &:active {
-        --radio-box-shadow-color: var(--semantic-interactive-foreground);
-        --radio-background-color: var(--semantic-interactive-foreground);
-      }
-
-      &:disabled {
-        --radio-box-shadow-color: var(--semantic-disabled-foreground);
-        --radio-background-color: var(--semantic-disabled-foreground);
-      }
-    }
-
-    &[aria-invalid='true'] {
-      --radio-box-shadow-color: var(--semantic-danger-foreground);
-
-      &:checked {
-        --radio-background-color: var(--semantic-danger-foreground);
-      }
-
-      &:hover {
-        --radio-box-shadow-color: var(--semantic-interactive-main);
-        --radio-background-color: var(--semantic-interactive-main);
-      }
-
-      &:active {
-        --radio-box-shadow-color: var(--semantic-interactive-foreground);
-        --radio-background-color: var(--semantic-interactive-foreground);
-      }
-
-      &:disabled {
-        --radio-box-shadow-color: var(--semantic-disabled-foreground);
-        --radio-background-color: var(--semantic-disabled-background);
-      }
-
-      &:disabled:checked {
-        --radio-background-color: var(--semantic-disabled-foreground);
-      }
+    &:focus:not(:disabled)::before {
+      position: absolute;
+      border: 2px solid var(--semantic-interactive-main);
+      border-radius: 50%;
+      content: '';
+      inset: calc(-1 * 6px - var(--border-width));
     }
   }
 
   &Label {
-    --label-color: var(--semantic-page-foreground);
-    --description-color: var(--palette-graphite-70);
-
     display: flex;
     flex-direction: column;
     padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs)
       calc($radio-transform-x + 2px + var(--spacing-s));
     color: var(--label-color);
-    cursor: pointer;
+    cursor: var(--cursor);
     font-size: var(--font-size-m);
     line-height: var(--semantic-line-height-input);
     overflow-wrap: anywhere;
@@ -128,21 +124,8 @@ $radio-transform-x: 2px;
       color: var(--description-color);
     }
   }
+}
 
-  &Input:hover + &Label {
-    --label-color: var(--semantic-interactive-main);
-    --description-color: var(--semantic-interactive-main);
-  }
-
-  &Input:active + &Label {
-    --label-color: var(--semantic-interactive-foreground);
-    --description-color: var(--semantic-interactive-foreground);
-  }
-
-  &Input:disabled + &Label {
-    --label-color: var(--semantic-disabled-foreground);
-    --description-color: var(--semantic-disabled-foreground);
-
-    cursor: not-allowed;
-  }
+.srOnly {
+  @include style.sr-only;
 }

@@ -100,25 +100,19 @@ export const Examples: Story = {
           </Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel value={'tab1'}>
-          <Heading as={'h3'} level={3}>
-            {'Mine oppgaver'}
-          </Heading>
+          <Heading as={'h3'}>{'Mine oppgaver'}</Heading>
           {
             'Lorem ipsum dolor sit amet, skattemyndighetene consectetuer adipiscing elit. Donec odio magna, sagittis eget rutrum quis, egestas vel nibh. Nullam eleifend ultricies eros, at accumsan nisl tincidunt sed. Vivamus vestibulum semper laoreet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Phasellus vel sapien eu magna laoreet rutrum. Curabitur eleifend tincidunt laoreet. Proin quam nibh, placerat vel blandit eu, placerat in tellus. Aenean lorem sem, malesuada in libero ut, mollis pretium turpis. Donec vitae sapien eu libero rutrum rutrum. Nam quis lacus neque. Pellentesque ultrices mattis odio. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas fermentum tortor at risus.'
           }
         </Tabs.Panel>
         <Tabs.Panel value={'tab2'}>
-          <Heading as={'h3'} level={3}>
-            {'Tildelt andre'}
-          </Heading>
+          <Heading as={'h3'}>{'Tildelt andre'}</Heading>
           {
             'Lorem ipsum dolor sit amet, skattemyndighetene consectetuer adipiscing elit. Donec odio magna, sagittis eget rutrum quis, egestas vel nibh. Nullam eleifend ultricies eros, at accumsan nisl tincidunt sed. Vivamus vestibulum semper laoreet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Phasellus vel sapien eu magna laoreet rutrum. Curabitur eleifend tincidunt laoreet. Proin quam nibh, placerat vel blandit eu, placerat in tellus. Aenean lorem sem, malesuada in libero ut, mollis pretium turpis. Donec vitae sapien eu libero rutrum rutrum. Nam quis lacus neque. Pellentesque ultrices mattis odio. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas fermentum tortor at risus.'
           }
         </Tabs.Panel>
         <Tabs.Panel value={'tab3'}>
-          <Heading as={'h3'} level={3}>
-            {'Ubehandlede'}
-          </Heading>
+          <Heading as={'h3'}>{'Ubehandlede'}</Heading>
           <ul>
             <li>{'oppgave 1'}</li>
             <li>{'oppgave2'}</li>

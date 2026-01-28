@@ -70,7 +70,7 @@ export const Example: Story = {
     return (
       <>
         <div className={'flex gapS'}>
-          <Heading id={h2Id} as={'h2'} level={2}>
+          <Heading id={h2Id} as={'h2'}>
             {'Disse tingene må du huske på før du henter skattekortet'}
           </Heading>
           <Popover color={'ochre'} position={'bottomEnd'}>
@@ -94,7 +94,7 @@ export const Example: Story = {
         </Paragraph>
 
         <div className={'flex gapS'}>
-          <Heading id={h3Id} as={'h3'} level={3}>
+          <Heading id={h3Id} as={'h3'}>
             {'Disse tingene må du huske på før du henter skattekortet'}
           </Heading>
           <Popover color={'ochre'} position={'bottomEnd'}>
@@ -176,7 +176,7 @@ export const Example: Story = {
         </Table>
 
         <div className={'flex gapS'}>
-          <Heading id={controlledId} as={'h2'} level={2}>
+          <Heading id={controlledId} as={'h2'}>
             {'Controlled Popover'}
           </Heading>
           <Popover

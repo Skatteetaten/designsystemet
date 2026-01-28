@@ -3,6 +3,7 @@ import { ReactNode, Ref } from 'react';
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
 import { ErrorSummaryError } from './ErrorSummaryError/ErrorSummaryError';
+import { ErrorSummaryGroup } from './ErrorSummaryGroup/ErrorSummaryGroup';
 
 export interface ErrorSummaryProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
@@ -27,6 +28,7 @@ export interface ErrorSummaryProps extends BaseProps {
 
 export interface ErrorSummaryComponent extends React.FC<ErrorSummaryProps> {
   Error: typeof ErrorSummaryError;
+  Group: typeof ErrorSummaryGroup;
 }
 
 export interface ErrorSummaryContextProps {

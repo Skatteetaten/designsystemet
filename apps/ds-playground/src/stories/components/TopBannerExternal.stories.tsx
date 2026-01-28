@@ -400,12 +400,12 @@ export const ExampleWithRolePicker: Story = {
           }
           secondColumn={
             <>
-              <Heading as={'h2'} level={2} hasSpacing>
+              <Heading as={'h2'} hasSpacing>
                 {'Alle temaer'}
               </Heading>
               <div className={topBannerExternalExampleStyles.secondColumn}>
                 <div>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.PERSON_FORSIDE}>
                       {'For personer'}
                     </a>
@@ -426,7 +426,7 @@ export const ExampleWithRolePicker: Story = {
                       </LinkGroup.Link>
                     ))}
                   </LinkGroup>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
                       {'For bedrifter og organisasjoner'}
                     </a>
@@ -554,6 +554,22 @@ export const ExampleWithUserMenu: Story = {
       name: 'Ola Nordmann',
       personId: '10101012345',
       type: 'Person',
+    };
+
+    const others: Paginated<Person> = {
+      total: 2,
+      list: [
+        {
+          name: 'Kari Nordmann',
+          personId: '10107554321',
+          type: 'Person',
+        },
+        {
+          name: 'Ola Hansen',
+          personId: '10108167890',
+          type: 'Person',
+        },
+      ],
     };
 
     const businesses: Paginated<Business> = {
@@ -824,12 +840,12 @@ export const ExampleWithUserMenu: Story = {
           }
           secondColumn={
             <>
-              <Heading as={'h2'} level={2} hasSpacing>
+              <Heading as={'h2'} hasSpacing>
                 {'Alle temaer'}
               </Heading>
               <div className={topBannerExternalExampleStyles.secondColumn}>
                 <div>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.PERSON_FORSIDE}>
                       {'For personer'}
                     </a>
@@ -850,7 +866,7 @@ export const ExampleWithUserMenu: Story = {
                       </LinkGroup.Link>
                     ))}
                   </LinkGroup>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
                       {'For bedrifter og organisasjoner'}
                     </a>
@@ -942,6 +958,7 @@ export const ExampleWithUserMenu: Story = {
         <RolePicker
           ref={modalRef}
           me={me}
+          people={others}
           businesses={businesses}
           onEntitySelect={async (entity) => {
             let role: User['role'];

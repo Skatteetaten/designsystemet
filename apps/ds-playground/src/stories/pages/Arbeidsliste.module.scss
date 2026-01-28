@@ -1,0 +1,65 @@
+.searchField {
+  width: 18.5rem;
+}
+
+.commandBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--semantic-responsive-internal-container-spacing);
+  padding-top: var(--spacing-s);
+  padding-bottom: var(--spacing-s);
+  background-color: var(--palette-graphite-5);
+  gap: var(--spacing-xs);
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--spacing-m);
+}
+
+.main {
+  padding: var(--semantic-responsive-internal-container-spacing);
+}
+
+.openClose {
+  position: relative;
+  padding: var(--spacing-xs) var(--spacing-m) var(--spacing-s);
+  background-color: var(--palette-graphite-5);
+
+  div[class*='content'] {
+    margin: 0;
+  }
+}
+
+.clearFilterButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 13.5px 1rem 0 0;
+}
+
+.clearFilterButtonMobile {
+  margin-top: var(--spacing-m);
+}
+
+.filterGroup {
+  display: flex;
+  flex-wrap: wrap;
+  margin: var(--spacing-m) 0;
+  gap: var(--spacing-m);
+}
+
+.datePicker {
+  max-width: 12.25rem;
+}
+
+.select {
+  width: 15rem;
+}
+
+.noWrap {
+  white-space: nowrap;
+}

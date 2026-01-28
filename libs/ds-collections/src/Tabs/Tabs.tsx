@@ -9,6 +9,12 @@ import { TabsList } from './TabsList/TabsList';
 import { TabsPanel } from './TabsPanel/TabsPanel';
 import { TabsTab } from './TabsTab/TabsTab';
 
+/**
+ * Tabs
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-tabs--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tabs/) - Brukerveiledning
+ */
 export const Tabs = (({
   ref,
   id,

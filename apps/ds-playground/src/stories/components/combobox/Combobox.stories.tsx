@@ -13,6 +13,8 @@ import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 import {
   comboboxStoryOptions,
   generatePerformanceTestData,
+  groupedKommuneOptions,
+  mixedGroupedOptions,
 } from './combobox.stories.utils';
 import ComboboxFormExample from './ComboboxFormExample';
 import comboboxFormExampleSource from './ComboboxFormExample.tsx?raw';
@@ -233,6 +235,70 @@ export const Multiple: Story = {
         multiple
       />
     );
+  },
+};
+
+export const GroupedOptions: Story = {
+  name: 'Grupperte alternativer',
+  render: (_args): JSX.Element => {
+    return (
+      <Combobox
+        options={groupedKommuneOptions}
+        classNames={{ container: 'width400', options: 'maxHeight300' }}
+        label={'Velg kommune'}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Viser hvordan alternativer kan grupperes visuelt ved å bruke `group`-feltet på options. Alternativer med samme `group`-verdi vises sammen under en felles overskrift. Dette er nyttig for å organisere lange lister og gjøre det lettere for brukeren å finne riktig alternativ.',
+      },
+    },
+  },
+};
+
+export const GroupedOptionsMultiple: Story = {
+  name: 'Grupperte alternativer (flervalg)',
+  render: (_args): JSX.Element => {
+    return (
+      <Combobox
+        options={groupedKommuneOptions}
+        classNames={{ container: 'width400', options: 'maxHeight300' }}
+        label={'Velg kommuner'}
+        multiple
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Grupperte alternativer fungerer også med flervalg-modus. Grupper bevares når listen filtreres - tomme grupper skjules automatisk.',
+      },
+    },
+  },
+};
+
+export const MixedGroupedOptions: Story = {
+  name: 'Blandet grupperte og ugrupperte',
+  render: (_args): JSX.Element => {
+    return (
+      <Combobox
+        options={mixedGroupedOptions}
+        classNames={{ container: 'width400', options: 'maxHeight300' }}
+        label={'Velg kommune'}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Alternativer uten `group`-felt vises inline mellom gruppene. Rekkefølgen i arrayet bevares - gruppering skjer kun for påfølgende elementer med samme `group`-verdi.',
+      },
+    },
   },
 };
 

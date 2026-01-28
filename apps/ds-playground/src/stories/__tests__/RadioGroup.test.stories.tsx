@@ -37,6 +37,7 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     selectedValue: { table: { disable: true } },
@@ -177,7 +178,7 @@ export const Defaults = {
     await expect(legend.tagName).toBe('LEGEND');
     radios.forEach((input) => {
       expect(input).toHaveAttribute('name');
-      expect(input).toHaveAttribute('aria-invalid', 'false');
+      expect(input).not.toHaveAttribute('aria-invalid');
     });
   },
 } satisfies Story;
@@ -222,6 +223,9 @@ export const WithSelectedValue = {
   argTypes: {
     selectedValue: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
@@ -261,6 +265,9 @@ export const WithDisabled = {
   argTypes: {
     disabled: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const radios = canvas.getAllByRole('radio');
@@ -285,6 +292,7 @@ export const WithRequired = {
     const radios = canvas.getAllByRole('radio');
     radios.forEach((input) => {
       expect(input).toBeRequired();
+      expect(input).toHaveAttribute('aria-invalid', 'false');
     });
   },
 } satisfies Story;
@@ -382,6 +390,9 @@ export const WithErrorMessage = {
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -632,5 +643,30 @@ export const WithCustomClassNames = {
         selector: "[aria-hidden='true']",
       })
     ).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
+export const ReadOnly = {
+  name: 'Read Only',
+  args: {
+    ...defaultArgs,
+    readOnly: true,
+    selectedValue: selectedValue,
+    defaultValue: undefined,
+    description: 'Dette er en radiogruppe i read only modus',
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const radios = canvas.getAllByRole('radio');
+    for (const radio of radios) {
+      await expect(radio).toHaveAttribute('data-read-only', 'true');
+      expect(radio).toHaveAccessibleName(/skrivebeskyttet$/);
+    }
   },
 } satisfies Story;
