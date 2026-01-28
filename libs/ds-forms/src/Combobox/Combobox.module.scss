@@ -284,6 +284,7 @@
     padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xxs);
     color: var(--palette-graphite-70);
     font-weight: var(--font-weight-bold);
+    overflow-wrap: anywhere;
   }
 
   &List {
