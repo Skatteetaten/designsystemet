@@ -17,6 +17,7 @@
   }
 
   &:focus-visible {
+    z-index: 1;
     background-repeat: no-repeat;
     background-size:
       100% 2px,

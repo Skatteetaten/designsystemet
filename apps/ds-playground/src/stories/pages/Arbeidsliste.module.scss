@@ -4,17 +4,20 @@
 
 .commandBar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: var(--semantic-responsive-internal-container-spacing);
   padding-top: var(--spacing-s);
   padding-bottom: var(--spacing-s);
   background-color: var(--palette-graphite-5);
+  gap: var(--spacing-xs);
 }
 
 .buttonGroup {
   display: flex;
-  gap: var(--spacing-m);
+  flex-wrap: wrap;
+  gap: 0 var(--spacing-m);
 }
 
 .main {
