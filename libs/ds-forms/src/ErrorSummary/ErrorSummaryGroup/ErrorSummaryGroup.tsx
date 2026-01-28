@@ -6,7 +6,8 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 import { getErrorSummaryGroupTitleAsDefault } from './defaults';
 import { ErrorSummaryGroupProps } from './ErrorSummaryGroup.types';
-import styles from '../ErrorSummary.module.scss';
+
+import styles from './ErrorSummaryGroup.module.scss';
 
 export const ErrorSummaryGroup = ({
   ref,
