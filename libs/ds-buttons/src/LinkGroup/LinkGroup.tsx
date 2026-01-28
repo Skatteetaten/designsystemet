@@ -31,34 +31,32 @@ export const LinkGroup = (({
   variant = getLinkGroupVariantDefault(),
   children,
 }: LinkGroupProps): JSX.Element => {
-  const hasVariantList = variant !== 'anchors';
-  const iconPath = hasVariantList ? ArrowForwardSVGpath : ArrowDownSVGpath;
-  const iconVariantClassName = hasVariantList
-    ? `${styles.icon_forward}`
-    : `${styles.icon_down}`;
-  const concatenatedIconClassName = `${styles.icon} ${iconVariantClassName} ${
-    color ? styles[`icon_${color}`] : ''
-  }`.trim();
-
-  const spacingClassName = hasSpacing ? styles.linkGroup_hasSpacing : '';
-  const concatenatedClassName =
-    `${styles.linkGroup} ${spacingClassName} ${className}`.trim();
-
   const links = Children.toArray(children);
 
   return (
     <ul
       ref={ref}
       id={id}
-      className={concatenatedClassName}
+      className={`${styles.linkGroup} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-has-spacing={hasSpacing ? 'true' : undefined}
     >
       <LinkContext.Provider value={{ color }}>
         {links.map((child, index) => {
           return (
-            <li key={index} className={styles.linkGroupItem}>
-              <Icon className={concatenatedIconClassName} svgPath={iconPath} />
+            <li
+              key={index}
+              className={styles.linkGroupItem}
+              data-color={color}
+              data-variant={variant}
+            >
+              <Icon
+                className={styles.linkGroupItemIcon}
+                svgPath={
+                  variant === 'list' ? ArrowForwardSVGpath : ArrowDownSVGpath
+                }
+              />
               {child}
             </li>
           );

@@ -1,50 +1,45 @@
-// ikonet er plassert over listens bullets dvs flyttet -20px og så utvidet med ytterligere avstand tilsvarende i skissen mellom pil og link
-$spacing-arrow-link: calc(-1 * 1.25rem - var(--spacing-s));
-
 .linkGroup {
-  padding-left: calc(-1 * $spacing-arrow-link);
-  margin: 0;
+  // Offset for å justere ikonene til venstre kant (ikon-størrelse + høyre-padding)
+  --link-icon-offset: calc(-1 * var(--size-medium) - var(--spacing-s));
 
-  &_hasSpacing {
+  padding-left: calc(-1 * var(--link-icon-offset));
+  margin: 0;
+  list-style-type: none;
+
+  &[data-has-spacing='true'] {
     margin-bottom: var(--spacing-m);
   }
 
   &Item {
     position: relative;
-    display: block;
     width: fit-content;
     margin: 0 0 var(--spacing-s);
 
-    .icon {
+    --icon-color: var(--semantic-interactive-main);
+    --transform-icon: translateX(var(--link-icon-offset));
+
+    &[data-color='white'] {
+      --icon-color: var(--palette-graphite-0);
+    }
+
+    &[data-variant='list']:has(a:hover) {
+      --transform-icon: translateX(
+        calc(var(--link-icon-offset) + var(--spacing-xs))
+      );
+    }
+
+    &[data-variant='anchors']:has(a:hover) {
+      --transform-icon: translate(var(--link-icon-offset), var(--spacing-xs));
+    }
+
+    &Icon {
       position: absolute;
       height: calc(var(--font-size-m) * var(--semantic-line-height-article));
       padding-right: var(--spacing-s);
       background-color: inherit;
-      fill: var(--semantic-interactive-main);
-      transform: translateX($spacing-arrow-link);
-      transition: 0.2s;
-
-      &_white {
-        fill: var(--palette-graphite-0);
-      }
-
-      &_forward:has(+ a:hover) {
-        transform: translateX(calc($spacing-arrow-link + var(--spacing-xs)));
-      }
-
-      &_down:has(+ a:hover) {
-        transform: translate($spacing-arrow-link, var(--spacing-xs));
-      }
-    }
-
-    &:active {
-      .icon {
-        fill: var(--semantic-interactive-foreground);
-
-        &_white {
-          fill: var(--palette-graphite-0);
-        }
-      }
+      fill: var(--icon-color);
+      transform: var(--transform-icon);
+      transition: transform 0.2s;
     }
   }
 }
