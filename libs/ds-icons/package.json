@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-icons",
   "groupId": "no.skatteetaten.aurora",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "license": "Apache-2.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "type": "module",
@@ -16,7 +16,7 @@
     "i18next": "^24 || ^25",
     "react": "^19.2.0",
     "react-i18next": "^15",
-    "@skatteetaten/ds-core-utils": "2.5.2"
+    "@skatteetaten/ds-core-utils": "2.6.0"
   },
   "scripts": {},
   "dependencies": {},
