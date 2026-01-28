@@ -136,6 +136,26 @@ function countDecimalDigits(
   return minimumFractionDigits;
 }
 
+/**
+ * Teller antall siffer før desimalskilletegnet (heltallsdelen). Inkluderer
+ * ledende nuller for å bevare dem ved formatering.
+ *
+ * @param rawValue - Råverdien som kan inneholde ledende nuller
+ * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
+ * @returns Antall heltallssiffer inkludert ledende nuller (minimum 1)
+ */
+function countIntegerDigits(
+  rawValue: string,
+  decimalSeparator: string
+): number {
+  const valueWithoutMinus = rawValue.replace(/^-/, '');
+  const decimalIndex = valueWithoutMinus.indexOf(decimalSeparator);
+  if (decimalIndex === -1) {
+    return Math.max(valueWithoutMinus.length, 1);
+  }
+  return Math.max(decimalIndex, 1);
+}
+
 /** Konfigurasjonsalternativer for useFormattedInput-hooken. */
 interface UseFormattedInputOptions {
   /** Typen formattering som skal anvendes */
@@ -292,11 +312,19 @@ export const useFormattedInput = ({
   const hasDecimal = rawValue.includes(decimalSeparator);
 
   const onLocaleChange = useEffectEvent((locale: string) => {
+    const separatorForCounting = new NumberParser(
+      localeRef.current
+    ).getDecimalSeparator();
+    const hasDecimal = rawValue.includes(separatorForCounting);
     const maximumFractionDigits = allowDecimals ? MAX_FRACTION_DIGITS : 0;
     const minimumFractionDigits =
       allowDecimals && hasDecimal
-        ? countDecimalDigits(rawValue, decimalSeparator)
+        ? countDecimalDigits(rawValue, separatorForCounting)
         : 0;
+    const minimumIntegerDigits = countIntegerDigits(
+      rawValue,
+      separatorForCounting
+    );
     const newRawValue = formatter({
       value: new NumberParser(localeRef.current).parse(rawValue).toString(),
       type,
@@ -304,6 +332,7 @@ export const useFormattedInput = ({
       options: {
         maximumFractionDigits,
         minimumFractionDigits,
+        minimumIntegerDigits,
       },
     }).value;
     setRawValue(cleanInput(newRawValue, type, decimalSeparator, allowDecimals));
@@ -322,6 +351,7 @@ export const useFormattedInput = ({
     allowDecimals && hasDecimal
       ? countDecimalDigits(rawValue, decimalSeparator)
       : 0;
+  const minimumIntegerDigits = countIntegerDigits(rawValue, decimalSeparator);
   const formatted = formatter({
     value: rawValue,
     type,
@@ -329,6 +359,7 @@ export const useFormattedInput = ({
     options: {
       maximumFractionDigits,
       minimumFractionDigits,
+      minimumIntegerDigits,
     },
   });
   const displayValue =
@@ -609,6 +640,10 @@ export const useFormattedInput = ({
       const minimumFractionDigits = allowDecimals
         ? countDecimalDigits(cleanedInput, decimalSeparator)
         : 0;
+      const minimumIntegerDigits = countIntegerDigits(
+        cleanedInput,
+        decimalSeparator
+      );
       const formatted = formatter({
         value: cleanedInput,
         type,
@@ -616,6 +651,7 @@ export const useFormattedInput = ({
         options: {
           maximumFractionDigits,
           minimumFractionDigits,
+          minimumIntegerDigits,
         },
       });
       const formattedValue =
