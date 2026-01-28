@@ -1,0 +1,9 @@
+import{j as t}from"./iframe-CBOQuZmX.js";import{useMDXComponents as m}from"./index-CuunzyVf.js";import{M as s,P as n,C as a}from"./blocks-BAFJMB4n.js";import{P as i}from"./utils-BCStObqa.js";import{T as p,E as x}from"./TextArea.stories-Ch8UfAB8.js";import{V as c}from"./VersionBadge-BustOrna.js";import{D as d}from"./DocIntro-CdHYMErl.js";import{D as l}from"./DocHeaderWrapper-CSKFtW7s.js";import"./preload-helper-PPVm8Dsz.js";import"./index-CT7HSXc_.js";import"./index-BcO1AqEL.js";import"./lz-string-m9jzapWX.js";import"./index-D76sDZza.js";import"./DatePickerCalendar-DF1H3gtV.js";import"./index-BxmwhRWV.js";import"./index-tEZUkoN5.js";import"./index-CSgUqAK2.js";import"./LabelWithHelp-vli_xocL.js";import"./Help-4dQh7YC4.js";import"./Combobox.module-C9fS7084.js";import"./ComboboxButton-BoJZJCCB.js";import"./index-haEYng38.js";import"./index-B4-BoLKC.js";import"./ComboboxSelectedOptions-Dx5LiZBO.js";import"./index-BYntwts4.js";import"./index-Zmgbh9ba.js";import"./icon.systems-DLlbXhEY.js";import"./icon.utils-jteK15zC.js";import"./stories.utils-CZ5hej_8.js";function e(r){const o={code:"code",h1:"h1",h2:"h2",pre:"pre",...m(),...r.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{of:p}),`
+`,t.jsxs(l,{componentName:"TextArea",children:[t.jsx(o.h1,{id:"textarea",children:"TextArea"}),t.jsx(c,{packageName:"forms"}),t.jsx(d,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textarea/"})]}),`
+`,t.jsx(n,{}),`
+`,t.jsx(o.pre,{children:t.jsx(o.code,{className:"language-tsx",children:`import { TextArea } from '@skatteetaten/ds-forms';
+`})}),`
+`,t.jsx(a,{}),`
+`,t.jsx(o.h2,{id:"examples",children:"Examples"}),`
+`,t.jsx(i,{of:x})]})}function q(r={}){const{wrapper:o}={...m(),...r.components};return o?t.jsx(o,{...r,children:t.jsx(e,{...r})}):e(r)}export{q as default};
+//# sourceMappingURL=TextArea-w4Wq6Svr.js.map

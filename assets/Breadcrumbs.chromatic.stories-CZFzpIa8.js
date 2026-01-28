@@ -1,5 +1,0 @@
-import{B as s}from"./index-Bqe6vRXX.js";import{B as t}from"./Breadcrumbs.test.stories-B9lC-H9x.js";import{c as o}from"./createSingleStory-B17uACwM.js";import"./iframe-Br1Xu9zr.js";import"./preload-helper-PPVm8Dsz.js";import"./index-Mga-TJ2K.js";import"./index-Xbc0duXx.js";import"./index-CjBS1QGy.js";import"./index-DgG-l9xe.js";import"./index-DCwxX22m.js";const a={title:"Chromatic/Breadcrumbs",component:s,tags:["chromatic","!autodocs"]},r=o(t,a),e=o(t,a,{viewport:"--breakpoint-xs",runPlayFunctions:!0});r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:"createSingleStory(BreadcrumbsStories, meta)",...r.parameters?.docs?.source}}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`createSingleStory(BreadcrumbsStories, meta, {
-  viewport: '--breakpoint-xs',
-  runPlayFunctions: true
-})`,...e.parameters?.docs?.source}}};const b=["Snapshots","BreakpointXS"];export{e as BreakpointXS,r as Snapshots,b as __namedExportsOrder,a as default};
-//# sourceMappingURL=Breadcrumbs.chromatic.stories-CZFzpIa8.js.map

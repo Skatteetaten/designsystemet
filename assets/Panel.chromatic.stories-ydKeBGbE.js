@@ -1,6 +1,0 @@
-import{P as i}from"./index-BVXicwjt.js";import{P as t}from"./Panel.test.stories-C6Upub_X.js";import{c as a}from"./createSingleStory-B17uACwM.js";import"./iframe-Br1Xu9zr.js";import"./preload-helper-PPVm8Dsz.js";import"./index-Mga-TJ2K.js";import"./index-Xbc0duXx.js";import"./index-CjBS1QGy.js";import"./index-DCwxX22m.js";import"./storybook.testing.utils-BgHZnMzD.js";import"./wait-alert-illustration-B8u9k-Re.js";import"./index-DgG-l9xe.js";const s={title:"Chromatic/Panel",component:i,tags:["chromatic","!autodocs"]},e=a(t,s),r=a(t,s,{viewport:"--mobile"}),o=a(t,s,{viewport:"--breakpoint-xs"});e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:"createSingleStory(PanelStories, meta)",...e.parameters?.docs?.source}}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`createSingleStory(PanelStories, meta, {
-  viewport: '--mobile'
-})`,...r.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`createSingleStory(PanelStories, meta, {
-  viewport: '--breakpoint-xs'
-})`,...o.parameters?.docs?.source}}};const h=["Snapshots","Mobile","BreakpointXS"];export{o as BreakpointXS,r as Mobile,e as Snapshots,h as __namedExportsOrder,s as default};
-//# sourceMappingURL=Panel.chromatic.stories-ydKeBGbE.js.map

@@ -1,6 +1,0 @@
-import{L as i}from"./LabelWithHelp-ChfJsnaj.js";import{L as t}from"./LabelWithHelp.test.stories-Dt5zw2IB.js";import{c as o}from"./createSingleStory-B17uACwM.js";import"./iframe-Br1Xu9zr.js";import"./preload-helper-PPVm8Dsz.js";import"./Help-DqUYp3Aw.js";import"./index-Mga-TJ2K.js";import"./index-Xbc0duXx.js";import"./index-CjBS1QGy.js";import"./storybook.testing.utils-BgHZnMzD.js";import"./icon.systems-BmhPSTgm.js";import"./icon.utils-DnMDnKX8.js";import"./index-DgG-l9xe.js";import"./index-DCwxX22m.js";const a={title:"Chromatic/LabelWithHelp",component:i,tags:["chromatic","!autodocs"]},r=o(t,a,{runPlayFunctions:!0}),e=o(t,a,{viewport:"--mobile"});r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`createSingleStory(LabelWithHelpStories, meta, {
-  runPlayFunctions: true
-})`,...r.parameters?.docs?.source}}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`createSingleStory(LabelWithHelpStories, meta, {
-  viewport: '--mobile'
-})`,...e.parameters?.docs?.source}}};const H=["Snapshots","Mobile"];export{e as Mobile,r as Snapshots,H as __namedExportsOrder,a as default};
-//# sourceMappingURL=LabelWithHelp.chromatic.stories-BCljvcDL.js.map

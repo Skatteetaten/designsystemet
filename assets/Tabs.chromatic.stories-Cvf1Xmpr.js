@@ -1,0 +1,4 @@
+import{T as s}from"./index-BYntwts4.js";import{T as e}from"./Tabs.test.stories-BliVq6Z-.js";import{c as t}from"./createSingleStory-Yv71cLIp.js";import"./iframe-CBOQuZmX.js";import"./preload-helper-PPVm8Dsz.js";import"./index-tEZUkoN5.js";import"./index-BxmwhRWV.js";import"./index-CSgUqAK2.js";import"./index-haEYng38.js";import"./index-B4-BoLKC.js";const a={title:"Chromatic/Tabs",component:s,tags:["chromatic","!autodocs"]},r=t(e,a),o=t(e,a,{viewport:"--mobile"});r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:"createSingleStory(TabsStories, meta)",...r.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`createSingleStory(TabsStories, meta, {
+  viewport: '--mobile'
+})`,...o.parameters?.docs?.source}}};const T=["Snapshots","Mobile"];export{o as Mobile,r as Snapshots,T as __namedExportsOrder,a as default};
+//# sourceMappingURL=Tabs.chromatic.stories-Cvf1Xmpr.js.map

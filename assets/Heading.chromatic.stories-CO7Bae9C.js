@@ -1,0 +1,4 @@
+import{H as s}from"./index-B4-BoLKC.js";import{H as o}from"./Heading.test.stories-CiBuScwI.js";import{c as t}from"./createSingleStory-Yv71cLIp.js";import"./iframe-CBOQuZmX.js";import"./preload-helper-PPVm8Dsz.js";import"./base-props.types-B340BQPQ.js";const a={title:"Chromatic/Heading",component:s,tags:["chromatic","!autodocs"]},e=t(o,a),r=t(o,a,{viewport:"--breakpoint-xs"});e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:"createSingleStory(HeadingStories, meta)",...e.parameters?.docs?.source}}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`createSingleStory(HeadingStories, meta, {
+  viewport: '--breakpoint-xs'
+})`,...r.parameters?.docs?.source}}};const S=["Snapshots","BreakpointXS"];export{r as BreakpointXS,e as Snapshots,S as __namedExportsOrder,a as default};
+//# sourceMappingURL=Heading.chromatic.stories-CO7Bae9C.js.map
