@@ -43,7 +43,7 @@ def overrides = [
     publishSnapshotToNpm         : true,
     publishSnapshotToNpmOverride : publishSnapshotToNpmOverride,
     npmjs                    : [
-        publish              : false,
+        publish              : env.BRANCH_NAME == "master",
         prepareCmd           : "run build:preparePublish"
     ],
     github                 : [
