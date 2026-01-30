@@ -9,6 +9,11 @@ const fs = require('fs');
 
 const addStyleImportPlugin = require('./rollup-plugin-addstyleimport.cjs');
 
+// Shared state mellom sass processor og import plugin
+const cssAssetState = {
+  pending: new Map(), // moduleId → { content, outputPath }
+};
+
 /**
  * Lager tilpasset Rollup config med Sass og plugin håndtering
  *
@@ -85,7 +90,7 @@ function createRollupConfig(
       ...sassPlugins, // Sass plugin først - viktig rekkefølge
       url({ limit: 20480 }),
       ...filteredPlugins, // Bruk filtrerte plugins i stedet for originale
-      addStyleImportPlugin(),
+      addStyleImportPlugin(cssAssetState),
       visualizer({ filename: `${outputDir.split('/').pop()}-stats.html` }),
     ],
     onwarn(warning, defaultHandler) {
@@ -99,7 +104,8 @@ function createRollupConfig(
 }
 
 /**
- * Håndterer utskrift av CSS-filer fra kompilerte SCSS-filer
+ * Håndterer utskrift av CSS-filer fra kompilerte SCSS-filer. Lagrer CSS i
+ * shared state for senere emittering via Rollup.
  *
  * @param _styles - Kompilerte CSS-stiler (ikke brukt men må beholdes for
  *   signatur)
@@ -108,52 +114,28 @@ function createRollupConfig(
  */
 function handleSassOutput(_styles, styleNodes) {
   if (styleNodes && styleNodes.length > 0) {
-    styleNodes.forEach((styleNode, index) => {
+    styleNodes.forEach((styleNode) => {
       const { id, content } = styleNode;
       if (id && id.endsWith('.scss') && content) {
-        // Hent komponentnavn fra filbanen (f.eks. Button/Button.module.scss -> Button)
-        const pathParts = id.split('/');
-        const componentDir = pathParts[pathParts.length - 2]; // Komponentmappe
-        const fileName = pathParts[pathParts.length - 1]; // Filnavn
+        // Beregn relativ output-sti (relativ til dist output dir)
+        // Fra: /path/to/libs/ds-buttons/src/Button/Button.module.scss
+        // Til: Button/Button.module.css
+        const pathParts = id.split('/src/');
+        const relativePath = pathParts[pathParts.length - 1].replace(
+          '.scss',
+          '.css'
+        );
 
-        console.log(`Processing SCSS file: ${fileName}`);
+        console.log(`Storing CSS for emission: ${relativePath}`);
 
-        // Bygg sti til output-katalog basert på faktisk prosjektstruktur
-        const outputPath = id
-          .replace(/\/libs\/([^/]+)\/src/, '/dist/libs/$1')
-          .replace('.scss', '.css');
-
-        try {
-          // Sikre at katalogen eksisterer
-          const outputDir = outputPath.substring(
-            0,
-            outputPath.lastIndexOf('/')
-          );
-          if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir, { recursive: true });
-          }
-
-          // Skriv CSS-filen (beholde samme struktur som før)
-          fs.writeFileSync(outputPath, content);
-
-          // For CSS modules (.module.scss), opprett også en styles.css i komponentkatalogen
-          // Dette sikrer bakoverkompatibilitet med eksisterende import-struktur
-          if (componentDir && fileName.includes('.module.scss')) {
-            const stylesPath = `${outputDir}/${fileName.split('.')[0]}.css`;
-            fs.writeFileSync(stylesPath, content);
-          }
-        } catch (error) {
-          console.error(
-            `Could not write CSS file: ${outputPath}`,
-            error.message
-          );
-        }
+        cssAssetState.pending.set(id, {
+          content,
+          outputPath: relativePath,
+        });
       }
     });
   }
 
-  // Return false to prevent the plugin from creating a combined CSS file
-  // We want individual CSS modules to work properly
   return false;
 }
 
