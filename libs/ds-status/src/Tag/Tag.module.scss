@@ -1,19 +1,14 @@
 .tag {
   display: inline-flex;
-  justify-content: center;
   border: 2px solid var(--palette-graphite-0);
   border-radius: var(--spacing-xs);
-  background-color: var(--palette-ochre-10);
   color: var(--palette-graphite-100);
   font-size: var(--font-size-m);
-  gap: var(--spacing-xs);
   line-height: var(--semantic-line-height-buttons);
 
-  .iconWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .icon {
+    height: calc(var(--font-size-m) * var(--semantic-line-height-buttons));
+    margin-right: var(--spacing-xs);
   }
 
   &:where([data-color='ochre']) {
@@ -49,9 +44,10 @@
     font-size: var(--font-size-s);
     line-height: var(--semantic-line-height-default);
 
-    .iconWrapper .icon {
+    .icon {
       width: var(--size-extra-small);
       min-width: var(--size-extra-small);
+      height: calc(var(--font-size-s) * var(--semantic-line-height-default));
     }
   }
 }
