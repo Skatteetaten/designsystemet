@@ -41,7 +41,10 @@ export interface DatePickerProps
   >;
   /** Tekst på feilmelding */
   errorMessage?: string;
-  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
+  /**
+   * Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for
+   * skjermleser.
+   */
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
@@ -59,7 +62,10 @@ export interface DatePickerProps
   variant?: FormSize;
   /** Hvilken dato som skal være satt. */
   value?: Date | null;
-  /** Initielt uthevet dato. (Hvis value har en dato, så blir den datoen uthevet istedenfor.) */
+  /**
+   * Initielt uthevet dato. (Hvis value har en dato, så blir den datoen uthevet
+   * istedenfor.)
+   */
   initialPickerDate?: Date;
   /** Liste med deaktiverte datoer. For eksempel helligdager/helg. */
   disabledDates?: Date[];
@@ -68,22 +74,19 @@ export interface DatePickerProps
   /** Maksimal tillatte dato */
   maxDate?: Date;
   /**
-   * Overskriver default datoformat for input-felt. Formater som kan brukes: https://date-fns.org/v3.3.1/docs/parse.
+   * Overskriver default datoformat for input-felt. Formater som kan brukes:
+   * https://date-fns.org/v3.3.1/docs/parse.
    *
-   * I tillegg til det valgte formatet, kan brukeren manuelt skrive inn dato på følgende formater som formateres automatisk i onBlur:
-   * 'dd.MM.yy',
-   * 'dd/MM/yy',
-   * 'dd-MM-yy',
-   * 'dd.MM.yyyy',
-   * 'dd/MM/yyyy',
-   * 'dd-MM-yyyy',
-   * 'ddMM',
-   * 'ddMMyy',
-   * 'ddMMyyyy',
+   * I tillegg til det valgte formatet, kan brukeren manuelt skrive inn dato på
+   * følgende formater som formateres automatisk i onBlur: 'dd.MM.yy',
+   * 'dd/MM/yy', 'dd-MM-yy', 'dd.MM.yyyy', 'dd/MM/yyyy', 'dd-MM-yyyy', 'ddMM',
+   * 'ddMMyy', 'ddMMyyyy',
    */
   dateFormat?: string;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
+  /** Callback som kalles når kalenderen åpnes/lukkes. */
+  onCalendarToggle?: ({ isOpen }: { isOpen: boolean }) => void;
   /** Callback som kalles når dato-verdien endres. */
   onSelectDate?: (date: Date | null) => void;
 }

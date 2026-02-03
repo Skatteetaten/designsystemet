@@ -91,6 +91,7 @@ const meta = {
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
+    onCalendarToggle: { table: { disable: true } },
     onSelectDate: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
@@ -621,6 +622,7 @@ export const ClickCalendarButton = {
     onBlur: fn(),
     onChange: fn(),
     onFocus: fn(),
+    onCalendarToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -633,6 +635,84 @@ export const ClickCalendarButton = {
     await fireEvent.click(calendarButton);
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(calendarButton);
+  },
+} satisfies Story;
+
+const WithCalendarToggleEventTemplate: StoryFn<typeof DatePicker> = (args) => {
+  const [statusText, setStatusText] = useState('Tester onCalendarToggle event');
+  return (
+    <div>
+      <pre>{statusText}</pre>
+      <DatePicker
+        {...args}
+        onCalendarToggle={(data): void => {
+          setStatusText(
+            data.isOpen
+              ? 'Kalender er åpen, onCalendarToggle har blitt trigget'
+              : 'Kalender er lukket, onCalendarToggle har blitt trigget'
+          );
+          args.onCalendarToggle && args.onCalendarToggle(data);
+        }}
+      />
+    </div>
+  );
+};
+
+export const WithCalendarToggleEvent = {
+  name: 'With onCalendarToggle Event',
+  render: WithCalendarToggleEventTemplate,
+  args: {
+    ...defaultArgs,
+    onCalendarToggle: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: true })
+    );
+
+    const dateButton = canvas.getByText('5');
+    await userEvent.click(dateButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: false })
+    );
+
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: true })
+    );
+
+    await userEvent.keyboard('[Escape]');
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: false })
+    );
+
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: true })
+    );
+
+    await fireEvent.click(canvas.getByLabelText(defaultLabelText));
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: false })
+    );
+
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: true })
+    );
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: false })
+    );
   },
 } satisfies Story;
 
