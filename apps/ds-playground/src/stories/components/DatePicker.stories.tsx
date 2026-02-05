@@ -1,7 +1,7 @@
 import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { isWithinInterval, format } from 'date-fns';
+import { isWithinInterval, format, addWeeks } from 'date-fns';
 import { useArgs } from 'storybook/preview-api';
 
 import {
@@ -10,11 +10,13 @@ import {
   getCommonFormVariantDefault,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
+import { InlineButton } from '@skatteetaten/ds-buttons';
 import {
   DatePicker,
   getDatePickerDateFormat,
   getDatePickerPlaceholderDefault,
   TextArea,
+  Combobox,
 } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -182,3 +184,66 @@ export const Enkeltdato: Story = {
   },
 } satisfies Story;
 Enkeltdato.parameters = exampleParameters;
+
+export const DatoMedAvansertFunskjon: Story = {
+  name: 'Dato med avansert funskjon',
+  render: (_args): JSX.Element => {
+    const [value, setValue] = useState<Date | null>(null);
+
+    const handleSuggestDate = (): void => {
+      const nesteUke = addWeeks(new Date(), 1);
+      setValue(nesteUke);
+    };
+
+    return (
+      <>
+        <DatePicker
+          label={'Oppstartsdato (dd.mm.åååå)'}
+          value={value}
+          onSelectDate={setValue}
+        />
+        <InlineButton onClick={handleSuggestDate}>
+          {'Foreslå neste ledige'}
+        </InlineButton>
+      </>
+    );
+  },
+} satisfies Story;
+DatoMedAvansertFunskjon.parameters = exampleParameters;
+
+export const DatoOgKlokkeslett: Story = {
+  name: 'Dato og klokkeslett',
+  render: (_args): JSX.Element => {
+    const [date, setDate] = useState<Date | null>(null);
+    const [time, setTime] = useState<string>('');
+
+    // Generer klokkeslett fra 08:00 til 16:00 med 30 minutters intervall
+    const timeOptions = [];
+    for (let hour = 8; hour <= 16; hour++) {
+      for (let minute = 0; minute < 60; minute += 30) {
+        if (hour === 16 && minute > 0) break; // Stopp ved 16:00
+        const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+        timeOptions.push({ value: timeString, label: timeString });
+      }
+    }
+
+    return (
+      <div className={'flex gapM'}>
+        <DatePicker
+          label={'Dato (dd.mm.åååå)'}
+          value={date}
+          onSelectDate={setDate}
+        />
+        <Combobox
+          label={'Tid (tt:mm)'}
+          value={time}
+          options={timeOptions}
+          placeholder={''}
+          className={'textField150'}
+          onSelectionChange={(option) => setTime(option?.value ?? '')}
+        />
+      </div>
+    );
+  },
+} satisfies Story;
+DatoOgKlokkeslett.parameters = exampleParameters;
