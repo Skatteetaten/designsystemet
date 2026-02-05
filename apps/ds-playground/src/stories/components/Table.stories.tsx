@@ -1162,13 +1162,13 @@ export const WithStripes: Story = {
         <Table caption={'Firmaoversikt'} size={'large'}>
           <Table.Header>
             <Table.Row>
+              <Table.HeaderCell as={'td'} />
               <Table.HeaderCell scope={'col'}>{'Firma'}</Table.HeaderCell>
               <Table.HeaderCell scope={'col'}>{'Startet'}</Table.HeaderCell>
               <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
               <Table.HeaderCell scope={'col'}>
                 {'Forventet behandlet'}
               </Table.HeaderCell>
-              <Table.HeaderCell as={'td'} />
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -1179,7 +1179,7 @@ export const WithStripes: Story = {
                   // .stripedTable:nth-of-type(even) { background-color: var(--palette-graphite-5);}
                   className={'stripedTable'}
                   expandableContent={
-                    <div className={'emptyExpandedTableRow'}></div>
+                    <div className={'emptyExpandedTableRow'}>{'Innhold'}</div>
                   }
                   expandButtonAriaDescribedby={row.id}
                   isExpandable
@@ -1215,7 +1215,7 @@ export const WithStripes: Story = {
                   className={index % 2 === 0 ? 'oddRow' : 'evenRow'}
                   expandButtonPosition={'right'}
                   expandableContent={
-                    <div className={'emptyExpandedTableRow'}></div>
+                    <div className={'emptyExpandedTableRow'}>{'Innhold'}</div>
                   }
                   expandButtonAriaDescribedby={row.id}
                   isExpandable
