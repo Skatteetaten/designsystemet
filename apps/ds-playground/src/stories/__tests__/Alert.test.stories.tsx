@@ -47,7 +47,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultText =
-  'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
+  'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.';
 
 const defaultArgs = {
   showAlert: false,
