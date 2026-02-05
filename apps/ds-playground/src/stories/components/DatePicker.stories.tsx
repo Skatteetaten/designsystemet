@@ -135,7 +135,7 @@ export const Preview: Story = {
   },
 } satisfies Story;
 
-export const Examples: Story = {
+export const Enkeltdato: Story = {
   render: (_args): JSX.Element => {
     const [value, setValue] = useState<Date | null>(null);
     const [inputValue, setInputValue] = useState('');
@@ -167,21 +167,18 @@ export const Examples: Story = {
       setValue(date);
     };
     return (
-      <>
-        <DatePicker
-          label={'Fødselsdato'}
-          value={value}
-          errorMessage={errorMessage}
-          maxDate={maxDate}
-          minDate={minDate}
-          hasSpacing
-          required
-          onSelectDate={handleSelect}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <TextArea className={'textField300'} label={'Andre opplysninger'} />
-      </>
+      <DatePicker
+        label={'Oppstartsdato (dd.mm.åååå)'}
+        value={value}
+        errorMessage={errorMessage}
+        maxDate={maxDate}
+        minDate={minDate}
+        hasSpacing
+        required
+        onSelectDate={handleSelect}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
     );
   },
 } satisfies Story;
-Examples.parameters = exampleParameters;
+Enkeltdato.parameters = exampleParameters;
