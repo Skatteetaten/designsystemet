@@ -111,6 +111,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
+  tags: ['!dev', '!autodocs'],
   render: (args): JSX.Element => {
     const [, setArgs] = useArgs();
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
@@ -185,8 +186,8 @@ export const Enkeltdato: Story = {
 } satisfies Story;
 Enkeltdato.parameters = exampleParameters;
 
-export const DatoMedAvansertFunskjon: Story = {
-  name: 'Dato med avansert funskjon',
+export const DatoMedAvansertFunksjon: Story = {
+  name: 'Dato med avansert funksjon',
   render: (_args): JSX.Element => {
     const [value, setValue] = useState<Date | null>(null);
 
@@ -198,7 +199,7 @@ export const DatoMedAvansertFunskjon: Story = {
     return (
       <>
         <DatePicker
-          label={'Oppstartsdato (dd.mm.åååå)'}
+          label={'Dato (dd.mm.åååå)'}
           value={value}
           onSelectDate={setValue}
         />
@@ -209,7 +210,7 @@ export const DatoMedAvansertFunskjon: Story = {
     );
   },
 } satisfies Story;
-DatoMedAvansertFunskjon.parameters = exampleParameters;
+DatoMedAvansertFunksjon.parameters = exampleParameters;
 
 export const DatoOgKlokkeslett: Story = {
   name: 'Dato og klokkeslett',
