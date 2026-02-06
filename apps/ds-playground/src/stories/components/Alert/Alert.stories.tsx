@@ -37,7 +37,7 @@ const meta = {
   },
   args: {
     children:
-      'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
+      'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.',
     showAlert: true,
     variant: 'warning',
   },
