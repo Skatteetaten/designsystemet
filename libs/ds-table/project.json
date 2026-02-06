@@ -67,13 +67,6 @@
         "command": "npm publish dist/libs/ds-table {args.switches}",
         "cwd": ""
       }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
-      "options": {
-        "reportsDirectory": "../../coverage/libs/ds-table"
-      }
     }
   }
 }
