@@ -1,5 +1,3 @@
-import { JSX } from 'react';
-
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
@@ -7,8 +5,6 @@ import {
   getAlertBackgroundBrightnessDefault,
 } from '@skatteetaten/ds-status';
 
-import AlertExample from './AlertExample';
-import alertExampleCode from './AlertExample?raw';
 import { category } from '../../../../.storybook/helpers';
 import { SystemSVGPaths } from '../../utils/icon.systems';
 
@@ -41,7 +37,7 @@ const meta = {
   },
   args: {
     children:
-      'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
+      'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.',
     showAlert: true,
     variant: 'warning',
   },
@@ -50,21 +46,49 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {} satisfies Story;
+export const Preview: Story = {
+  tags: ['!dev', '!autodocs'],
+} satisfies Story;
 
-export const Examples: Story = {
-  parameters: {
-    docs: {
-      codePanel: true,
-      source: {
-        code: alertExampleCode,
-        type: 'auto',
-        language: 'tsx',
-      },
-    },
-    controls: {
-      exclude: /.*/,
-    },
+export const Info: Story = {
+  name: 'Nøytral',
+  args: {
+    variant: 'info',
+    children:
+      'Disse feltene er låst for redigering fordi du har fått et varsel fra oss',
   },
-  render: (): JSX.Element => <AlertExample />,
+} satisfies Story;
+
+export const Success: Story = {
+  name: 'Suksess',
+  args: {
+    variant: 'success',
+    children: 'Filen ble lastet opp',
+  },
+} satisfies Story;
+
+export const Warning: Story = {
+  name: 'Advarsel',
+  args: {
+    variant: 'warning',
+    children:
+      'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.',
+  },
+} satisfies Story;
+
+export const ErrorAlert: Story = {
+  name: 'Feil',
+  args: {
+    variant: 'error',
+    children:
+      'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
+  },
+} satisfies Story;
+
+export const Danger: Story = {
+  name: 'Fare',
+  args: {
+    variant: 'danger',
+    children: 'Strengt fortrolig (Kode 6)',
+  },
 } satisfies Story;
