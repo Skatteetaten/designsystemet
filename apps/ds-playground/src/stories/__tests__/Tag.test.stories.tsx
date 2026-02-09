@@ -7,6 +7,7 @@ import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Tag } from '@skatteetaten/ds-status';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Tag,
@@ -171,5 +172,18 @@ export const WithCanBeManuallyFocused: Story = {
     tag.focus();
     await expect(tag).toBeInTheDocument();
     await expect(tag).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const WithIconAndLongText = {
+  name: 'With Icon and Long Text',
+  args: {
+    children: loremIpsum,
+    svgPath: WarningSVGpath,
+  },
+  argTypes: {
+    svgPath: {
+      table: { disable: false },
+    },
   },
 } satisfies Story;
