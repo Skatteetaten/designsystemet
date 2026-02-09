@@ -141,6 +141,23 @@ export const Preview: Story = {
 export const Enkeltdato: Story = {
   render: (_args): JSX.Element => {
     const [value, setValue] = useState<Date | null>(null);
+
+    return (
+      <DatePicker
+        label={'Dato (dd.mm.åååå)'}
+        value={value}
+        required
+        onSelectDate={setValue}
+      />
+    );
+  },
+} satisfies Story;
+Enkeltdato.parameters = exampleParameters;
+
+export const MedMinOgMaxDato: Story = {
+  name: 'Med min- og maxdato',
+  render: (_args): JSX.Element => {
+    const [value, setValue] = useState<Date | null>(null);
     const [inputValue, setInputValue] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -160,7 +177,7 @@ export const Enkeltdato: Story = {
         setErrorMessage(
           `Dato må være mellom ${format(minDate, 'dd.MM.yyyy')} og ${format(
             maxDate,
-            'dd.MM.yyyy.'
+            'dd.MM.yyyy'
           )}.`
         );
       } else {
@@ -184,7 +201,7 @@ export const Enkeltdato: Story = {
     );
   },
 } satisfies Story;
-Enkeltdato.parameters = exampleParameters;
+MedMinOgMaxDato.parameters = exampleParameters;
 
 export const DatoMedAvansertFunksjon: Story = {
   name: 'Dato med avansert funksjon',
