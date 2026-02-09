@@ -76,7 +76,7 @@ export const Warning: Story = {
   },
 } satisfies Story;
 
-export const Error: Story = {
+export const ErrorAlert: Story = {
   name: 'Feil',
   args: {
     variant: 'error',
