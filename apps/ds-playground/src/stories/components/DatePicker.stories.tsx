@@ -1,7 +1,7 @@
 import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { isWithinInterval, format, addWeeks } from 'date-fns';
+import { isWithinInterval, format } from 'date-fns';
 import { useArgs } from 'storybook/preview-api';
 
 import {
@@ -10,12 +10,10 @@ import {
   getCommonFormVariantDefault,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
-import { InlineButton } from '@skatteetaten/ds-buttons';
 import {
   DatePicker,
   getDatePickerDateFormat,
   getDatePickerPlaceholderDefault,
-  TextArea,
   Combobox,
 } from '@skatteetaten/ds-forms';
 
@@ -202,32 +200,6 @@ export const MedMinOgMaxDato: Story = {
   },
 } satisfies Story;
 MedMinOgMaxDato.parameters = exampleParameters;
-
-export const DatoMedAvansertFunksjon: Story = {
-  name: 'Dato med avansert funksjon',
-  render: (_args): JSX.Element => {
-    const [value, setValue] = useState<Date | null>(null);
-
-    const handleSuggestDate = (): void => {
-      const nesteUke = addWeeks(new Date(), 1);
-      setValue(nesteUke);
-    };
-
-    return (
-      <>
-        <DatePicker
-          label={'Dato (dd.mm.åååå)'}
-          value={value}
-          onSelectDate={setValue}
-        />
-        <InlineButton onClick={handleSuggestDate}>
-          {'Foreslå neste ledige'}
-        </InlineButton>
-      </>
-    );
-  },
-} satisfies Story;
-DatoMedAvansertFunksjon.parameters = exampleParameters;
 
 export const DatoOgKlokkeslett: Story = {
   name: 'Dato og klokkeslett',
