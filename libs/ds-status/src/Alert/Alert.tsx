@@ -33,6 +33,7 @@ export const Alert = ({
   svgPath,
   variant,
   ariaLive,
+  ariaDescribedBy,
   showAlert,
   children,
   onClose,
@@ -71,6 +72,7 @@ export const Alert = ({
       lang={lang}
       data-testid={dataTestId}
       aria-live={getAriaLive()}
+      aria-describedby={ariaDescribedBy}
       aria-atomic
     >
       {showAlert && children && (

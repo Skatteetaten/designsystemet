@@ -37,6 +37,7 @@ const meta = {
     onClose: { table: { disable: true } },
     // Aria
     ariaLive: { table: { disable: true } },
+    ariaDescribedBy: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
@@ -86,6 +87,7 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'en',
     'data-testid': '123ID',
+    ariaDescribedBy: 'ariaDescribedById',
     showAlert: true,
   },
   argTypes: {
@@ -93,6 +95,7 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    ariaDescribedBy: { table: { disable: false } },
   },
   parameters: {
     a11y: {
@@ -107,6 +110,10 @@ export const WithAttributes = {
     await expect(alert).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+    await expect(container).toHaveAttribute(
+      'aria-describedby',
+      'ariaDescribedById'
+    );
   },
 } satisfies Story;
 
