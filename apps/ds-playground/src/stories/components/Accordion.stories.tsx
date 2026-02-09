@@ -25,8 +25,18 @@ import { Heading } from '@skatteetaten/ds-typography';
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
-const defaultContent =
-  'Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.';
+const defaultChildren = [
+  <Accordion.Item key={'a1'} title={'Restskatt på 1 000 kroner eller mer'}>
+    {
+      'Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.'
+    }
+  </Accordion.Item>,
+  <Accordion.Item key={'a2'} title={'Restskatt under 1 000 kroner'}>
+    {
+      'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
+    }
+  </Accordion.Item>,
+];
 
 const meta = {
   component: Accordion,
@@ -58,16 +68,7 @@ const meta = {
   },
   args: {
     iconPosition: 'right',
-    children: [
-      <Accordion.Item key={'a1'} title={'Restskatt på 1 000 kroner eller mer'}>
-        {defaultContent}
-      </Accordion.Item>,
-      <Accordion.Item key={'a2'} title={'Restskatt under 1 000 kroner'}>
-        {
-          'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
-        }
-      </Accordion.Item>,
-    ],
+    children: defaultChildren,
   },
 } satisfies Meta<typeof Accordion>;
 
@@ -82,16 +83,7 @@ export const StandardRightIcon: Story = {
   name: 'Standard med høyreikon',
   args: {
     iconPosition: 'right',
-    children: [
-      <Accordion.Item key={'a1'} title={'Restskatt på 1 000 kroner eller mer'}>
-        {defaultContent}
-      </Accordion.Item>,
-      <Accordion.Item key={'a2'} title={'Restskatt under 1 000 kroner'}>
-        {
-          'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
-        }
-      </Accordion.Item>,
-    ],
+    children: defaultChildren,
   },
 } satisfies Story;
 
@@ -100,16 +92,7 @@ export const SmallLeftIcon: Story = {
   args: {
     size: 'small',
     iconPosition: 'left',
-    children: [
-      <Accordion.Item key={'a1'} title={'Restskatt på 1 000 kroner eller mer'}>
-        {defaultContent}
-      </Accordion.Item>,
-      <Accordion.Item key={'a2'} title={'Restskatt under 1 000 kroner'}>
-        {
-          'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
-        }
-      </Accordion.Item>,
-    ],
+    children: defaultChildren,
   },
 } satisfies Story;
 
@@ -183,11 +166,7 @@ export const LeftMenu: Story = {
   name: 'Eksempel med virksomhetsinfo',
   render: (_args): JSX.Element => {
     return (
-      <Accordion
-        id={'virksomhet'}
-        size={'small'}
-        className={'container-aside marginRightM'}
-      >
+      <Accordion id={'virksomhet'} size={'small'} className={'container-aside'}>
         <Accordion.Item
           title={'987 654 321\nStødig Sjappe 1'}
           svgPath={CompanySVGpath}
@@ -284,7 +263,7 @@ export const WorkTask: Story = {
           <Accordion.Item title={'Informasjon fra skattemeldingen'}>
             <Table
               caption={'Informasjon fra skattemeldingen'}
-              variant={'compact'}
+              size={'extraSmall'}
             >
               <Table.Header>
                 <Table.Row>
