@@ -528,7 +528,7 @@ export const Button = ({ isExternal }) => {
 **ALWAYS:**
 
 - Write behavioral tests as **Storybook test stories** in `apps/ds-playground/src/stories/__tests__/*.test.stories.tsx`
-- Write unit tests for utilities in component `__tests__/` subdirectories (simple tests only)
+- Write unit tests for utilities in component `__tests__/` subdirectories (simple tests only). Default prop functions (parameterless functions that return a constant, e.g. `getTagSizeDefault = (): TagSize => 'medium'`) should only have unit tests if the function accepts parameters.
 - Use Storybook testing framework with Vitest + browser testing
 - Test component behavior, NOT implementation details
 - Include accessibility testing in every component test story
