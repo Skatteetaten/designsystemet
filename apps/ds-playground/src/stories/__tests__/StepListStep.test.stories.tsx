@@ -20,6 +20,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { disable: true } },
     introContent: { table: { disable: true, category: category.props } },
     introTitle: { table: { disable: true, category: category.props } },
     introTitleAs: { table: { disable: true, category: category.props } },
