@@ -73,6 +73,7 @@ export const DatePicker = ({
   onChange,
   onFocus,
   onHelpToggle,
+  onCalendarToggle,
   onSelectDate,
 }: DatePickerProps): JSX.Element => {
   useValidateFormRequiredProps({ required, showRequiredMark });
@@ -129,7 +130,7 @@ export const DatePicker = ({
 
   const handleFocus = (e: FocusEvent<HTMLInputElement>): void => {
     if (showCalendar) {
-      setShowCalendar(false);
+      handleCalendarOpenChange(false);
     }
     onFocus?.(e);
   };
@@ -144,15 +145,20 @@ export const DatePicker = ({
     onBlur?.(e);
   };
 
+  const handleCalendarOpenChange = (isOpen: boolean): void => {
+    setShowCalendar(isOpen);
+    onCalendarToggle?.(isOpen);
+  };
+
   const handleSelectDate = (date: Date): void => {
     setInputValue(formatDateForInput(dateFormat, date));
-    setShowCalendar(false);
+    handleCalendarOpenChange(false);
     inputRef.current?.focus();
     onSelectDate?.(date);
   };
 
   const closeCalendar = (): void => {
-    setShowCalendar(false);
+    handleCalendarOpenChange(false);
     calenderButtonRef?.current?.focus();
   };
 
@@ -170,7 +176,7 @@ export const DatePicker = ({
         !calendarRef?.current?.contains(node) &&
         !calenderButtonRef?.current?.contains(node)
       ) {
-        setShowCalendar(false);
+        handleCalendarOpenChange(false);
         event.type === 'click' && calenderButtonRef?.current?.focus();
       }
     };
@@ -266,7 +272,9 @@ export const DatePicker = ({
             className={calendarButtonClassName}
             disabled={disabled}
             aria-expanded={showCalendar}
-            onClick={(): void => setShowCalendar(!showCalendar)}
+            onClick={(): void => {
+              handleCalendarOpenChange(!showCalendar);
+            }}
           >
             <CalendarIcon
               className={styles.icon}
