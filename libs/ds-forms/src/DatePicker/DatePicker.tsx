@@ -146,8 +146,8 @@ export const DatePicker = ({
   };
 
   const handleCalendarOpenChange = (isOpen: boolean): void => {
-    setShowCalendar(open);
-    onCalendarToggle?.({ isOpen: open });
+    setShowCalendar(isOpen);
+    onCalendarToggle?.(isOpen);
   };
 
   const handleSelectDate = (date: Date): void => {

@@ -645,13 +645,13 @@ const WithCalendarToggleEventTemplate: StoryFn<typeof DatePicker> = (args) => {
       <pre>{statusText}</pre>
       <DatePicker
         {...args}
-        onCalendarToggle={(data): void => {
+        onCalendarToggle={(isOpen): void => {
           setStatusText(
-            data.isOpen
+            isOpen
               ? 'Kalender er åpen, onCalendarToggle har blitt trigget'
               : 'Kalender er lukket, onCalendarToggle har blitt trigget'
           );
-          args.onCalendarToggle && args.onCalendarToggle(data);
+          args.onCalendarToggle && args.onCalendarToggle(isOpen);
         }}
       />
     </div>
@@ -676,42 +676,42 @@ export const WithCalendarToggleEvent = {
 
     await userEvent.click(calendarButton);
     await waitFor(() =>
-      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: true })
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(true)
     );
 
     const dateButton = canvas.getByText('5');
     await userEvent.click(dateButton);
     await waitFor(() =>
-      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: false })
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(false)
     );
 
     await userEvent.click(calendarButton);
     await waitFor(() =>
-      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: true })
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(true)
     );
 
     await userEvent.keyboard('[Escape]');
     await waitFor(() =>
-      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: false })
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(false)
     );
 
     await userEvent.click(calendarButton);
     await waitFor(() =>
-      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: true })
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(true)
     );
 
     await fireEvent.click(canvas.getByLabelText(defaultLabelText));
     await waitFor(() =>
-      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: false })
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(false)
     );
 
     await userEvent.click(calendarButton);
     await waitFor(() =>
-      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: true })
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(true)
     );
     await userEvent.click(calendarButton);
     await waitFor(() =>
-      expect(args.onCalendarToggle).toHaveBeenLastCalledWith({ isOpen: false })
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(false)
     );
   },
 } satisfies Story;

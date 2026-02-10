@@ -86,7 +86,7 @@ export interface DatePickerProps
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
   /** Callback som kalles når kalenderen åpnes/lukkes. */
-  onCalendarToggle?: ({ isOpen }: { isOpen: boolean }) => void;
+  onCalendarToggle?: (isOpen: boolean) => void;
   /** Callback som kalles når dato-verdien endres. */
   onSelectDate?: (date: Date | null) => void;
 }
