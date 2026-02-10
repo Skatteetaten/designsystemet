@@ -145,7 +145,7 @@ export const DatePicker = ({
     onBlur?.(e);
   };
 
-  const handleCalendarOpenChange = (open: boolean): void => {
+  const handleCalendarOpenChange = (isOpen: boolean): void => {
     setShowCalendar(open);
     onCalendarToggle?.({ isOpen: open });
   };
