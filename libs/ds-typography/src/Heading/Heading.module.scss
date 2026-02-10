@@ -3,14 +3,16 @@
 
 .heading {
   margin: 0;
+  font-size: var(--heading-font-size);
   font-weight: var(--font-weight-bold);
+  line-height: var(--heading-line-height);
 
   &:where([data-level='1']) {
-    font-size: var(--font-size-xxl);
-    line-height: var(--semantic-line-height-heading1);
+    --heading-font-size: var(--font-size-xxl);
+    --heading-line-height: var(--semantic-line-height-heading1);
 
     @media (min-width: breakpoints.$breakpoint-s) {
-      font-size: var(--font-size-mega);
+      --heading-font-size: var(--font-size-mega);
     }
 
     &[data-has-spacing='true'] {
@@ -19,11 +21,11 @@
   }
 
   &:where([data-level='2']) {
-    font-size: var(--font-size-xl);
-    line-height: var(--semantic-line-height-heading2);
+    --heading-font-size: var(--font-size-xl);
+    --heading-line-height: var(--semantic-line-height-heading2);
 
     @media (min-width: breakpoints.$breakpoint-s) {
-      font-size: var(--font-size-xxl);
+      --heading-font-size: var(--font-size-xxl);
     }
 
     &[data-has-spacing='true'] {
@@ -36,11 +38,11 @@
   }
 
   &:where([data-level='3']) {
-    font-size: var(--font-size-l);
-    line-height: var(--semantic-line-height-heading3);
+    --heading-font-size: var(--font-size-l);
+    --heading-line-height: var(--semantic-line-height-heading3);
 
     @media (min-width: breakpoints.$breakpoint-s) {
-      font-size: var(--font-size-xl);
+      --heading-font-size: var(--font-size-xl);
     }
 
     &[data-has-spacing='true'] {
@@ -49,8 +51,8 @@
   }
 
   &:where([data-level='4']) {
-    font-size: var(--font-size-l);
-    line-height: var(--semantic-line-height-heading4);
+    --heading-font-size: var(--font-size-l);
+    --heading-line-height: var(--semantic-line-height-heading4);
 
     &[data-has-spacing='true'] {
       margin-bottom: var(--spacing-s);
@@ -58,8 +60,8 @@
   }
 
   &:where([data-level='5']) {
-    font-size: var(--font-size-m);
-    line-height: var(--semantic-line-height-article);
+    --heading-font-size: var(--font-size-m);
+    --heading-line-height: var(--semantic-line-height-article);
 
     &[data-has-spacing='true'] {
       margin-bottom: var(--spacing-xs);
@@ -70,5 +72,10 @@
     @include styles.link;
 
     font-weight: inherit;
+  }
+
+  > svg {
+    height: calc(var(--heading-font-size) * var(--heading-line-height));
+    vertical-align: bottom;
   }
 }
