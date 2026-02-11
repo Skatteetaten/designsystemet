@@ -4,7 +4,6 @@ import { BaseProps, Brightness, Status } from '@skatteetaten/ds-core-utils';
 
 interface AlertHTMLAttributes {
   ariaLive?: ComponentPropsWithoutRef<'div'>['aria-live'];
-  ariaDescribedBy?: ComponentPropsWithoutRef<'div'>['aria-describedby'];
 }
 
 export type AlertBackgroundBrightness = Extract<

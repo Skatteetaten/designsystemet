@@ -32,9 +32,6 @@ const meta = {
       table: { category: category.aria },
       defaultValue: { summary: 'polite' },
     },
-    ariaDescribedBy: {
-      table: { category: category.aria },
-    },
     // Events
     onClose: { table: { category: category.event } },
   },
