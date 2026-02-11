@@ -10,3 +10,5 @@ export * from './TopBannerInternal/TopBannerInternalActionMenu/TopBannerInternal
 export * from './TopBannerExternal/TopBannerExternalUserMenu/TopBannerExternalUserMenu';
 export * from './TopBannerExternal/TopBannerExternalUserMenu/TopBannerExternalUserMenu.types';
 export * from './TopBannerExternal/TopBannerExternalUserMenu/defaults';
+export * from './RoleBanner/RoleBanner';
+export * from './RoleBanner/RoleBanner.types';

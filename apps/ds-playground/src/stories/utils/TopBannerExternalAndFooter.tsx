@@ -12,6 +12,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import {
   Footer,
+  RoleBanner,
   TopBannerExternal,
   TopBannerExternalHandle,
   User,
@@ -31,9 +32,11 @@ import styles from './TopBannerExternalAndFooter.module.scss';
 export function TopBannerExternalAndFooter({
   children,
   showAsSignedIn,
+  showRoleBanner,
 }: {
   children: ReactNode;
   showAsSignedIn?: boolean;
+  showRoleBanner?: boolean;
 }): JSX.Element {
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const modalRef = useRef<HTMLDialogElement>(null);
@@ -47,14 +50,35 @@ export function TopBannerExternalAndFooter({
   };
 
   const me: Person = {
+    type: 'Person',
     name: 'Ola Nordmann',
     personId: '10101012345',
-    type: 'Person',
   };
-
+  const people: Paginated<Person> = {
+    total: 2,
+    list: [
+      {
+        name: 'Kenneth Performance Hansen',
+        personId: '(01.01.2001)',
+        type: 'Person',
+      },
+      {
+        name: 'Bobby Boblejacke',
+        personId: '(01.01.2001)',
+        type: 'Person',
+      },
+    ],
+  };
   const businesses: Paginated<Business> = {
     total: 3,
     list: [
+      {
+        name: 'Bobby Boblejacke Trefelling og Taksidermi Gode Betingelser Alle Rettigheter',
+        organizationNumber: '123456777',
+        isDeleted: false,
+        unitType: 'Andelslag',
+        type: 'Organization',
+      },
       {
         name: 'Costco AS',
         organizationNumber: '123456777',
@@ -421,10 +445,20 @@ export function TopBannerExternalAndFooter({
           />
         )}
       </TopBannerExternal>
+      {showRoleBanner && user && (
+        <RoleBanner
+          user={{
+            name: user?.name ?? '',
+            role: user?.role ?? 'meg',
+            identifier: user.person?.personId ?? '01.01.2026',
+          }}
+        />
+      )}
       <RolePicker
         ref={modalRef}
         me={me}
         businesses={businesses}
+        people={people}
         onEntitySelect={async (entity) => {
           let role: User['role'];
           if (entity.name === me.name) {

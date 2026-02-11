@@ -1,4 +1,6 @@
 {
+  "rolebanner.Business": "business",
+  "rolebanner.Person": "person",
   "topbanner.InkLogoImageText": "The Norwegian National Collection Agency logo",
   "topbanner.InkLogoLinkText": "Front page The Norwegian National Collection Agency",
   "topbanner.LsoLogoImageText": "Salary subsidy logo",
