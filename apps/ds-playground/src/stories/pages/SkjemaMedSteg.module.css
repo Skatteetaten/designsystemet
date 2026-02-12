@@ -71,5 +71,4 @@
 
 .errorSummaryWrapper {
   margin-top: var(--spacing-m);
-  container-type: inline-size;
 }

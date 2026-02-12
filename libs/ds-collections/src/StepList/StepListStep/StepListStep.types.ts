@@ -21,6 +21,9 @@ export type StepVariant = (typeof stepVariantArr)[number];
 
 export interface StepListStepProps extends BaseProps {
   ref?: Ref<HTMLLIElement>;
+  classNames?: {
+    content?: string;
+  };
   /** Overskriver default tekst på edit-knapp */
   editButtonText?: string;
   /** Overskriver default tekst på next-knapp */
