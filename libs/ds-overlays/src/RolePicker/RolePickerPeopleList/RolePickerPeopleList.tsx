@@ -47,8 +47,8 @@ export const RolePickerPeopleList = ({
   };
 
   const visibleItems = useMemo(() => {
-    // lager en dyp kopiering av person-listen for å unngå mutasjon
-    let items: Person[] = JSON.parse(JSON.stringify(people.list));
+    // lager en kopi av person-listen for å unngå mutasjon
+    let items: Person[] = people.list.slice();
 
     items = !showDeceasedPeople ? items.filter((p) => !p.isDeleted) : items;
 
@@ -73,6 +73,20 @@ export const RolePickerPeopleList = ({
 
   const displayToggleAllButton =
     !filterQuery && people.total > MAX_INITIAL_ITEMS;
+
+  const getDescription = ({ dateOfBirth, personId }: Person): string => {
+    if (!dateOfBirth) {
+      return `${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(personId)}`;
+    }
+    return `${t('rolepicker.DateOfBirth')} ${dateOfBirth.toLocaleDateString(
+      'no-NO',
+      {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+      }
+    )}`;
+  };
 
   return (
     <div>
@@ -99,7 +113,7 @@ export const RolePickerPeopleList = ({
                 <RolePickerRow
                   id={item.personId}
                   title={`${item.name}${item.isDeleted ? ` (${t('rolepicker.Deceased')})` : ''}`}
-                  description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(item.personId)}`}
+                  description={getDescription(item)}
                   svgPath={PersonSVGpath}
                   onClick={() => handleEntityClicked(item)}
                 />

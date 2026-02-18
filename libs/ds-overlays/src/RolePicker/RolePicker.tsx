@@ -25,7 +25,7 @@ import {
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
 } from './defaults';
-import { Business, Entity, RolePickerProps } from './RolePicker.types';
+import { Business, Entity, Person, RolePickerProps } from './RolePicker.types';
 import {
   getModalDismissOnEscDefault,
   getModalDismissOnOutsideClickDefault,
@@ -169,6 +169,20 @@ export const RolePicker = ({
     [error, handleEntitySelect, loadingEntityId]
   );
 
+  const getDescription = ({ dateOfBirth, personId }: Person): string => {
+    if (!dateOfBirth) {
+      return `${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(personId)}`;
+    }
+    return `${t('rolepicker.DateOfBirth')} ${dateOfBirth.toLocaleDateString(
+      'no-NO',
+      {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+      }
+    )}`;
+  };
+
   return (
     <RolePickerContext.Provider value={contextValue}>
       <Modal
@@ -189,7 +203,7 @@ export const RolePicker = ({
               <RolePickerRow
                 id={me.personId}
                 title={t('rolepicker.MeHeading')}
-                description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(me.personId)}`}
+                description={getDescription(me)}
                 svgPath={FavoriteSVGpath}
                 titleAs={'h2'}
                 onClick={() => handleEntitySelect(me)}

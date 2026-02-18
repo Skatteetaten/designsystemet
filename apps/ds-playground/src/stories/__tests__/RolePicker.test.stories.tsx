@@ -17,6 +17,7 @@ import {
 const me: Person = {
   name: 'Ola Nordmann',
   personId: '10101012345',
+  dateOfBirth: new Date('1990-01-01'),
   type: 'Person',
 };
 
@@ -120,24 +121,28 @@ const people: Paginated<Person> = {
     {
       name: 'Antikvitet presis',
       personId: '13889999726',
+      dateOfBirth: new Date('2000-10-10'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
       personId: '18849574503',
+      dateOfBirth: new Date('2000-10-10'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lomme filosofisk',
       personId: '08889674513',
+      dateOfBirth: new Date('2000-10-10'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Adelsmann varm',
       personId: '14892449911',
+      dateOfBirth: new Date('2000-10-10'),
       type: 'Person',
       isDeleted: false,
     },
@@ -150,70 +155,86 @@ const people11: Paginated<Person> = {
     {
       name: 'Frisk Elefant',
       personId: '10090812345',
+      dateOfBirth: new Date('2000-10-10'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Melankolsk Aldrende Ape',
       personId: '13889999726',
+      dateOfBirth: new Date('2000-10-10'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
       personId: '18849574503',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lomme filosofisk',
       personId: '08889674513',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Adelsmann varm',
       personId: '14892449911',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Kari Nordmann',
       personId: '10101054321',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Per Hansen',
       personId: '20202012345',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Lise Olsen',
       personId: '30303067890',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Nina Johansen',
       personId: '40404011223',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Ole Pettersen',
       personId: '50505044556',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Eva Nilsen',
       personId: '60606077889',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
       isDeleted: false,
     },
   ],
+};
+
+const peopleWithoutDateOfBirth: Paginated<Person> = {
+  ...people,
+  list: people.list.map((person) => ({ ...person, dateOfBirth: undefined })),
 };
 
 const meta = {
@@ -994,6 +1015,22 @@ export const WithMinimumEntitiesForSearch = {
 
     const searchInput = within(modal).queryByRole('searchbox');
     expect(searchInput).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithoutDateOfBirth = {
+  name: 'Without Date Of Birth',
+  args: {
+    ...defaultArgs,
+    businesses: undefined,
+    me: { ...me, dateOfBirth: undefined },
+    people: peopleWithoutDateOfBirth,
+  },
+  render: DefaultTemplate,
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
   },
 } satisfies Story;
 
