@@ -21,12 +21,13 @@ MessageId = del etter første punktum.
 Alle språkverdier samles i én dokument per nøkkel.
 
 Kjøring:
-node sanity.ts --translations [--dry-run] [--package=<navn>]
+npm run sanity:upload [-- --dry-run] [-- --package=<navn>]
 
-Dry-run skriver planlagte actions uten å endre noe.
+--dry-run: Skriver planlagte actions uten å endre noe.
+--package=<navn>: Importer kun én spesifikk pakke.
 
 Hierarki (mål): omraade(Designsystemet) -> liste(oversettelser) -> mappe(pakke) -> tekstdokument(localeText)
-Alle nye dokumenter får UUID som _id.
+Alle nye dokumenter får tekniskNavn prefikset med ds_tekst som _id.
 */
 
 // Last inn miljøvariabler (må være tilgjengelig for Sanity klienten)
@@ -172,7 +173,7 @@ async function ensureOversettelserListe(): Promise<string> {
     }
     return existing._id;
   }
-  const newId = uuid();
+  const newId = `ds_liste_${OVERSETTELSE_LISTE_TEKNISKNAVN}`;
   const doc = {
     _type: 'liste',
     _id: newId,
@@ -184,7 +185,7 @@ async function ensureOversettelserListe(): Promise<string> {
   ACTIONS.push({ type: 'create_liste', id: newId });
   ACTIONS.push({ type: 'linkListeToOmraade', id: OMRAADE_ID, info: newId });
   if (!DRY_RUN) {
-    const newDoc = await client.create(doc);
+    const newDoc = await client.createOrReplace(doc);
     const createdId = newDoc._id;
     if (createdId.includes('draft')) {
       console.log('publiserer draft', newId);
@@ -253,7 +254,7 @@ async function ensureMappe(
     }
     return existingMappe._id;
   }
-  const newId = uuid();
+  const newId = `ds_mappe_${packageName}`;
   const doc = {
     _type: 'mappe',
     _id: newId,
@@ -271,7 +272,7 @@ async function ensureMappe(
   ACTIONS.push({ type: 'create_mappe', id: newId });
   ACTIONS.push({ type: 'linkMappeToListe', id: newId, info: listeId });
   if (!DRY_RUN) {
-    const newDoc = await client.create(doc);
+    const newDoc = await client.createOrReplace(doc);
     const createdId = newDoc._id;
     if (createdId.includes('draft')) {
       await publishDocument(newId);
@@ -372,7 +373,7 @@ async function upsertMessage(
     });
     return { created: false, patched: false, docId: existing._id };
   }
-  const newId = uuid();
+  const newId = `ds_tekst_${tekniskNavn}`;
   const newDoc: {
     _id: string;
     _type: string;
@@ -393,7 +394,7 @@ async function upsertMessage(
     id: newId,
     info: { tekniskNavn, locales: Object.keys(localesMap), values: localesMap },
   });
-  const msg = await client.create(newDoc as any);
+  const msg = await client.createOrReplace(newDoc as any);
   console.log(`Opprettet ny melding: ${tekniskNavn}`, msg);
   return { created: true, patched: false, docId: msg._id ?? newId };
 }
