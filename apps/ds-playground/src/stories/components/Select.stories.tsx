@@ -101,12 +101,12 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [fruktOption, setFruktOption] = useState<string>('');
+    const [fruitOption, setFruitOption] = useState<string>('');
     const [errorMessage, setErrorMessage] = useState<string>('');
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
       onError(e);
-      setFruktOption(e.target.value);
+      setFruitOption(e.target.value);
     };
 
     const handleBlur = (e: ChangeEvent<HTMLSelectElement>): void => {
@@ -125,7 +125,7 @@ export const Examples: Story = {
     return (
       <Select
         label={'Fruktsort'}
-        value={fruktOption}
+        value={fruitOption}
         helpText={'Velg frukten du liker best.'}
         errorMessage={errorMessage}
         required
