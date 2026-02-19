@@ -101,12 +101,12 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [fruktOption, setFruktOption] = useState<number>(0);
+    const [fruitOption, setFruitOption] = useState<string>('');
     const [errorMessage, setErrorMessage] = useState<string>('');
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
       onError(e);
-      setFruktOption(Number(e.target.value));
+      setFruitOption(e.target.value);
     };
 
     const handleBlur = (e: ChangeEvent<HTMLSelectElement>): void => {
@@ -120,21 +120,23 @@ export const Examples: Story = {
       }
     };
 
+    type Fruit = '' | 'banan' | 'eple' | 'kiwi' | 'pære' | 'sitron';
+
     return (
       <Select
         label={'Fruktsort'}
-        value={fruktOption}
+        value={fruitOption}
         helpText={'Velg frukten du liker best.'}
         errorMessage={errorMessage}
         required
         onBlur={handleBlur}
         onChange={handleChange}
       >
-        <Select.Option value={1}>{'Banan'}</Select.Option>
-        <Select.Option value={2}>{'Eple'}</Select.Option>
-        <Select.Option value={3}>{'Kiwi'}</Select.Option>
-        <Select.Option value={4}>{'Pære'}</Select.Option>
-        <Select.Option value={5}>{'Sitron'}</Select.Option>
+        <Select.Option<Fruit> value={'banan'}>{'Banan'}</Select.Option>
+        <Select.Option<Fruit> value={'eple'}>{'Eple'}</Select.Option>
+        <Select.Option<Fruit> value={'kiwi'}>{'Kiwi'}</Select.Option>
+        <Select.Option<Fruit> value={'pære'}>{'Pære'}</Select.Option>
+        <Select.Option<Fruit> value={'sitron'}>{'Sitron'}</Select.Option>
       </Select>
     );
   },

@@ -33,6 +33,20 @@ import { Select } from '@skatteetaten/ds-forms';
 
 ## `Select.Option`
 
+Select.Option støtter generisk typing av value. Dette er nyttig for å avgrense verdier.
+
+```tsx
+type Fruit = '' | 'banan' | 'eple' | 'kiwi' | 'pære' | 'sitron';
+
+<Select>
+  <Select.Option<Fruit> value={'banan'}>{'Banan'}</Select.Option>
+  <Select.Option<Fruit> value={'eple'}>{'Eple'}</Select.Option>
+  <Select.Option<Fruit> value={'kiwi'}>{'Kiwi'}</Select.Option>
+  <Select.Option<Fruit> value={'pære'}>{'Pære'}</Select.Option>
+  <Select.Option<Fruit> value={'sitron'}>{'Sitron'}</Select.Option>
+</Select>;
+```
+
 <ArgTypes of={SelectOption} />
 
 ## Examples

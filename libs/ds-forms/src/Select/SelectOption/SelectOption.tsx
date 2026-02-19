@@ -2,11 +2,11 @@ import { JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import { SelectOptionProps } from './SelectOption.types';
+import { SelectOptionProps, SelectOptionValue } from './SelectOption.types';
 
 import styles from './SelectOption.module.scss';
 
-export const SelectOption = ({
+export const SelectOption = <TValue extends SelectOptionValue = string>({
   ref,
   id: externalId,
   className = getCommonClassNameDefault(),
@@ -14,7 +14,7 @@ export const SelectOption = ({
   'data-testid': dataTestId,
   value,
   children,
-}: SelectOptionProps): JSX.Element => {
+}: SelectOptionProps<TValue>): JSX.Element => {
   return (
     <option
       ref={ref}
