@@ -23,8 +23,8 @@ Norwegian Tax Administration's official design system - an accessible React comp
 ### File-Scoped (Use During Development)
 
 ```bash
-# Type check single file
-npx tsc --noEmit path/to/Component.tsx
+# Type check package (single-file checking not supported in Nx monorepo)
+npx nx run ds-buttons:tsc
 
 # Lint single file (replace ds-buttons with actual package)
 npx nx run ds-buttons:lint -- --fix path/to/Component.tsx
@@ -168,8 +168,8 @@ libs/ds-{package}/project.json
 **Single File Validation** (use during development):
 
 ```bash
-# Type check specific file
-npx tsc --noEmit libs/ds-buttons/src/Button/Button.tsx
+# Type check package containing your changed file
+npx nx run ds-buttons:tsc
 
 # Lint and fix specific file
 npx nx run ds-buttons:lint -- --fix libs/ds-buttons/src/Button/Button.tsx
@@ -671,7 +671,7 @@ ls libs/ds-buttons/src/Button/
 
 ```bash
 # Always run these before saying "done"
-npx tsc --noEmit [changed-file].tsx
+npx nx run ds-buttons:tsc  # replace with actual package
 npm run test:storybook -- -t "ComponentName"
 ```
 
