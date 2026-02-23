@@ -445,7 +445,7 @@ export function TopBannerExternalAndFooter({
           />
         )}
       </TopBannerExternal>
-      {showRoleBanner && user && (
+      {showRoleBanner && user && user.role !== 'meg' && (
         <RoleBanner
           user={{
             name: user?.name ?? '',
