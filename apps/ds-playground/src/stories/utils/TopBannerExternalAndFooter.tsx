@@ -450,7 +450,10 @@ export function TopBannerExternalAndFooter({
           user={{
             name: user?.name ?? '',
             role: user?.role ?? 'meg',
-            identifier: user.person?.personId ?? '01.01.2026',
+            identifier:
+              user.role === 'virksomhet'
+                ? (user.orgnr ?? '123 456 789')
+                : (user.person?.personId ?? '01.01.2026'),
           }}
         />
       )}
