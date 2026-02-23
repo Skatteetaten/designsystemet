@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
@@ -224,13 +226,13 @@ export const WithCanBeManuallyFocused: Story = {
 } satisfies Story;
 
 export const ParagraphWithIcon: Story = {
+  args: {
+    ...defaultArgs,
+  },
   render: (_args): JSX.Element => {
     return (
       <Paragraph>
-        <Icon
-          svgPath={CompletedSVGpath}
-          ariaLabel={'Systemikon i et avsnitt'}
-        />
+        <Icon svgPath={CompletedSVGpath} />
         {
           ' Dette er et avsnitt som inneholder et systemikon i begynnelsen av teksten.'
         }

@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
@@ -243,14 +245,13 @@ export const WithCanBeManuallyFocused: Story = {
 } satisfies Story;
 
 export const HeadingWithIcon: Story = {
+  args: {
+    ...defaultArgs,
+  },
   render: (_args): JSX.Element => {
     return (
       <Heading as={'h1'}>
-        <Icon
-          svgPath={CompletedSVGpath}
-          size={'extraLarge'}
-          ariaLabel={'Systemikon i en overskrift'}
-        />
+        <Icon svgPath={CompletedSVGpath} size={'extraLarge'} />
         {
           ' Dette er en overskrift som inneholder et systemikon i begynnelsen av teksten.'
         }

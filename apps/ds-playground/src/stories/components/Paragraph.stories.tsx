@@ -114,10 +114,7 @@ export const ParagraphWithIcon: Story = {
   render: (_args): JSX.Element => {
     return (
       <Paragraph>
-        <Icon
-          svgPath={CompletedSVGpath}
-          ariaLabel={'Systemikon i et avsnitt'}
-        />
+        <Icon svgPath={CompletedSVGpath} />
         {
           ' Dette er et avsnitt som inneholder et systemikon i begynnelsen av teksten.'
         }

@@ -75,11 +75,7 @@ export const HeadingWithIcon: Story = {
   render: (_args): JSX.Element => {
     return (
       <Heading as={'h1'}>
-        <Icon
-          svgPath={CompletedSVGpath}
-          size={'extraLarge'}
-          ariaLabel={'Systemikon i en overskrift'}
-        />
+        <Icon svgPath={CompletedSVGpath} size={'extraLarge'} />
         {
           ' Dette er en overskrift som inneholder et systemikon i begynnelsen av teksten.'
         }
