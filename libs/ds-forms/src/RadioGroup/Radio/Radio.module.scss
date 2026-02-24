@@ -108,8 +108,6 @@ $radio-transform-x: 2px;
   }
 
   &Label {
-    display: flex;
-    flex-direction: column;
     padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs)
       calc($radio-transform-x + 2px + var(--spacing-s));
     color: var(--label-color);
@@ -120,7 +118,8 @@ $radio-transform-x: 2px;
     word-break: normal;
 
     &Description {
-      padding-top: var(--spacing-xs);
+      display: block;
+      margin-top: var(--spacing-xs);
       color: var(--description-color);
     }
   }

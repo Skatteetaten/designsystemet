@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { within as shadowWithin } from 'shadow-dom-testing-library';
@@ -663,4 +663,29 @@ export const ReadOnly = {
       expect(radio).toHaveAccessibleName(/skrivebeskyttet$/);
     }
   },
+} satisfies Story;
+
+export const ReadOnlyAndDescription = {
+  name: 'Read Only And Description',
+  args: {
+    ...defaultArgs,
+    readOnly: true,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  render: (args): JSX.Element => (
+    <RadioGroup {...args}>
+      <RadioGroup.Radio
+        description={'Dette er en radiogruppe i read only modus'}
+      >
+        {'Enkeltpersonsforetak'}
+      </RadioGroup.Radio>
+      <RadioGroup.Radio
+        description={'Dette er en radiogruppe i read only modus'}
+      >
+        {'Aksjeselskap'}
+      </RadioGroup.Radio>
+    </RadioGroup>
+  ),
 } satisfies Story;
