@@ -6,8 +6,13 @@ export const withPageLayout: Decorator = (Story, context) => {
   const { parameters } = context;
   const showAsSignedIn =
     (parameters.pageLayout?.showAsSignedIn as boolean) ?? false;
+  const showRoleBanner =
+    (parameters.pageLayout?.showRoleBanner as boolean) ?? false;
   return (
-    <TopBannerExternalAndFooter showAsSignedIn={showAsSignedIn}>
+    <TopBannerExternalAndFooter
+      showAsSignedIn={showAsSignedIn}
+      showRoleBanner={showRoleBanner}
+    >
       <Story />
     </TopBannerExternalAndFooter>
   );

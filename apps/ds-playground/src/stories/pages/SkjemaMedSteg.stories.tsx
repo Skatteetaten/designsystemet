@@ -28,6 +28,9 @@ export default {
   title: 'Sidetyper/Ekstern/Skjema med steg',
   decorators: [withPageLayout],
   parameters: {
+    pageLayout: {
+      showRoleBanner: true,
+    },
     layout: 'fullscreen',
     controls: {
       disable: true,
