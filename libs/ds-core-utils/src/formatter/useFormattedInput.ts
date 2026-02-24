@@ -286,7 +286,8 @@ function countAllowedSymbols(
  * @param options.locale - Språk som bestemmer symboler for desimal og
  *   tusenskille
  * @param options.allowDecimals - Tillat desimaltall for type 'number'
- * @param options.maxFractionDigits - Maks antall desimaler (standard er 2)
+ * @param options.maxFractionDigits - Maks antall desimaler ( standard er 2)
+ *   Sett allowDecimals til false hvis du ikke ønsker desimaler.
  * @returns Objekt med formatert verdi, hendelseshåndterere og råverdi
  */
 export const useFormattedInput = ({
