@@ -778,3 +778,47 @@ export const WithCharacterLimitAndError = {
     characterLimit: { table: { disable: false } },
   },
 } satisfies Story;
+
+const TemplateWithCharacterCounterAndOnBlur = (
+  args: TextAreaProps
+): JSX.Element => {
+  const [value, setValue] = useState('');
+
+  return (
+    <TextArea
+      {...args}
+      value={value}
+      characterLimit={50}
+      onChange={(e): void => {
+        setValue(e.target.value);
+      }}
+      onBlur={(e) => setValue(e.target.value.replaceAll(' ', ''))}
+    />
+  );
+};
+
+export const WithCharacterLimitAndResetOnEmptyAString = {
+  name: 'With CharacterLimit And Reset On Empty String',
+  render: TemplateWithCharacterCounterAndOnBlur,
+  args: {
+    ...defaultArgs,
+    characterLimit: 50,
+  },
+  argTypes: {
+    characterLimit: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textArea = canvas.getByRole('textbox');
+    const textWith10Spaces = '          ';
+
+    await userEvent.type(textArea, textWith10Spaces);
+    const remainingCount = await canvas.findByText('40 tegn igjen');
+    expect(remainingCount).toBeInTheDocument();
+
+    await userEvent.keyboard('{Tab}');
+
+    const newRemainingCount = await canvas.findByText('50 tegn igjen');
+    expect(newRemainingCount).toBeInTheDocument();
+  },
+} satisfies Story;
