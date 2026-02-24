@@ -625,16 +625,19 @@ const TestNumberInput = ({
   initialValue,
   label,
   locale,
+  maxFractionDigits,
 }: {
   initialValue?: string;
   label: string;
   locale?: string;
+  maxFractionDigits?: number;
 }): JSX.Element => {
   const formatter = useFormattedInput({
     type: 'number',
     initialValue,
     locale,
     allowDecimals: true,
+    maxFractionDigits,
   });
 
   return (
@@ -1002,5 +1005,102 @@ export const NumberLeadingZeroesWithThousandSeparator = {
     await userEvent.type(textbox, '000000123');
     await expect(textbox).toHaveValue(formatNBS('000 000 123'));
     await expect(rawValueDisplay).toHaveTextContent('Raw: 000000123');
+  },
+} satisfies Story;
+
+export const NumberMaxFractionDigits = {
+  name: 'Number - Max Fraction Digits',
+  render: (): JSX.Element => (
+    <TestNumberInput
+      initialValue={''}
+      label={'Maks 4 desimaler'}
+      maxFractionDigits={4}
+    />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const rawValueDisplay = canvas.getByTestId('raw-value');
+    const numberValueDisplay = canvas.getByTestId('number-value');
+
+    textbox.focus();
+
+    // Skriv tall med 4 desimaler (skal tillates)
+    await userEvent.type(textbox, '123,4567');
+    await expect(textbox).toHaveValue('123,4567');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 123,4567');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 123.4567');
+
+    // Forsøk å skrive flere desimaler (skal avvises)
+    await userEvent.type(textbox, '89');
+    await expect(textbox).toHaveValue('123,4567');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 123,4567');
+
+    // Test med initial value som overstiger maks desimaler
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '99,123456789');
+    await expect(textbox).toHaveValue('99,1234');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 99,1234');
+  },
+} satisfies Story;
+
+export const NumberMaxFractionDigitsOne = {
+  name: 'Number - Max Fraction Digits One',
+  render: (): JSX.Element => (
+    <TestNumberInput
+      initialValue={''}
+      label={'Maks 1 desimal'}
+      maxFractionDigits={1}
+    />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const rawValueDisplay = canvas.getByTestId('raw-value');
+    const numberValueDisplay = canvas.getByTestId('number-value');
+
+    textbox.focus();
+
+    // Skriv tall med 1 desimal
+    await userEvent.type(textbox, '500,5');
+    await expect(textbox).toHaveValue('500,5');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 500,5');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 500.5');
+
+    // Forsøk å skrive flere desimaler
+    await userEvent.type(textbox, '99');
+    await expect(textbox).toHaveValue('500,5');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 500,5');
+  },
+} satisfies Story;
+
+export const NumberMaxFractionDigitsZero = {
+  name: 'Number - Max Fraction Digits Zero',
+  render: (): JSX.Element => (
+    <TestNumberInput
+      initialValue={''}
+      label={'Maks 0 desimal'}
+      maxFractionDigits={0}
+    />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+    const rawValueDisplay = canvas.getByTestId('raw-value');
+    const numberValueDisplay = canvas.getByTestId('number-value');
+
+    textbox.focus();
+
+    // Skriv tall med 1 desimal
+    await userEvent.type(textbox, '500,5');
+    //input behandles som heltall i stedet for desimal
+    await expect(textbox).toHaveValue(formatNBS('5 005'));
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 5005');
+    await expect(numberValueDisplay).toHaveTextContent('Number: 5005');
+
+    // Forsøk å skrive flere desimaler
+    await userEvent.type(textbox, '99');
+    await expect(textbox).toHaveValue(formatNBS('500 599'));
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 500599');
   },
 } satisfies Story;
