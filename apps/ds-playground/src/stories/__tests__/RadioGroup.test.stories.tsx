@@ -453,9 +453,7 @@ export const WithHelpText = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultLegendText,
-    });
+    const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await userEvent.click(helpButton);
   },
@@ -638,11 +636,7 @@ export const WithCustomClassNames = {
     );
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
 
-    await expect(
-      canvas.getByText('beskrivelse', {
-        selector: "[aria-hidden='true']",
-      })
-    ).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

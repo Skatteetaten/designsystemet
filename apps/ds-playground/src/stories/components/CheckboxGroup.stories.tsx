@@ -30,7 +30,7 @@ const meta = {
         defaultValue: { summary: 'HelpSimpleSVGpath' },
       },
     },
-    helpText: { table: { category: category.props } },
+    helpText: { control: 'text', table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
     readOnly: { table: { category: category.props } },

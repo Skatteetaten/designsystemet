@@ -70,25 +70,19 @@ export const Fieldset = ({
       form={form}
       data-has-spacing={hasSpacing}
     >
-      <legend id={legendId} className={styles.srOnly}>
+      <legend id={legendId} className={legendClassName}>
         {legend}
-        {description && <span> {description}</span>}
+        <Help
+          classNames={classNames}
+          helpSvgPath={helpSvgPath}
+          helpText={helpText}
+          hideHelp={hideLegend}
+          targetId={legendId}
+          titleHelpSvg={titleHelpSvg}
+          description={description}
+          onHelpToggle={onHelpToggle}
+        />
       </legend>
-
-      <div className={legendClassName} aria-hidden={'true'}>
-        {legend}
-      </div>
-      <Help
-        classNames={classNames}
-        helpSvgPath={helpSvgPath}
-        helpText={helpText}
-        hideHelp={hideLegend}
-        targetId={legendId}
-        titleHelpSvg={titleHelpSvg}
-        description={description}
-        hideDescriptionForScreenReader
-        onHelpToggle={onHelpToggle}
-      />
       <div
         className={`${styles.contentContainer} ${noMarginTopContentContainerClassName} ${classNames?.contentContainer ?? ''}`.trim()}
       >
