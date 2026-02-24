@@ -2,6 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
+import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
 import {
   getParagraphVariantDefault,
   Heading,
@@ -73,7 +74,7 @@ export const Examples: Story = {
 } satisfies Story;
 Examples.parameters = exampleParameters;
 
-export const ExampleWithLink: Story = {
+export const ParagraphWithLink: Story = {
   render: (_args): JSX.Element => {
     return (
       <Paragraph>
@@ -90,10 +91,10 @@ export const ExampleWithLink: Story = {
     );
   },
 } satisfies Story;
-ExampleWithLink.storyName = 'Paragraf med lenke';
-ExampleWithLink.parameters = exampleParameters;
+ParagraphWithLink.storyName = 'Paragraf med lenke';
+ParagraphWithLink.parameters = exampleParameters;
 
-export const ExampleWithInlineStyling: Story = {
+export const ParagraphWithInlineStyling: Story = {
   render: (_args): JSX.Element => {
     return (
       <Paragraph>
@@ -106,5 +107,20 @@ export const ExampleWithInlineStyling: Story = {
     );
   },
 } satisfies Story;
-ExampleWithInlineStyling.storyName = 'Paragraf med utheving';
-ExampleWithInlineStyling.parameters = exampleParameters;
+ParagraphWithInlineStyling.storyName = 'Paragraf med utheving';
+ParagraphWithInlineStyling.parameters = exampleParameters;
+
+export const ParagraphWithIcon: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Paragraph>
+        <Icon svgPath={CompletedSVGpath} />
+        {
+          ' Dette er et avsnitt som inneholder et systemikon i begynnelsen av teksten.'
+        }
+      </Paragraph>
+    );
+  },
+} satisfies Story;
+ParagraphWithIcon.storyName = 'Paragraf med ikon';
+ParagraphWithIcon.parameters = exampleParameters;

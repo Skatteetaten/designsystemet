@@ -6,10 +6,13 @@ import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
 import { Checkbox, TextField } from '@skatteetaten/ds-forms';
 import {
+  AddOutlineSVGpath,
   CopySVGpath,
   DeleteSVGpath,
   EditSVGpath,
   SaveSVGpath,
+  CompletedSVGpath,
+  Icon,
 } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import {
@@ -1537,3 +1540,45 @@ export const AddRow: Story = {
   },
 } satisfies Story;
 AddRow.parameters = exampleParameters;
+
+export const TableWithIcons: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Table caption={'Dette er en ekstra liten tabell'}>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>
+              {'Arbeidsoppgave'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          <Table.Row>
+            <Table.DataCell>{'10.03.2023'}</Table.DataCell>
+            <Table.DataCell>{'Kategori 2'}</Table.DataCell>
+            <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
+            <Table.DataCell>{'HAIKU HEDGE ASA'}</Table.DataCell>
+            <Table.DataCell>
+              <Icon svgPath={CompletedSVGpath} /> {'Fullført'}
+            </Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>{'11.04.2023'}</Table.DataCell>
+            <Table.DataCell>{'Kategori 4'}</Table.DataCell>
+            <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
+            <Table.DataCell>{'ATMOSPHERIC EXPLORER ASA'}</Table.DataCell>
+            <Table.DataCell>
+              <Icon svgPath={AddOutlineSVGpath} /> {'Ny'}
+            </Table.DataCell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    );
+  },
+} satisfies Story;
+TableWithIcons.storyName = 'Tabell med ikoner';
+TableWithIcons.parameters = exampleParameters;

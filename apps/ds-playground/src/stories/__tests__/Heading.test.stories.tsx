@@ -1,7 +1,10 @@
+import { JSX } from 'react';
+
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
+import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
 import {
   Heading,
   HeadingProps,
@@ -238,5 +241,21 @@ export const WithCanBeManuallyFocused: Story = {
     heading.focus();
     await expect(heading).toBeInTheDocument();
     await expect(heading).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const HeadingWithIcon: Story = {
+  args: {
+    ...defaultArgs,
+  },
+  render: (_args): JSX.Element => {
+    return (
+      <Heading as={'h1'}>
+        <Icon svgPath={CompletedSVGpath} size={'extraLarge'} />
+        {
+          ' Dette er en overskrift som inneholder et systemikon i begynnelsen av teksten.'
+        }
+      </Heading>
+    );
   },
 } satisfies Story;
