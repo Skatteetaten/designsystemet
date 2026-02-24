@@ -19,7 +19,7 @@ import {
   removeDuplicateCharsExceptFirstOccurrence,
 } from './utils';
 
-const MAX_FRACTION_DIGITS = 2;
+const DEFAULT_MAX_FRACTION_DIGITS = 2;
 
 /**
  * Oppretter regex som matcher tillatte symboler i input.
@@ -75,13 +75,15 @@ const getMaxLength = (type: FormatTypes): number | undefined => {
  * @param type - Formattypen som bestemmer tillatte tegn
  * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
  * @param allowDecimals - Om desimaltall er tillatt for type 'number'
+ * @param maxFractionDigits - Maks antall desimaler
  * @returns Renset streng med kun gyldige tegn
  */
 const cleanInput = (
   input: string,
   type: FormatTypes,
   decimalSeparator: string,
-  allowDecimals: boolean
+  allowDecimals: boolean,
+  maxFractionDigits: number
 ): string => {
   const digitsOnly = /[^\d]/g;
   const escapedDecimal = escapeRegExp(decimalSeparator);
@@ -102,7 +104,7 @@ const cleanInput = (
 
       const parts = cleanedInput.split(decimalSeparator);
       if (parts.length === 2) {
-        parts[1] = parts[1].substring(0, MAX_FRACTION_DIGITS);
+        parts[1] = parts[1].substring(0, maxFractionDigits);
         cleanedInput = parts.join(decimalSeparator);
       }
     }
@@ -166,6 +168,8 @@ interface UseFormattedInputOptions {
   locale?: string;
   /** Tillat desimaltall for type 'number' (valgfritt, standard er false) */
   allowDecimals?: boolean;
+  /** Maks antall desimaler for type 'number' (valgfritt, standard er 2) */
+  maxFractionDigits?: number;
 }
 
 /** Returtype for useFormattedInput-hooken. */
@@ -282,6 +286,7 @@ function countAllowedSymbols(
  * @param options.locale - Språk som bestemmer symboler for desimal og
  *   tusenskille
  * @param options.allowDecimals - Tillat desimaltall for type 'number'
+ * @param options.maxFractionDigits - Maks antall desimaler (standard er 2)
  * @returns Objekt med formatert verdi, hendelseshåndterere og råverdi
  */
 export const useFormattedInput = ({
@@ -289,7 +294,9 @@ export const useFormattedInput = ({
   initialValue = '',
   locale = 'nb-NO',
   allowDecimals = false,
+  maxFractionDigits: maxFractionDigitsExternal = DEFAULT_MAX_FRACTION_DIGITS,
 }: UseFormattedInputOptions): UseFormattedInputReturn => {
+  const maximumFractionDigits = allowDecimals ? maxFractionDigitsExternal : 0;
   const localeRef = useRef(locale);
   const numberParser = useMemo(() => new NumberParser(locale), [locale]);
   const decimalSeparator = numberParser.getDecimalSeparator();
@@ -307,7 +314,13 @@ export const useFormattedInput = ({
     [decimalSeparator, allowDecimals]
   );
   const [rawValue, setRawValue] = useState(() => {
-    return cleanInput(initialValue, type, decimalSeparator, allowDecimals);
+    return cleanInput(
+      initialValue,
+      type,
+      decimalSeparator,
+      allowDecimals,
+      maximumFractionDigits
+    );
   });
   const hasDecimal = rawValue.includes(decimalSeparator);
 
@@ -316,7 +329,6 @@ export const useFormattedInput = ({
       localeRef.current
     ).getDecimalSeparator();
     const hasDecimal = rawValue.includes(separatorForCounting);
-    const maximumFractionDigits = allowDecimals ? MAX_FRACTION_DIGITS : 0;
     const minimumFractionDigits =
       allowDecimals && hasDecimal
         ? countDecimalDigits(rawValue, separatorForCounting)
@@ -335,7 +347,15 @@ export const useFormattedInput = ({
         minimumIntegerDigits,
       },
     }).value;
-    setRawValue(cleanInput(newRawValue, type, decimalSeparator, allowDecimals));
+    setRawValue(
+      cleanInput(
+        newRawValue,
+        type,
+        decimalSeparator,
+        allowDecimals,
+        maximumFractionDigits
+      )
+    );
     localeRef.current = locale;
   });
 
@@ -346,7 +366,6 @@ export const useFormattedInput = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [locale]);
 
-  const maximumFractionDigits = allowDecimals ? MAX_FRACTION_DIGITS : 0;
   const minimumFractionDigits =
     allowDecimals && hasDecimal
       ? countDecimalDigits(rawValue, decimalSeparator)
@@ -385,7 +404,8 @@ export const useFormattedInput = ({
           previousState.value,
           type,
           decimalSeparator,
-          allowDecimals
+          allowDecimals,
+          maximumFractionDigits
         );
         setRawValue(newRawValue);
 
@@ -398,7 +418,7 @@ export const useFormattedInput = ({
         });
       }
     },
-    [inputHistory, type, decimalSeparator, allowDecimals]
+    [inputHistory, type, decimalSeparator, allowDecimals, maximumFractionDigits]
   );
 
   const handleRedo = useCallback(
@@ -415,7 +435,8 @@ export const useFormattedInput = ({
           nextState.value,
           type,
           decimalSeparator,
-          allowDecimals
+          allowDecimals,
+          maximumFractionDigits
         );
         setRawValue(newRawValue);
 
@@ -428,7 +449,7 @@ export const useFormattedInput = ({
         });
       }
     },
-    [inputHistory, type, decimalSeparator, allowDecimals]
+    [inputHistory, type, decimalSeparator, allowDecimals, maximumFractionDigits]
   );
 
   const handleBackspaceAtSeparator = useCallback(
@@ -632,11 +653,11 @@ export const useFormattedInput = ({
         inputValue,
         type,
         decimalSeparator,
-        allowDecimals
+        allowDecimals,
+        maximumFractionDigits
       );
       setRawValue(cleanedInput);
 
-      const maximumFractionDigits = allowDecimals ? MAX_FRACTION_DIGITS : 0;
       const minimumFractionDigits = allowDecimals
         ? countDecimalDigits(cleanedInput, decimalSeparator)
         : 0;
@@ -681,6 +702,7 @@ export const useFormattedInput = ({
       locale,
       decimalSeparator,
       allowDecimals,
+      maximumFractionDigits,
       allowedSymbols,
       disallowedSymbols,
       inputHistory,
