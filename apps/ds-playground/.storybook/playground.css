@@ -1,5 +1,11 @@
 @import 'inter.css';
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 :root,
 :host {
   font-family: 'Inter';
