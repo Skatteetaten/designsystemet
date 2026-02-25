@@ -30,7 +30,6 @@ export const RoleBanner = ({
   const bannerRef = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => bannerRef?.current as HTMLDivElement);
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });
-  const isDesktop = useMediaQuery('(min-width: 640px)');
 
   const identifier = ` (${user?.identifier})`;
 
@@ -66,7 +65,7 @@ export const RoleBanner = ({
       <div className={styles.content}>
         <span className={styles.nameWrapper}>
           {`${t('rolebanner.Represents')}`}
-          {getRoleIcon(user?.role, isDesktop)}
+          {getRoleIcon(user?.role)}
           {user.role !== 'meg' && (
             <span className={styles.srOnly}>
               {user.role === 'virksomhet'

@@ -7,6 +7,8 @@ import { Link, LinkGroup } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
 import {
   dsI18n,
+  formatNationalIdentityNumber,
+  formatOrganisationNumber,
   langToLocale,
   useMediaQuery,
 } from '@skatteetaten/ds-core-utils';
@@ -58,7 +60,11 @@ const meta = {
     },
   },
   args: {
-    user: { name: 'Ola Nordmann', role: 'meg', identifier: '12345678901' },
+    user: {
+      name: 'Ola Nordmann',
+      role: 'andre',
+      identifier: formatNationalIdentityNumber('12345678901'),
+    },
   },
 } satisfies Meta<typeof RoleBanner>;
 
@@ -108,7 +114,7 @@ export const ExampleWithTopBannerExternalMegSelv: Story = {
           user={{
             name: 'Ola Nordmann',
             role: 'meg',
-            identifier: '12345678901',
+            identifier: formatNationalIdentityNumber('12345678901'),
           }}
         />
         <main>
@@ -128,6 +134,11 @@ export const ExampleWithTopBannerExternalAndre: Story = {
     const [user, setUser] = useState<User>({
       role: 'andre',
       name: 'Kari Nordmann',
+      person: {
+        personId: '10101012345',
+        name: 'Kari Nordmann',
+        type: 'person',
+      },
     });
 
     const isDesktop = useMediaQuery('(min-width: 640px)');
@@ -397,11 +408,7 @@ export const ExampleWithTopBannerExternalAndre: Story = {
             </>
           }
           user={user}
-          onLogOutClick={
-            isDesktop
-              ? (): void => setUser({ role: 'meg', name: me.name })
-              : undefined
-          }
+          onLogOutClick={() => alert('du logget ut')}
           onLanguageClick={handleLanguageClick}
           onSearch={(_e, value): void => {
             alert(`søker etter ${value}`);
@@ -419,9 +426,13 @@ export const ExampleWithTopBannerExternalAndre: Story = {
         </TopBannerExternal>
         <RoleBanner
           user={{
-            name: user.name ?? 'Kari Nordmann',
-            role: 'andre',
-            identifier: '10107554321',
+            name: user?.name ?? 'Kari Nordmann',
+            role: user?.role ?? 'andre',
+            identifier:
+              user.role === 'virksomhet'
+                ? formatOrganisationNumber(user.orgnr ?? '123 456 789')
+                : (formatNationalIdentityNumber(user.person?.personId ?? '') ??
+                  '01.01.2026'),
           }}
         />
         <RolePicker
@@ -441,7 +452,11 @@ export const ExampleWithTopBannerExternalAndre: Story = {
             setUser({
               role: role,
               name: entity.name,
-              orgnr: '999 999 999',
+              orgnr:
+                entity.type === 'Organization'
+                  ? (entity as Business).organizationNumber
+                  : undefined,
+              person: entity.type === 'Person' ? (entity as Person) : undefined,
             });
             modalRef.current?.close();
           }}
