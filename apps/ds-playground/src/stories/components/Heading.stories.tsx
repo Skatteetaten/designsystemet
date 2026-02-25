@@ -76,9 +76,7 @@ export const HeadingWithIcon: Story = {
     return (
       <Heading as={'h1'}>
         <Icon svgPath={CompletedSVGpath} size={'extraLarge'} />
-        {
-          ' Dette er en overskrift som inneholder et systemikon i begynnelsen av teksten.'
-        }
+        {' Skjemaet er sendt inn.'}
       </Heading>
     );
   },

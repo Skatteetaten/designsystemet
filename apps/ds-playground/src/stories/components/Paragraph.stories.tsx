@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
+import { AttachFileSVGpath, Icon } from '@skatteetaten/ds-icons';
 import {
   getParagraphVariantDefault,
   Heading,
@@ -114,10 +114,8 @@ export const ParagraphWithIcon: Story = {
   render: (_args): JSX.Element => {
     return (
       <Paragraph>
-        <Icon svgPath={CompletedSVGpath} />
-        {
-          ' Dette er et avsnitt som inneholder et systemikon i begynnelsen av teksten.'
-        }
+        <Icon svgPath={AttachFileSVGpath} />
+        {' Siden inneholder et filvedlegg.'}
       </Paragraph>
     );
   },

@@ -6,7 +6,7 @@ import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
 import { Checkbox, TextField } from '@skatteetaten/ds-forms';
 import {
-  AddOutlineSVGpath,
+  TimelapseSVGpath,
   CopySVGpath,
   DeleteSVGpath,
   EditSVGpath,
@@ -1572,7 +1572,7 @@ export const TableWithIcons: Story = {
             <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
             <Table.DataCell>{'ATMOSPHERIC EXPLORER ASA'}</Table.DataCell>
             <Table.DataCell>
-              <Icon svgPath={AddOutlineSVGpath} /> {'Ny'}
+              <Icon svgPath={TimelapseSVGpath} /> {'Under arbeid'}
             </Table.DataCell>
           </Table.Row>
         </Table.Body>
