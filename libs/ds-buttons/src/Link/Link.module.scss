@@ -7,10 +7,10 @@
   line-height: var(--semantic-line-height-article);
 
   &Icon {
+    height: calc(var(--font-size-m) * var(--semantic-line-height-article));
     background-color: inherit;
     fill: currentcolor;
-    transform: translate(0, var(--spacing-xs));
-    vertical-align: top;
+    vertical-align: bottom;
 
     &_isCustom {
       margin-right: var(--spacing-s);
