@@ -25,7 +25,10 @@ const meta = {
       table: { category: category.props },
     },
     isSticky: {
-      table: { category: category.props, defaultValue: { summary: 'false' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'undefined' },
+      },
     },
   },
   args: {
