@@ -50,7 +50,7 @@ export const InputCounter = ({
   }, [inputRef]);
 
   useEffect(() => {
-    if (value) {
+    if (value !== undefined) {
       setCharCount(value.length);
     }
   }, [value]);
