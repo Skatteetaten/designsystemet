@@ -41,10 +41,6 @@
   &Icon {
     margin: 0 var(--spacing-s);
     transform: translateY(3px);
-
-    @media (min-width: breakpoints.$breakpoint-s) {
-      transform: translateY(6px);
-    }
   }
 }
 
