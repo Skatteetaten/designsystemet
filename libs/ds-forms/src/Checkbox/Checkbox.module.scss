@@ -120,6 +120,7 @@
       left: 0.0625rem;
       width: 0.71875rem;
       height: 0.3125rem;
+      box-sizing: content-box;
       border-bottom: var(--spacing-xxs) solid var(--check-color);
       border-left: var(--spacing-xxs) solid var(--check-color);
       content: '';
