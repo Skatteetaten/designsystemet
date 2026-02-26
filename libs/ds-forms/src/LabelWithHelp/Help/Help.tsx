@@ -20,6 +20,7 @@ export const Help = ({
   hideHelp,
   targetId,
   titleHelpSvg = getHelpTitleHelpSvgDefault(),
+  disabled,
   onHelpToggle,
   className,
   classNames,
@@ -54,6 +55,7 @@ export const Help = ({
           svgPath={svgHelpIcon}
           title={titleHelpSvg}
           size={'extraSmall'}
+          disabled={disabled}
           ariaExpanded={showHelpText}
           ariaDescribedby={targetId}
           isOutlined

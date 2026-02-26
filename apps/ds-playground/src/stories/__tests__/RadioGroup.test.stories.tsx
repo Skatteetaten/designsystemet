@@ -261,6 +261,7 @@ export const WithDisabled = {
     disabled: true,
     selectedValue: selectedValue,
     defaultValue: undefined,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -274,6 +275,8 @@ export const WithDisabled = {
     radios.forEach((input) => {
       expect(input).toBeDisabled();
     });
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 

@@ -80,6 +80,7 @@ export const Fieldset = ({
           targetId={legendId}
           titleHelpSvg={titleHelpSvg}
           description={description}
+          disabled={disabled}
           onHelpToggle={onHelpToggle}
         />
       </legend>

@@ -233,6 +233,7 @@ export const DatePicker = ({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}

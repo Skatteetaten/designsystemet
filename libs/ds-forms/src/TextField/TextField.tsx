@@ -364,6 +364,7 @@ export const TextField = ({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}

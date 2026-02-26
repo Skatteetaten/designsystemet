@@ -321,6 +321,8 @@ export const WithDisabled = {
     ...defaultArgs,
     disabled: true,
     value: 'En lang tekst som ikke skal synes bak reset-ikonet',
+    hideLabel: false,
+    helpText: 'hjelpetekst',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -328,9 +330,15 @@ export const WithDisabled = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('searchbox');
-    const searchButton = canvas.getByRole('button');
+    const searchButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:searchfield.ButtonTitle'),
+    });
     await expect(textbox).toBeDisabled();
     await expect(searchButton).toBeDisabled();
+    const helpButton = canvas.getByRole('button', {
+      name: dsI18n.t('Shared:shared.Help'),
+    });
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
