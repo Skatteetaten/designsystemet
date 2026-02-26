@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {
   dsI18n,
   getCommonClassNameDefault,
+  NON_BREAKING_SPACE,
   useMediaQuery,
 } from '@skatteetaten/ds-core-utils';
 
@@ -69,8 +70,8 @@ export const RoleBanner = ({
           {user.role !== 'meg' && (
             <span className={styles.srOnly}>
               {user.role === 'virksomhet'
-                ? ` ${t('rolebanner.Business')} `
-                : ` ${t('rolebanner.Person')} `}
+                ? `${NON_BREAKING_SPACE}${t('rolebanner.Business')}${NON_BREAKING_SPACE}`
+                : `${NON_BREAKING_SPACE}${t('rolebanner.Person')}${NON_BREAKING_SPACE}`}
             </span>
           )}
           <span className={styles.bold}>{user.name}</span>
