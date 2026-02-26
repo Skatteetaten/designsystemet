@@ -681,10 +681,18 @@ export const useFormattedInput = ({
           ? (formatted.valueWithDecimalTail ?? '')
           : formatted.value;
 
+      /* Hvis bruker skriver inn desimaltegn uten heltall først  vil formatteren legge på 0 foran desimaltegnet (f.eks ",1" formatteres til 0,1).
+      For å unngå at markøren hopper bakover må vi legge til 1 i antall siffer før markøren. */
+      const digitsBeforeCursorAfterFormatting =
+        formattedValue.startsWith(`0${decimalSeparator}`) &&
+        inputValue.startsWith(decimalSeparator)
+          ? digitsBeforeCursor + 1
+          : digitsBeforeCursor;
+
       const newPosition = positionCursorAfterDigits(
         input,
         formattedValue,
-        digitsBeforeCursor,
+        digitsBeforeCursorAfterFormatting,
         allowedSymbols
       );
 
