@@ -24,6 +24,7 @@ const meta = {
     classNames: { table: { disable: true } },
     children: { table: { disable: true } },
     description: { table: { disable: true } },
+    disabled: { table: { disable: true } },
     helpText: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
@@ -257,5 +258,22 @@ export const WithCustomClassNames = {
     await fireEvent.click(canvas.getByRole('button'));
     const helpText = canvas.getByText('hjelp').parentElement;
     await expect(helpText).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
+export const WithDisabled = {
+  name: 'With Disabled',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    disabled: true,
+  },
+  argTypes: {
+    disabled: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;

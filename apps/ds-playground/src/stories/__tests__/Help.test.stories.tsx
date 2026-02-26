@@ -19,6 +19,7 @@ const meta = {
     // Props
     description: { table: { disable: true } },
     classNames: { table: { disable: true } },
+    disabled: { table: { disable: true } },
     hideHelp: { table: { disable: true } },
     helpText: { table: { disable: true } },
     helpSvgPath: {
@@ -221,5 +222,21 @@ export const WithHelpToggleEvent = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+export const WithDisabled = {
+  name: 'With Disabled',
+  args: {
+    helpText: 'Hjelpetekst',
+    disabled: true,
+  },
+  argTypes: {
+    disabled: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;

@@ -126,6 +126,7 @@ export const TextArea = ({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}

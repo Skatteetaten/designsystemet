@@ -256,6 +256,7 @@ export const WithDisabled = {
     ...defaultArgs,
     disabled: true,
     value: valueDate,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -263,9 +264,15 @@ export const WithDisabled = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    const calendarButton = canvas.getByRole('button');
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
     await expect(textbox).toBeDisabled();
     await expect(calendarButton).toBeDisabled();
+    const helpButton = canvas.getByRole('button', {
+      name: dsI18n.t('Shared:shared.Help'),
+    });
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 

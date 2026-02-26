@@ -117,6 +117,7 @@ export const Select = (({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}

@@ -498,6 +498,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -507,6 +508,8 @@ export const WithDisabled = {
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toBeDisabled();
     await expect(inputElement).toHaveStyle('cursor: not-allowed');
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 

@@ -234,6 +234,7 @@ export const WithDisabled = {
     ...defaultArgs,
     disabled: true,
     value: valueText,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -243,6 +244,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 

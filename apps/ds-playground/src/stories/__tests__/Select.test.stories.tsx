@@ -254,6 +254,7 @@ export const WithDisabled = {
     ...defaultArgs,
     disabled: true,
     value: valueOption1,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -265,6 +266,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const selectNode = canvas.getByRole('combobox');
     await expect(selectNode).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
