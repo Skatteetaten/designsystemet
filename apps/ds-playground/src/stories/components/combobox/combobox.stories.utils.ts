@@ -370,35 +370,30 @@ export const generatePerformanceTestData = (
   return result;
 };
 
-/** Eksempel på grupperte options - kommuner gruppert etter fylke */
+/** Eksempel på grupperte options - kommuner gruppert etter fylke. */
 export const groupedKommuneOptions: ComboboxOption[] = [
-  // Trøndelag
-  { label: 'Trondheim', value: 'trondheim', group: 'Trøndelag' },
-  { label: 'Steinkjer', value: 'steinkjer', group: 'Trøndelag' },
-  { label: 'Levanger', value: 'levanger', group: 'Trøndelag' },
-  { label: 'Stjørdal', value: 'stjordal', group: 'Trøndelag' },
-  { label: 'Orkland', value: 'orkland', group: 'Trøndelag' },
-  // Nordland
   { label: 'Bodø', value: 'bodo', group: 'Nordland' },
-  { label: 'Narvik', value: 'narvik', group: 'Nordland' },
+  { label: 'Bergen', value: 'bergen', group: 'Vestland' },
+  { label: 'Drammen', value: 'drammen', group: 'Oslo og Viken' },
+  { label: 'Eigersund', value: 'eigersund', group: 'Rogaland' },
+  { label: 'Fredrikstad', value: 'fredrikstad', group: 'Oslo og Viken' },
+  { label: 'Førde', value: 'forde', group: 'Vestland' },
+  { label: 'Haugesund', value: 'haugesund', group: 'Rogaland' },
+  { label: 'Levanger', value: 'levanger', group: 'Trøndelag' },
+  { label: 'Lillestrøm', value: 'lillestrom', group: 'Oslo og Viken' },
   { label: 'Mo i Rana', value: 'mo-i-rana', group: 'Nordland' },
   { label: 'Mosjøen', value: 'mosjoen', group: 'Nordland' },
-  // Vestland
-  { label: 'Bergen', value: 'bergen', group: 'Vestland' },
-  { label: 'Voss', value: 'voss', group: 'Vestland' },
-  { label: 'Sogndal', value: 'sogndal', group: 'Vestland' },
-  { label: 'Førde', value: 'forde', group: 'Vestland' },
-  // Rogaland
-  { label: 'Stavanger', value: 'stavanger', group: 'Rogaland' },
-  { label: 'Sandnes', value: 'sandnes', group: 'Rogaland' },
-  { label: 'Haugesund', value: 'haugesund', group: 'Rogaland' },
-  { label: 'Eigersund', value: 'eigersund', group: 'Rogaland' },
-  // Oslo og Viken
+  { label: 'Narvik', value: 'narvik', group: 'Nordland' },
+  { label: 'Orkland', value: 'orkland', group: 'Trøndelag' },
   { label: 'Oslo', value: 'oslo', group: 'Oslo og Viken' },
-  { label: 'Drammen', value: 'drammen', group: 'Oslo og Viken' },
-  { label: 'Fredrikstad', value: 'fredrikstad', group: 'Oslo og Viken' },
+  { label: 'Sandnes', value: 'sandnes', group: 'Rogaland' },
   { label: 'Sarpsborg', value: 'sarpsborg', group: 'Oslo og Viken' },
-  { label: 'Lillestrøm', value: 'lillestrom', group: 'Oslo og Viken' },
+  { label: 'Sogndal', value: 'sogndal', group: 'Vestland' },
+  { label: 'Stavanger', value: 'stavanger', group: 'Rogaland' },
+  { label: 'Steinkjer', value: 'steinkjer', group: 'Trøndelag' },
+  { label: 'Stjørdal', value: 'stjordal', group: 'Trøndelag' },
+  { label: 'Trondheim', value: 'trondheim', group: 'Trøndelag' },
+  { label: 'Voss', value: 'voss', group: 'Vestland' },
 ];
 
 /** Eksempel med blanding av grupperte og ugrupperte options */

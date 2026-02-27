@@ -12,6 +12,7 @@ import {
   buildGroupedStructure,
   getOptionAtFlatIndex,
   countOptionsInGroupedStructure,
+  getOptionsInGroupOrder,
 } from '../combobox-utils';
 
 describe('combobox-utils', () => {
@@ -575,6 +576,30 @@ describe('combobox-utils', () => {
       ];
       const structure = buildGroupedStructure(mixedOptions);
       expect(countOptionsInGroupedStructure(structure)).toBe(3);
+    });
+  });
+
+  describe('getOptionsInGroupOrder', () => {
+    it('Når ingen options har group, så returnerer den samme rekkefølge', () => {
+      expect(getOptionsInGroupOrder(mockOptions)).toEqual(mockOptions);
+    });
+
+    it('Når options er gruppert, sa returnerer den rekkefølge sortert etter grupper', () => {
+      const mixedOptions: ComboboxOption[] = [
+        { label: 'Ungrouped 1', value: 'u1' },
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+        { label: 'Ungrouped 2', value: 'u2' },
+      ];
+
+      expect(getOptionsInGroupOrder(mixedOptions)).toEqual([
+        mixedOptions[0],
+        mixedOptions[1],
+        mixedOptions[3],
+        mixedOptions[2],
+        mixedOptions[4],
+      ]);
     });
   });
 });
