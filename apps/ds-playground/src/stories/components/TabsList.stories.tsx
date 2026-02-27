@@ -10,6 +10,8 @@ const meta = {
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
+    // Aria
+    ariaLabel: { table: { category: category.aria } },
   },
   args: {
     children: [

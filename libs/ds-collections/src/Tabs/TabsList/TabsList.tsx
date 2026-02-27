@@ -47,6 +47,7 @@ export const TabsList = (({
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
+  ariaLabel,
   children,
 }: TabsListProps): JSX.Element => {
   const { isMultiline, ...context } = useContext(TabsContext);
@@ -60,6 +61,7 @@ export const TabsList = (({
       data-testid={dataTestId}
       role={'tablist'}
       tabIndex={-1}
+      aria-label={ariaLabel}
     >
       <TabRenderComponent context={context}>{children}</TabRenderComponent>
     </div>
