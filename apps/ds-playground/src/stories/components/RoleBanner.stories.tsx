@@ -10,7 +10,6 @@ import {
   formatNationalIdentityNumber,
   formatOrganisationNumber,
   langToLocale,
-  useMediaQuery,
 } from '@skatteetaten/ds-core-utils';
 import {
   AccountMultipleIcon,
@@ -143,8 +142,6 @@ export const ExampleWithTopBannerExternalAndre: Story = {
         type: 'person',
       },
     });
-
-    const isDesktop = useMediaQuery('(min-width: 640px)');
 
     const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
       const lang = e.currentTarget.lang;
