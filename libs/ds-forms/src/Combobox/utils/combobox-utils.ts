@@ -510,6 +510,35 @@ export const buildGroupedStructure = (
 };
 
 /**
+ * Returnerer en flat liste med options i samme rekkefølge som den grupperte
+ * visningen. Brukes for keyboard-navigasjon og fokus som følger visuell
+ * rekkefølge.
+ *
+ * @param options - Flat array med options
+ * @returns Flat array med options i visuell rekkefølge
+ */
+export const getOptionsInGroupOrder = (
+  options: ComboboxOption[]
+): ComboboxOption[] => {
+  if (!hasGroupedOptions(options)) {
+    return options;
+  }
+
+  const groupedStructure = buildGroupedStructure(options);
+  const result: ComboboxOption[] = [];
+
+  for (const item of groupedStructure) {
+    if (item.type === 'option') {
+      result.push(item.option);
+    } else {
+      result.push(...item.options);
+    }
+  }
+
+  return result;
+};
+
+/**
  * Mapper en flat index til riktig option i den grupperte strukturen. Brukes for
  * å beholde flat keyboard-navigasjon selv med visuell gruppering.
  *

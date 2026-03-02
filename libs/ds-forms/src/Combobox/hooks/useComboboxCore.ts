@@ -18,6 +18,7 @@ import {
   getSelectedValuesFromValue,
   getSearchTermFromValue,
   filterOptions,
+  getOptionsInGroupOrder,
 } from '../utils/combobox-utils';
 
 export type DropdownTrigger =
@@ -87,8 +88,9 @@ export interface UseComboboxCoreReturn {
  * What: Provides centralized state for dropdown open/close, focus management,
  * option filtering, keyboard navigation, and scroll behavior.
  *
- * Why: The combobox needs a single source of truth for state management to prevent
- * race conditions and ensure consistent behavior across all sub-hooks.
+ * Why: The combobox needs a single source of truth for state management to
+ * prevent race conditions and ensure consistent behavior across all sub-hooks.
+ *
  * @param props - The configuration object for the combobox core hook
  * @param props.options - Array of options available for selection
  * @param props.multiple - Whether multiple selections are allowed
@@ -153,24 +155,37 @@ export function useComboboxCore({
     return filterOptions(options, searchTerm);
   }, [options, searchTerm, isOpen, isLoading]);
 
+  const orderedDisplayOptions = useMemo(() => {
+    return getOptionsInGroupOrder(displayOptions);
+  }, [displayOptions]);
+
   // Calculate enabled indices for keyboard navigation
   // Use allOptions when closed (for keyboard opening), displayOptions when open (for navigation)
   const enabledIndices = useMemo(() => {
-    const optionsToUse = isOpen ? displayOptions : options;
+    const optionsToUse = isOpen
+      ? orderedDisplayOptions
+      : getOptionsInGroupOrder(options);
     return getEnabledIndices({
       options: optionsToUse,
       selectedValues,
       multiple,
       maxSelected,
     });
-  }, [isOpen, displayOptions, options, selectedValues, multiple, maxSelected]);
+  }, [
+    isOpen,
+    orderedDisplayOptions,
+    options,
+    selectedValues,
+    multiple,
+    maxSelected,
+  ]);
 
   // Get currently focused option
   const focusedOption = useMemo(() => {
-    return focusedIndex >= 0 && focusedIndex < displayOptions.length
-      ? displayOptions[focusedIndex]
+    return focusedIndex >= 0 && focusedIndex < orderedDisplayOptions.length
+      ? orderedDisplayOptions[focusedIndex]
       : null;
-  }, [focusedIndex, displayOptions]);
+  }, [focusedIndex, orderedDisplayOptions]);
 
   // Core actions
   /**
@@ -228,7 +243,8 @@ export function useComboboxCore({
    *
    * What: Tracks whether user manually closed to prevent unwanted re-opening.
    *
-   * Why: Manual closes should be respected until user explicitly interacts again.
+   * Why: Manual closes should be respected until user explicitly interacts
+   * again.
    */
   const closeDropdown = useCallback((manual = false): void => {
     setIsOpen(false);
@@ -246,7 +262,8 @@ export function useComboboxCore({
   /**
    * Smoothly scrolls focused option into view with debouncing.
    *
-   * What: Prevents performance issues from rapid focus changes during navigation.
+   * What: Prevents performance issues from rapid focus changes during
+   * navigation.
    *
    * Why: Focused options must be visible for accessibility, but rapid scrolling
    * can cause performance issues and visual jank.
@@ -275,18 +292,21 @@ export function useComboboxCore({
   /**
    * Enhanced focus setter with validation and edge case handling.
    *
-   * What: Validates and corrects focus indices before setting them, handling disabled options,
-   * out-of-bounds indices, and options list changes.
+   * What: Validates and corrects focus indices before setting them, handling
+   * disabled options, out-of-bounds indices, and options list changes.
    *
-   * Why: Raw focus indices can be invalid due to disabled options, dynamic option changes,
-   * or out-of-bounds values, causing accessibility failures and broken keyboard navigation.
+   * Why: Raw focus indices can be invalid due to disabled options, dynamic
+   * option changes, or out-of-bounds values, causing accessibility failures and
+   * broken keyboard navigation.
    *
    * Behavior:
+   *
    * - If options changed: Reset focus to -1 (no focus)
    * - If index is -1: Set directly (valid unfocused state)
    * - If no enabled options: Force to -1
    * - If index points to disabled option: Find nearest enabled option
    * - If index out of bounds: Clamp to valid enabled range
+   *
    * @param index - The desired focus index to set
    */
   const setFocusedIndexEnhanced = useCallback(
@@ -454,10 +474,10 @@ export function useComboboxCore({
 
   // Reset focus when options change significantly
   useEffect(() => {
-    if (focusedIndex >= displayOptions.length) {
+    if (focusedIndex >= orderedDisplayOptions.length) {
       setFocusedIndex(-1);
     }
-  }, [displayOptions.length, focusedIndex]);
+  }, [orderedDisplayOptions.length, focusedIndex]);
 
   // Reset focus when options change during loading
   useEffect(() => {
@@ -484,7 +504,7 @@ export function useComboboxCore({
     isOpen,
     focusedIndex,
     enabledIndices,
-    displayOptions,
+    displayOptions: orderedDisplayOptions,
 
     // Refs
     inputRef,
