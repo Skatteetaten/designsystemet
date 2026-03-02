@@ -1041,6 +1041,12 @@ export const NumberMaxFractionDigits = {
     await userEvent.type(textbox, '99,123456789');
     await expect(textbox).toHaveValue('99,1234');
     await expect(rawValueDisplay).toHaveTextContent('Raw: 99,1234');
+
+    // Test med ekstra nuller i desimal
+    await userEvent.clear(textbox);
+    await userEvent.type(textbox, '99,0010');
+    await expect(textbox).toHaveValue('99,0010');
+    await expect(rawValueDisplay).toHaveTextContent('Raw: 99,0010');
   },
 } satisfies Story;
 

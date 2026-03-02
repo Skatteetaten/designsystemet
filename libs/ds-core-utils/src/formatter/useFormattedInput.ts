@@ -125,16 +125,18 @@ const cleanInput = (
  *
  * @param rawValue - Råverdien som inneholder desimaltall
  * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
- * @returns Antall desimalsiffer (maks 2)
+ * @param maxDecimalDigits - Maks antall desimalsiffer som skal telles
+ * @returns Antall desimalsiffer
  */
 function countDecimalDigits(
   rawValue: string,
-  decimalSeparator: string
+  decimalSeparator: string,
+  maxDecimalDigits: number
 ): number {
   const desimalIndex = rawValue.indexOf(decimalSeparator);
   if (desimalIndex === -1) return 0;
   const digitsAfterDecimal = rawValue.length - desimalIndex - 1;
-  const minimumFractionDigits = Math.min(digitsAfterDecimal, 2);
+  const minimumFractionDigits = Math.min(digitsAfterDecimal, maxDecimalDigits);
   return minimumFractionDigits;
 }
 
@@ -332,7 +334,11 @@ export const useFormattedInput = ({
     const hasDecimal = rawValue.includes(separatorForCounting);
     const minimumFractionDigits =
       allowDecimals && hasDecimal
-        ? countDecimalDigits(rawValue, separatorForCounting)
+        ? countDecimalDigits(
+            rawValue,
+            separatorForCounting,
+            maximumFractionDigits
+          )
         : 0;
     const minimumIntegerDigits = countIntegerDigits(
       rawValue,
@@ -369,7 +375,7 @@ export const useFormattedInput = ({
 
   const minimumFractionDigits =
     allowDecimals && hasDecimal
-      ? countDecimalDigits(rawValue, decimalSeparator)
+      ? countDecimalDigits(rawValue, decimalSeparator, maximumFractionDigits)
       : 0;
   const minimumIntegerDigits = countIntegerDigits(rawValue, decimalSeparator);
   const formatted = formatter({
@@ -660,7 +666,11 @@ export const useFormattedInput = ({
       setRawValue(cleanedInput);
 
       const minimumFractionDigits = allowDecimals
-        ? countDecimalDigits(cleanedInput, decimalSeparator)
+        ? countDecimalDigits(
+            cleanedInput,
+            decimalSeparator,
+            maximumFractionDigits
+          )
         : 0;
       const minimumIntegerDigits = countIntegerDigits(
         cleanedInput,
