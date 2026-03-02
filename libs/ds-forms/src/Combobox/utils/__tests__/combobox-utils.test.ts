@@ -584,7 +584,7 @@ describe('combobox-utils', () => {
       expect(getOptionsInGroupOrder(mockOptions)).toEqual(mockOptions);
     });
 
-    it('Når options er gruppert, sa returnerer den rekkefølge sortert etter grupper', () => {
+    it('Når options er gruppert, så returnerer den rekkefølge sortert etter grupper', () => {
       const mixedOptions: ComboboxOption[] = [
         { label: 'Ungrouped 1', value: 'u1' },
         { label: 'Apple', value: 'apple', group: 'Fruits' },
