@@ -43,8 +43,10 @@
       align-self: start;
       margin: var(--spacing-s) var(--spacing-s) 0 0;
 
-      &:not(:active) > svg {
-        fill: var(--palette-graphite-100);
+      --icon-button-icon-color: var(--palette-graphite-100);
+
+      &:active {
+        --icon-button-icon-color: var(--palette-graphite-0);
       }
     }
   }
