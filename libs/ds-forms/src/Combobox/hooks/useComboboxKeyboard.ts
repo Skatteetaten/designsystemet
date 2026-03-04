@@ -291,15 +291,12 @@ const handleEscape = (
   e: KeyboardEvent,
   props: UseComboboxKeyboardProps
 ): void => {
-  const { isOpen, closeDropdown, setFocusedIndex, setSearchTerm } = props;
+  const { isOpen, closeDropdown, setFocusedIndex } = props;
 
   e.preventDefault();
 
   if (isOpen) {
     closePopup(closeDropdown, setFocusedIndex);
-  } else {
-    // Optional: clear the combobox when popup is hidden
-    setSearchTerm('');
   }
 };
 

@@ -733,7 +733,7 @@ describe('useComboboxKeyboard', () => {
       expect(mockProps.setFocusedIndex).toHaveBeenCalledWith(-1);
     });
 
-    it("should call setSearchTerm('') when popup closed (A5)", () => {
+    it('should not clear search term on Escape', () => {
       // Arrange: Setup mock input with popup closed
       const mockInput = createMockInputElement('search');
       const { mockProps, mockAddEventListener } = setupKeyboardTest({
@@ -748,9 +748,9 @@ describe('useComboboxKeyboard', () => {
       // Act: Simulate Escape keypress with popup closed
       const mockEvent = simulateKeyboardEvent(keydownHandler, 'Escape');
 
-      // Assert: Verify search term cleared
+      // Assert: Verify search term is not cleared
       expect(mockEvent.preventDefault).toHaveBeenCalled();
-      expect(mockProps.setSearchTerm).toHaveBeenCalledWith('');
+      expect(mockProps.setSearchTerm).not.toHaveBeenCalled();
     });
 
     it('should call preventDefault when popup open', () => {
