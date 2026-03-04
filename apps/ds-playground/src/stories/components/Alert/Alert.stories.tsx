@@ -47,7 +47,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
-  tags: ['!dev', '!autodocs'],
+  tags: ['!dev'],
 } satisfies Story;
 
 export const Info: Story = {
