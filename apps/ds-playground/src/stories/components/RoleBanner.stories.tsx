@@ -1,34 +1,12 @@
-import { JSX, MouseEvent, useRef, useState } from 'react';
+import { JSX } from 'react';
 
 import { linkTo } from '@storybook/addon-links';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Link, LinkGroup } from '@skatteetaten/ds-buttons';
-import { Card } from '@skatteetaten/ds-content';
-import {
-  dsI18n,
-  formatNationalIdentityNumber,
-  formatOrganisationNumber,
-  langToLocale,
-} from '@skatteetaten/ds-core-utils';
-import {
-  AccountMultipleIcon,
-  BriefcaseIcon,
-  FavoriteIcon,
-} from '@skatteetaten/ds-icons';
-import {
-  RoleBanner,
-  TopBannerExternal,
-  TopBannerExternalHandle,
-  User,
-} from '@skatteetaten/ds-layout';
-import {
-  Business,
-  Paginated,
-  Person,
-  RolePicker,
-} from '@skatteetaten/ds-overlays';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+import { Link } from '@skatteetaten/ds-buttons';
+import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
+import { RoleBanner, TopBannerExternal } from '@skatteetaten/ds-layout';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import stylesAsString from './RoleBannerExample.module.scss?raw';
 import { category } from '../../../.storybook/helpers';
@@ -38,7 +16,6 @@ import {
 } from '../utils/stories.utils';
 
 import styles from './RoleBannerExample.module.scss';
-import topBannerExternalExampleStyles from './TopBannerExternalExample.module.scss';
 
 const meta = {
   component: RoleBanner,
