@@ -117,6 +117,7 @@
     "@swc/core": "1.15.18",
     "@testing-library/dom": "10.4.0",
     "@testing-library/react": "16.2.0",
+    "@types/fs-extra": "11.0.4",
     "@types/node": "22.13.14",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
