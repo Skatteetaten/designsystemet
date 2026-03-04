@@ -110,7 +110,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
-  tags: ['!dev', '!autodocs'],
+  tags: ['!dev'],
   render: (args): JSX.Element => {
     const [, setArgs] = useArgs();
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
