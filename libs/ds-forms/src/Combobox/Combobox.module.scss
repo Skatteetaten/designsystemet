@@ -180,7 +180,6 @@
 
   &WithCheckbox {
     display: flex;
-    align-items: center;
     column-gap: var(--spacing-s);
   }
 
@@ -213,6 +212,7 @@
   box-sizing: border-box;
   border: var(--spacing-xxs) solid var(--semantic-page-foreground);
   background-color: var(--semantic-page-background);
+  transform: translateY(2px);
 
   &.checked {
     border-color: var(--semantic-interactive-main);
