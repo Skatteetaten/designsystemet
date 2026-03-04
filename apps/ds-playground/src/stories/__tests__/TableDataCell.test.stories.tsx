@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { Icon, AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { Table } from '@skatteetaten/ds-table';
 
 const meta = {
@@ -123,5 +124,16 @@ export const WithChildren = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText('cellChildren')).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithIcon = {
+  name: 'With Icon',
+  args: {
+    children: (
+      <>
+        <Icon svgPath={AddOutlineSVGpath} /> {'Innhold med ikon'}
+      </>
+    ),
   },
 } satisfies Story;

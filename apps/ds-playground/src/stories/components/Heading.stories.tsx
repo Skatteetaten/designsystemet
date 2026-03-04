@@ -2,6 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
+import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -69,3 +70,16 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const HeadingWithIcon: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Heading as={'h1'}>
+        <Icon svgPath={CompletedSVGpath} size={'extraLarge'} />
+        {' Skjemaet er sendt inn.'}
+      </Heading>
+    );
+  },
+} satisfies Story;
+HeadingWithIcon.storyName = 'Overskrift med ikon';
+HeadingWithIcon.parameters = exampleParameters;

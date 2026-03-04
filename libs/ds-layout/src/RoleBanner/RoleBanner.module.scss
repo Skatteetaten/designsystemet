@@ -1,0 +1,61 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/mixins/styles' as style;
+
+.roleBanner {
+  position: sticky;
+  z-index: 60;
+  top: 0;
+  box-sizing: border-box;
+  padding: var(--spacing-xs) 0;
+  background-color: var(--palette-ochre-50);
+
+  &[data-user='meg'] {
+    background-color: var(--palette-graphite-5);
+  }
+
+  &[data-scrolled='true'] {
+    max-height: 3.5rem;
+
+    .nameWrapper {
+      display: block;
+      overflow: hidden;
+      max-width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      max-height: none;
+
+      .nameWrapper {
+        display: inline;
+        white-space: normal;
+      }
+    }
+  }
+
+  &[data-sticky='false'] {
+    position: static;
+  }
+
+  &Icon {
+    margin: 0 var(--spacing-s);
+    transform: translateY(3px);
+  }
+}
+
+.content {
+  max-width: var(--semantic-responsive-container);
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-default);
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.srOnly {
+  @include style.sr-only;
+}

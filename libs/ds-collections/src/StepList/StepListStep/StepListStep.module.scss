@@ -53,6 +53,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: var(--spacing-m);
+    container-type: inline-size;
     gap: var(--spacing-xs);
     grid-area: 2/ 2 / 3 / 3;
     line-height: var(--semantic-line-height-article);
@@ -281,6 +282,7 @@
   position: relative;
   width: 0.6875rem;
   height: 50%;
+  box-sizing: content-box;
   border-bottom: 2px solid var(--semantic-divider-30);
   border-left: 2px solid var(--semantic-divider-30);
   margin-left: 11px;
@@ -303,6 +305,7 @@
     display: inline-block;
     width: 4px;
     height: 4px;
+    box-sizing: content-box;
     padding: 3px;
     border: solid var(--semantic-divider-30);
     border-width: 0 2px 2px 0;

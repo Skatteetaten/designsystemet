@@ -6,11 +6,11 @@
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-article);
 
-  .icon {
+  &Icon {
+    height: calc(var(--font-size-m) * var(--semantic-line-height-article));
     background-color: inherit;
     fill: currentcolor;
-    transform: translate(0, var(--spacing-xs));
-    vertical-align: top;
+    vertical-align: bottom;
 
     &_isCustom {
       margin-right: var(--spacing-s);
@@ -21,31 +21,28 @@
     }
   }
 
-  &_white {
+  &[data-color='white'] {
     --semantic-interactive-main: var(--palette-graphite-0);
-
-    &:focus-visible {
-      @extend %focus;
-
-      color: var(--theme-primary);
-      text-decoration: underline;
-    }
 
     &:hover {
       --semantic-interactive-main: var(--theme-primary);
       --semantic-interactive-background: var(--palette-graphite-0);
     }
 
-    &:active {
-      @extend %focus;
+    &:focus-visible {
+      color: var(--theme-primary);
+      text-decoration: underline;
+    }
 
+    &:active {
       --semantic-interactive-foreground: var(--palette-graphite-0);
-      --theme-primary: var(--palette-graphite-100);
+
+      color: var(--palette-graphite-100);
+      text-decoration: underline;
     }
 
     &:hover:active {
       color: var(--theme-primary);
-      text-decoration: underline;
     }
   }
 }

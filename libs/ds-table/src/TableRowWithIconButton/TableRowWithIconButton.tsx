@@ -54,10 +54,6 @@ export const RowWithLeftSideExpandButton = ({
   const cellRef = useRef<HTMLTableCellElement | null>(null);
 
   useEffect(() => {
-    if (!isExpanded) {
-      return;
-    }
-
     const boundingRects = cellRef.current?.getBoundingClientRect();
     cellRef.current?.style.setProperty(
       'max-width',
@@ -98,13 +94,13 @@ export const RowWithLeftSideExpandButton = ({
     onExpandClick();
 
     /* pass på at bredden på expandert innhold blir riktig første gang raden åpnes
-     * setTimeout stokker om på rekkefølgen slik at expandableWrapper ikke er undefined når vi setter bredden*/
-    setTimeout(() => {
+     * requestAnimationFrame stokker om på rekkefølgen slik at expandableWrapper ikke er undefined når vi setter bredden */
+    requestAnimationFrame(() => {
       expandableWrapperRef.current?.style?.setProperty(
         'width',
         `${rowRef?.current?.offsetWidth ?? 0}px`
       );
-    }, 0);
+    });
   };
 
   const cellSizeClassName = context?.size

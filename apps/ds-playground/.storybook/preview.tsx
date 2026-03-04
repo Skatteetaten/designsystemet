@@ -215,7 +215,7 @@ const globalTypes = {
       items: Spacing,
     },
   },
-};
+} satisfies Preview['globalTypes'];
 
 const preview = {
   decorators: [

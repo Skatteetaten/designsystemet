@@ -199,6 +199,7 @@ export const SearchField = (({
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
         showRequiredMark={showRequiredMark}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}

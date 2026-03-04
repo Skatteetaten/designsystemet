@@ -227,6 +227,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -235,6 +236,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const fieldsetNode = canvas.getByRole('group');
     await expect(fieldsetNode).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -296,9 +299,7 @@ export const WithHelptext = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultLegendText,
-    });
+    const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await fireEvent.click(helpButton);
   },
@@ -364,11 +365,7 @@ export const WithCustomClassNames = {
       '[id^=checkboxGroupErrorId]>div'
     );
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
-    await expect(
-      canvas.getByText('beskrivelse', {
-        selector: "[aria-hidden='true']",
-      })
-    ).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

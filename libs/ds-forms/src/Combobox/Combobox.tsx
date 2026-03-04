@@ -66,8 +66,10 @@ const Combobox = memo(
     titleHelpSvg,
     value,
     variant = getComboboxVariantDefault(),
+    accessKey,
     name,
     disabled,
+    form,
     required,
     onBlur,
     onFocus,
@@ -75,7 +77,6 @@ const Combobox = memo(
     onInputChange,
     onSelectionChange,
     maxSelected,
-    ...htmlAttributes
   }: Readonly<ComboboxProps>): JSX.Element => {
     const { safeFocus } = useBrowserCompatibility();
 
@@ -222,6 +223,7 @@ const Combobox = memo(
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
+          disabled={disabled}
           onHelpToggle={onHelpToggle}
         >
           {label}
@@ -240,11 +242,15 @@ const Combobox = memo(
               disabled={disabled}
               onRemoveValue={handleRemoveValue}
             />
+            {/*eslint-disable-next-line jsx-a11y/no-access-key*/}
             <input
               ref={inputRef}
               id={comboboxId}
               type={'text'}
               value={searchTerm}
+              accessKey={accessKey}
+              form={form}
+              name={multiple ? undefined : name}
               placeholder={placeholder}
               disabled={disabled}
               required={required}
@@ -263,8 +269,6 @@ const Combobox = memo(
               onChange={handleInputChange}
               onFocus={handleInputFocus}
               onBlur={handleInputBlur}
-              {...(multiple ? { name: undefined } : { name })}
-              {...htmlAttributes}
             />
             {/* Hidden inputs for form submission in multiple mode */}
             {multiple &&

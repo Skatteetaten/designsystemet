@@ -197,10 +197,8 @@ export const WithHideLegend = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getAllByText(defaultLegendText)[0];
-    const descriptionNode = canvas.getByText(defaultDescription, {
-      selector: "[aria-hidden='true']",
-    });
+    const legend = canvas.getByText(defaultLegendText);
+    const descriptionNode = canvas.getByText(defaultDescription);
     const helpButtonNode = canvas.getByRole('button');
     await expect(legend).toBeInTheDocument();
     await expect(descriptionNode).toBeInTheDocument();
@@ -224,6 +222,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -235,6 +234,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const fieldset = canvas.getByRole('group');
     await expect(fieldset).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -253,26 +254,28 @@ export const WithHelpTextSvgPathAndTitle = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultLegendText,
-    });
+    const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     const svgNode = canvas.getByLabelText('Tooltip', { selector: 'svg' });
     await expect(svgNode).toBeInTheDocument();
-    const legend = canvas.getAllByText(defaultLegendText)[0];
+    const legend = canvas.getByText(defaultLegendText);
     await expect(helpButton).toHaveAttribute('aria-describedby', legend.id);
     await userEvent.click(helpButton);
   },
 } satisfies Story;
 
 export const WithLongLegend = {
-  name: 'With Long Legend',
+  name: 'With Long Legend And HelpText And Description',
   args: {
     ...defaultArgs,
     legend: loremIpsumWithoutSpaces,
+    helpText: defaultHelpText,
+    description: defaultDescription,
   },
   argTypes: {
     legend: { table: { disable: false } },
+    helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
   },
   globals: {
     viewport: {
@@ -312,7 +315,7 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getAllByText(defaultLegendText)[1];
+    const legend = canvas.getByText(defaultLegendText);
     await expect(legend).toHaveClass('dummyClassname');
   },
 } satisfies Story;

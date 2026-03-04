@@ -19,6 +19,7 @@ export const LabelWithHelp = ({
   helpText,
   helpSvgPath,
   titleHelpSvg,
+  disabled,
   htmlFor,
   hideLabel,
   showRequiredMark,
@@ -58,6 +59,7 @@ export const LabelWithHelp = ({
         titleHelpSvg={titleHelpSvg}
         description={description}
         descriptionId={descriptionId}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       />
     </>

@@ -29,6 +29,7 @@ export const StepListStep = ({
   lang,
   'data-testid': dataTestId,
   editButtonText = getStepListStepEditButtonTextDefault(),
+  classNames,
   introContent,
   introTitle,
   introTitleAs,
@@ -134,7 +135,7 @@ export const StepListStep = ({
       )}
 
       <div
-        className={styles.stepContent}
+        className={`${styles.stepContent} ${classNames?.content}`.trim()}
         data-full-width={hasResultContentFullWidth || undefined}
       >
         <div>{children}</div>

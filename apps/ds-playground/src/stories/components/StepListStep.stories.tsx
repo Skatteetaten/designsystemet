@@ -18,6 +18,7 @@ const meta = {
   title: 'Komponenter/StepList/Step',
   argTypes: {
     // Props
+    classNames: { control: false, table: { category: category.props } },
     editButtonText: {
       table: {
         category: category.props,

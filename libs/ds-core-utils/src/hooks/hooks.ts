@@ -1,23 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useSyncExternalStore } from 'react';
 
 import { FormRequiredProps } from '../base-props.types';
 
 export const useMediaQuery = (query: string): boolean => {
-  const [matches, setMatches] = useState(false);
+  const subscribe = useCallback(
+    (callback: () => void) => {
+      const mediaQueryList = window.matchMedia(query);
+      mediaQueryList.addEventListener('change', callback);
+      return (): void => {
+        mediaQueryList.removeEventListener('change', callback);
+      };
+    },
+    [query]
+  );
 
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = (): void => {
-      setMatches(media.matches);
-    };
-    media.addEventListener('change', listener);
-    return (): void => media.removeEventListener('change', listener);
-  }, [matches, query]);
+  const getSnapshot = useCallback(
+    (): boolean => window.matchMedia(query).matches,
+    [query]
+  );
 
-  return matches;
+  return useSyncExternalStore(subscribe, getSnapshot);
 };
 
 export const useValidateFormRequiredProps = ({

@@ -23,8 +23,8 @@ Norwegian Tax Administration's official design system - an accessible React comp
 ### File-Scoped (Use During Development)
 
 ```bash
-# Type check single file
-npx tsc --noEmit path/to/Component.tsx
+# Type check package (single-file checking not supported in Nx monorepo)
+npx nx run ds-buttons:tsc
 
 # Lint single file (replace ds-buttons with actual package)
 npx nx run ds-buttons:lint -- --fix path/to/Component.tsx
@@ -102,8 +102,6 @@ designsystemet/
 
 ```
 /ComponentName
-  __tests__
-    defaults.test.ts            # Simple unit tests for defaults/utilities
   ComponentName.tsx             # Main component
   ComponentName.module.scss     # Styles
   ComponentName.types.ts        # TypeScript definitions
@@ -134,7 +132,6 @@ libs/ds-{package}/src/{Component}/defaults.ts
 # Testing files
 apps/ds-playground/src/stories/__tests__/{Component}.test.stories.tsx
 apps/ds-playground/src/stories/{Component}.stories.tsx
-libs/ds-{package}/src/{Component}/__tests__/defaults.test.ts
 
 # Package configuration
 libs/ds-{package}/package.json
@@ -171,8 +168,8 @@ libs/ds-{package}/project.json
 **Single File Validation** (use during development):
 
 ```bash
-# Type check specific file
-npx tsc --noEmit libs/ds-buttons/src/Button/Button.tsx
+# Type check package containing your changed file
+npx nx run ds-buttons:tsc
 
 # Lint and fix specific file
 npx nx run ds-buttons:lint -- --fix libs/ds-buttons/src/Button/Button.tsx
@@ -531,7 +528,7 @@ export const Button = ({ isExternal }) => {
 **ALWAYS:**
 
 - Write behavioral tests as **Storybook test stories** in `apps/ds-playground/src/stories/__tests__/*.test.stories.tsx`
-- Write unit tests for defaults/utilities in component `__tests__/` subdirectories (simple tests only)
+- Write unit tests for utilities in component `__tests__/` subdirectories (simple tests only). Default prop functions (parameterless functions that return a constant, e.g. `getTagSizeDefault = (): TagSize => 'medium'`) should only have unit tests if the function accepts parameters.
 - Use Storybook testing framework with Vitest + browser testing
 - Test component behavior, NOT implementation details
 - Include accessibility testing in every component test story
@@ -566,14 +563,6 @@ export const WithAccessibility = {
     await userEvent.click(button);
   },
 } satisfies Story;
-
-// ✅ CORRECT - Simple unit test for defaults (component __tests__ directory)
-// libs/ds-buttons/src/Button/__tests__/defaults.test.ts
-describe('Button defaults', () => {
-  it('returns correct default variant', () => {
-    expect(getButtonVariantDefault()).toBe('primary');
-  });
-});
 ```
 
 **Visual Testing:** Storybook + Chromatic (`npm run chromatic`), responsive breakpoints
@@ -682,7 +671,7 @@ ls libs/ds-buttons/src/Button/
 
 ```bash
 # Always run these before saying "done"
-npx tsc --noEmit [changed-file].tsx
+npx nx run ds-buttons:tsc  # replace with actual package
 npm run test:storybook -- -t "ComponentName"
 ```
 

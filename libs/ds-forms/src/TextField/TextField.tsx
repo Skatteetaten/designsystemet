@@ -364,6 +364,7 @@ export const TextField = ({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}
@@ -408,7 +409,9 @@ export const TextField = ({
           inputRef={textboxRef}
           id={characterCounterId}
           characterLimit={characterLimit}
-          value={formattedValue ? String(formattedValue) : undefined}
+          value={
+            formattedValue !== undefined ? String(formattedValue) : undefined
+          }
         />
       ) : null}
       <ErrorMessage

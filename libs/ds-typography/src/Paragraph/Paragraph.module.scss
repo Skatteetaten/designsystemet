@@ -25,4 +25,9 @@
   a {
     @include styles.link;
   }
+
+  > svg {
+    height: calc(var(--font-size-m) * var(--semantic-line-height-article));
+    vertical-align: bottom;
+  }
 }

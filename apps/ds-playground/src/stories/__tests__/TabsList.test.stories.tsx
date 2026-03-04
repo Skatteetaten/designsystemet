@@ -1,4 +1,5 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, within } from 'storybook/test';
 
 import { Tabs } from '@skatteetaten/ds-collections';
 
@@ -13,6 +14,8 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: false } },
+    // Aria
+    ariaLabel: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
@@ -61,5 +64,34 @@ export const WithAttributes = {
     a11y: {
       test: 'off',
     },
+  },
+} satisfies Story;
+
+const ariaLabel = 'Velg type';
+
+export const WithAriaLabel = {
+  name: 'With AriaLabel',
+  render: TemplateTabsList,
+  args: {
+    ariaLabel,
+    children: [
+      <Tabs.Tab key={'k1'} value={'tab1'}>
+        {'Person'}
+      </Tabs.Tab>,
+      <Tabs.Tab key={'k2'} value={'tab2'}>
+        {'Bedrift'}
+      </Tabs.Tab>,
+    ],
+  },
+  argTypes: {
+    ariaLabel: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const tablist = canvas.getByRole('tablist');
+    await expect(tablist).toHaveAttribute('aria-label', ariaLabel);
   },
 } satisfies Story;

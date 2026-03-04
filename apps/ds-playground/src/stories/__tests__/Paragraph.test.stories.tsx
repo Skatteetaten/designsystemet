@@ -1,6 +1,9 @@
+import { JSX } from 'react';
+
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Paragraph, ParagraphProps } from '@skatteetaten/ds-typography';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
@@ -219,5 +222,21 @@ export const WithCanBeManuallyFocused: Story = {
     paragraph.focus();
     await expect(paragraph).toBeInTheDocument();
     await expect(paragraph).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const ParagraphWithIcon: Story = {
+  args: {
+    ...defaultArgs,
+  },
+  render: (_args): JSX.Element => {
+    return (
+      <Paragraph>
+        <Icon svgPath={CompletedSVGpath} />
+        {
+          ' Dette er et avsnitt som inneholder et systemikon i begynnelsen av teksten.'
+        }
+      </Paragraph>
+    );
   },
 } satisfies Story;

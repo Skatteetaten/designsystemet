@@ -17,6 +17,7 @@
 .description {
   color: var(--palette-graphite-70);
   font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-input);
   overflow-wrap: anywhere;
 
@@ -27,7 +28,7 @@
 
 .helpButton {
   margin-left: var(--spacing-s);
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 .helpBox {
@@ -48,6 +49,7 @@
     padding: var(--spacing-xs) var(--spacing-s);
     color: var(--semantic-page-foreground);
     font-size: var(--font-size-m);
+    font-weight: var(--font-weight-regular);
     line-height: var(--semantic-line-height-default);
   }
 

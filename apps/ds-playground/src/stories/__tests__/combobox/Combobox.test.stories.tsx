@@ -289,6 +289,32 @@ export const IsOpen = {
   },
 } satisfies Story;
 
+export const GroupedKeyboardSelection = {
+  name: 'Grouped Keyboard Selection',
+  args: {
+    label: 'Velg element',
+    options: [
+      { label: 'Ugruppert 1', value: 'u1' },
+      { label: 'Eple', value: 'apple', group: 'Frukt' },
+      { label: 'Gulrot', value: 'carrot', group: 'Gront' },
+      { label: 'Banan', value: 'banana', group: 'Frukt' },
+      { label: 'Ugruppert 2', value: 'u2' },
+    ],
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+
+    await userEvent.keyboard('{ArrowDown}{ArrowDown}{ArrowDown}{Enter}');
+
+    await expect(combobox).toHaveValue('Banan');
+  },
+} satisfies Story;
+
 export const WithErrorMessage = {
   name: 'With ErrorMessage (A2)',
   args: {
@@ -498,6 +524,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -507,6 +534,8 @@ export const WithDisabled = {
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toBeDisabled();
     await expect(inputElement).toHaveStyle('cursor: not-allowed');
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 

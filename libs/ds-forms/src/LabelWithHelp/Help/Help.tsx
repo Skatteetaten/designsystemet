@@ -18,9 +18,9 @@ export const Help = ({
   helpText,
   helpSvgPath,
   hideHelp,
-  hideDescriptionForScreenReader,
   targetId,
   titleHelpSvg = getHelpTitleHelpSvgDefault(),
+  disabled,
   onHelpToggle,
   className,
   classNames,
@@ -55,6 +55,7 @@ export const Help = ({
           svgPath={svgHelpIcon}
           title={titleHelpSvg}
           size={'extraSmall'}
+          disabled={disabled}
           ariaExpanded={showHelpText}
           ariaDescribedby={targetId}
           isOutlined
@@ -80,7 +81,6 @@ export const Help = ({
       {description && (
         <div
           id={descriptionId}
-          aria-hidden={hideDescriptionForScreenReader}
           className={`${
             styles.description
           } ${marginTopClassName} ${hideHelpClassName} ${

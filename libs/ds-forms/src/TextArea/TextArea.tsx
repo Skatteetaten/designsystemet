@@ -126,6 +126,7 @@ export const TextArea = ({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}
@@ -160,7 +161,7 @@ export const TextArea = ({
           inputRef={textboxRef}
           id={characterCounterId}
           characterLimit={characterLimit}
-          value={value ? String(value) : undefined}
+          value={value !== undefined ? String(value) : undefined}
         />
       ) : null}
       <ErrorMessage

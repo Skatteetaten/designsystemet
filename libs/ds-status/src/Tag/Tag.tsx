@@ -38,9 +38,7 @@ export const Tag = ({
       data-size={size}
     >
       {svgPath && (
-        <div className={styles.iconWrapper} aria-hidden>
-          <Icon className={styles.icon} svgPath={svgPath} size={'small'} />
-        </div>
+        <Icon className={styles.icon} svgPath={svgPath} size={'small'} />
       )}
       {children}
     </div>
