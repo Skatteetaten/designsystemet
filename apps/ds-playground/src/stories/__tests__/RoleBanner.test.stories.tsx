@@ -17,7 +17,8 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    // children: { table: { disable: true } },
+    user: { table: { disable: true } },
+    isSticky: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
@@ -185,18 +186,6 @@ export const MobileAndScrolled = {
       value: '--mobile',
     },
   },
-  parameters: {
-    viewport: {
-      options: {
-        maxHeight: {
-          maxHeight: { name: 'maxHeight', styles: { height: '300px' } },
-        },
-      },
-    },
-    chromatic: {
-      modes: { maxHeight: { viewport: 'maxHeight' } },
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const banner = canvas.getByRole('region');
@@ -219,18 +208,6 @@ export const Mobile = {
   globals: {
     viewport: {
       value: '--mobile',
-    },
-  },
-  parameters: {
-    viewport: {
-      options: {
-        maxHeight: {
-          maxHeight: { name: 'maxHeight', styles: { height: '300px' } },
-        },
-      },
-    },
-    chromatic: {
-      modes: { maxHeight: { viewport: 'maxHeight' } },
     },
   },
 } satisfies Story;
