@@ -1,0 +1,9 @@
+import{j as o}from"./iframe-CiN0Q14g.js";import{useMDXComponents as m}from"./index-CwHA38Rx.js";import{M as s,P as n,a as p}from"./blocks-sF-ikpxg.js";import{P as i}from"./utils-BU3voO0p.js";import{C as a,E as c}from"./CheckboxGroup.stories-BsEpX4np.js";import{V as x}from"./VersionBadge-CatfQa8W.js";import{D as h}from"./DocIntro-DWTfTD_X.js";import{D as d}from"./DocHeaderWrapper-BhSoideu.js";import"./preload-helper-PPVm8Dsz.js";import"./index-DCXUn40C.js";import"./index-BISxtpJG.js";import"./lz-string-m9jzapWX.js";import"./index-DlhHSFLU.js";import"./index-DPSubrBs.js";import"./index-CADG8hp_.js";import"./index-CXQcQlzF.js";import"./DatePickerCalendar-33-6eNA3.js";import"./LabelWithHelp-BVo4oAdJ.js";import"./Help-CWCFe-OJ.js";import"./Combobox.module-DmWNkYt7.js";import"./ComboboxButton-D9rNpk9d.js";import"./index-CkFywVr_.js";import"./index-BYrVrPct.js";import"./ComboboxSelectedOptions-DsscLJf7.js";import"./index-PbL3vWv8.js";import"./index-BJUFs7AQ.js";import"./icon.systems-Bl-E5KUb.js";import"./icon.utils-Cf2kPhAa.js";import"./stories.utils-CY4KCgXE.js";function e(t){const r={code:"code",h1:"h1",h2:"h2",pre:"pre",...m(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(s,{of:a}),`
+`,o.jsxs(d,{componentName:"CheckboxGroup",children:[o.jsx(r.h1,{id:"checkboxgroup",children:"CheckboxGroup"}),o.jsx(x,{packageName:"forms"}),o.jsx(h,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/"})]}),`
+`,o.jsx(n,{}),`
+`,o.jsx(r.pre,{children:o.jsx(r.code,{className:"language-tsx",children:`import { CheckboxGroup } from '@skatteetaten/ds-forms';
+`})}),`
+`,o.jsx(p,{}),`
+`,o.jsx(r.h2,{id:"examples",children:"Examples"}),`
+`,o.jsx(i,{of:c})]})}function z(t={}){const{wrapper:r}={...m(),...t.components};return r?o.jsx(r,{...t,children:o.jsx(e,{...t})}):e(t)}export{z as default};
+//# sourceMappingURL=CheckboxGroup-DPQs0E8e.js.map

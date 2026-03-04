@@ -1,0 +1,4 @@
+import{T as o}from"./index-Dmm9DSlI.js";import{T as r}from"./TableEditableRow.test.stories-CKE6ZuhV.js";import{c as e}from"./createSingleStory-DCT1IPSt.js";import"./iframe-CiN0Q14g.js";import"./preload-helper-PPVm8Dsz.js";import"./index-DPSubrBs.js";import"./index-DlhHSFLU.js";import"./index-CADG8hp_.js";import"./index-BYrVrPct.js";const a={title:"Chromatic/Table/EditableRow",component:o.EditableRow,tags:["chromatic","!autodocs"]},t=e(r,a,{runPlayFunctions:!0});t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:`createSingleStory(TableEditableRowStories, meta, {
+  runPlayFunctions: true
+})`,...t.parameters?.docs?.source}}};const S=["Snapshots"];export{t as Snapshots,S as __namedExportsOrder,a as default};
+//# sourceMappingURL=TableEditableRow.chromatic.stories-Dps4xP_E.js.map
