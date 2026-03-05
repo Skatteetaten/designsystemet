@@ -28,6 +28,8 @@ export const FileUploaderFile = ({
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const generatedId = useId();
   const id = externalId ?? generatedId;
+  //remove invalid whitespace from children to create a valid id
+  const fileId = `${id}-file-${children.replace(/\s/g, '_')}`;
 
   return (
     <li
@@ -55,7 +57,7 @@ export const FileUploaderFile = ({
               title={t('fileuploader.DeleteLabel')}
               spinnerTitle={t('fileuploader.DeleteInProgress')}
               hasSpinner={showSpinner}
-              ariaDescribedby={`${id}-file-${children}`}
+              ariaDescribedby={fileId}
               onClick={onClickDelete}
             />
           }
@@ -67,16 +69,11 @@ export const FileUploaderFile = ({
           />
           <div className={styles.fileNameContainer}>
             {href ? (
-              <Link
-                id={`${id}-file-${children}`}
-                href={href}
-                download
-                onClick={onClick}
-              >
+              <Link id={fileId} href={href} download onClick={onClick}>
                 {children}
               </Link>
             ) : (
-              <span id={`${id}-file-${children}`}>{children}</span>
+              <span id={fileId}>{children}</span>
             )}
           </div>
         </Card.Content>
