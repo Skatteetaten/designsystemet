@@ -141,19 +141,24 @@ describe('combobox-utils', () => {
   });
 
   describe('selectOption', () => {
-    let mockSetSelectedValues: ReturnType<typeof vi.fn>;
-    let mockSetSearchTerm: ReturnType<typeof vi.fn>;
-    let mockCloseDropdown: ReturnType<typeof vi.fn>;
-    let mockSetFocusedIndex: ReturnType<typeof vi.fn>;
-    let mockOnSelectionChange: ReturnType<typeof vi.fn>;
+    let mockSetSelectedValues: ReturnType<
+      typeof vi.fn<(values: ComboboxOption[]) => void>
+    >;
+    let mockSetSearchTerm: ReturnType<typeof vi.fn<(term: string) => void>>;
+    let mockCloseDropdown: ReturnType<typeof vi.fn<(manual?: boolean) => void>>;
+    let mockSetFocusedIndex: ReturnType<typeof vi.fn<(index: number) => void>>;
+    let mockOnSelectionChange: ReturnType<
+      typeof vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>
+    >;
     let mockInputRef: React.RefObject<HTMLInputElement | null>;
 
     beforeEach(() => {
-      mockSetSelectedValues = vi.fn();
-      mockSetSearchTerm = vi.fn();
-      mockCloseDropdown = vi.fn();
-      mockSetFocusedIndex = vi.fn();
-      mockOnSelectionChange = vi.fn();
+      mockSetSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+      mockSetSearchTerm = vi.fn<(term: string) => void>();
+      mockCloseDropdown = vi.fn<(manual?: boolean) => void>();
+      mockSetFocusedIndex = vi.fn<(index: number) => void>();
+      mockOnSelectionChange =
+        vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>();
       mockInputRef = createRef<HTMLInputElement | null>();
 
       // Mock HTMLInputElement
@@ -341,12 +346,17 @@ describe('combobox-utils', () => {
   });
 
   describe('removeOption', () => {
-    let mockSetSelectedValues: ReturnType<typeof vi.fn>;
-    let mockOnSelectionChange: ReturnType<typeof vi.fn>;
+    let mockSetSelectedValues: ReturnType<
+      typeof vi.fn<(values: ComboboxOption[]) => void>
+    >;
+    let mockOnSelectionChange: ReturnType<
+      typeof vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>
+    >;
 
     beforeEach(() => {
-      mockSetSelectedValues = vi.fn();
-      mockOnSelectionChange = vi.fn();
+      mockSetSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+      mockOnSelectionChange =
+        vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>();
     });
 
     it('Når en option fjernes, så oppdaterer den selectedValues og kaller callback', () => {

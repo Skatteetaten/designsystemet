@@ -79,7 +79,7 @@ const unzipFile = (fileName: string): Promise<Tekstliste[] | void> => {
 };
 
 const removeZipFile = (zipFileName: string): void => {
-  fse.unlink(zipFileName, (unlinkError: NodeJS.ErrnoException) => {
+  fse.unlink(zipFileName, (unlinkError: NodeJS.ErrnoException | null) => {
     if (unlinkError) {
       console.error(unlinkError);
     }
