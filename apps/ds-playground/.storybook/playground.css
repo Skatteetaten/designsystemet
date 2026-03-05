@@ -476,3 +476,15 @@ dl.descriptionListTwoColumns {
   width: 100%;
   max-width: 400px;
 }
+
+.maxHeight300 {
+  max-height: 300px;
+}
+
+.singleCombobox {
+  max-width: 15.5rem;
+}
+
+.multipleCombobox {
+  max-width: 17rem;
+}

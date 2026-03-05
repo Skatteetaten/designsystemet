@@ -67,13 +67,6 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
     );
   };
 
-  const handleReset = (): void => {
-    setSelectedKommuner([]);
-    setSelectedKommuneObjects([]);
-    setIsSubmitted(false);
-    setSubmissionMessage('');
-  };
-
   return (
     <div>
       <Paragraph hasSpacing>
@@ -87,11 +80,10 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
           <div>
             <Combobox
               name={'selectedKommuner'}
-              label={'Velg tidligere norske kommuner'}
+              label={'Kommune'}
               description={
                 'Velg maksimalt 2 kommuner. Du kan se informasjon om sammenslåing og resulterende kommune.'
               }
-              placeholder={'Søk etter kommune'}
               options={typedKommuneOptions}
               value={selectedKommuner}
               errorMessage={
@@ -105,19 +97,7 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
               onSelectionChange={handleSelectionChange}
             />
 
-            <div className={'flex gapS topSpacingL'}>
-              <Button type={'submit'}>{'Send inn valg'}</Button>
-
-              {(selectedKommuneObjects.length > 0 || isSubmitted) && (
-                <Button
-                  variant={'tertiary'}
-                  type={'button'}
-                  onClick={handleReset}
-                >
-                  {'Nullstill valg'}
-                </Button>
-              )}
-            </div>
+            <Button type={'submit'}>{'Send inn'}</Button>
 
             {isSubmitted && submissionMessage && (
               <div className={'topSpacingS paddingXS'}>

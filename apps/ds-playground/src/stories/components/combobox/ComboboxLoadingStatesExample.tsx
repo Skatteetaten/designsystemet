@@ -10,9 +10,6 @@ const ComboboxLoadingStatesExample = (): JSX.Element => {
   const [asyncOptions, setAsyncOptions] = useState<
     ReturnType<typeof generatePerformanceTestData>
   >([]);
-  const [searchValue, setSearchValue] = useState('');
-
-  console.info('Søkeverdi:', searchValue);
 
   const simulateAsyncSearch = (value: string): void => {
     setAsyncLoading(true);
@@ -36,7 +33,6 @@ const ComboboxLoadingStatesExample = (): JSX.Element => {
   };
 
   const handleInputChange = (value: string): void => {
-    setSearchValue(value);
     if (value.length >= 2) {
       simulateAsyncSearch(value);
     } else {
@@ -46,24 +42,27 @@ const ComboboxLoadingStatesExample = (): JSX.Element => {
   };
 
   return (
-    <div>
+    <>
       <Paragraph hasSpacing>
         {
-          'Eksempel på bruk av combobox med lastetilstander og asynkront søk med 5000 elementer. Skriv minst 2 tegn i søkefeltet for å simulere et API-kall som henter og filtrerer alternativer.'
+          'Eksempel på bruk av combobox med lastetilstander og asynkront søk med 5000 elementer.'
         }
       </Paragraph>
-
+      <Paragraph hasSpacing>
+        {
+          'Skriv minst 2 tegn i søkefeltet for å simulere et API-kall som henter og filtrerer alternativer.'
+        }
+      </Paragraph>
       <Combobox
-        label={'Søk i database (5000 elementer)'}
-        placeholder={'Skriv minst 2 tegn for å søke blant 5000 elementer'}
+        className={'singleCombobox'}
+        label={'Avdeling'}
+        description={'Skriv minst 2 tegn for å søke'}
         isLoading={asyncLoading}
-        spinnerLabel={'Søker'}
         options={asyncOptions}
         minSearchLength={2}
-        hasSpacing
         onInputChange={handleInputChange}
       />
-    </div>
+    </>
   );
 };
 
