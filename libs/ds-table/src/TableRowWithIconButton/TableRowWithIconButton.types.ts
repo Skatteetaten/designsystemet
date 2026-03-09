@@ -10,6 +10,7 @@ import {
 
 export interface ExpandableRowProps extends BaseProps {
   ref?: RefObject<RowWithExpandButtonHandle | null>;
+  rowType?: 'expand' | 'edit';
   /**
    * Overstyring av standard title/tekst for utvidelsesknappen. Default title er
    * "Mer informasjon" (når showExpandButtonTitle er false). Når
