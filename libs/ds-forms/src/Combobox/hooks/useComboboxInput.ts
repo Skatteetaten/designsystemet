@@ -7,6 +7,10 @@ import {
 
 import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 import { useBrowserCompatibility } from './useBrowserCompatibility';
+import {
+  getFirstEnabledIndex,
+  openDropdownWithFocus,
+} from '../utils/combobox-state-utils';
 
 export type DropdownTrigger =
   | 'focus'
@@ -27,6 +31,9 @@ interface UseComboboxInputProps {
   value?: ComboboxProps['value'];
   openDropdown: (trigger: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
+  enabledIndices: number[];
+  focusedIndex: number;
+  setFocusedIndex: (index: number) => void;
 }
 
 interface UseComboboxInputReturn {
@@ -57,6 +64,8 @@ interface UseComboboxInputReturn {
  * @param props.value - Current value(s) of the combobox
  * @param props.openDropdown - Function to open the dropdown
  * @param props.closeDropdown - Function to close the dropdown
+ * @param props.enabledIndices - Array of indices for non-disabled options
+ * @param props.setFocusedIndex - Function to update focused option index
  * @returns Object containing input event handlers
  */
 export function useComboboxInput({
@@ -71,9 +80,12 @@ export function useComboboxInput({
   onBlur,
   onFocus,
   value,
+  setFocusedIndex,
+  enabledIndices,
 }: UseComboboxInputProps): UseComboboxInputReturn {
   const { safeFocus, preventZoom, manageVirtualKeyboard } =
     useBrowserCompatibility();
+
   /**
    * Handles text input changes and triggers dropdown opening.
    *
@@ -97,19 +109,27 @@ export function useComboboxInput({
         }
       }
 
-      openDropdown('input');
+      const firstEnabledIndex = getFirstEnabledIndex(enabledIndices);
+      const inputOpenDropDown = (): void => openDropdown('input');
+      openDropdownWithFocus(
+        inputOpenDropDown,
+        setFocusedIndex,
+        firstEnabledIndex
+      );
 
       // Call user's onInputChange callback
       onInputChange?.(newValue);
     },
     [
       setSearchTerm,
-      openDropdown,
-      onInputChange,
       multiple,
       value,
+      enabledIndices,
+      onInputChange,
       setSelectedValues,
       onSelectionChange,
+      openDropdown,
+      setFocusedIndex,
     ]
   );
 

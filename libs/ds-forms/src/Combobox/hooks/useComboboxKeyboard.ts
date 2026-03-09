@@ -2,8 +2,10 @@ import { useEffect, type RefObject } from 'react';
 
 import type { ComboboxOption } from '../Combobox.types';
 import {
+  closeDropdownAndResetFocus,
   getFirstEnabledIndex,
   isIndexEnabled,
+  openDropdownWithFocus,
 } from '../utils/combobox-state-utils';
 
 export interface UseComboboxKeyboardProps {
@@ -47,26 +49,6 @@ const canOpenDropdown = (
     allOptions.length > 0 &&
     (inputRef.current?.value.length ?? 0) >= minSearchLength
   );
-};
-
-// Popup management utilities
-const openDropdownWithFocus = (
-  openDropdown: () => void,
-  setFocusedIndex: (index: number) => void,
-  focusIndex?: number
-): void => {
-  openDropdown();
-  if (focusIndex !== undefined) {
-    setFocusedIndex(focusIndex);
-  }
-};
-
-const closePopup = (
-  closeDropdown: (manual?: boolean) => void,
-  setFocusedIndex: (index: number) => void
-): void => {
-  closeDropdown(true);
-  setFocusedIndex(-1);
 };
 
 // Handle exact text match when no option is focused
@@ -166,7 +148,7 @@ const handleArrowUp = (
   if (e.altKey) {
     // Alt + Up Arrow: Close popup and return focus to combobox
     if (isOpen) {
-      closePopup(closeDropdown, setFocusedIndex);
+      closeDropdownAndResetFocus(closeDropdown, setFocusedIndex);
     }
     return;
   }
@@ -179,25 +161,26 @@ const handleArrowUp = (
 
     if (focusedIndex === firstEnabledIndex) {
       // We're at the first enabled option - close dropdown instead of wrapping
-      closePopup(closeDropdown, setFocusedIndex);
+      closeDropdownAndResetFocus(closeDropdown, setFocusedIndex);
     } else {
       // Move to previous enabled option using validated utility
       moveFocusPrevious();
     }
   } else {
     // Current index is not enabled, close dropdown
-    closePopup(closeDropdown, setFocusedIndex);
+    closeDropdownAndResetFocus(closeDropdown, setFocusedIndex);
   }
 };
 
 /**
- * Handles option selection for both Enter and Space keys.
+ * Handles option selection for both Enter.
  *
  * What: Selects focused option or attempts exact text match if no option
  * focused.
  *
- * Why: Both Enter and Space should select options per ARIA guidelines. Exact
- * text matching allows typing complete values without dropdown navigation.
+ * Why not Both Enter and Space: space for selection blocks searchValues
+ * containing spcae. Exact text matching allows typing complete values without
+ * dropdown navigation.
  *
  * @param e - The keyboard event
  * @param props - Configuration object containing combobox state and handlers
@@ -241,38 +224,6 @@ const handleEnter = (
   handleSelection(e, props);
 };
 
-// Space key handler
-const handleSpace = (
-  e: KeyboardEvent,
-  props: UseComboboxKeyboardProps
-): void => {
-  const { isOpen, focusedIndex, enabledIndices, inputRef, displayOptions } =
-    props;
-
-  // If dropdown is open and an option is focused, handle selection and prevent space from reaching input
-  if (isOpen && isIndexEnabled(focusedIndex, enabledIndices)) {
-    handleSelection(e, props);
-    return;
-  }
-
-  // If dropdown is open but no option is focused, check for exact text match
-  if (isOpen && focusedIndex === -1) {
-    const searchValue = inputRef.current?.value.trim();
-    const hasExactMatch =
-      searchValue &&
-      displayOptions.find(
-        (option) => option.label.toLowerCase() === searchValue.toLowerCase()
-      );
-
-    if (hasExactMatch) {
-      handleSelection(e, props);
-      return;
-    }
-  }
-
-  // Otherwise, let the input handle the space normally
-};
-
 // Escape key handler
 const handleEscape = (
   e: KeyboardEvent,
@@ -283,7 +234,7 @@ const handleEscape = (
   e.preventDefault();
 
   if (isOpen) {
-    closePopup(closeDropdown, setFocusedIndex);
+    closeDropdownAndResetFocus(closeDropdown, setFocusedIndex);
   }
 };
 
@@ -292,10 +243,27 @@ const handleTab = (
   _e: KeyboardEvent,
   props: UseComboboxKeyboardProps
 ): void => {
-  const { isOpen, closeDropdown, setFocusedIndex } = props;
+  const {
+    isOpen,
+    focusedIndex,
+    displayOptions,
+    enabledIndices,
+    closeDropdown,
+    setFocusedIndex,
+    onOptionSelect,
+  } = props;
 
   if (isOpen) {
-    closePopup(closeDropdown, setFocusedIndex);
+    // Velg fokusert valg hvis det finnes ett
+    if (
+      isIndexEnabled(focusedIndex, enabledIndices) &&
+      displayOptions[focusedIndex]
+    ) {
+      const selectedOption = displayOptions[focusedIndex];
+      onOptionSelect(selectedOption, true); // true = fromKeyboard
+    }
+
+    closeDropdownAndResetFocus(closeDropdown, setFocusedIndex);
   }
   // Allow normal tab behavior
 };
@@ -362,7 +330,6 @@ export function useComboboxKeyboard(props: UseComboboxKeyboardProps): void {
         ArrowDown: handleArrowDown,
         ArrowUp: handleArrowUp,
         Enter: handleEnter,
-        ' ': handleSpace,
         Escape: handleEscape,
         Tab: handleTab,
         Backspace: handleBackspace,
