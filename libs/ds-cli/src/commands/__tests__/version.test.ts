@@ -1,4 +1,5 @@
 import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
+
 import { handleVersion } from '../version.js';
 
 const { mockReadFileSync, mockDirname, mockJoin } = vi.hoisted(() => ({
