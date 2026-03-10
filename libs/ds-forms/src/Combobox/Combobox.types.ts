@@ -7,9 +7,9 @@ import type { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
 export type ComboboxSize = Extract<Size, 'medium' | 'large'>;
 
-export type ComboboxOption = {
+type ComboboxOptionBase<TValue extends string | number = string> = {
   label: string;
-  value: string;
+  value: TValue;
   /**
    * Gruppe som alternativet tilhører. Alternativer med samme group vises sammen
    * under en felles overskrift.
@@ -17,9 +17,49 @@ export type ComboboxOption = {
   group?: string;
 };
 
-export type TypedComboboxOption<TData> = ComboboxOption & {
-  data: TData;
-};
+/**
+ * Representerer et alternativ i Combobox.
+ *
+ * @example
+ *   // Basis - ingen generics
+ *   const option: ComboboxOption = { label: 'Oslo', value: 'oslo' };
+ *
+ *   // Med typed value (string union)
+ *   type Status = 'active' | 'inactive';
+ *   const option: ComboboxOption<Status> = {
+ *     label: 'Active',
+ *     value: 'active',
+ *   };
+ *
+ *   // Med metadata
+ *   type Meta = { population: number };
+ *   const option: ComboboxOption<string, Meta> = {
+ *     label: 'Oslo',
+ *     value: 'oslo',
+ *     data: { population: 709037 },
+ *   };
+ *
+ *   // Begge generics
+ *   const option: ComboboxOption<Status, Meta> = {
+ *     label: 'Active Oslo',
+ *     value: 'active',
+ *     data: { population: 709037 },
+ *   };
+ *
+ * @param TValue - Type for value-feltet. Standard er string. Kan være
+ *   strengunion (f.eks. 'active' | 'inactive') eller number.
+ * @param TData - Type for metadata via data-feltet. Standard er never (ikke
+ *   tilgjengelig).
+ */
+export type ComboboxOption<
+  TValue extends string | number = string,
+  TData = never,
+> = [TData] extends [never]
+  ? ComboboxOptionBase<TValue>
+  : ComboboxOptionBase<TValue> & { data: TData };
+
+/** @deprecated Bruk ComboboxOption<TValue, TData> i stedet. */
+export type TypedComboboxOption<TData> = ComboboxOption<string, TData>;
 
 export type ComboboxPropsHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
@@ -33,7 +73,11 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'accessKey'
 >;
 
-interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
+interface ComboboxCommonProps<
+  TValue extends string | number = string,
+  TData = never,
+> extends ComboboxPropsHTMLAttributes,
+    BaseProps {
   ref?: Ref<HTMLInputElement | null>;
   classNames?: Prettify<
     {
@@ -59,7 +103,7 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   /** Minimum antall tegn før søkeresultater vises */
   minSearchLength?: number;
   /** Array av valg som kan velges fra */
-  options: ComboboxOption[];
+  options: ComboboxOption<TValue, TData>[];
   /** For å tilpasse 'color' eller 'size' til spinner */
   spinnerProps?: Prettify<Partial<Pick<SpinnerProps, 'size' | 'color'>>>;
   /** Overskriver default tooltip-tekst til hjelpeikon */
@@ -74,7 +118,10 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
-interface SingleComboboxProps extends ComboboxCommonProps {
+interface SingleComboboxProps<
+  TValue extends string | number = string,
+  TData = never,
+> extends ComboboxCommonProps<TValue, TData> {
   /** Tillater valg av flere alternativer */
   multiple?: false;
   /**
@@ -86,9 +133,11 @@ interface SingleComboboxProps extends ComboboxCommonProps {
    * Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert
    * modus
    */
-  value?: string | number;
+  value?: TValue | number;
   /** Kalles når valget endres. Enkeltvalg: mottar ComboboxOption | null */
-  onSelectionChange?: (selectedOption: ComboboxOption | null) => void;
+  onSelectionChange?: (
+    selectedOption: ComboboxOption<TValue, TData> | null
+  ) => void;
   /**
    * Kalles når input-teksten endres. Mottar søketekst som string. Nyttig for
    * asynkron søk og filtrering
@@ -97,7 +146,10 @@ interface SingleComboboxProps extends ComboboxCommonProps {
   maxSelected?: never;
 }
 
-interface MultiComboboxProps extends ComboboxCommonProps {
+interface MultiComboboxProps<
+  TValue extends string | number = string,
+  TData = never,
+> extends ComboboxCommonProps<TValue, TData> {
   /** Tillater valg av flere alternativer */
   multiple: true;
   /**
@@ -111,7 +163,9 @@ interface MultiComboboxProps extends ComboboxCommonProps {
    */
   value?: ComponentPropsWithoutRef<'input'>['value'];
   /** Kalles når valget endres. Flervalg: mottar ComboboxOption[] array */
-  onSelectionChange?: (selectedOptions: ComboboxOption[]) => void;
+  onSelectionChange?: (
+    selectedOptions: ComboboxOption<TValue, TData>[]
+  ) => void;
   /**
    * Kalles når input-teksten endres. Mottar søketekst som string. Nyttig for
    * asynkron søk og filtrering
@@ -124,9 +178,18 @@ interface MultiComboboxProps extends ComboboxCommonProps {
   maxSelected?: number;
 }
 
-export type ComboboxProps = SingleComboboxProps | MultiComboboxProps;
+export type ComboboxProps<
+  TValue extends string | number = string,
+  TData = never,
+> = SingleComboboxProps<TValue, TData> | MultiComboboxProps<TValue, TData>;
 
-export type ComboboxComponent = React.FC<ComboboxProps>;
+export interface ComboboxComponent {
+  <TValue extends string | number, TData = never>(
+    props: Readonly<ComboboxProps<TValue, TData>>
+  ): React.JSX.Element;
+  (props: Readonly<ComboboxProps>): React.JSX.Element;
+  displayName?: string;
+}
 
 export type ComboboxSelectedOptionsProps = {
   className?: string;

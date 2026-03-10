@@ -1,37 +1,31 @@
 import { JSX, useState, type FormEvent } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  Combobox,
-  TypedComboboxOption,
-  type ComboboxOption,
-} from '@skatteetaten/ds-forms';
+import { Combobox, type ComboboxOption } from '@skatteetaten/ds-forms';
 import { List, Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   KommuneTestMetaData,
+  KommuneValues,
   typedKommuneOptions,
 } from './combobox.stories.utils';
 
 export const ComboboxTypedOptionsExample = (): JSX.Element => {
-  const [selectedKommuner, setSelectedKommuner] = useState<string[]>([]);
+  const [selectedKommuner, setSelectedKommuner] = useState<KommuneValues[]>([]);
   const [selectedKommuneObjects, setSelectedKommuneObjects] = useState<
-    TypedComboboxOption<KommuneTestMetaData>[]
+    ComboboxOption<KommuneValues, KommuneTestMetaData>[]
   >([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submissionMessage, setSubmissionMessage] = useState('');
 
-  const handleSelectionChange = (options: ComboboxOption[]): void => {
-    const typedOptions = options as TypedComboboxOption<KommuneTestMetaData>[];
-
-    // Update both the value array for the controlled component
-    const values = typedOptions.map((option) => option.value);
+  const handleSelectionChange = (
+    options: ComboboxOption<KommuneValues, KommuneTestMetaData>[]
+  ): void => {
+    const values = options.map((option) => option.value);
     setSelectedKommuner(values);
 
-    // And keep the full objects for displaying metadata
-    setSelectedKommuneObjects(typedOptions);
+    setSelectedKommuneObjects(options);
 
-    // Reset submission state when selection changes
     setIsSubmitted(false);
     setSubmissionMessage('');
   };
@@ -77,15 +71,15 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
   return (
     <div>
       <Paragraph hasSpacing>
-        {'Dette eksemplet viser hvordan man kan bruke TypedComboboxOption for å legge til metadata i valgalternativene. ' +
+        {'Dette eksemplet viser hvordan man kan bruke Combobox med generiske type-parametere for å legge til metadata i valgalternativene. ' +
           'Her demonstreres dette med tidligere norske kommuner og informasjon om deres sammenslåing. ' +
-          'TypedComboboxOption gir full TypeScript type-sikkerhet og IntelliSense for metadata, og fungerer med alle ' +
+          'ComboboxOption<TValue, TData> gir full TypeScript type-sikkerhet og IntelliSense for både verdier og metadata, og fungerer med alle ' +
           'Combobox-varianter (single-, multi-select, samt controlled og uncontrolled).'}
       </Paragraph>
       <form onSubmit={handleSubmit}>
         <div className={'flex gapXl'}>
           <div>
-            <Combobox
+            <Combobox<KommuneValues, KommuneTestMetaData>
               name={'selectedKommuner'}
               label={'Velg tidligere norske kommuner'}
               description={
