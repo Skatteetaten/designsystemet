@@ -116,6 +116,9 @@ const Combobox = memo(
       handleContainerClick,
       handleContainerKeyDown,
       handleButtonFocus,
+      moveFocusNext,
+      moveFocusPrevious,
+      getFocusedElementId,
       chevronClickedRef,
     } = coreState;
 
@@ -173,6 +176,8 @@ const Combobox = memo(
       enabledIndices,
       focusedIndex,
       setFocusedIndex,
+      moveFocusNext,
+      moveFocusPrevious,
       openDropdown: keyboardOpenDropdown,
       closeDropdown,
       setSearchTerm,
@@ -196,8 +201,7 @@ const Combobox = memo(
       }
     }, [value, multiple, options, setSearchTerm, setSelectedValues]);
 
-    const focusedOptionId =
-      focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined;
+    const focusedOptionId = getFocusedElementId();
 
     const labelId = `${comboboxId}-label`;
     const descriptionId = `${comboboxId}-description`;

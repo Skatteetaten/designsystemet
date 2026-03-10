@@ -2,8 +2,6 @@ import { useEffect, type RefObject } from 'react';
 
 import type { ComboboxOption } from '../Combobox.types';
 import {
-  getNextEnabledIndex,
-  getPreviousEnabledIndex,
   getFirstEnabledIndex,
   isIndexEnabled,
 } from '../utils/combobox-state-utils';
@@ -15,6 +13,8 @@ export interface UseComboboxKeyboardProps {
   enabledIndices: number[];
   focusedIndex: number;
   setFocusedIndex: (index: number) => void;
+  moveFocusNext: () => void;
+  moveFocusPrevious: () => void;
   openDropdown: () => void;
   closeDropdown: (manual?: boolean) => void;
   setSearchTerm: (term: string) => void;
@@ -38,7 +38,7 @@ const isInputFocused = (
   );
 };
 
-const canOpenPopup = (
+const canOpenDropdown = (
   allOptions: ComboboxOption[],
   inputRef: RefObject<HTMLInputElement | null>,
   minSearchLength: number
@@ -49,15 +49,8 @@ const canOpenPopup = (
   );
 };
 
-const getNextFocusIndex = (
-  currentIndex: number,
-  enabledIndices: number[]
-): number => {
-  return getNextEnabledIndex(currentIndex, enabledIndices);
-};
-
 // Popup management utilities
-const openPopupWithFocus = (
+const openDropdownWithFocus = (
   openDropdown: () => void,
   setFocusedIndex: (index: number) => void,
   focusIndex?: number
@@ -114,9 +107,9 @@ const handleArrowDown = (
     isOpen,
     allOptions,
     enabledIndices,
-    focusedIndex,
     openDropdown,
     setFocusedIndex,
+    moveFocusNext,
     inputRef,
     minSearchLength = 0,
   } = props;
@@ -126,7 +119,7 @@ const handleArrowDown = (
   if (e.altKey) {
     // Alt + Down Arrow: Display popup without moving focus
     // For Alt+Down, use normal minSearchLength logic
-    if (!isOpen && canOpenPopup(allOptions, inputRef, minSearchLength)) {
+    if (!isOpen && canOpenDropdown(allOptions, inputRef, minSearchLength)) {
       openDropdown();
     }
     return;
@@ -137,13 +130,10 @@ const handleArrowDown = (
   if (!isOpen && allOptions.length > 0) {
     const firstEnabledIndex = getFirstEnabledIndex(enabledIndices);
     if (firstEnabledIndex !== -1) {
-      openPopupWithFocus(openDropdown, setFocusedIndex, firstEnabledIndex);
+      openDropdownWithFocus(openDropdown, setFocusedIndex, firstEnabledIndex);
     }
   } else if (isOpen) {
-    const nextIndex = getNextFocusIndex(focusedIndex, enabledIndices);
-    if (nextIndex !== -1) {
-      setFocusedIndex(nextIndex);
-    }
+    moveFocusNext();
   }
 };
 
@@ -168,6 +158,7 @@ const handleArrowUp = (
     enabledIndices,
     closeDropdown,
     setFocusedIndex,
+    moveFocusPrevious,
   } = props;
 
   e.preventDefault();
@@ -190,12 +181,8 @@ const handleArrowUp = (
       // We're at the first enabled option - close dropdown instead of wrapping
       closePopup(closeDropdown, setFocusedIndex);
     } else {
-      // Move to previous enabled option
-      const previousIndex = getPreviousEnabledIndex(
-        focusedIndex,
-        enabledIndices
-      );
-      setFocusedIndex(previousIndex);
+      // Move to previous enabled option using validated utility
+      moveFocusPrevious();
     }
   } else {
     // Current index is not enabled, close dropdown
