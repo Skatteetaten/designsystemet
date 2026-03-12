@@ -89,8 +89,10 @@
   right: 0;
   margin: var(--spacing-s);
 
-  &:not(:active) > svg {
-    fill: var(--palette-graphite-100);
+  --icon-button-icon-color: var(--palette-graphite-100);
+
+  &:active {
+    --icon-button-icon-color: var(--palette-graphite-0);
   }
 }
 

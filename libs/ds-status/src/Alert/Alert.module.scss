@@ -36,12 +36,14 @@
     align-self: start;
     margin: var(--spacing-s) var(--spacing-xs) var(--spacing-s) 0;
 
-    @media (min-width: breakpoints.$breakpoint-xs) {
-      margin-right: var(--spacing-s);
+    --icon-button-icon-color: var(--palette-graphite-100);
+
+    &:active {
+      --icon-button-icon-color: var(--palette-graphite-0);
     }
 
-    &:not(:active) > svg {
-      fill: var(--palette-graphite-100);
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      margin-right: var(--spacing-s);
     }
   }
 
