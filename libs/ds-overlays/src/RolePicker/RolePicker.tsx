@@ -10,11 +10,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  formatNationalIdentityNumber,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { FavoriteSVGpath, LogOutSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -25,7 +21,7 @@ import {
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
 } from './defaults';
-import { Business, Entity, Person, RolePickerProps } from './RolePicker.types';
+import { Business, Entity, RolePickerProps } from './RolePicker.types';
 import {
   getModalDismissOnEscDefault,
   getModalDismissOnOutsideClickDefault,
@@ -36,6 +32,7 @@ import { RolePickerContext } from './RolePickerContext';
 import { RolePickerFilterInput } from './RolePickerFilterInput/RolePickerFilterInput';
 import { RolePickerPeopleList } from './RolePickerPeopleList/RolePickerPeopleList';
 import { RolePickerRow } from './RolePickerRow/RolePickerRow';
+import { getPersonDescription } from './utils';
 
 import styles from './RolePicker.module.scss';
 
@@ -169,20 +166,6 @@ export const RolePicker = ({
     [error, handleEntitySelect, loadingEntityId]
   );
 
-  const getDescription = ({ dateOfBirth, personId }: Person): string => {
-    if (!dateOfBirth) {
-      return `${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(personId)}`;
-    }
-    return `${t('rolepicker.DateOfBirth')} ${dateOfBirth.toLocaleDateString(
-      'no-NO',
-      {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-      }
-    )}`;
-  };
-
   return (
     <RolePickerContext.Provider value={contextValue}>
       <Modal
@@ -203,7 +186,7 @@ export const RolePicker = ({
               <RolePickerRow
                 id={me.personId}
                 title={t('rolepicker.MeHeading')}
-                description={getDescription(me)}
+                description={getPersonDescription(me)}
                 svgPath={FavoriteSVGpath}
                 titleAs={'h2'}
                 onClick={() => handleEntitySelect(me)}
