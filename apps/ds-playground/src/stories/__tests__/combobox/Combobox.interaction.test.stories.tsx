@@ -78,9 +78,13 @@ export const KeyboardNavigation = {
 
     // Verifiser at input har aktivt descendant satt til første option
     await expect(inputElement).toHaveAttribute('aria-activedescendant');
+    await expect(options[0]).toHaveAttribute(
+      'id',
+      inputElement.getAttribute('aria-activedescendant')
+    );
 
-    await userEvent.keyboard('{ArrowDown}');
     // Verifiser at vi kan navigere til neste option
+    await userEvent.keyboard('{ArrowDown}');
 
     // Naviger opp igjen til første option
     await userEvent.keyboard('{ArrowUp}');
