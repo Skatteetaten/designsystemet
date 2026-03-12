@@ -113,6 +113,7 @@ export const TableRow = ({
         data-testid={dataTestId}
         isExpanded={isExpanded}
         iconButtonAriaExpanded={isExpanded}
+        rowType={'expand'}
         expandButtonTitle={getButtonTitle()}
         expandButtonAriaDescribedby={expandButtonAriaDescribedby}
         expandableContent={expandableContent}
