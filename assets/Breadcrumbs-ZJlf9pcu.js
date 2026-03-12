@@ -1,0 +1,11 @@
+import{j as r}from"./iframe-BHAek7Q1.js";import{useMDXComponents as m}from"./index-DSz98NdT.js";import{M as e,P as s,a}from"./blocks-BpBa1eEB.js";import{P as n}from"./utils-BgcVCBuX.js";import{B as p,E as c,I as d}from"./Breadcrumbs.stories-Bs69hIbI.js";import{V as l}from"./VersionBadge-CDyea5_5.js";import{D as x}from"./DocIntro-u8EjgXgd.js";import{D as u}from"./DocHeaderWrapper-DhLsIChr.js";import"./preload-helper-PPVm8Dsz.js";import"./index-BHxcGkSl.js";import"./index-Ceylv9ay.js";import"./lz-string-m9jzapWX.js";import"./index-5oWADZYA.js";import"./index-BkWKVRRR.js";import"./index-k4H7HdQu.js";import"./index-MVsVTAOX.js";import"./index-BVEcgXLv.js";import"./index-D1w89d87.js";import"./DatePickerCalendar-BX9HtFSH.js";import"./LabelWithHelp-ZJcs-Zvg.js";import"./Help-CgNeZLkX.js";import"./Combobox.module-DmWNkYt7.js";import"./ComboboxButton-DO8yVEaz.js";import"./index-DNPWp4Lv.js";import"./ComboboxSelectedOptions-CCttgKi_.js";import"./index-B6YsjIh8.js";import"./index-DVawnBNL.js";import"./TopBannerButton-DvjpiEol.js";import"./floating-ui.react-CUZKHbhc.js";import"./TopBannerLangPicker-C5euwKyi.js";import"./TopBannerLangPickerButton-Bn6amm8k.js";import"./TopBannerLogo-BdVrDKYI.js";import"./TopBannerSkipLink-EKAK7lAN.js";import"./TopBannerUserButton-Bax_fuJ-.js";import"./index-DO3ddEaQ.js";import"./stories.utils-DvYM6q3N.js";function i(o){const t={code:"code",h1:"h1",h2:"h2",pre:"pre",...m(),...o.components};return r.jsxs(r.Fragment,{children:[r.jsx(e,{of:p}),`
+`,r.jsxs(u,{componentName:"Breadcrumbs",children:[r.jsx(t.h1,{id:"breadcrumbs",children:"Breadcrumbs"}),r.jsx(l,{packageName:"navigation"}),r.jsx(x,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/"})]}),`
+`,r.jsx(s,{}),`
+`,r.jsx(t.pre,{children:r.jsx(t.code,{className:"language-tsx",children:`import { Breadcrumbs } from '@skatteetaten/ds-navigation';
+`})}),`
+`,r.jsx(a,{}),`
+`,r.jsx(t.h2,{id:"i-publikumsløsning",children:"I publikumsløsning"}),`
+`,r.jsx(n,{of:c}),`
+`,r.jsx(t.h2,{id:"i-intern-løsning",children:"I intern løsning"}),`
+`,r.jsx(n,{of:d})]})}function Y(o={}){const{wrapper:t}={...m(),...o.components};return t?r.jsx(t,{...o,children:r.jsx(i,{...o})}):i(o)}export{Y as default};
+//# sourceMappingURL=Breadcrumbs-ZJlf9pcu.js.map
