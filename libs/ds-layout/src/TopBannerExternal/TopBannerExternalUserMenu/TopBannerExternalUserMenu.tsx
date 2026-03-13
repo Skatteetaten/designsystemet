@@ -127,9 +127,9 @@ export const TopBannerExternalUserMenu = ({
           >
             <Heading as={'h4'}>
               {user.role !== 'meg' && (
-                <div className={styles.namePrefix}>
+                <span className={styles.namePrefix}>
                   {t('ds_overlays:topbannerexternalusermenu.OnBehalfOf')}
-                </div>
+                </span>
               )}
               {user.role === 'virksomhet' ? user.name.toUpperCase() : user.name}
             </Heading>
