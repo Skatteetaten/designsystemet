@@ -247,3 +247,43 @@ export const ClickOutsideToClose = {
     await expect(options).toHaveLength(0);
   },
 } satisfies Story;
+
+export const KeyBoardFocusDoesNotOpen = {
+  name: 'Tastaturfokus åpner ikke dropdown automatisk',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Fokus via tastatur skal ikke åpne dropdown automatisk
+    await userEvent.tab();
+    await expect(inputElement).toHaveFocus();
+    await expect(inputElement).toHaveAttribute('aria-expanded', 'false');
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const MouseClickOpens = {
+  name: 'Musklikk åpner dropdown',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Klikk på input skal åpne dropdown automatisk
+    await userEvent.click(inputElement);
+    await expect(inputElement).toHaveFocus();
+    await expect(inputElement).toHaveAttribute('aria-expanded', 'true');
+    await expect(canvas.getByRole('listbox')).toBeInTheDocument();
+  },
+} satisfies Story;
