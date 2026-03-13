@@ -10,6 +10,7 @@
     "sharedGlobals": [
       "{workspaceRoot}/babel.config.json",
       "{workspaceRoot}/.stylelintrc.json",
+      "{workspaceRoot}/libs/.browserslistrc",
       "{workspaceRoot}/libs/ds-dev-config/build/rollup-config-factory.cjs",
       "{workspaceRoot}/libs/ds-dev-config/config/**/*"
     ],
