@@ -146,7 +146,7 @@ export const WithCustomClassNames = {
       `${wrapper} > div > div:nth-child(2)`
     );
     const button = canvas.getByRole('button');
-    const iconContainer = button.querySelector('div');
+    const iconContainer = button.querySelector('span');
 
     const icon = canvas.getByRole('img', { hidden: true });
     const label = canvas.getByText(getScrollToTopButtonTextDefault());
