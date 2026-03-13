@@ -66,7 +66,10 @@ export interface TextAreaCommonProps
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
   description?: LabelWithHelpProps['description'];
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];

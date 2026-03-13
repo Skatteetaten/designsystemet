@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, Ref } from 'react';
+import { ComponentPropsWithoutRef, Ref, ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -21,7 +21,7 @@ export interface LabelWithHelpProps
   /** Skjuler hele komponenten men er fortsatt synlig for skjermleser */
   hideLabel?: boolean;
   /** Tilleggstekst */
-  description?: string;
+  description?: ReactNode;
   /** Id til tilleggstekst */
   descriptionId?: string;
   /** Om hjelpeknappen er deaktivert */
