@@ -655,7 +655,9 @@ const ResetButtonTemplate: StoryFn<typeof SearchField> = (args) => {
           args.onChange?.(event);
         }}
       />
-      <button onClick={() => setValue('')}>{'reset'}</button>
+      <button type={'button'} onClick={() => setValue('')}>
+        {'reset'}
+      </button>
     </>
   );
 };
