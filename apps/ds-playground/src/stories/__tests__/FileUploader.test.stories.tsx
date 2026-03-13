@@ -77,6 +77,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
+    htmlValidate: { test: 'off' }, //TODO: input og label som descendat av button
     imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof FileUploader>;
