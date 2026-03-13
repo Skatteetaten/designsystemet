@@ -46,6 +46,7 @@ export interface UseComboboxCoreReturn {
   selectedValues: ComboboxOption[];
   setSelectedValues: (values: ComboboxOption[]) => void;
   isOpen: boolean;
+  openTrigger?: DropdownTrigger;
   focusedIndex: number;
   enabledIndices: number[];
   displayOptions: ComboboxOption[];
@@ -60,7 +61,7 @@ export interface UseComboboxCoreReturn {
   errorId: string;
 
   // Actions
-  openDropdown: (searchValue: string, trigger: DropdownTrigger) => void;
+  openDropdown: (trigger: string, legacyTrigger?: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
   setFocusedIndex: (index: number) => void;
   resetFocus: () => void;
@@ -120,6 +121,7 @@ export function useComboboxCore({
     getSelectedValuesFromValue(value, options, multiple)
   );
   const [isOpen, setIsOpen] = useState(false);
+  const [openTrigger, setOpenTrigger] = useState<DropdownTrigger>();
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const [manuallyClosed, setManuallyClosed] = useState(false);
   const [optionsChanged, setOptionsChanged] = useState(false);
@@ -152,8 +154,9 @@ export function useComboboxCore({
   const displayOptions = useMemo(() => {
     if (!isOpen) return []; // No options when dropdown is closed
     if (isLoading) return []; // Empty list while loading (spinner shows instead)
+    if (searchTerm.length < minSearchLength) return [];
     return filterOptions(options, searchTerm);
-  }, [options, searchTerm, isOpen, isLoading]);
+  }, [options, searchTerm, isOpen, isLoading, minSearchLength]);
 
   const orderedDisplayOptions = useMemo(() => {
     return getOptionsInGroupOrder(displayOptions);
@@ -197,19 +200,24 @@ export function useComboboxCore({
    * to match user expectations and accessibility standards.
    */
   const openDropdown = useCallback(
-    (
-      searchValue: string,
-      trigger: 'focus' | 'input' | 'click' | 'keyboard' | 'chevron'
-    ): void => {
+    (trigger: string, legacyTrigger?: DropdownTrigger): void => {
+      const resolvedTrigger = (legacyTrigger ?? trigger) as DropdownTrigger;
       const now = Date.now();
 
       // Block any openDropdown calls for 150ms after chevron action
-      if (trigger !== 'chevron' && now - chevronActionTimeRef.current < 150) {
+      if (
+        resolvedTrigger !== 'chevron' &&
+        now - chevronActionTimeRef.current < 150
+      ) {
         return;
       }
 
       // Reset manually closed flag for explicit user actions
-      if (trigger === 'chevron' || trigger === 'click' || trigger === 'input') {
+      if (
+        resolvedTrigger === 'chevron' ||
+        resolvedTrigger === 'click' ||
+        resolvedTrigger === 'input'
+      ) {
         if (manuallyClosed) {
           setManuallyClosed(false);
         }
@@ -218,24 +226,18 @@ export function useComboboxCore({
       // If manually closed, only allow input, chevron, keyboard or click to reopen
       if (
         manuallyClosed &&
-        trigger !== 'input' &&
-        trigger !== 'chevron' &&
-        trigger !== 'keyboard' &&
-        trigger !== 'click'
+        resolvedTrigger !== 'input' &&
+        resolvedTrigger !== 'chevron' &&
+        resolvedTrigger !== 'keyboard' &&
+        resolvedTrigger !== 'click'
       ) {
         return;
       }
 
-      // Check minimum search length, but allow click to bypass
-      if (
-        searchValue.length >= minSearchLength ||
-        trigger === 'click' ||
-        trigger === 'chevron'
-      ) {
-        setIsOpen(true);
-      }
+      setOpenTrigger(resolvedTrigger);
+      setIsOpen(true);
     },
-    [manuallyClosed, minSearchLength]
+    [manuallyClosed]
   );
 
   /**
@@ -248,6 +250,7 @@ export function useComboboxCore({
    */
   const closeDropdown = useCallback((manual = false): void => {
     setIsOpen(false);
+    setOpenTrigger(undefined);
     setFocusedIndex(-1); // Reset focus when closing
     if (manual) {
       setManuallyClosed(true);
@@ -403,8 +406,7 @@ export function useComboboxCore({
       if (isOpen) {
         closeDropdown(true);
       } else {
-        const currentValue = inputRef.current?.value || '';
-        openDropdown(currentValue, 'chevron');
+        openDropdown('chevron');
 
         if (inputRef.current) {
           safeFocus(inputRef.current);
@@ -439,8 +441,7 @@ export function useComboboxCore({
         return;
       }
 
-      const currentValue = inputRef.current?.value || '';
-      openDropdown(currentValue, 'click');
+      openDropdown('click');
 
       if (inputRef.current) {
         safeFocus(inputRef.current);
@@ -502,6 +503,7 @@ export function useComboboxCore({
     selectedValues,
     setSelectedValues,
     isOpen,
+    openTrigger,
     focusedIndex,
     enabledIndices,
     displayOptions: orderedDisplayOptions,

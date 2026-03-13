@@ -101,6 +101,7 @@ const Combobox = memo(
       selectedValues,
       setSelectedValues,
       isOpen,
+      openTrigger,
       focusedIndex,
       setFocusedIndex,
       enabledIndices,
@@ -162,9 +163,8 @@ const Combobox = memo(
 
     // Memoize keyboard dropdown handler to prevent unnecessary re-creations
     const keyboardOpenDropdown = useCallback(() => {
-      const currentValue = inputRef.current?.value || '';
-      openDropdown(currentValue, 'keyboard');
-    }, [openDropdown, inputRef]);
+      openDropdown('keyboard');
+    }, [openDropdown]);
 
     // Keyboard navigation hook
     useComboboxKeyboard({
@@ -294,6 +294,7 @@ const Combobox = memo(
           />
           <ComboboxOptions
             isOpen={isOpen}
+            openTrigger={openTrigger}
             isLoading={isLoading}
             spinnerProps={spinnerProps}
             displayOptions={displayOptions}

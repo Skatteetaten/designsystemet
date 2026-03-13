@@ -4,6 +4,7 @@ import type { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
 import type { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
+import type { DropdownTrigger } from './hooks/useComboboxCore';
 
 export type ComboboxSize = Extract<Size, 'medium' | 'large'>;
 
@@ -139,6 +140,7 @@ export type ComboboxSelectedOptionsProps = {
 
 export type ComboboxOptionsProps = {
   isOpen: boolean;
+  openTrigger?: DropdownTrigger;
   isLoading?: boolean;
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   displayOptions: ComboboxOption[];

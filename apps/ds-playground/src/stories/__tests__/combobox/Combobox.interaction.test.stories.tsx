@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
 
@@ -285,5 +285,80 @@ export const MouseClickOpens = {
     await expect(inputElement).toHaveFocus();
     await expect(inputElement).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByRole('listbox')).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const MinSearchLengthSpinnerOnChevronClick = {
+  name: 'Min søkelengde viser spinner ved chevron-klikk',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 3,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const chevronButton = canvasElement.querySelector(
+      'div[class*="chevronButton"]'
+    );
+    await expect(chevronButton).toBeInTheDocument();
+
+    await userEvent.click(chevronButton as Element);
+
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+    await expect(
+      canvas.getByText('Skriv minst 3 tegn for å vise resultater')
+    ).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const MinSearchLengthSpinnerOnMouseClick = {
+  name: 'Min søkelengde viser spinner ved musklikk',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 3,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(
+        canvas.getByText('Skriv minst 3 tegn for å vise resultater')
+      ).toBeInTheDocument();
+    });
+  },
+} satisfies Story;
+
+export const MinSearchLengthSpinnerBeforeThreshold = {
+  name: 'Min søkelengde viser spinner før terskel',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 3,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    await userEvent.type(inputElement, 'ab');
+
+    await expect(inputElement).toHaveValue('ab');
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(
+        canvas.getByText('Skriv minst 3 tegn for å vise resultater')
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;

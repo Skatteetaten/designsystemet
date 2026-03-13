@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import React, { type JSX, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -14,6 +14,7 @@ import styles from './Combobox.module.scss';
 export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
   ({
     isOpen,
+    openTrigger,
     isLoading = false,
     spinnerProps,
     displayOptions,
@@ -32,14 +33,51 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     spinnerLabel,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
+    const [showMinSearchLengthSpinner, setShowMinSearchLengthSpinner] =
+      useState(false);
+
+    const isBelowMinSearchLength = searchTerm.length < minSearchLength;
+
+    useEffect(() => {
+      if (!isOpen || minSearchLength === 0 || !isBelowMinSearchLength) {
+        setShowMinSearchLengthSpinner(false);
+        return;
+      }
+
+      if (openTrigger === 'chevron') {
+        setShowMinSearchLengthSpinner(true);
+        return;
+      }
+
+      const timeout = setTimeout(() => {
+        setShowMinSearchLengthSpinner(true);
+      }, 500);
+
+      return (): void => {
+        clearTimeout(timeout);
+      };
+    }, [isBelowMinSearchLength, isOpen, minSearchLength, openTrigger]);
+
     if (!isOpen) {
       return null;
     }
 
-    /* Ikke vis liste hvis søketerm er kortere enn minSearchLength
-    TODO: Implementer løsning for FRONT-2179 */
-    if (searchTerm.length < minSearchLength) {
-      return null;
+    if (isBelowMinSearchLength) {
+      if (!showMinSearchLengthSpinner) {
+        return null;
+      }
+
+      return (
+        <div
+          ref={customListRef}
+          id={listId}
+          className={`${styles.optionsListContainer} ${styles.loadingContainer} ${className || ''}`.trim()}
+        >
+          <Spinner titlePosition={'right'} {...spinnerProps}>
+            {`Skriv minst ${minSearchLength} tegn for å vise resultater`}
+          </Spinner>
+        </div>
+      );
     }
 
     // Vis loading state

@@ -98,7 +98,7 @@ describe('useComboboxCore', () => {
       expect(result.current.isOpen).toBe(true);
     });
 
-    it('should not open dropdown when minimum search length is not met (A5)', () => {
+    it('should open dropdown with spinner when minimum search length is not met (A5)', () => {
       const { result } = renderHook(() =>
         useComboboxCore({
           ...defaultProps,
@@ -110,7 +110,7 @@ describe('useComboboxCore', () => {
         result.current.openDropdown('a', 'input');
       });
 
-      expect(result.current.isOpen).toBe(false);
+      expect(result.current.isOpen).toBe(true);
     });
 
     it('should allow click to bypass minimum search length (A5)', () => {
