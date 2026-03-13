@@ -45,6 +45,7 @@ interface UseComboboxInputReturn {
  *
  * Why: Input field behavior needs careful coordination with dropdown state and
  * cross-browser compatibility (especially iOS/Safari focus issues).
+ *
  * @param props - The configuration object for input handling
  * @param props.multiple - Whether multiple selections are allowed
  * @param props.setSelectedValues - Function to update selected values
@@ -81,7 +82,8 @@ export function useComboboxInput({
    *
    * What: Clears selection in single-select mode when input is emptied.
    *
-   * Why: Typing should open dropdown and clear conflicting selections in single-select mode.
+   * Why: Typing should open dropdown and clear conflicting selections in
+   * single-select mode.
    */
   const handleInputChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>): void => {
@@ -159,8 +161,8 @@ export function useComboboxInput({
    *
    * What: Delays closing to allow focus to move to dropdown options.
    *
-   * Why: Immediate closing on blur would prevent option selection via mouse/touch.
-   * Delay allows focus to move within the combobox component.
+   * Why: Immediate closing on blur would prevent option selection via
+   * mouse/touch. Delay allows focus to move within the combobox component.
    */
   const handleInputBlur = useCallback(
     (e: FocusEvent<HTMLInputElement>): void => {
@@ -192,10 +194,12 @@ export function useComboboxInput({
    *
    * What: Triggers selection change callbacks
    *
-   * Why: Clear button should reset the component to empty state and refocus input.
+   * Why: Clear button should reset the component to empty state and refocus
+   * input.
    */
   const handleClearValue = useCallback((): void => {
     setSearchTerm('');
+    setSelectedValues([]);
 
     if (inputRef.current) {
       safeFocus(inputRef.current);
@@ -215,6 +219,7 @@ export function useComboboxInput({
     }
   }, [
     setSearchTerm,
+    setSelectedValues,
     inputRef,
     safeFocus,
     onSelectionChange,

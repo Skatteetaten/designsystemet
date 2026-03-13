@@ -238,11 +238,18 @@
 }
 
 .optionLabel {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-s);
   overflow-wrap: anywhere;
 
   .disabled {
     color: var(--semantic-disabled-foreground);
   }
+}
+
+.checkIcon {
+  height: calc(var(--font-size-m) * var(--semantic-line-height-input));
 }
 
 .emptyResult {
