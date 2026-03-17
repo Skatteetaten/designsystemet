@@ -82,7 +82,7 @@ export const Alert = ({
           <span className={styles.iconWrapper}>
             <Icon size={'large'} svgPath={svg} className={styles.icon} />
           </span>
-          <span className={styles.content}>{children}</span>
+          <div className={styles.content}>{children}</div>
           {onClose && (
             <IconButton
               className={styles.closeButton}
