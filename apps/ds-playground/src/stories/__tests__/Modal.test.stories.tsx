@@ -4,6 +4,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, fireEvent, within, waitFor } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
@@ -282,12 +283,10 @@ export const WithVerticalScrolling = {
     viewport: {
       options: {
         maxHeight: {
-          maxHeight: { name: 'maxHeight', styles: { height: '500px' } },
+          name: 'maxHeight',
+          styles: { width: breakpoints['--breakpoint-m'], height: '500px' },
         },
       },
-    },
-    chromatic: {
-      modes: { maxHeight: { viewport: 'maxHeight' } },
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

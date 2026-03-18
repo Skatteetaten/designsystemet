@@ -64,7 +64,7 @@
         "{projectRoot}/tsconfig.storybook.json"
       ]
     },
-    "@nx/vite:test": {
+    "@nx/vitest:test": {
       "cache": true,
       "inputs": ["default", "^production"]
     }

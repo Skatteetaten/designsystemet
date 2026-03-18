@@ -25,8 +25,11 @@ export interface FieldsetProps
    * skjermleser
    */
   hideLegend?: boolean;
-  /** Tilleggstekst */
-  description?: string;
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
+  description?: ReactNode;
   /** Margin under komponenten */
   hasSpacing?: boolean;
   /** Hjelpetekst */

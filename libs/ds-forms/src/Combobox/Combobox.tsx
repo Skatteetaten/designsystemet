@@ -116,7 +116,9 @@ const Combobox = memo(
       handleContainerClick,
       handleContainerKeyDown,
       handleButtonFocus,
-      chevronClickedRef,
+      moveFocusNext,
+      moveFocusPrevious,
+      getFocusedElementId,
     } = coreState;
 
     // Expose the input element to parent component via ref prop
@@ -156,7 +158,6 @@ const Combobox = memo(
       onBlur,
       onFocus,
       value,
-      chevronClickedRef,
     });
 
     // Memoize keyboard dropdown handler to prevent unnecessary re-creations
@@ -173,6 +174,8 @@ const Combobox = memo(
       enabledIndices,
       focusedIndex,
       setFocusedIndex,
+      moveFocusNext,
+      moveFocusPrevious,
       openDropdown: keyboardOpenDropdown,
       closeDropdown,
       setSearchTerm,
@@ -196,8 +199,7 @@ const Combobox = memo(
       }
     }, [value, multiple, options, setSearchTerm, setSelectedValues]);
 
-    const focusedOptionId =
-      focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined;
+    const focusedOptionId = getFocusedElementId();
 
     const labelId = `${comboboxId}-label`;
     const descriptionId = `${comboboxId}-description`;

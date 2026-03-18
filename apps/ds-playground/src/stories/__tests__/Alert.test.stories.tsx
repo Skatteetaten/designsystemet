@@ -372,6 +372,9 @@ export const WithCloseButton = {
     showAlert: true,
     onClose: fn(),
   },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
 } satisfies Story;
 
 export const WithCloseOnClickButton = {

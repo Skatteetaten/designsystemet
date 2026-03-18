@@ -1,20 +1,36 @@
 import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 
-import * as fs from 'node:fs';
-import * as path from 'node:path';
-
 import { handleVersion } from '../version.js';
 
-vi.mock('fs');
-vi.mock('path');
+const { mockReadFileSync, mockDirname, mockJoin } = vi.hoisted(() => ({
+  mockReadFileSync: vi.fn(),
+  mockDirname: vi.fn(),
+  mockJoin: vi.fn(),
+}));
+
+vi.mock('fs', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('fs')>();
+  return {
+    ...actual,
+    default: { ...actual, readFileSync: mockReadFileSync },
+    readFileSync: mockReadFileSync,
+  };
+});
+
+vi.mock('path', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('path')>();
+  return {
+    ...actual,
+    default: { ...actual, dirname: mockDirname, join: mockJoin },
+    dirname: mockDirname,
+    join: mockJoin,
+  };
+});
 
 describe('handleVersion', () => {
   const consoleSpy = vi.spyOn(console, 'info').mockImplementation(() => {
     /* no-op */
   });
-  const mockReadFileSync = vi.mocked(fs.readFileSync);
-  const mockDirname = vi.mocked(path.dirname);
-  const mockJoin = vi.mocked(path.join);
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -48,6 +64,8 @@ describe('handleVersion', () => {
 
     testCases.forEach((version) => {
       vi.clearAllMocks();
+      mockDirname.mockReturnValue('/mocked/dir');
+      mockJoin.mockReturnValue('/mocked/dir/package.json');
       const mockPackage = { version };
       mockReadFileSync.mockReturnValue(JSON.stringify(mockPackage));
 

@@ -3,6 +3,7 @@ declare const classNames: {
   readonly commandBar: 'commandBar';
   readonly buttonGroup: 'buttonGroup';
   readonly main: 'main';
+  readonly tabsPanel: 'tabsPanel';
   readonly openClose: 'openClose';
   readonly clearFilterButton: 'clearFilterButton';
   readonly clearFilterButtonMobile: 'clearFilterButtonMobile';

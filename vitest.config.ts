@@ -1,9 +1,10 @@
 import storybookTest from '@storybook/addon-vitest/vitest-plugin';
+import { playwright } from '@vitest/browser-playwright';
+import { UserConfig } from 'vite';
 import { defineConfig } from 'vitest/config';
 
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { UserConfig } from 'vite';
 
 const dirname =
   typeof __dirname !== 'undefined'
@@ -50,7 +51,7 @@ export default defineConfig({
           browser: {
             enabled: true,
             headless: true,
-            provider: 'playwright',
+            provider: playwright(),
             instances: [
               {
                 browser: 'chromium',

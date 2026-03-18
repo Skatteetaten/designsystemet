@@ -270,6 +270,10 @@ export const IsOpen = {
     const combobox = canvas.getByRole('combobox');
     await userEvent.click(combobox);
     await expect(combobox).toHaveAttribute('aria-expanded', 'true');
+    await expect(combobox).toHaveAttribute(
+      'aria-controls',
+      'test-combobox-list'
+    );
 
     const listbox = canvas.getByRole('listbox');
     await expect(listbox).toBeInTheDocument();
