@@ -176,7 +176,7 @@ const Combobox = memo(
       setFocusedIndex,
       moveFocusNext,
       moveFocusPrevious,
-      openDropdown: keyboardOpenDropdown,
+      // openDropdown: keyboardOpenDropdown,
       closeDropdown,
       setSearchTerm,
       inputRef,
