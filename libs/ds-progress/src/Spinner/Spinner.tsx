@@ -68,7 +68,7 @@ export const Spinner = ({
   };
   return (
     <>
-      <div
+      <span
         ref={ref}
         aria-labelledby={isInPercentageMode ? titleId : undefined}
         aria-live={!isInPercentageMode ? 'polite' : undefined}
@@ -85,7 +85,7 @@ export const Spinner = ({
         data-size={size}
         data-color={color}
       >
-        <div
+        <span
           className={`${styles.spinnerAnimation} ${
             classNames?.animation ?? ''
           }`.trim()}
@@ -102,15 +102,15 @@ export const Spinner = ({
             `${getSpinnerLabelDefault()} (${percentComplete} %)`}
           {!isInPercentageMode && isRendered && children}
         </span>
-      </div>
+      </span>
       {isInPercentageMode && (
-        <div
+        <span
           className={styles.srOnly}
           aria-atomic={'true'}
           aria-live={'polite'}
         >
           {`${percentComplete} %`}
-        </div>
+        </span>
       )}
     </>
   );

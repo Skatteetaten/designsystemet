@@ -99,8 +99,8 @@ export const Option = {
         searchTerm={''}
         minSearchLength={0}
         selectedValues={[]}
-        comboboxId={''}
-        listId={''}
+        comboboxId={'combo'}
+        listId={'list'}
         focusedIndex={0}
         handleButtonFocus={(): void => console.log('Handle button focus')}
         handleOptionSelect={(): void => console.log('Handle option select')}

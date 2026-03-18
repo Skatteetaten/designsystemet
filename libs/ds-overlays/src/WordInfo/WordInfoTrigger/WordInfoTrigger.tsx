@@ -32,6 +32,7 @@ export const WordInfoTrigger = ({
       ref={mergedRef}
       id={id}
       className={`${styles.wordInfoTrigger} ${className}`.trim()}
+      type={'button'}
       lang={lang}
       data-testid={dataTestId}
       aria-expanded={isOpen}

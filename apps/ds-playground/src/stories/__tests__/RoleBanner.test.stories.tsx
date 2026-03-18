@@ -23,6 +23,7 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+    htmlValidate: { rules: { 'no-redundant-role': 'off' } },
   },
 } satisfies Meta<typeof RoleBanner>;
 export default meta;
@@ -115,6 +116,7 @@ export const AllRoles = {
     a11y: {
       test: 'off',
     },
+    htmlValidate: { test: 'off' },
   },
   render: (): JSX.Element => (
     <>

@@ -93,23 +93,23 @@ export const AccordionItem = ({
           onClick={handleClick}
         >
           {svgPath && iconPosition !== 'left' && (
-            <div className={iconWrapperClassNames}>
+            <span className={iconWrapperClassNames}>
               <Icon svgPath={svgPath} size={iconSize} className={styles.icon} />
-            </div>
+            </span>
           )}
 
-          <div className={styles.titleWrapper}>
-            <div className={titleClassNames}>{title}</div>
-            {subtitle && <p className={subtitleClassNames}>{subtitle}</p>}
-          </div>
+          <span className={styles.titleWrapper}>
+            <span className={titleClassNames}>{title}</span>
+            {subtitle && <span className={subtitleClassNames}>{subtitle}</span>}
+          </span>
 
-          <div className={iconWrapperClassNames}>
+          <span className={iconWrapperClassNames}>
             <Icon
               svgPath={ChevronDownSVGpath}
               size={iconSize}
               className={chevronClassNames}
             />
-          </div>
+          </span>
         </button>
       </Tag>
       {keepMounted ? (

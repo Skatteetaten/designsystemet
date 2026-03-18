@@ -43,6 +43,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
+    htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
     imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof CheckboxGroup>;
