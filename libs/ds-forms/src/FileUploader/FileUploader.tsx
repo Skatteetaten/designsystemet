@@ -2,6 +2,7 @@ import {
   ChangeEvent,
   DragEvent,
   useEffect,
+  useEffectEvent,
   useId,
   useRef,
   useState,
@@ -82,13 +83,16 @@ export const FileUploader = (({
   const [newFiles, setNewFiles] = useState<UploadedFile[]>([]);
   const prevFilesRef = useRef<UploadedFile[] | undefined>(undefined);
 
-  useEffect(() => {
-    //NOTE: hvis vi får samme statusmelding to ganger på rad så vil ikke skjermen lese det opp igjen med mindre vi tømmer den først
+  //NOTE: hvis vi får samme statusmelding to ganger på rad så vil ikke skjermen lese det opp igjen med mindre vi tømmer den først
+  const refreshStatusMessage = useEffectEvent(() => {
+    if (!uploadResult) {
+      return;
+    }
     setShouldrenderStatus(false);
     setTimeout(() => {
       setShouldrenderStatus(true);
     }, 120);
-  }, [uploadResult]);
+  });
 
   useEffect(() => {
     if (uploadedFiles) {
@@ -106,7 +110,10 @@ export const FileUploader = (({
       }
 
       prevFilesRef.current = uploadedFiles;
+      refreshStatusMessage();
     }
+    //TODO: eslint plugin må oppdateres for at den skal forstå at refreshStatusMessage ikke trenger å være med i dependency array siden den bruker useEffectEvent
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uploadedFiles]);
 
   const id = externalId ?? generatedId;
