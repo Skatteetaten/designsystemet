@@ -60,6 +60,7 @@ export const DatePicker = ({
   titleHelpSvg,
   value,
   variant = getCommonFormVariantDefault(),
+  ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
   disabled,
   name,
@@ -256,7 +257,11 @@ export const DatePicker = ({
           required={required}
           value={inputValue}
           aria-describedby={
-            [description && descriptionId, errorMessage && errorId]
+            [
+              ariaDescribedBy,
+              description && descriptionId,
+              errorMessage && errorId,
+            ]
               .filter(Boolean)
               .join(' ')
               .trim() || undefined

@@ -1,7 +1,10 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within } from 'storybook/test';
 
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -38,6 +41,8 @@ const meta = {
     // HTML
     disabled: { table: { disable: true } },
     form: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onHelpToggle: { table: { disable: true } },
   },
@@ -162,6 +167,43 @@ export const Defaults = {
       await expect(input).not.toHaveAttribute('aria-invalid');
       await expect(input).not.toBeRequired();
     }
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'checkboxgroup-alert-description-id';
+    return (
+      <>
+        <CheckboxGroup {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for checkboxgroup'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const group = canvas.getByRole('group');
+    await expect(group).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for checkboxgroup'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = group.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain(
+      'checkboxgroup-alert-description-id'
+    );
   },
 } satisfies Story;
 

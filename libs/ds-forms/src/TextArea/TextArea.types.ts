@@ -31,7 +31,9 @@ type RequiredTextAreaHTMLAttributes = Pick<
   | 'value'
 >;
 
-type TextAreaHTMLAttributes = Partial<RequiredTextAreaHTMLAttributes>;
+type TextAreaHTMLAttributes = Partial<RequiredTextAreaHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface TextAreaPropsHTMLAttributes extends TextAreaHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLTextAreaElement>;

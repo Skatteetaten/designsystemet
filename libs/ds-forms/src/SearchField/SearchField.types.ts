@@ -38,7 +38,9 @@ type RequiredDatePickerHTMLAttributes = Pick<
   | 'value'
 >;
 
-type SearchFieldHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes>;
+type SearchFieldHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface SearchFieldPropsHTMLAttributes extends SearchFieldHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;

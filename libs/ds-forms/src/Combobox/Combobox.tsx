@@ -67,6 +67,7 @@ const Combobox = memo(
     value,
     variant = getComboboxVariantDefault(),
     accessKey,
+    ariaDescribedBy,
     name,
     disabled,
     form,
@@ -204,8 +205,8 @@ const Combobox = memo(
     const labelId = `${comboboxId}-label`;
     const descriptionId = `${comboboxId}-description`;
 
-    const ariaDescribedBy =
-      [description && descriptionId, errorMessage && errorId]
+    const resolvedAriaDescribedBy =
+      [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
         .filter(Boolean)
         .join(' ') || undefined;
 
@@ -265,7 +266,7 @@ const Combobox = memo(
               aria-activedescendant={
                 focusedIndex >= 0 ? focusedOptionId : undefined
               }
-              aria-describedby={ariaDescribedBy}
+              aria-describedby={resolvedAriaDescribedBy}
               aria-invalid={getAriaInvalid(errorMessage, required)}
               data-testid={dataTestId}
               onChange={handleInputChange}

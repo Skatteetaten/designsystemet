@@ -10,7 +10,10 @@ type RequiredCheckboxGroupHTMLAttributes = Pick<
   'disabled' | 'form'
 >;
 
-type CheckboxGroupHTMLAttributes = Partial<RequiredCheckboxGroupHTMLAttributes>;
+type CheckboxGroupHTMLAttributes =
+  Partial<RequiredCheckboxGroupHTMLAttributes> & {
+    ariaDescribedBy?: string;
+  };
 
 interface CheckboxGroupCommonProps
   extends CheckboxGroupHTMLAttributes,

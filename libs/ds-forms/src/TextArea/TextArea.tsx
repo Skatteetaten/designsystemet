@@ -41,6 +41,7 @@ export const TextArea = ({
   helpText,
   label,
   titleHelpSvg,
+  ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
   autoCorrect,
   characterLimit,
@@ -101,8 +102,9 @@ export const TextArea = ({
       classNames?.textbox ?? ''
     }`.trim();
 
-  const ariaDescribedBy =
+  const resolvedAriaDescribedBy =
     [
+      ariaDescribedBy,
       description && descriptionId,
       errorMessage && errorId,
       characterLimit && characterCounterId,
@@ -150,7 +152,7 @@ export const TextArea = ({
         rows={rows}
         spellCheck={spellCheck}
         value={value}
-        aria-describedby={ariaDescribedBy}
+        aria-describedby={resolvedAriaDescribedBy}
         aria-invalid={getAriaInvalid(errorMessage, required)}
         onBlur={onBlur}
         onChange={handleChange}

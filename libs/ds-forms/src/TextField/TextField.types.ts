@@ -33,7 +33,9 @@ type RequiredTextFieldHTMLAttributes = Pick<
   | 'pattern'
 >;
 
-type TextFieldHTMLAttributes = Partial<RequiredTextFieldHTMLAttributes>;
+type TextFieldHTMLAttributes = Partial<RequiredTextFieldHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;

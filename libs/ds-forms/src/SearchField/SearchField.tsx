@@ -54,6 +54,7 @@ export const SearchField = (({
   titleHelpSvg,
   searchButtonTitle,
   variant = getCommonFormVariantDefault(),
+  ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
   accessKey,
   disabled,
@@ -231,6 +232,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             required={required}
             aria-describedby={
               [
+                ariaDescribedBy,
                 description && descriptionId,
                 errorMessage && errorId,
                 enableSRNavigationHint && srFocusId,

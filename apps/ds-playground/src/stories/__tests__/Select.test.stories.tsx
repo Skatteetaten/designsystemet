@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
@@ -11,6 +11,7 @@ import {
 } from 'storybook/test';
 
 import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -55,6 +56,8 @@ const meta = {
     form: { table: { disable: true } },
     name: { table: { disable: true } },
     required: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -211,6 +214,39 @@ export const Defaults = {
       '[id^=selectErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'select-alert-description-id';
+    return (
+      <>
+        <Select {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for select'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const select = canvas.getByRole('combobox');
+    await expect(select).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText('Dette er en varselmelding for select');
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = select.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('select-alert-description-id');
   },
 } satisfies Story;
 

@@ -7,13 +7,13 @@ import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 import { Button } from '@skatteetaten/ds-buttons';
 import { TextArea, TextAreaProps } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
+import { Alert } from '@skatteetaten/ds-status';
 
 import {
   coolString,
   loremIpsum,
   wrapper,
 } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -36,53 +36,49 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    autosize: { table: { disable: true, category: category.props } },
-    classNames: {
-      table: { disable: true, category: category.props },
-    },
-    characterLimit: { table: { disable: true, category: category.props } },
+    autosize: { table: { disable: true } },
+    classNames: { table: { disable: true } },
+    characterLimit: { table: { disable: true } },
     defaultValue: {
       control: 'text',
-      table: { disable: true, category: category.props },
+      table: { disable: true },
     },
-    description: { table: { disable: true, category: category.props } },
-    errorMessage: { table: { disable: true, category: category.props } },
-    hasSpacing: { table: { disable: true, category: category.props } },
+    description: { table: { disable: true } },
+    errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     helpSvgPath: {
-      table: { disable: true, category: category.props },
+      table: { disable: true },
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    helpText: { table: { disable: true, category: category.props } },
-    hideLabel: { table: { disable: true, category: category.props } },
-    label: { table: { disable: true, category: category.props } },
-    showRequiredMark: { table: { disable: true, category: category.props } },
-    titleHelpSvg: { table: { disable: true, category: category.props } },
+    helpText: { table: { disable: true } },
+    hideLabel: { table: { disable: true } },
+    label: { table: { disable: true } },
+    showRequiredMark: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: {
-      table: { disable: true, category: category.htmlAttribute },
+      table: { disable: true },
       type: 'string',
     },
-    autoCorrect: {
-      table: { disable: true, category: category.htmlAttribute },
-    },
-    disabled: { table: { disable: true, category: category.htmlAttribute } },
-    form: { table: { disable: true, category: category.htmlAttribute } },
-    name: { table: { disable: true, category: category.htmlAttribute } },
-    maxLength: { table: { disable: true, category: category.htmlAttribute } },
-    minLength: { table: { disable: true, category: category.htmlAttribute } },
-    placeholder: { table: { disable: true, category: category.htmlAttribute } },
-    readOnly: { table: { disable: true, category: category.htmlAttribute } },
-    required: { table: { disable: true, category: category.htmlAttribute } },
-    rows: { table: { disable: true, category: category.htmlAttribute } },
-    spellCheck: {
-      table: { disable: true, category: category.htmlAttribute },
-    },
-    value: { table: { disable: true, category: category.htmlAttribute } },
+    autoCorrect: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
+    name: { table: { disable: true } },
+    maxLength: { table: { disable: true } },
+    minLength: { table: { disable: true } },
+    placeholder: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
+    required: { table: { disable: true } },
+    rows: { table: { disable: true } },
+    spellCheck: { table: { disable: true } },
+    value: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
-    onBlur: { table: { disable: true, category: category.event } },
-    onChange: { table: { disable: true, category: category.event } },
-    onFocus: { table: { disable: true, category: category.event } },
+    onBlur: { table: { disable: true } },
+    onChange: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
   tags: ['test'],
@@ -220,6 +216,41 @@ export const Defaults = {
       '[id^=textAreaErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'textarea-alert-description-id';
+    return (
+      <>
+        <TextArea {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for textarea'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for textarea'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = textbox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('textarea-alert-description-id');
   },
 } satisfies Story;
 

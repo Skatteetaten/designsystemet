@@ -6,6 +6,7 @@ import { useArgs } from 'storybook/preview-api';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -51,6 +52,8 @@ const meta = {
     form: { table: { disable: true } },
     name: { table: { disable: true } },
     required: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onChange: { table: { disable: true } },
     onBlur: { table: { disable: true } },
@@ -181,6 +184,41 @@ export const Defaults = {
       expect(input).toHaveAttribute('name');
       expect(input).not.toHaveAttribute('aria-invalid');
     });
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'radiogroup-alert-description-id';
+    return (
+      <>
+        <RadioGroup {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for radiogroup'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const group = canvas.getByRole('group');
+    await expect(group).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for radiogroup'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = group.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('radiogroup-alert-description-id');
   },
 } satisfies Story;
 

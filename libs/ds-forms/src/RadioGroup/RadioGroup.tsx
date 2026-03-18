@@ -36,6 +36,7 @@ export const RadioGroup = (({
   selectedValue,
   titleHelpSvg,
   variant = getRadioGroupVariantDefault(),
+  ariaDescribedBy,
   defaultValue,
   disabled,
   form,
@@ -104,6 +105,7 @@ export const RadioGroup = (({
       }}
       lang={lang}
       data-testid={dataTestId}
+      ariaDescribedBy={ariaDescribedBy}
       disabled={disabled}
       form={form}
       legend={legend}
