@@ -228,50 +228,6 @@ export const MaxSelected: Story = {
   },
 } satisfies Story;
 
-// .maxHeight {
-//   max-height: 7rem;
-//   padding: 2px;
-//   border-bottom: 1px solid var(--palette-graphite-50);
-//   overflow-y: auto;
-
-//   -webkit-mask-image: linear-gradient(
-//     to bottom,
-//     rgb(0 0 0 / 100%) 80%,
-//     rgb(0 0 0 / 0%)
-//   );
-//   mask-image: linear-gradient(
-//     to bottom,
-//     rgb(0 0 0 / 100%) 80%,
-//     rgb(0 0 0 / 20%)
-//   );
-// }
-
-// export const MaxHeightInputList: Story = {
-//   name: 'Begrenset høyde på input liste',
-//   render: (): JSX.Element => (
-//     <>
-//       <Heading as={'h2'} level={4}>
-//         {'Flervalg med begrenset høyde på input liste'}
-//       </Heading>
-//       <Combobox
-//         className={'multipleCombobox'}
-//         label={'Kommune'}
-//         options={kommuneOptions}
-//         classNames={{
-//           inputList: 'maxHeight',
-//         }}
-//         hasSpacing
-//         multiple
-//       />
-//     </>
-//   ),
-//   parameters: {
-//     controls: {
-//       disable: true,
-//     },
-//   },
-// } satisfies Story;
-
 export const MaxHeight: Story = {
   name: 'Begrenset høyde på options liste',
   render: (): JSX.Element => (
