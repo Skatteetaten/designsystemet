@@ -8,8 +8,10 @@
   "table.Sortable": "Vejolaš sirret",
   "table.SortedAscending": "Sirrejuvvon lassáneamen",
   "table.SortedDescending": "Sirrejuvvon vuolideamen",
+  "tablerow.EditButtonScreenReaderText": "Åpner redigeringspanelet etter denne raden og flytter fokus dit.",
   "tablerow.EditData": "Redigere dieđuid",
   "tablerow.Editable": "Redigere ráiddu",
+  "tablerow.ExpandButtonScreenReaderText": "Viser eller skjuler innhold etter denne raden.",
   "tablerow.ExpandText": "Detáljat",
   "tablerow.Expandable": "Eanet dieđut",
   "tablesum.Sum": "Submi"
