@@ -190,11 +190,22 @@
     outline-offset: -1px;
   }
 
-  &:not(.disabled):hover {
-    z-index: 10;
-    background: var(--semantic-interactive-background);
-    color: var(--semantic-interactive-main);
-    text-decoration: underline;
+  @media (hover: hover) and (pointer: fine) {
+    &:not(.disabled):hover {
+      z-index: 10;
+      background: var(--semantic-interactive-background);
+      color: var(--semantic-interactive-main);
+      text-decoration: underline;
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    &:not(.disabled):active {
+      z-index: 10;
+      background: var(--semantic-interactive-background);
+      color: var(--semantic-interactive-main);
+      text-decoration: underline;
+    }
   }
 
   &.disabled {
