@@ -8,8 +8,10 @@
   "table.Sortable": "Sorterbar",
   "table.SortedAscending": "Sortert stigende",
   "table.SortedDescending": "Sortert synkende",
+  "tablerow.EditButtonScreenReaderText": "Åpner redigeringspanelet etter denne raden og flytter fokus dit.",
   "tablerow.EditData": "Rediger data",
   "tablerow.Editable": "Rediger rad",
+  "tablerow.ExpandButtonScreenReaderText": "Viser eller skjuler innhold etter denne raden.",
   "tablerow.ExpandText": "Detaljer",
   "tablerow.Expandable": "Mer informasjon",
   "tablesum.Sum": "Sum"

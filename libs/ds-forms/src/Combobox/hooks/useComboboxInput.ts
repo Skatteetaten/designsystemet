@@ -27,7 +27,6 @@ interface UseComboboxInputProps {
   value?: ComboboxProps['value'];
   openDropdown: (searchTerm: string, trigger: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
-  chevronClickedRef: React.RefObject<boolean>;
 }
 
 interface UseComboboxInputReturn {
@@ -58,7 +57,6 @@ interface UseComboboxInputReturn {
  * @param props.value - Current value(s) of the combobox
  * @param props.openDropdown - Function to open the dropdown
  * @param props.closeDropdown - Function to close the dropdown
- * @param props.chevronClickedRef - Ref to track if chevron was recently clicked
  * @returns Object containing input event handlers
  */
 export function useComboboxInput({
@@ -73,7 +71,6 @@ export function useComboboxInput({
   onBlur,
   onFocus,
   value,
-  chevronClickedRef,
 }: UseComboboxInputProps): UseComboboxInputReturn {
   const { safeFocus, preventZoom, manageVirtualKeyboard } =
     useBrowserCompatibility();
@@ -117,43 +114,25 @@ export function useComboboxInput({
   );
 
   /**
-   * Handles input focus with mobile compatibility and smart dropdown opening.
+   * Handles input focus with mobile compatibility.
    *
    * What: Prevents iOS zoom and manages virtual keyboard display.
    *
-   * Why: Focus should open dropdown except when coming from chevron button.
-   * Mobile devices need special handling for zoom and virtual keyboard.
+   * Why: Keyboard/programmatic focus should not automatically open the
+   * dropdown. Mobile devices still need special handling for zoom and virtual
+   * keyboard.
    */
   const handleInputFocus = useCallback(
     (e: FocusEvent<HTMLInputElement>): void => {
-      const currentValue = e.target.value;
-
       // Prevent zoom on iOS devices
       preventZoom(e.target);
 
       // Manage virtual keyboard for mobile devices
       manageVirtualKeyboard(e.target, true);
 
-      // Check if focus is coming from chevron button
-      const isFromChevron =
-        (e.relatedTarget instanceof Element &&
-          e.relatedTarget.hasAttribute('data-chevron-button')) ||
-        chevronClickedRef.current;
-
-      // Only auto-open dropdown if focus is not from chevron button
-      if (!isFromChevron) {
-        openDropdown(currentValue, 'focus');
-      }
-
       onFocus?.(e);
     },
-    [
-      openDropdown,
-      onFocus,
-      preventZoom,
-      manageVirtualKeyboard,
-      chevronClickedRef,
-    ]
+    [onFocus, preventZoom, manageVirtualKeyboard]
   );
 
   /**

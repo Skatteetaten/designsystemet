@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, fn, within } from 'storybook/test';
 
@@ -123,7 +125,7 @@ export const WithExpandable = {
     const iconButton = canvas.getByRole('button');
     await expect(iconButton).toHaveAttribute('aria-describedby', 'Id123');
     await expect(iconButton).toHaveAccessibleName(
-      dsI18n.t('ds_tables:tablerow.Expandable')
+      `${dsI18n.t('ds_tables:tablerow.Expandable')} ${dsI18n.t('ds_tables:tablerow.ExpandButtonScreenReaderText')}`
     );
     await expect(iconButton).toHaveAttribute('aria-expanded', 'false');
     /* Etter bytte fra @storybook/jest til @storybook/test må denne testen bruke
@@ -200,7 +202,7 @@ export const WithExpandableContent = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_tables:tablerow.Expandable'),
+      name: `${dsI18n.t('ds_tables:tablerow.Expandable')} ${dsI18n.t('ds_tables:tablerow.ExpandButtonScreenReaderText')}`,
     });
     await fireEvent.click(inlineButton);
   },
@@ -250,7 +252,7 @@ export const WithExpandTextLeft = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_tables:tablerow.ExpandText'),
+      name: `${dsI18n.t('ds_tables:tablerow.ExpandText')} ${dsI18n.t('ds_tables:tablerow.ExpandButtonScreenReaderText')}`,
     });
     await expect(inlineButton).toHaveAttribute('aria-describedby', 'Id123');
     await expect(inlineButton).toHaveAttribute('aria-expanded', 'false');
@@ -308,5 +310,100 @@ export const WithExpandButtonTitle = {
     showExpandButtonTitle: { table: { disable: false } },
     expandButtonTitle: { table: { disable: false } },
     expandButtonPosition: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithScreenReaderTextOnlyOnFirstLeftExpandableRow = {
+  render: (): JSX.Element => (
+    <Table caption={'testtabell'}>
+      <Table.Body>
+        <Table.Row expandButtonAriaDescribedby={'Id123'} isExpandable>
+          <Table.DataCell id={'Id123'} as={'th'}>
+            {'Cake'}
+          </Table.DataCell>
+          <Table.DataCell>{'3,000'}</Table.DataCell>
+        </Table.Row>
+        <Table.Row expandButtonAriaDescribedby={'Id456'} isExpandable>
+          <Table.DataCell id={'Id456'} as={'th'}>
+            {'Muffin'}
+          </Table.DataCell>
+          <Table.DataCell>{'4,000'}</Table.DataCell>
+        </Table.Row>
+      </Table.Body>
+    </Table>
+  ),
+  name: 'With ScreenReaderText only on first left expandable row',
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const [firstButton, secondButton] = canvas.getAllByRole('button');
+
+    await expect(firstButton).toHaveAccessibleName(
+      `${dsI18n.t('ds_tables:tablerow.Expandable')} ${dsI18n.t('ds_tables:tablerow.ExpandButtonScreenReaderText')}`
+    );
+    await expect(secondButton).toHaveAccessibleName(
+      dsI18n.t('ds_tables:tablerow.Expandable')
+    );
+  },
+} satisfies Story;
+
+export const WithScreenReaderTextOnlyOnFirstRowOfEachType = {
+  render: (): JSX.Element => (
+    <Table caption={'testtabell'}>
+      <Table.Body>
+        <Table.Row expandButtonAriaDescribedby={'Id123'} isExpandable>
+          <Table.DataCell id={'Id123'} as={'th'}>
+            {'Cake'}
+          </Table.DataCell>
+          <Table.DataCell>{'3,000'}</Table.DataCell>
+        </Table.Row>
+        <Table.Row expandButtonAriaDescribedby={'Id456'} isExpandable>
+          <Table.DataCell id={'Id456'} as={'th'}>
+            {'Muffin'}
+          </Table.DataCell>
+          <Table.DataCell>{'4,000'}</Table.DataCell>
+        </Table.Row>
+        <Table.EditableRow
+          editableContent={(): JSX.Element => <span>{'Rediger data 1'}</span>}
+        >
+          <Table.DataCell as={'th'}>{'Cookie'}</Table.DataCell>
+          <Table.DataCell>{'5,000'}</Table.DataCell>
+        </Table.EditableRow>
+        <Table.EditableRow
+          editableContent={(): JSX.Element => <span>{'Rediger data 2'}</span>}
+        >
+          <Table.DataCell as={'th'}>{'Brownie'}</Table.DataCell>
+          <Table.DataCell>{'6,000'}</Table.DataCell>
+        </Table.EditableRow>
+      </Table.Body>
+    </Table>
+  ),
+  name: 'With ScreenReaderText only on first row of each type',
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const [
+      firstExpandButton,
+      secondExpandButton,
+      firstEditButton,
+      secondEditButton,
+    ] = canvas.getAllByRole('button');
+
+    await expect(firstExpandButton).toHaveAccessibleName(
+      `${dsI18n.t('ds_tables:tablerow.Expandable')} ${dsI18n.t('ds_tables:tablerow.ExpandButtonScreenReaderText')}`
+    );
+    await expect(secondExpandButton).toHaveAccessibleName(
+      dsI18n.t('ds_tables:tablerow.Expandable')
+    );
+    await expect(firstEditButton).toHaveAccessibleName(
+      `${dsI18n.t('ds_tables:tablerow.Editable')} ${dsI18n.t('ds_tables:tablerow.EditButtonScreenReaderText')}`
+    );
+    await expect(secondEditButton).toHaveAccessibleName(
+      dsI18n.t('ds_tables:tablerow.Editable')
+    );
   },
 } satisfies Story;

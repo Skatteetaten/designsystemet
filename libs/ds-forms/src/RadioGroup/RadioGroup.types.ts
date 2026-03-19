@@ -64,7 +64,10 @@ interface RadioGroupComponentCommonProps
   hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */
   legend: FieldsetProps['legend'];
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
   description?: FieldsetProps['description'];
   /** Margin under komponenten */
   hasSpacing?: boolean;

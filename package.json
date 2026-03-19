@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/designsystemet",
   "groupId": "no.skatteetaten.aurora",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "license": "Apache-2.0",
   "private": false,
   "author": {
@@ -147,6 +147,7 @@
     "eslint-plugin-testing-library": "7.1.1",
     "filter-files": "0.4.0",
     "gh-pages": "6.3.0",
+    "html-validate": "10.11.1",
     "http-server": "14.1.1",
     "jiti": "2.4.2",
     "jsdom": "22.1.0",

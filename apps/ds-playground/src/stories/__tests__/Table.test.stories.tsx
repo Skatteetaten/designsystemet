@@ -367,7 +367,7 @@ const ExpandEditSortTable = (
           ({ isExpandable, id, rowData, showExpandButtonTitle }, index) => {
             const content = (
               <>
-                <Table.DataCell alignment={'left'} id={id}>
+                <Table.DataCell alignment={'left'}>
                   {rowData.coverage}
                 </Table.DataCell>
                 <Table.DataCell alignment={'right'}>
@@ -450,7 +450,7 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
         ({ isExpandable, id, rowData, showExpandButtonTitle }, index) => {
           const content = (
             <>
-              <Table.DataCell alignment={'left'} id={id}>
+              <Table.DataCell alignment={'left'}>
                 {rowData.coverage}
               </Table.DataCell>
               <Table.DataCell alignment={'right'}>

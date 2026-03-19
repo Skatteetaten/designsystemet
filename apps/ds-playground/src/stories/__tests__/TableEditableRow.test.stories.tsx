@@ -168,8 +168,8 @@ export const WithEditableContent = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const inlineButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_tables:tablerow.Editable'),
+    const inlineButton = await canvas.findByRole('button', {
+      name: `${dsI18n.t('ds_tables:tablerow.Editable')} ${dsI18n.t('ds_tables:tablerow.EditButtonScreenReaderText')}`,
     });
     await fireEvent.click(inlineButton);
   },
@@ -199,5 +199,41 @@ export const WithEditButtonPositionRight = {
       name: dsI18n.t('ds_tables:tablerow.Editable'),
     });
     await fireEvent.click(inlineButton);
+  },
+} satisfies Story;
+
+export const WithScreenReaderTextOnlyOnFirstLeftEditableRow = {
+  render: (): JSX.Element => (
+    <Table caption={'testtabell'}>
+      <Table.Body>
+        <Table.EditableRow
+          editableContent={(): JSX.Element => <span>{'Rediger data 1'}</span>}
+        >
+          <Table.DataCell as={'th'}>{'Cake'}</Table.DataCell>
+          <Table.DataCell>{'3,000'}</Table.DataCell>
+        </Table.EditableRow>
+        <Table.EditableRow
+          editableContent={(): JSX.Element => <span>{'Rediger data 2'}</span>}
+        >
+          <Table.DataCell as={'th'}>{'Muffin'}</Table.DataCell>
+          <Table.DataCell>{'4,000'}</Table.DataCell>
+        </Table.EditableRow>
+      </Table.Body>
+    </Table>
+  ),
+  name: 'With ScreenReaderText only on first left editable row',
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const [firstButton, secondButton] = canvas.getAllByRole('button');
+
+    await expect(firstButton).toHaveAccessibleName(
+      `${dsI18n.t('ds_tables:tablerow.Editable')} ${dsI18n.t('ds_tables:tablerow.EditButtonScreenReaderText')}`
+    );
+    await expect(secondButton).toHaveAccessibleName(
+      dsI18n.t('ds_tables:tablerow.Editable')
+    );
   },
 } satisfies Story;

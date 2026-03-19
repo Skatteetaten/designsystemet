@@ -65,7 +65,7 @@ export const ScrollToTopButton = ({
           main?.focus({ preventScroll: !scrollToMain });
         }}
       >
-        <div
+        <span
           className={`${styles.scrollToTopButtonIconContainer} ${
             classNames?.iconContainer ?? ''
           }`.trim()}
@@ -76,14 +76,14 @@ export const ScrollToTopButton = ({
               classNames?.icon ?? ''
             }`.trim()}
           />
-        </div>
-        <div
+        </span>
+        <span
           className={`${styles.scrollToTopButtonLabel} ${
             classNames?.label ?? ''
           }`.trim()}
         >
           {children}
-        </div>
+        </span>
       </button>
     </div>
   );

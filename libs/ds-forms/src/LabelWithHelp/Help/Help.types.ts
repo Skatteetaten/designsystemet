@@ -16,7 +16,7 @@ export interface HelpProps {
   /** Label eller legend id */
   targetId?: string;
   /** Beskrivelse */
-  description?: string;
+  description?: ReactNode;
   /** Id til beskrivelse */
   descriptionId?: string;
   /** Om hjelpeknappen er deaktivert */
