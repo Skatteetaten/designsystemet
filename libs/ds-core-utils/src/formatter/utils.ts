@@ -12,7 +12,7 @@ export const maxLengths: ValidData = {
   organisationNumber: 9,
   bankAccountNumber: 11,
   phoneNumber: 10,
-  number: 13,
+  number: 15,
 };
 
 type ValidLengths = keyof typeof maxLengths;
