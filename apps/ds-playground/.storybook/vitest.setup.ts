@@ -1,7 +1,7 @@
 import * as a11yAddonAnnotations from '@storybook/addon-a11y/preview';
 import { setProjectAnnotations } from '@storybook/react-vite';
-import { afterEach, beforeAll } from 'vitest';
 import { ConfigData, HtmlValidate } from 'html-validate';
+import { afterEach, beforeAll } from 'vitest';
 
 import * as projectAnnotations from './preview';
 
