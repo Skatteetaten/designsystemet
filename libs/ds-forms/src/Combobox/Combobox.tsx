@@ -176,7 +176,7 @@ const Combobox = memo(
       setFocusedIndex,
       moveFocusNext,
       moveFocusPrevious,
-      // openDropdown: keyboardOpenDropdown,
+      openDropdown: keyboardOpenDropdown,
       closeDropdown,
       setSearchTerm,
       inputRef,
@@ -253,7 +253,9 @@ const Combobox = memo(
               accessKey={accessKey}
               form={form}
               name={multiple ? undefined : name}
-              placeholder={placeholder}
+              placeholder={
+                multiple && selectedValues.length > 0 ? undefined : placeholder
+              }
               disabled={disabled}
               required={required}
               role={'combobox'}
