@@ -254,7 +254,9 @@ const Combobox = memo(
               accessKey={accessKey}
               form={form}
               name={multiple ? undefined : name}
-              placeholder={placeholder}
+              placeholder={
+                multiple && selectedValues.length > 0 ? undefined : placeholder
+              }
               disabled={disabled}
               required={required}
               role={'combobox'}
