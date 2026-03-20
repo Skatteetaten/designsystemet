@@ -61,7 +61,7 @@ const Combobox = memo(
     minSearchLength = getComboboxMinSearchLengthDefault(),
     multiple = getComboboxIsMultiSelectDefault(),
     options,
-    placeholder = getComboboxPlaceholderDefault(),
+    placeholder = getComboboxPlaceholderDefault(minSearchLength),
     spinnerProps,
     titleHelpSvg,
     value,

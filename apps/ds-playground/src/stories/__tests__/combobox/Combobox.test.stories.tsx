@@ -533,6 +533,49 @@ export const WithPlaceholder = {
   },
 } satisfies Story;
 
+export const WithMinSearchLength = {
+  name: 'With MinSearchLength',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 1,
+  },
+  argTypes: {
+    minSearchLength: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).not.toHaveAttribute('placeholder');
+  },
+} satisfies Story;
+
+export const WithMinSearchLengthAndPlaceholder = {
+  name: 'With MinSearchLength And Placeholder',
+  args: {
+    ...defaultArgs,
+    placeholder: 'Søk etter kommune, fylke eller land',
+    minSearchLength: 1,
+  },
+  argTypes: {
+    placeholder: { table: { disable: false } },
+    minSearchLength: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toHaveAttribute(
+      'placeholder',
+      'Søk etter kommune, fylke eller land'
+    );
+  },
+} satisfies Story;
+
 export const WithAccessKey = {
   name: 'With AccessKey (B7)',
   args: {
