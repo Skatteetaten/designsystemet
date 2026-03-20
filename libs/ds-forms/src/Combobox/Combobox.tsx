@@ -195,6 +195,8 @@ const Combobox = memo(
         setSelectedValues(getSelectedValuesFromValue(value, options, multiple));
         setSearchTerm(''); // Keep search field clear in multi-select mode
       } else if (!multiple && value !== undefined) {
+        const selectedOption = options.find((option) => option.value === value);
+        setSelectedValues(selectedOption ? [selectedOption] : []);
         // In controlled single mode, update searchTerm when value changes
         setSearchTerm(getSearchTermFromValue(value, options, multiple));
       }

@@ -300,6 +300,7 @@ const selectMultipleOption = (
  * @param option - The option being selected
  * @param config - Configuration object containing state and handlers for
  *   single-select
+ * @param config.setSelectedValues - Function to update selected values state
  * @param config.setSearchTerm - Function to update search input state
  * @param config.closeDropdown - Function to close the dropdown
  * @param config.setFocusedIndex - Function to update focused option index
@@ -308,17 +309,22 @@ const selectMultipleOption = (
 const selectSingleOption = (
   option: ComboboxOption,
   {
+    setSelectedValues,
     setSearchTerm,
     closeDropdown,
     setFocusedIndex,
     onSelectionChange,
   }: {
+    setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
   }
 ): void => {
+  // Track selected option state in single-select mode
+  setSelectedValues([option]);
+
   // Update search term to selected option label
   setSearchTerm(option.label);
 
@@ -388,6 +394,7 @@ export const selectOption = (
     });
   } else {
     selectSingleOption(option, {
+      setSelectedValues,
       setSearchTerm,
       closeDropdown,
       setFocusedIndex,

@@ -178,6 +178,7 @@ export function useComboboxInput({
    */
   const handleClearValue = useCallback((): void => {
     setSearchTerm('');
+    setSelectedValues([]);
 
     if (inputRef.current) {
       safeFocus(inputRef.current);
@@ -197,6 +198,7 @@ export function useComboboxInput({
     }
   }, [
     setSearchTerm,
+    setSelectedValues,
     inputRef,
     safeFocus,
     onSelectionChange,

@@ -1,6 +1,7 @@
 import { JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
 
@@ -121,3 +122,19 @@ export const Option = {
     },
   },
 };
+
+export const WithSelectedOption = {
+  name: 'With Selected Option',
+  args: {
+    ...defaultArgs,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await userEvent.click(inputElement);
+  },
+} satisfies Story;

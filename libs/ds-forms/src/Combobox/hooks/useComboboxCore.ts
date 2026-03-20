@@ -152,8 +152,17 @@ export function useComboboxCore({
   const displayOptions = useMemo(() => {
     if (!isOpen) return []; // No options when dropdown is closed
     if (isLoading) return []; // Empty list while loading (spinner shows instead)
-    return filterOptions(options, searchTerm);
-  }, [options, searchTerm, isOpen, isLoading]);
+
+    // In single-select mode, if input shows a selected option label,
+    // reopening should show full list while still keeping the label in input.
+    const selectedOptionLabelInSingleMode =
+      !multiple && selectedValues[0]?.label === searchTerm;
+
+    return filterOptions(
+      options,
+      selectedOptionLabelInSingleMode ? '' : searchTerm
+    );
+  }, [options, searchTerm, isOpen, isLoading, multiple, selectedValues]);
 
   const orderedDisplayOptions = useMemo(() => {
     return getOptionsInGroupOrder(displayOptions);

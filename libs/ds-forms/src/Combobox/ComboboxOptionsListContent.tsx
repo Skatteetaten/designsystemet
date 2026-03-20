@@ -1,6 +1,7 @@
 import React, { type JSX, useMemo } from 'react';
 
 import { Divider } from '@skatteetaten/ds-content';
+import { CheckIcon } from '@skatteetaten/ds-icons';
 
 import type { ComboboxOption } from './Combobox.types';
 import {
@@ -21,7 +22,6 @@ interface ComboboxOptionItemProps {
   flatIndex: number;
   comboboxId: string;
   comboboxState: ComboboxState;
-  searchTerm: string;
   multiple: boolean;
   isGroupItem: boolean;
   focusedIndex: number;
@@ -38,7 +38,6 @@ const ComboboxOptionItem = ({
   flatIndex,
   comboboxId,
   comboboxState,
-  searchTerm,
   isGroupItem,
   multiple,
   focusedIndex,
@@ -47,10 +46,6 @@ const ComboboxOptionItem = ({
 }: ComboboxOptionItemProps): JSX.Element => {
   const { isSelected, isDisabled } = getOptionState(option, comboboxState);
 
-  // I enkeltvalg-modus markerer vi option som valgt når label matcher søketekst
-  const isSelectedInSingleMode = !multiple && option.label === searchTerm;
-  const ariaSelected = multiple ? isSelected : isSelectedInSingleMode;
-
   const isFocused = flatIndex === focusedIndex;
 
   return (
@@ -58,7 +53,7 @@ const ComboboxOptionItem = ({
       key={option.value}
       id={`${comboboxId}-option-${flatIndex}`}
       role={'option'}
-      aria-selected={ariaSelected ? 'true' : 'false'}
+      aria-selected={isSelected ? 'true' : 'false'}
       aria-disabled={isDisabled ? 'true' : undefined}
       className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isGroupItem ? styles.optionInGroup : ''} ${isFocused ? styles.focused : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
       tabIndex={-1}
@@ -88,6 +83,9 @@ const ComboboxOptionItem = ({
         className={`${styles.optionLabel} ${isDisabled ? styles.disabled : ''}`.trim()}
       >
         {option.label}
+        {!multiple && isSelected && (
+          <CheckIcon className={styles.checkIcon} aria-hidden={'true'} />
+        )}
       </span>
     </li>
   );
@@ -98,7 +96,6 @@ export interface ComboboxOptionsListContentProps {
   displayOptions: ComboboxOption[];
   comboboxId: string;
   comboboxState: ComboboxState;
-  searchTerm: string;
   multiple: boolean;
   focusedIndex: number;
   handleButtonFocus: (index: number) => void;
@@ -113,7 +110,6 @@ export const ComboboxOptionsListContent = ({
   displayOptions,
   comboboxId,
   comboboxState,
-  searchTerm,
   multiple,
   focusedIndex,
   handleButtonFocus,
@@ -135,7 +131,6 @@ export const ComboboxOptionsListContent = ({
             flatIndex={index}
             comboboxId={comboboxId}
             comboboxState={comboboxState}
-            searchTerm={searchTerm}
             multiple={multiple}
             isGroupItem={hasGroups}
             focusedIndex={focusedIndex}
@@ -183,7 +178,6 @@ export const ComboboxOptionsListContent = ({
                 flatIndex={currentIndex}
                 comboboxId={comboboxId}
                 comboboxState={comboboxState}
-                searchTerm={searchTerm}
                 multiple={multiple}
                 isGroupItem={hasGroups}
                 focusedIndex={focusedIndex}
@@ -206,7 +200,6 @@ export const ComboboxOptionsListContent = ({
               flatIndex={currentIndex}
               comboboxId={comboboxId}
               comboboxState={comboboxState}
-              searchTerm={searchTerm}
               multiple={multiple}
               isGroupItem={hasGroups}
               focusedIndex={focusedIndex}
