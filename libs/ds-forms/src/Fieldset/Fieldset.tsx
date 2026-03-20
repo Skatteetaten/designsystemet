@@ -25,6 +25,7 @@ export const Fieldset = ({
   helpText,
   legend,
   titleHelpSvg,
+  ariaDescribedBy,
   disabled,
   form,
   hasSpacing,
@@ -66,6 +67,7 @@ export const Fieldset = ({
       data-testid={dataTestId}
       className={`${styles.fieldset} ${className}`.trim()}
       lang={lang}
+      aria-describedby={ariaDescribedBy}
       disabled={disabled}
       form={form}
       data-has-spacing={hasSpacing}

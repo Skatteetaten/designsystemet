@@ -67,6 +67,8 @@ const meta = {
       control: 'boolean',
       table: { category: category.htmlAttribute },
     },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },

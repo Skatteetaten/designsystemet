@@ -90,6 +90,8 @@ const meta = {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },

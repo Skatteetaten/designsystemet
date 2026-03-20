@@ -1,8 +1,11 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
+import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
@@ -36,6 +39,8 @@ const meta = {
     // HTML
     disabled: { table: { disable: true } },
     form: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onHelpToggle: { table: { disable: true } },
   },
@@ -128,6 +133,41 @@ export const Defaults = {
     await expect(fieldset.tagName).toBe('FIELDSET');
 
     await expect(fieldset.firstElementChild?.tagName).toBe('LEGEND');
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'fieldset-alert-description-id';
+    return (
+      <>
+        <Fieldset {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for fieldset'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const fieldset = canvas.getByRole('group');
+    await expect(fieldset).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for fieldset'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = fieldset.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('fieldset-alert-description-id');
   },
 } satisfies Story;
 

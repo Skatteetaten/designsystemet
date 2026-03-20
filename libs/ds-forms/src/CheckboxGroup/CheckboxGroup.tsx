@@ -36,6 +36,7 @@ export const CheckboxGroup = (({
   legend,
   readOnly,
   titleHelpSvg,
+  ariaDescribedBy,
   disabled,
   form,
   hasSpacing = getHasSpacingDefault(),
@@ -58,6 +59,7 @@ export const CheckboxGroup = (({
       }}
       lang={lang}
       data-testid={dataTestId}
+      ariaDescribedBy={ariaDescribedBy}
       disabled={disabled}
       form={form}
       legend={legend}

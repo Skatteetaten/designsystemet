@@ -27,7 +27,9 @@ type RequiredSelectHTMLAttributes = Pick<
   | 'value'
 >;
 
-type SelectHTMLAttributes = Partial<RequiredSelectHTMLAttributes>;
+type SelectHTMLAttributes = Partial<RequiredSelectHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface SelectPropsHTMLAttributes extends SelectHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLSelectElement>;

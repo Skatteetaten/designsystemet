@@ -40,7 +40,10 @@ type RequiredFieldsetHTMLAttributes = Pick<
   'disabled' | 'form'
 >;
 
-type InputHTMLAttributes = Partial<RequiredInputHTMLAttributes>;
+type InputHTMLAttributes = Partial<RequiredInputHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
+
 interface InputPropsHTMLAttributes extends InputHTMLAttributes {
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }

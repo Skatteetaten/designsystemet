@@ -31,7 +31,9 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'onFocus'
   | 'form'
   | 'accessKey'
->;
+> & {
+  ariaDescribedBy?: string;
+};
 
 interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement | null>;

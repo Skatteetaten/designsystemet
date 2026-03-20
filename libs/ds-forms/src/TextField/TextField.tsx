@@ -47,6 +47,7 @@ export const TextField = ({
   thousandSeparator,
   titleHelpSvg,
   variant = getCommonFormVariantDefault(),
+  ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
   defaultValue,
   disabled,
@@ -339,8 +340,9 @@ export const TextField = ({
       classNames?.textbox ?? ''
     }`.trim();
 
-  const ariaDescribedBy =
+  const resolvedAriaDescribedBy =
     [
+      ariaDescribedBy,
       description && descriptionId,
       errorMessage && errorId,
       characterLimit && characterCounterId,
@@ -397,7 +399,7 @@ export const TextField = ({
         readOnly={readOnly}
         required={required}
         value={formattedValue}
-        aria-describedby={ariaDescribedBy}
+        aria-describedby={resolvedAriaDescribedBy}
         aria-invalid={getAriaInvalid(errorMessage, required)}
         onBlur={onBlur}
         onChange={handleChange}

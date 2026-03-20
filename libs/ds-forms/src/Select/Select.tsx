@@ -46,6 +46,7 @@ export const Select = (({
   titleHelpSvg,
   variant = getCommonFormVariantDefault(),
   value,
+  ariaDescribedBy,
   autoComplete,
   disabled,
   form,
@@ -140,7 +141,11 @@ export const Select = (({
           value={value}
           defaultValue={defaultValue}
           aria-describedby={
-            [description && descriptionId, errorMessage && errorId]
+            [
+              ariaDescribedBy,
+              description && descriptionId,
+              errorMessage && errorId,
+            ]
               .filter(Boolean)
               .join(' ') || undefined
           }

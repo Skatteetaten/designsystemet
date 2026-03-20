@@ -19,7 +19,9 @@ type RequiredDatePickerHTMLAttributes = Pick<
   'autoComplete' | 'disabled' | 'name' | 'placeholder' | 'readOnly' | 'required'
 >;
 
-type DatePickerHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes>;
+type DatePickerHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;
