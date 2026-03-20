@@ -33,6 +33,7 @@ const meta: Meta<typeof TopBannerExternal.UserMenu> = {
       person: {
         name: 'Buljo Tulljo',
         personId: '6969420420',
+        dateOfBirth: new Date('1984-02-13'),
         type: '',
       },
     },

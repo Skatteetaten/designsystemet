@@ -10,11 +10,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  formatNationalIdentityNumber,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { FavoriteSVGpath, LogOutSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -36,6 +32,7 @@ import { RolePickerContext } from './RolePickerContext';
 import { RolePickerFilterInput } from './RolePickerFilterInput/RolePickerFilterInput';
 import { RolePickerPeopleList } from './RolePickerPeopleList/RolePickerPeopleList';
 import { RolePickerRow } from './RolePickerRow/RolePickerRow';
+import { getPersonDescription } from './utils';
 
 import styles from './RolePicker.module.scss';
 
@@ -189,7 +186,7 @@ export const RolePicker = ({
               <RolePickerRow
                 id={me.personId}
                 title={t('rolepicker.MeHeading')}
-                description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(me.personId)}`}
+                description={getPersonDescription(me)}
                 svgPath={FavoriteSVGpath}
                 titleAs={'h2'}
                 onClick={() => handleEntitySelect(me)}

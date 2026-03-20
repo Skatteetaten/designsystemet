@@ -17,6 +17,7 @@ export type Entity = {
 
 export interface Person extends Entity {
   personId: string;
+  dateOfBirth?: Date;
 }
 
 export interface Business extends Entity {
