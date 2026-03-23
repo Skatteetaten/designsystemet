@@ -62,8 +62,12 @@ const createDisallowedSymbolsRegex = (
  * @param type - Formattypen å hente maksimallengde for
  * @returns Maksimallengde
  */
-const getMaxLength = (type: FormatTypes): number | undefined => {
-  return maxLengths[type as keyof typeof maxLengths];
+const getMaxLength = (
+  type: FormatTypes,
+  hasDecimal?: boolean
+): number | undefined => {
+  const maxLength = maxLengths[type as keyof typeof maxLengths];
+  return maxLength !== undefined && hasDecimal ? maxLength + 1 : maxLength;
 };
 
 /**
@@ -112,7 +116,8 @@ const cleanInput = (
     cleanedInput = input.replace(digitsOnly, '');
   }
 
-  const maxLength = getMaxLength(type);
+  const hasDecimal = cleanedInput.includes(decimalSeparator);
+  const maxLength = getMaxLength(type, hasDecimal);
   if (maxLength && cleanedInput.length > maxLength) {
     cleanedInput = cleanedInput.substring(0, maxLength);
   }
@@ -620,7 +625,7 @@ export const useFormattedInput = ({
         }
       }
 
-      const maxLength = getMaxLength(type);
+      const maxLength = getMaxLength(type, hasDecimal);
       if (
         maxLength &&
         rawValue.length >= maxLength &&
@@ -643,6 +648,7 @@ export const useFormattedInput = ({
       handleBackspaceAtSeparator,
       handleDeleteAtSeparator,
       handleDeleteAtDigit,
+      hasDecimal,
     ]
   );
 
