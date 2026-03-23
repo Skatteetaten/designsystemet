@@ -45,6 +45,7 @@ export interface ExpandableRowProps extends BaseProps {
   isExpanded?: boolean;
   /** Innholdet i raden. Bruk Table.DataCell for celler. */
   children?: ReactNode;
+  buttonPosition?: 'left' | 'right';
   classNames?: { expandedContent?: string };
   context: TableContextProps | null;
   svgPath: ReactElement<SVGPathElement>;
