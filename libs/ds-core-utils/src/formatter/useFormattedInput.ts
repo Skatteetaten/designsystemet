@@ -104,10 +104,17 @@ const cleanInput = (
       : input.replace(digitsAndMinus, '');
 
     if (allowDecimals) {
+      const decimalCount = (
+        cleanedInput.match(new RegExp(escapeRegExp(decimalSeparator), 'g')) ||
+        []
+      ).length;
       cleanedInput = removeDuplicateCharsExceptFirstOccurrence(
         cleanedInput,
         decimalSeparator
       );
+      if (decimalCount > 1) {
+        onStatusChange?.('duplicateDecimalSeparator');
+      }
 
       const parts = cleanedInput.split(decimalSeparator);
       if (parts.length === 2) {
