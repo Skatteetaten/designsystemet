@@ -1,4 +1,4 @@
-import React, { type JSX, useMemo } from 'react';
+import React, { type JSX, useMemo, useRef } from 'react';
 
 import { Divider } from '@skatteetaten/ds-content';
 import { CheckIcon } from '@skatteetaten/ds-icons';
@@ -46,6 +46,8 @@ const ComboboxOptionItem = ({
 }: ComboboxOptionItemProps): JSX.Element => {
   const { isSelected, isDisabled } = getOptionState(option, comboboxState);
 
+  const isScrolling = useRef(false);
+
   const isFocused = flatIndex === focusedIndex;
 
   return (
@@ -66,10 +68,38 @@ const ComboboxOptionItem = ({
           }
         }
       }}
-      onClick={() => {
-        if (!isDisabled) {
+      /**
+       * Vi bruker Pointer Events (Down/Move/Up) i kombinasjon med en ref i
+       * stedet for onClick for å løse to problemer på mobil:
+       *
+       * 1. "Ghost clicks": Standard onClick på mobil har en forsinkelse (300ms)
+       *    som ofte gjør at raske trykk på rad registreres på feil element
+       *    etter at listen har rendret på nytt.
+       * 2. Scroll vs. Valg: Ved å bruke en 'isScrolling' sjekk, hindrer vi at
+       *    elementet blir valgt når brukeren egentlig bare prøver å scrolle
+       *    over listen (noe onPointerDown alene ville trigget).
+       *
+       * CSS 'touch-action: pan-y' er nødvendig for å fjerne nettleserens
+       * "double-tap to zoom"-forsinkelse, slik at onPointerUp fyrer
+       * umiddelbart.
+       */
+      onPointerDown={() => {
+        isScrolling.current = false;
+      }}
+      onPointerMove={() => {
+        // Hvis fingeren flytter seg mer enn noen få piksler,
+        // tolker vi det som en scroll-bevegelse.
+        isScrolling.current = true;
+      }}
+      onPointerUp={(e) => {
+        // Kun velg hvis brukeren ikke har scrollet
+        if (!isScrolling.current && !isDisabled) {
           handleOptionSelect(option, false);
         }
+      }}
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
       }}
     >
       {multiple && (
