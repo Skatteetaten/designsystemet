@@ -46,6 +46,7 @@ const ComboboxOptionItem = ({
 }: ComboboxOptionItemProps): JSX.Element => {
   const { isSelected, isDisabled } = getOptionState(option, comboboxState);
 
+  const pointerStartRef = useRef<{ x: number; y: number } | null>(null);
   const isScrolling = useRef(false);
 
   const isFocused = flatIndex === focusedIndex;
@@ -83,19 +84,36 @@ const ComboboxOptionItem = ({
        * "double-tap to zoom"-forsinkelse, slik at onPointerUp fyrer
        * umiddelbart.
        */
-      onPointerDown={() => {
+      onPointerDown={(e) => {
+        pointerStartRef.current = { x: e.clientX, y: e.clientY };
         isScrolling.current = false;
       }}
-      onPointerMove={() => {
-        // Hvis fingeren flytter seg mer enn noen få piksler,
-        // tolker vi det som en scroll-bevegelse.
-        isScrolling.current = true;
+      onPointerMove={(e) => {
+        if (!pointerStartRef.current) {
+          return;
+        }
+
+        const deltaX = Math.abs(e.clientX - pointerStartRef.current.x);
+        const deltaY = Math.abs(e.clientY - pointerStartRef.current.y);
+
+        // Små bevegelser skjer ofte under et vanlig trykk på mobil.
+        // Vi regner det først som scroll når bevegelsen passerer en liten terskel.
+        if (deltaX > 6 || deltaY > 6) {
+          isScrolling.current = true;
+        }
       }}
-      onPointerUp={(e) => {
+      onPointerUp={() => {
         // Kun velg hvis brukeren ikke har scrollet
         if (!isScrolling.current && !isDisabled) {
           handleOptionSelect(option, false);
         }
+
+        pointerStartRef.current = null;
+        isScrolling.current = false;
+      }}
+      onPointerCancel={() => {
+        pointerStartRef.current = null;
+        isScrolling.current = false;
       }}
       onClick={(e) => {
         e.preventDefault();
