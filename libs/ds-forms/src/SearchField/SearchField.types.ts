@@ -64,6 +64,7 @@ interface SearchFieldCommonProps
       errorMessage?: string;
       textbox?: string;
       searchContainer?: string;
+      searchResultsList?: string;
       searchResult?: string;
     } & LabelWithHelpProps['classNames']
   >;

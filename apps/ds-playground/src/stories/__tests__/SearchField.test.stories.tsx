@@ -834,3 +834,83 @@ export const WithEnableSRNavigationHintsFalse = {
     await expect(canvas.queryByText(sRtexst)).not.toBeInTheDocument();
   },
 } satisfies Story;
+
+const TemplateWithTabIndex: StoryFn<typeof SearchField> = () => {
+  const [value, setValue] = useState<string>('');
+
+  const options = useMemo(() => {
+    return [
+      {
+        title: 'Ert',
+        description:
+          'Sukkererter er en deilig grønnsak som kan spises rå eller lett kokt.',
+      },
+      {
+        title: 'Sellerirot',
+        description:
+          'En rotgrønnsak med en karakteristisk smak, ofte brukt i supper og gryteretter.',
+      },
+      {
+        title: 'Sukkermais',
+        description: 'Søte maiskolber som kan grilles, kokes eller spises rå.',
+      },
+      {
+        title: 'Østerssopp',
+        description: 'En deilig soppvariant som kan brukes i ulike retter.',
+      },
+      {
+        title: 'Aubergine',
+        description:
+          'Også kjent som eggplante, flott for grilling eller steking.',
+      },
+      {
+        title: 'Cherrytomat',
+        description:
+          'Små, søte tomater som er perfekte for salater eller snacks.',
+      },
+    ];
+  }, []);
+
+  const results = useMemo(
+    () => (value.length >= 2 ? searchInList(options, value) : undefined),
+    [value, options]
+  );
+
+  return (
+    <div tabIndex={-1}>
+      <SearchField
+        classNames={{ searchResultsList: 'searchResultsList' }}
+        label={'Søk etter grønnsaker'}
+        results={results}
+        hideLabel={false}
+        value={value}
+        onChange={(event) => {
+          setValue(event.target.value);
+        }}
+        onClear={() => setValue('')}
+      />
+    </div>
+  );
+};
+
+export const WithTabIndexScope = {
+  name: 'With TabIndex Scope',
+  render: TemplateWithTabIndex,
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('searchbox');
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+
+    await userEvent.type(textbox, 'er');
+    await expect(textbox).toHaveValue('er');
+
+    const listbox = await canvas.findByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+  },
+} satisfies Story;
