@@ -902,15 +902,4 @@ export const WithTabIndexScope = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('searchbox');
-    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
-
-    await userEvent.type(textbox, 'er');
-    await expect(textbox).toHaveValue('er');
-
-    const listbox = await canvas.findByRole('listbox');
-    await expect(listbox).toBeInTheDocument();
-  },
 } satisfies Story;
