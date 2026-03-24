@@ -33,25 +33,25 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     spinnerLabel,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
-    const [showMinSearchLengthSpinner, setShowMinSearchLengthSpinner] =
+    const [showMinSearchLengthText, setShowMinSearchLengthText] =
       useState(false);
 
     const isBelowMinSearchLength = searchTerm.length < minSearchLength;
 
     useEffect(() => {
       if (!isOpen || minSearchLength === 0 || !isBelowMinSearchLength) {
-        setShowMinSearchLengthSpinner(false);
+        setShowMinSearchLengthText(false);
         return;
       }
 
       if (openTrigger === 'chevron') {
-        setShowMinSearchLengthSpinner(true);
+        setShowMinSearchLengthText(true);
         return;
       }
 
       const timeout = setTimeout(() => {
-        setShowMinSearchLengthSpinner(true);
-      }, 500);
+        setShowMinSearchLengthText(true);
+      }, 1000);
 
       return (): void => {
         clearTimeout(timeout);
@@ -62,25 +62,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       return null;
     }
 
-    if (isBelowMinSearchLength) {
-      if (!showMinSearchLengthSpinner) {
-        return null;
-      }
-
-      return (
-        <div
-          ref={customListRef}
-          id={listId}
-          className={`${styles.optionsListContainer} ${styles.loadingContainer} ${className || ''}`.trim()}
-        >
-          <Spinner titlePosition={'right'} {...spinnerProps}>
-            {`Skriv minst ${minSearchLength} tegn for å vise resultater`}
-          </Spinner>
-        </div>
-      );
-    }
-
-    // Vis loading state
     if (isLoading) {
       return (
         <div
@@ -137,8 +118,17 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       );
     }
 
-    // Vis "ingen resultater" når bruker har søkt men ikke fått treff
-    if (searchTerm && displayOptions.length === 0) {
+    const shouldShowMinSearchLengthMessage =
+      isBelowMinSearchLength && showMinSearchLengthText;
+    const shouldShowNoResultsMessage =
+      !isBelowMinSearchLength && !!searchTerm && displayOptions.length === 0;
+
+    // Vis "skriv minst x tegn" eller "ingen resultater"
+    if (shouldShowMinSearchLengthMessage || shouldShowNoResultsMessage) {
+      const message = shouldShowMinSearchLengthMessage
+        ? t('combobox.minSearchLengthText', { ant: minSearchLength })
+        : t('combobox.NoResults', { searchTerm });
+
       return (
         <div
           ref={customListRef}
@@ -157,7 +147,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
               aria-disabled={'true'}
               className={styles.emptyResult}
             >
-              {t('combobox.NoResults', { searchTerm })}
+              {message}
             </li>
           </ul>
         </div>

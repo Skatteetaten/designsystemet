@@ -8,6 +8,7 @@
   "combobox.SelectedOfTotalPlural": "{{selected}} of {{total}} are selected",
   "combobox.SelectedOfTotalSingular": "{{selected}} of {{total}} is selected",
   "combobox.TypeOrSelect": "Type or select",
+  "combobox.minSearchLengthText": "Type at least {{ant}} characters to show results",
   "datepicker.April": "April",
   "datepicker.August": "August",
   "datepicker.CalenderDisplay": "Calender display for",

@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 
 import { defaultArgs } from './utils/combobox.test.utils';
@@ -288,8 +289,8 @@ export const MouseClickOpens = {
   },
 } satisfies Story;
 
-export const MinSearchLengthSpinnerOnChevronClick = {
-  name: 'Min søkelengde viser spinner ved chevron-klikk',
+export const MinSearchLengthTextOnChevronClick = {
+  name: 'Min søkelengde viser "skriv minst x tegn" ved chevron-klikk',
   args: {
     ...defaultArgs,
     minSearchLength: 3,
@@ -306,15 +307,17 @@ export const MinSearchLengthSpinnerOnChevronClick = {
 
     await userEvent.click(chevronButton as Element);
 
-    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+    await expect(canvas.queryByRole('listbox')).toBeInTheDocument();
     await expect(
-      canvas.getByText('Skriv minst 3 tegn for å vise resultater')
+      canvas.getByText(
+        dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
+      )
     ).toBeInTheDocument();
   },
 } satisfies Story;
 
-export const MinSearchLengthSpinnerOnMouseClick = {
-  name: 'Min søkelengde viser spinner ved musklikk',
+export const MinSearchLengthTextOnMouseClick = {
+  name: 'Min søkelengde viser "skriv minst x tegn" ved musklikk',
   args: {
     ...defaultArgs,
     minSearchLength: 3,
@@ -328,17 +331,19 @@ export const MinSearchLengthSpinnerOnMouseClick = {
 
     await userEvent.click(inputElement);
 
-    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
     await waitFor(() => {
-      expect(
-        canvas.getByText('Skriv minst 3 tegn for å vise resultater')
-      ).toBeInTheDocument();
+      expect(canvas.getByRole('listbox')).toBeInTheDocument();
     });
+    await expect(
+      canvas.getByText(
+        dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
+      )
+    ).toBeInTheDocument();
   },
 } satisfies Story;
 
-export const MinSearchLengthSpinnerBeforeThreshold = {
-  name: 'Min søkelengde viser spinner før terskel',
+export const MinSearchLengthTextBeforeThreshold = {
+  name: 'Min søkelengde viser "skriv minst x tegn" før terskel',
   args: {
     ...defaultArgs,
     minSearchLength: 3,
@@ -354,11 +359,18 @@ export const MinSearchLengthSpinnerBeforeThreshold = {
     await userEvent.type(inputElement, 'ab');
 
     await expect(inputElement).toHaveValue('ab');
-    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
     await waitFor(() => {
-      expect(
-        canvas.getByText('Skriv minst 3 tegn for å vise resultater')
-      ).toBeInTheDocument();
+      expect(canvas.getByRole('listbox')).toBeInTheDocument();
     });
+    await waitFor(
+      () => {
+        expect(
+          canvas.getByText(
+            dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
+          )
+        ).toBeInTheDocument();
+      },
+      { timeout: 2000 }
+    );
   },
 } satisfies Story;
