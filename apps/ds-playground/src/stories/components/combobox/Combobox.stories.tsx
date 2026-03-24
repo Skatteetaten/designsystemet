@@ -87,7 +87,7 @@ const meta = {
     placeholder: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: getComboboxPlaceholderDefault() },
+        defaultValue: { summary: getComboboxPlaceholderDefault(0) },
       },
     },
     required: { table: { category: category.htmlAttribute } },
