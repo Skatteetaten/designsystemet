@@ -61,12 +61,13 @@ const Combobox = memo(
     minSearchLength = getComboboxMinSearchLengthDefault(),
     multiple = getComboboxIsMultiSelectDefault(),
     options,
-    placeholder = getComboboxPlaceholderDefault(),
+    placeholder = getComboboxPlaceholderDefault(minSearchLength),
     spinnerProps,
     titleHelpSvg,
     value,
     variant = getComboboxVariantDefault(),
     accessKey,
+    ariaDescribedBy,
     name,
     disabled,
     form,
@@ -194,6 +195,8 @@ const Combobox = memo(
         setSelectedValues(getSelectedValuesFromValue(value, options, multiple));
         setSearchTerm(''); // Keep search field clear in multi-select mode
       } else if (!multiple && value !== undefined) {
+        const selectedOption = options.find((option) => option.value === value);
+        setSelectedValues(selectedOption ? [selectedOption] : []);
         // In controlled single mode, update searchTerm when value changes
         setSearchTerm(getSearchTermFromValue(value, options, multiple));
       }
@@ -204,8 +207,8 @@ const Combobox = memo(
     const labelId = `${comboboxId}-label`;
     const descriptionId = `${comboboxId}-description`;
 
-    const ariaDescribedBy =
-      [description && descriptionId, errorMessage && errorId]
+    const resolvedAriaDescribedBy =
+      [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
         .filter(Boolean)
         .join(' ') || undefined;
 
@@ -253,7 +256,9 @@ const Combobox = memo(
               accessKey={accessKey}
               form={form}
               name={multiple ? undefined : name}
-              placeholder={placeholder}
+              placeholder={
+                multiple && selectedValues.length > 0 ? undefined : placeholder
+              }
               disabled={disabled}
               required={required}
               role={'combobox'}
@@ -265,7 +270,7 @@ const Combobox = memo(
               aria-activedescendant={
                 focusedIndex >= 0 ? focusedOptionId : undefined
               }
-              aria-describedby={ariaDescribedBy}
+              aria-describedby={resolvedAriaDescribedBy}
               aria-invalid={getAriaInvalid(errorMessage, required)}
               data-testid={dataTestId}
               onChange={handleInputChange}

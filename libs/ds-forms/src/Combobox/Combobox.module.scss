@@ -172,6 +172,7 @@
   box-shadow: inset 0 -1px 0 0 var(--semantic-divider-30);
   color: var(--semantic-page-foreground);
   cursor: pointer;
+  scroll-margin-block-end: 3px;
 
   &InGroup,
   &:last-child {
@@ -181,6 +182,7 @@
   &WithCheckbox {
     display: flex;
     column-gap: var(--spacing-s);
+    touch-action: pan-y;
   }
 
   &:focus-visible,
@@ -190,11 +192,22 @@
     outline-offset: -1px;
   }
 
-  &:not(.disabled):hover {
-    z-index: 10;
-    background: var(--semantic-interactive-background);
-    color: var(--semantic-interactive-main);
-    text-decoration: underline;
+  @media (hover: hover) and (pointer: fine) {
+    &:not(.disabled):hover {
+      z-index: 10;
+      background: var(--semantic-interactive-background);
+      color: var(--semantic-interactive-main);
+      text-decoration: underline;
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    &:not(.disabled):active {
+      z-index: 10;
+      background: var(--semantic-interactive-background);
+      color: var(--semantic-interactive-main);
+      text-decoration: underline;
+    }
   }
 
   &.disabled {
@@ -238,11 +251,18 @@
 }
 
 .optionLabel {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-s);
   overflow-wrap: anywhere;
 
   .disabled {
     color: var(--semantic-disabled-foreground);
   }
+}
+
+.checkIcon {
+  height: calc(var(--font-size-m) * var(--semantic-line-height-input));
 }
 
 .emptyResult {

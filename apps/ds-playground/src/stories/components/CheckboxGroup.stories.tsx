@@ -48,6 +48,8 @@ const meta = {
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onHelpToggle: { control: false, table: { category: category.event } },
   },

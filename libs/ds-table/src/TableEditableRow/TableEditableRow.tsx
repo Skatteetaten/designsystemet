@@ -78,6 +78,7 @@ export const TableEditableRow = ({
       classNames={{ expandedContent: styles.expandableContent }}
       isExpandButtonDisabled={!!context?.rowInEditModeId}
       isExpanded={isExpanded}
+      rowType={'edit'}
       expandButtonTitle={isNew ? '' : t('tablerow.Editable')}
       expandButtonAriaDescribedby={editButtonAriaDescribedby}
       expandableContent={

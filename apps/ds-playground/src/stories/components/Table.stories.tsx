@@ -1,4 +1,4 @@
-import { ReactNode, useState, JSX, useRef } from 'react';
+import { JSX, ReactNode, useRef, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
@@ -6,19 +6,19 @@ import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
 import { Checkbox, TextField } from '@skatteetaten/ds-forms';
 import {
-  TimelapseSVGpath,
+  CompletedSVGpath,
   CopySVGpath,
   DeleteSVGpath,
   EditSVGpath,
-  SaveSVGpath,
-  CompletedSVGpath,
   Icon,
+  SaveSVGpath,
+  TimelapseSVGpath,
 } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import {
-  Table,
   getTableVariantDefault,
   SortState,
+  Table,
 } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
 

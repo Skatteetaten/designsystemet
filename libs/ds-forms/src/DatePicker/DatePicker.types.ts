@@ -19,7 +19,9 @@ type RequiredDatePickerHTMLAttributes = Pick<
   'autoComplete' | 'disabled' | 'name' | 'placeholder' | 'readOnly' | 'required'
 >;
 
-type DatePickerHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes>;
+type DatePickerHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;
@@ -48,7 +50,10 @@ export interface DatePickerProps
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
   description?: LabelWithHelpProps['description'];
   /** Margin under komponenten */
   hasSpacing?: boolean;

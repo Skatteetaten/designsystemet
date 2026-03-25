@@ -101,7 +101,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
               displayOptions={displayOptions}
               comboboxId={comboboxId}
               comboboxState={comboboxState}
-              searchTerm={searchTerm}
               multiple={multiple}
               focusedIndex={focusedIndex}
               handleButtonFocus={handleButtonFocus}

@@ -43,6 +43,7 @@ export const Kvittering = (): JSX.Element => {
   const me: Person = {
     name: 'Knuslete Foxtrot',
     personId: '12345678910',
+    dateOfBirth: new Date('1984-02-13'),
     type: 'Person',
   };
 

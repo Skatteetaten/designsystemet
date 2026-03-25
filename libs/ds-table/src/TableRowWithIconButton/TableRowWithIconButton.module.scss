@@ -23,7 +23,6 @@
       calc(var(--spacing-xs) - var(--table-cell-border-width));
   }
 
-  &_expanded,
   &_compact {
     padding: var(--spacing-xs) var(--spacing-xs) 0;
   }
@@ -50,20 +49,11 @@
   }
 }
 
-.expandableContent {
-  position: relative;
-  box-sizing: border-box;
+.expandableLeftContent {
   padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
-  margin-top: var(--spacing-xs);
-  margin-left: calc(var(--spacing-xs) * -1);
-
-  &_extraSmall,
-  &_compact {
-    margin-top: 0;
-  }
 }
 
-.expandedRowRight {
+.expandedRow {
   border-bottom: solid 1px var(--semantic-divider-30);
 }
 

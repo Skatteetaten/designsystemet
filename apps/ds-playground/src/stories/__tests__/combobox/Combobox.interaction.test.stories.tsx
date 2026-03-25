@@ -374,3 +374,83 @@ export const MinSearchLengthTextBeforeThreshold = {
     );
   },
 } satisfies Story;
+
+export const ReopenShowsAllWithSelectedMark = {
+  name: 'Gjenåpning viser alle alternativer med valgt markering',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Åpne og velg alternativ
+    await userEvent.click(inputElement);
+    let options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await expect(inputElement).toHaveValue('Sverige');
+
+    // Åpne igjen - hele listen skal vises
+    await userEvent.click(inputElement);
+    options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+
+    // Valgt alternativ skal være markert
+    const selectedOption = options.find(
+      (option) => option.textContent?.trim() === 'Sverige'
+    );
+    await expect(selectedOption).toHaveAttribute('aria-selected', 'true');
+
+    const selectedIcon = selectedOption?.querySelector(
+      'svg[aria-hidden="true"]'
+    );
+    await expect(selectedIcon).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const ClearRemovesSelectedMark = {
+  name: 'Nullstilling fjerner valgt markering',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Velg ett alternativ først
+    await userEvent.click(inputElement);
+    let options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await expect(inputElement).toHaveValue('Sverige');
+
+    // Sørg for at valgt markering vises
+    await userEvent.click(inputElement);
+    options = canvas.getAllByRole('option');
+    let selectedOptions = options.filter(
+      (option) => option.getAttribute('aria-selected') === 'true'
+    );
+    await expect(selectedOptions).toHaveLength(1);
+
+    // Nullstill fra knapp i input
+    const clearButton = canvasElement.querySelector(
+      'button[data-chevron-button]'
+    );
+    await expect(clearButton).toBeInTheDocument();
+    await userEvent.click(clearButton as Element);
+    await expect(inputElement).toHaveValue('');
+
+    // Åpne og verifiser at valgt markering er borte
+    await userEvent.click(inputElement);
+    options = canvas.getAllByRole('option');
+    selectedOptions = options.filter(
+      (option) => option.getAttribute('aria-selected') === 'true'
+    );
+    await expect(selectedOptions).toHaveLength(0);
+  },
+} satisfies Story;

@@ -9,9 +9,11 @@ type RequiredFieldsetHTMLAttributes = Pick<
   'disabled' | 'form'
 >;
 
-export interface FieldsetProps
-  extends RequiredFieldsetHTMLAttributes,
-    BaseProps {
+type FieldsetHTMLAttributes = Partial<RequiredFieldsetHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
+
+export interface FieldsetProps extends FieldsetHTMLAttributes, BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
     { legend?: string; contentContainer?: string } & HelpProps['classNames']
@@ -25,8 +27,11 @@ export interface FieldsetProps
    * skjermleser
    */
   hideLegend?: boolean;
-  /** Tilleggstekst */
-  description?: string;
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
+  description?: ReactNode;
   /** Margin under komponenten */
   hasSpacing?: boolean;
   /** Hjelpetekst */

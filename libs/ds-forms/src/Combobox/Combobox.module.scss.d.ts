@@ -20,6 +20,7 @@ declare const classNames: {
   readonly checked: 'checked';
   readonly checkboxIconCheck: 'checkboxIconCheck';
   readonly optionLabel: 'optionLabel';
+  readonly checkIcon: 'checkIcon';
   readonly emptyResult: 'emptyResult';
   readonly loadingContainer: 'loadingContainer';
   readonly maxSelectedMessage: 'maxSelectedMessage';

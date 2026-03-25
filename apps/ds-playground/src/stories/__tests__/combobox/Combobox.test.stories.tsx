@@ -1,8 +1,11 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { defaultArgs } from './utils/combobox.test.utils';
 
@@ -42,6 +45,8 @@ const meta = {
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },
     required: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onFocus: { table: { disable: true } },
@@ -208,6 +213,41 @@ export const Defaults = {
     await expect(accessibilityAnnouncer).toHaveAttribute('aria-live', 'polite');
     await expect(accessibilityAnnouncer).toHaveAttribute('aria-atomic', 'true');
     await expect(accessibilityAnnouncer).toHaveTextContent('');
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'combobox-alert-description-id';
+    return (
+      <>
+        <Combobox {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for combobox'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await expect(combobox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for combobox'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = combobox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('combobox-alert-description-id');
   },
 } satisfies Story;
 
@@ -482,6 +522,49 @@ export const WithPlaceholder = {
   },
   argTypes: {
     placeholder: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toHaveAttribute(
+      'placeholder',
+      'Søk etter kommune, fylke eller land'
+    );
+  },
+} satisfies Story;
+
+export const WithMinSearchLength = {
+  name: 'With MinSearchLength',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 1,
+  },
+  argTypes: {
+    minSearchLength: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).not.toHaveAttribute('placeholder');
+  },
+} satisfies Story;
+
+export const WithMinSearchLengthAndPlaceholder = {
+  name: 'With MinSearchLength And Placeholder',
+  args: {
+    ...defaultArgs,
+    placeholder: 'Søk etter kommune, fylke eller land',
+    minSearchLength: 1,
+  },
+  argTypes: {
+    placeholder: { table: { disable: false } },
+    minSearchLength: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

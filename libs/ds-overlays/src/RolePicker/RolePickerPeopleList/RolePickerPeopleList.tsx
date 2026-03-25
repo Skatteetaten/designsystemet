@@ -2,10 +2,7 @@ import { useCallback, useContext, useMemo, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  formatNationalIdentityNumber,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -14,6 +11,7 @@ import { RolePickerPeopleListProps } from './RolePickerPeopleList.types';
 import { Person } from '../RolePicker.types';
 import { RolePickerContext } from '../RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
+import { getPersonDescription } from '../utils';
 
 import styles from './RolePickerPeopleList.module.scss';
 
@@ -47,8 +45,8 @@ export const RolePickerPeopleList = ({
   };
 
   const visibleItems = useMemo(() => {
-    // lager en dyp kopiering av person-listen for å unngå mutasjon
-    let items: Person[] = JSON.parse(JSON.stringify(people.list));
+    // lager en kopi av person-listen for å unngå mutasjon
+    let items: Person[] = people.list.slice();
 
     items = !showDeceasedPeople ? items.filter((p) => !p.isDeleted) : items;
 
@@ -99,7 +97,7 @@ export const RolePickerPeopleList = ({
                 <RolePickerRow
                   id={item.personId}
                   title={`${item.name}${item.isDeleted ? ` (${t('rolepicker.Deceased')})` : ''}`}
-                  description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(item.personId)}`}
+                  description={getPersonDescription(item)}
                   svgPath={PersonSVGpath}
                   onClick={() => handleEntityClicked(item)}
                 />

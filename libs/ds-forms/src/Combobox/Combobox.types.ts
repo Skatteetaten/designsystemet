@@ -32,7 +32,9 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'onFocus'
   | 'form'
   | 'accessKey'
->;
+> & {
+  ariaDescribedBy?: string;
+};
 
 interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement | null>;
@@ -44,8 +46,10 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
-
-  /** Tilleggstekst som vises under label */
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
   description?: LabelWithHelpProps['description'];
   /** Feilmelding som vises under komponenten */
   errorMessage?: string;

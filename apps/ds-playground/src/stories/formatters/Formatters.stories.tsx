@@ -2,8 +2,28 @@ import { useEffect, useState } from 'react';
 
 import { StoryObj } from '@storybook/react-vite';
 
-import { dsI18n, useFormattedInput } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  useFormattedInput,
+  type FormattedInputStatus,
+} from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
+
+const mapStatusToMessage = (
+  status: FormattedInputStatus
+): string | undefined => {
+  switch (status) {
+    case 'maxDigitsReached':
+      return 'Du kan ikke legge inn flere siffer';
+    case 'maxDecimalsReached':
+      return 'Du kan ikke legge inn flere desimaler';
+    case 'duplicateDecimalSeparator':
+      return 'Desimalskilletegn er allerede lagt inn';
+    case 'valid':
+      return undefined;
+  }
+};
 
 export default {
   title: 'Verktøy/Formatters',
@@ -112,6 +132,13 @@ export const Formatters: StoryObj = {
           onChange={numberFormatter.onChange}
           onKeyDown={numberFormatter.onKeyDown}
         />
+        <Alert
+          className={'textField300'}
+          variant={'warning'}
+          showAlert={numberFormatter.status !== 'valid'}
+        >
+          {mapStatusToMessage(numberFormatter.status)}
+        </Alert>
         <TextField
           label={'Beløp med desimal'}
           description={`Formatert etter valgt språk: ${locale}`}
@@ -121,6 +148,13 @@ export const Formatters: StoryObj = {
           onChange={decimalNumberFormatter.onChange}
           onKeyDown={decimalNumberFormatter.onKeyDown}
         />
+        <Alert
+          className={'textField300'}
+          variant={'warning'}
+          showAlert={decimalNumberFormatter.status !== 'valid'}
+        >
+          {mapStatusToMessage(decimalNumberFormatter.status)}
+        </Alert>
       </>
     );
   },
