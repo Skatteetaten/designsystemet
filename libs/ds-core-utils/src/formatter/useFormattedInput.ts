@@ -64,10 +64,11 @@ const createDisallowedSymbolsRegex = (
  */
 const getMaxLength = (
   type: FormatTypes,
-  hasDecimal?: boolean
+  hasDecimal = false,
+  hasMinus = false
 ): number | undefined => {
   const maxLength = maxLengths[type as keyof typeof maxLengths];
-  return maxLength !== undefined && hasDecimal ? maxLength + 1 : maxLength;
+  return maxLength + Number(hasDecimal) + Number(hasMinus);
 };
 
 /**
@@ -131,7 +132,8 @@ const cleanInput = (
   }
 
   const hasDecimal = cleanedInput.includes(decimalSeparator);
-  const maxLength = getMaxLength(type, hasDecimal);
+  const hasMinus = cleanedInput.includes('-');
+  const maxLength = getMaxLength(type, hasDecimal, hasMinus);
   if (maxLength && cleanedInput.length > maxLength) {
     cleanedInput = cleanedInput.substring(0, maxLength);
     if (type === 'number') {
