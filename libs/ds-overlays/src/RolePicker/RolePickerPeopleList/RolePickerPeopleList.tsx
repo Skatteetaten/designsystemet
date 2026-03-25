@@ -11,7 +11,7 @@ import { RolePickerPeopleListProps } from './RolePickerPeopleList.types';
 import { Person } from '../RolePicker.types';
 import { RolePickerContext } from '../RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
-import { getPersonDescription } from '../utils';
+import { getDateOfBirthAsLocaleString, getPersonDescription } from '../utils';
 
 import styles from './RolePickerPeopleList.module.scss';
 
@@ -51,11 +51,16 @@ export const RolePickerPeopleList = ({
     items = !showDeceasedPeople ? items.filter((p) => !p.isDeleted) : items;
 
     if (filterQuery) {
-      return items.filter(
-        (f) =>
+      return items.filter((f) => {
+        const personIdentifier = f.dateOfBirth
+          ? getDateOfBirthAsLocaleString(f.dateOfBirth, dsI18n.language)
+          : f.personId;
+
+        return (
           f.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
-          f.personId.includes(filterQuery.toLowerCase())
-      );
+          personIdentifier.includes(filterQuery.toLowerCase())
+        );
+      });
     }
     if (isExpanded) {
       return items;
