@@ -488,3 +488,8 @@ dl.descriptionListTwoColumns {
 .multipleCombobox {
   max-width: 17rem;
 }
+
+.searchResultsList {
+  max-height: 200px;
+  overflow-y: auto;
+}

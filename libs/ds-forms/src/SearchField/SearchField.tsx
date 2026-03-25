@@ -268,34 +268,34 @@ ${classNames?.searchContainer ?? ''}`.trim()}
               })}
           </span>
           {shouldShowResults && (
-            <div>
-              <ul
-                ref={listboxRef}
-                id={resultsId}
-                className={styles.searchResultContainer}
-                role={'listbox'}
-                aria-labelledby={labelId}
-              >
-                {results?.map((result, index) => {
-                  const hasFocus = currentFocus === index;
-                  return (
-                    <SearchFieldResult
-                      key={result.key ?? result.description}
-                      className={classNames?.searchResult}
-                      hasFocus={hasFocus}
-                      aria-selected={hasFocus}
-                      role={'option'}
-                      title={result.title}
-                      setFocus={setCurrentFocus}
-                      index={index}
-                      onClick={() => onResultClick?.(result)}
-                    >
-                      {result.description}
-                    </SearchFieldResult>
-                  );
-                })}
-              </ul>
-            </div>
+            <ul
+              ref={listboxRef}
+              id={resultsId}
+              className={`${styles.searchResultContainer} ${classNames?.searchResultsList ?? ''}`.trim()}
+              role={'listbox'}
+              aria-labelledby={labelId}
+              // Prevents parent tabIndex scopes from blocking scrollbar clicks in the results list
+              tabIndex={-1}
+            >
+              {results?.map((result, index) => {
+                const hasFocus = currentFocus === index;
+                return (
+                  <SearchFieldResult
+                    key={result.key ?? result.description}
+                    className={classNames?.searchResult}
+                    hasFocus={hasFocus}
+                    aria-selected={hasFocus}
+                    role={'option'}
+                    title={result.title}
+                    setFocus={setCurrentFocus}
+                    index={index}
+                    onClick={() => onResultClick?.(result)}
+                  >
+                    {result.description}
+                  </SearchFieldResult>
+                );
+              })}
+            </ul>
           )}
           {showClearButton && !disabled && !readOnly && (
             <IconButton
