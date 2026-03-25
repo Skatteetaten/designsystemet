@@ -4,6 +4,7 @@ import {
   JSX,
   KeyboardEvent,
   useEffect,
+  useEffectEvent,
   useRef,
   useImperativeHandle,
 } from 'react';
@@ -108,14 +109,19 @@ export const SearchField = (({
     }
   }, [value, defaultValue]);
 
-  useEffect(() => {
-    setShowResults(
-      !!(
-        !disabled &&
-        results?.length &&
-        document.activeElement === inputRef?.current
-      )
+  const updateShowResults = useEffectEvent(() => {
+    const updatedShouldShow = !!(
+      !disabled &&
+      results?.length &&
+      document.activeElement === inputRef?.current
     );
+    if (updatedShouldShow !== shouldShowResults) {
+      setShowResults(updatedShouldShow);
+    }
+  });
+
+  useEffect(() => {
+    updateShowResults();
   }, [disabled, results]);
 
   useEffect(() => {
