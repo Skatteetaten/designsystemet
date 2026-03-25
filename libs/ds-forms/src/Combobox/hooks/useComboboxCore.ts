@@ -61,7 +61,7 @@ export interface UseComboboxCoreReturn {
   errorId: string;
 
   // Actions
-  openDropdown: (trigger: string, legacyTrigger?: DropdownTrigger) => void;
+  openDropdown: (trigger: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
   setFocusedIndex: (index: number) => void;
   resetFocus: () => void;
@@ -217,24 +217,16 @@ export function useComboboxCore({
    * to match user expectations and accessibility standards.
    */
   const openDropdown = useCallback(
-    (trigger: string, legacyTrigger?: DropdownTrigger): void => {
-      const resolvedTrigger = (legacyTrigger ?? trigger) as DropdownTrigger;
+    (trigger: DropdownTrigger): void => {
       const now = Date.now();
 
       // Block any openDropdown calls for 150ms after chevron action
-      if (
-        resolvedTrigger !== 'chevron' &&
-        now - chevronActionTimeRef.current < 150
-      ) {
+      if (trigger !== 'chevron' && now - chevronActionTimeRef.current < 150) {
         return;
       }
 
       // Reset manually closed flag for explicit user actions
-      if (
-        resolvedTrigger === 'chevron' ||
-        resolvedTrigger === 'click' ||
-        resolvedTrigger === 'input'
-      ) {
+      if (trigger === 'chevron' || trigger === 'click' || trigger === 'input') {
         if (manuallyClosed) {
           setManuallyClosed(false);
         }
@@ -243,15 +235,15 @@ export function useComboboxCore({
       // If manually closed, only allow input, chevron, keyboard or click to reopen
       if (
         manuallyClosed &&
-        resolvedTrigger !== 'input' &&
-        resolvedTrigger !== 'chevron' &&
-        resolvedTrigger !== 'keyboard' &&
-        resolvedTrigger !== 'click'
+        trigger !== 'input' &&
+        trigger !== 'chevron' &&
+        trigger !== 'keyboard' &&
+        trigger !== 'click'
       ) {
         return;
       }
 
-      setOpenTrigger(resolvedTrigger);
+      setOpenTrigger(trigger);
       setIsOpen(true);
     },
     [manuallyClosed]
