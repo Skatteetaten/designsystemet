@@ -8,11 +8,7 @@ import {
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import type {
-  ComboboxProps,
-  ComboboxComponent,
-  ComboboxOption,
-} from './Combobox.types';
+import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer';
 import { ComboboxButton } from './ComboboxButton';
 import { ComboboxOptions } from './ComboboxOptions';
@@ -87,13 +83,9 @@ const Combobox = memo(
 
     const resolvedVariant = multiple ? 'large' : variant;
 
-    // Intern options-type er alltid ComboboxOption (uten generisk parameter).
-    // Eventuelle data-felt bevares på runtime, men trenger ikke typesikkerhet internt.
-    const baseOptions = options as ComboboxOption[];
-
     // UNIFIED CORE HOOK - consolidates dropdown + focus + state management
     const coreState = useComboboxCore({
-      options: baseOptions,
+      options,
       multiple,
       value,
       minSearchLength,
@@ -178,7 +170,7 @@ const Combobox = memo(
     // Keyboard navigation hook
     useComboboxKeyboard({
       isOpen,
-      allOptions: baseOptions,
+      allOptions: options,
       displayOptions,
       enabledIndices,
       focusedIndex,
@@ -200,17 +192,15 @@ const Combobox = memo(
     // Update selected values for multi-select when external value changes
     useEffect(() => {
       if (multiple && Array.isArray(value)) {
-        setSelectedValues(
-          getSelectedValuesFromValue(value, baseOptions, multiple)
-        );
+        setSelectedValues(getSelectedValuesFromValue(value, options, multiple));
         setSearchTerm(''); // Keep search field clear in multi-select mode
       } else if (!multiple && value !== undefined) {
         const selectedOption = options.find((option) => option.value === value);
         setSelectedValues(selectedOption ? [selectedOption] : []);
         // In controlled single mode, update searchTerm when value changes
-        setSearchTerm(getSearchTermFromValue(value, baseOptions, multiple));
+        setSearchTerm(getSearchTermFromValue(value, options, multiple));
       }
-    }, [value, multiple, baseOptions, setSearchTerm, setSelectedValues]);
+    }, [value, multiple, options, setSearchTerm, setSelectedValues]);
 
     const focusedOptionId = getFocusedElementId();
 
