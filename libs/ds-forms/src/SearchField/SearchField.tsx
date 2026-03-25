@@ -274,6 +274,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
               className={`${styles.searchResultContainer} ${classNames?.searchResultsList ?? ''}`.trim()}
               role={'listbox'}
               aria-labelledby={labelId}
+              // Prevents parent tabIndex scopes from blocking scrollbar clicks in the results list
               tabIndex={-1}
             >
               {results?.map((result, index) => {
