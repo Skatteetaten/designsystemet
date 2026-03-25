@@ -301,6 +301,7 @@ const selectMultipleOption = (
  * @param config - Configuration object containing state and handlers for
  *   single-select
  * @param config.setSelectedValues - Function to update selected values state
+ * @param config.behavior - The selection behavior. Mouse or keyboard
  * @param config.setSearchTerm - Function to update search input state
  * @param config.closeDropdown - Function to close the dropdown
  * @param config.setFocusedIndex - Function to update focused option index
@@ -309,12 +310,14 @@ const selectMultipleOption = (
 const selectSingleOption = (
   option: ComboboxOption,
   {
+    behavior,
     setSelectedValues,
     setSearchTerm,
     closeDropdown,
     setFocusedIndex,
     onSelectionChange,
   }: {
+    behavior: SelectionBehavior;
     setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
@@ -328,9 +331,18 @@ const selectSingleOption = (
   // Update search term to selected option label
   setSearchTerm(option.label);
 
-  // Close dropdown and reset focus
-  closeDropdown();
-  setFocusedIndex(-1);
+  const shouldDelayClose = behavior === SELECTION_BEHAVIORS.MOUSE;
+
+  const closeAndResetFocus = (): void => {
+    closeDropdown();
+    setFocusedIndex(-1);
+  };
+
+  if (shouldDelayClose) {
+    setTimeout(closeAndResetFocus, 0);
+  } else {
+    closeAndResetFocus();
+  }
 
   // Trigger callback with selected option
   triggerSelectionCallback(option, onSelectionChange, false);
@@ -394,6 +406,7 @@ export const selectOption = (
     });
   } else {
     selectSingleOption(option, {
+      behavior,
       setSelectedValues,
       setSearchTerm,
       closeDropdown,

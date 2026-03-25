@@ -1,5 +1,7 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
 
@@ -321,6 +323,42 @@ export const ReopenShowsAllWithSelectedMark = {
       'svg[aria-hidden="true"]'
     );
     await expect(selectedIcon).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const SelectingOverlappingOptionDoesNotFocusUnderlyingCombobox = {
+  name: 'Valg i overlappende liste fokuserer ikke combobox under',
+  args: {
+    ...defaultArgs,
+  },
+  render: (): JSX.Element => (
+    <div className={'width200'}>
+      <Combobox label={'Oveste combobox'} options={defaultArgs.options} />
+      <Combobox label={'Nederste combobox'} options={defaultArgs.options} />
+    </div>
+  ),
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const topCombobox = canvas.getByRole('combobox', {
+      name: 'Oveste combobox',
+    });
+    const bottomCombobox = canvas.getByRole('combobox', {
+      name: 'Nederste combobox',
+    });
+
+    await userEvent.click(topCombobox);
+
+    const topOption = canvas.getByRole('option', { name: 'Sverige' });
+    await userEvent.click(topOption);
+
+    await waitFor(async () => {
+      await expect(topCombobox).toHaveValue('Sverige');
+    });
+    await expect(bottomCombobox).not.toHaveFocus();
+    await expect(bottomCombobox).toHaveAttribute('aria-expanded', 'false');
   },
 } satisfies Story;
 

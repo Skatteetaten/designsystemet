@@ -171,6 +171,10 @@ describe('combobox-utils', () => {
 
     describe('single-select mode', () => {
       it('Når en option velges, så oppdaterer den search term og lukker dropdown', () => {
+        // Mouse-seleksjon lukker dropdown med setTimeout(0) for å unngå
+        // click-through til elementer bak listen før klikksekvensen er ferdig.
+        // Derfor må testen styre timerne eksplisitt for å verifisere closeDropdown.
+        vi.useFakeTimers();
         const option = mockOptions[0];
 
         selectOption(option, {
@@ -186,9 +190,14 @@ describe('combobox-utils', () => {
         });
 
         expect(mockSetSearchTerm).toHaveBeenCalledWith('Apple');
+        // Kjør pending timeout slik at den forsinkede lukkingen faktisk skjer i testen.
+        vi.runAllTimers();
         expect(mockCloseDropdown).toHaveBeenCalled();
         expect(mockSetFocusedIndex).toHaveBeenCalledWith(-1);
         expect(mockOnSelectionChange).toHaveBeenCalledWith(option);
+
+        // Nullstill timer-oppsettet så det ikke lekker til andre tester.
+        vi.useRealTimers();
       });
 
       it('Når onSelectionChange ikke er definert, så krasjer den ikke', () => {
