@@ -25,7 +25,7 @@ interface UseComboboxInputProps {
   onBlur?: ComboboxProps['onBlur'];
   onFocus?: ComboboxProps['onFocus'];
   value?: ComboboxProps['value'];
-  openDropdown: (searchTerm: string, trigger: DropdownTrigger) => void;
+  openDropdown: (trigger: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
 }
 
@@ -97,7 +97,7 @@ export function useComboboxInput({
         }
       }
 
-      openDropdown(newValue, 'input');
+      openDropdown('input');
 
       // Call user's onInputChange callback
       onInputChange?.(newValue);
@@ -193,7 +193,7 @@ export function useComboboxInput({
 
       // Reopen dropdown after clearing using keyboard
       requestAnimationFrame(() => {
-        openDropdown('', 'click');
+        openDropdown('click');
       });
     }
   }, [

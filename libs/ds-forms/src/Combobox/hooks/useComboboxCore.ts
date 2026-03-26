@@ -46,6 +46,7 @@ export interface UseComboboxCoreReturn {
   selectedValues: ComboboxOption[];
   setSelectedValues: (values: ComboboxOption[]) => void;
   isOpen: boolean;
+  openTrigger?: DropdownTrigger;
   focusedIndex: number;
   enabledIndices: number[];
   displayOptions: ComboboxOption[];
@@ -60,7 +61,7 @@ export interface UseComboboxCoreReturn {
   errorId: string;
 
   // Actions
-  openDropdown: (searchValue: string, trigger: DropdownTrigger) => void;
+  openDropdown: (trigger: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
   setFocusedIndex: (index: number) => void;
   resetFocus: () => void;
@@ -120,6 +121,7 @@ export function useComboboxCore({
     getSelectedValuesFromValue(value, options, multiple)
   );
   const [isOpen, setIsOpen] = useState(false);
+  const [openTrigger, setOpenTrigger] = useState<DropdownTrigger>();
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const [manuallyClosed, setManuallyClosed] = useState(false);
   const [optionsChanged, setOptionsChanged] = useState(false);
@@ -152,6 +154,7 @@ export function useComboboxCore({
   const displayOptions = useMemo(() => {
     if (!isOpen) return []; // No options when dropdown is closed
     if (isLoading) return []; // Empty list while loading (spinner shows instead)
+    if (searchTerm.length < minSearchLength) return [];
 
     // In single-select mode, if input shows a selected option label,
     // reopening should show full list while still keeping the label in input.
@@ -162,7 +165,15 @@ export function useComboboxCore({
       options,
       selectedOptionLabelInSingleMode ? '' : searchTerm
     );
-  }, [options, searchTerm, isOpen, isLoading, multiple, selectedValues]);
+  }, [
+    options,
+    searchTerm,
+    isOpen,
+    isLoading,
+    minSearchLength,
+    multiple,
+    selectedValues,
+  ]);
 
   const orderedDisplayOptions = useMemo(() => {
     return getOptionsInGroupOrder(displayOptions);
@@ -206,10 +217,7 @@ export function useComboboxCore({
    * to match user expectations and accessibility standards.
    */
   const openDropdown = useCallback(
-    (
-      searchValue: string,
-      trigger: 'focus' | 'input' | 'click' | 'keyboard' | 'chevron'
-    ): void => {
+    (trigger: DropdownTrigger): void => {
       const now = Date.now();
 
       // Block any openDropdown calls for 150ms after chevron action
@@ -235,16 +243,10 @@ export function useComboboxCore({
         return;
       }
 
-      // Check minimum search length, but allow click to bypass
-      if (
-        searchValue.length >= minSearchLength ||
-        trigger === 'click' ||
-        trigger === 'chevron'
-      ) {
-        setIsOpen(true);
-      }
+      setOpenTrigger(trigger);
+      setIsOpen(true);
     },
-    [manuallyClosed, minSearchLength]
+    [manuallyClosed]
   );
 
   /**
@@ -257,6 +259,7 @@ export function useComboboxCore({
    */
   const closeDropdown = useCallback((manual = false): void => {
     setIsOpen(false);
+    setOpenTrigger(undefined);
     setFocusedIndex(-1); // Reset focus when closing
     if (manual) {
       setManuallyClosed(true);
@@ -412,8 +415,7 @@ export function useComboboxCore({
       if (isOpen) {
         closeDropdown(true);
       } else {
-        const currentValue = inputRef.current?.value || '';
-        openDropdown(currentValue, 'chevron');
+        openDropdown('chevron');
 
         if (inputRef.current) {
           safeFocus(inputRef.current);
@@ -448,8 +450,7 @@ export function useComboboxCore({
         return;
       }
 
-      const currentValue = inputRef.current?.value || '';
-      openDropdown(currentValue, 'click');
+      openDropdown('click');
 
       if (inputRef.current) {
         safeFocus(inputRef.current);
@@ -511,6 +512,7 @@ export function useComboboxCore({
     selectedValues,
     setSelectedValues,
     isOpen,
+    openTrigger,
     focusedIndex,
     enabledIndices,
     displayOptions: orderedDisplayOptions,

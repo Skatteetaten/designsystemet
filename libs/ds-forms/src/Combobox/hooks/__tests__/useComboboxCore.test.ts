@@ -92,13 +92,13 @@ describe('useComboboxCore', () => {
       );
 
       act(() => {
-        result.current.openDropdown('ab', 'input');
+        result.current.openDropdown('input');
       });
 
       expect(result.current.isOpen).toBe(true);
     });
 
-    it('should not open dropdown when minimum search length is not met (A5)', () => {
+    it('should open dropdown when minimum search length is not met (A5)', () => {
       const { result } = renderHook(() =>
         useComboboxCore({
           ...defaultProps,
@@ -107,10 +107,10 @@ describe('useComboboxCore', () => {
       );
 
       act(() => {
-        result.current.openDropdown('a', 'input');
+        result.current.openDropdown('input');
       });
 
-      expect(result.current.isOpen).toBe(false);
+      expect(result.current.isOpen).toBe(true);
     });
 
     it('should allow click to bypass minimum search length (A5)', () => {
@@ -122,7 +122,7 @@ describe('useComboboxCore', () => {
       );
 
       act(() => {
-        result.current.openDropdown('', 'click');
+        result.current.openDropdown('click');
       });
 
       expect(result.current.isOpen).toBe(true);
@@ -133,7 +133,7 @@ describe('useComboboxCore', () => {
 
       // Open dropdown and set focus
       act(() => {
-        result.current.openDropdown('test', 'input');
+        result.current.openDropdown('input');
         result.current.setFocusedIndex(1);
       });
 
@@ -154,7 +154,7 @@ describe('useComboboxCore', () => {
 
       // Open dropdown
       act(() => {
-        result.current.openDropdown('test', 'input');
+        result.current.openDropdown('input');
       });
 
       expect(result.current.isOpen).toBe(true);
@@ -168,14 +168,14 @@ describe('useComboboxCore', () => {
 
       // Should not reopen on focus
       act(() => {
-        result.current.openDropdown('test', 'focus');
+        result.current.openDropdown('focus');
       });
 
       expect(result.current.isOpen).toBe(false);
 
       // Should reopen on input
       act(() => {
-        result.current.openDropdown('test', 'input');
+        result.current.openDropdown('input');
       });
 
       expect(result.current.isOpen).toBe(true);
@@ -188,7 +188,7 @@ describe('useComboboxCore', () => {
 
       // First open dropdown to enable focus setting
       act(() => {
-        result.current.openDropdown('', 'click');
+        result.current.openDropdown('click');
       });
 
       act(() => {
@@ -203,7 +203,7 @@ describe('useComboboxCore', () => {
 
       // First open dropdown
       act(() => {
-        result.current.openDropdown('', 'click');
+        result.current.openDropdown('click');
       });
 
       // Set focus while open
@@ -253,7 +253,7 @@ describe('useComboboxCore', () => {
 
         // Open dropdown and set focus to first option
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           result.current.setFocusedIndex(0);
         });
 
@@ -272,7 +272,7 @@ describe('useComboboxCore', () => {
 
         // Open dropdown and set focus to last option
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           result.current.setFocusedIndex(2); // Last option
         });
 
@@ -297,7 +297,7 @@ describe('useComboboxCore', () => {
 
         // Open dropdown and select two options to  disable middle option when max reached
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           result.current.setSelectedValues([mockOptions[0], mockOptions[2]]);
           result.current.setFocusedIndex(0); // First option (selected)
         });
@@ -321,7 +321,7 @@ describe('useComboboxCore', () => {
         );
 
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           // Select first option, making others disabled
           result.current.setSelectedValues([mockOptions[0]]);
         });
@@ -341,7 +341,7 @@ describe('useComboboxCore', () => {
         const { result } = renderHook(() => useComboboxCore(defaultProps));
 
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
         });
 
         expect(result.current.focusedIndex).toBe(-1);
@@ -360,7 +360,7 @@ describe('useComboboxCore', () => {
 
         // Open dropdown and set focus to second option
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           result.current.setFocusedIndex(1);
         });
 
@@ -379,7 +379,7 @@ describe('useComboboxCore', () => {
 
         // Open dropdown and set focus to first option
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           result.current.setFocusedIndex(0);
         });
 
@@ -404,7 +404,7 @@ describe('useComboboxCore', () => {
 
         // Open dropdown and select first and third options (makes middle disabled when max reached)
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           result.current.setSelectedValues([mockOptions[0], mockOptions[2]]);
           result.current.setFocusedIndex(2); // Last option (selected)
         });
@@ -428,7 +428,7 @@ describe('useComboboxCore', () => {
         );
 
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           // Select first option, making others disabled
           result.current.setSelectedValues([mockOptions[0]]);
         });
@@ -448,7 +448,7 @@ describe('useComboboxCore', () => {
         const { result } = renderHook(() => useComboboxCore(defaultProps));
 
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
         });
 
         expect(result.current.focusedIndex).toBe(-1);
@@ -466,7 +466,7 @@ describe('useComboboxCore', () => {
         const { result } = renderHook(() => useComboboxCore(defaultProps));
 
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           result.current.setFocusedIndex(99); // Way out of bounds
         });
 
@@ -484,7 +484,7 @@ describe('useComboboxCore', () => {
         );
 
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           // Select first and last, making middle disabled
           result.current.setSelectedValues([mockOptions[0], mockOptions[2]]);
         });
@@ -506,7 +506,7 @@ describe('useComboboxCore', () => {
         const { result } = renderHook(() => useComboboxCore(defaultProps));
 
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           result.current.setFocusedIndex(1);
         });
 
@@ -529,7 +529,7 @@ describe('useComboboxCore', () => {
         );
 
         act(() => {
-          result.current.openDropdown('', 'click');
+          result.current.openDropdown('click');
           // Select first option, making others disabled
           result.current.setSelectedValues([mockOptions[0]]);
         });

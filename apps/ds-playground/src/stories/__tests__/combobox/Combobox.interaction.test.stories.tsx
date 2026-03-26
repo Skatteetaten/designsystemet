@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 
 import { defaultArgs } from './utils/combobox.test.utils';
@@ -285,6 +286,92 @@ export const MouseClickOpens = {
     await expect(inputElement).toHaveFocus();
     await expect(inputElement).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByRole('listbox')).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const MinSearchLengthTextOnChevronClick = {
+  name: 'Min søkelengde viser "skriv minst x tegn" ved chevron-klikk',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 3,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const chevronButton = canvasElement.querySelector(
+      'div[class*="chevronButton"]'
+    );
+    await expect(chevronButton).toBeInTheDocument();
+
+    await userEvent.click(chevronButton as Element);
+
+    await expect(canvas.queryByRole('listbox')).toBeInTheDocument();
+    await expect(
+      canvas.getByText(
+        dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
+      )
+    ).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const MinSearchLengthTextOnMouseClick = {
+  name: 'Min søkelengde viser "skriv minst x tegn" ved musklikk',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 3,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+
+    await waitFor(() => {
+      expect(canvas.getByRole('listbox')).toBeInTheDocument();
+    });
+    await expect(
+      canvas.getByText(
+        dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
+      )
+    ).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const MinSearchLengthTextBeforeThreshold = {
+  name: 'Min søkelengde viser "skriv minst x tegn" før terskel',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 3,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    await userEvent.type(inputElement, 'ab');
+
+    await expect(inputElement).toHaveValue('ab');
+    await waitFor(() => {
+      expect(canvas.getByRole('listbox')).toBeInTheDocument();
+    });
+    await waitFor(
+      () => {
+        expect(
+          canvas.getByText(
+            dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
+          )
+        ).toBeInTheDocument();
+      },
+      { timeout: 2000 }
+    );
   },
 } satisfies Story;
 
