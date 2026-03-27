@@ -31,11 +31,7 @@ describe('combobox-utils', () => {
 
     it('Når searchTerm matcher noen options, så filtrerer den riktig (A5)', () => {
       const result = filterOptions(mockOptions, 'a');
-      expect(result).toEqual([
-        { label: 'Apple', value: 'apple' },
-        { label: 'Banana', value: 'banana' },
-        { label: 'Date', value: 'date' },
-      ]);
+      expect(result).toEqual([{ label: 'Apple', value: 'apple' }]);
     });
 
     it('Når searchTerm er case-insensitive, så filtrerer den riktig (A5)', () => {
@@ -50,11 +46,7 @@ describe('combobox-utils', () => {
 
     it('Når multiple er true, så returnerer den alle options uavhengig av selectedValues', () => {
       const result = filterOptions(mockOptions, 'a');
-      expect(result).toEqual([
-        { label: 'Apple', value: 'apple' },
-        { label: 'Banana', value: 'banana' },
-        { label: 'Date', value: 'date' },
-      ]);
+      expect(result).toEqual([{ label: 'Apple', value: 'apple' }]);
     });
   });
 

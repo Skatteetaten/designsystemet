@@ -160,6 +160,9 @@ const Combobox = memo(
       onBlur,
       onFocus,
       value,
+      enabledIndices,
+      setFocusedIndex,
+      focusedIndex,
     });
 
     // Memoize keyboard dropdown handler to prevent unnecessary re-creations

@@ -1,8 +1,8 @@
 import type { ComboboxOption } from '../Combobox.types';
 
 /**
- * Global state interface representing the current combobox configuration.
- * Used to calculate option states and navigation indices.
+ * Global state interface representing the current combobox configuration. Used
+ * to calculate option states and navigation indices.
  */
 export interface ComboboxState {
   /** All available options in the combobox */
@@ -16,8 +16,8 @@ export interface ComboboxState {
 }
 
 /**
- * State information for a single option within the combobox.
- * Determines visual appearance and interaction behavior.
+ * State information for a single option within the combobox. Determines visual
+ * appearance and interaction behavior.
  */
 export interface OptionState {
   /** Whether this option is currently selected */
@@ -30,6 +30,7 @@ export interface OptionState {
 
 /**
  * Checks if a specific option is currently selected.
+ *
  * @param option - The option to check
  * @param selectedValues - Array of currently selected options
  * @returns True if the option is selected, false otherwise
@@ -42,8 +43,10 @@ export const isOptionSelected = (
 };
 
 /**
- * Determines if an option should be disabled based on selection limits.
- * An option is disabled when max selections are reached and the option is not already selected.
+ * Determines if an option should be disabled based on selection limits. An
+ * option is disabled when max selections are reached and the option is not
+ * already selected.
+ *
  * @param option - The option to check
  * @param state - Current combobox state containing selection info
  * @returns True if the option should be disabled, false otherwise
@@ -65,8 +68,9 @@ export const isOptionDisabled = (
 };
 
 /**
- * Calculates the complete state information for a single option.
- * Combines selection status, disabled state, and focusability into one object.
+ * Calculates the complete state information for a single option. Combines
+ * selection status, disabled state, and focusability into one object.
+ *
  * @param option - The option to analyze
  * @param state - Current combobox state
  * @returns Complete state object for the option
@@ -87,8 +91,9 @@ export const getOptionState = (
 };
 
 /**
- * Gets array indices of all options that can be focused via keyboard navigation.
- * Excludes disabled options to prevent keyboard traps.
+ * Gets array indices of all options that can be focused via keyboard
+ * navigation. Excludes disabled options to prevent keyboard traps.
+ *
  * @param state - Current combobox state
  * @returns Array of indices for focusable options
  */
@@ -100,8 +105,9 @@ export const getEnabledIndices = (state: ComboboxState): number[] => {
 };
 
 /**
- * Finds the next focusable option index after the current one.
- * Wraps to the beginning if at the end of the list.
+ * Finds the next focusable option index after the current one. Wraps to the
+ * beginning if at the end of the list.
+ *
  * @param currentIndex - Current focused option index
  * @param enabledIndices - Array of all focusable option indices
  * @returns Index of next focusable option, or -1 if none available
@@ -131,8 +137,9 @@ export const getNextEnabledIndex = (
 };
 
 /**
- * Finds the previous focusable option index before the current one.
- * Wraps to the end if at the beginning of the list.
+ * Finds the previous focusable option index before the current one. Wraps to
+ * the end if at the beginning of the list.
+ *
  * @param currentIndex - Current focused option index
  * @param enabledIndices - Array of all focusable option indices
  * @returns Index of previous focusable option, or -1 if none available
@@ -162,8 +169,9 @@ export const getPreviousEnabledIndex = (
 };
 
 /**
- * Gets the first focusable option index.
- * Used for Home key navigation and initial focus placement.
+ * Gets the first focusable option index. Used for Home key navigation and
+ * initial focus placement.
+ *
  * @param enabledIndices - Array of all focusable option indices
  * @returns Index of first focusable option, or -1 if none available
  */
@@ -172,8 +180,9 @@ export const getFirstEnabledIndex = (enabledIndices: number[]): number => {
 };
 
 /**
- * Checks if a specific index corresponds to a focusable option.
- * Used to validate focus targets before applying focus.
+ * Checks if a specific index corresponds to a focusable option. Used to
+ * validate focus targets before applying focus.
+ *
  * @param index - Option index to check
  * @param enabledIndices - Array of all focusable option indices
  * @returns True if the index is focusable, false otherwise
@@ -183,4 +192,24 @@ export const isIndexEnabled = (
   enabledIndices: number[]
 ): boolean => {
   return enabledIndices.includes(index);
+};
+
+// dropdown management utilities
+export const openDropdownWithFocus = (
+  openDropdown: () => void,
+  setFocusedIndex: (index: number) => void,
+  focusIndex?: number
+): void => {
+  openDropdown();
+  if (focusIndex !== undefined) {
+    setFocusedIndex(focusIndex);
+  }
+};
+
+export const closeDropdownAndResetFocus = (
+  closeDropdown: (manual?: boolean) => void,
+  setFocusedIndex: (index: number) => void
+): void => {
+  closeDropdown(true);
+  setFocusedIndex(-1);
 };

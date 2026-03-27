@@ -21,7 +21,7 @@ export const filterOptions = (
   if (!searchTerm) return filteredOptions;
 
   return filteredOptions.filter((option) =>
-    option.label.toLowerCase().includes(searchTerm.trim().toLowerCase())
+    option.label.toLowerCase().startsWith(searchTerm.trim().toLowerCase())
   );
 };
 
