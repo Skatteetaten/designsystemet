@@ -301,27 +301,27 @@ const selectMultipleOption = (
  * @param config - Configuration object containing state and handlers for
  *   single-select
  * @param config.setSelectedValues - Function to update selected values state
- * @param config.behavior - The selection behavior. Mouse or keyboard
  * @param config.setSearchTerm - Function to update search input state
  * @param config.closeDropdown - Function to close the dropdown
  * @param config.setFocusedIndex - Function to update focused option index
+ * @param config.inputRef - Ref to input element for focus management
  * @param config.onSelectionChange - Optional callback for selection changes
  */
 const selectSingleOption = (
   option: ComboboxOption,
   {
-    behavior,
     setSelectedValues,
     setSearchTerm,
     closeDropdown,
     setFocusedIndex,
+    inputRef,
     onSelectionChange,
   }: {
-    behavior: SelectionBehavior;
     setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
+    inputRef: React.RefObject<HTMLInputElement | null>;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
   }
 ): void => {
@@ -331,18 +331,9 @@ const selectSingleOption = (
   // Update search term to selected option label
   setSearchTerm(option.label);
 
-  const shouldDelayClose = behavior === SELECTION_BEHAVIORS.MOUSE;
-
-  const closeAndResetFocus = (): void => {
-    closeDropdown();
-    setFocusedIndex(-1);
-  };
-
-  if (shouldDelayClose) {
-    setTimeout(closeAndResetFocus, 0);
-  } else {
-    closeAndResetFocus();
-  }
+  closeDropdown();
+  setFocusedIndex(-1);
+  setTimeout(() => inputRef.current?.focus(), 0);
 
   // Trigger callback with selected option
   triggerSelectionCallback(option, onSelectionChange, false);
@@ -406,11 +397,11 @@ export const selectOption = (
     });
   } else {
     selectSingleOption(option, {
-      behavior,
       setSelectedValues,
       setSearchTerm,
       closeDropdown,
       setFocusedIndex,
+      inputRef,
       onSelectionChange,
     });
   }
