@@ -2,6 +2,7 @@ import {
   useEffect,
   useCallback,
   useImperativeHandle,
+  useState,
   memo,
   type JSX,
 } from 'react';
@@ -82,6 +83,17 @@ const Combobox = memo(
     const { safeFocus } = useBrowserCompatibility();
 
     const resolvedVariant = multiple ? 'large' : variant;
+
+    // Track when minimum search length delay is complete (for delayed chevron display)
+    const [shouldShowChevronDelayed, setShouldShowChevronDelayed] =
+      useState(false);
+
+    const handleMinSearchLengthDelayChange = useCallback(
+      (isReady: boolean): void => {
+        setShouldShowChevronDelayed(isReady);
+      },
+      []
+    );
 
     // UNIFIED CORE HOOK - consolidates dropdown + focus + state management
     const coreState = useComboboxCore({
@@ -207,6 +219,17 @@ const Combobox = memo(
 
     const focusedOptionId = getFocusedElementId();
 
+    // Compute delayed chevron visibility - chevron should wait for delay when:
+    // 1. Below min search length
+    // 2. Delay hasn't completed yet
+    const isBelowMinSearchLength = searchTerm.length < minSearchLength;
+    const chevronIsDelayedCase =
+      isOpen &&
+      openTrigger !== 'chevron' &&
+      isBelowMinSearchLength &&
+      !shouldShowChevronDelayed;
+    const chevronIsOpen = isOpen && !chevronIsDelayedCase;
+
     const labelId = `${comboboxId}-label`;
     const descriptionId = `${comboboxId}-description`;
 
@@ -292,7 +315,7 @@ const Combobox = memo(
               ))}
           </div>
           <ComboboxButton
-            isOpen={isOpen}
+            isOpen={chevronIsOpen}
             hasValue={!multiple && !!searchTerm}
             multiple={multiple}
             disabled={disabled}
@@ -319,6 +342,7 @@ const Combobox = memo(
             customListRef={containerRef}
             maxSelected={maxSelected}
             spinnerLabel={spinnerLabel}
+            onMinSearchLengthDelayChange={handleMinSearchLengthDelayChange}
           />
         </div>
         <ErrorMessage
