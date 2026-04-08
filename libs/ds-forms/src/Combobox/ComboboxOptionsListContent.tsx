@@ -70,8 +70,8 @@ const ComboboxOptionItem = ({
         }
       }}
       /**
-       * Vi bruker Pointer Events (Down/Move/Up) i kombinasjon med en ref i
-       * stedet for onClick for å løse to problemer på mobil:
+       * I multi-select bruker vi Pointer Events (Down/Move/Up) i kombinasjon
+       * med en ref i stedet for onClick for å løse to problemer på mobil:
        *
        * 1. "Ghost clicks": Standard onClick på mobil har en forsinkelse (300ms)
        *    som ofte gjør at raske trykk på rad registreres på feil element
@@ -83,12 +83,23 @@ const ComboboxOptionItem = ({
        * CSS 'touch-action: pan-y' er nødvendig for å fjerne nettleserens
        * "double-tap to zoom"-forsinkelse, slik at onPointerUp fyrer
        * umiddelbart.
+       *
+       * I single-select bruker vi vanlig onClick for å unngå click-through og
+       * sideeffekter på første klikk etter valgt option.
        */
       onPointerDown={(e) => {
+        if (!multiple) {
+          return;
+        }
+
         pointerStartRef.current = { x: e.clientX, y: e.clientY };
         isScrolling.current = false;
       }}
       onPointerMove={(e) => {
+        if (!multiple) {
+          return;
+        }
+
         if (!pointerStartRef.current) {
           return;
         }
@@ -102,9 +113,18 @@ const ComboboxOptionItem = ({
           isScrolling.current = true;
         }
       }}
-      onPointerUp={() => {
+      onPointerUp={(e) => {
+        if (!multiple) {
+          return;
+        }
+
         // Kun velg hvis brukeren ikke har scrollet
         if (!isScrolling.current && !isDisabled) {
+          // Hindre at samme trykk utløser en click-event på elementet
+          // som ligger bak dropdownen etter at den er lukket.
+          e.preventDefault();
+          e.stopPropagation();
+
           handleOptionSelect(option, false);
         }
 
@@ -112,12 +132,23 @@ const ComboboxOptionItem = ({
         isScrolling.current = false;
       }}
       onPointerCancel={() => {
+        if (!multiple) {
+          return;
+        }
+
         pointerStartRef.current = null;
         isScrolling.current = false;
       }}
       onClick={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
+        if (multiple) {
+          e.preventDefault();
+          e.stopPropagation();
+          return;
+        }
+
+        if (!isDisabled) {
+          handleOptionSelect(option, false);
+        }
       }}
     >
       {multiple && (
