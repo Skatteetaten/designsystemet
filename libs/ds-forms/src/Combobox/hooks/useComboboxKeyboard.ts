@@ -251,6 +251,7 @@ const handleTab = (
     closeDropdown,
     setFocusedIndex,
     onOptionSelect,
+    selectedValues,
   } = props;
 
   if (isOpen) {
@@ -260,7 +261,11 @@ const handleTab = (
       displayOptions[focusedIndex]
     ) {
       const selectedOption = displayOptions[focusedIndex];
-      onOptionSelect(selectedOption, true); // true = fromKeyboard
+
+      // dont de-select the option if already selected
+      if (!selectedValues?.includes(selectedOption)) {
+        onOptionSelect(selectedOption, true); // true = fromKeyboard
+      }
     }
 
     closeDropdownAndResetFocus(closeDropdown, setFocusedIndex);
