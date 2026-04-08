@@ -261,7 +261,7 @@ export function useComboboxInput({
         if (!isInCombobox && !isInListbox) {
           closeDropdown();
         }
-      }, 100);
+      }, 0);
       onBlur?.(e);
     },
     [
