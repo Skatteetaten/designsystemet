@@ -128,8 +128,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     }
 
     const shouldShowMinSearchLengthMessage =
-      isBelowMinSearchLength &&
-      (openTrigger === 'chevron' || showMinSearchLengthText);
+      isBelowMinSearchLength && showMinSearchLengthText;
     const shouldShowNoResultsMessage =
       !isBelowMinSearchLength && !!searchTerm && displayOptions.length === 0;
 

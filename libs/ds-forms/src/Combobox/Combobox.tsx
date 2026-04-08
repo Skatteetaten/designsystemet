@@ -219,16 +219,13 @@ const Combobox = memo(
 
     const focusedOptionId = getFocusedElementId();
 
-    // Compute delayed chevron visibility - chevron should wait for delay when:
-    // 1. Below min search length
-    // 2. Delay hasn't completed yet
+    // Chevron should reflect actual open state, except during delayed min-search hint flow.
     const isBelowMinSearchLength = searchTerm.length < minSearchLength;
-    const chevronIsDelayedCase =
+    const chevronIsOpen =
       isOpen &&
-      openTrigger !== 'chevron' &&
-      isBelowMinSearchLength &&
-      !shouldShowChevronDelayed;
-    const chevronIsOpen = isOpen && !chevronIsDelayedCase;
+      (openTrigger === 'chevron' ||
+        !isBelowMinSearchLength ||
+        shouldShowChevronDelayed);
 
     const labelId = `${comboboxId}-label`;
     const descriptionId = `${comboboxId}-description`;

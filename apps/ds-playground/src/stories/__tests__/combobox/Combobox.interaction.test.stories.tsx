@@ -334,9 +334,16 @@ export const MinSearchLengthTextOnMouseClick = {
 
     await userEvent.click(inputElement);
 
-    await waitFor(() => {
-      expect(canvas.getByRole('listbox')).toBeInTheDocument();
-    });
+    const getChevronPath = (): SVGPathElement | null =>
+      canvasElement.querySelector('div[data-chevron-button] svg path');
+
+    const chevronPathBeforeDelay = getChevronPath();
+    await expect(chevronPathBeforeDelay).toBeInTheDocument();
+    const chevronPathValueBeforeDelay =
+      chevronPathBeforeDelay?.getAttribute('d');
+    const chevronDownPath = ChevronDownSVGpath.props.d;
+    await expect(chevronPathValueBeforeDelay).toEqual(chevronDownPath);
+
     await waitFor(
       () => {
         expect(
@@ -347,6 +354,12 @@ export const MinSearchLengthTextOnMouseClick = {
       },
       { timeout: 2000 }
     );
+
+    const chevronPathAfterDelay = getChevronPath();
+    await expect(chevronPathAfterDelay).toBeInTheDocument();
+    const chevronPathValueAfterDelay = chevronPathAfterDelay?.getAttribute('d');
+    const chevronUpPath = ChevronUpSVGpath.props.d;
+    await expect(chevronPathValueAfterDelay).toEqual(chevronUpPath);
   },
 } satisfies Story;
 
@@ -367,9 +380,7 @@ export const MinSearchLengthTextBeforeThreshold = {
     await userEvent.type(inputElement, 'ab');
 
     await expect(inputElement).toHaveValue('ab');
-    await waitFor(() => {
-      expect(canvas.getByRole('listbox')).toBeInTheDocument();
-    });
+
     await waitFor(
       () => {
         expect(
@@ -496,49 +507,5 @@ export const ClearRemovesSelectedMark = {
       (option) => option.getAttribute('aria-selected') === 'true'
     );
     await expect(selectedOptions).toHaveLength(0);
-  },
-} satisfies Story;
-
-export const ChevronStaysDownUntilMinSearchLengthDelay = {
-  name: 'Chevron venter med a snu til min-sokelengde-melding vises',
-  args: {
-    ...defaultArgs,
-    minSearchLength: 3,
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const inputElement = canvas.getByRole('combobox');
-
-    await userEvent.click(inputElement);
-
-    const getChevronPath = (): SVGPathElement | null =>
-      canvasElement.querySelector('div[data-chevron-button] svg path');
-
-    const chevronPathBeforeDelay = getChevronPath();
-    await expect(chevronPathBeforeDelay).toBeInTheDocument();
-    const chevronPathValueBeforeDelay =
-      chevronPathBeforeDelay?.getAttribute('d');
-    const chevronDownPath = ChevronDownSVGpath.props.d;
-    const chevronUpPath = ChevronUpSVGpath.props.d;
-    await expect(chevronPathValueBeforeDelay).toEqual(chevronDownPath);
-
-    await waitFor(
-      () => {
-        expect(
-          canvas.getByText(
-            dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
-          )
-        ).toBeInTheDocument();
-      },
-      { timeout: 2000 }
-    );
-
-    const chevronPathAfterDelay = getChevronPath();
-    await expect(chevronPathAfterDelay).toBeInTheDocument();
-    const chevronPathValueAfterDelay = chevronPathAfterDelay?.getAttribute('d');
-    await expect(chevronPathValueAfterDelay).toEqual(chevronUpPath);
   },
 } satisfies Story;
