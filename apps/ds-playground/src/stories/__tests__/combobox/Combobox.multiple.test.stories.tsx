@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
@@ -285,6 +285,45 @@ export const MultipleSelectionKeyboard = {
     selectedChips = canvas.getAllByRole('button', { name: /fjern/i });
     await expect(selectedChips).toHaveLength(1);
     await expect(selectedChips[0]).toHaveTextContent('Norge');
+  },
+} satisfies Story;
+
+export const KeyboardSelectionRestoresOriginalFocusIndex = {
+  name: 'Tastaturvalg etter filtrering bruker original indeks',
+  args: {
+    ...defaultArgs,
+    multiple: true,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    await userEvent.type(inputElement, 'Da');
+
+    let options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(1);
+    await expect(options[0]).toHaveTextContent('Danmark');
+
+    await userEvent.keyboard('{ArrowDown}');
+    await userEvent.keyboard('{Enter}');
+
+    const comboboxId = inputElement.getAttribute('id');
+    const expectedActiveDescendant = `${comboboxId}-option-2`;
+
+    await waitFor(async () => {
+      options = canvas.getAllByRole('option');
+      await expect(options).toHaveLength(3);
+      await expect(inputElement).toHaveAttribute(
+        'aria-activedescendant',
+        expectedActiveDescendant
+      );
+      await expect(options[2]).toHaveAttribute('id', expectedActiveDescendant);
+      await expect(options[2]).toHaveTextContent('Danmark');
+    });
   },
 } satisfies Story;
 

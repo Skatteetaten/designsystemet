@@ -29,6 +29,7 @@ import { useComboboxSelection } from './hooks/useComboboxSelection';
 import {
   getSelectedValuesFromValue,
   getSearchTermFromValue,
+  getOptionsInGroupOrder,
 } from './utils/combobox-utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -83,6 +84,7 @@ const Combobox = memo(
     const { safeFocus } = useBrowserCompatibility();
 
     const resolvedVariant = multiple ? 'large' : variant;
+    const allOptionsInOrder = getOptionsInGroupOrder(options);
 
     // Track when minimum search length delay is complete (for delayed chevron display)
     const [shouldShowChevronDelayed, setShouldShowChevronDelayed] =
@@ -143,7 +145,9 @@ const Combobox = memo(
     // Use selection handlers hook
     const { handleRemoveLastValue, handleOptionSelect, handleRemoveValue } =
       useComboboxSelection({
+        options: allOptionsInOrder,
         multiple,
+        searchTerm,
         selectedValues,
         setSelectedValues,
         setSearchTerm,

@@ -1,14 +1,24 @@
-import { useCallback, type RefObject } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type RefObject,
+} from 'react';
 
 import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 import {
+  getOptionsInGroupOrder,
+  type PendingFocusTarget,
   selectOption,
   removeOption,
   SELECTION_BEHAVIORS,
 } from '../utils/combobox-utils';
 
 interface UseComboboxSelectionProps {
+  options: ComboboxOption[];
   multiple: boolean;
+  searchTerm: string;
   selectedValues: ComboboxOption[];
   setSelectedValues: (values: ComboboxOption[]) => void;
   setSearchTerm: (term: string) => void;
@@ -28,13 +38,18 @@ interface UseComboboxSelectionReturn {
 /**
  * Option selection and removal logic hook for combobox.
  *
- * What: Provides methods for selecting options, removing selections, and handling
- * keyboard vs mouse selection behaviors.
+ * What: Provides methods for selecting options, removing selections, and
+ * handling keyboard vs mouse selection behaviors.
  *
- * Why: Selection logic differs significantly between single and multi-select modes.
- * Centralized selection handling ensures consistent behavior and proper callbacks.
+ * Why: Selection logic differs significantly between single and multi-select
+ * modes. Centralized selection handling ensures consistent behavior and proper
+ * callbacks.
+ *
  * @param props - The configuration object for selection handling
+ * @param props.options - Available options in visual order
  * @param props.multiple - Whether multiple selections are allowed
+ * @param props.searchTerm - Current search term used to detect when filtering
+ *   is cleared
  * @param props.selectedValues - Currently selected options
  * @param props.setSelectedValues - Function to update selected values
  * @param props.setSearchTerm - Function to update search term
@@ -46,7 +61,9 @@ interface UseComboboxSelectionReturn {
  * @returns Object containing selection and removal handlers
  */
 export function useComboboxSelection({
+  options,
   multiple,
+  searchTerm,
   selectedValues,
   setSelectedValues,
   setSearchTerm,
@@ -56,12 +73,37 @@ export function useComboboxSelection({
   onSelectionChange,
   maxSelected,
 }: UseComboboxSelectionProps): UseComboboxSelectionReturn {
+  const [pendingFocusTarget, setPendingFocusTarget] =
+    useState<PendingFocusTarget | null>(null);
+
+  const allOptionsInOrder = useMemo(
+    () => getOptionsInGroupOrder(options),
+    [options]
+  );
+
+  useEffect(() => {
+    if (!pendingFocusTarget || searchTerm !== '') {
+      return;
+    }
+
+    const nextFocusedIndex = allOptionsInOrder.findIndex(
+      (option) => option.value === pendingFocusTarget.optionValue
+    );
+
+    if (nextFocusedIndex !== -1) {
+      setFocusedIndex(nextFocusedIndex);
+    }
+
+    setPendingFocusTarget(null);
+  }, [allOptionsInOrder, pendingFocusTarget, searchTerm, setFocusedIndex]);
+
   /**
    * Removes the last selected value in multi-select mode.
    *
    * What: Used when user presses Backspace with empty input.
    *
-   * Why: Common UX pattern for tag inputs - Backspace removes last tag when input is empty.
+   * Why: Common UX pattern for tag inputs - Backspace removes last tag when
+   * input is empty.
    */
   const handleRemoveLastValue = useCallback((): void => {
     if (multiple && selectedValues.length > 0) {
@@ -79,9 +121,11 @@ export function useComboboxSelection({
   /**
    * Handles option selection with keyboard vs mouse behavior distinction.
    *
-   * What: Delegates to shared selection utilities with appropriate behavior flags.
+   * What: Delegates to shared selection utilities with appropriate behavior
+   * flags.
    *
-   * Why: Keyboard and mouse selection may have different behaviors (dropdown closing, focus management).
+   * Why: Keyboard and mouse selection may have different behaviors (dropdown
+   * closing, focus management).
    */
   const handleOptionSelect = useCallback(
     (option: ComboboxOption, fromKeyboard = false): void => {
@@ -98,6 +142,7 @@ export function useComboboxSelection({
         closeDropdown,
         setFocusedIndex,
         inputRef,
+        setPendingFocusTarget,
         onSelectionChange,
         maxSelected,
       });
@@ -111,6 +156,7 @@ export function useComboboxSelection({
       setFocusedIndex,
       onSelectionChange,
       inputRef,
+      setPendingFocusTarget,
       maxSelected,
     ]
   );
@@ -120,7 +166,8 @@ export function useComboboxSelection({
    *
    * What: Used by remove buttons on selected option tags.
    *
-   * Why: Users need ability to remove specific selections without affecting others.
+   * Why: Users need ability to remove specific selections without affecting
+   * others.
    */
   const handleRemoveValue = useCallback(
     (optionToRemove: ComboboxOption): void => {
