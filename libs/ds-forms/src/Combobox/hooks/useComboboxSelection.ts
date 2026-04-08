@@ -81,6 +81,15 @@ export function useComboboxSelection({
     [options]
   );
 
+  const clearFocusWhenSelectionIsEmpty = useCallback(
+    (newSelectedValues: ComboboxOption[]): void => {
+      if (newSelectedValues.length === 0) {
+        setFocusedIndex(-1);
+      }
+    },
+    [setFocusedIndex]
+  );
+
   useEffect(() => {
     if (!pendingFocusTarget || searchTerm !== '') {
       return;
@@ -109,6 +118,7 @@ export function useComboboxSelection({
     if (multiple && selectedValues.length > 0) {
       const newSelectedValues = selectedValues.slice(0, -1);
       setSelectedValues(newSelectedValues);
+      clearFocusWhenSelectionIsEmpty(newSelectedValues);
 
       if (onSelectionChange) {
         (onSelectionChange as (values: ComboboxOption[]) => void)(
@@ -116,7 +126,13 @@ export function useComboboxSelection({
         );
       }
     }
-  }, [multiple, selectedValues, setSelectedValues, onSelectionChange]);
+  }, [
+    multiple,
+    selectedValues,
+    setSelectedValues,
+    clearFocusWhenSelectionIsEmpty,
+    onSelectionChange,
+  ]);
 
   /**
    * Handles option selection with keyboard vs mouse behavior distinction.
@@ -172,14 +188,26 @@ export function useComboboxSelection({
   const handleRemoveValue = useCallback(
     (optionToRemove: ComboboxOption): void => {
       if (multiple) {
+        const newSelectedValues = selectedValues.filter(
+          (selected) => selected.value !== optionToRemove.value
+        );
+
         removeOption(optionToRemove, {
           selectedValues,
           setSelectedValues,
           onSelectionChange,
         });
+
+        clearFocusWhenSelectionIsEmpty(newSelectedValues);
       }
     },
-    [multiple, selectedValues, setSelectedValues, onSelectionChange]
+    [
+      multiple,
+      selectedValues,
+      setSelectedValues,
+      clearFocusWhenSelectionIsEmpty,
+      onSelectionChange,
+    ]
   );
 
   return {

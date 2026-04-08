@@ -86,4 +86,68 @@ describe('useComboboxSelection', () => {
 
     expect(setFocusedIndex).toHaveBeenCalledWith(2);
   });
+
+  it('clears focused index when removing the last selected value with backspace', () => {
+    const setSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+    const setSearchTerm = vi.fn<(term: string) => void>();
+    const closeDropdown = vi.fn<(manual?: boolean) => void>();
+    const setFocusedIndex = vi.fn<(index: number) => void>();
+    const onSelectionChange = vi.fn<(values: ComboboxOption[]) => void>();
+    const inputRef = { current: null };
+
+    const { result } = renderHook(() =>
+      useComboboxSelection({
+        options,
+        multiple: true,
+        searchTerm: '',
+        selectedValues: [options[0]],
+        setSelectedValues,
+        setSearchTerm,
+        closeDropdown,
+        setFocusedIndex,
+        inputRef,
+        onSelectionChange,
+      })
+    );
+
+    act(() => {
+      result.current.handleRemoveLastValue();
+    });
+
+    expect(setSelectedValues).toHaveBeenCalledWith([]);
+    expect(setFocusedIndex).toHaveBeenCalledWith(-1);
+    expect(onSelectionChange).toHaveBeenCalledWith([]);
+  });
+
+  it('clears focused index when removing the last selected chip', () => {
+    const setSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+    const setSearchTerm = vi.fn<(term: string) => void>();
+    const closeDropdown = vi.fn<(manual?: boolean) => void>();
+    const setFocusedIndex = vi.fn<(index: number) => void>();
+    const onSelectionChange = vi.fn<(values: ComboboxOption[]) => void>();
+    const inputRef = { current: null };
+
+    const { result } = renderHook(() =>
+      useComboboxSelection({
+        options,
+        multiple: true,
+        searchTerm: '',
+        selectedValues: [options[0]],
+        setSelectedValues,
+        setSearchTerm,
+        closeDropdown,
+        setFocusedIndex,
+        inputRef,
+        onSelectionChange,
+      })
+    );
+
+    act(() => {
+      result.current.handleRemoveValue(options[0]);
+    });
+
+    expect(setSelectedValues).toHaveBeenCalledWith([]);
+    expect(setFocusedIndex).toHaveBeenCalledWith(-1);
+    expect(onSelectionChange).toHaveBeenCalledWith([]);
+  });
 });
