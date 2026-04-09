@@ -5,6 +5,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type PropsFromIconButton = Pick<
   IconButtonProps,
+  | 'isOutlined'
   | 'size'
   | 'svgPath'
   | 'title'

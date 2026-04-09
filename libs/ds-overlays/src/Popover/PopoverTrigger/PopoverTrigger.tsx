@@ -8,6 +8,7 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { PopoverTriggerProps } from './PopoverTrigger.types';
+import { getPopoverTriggerIsOutlinedDefault } from '../defaults';
 import { PopoverContext } from '../PopoverContext';
 
 export const PopoverTrigger = ({
@@ -20,12 +21,12 @@ export const PopoverTrigger = ({
   ariaDescribedby,
   size,
   svgPath,
+  isOutlined = getPopoverTriggerIsOutlinedDefault(),
   onClick,
   onBlur,
   onFocus,
 }: PopoverTriggerProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
-
   const titleHelpIcon = title ?? t('shared.Help');
 
   const { floatingData, setIsOpen, isOpen } = useContext(PopoverContext);
@@ -44,7 +45,7 @@ export const PopoverTrigger = ({
       size={size}
       ariaDescribedby={ariaDescribedby}
       ariaExpanded={isOpen}
-      isOutlined
+      isOutlined={isOutlined}
       onClick={(event): void => {
         onClick?.(event);
         setIsOpen(!isOpen);

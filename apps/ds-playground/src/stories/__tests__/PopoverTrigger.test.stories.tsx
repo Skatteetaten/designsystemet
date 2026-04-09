@@ -28,6 +28,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    isOutlined: { table: { disable: true } },
     size: { table: { disable: true } },
     svgPath: {
       options: Object.keys(SystemSVGPaths),

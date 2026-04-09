@@ -2,7 +2,10 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
-import { Popover } from '@skatteetaten/ds-overlays';
+import {
+  Popover,
+  getPopoverTriggerIsOutlinedDefault,
+} from '@skatteetaten/ds-overlays';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -27,7 +30,14 @@ export default {
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
-
+    isOutlined: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getPopoverTriggerIsOutlinedDefault().toString(),
+        },
+      },
+    },
     //HTML
     title: { table: { category: category.htmlAttribute } },
     //Aria
