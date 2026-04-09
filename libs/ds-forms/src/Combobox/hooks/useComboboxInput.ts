@@ -59,8 +59,11 @@ const getSingleSelectBlurOutcome = ({
   selectedLabel: string;
   isControlled: boolean;
 }): SingleSelectBlurOutcome => {
-  if (searchTerm === '') {
-    if (selectedLabel === '') {
+  const isInputEmpty = searchTerm === '';
+  const isItemSelected = selectedLabel !== '';
+
+  if (isInputEmpty) {
+    if (!isItemSelected) {
       return { shouldClearSelection: false };
     }
 
@@ -74,7 +77,7 @@ const getSingleSelectBlurOutcome = ({
     return { shouldClearSelection: true };
   }
 
-  if (selectedLabel === '') {
+  if (!isItemSelected) {
     return {
       nextSearchTerm: '',
       shouldClearSelection: false,
@@ -161,8 +164,11 @@ export function useComboboxInput({
         }
       }
 
-      const firstEnabledIndex =
-        newValue !== '' ? getFirstEnabledIndex(enabledIndices) : -1;
+      // only focus first enabled index if the input has a value
+      const shouldFocusFirstEnabledIndex = newValue !== '';
+      const firstEnabledIndex = shouldFocusFirstEnabledIndex
+        ? getFirstEnabledIndex(enabledIndices)
+        : -1;
       const inputOpenDropDown = (): void => openDropdown('input');
       openDropdownWithFocus(
         inputOpenDropDown,

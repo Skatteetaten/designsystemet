@@ -147,8 +147,6 @@ export const WithCustomClassNames = {
 
     const input = canvas.getByRole('combobox');
     await userEvent.click(input);
-    const helpButton = canvas.getAllByRole('button')[0];
-    await userEvent.click(helpButton);
 
     const container = canvas.getAllByRole('generic')[1];
     const optionsContainer = canvasElement.querySelector(
@@ -158,15 +156,20 @@ export const WithCustomClassNames = {
       '[id^=comboboxErrorId]>div'
     );
     const label = canvas.getByText(defaultArgs.label as string);
-    const helpTextContainer = canvasElement.querySelector(
-      'div[class*="helpBox"]'
-    );
-    const description = canvas.getByText('Beskrivelse');
 
     await expect(container).toHaveClass('dummyClassname');
     await expect(optionsContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
+
+    const helpButton = canvas.getAllByRole('button')[0];
+    await userEvent.click(helpButton);
+
+    const helpTextContainer = canvasElement.querySelector(
+      'div[class*="helpBox"]'
+    );
+    const description = canvas.getByText('Beskrivelse');
+
     await expect(helpTextContainer).toHaveClass('dummyClassname');
     await expect(description).toHaveClass('dummyClassname');
   },
