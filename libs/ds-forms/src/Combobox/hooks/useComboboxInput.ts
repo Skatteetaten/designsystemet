@@ -245,6 +245,10 @@ export function useComboboxInput({
           setSearchTerm(nextSearchTerm);
           onInputChange?.(nextSearchTerm);
         }
+      } else {
+        // For multi-select, we always clear the input on blur.
+        setSearchTerm('');
+        onInputChange?.('');
       }
 
       setTimeout(() => {
