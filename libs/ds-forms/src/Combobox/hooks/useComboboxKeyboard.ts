@@ -245,27 +245,23 @@ const handleTab = (
 ): void => {
   const {
     isOpen,
+    multiple,
     focusedIndex,
     displayOptions,
     enabledIndices,
     closeDropdown,
     setFocusedIndex,
     onOptionSelect,
-    selectedValues,
   } = props;
 
-  if (isOpen) {
+  if (isOpen && !multiple) {
     // Velg fokusert valg hvis det finnes ett
     if (
       isIndexEnabled(focusedIndex, enabledIndices) &&
       displayOptions[focusedIndex]
     ) {
       const selectedOption = displayOptions[focusedIndex];
-
-      // dont de-select the option if already selected
-      if (!selectedValues?.includes(selectedOption)) {
-        onOptionSelect(selectedOption, true); // true = fromKeyboard
-      }
+      onOptionSelect(selectedOption, true); // true = fromKeyboard
     }
 
     closeDropdownAndResetFocus(closeDropdown, setFocusedIndex);
