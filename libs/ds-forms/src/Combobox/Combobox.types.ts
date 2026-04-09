@@ -161,6 +161,7 @@ export type ComboboxOptionsProps = {
   customListRef: RefObject<HTMLDivElement | null>;
   maxSelected?: number;
   spinnerLabel?: string;
+  onMinSearchLengthDelayChange?: (isReady: boolean) => void;
 };
 
 export type MaxSelectedMessageProps = {

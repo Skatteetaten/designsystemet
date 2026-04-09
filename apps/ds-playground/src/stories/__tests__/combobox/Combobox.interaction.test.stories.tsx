@@ -5,6 +5,7 @@ import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
+import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { defaultArgs } from './utils/combobox.test.utils';
 
@@ -333,14 +334,32 @@ export const MinSearchLengthTextOnMouseClick = {
 
     await userEvent.click(inputElement);
 
-    await waitFor(() => {
-      expect(canvas.getByRole('listbox')).toBeInTheDocument();
-    });
-    await expect(
-      canvas.getByText(
-        dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
-      )
-    ).toBeInTheDocument();
+    const getChevronPath = (): SVGPathElement | null =>
+      canvasElement.querySelector('div[data-chevron-button] svg path');
+
+    const chevronPathBeforeDelay = getChevronPath();
+    await expect(chevronPathBeforeDelay).toBeInTheDocument();
+    const chevronPathValueBeforeDelay =
+      chevronPathBeforeDelay?.getAttribute('d');
+    const chevronDownPath = ChevronDownSVGpath.props.d;
+    await expect(chevronPathValueBeforeDelay).toEqual(chevronDownPath);
+
+    await waitFor(
+      () => {
+        expect(
+          canvas.getByText(
+            dsI18n.t('ds_forms:combobox.minSearchLengthText', { ant: 3 })
+          )
+        ).toBeInTheDocument();
+      },
+      { timeout: 2000 }
+    );
+
+    const chevronPathAfterDelay = getChevronPath();
+    await expect(chevronPathAfterDelay).toBeInTheDocument();
+    const chevronPathValueAfterDelay = chevronPathAfterDelay?.getAttribute('d');
+    const chevronUpPath = ChevronUpSVGpath.props.d;
+    await expect(chevronPathValueAfterDelay).toEqual(chevronUpPath);
   },
 } satisfies Story;
 
@@ -361,9 +380,7 @@ export const MinSearchLengthTextBeforeThreshold = {
     await userEvent.type(inputElement, 'ab');
 
     await expect(inputElement).toHaveValue('ab');
-    await waitFor(() => {
-      expect(canvas.getByRole('listbox')).toBeInTheDocument();
-    });
+
     await waitFor(
       () => {
         expect(

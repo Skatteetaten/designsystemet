@@ -31,6 +31,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     customListRef,
     maxSelected,
     spinnerLabel,
+    onMinSearchLengthDelayChange,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     const [showMinSearchLengthText, setShowMinSearchLengthText] =
@@ -41,22 +42,31 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     useEffect(() => {
       if (!isOpen || minSearchLength === 0 || !isBelowMinSearchLength) {
         setShowMinSearchLengthText(false);
+        onMinSearchLengthDelayChange?.(false);
         return;
       }
 
       if (openTrigger === 'chevron') {
         setShowMinSearchLengthText(true);
+        onMinSearchLengthDelayChange?.(true);
         return;
       }
 
       const timeout = setTimeout(() => {
         setShowMinSearchLengthText(true);
+        onMinSearchLengthDelayChange?.(true);
       }, 1000);
 
       return (): void => {
         clearTimeout(timeout);
       };
-    }, [isBelowMinSearchLength, isOpen, minSearchLength, openTrigger]);
+    }, [
+      isBelowMinSearchLength,
+      isOpen,
+      minSearchLength,
+      openTrigger,
+      onMinSearchLengthDelayChange,
+    ]);
 
     if (!isOpen) {
       return null;
