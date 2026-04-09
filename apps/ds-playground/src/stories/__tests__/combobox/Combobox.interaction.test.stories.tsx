@@ -430,6 +430,117 @@ export const ReopenShowsAllWithSelectedMark = {
   },
 } satisfies Story;
 
+export const BlurRevertsToLastSelectedValue = {
+  name: 'Blur gjenoppretter sist valgte verdi i single-select',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await expect(inputElement).toHaveValue('Sverige');
+
+    await userEvent.type(inputElement, 'x');
+    await expect(inputElement).toHaveValue('Sverigex');
+
+    await userEvent.click(canvasElement);
+    await waitFor(() => {
+      expect(inputElement).toHaveValue('Sverige');
+    });
+  },
+} satisfies Story;
+
+export const BlurAfterPartialDeleteRevertsToLastSelectedValue = {
+  name: 'Blur etter delvis sletting gjenoppretter siste valg',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await expect(inputElement).toHaveValue('Sverige');
+
+    await userEvent.type(inputElement, '{backspace}{backspace}');
+    await expect(inputElement).toHaveValue('Sveri');
+
+    await userEvent.click(canvasElement);
+    await waitFor(() => {
+      expect(inputElement).toHaveValue('Sverige');
+    });
+  },
+} satisfies Story;
+
+export const BlurAfterDeletingAllTextClearsSelection = {
+  name: 'Blur etter sletting av all tekst nullstiller valg',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    let options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await expect(inputElement).toHaveValue('Sverige');
+
+    await userEvent.clear(inputElement);
+    await expect(inputElement).toHaveValue('');
+
+    await userEvent.click(canvasElement);
+    await waitFor(() => {
+      expect(inputElement).toHaveValue('');
+    });
+
+    await userEvent.click(inputElement);
+    options = canvas.getAllByRole('option');
+    const selectedOptions = options.filter(
+      (option) => option.getAttribute('aria-selected') === 'true'
+    );
+    await expect(selectedOptions).toHaveLength(0);
+  },
+} satisfies Story;
+
+export const BlurClearsTypedTextWithoutSelection = {
+  name: 'Blur tømmer fritekst uten valgt verdi',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    await userEvent.type(inputElement, 'abc');
+    await expect(inputElement).toHaveValue('abc');
+
+    await userEvent.click(canvasElement);
+    await waitFor(() => {
+      expect(inputElement).toHaveValue('');
+    });
+  },
+} satisfies Story;
+
 export const SelectingOverlappingOptionDoesNotFocusUnderlyingCombobox = {
   name: 'Valg i overlappende liste fokuserer ikke combobox under',
   args: {

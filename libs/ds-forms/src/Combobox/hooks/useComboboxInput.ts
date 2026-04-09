@@ -21,6 +21,8 @@ export type DropdownTrigger =
 
 interface UseComboboxInputProps {
   multiple: boolean;
+  searchTerm: string;
+  selectedValues: ComboboxOption[];
   setSelectedValues: (values: ComboboxOption[]) => void;
   setSearchTerm: (term: string) => void;
   inputRef: RefObject<HTMLInputElement | null>;
@@ -43,6 +45,55 @@ interface UseComboboxInputReturn {
   handleClearValue: () => void;
 }
 
+interface SingleSelectBlurOutcome {
+  nextSearchTerm?: string;
+  shouldClearSelection: boolean;
+}
+
+const getSingleSelectBlurOutcome = ({
+  searchTerm,
+  selectedLabel,
+  isControlled,
+}: {
+  searchTerm: string;
+  selectedLabel: string;
+  isControlled: boolean;
+}): SingleSelectBlurOutcome => {
+  const isInputEmpty = searchTerm === '';
+  const isItemSelected = selectedLabel !== '';
+
+  if (isInputEmpty) {
+    if (!isItemSelected) {
+      return { shouldClearSelection: false };
+    }
+
+    if (isControlled) {
+      return {
+        nextSearchTerm: selectedLabel,
+        shouldClearSelection: false,
+      };
+    }
+
+    return { shouldClearSelection: true };
+  }
+
+  if (!isItemSelected) {
+    return {
+      nextSearchTerm: '',
+      shouldClearSelection: false,
+    };
+  }
+
+  if (searchTerm !== selectedLabel) {
+    return {
+      nextSearchTerm: selectedLabel,
+      shouldClearSelection: false,
+    };
+  }
+
+  return { shouldClearSelection: false };
+};
+
 /**
  * Input field event handling hook for combobox.
  *
@@ -54,6 +105,8 @@ interface UseComboboxInputReturn {
  *
  * @param props - The configuration object for input handling
  * @param props.multiple - Whether multiple selections are allowed
+ * @param props.searchTerm - Current input value shown in the combobox
+ * @param props.selectedValues - Currently selected options
  * @param props.setSelectedValues - Function to update selected values
  * @param props.setSearchTerm - Function to update search term
  * @param props.inputRef - Reference to the input element
@@ -70,6 +123,8 @@ interface UseComboboxInputReturn {
  */
 export function useComboboxInput({
   multiple,
+  searchTerm,
+  selectedValues,
   setSelectedValues,
   setSearchTerm,
   openDropdown,
@@ -109,7 +164,11 @@ export function useComboboxInput({
         }
       }
 
-      const firstEnabledIndex = getFirstEnabledIndex(enabledIndices);
+      // only focus first enabled index if the input has a value
+      const shouldFocusFirstEnabledIndex = newValue !== '';
+      const firstEnabledIndex = shouldFocusFirstEnabledIndex
+        ? getFirstEnabledIndex(enabledIndices)
+        : -1;
       const inputOpenDropDown = (): void => openDropdown('input');
       openDropdownWithFocus(
         inputOpenDropDown,
@@ -168,6 +227,36 @@ export function useComboboxInput({
       // Hide virtual keyboard on mobile devices when losing focus
       manageVirtualKeyboard(e.target, false);
 
+      if (!multiple) {
+        const selectedLabel = selectedValues[0]?.label ?? '';
+        const { nextSearchTerm, shouldClearSelection } =
+          getSingleSelectBlurOutcome({
+            searchTerm,
+            selectedLabel,
+            isControlled: value !== undefined,
+          });
+
+        if (shouldClearSelection) {
+          setSelectedValues([]);
+          if (onSelectionChange) {
+            (
+              onSelectionChange as (
+                selectedOption: ComboboxOption | null
+              ) => void
+            )(null);
+          }
+        }
+
+        if (nextSearchTerm !== undefined) {
+          setSearchTerm(nextSearchTerm);
+          onInputChange?.(nextSearchTerm);
+        }
+      } else {
+        // For multi-select, we always clear the input on blur.
+        setSearchTerm('');
+        onInputChange?.('');
+      }
+
       setTimeout(() => {
         const activeElement = document.activeElement;
 
@@ -182,10 +271,22 @@ export function useComboboxInput({
         if (!isInCombobox && !isInListbox) {
           closeDropdown();
         }
-      }, 100);
+      }, 0);
       onBlur?.(e);
     },
-    [closeDropdown, onBlur, manageVirtualKeyboard]
+    [
+      closeDropdown,
+      manageVirtualKeyboard,
+      multiple,
+      onBlur,
+      onInputChange,
+      onSelectionChange,
+      searchTerm,
+      selectedValues,
+      setSearchTerm,
+      setSelectedValues,
+      value,
+    ]
   );
 
   /**

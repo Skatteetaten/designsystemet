@@ -162,6 +162,8 @@ const Combobox = memo(
       handleClearValue,
     } = useComboboxInput({
       multiple,
+      searchTerm,
+      selectedValues,
       setSelectedValues,
       setSearchTerm,
       openDropdown,
