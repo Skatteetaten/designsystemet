@@ -5,6 +5,7 @@ import { glob } from 'node:fs/promises';
 const getUrl = createGetUrl('/docs');
 export default {
   // disable SSR
+  buildDirectory: '../../dist/ds-docs/build',
   ssr: false,
   // async prerender({ getStaticPaths }): Promise<string[]> {
   //   const paths: string[] = [...getStaticPaths()];

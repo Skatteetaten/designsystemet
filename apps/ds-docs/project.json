@@ -6,54 +6,41 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
+      "cache": true,
+      "dependsOn": [
+        "^build",
+        { "projects": "ds-core-designtokens", "target": "build" }
+      ],
+      "inputs": [
+        "production",
+        "^production",
+        { "externalDependencies": ["@react-router/dev"] }
+      ],
+      "outputs": ["{workspaceRoot}/dist/ds-docs/build/client"],
+      "command": "react-router build",
       "options": {
-        "outputPath": "dist/apps/ds-docs"
-      },
-      "dependsOn": [{ "projects": "ds-core-designtokens", "target": "build" }],
-      "configurations": {
-        "development": {
-          "mode": "development"
-        },
-        "production": {
-          "mode": "production"
-        }
+        "cwd": "apps/ds-docs"
       }
     },
     "serve": {
-      "executor": "@nx/vite:dev-server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "ds-docs:build"
-      },
+      "continuous": true,
       "dependsOn": [{ "projects": "ds-core-designtokens", "target": "build" }],
-      "configurations": {
-        "development": {
-          "buildTarget": "ds-docs:build:development",
-          "hmr": true
-        },
-        "production": {
-          "buildTarget": "ds-docs:build:production",
-          "hmr": false
-        }
+      "command": "react-router dev",
+      "options": {
+        "cwd": "apps/ds-docs"
       }
     },
     "preview": {
-      "dependsOn": ["build"],
-      "executor": "@nx/vite:preview-server",
-      "defaultConfiguration": "development",
+      "continuous": true,
+      "dependsOn": [
+        "build",
+        { "projects": "ds-core-designtokens", "target": "build" }
+      ],
+      "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "ds-docs:build"
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "ds-docs:build:development"
-        },
-        "production": {
-          "buildTarget": "ds-docs:build:production"
-        }
+        "staticFilePath": "dist/ds-docs/build/client",
+        "spa": true,
+        "watch": false
       }
     },
     "test": {
@@ -63,12 +50,46 @@
         "reportsDirectory": "../../coverage/apps/ds-docs"
       }
     },
+    "typegen": {
+      "cache": true,
+      "inputs": [
+        "production",
+        "^production",
+        { "externalDependencies": ["@react-router/dev"] }
+      ],
+      "outputs": ["{workspaceRoot}/apps/ds-docs/.react-router/types"],
+      "command": "react-router typegen",
+      "options": {
+        "cwd": "apps/ds-docs"
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ds-docs/**/*.css", "apps/ds-docs/**/*.scss"]
+      }
+    },
+    "tsc": {
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"]
+      },
+      "dependsOn": [
+        "typegen",
+        {
+          "projects": "ds-core-designtokens",
+          "target": "build"
+        }
+      ]
+    },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "dependsOn": ["build"],
       "options": {
-        "buildTarget": "ds-docs:build",
-        "spa": true
+        "staticFilePath": "dist/ds-docs/build/client",
+        "spa": true,
+        "watch": false
       }
     }
   }

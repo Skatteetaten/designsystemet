@@ -8,8 +8,8 @@
   },
   "web": {
     "webapp": {
-      "content": "dist/storybook/ds-playground",
-      "path": "/web/designsystemet/",
+      "content": "dist/ds-docs/build/client",
+      "path": "/",
       "headers": {
         "Cache-Control": "no-cache"
       }

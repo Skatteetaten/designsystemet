@@ -5,8 +5,11 @@ import svgr from '@svgr/rollup';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import mdx from 'fumadocs-mdx/vite';
 import * as MdxConfig from './source.config';
+
+const rootDir = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
@@ -14,12 +17,6 @@ export default defineConfig(() => ({
   server: {
     port: 4200,
     host: 'localhost',
-    fs: {
-      allow: [import.meta.dirname, resolve(import.meta.dirname, '../..')],
-    },
-    ssr: {
-      allowServingOutsideRoot: true,
-    },
   },
   preview: {
     port: 4200,
@@ -27,8 +24,8 @@ export default defineConfig(() => ({
   },
   plugins: [
     mdx(MdxConfig, {
-      configPath: 'apps/ds-docs/source.config.ts',
-      outDir: 'apps/ds-docs/.source',
+      configPath: resolve(rootDir, 'source.config.ts'),
+      outDir: resolve(rootDir, '.source'),
     }),
     !process.env.VITEST && reactRouter(),
     svgr(),
