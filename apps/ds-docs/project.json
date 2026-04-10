@@ -1,0 +1,75 @@
+{
+  "name": "ds-docs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ds-docs",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/ds-docs"
+      },
+      "dependsOn": [{ "projects": "ds-core-designtokens", "target": "build" }],
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "ds-docs:build"
+      },
+      "dependsOn": [{ "projects": "ds-core-designtokens", "target": "build" }],
+      "configurations": {
+        "development": {
+          "buildTarget": "ds-docs:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "ds-docs:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "dependsOn": ["build"],
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "ds-docs:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "ds-docs:build:development"
+        },
+        "production": {
+          "buildTarget": "ds-docs:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/apps/ds-docs"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "ds-docs:build",
+        "spa": true
+      }
+    }
+  }
+}
