@@ -245,6 +245,7 @@ const handleTab = (
 ): void => {
   const {
     isOpen,
+    multiple,
     focusedIndex,
     displayOptions,
     enabledIndices,
@@ -253,7 +254,7 @@ const handleTab = (
     onOptionSelect,
   } = props;
 
-  if (isOpen) {
+  if (isOpen && !multiple) {
     // Velg fokusert valg hvis det finnes ett
     if (
       isIndexEnabled(focusedIndex, enabledIndices) &&

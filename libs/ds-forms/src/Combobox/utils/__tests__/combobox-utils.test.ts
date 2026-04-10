@@ -325,8 +325,10 @@ describe('combobox-utils', () => {
         vi.useRealTimers();
       });
 
-      it('Når KEYBOARD behavior brukes, så resettes ikke focusIndex og ingen delayed focus', () => {
-        const option = mockOptions[0];
+      it('Når KEYBOARD behavior brukes, så settes pending fokus uten å fokusere input', () => {
+        const option = mockOptions[2];
+        const mockSetPendingFocusTarget =
+          vi.fn<(target: { optionValue: string } | null) => void>();
 
         selectOption(option, {
           multiple: true,
@@ -337,10 +339,39 @@ describe('combobox-utils', () => {
           closeDropdown: mockCloseDropdown,
           setFocusedIndex: mockSetFocusedIndex,
           inputRef: mockInputRef,
+          setPendingFocusTarget: mockSetPendingFocusTarget,
           onSelectionChange: mockOnSelectionChange,
         });
 
         expect(mockSetFocusedIndex).not.toHaveBeenCalled();
+        expect(mockSetPendingFocusTarget).toHaveBeenCalledWith({
+          optionValue: 'cherry',
+        });
+        expect(mockInputRef.current?.focus).not.toHaveBeenCalled();
+      });
+
+      it('Når KEYBOARD behavior brukes på allerede valgt option, så settes pending fokus også ved toggle off', () => {
+        const option = mockOptions[0];
+        const mockSetPendingFocusTarget =
+          vi.fn<(target: { optionValue: string } | null) => void>();
+
+        selectOption(option, {
+          multiple: true,
+          selectedValues: [mockOptions[0]],
+          behavior: SELECTION_BEHAVIORS.KEYBOARD,
+          setSelectedValues: mockSetSelectedValues,
+          setSearchTerm: mockSetSearchTerm,
+          closeDropdown: mockCloseDropdown,
+          setFocusedIndex: mockSetFocusedIndex,
+          inputRef: mockInputRef,
+          setPendingFocusTarget: mockSetPendingFocusTarget,
+          onSelectionChange: mockOnSelectionChange,
+        });
+
+        expect(mockSetFocusedIndex).not.toHaveBeenCalled();
+        expect(mockSetPendingFocusTarget).toHaveBeenCalledWith({
+          optionValue: 'apple',
+        });
         expect(mockInputRef.current?.focus).not.toHaveBeenCalled();
       });
     });

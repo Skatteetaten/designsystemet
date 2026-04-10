@@ -91,6 +91,10 @@ export interface SelectionBehavior {
   delayedFocus: boolean;
 }
 
+export interface PendingFocusTarget {
+  optionValue: ComboboxOption['value'];
+}
+
 /**
  * Predefined selection behavior configurations for common interaction patterns.
  * Ensures consistent UX between different input methods.
@@ -233,6 +237,8 @@ const triggerSelectionCallback = (
  * @param config.setSearchTerm - Function to update search input state
  * @param config.setFocusedIndex - Function to update focused option index
  * @param config.inputRef - Ref to the input element for focus management
+ * @param config.setPendingFocusTarget - Function to queue focus remapping after
+ *   filtering is cleared
  * @param config.onSelectionChange - Optional callback for selection changes
  * @param config.maxSelected - Optional maximum number of selections allowed
  */
@@ -245,6 +251,7 @@ const selectMultipleOption = (
     setSearchTerm,
     setFocusedIndex,
     inputRef,
+    setPendingFocusTarget,
     onSelectionChange,
     maxSelected,
   }: {
@@ -254,6 +261,7 @@ const selectMultipleOption = (
     setSearchTerm: (term: string) => void;
     setFocusedIndex: (index: number) => void;
     inputRef: React.RefObject<HTMLInputElement | null>;
+    setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
   }
@@ -288,6 +296,10 @@ const selectMultipleOption = (
 
   // Handle focus management
   handleSelectionFocus(behavior, setFocusedIndex, inputRef);
+
+  if (!behavior.resetFocusIndex) {
+    setPendingFocusTarget?.({ optionValue: option.value });
+  }
 
   // Trigger callback
   triggerSelectionCallback(newSelectedValues, onSelectionChange, true);
@@ -355,6 +367,8 @@ const selectSingleOption = (
  * @param config.closeDropdown - Function to close the dropdown
  * @param config.setFocusedIndex - Function to update focused option index
  * @param config.inputRef - Ref to the input element for focus management
+ * @param config.setPendingFocusTarget - Function to queue focus remapping after
+ *   filtering is cleared
  * @param config.onSelectionChange - Optional callback for selection changes
  * @param config.maxSelected - Optional maximum number of selections allowed
  */
@@ -369,6 +383,7 @@ export const selectOption = (
     closeDropdown,
     setFocusedIndex,
     inputRef,
+    setPendingFocusTarget,
     onSelectionChange,
     maxSelected,
   }: {
@@ -380,6 +395,7 @@ export const selectOption = (
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
     inputRef: React.RefObject<HTMLInputElement | null>;
+    setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
   }
@@ -392,6 +408,7 @@ export const selectOption = (
       setSearchTerm,
       setFocusedIndex,
       inputRef,
+      setPendingFocusTarget,
       onSelectionChange,
       maxSelected,
     });
