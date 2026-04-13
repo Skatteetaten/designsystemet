@@ -28,7 +28,7 @@
             "output": "."
           },
           {
-            "glob": "*",
+            "glob": "**/*",
             "input": "libs/ds-core-designtokens/lib",
             "output": "."
           }

@@ -76,48 +76,81 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {} satisfies Story;
+const exampleTitle = 'Hva er aksjesparekonto';
+const exampleContent =
+  'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. ' +
+  'Gevinster blir ikke skattlagt og det gis ikke fradrag for tap så lenge verdien holdes inne på kontoen. ';
 
-export const Examples: Story = {
+export const Standard: Story = {
+  args: {
+    children: exampleContent,
+    title: exampleTitle,
+  },
+  render: (args): JSX.Element => {
+    return <OpenClose {...args} />;
+  },
+} satisfies Story;
+
+export const HoyrestiltIkon: Story = {
+  name: 'Høyrestilt ikon',
   render: (_args): JSX.Element => {
-    const exampleTitle = 'Hva er aksjesparekonto';
-    const exampleContent =
-      'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. ' +
-      'Gevinster blir ikke skattlagt og det gis ikke fradrag for tap så lenge verdien holdes inne på kontoen. ';
-
     return (
       <>
-        <Heading level={4} as={'h2'}>
-          {'Aksjesparekonto (ASK)'}
-        </Heading>
         <Paragraph>
           {
-            'Du som er personlig skattyter, kan etablere en aksjesparekonto (ASK) for børsnoterte aksjer og aksjefondsandeler.'
+            'Høyrestilt ikon kan gi et roligere visuelt inntrykk og bedre plassutnyttelse på mobil. Vestrejustert ikon kan samtidig være et bedre valg for universell utforming, siden ikonet kommer først i leserekkefølgen og blir synlig tidligere ved zoom.'
           }
         </Paragraph>
-        <OpenClose title={exampleTitle} isExpanded>
-          {exampleContent}
-        </OpenClose>
-        <OpenClose title={exampleTitle}>{exampleContent}</OpenClose>
-        <OpenClose title={exampleTitle} showUnderline>
-          {exampleContent}
-        </OpenClose>
         <OpenClose title={exampleTitle} iconPosition={'right'}>
-          {exampleContent}
-        </OpenClose>
-        <OpenClose title={exampleTitle} variant={'compact'}>
-          {exampleContent}
-        </OpenClose>
-        <OpenClose
-          title={exampleTitle}
-          iconPosition={'right'}
-          variant={'compact'}
-          showUnderline
-        >
           {exampleContent}
         </OpenClose>
       </>
     );
   },
 } satisfies Story;
-Examples.parameters = exampleParameters;
+HoyrestiltIkon.parameters = exampleParameters;
+
+export const KompaktVariant: Story = {
+  name: 'Kompakt variant',
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <Paragraph>
+          {
+            'Kompakt variant bruker mindre fontstørrelse, og brukes normalt i situasjoner der det er lite plass tilgjengelig.'
+          }
+        </Paragraph>
+        <OpenClose title={exampleTitle} variant={'compact'}>
+          {exampleContent}
+        </OpenClose>
+      </>
+    );
+  },
+} satisfies Story;
+KompaktVariant.parameters = exampleParameters;
+
+export const EksempelSelvvalgtHjelpetekst: Story = {
+  name: 'Eksempel - selvvalgt hjelpetekst',
+  render: (_args): JSX.Element => {
+    return (
+      <div className={'semantic-article'}>
+        <Heading as={'h1'} level={2}>
+          {'Navn på oppgave eller tema'}
+        </Heading>
+        <Paragraph variant={'ingress'}>
+          {
+            'Hjelpetekst som vi ønsker at brukeren skal lese før hen går videre, plasserer vi normalt synlig og rett etter overskriften. '
+          }
+        </Paragraph>
+        <OpenClose title={'Hjelpetekst som folk kan velge å åpne'}>
+          <Paragraph>
+            {
+              'Denne teksten kan brukere hente frem og lese hvis de har behov for det. Den kan også bli stående oppe som ekstra støtte for prosessen videre. Det er viktig at tittelen på OpenClose-komponenten tydelig kommuniserer hva slags informasjon man kan finne ved å åpne den. '
+            }
+          </Paragraph>
+        </OpenClose>
+      </div>
+    );
+  },
+} satisfies Story;
+EksempelSelvvalgtHjelpetekst.parameters = exampleParameters;

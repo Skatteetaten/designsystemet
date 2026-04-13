@@ -31,11 +31,7 @@ describe('combobox-utils', () => {
 
     it('Når searchTerm matcher noen options, så filtrerer den riktig (A5)', () => {
       const result = filterOptions(mockOptions, 'a');
-      expect(result).toEqual([
-        { label: 'Apple', value: 'apple' },
-        { label: 'Banana', value: 'banana' },
-        { label: 'Date', value: 'date' },
-      ]);
+      expect(result).toEqual([{ label: 'Apple', value: 'apple' }]);
     });
 
     it('Når searchTerm er case-insensitive, så filtrerer den riktig (A5)', () => {
@@ -50,11 +46,7 @@ describe('combobox-utils', () => {
 
     it('Når multiple er true, så returnerer den alle options uavhengig av selectedValues', () => {
       const result = filterOptions(mockOptions, 'a');
-      expect(result).toEqual([
-        { label: 'Apple', value: 'apple' },
-        { label: 'Banana', value: 'banana' },
-        { label: 'Date', value: 'date' },
-      ]);
+      expect(result).toEqual([{ label: 'Apple', value: 'apple' }]);
     });
   });
 
@@ -141,19 +133,24 @@ describe('combobox-utils', () => {
   });
 
   describe('selectOption', () => {
-    let mockSetSelectedValues: ReturnType<typeof vi.fn>;
-    let mockSetSearchTerm: ReturnType<typeof vi.fn>;
-    let mockCloseDropdown: ReturnType<typeof vi.fn>;
-    let mockSetFocusedIndex: ReturnType<typeof vi.fn>;
-    let mockOnSelectionChange: ReturnType<typeof vi.fn>;
+    let mockSetSelectedValues: ReturnType<
+      typeof vi.fn<(values: ComboboxOption[]) => void>
+    >;
+    let mockSetSearchTerm: ReturnType<typeof vi.fn<(term: string) => void>>;
+    let mockCloseDropdown: ReturnType<typeof vi.fn<(manual?: boolean) => void>>;
+    let mockSetFocusedIndex: ReturnType<typeof vi.fn<(index: number) => void>>;
+    let mockOnSelectionChange: ReturnType<
+      typeof vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>
+    >;
     let mockInputRef: React.RefObject<HTMLInputElement | null>;
 
     beforeEach(() => {
-      mockSetSelectedValues = vi.fn();
-      mockSetSearchTerm = vi.fn();
-      mockCloseDropdown = vi.fn();
-      mockSetFocusedIndex = vi.fn();
-      mockOnSelectionChange = vi.fn();
+      mockSetSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+      mockSetSearchTerm = vi.fn<(term: string) => void>();
+      mockCloseDropdown = vi.fn<(manual?: boolean) => void>();
+      mockSetFocusedIndex = vi.fn<(index: number) => void>();
+      mockOnSelectionChange =
+        vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>();
       mockInputRef = createRef<HTMLInputElement | null>();
 
       // Mock HTMLInputElement
@@ -166,6 +163,10 @@ describe('combobox-utils', () => {
 
     describe('single-select mode', () => {
       it('Når en option velges, så oppdaterer den search term og lukker dropdown', () => {
+        // Mouse-seleksjon lukker dropdown med setTimeout(0) for å unngå
+        // click-through til elementer bak listen før klikksekvensen er ferdig.
+        // Derfor må testen styre timerne eksplisitt for å verifisere closeDropdown.
+        vi.useFakeTimers();
         const option = mockOptions[0];
 
         selectOption(option, {
@@ -181,9 +182,14 @@ describe('combobox-utils', () => {
         });
 
         expect(mockSetSearchTerm).toHaveBeenCalledWith('Apple');
+        // Kjør pending timeout slik at den forsinkede lukkingen faktisk skjer i testen.
+        vi.runAllTimers();
         expect(mockCloseDropdown).toHaveBeenCalled();
         expect(mockSetFocusedIndex).toHaveBeenCalledWith(-1);
         expect(mockOnSelectionChange).toHaveBeenCalledWith(option);
+
+        // Nullstill timer-oppsettet så det ikke lekker til andre tester.
+        vi.useRealTimers();
       });
 
       it('Når onSelectionChange ikke er definert, så krasjer den ikke', () => {
@@ -319,8 +325,10 @@ describe('combobox-utils', () => {
         vi.useRealTimers();
       });
 
-      it('Når KEYBOARD behavior brukes, så resettes ikke focusIndex og ingen delayed focus', () => {
-        const option = mockOptions[0];
+      it('Når KEYBOARD behavior brukes, så settes pending fokus uten å fokusere input', () => {
+        const option = mockOptions[2];
+        const mockSetPendingFocusTarget =
+          vi.fn<(target: { optionValue: string } | null) => void>();
 
         selectOption(option, {
           multiple: true,
@@ -331,22 +339,56 @@ describe('combobox-utils', () => {
           closeDropdown: mockCloseDropdown,
           setFocusedIndex: mockSetFocusedIndex,
           inputRef: mockInputRef,
+          setPendingFocusTarget: mockSetPendingFocusTarget,
           onSelectionChange: mockOnSelectionChange,
         });
 
         expect(mockSetFocusedIndex).not.toHaveBeenCalled();
+        expect(mockSetPendingFocusTarget).toHaveBeenCalledWith({
+          optionValue: 'cherry',
+        });
+        expect(mockInputRef.current?.focus).not.toHaveBeenCalled();
+      });
+
+      it('Når KEYBOARD behavior brukes på allerede valgt option, så settes pending fokus også ved toggle off', () => {
+        const option = mockOptions[0];
+        const mockSetPendingFocusTarget =
+          vi.fn<(target: { optionValue: string } | null) => void>();
+
+        selectOption(option, {
+          multiple: true,
+          selectedValues: [mockOptions[0]],
+          behavior: SELECTION_BEHAVIORS.KEYBOARD,
+          setSelectedValues: mockSetSelectedValues,
+          setSearchTerm: mockSetSearchTerm,
+          closeDropdown: mockCloseDropdown,
+          setFocusedIndex: mockSetFocusedIndex,
+          inputRef: mockInputRef,
+          setPendingFocusTarget: mockSetPendingFocusTarget,
+          onSelectionChange: mockOnSelectionChange,
+        });
+
+        expect(mockSetFocusedIndex).not.toHaveBeenCalled();
+        expect(mockSetPendingFocusTarget).toHaveBeenCalledWith({
+          optionValue: 'apple',
+        });
         expect(mockInputRef.current?.focus).not.toHaveBeenCalled();
       });
     });
   });
 
   describe('removeOption', () => {
-    let mockSetSelectedValues: ReturnType<typeof vi.fn>;
-    let mockOnSelectionChange: ReturnType<typeof vi.fn>;
+    let mockSetSelectedValues: ReturnType<
+      typeof vi.fn<(values: ComboboxOption[]) => void>
+    >;
+    let mockOnSelectionChange: ReturnType<
+      typeof vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>
+    >;
 
     beforeEach(() => {
-      mockSetSelectedValues = vi.fn();
-      mockOnSelectionChange = vi.fn();
+      mockSetSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+      mockOnSelectionChange =
+        vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>();
     });
 
     it('Når en option fjernes, så oppdaterer den selectedValues og kaller callback', () => {

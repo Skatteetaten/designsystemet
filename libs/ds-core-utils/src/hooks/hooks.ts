@@ -19,7 +19,7 @@ export const useMediaQuery = (query: string): boolean => {
     [query]
   );
 
-  return useSyncExternalStore(subscribe, getSnapshot);
+  return useSyncExternalStore(subscribe, getSnapshot, () => false);
 };
 
 export const useValidateFormRequiredProps = ({

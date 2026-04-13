@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
@@ -10,15 +10,13 @@ import {
   within,
 } from 'storybook/test';
 
-import {
-  dsI18n,
-  getCommonAutoCompleteDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
   getDatePickerPlaceholderDefault,
   TextField,
 } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -71,22 +69,14 @@ const meta = {
       control: 'inline-radio',
     },
     // HTML
-    autoComplete: {
-      table: {
-        disable: true,
-        defaultValue: {
-          summary: getCommonAutoCompleteDefault(),
-        },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      control: 'text',
-    },
+    autoComplete: { table: { disable: true } },
     disabled: { table: { disable: true } },
     name: { table: { disable: true } },
     placeholder: { table: { disable: true } },
     required: { table: { disable: true } },
     readOnly: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -236,6 +226,41 @@ export const Defaults = {
       '[id^=datepickerErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'datepicker-alert-description-id';
+    return (
+      <>
+        <DatePicker {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for datepicker'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for datepicker'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = textbox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('datepicker-alert-description-id');
   },
 } satisfies Story;
 

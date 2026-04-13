@@ -4,6 +4,7 @@ import type { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
 import type { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
+import type { DropdownTrigger } from './hooks/useComboboxCore';
 
 export type ComboboxSize = Extract<Size, 'medium' | 'large'>;
 
@@ -31,7 +32,9 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'onFocus'
   | 'form'
   | 'accessKey'
->;
+> & {
+  ariaDescribedBy?: string;
+};
 
 interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement | null>;
@@ -43,8 +46,10 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
-
-  /** Tilleggstekst som vises under label */
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
   description?: LabelWithHelpProps['description'];
   /** Feilmelding som vises under komponenten */
   errorMessage?: string;
@@ -139,6 +144,7 @@ export type ComboboxSelectedOptionsProps = {
 
 export type ComboboxOptionsProps = {
   isOpen: boolean;
+  openTrigger?: DropdownTrigger;
   isLoading?: boolean;
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   displayOptions: ComboboxOption[];
@@ -155,6 +161,7 @@ export type ComboboxOptionsProps = {
   customListRef: RefObject<HTMLDivElement | null>;
   maxSelected?: number;
   spinnerLabel?: string;
+  onMinSearchLengthDelayChange?: (isReady: boolean) => void;
 };
 
 export type MaxSelectedMessageProps = {

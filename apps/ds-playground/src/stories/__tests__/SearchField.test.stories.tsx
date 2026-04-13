@@ -18,14 +18,11 @@ import {
   fn,
 } from 'storybook/test';
 
-import {
-  dsI18n,
-  getCommonAutoCompleteDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { SearchField, searchInList } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -73,22 +70,17 @@ const meta = {
       control: 'inline-radio',
     },
     // HTML
-    accessKey: { table: { disable: true, category: category.htmlAttribute } },
-    autoComplete: {
-      table: {
-        disable: true,
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-      },
-      type: 'string',
-    },
-    disabled: { table: { disable: true, category: category.htmlAttribute } },
-    form: { table: { disable: true, category: category.htmlAttribute } },
-    name: { table: { disable: true, category: category.htmlAttribute } },
-    placeholder: { table: { disable: true, category: category.htmlAttribute } },
-    readOnly: { table: { disable: true, category: category.htmlAttribute } },
-    required: { table: { disable: true, category: category.htmlAttribute } },
-    value: { table: { disable: true, category: category.htmlAttribute } },
+    accessKey: { table: { disable: true } },
+    autoComplete: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
+    name: { table: { disable: true } },
+    placeholder: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
+    required: { table: { disable: true } },
+    value: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -258,6 +250,41 @@ export const Defaults = {
 
     const sRtexst = dsI18n.t('ds_forms:searchfield.Focus');
     await expect(await canvas.findByText(sRtexst)).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'searchfield-alert-description-id';
+    return (
+      <>
+        <SearchField {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for searchfield'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchbox = canvas.getByRole('searchbox');
+    await expect(searchbox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for searchfield'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = searchbox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('searchfield-alert-description-id');
   },
 } satisfies Story;
 
@@ -655,7 +682,9 @@ const ResetButtonTemplate: StoryFn<typeof SearchField> = (args) => {
           args.onChange?.(event);
         }}
       />
-      <button onClick={() => setValue('')}>{'reset'}</button>
+      <button type={'button'} onClick={() => setValue('')}>
+        {'reset'}
+      </button>
     </>
   );
 };
@@ -803,5 +832,74 @@ export const WithEnableSRNavigationHintsFalse = {
     const canvas = within(canvasElement);
     const sRtexst = dsI18n.t('ds_forms:searchfield.Focus');
     await expect(canvas.queryByText(sRtexst)).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+const TemplateWithTabIndex: StoryFn<typeof SearchField> = () => {
+  const [value, setValue] = useState<string>('');
+
+  const options = useMemo(() => {
+    return [
+      {
+        title: 'Ert',
+        description:
+          'Sukkererter er en deilig grønnsak som kan spises rå eller lett kokt.',
+      },
+      {
+        title: 'Sellerirot',
+        description:
+          'En rotgrønnsak med en karakteristisk smak, ofte brukt i supper og gryteretter.',
+      },
+      {
+        title: 'Sukkermais',
+        description: 'Søte maiskolber som kan grilles, kokes eller spises rå.',
+      },
+      {
+        title: 'Østerssopp',
+        description: 'En deilig soppvariant som kan brukes i ulike retter.',
+      },
+      {
+        title: 'Aubergine',
+        description:
+          'Også kjent som eggplante, flott for grilling eller steking.',
+      },
+      {
+        title: 'Cherrytomat',
+        description:
+          'Små, søte tomater som er perfekte for salater eller snacks.',
+      },
+    ];
+  }, []);
+
+  const results = useMemo(
+    () => (value.length >= 2 ? searchInList(options, value) : undefined),
+    [value, options]
+  );
+
+  return (
+    <div tabIndex={-1}>
+      <SearchField
+        classNames={{ searchResultsList: 'searchResultsList' }}
+        label={'Søk etter grønnsaker'}
+        results={results}
+        hideLabel={false}
+        value={value}
+        onChange={(event) => {
+          setValue(event.target.value);
+        }}
+        onClear={() => setValue('')}
+      />
+    </div>
+  );
+};
+
+export const WithTabIndexScope = {
+  name: 'With TabIndex Scope',
+  render: TemplateWithTabIndex,
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;

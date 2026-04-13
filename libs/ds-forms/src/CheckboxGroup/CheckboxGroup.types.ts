@@ -10,7 +10,10 @@ type RequiredCheckboxGroupHTMLAttributes = Pick<
   'disabled' | 'form'
 >;
 
-type CheckboxGroupHTMLAttributes = Partial<RequiredCheckboxGroupHTMLAttributes>;
+type CheckboxGroupHTMLAttributes =
+  Partial<RequiredCheckboxGroupHTMLAttributes> & {
+    ariaDescribedBy?: string;
+  };
 
 interface CheckboxGroupCommonProps
   extends CheckboxGroupHTMLAttributes,
@@ -30,7 +33,10 @@ interface CheckboxGroupCommonProps
   hideLegend?: FieldsetProps['hideLegend'];
   /** Ledetekst til gruppen */
   legend: FieldsetProps['legend'];
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
   description?: FieldsetProps['description'];
   /** Margin under komponenten */
   hasSpacing?: boolean;

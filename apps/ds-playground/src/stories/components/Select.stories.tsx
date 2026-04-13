@@ -65,10 +65,9 @@ const meta = {
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },

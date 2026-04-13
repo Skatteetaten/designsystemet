@@ -31,7 +31,9 @@ type RequiredTextAreaHTMLAttributes = Pick<
   | 'value'
 >;
 
-type TextAreaHTMLAttributes = Partial<RequiredTextAreaHTMLAttributes>;
+type TextAreaHTMLAttributes = Partial<RequiredTextAreaHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface TextAreaPropsHTMLAttributes extends TextAreaHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLTextAreaElement>;
@@ -66,7 +68,10 @@ export interface TextAreaCommonProps
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
+   * begreper, for eksempel med et span-element med lang-attributt.
+   */
   description?: LabelWithHelpProps['description'];
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];

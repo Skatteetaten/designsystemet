@@ -8,6 +8,7 @@
   "combobox.SelectedOfTotalPlural": "{{selected}} av {{total}} er valde",
   "combobox.SelectedOfTotalSingular": "{{selected}} av {{total}} er vald",
   "combobox.TypeOrSelect": "Skriv eller vel",
+  "combobox.minSearchLengthText": "Skriv minst {{ant}} teikn for å vise resultat",
   "datepicker.April": "April",
   "datepicker.August": "August",
   "datepicker.CalenderDisplay": "Kalendervisning for",

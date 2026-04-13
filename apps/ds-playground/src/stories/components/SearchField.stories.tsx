@@ -82,9 +82,7 @@ const meta = {
       },
     },
     // HTML
-    accessKey: {
-      table: { category: category.htmlAttribute },
-    },
+    accessKey: { table: { category: category.htmlAttribute } },
     autoComplete: {
       table: {
         category: category.htmlAttribute,
@@ -97,15 +95,15 @@ const meta = {
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
-    placeholder: {
-      table: { category: category.htmlAttribute },
-    },
+    placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
     required: { table: { category: category.htmlAttribute } },
     value: {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },

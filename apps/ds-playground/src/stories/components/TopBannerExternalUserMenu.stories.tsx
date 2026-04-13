@@ -39,6 +39,7 @@ const meta = {
     user: {
       person: {
         personId: '123456789',
+        dateOfBirth: new Date('1984-02-13'),
         name: 'John Doe',
         type: 'person',
       },

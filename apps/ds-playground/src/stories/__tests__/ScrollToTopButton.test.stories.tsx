@@ -5,6 +5,7 @@ import {
   getScrollToTopButtonTextDefault,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
+import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -145,7 +146,7 @@ export const WithCustomClassNames = {
       `${wrapper} > div > div:nth-child(2)`
     );
     const button = canvas.getByRole('button');
-    const iconContainer = button.querySelector('div');
+    const iconContainer = button.querySelector('span');
 
     const icon = canvas.getByRole('img', { hidden: true });
     const label = canvas.getByText(getScrollToTopButtonTextDefault());
@@ -239,12 +240,10 @@ export const WithVisibilityThreshold = {
     viewport: {
       options: {
         maxHeight: {
-          maxHeight: { name: 'maxHeight', styles: { height: '500px' } },
+          name: 'maxHeight',
+          styles: { width: breakpoints['--breakpoint-m'], height: '500px' },
         },
       },
-    },
-    chromatic: {
-      modes: { maxHeight: { viewport: 'maxHeight' } },
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

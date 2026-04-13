@@ -270,7 +270,16 @@ export const Arbeidsliste = (): JSX.Element => {
               {`Mine fullførte ${breakpointM ? 'oppgaver ' : ''}(10)`}
             </Tabs.Tab>
           </Tabs.List>
-          <Tabs.Panel value={'mineoppgaver'}>
+          <Tabs.Panel value={'mineoppgaver'} className={styles.tabsPanel}>
+            {!isMobile && antallAktiveFilter > 0 && (
+              <InlineButton
+                className={styles.clearFilterButton}
+                svgPath={CancelSVGpath}
+                onClick={handleClearFilters}
+              >
+                {'Tilbakestill filter'}
+              </InlineButton>
+            )}
             <OpenClose
               className={styles.openClose}
               title={
@@ -281,15 +290,6 @@ export const Arbeidsliste = (): JSX.Element => {
               isExpanded={visFilter}
               onClick={() => setVisFilter(!visFilter)}
             >
-              {!isMobile && antallAktiveFilter > 0 && (
-                <InlineButton
-                  className={styles.clearFilterButton}
-                  svgPath={CancelSVGpath}
-                  onClick={handleClearFilters}
-                >
-                  {'Tilbakestill filter'}
-                </InlineButton>
-              )}
               <div className={styles.filterGroup}>
                 <DatePicker
                   classNames={{ dateContainer: styles.datePicker }}
@@ -355,6 +355,7 @@ export const Arbeidsliste = (): JSX.Element => {
               caption={'Dette er en tabell med arbeidsoppgaver'}
               sortState={sortState}
               setSortState={setSortState}
+              size={'medium'}
               hasFullWidth
             >
               <Table.Header>

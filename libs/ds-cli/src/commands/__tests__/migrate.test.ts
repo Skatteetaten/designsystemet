@@ -3,10 +3,12 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 // Mock dependencies
 vi.mock('ts-morph', () => ({
-  Project: vi.fn(() => ({
-    addSourceFilesAtPaths: vi.fn(() => []),
-    save: vi.fn(),
-  })),
+  Project: vi.fn(function () {
+    return {
+      addSourceFilesAtPaths: vi.fn(() => []),
+      save: vi.fn(),
+    };
+  }),
 }));
 
 vi.mock('../../../utils/typescript-checker.js', () => ({
@@ -144,7 +146,9 @@ describe('migrate command', () => {
           addSourceFilesAtPaths: vi.fn(() => []),
           save: vi.fn(),
         };
-        (Project as any).mockImplementation(() => mockProject);
+        (Project as any).mockImplementation(function () {
+          return mockProject;
+        });
 
         const mockCli = {
           input: ['v2-alert', 'src/'],
@@ -167,7 +171,9 @@ describe('migrate command', () => {
           ]),
           save: vi.fn(),
         };
-        (Project as any).mockImplementation(() => mockProject);
+        (Project as any).mockImplementation(function () {
+          return mockProject;
+        });
 
         const mockCli = {
           input: ['v2-alert', 'src/'],
@@ -193,7 +199,9 @@ describe('migrate command', () => {
           ]),
           save: vi.fn(),
         };
-        (Project as any).mockImplementation(() => mockProject);
+        (Project as any).mockImplementation(function () {
+          return mockProject;
+        });
 
         const mockCli = {
           input: ['v2-alert', 'src/'],
@@ -222,7 +230,9 @@ describe('migrate command', () => {
           addSourceFilesAtPaths: vi.fn(() => mockFiles),
           save: vi.fn(),
         };
-        (Project as any).mockImplementation(() => mockProject);
+        (Project as any).mockImplementation(function () {
+          return mockProject;
+        });
 
         const mockCli = {
           input: ['v2-alert', 'src/'],
@@ -255,7 +265,9 @@ describe('migrate command', () => {
           }),
           save: vi.fn(),
         };
-        (Project as any).mockImplementation(() => mockProject);
+        (Project as any).mockImplementation(function () {
+          return mockProject;
+        });
 
         const mockCli = {
           input: ['v2-alert', 'src/'],
@@ -277,7 +289,9 @@ describe('migrate command', () => {
           }),
           save: vi.fn(),
         };
-        (Project as any).mockImplementation(() => mockProject);
+        (Project as any).mockImplementation(function () {
+          return mockProject;
+        });
 
         const mockCli = {
           input: ['v2-alert', 'src/'],

@@ -7,6 +7,10 @@ import {
 
 import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 import { useBrowserCompatibility } from './useBrowserCompatibility';
+import {
+  getFirstEnabledIndex,
+  openDropdownWithFocus,
+} from '../utils/combobox-state-utils';
 
 export type DropdownTrigger =
   | 'focus'
@@ -17,6 +21,8 @@ export type DropdownTrigger =
 
 interface UseComboboxInputProps {
   multiple: boolean;
+  searchTerm: string;
+  selectedValues: ComboboxOption[];
   setSelectedValues: (values: ComboboxOption[]) => void;
   setSearchTerm: (term: string) => void;
   inputRef: RefObject<HTMLInputElement | null>;
@@ -25,9 +31,11 @@ interface UseComboboxInputProps {
   onBlur?: ComboboxProps['onBlur'];
   onFocus?: ComboboxProps['onFocus'];
   value?: ComboboxProps['value'];
-  openDropdown: (searchTerm: string, trigger: DropdownTrigger) => void;
+  openDropdown: (trigger: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
-  chevronClickedRef: React.RefObject<boolean>;
+  enabledIndices: number[];
+  focusedIndex: number;
+  setFocusedIndex: (index: number) => void;
 }
 
 interface UseComboboxInputReturn {
@@ -37,6 +45,55 @@ interface UseComboboxInputReturn {
   handleClearValue: () => void;
 }
 
+interface SingleSelectBlurOutcome {
+  nextSearchTerm?: string;
+  shouldClearSelection: boolean;
+}
+
+const getSingleSelectBlurOutcome = ({
+  searchTerm,
+  selectedLabel,
+  isControlled,
+}: {
+  searchTerm: string;
+  selectedLabel: string;
+  isControlled: boolean;
+}): SingleSelectBlurOutcome => {
+  const isInputEmpty = searchTerm === '';
+  const isItemSelected = selectedLabel !== '';
+
+  if (isInputEmpty) {
+    if (!isItemSelected) {
+      return { shouldClearSelection: false };
+    }
+
+    if (isControlled) {
+      return {
+        nextSearchTerm: selectedLabel,
+        shouldClearSelection: false,
+      };
+    }
+
+    return { shouldClearSelection: true };
+  }
+
+  if (!isItemSelected) {
+    return {
+      nextSearchTerm: '',
+      shouldClearSelection: false,
+    };
+  }
+
+  if (searchTerm !== selectedLabel) {
+    return {
+      nextSearchTerm: selectedLabel,
+      shouldClearSelection: false,
+    };
+  }
+
+  return { shouldClearSelection: false };
+};
+
 /**
  * Input field event handling hook for combobox.
  *
@@ -45,8 +102,11 @@ interface UseComboboxInputReturn {
  *
  * Why: Input field behavior needs careful coordination with dropdown state and
  * cross-browser compatibility (especially iOS/Safari focus issues).
+ *
  * @param props - The configuration object for input handling
  * @param props.multiple - Whether multiple selections are allowed
+ * @param props.searchTerm - Current input value shown in the combobox
+ * @param props.selectedValues - Currently selected options
  * @param props.setSelectedValues - Function to update selected values
  * @param props.setSearchTerm - Function to update search term
  * @param props.inputRef - Reference to the input element
@@ -57,11 +117,14 @@ interface UseComboboxInputReturn {
  * @param props.value - Current value(s) of the combobox
  * @param props.openDropdown - Function to open the dropdown
  * @param props.closeDropdown - Function to close the dropdown
- * @param props.chevronClickedRef - Ref to track if chevron was recently clicked
+ * @param props.enabledIndices - Array of indices for non-disabled options
+ * @param props.setFocusedIndex - Function to update focused option index
  * @returns Object containing input event handlers
  */
 export function useComboboxInput({
   multiple,
+  searchTerm,
+  selectedValues,
   setSelectedValues,
   setSearchTerm,
   openDropdown,
@@ -72,16 +135,19 @@ export function useComboboxInput({
   onBlur,
   onFocus,
   value,
-  chevronClickedRef,
+  setFocusedIndex,
+  enabledIndices,
 }: UseComboboxInputProps): UseComboboxInputReturn {
   const { safeFocus, preventZoom, manageVirtualKeyboard } =
     useBrowserCompatibility();
+
   /**
    * Handles text input changes and triggers dropdown opening.
    *
    * What: Clears selection in single-select mode when input is emptied.
    *
-   * Why: Typing should open dropdown and clear conflicting selections in single-select mode.
+   * Why: Typing should open dropdown and clear conflicting selections in
+   * single-select mode.
    */
   const handleInputChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>): void => {
@@ -98,60 +164,54 @@ export function useComboboxInput({
         }
       }
 
-      openDropdown(newValue, 'input');
+      // only focus first enabled index if the input has a value
+      const shouldFocusFirstEnabledIndex = newValue !== '';
+      const firstEnabledIndex = shouldFocusFirstEnabledIndex
+        ? getFirstEnabledIndex(enabledIndices)
+        : -1;
+      const inputOpenDropDown = (): void => openDropdown('input');
+      openDropdownWithFocus(
+        inputOpenDropDown,
+        setFocusedIndex,
+        firstEnabledIndex
+      );
 
       // Call user's onInputChange callback
       onInputChange?.(newValue);
     },
     [
       setSearchTerm,
-      openDropdown,
-      onInputChange,
       multiple,
       value,
+      enabledIndices,
+      onInputChange,
       setSelectedValues,
       onSelectionChange,
+      openDropdown,
+      setFocusedIndex,
     ]
   );
 
   /**
-   * Handles input focus with mobile compatibility and smart dropdown opening.
+   * Handles input focus with mobile compatibility.
    *
    * What: Prevents iOS zoom and manages virtual keyboard display.
    *
-   * Why: Focus should open dropdown except when coming from chevron button.
-   * Mobile devices need special handling for zoom and virtual keyboard.
+   * Why: Keyboard/programmatic focus should not automatically open the
+   * dropdown. Mobile devices still need special handling for zoom and virtual
+   * keyboard.
    */
   const handleInputFocus = useCallback(
     (e: FocusEvent<HTMLInputElement>): void => {
-      const currentValue = e.target.value;
-
       // Prevent zoom on iOS devices
       preventZoom(e.target);
 
       // Manage virtual keyboard for mobile devices
       manageVirtualKeyboard(e.target, true);
 
-      // Check if focus is coming from chevron button
-      const isFromChevron =
-        (e.relatedTarget instanceof Element &&
-          e.relatedTarget.hasAttribute('data-chevron-button')) ||
-        chevronClickedRef.current;
-
-      // Only auto-open dropdown if focus is not from chevron button
-      if (!isFromChevron) {
-        openDropdown(currentValue, 'focus');
-      }
-
       onFocus?.(e);
     },
-    [
-      openDropdown,
-      onFocus,
-      preventZoom,
-      manageVirtualKeyboard,
-      chevronClickedRef,
-    ]
+    [onFocus, preventZoom, manageVirtualKeyboard]
   );
 
   /**
@@ -159,13 +219,43 @@ export function useComboboxInput({
    *
    * What: Delays closing to allow focus to move to dropdown options.
    *
-   * Why: Immediate closing on blur would prevent option selection via mouse/touch.
-   * Delay allows focus to move within the combobox component.
+   * Why: Immediate closing on blur would prevent option selection via
+   * mouse/touch. Delay allows focus to move within the combobox component.
    */
   const handleInputBlur = useCallback(
     (e: FocusEvent<HTMLInputElement>): void => {
       // Hide virtual keyboard on mobile devices when losing focus
       manageVirtualKeyboard(e.target, false);
+
+      if (!multiple) {
+        const selectedLabel = selectedValues[0]?.label ?? '';
+        const { nextSearchTerm, shouldClearSelection } =
+          getSingleSelectBlurOutcome({
+            searchTerm,
+            selectedLabel,
+            isControlled: value !== undefined,
+          });
+
+        if (shouldClearSelection) {
+          setSelectedValues([]);
+          if (onSelectionChange) {
+            (
+              onSelectionChange as (
+                selectedOption: ComboboxOption | null
+              ) => void
+            )(null);
+          }
+        }
+
+        if (nextSearchTerm !== undefined) {
+          setSearchTerm(nextSearchTerm);
+          onInputChange?.(nextSearchTerm);
+        }
+      } else {
+        // For multi-select, we always clear the input on blur.
+        setSearchTerm('');
+        onInputChange?.('');
+      }
 
       setTimeout(() => {
         const activeElement = document.activeElement;
@@ -181,10 +271,22 @@ export function useComboboxInput({
         if (!isInCombobox && !isInListbox) {
           closeDropdown();
         }
-      }, 100);
+      }, 0);
       onBlur?.(e);
     },
-    [closeDropdown, onBlur, manageVirtualKeyboard]
+    [
+      closeDropdown,
+      manageVirtualKeyboard,
+      multiple,
+      onBlur,
+      onInputChange,
+      onSelectionChange,
+      searchTerm,
+      selectedValues,
+      setSearchTerm,
+      setSelectedValues,
+      value,
+    ]
   );
 
   /**
@@ -192,10 +294,12 @@ export function useComboboxInput({
    *
    * What: Triggers selection change callbacks
    *
-   * Why: Clear button should reset the component to empty state and refocus input.
+   * Why: Clear button should reset the component to empty state and refocus
+   * input.
    */
   const handleClearValue = useCallback((): void => {
     setSearchTerm('');
+    setSelectedValues([]);
 
     if (inputRef.current) {
       safeFocus(inputRef.current);
@@ -210,11 +314,12 @@ export function useComboboxInput({
 
       // Reopen dropdown after clearing using keyboard
       requestAnimationFrame(() => {
-        openDropdown('', 'click');
+        openDropdown('click');
       });
     }
   }, [
     setSearchTerm,
+    setSelectedValues,
     inputRef,
     safeFocus,
     onSelectionChange,

@@ -2,6 +2,7 @@ import {
   useEffect,
   useCallback,
   useImperativeHandle,
+  useState,
   memo,
   type JSX,
 } from 'react';
@@ -28,6 +29,7 @@ import { useComboboxSelection } from './hooks/useComboboxSelection';
 import {
   getSelectedValuesFromValue,
   getSearchTermFromValue,
+  getOptionsInGroupOrder,
 } from './utils/combobox-utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -61,12 +63,13 @@ const Combobox = memo(
     minSearchLength = getComboboxMinSearchLengthDefault(),
     multiple = getComboboxIsMultiSelectDefault(),
     options,
-    placeholder = getComboboxPlaceholderDefault(),
+    placeholder = getComboboxPlaceholderDefault(minSearchLength),
     spinnerProps,
     titleHelpSvg,
     value,
     variant = getComboboxVariantDefault(),
     accessKey,
+    ariaDescribedBy,
     name,
     disabled,
     form,
@@ -81,6 +84,18 @@ const Combobox = memo(
     const { safeFocus } = useBrowserCompatibility();
 
     const resolvedVariant = multiple ? 'large' : variant;
+    const allOptionsInOrder = getOptionsInGroupOrder(options);
+
+    // Track when minimum search length delay is complete (for delayed chevron display)
+    const [shouldShowChevronDelayed, setShouldShowChevronDelayed] =
+      useState(false);
+
+    const handleMinSearchLengthDelayChange = useCallback(
+      (isReady: boolean): void => {
+        setShouldShowChevronDelayed(isReady);
+      },
+      []
+    );
 
     // UNIFIED CORE HOOK - consolidates dropdown + focus + state management
     const coreState = useComboboxCore({
@@ -101,6 +116,7 @@ const Combobox = memo(
       selectedValues,
       setSelectedValues,
       isOpen,
+      openTrigger,
       focusedIndex,
       setFocusedIndex,
       enabledIndices,
@@ -116,7 +132,9 @@ const Combobox = memo(
       handleContainerClick,
       handleContainerKeyDown,
       handleButtonFocus,
-      chevronClickedRef,
+      moveFocusNext,
+      moveFocusPrevious,
+      getFocusedElementId,
     } = coreState;
 
     // Expose the input element to parent component via ref prop
@@ -127,7 +145,9 @@ const Combobox = memo(
     // Use selection handlers hook
     const { handleRemoveLastValue, handleOptionSelect, handleRemoveValue } =
       useComboboxSelection({
+        options: allOptionsInOrder,
         multiple,
+        searchTerm,
         selectedValues,
         setSelectedValues,
         setSearchTerm,
@@ -146,6 +166,8 @@ const Combobox = memo(
       handleClearValue,
     } = useComboboxInput({
       multiple,
+      searchTerm,
+      selectedValues,
       setSelectedValues,
       setSearchTerm,
       openDropdown,
@@ -156,14 +178,15 @@ const Combobox = memo(
       onBlur,
       onFocus,
       value,
-      chevronClickedRef,
+      enabledIndices,
+      setFocusedIndex,
+      focusedIndex,
     });
 
     // Memoize keyboard dropdown handler to prevent unnecessary re-creations
     const keyboardOpenDropdown = useCallback(() => {
-      const currentValue = inputRef.current?.value || '';
-      openDropdown(currentValue, 'keyboard');
-    }, [openDropdown, inputRef]);
+      openDropdown('keyboard');
+    }, [openDropdown]);
 
     // Keyboard navigation hook
     useComboboxKeyboard({
@@ -173,6 +196,8 @@ const Combobox = memo(
       enabledIndices,
       focusedIndex,
       setFocusedIndex,
+      moveFocusNext,
+      moveFocusPrevious,
       openDropdown: keyboardOpenDropdown,
       closeDropdown,
       setSearchTerm,
@@ -191,19 +216,28 @@ const Combobox = memo(
         setSelectedValues(getSelectedValuesFromValue(value, options, multiple));
         setSearchTerm(''); // Keep search field clear in multi-select mode
       } else if (!multiple && value !== undefined) {
+        const selectedOption = options.find((option) => option.value === value);
+        setSelectedValues(selectedOption ? [selectedOption] : []);
         // In controlled single mode, update searchTerm when value changes
         setSearchTerm(getSearchTermFromValue(value, options, multiple));
       }
     }, [value, multiple, options, setSearchTerm, setSelectedValues]);
 
-    const focusedOptionId =
-      focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined;
+    const focusedOptionId = getFocusedElementId();
+
+    // Chevron should reflect actual open state, except during delayed min-search hint flow.
+    const isBelowMinSearchLength = searchTerm.length < minSearchLength;
+    const chevronIsOpen =
+      isOpen &&
+      (openTrigger === 'chevron' ||
+        !isBelowMinSearchLength ||
+        shouldShowChevronDelayed);
 
     const labelId = `${comboboxId}-label`;
     const descriptionId = `${comboboxId}-description`;
 
-    const ariaDescribedBy =
-      [description && descriptionId, errorMessage && errorId]
+    const resolvedAriaDescribedBy =
+      [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
         .filter(Boolean)
         .join(' ') || undefined;
 
@@ -251,7 +285,9 @@ const Combobox = memo(
               accessKey={accessKey}
               form={form}
               name={multiple ? undefined : name}
-              placeholder={placeholder}
+              placeholder={
+                multiple && selectedValues.length > 0 ? undefined : placeholder
+              }
               disabled={disabled}
               required={required}
               role={'combobox'}
@@ -263,7 +299,7 @@ const Combobox = memo(
               aria-activedescendant={
                 focusedIndex >= 0 ? focusedOptionId : undefined
               }
-              aria-describedby={ariaDescribedBy}
+              aria-describedby={resolvedAriaDescribedBy}
               aria-invalid={getAriaInvalid(errorMessage, required)}
               data-testid={dataTestId}
               onChange={handleInputChange}
@@ -282,7 +318,7 @@ const Combobox = memo(
               ))}
           </div>
           <ComboboxButton
-            isOpen={isOpen}
+            isOpen={chevronIsOpen}
             hasValue={!multiple && !!searchTerm}
             multiple={multiple}
             disabled={disabled}
@@ -292,6 +328,7 @@ const Combobox = memo(
           />
           <ComboboxOptions
             isOpen={isOpen}
+            openTrigger={openTrigger}
             isLoading={isLoading}
             spinnerProps={spinnerProps}
             displayOptions={displayOptions}
@@ -308,6 +345,7 @@ const Combobox = memo(
             customListRef={containerRef}
             maxSelected={maxSelected}
             spinnerLabel={spinnerLabel}
+            onMinSearchLengthDelayChange={handleMinSearchLengthDelayChange}
           />
         </div>
         <ErrorMessage

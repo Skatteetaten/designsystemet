@@ -4,9 +4,9 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { TextField, TextFieldProps } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -30,54 +30,56 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     variant: {
-      table: { disable: true, category: category.props },
+      table: { disable: true },
       control: 'inline-radio',
     },
     classNames: {
-      table: { disable: true, category: category.props },
+      table: { disable: true },
     },
-    characterLimit: { table: { disable: true, category: category.props } },
+    characterLimit: { table: { disable: true } },
     defaultValue: {
       control: 'text',
-      table: { disable: true, category: category.props },
+      table: { disable: true },
     },
-    description: { table: { disable: true, category: category.props } },
-    errorMessage: { table: { disable: true, category: category.props } },
-    hasSpacing: { table: { disable: true, category: category.props } },
+    description: { table: { disable: true } },
+    errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     helpSvgPath: {
-      table: { disable: true, category: category.props },
+      table: { disable: true },
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    helpText: { table: { disable: true, category: category.props } },
-    hideLabel: { table: { disable: true, category: category.props } },
-    label: { table: { disable: true, category: category.props } },
-    list: { table: { disable: true, category: category.props } },
-    showRequiredMark: { table: { disable: true, category: category.props } },
-    thousandSeparator: { table: { disable: true, category: category.props } },
-    titleHelpSvg: { table: { disable: true, category: category.props } },
+    helpText: { table: { disable: true } },
+    hideLabel: { table: { disable: true } },
+    label: { table: { disable: true } },
+    list: { table: { disable: true } },
+    showRequiredMark: { table: { disable: true } },
+    thousandSeparator: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: {
-      table: { disable: true, category: category.htmlAttribute },
+      table: { disable: true },
       type: 'string',
     },
-    disabled: { table: { disable: true, category: category.htmlAttribute } },
-    form: { table: { disable: true, category: category.htmlAttribute } },
-    inputMode: { table: { disable: true, category: category.htmlAttribute } },
-    name: { table: { disable: true, category: category.htmlAttribute } },
-    maxLength: { table: { disable: true, category: category.htmlAttribute } },
-    minLength: { table: { disable: true, category: category.htmlAttribute } },
-    pattern: { table: { disable: true, category: category.htmlAttribute } },
-    placeholder: { table: { disable: true, category: category.htmlAttribute } },
-    readOnly: { table: { disable: true, category: category.htmlAttribute } },
-    required: { table: { disable: true, category: category.htmlAttribute } },
-    value: { table: { disable: true, category: category.htmlAttribute } },
+    disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
+    inputMode: { table: { disable: true } },
+    name: { table: { disable: true } },
+    maxLength: { table: { disable: true } },
+    minLength: { table: { disable: true } },
+    pattern: { table: { disable: true } },
+    placeholder: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
+    required: { table: { disable: true } },
+    value: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
-    onBlur: { table: { disable: true, category: category.event } },
-    onChange: { table: { disable: true, category: category.event } },
-    onFocus: { table: { disable: true, category: category.event } },
-    onHelpToggle: { table: { disable: true, category: category.event } },
-    onKeyDown: { table: { disable: true, category: category.event } },
+    onBlur: { table: { disable: true } },
+    onChange: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
+    onKeyDown: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
@@ -497,6 +499,41 @@ export const WithDescription = {
     await expect(textbox).toHaveAttribute('aria-describedby');
     const describedbyValue = textbox.getAttribute('aria-describedby');
     await expect(describedbyValue).toMatch(/descId-/);
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'textfield-alert-description-id';
+    return (
+      <>
+        <TextField {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for tekstfeltet'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for tekstfeltet'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = textbox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('textfield-alert-description-id');
   },
 } satisfies Story;
 

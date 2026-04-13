@@ -53,18 +53,21 @@ export function TopBannerExternalAndFooter({
     type: 'Person',
     name: 'Ola Nordmann',
     personId: '10101012345',
+    dateOfBirth: new Date('1984-02-13'),
   };
   const people: Paginated<Person> = {
     total: 2,
     list: [
       {
         name: 'Kenneth Performance Hansen',
-        personId: '(01.01.2001)',
+        personId: '0101200112345',
+        dateOfBirth: new Date('2001-01-01'),
         type: 'Person',
       },
       {
         name: 'Bobby Boblejacke',
-        personId: '(01.01.2001)',
+        personId: '0101200112346',
+        dateOfBirth: new Date('1972-05-17'),
         type: 'Person',
       },
     ],

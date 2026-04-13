@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import React, { type JSX, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -14,6 +14,7 @@ import styles from './Combobox.module.scss';
 export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
   ({
     isOpen,
+    openTrigger,
     isLoading = false,
     spinnerProps,
     displayOptions,
@@ -30,19 +31,47 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     customListRef,
     maxSelected,
     spinnerLabel,
+    onMinSearchLengthDelayChange,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
+    const [showMinSearchLengthText, setShowMinSearchLengthText] =
+      useState(false);
+
+    const isBelowMinSearchLength = searchTerm.length < minSearchLength;
+
+    useEffect(() => {
+      if (!isOpen || minSearchLength === 0 || !isBelowMinSearchLength) {
+        setShowMinSearchLengthText(false);
+        onMinSearchLengthDelayChange?.(false);
+        return;
+      }
+
+      if (openTrigger === 'chevron') {
+        setShowMinSearchLengthText(true);
+        onMinSearchLengthDelayChange?.(true);
+        return;
+      }
+
+      const timeout = setTimeout(() => {
+        setShowMinSearchLengthText(true);
+        onMinSearchLengthDelayChange?.(true);
+      }, 1000);
+
+      return (): void => {
+        clearTimeout(timeout);
+      };
+    }, [
+      isBelowMinSearchLength,
+      isOpen,
+      minSearchLength,
+      openTrigger,
+      onMinSearchLengthDelayChange,
+    ]);
+
     if (!isOpen) {
       return null;
     }
 
-    /* Ikke vis liste hvis søketerm er kortere enn minSearchLength
-    TODO: Implementer løsning for FRONT-2179 */
-    if (searchTerm.length < minSearchLength) {
-      return null;
-    }
-
-    // Vis loading state
     if (isLoading) {
       return (
         <div
@@ -82,7 +111,6 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
               displayOptions={displayOptions}
               comboboxId={comboboxId}
               comboboxState={comboboxState}
-              searchTerm={searchTerm}
               multiple={multiple}
               focusedIndex={focusedIndex}
               handleButtonFocus={handleButtonFocus}
@@ -99,8 +127,17 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       );
     }
 
-    // Vis "ingen resultater" når bruker har søkt men ikke fått treff
-    if (searchTerm && displayOptions.length === 0) {
+    const shouldShowMinSearchLengthMessage =
+      isBelowMinSearchLength && showMinSearchLengthText;
+    const shouldShowNoResultsMessage =
+      !isBelowMinSearchLength && !!searchTerm && displayOptions.length === 0;
+
+    // Vis "skriv minst x tegn" eller "ingen resultater"
+    if (shouldShowMinSearchLengthMessage || shouldShowNoResultsMessage) {
+      const message = shouldShowMinSearchLengthMessage
+        ? t('combobox.minSearchLengthText', { ant: minSearchLength })
+        : t('combobox.NoResults', { searchTerm });
+
       return (
         <div
           ref={customListRef}
@@ -119,7 +156,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
               aria-disabled={'true'}
               className={styles.emptyResult}
             >
-              {t('combobox.NoResults', { searchTerm })}
+              {message}
             </li>
           </ul>
         </div>

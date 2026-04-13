@@ -1,6 +1,7 @@
-import React, { type JSX, useMemo } from 'react';
+import React, { type JSX, useMemo, useRef } from 'react';
 
 import { Divider } from '@skatteetaten/ds-content';
+import { CheckIcon } from '@skatteetaten/ds-icons';
 
 import type { ComboboxOption } from './Combobox.types';
 import {
@@ -21,7 +22,6 @@ interface ComboboxOptionItemProps {
   flatIndex: number;
   comboboxId: string;
   comboboxState: ComboboxState;
-  searchTerm: string;
   multiple: boolean;
   isGroupItem: boolean;
   focusedIndex: number;
@@ -38,7 +38,6 @@ const ComboboxOptionItem = ({
   flatIndex,
   comboboxId,
   comboboxState,
-  searchTerm,
   isGroupItem,
   multiple,
   focusedIndex,
@@ -47,9 +46,8 @@ const ComboboxOptionItem = ({
 }: ComboboxOptionItemProps): JSX.Element => {
   const { isSelected, isDisabled } = getOptionState(option, comboboxState);
 
-  // I enkeltvalg-modus markerer vi option som valgt når label matcher søketekst
-  const isSelectedInSingleMode = !multiple && option.label === searchTerm;
-  const ariaSelected = multiple ? isSelected : isSelectedInSingleMode;
+  const pointerStartRef = useRef<{ x: number; y: number } | null>(null);
+  const isScrolling = useRef(false);
 
   const isFocused = flatIndex === focusedIndex;
 
@@ -58,7 +56,7 @@ const ComboboxOptionItem = ({
       key={option.value}
       id={`${comboboxId}-option-${flatIndex}`}
       role={'option'}
-      aria-selected={ariaSelected ? 'true' : 'false'}
+      aria-selected={isSelected ? 'true' : 'false'}
       aria-disabled={isDisabled ? 'true' : undefined}
       className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isGroupItem ? styles.optionInGroup : ''} ${isFocused ? styles.focused : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
       tabIndex={-1}
@@ -71,7 +69,83 @@ const ComboboxOptionItem = ({
           }
         }
       }}
-      onClick={() => {
+      /**
+       * I multi-select bruker vi Pointer Events (Down/Move/Up) i kombinasjon
+       * med en ref i stedet for onClick for å løse to problemer på mobil:
+       *
+       * 1. "Ghost clicks": Standard onClick på mobil har en forsinkelse (300ms)
+       *    som ofte gjør at raske trykk på rad registreres på feil element
+       *    etter at listen har rendret på nytt.
+       * 2. Scroll vs. Valg: Ved å bruke en 'isScrolling' sjekk, hindrer vi at
+       *    elementet blir valgt når brukeren egentlig bare prøver å scrolle
+       *    over listen (noe onPointerDown alene ville trigget).
+       *
+       * CSS 'touch-action: pan-y' er nødvendig for å fjerne nettleserens
+       * "double-tap to zoom"-forsinkelse, slik at onPointerUp fyrer
+       * umiddelbart.
+       *
+       * I single-select bruker vi vanlig onClick for å unngå click-through og
+       * sideeffekter på første klikk etter valgt option.
+       */
+      onPointerDown={(e) => {
+        if (!multiple) {
+          return;
+        }
+
+        pointerStartRef.current = { x: e.clientX, y: e.clientY };
+        isScrolling.current = false;
+      }}
+      onPointerMove={(e) => {
+        if (!multiple) {
+          return;
+        }
+
+        if (!pointerStartRef.current) {
+          return;
+        }
+
+        const deltaX = Math.abs(e.clientX - pointerStartRef.current.x);
+        const deltaY = Math.abs(e.clientY - pointerStartRef.current.y);
+
+        // Små bevegelser skjer ofte under et vanlig trykk på mobil.
+        // Vi regner det først som scroll når bevegelsen passerer en liten terskel.
+        if (deltaX > 6 || deltaY > 6) {
+          isScrolling.current = true;
+        }
+      }}
+      onPointerUp={(e) => {
+        if (!multiple) {
+          return;
+        }
+
+        // Kun velg hvis brukeren ikke har scrollet
+        if (!isScrolling.current && !isDisabled) {
+          // Hindre at samme trykk utløser en click-event på elementet
+          // som ligger bak dropdownen etter at den er lukket.
+          e.preventDefault();
+          e.stopPropagation();
+
+          handleOptionSelect(option, false);
+        }
+
+        pointerStartRef.current = null;
+        isScrolling.current = false;
+      }}
+      onPointerCancel={() => {
+        if (!multiple) {
+          return;
+        }
+
+        pointerStartRef.current = null;
+        isScrolling.current = false;
+      }}
+      onClick={(e) => {
+        if (multiple) {
+          e.preventDefault();
+          e.stopPropagation();
+          return;
+        }
+
         if (!isDisabled) {
           handleOptionSelect(option, false);
         }
@@ -88,6 +162,9 @@ const ComboboxOptionItem = ({
         className={`${styles.optionLabel} ${isDisabled ? styles.disabled : ''}`.trim()}
       >
         {option.label}
+        {!multiple && isSelected && (
+          <CheckIcon className={styles.checkIcon} aria-hidden={'true'} />
+        )}
       </span>
     </li>
   );
@@ -98,7 +175,6 @@ export interface ComboboxOptionsListContentProps {
   displayOptions: ComboboxOption[];
   comboboxId: string;
   comboboxState: ComboboxState;
-  searchTerm: string;
   multiple: boolean;
   focusedIndex: number;
   handleButtonFocus: (index: number) => void;
@@ -113,7 +189,6 @@ export const ComboboxOptionsListContent = ({
   displayOptions,
   comboboxId,
   comboboxState,
-  searchTerm,
   multiple,
   focusedIndex,
   handleButtonFocus,
@@ -135,7 +210,6 @@ export const ComboboxOptionsListContent = ({
             flatIndex={index}
             comboboxId={comboboxId}
             comboboxState={comboboxState}
-            searchTerm={searchTerm}
             multiple={multiple}
             isGroupItem={hasGroups}
             focusedIndex={focusedIndex}
@@ -183,7 +257,6 @@ export const ComboboxOptionsListContent = ({
                 flatIndex={currentIndex}
                 comboboxId={comboboxId}
                 comboboxState={comboboxState}
-                searchTerm={searchTerm}
                 multiple={multiple}
                 isGroupItem={hasGroups}
                 focusedIndex={focusedIndex}
@@ -206,7 +279,6 @@ export const ComboboxOptionsListContent = ({
               flatIndex={currentIndex}
               comboboxId={comboboxId}
               comboboxState={comboboxState}
-              searchTerm={searchTerm}
               multiple={multiple}
               isGroupItem={hasGroups}
               focusedIndex={focusedIndex}

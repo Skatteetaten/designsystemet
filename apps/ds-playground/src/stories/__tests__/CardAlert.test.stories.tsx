@@ -133,6 +133,12 @@ export const AllVariants = {
   args: {
     ...defaultArgs,
   },
+  parameters: {
+    /*vanligvis legger vi ikke tre alerts i samme card, men har det her for testen sin skyld.
+     * Må slå av siden alle tre henter samme id fra card sin context
+     */
+    htmlValidate: { test: 'off' },
+  },
 } satisfies Story;
 
 export const WithOnClose = {

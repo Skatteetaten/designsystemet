@@ -92,13 +92,13 @@ describe('useComboboxCore', () => {
       );
 
       act(() => {
-        result.current.openDropdown('ab', 'input');
+        result.current.openDropdown('input');
       });
 
       expect(result.current.isOpen).toBe(true);
     });
 
-    it('should not open dropdown when minimum search length is not met (A5)', () => {
+    it('should open dropdown when minimum search length is not met (A5)', () => {
       const { result } = renderHook(() =>
         useComboboxCore({
           ...defaultProps,
@@ -107,10 +107,10 @@ describe('useComboboxCore', () => {
       );
 
       act(() => {
-        result.current.openDropdown('a', 'input');
+        result.current.openDropdown('input');
       });
 
-      expect(result.current.isOpen).toBe(false);
+      expect(result.current.isOpen).toBe(true);
     });
 
     it('should allow click to bypass minimum search length (A5)', () => {
@@ -122,7 +122,7 @@ describe('useComboboxCore', () => {
       );
 
       act(() => {
-        result.current.openDropdown('', 'click');
+        result.current.openDropdown('click');
       });
 
       expect(result.current.isOpen).toBe(true);
@@ -133,7 +133,7 @@ describe('useComboboxCore', () => {
 
       // Open dropdown and set focus
       act(() => {
-        result.current.openDropdown('test', 'input');
+        result.current.openDropdown('input');
         result.current.setFocusedIndex(1);
       });
 
@@ -154,7 +154,7 @@ describe('useComboboxCore', () => {
 
       // Open dropdown
       act(() => {
-        result.current.openDropdown('test', 'input');
+        result.current.openDropdown('input');
       });
 
       expect(result.current.isOpen).toBe(true);
@@ -168,14 +168,14 @@ describe('useComboboxCore', () => {
 
       // Should not reopen on focus
       act(() => {
-        result.current.openDropdown('test', 'focus');
+        result.current.openDropdown('focus');
       });
 
       expect(result.current.isOpen).toBe(false);
 
       // Should reopen on input
       act(() => {
-        result.current.openDropdown('test', 'input');
+        result.current.openDropdown('input');
       });
 
       expect(result.current.isOpen).toBe(true);
@@ -188,7 +188,7 @@ describe('useComboboxCore', () => {
 
       // First open dropdown to enable focus setting
       act(() => {
-        result.current.openDropdown('', 'click');
+        result.current.openDropdown('click');
       });
 
       act(() => {
@@ -203,7 +203,7 @@ describe('useComboboxCore', () => {
 
       // First open dropdown
       act(() => {
-        result.current.openDropdown('', 'click');
+        result.current.openDropdown('click');
       });
 
       // Set focus while open
@@ -243,6 +243,308 @@ describe('useComboboxCore', () => {
       });
 
       expect(result.current.selectedValues).toEqual(newValues);
+    });
+  });
+
+  describe('Focus navigation utilities', () => {
+    describe('moveFocusNext', () => {
+      it('should move focus to next enabled option', () => {
+        const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+        // Open dropdown and set focus to first option
+        act(() => {
+          result.current.openDropdown('click');
+          result.current.setFocusedIndex(0);
+        });
+
+        expect(result.current.focusedIndex).toBe(0);
+
+        // Move to next option
+        act(() => {
+          result.current.moveFocusNext();
+        });
+
+        expect(result.current.focusedIndex).toBe(1);
+      });
+
+      it('should wrap around to first option when at last option', () => {
+        const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+        // Open dropdown and set focus to last option
+        act(() => {
+          result.current.openDropdown('click');
+          result.current.setFocusedIndex(2); // Last option
+        });
+
+        expect(result.current.focusedIndex).toBe(2);
+
+        // Move to next - should wrap to first
+        act(() => {
+          result.current.moveFocusNext();
+        });
+
+        expect(result.current.focusedIndex).toBe(0);
+      });
+
+      it('should skip disabled options when moving next', () => {
+        const { result } = renderHook(() =>
+          useComboboxCore({
+            ...defaultProps,
+            multiple: true,
+            maxSelected: 2,
+          })
+        );
+
+        // Open dropdown and select two options to  disable middle option when max reached
+        act(() => {
+          result.current.openDropdown('click');
+          result.current.setSelectedValues([mockOptions[0], mockOptions[2]]);
+          result.current.setFocusedIndex(0); // First option (selected)
+        });
+
+        // Move next - should skip to option 2 (also selected, so enabled)
+        act(() => {
+          result.current.moveFocusNext();
+        });
+
+        expect(result.current.focusedIndex).toBe(2);
+      });
+
+      it('should handle case when trying to move with no enabled options', () => {
+        // Scenario: maxSelected reached and trying to move from unselected (disabled) option
+        const { result } = renderHook(() =>
+          useComboboxCore({
+            ...defaultProps,
+            multiple: true,
+            maxSelected: 1,
+          })
+        );
+
+        act(() => {
+          result.current.openDropdown('click');
+          // Select first option, making others disabled
+          result.current.setSelectedValues([mockOptions[0]]);
+        });
+
+        // Only selected option should be enabled
+        expect(result.current.enabledIndices).toEqual([0]);
+
+        // Try to move next - should stay at selected option since it's the only enabled one
+        act(() => {
+          result.current.moveFocusNext();
+        });
+
+        expect(result.current.focusedIndex).toBe(0);
+      });
+
+      it('should handle moving from -1 (no focus) to first enabled option', () => {
+        const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+        act(() => {
+          result.current.openDropdown('click');
+        });
+
+        expect(result.current.focusedIndex).toBe(-1);
+
+        act(() => {
+          result.current.moveFocusNext();
+        });
+
+        expect(result.current.focusedIndex).toBe(0);
+      });
+    });
+
+    describe('moveFocusPrevious', () => {
+      it('should move focus to previous enabled option', () => {
+        const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+        // Open dropdown and set focus to second option
+        act(() => {
+          result.current.openDropdown('click');
+          result.current.setFocusedIndex(1);
+        });
+
+        expect(result.current.focusedIndex).toBe(1);
+
+        // Move to previous option
+        act(() => {
+          result.current.moveFocusPrevious();
+        });
+
+        expect(result.current.focusedIndex).toBe(0);
+      });
+
+      it('should wrap around to last option when at first option', () => {
+        const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+        // Open dropdown and set focus to first option
+        act(() => {
+          result.current.openDropdown('click');
+          result.current.setFocusedIndex(0);
+        });
+
+        expect(result.current.focusedIndex).toBe(0);
+
+        // Move to previous - should wrap to last
+        act(() => {
+          result.current.moveFocusPrevious();
+        });
+
+        expect(result.current.focusedIndex).toBe(2);
+      });
+
+      it('should skip disabled options when moving previous', () => {
+        const { result } = renderHook(() =>
+          useComboboxCore({
+            ...defaultProps,
+            multiple: true,
+            maxSelected: 2,
+          })
+        );
+
+        // Open dropdown and select first and third options (makes middle disabled when max reached)
+        act(() => {
+          result.current.openDropdown('click');
+          result.current.setSelectedValues([mockOptions[0], mockOptions[2]]);
+          result.current.setFocusedIndex(2); // Last option (selected)
+        });
+
+        // Move previous - should skip to first selected option
+        act(() => {
+          result.current.moveFocusPrevious();
+        });
+
+        expect(result.current.focusedIndex).toBe(0);
+      });
+
+      it('should handle case when trying to move with no enabled options', () => {
+        // Scenario: maxSelected reached and trying to move from unselected (disabled) option
+        const { result } = renderHook(() =>
+          useComboboxCore({
+            ...defaultProps,
+            multiple: true,
+            maxSelected: 1,
+          })
+        );
+
+        act(() => {
+          result.current.openDropdown('click');
+          // Select first option, making others disabled
+          result.current.setSelectedValues([mockOptions[0]]);
+        });
+
+        // Only selected option should be enabled
+        expect(result.current.enabledIndices).toEqual([0]);
+
+        // Try to move previous - should stay at selected option since it's the only enabled one
+        act(() => {
+          result.current.moveFocusPrevious();
+        });
+
+        expect(result.current.focusedIndex).toBe(0);
+      });
+
+      it('should handle moving from -1 (no focus) to last enabled option', () => {
+        const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+        act(() => {
+          result.current.openDropdown('click');
+        });
+
+        expect(result.current.focusedIndex).toBe(-1);
+
+        act(() => {
+          result.current.moveFocusPrevious();
+        });
+
+        expect(result.current.focusedIndex).toBe(2); // Last option
+      });
+    });
+
+    describe('setFocusedIndex (enhanced)', () => {
+      it('should clamp out-of-bounds index to nearest enabled option', () => {
+        const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+        act(() => {
+          result.current.openDropdown('click');
+          result.current.setFocusedIndex(99); // Way out of bounds
+        });
+
+        // Should clamp to last enabled option
+        expect(result.current.focusedIndex).toBe(2);
+      });
+
+      it('should handle disabled options when setting focus', () => {
+        const { result } = renderHook(() =>
+          useComboboxCore({
+            ...defaultProps,
+            multiple: true,
+            maxSelected: 2,
+          })
+        );
+
+        act(() => {
+          result.current.openDropdown('click');
+          // Select first and last, making middle disabled
+          result.current.setSelectedValues([mockOptions[0], mockOptions[2]]);
+        });
+
+        // Only first and last should be enabled
+        expect(result.current.enabledIndices).toEqual([0, 2]);
+
+        // Try to focus disabled middle option (index 1)
+        act(() => {
+          result.current.setFocusedIndex(1);
+        });
+
+        // Should move to nearest enabled - either 0 or 2
+        // The enhanced setter picks the closest one
+        expect([0, 2]).toContain(result.current.focusedIndex);
+      });
+
+      it('should allow setting focus to -1', () => {
+        const { result } = renderHook(() => useComboboxCore(defaultProps));
+
+        act(() => {
+          result.current.openDropdown('click');
+          result.current.setFocusedIndex(1);
+        });
+
+        expect(result.current.focusedIndex).toBe(1);
+
+        act(() => {
+          result.current.setFocusedIndex(-1);
+        });
+
+        expect(result.current.focusedIndex).toBe(-1);
+      });
+
+      it('should handle setting focus when only one option enabled', () => {
+        const { result } = renderHook(() =>
+          useComboboxCore({
+            ...defaultProps,
+            multiple: true,
+            maxSelected: 1,
+          })
+        );
+
+        act(() => {
+          result.current.openDropdown('click');
+          // Select first option, making others disabled
+          result.current.setSelectedValues([mockOptions[0]]);
+        });
+
+        // Only first option should be enabled
+        expect(result.current.enabledIndices).toEqual([0]);
+
+        // Try to set focus to disabled option
+        act(() => {
+          result.current.setFocusedIndex(1);
+        });
+
+        // Should clamp to only enabled option (0)
+        expect(result.current.focusedIndex).toBe(0);
+      });
     });
   });
 

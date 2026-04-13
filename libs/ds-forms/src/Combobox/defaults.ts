@@ -2,8 +2,10 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { ComboboxSize } from './Combobox.types';
 
-export const getComboboxPlaceholderDefault = (): string =>
-  dsI18n.t('ds_forms:combobox.TypeOrSelect');
+export const getComboboxPlaceholderDefault = (
+  minSearchLength: number
+): string | undefined =>
+  minSearchLength > 0 ? undefined : dsI18n.t('ds_forms:combobox.TypeOrSelect');
 export const getComboboxIsMultiSelectDefault = (): boolean => false;
 export const getComboboxIsLoadingDefault = (): boolean => false;
 export const getComboboxMinSearchLengthDefault = (): number => 0;

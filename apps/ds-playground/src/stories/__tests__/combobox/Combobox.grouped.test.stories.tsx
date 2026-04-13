@@ -50,12 +50,22 @@ const meta = {
     hideLabel: { table: { disable: true } },
     minSearchLength: { table: { disable: true } },
     isLoading: { table: { disable: true } },
+    helpSvgPath: { table: { disable: true } },
+    maxSelected: { table: { disable: true } },
+    spinnerProps: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     spinnerLabel: { table: { disable: true } },
     // HTML attributes
+    accessKey: { table: { disable: true } },
+    form: { table: { disable: true } },
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },
     required: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
+    onBlur: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
     onSelectionChange: { table: { disable: true } },
     onInputChange: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },

@@ -62,8 +62,13 @@ const createDisallowedSymbolsRegex = (
  * @param type - Formattypen å hente maksimallengde for
  * @returns Maksimallengde
  */
-const getMaxLength = (type: FormatTypes): number | undefined => {
-  return maxLengths[type as keyof typeof maxLengths];
+const getMaxLength = (
+  type: FormatTypes,
+  hasDecimal = false,
+  hasMinus = false
+): number | undefined => {
+  const maxLength = maxLengths[type as keyof typeof maxLengths];
+  return maxLength + Number(hasDecimal) + Number(hasMinus);
 };
 
 /**
@@ -76,6 +81,7 @@ const getMaxLength = (type: FormatTypes): number | undefined => {
  * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
  * @param allowDecimals - Om desimaltall er tillatt for type 'number'
  * @param maxFractionDigits - Maks antall desimaler
+ * @param onStatusChange - Callback som kalles med status ved trunkering
  * @returns Renset streng med kun gyldige tegn
  */
 const cleanInput = (
@@ -83,7 +89,8 @@ const cleanInput = (
   type: FormatTypes,
   decimalSeparator: string,
   allowDecimals: boolean,
-  maxFractionDigits: number
+  maxFractionDigits: number,
+  onStatusChange?: (status: FormattedInputStatus) => void
 ): string => {
   const digitsOnly = /[^\d]/g;
   const escapedDecimal = escapeRegExp(decimalSeparator);
@@ -91,20 +98,32 @@ const cleanInput = (
   const digitsAndMinus = /[^\d-]|(?!^)-/g;
 
   let cleanedInput: string;
+
   if (type === 'number') {
     cleanedInput = allowDecimals
       ? input.replace(digitsAndDecimal, '')
       : input.replace(digitsAndMinus, '');
 
     if (allowDecimals) {
+      const decimalCount = (
+        cleanedInput.match(new RegExp(escapeRegExp(decimalSeparator), 'g')) ||
+        []
+      ).length;
       cleanedInput = removeDuplicateCharsExceptFirstOccurrence(
         cleanedInput,
         decimalSeparator
       );
+      if (decimalCount > 1) {
+        onStatusChange?.('duplicateDecimalSeparator');
+      }
 
       const parts = cleanedInput.split(decimalSeparator);
       if (parts.length === 2) {
+        const originalDecimalLength = parts[1].length;
         parts[1] = parts[1].substring(0, maxFractionDigits);
+        if (parts[1].length < originalDecimalLength) {
+          onStatusChange?.('maxDecimalsReached');
+        }
         cleanedInput = parts.join(decimalSeparator);
       }
     }
@@ -112,9 +131,14 @@ const cleanInput = (
     cleanedInput = input.replace(digitsOnly, '');
   }
 
-  const maxLength = getMaxLength(type);
+  const hasDecimal = cleanedInput.includes(decimalSeparator);
+  const hasMinus = cleanedInput.includes('-');
+  const maxLength = getMaxLength(type, hasDecimal, hasMinus);
   if (maxLength && cleanedInput.length > maxLength) {
     cleanedInput = cleanedInput.substring(0, maxLength);
+    if (type === 'number') {
+      onStatusChange?.('maxDigitsReached');
+    }
   }
   return cleanedInput;
 };
@@ -160,6 +184,13 @@ function countIntegerDigits(
   return Math.max(decimalIndex, 1);
 }
 
+/** Status for validering av input i useFormattedInput-hooken. */
+export type FormattedInputStatus =
+  | 'valid'
+  | 'maxDigitsReached'
+  | 'maxDecimalsReached'
+  | 'duplicateDecimalSeparator';
+
 /** Konfigurasjonsalternativer for useFormattedInput-hooken. */
 interface UseFormattedInputOptions {
   /** Typen formattering som skal anvendes */
@@ -189,6 +220,8 @@ interface UseFormattedInputReturn {
    * Returnerer NaN for ugyldig input.
    */
   numberValue: number | undefined;
+  /** Status for validering. Kun relevant for type 'number'. */
+  status: FormattedInputStatus;
 }
 
 /**
@@ -296,9 +329,11 @@ export const useFormattedInput = ({
   type,
   initialValue = '',
   locale = 'nb-NO',
-  allowDecimals = false,
+  allowDecimals: allowDecimalsExternal = false,
   maxFractionDigits: maxFractionDigitsExternal = DEFAULT_MAX_FRACTION_DIGITS,
 }: UseFormattedInputOptions): UseFormattedInputReturn => {
+  const allowDecimals =
+    maxFractionDigitsExternal > 0 ? allowDecimalsExternal : false;
   const maximumFractionDigits = allowDecimals ? maxFractionDigitsExternal : 0;
   const localeRef = useRef(locale);
   const numberParser = useMemo(() => new NumberParser(locale), [locale]);
@@ -325,6 +360,7 @@ export const useFormattedInput = ({
       maximumFractionDigits
     );
   });
+  const [status, setStatus] = useState<FormattedInputStatus>('valid');
   const hasDecimal = rawValue.includes(decimalSeparator);
 
   const onLocaleChange = useEffectEvent((locale: string) => {
@@ -556,6 +592,7 @@ export const useFormattedInput = ({
       const isAnyModifierKeyPressed = isModifierKeyPressed(event);
 
       inputHistory.initialize(value, cursorPosition);
+      setStatus('valid');
 
       if (
         (event.ctrlKey || event.metaKey) &&
@@ -620,7 +657,7 @@ export const useFormattedInput = ({
         }
       }
 
-      const maxLength = getMaxLength(type);
+      const maxLength = getMaxLength(type, hasDecimal);
       if (
         maxLength &&
         rawValue.length >= maxLength &&
@@ -629,6 +666,45 @@ export const useFormattedInput = ({
         selectionLength === 0
       ) {
         event.preventDefault();
+        if (type === 'number') {
+          setStatus('maxDigitsReached');
+        }
+      }
+
+      // Hindre å legge inn flere desimaler hvis maks antall desimaler er nådd
+      if (
+        type === 'number' &&
+        allowDecimals &&
+        hasDecimal &&
+        /^[0-9]$/.test(event.key) &&
+        !isAnyModifierKeyPressed &&
+        selectionLength === 0
+      ) {
+        const decimalIndex = value.indexOf(decimalSeparator);
+        const isCursorAfterDecimal = cursorPosition > decimalIndex;
+        if (isCursorAfterDecimal) {
+          const currentDecimalDigits = countDecimalDigits(
+            rawValue,
+            decimalSeparator,
+            maximumFractionDigits + 1
+          );
+          if (currentDecimalDigits >= maximumFractionDigits) {
+            event.preventDefault();
+            setStatus('maxDecimalsReached');
+          }
+        }
+      }
+      // Hindre å legge inn desimalskilletegn hvis det allerede finnes ett
+      if (
+        type === 'number' &&
+        allowDecimals &&
+        hasDecimal &&
+        event.key === decimalSeparator &&
+        !isAnyModifierKeyPressed &&
+        selectionLength === 0
+      ) {
+        event.preventDefault();
+        setStatus('duplicateDecimalSeparator');
       }
     },
     [
@@ -643,6 +719,10 @@ export const useFormattedInput = ({
       handleBackspaceAtSeparator,
       handleDeleteAtSeparator,
       handleDeleteAtDigit,
+      hasDecimal,
+      allowDecimals,
+      decimalSeparator,
+      maximumFractionDigits,
     ]
   );
 
@@ -661,7 +741,8 @@ export const useFormattedInput = ({
         type,
         decimalSeparator,
         allowDecimals,
-        maximumFractionDigits
+        maximumFractionDigits,
+        setStatus
       );
       setRawValue(cleanedInput);
 
@@ -734,5 +815,6 @@ export const useFormattedInput = ({
     onKeyDown: handleKeyDown,
     rawValue,
     numberValue: type === 'number' ? numberParser.parse(rawValue) : undefined,
+    status,
   };
 };

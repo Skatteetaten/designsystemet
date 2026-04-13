@@ -1,6 +1,7 @@
 import { JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
+import { userEvent, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
 
@@ -44,6 +45,8 @@ const meta = {
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },
     required: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onFocus: { table: { disable: true } },
@@ -99,8 +102,8 @@ export const Option = {
         searchTerm={''}
         minSearchLength={0}
         selectedValues={[]}
-        comboboxId={''}
-        listId={''}
+        comboboxId={'combo'}
+        listId={'list'}
         focusedIndex={0}
         handleButtonFocus={(): void => console.log('Handle button focus')}
         handleOptionSelect={(): void => console.log('Handle option select')}
@@ -119,3 +122,19 @@ export const Option = {
     },
   },
 };
+
+export const WithSelectedOption = {
+  name: 'With Selected Option',
+  args: {
+    ...defaultArgs,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await userEvent.click(inputElement);
+  },
+} satisfies Story;

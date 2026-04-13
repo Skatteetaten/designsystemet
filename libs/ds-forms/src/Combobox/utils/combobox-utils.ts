@@ -21,7 +21,7 @@ export const filterOptions = (
   if (!searchTerm) return filteredOptions;
 
   return filteredOptions.filter((option) =>
-    option.label.toLowerCase().includes(searchTerm.trim().toLowerCase())
+    option.label.toLowerCase().startsWith(searchTerm.trim().toLowerCase())
   );
 };
 
@@ -89,6 +89,10 @@ export interface SelectionBehavior {
   resetFocusIndex: boolean;
   /** Whether to delay focus return to input. Mouse: true, Keyboard: false */
   delayedFocus: boolean;
+}
+
+export interface PendingFocusTarget {
+  optionValue: ComboboxOption['value'];
 }
 
 /**
@@ -233,6 +237,8 @@ const triggerSelectionCallback = (
  * @param config.setSearchTerm - Function to update search input state
  * @param config.setFocusedIndex - Function to update focused option index
  * @param config.inputRef - Ref to the input element for focus management
+ * @param config.setPendingFocusTarget - Function to queue focus remapping after
+ *   filtering is cleared
  * @param config.onSelectionChange - Optional callback for selection changes
  * @param config.maxSelected - Optional maximum number of selections allowed
  */
@@ -245,6 +251,7 @@ const selectMultipleOption = (
     setSearchTerm,
     setFocusedIndex,
     inputRef,
+    setPendingFocusTarget,
     onSelectionChange,
     maxSelected,
   }: {
@@ -254,6 +261,7 @@ const selectMultipleOption = (
     setSearchTerm: (term: string) => void;
     setFocusedIndex: (index: number) => void;
     inputRef: React.RefObject<HTMLInputElement | null>;
+    setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
   }
@@ -289,6 +297,10 @@ const selectMultipleOption = (
   // Handle focus management
   handleSelectionFocus(behavior, setFocusedIndex, inputRef);
 
+  if (!behavior.resetFocusIndex) {
+    setPendingFocusTarget?.({ optionValue: option.value });
+  }
+
   // Trigger callback
   triggerSelectionCallback(newSelectedValues, onSelectionChange, true);
 };
@@ -300,31 +312,40 @@ const selectMultipleOption = (
  * @param option - The option being selected
  * @param config - Configuration object containing state and handlers for
  *   single-select
+ * @param config.setSelectedValues - Function to update selected values state
  * @param config.setSearchTerm - Function to update search input state
  * @param config.closeDropdown - Function to close the dropdown
  * @param config.setFocusedIndex - Function to update focused option index
+ * @param config.inputRef - Ref to input element for focus management
  * @param config.onSelectionChange - Optional callback for selection changes
  */
 const selectSingleOption = (
   option: ComboboxOption,
   {
+    setSelectedValues,
     setSearchTerm,
     closeDropdown,
     setFocusedIndex,
+    inputRef,
     onSelectionChange,
   }: {
+    setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
+    inputRef: React.RefObject<HTMLInputElement | null>;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
   }
 ): void => {
+  // Track selected option state in single-select mode
+  setSelectedValues([option]);
+
   // Update search term to selected option label
   setSearchTerm(option.label);
 
-  // Close dropdown and reset focus
   closeDropdown();
   setFocusedIndex(-1);
+  setTimeout(() => inputRef.current?.focus(), 0);
 
   // Trigger callback with selected option
   triggerSelectionCallback(option, onSelectionChange, false);
@@ -346,6 +367,8 @@ const selectSingleOption = (
  * @param config.closeDropdown - Function to close the dropdown
  * @param config.setFocusedIndex - Function to update focused option index
  * @param config.inputRef - Ref to the input element for focus management
+ * @param config.setPendingFocusTarget - Function to queue focus remapping after
+ *   filtering is cleared
  * @param config.onSelectionChange - Optional callback for selection changes
  * @param config.maxSelected - Optional maximum number of selections allowed
  */
@@ -360,6 +383,7 @@ export const selectOption = (
     closeDropdown,
     setFocusedIndex,
     inputRef,
+    setPendingFocusTarget,
     onSelectionChange,
     maxSelected,
   }: {
@@ -371,6 +395,7 @@ export const selectOption = (
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
     inputRef: React.RefObject<HTMLInputElement | null>;
+    setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
   }
@@ -383,14 +408,17 @@ export const selectOption = (
       setSearchTerm,
       setFocusedIndex,
       inputRef,
+      setPendingFocusTarget,
       onSelectionChange,
       maxSelected,
     });
   } else {
     selectSingleOption(option, {
+      setSelectedValues,
       setSearchTerm,
       closeDropdown,
       setFocusedIndex,
+      inputRef,
       onSelectionChange,
     });
   }

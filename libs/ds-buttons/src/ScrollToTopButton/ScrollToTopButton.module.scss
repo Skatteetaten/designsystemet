@@ -50,6 +50,7 @@
   }
 
   &IconContainer {
+    display: block;
     width: var(--spacing-xl);
     height: var(--spacing-xl);
     border: solid 2px var(--semantic-interactive-main);
@@ -77,6 +78,7 @@
   }
 
   &Label {
+    display: block;
     padding: var(--spacing-xs) var(--spacing-s);
     border-radius: 999px;
     background: var(--palette-graphite-0);

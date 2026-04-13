@@ -144,7 +144,11 @@ export const Table = (({
         setRowInEditModeId: setInternalRowInEditModeId,
       }}
     >
-      <div ref={wrapperRef} className={wrapperClassName}>
+      <div
+        ref={wrapperRef}
+        className={wrapperClassName}
+        tabIndex={isTableScrollable ? 0 : undefined}
+      >
         <table
           ref={ref}
           id={id}

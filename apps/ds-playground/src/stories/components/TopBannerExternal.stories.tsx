@@ -129,6 +129,7 @@ export const ExampleWithRolePicker: Story = {
     const me: Person = {
       name: 'Ola Nordmann',
       personId: '10101012345',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
     };
 
@@ -553,21 +554,40 @@ export const ExampleWithUserMenu: Story = {
     const me: Person = {
       name: 'Ola Nordmann',
       personId: '10101012345',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
     };
 
-    const others: Paginated<Person> = {
-      total: 2,
+    const people: Paginated<Person> = {
+      total: 4,
       list: [
         {
-          name: 'Kari Nordmann',
-          personId: '10107554321',
+          name: 'Antikvitet presis',
+          personId: '13889999726',
+          dateOfBirth: new Date('1964-02-28'),
           type: 'Person',
+          isDeleted: false,
         },
         {
-          name: 'Ola Hansen',
-          personId: '10108167890',
+          name: 'Bønne elegant',
+          personId: '18849574503',
+          dateOfBirth: new Date('1932-10-10'),
           type: 'Person',
+          isDeleted: true,
+        },
+        {
+          name: 'Lomme filosofisk',
+          personId: '08889674513',
+          dateOfBirth: new Date('1944-01-26'),
+          type: 'Person',
+          isDeleted: true,
+        },
+        {
+          name: 'Adelsmann varm',
+          personId: '14892449911',
+          dateOfBirth: new Date('1981-07-04'),
+          type: 'Person',
+          isDeleted: false,
         },
       ],
     };
@@ -958,7 +978,7 @@ export const ExampleWithUserMenu: Story = {
         <RolePicker
           ref={modalRef}
           me={me}
-          people={others}
+          people={people}
           businesses={businesses}
           onEntitySelect={async (entity) => {
             let role: User['role'];
