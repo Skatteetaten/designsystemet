@@ -87,7 +87,6 @@
     "@babel/preset-typescript": "7.26.0",
     "@chromatic-com/storybook": "5.0.1",
     "@eslint/compat": "1.2.6",
-    "@eslint/eslintrc": "3.2.0",
     "@eslint/js": "9.19.0",
     "@nx/devkit": "22.6.5",
     "@nx/eslint": "22.6.5",
