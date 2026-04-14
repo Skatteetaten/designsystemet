@@ -1,0 +1,115 @@
+---
+title: Table
+---
+
+## Formål med komponenten
+
+Table brukes for å organisere og presentere data på en strukturert måte i rekker og kolonner. Tabellen gjør det enkelt å sammenligne data og gir brukeren oversikt når informasjonen naturlig hører sammen i et tabellformat.
+
+## Når bruke komponenten
+
+- Når du skal vise data som egner seg for sammenligning i rader og kolonner.
+- Når informasjonen kan struktureres som en datasamling med tydelige attributter.
+- Når tabellariske data er mest effektiv måte å formidle innholdet på.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk tabell for å strukturere generelt innhold på en side — bruk riktig sidelayout-komponent.
+- Ikke bruk til store mengder data på mobil, der tabeller kan bli vanskelige å lese og krever horisontal scrolling.
+
+## Hvorfor anbefalingene finnes?
+
+> - Tabeller er sterke for sammenligning av strukturerte data, men svake for lange fritekster. Å styre bruk mot korte celler gir bedre lesbarhet og bedre UU.
+> - `<caption>` er påkrevd fordi skjermlesere trenger et navn på tabellen for å gi brukeren kontekst. En tabell uten caption er vanskelig å identifisere i et dokument.
+> - Vi prioriterer forutsigbar tabellatferd (sortering, tastatur, caption) fremfor maksimal frihet, for å sikre konsistente og tilgjengelige tabeller på tvers av løsninger.
+
+## Varianter (og når bruke dem)
+
+## TODO: Size-beskrivelse
+
+### Standard
+
+- Normal tekststørrelse og standard avstand.
+- Egnet for de fleste visninger.
+
+### Kompakt
+
+- Redusert tekststørrelse og mindre luft.
+- Egnet når det er begrenset plass, eller når mye data må vises samtidig.
+- Unnga at lange tekster bryter lesbarheten: vurder forkorting med tydelig tilgang til full tekst (for eksempel ekspanderbar rad eller detaljvisning).
+
+Alle tabeller kan:
+
+- vise kolonneoverskrifter (`th`)
+- sortere kolonner
+- tilpasse seg nødvendig bredde basert på innhold
+
+## Plassering og justering
+
+- Tabellen skal vises i den bredden innholdet krever.
+- På små skjermer vil:
+  - endre‑ikon flyttes til venstre
+  - tabellen få horisontal scrolling
+- Ekspanderbare rader kan brukes for å vise mer informasjon uten å overlesse tabellen.
+
+## Interaksjon og tilstander
+
+### Ekspanderbare rader
+
+- Rader kan åpnes og lukkes for å vise relatert innhold.
+- Bruk de innebygde knappene til åpne/lukke — ikke bruk radklikk eller egne knapper.
+- Gir brukeren mulighet til å se detaljer uten å forlate tabellen.
+
+### Redigering i tabell
+
+- Rader kan gjøres redigerbare.
+- Brukeren må fullføre redigering av én rad før en annen kan redigeres.
+- Bruk `isNew` for nye rader — dette skjuler hjelpetekst som kun er relevant ved redigering.
+
+### Sortering
+
+- Kolonner skal kunne sorteres med tastatur.
+- Sorteringsstatus (stigende, synkende) skal kunne oppfattes med skjermleser.
+
+## Tekst og språkbruk
+
+- Kolonneoverskrifter skal være korte, presise og beskrivende.
+- Unngå unødvendige forkortelser.
+- Vurder om radoverskrifter er nødvendig for å gjøre tabellen mer forståelig.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Bruk `<th>` for kolonneoverskrifter og eventuelt radoverskrifter.
+- Bruk `scope="col"` og `scope="row"` for å tydeliggjøre struktur.
+- Tomme celler skal bruke `<td>`, ikke `<th>`.
+- Tabeller skal alltid ha et `<caption>` som beskriver tabellen:
+  - som standard er dette visuelt skjult, men tilgjengelig for skjermlesere
+  - kan vises visuelt ved behov
+- Test at skjermlesere:
+  - leser hvilke kolonner som er sorterbare
+  - formidler sorteringsstatus
+  - beholder fokus ved sortering
+- Sjekk tastaturnavigasjon for interaksjonselementer i tabellen.
+
+## Do
+
+- Bruk tabell når data skal sammenlignes.
+- Bruk caption for å forklare hva tabellen viser.
+- Test tabellen på mobil for å sikre god lesbarhet.
+- Bruk ekspanderbare rader for å holde tabellen ryddig.
+
+## Don’t
+
+- Ikke bruk tabell for layout eller generell innholdsstruktur.
+- Ikke bruk tabell når innholdet er bedre egnet som lister eller tekst.
+- Ikke fyll tabellen med lange tekster som gjør den vanskelig å lese.
+
+## [ENDRING 2026-03-25] Eksempel (sett inn her)
+
+- [ENDRING] Eksempel inn her: sorterbar tabell med caption, ekspanderbare rader og handtering av lange celleverdier.
+
+## Relaterte komponenter
+
+- [Pagination](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/)
+- [SearchField](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/)
+- [List](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/list/)

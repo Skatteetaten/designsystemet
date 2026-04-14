@@ -1,0 +1,91 @@
+---
+title: Link
+---
+
+## Formål med komponenten
+
+Link brukes for å navigere brukeren til filer, interne sider, eksterne sider eller andre steder på samme side. Den skal kommunisere tydelig hva som skjer når brukeren klikker.
+
+## Når bruke komponenten
+
+- Når du skal lenke til en side internt eller eksternt.
+- Når brukeren skal åpne en fil, faner eller laste ned innhold.
+- Når du skal lenke til et annet sted på samme side.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk Link til handlinger som skjer på samme side, som «Lagre» eller «Send inn».  
+  Bruk [[InlineButton]] i stedet.
+- Ikke bruk Link i lister med flere lenker — bruk [[LinkGroup]].
+
+## Hvorfor anbefalingene finnes?
+
+> - To visuelle signaler (farge + understreking) er nødvendig fordi kun farge ikke er tilstrekkelig for å skille lenker fra tekst for brukere med fargeblindhet (WCAG 1.4.1).
+> - Unike lenketekster er påkrevd fordi skjermleserbrukere kan hoppe mellom lenker alfabetisk. «Les mer» × 5 gir ingen informasjon om destinasjon.
+> - Åpning i ny fane er begrenset til klart begrunnede unntak fordi det tar fra brukeren kontrollen over nettleseren og forstyrrer navigasjonshistorikken.
+
+## Varianter (og når bruke dem)
+
+### Vanlig lenke
+
+- Standardvariant for lenker i brødtekst eller som stående lenke.
+
+### Ekstern lenke
+
+- Skal alltid brukes når brukeren sendes til en ekstern nettside.
+
+### Lenke med ikon
+
+- Ikonet ligger til venstre og viser hva slags handling brukeren kan forvente.
+- Ikonet er dekorativt og skjules for skjermleser.
+
+## Plassering og justering
+
+- Lenker kan brukes i tekst, menyer, navigasjon eller som enkeltstående element.
+- Lenker skal som hovedregel åpnes i **samme vindu** for å sikre forutsigbarhet.
+- Åpning i ny fane brukes kun når:
+  - brukeren ellers risikerer å miste påbegynt innhold (f.eks. i skjema),
+  - lenken leder til innhold brukeren trenger for å fullføre en oppgave (f.eks. veiledning).
+
+## Interaksjon og tilstander
+
+- Lenker skal kommunisere tydelig at de er klikkbare.
+- Eksterne lenker skal bruke ikon og tekstindicering når de åpnes i ny fane:  
+  `(åpnes i ny fane)`.
+
+## Tekst og språkbruk
+
+- Lenker skal være selvforklarende og gi mening også isolert.
+- Unngå generiske tekster som «Gå til», «Klikk her», «Les mer».
+- Bruk tydelige triggerord tidlig i lenketeksten.
+- Alle lenker på samme side må ha unike lenketekster.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Lenker skal ha minst to visuelle signaler (vi bruker blå farge + understreking).
+- Kontrastkrav:
+  - Minst **4.5:1** for vanlig tekst.
+  - Minst **3.0:1** for stor tekst (over 24 px, eller 19 px i bold).
+- Lenketekst eller alternativ tekst (for grafiske lenker) skal tydelig fortelle målet med lenken.
+
+## Do
+
+- Skriv tydelige, selvforklarende lenketekster.
+- Bruk ekstern lenke‑variant for lenker som går utenfor løsningen.
+- Informer alltid når lenker åpner i ny fane.
+
+## Don’t
+
+- Ikke bruk Link til handlinger — bruk knapper i stedet ([[InlineButton]], [[Button]]).
+- Ikke bruk samme lenketekst for ulike lenkemål.
+- Ikke bruk generiske formuleringer som «Les mer».
+
+## Relaterte komponenter
+
+- [LinkGroup](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/linkgroup/)
+- [InlineButton](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/inlinebutton/)
+- [Icon](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/icon/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/link/

@@ -1,0 +1,97 @@
+---
+title: RoleBanner
+---
+
+## Formål med komponenten
+
+RoleBanner brukes i innloggede publikumsløsninger for tydelig å vise hvem brukeren representerer — seg selv, en virksomhet eller en annen person. Den skaper trygghet i konteksten og reduserer risikoen for at brukeren utfører handlinger på vegne av feil aktør.
+
+## Når bruke komponenten
+
+- Når brukeren er logget inn i en publikumsløsning.
+- Når brukeren representerer andre enn seg selv (person eller virksomhet).
+- Når innlogget bruker skal vises i skjema eller prosesser, og toppbanneret ikke viser denne informasjonen.
+- Når brukerens representasjon må være synlig uansett hvor langt ned på siden de scroller.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk i interne systemer — disse har andre mekanismer for rollevisning.
+- Ikke bruk for feilmeldinger eller varselmeldinger — bruk mønster for systemvarsler.
+- Ikke bruk før identiteten/rollen til brukeren er kjent.
+- Ikke bruk når representasjon allerede vises tydelig i toppbanner og det ikke finnes isolert prosessvisning.
+
+## Hvorfor anbefalingene finnes?
+
+> **[FORSLAG 2026-03-25]** _Teksten er foreslått — gjennomgå og tilpass._
+>
+> - Gul sticky banner er valgt for representasjonsvisning fordi det er kritisk at brukeren alltid vet hvem de handler på vegne av. Feil representasjon kan ha juridiske og økonomiske konsekvenser.
+> - Grå variant brukes når brukeren representerer seg selv fordi det er informativt, men ikke like kritisk — vi bruker visuell vekting bevisst for å formidle viktighet.
+> - Vi anbefaler ikke RoleBanner før identiteten er kjent for å unngå at en tom eller feil representasjon vises — det kan skape forvirring og feil handling.
+
+## Varianter (og når bruke dem)
+
+### Bakgrunnsfarger
+
+- **Gul:** Brukes når brukeren representerer noen andre (virksomhet eller annen person).  
+  Gir sterkere visuell oppmerksomhet.
+- **Grå:** Brukes når brukeren representerer seg selv, særlig i isolerte prosesser der toppbanneret er redusert.
+
+### Sticky (standard) og ikke-sticky
+
+- **Sticky:** Anbefalt som standard. Banneret følger med når brukeren scroller, slik at representasjonen alltid er synlig.
+- **Ikke-sticky:** Kan brukes i tilfeller der persistent visning ikke er ønskelig eller nødvendig.
+
+## Plassering og justering
+
+- Plasseres øverst under toppbanneret i innloggede løsninger.
+- Bruk sticky‑modus når bruker representerer andre, for å gi kontinuerlig kontekst.
+- I spesielle prosesser uten toppbanner: vis kun språkvelger og «Logg ut», og bruk grå variant for å vise innlogget bruker.
+
+## Interaksjon og tilstander
+
+- Rollen vises kun når brukeren er innlogget.
+- Banneret endres avhengig av om brukeren representerer seg selv eller andre.
+- Ved representasjon av andre:
+  - Bruk gul variant
+  - Bruk sticky‑modus
+  - Behold full topplinje (meny, brukerknapp, søk)
+- Ved isolerte prosesser:
+  - Skjul meny og brukerknapp
+  - Vis språkvelger og «Logg ut»
+  - Bruk grå variant av RoleBanner
+
+## Tekst og språkbruk
+
+- Teksten skal være tydelig og direkte: «Du representerer …».
+- Rolleangivelsen skal være kort, korrekt og lett å skanne.
+- Unngå tekniske betegnelser eller intern terminologi brukeren ikke kjenner.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Banneret skal vises på et konsistent og forutsigbart sted.
+- Representasjonen må formidles både visuelt og semantisk.
+- Fargebruk skal være tydelig, men teksten må fortsatt ha høy kontrast.
+- Sticky‑modus må ikke skjule viktig innhold eller forstyrre navigasjon.
+
+## Do
+
+- Bruk gul variant når brukeren representerer andre.
+- Bruk sticky‑modus for å holde rollevisning synlig.
+- Vis banneret kun etter innlogging.
+- For isolerte oppgaver: bruk grå variant og forenklet topp.
+
+## Don’t
+
+- Ikke bruk i interne løsninger.
+- Ikke bruk RoleBanner som feilmeldingskomponent.
+- Ikke bruk før identiteten og rollen til brukeren er kjent.
+
+## Relaterte komponenter
+
+- [TopBannerExternal](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/)
+- [Alert](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/alert/)
+- [RolePicker](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolepicker/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolebanner/

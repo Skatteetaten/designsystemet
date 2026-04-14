@@ -1,0 +1,86 @@
+---
+title: Icon
+---
+
+## Formål med komponenten
+
+Icon brukes for å spare plass, forenkle navigasjon og gi visuell støtte til tekstlig innhold. Ikoner skal hjelpe brukeren å oppfatte funksjon, handling eller tema raskere enn ren tekst alene.
+
+## Når bruke komponenten
+
+- Når et ikon kan forenkle navigasjonen.
+- Når ikoner gir tydelig visuell støtte til tekstlig innhold.
+- Når du trenger en visuell markør for handlinger, kategorier eller seksjoner.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk ikoner kun som dekorasjon uten funksjon.
+- Ikke bruk temaikoner som interaktive elementer, bortsett fra:
+  - som del av en forsideknapp
+  - som del av en seksjon eller et innholdskort der andre interaksjonselementer ligger ved siden av
+
+## Hvorfor anbefalingene finnes?
+
+> - Meningsbærende ikoner uten tekstalternativ er usynlige for skjermleserbrukere og brukere med svaksyn. Vi krever [[aria-label]] eller `title` for å sikre at funksjonen kommuniseres til alle.
+> - Dekorative ikoner skal skjules for skjermlesere ([[aria-hidden]]) for å unngå unnødvendig støy i lesingen.
+> - Vi skiller mellom systemikoner (handlinger/navigasjon) og temaikoner (seksjonsmarkering) fordi de har ulike størrelser, formater og brukskontekster — konsekvent bruk gjør grensesnittet mer forut sigbart.
+
+## Varianter (og når bruke dem)
+
+### Systemikoner
+
+- Små og enkle ikoner.
+- Brukes til handlinger (lagre, skrive ut, favoritt) eller for å markere innholdstyper.
+- Passer i navigasjon og knapper.
+
+### Temaikoner
+
+- Mer detaljerte og større enn systemikoner.
+- Brukes sammen med overskrifter i starten av en temaseksjon.
+- Anbefalt størrelse: **48 px og oppover**.
+- Skal ikke brukes som knapper.
+
+## Plassering og justering
+
+- Ikoner i grensesnittet skal brukes konsekvent og med tydelig formål.
+- Temaikoner plasseres i kontekst sammen med seksjonstitler.
+- Systemikoner skal integreres i handlinger, menyer og knapper der det er naturlig.
+
+## Interaksjon og tilstander
+
+- Ikoner kan være dekorative eller meningsbærende.
+- Ikoner med `title` viser tooltip ved hover.
+- Ikoner som uttrykker en handling (systemikoner) skal ha riktig semantikk hvis de er interaktive.
+
+## Tekst og språkbruk
+
+- Ikoner som formidler informasjon eller funksjon skal ha et tekstalternativ (`aria-label` eller `title`).
+- Dekorative ikoner skal skjules for skjermleser (`aria-hidden="true"`).
+
+## Tilgjengelighet (UU / WCAG)
+
+- Meningsbærende ikoner må ha tekstalternativ.
+- Dekorative ikoner skal skjules for skjermlesere.
+- Ikon og bakgrunn må ha tilstrekkelig kontrast (minst WCAG 3.0 for ikoner).
+
+## Do
+
+- Bruk ikoner for å tydeliggjøre handlinger og innhold.
+- Bruk temaikoner for å støtte seksjonsinndeling.
+- Sikre riktig semantikk og kontrast.
+
+## Don’t
+
+- Ikke bruk ikoner som ren pynt.
+- Ikke bruk temaikoner som interaktive elementer.
+- Ikke bruk ikoner uten nødvendig tekstalternativ dersom de er meningsbærende.
+
+## Relaterte komponenter
+
+- [Button](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/button/)
+- [IconButton](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/iconbutton/)
+- [NavigationTile](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/icon/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/icon/

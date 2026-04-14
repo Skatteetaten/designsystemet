@@ -1,0 +1,86 @@
+---
+title: IconButton
+---
+
+## Formål med komponenten
+
+IconButton brukes til mindre fremtredende handlinger, særlig der det er lite plass, eller der funksjonen er så innlysende at den ikke trenger tekstlig forklaring. Den gir en effektiv og kompakt måte å utføre handlinger på.
+
+## Når bruke komponenten
+
+- Når du vil hjelpe brukeren å huske tilgjengelige handlinger, f.eks. en print‑knapp.
+- Når plass er begrenset.
+- Når en ikon‑basert handling er tydelig nok uten tekst.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk når handlingen er viktig eller sentral — bruk da vanlig Button.
+- Ikke bruk når ikonet alene ikke tydelig kommuniserer funksjonen — bruk InlineButton.
+
+## Hvorfor anbefalingene finnes?
+
+> - `disabled`-tilstand anbefales ikke fordi lav kontrast gjør den vanskelig å se, og skjermlesere kan ignorere deaktiverte elementer. En aktiv knapp med forklaring er mer tilgjengelig.
+> - Ikonet alene er ikke alltid selvforklarende, og riktig `aria-label` eller `title` sikrer at alle brukere forstår funksjonen — incluktivt sansehemmede og brukere som når ikoner med tastatur.
+> - Vi skiller mellom IconButton (kompakt isolert handling) og [[Button]] (sentral handling) for å bevare et konsistent knapphierarki på tvers av løsninger.
+
+## Varianter (og når bruke dem)
+
+IconButton finnes i to hovedvarianter:
+
+### Med sirkel
+
+- Tar mer oppmerksomhet.
+- Passer når handlingen skal være mer synlig.
+
+### Uten sirkel
+
+- Mindre fremtredende.
+- Passer når du vil minimere visuell støy.
+
+Varianter finnes også i flere størrelser; størrelse og sirkel påvirker synligheten.
+
+## Plassering og justering
+
+- Bruk IconButton der handlinger skal være lett tilgjengelige uten å ta mye plass.
+- Plasser knappen tett på innholdet den hører til, f.eks. i kort, tabeller eller små seksjoner.
+
+## Interaksjon og tilstander
+
+- Ikonet fungerer som klikkflate.
+- Bruk `title` for å vise forklarende tekst som tooltip.
+- Skal ikke brukes som lenke til andre sider — kun punkt‑handlinger.
+
+## Tekst og språkbruk
+
+- Gi alltid meningsbærende IconButtons et forklarende `title` eller `aria-label`.
+- Unngå tvetydige ikoner som brukerne ikke umiddelbart forstår.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Bruk `title` eller `aria-label` for å beskrive knappens funksjon for skjermlesere.
+- Ikke bruk inaktiv (disabled) IconButton:
+  - Lav kontrast kan gjøre den vanskelig å se.
+  - Endring fra inaktiv til aktiv kan overses.
+  - Noen skjermlesere ignorerer inaktive elementer.
+
+## Do
+
+- Bruk IconButton når handlingen er liten og kjent.
+- Sørg for tydelige tekstalternativer for skjermlesere.
+- Velg variant basert på hvor viktig handlingen er.
+
+## Don’t
+
+- Ikke bruk til viktige eller sentrale handlinger.
+- Ikke bruk som navigasjonselement til andre sider.
+- Ikke bruk ikon uten tilgjengelighetsmerking når det har funksjon.
+
+## Relaterte komponenter
+
+- [Button](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/button/)
+- [InlineButton](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/inlinebutton/)
+- [Icon](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/icon/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/iconbutton/

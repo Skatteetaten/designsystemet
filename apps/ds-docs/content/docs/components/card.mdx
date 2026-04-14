@@ -1,0 +1,84 @@
+---
+title: Card
+---
+
+## Formål med komponenten
+
+Card (kort) brukes til å gruppere innhold av samme type. Komponenten kan inneholde knapper, tekst, grafikk, ikoner og andre elementer for å presentere informasjon og handlinger på en strukturert og lettfattelig måte.
+
+## Når bruke komponenten
+
+- For å gruppere opplysninger i skjema, som inntekter, personer eller oppsummeringer.
+- For å vise status knyttet til en samling av opplysninger, inkludert dulting.
+- Som seksjoner i dashboards.
+- For å presentere lister, for eksempel fil-lister.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk Card til lange tekstblokker eller mye ren tekst — bruk **[[Panel]]** i stedet.
+- Ikke bruk Card til varsler eller feilmeldinger — bruk **[[Alert]]**.
+
+## Hvorfor anbefalingene finnes?
+
+> - Card samler relatert informasjon i en visuell enhet, noe som reduserer kognitiv belastning og gjør det enklere å se at informasjon hører sammen.
+> - Fargevarianter er faste for å sikre konsistens på tvers av løsninger. Friheten til å kombinere bakgrunn og ramme er begrenset for å unngå visuell støy.
+> - Vi skiller mellom Card (strukturert gruppeinnhold) og Panel (fritekstinnhold) og Alert (statusbeskjed) for å sikre at brukeren leser innholdet med riktig forventning.
+
+## Varianter (og når bruke dem)
+
+Card har flere fargevarianter:
+
+- Gul ([[Ochre]])
+- Grønn ([[Forest]])
+- Rød ([[Burgundy]])
+- Blå ([[Denim]])
+- Grå ([[Graphite]])
+- Hvit ([[White]])
+
+Bakgrunns- og rammefarge hører sammen og kan ikke velges separat.
+
+## Plassering og justering
+
+- Card er fleksibel og kan brukes både enkeltvis og i lister eller grid‑strukturer.
+- Padding kan settes på hele kortet eller per underkomponent.
+- Underkomponentene arver padding fra hovedkomponenten, med mulighet for overstyring.
+
+## Interaksjon og tilstander
+
+**Ingen interaksjonstilstander utover klikkbare elementer inne i kortet (f.eks. knapper).**
+
+## Tekst og språkbruk
+
+**Ingen eksplisitte språkføringer**  
+Kort bør likevel ha tydelige overskrifter og konsis informasjon.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Card støtter semantisk oppbygging gjennom underkomponenter som Header, Content og Actions.
+- Klar og tydelig struktur bidrar til bedre navigasjon og oppfattelse for brukere av hjelpeteknologi.
+
+## Do
+
+- Bruk Card for å skape oversikt i informasjonstunge flater.
+- Strukturér innholdet med tydelig Header, Content og eventuelt Actions og Note.
+- Bruk Note for dulting eller viktig oppmerksomhetsinformasjon knyttet til innholdet.
+
+## Don’t
+
+- Ikke bruk til varsler eller feilmeldinger.
+- Ikke bruk til mye tekst — bruk [[Panel]].
+- Ikke bland for mange ulike fargevarianter på samme flate.
+
+## [ENDRING 2026-03-25] Eksempel (sett inn her)
+
+- [ENDRING] Eksempel inn her: Card med Header, Content og Actions, inkludert anbefalt bruk av fargevariant.
+
+## Relaterte komponenter
+
+- [Panel](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/panel/)
+- [Alert](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/alert/)
+- [Tag](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tag/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/card/

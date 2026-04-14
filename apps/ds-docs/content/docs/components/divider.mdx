@@ -1,0 +1,67 @@
+---
+title: Divider
+---
+
+## Formål med komponenten
+
+Divider (delelinje) brukes til å visuelt skille innhold fra hverandre. Det markerer et tematisk skille mellom seksjoner og bidrar til bedre struktur og lesbarhet.
+
+## Når bruke komponenten
+
+- Når du vil skape en tydelig oppdeling av innhold, for eksempel under en temaoverskrift.
+- Når du vil hjelpe brukeren å skille mellom ulike seksjoner på en side.
+- Når luft alene ikke gir tilstrekkelig visuelt skille.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk når naturlig spacing eller andre visuelle virkemidler gir godt nok skille.
+- Ikke bruk mange delelinjer tett etter hverandre – det kan skape et rotete og tungt visuelt uttrykk.
+
+## Hvorfor anbefalingene finnes?
+
+> - En dekorativ linje uten semantisk hensikt er støy for skjermlesere. `ariaHidden` skal brukes på rent dekorative dividers for å holde markupen ren.
+> - Mange dividers tett etter hverandre er et signal om at innholdet trenger bedre strukturering med overskrifter og avstand — ikke flere linjer.
+> - Den uthevede varianten (full opasitet) brukes kun når det svakere skillet ikke er visuelt tilstrekkelig — overbruk av uthevet variant gjør siden tyngre og mer fragmentert.
+
+## Varianter (og når bruke dem)
+
+- **Nedtonet (standard):** 50 % gjennomsiktighet, brukt i de fleste situasjoner.
+- **Uthevet:** Full opasitet, brukes når du trenger et sterkere visuelt skille.
+
+## Plassering og justering
+
+- Divider strekker seg over tilgjengelig bredde som et horisontalt skille.
+- Den skal brukes funksjonelt – kun der innhold faktisk trenger et tematisk skille.
+- Unngå å bruke Divider som ren dekorasjon.
+
+## Interaksjon og tilstander
+
+Divider er et statisk element uten interaksjon eller tilstander.
+
+## Tekst og språkbruk
+
+Ikke relevant – komponenten inneholder ingen tekst.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Divider representeres som `<hr>` i HTML og gir skjermlesere informasjon om tematiske skiller.
+- Hvis Divider kun brukes dekorativt, bør den settes med `ariaHidden` for å hindre unødvendig opplesing.
+
+## Do
+
+- Bruk Divider for å tydeliggjøre overganger mellom seksjoner.
+- Bruk riktig variant basert på ønsket visuelt skille.
+
+## Don’t
+
+- Ikke bruk Divider uten semantisk hensikt.
+- Ikke bruk flere Divider‑elementer etter hverandre.
+
+## Relaterte komponenter
+
+- [Panel](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/panel/)
+- [Card](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/card/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/divider/

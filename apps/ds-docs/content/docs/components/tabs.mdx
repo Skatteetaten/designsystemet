@@ -1,0 +1,109 @@
+---
+title: Tabs
+---
+
+## Formål med komponenten
+
+Tabs (arkfaner) brukes for å dele innhold i ulike områder eller seksjoner innenfor samme kontekst. De gjør det enklere for brukeren å skanne informasjon, orientere seg og veksle mellom innhold uten å navigere bort fra siden.
+
+## Når bruke komponenten
+
+- Når siden inneholder mye innhold som kan deles i logiske seksjoner.
+- Når brukeren trenger å veksle frem og tilbake mellom visninger.
+- Når kun én tematisk seksjon bør vises om gangen for å redusere kognitiv belastning.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk tabs på sider med lite innhold.
+- Ikke bruk tabs når alt innholdet kan vises samlet uten å skape støy.
+- Ikke bruk tabs som navigasjon mellom sider — kun til innhold på **samme** side.
+- Unngå tabs i tilfeller der sammenligning av innhold på tvers av faner er nødvendig.
+
+## Hvorfor anbefalingene finnes?
+
+> **[FORSLAG 2026-03-25]** _Teksten er foreslått — gjennomgå og tilpass._
+>
+> - Faner kun på én øverste linje er standard fordi faner på siden eller i bunnen bryter brukerens forventning og kan skape forvirring om hva som er innhold og hva som er navigasjon.
+> - Ikon i faner er dekorativt og skjelt for skjermlesere fordi fanetittelen alene skal bære meningsinnholdet — ikoner uten tekstalternativ er utilgjengelige.
+> - Select-fallback på mobil er anbefalt fordi det gir forutsigbar og tilgjengelig atferd uten at flertallet av tabs brytes over flere linjer.
+
+## Varianter (og når bruke dem)
+
+### Med eller uten kantlinje
+
+- **Uten kantlinje:** Mer visuelt lett. Passer de fleste flater.
+- **Med kantlinje:** Gir mer struktur og tydelig skille, ofte brukt i mer datatunge flater.
+
+### Størrelser
+
+- **Normal:** Standard og mest brukt.
+- **Small:** Brukes når det er begrenset plass eller i kompakte layout‑situasjoner.
+
+## Plassering og justering
+
+- Tabs skal som hovedregel ligge **på én linje**.
+- Plasser tabs **øverst** i innholdsområdet — aldri til venstre, høyre eller nederst.
+- Fane‑titler og rekkefølge skal være **faste og forutsigbare**.
+- Bruk korte, meningsfulle titler som tydelig beskriver innholdet.
+- Unngå tabs inni tabs — det skaper forvirring og øker kompleksitet.
+
+## Tabs på mobil
+
+Dersom skjermen ikke er bred nok til å vise alle fanene finnes to tilnærminger, i prioritert rekkefølge:
+
+### 1. Erstatte tabs med Select (anbefalt)
+
+- Gir forutsigbarhet og god tilgjengelighet.
+- Gjør det enkelt å bla mellom tilgjengelige seksjoner.
+
+### 2. Multilinje tabs (fallback)
+
+- Tabs brettes over flere linjer.
+- Brukes kun dersom Select‑varianten ikke passer.
+- Mindre forutsigbart og kan påvirke brukeropplevelsen negativt.
+
+## Interaksjon og tilstander
+
+- Én fane er alltid valgt.
+- Avansert funksjonalitet (f.eks. å lukke en fane) skal implementeres i **innholdsdelen**, ikke i tab‑elementet.
+- Unngå uventet dynamisk manipulering av tabs.
+
+## Tekst og språkbruk
+
+- Tab‑titler skal være konsise (ett til få ord).
+- Titler skal tydelig indikere hva som finnes bak fanen.
+- Ikke bruk forkortelser med mindre de er allment forståelige.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Faneinnholdet bør starte med en overskrift for å gi skjermlesere tydelig navigasjonsmål.
+- Tastaturnavigasjon skal følge standardene:
+  - Ett tab‑stopp for tablist
+  - Piltaster høyre/venstre for å bytte fane
+  - Enter eller mellomrom for å aktivere valgt fane
+- Ikoner i faner regnes som pynt og skal **ikke** leses opp av skjermleser.
+- Sørg for god kontrast og tydelig markering av valgt fane.
+
+## Do
+
+- Hold faner på én linje der det er mulig.
+- Velg logiske og meningsfulle fanetitler.
+- Bruk Select‑variant på mobil ved behov.
+- Del innholdet slik at fanene skaper reell verdi for oversikt og navigasjon.
+
+## Don’t
+
+- Ikke bruk tabs for navigasjon mellom sider.
+- Ikke bruk tabs hvis brukeren må se flere seksjoner samtidig.
+- Ikke plasser tabs nede eller på sidene.
+- Ikke nest tabs innenfor tabs.
+
+## Relaterte komponenter
+
+- [Select](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/select/)
+- [NavigationTile](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/navigationtile/)
+- [Panel](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/panel/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tabs/

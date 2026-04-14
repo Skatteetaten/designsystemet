@@ -1,0 +1,101 @@
+---
+title: TextArea
+---
+
+## Formål med komponenten
+
+TextArea brukes når brukeren skal fylle inn fritekst som går over flere linjer. Det er et fleksibelt tekstfelt som egner seg for åpne svar, beskrivelser, forklaringer og informasjon som ikke lar seg begrense til én linje.
+
+## Når bruke komponenten
+
+- Når brukeren skal skrive inn **lengre tekster**.
+- Når innholdet er **åpent, ustrukturert eller beskrivende**.
+- Når svarlengden er ukjent eller kan variere betydelig.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk TextArea for korte eller strukturerte data (navn, dato, fødselsnummer).  
+  Bruk **TextField** i stedet.
+- Ikke bruk TextArea når formatert tekst (f.eks. Markdown) er nødvendig.
+- Ikke bruk hvis brukeren skal velge et forhåndsdefinert alternativ.
+
+## Hvorfor anbefalingene finnes?
+
+> - Placeholder forsvinner når brukeren begynner å skrive, og all nødvendig informasjon må derfor uansett stille i label og beskrivelse. Å bruke placeholder i tillegg er dermed redundant og kan være forvirrende.
+> - `readOnly` skilles fra `disabled` fordi `readOnly`-innhold fortsatt sendes med skjemaet og er tilgjengelig for skjermlesere — viktig for korrekt datainnsamling.
+> - Fritekst-svar er krevende å validere og behandle. Vi styrer brukeren mot kortere, strukturerte felt når det er mulig, og bruker TextArea bare når åpent svar er nødvendig.
+
+## Varianter (og når bruke dem)
+
+### Standard (skrivefelt)
+
+Brukes som vanlig i skjema der fritekst ønskes.
+
+### Read-only
+
+- Når brukeren skal **lese**, men ikke redigere, innholdet.
+- Feltet kan fortsatt fokuseres, markeres og kopieres.
+- Innhold i read‑only felt sendes inn med skjema, i motsetning til disabled‑felter.
+
+## Plassering og justering
+
+- Ledetekst og beskrivelse skal alltid plasseres **over** feltet.
+- Unngå ledetekster som går over flere linjer — bruk beskrivelsesfeltet til utvidet forklaring.
+- Legg lengre veiledning i en hjelpetekst bak spørsmålstegn‑ikonet (hjelpetekst-mønster).
+
+## Interaksjon og tilstander
+
+- Feltet vokser etter innhold dersom komponenten tillater det.
+- Feilmelding skal vises **rett under** feltet.
+- Read-only felt inngår i innsending; disabled gjør det ikke.
+
+## Tekst og språkbruk
+
+- Ledetekst skal være kort og presis.
+- Beskrivelse skal brukes til å forklare hva brukeren skal gjøre.
+- Unngå placeholder‑tekst — se eget avsnitt under.
+
+## Ikke bruk placeholder-tekst
+
+Komponenten fraråder bruk av placeholder‑tekst fordi:
+
+- placeholder forsvinner når brukeren begynner å skrive, og må derfor uansett gjentas i label/beskrivelse.
+- kontrastkravet (minst 4.5:1) gjør at placeholder må være mørkere — brukere kan tro feltet allerede er utfylt.
+- placeholder‑tekst er ofte utilgjengelig for skjermlesere.
+
+All nødvendig informasjon skal ligge i **ledetekst og beskrivelse**, ikke placeholder.
+
+## Tilgjengelighet (UU / WCAG)
+
+- TextArea må alltid ha ledetekst (label eller aria‑label).
+- Label skal ikke være identisk med placeholder hvis placeholder brukes unntaksvis.
+- Feilmeldinger vises tett ved feltet og må ha tilstrekkelig kontrast (min. 4.5:1).  
+  Dette er oppfylt som standard.
+- Read-only felt må fortsatt være semantisk korrekte og kunne leses av skjermleser.
+
+## Do
+
+- Bruk TextArea for lengre, åpne svar.
+- Sett label og beskrivelse tydelig over feltet.
+- Sørg for god feilhåndtering under feltet.
+- Bruk read‑only der innhold skal vises, men ikke endres.
+
+## Don’t
+
+- Ikke bruk placeholder som instruksjon.
+- Ikke bruk disabled med mindre helt nødvendig.
+- Ikke bruk TextArea for strukturerte, korte svar.
+
+## [ENDRING 2026-03-25] Eksempel (sett inn her)
+
+- [ENDRING] Eksempel inn her: TextArea med label, beskrivelse, tegnbegrensning og feilmelding.
+
+## Relaterte komponenter
+
+- [TextField](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/)
+- [Fieldset](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fieldset/)
+- [ErrorMessage](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errormessage/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textarea/

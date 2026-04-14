@@ -20,6 +20,8 @@ import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import type { Route } from './+types/root';
 
+import styles from './root.module.scss';
+
 export interface RootLoaderData {
   pageTree: SerializedPageTree;
 }
@@ -55,7 +57,7 @@ export function Layout({ children }: { children: ReactNode }): JSX.Element {
       </head>
       <body>
         <TopBannerExternal />
-        {children}
+        <main className={styles.main}>{children}</main>
         <ScrollRestoration />
         <Scripts />
       </body>

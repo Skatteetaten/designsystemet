@@ -1,0 +1,98 @@
+---
+title: SearchField
+---
+
+## Formål med komponenten
+
+SearchField brukes når brukeren skal søke seg fram til et resultat i løsningen. Det gir rask tilgang til relevant informasjon ved at brukeren kan skrive inn et søk og gå til trefflisten eller et konkret søkeresultat.
+
+## Når bruke komponenten
+
+- Når brukeren skal finne relevant innhold raskt gjennom søk.
+- Når det finnes en resultatside eller oversikt det kan søkes i, for eksempel en kjøretøyoversikt eller personsøk.
+- Når søk er den mest effektive måten å navigere til ønsket innhold.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk når innholdet er så lite at brukeren enkelt kan navigere uten søk.
+- Ikke bruk for autofullføring i skjema — bruk **TextField** med datalist eller passende mønster.
+- Ikke bruk dersom oppgaven krever filtrering eller sortering fremfor søk.
+
+## Hvorfor anbefalingene finnes?
+
+> - Vi skiller mellom SearchField og TextField fordi søk og skjemainput har ulike atferdsmmønstre: søk er optimalisert for hurtigoppslag og resultatlister, mens skjemafelt er for datainnsamling.
+> - Placeholder begrenses i publikumslløsninger fordi den kan forveksles med forhåndsutfylt innhold i kontrastkompliant design — brukere kan glattet ut feltet og må skrive på nytt.
+> - TODO: noe om søkeresultater/treffliste
+
+## Varianter (og når bruke dem)
+
+### Medium
+
+- Typisk brukt i interne løsninger, i toppseksjoner eller ved funksjonelt søk.
+- Kan kombinere med hurtigoppslag.
+
+### Large
+
+- Brukes gjerne på landingssider for interne løsninger.
+- Støtter mer sammensatte hurtigoppslag med tekst og beskrivelser.
+
+### ExtraLarge
+
+- Brukes for globalt søk i publikumsløsninger (f.eks. i TopBannerExternal).
+- Søket tar brukeren til trefflisten på skatteetaten.no.
+
+### Valg av utforming
+
+- Ikon til høyre (forstørrelsesglass) eller knapp med teksten «Søk».
+- Kan inkludere hurtigoppslag som lar brukeren hoppe direkte til et enkelt resultat.
+
+## Plassering og justering
+
+- Søkefelt bør stå der brukeren forventer å søke — ofte i toppbanner, landingssider eller ved omfattende datasett.
+- Standard maksbredde er 400px / 25rem for å unngå unaturlig stor avstand mellom søketekst og knapp.
+- Komponenten tar som standard 100 % bredde hvis ikke annet er spesifisert.
+- Nullstillingsikon (kryss) skal være tilgjengelig for å slette søketeksten.
+
+## Interaksjon og tilstander
+
+- Klikk på søkeknappen tar brukeren til resultatsiden.
+- Ved «live»-søk tar både listevalg og søkeknappen brukeren til resultatvisning.
+- Hurtigoppslag kan føre direkte til detaljvisning (for eksempel et spesifikt kjøretøy eller en virksomhet).
+
+## Tekst og språkbruk
+
+- SearchField skal alltid ha en label, men den vises vanligvis skjult.
+- Unngå placeholder‑tekst i publikumsløsninger fordi:
+  - lav kontrast kan oppfattes som forhåndsutfylt informasjon
+  - teksten forsvinner når brukeren skriver, og må derfor gjentas i label
+- Placeholder kan brukes unntaksvis i interne flater hvor plassen er begrenset.
+- Knappeteksten skal være «Søk» når tekstknapp brukes.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Søkefelt trenger en [[semantisk label::Programmatisk etikett som beskriver feltet selv om etiketten er visuelt skjult]] selv når label er visuelt skjult.
+- Ikonet må suppleres med tekst eller aria‑label dersom det er eneste interaksjonselement.
+- Sørg for tydelig kontrast og fokusmarkering.
+- Hurtigoppslag må være navigerbare med tastatur.
+
+## Do
+
+- Bruk søk når det er den raskeste måten å finne innhold på.
+- Bruk «live»-søk kun når det finnes tydelig og relevant resultatliste.
+- Gi brukeren tydelig søkeikon eller «Søk»-knapp.
+
+## Don’t
+
+- Ikke bruk placeholder som hovedindikasjon på hva som skal skrives.
+- Ikke la feltet bli overdrevent bredt.
+- Ikke bruk SearchField for skjemaautofullføring.
+
+## Relaterte komponenter
+
+- [TextField](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/)
+- [Pagination](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/)
+- [List](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/list/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/

@@ -1,0 +1,80 @@
+---
+title: Pagination
+---
+
+## Formål med komponenten
+
+Pagination brukes til å dele opp store mengder innhold i flere sider slik at brukeren ikke blir overveldet. Den gjør det enklere å navigere frem og tilbake i informasjon som tabeller, søkeresultater eller lister.
+
+## Når bruke komponenten
+
+- Når store mengder relatert innhold må fordeles over flere sider.
+- Når brukeren skal kunne navigere mellom sider i en seksjon.
+- Når søkeresultater deles opp på flere sider.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk for uendelig eller kontinuerlig innhold.
+- Ikke bruk når det kun finnes én side med innhold.
+
+## Hvorfor anbefalingene finnes?
+
+> - Paginering fordeler innhold i håndterbare mengder for å redusere kognitiv belastning og lastetid. Å vise for mye innhold på én side gjer det vanskelig å orientere seg.
+> - Pagination er like bred som innholdet fordi det gir brukeren et intuitivt når-gjelder-dette-kontekst — plassert løsrevet fra innholdet er det uklart hva som pagineres.
+> - Uendelig scroll er et fundamentalt annerledes mønster som krever andre UU-hensyn (f.eks. fokusstyring ved innlasting) og passer ikke inn i Pagination-komponenten.
+
+## Varianter (og når bruke dem)
+
+Kilden beskriver ingen visuelle varianter, men komponenten kan justeres:
+
+- Antall treff per side (standard er 10).
+- Antall klikkbare sidetall rundt aktiv side (“siblings”).
+- Om tekst på forrige/neste-knapper vises eller skjules.
+- Om sideoppsummeringen vises eller skjules.
+
+## Plassering og justering
+
+- Pagination skal plasseres **rett under** og være **like bred som** innholdet den styrer (tabell, søkeresultat).
+- Tilpass antall synlige sidetall etter mengden data og forventet blabruk.
+- På mobil anbefales maks tre synlige sidetall for å spare plass.
+- Skjul komponenten når det ikke finnes flere sider.
+- For tydelighet kan du vise en kort tekst øverst i innholdet der pagination ellers ville vært.
+
+## Interaksjon og tilstander
+
+- Første og siste side vises alltid.
+- Det skal alltid være minst ett klikkbart sidetall ved siden av aktiv side.
+- Fokus skal forbli på valgt element ved tastaturnavigasjon.
+- Skjermleser skal lese opp hva som vises når sidetall endres.
+
+## Tekst og språkbruk
+
+- Vær tydelig i sideoppsummeringen dersom du velger å beholde den.
+- Hvis du skjuler tekst på forrige/neste-knapper, må pilikonene alene være tilstrekkelig.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Tastaturfokus skal forbli innenfor komponenten.
+- Endring av sidetall skal annonseres av skjermleser.
+- Piler og sidetall må ha god kontrast mot bakgrunnen.
+
+## Do
+
+- Hold komponenten like bred som innholdet den paginerer.
+- Juster antall synlige tall etter skjermstørrelse.
+- Skjul komponenten når ingen paginering er nødvendig.
+
+## Don’t
+
+- Ikke bruk pagination for uendelig scroll‑innhold.
+- Ikke vis for mange tall på mobil.
+
+## Relaterte komponenter
+
+- [Table](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/table/)
+- [SearchField](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/)
+- [List](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/list/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/

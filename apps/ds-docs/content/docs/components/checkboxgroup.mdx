@@ -1,0 +1,74 @@
+---
+title: CheckboxGroup
+---
+
+## Formål med komponenten
+
+CheckboxGroup brukes når brukeren kan velge ett eller flere alternativer. Hver avkrysning er uavhengig av de andre, og det er også et gyldig valg å ikke velge noen.
+
+## Når bruke komponenten
+
+- Når brukeren skal kunne velge mellom flere uavhengige valg.
+- Når det er et gyldig alternativ for brukeren å ikke krysse av noe.
+- Når du skal innhente bekreftelser som kan innebære flere valg samtidig.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk CheckboxGroup når brukeren kun skal ta **ett** valg — bruk **[[RadioGroup]]** i stedet.
+
+## Hvorfor anbefalingene finnes?
+
+> - Grupperingen med ledetekst (`legend`-element) sørger for at skjermlesere forstår at valgene hører til samme spørsmål. Uten dette leses hvert enkelt valg opp uten kontekst.
+> - Vertikal layout er standard for å gi bedre lesbarhet og forutsigbar skalering på tvers av skjermstørrelser — horisontal opplisting av mange valg fungerer ofte ikke så godt på små skjermer.
+> - Å tillate null valg (ingen avhuking) er et bevisst design-valg: det er ikke alle som har noe å velge, og tvunget valg skaper feil data.
+
+## Varianter (og når bruke dem)
+
+**Ingen varianter**
+
+## Plassering og justering
+
+- Alle checkboxer i gruppen skal plasseres **vertikalt**.
+- Det skal være mulig å velge null, ett eller flere alternativer.
+
+## Interaksjon og tilstander
+
+- Alle valg er uavhengige av hverandre — avkrysning i én boks påvirker ikke de andre.
+- Komponentgruppen må alltid inneholde underkomponenter (children).
+
+## Tekst og språkbruk
+
+- Spørsmål eller [[ledetekst]] for gruppen skal stå i et **legend‑element**.  
+  Dette gir nødvendig kontekst for alle brukere.
+- Selv om `legend` skjules visuelt, må det være semantisk tilgjengelig.
+
+## Tilgjengelighet (UU / WCAG)
+
+- `legend` skal beskrive hva brukeren skal ta stilling til.
+- Feilmeldinger skal henvise til spørsmålet eller ledeteksten, f.eks.:  
+  _«Type virksomhet må fylles ut»_.
+- Det skal være mulig å navigere hele gruppen med tastatur.
+
+## Do
+
+- Sørg for tydelig og forklarende `legend`.
+- Bruk gruppen når flere valg kan være riktige samtidig.
+- Plasser avkrysningsalternativene vertikalt.
+
+## Don’t
+
+- Ikke bruk ved enkeltvalg (bruk RadioGroup).
+- Ikke la gruppen være tom — den skal alltid ha valgalternativer.
+
+## [ENDRING 2026-03-25] Eksempel (sett inn her)
+
+- [ENDRING] Eksempel inn her: CheckboxGroup med `legend`, validering og to uavhengige valg.
+
+## Relaterte komponenter
+
+- [Checkbox](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkbox/)
+- [RadioGroup](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/

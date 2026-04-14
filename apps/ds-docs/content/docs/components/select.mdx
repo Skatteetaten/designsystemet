@@ -1,0 +1,94 @@
+---
+title: Select
+---
+
+## Formål med komponenten
+
+Select brukes når brukeren skal velge ett alternativ fra en liste med mange valg. Den er spesielt nyttig når tilgjengelig plass er begrenset, og når [[RadioGroup]] eller [[CheckboxGroup]] ville blitt for omfattende.
+
+## Når bruke komponenten
+
+- Når det finnes **7 eller flere alternativer**.
+- Når du trenger å vise mange valg på liten plass.
+- Når valget skal presenteres kompakt og brukeren kun kan velge **ett** alternativ.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk når det finnes **få valg (færre enn 7)** — bruk [[RadioGroup]] eller [[CheckboxGroup]].
+- Ikke bruk til navigasjon mellom sider eller seksjoner.
+- Ikke bruk når brukeren skal velge **flere** alternativer (velg da CheckboxGroup eller annen komponent).
+
+## Hvorfor anbefalingene finnes?
+
+> - Native select brukes for å gi brukerne forutsigbar og tilgjengelig atferd — nettleserens innebygde select har god støtte for skjermlesere og tastatur på alle plattformer.
+> - Grensen på 7+ alternativer er den øvre terskelen for RadioGroup: færre valg er lettere å sammenligne visuelt, men mange valg gjør listen uoversiktlig i et åpent format.
+
+## Varianter (og når bruke dem)
+
+### Standard atferd
+
+Select bruker nettleserens innebygde funksjonalitet.  
+Det gir:
+
+- Native visning som varierer mellom nettlesere
+- Forutsigbar og tilgjengelig atferd for brukeren
+
+### Størrelser
+
+- **Medium (standard):**  
+  Kan brukes både internt og eksternt.
+- **Large:**  
+  Kun for eksterne flater – mer luft og tykkere ramme.
+
+## Plassering og justering
+
+- Sorter alternativer i en **logisk rekkefølge**, f.eks. alfabetisk.
+- Bruk **placeholder‑tekst** for å signalisere hva brukeren skal gjøre.
+- Unngå lange setninger som alternativer — hold valgene korte og skannbare.
+
+## Interaksjon og tilstander
+
+- Listen åpner seg i nettleserens egen stil og funksjonalitet.
+- Select kan utvides med grupperte alternativer (optgroup) dersom listen er lang.
+- Brukeren får kun velge ett valg — ingen multiple‑valgstøtte i designsystemets bruksmønster.
+
+## Tekst og språkbruk
+
+- Ledetekst skal alltid brukes og plasseres over feltet.
+- Ledeteksten bør være kort (helst én linje).
+- Hvis Select er plassert inne i en tabell, kan ledeteksten skjules (men skal fortsatt eksistere semantisk).
+
+## Tilgjengelighet (UU / WCAG)
+
+- Select‑komponenten følger systemets native tilgjengelighetsmønster.
+- Sørg for:
+  - tydelig og konsistent ledetekst
+  - logisk sortering
+  - korte og forståelige alternativer
+- Unngå deaktivert tilstand — det kan være vanskelig for brukere å forstå hvorfor feltet ikke kan brukes.
+
+## Do
+
+- Bruk Select når listen er lang og valget er entydig.
+- Hold alternativene korte og strukturerte.
+- Bruk placeholder for å kommunisere forventet handling.
+
+## Don’t
+
+- Ikke bruk Select til få alternativer.
+- Ikke bruk lange setninger i valgene.
+- Ikke bruk Select for navigasjon eller flervalgssituasjoner.
+
+## [ENDRING 2026-03-25] Eksempel (sett inn her)
+
+- [ENDRING] Eksempel inn her: Select med `optgroup`, logisk sortering og tydelig label.
+
+## Relaterte komponenter
+
+- [RadioGroup](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/)
+- [CheckboxGroup](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/)
+- [Combobox](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/combobox/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/select/

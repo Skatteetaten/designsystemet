@@ -1,0 +1,87 @@
+---
+title: Chips
+---
+
+## Formål med komponenten
+
+Chips er små interaktive komponenter som brukes til å styre visning av innhold, ofte i forbindelse med filtrering, valg eller visning av status i en gruppe.
+
+## Når bruke komponenten
+
+- For å filtrere data, for eksempel i lister eller tabeller.
+- For å vise valgte elementer i en gruppe.
+- For å la brukeren veksle mellom ulike visninger eller valg.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk til menyer (f.eks. sidemeny eller hovedmeny).
+- Ikke bruk til statisk metadata — bruk **[[Tag]]** i stedet.
+- Ikke bruk som aksjons- eller innsendingselementer i skjema — bruk **[[Button]]**.
+- Ikke bruk én enkelt chip alene; Chips er ment som en samlet gruppe.
+
+## Hvorfor anbefalingene finnes?
+
+> - Chips er ment for kompakte, raske valg i grupper. En enkelt chip gir ikke nok kontekst for at brukeren forstår at de kan velge — da er en knapp eller et annet element mer intuitivt.
+> - Vi skiller mellom lukkbar og valgbar variant for å gi tydelig forventning om hva som skjer når brukeren klikker.
+> - For lukkvalgre chips er det å styre fokus et kjent tilgjengelighetsproblem: tastaturbrukere risikerer å miste fokus når et valgt element fjernes, og må orientere seg på nytt.
+
+## Varianter (og når bruke dem)
+
+### Lukkbar variant
+
+- Brukes til dynamiske filtre og visninger.
+- Egnet når brukeren skal kunne fjerne enkeltvalg.
+
+### Valgbar variant
+
+- Brukes til statiske filtre og visninger.
+- Krever minst tre chips når de brukes uten ikon, for at valgt tilstand skal være tydelig.
+
+### Størrelser
+
+- Medium (standard)
+- Small
+
+## Plassering og justering
+
+- Chips skal brukes i grupper, ikke alene.
+- De skal fremstå som små knapper samlet i en enhetlig visuell rekke eller blokk.
+- Valgene bør være korte og raske å skanne — for lange eller komplekse valg skal du heller bruke **CheckboxGroup**.
+
+## Interaksjon og tilstander
+
+- Når en chip fjernes via tastatur, skal fokus automatisk flyttes til neste chip.
+- Når alle chips er fjernet, settes fokus til en skjult tekst: «Ingen flere filter».
+- Det kan være nødvendig å bruke `ariaLabel` for å gi gruppen et navn dersom det finnes flere chip‑lister på samme side.
+
+## Tekst og språkbruk
+
+- Valgene skal være korte og lettleste.
+- Bruk ord og begreper som er enkle å skanne og sortere.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Fokusflyt må være tydelig og forutsigbar ved fjerning av chips.
+- Skjult tekst brukes for å formidle tilstand når alle chips fjernes.
+- Gi tydelig aria‑navn når siden inneholder flere chip‑grupper.
+
+## Do
+
+- Bruk chips til filtrering eller for å vise valgte elementer.
+- Bruk korte, lette og tydelige valg.
+- Bruk lukkbare chips til dynamiske filtre og valgbar variant til statiske filtre.
+
+## Don’t
+
+- Ikke bruk chips alene som enkeltkomponent.
+- Ikke bruk chips for menystrukturer.
+- Ikke bruk chips for lange eller komplekse valg (bruk CheckboxGroup).
+
+## Relaterte komponenter
+
+- [Tag](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/Tag/)
+- [Button](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/Button/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/chips/

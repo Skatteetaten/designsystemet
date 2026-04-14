@@ -1,0 +1,72 @@
+---
+title: Paragraph
+---
+
+## Formål med komponenten
+
+Paragraph brukes til å presentere løpende tekst i to varianter: ingress eller vanlig brødtekst. Komponentens typografi sikrer lesbarhet og god struktur.
+
+## Når bruke komponenten
+
+- Når du skriver brødtekst som forklarer eller beskriver innhold.
+- Når du ønsker å introdusere seksjoner med en **ingress**.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk Paragraph for overskrifter — bruk Heading.
+- Ikke bruk Paragraph for sitater — bruk Blockquote.
+
+## Hvorfor anbefalingene finnes?
+
+> - Vi skiller mellom ingress og brødtekst for å gi innholdet tydelig typografisk hierarki. Lesere skanner typisk ingress for å avgjre om de vil lese videre — riktig bruk av ingress øker lesestart.
+> - Tom paragraph skal ikke brukes til spacing fordi avstand bør håndteres av layout-komponenter, CSS, eller innebygget hasSpacing-mekanisme — å bruke tomme tekstelementer for luft gir feil semantikk og kan forvirre skjermlesere.
+> - Overskrifter inne i Paragraph bryter HTML-semantikken og kan føre til uforutsigbar rendering og deilige tilgjengelighetsutfordringer.
+
+## Varianter (og når bruke dem)
+
+- **Ingress** – brukes som introduksjon til en seksjon.
+- **Standard brødtekst** – brukes for vanlig løpende innhold.
+
+## Plassering og justering
+
+- Ingress skal stå direkte under overskriften den tilhører.
+- Brødtekst skal følge logisk struktur og deles opp i korte avsnitt.
+
+## Interaksjon og tilstander
+
+Paragraph støtter inline‑elementer:
+
+- `<strong>` for fet utheving
+- `<em>` for kursiv
+- `<a>` for lenker  
+  Komponenten håndterer typografisk styling for disse automatisk.
+
+## Tekst og språkbruk
+
+- Skriv korte avsnitt med klar og presis informasjon.
+- Unngå unødvendig langt innhold uten visuell struktur.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Sørg for god avsnittsdeling slik at skjermlesere lettere kan navigere teksten.
+- Lenker bør være tydelige og selvforklarende.
+
+## Do
+
+- Bruk ingress for å introdusere en side eller seksjon.
+- Bruk Paragraph for all brødtekst.
+
+## Don’t
+
+- Ikke bruk Paragraph kun for spacing.
+- Ikke plasser overskrifter inne i Paragraph.
+
+## Relaterte komponenter
+
+- [Heading](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography/)
+- [Blockquote](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography/)
+- [List](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography/)
+
+## Kilder og referanser
+
+- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography/
