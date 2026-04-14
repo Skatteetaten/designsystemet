@@ -1,5 +1,6 @@
-import { JSX } from 'react';
+import { Children, JSX, ReactNode, isValidElement } from 'react';
 
+import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import type { Route } from './+types/docs';
@@ -7,6 +8,8 @@ import browserCollections from '../../.source/browser';
 import { DocsBreadcrumbs } from '../components/breadcrumbs';
 import { getMdxComponents } from '../mdx-components';
 import { useRootLoaderData } from '../root';
+
+import styles from './docs.module.scss';
 
 // interface DocsContentProps {
 //   // TODO: Ta i bruk når vi kan lenke til andre markdown-filer i MDX-innholdet
@@ -19,17 +22,55 @@ interface ClientLoaderProps {
   path: string;
 }
 
+interface TocItem {
+  title: string;
+  url: string;
+  depth: number;
+}
+
+const toTocTitle = (title: ReactNode): string => {
+  if (typeof title === 'string' || typeof title === 'number') {
+    return String(title);
+  }
+
+  if (Array.isArray(title)) {
+    return title.map(toTocTitle).join('');
+  }
+
+  if (isValidElement(title)) {
+    return toTocTitle(title.props.children);
+  }
+
+  return Children.toArray(title).map(toTocTitle).join('');
+};
+
 const docsContentLoader = browserCollections.docs.createClientLoader({
-  component({ frontmatter, default: Mdx }) {
+  component({ frontmatter, toc, default: Mdx }) {
+    const tocItems = toc.filter((item) => item.depth > 1) as TocItem[];
+
     return (
-      <div>
-        <title>{frontmatter.title}</title>
-        <meta name={'description'} content={frontmatter.description} />
-        <Heading as={'h1'}>{frontmatter.title}</Heading>
-        {frontmatter.description}
-        <div>
-          <Mdx components={getMdxComponents()} />
+      <div className={styles.layout}>
+        <div className={styles.content}>
+          <title>{frontmatter.title}</title>
+          <meta name={'description'} content={frontmatter.description} />
+          <Heading as={'h1'}>{frontmatter.title}</Heading>
+          {frontmatter.description}
+          <div>
+            <Mdx components={getMdxComponents()} />
+          </div>
         </div>
+        {tocItems.length > 0 && (
+          <aside className={styles.toc} aria-label={'Innhold'}>
+            <Heading as={'h4'}>{'Innhold'}</Heading>
+            <LinkGroup variant={'anchors'}>
+              {tocItems.map((item) => (
+                <LinkGroup.Link key={item.url} href={item.url}>
+                  {toTocTitle(item.title)}
+                </LinkGroup.Link>
+              ))}
+            </LinkGroup>
+          </aside>
+        )}
       </div>
     );
   },
