@@ -268,6 +268,21 @@ export const AllVariantsMobile = {
   },
 } satisfies Story;
 
+export const AllVariantsWithCloseButtonMobile = {
+  render: TemplateAllVariants,
+  name: 'All Variants On Small Screen (A1)',
+  args: {
+    ...defaultArgs,
+    showAlert: true,
+    onClose: fn(),
+  },
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
+  },
+} satisfies Story;
+
 export const AllLightVariants = {
   render: TemplateAllVariants,
   name: 'All Light Variants',

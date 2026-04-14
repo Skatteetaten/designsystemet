@@ -62,8 +62,6 @@ export const Alert = ({
     }
   };
 
-  const concatenatedClassName = `${styles.alert} ${className}`.trim();
-
   return (
     <div
       ref={ref}
@@ -75,7 +73,7 @@ export const Alert = ({
     >
       {showAlert && children && (
         <div
-          className={concatenatedClassName}
+          className={`${styles.alert} ${className}`.trim()}
           data-variant={variant}
           data-brightness={backgroundBrightness}
         >
