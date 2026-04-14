@@ -1,0 +1,20 @@
+.pageWrapper {
+  width: var(--semantic-responsive-container);
+  padding: var(--semantic-responsive-container-spacing);
+  margin: 0 auto;
+}
+
+.wrapperInternalLayout {
+  display: var(--semantic-responsive-internal-container-display);
+  flex-direction: var(--semantic-responsive-internal-container-flex-direction);
+  margin-top: var(--spacing-l);
+  gap: var(--semantic-responsive-internal-container-spacing);
+}
+
+.aside {
+  width: var(--container-aside-narrow);
+}
+
+.main {
+  flex: 1;
+}

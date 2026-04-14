@@ -1,13 +1,11 @@
 import { Children, JSX, ReactNode, isValidElement } from 'react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { Heading } from '@skatteetaten/ds-typography';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import type { Route } from './+types/docs';
 import browserCollections from '../../.source/browser';
-import { DocsBreadcrumbs } from '../components/breadcrumbs';
 import { getMdxComponents } from '../mdx-components';
-import { useRootLoaderData } from '../root';
 
 import styles from './docs.module.scss';
 
@@ -18,6 +16,17 @@ import styles from './docs.module.scss';
 // }
 
 interface ClientLoaderProps {
+  parentTitle: string | null;
+  markdownUrl: string;
+  path: string;
+}
+
+interface DocsContentProps {
+  parentTitle: string | null;
+}
+
+interface DocsPageProps {
+  parentTitle?: string | null;
   markdownUrl: string;
   path: string;
 }
@@ -38,43 +47,86 @@ const toTocTitle = (title: ReactNode): string => {
   }
 
   if (isValidElement(title)) {
-    return toTocTitle(title.props.children);
+    return toTocTitle((title.props as { children?: ReactNode }).children);
   }
 
   return Children.toArray(title).map(toTocTitle).join('');
 };
 
-const docsContentLoader = browserCollections.docs.createClientLoader({
-  component({ frontmatter, toc, default: Mdx }) {
-    const tocItems = toc.filter((item) => item.depth > 1) as TocItem[];
+const getParentIndexPath = (path: string): string | null => {
+  const segments = path.split('/');
 
-    return (
-      <div className={styles.layout}>
-        <div className={styles.content}>
-          <title>{frontmatter.title}</title>
-          <meta name={'description'} content={frontmatter.description} />
-          <Heading as={'h1'}>{frontmatter.title}</Heading>
-          {frontmatter.description}
-          <div>
-            <Mdx components={getMdxComponents()} />
+  if (path === 'index.mdx') {
+    return null;
+  }
+
+  if (path.endsWith('/index.mdx')) {
+    return segments.length > 2
+      ? `${segments.slice(0, -2).join('/')}/index.mdx`
+      : 'index.mdx';
+  }
+
+  return segments.length > 1
+    ? `${segments.slice(0, -1).join('/')}/index.mdx`
+    : null;
+};
+
+const getDocImport = (
+  path: string
+): (() => Promise<{ frontmatter: { title?: string } }>) | undefined => {
+  return (browserCollections.docs.raw[path] ??
+    browserCollections.docs.raw[`./${path}`]) as
+    | (() => Promise<{ frontmatter: { title?: string } }>)
+    | undefined;
+};
+
+const getParentTitleFromPath = async (path: string): Promise<string | null> => {
+  const parentIndexPath = getParentIndexPath(path);
+
+  if (!parentIndexPath) {
+    return null;
+  }
+
+  const loadDoc = getDocImport(parentIndexPath);
+  const parentDoc = loadDoc ? await loadDoc() : null;
+
+  return parentDoc?.frontmatter.title ?? null;
+};
+const docsContentLoader =
+  browserCollections.docs.createClientLoader<DocsContentProps>({
+    component({ frontmatter, toc, default: Mdx }, { parentTitle }) {
+      const tocItems = toc.filter((item) => item.depth > 1) as TocItem[];
+
+      return (
+        <div className={styles.layout}>
+          <div className={styles.content}>
+            <title>{frontmatter.title}</title>
+            <meta name={'description'} content={frontmatter.description} />
+            {parentTitle && (
+              <Paragraph variant={'ingress'}>{parentTitle}</Paragraph>
+            )}
+            <Heading as={'h1'}>{frontmatter.title}</Heading>
+            {frontmatter.description}
+            <div>
+              <Mdx components={getMdxComponents()} />
+            </div>
           </div>
+          {tocItems.length > 0 && (
+            <aside className={styles.toc} aria-label={'Innhold'}>
+              <Heading as={'h4'}>{'Innhold'}</Heading>
+              <LinkGroup variant={'anchors'}>
+                {tocItems.map((item) => (
+                  <LinkGroup.Link key={item.url} href={item.url}>
+                    {toTocTitle(item.title)}
+                  </LinkGroup.Link>
+                ))}
+              </LinkGroup>
+            </aside>
+          )}
         </div>
-        {tocItems.length > 0 && (
-          <aside className={styles.toc} aria-label={'Innhold'}>
-            <Heading as={'h4'}>{'Innhold'}</Heading>
-            <LinkGroup variant={'anchors'}>
-              {tocItems.map((item) => (
-                <LinkGroup.Link key={item.url} href={item.url}>
-                  {toTocTitle(item.title)}
-                </LinkGroup.Link>
-              ))}
-            </LinkGroup>
-          </aside>
-        )}
-      </div>
-    );
-  },
-});
+      );
+    },
+  });
 const docPaths = new Set(
   Object.keys(browserCollections.docs.raw).map((path) =>
     path.startsWith('./') ? path.slice(2) : path
@@ -98,18 +150,18 @@ export async function clientLoader({
   }
 
   return {
+    parentTitle: await getParentTitleFromPath(path),
     path,
     markdownUrl: '',
   };
 }
 
-export const DocsPage = ({ path }: ClientLoaderProps): JSX.Element => {
-  const { pageTree } = useRootLoaderData();
-
+export const DocsPage = ({ parentTitle, path }: DocsPageProps): JSX.Element => {
   return (
     <>
-      <DocsBreadcrumbs pageTree={pageTree} />
-      {docsContentLoader.useContent(path)}
+      {docsContentLoader.useContent(path, {
+        parentTitle: parentTitle ?? null,
+      })}
     </>
   );
 };

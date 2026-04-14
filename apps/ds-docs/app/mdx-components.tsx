@@ -13,7 +13,7 @@ const components = {
     children?: ReactNode;
     id?: string;
   }): JSX.Element => (
-    <Heading as={'h3'} id={id}>
+    <Heading as={'h1'} id={id}>
       {children}
     </Heading>
   ),
@@ -25,15 +25,15 @@ const components = {
     children?: ReactNode;
     id?: string;
   }): JSX.Element => (
-    <Heading as={'h4'} id={id}>
+    <Heading as={'h3'} id={id} hasSpacing={false}>
       {children}
     </Heading>
   ),
   p: ({ children }: { children?: ReactNode }): JSX.Element => (
-    <Paragraph>{children}</Paragraph>
+    <Paragraph hasSpacing>{children}</Paragraph>
   ),
   ul: ({ children }: { children?: ReactNode }): JSX.Element => (
-    <List>{children}</List>
+    <List hasSpacing>{children}</List>
   ),
   li: ({ children }: { children?: ReactNode }): JSX.Element => (
     <List.Element>{children}</List.Element>
