@@ -2,7 +2,7 @@ import type { Config } from '@react-router/dev/config';
 import { createGetUrl, getSlugs } from 'fumadocs-core/source';
 
 import { glob } from 'node:fs/promises';
-const getUrl = createGetUrl('/docs');
+const getUrl = createGetUrl('/');
 export default {
   // disable SSR
   buildDirectory: '../../dist/ds-docs/build',
