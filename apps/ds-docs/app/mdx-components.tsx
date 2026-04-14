@@ -5,6 +5,13 @@ import type { MDXComponents } from 'mdx/types';
 import { Link } from '@skatteetaten/ds-buttons';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
+import { Canvas } from './components/canvas';
+
+interface CanvasMdxProps {
+  children?: ReactNode;
+  examplesPath?: string;
+}
+
 const components = {
   h1: ({
     children,
@@ -40,6 +47,9 @@ const components = {
   ),
   a: ({ children, href }: { children: string; href?: string }): JSX.Element => (
     <Link href={href || ''}>{children}</Link>
+  ),
+  Canvas: ({ children, examplesPath }: CanvasMdxProps): JSX.Element => (
+    <Canvas examplesPath={examplesPath}>{children}</Canvas>
   ),
 };
 

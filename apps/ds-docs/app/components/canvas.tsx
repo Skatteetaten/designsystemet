@@ -1,0 +1,233 @@
+import {
+  JSX,
+  ReactNode,
+  useEffect,
+  useEffectEvent,
+  useId,
+  useState,
+} from 'react';
+
+import { useShikiDynamic } from 'fumadocs-core/highlight/shiki/react';
+
+import { IconButton, InlineButton } from '@skatteetaten/ds-buttons';
+import { Chips, Tabs } from '@skatteetaten/ds-collections';
+import { CodeSVGpath, CopySVGpath } from '@skatteetaten/ds-icons';
+
+import { ExampleDescriptor, getExamples } from './canvas.utils';
+
+import styles from './canvas.module.scss';
+
+interface CanvasProps {
+  children?: ReactNode;
+  examplesPath?: string;
+}
+
+interface HighlightedCodeProps {
+  code: string;
+  language: string;
+}
+
+const getSelectedExample = (
+  examples: ExampleDescriptor[],
+  selectedExampleKey: string | null
+): ExampleDescriptor | null => {
+  return examples.find((example) => example.key === selectedExampleKey) ?? null;
+};
+
+const HighlightedCode = ({
+  code,
+  language,
+}: HighlightedCodeProps): ReactNode => {
+  return useShikiDynamic(
+    () =>
+      import('fumadocs-core/highlight').then((mod) => mod.getHighlighter('js')),
+    code,
+    {
+      defaultValue: (
+        <pre className={styles.codeBlock}>
+          <code>{code}</code>
+        </pre>
+      ),
+      lang: language,
+      theme: 'github-dark',
+      components: {
+        pre: (props): JSX.Element => (
+          <pre {...props} className={styles.codeBlock} />
+        ),
+      },
+    },
+    [code]
+  );
+};
+
+export const Canvas = ({
+  children,
+  examplesPath,
+}: CanvasProps): JSX.Element => {
+  const codePanelId = useId();
+  const examples = examplesPath ? getExamples(examplesPath) : [];
+  const [isCodeVisible, setIsCodeVisible] = useState(false);
+  const [selectedCodeFileKey, setSelectedCodeFileKey] = useState<string | null>(
+    null
+  );
+  const [selectedExampleKey, setSelectedExampleKey] = useState<string | null>(
+    null
+  );
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>(
+    'idle'
+  );
+
+  const selectedExample =
+    getSelectedExample(examples, selectedExampleKey) ?? examples[0] ?? null;
+  const selectedCodeFile =
+    selectedExample?.codeFiles.find(
+      (file) => file.key === selectedCodeFileKey
+    ) ??
+    selectedExample?.codeFiles[0] ??
+    null;
+  const SelectedExampleComponent = selectedExample?.Component;
+
+  const handleSelectedCodeFileChange = useEffectEvent((): void => {
+    if (!selectedCodeFile) {
+      return;
+    }
+
+    setCopyStatus('idle');
+  });
+
+  const handleSelectedExampleChange = useEffectEvent((): void => {
+    setSelectedCodeFileKey(selectedExample?.codeFiles[0]?.key ?? null);
+  });
+
+  useEffect(() => {
+    handleSelectedCodeFileChange();
+  }, [selectedCodeFile?.key]);
+
+  useEffect(() => {
+    handleSelectedExampleChange();
+  }, [selectedExample?.key]);
+
+  if (!examplesPath) {
+    return <div className={styles.canvas}>{children}</div>;
+  }
+
+  if (
+    examples.length === 0 ||
+    !selectedExample ||
+    !selectedCodeFile ||
+    !SelectedExampleComponent
+  ) {
+    return (
+      <div className={styles.wrapper}>
+        <div className={styles.canvas}>
+          <p className={styles.message}>
+            {`Fant ingen eksempler i "${examplesPath}".`}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  const handleCopyCode = async (): Promise<void> => {
+    try {
+      await navigator.clipboard.writeText(selectedCodeFile.source);
+      setCopyStatus('copied');
+    } catch {
+      setCopyStatus('error');
+    }
+  };
+
+  const handleCodeFileChange = (value: string): void => {
+    const matchingFile = selectedExample.codeFiles.find(
+      (file) => file.tabValue === value
+    );
+
+    if (matchingFile) {
+      setSelectedCodeFileKey(matchingFile.key);
+    }
+  };
+
+  return (
+    <div className={styles.wrapper}>
+      {examples.length > 1 && (
+        <Chips ariaLabel={'Velg eksempel'} className={styles.selector}>
+          {examples.map((example) => (
+            <Chips.Toggle
+              key={example.key}
+              size={'small'}
+              isSelected={example.key === selectedExample.key}
+              onClick={() => setSelectedExampleKey(example.key)}
+            >
+              {example.label}
+            </Chips.Toggle>
+          ))}
+        </Chips>
+      )}
+      <div className={styles.canvas}>
+        <div className={styles.example}>
+          <SelectedExampleComponent key={selectedExample.key} />
+        </div>
+        <div className={styles.actions}>
+          <InlineButton
+            type={'button'}
+            svgPath={CodeSVGpath}
+            ariaDescribedby={codePanelId}
+            onClick={() => setIsCodeVisible((currentValue) => !currentValue)}
+          >
+            {isCodeVisible ? 'Skjul kode' : 'Vis kode'}
+          </InlineButton>
+        </div>
+      </div>
+      {isCodeVisible && (
+        <div id={codePanelId} className={styles.codePanel}>
+          <div className={styles.codeHeader}>
+            <span className={styles.codeFileName}>{selectedExample.label}</span>
+            <IconButton
+              type={'button'}
+              size={'extraSmall'}
+              svgPath={CopySVGpath}
+              title={
+                copyStatus === 'copied' ? 'Koden er kopiert' : 'Kopier kode'
+              }
+              onClick={handleCopyCode}
+            />
+          </div>
+          {selectedExample.codeFiles.length > 1 ? (
+            <Tabs
+              className={styles.codeTabs}
+              defaultValue={selectedCodeFile.key}
+              value={selectedCodeFile.tabValue}
+              isMultiline
+              onChange={handleCodeFileChange}
+            >
+              <Tabs.List className={styles.codeTabList}>
+                {selectedExample.codeFiles.map((file) => (
+                  <Tabs.Tab key={file.key} value={file.tabValue}>
+                    {file.fileName}
+                  </Tabs.Tab>
+                ))}
+              </Tabs.List>
+              {selectedExample.codeFiles.map((file) => (
+                <Tabs.Panel
+                  key={file.key}
+                  className={styles.codeTabPanel}
+                  value={file.tabValue}
+                >
+                  <HighlightedCode
+                    code={file.source}
+                    language={file.language}
+                  />
+                </Tabs.Panel>
+              ))}
+            </Tabs>
+          ) : (
+            <HighlightedCode
+              code={selectedCodeFile.source}
+              language={selectedCodeFile.language}
+            />
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
