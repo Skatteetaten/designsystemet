@@ -14,10 +14,12 @@
   .iconWrapper {
     display: flex; // to size the wrapper to the icon
     padding: var(--spacing-s) 0 0.125rem var(--spacing-s);
+    margin-left: -0.125rem; // kompenserer for 2px luft rundt ikonet
 
     @media (min-width: breakpoints.$breakpoint-xs) {
       padding: var(--spacing-s) var(--spacing-l) var(--spacing-s)
         var(--spacing-m);
+      margin-left: 0;
     }
   }
 

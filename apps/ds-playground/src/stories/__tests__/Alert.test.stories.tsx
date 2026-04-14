@@ -9,6 +9,7 @@ import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Alert,
@@ -307,8 +308,7 @@ export const WithLongText = {
   name: 'With Long Text (A2)',
   args: {
     ...defaultArgs,
-    children:
-      'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon. Dersom teksten går over flere linjer, så vil ikonene beholde plasseringen sin.',
+    children: loremIpsum,
     showAlert: true,
   },
   argTypes: {
@@ -329,6 +329,11 @@ export const WithLongTextAndBreaking = {
   argTypes: {
     children: {
       table: { disable: false },
+    },
+  },
+  globals: {
+    viewport: {
+      value: '--mobile',
     },
   },
 } satisfies Story;
