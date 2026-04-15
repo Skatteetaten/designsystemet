@@ -52,13 +52,7 @@
     "sonarqube": "sonar-scanner",
     "generate:iconIndexFiles": "node libs/ds-icons/src/createIconIndexFiles.cjs",
     "generate:designtokens": "node ./libs/ds-core-designtokens/scripts/CSStoJS.cjs && nx format ds-core-designtokens",
-    "docker:start": "docker run -d --rm --name snapshotscontainer -p 3000:3000 -p 63315:63315 -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true browserless/chrome:1.59.0-puppeteer-20.2.1",
-    "docker:start:linux": "docker run -d --rm --name snapshotscontainer -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true --net=host browserless/chrome:1.59.0-chrome-stable",
-    "docker:stop": "docker stop snapshotscontainer",
-    "sanity:upload": "node ./libs/ds-dev-config/src/scripts/sanity-upload.ts",
     "sanity:download": "node ./libs/ds-dev-config/src/scripts/sanity-download.ts",
-    "sanity:delete": "node ./libs/ds-dev-config/src/scripts/sanity-delete.ts",
-    "sanity:unlink-mappe-from-liste": "node src/scripts/sanity-unlink-mappe-from-liste.ts",
     "downloadTranslations": "npm run sanity:download -- --download --listeTekniskNavn=ds-translations",
     "postinstall": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./libs/ds-dev-config/src/scripts/fix-lib-types.ts && playwright install chromium"
   },
