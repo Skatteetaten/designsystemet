@@ -1,9 +1,10 @@
 import { JSX } from 'react';
 
-import { Link } from '@skatteetaten/ds-buttons';
-import { List } from '@skatteetaten/ds-typography';
+import { NavigationTile } from '@skatteetaten/ds-navigation';
 
 import browserCollections from '../../.source/browser';
+
+import styles from './component-list.module.scss';
 
 const componentEntries = Object.keys(browserCollections.docs.raw)
   .map((path) => path.replace(/^\.\//, ''))
@@ -21,15 +22,20 @@ const toLabel = (path: string): string =>
     .replace(/\b\w/g, (character) => character.toUpperCase());
 
 export const ComponentList = (): JSX.Element => (
-  <List>
+  <nav
+    aria-label={'Liste over alle komponentene i designsystemet'}
+    className={styles.nav}
+  >
     {componentEntries.map((path) => {
       const slug = path.replace(/^components\//, '').replace(/\.mdx$/, '');
-
       return (
-        <List.Element key={path}>
-          <Link href={`/components/${slug}`}>{toLabel(path)}</Link>
-        </List.Element>
+        <NavigationTile
+          key={path}
+          title={toLabel(path)}
+          href={`/components/${slug}`}
+          size={'extraLarge'}
+        />
       );
     })}
-  </List>
+  </nav>
 );

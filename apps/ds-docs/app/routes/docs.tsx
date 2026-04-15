@@ -102,10 +102,21 @@ const docsContentLoader =
           <div className={styles.content}>
             <title>{frontmatter.title}</title>
             <meta name={'description'} content={frontmatter.description} />
-            {parentTitle && (
-              <Paragraph variant={'ingress'}>{parentTitle}</Paragraph>
-            )}
-            <Heading as={'h1'}>{frontmatter.title}</Heading>
+            <div className={styles.headingWrapper}>
+              <div>
+                {parentTitle && (
+                  <Paragraph variant={'ingress'}>{parentTitle}</Paragraph>
+                )}
+                <Heading as={'h1'}>{frontmatter.title}</Heading>
+              </div>
+              {frontmatter.icon && (
+                <img
+                  src={frontmatter.icon}
+                  className={styles.mdxIcon}
+                  aria-hidden
+                />
+              )}
+            </div>
             {frontmatter.description}
             <div>
               <Mdx components={getMdxComponents()} />

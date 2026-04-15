@@ -23,3 +23,17 @@
     position: static;
   }
 }
+
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mdxIcon {
+  width: 11rem;
+
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
+}
