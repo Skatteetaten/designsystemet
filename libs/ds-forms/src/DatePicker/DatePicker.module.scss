@@ -30,7 +30,6 @@
 }
 
 .input {
-  position: relative;
   width: 100%;
   padding: var(--spacing-xs) var(--spacing-s);
   border: none;
@@ -96,7 +95,6 @@
 }
 
 .calendarButton {
-  position: relative;
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -159,5 +157,7 @@
 .calendarContainer {
   position: absolute;
   z-index: 55;
+  top: 100%;
+  left: 0;
   margin-top: var(--spacing-xs);
 }
