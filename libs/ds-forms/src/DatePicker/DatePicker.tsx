@@ -289,6 +289,19 @@ export const DatePicker = ({
             />
           </button>
         )}
+        {showCalendar && (
+          <div className={styles.calendarContainer}>
+            <DatePickerCalendar
+              ref={calendarRef}
+              disabledDates={disabledDates}
+              selectedDate={preselectedDate}
+              minDate={minDate}
+              maxDate={maxDate}
+              onSelectDate={handleSelectDate}
+              onTabKeyOut={closeCalendar}
+            />
+          </div>
+        )}
       </div>
       <ErrorMessage
         id={errorId}
@@ -297,19 +310,6 @@ export const DatePicker = ({
       >
         {errorMessage}
       </ErrorMessage>
-      {showCalendar && (
-        <div className={styles.calendarContainer}>
-          <DatePickerCalendar
-            ref={calendarRef}
-            disabledDates={disabledDates}
-            selectedDate={preselectedDate}
-            minDate={minDate}
-            maxDate={maxDate}
-            onSelectDate={handleSelectDate}
-            onTabKeyOut={closeCalendar}
-          />
-        </div>
-      )}
     </div>
   );
 };
