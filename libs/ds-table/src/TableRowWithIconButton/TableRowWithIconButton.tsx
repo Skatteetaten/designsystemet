@@ -51,7 +51,7 @@ const getScreenReaderText = (
   return t('tablerow.ExpandButtonScreenReaderText');
 };
 
-export const RowWithLeftSideExpandButton = ({
+export const TableRowWithIconButton = ({
   ref,
   id,
   className = getCommonClassNameDefault(),
@@ -59,6 +59,7 @@ export const RowWithLeftSideExpandButton = ({
   'data-testid': dataTestId,
   onExpandClick,
   classNames,
+  buttonPosition,
   svgPath,
   context,
   iconButtonAriaExpanded,
@@ -75,10 +76,11 @@ export const RowWithLeftSideExpandButton = ({
   children,
 }: ExpandableRowProps): JSX.Element => {
   const rowRef = useRef<HTMLTableRowElement>(null);
-  const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const [shouldShowScreenReaderText, setShouldShowScreenReaderText] =
     useState(false);
+
   useImperativeHandle(ref, () => ({
     focusButton: (): void => {
       buttonRef?.current?.focus();
@@ -144,7 +146,7 @@ export const RowWithLeftSideExpandButton = ({
     context?.variant === 'compact' ? styles.expandButton_compact : '';
 
   const expandButtonScreenReaderText =
-    shouldShowScreenReaderText && rowType
+    buttonPosition === 'left' && shouldShowScreenReaderText && rowType
       ? getScreenReaderText(rowType, t)
       : undefined;
 
@@ -152,18 +154,20 @@ export const RowWithLeftSideExpandButton = ({
     <>
       <tr
         ref={rowRef}
-        data-row-type={rowType}
+        data-row-type={buttonPosition === 'left' ? rowType : undefined}
         id={id}
         className={`${isExpanded && !shouldInsertExpandAreaMarkers ? styles.row_noBorder : ''} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
       >
+        {buttonPosition === 'right' && children}
         <TableDataCell
           className={`${!showExpandButtonTitle ? styles.buttonCell : ''} ${
             !showExpandButtonTitle
               ? cellSizeClassName || cellVariantClassName
               : ''
           }`.trim()}
+          alignment={buttonPosition}
         >
           {showExpandButtonTitle ? (
             <InlineButtonWithScreenReaderText
@@ -190,7 +194,7 @@ export const RowWithLeftSideExpandButton = ({
               ref={buttonRef}
               className={hideIconButton ? styles.hideIcon : ''}
               svgPath={svgPath}
-              title={`${expandButtonTitle} ${expandButtonScreenReaderText ? expandButtonScreenReaderText : ''}`.trim()}
+              title={`${expandButtonTitle} ${expandButtonScreenReaderText ?? ''}`.trim()}
               size={getIconButtonSize(
                 isDesktop,
                 context?.variant,
@@ -204,14 +208,14 @@ export const RowWithLeftSideExpandButton = ({
             />
           )}
         </TableDataCell>
-        {children}
+        {buttonPosition === 'left' && children}
       </tr>
 
       {isExpanded && !shouldInsertExpandAreaMarkers && (
         <tr className={`${styles.expandedRow} ${className}`.trim()}>
           <td colSpan={rowLength}>
             <div
-              className={`${styles.expandableLeftContent} ${
+              className={`${buttonPosition === 'left' ? styles.expandableLeftContent : ''} ${
                 classNames?.expandedContent ?? ''
               }`.trim()}
             >
@@ -234,148 +238,4 @@ export const RowWithLeftSideExpandButton = ({
     </>
   );
 };
-RowWithLeftSideExpandButton.displayName = 'TableRow';
-
-export const RowWithRightSideExpandButton = ({
-  ref,
-  id,
-  className = getCommonClassNameDefault(),
-  classNames,
-  lang,
-  'data-testid': dataTestId,
-  context,
-  expandButtonTitle = getTableRowExpandButtonTitleDefault(),
-  expandableContent,
-  showExpandButtonTitle,
-  iconButtonAriaExpanded,
-  svgPath,
-  expandButtonAriaDescribedby,
-  expandButtonProps,
-  isExpanded = getTableRowIsExpandedDefault(),
-  isExpandButtonDisabled,
-  shouldInsertExpandAreaMarkers,
-  onExpandClick,
-  hideIconButton,
-  children,
-}: ExpandableRowProps): JSX.Element => {
-  const rowRef = useRef<HTMLTableRowElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  useImperativeHandle(ref, () => ({
-    focusButton: (): void => {
-      buttonRef?.current?.focus();
-    },
-    buttonRef,
-    rowRef,
-  }));
-  const { t } = useTranslation('ds_tables', { i18n: dsI18n });
-  const [rowLength, setRowLength] = useState<number>(999);
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
-
-  useEffect(() => {
-    if (buttonRef.current) {
-      buttonRef.current.ariaExpanded = isExpanded.toString();
-    }
-  }, [isExpanded]);
-
-  useEffect(() => {
-    if (!isExpanded) return;
-
-    const cells = rowRef.current?.cells;
-
-    if (!cells) return;
-
-    let totalColumns = 0;
-    for (let i = 0; i < cells.length; i++) {
-      totalColumns += cells[i].colSpan || 1;
-    }
-
-    setRowLength(totalColumns);
-  }, [rowRef, isExpanded]);
-
-  const cellSizeClassName = context?.size
-    ? styles[`buttonCell_${context?.size}`]
-    : '';
-  const cellVariantClassName =
-    context?.variant === 'compact' ? styles.buttonCell_compact : '';
-
-  const expandButtonSizeClassName =
-    context?.size === 'extraSmall' ? styles.expandButton_extraSmall : '';
-
-  const expandButtonVariantClassName =
-    context?.variant === 'compact' ? styles.expandButton_compact : '';
-
-  return (
-    <>
-      <tr
-        ref={rowRef}
-        id={id}
-        className={`${isExpanded && !shouldInsertExpandAreaMarkers ? styles.row_noBorder : ''} ${className}`.trim()}
-        lang={lang}
-        data-testid={dataTestId}
-      >
-        {children}
-        <TableDataCell
-          className={`${!showExpandButtonTitle ? styles.buttonCell : ''} ${
-            !showExpandButtonTitle
-              ? cellSizeClassName || cellVariantClassName
-              : ''
-          }`.trim()}
-          alignment={'right'}
-        >
-          {showExpandButtonTitle ? (
-            <InlineButton
-              ref={buttonRef}
-              className={`${styles.expandButton} ${expandButtonSizeClassName || expandButtonVariantClassName}`.trim()}
-              svgPath={svgPath}
-              ariaDescribedby={expandButtonAriaDescribedby}
-              disabled={isExpandButtonDisabled}
-              onClick={onExpandClick}
-              {...expandButtonProps}
-            >
-              {expandButtonTitle}
-            </InlineButton>
-          ) : (
-            <IconButton
-              ref={buttonRef}
-              className={hideIconButton ? styles.hideIcon : ''}
-              svgPath={svgPath}
-              title={expandButtonTitle}
-              size={getIconButtonSize(
-                isDesktop,
-                context?.variant,
-                context?.size
-              )}
-              ariaDescribedby={expandButtonAriaDescribedby}
-              ariaExpanded={iconButtonAriaExpanded}
-              disabled={isExpandButtonDisabled}
-              onClick={onExpandClick}
-              {...expandButtonProps}
-            />
-          )}
-        </TableDataCell>
-      </tr>
-
-      {isExpanded && !shouldInsertExpandAreaMarkers && (
-        <tr className={`${styles.expandedRow} ${className}`.trim()}>
-          <td colSpan={rowLength}>
-            <div className={classNames?.expandedContent}>
-              {expandableContent}
-            </div>
-          </td>
-        </tr>
-      )}
-      {isExpanded && shouldInsertExpandAreaMarkers && (
-        <>
-          <tr className={styles.srOnly} lang={lang} data-testid={dataTestId}>
-            <td colSpan={rowLength}>{t('table.ExpandAreaStart')}</td>
-          </tr>
-          {expandableContent}
-          <tr className={styles.srOnly}>
-            <td colSpan={rowLength}>{t('table.ExpandAreaEnd')}</td>
-          </tr>
-        </>
-      )}
-    </>
-  );
-};
-RowWithRightSideExpandButton.displayName = 'TableRow';
+TableRowWithIconButton.displayName = 'TableRowWithIconButton';

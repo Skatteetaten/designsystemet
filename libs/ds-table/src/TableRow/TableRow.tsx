@@ -20,10 +20,7 @@ import {
 } from '../Table/defaults';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
-import {
-  RowWithLeftSideExpandButton,
-  RowWithRightSideExpandButton,
-} from '../TableRowWithIconButton/TableRowWithIconButton';
+import { TableRowWithIconButton } from '../TableRowWithIconButton/TableRowWithIconButton';
 
 const isExpandableContentRows = (expandableContent: ReactNode): boolean => {
   if (Array.isArray(expandableContent)) {
@@ -86,11 +83,6 @@ export const TableRow = ({
       ? t('tablerow.ExpandText')
       : getTableRowExpandButtonTitleDefault());
 
-  const Tag =
-    expandButtonPosition === 'left'
-      ? RowWithLeftSideExpandButton
-      : RowWithRightSideExpandButton;
-
   if (!isExpandable) {
     return (
       <tr
@@ -105,12 +97,13 @@ export const TableRow = ({
     );
   } else {
     return (
-      <Tag
+      <TableRowWithIconButton
         ref={testRef}
         id={id}
         className={className}
         lang={lang}
         data-testid={dataTestId}
+        buttonPosition={expandButtonPosition}
         isExpanded={isExpanded}
         iconButtonAriaExpanded={isExpanded}
         rowType={'expand'}
@@ -127,7 +120,7 @@ export const TableRow = ({
         onExpandClick={onExpandClick}
       >
         {children}
-      </Tag>
+      </TableRowWithIconButton>
     );
   }
 };
