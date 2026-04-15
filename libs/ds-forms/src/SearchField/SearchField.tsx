@@ -267,7 +267,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             }}
             onFocus={onFocus}
           />
-          <span aria-live={'assertive'} className={styles.srOnly}>
+          <span aria-live={'polite'} className={styles.srOnly}>
             {shouldShowResults &&
               t('searchfield.NumberOfResults', {
                 ant: results?.length ?? 0,
