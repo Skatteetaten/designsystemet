@@ -1,49 +1,52 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .alert {
-  display: flex;
+  position: relative;
   width: 100%;
   box-sizing: border-box;
   border-width: 1px 1px 1px 0.25rem;
   border-style: solid;
 
+  @media (min-width: breakpoints.$breakpoint-xs) {
+    display: flex;
+  }
+
   .iconWrapper {
-    display: inherit;
-    padding: var(--spacing-s) var(--spacing-s) var(--spacing-s)
-      var(--spacing-xs);
+    display: flex; // to size the wrapper to the icon
+    padding: var(--spacing-s) 0 0.125rem var(--spacing-s);
+    margin-left: -0.125rem; // kompenserer for 2px luft rundt ikonet
 
     @media (min-width: breakpoints.$breakpoint-xs) {
       padding: var(--spacing-s) var(--spacing-l) var(--spacing-s)
         var(--spacing-m);
+      margin-left: 0;
     }
   }
 
   .content {
-    flex-grow: 1;
-    align-self: center;
-    padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) 0;
+    padding: 0 var(--spacing-s) var(--spacing-s);
     color: var(--palette-graphite-100);
     font-size: var(--font-size-m);
     line-height: var(--semantic-line-height-default);
     overflow-wrap: anywhere;
 
     @media (min-width: breakpoints.$breakpoint-xs) {
-      padding-right: var(--spacing-m);
+      flex-grow: 1;
+      align-self: center;
+      padding: var(--spacing-s) calc(1.625rem + 2 * var(--spacing-s))
+        var(--spacing-s) 0; // størrelse på closeButton (26px) + spacing på begge sider
     }
   }
 
   .closeButton {
-    align-self: start;
-    margin: var(--spacing-s) var(--spacing-xs) var(--spacing-s) 0;
+    position: absolute;
+    top: var(--spacing-s);
+    right: var(--spacing-s);
 
     --icon-button-icon-color: var(--palette-graphite-100);
 
     &:active {
       --icon-button-icon-color: var(--palette-graphite-0);
-    }
-
-    @media (min-width: breakpoints.$breakpoint-xs) {
-      margin-right: var(--spacing-s);
     }
   }
 
@@ -91,16 +94,19 @@
   }
 
   &[data-variant='danger'] {
-    border-width: 3px 3px 3px 0;
+    border-width: 3px;
     border-color: var(--semantic-danger-foreground);
     background-color: var(--semantic-danger-background);
 
     .iconWrapper {
-      padding: calc(var(--spacing-s) - 2px) var(--spacing-xs);
+      padding: calc(var(--spacing-s) - 2px) calc(var(--spacing-s) - 2px)
+        var(--spacing-s); // kompenserer for økt bredde på rammen
+
       background-color: var(--semantic-danger-foreground);
 
       @media (min-width: breakpoints.$breakpoint-xs) {
-        padding: calc(var(--spacing-s) - 2px) var(--spacing-m);
+        padding: calc(var(--spacing-s) - 2px) var(--spacing-m)
+          calc(var(--spacing-s) - 2px) calc(var(--spacing-m) - 2px);
       }
 
       .icon {
@@ -109,19 +115,23 @@
     }
 
     .content {
-      padding: calc(var(--spacing-s) - 2px) var(--spacing-s);
+      padding: calc(
+        var(--spacing-s) - 2px
+      ); // kompenserer for økt bredde på rammen
 
       @media (min-width: breakpoints.$breakpoint-xs) {
-        padding: calc(var(--spacing-s) - 2px) var(--spacing-m);
+        padding-left: var(--spacing-m);
       }
     }
 
     .closeButton {
-      margin: calc(var(--spacing-s) - 2px) var(--spacing-xs)
-        calc(var(--spacing-s) - 2px) 0;
+      top: 0.25rem;
+      right: 0.25rem;
 
-      @media (min-width: breakpoints.$breakpoint-xs) {
-        margin-right: var(--spacing-s);
+      --icon-button-icon-color: var(--palette-graphite-0);
+
+      &:hover {
+        --icon-button-icon-color: var(--palette-graphite-100);
       }
     }
   }
