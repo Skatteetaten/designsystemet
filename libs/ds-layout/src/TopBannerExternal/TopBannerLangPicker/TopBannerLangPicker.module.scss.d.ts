@@ -1,4 +1,5 @@
 declare const classNames: {
+  readonly otherLanguagesLink: 'otherLanguagesLink';
   readonly container: 'container';
   readonly overlay: 'overlay';
   readonly menuButtonDesktopOnly: 'menuButtonDesktopOnly';

@@ -1,5 +1,6 @@
 import {
   ComponentPropsWithoutRef,
+  FocusEventHandler,
   KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
@@ -18,6 +19,7 @@ type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   ariaCurrent?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  onFocus?: FocusEventHandler<HTMLButtonElement>;
   onKeyDown?: KeyboardEventHandler<HTMLButtonElement>;
 }
 

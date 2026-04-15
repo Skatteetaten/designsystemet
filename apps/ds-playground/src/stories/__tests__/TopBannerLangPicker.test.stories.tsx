@@ -41,6 +41,10 @@ const meta = {
     openMenu: { table: { disable: true } },
     setOpenMenu: { table: { disable: true } },
     menuButtonRef: { table: { disable: true } },
+    additionalLanguages: { table: { disable: true } },
+    otherLanguagesURL: { table: { disable: true } },
+    isInMobileMenu: { table: { disable: true } },
+    selectedLang: { table: { disable: true } },
     // Events
     onLanguageClick: { table: { disable: true } },
   },
@@ -244,5 +248,24 @@ export const WithKeyboardNavigation = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+} satisfies Story;
+
+const otherLanguagesURL =
+  'https://www.skatteetaten.no/person/utenlandsk/skal-du-arbeide-i-norge/film_no/';
+
+export const WithOtherLanguagesLink = {
+  args: {
+    ...defaultArgs,
+    otherLanguagesURL,
+  },
+  argTypes: { otherLanguagesURL: { table: { disable: false } } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button');
+    await userEvent.click(menuButton);
+    const otherLanguagesLink = canvas.getByRole('link');
+    await expect(otherLanguagesLink).toBeInTheDocument();
+    await expect(otherLanguagesLink).toHaveAttribute('href', otherLanguagesURL);
   },
 } satisfies Story;

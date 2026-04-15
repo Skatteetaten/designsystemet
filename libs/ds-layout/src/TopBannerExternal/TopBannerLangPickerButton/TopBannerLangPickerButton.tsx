@@ -17,13 +17,10 @@ export const TopBannerLangPickerButton = ({
   ariaCurrent,
   focus,
   onClick,
+  onFocus,
   onKeyDown,
   children,
 }: TopBannerLangPickerButtonProps): JSX.Element => {
-  const concatenatedClassNames = `${
-    ariaCurrent ? styles.buttonCurrent : ''
-  } ${styles.button} ${className}`.trim();
-
   const refInternal = useRef<HTMLButtonElement>(null);
   useImperativeHandle(ref, () => refInternal?.current as HTMLButtonElement);
 
@@ -37,12 +34,13 @@ export const TopBannerLangPickerButton = ({
     <button
       ref={refInternal}
       id={id}
-      className={concatenatedClassNames}
+      className={`${styles.button} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
       aria-current={ariaCurrent}
       type={'button'}
       onClick={onClick}
+      onFocus={onFocus}
       onKeyDown={onKeyDown}
     >
       <span className={styles.flagWrapper}>{flagIcon}</span>

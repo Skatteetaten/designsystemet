@@ -77,7 +77,7 @@ const meta = {
       control: false,
       table: { category: category.props },
     },
-
+    otherLanguagesURL: { table: { category: category.props } },
     searchContent: { control: 'text', table: { category: category.props } },
     // Events
     onSearchClick: {

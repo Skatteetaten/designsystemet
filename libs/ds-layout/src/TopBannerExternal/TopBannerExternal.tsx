@@ -61,6 +61,7 @@ export const TopBannerExternal = (({
   thirdColumn,
   user,
   additionalLanguages,
+  otherLanguagesURL,
   searchContent,
   showSami,
   children,
@@ -251,6 +252,7 @@ export const TopBannerExternal = (({
                 setOpenMenu={setOpenMenu}
                 menuButtonRef={languagePickerButtonRef}
                 additionalLanguages={additionalLanguages}
+                otherLanguagesURL={otherLanguagesURL}
                 selectedLang={selectedLang}
                 onLanguageClick={(e) => {
                   setSelectedLang(e.currentTarget.lang);
