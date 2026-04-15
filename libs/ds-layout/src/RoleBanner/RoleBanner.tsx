@@ -5,7 +5,6 @@ import {
   dsI18n,
   getCommonClassNameDefault,
   NON_BREAKING_SPACE,
-  useMediaQuery,
 } from '@skatteetaten/ds-core-utils';
 
 import { RoleBannerProps } from './RoleBanner.types';
@@ -55,7 +54,6 @@ export const RoleBanner = ({
     <section
       ref={bannerRef}
       id={id}
-      role={'region'}
       aria-label={t('rolebanner.AriaLabel')}
       lang={lang}
       data-testid={dataTestId}
