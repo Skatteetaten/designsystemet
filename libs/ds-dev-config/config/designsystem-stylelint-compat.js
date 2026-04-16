@@ -13,7 +13,7 @@ const browsers = readFileSync(browserslistPath, 'utf8')
 export default {
   overrides: [
     {
-      files: ['../../**/*.css'],
+      files: ['../../**/*.css', '../../**/*.scss'],
       plugins: ['stylelint-no-unsupported-browser-features'],
       rules: {
         'plugin/no-unsupported-browser-features': [
@@ -21,6 +21,12 @@ export default {
           {
             browsers,
             ignorePartialSupport: true,
+            ignore: [
+              'css3-cursors',
+              'css-selection',
+              'css-resize',
+              'css-touch-action',
+            ],
           },
         ],
       },
