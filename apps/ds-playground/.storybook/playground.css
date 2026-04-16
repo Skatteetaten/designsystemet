@@ -493,3 +493,8 @@ dl.descriptionListTwoColumns {
   max-height: 200px;
   overflow-y: auto;
 }
+
+.container-main {
+  overflow-y: scroll;
+  max-height: 100%;
+}
