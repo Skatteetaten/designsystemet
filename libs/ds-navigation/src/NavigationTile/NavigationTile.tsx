@@ -84,7 +84,7 @@ export const NavigationTile = ({
   } ${classNames?.title ?? ''}`.trim();
 
   const descriptionClassNames = `${styles.description} ${
-    size === 'extraLarge' && styles.description_extraLarge
+    size === 'extraLarge' ? styles.description_extraLarge : ''
   } ${size !== 'extraLarge' && (svgPath || hasSpinner) ? styles.descriptionIndented : ''} ${
     classNames?.description ?? ''
   }`.trim();

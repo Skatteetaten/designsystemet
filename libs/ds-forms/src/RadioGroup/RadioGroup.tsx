@@ -101,7 +101,7 @@ export const RadioGroup = (({
       classNames={{
         ...classNames,
         contentContainer:
-          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer}`.trim(),
+          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer ?? ''}`.trim(),
       }}
       lang={lang}
       data-testid={dataTestId}
