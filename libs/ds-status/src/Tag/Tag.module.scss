@@ -36,11 +36,11 @@
   }
 
   &:where([data-size='medium']) {
-    padding: var(--spacing-xxs) 6px;
+    padding: var(--spacing-xxs) 0.375rem;
   }
 
   &:where([data-size='small']) {
-    padding: 0 6px;
+    padding: 0 0.375rem;
     font-size: var(--font-size-s);
     line-height: var(--semantic-line-height-default);
 
