@@ -51,14 +51,28 @@ type Story = StoryObj<typeof meta>;
 
 export const Defaults = {
   name: 'Defaults',
-  args: {},
+  args: {
+    onClose: fn(),
+  },
   argTypes: {
     children: { table: { disable: false } },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const triggerButton = canvas.getByRole('button');
     await expect(triggerButton).toBeInTheDocument();
+    await expect(triggerButton).toHaveAttribute('aria-expanded', 'false');
+
+    await fireEvent.click(triggerButton);
+
+    await expect(triggerButton).toHaveAttribute('aria-expanded', 'true');
+    await expect(canvas.getByText(defaultText)).toBeInTheDocument();
+
+    await fireEvent.scroll(window);
+
+    await expect(triggerButton).toHaveAttribute('aria-expanded', 'true');
+    await expect(canvas.getByText(defaultText)).toBeInTheDocument();
+    await expect(args.onClose).not.toHaveBeenCalled();
   },
 } satisfies Story;
 
