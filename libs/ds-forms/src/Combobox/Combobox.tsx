@@ -263,7 +263,7 @@ const Combobox = memo(
           {label}
         </LabelWithHelp>
         <div
-          className={`${styles.inputContainer} ${label && !hideLabel ? styles.inputContainerMarginTop : ''}`.trim()}
+          className={`${styles.inputContainer} ${label && !hideLabel ? styles.inputContainerMarginTop : ''} ${classNames?.inputContainer ?? ''}`.trim()}
           onClick={!disabled ? handleContainerClick : undefined}
           onKeyDown={!disabled ? handleContainerKeyDown : undefined}
         >
