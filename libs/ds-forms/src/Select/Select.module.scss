@@ -71,14 +71,14 @@
 
 .selectIcon {
   position: absolute;
-  right: 4px;
+  right: var(--spacing-xs);
   align-self: center;
-  padding: 2px;
+  padding: var(--spacing-xxs);
   fill: var(--palette-azure-70);
   pointer-events: none;
 
   &_large {
-    right: 5px;
+    right: 0.3125rem;
     padding: var(--spacing-xs);
   }
 }
