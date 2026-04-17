@@ -78,7 +78,7 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
 
   const dismiss = useDismiss(floatingData.context, {
     enabled: shouldAutoDismiss,
-    ancestorScroll: true,
+    ancestorScroll: false,
   });
   const interactions = useInteractions([dismiss]);
 
