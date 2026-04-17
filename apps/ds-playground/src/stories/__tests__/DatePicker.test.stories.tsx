@@ -1017,3 +1017,27 @@ export const TabNavigationWithAllDatesDisabled = {
     });
   },
 } satisfies Story;
+
+const TemplateWithScrollableContainer: StoryFn<typeof DatePicker> = (args) => (
+  <div className={'flex gapS'}>
+    <aside className={'container-aside'}>
+      <p>
+        {
+          'Denne historien er laget for å teste rød ramme i kantlinjen når det er en feilmelding.'
+        }
+      </p>
+    </aside>
+    <main className={'container-main'}>
+      <DatePicker {...args} />
+    </main>
+  </div>
+);
+
+export const WithScrollableContainer = {
+  render: TemplateWithScrollableContainer,
+  name: 'Inside Scrollable Container',
+  args: {
+    ...defaultArgs,
+    errorMessage: 'Error',
+  },
+} satisfies Story;

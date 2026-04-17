@@ -15,17 +15,20 @@
   }
 }
 
-.dateContainer:has(.input[aria-invalid='true']) {
-  box-shadow: 0 0 0 1px var(--semantic-danger-foreground);
-}
-
 .input[aria-invalid='true'] + button.calendarButton {
-  box-shadow: inset 0 0 0 1px var(--semantic-danger-foreground);
+  box-shadow:
+    inset 0 2px 0 var(--semantic-danger-foreground),
+    inset -2px 0 0 var(--semantic-danger-foreground),
+    inset 0 -2px 0 var(--semantic-danger-foreground);
 
   &:hover,
   &:focus-visible,
   &:active {
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+  }
+
+  &:disabled {
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
   }
 }
 
@@ -42,7 +45,7 @@
   color: var(--semantic-page-foreground);
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
-  outline: none;
+  outline: 0;
   outline-offset: 0;
 
   &_large {
@@ -50,26 +53,24 @@
   }
 
   &[aria-invalid='true'] {
-    box-shadow: inset 0 0 0 1px var(--semantic-danger-foreground);
+    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
   }
 
   &::placeholder {
     color: var(--palette-graphite-50);
   }
 
-  &:hover {
-    z-index: 1;
-    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
-    outline: 2px solid var(--semantic-interactive-background);
-  }
-
-  &:disabled,
-  &:disabled:hover {
+  &:disabled {
     background: var(--semantic-disabled-background);
     box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
     color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
-    outline: 0;
+  }
+
+  &:enabled:hover {
+    z-index: 1;
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
   }
 
   &:enabled:focus-visible,
@@ -84,13 +85,7 @@
   }
 
   &:read-only:not(:disabled) {
-    padding: var(--spacing-xs) var(--spacing-s);
     box-shadow: none;
-    outline: 0;
-  }
-
-  &_large:read-only:not(:disabled) {
-    padding: var(--spacing-s);
   }
 }
 
@@ -115,19 +110,11 @@
     padding: var(--spacing-s);
   }
 
-  &:focus-visible,
-  &:hover {
-    z-index: 1;
-    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
-    outline: 1px solid var(--semantic-interactive-main);
-  }
-
   &:disabled {
     background-color: var(--semantic-disabled-background);
     box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
     color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
-    outline: 0;
 
     & .icon {
       fill: var(--semantic-disabled-foreground);
@@ -140,6 +127,12 @@
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     cursor: pointer;
     outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:enabled:focus-visible {
+    z-index: 1;
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 1px solid var(--semantic-interactive-main);
   }
 
   &:enabled:active {
