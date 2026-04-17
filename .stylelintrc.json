@@ -10,7 +10,10 @@
     },
     {
       "files": ["**/*.scss"],
-      "extends": ["./libs/ds-dev-config/config/designsystem-stylelintrc.yml"],
+      "extends": [
+        "./libs/ds-dev-config/config/designsystem-stylelintrc.yml",
+        "./libs/ds-dev-config/config/designsystem-stylelint-compat.js"
+      ],
       "rules": {
         "number-max-precision": 5
       }
