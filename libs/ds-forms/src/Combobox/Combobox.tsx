@@ -245,7 +245,7 @@ const Combobox = memo(
       <div
         lang={lang}
         data-has-spacing={hasSpacing}
-        className={`${styles.wrapper} ${className} ${classNames?.container || ''}`.trim()}
+        className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
       >
         <LabelWithHelp
           id={labelId}

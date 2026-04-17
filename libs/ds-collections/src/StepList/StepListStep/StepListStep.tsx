@@ -135,7 +135,7 @@ export const StepListStep = ({
       )}
 
       <div
-        className={`${styles.stepContent} ${classNames?.content}`.trim()}
+        className={`${styles.stepContent} ${classNames?.content ?? ''}`.trim()}
         data-full-width={hasResultContentFullWidth || undefined}
       >
         <div>{children}</div>
