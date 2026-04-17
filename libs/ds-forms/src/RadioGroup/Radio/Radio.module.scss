@@ -51,13 +51,11 @@
   }
 
   &:has(&Input[data-read-only='true']:not(:disabled)) {
-    --radio-outline-color: var(--semantic-disabled-foreground);
-    --radio-border-color: var(--semantic-disabled-foreground);
-    --radio-background-color: var(--semantic-disabled-foreground);
+    --radio-outline-color: var(--semantic-disabled-background);
+    --radio-border-color: var(--semantic-page-background);
+    --radio-background-color: var(--semantic-page-background);
     --label-color: var(--semantic-page-foreground);
     --description-color: var(--palette-graphite-70);
-    --outline-width: 3px;
-    --outline-offset: -1px;
     --cursor: default;
 
     pointer-events: none;
@@ -77,8 +75,11 @@
   }
 
   &:has(&Input[data-read-only='true']:checked:not(:disabled)) {
+    --radio-outline-color: var(--semantic-disabled-foreground);
     --radio-border-color: var(--semantic-disabled-foreground);
     --radio-background-color: var(--semantic-page-background);
+    --outline-width: 3px;
+    --outline-offset: -1px;
     --border-width: 5px;
   }
 
