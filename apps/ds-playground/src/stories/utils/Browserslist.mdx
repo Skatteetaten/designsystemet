@@ -1,0 +1,19 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Verktøy/Browserslist" />
+
+# Browserslist i designsystemet
+
+Vi bruker `browserslist` for å definere hvilke nettlesere vi skal støtte. Vi bruker plugins for [eslint](https://www.npmjs.com/package/eslint-plugin-compat) og [stylelint](https://github.com/RJWadley/stylelint-no-unsupported-browser-features) som sjekker at vi ikke bruker funksjoner som ikke er støttet i de nettleserne vi har definert i `browserslist`. Dette gjør at vi kan være trygge på at det vi leverer faktisk fungerer i de nettleserne vi har sagt at vi støtter.
+
+## Nåværende query for bibliotekene
+
+```txt
+> 0.5% in NO AND not dead
+not opera > 0
+not op_mob > 0
+```
+
+Du kan åpne `browsersl.ist` for å se hvilke konkrete nettleserversjoner denne spørringen matcher akkurat nå.
+
+[Se støttede nettlesere på browsersl.ist](https://browsersl.ist/?q=%3E%200.5%25%20in%20NO%20AND%20not%20dead%2C%20not%20opera%20%3E%200%2C%20not%20op_mob%20%3E%200)
