@@ -74,11 +74,7 @@ export const InputCounter = ({
       });
 
   return (
-    <div
-      id={ariaLive === 'polite' ? id : undefined}
-      className={concatenatedClassName}
-      aria-live={ariaLive}
-    >
+    <div id={id} className={concatenatedClassName} aria-live={ariaLive}>
       {label}
     </div>
   );
