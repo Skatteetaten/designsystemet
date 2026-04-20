@@ -188,6 +188,20 @@ export const TopBannerExternal = (({
     };
   }, [openMenu, isMenuOpen, isSearchOpen]);
 
+  useEffect(() => {
+    const handleLanguageChange = (language: string): void => {
+      setSelectedLang(
+        isLanguages(language) ? convertLocaleToLang(language) : language
+      );
+    };
+
+    dsI18n.on('languageChanged', handleLanguageChange);
+
+    return (): void => {
+      dsI18n.off('languageChanged', handleLanguageChange);
+    };
+  }, []);
+
   useImperativeHandle(ref, () => ({
     ...innerRef,
     openMenu: (): void => {
