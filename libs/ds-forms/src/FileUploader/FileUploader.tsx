@@ -1,8 +1,8 @@
 import {
   ChangeEvent,
   DragEvent,
+  ReactNode,
   useEffect,
-  useEffectEvent,
   useId,
   useRef,
   useState,
@@ -27,6 +27,9 @@ import { FileUploaderFile } from './FileUploaderFile/FileUploaderFile';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './FileUploader.module.scss';
+
+const getUploadedFilesSignature = (uploadedFiles?: UploadedFile[]): string =>
+  uploadedFiles?.map((file) => file.id ?? file.name).join('|') ?? '';
 
 /**
  * FileUploader
@@ -73,8 +76,8 @@ export const FileUploader = (({
   const buttonRef = useRef<HTMLButtonElement>(null);
   const deleteButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const [srOnlyText, setSrOnlyText] = useState<string>();
+  const [srOnlyStatusMessage, setSrOnlyStatusMessage] = useState<ReactNode>();
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const [shouldRenderStatus, setShouldrenderStatus] = useState<boolean>(false);
   const generatedId = useId();
   const [filesPendingDelete, setFilesPendingDelete] = useState<
     Record<string, boolean>
@@ -82,17 +85,48 @@ export const FileUploader = (({
 
   const [newFiles, setNewFiles] = useState<UploadedFile[]>([]);
   const prevFilesRef = useRef<UploadedFile[] | undefined>(undefined);
+  const prevHadUploadResultRef = useRef<boolean>(false);
+  const prevIsUploadingRef = useRef<boolean>(!!isUploading);
+  const prevUploadedFilesSignatureRef = useRef<string>(
+    getUploadedFilesSignature(uploadedFiles)
+  );
+  const statusMessageTimeoutRef = useRef<number | undefined>(undefined);
+  const uploadedFilesSignature = getUploadedFilesSignature(uploadedFiles);
 
-  //NOTE: hvis vi får samme statusmelding to ganger på rad så vil ikke skjermen lese det opp igjen med mindre vi tømmer den først
-  const refreshStatusMessage = useEffectEvent(() => {
-    if (!uploadResult) {
-      return;
+  useEffect(() => {
+    const hasStatusMessage = !!uploadResult?.statusMessage;
+    const didUploadResultAppear = !prevHadUploadResultRef.current;
+    const didUploadFinish = prevIsUploadingRef.current && !isUploading;
+    const hasUploadedFilesChanged =
+      prevUploadedFilesSignatureRef.current !== uploadedFilesSignature;
+    const shouldAnnounceStatusMessage =
+      hasStatusMessage &&
+      (didUploadResultAppear || didUploadFinish || hasUploadedFilesChanged);
+
+    if (!hasStatusMessage) {
+      clearTimeout(statusMessageTimeoutRef.current);
+      statusMessageTimeoutRef.current = undefined;
+      setSrOnlyStatusMessage(undefined);
+    } else if (shouldAnnounceStatusMessage) {
+      //NOTE: hvis vi får samme statusmelding to ganger på rad så må live region tømmes først for at skjermleser skal lese den opp på nytt
+      clearTimeout(statusMessageTimeoutRef.current);
+      setSrOnlyStatusMessage(undefined);
+      statusMessageTimeoutRef.current = window.setTimeout(() => {
+        setSrOnlyStatusMessage(uploadResult.statusMessage);
+        statusMessageTimeoutRef.current = undefined;
+      }, 120);
     }
-    setShouldrenderStatus(false);
-    setTimeout(() => {
-      setShouldrenderStatus(true);
-    }, 120);
-  });
+
+    prevHadUploadResultRef.current = !!uploadResult;
+    prevIsUploadingRef.current = !!isUploading;
+    prevUploadedFilesSignatureRef.current = uploadedFilesSignature;
+  }, [uploadResult, isUploading, uploadedFilesSignature]);
+
+  useEffect(() => {
+    return (): void => {
+      clearTimeout(statusMessageTimeoutRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     if (uploadedFiles) {
@@ -110,10 +144,7 @@ export const FileUploader = (({
       }
 
       prevFilesRef.current = uploadedFiles;
-      refreshStatusMessage();
     }
-    //TODO: eslint plugin må oppdateres for at den skal forstå at refreshStatusMessage ikke trenger å være med i dependency array siden den bruker useEffectEvent
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uploadedFiles]);
 
   const id = externalId ?? generatedId;
@@ -348,9 +379,10 @@ export const FileUploader = (({
       <Alert
         showAlert={!!uploadResult}
         className={styles.alert}
+        ariaLive={'off'}
         variant={uploadResult?.hasUploadFailed ? 'error' : 'success'}
       >
-        {shouldRenderStatus && uploadResult?.statusMessage}
+        {uploadResult?.statusMessage}
       </Alert>
       {uploadedFiles && (
         <ul className={styles.fileList}>
@@ -380,6 +412,13 @@ export const FileUploader = (({
           })}
         </ul>
       )}
+      <div
+        className={styles.srOnly}
+        aria-live={uploadResult?.hasUploadFailed ? 'assertive' : 'polite'}
+        aria-atomic={'true'}
+      >
+        {srOnlyStatusMessage}
+      </div>
       <div className={styles.srOnly} aria-live={'polite'} aria-atomic={'true'}>
         {srOnlyText}
       </div>
