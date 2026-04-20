@@ -7,9 +7,8 @@ export const getIconButtonSize = (
   variant?: TableVariant,
   size?: TableSize
 ): Extract<Size, 'extraSmall' | 'small' | 'medium' | 'large'> => {
-  if (size) {
-    return size;
-  }
+  if (size === 'small') return 'medium';
+  if (size) return size;
 
   if (variant === 'compact') {
     return 'extraSmall';
