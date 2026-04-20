@@ -95,24 +95,46 @@ export const SearchField = (({
   const labelId = `${searchFieldId}-label`;
 
   const [shouldShowResults, setShowResults] = useState(false);
-  const [showClearButton, setShowClearButton] = useState(
-    !!defaultValue || !!value
+  const [searchTerm, setSearchTerm] = useState(
+    value?.toString() ?? defaultValue?.toString() ?? ''
   );
   const [currentFocus, setCurrentFocus] = useState<number>(-1);
+  const isControlled = value !== undefined;
+  const currentValue = isControlled ? (value?.toString() ?? '') : searchTerm;
+  const showClearButton = !!currentValue;
 
   useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
 
-  //skjule clearButton dersom value fjernes programatisk fra utenfor komponenten
   useEffect(() => {
-    if (!value && !defaultValue) {
-      setShowClearButton(false);
+    if (isControlled) {
+      setSearchTerm(value?.toString() ?? '');
     }
-  }, [value, defaultValue]);
+  }, [isControlled, value]);
+
+  useEffect(() => {
+    if (isControlled) {
+      return;
+    }
+
+    const formElement = inputRef.current?.form;
+    if (!formElement) {
+      return;
+    }
+
+    const handleReset = (): void => {
+      setSearchTerm(defaultValue?.toString() ?? '');
+    };
+
+    formElement.addEventListener('reset', handleReset);
+    return (): void => {
+      formElement.removeEventListener('reset', handleReset);
+    };
+  }, [defaultValue, isControlled, form]);
 
   const updateShowResults = useEffectEvent(() => {
     const updatedShouldShow = !!(
       !disabled &&
-      results?.length &&
+      results !== undefined &&
       document.activeElement === inputRef?.current
     );
     if (updatedShouldShow !== shouldShowResults) {
@@ -122,6 +144,7 @@ export const SearchField = (({
 
   useEffect(() => {
     updateShowResults();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [disabled, results]);
 
   useEffect(() => {
@@ -187,6 +210,11 @@ export const SearchField = (({
     classNames?.container ?? ''
   }`.trim();
 
+  const screenReaderMessage =
+    results && results.length > 0
+      ? t('searchfield.NumberOfResults', { ant: results.length })
+      : t('combobox.NoResults', { searchTerm: currentValue });
+
   return (
     <div
       id={searchFieldId}
@@ -227,13 +255,13 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             className={`${styles.input} ${classNames?.textbox ?? ''} ${showClearButton && !disabled ? styles.inputWithValue : ''}`.trim()}
             data-testid={dataTestId}
             accessKey={accessKey}
-            defaultValue={defaultValue}
             disabled={disabled}
             form={form}
             name={name}
             placeholder={placeholder}
             readOnly={readOnly}
-            value={value}
+            defaultValue={defaultValue}
+            value={isControlled ? currentValue : undefined}
             autoComplete={autoComplete}
             required={required}
             aria-describedby={
@@ -252,26 +280,18 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             type={'search'}
             onKeyDown={(event) => {
               if (event.key === 'Enter') {
-                onSearch?.(event, inputRef?.current?.value);
+                onSearch?.(event, currentValue);
               }
             }}
             onBlur={onBlur}
             onChange={(event) => {
               onChange?.(event);
-              // Nødvendig for at clearButton skal vises riktig for uncontrolled komponent
-              if (event.target.value.length) {
-                setShowClearButton(true);
-              } else {
-                setShowClearButton(false);
-              }
+              setSearchTerm(event.target.value);
             }}
             onFocus={onFocus}
           />
           <span aria-live={'polite'} className={styles.srOnly}>
-            {shouldShowResults &&
-              t('searchfield.NumberOfResults', {
-                ant: results?.length ?? 0,
-              })}
+            {shouldShowResults && screenReaderMessage}
           </span>
           {shouldShowResults && (
             <ul
@@ -283,6 +303,18 @@ ${classNames?.searchContainer ?? ''}`.trim()}
               // Prevents parent tabIndex scopes from blocking scrollbar clicks in the results list
               tabIndex={-1}
             >
+              {results?.length === 0 && (
+                <li
+                  role={'option'}
+                  aria-selected={'false'}
+                  aria-disabled={'true'}
+                  className={styles.emptyResult}
+                >
+                  {t('combobox.NoResults', {
+                    searchTerm: currentValue,
+                  })}
+                </li>
+              )}
               {results?.map((result, index) => {
                 const hasFocus = currentFocus === index;
                 return (
@@ -311,11 +343,14 @@ ${classNames?.searchContainer ?? ''}`.trim()}
               title={clearButtonTitle ?? t('searchfield.ClearButtonTitle')}
               onClick={(event) => {
                 onClear?.(event);
-                // Nødvendig for å fjerne knappen også i uncontrolled SearchField
-                setShowClearButton(false);
-                if (!value && inputRef.current) {
-                  inputRef.current.value = '';
+                setSearchTerm('');
+
+                if (!isControlled) {
+                  if (inputRef.current) {
+                    inputRef.current.value = '';
+                  }
                 }
+
                 inputRef.current?.focus();
               }}
             />
@@ -327,7 +362,7 @@ ${classNames?.searchContainer ?? ''}`.trim()}
             className={searchButtonClassName}
             disabled={disabled}
             onClick={(event): void => {
-              onSearchClick?.(event, inputRef?.current?.value);
+              onSearchClick?.(event, currentValue);
             }}
           >
             {hasSearchButtonIcon ? (

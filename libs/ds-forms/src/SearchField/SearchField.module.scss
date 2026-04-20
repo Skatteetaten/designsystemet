@@ -223,6 +223,12 @@
   list-style-type: none;
 }
 
+.emptyResult {
+  padding: var(--search-result-padding);
+  color: var(--semantic-page-foreground);
+  opacity: 0.8;
+}
+
 .srOnly {
   @include styles.sr-only;
 }
