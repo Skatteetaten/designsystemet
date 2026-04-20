@@ -1,26 +1,22 @@
-.layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 18rem;
-  gap: var(--spacing-xl);
-  align-items: start;
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.mainContentWrapper {
+  display: flex;
+  gap: var(--semantic-responsive-internal-container-spacing);
+  align-items: flex-start;
 }
 
-.content {
-  min-width: 0;
+.mainContent {
+  flex: 1;
 }
 
-.toc {
-  position: sticky;
-  top: var(--spacing-l);
-}
+.asideContent {
+  display: none;
 
-@media (max-width: 64rem) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .toc {
-    position: static;
+  @media (min-width: breakpoints.$breakpoint-m) {
+    display: block;
+    position: sticky;
+    top: var(--spacing-l);
   }
 }
 
@@ -31,9 +27,5 @@
 }
 
 .mdxIcon {
-  width: 11rem;
-
-  @media only screen and (max-width: 480px) {
-    display: none;
-  }
+  width: 6rem;
 }

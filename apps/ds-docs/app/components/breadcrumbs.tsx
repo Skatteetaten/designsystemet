@@ -6,6 +6,8 @@ import type { Root } from 'fumadocs-core/page-tree';
 
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
+import styles from './breadcrumbs.module.scss';
+
 interface DocsBreadcrumbsProps {
   pageTree: Root;
 }
@@ -24,7 +26,7 @@ export const DocsBreadcrumbs = ({
       : breadcrumbItems;
 
   return (
-    <Breadcrumbs>
+    <Breadcrumbs className={styles.breadcrumbs}>
       <Breadcrumbs.List>
         {items.map((item) => (
           <Breadcrumbs.Item key={item.url}>

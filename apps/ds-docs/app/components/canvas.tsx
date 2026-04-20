@@ -16,6 +16,7 @@ import { CodeSVGpath, CopySVGpath } from '@skatteetaten/ds-icons';
 import { ExampleDescriptor, getExamples } from './canvas.utils';
 
 import styles from './canvas.module.scss';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 interface CanvasProps {
   children?: ReactNode;
@@ -120,9 +121,7 @@ export const Canvas = ({
     return (
       <div className={styles.wrapper}>
         <div className={styles.canvas}>
-          <p className={styles.message}>
-            {`Fant ingen eksempler i "${examplesPath}".`}
-          </p>
+          <Paragraph>{`Fant ingen eksempler i "${examplesPath}".`}</Paragraph>
         </div>
       </div>
     );
@@ -148,9 +147,9 @@ export const Canvas = ({
   };
 
   return (
-    <div className={styles.wrapper}>
+    <>
       {examples.length > 1 && (
-        <Chips ariaLabel={'Velg eksempel'} className={styles.selector}>
+        <Chips ariaLabel={'Velg eksempel'} className={styles.chips}>
           {examples.map((example) => (
             <Chips.Toggle
               key={example.key}
@@ -181,10 +180,10 @@ export const Canvas = ({
       {isCodeVisible && (
         <div id={codePanelId} className={styles.codePanel}>
           <div className={styles.codeHeader}>
-            <span className={styles.codeFileName}>{selectedExample.label}</span>
+            <span>{selectedExample.label}</span>
             <IconButton
               type={'button'}
-              size={'extraSmall'}
+              size={'small'}
               svgPath={CopySVGpath}
               title={
                 copyStatus === 'copied' ? 'Koden er kopiert' : 'Kopier kode'
@@ -200,7 +199,7 @@ export const Canvas = ({
               isMultiline
               onChange={handleCodeFileChange}
             >
-              <Tabs.List className={styles.codeTabList}>
+              <Tabs.List>
                 {selectedExample.codeFiles.map((file) => (
                   <Tabs.Tab key={file.key} value={file.tabValue}>
                     {file.fileName}
@@ -208,11 +207,7 @@ export const Canvas = ({
                 ))}
               </Tabs.List>
               {selectedExample.codeFiles.map((file) => (
-                <Tabs.Panel
-                  key={file.key}
-                  className={styles.codeTabPanel}
-                  value={file.tabValue}
-                >
+                <Tabs.Panel key={file.key} value={file.tabValue}>
                   <HighlightedCode
                     code={file.source}
                     language={file.language}
@@ -228,6 +223,6 @@ export const Canvas = ({
           )}
         </div>
       )}
-    </div>
+    </>
   );
 };

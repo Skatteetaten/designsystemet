@@ -4,10 +4,10 @@
   margin: 0 auto;
 }
 
-.wrapperInternalLayout {
+.pageLayout {
   display: var(--semantic-responsive-internal-container-display);
   flex-direction: var(--semantic-responsive-internal-container-flex-direction);
-  margin-top: var(--spacing-l);
+  margin-top: var(--spacing-xl);
   gap: var(--semantic-responsive-internal-container-spacing);
 }
 

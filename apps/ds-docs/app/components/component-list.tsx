@@ -1,6 +1,7 @@
 import { JSX } from 'react';
 
 import { NavigationTile } from '@skatteetaten/ds-navigation';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import browserCollections from '../../.source/browser';
 
@@ -22,20 +23,26 @@ const toLabel = (path: string): string =>
     .replace(/\b\w/g, (character) => character.toUpperCase());
 
 export const ComponentList = (): JSX.Element => (
-  <nav
-    aria-label={'Liste over alle komponentene i designsystemet'}
-    className={styles.nav}
-  >
-    {componentEntries.map((path) => {
-      const slug = path.replace(/^components\//, '').replace(/\.mdx$/, '');
-      return (
-        <NavigationTile
-          key={path}
-          title={toLabel(path)}
-          href={`/components/${slug}`}
-          size={'extraLarge'}
-        />
-      );
-    })}
-  </nav>
+  <>
+    <Paragraph variant={'ingress'} hasSpacing>
+      {'Komponentene kan brukes både til løsninger for publikum og interne.'}
+    </Paragraph>
+    <nav
+      aria-label={'Liste over alle komponentene i designsystemet'}
+      className={styles.nav}
+    >
+      {componentEntries.map((path) => {
+        const slug = path.replace(/^components\//, '').replace(/\.mdx$/, '');
+        return (
+          <NavigationTile
+            key={path}
+            title={toLabel(path)}
+            href={`/components/${slug}`}
+            size={'medium'}
+            className={styles.tile}
+          />
+        );
+      })}
+    </nav>
+  </>
 );

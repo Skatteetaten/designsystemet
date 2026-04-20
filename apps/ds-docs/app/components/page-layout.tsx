@@ -16,10 +16,10 @@ export const PageLayout = ({
   return (
     <div className={styles.pageWrapper}>
       <DocsBreadcrumbs pageTree={pageTree} />
-      <div className={styles.wrapperInternalLayout}>
-        <div className={styles.aside}>
+      <div className={styles.pageLayout}>
+        <aside className={styles.aside}>
           <Navigation />
-        </div>
+        </aside>
         <main className={styles.main}>{children}</main>
       </div>
     </div>

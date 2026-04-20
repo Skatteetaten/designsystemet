@@ -98,21 +98,24 @@ const docsContentLoader =
       const tocItems = toc.filter((item) => item.depth > 1) as TocItem[];
 
       return (
-        <div className={styles.layout}>
-          <div className={styles.content}>
+        <div className={styles.mainContentWrapper}>
+          <div className={styles.mainContent}>
             <title>{frontmatter.title}</title>
             <meta name={'description'} content={frontmatter.description} />
+            {parentTitle && (
+              <Paragraph variant={'ingress'}>
+                <strong>{parentTitle}</strong>
+              </Paragraph>
+            )}
             <div className={styles.headingWrapper}>
-              <div>
-                {parentTitle && (
-                  <Paragraph variant={'ingress'}>{parentTitle}</Paragraph>
-                )}
-                <Heading as={'h1'}>{frontmatter.title}</Heading>
-              </div>
+              <Heading as={'h1'} hasSpacing={!frontmatter.icon}>
+                {frontmatter.title}
+              </Heading>
               {frontmatter.icon && (
                 <img
                   src={frontmatter.icon}
                   className={styles.mdxIcon}
+                  alt={''}
                   aria-hidden
                 />
               )}
@@ -123,7 +126,7 @@ const docsContentLoader =
             </div>
           </div>
           {tocItems.length > 0 && (
-            <aside className={styles.toc} aria-label={'Innhold'}>
+            <aside className={styles.asideContent} aria-label={'Innhold'}>
               <Heading as={'h4'}>{'Innhold'}</Heading>
               <LinkGroup variant={'anchors'}>
                 {tocItems.map((item) => (
