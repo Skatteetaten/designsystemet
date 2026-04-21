@@ -262,6 +262,12 @@ export const SearchField = (({
 
   const isLarge = variant === 'large';
   const isExtraLarge = variant === 'extraLarge';
+  let sizeAttribute: 'medium' | 'large' | 'extraLarge' = 'medium';
+  if (isLarge) {
+    sizeAttribute = 'large';
+  } else if (isExtraLarge) {
+    sizeAttribute = 'extraLarge';
+  }
   const hasVisibleLabel = !!label && !hideLabel;
   const clearButtonSize = variant === 'medium' ? 'extraSmall' : 'small';
   const resolvedClearButtonTitle =
@@ -271,12 +277,8 @@ export const SearchField = (({
   const resolvedSpinnerLabel =
     spinnerLabel ?? t('ds_progress:spinner.LoadingLabel');
 
-  const searchButtonClassName = `${styles.searchButton} ${
-    isLarge ? styles.searchButton_large : ''
-  } ${isExtraLarge ? styles.searchButton_extraLarge : ''}`.trim();
-  const containerClassName = `${styles.topContainer} ${
-    isLarge ? styles.topContainer_large : ''
-  } ${isExtraLarge ? styles.topContainer_extraLarge : ''} ${className} ${
+  const searchButtonClassName = styles.searchButton;
+  const containerClassName = `${styles.topContainer} ${className} ${
     classNames?.container ?? ''
   }`.trim();
   const searchContainerClassName = `${styles.searchContainer} ${
@@ -305,6 +307,7 @@ export const SearchField = (({
           ref={loadingContainerRef}
           id={resultsId}
           className={`${styles.searchResultContainer} ${styles.loadingContainer} ${classNames?.searchResultsList ?? ''}`.trim()}
+          data-size={sizeAttribute}
           tabIndex={-1}
         >
           <Spinner titlePosition={'right'} {...spinnerProps}>
@@ -361,6 +364,7 @@ export const SearchField = (({
       className={containerClassName}
       lang={lang}
       data-has-spacing={hasSpacing}
+      data-size={sizeAttribute}
       onKeyDown={handleResultsKeyDown}
     >
       <LabelWithHelp
@@ -428,6 +432,7 @@ export const SearchField = (({
           <button
             type={'button'}
             className={searchButtonClassName}
+            data-size={sizeAttribute}
             disabled={disabled}
             onClick={handleSearchClick}
           >
