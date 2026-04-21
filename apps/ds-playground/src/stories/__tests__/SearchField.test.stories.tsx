@@ -59,6 +59,9 @@ const meta = {
     hasSearchButtonIcon: { table: { disable: true } },
     clearButtonTitle: { table: { disable: true } },
     searchButtonTitle: { table: { disable: true } },
+    isLoading: { table: { disable: true } },
+    spinnerLabel: { table: { disable: true } },
+    spinnerProps: { table: { disable: true } },
     results: { table: { disable: true } },
     helpText: { table: { disable: true } },
     enableSRNavigationHint: { table: { disable: true } },
@@ -794,6 +797,77 @@ export const WithLongInput = {
     defaultValue: {
       table: { disable: false },
     },
+  },
+} satisfies Story;
+
+export const WithLoading = {
+  name: 'With Loading',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+  },
+  argTypes: {
+    isLoading: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchbox = canvas.getByRole('searchbox');
+
+    await userEvent.click(searchbox);
+
+    const spinner = await canvas.findByText(
+      dsI18n.t('ds_progress:spinner.LoadingLabel')
+    );
+    await expect(spinner).toBeInTheDocument();
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithCustomSpinnerLabel = {
+  name: 'With Custom Spinner Label',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+    spinnerLabel: 'Laster søk...',
+  },
+  argTypes: {
+    spinnerLabel: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchbox = canvas.getByRole('searchbox');
+
+    await userEvent.click(searchbox);
+
+    const spinner = await canvas.findByText('Laster søk...');
+    await expect(spinner).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithSpinnerProps = {
+  name: 'With Spinner Props',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+    spinnerProps: {
+      size: 'small',
+      color: 'black',
+    },
+  },
+  argTypes: {
+    spinnerProps: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchbox = canvas.getByRole('searchbox');
+
+    await userEvent.click(searchbox);
+
+    const spinner = await canvas.findByText(
+      dsI18n.t('ds_progress:spinner.LoadingLabel')
+    );
+    await expect(spinner.parentElement).toHaveAttribute('data-size', 'small');
+    await expect(spinner.parentElement).toHaveAttribute('data-color', 'black');
   },
 } satisfies Story;
 

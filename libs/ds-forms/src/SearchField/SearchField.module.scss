@@ -223,6 +223,14 @@
   list-style-type: none;
 }
 
+.loadingContainer {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
 .emptyResult {
   padding: var(--search-result-padding);
   color: var(--semantic-page-foreground);

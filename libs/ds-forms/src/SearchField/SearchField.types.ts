@@ -14,6 +14,7 @@ import {
   Prettify,
   Size,
 } from '@skatteetaten/ds-core-utils';
+import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
@@ -25,7 +26,7 @@ export const searchArrSize = [
 ] as const satisfies readonly Size[];
 export type SearchSize = (typeof searchArrSize)[number];
 
-type RequiredDatePickerHTMLAttributes = Pick<
+type RequiredSearchFieldHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
   | 'accessKey'
   | 'autoComplete'
@@ -38,7 +39,7 @@ type RequiredDatePickerHTMLAttributes = Pick<
   | 'value'
 >;
 
-type SearchFieldHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes> & {
+type SearchFieldHTMLAttributes = Partial<RequiredSearchFieldHTMLAttributes> & {
   ariaDescribedBy?: string;
 };
 
@@ -94,6 +95,12 @@ interface SearchFieldCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Overskriver default title på søkeknappen */
   searchButtonTitle?: string;
+  /** Viser loading state med spinner */
+  isLoading?: boolean;
+  /** Overskriver teksten som vises med spinner når isLoading = true. */
+  spinnerLabel?: string;
+  /** For å tilpasse størrelse eller farge på spinneren */
+  spinnerProps?: Prettify<Partial<Pick<SpinnerProps, 'size' | 'color'>>>;
   /** Definerer stilen til SearchField */
   variant?: SearchSize;
   /** Kalles ved trykk på knappen for resetting av søkefeltet */

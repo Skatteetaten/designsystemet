@@ -1,5 +1,6 @@
 import {
   ChangeEvent,
+  FocusEvent,
   useId,
   useState,
   JSX,
@@ -20,6 +21,7 @@ import {
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 import {
   getEnableSRNavigationHintDefault,
@@ -56,6 +58,9 @@ export const SearchField = (({
   label,
   titleHelpSvg,
   searchButtonTitle,
+  isLoading = false,
+  spinnerLabel,
+  spinnerProps,
   variant = getCommonFormVariantDefault(),
   ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
@@ -82,6 +87,7 @@ export const SearchField = (({
   onResultClick,
   results,
 }: SearchFieldProps): JSX.Element => {
+  const loadingContainerRef = useRef<HTMLDivElement>(null);
   const listboxRef = useRef<HTMLUListElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -149,7 +155,7 @@ export const SearchField = (({
   const updateShowResults = useEffectEvent(() => {
     const shouldOpenResults = !!(
       !disabled &&
-      results !== undefined &&
+      (results !== undefined || isLoading) &&
       document.activeElement === inputRef?.current
     );
 
@@ -161,7 +167,7 @@ export const SearchField = (({
   useEffect(() => {
     updateShowResults();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [disabled, results]);
+  }, [disabled, isLoading, results]);
 
   useEffect(() => {
     if (!isResultsOpen) {
@@ -174,9 +180,11 @@ export const SearchField = (({
       if (node === inputRef.current) {
         setFocusedResultIndex(-1);
       }
-      if (!listboxRef?.current?.contains(node) && node !== inputRef.current) {
+      const resultsContainer =
+        listboxRef.current ?? loadingContainerRef.current;
+      if (!resultsContainer?.contains(node) && node !== inputRef.current) {
         setIsResultsOpen(false);
-        event.type === 'click' && listboxRef?.current?.focus();
+        event.type === 'click' && resultsContainer?.focus();
       }
     };
 
@@ -228,6 +236,14 @@ export const SearchField = (({
     setSearchTerm(event.target.value);
   };
 
+  const handleInputFocus = (event: FocusEvent<HTMLInputElement>): void => {
+    onFocus?.(event);
+
+    if (!disabled && isLoading) {
+      setIsResultsOpen(true);
+    }
+  };
+
   const handleClearClick = (event: MouseEvent<HTMLButtonElement>): void => {
     onClear?.(event);
     setSearchTerm('');
@@ -251,6 +267,8 @@ export const SearchField = (({
     clearButtonTitle ?? t('searchfield.ClearButtonTitle');
   const resolvedSearchButtonTitle =
     searchButtonTitle ?? t('searchfield.ButtonTitle');
+  const resolvedSpinnerLabel =
+    spinnerLabel ?? t('ds_progress:spinner.LoadingLabel');
 
   const searchButtonClassName = `${styles.searchButton} ${
     isLarge ? styles.searchButton_large : ''
@@ -274,6 +292,67 @@ export const SearchField = (({
     resultCount > 0
       ? t('searchfield.NumberOfResults', { ant: resultCount })
       : t('combobox.NoResults', { searchTerm: currentValue });
+
+  const renderResultsContent = (): JSX.Element | null => {
+    if (!isResultsOpen) {
+      return null;
+    }
+
+    if (isLoading) {
+      return (
+        <div
+          ref={loadingContainerRef}
+          id={resultsId}
+          className={`${styles.searchResultContainer} ${styles.loadingContainer} ${classNames?.searchResultsList ?? ''}`.trim()}
+          tabIndex={-1}
+        >
+          <Spinner titlePosition={'right'} {...spinnerProps}>
+            {resolvedSpinnerLabel}
+          </Spinner>
+        </div>
+      );
+    }
+
+    return (
+      <ul
+        ref={listboxRef}
+        id={resultsId}
+        className={resultsListClassName}
+        role={'listbox'}
+        aria-labelledby={labelId}
+        // Prevents parent tabIndex scopes from blocking scrollbar clicks in the results list
+        tabIndex={-1}
+      >
+        {showNoResults && (
+          <li
+            role={'option'}
+            aria-selected={'false'}
+            aria-disabled={'true'}
+            className={styles.emptyResult}
+          >
+            {t('combobox.NoResults', {
+              searchTerm: currentValue,
+            })}
+          </li>
+        )}
+        {results?.map((result, index) => {
+          return (
+            <SearchFieldResult
+              key={result.key ?? result.description}
+              className={classNames?.searchResult}
+              hasFocus={focusedResultIndex === index}
+              title={result.title}
+              setFocus={setFocusedResultIndex}
+              index={index}
+              onClick={() => onResultClick?.(result)}
+            >
+              {result.description}
+            </SearchFieldResult>
+          );
+        })}
+      </ul>
+    );
+  };
 
   return (
     <div
@@ -328,50 +407,12 @@ export const SearchField = (({
             onKeyDown={handleInputKeyDown}
             onBlur={onBlur}
             onChange={handleInputChange}
-            onFocus={onFocus}
+            onFocus={handleInputFocus}
           />
           <span aria-live={'polite'} className={styles.srOnly}>
-            {isResultsOpen && screenReaderMessage}
+            {isResultsOpen && !isLoading && screenReaderMessage}
           </span>
-          {isResultsOpen && (
-            <ul
-              ref={listboxRef}
-              id={resultsId}
-              className={resultsListClassName}
-              role={'listbox'}
-              aria-labelledby={labelId}
-              // Prevents parent tabIndex scopes from blocking scrollbar clicks in the results list
-              tabIndex={-1}
-            >
-              {showNoResults && (
-                <li
-                  role={'option'}
-                  aria-selected={'false'}
-                  aria-disabled={'true'}
-                  className={styles.emptyResult}
-                >
-                  {t('combobox.NoResults', {
-                    searchTerm: currentValue,
-                  })}
-                </li>
-              )}
-              {results?.map((result, index) => {
-                return (
-                  <SearchFieldResult
-                    key={result.key ?? result.description}
-                    className={classNames?.searchResult}
-                    hasFocus={focusedResultIndex === index}
-                    title={result.title}
-                    setFocus={setFocusedResultIndex}
-                    index={index}
-                    onClick={() => onResultClick?.(result)}
-                  >
-                    {result.description}
-                  </SearchFieldResult>
-                );
-              })}
-            </ul>
-          )}
+          {renderResultsContent()}
           {showClearButton && !disabled && !readOnly && (
             <IconButton
               className={styles.clearButton}

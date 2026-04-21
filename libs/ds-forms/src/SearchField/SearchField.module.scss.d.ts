@@ -13,6 +13,7 @@ declare const classNames: {
   readonly searchButton_large: 'searchButton_large';
   readonly searchButton_extraLarge: 'searchButton_extraLarge';
   readonly searchResultContainer: 'searchResultContainer';
+  readonly loadingContainer: 'loadingContainer';
   readonly emptyResult: 'emptyResult';
   readonly srOnly: 'srOnly';
 };
