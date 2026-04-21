@@ -12,6 +12,7 @@ import {
   getEnableSRNavigationHintDefault,
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
+  getSearchFieldIsLoadingDefault,
   SearchField,
   type SearchFieldProps,
   searchInList,
@@ -29,7 +30,14 @@ const meta = {
     classNames: { control: false, table: { category: category.props } },
     clearButtonTitle: { table: { category: category.props } },
     searchButtonTitle: { table: { category: category.props } },
-    isLoading: { table: { category: category.props } },
+    isLoading: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getSearchFieldIsLoadingDefault().toString(),
+        },
+      },
+    },
     spinnerLabel: { table: { category: category.props } },
     spinnerProps: { table: { category: category.props } },
     results: { control: false, table: { category: category.props } },

@@ -27,6 +27,7 @@ import {
   getEnableSRNavigationHintDefault,
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
+  getSearchFieldIsLoadingDefault,
 } from './defaults';
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
@@ -58,7 +59,7 @@ export const SearchField = (({
   label,
   titleHelpSvg,
   searchButtonTitle,
-  isLoading = false,
+  isLoading = getSearchFieldIsLoadingDefault(),
   spinnerLabel,
   spinnerProps,
   variant = getCommonFormVariantDefault(),
