@@ -18,9 +18,6 @@ const meta = {
     ariaLabel: { table: { disable: true } },
   },
   tags: ['test'],
-  parameters: {
-    imageSnapshot: { disableSnapshot: false },
-  },
 } satisfies Meta<typeof Tabs.List>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -85,9 +82,6 @@ export const WithAriaLabel = {
   },
   argTypes: {
     ariaLabel: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
