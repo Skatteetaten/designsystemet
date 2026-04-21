@@ -12,11 +12,11 @@ import { useShikiDynamic } from 'fumadocs-core/highlight/shiki/react';
 import { IconButton, InlineButton } from '@skatteetaten/ds-buttons';
 import { Chips, Tabs } from '@skatteetaten/ds-collections';
 import { CodeSVGpath, CopySVGpath } from '@skatteetaten/ds-icons';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { ExampleDescriptor, getExamples } from './canvas.utils';
 
 import styles from './canvas.module.scss';
-import { Paragraph } from '@skatteetaten/ds-typography';
 
 interface CanvasProps {
   children?: ReactNode;
