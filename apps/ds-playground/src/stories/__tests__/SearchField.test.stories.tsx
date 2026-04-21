@@ -809,6 +809,9 @@ export const WithLoading = {
   argTypes: {
     isLoading: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const searchbox = canvas.getByRole('searchbox');
@@ -833,6 +836,9 @@ export const WithCustomSpinnerLabel = {
   argTypes: {
     spinnerLabel: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const searchbox = canvas.getByRole('searchbox');
@@ -856,6 +862,9 @@ export const WithSpinnerProps = {
   },
   argTypes: {
     spinnerProps: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
