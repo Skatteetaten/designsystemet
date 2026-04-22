@@ -1,8 +1,42 @@
 @import 'inter.css';
 
-:root,
+:root {
+  font-family: 'Inter';
+  --storybook-sr-only-position: absolute;
+  --storybook-sr-only-overflow: hidden;
+  --storybook-sr-only-width: 1px;
+  --storybook-sr-only-height: 1px;
+  --storybook-sr-only-padding: 0;
+  --storybook-sr-only-border: 0;
+  --storybook-sr-only-margin: -1px;
+  --storybook-sr-only-clip: rect(0, 0, 0, 0);
+  --storybook-sr-only-white-space: nowrap;
+  --storybook-sr-only-outline: none;
+  --storybook-sr-only-background: transparent;
+  --storybook-sr-only-border-radius: 0;
+  --storybook-sr-only-badge-content: '';
+  --storybook-sr-only-badge-display: none;
+}
+
 :host {
   font-family: 'Inter';
+}
+
+:root[data-sr-only='visible'] {
+  --storybook-sr-only-position: static;
+  --storybook-sr-only-overflow: visible;
+  --storybook-sr-only-width: auto;
+  --storybook-sr-only-height: auto;
+  --storybook-sr-only-padding: 0;
+  --storybook-sr-only-border: 0;
+  --storybook-sr-only-margin: 0;
+  --storybook-sr-only-clip: auto;
+  --storybook-sr-only-white-space: normal;
+  --storybook-sr-only-outline: 1px dotted var(--palette-ochre-50);
+  --storybook-sr-only-background: var(--palette-ochre-5);
+  --storybook-sr-only-border-radius: var(--spacing-xs);
+  --storybook-sr-only-badge-content: '[SR]';
+  --storybook-sr-only-badge-display: inline-block;
 }
 
 @font-face {
@@ -134,15 +168,47 @@ code {
 }
 
 .srOnly {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  margin: -1px;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+  position: var(--storybook-sr-only-position);
+  overflow: var(--storybook-sr-only-overflow);
+  width: var(--storybook-sr-only-width);
+  height: var(--storybook-sr-only-height);
+  padding: var(--storybook-sr-only-padding);
+  border: var(--storybook-sr-only-border);
+  margin: var(--storybook-sr-only-margin);
+  clip: var(--storybook-sr-only-clip);
+  white-space: var(--storybook-sr-only-white-space);
+  outline: var(--storybook-sr-only-outline);
+  background-color: var(--storybook-sr-only-background);
+  border-radius: var(--storybook-sr-only-border-radius);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+[class*='srOnly'] {
+  position: var(--storybook-sr-only-position) !important;
+  overflow: var(--storybook-sr-only-overflow) !important;
+  width: var(--storybook-sr-only-width) !important;
+  height: var(--storybook-sr-only-height) !important;
+  padding: var(--storybook-sr-only-padding) !important;
+  border: var(--storybook-sr-only-border) !important;
+  margin: var(--storybook-sr-only-margin) !important;
+  clip: var(--storybook-sr-only-clip) !important;
+  white-space: var(--storybook-sr-only-white-space) !important;
+  outline: var(--storybook-sr-only-outline) !important;
+  background-color: var(--storybook-sr-only-background) !important;
+  border-radius: var(--storybook-sr-only-border-radius) !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.srOnly::before,
+[class*='srOnly']::before {
+  content: var(--storybook-sr-only-badge-content);
+  display: var(--storybook-sr-only-badge-display);
+  margin-right: var(--spacing-xs);
+  color: var(--palette-ochre-80);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
 }
 
 .textField150 {
