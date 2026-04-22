@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { BaseProps, Color, Position, Size } from '@skatteetaten/ds-core-utils';
 
@@ -23,7 +23,7 @@ export interface AccordionProps extends BaseProps {
   children?: ReactNode;
 }
 
-export interface AccordionComponent extends React.FC<AccordionProps> {
+export interface AccordionComponent extends FunctionComponent<AccordionProps> {
   Item: typeof AccordionItem;
 }
 

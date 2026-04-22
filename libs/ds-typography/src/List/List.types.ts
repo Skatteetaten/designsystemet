@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -19,7 +19,7 @@ export interface ListProps extends BaseProps {
   canBeManuallyFocused?: boolean;
 }
 
-export interface ListComponent extends React.FC<ListProps> {
+export interface ListComponent extends FunctionComponent<ListProps> {
   Element: typeof ListElement;
 }
 

@@ -35,6 +35,6 @@ export interface TopBannerLangPickerProps extends BaseProps {
 }
 
 export interface TopBannerLangPickerComponent
-  extends React.FC<TopBannerLangPickerProps> {
+  extends FunctionComponent<TopBannerLangPickerProps> {
   Button: typeof TopBannerLangPickerButton;
 }

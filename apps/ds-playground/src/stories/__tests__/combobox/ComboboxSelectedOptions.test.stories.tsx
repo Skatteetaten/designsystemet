@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, within } from 'storybook/test';
@@ -7,10 +7,6 @@ import type { ComboboxOption } from '@skatteetaten/ds-forms';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ComboboxSelectedOptions } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxSelectedOptions';
-
-type ComboboxSelectedOptionsProps = React.ComponentProps<
-  typeof ComboboxSelectedOptions
->;
 
 const meta = {
   component: ComboboxSelectedOptions,
@@ -45,13 +41,7 @@ export const OnRemoveValueCallback = {
     ...defaultProps,
     onRemoveValue: fn(),
   },
-  play: async ({
-    args,
-    canvasElement,
-  }: {
-    args: ComboboxSelectedOptionsProps;
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
     // Should call onRemoveValue with correct option when chip button is clicked
@@ -75,11 +65,7 @@ export const WithDisabledChips = {
   parameters: {
     chromatic: { disableSnapshot: false },
   },
-  play: async ({
-    canvasElement,
-  }: {
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const chips = canvas.getAllByRole('button');
     for (const chip of chips) {

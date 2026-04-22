@@ -1,4 +1,11 @@
-import { useState, ChangeEvent, FocusEvent, JSX } from 'react';
+import {
+  useState,
+  ChangeEvent,
+  FocusEvent,
+  JSX,
+  ChangeEventHandler,
+  FocusEventHandler,
+} from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
@@ -202,12 +209,12 @@ export const WithTimeInput: Story = {
       return `${HH}:${MM}`;
     };
 
-    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
       setErrorMessage('');
       setTimeValue(e.target.value);
     };
 
-    const handleBlur: React.FocusEventHandler<HTMLInputElement> = (e) => {
+    const handleBlur: FocusEventHandler<HTMLInputElement> = (e) => {
       const raw = e.currentTarget.value.trim();
       const formatted = formatTimeOnBlur(raw);
       const isValid = /^([01]?\d|2[0-3]):([0-5]\d)$/.test(formatted);

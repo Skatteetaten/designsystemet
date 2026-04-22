@@ -5,6 +5,9 @@ import {
   useId,
   useEffect,
   useMemo,
+  KeyboardEvent,
+  MouseEvent,
+  RefObject,
 } from 'react';
 
 import type { ComboboxOption, ComboboxProps } from '../Combobox.types';
@@ -52,8 +55,8 @@ export interface UseComboboxCoreReturn {
   displayOptions: ComboboxOption[];
 
   // Refs
-  inputRef: React.RefObject<HTMLInputElement | null>;
-  containerRef: React.RefObject<HTMLDivElement | null>;
+  inputRef: RefObject<HTMLInputElement | null>;
+  containerRef: RefObject<HTMLDivElement | null>;
 
   // IDs
   comboboxId: string;
@@ -67,9 +70,9 @@ export interface UseComboboxCoreReturn {
   resetFocus: () => void;
 
   // Event handlers
-  handleChevronClick: (e?: React.MouseEvent) => void;
-  handleContainerClick: (e: React.MouseEvent) => void;
-  handleContainerKeyDown: (e: React.KeyboardEvent<HTMLDivElement>) => void;
+  handleChevronClick: (e?: MouseEvent) => void;
+  handleContainerClick: (e: MouseEvent) => void;
+  handleContainerKeyDown: (e: KeyboardEvent<HTMLDivElement>) => void;
 
   // Focus utilities
   focusedOption: ComboboxOption | null;
@@ -80,7 +83,7 @@ export interface UseComboboxCoreReturn {
   handleButtonFocus: (index: number) => void;
 
   // Internal refs for coordination
-  chevronClickedRef: React.RefObject<boolean>;
+  chevronClickedRef: RefObject<boolean>;
 }
 
 /**
@@ -402,7 +405,7 @@ export function useComboboxCore({
 
   // Event handlers from dropdown
   const handleChevronClick = useCallback(
-    (e?: React.MouseEvent): void => {
+    (e?: MouseEvent): void => {
       // Set flag IMMEDIATELY to prevent other handlers
       chevronClickedRef.current = true;
       chevronActionTimeRef.current = Date.now();
@@ -432,7 +435,7 @@ export function useComboboxCore({
   );
 
   const handleContainerClick = useCallback(
-    (e: React.MouseEvent): void => {
+    (e: MouseEvent): void => {
       const target = e.target as HTMLElement;
 
       // If chevron was just clicked, ignore this container click
@@ -460,7 +463,7 @@ export function useComboboxCore({
   );
 
   const handleContainerKeyDown = useCallback(
-    (e: React.KeyboardEvent<HTMLDivElement>): void => {
+    (e: KeyboardEvent<HTMLDivElement>): void => {
       if ((e.target as HTMLElement).tagName === 'BUTTON') {
         return;
       }

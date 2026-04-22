@@ -1,4 +1,4 @@
-import { useContext, useId, JSX } from 'react';
+import { useContext, useId, JSX, KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -67,9 +67,7 @@ export const Checkbox = ({
     .join(' ')
     .trim();
 
-  const handleKeyDown = (
-    event: React.KeyboardEvent<HTMLInputElement>
-  ): void => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>): void => {
     if (
       (context?.readOnly || readOnly) &&
       (event.key === ' ' ||

@@ -19,5 +19,5 @@ export interface TabsListProps extends BaseProps, TabsListHTMLAttributes {
   children: ReactNode;
 }
 export interface TabsListComponent extends FunctionComponent<TabsListProps> {
-  children?: typeof TabsTab;
+  Tab: typeof TabsTab;
 }

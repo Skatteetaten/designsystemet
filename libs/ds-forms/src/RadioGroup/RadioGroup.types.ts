@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  FunctionComponent,
   ReactNode,
   Ref,
 } from 'react';
@@ -116,6 +117,7 @@ export type RadioGroupProps = RadioGroupComponentCommonProps &
   FormRequiredProps &
   RadioGroupDiscriminatedCheckedProps;
 
-export interface RadioGroupComponent extends React.FC<RadioGroupProps> {
+export interface RadioGroupComponent
+  extends FunctionComponent<RadioGroupProps> {
   Radio: typeof Radio;
 }

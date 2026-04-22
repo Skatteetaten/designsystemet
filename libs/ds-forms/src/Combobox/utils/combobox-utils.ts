@@ -1,3 +1,5 @@
+import { RefObject } from 'react';
+
 import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 
 /**
@@ -187,7 +189,7 @@ const getSelectionAction = (
 const handleSelectionFocus = (
   behavior: SelectionBehavior,
   setFocusedIndex: (index: number) => void,
-  inputRef: React.RefObject<HTMLInputElement | null>
+  inputRef: RefObject<HTMLInputElement | null>
 ): void => {
   if (behavior.resetFocusIndex) {
     setFocusedIndex(-1);
@@ -260,7 +262,7 @@ const selectMultipleOption = (
     setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
     setFocusedIndex: (index: number) => void;
-    inputRef: React.RefObject<HTMLInputElement | null>;
+    inputRef: RefObject<HTMLInputElement | null>;
     setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
@@ -333,7 +335,7 @@ const selectSingleOption = (
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
-    inputRef: React.RefObject<HTMLInputElement | null>;
+    inputRef: RefObject<HTMLInputElement | null>;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
   }
 ): void => {
@@ -394,7 +396,7 @@ export const selectOption = (
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
-    inputRef: React.RefObject<HTMLInputElement | null>;
+    inputRef: RefObject<HTMLInputElement | null>;
     setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;

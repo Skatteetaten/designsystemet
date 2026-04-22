@@ -1,4 +1,4 @@
-import { createRef } from 'react';
+import { createRef, RefObject } from 'react';
 
 import type { ComboboxOption } from '../../Combobox.types';
 import {
@@ -142,7 +142,7 @@ describe('combobox-utils', () => {
     let mockOnSelectionChange: ReturnType<
       typeof vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>
     >;
-    let mockInputRef: React.RefObject<HTMLInputElement | null>;
+    let mockInputRef: RefObject<HTMLInputElement | null>;
 
     beforeEach(() => {
       mockSetSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
