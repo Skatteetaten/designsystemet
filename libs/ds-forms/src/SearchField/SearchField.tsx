@@ -274,8 +274,6 @@ export const SearchField = (({
     clearButtonTitle ?? t('searchfield.ClearButtonTitle');
   const resolvedSearchButtonTitle =
     searchButtonTitle ?? t('searchfield.ButtonTitle');
-  const resolvedSpinnerLabel =
-    spinnerLabel ?? t('ds_progress:spinner.LoadingLabel');
 
   const searchButtonClassName = styles.searchButton;
   const containerClassName = `${styles.topContainer} ${className} ${
@@ -311,7 +309,7 @@ export const SearchField = (({
           tabIndex={-1}
         >
           <Spinner titlePosition={'right'} {...spinnerProps}>
-            {resolvedSpinnerLabel}
+            {spinnerLabel}
           </Spinner>
         </div>
       );
