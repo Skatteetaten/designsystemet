@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/Tabs/Tab',
   component: Tabs.Tab,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'button',
+  },
 } satisfies Meta<typeof Tabs.Tab>;
 export default meta;
 export const Snapshots = createSingleStory(TabsTabStories, meta);
