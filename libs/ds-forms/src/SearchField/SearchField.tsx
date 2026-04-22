@@ -1,8 +1,11 @@
 import {
+  ChangeEvent,
+  FocusEvent,
   useId,
   useState,
   JSX,
   KeyboardEvent,
+  MouseEvent,
   useEffect,
   useEffectEvent,
   useRef,
@@ -18,11 +21,13 @@ import {
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 import {
   getEnableSRNavigationHintDefault,
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
+  getSearchFieldIsLoadingDefault,
 } from './defaults';
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
@@ -54,6 +59,9 @@ export const SearchField = (({
   label,
   titleHelpSvg,
   searchButtonTitle,
+  isLoading = getSearchFieldIsLoadingDefault(),
+  spinnerLabel,
+  spinnerProps,
   variant = getCommonFormVariantDefault(),
   ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
@@ -80,6 +88,7 @@ export const SearchField = (({
   onResultClick,
   results,
 }: SearchFieldProps): JSX.Element => {
+  const loadingContainerRef = useRef<HTMLDivElement>(null);
   const listboxRef = useRef<HTMLUListElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -93,50 +102,90 @@ export const SearchField = (({
   const resultsId = `${searchFieldId}-results`;
   const srFocusId = `${searchFieldId}-srFocus`;
   const labelId = `${searchFieldId}-label`;
+  const defaultSearchTerm = defaultValue?.toString() ?? '';
 
-  const [shouldShowResults, setShowResults] = useState(false);
-  const [showClearButton, setShowClearButton] = useState(
-    !!defaultValue || !!value
+  const [isResultsOpen, setIsResultsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(
+    value?.toString() ?? defaultSearchTerm
   );
-  const [currentFocus, setCurrentFocus] = useState<number>(-1);
+  const [focusedResultIndex, setFocusedResultIndex] = useState<number>(-1);
+  const isControlled = value !== undefined;
+  const currentValue = isControlled ? (value?.toString() ?? '') : searchTerm;
+  const describedBy =
+    [
+      ariaDescribedBy,
+      description && descriptionId,
+      errorMessage && errorId,
+      enableSRNavigationHint && srFocusId,
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .trim() || undefined;
+  const showClearButton = !!currentValue;
+  const resultCount = results?.length ?? 0;
+  const showNoResults = resultCount === 0;
 
   useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
 
-  //skjule clearButton dersom value fjernes programatisk fra utenfor komponenten
   useEffect(() => {
-    if (!value && !defaultValue) {
-      setShowClearButton(false);
+    if (isControlled) {
+      setSearchTerm(value?.toString() ?? '');
     }
-  }, [value, defaultValue]);
+  }, [isControlled, value]);
+
+  useEffect(() => {
+    if (isControlled) {
+      return;
+    }
+
+    const formElement = inputRef.current?.form;
+    if (!formElement) {
+      return;
+    }
+
+    const handleReset = (): void => {
+      setSearchTerm(defaultSearchTerm);
+    };
+
+    formElement.addEventListener('reset', handleReset);
+    return (): void => {
+      formElement.removeEventListener('reset', handleReset);
+    };
+  }, [defaultSearchTerm, isControlled, form]);
 
   const updateShowResults = useEffectEvent(() => {
-    const updatedShouldShow = !!(
+    const shouldOpenResults = !!(
       !disabled &&
-      results?.length &&
+      (results !== undefined || isLoading) &&
       document.activeElement === inputRef?.current
     );
-    if (updatedShouldShow !== shouldShowResults) {
-      setShowResults(updatedShouldShow);
+
+    if (shouldOpenResults !== isResultsOpen) {
+      setIsResultsOpen(shouldOpenResults);
     }
   });
 
   useEffect(() => {
     updateShowResults();
-  }, [disabled, results]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [disabled, isLoading, results]);
 
   useEffect(() => {
-    if (!shouldShowResults) {
-      setCurrentFocus(-1);
+    if (!isResultsOpen) {
+      setFocusedResultIndex(-1);
       return;
     }
+
     const handleOutsideMenuEvent: EventListener = (event): void => {
       const node = event.target as Node;
       if (node === inputRef.current) {
-        setCurrentFocus(-1);
+        setFocusedResultIndex(-1);
       }
-      if (!listboxRef?.current?.contains(node) && node !== inputRef.current) {
-        setShowResults(false);
-        event.type === 'click' && listboxRef?.current?.focus();
+      const resultsContainer =
+        listboxRef.current ?? loadingContainerRef.current;
+      if (!resultsContainer?.contains(node) && node !== inputRef.current) {
+        setIsResultsOpen(false);
+        event.type === 'click' && resultsContainer?.focus();
       }
     };
 
@@ -146,46 +195,166 @@ export const SearchField = (({
       document.removeEventListener('click', handleOutsideMenuEvent);
       document.removeEventListener('focusin', handleOutsideMenuEvent);
     };
-  }, [shouldShowResults]);
+  }, [isResultsOpen]);
 
-  const handleKeyDown = (e: KeyboardEvent): void => {
-    if (!shouldShowResults) {
+  const handleResultsKeyDown = (event: KeyboardEvent): void => {
+    if (!isResultsOpen) {
       // slik at currentFocus ikke blir flyttet inn i lista hvis man trykker på piltaster og lista er lukket
       return;
     }
-    const length = results?.length ?? 0;
-    switch (e.key) {
+
+    switch (event.key) {
       case 'Escape':
-        setCurrentFocus(-1);
-        setShowResults(false);
+        setFocusedResultIndex(-1);
+        setIsResultsOpen(false);
         inputRef.current?.focus();
         break;
 
       case 'ArrowUp':
-        e.preventDefault();
-        setCurrentFocus((currentFocus) =>
-          currentFocus === 0 ? length - 1 : currentFocus - 1
+        event.preventDefault();
+        setFocusedResultIndex((currentFocus) =>
+          currentFocus === 0 ? resultCount - 1 : currentFocus - 1
         );
         break;
+
       case 'ArrowDown':
-        e.preventDefault();
-        setCurrentFocus((currentFocus) =>
-          currentFocus === length - 1 ? 0 : currentFocus + 1
+        event.preventDefault();
+        setFocusedResultIndex((currentFocus) =>
+          currentFocus === resultCount - 1 ? 0 : currentFocus + 1
         );
         break;
     }
   };
 
+  const handleInputKeyDown = (event: KeyboardEvent<HTMLInputElement>): void => {
+    if (event.key === 'Enter') {
+      onSearch?.(event, currentValue);
+    }
+  };
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    onChange?.(event);
+    setSearchTerm(event.target.value);
+  };
+
+  const handleInputFocus = (event: FocusEvent<HTMLInputElement>): void => {
+    onFocus?.(event);
+
+    if (!disabled && isLoading) {
+      setIsResultsOpen(true);
+    }
+  };
+
+  const handleClearClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    onClear?.(event);
+    setSearchTerm('');
+
+    if (!isControlled && inputRef.current) {
+      inputRef.current.value = '';
+    }
+
+    inputRef.current?.focus();
+  };
+
+  const handleSearchClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    onSearchClick?.(event, currentValue);
+  };
+
   const isLarge = variant === 'large';
   const isExtraLarge = variant === 'extraLarge';
-  const searchButtonClassName = `${styles.searchButton} ${
-    isLarge ? styles.searchButton_large : ''
-  } ${isExtraLarge ? styles.searchButton_extraLarge : ''}`.trim();
-  const containerClassName = `${styles.topContainer} ${
-    isLarge ? styles.topContainer_large : ''
-  } ${isExtraLarge ? styles.topContainer_extraLarge : ''} ${className} ${
+  let sizeAttribute: 'medium' | 'large' | 'extraLarge' = 'medium';
+  if (isLarge) {
+    sizeAttribute = 'large';
+  } else if (isExtraLarge) {
+    sizeAttribute = 'extraLarge';
+  }
+  const hasVisibleLabel = !!label && !hideLabel;
+  const clearButtonSize = variant === 'medium' ? 'extraSmall' : 'small';
+  const resolvedClearButtonTitle =
+    clearButtonTitle ?? t('searchfield.ClearButtonTitle');
+  const resolvedSearchButtonTitle =
+    searchButtonTitle ?? t('searchfield.ButtonTitle');
+
+  const searchButtonClassName = styles.searchButton;
+  const containerClassName = `${styles.topContainer} ${className} ${
     classNames?.container ?? ''
   }`.trim();
+  const searchContainerClassName = `${styles.searchContainer} ${
+    hasVisibleLabel ? styles.searchContainerMarginTop : ''
+  } ${classNames?.searchContainer ?? ''}`.trim();
+  const inputClassName = `${styles.input} ${classNames?.textbox ?? ''} ${
+    showClearButton && !disabled ? styles.inputWithValue : ''
+  }`.trim();
+  const resultsListClassName = `${styles.searchResultContainer} ${
+    classNames?.searchResultsList ?? ''
+  }`.trim();
+
+  const screenReaderMessage =
+    resultCount > 0
+      ? t('searchfield.NumberOfResults', { ant: resultCount })
+      : t('combobox.NoResults', { searchTerm: currentValue });
+
+  const renderResultsContent = (): JSX.Element | null => {
+    if (!isResultsOpen) {
+      return null;
+    }
+
+    if (isLoading) {
+      return (
+        <div
+          ref={loadingContainerRef}
+          id={resultsId}
+          className={`${styles.searchResultContainer} ${styles.loadingContainer} ${classNames?.searchResultsList ?? ''}`.trim()}
+          data-size={sizeAttribute}
+          tabIndex={-1}
+        >
+          <Spinner titlePosition={'right'} {...spinnerProps}>
+            {spinnerLabel}
+          </Spinner>
+        </div>
+      );
+    }
+
+    return (
+      <ul
+        ref={listboxRef}
+        id={resultsId}
+        className={resultsListClassName}
+        role={'listbox'}
+        aria-labelledby={labelId}
+        // Prevents parent tabIndex scopes from blocking scrollbar clicks in the results list
+        tabIndex={-1}
+      >
+        {showNoResults && (
+          <li
+            role={'option'}
+            aria-selected={'false'}
+            aria-disabled={'true'}
+            className={styles.emptyResult}
+          >
+            {t('combobox.NoResults', {
+              searchTerm: currentValue,
+            })}
+          </li>
+        )}
+        {results?.map((result, index) => {
+          return (
+            <SearchFieldResult
+              key={result.key ?? result.description}
+              className={classNames?.searchResult}
+              hasFocus={focusedResultIndex === index}
+              title={result.title}
+              setFocus={setFocusedResultIndex}
+              index={index}
+              onClick={() => onResultClick?.(result)}
+            >
+              {result.description}
+            </SearchFieldResult>
+          );
+        })}
+      </ul>
+    );
+  };
 
   return (
     <div
@@ -193,7 +362,8 @@ export const SearchField = (({
       className={containerClassName}
       lang={lang}
       data-has-spacing={hasSpacing}
-      onKeyDown={handleKeyDown}
+      data-size={sizeAttribute}
+      onKeyDown={handleResultsKeyDown}
     >
       <LabelWithHelp
         id={labelId}
@@ -211,10 +381,7 @@ export const SearchField = (({
       >
         {label}
       </LabelWithHelp>
-      <div
-        className={`${styles.searchContainer} ${label && !hideLabel ? styles.searchContainerMarginTop : ''}
-${classNames?.searchContainer ?? ''}`.trim()}
-      >
+      <div className={searchContainerClassName}>
         <div className={styles.inputWrapper}>
           {enableSRNavigationHint && (
             <span id={srFocusId} className={styles.srOnly}>
@@ -224,100 +391,38 @@ ${classNames?.searchContainer ?? ''}`.trim()}
           <input
             ref={inputRef}
             id={inputId}
-            className={`${styles.input} ${classNames?.textbox ?? ''} ${showClearButton && !disabled ? styles.inputWithValue : ''}`.trim()}
+            className={inputClassName}
             data-testid={dataTestId}
             accessKey={accessKey}
-            defaultValue={defaultValue}
             disabled={disabled}
             form={form}
             name={name}
             placeholder={placeholder}
             readOnly={readOnly}
-            value={value}
+            defaultValue={defaultValue}
+            value={isControlled ? currentValue : undefined}
             autoComplete={autoComplete}
             required={required}
-            aria-describedby={
-              [
-                ariaDescribedBy,
-                description && descriptionId,
-                errorMessage && errorId,
-                enableSRNavigationHint && srFocusId,
-              ]
-                .filter(Boolean)
-                .join(' ')
-                .trim() || undefined
-            }
+            aria-describedby={describedBy}
             aria-invalid={getAriaInvalid(errorMessage, required)}
-            aria-owns={shouldShowResults ? resultsId : undefined}
+            aria-owns={isResultsOpen ? resultsId : undefined}
             type={'search'}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                onSearch?.(event, inputRef?.current?.value);
-              }
-            }}
+            onKeyDown={handleInputKeyDown}
             onBlur={onBlur}
-            onChange={(event) => {
-              onChange?.(event);
-              // Nødvendig for at clearButton skal vises riktig for uncontrolled komponent
-              if (event.target.value.length) {
-                setShowClearButton(true);
-              } else {
-                setShowClearButton(false);
-              }
-            }}
-            onFocus={onFocus}
+            onChange={handleInputChange}
+            onFocus={handleInputFocus}
           />
           <span aria-live={'polite'} className={styles.srOnly}>
-            {shouldShowResults &&
-              t('searchfield.NumberOfResults', {
-                ant: results?.length ?? 0,
-              })}
+            {isResultsOpen && !isLoading && screenReaderMessage}
           </span>
-          {shouldShowResults && (
-            <ul
-              ref={listboxRef}
-              id={resultsId}
-              className={`${styles.searchResultContainer} ${classNames?.searchResultsList ?? ''}`.trim()}
-              role={'listbox'}
-              aria-labelledby={labelId}
-              // Prevents parent tabIndex scopes from blocking scrollbar clicks in the results list
-              tabIndex={-1}
-            >
-              {results?.map((result, index) => {
-                const hasFocus = currentFocus === index;
-                return (
-                  <SearchFieldResult
-                    key={result.key ?? result.description}
-                    className={classNames?.searchResult}
-                    hasFocus={hasFocus}
-                    aria-selected={hasFocus}
-                    role={'option'}
-                    title={result.title}
-                    setFocus={setCurrentFocus}
-                    index={index}
-                    onClick={() => onResultClick?.(result)}
-                  >
-                    {result.description}
-                  </SearchFieldResult>
-                );
-              })}
-            </ul>
-          )}
+          {renderResultsContent()}
           {showClearButton && !disabled && !readOnly && (
             <IconButton
               className={styles.clearButton}
-              size={variant === 'medium' ? 'extraSmall' : 'small'}
+              size={clearButtonSize}
               svgPath={CancelSVGpath}
-              title={clearButtonTitle ?? t('searchfield.ClearButtonTitle')}
-              onClick={(event) => {
-                onClear?.(event);
-                // Nødvendig for å fjerne knappen også i uncontrolled SearchField
-                setShowClearButton(false);
-                if (!value && inputRef.current) {
-                  inputRef.current.value = '';
-                }
-                inputRef.current?.focus();
-              }}
+              title={resolvedClearButtonTitle}
+              onClick={handleClearClick}
             />
           )}
         </div>
@@ -325,19 +430,18 @@ ${classNames?.searchContainer ?? ''}`.trim()}
           <button
             type={'button'}
             className={searchButtonClassName}
+            data-size={sizeAttribute}
             disabled={disabled}
-            onClick={(event): void => {
-              onSearchClick?.(event, inputRef?.current?.value);
-            }}
+            onClick={handleSearchClick}
           >
             {hasSearchButtonIcon ? (
               <SearchIcon
                 className={styles.icon}
-                title={searchButtonTitle ?? t('searchfield.ButtonTitle')}
+                title={resolvedSearchButtonTitle}
                 size={isLarge || isExtraLarge ? 'large' : 'medium'}
               />
             ) : (
-              (searchButtonTitle ?? t('searchfield.ButtonTitle'))
+              resolvedSearchButtonTitle
             )}
           </button>
         )}
