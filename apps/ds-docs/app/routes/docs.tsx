@@ -120,7 +120,9 @@ const docsContentLoader =
                 />
               )}
             </div>
-            {frontmatter.description}
+            <Paragraph variant={'ingress'} hasSpacing>
+              {frontmatter.description}
+            </Paragraph>
             <div>
               <Mdx components={getMdxComponents()} />
             </div>
