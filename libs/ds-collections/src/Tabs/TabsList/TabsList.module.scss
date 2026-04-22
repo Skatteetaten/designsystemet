@@ -5,12 +5,12 @@
   border-bottom: 1px solid var(--semantic-interactive-main);
   gap: var(--spacing-s);
 
-  &_multiline {
+  &[data-multiline='true'] {
     flex-wrap: wrap;
-    border-bottom: none;
+    border-bottom-color: transparent;
 
     @media (min-width: breakpoints.$breakpoint-xs) {
-      border-bottom: 1px solid var(--semantic-interactive-main);
+      border-bottom-color: var(--semantic-interactive-main);
     }
   }
 }
