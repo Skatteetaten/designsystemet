@@ -1,7 +1,6 @@
 import {
   ChangeEvent,
   DragEvent,
-  ReactNode,
   useEffect,
   useId,
   useRef,
@@ -21,15 +20,13 @@ import {
   UploadedFile,
 } from './FileUploader.types';
 import { useFileUploader } from './useFileUploader';
+import { useFileUploaderAccessibilityAnnouncer } from './useFileUploaderAccessibilityAnnouncer';
 import { getFiles, isChangeEvent, normalize } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { FileUploaderFile } from './FileUploaderFile/FileUploaderFile';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './FileUploader.module.scss';
-
-const getUploadedFilesSignature = (uploadedFiles?: UploadedFile[]): string =>
-  uploadedFiles?.map((file) => file.id ?? file.name).join('|') ?? '';
 
 /**
  * FileUploader
@@ -75,8 +72,6 @@ export const FileUploader = (({
   const inputRef = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const deleteButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
-  const [srOnlyText, setSrOnlyText] = useState<string>();
-  const [srOnlyStatusMessage, setSrOnlyStatusMessage] = useState<ReactNode>();
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const generatedId = useId();
   const [filesPendingDelete, setFilesPendingDelete] = useState<
@@ -85,48 +80,15 @@ export const FileUploader = (({
 
   const [newFiles, setNewFiles] = useState<UploadedFile[]>([]);
   const prevFilesRef = useRef<UploadedFile[] | undefined>(undefined);
-  const prevHadUploadResultRef = useRef<boolean>(false);
-  const prevIsUploadingRef = useRef<boolean>(!!isUploading);
-  const prevUploadedFilesSignatureRef = useRef<string>(
-    getUploadedFilesSignature(uploadedFiles)
-  );
-  const statusMessageTimeoutRef = useRef<number | undefined>(undefined);
-  const uploadedFilesSignature = getUploadedFilesSignature(uploadedFiles);
-
-  useEffect(() => {
-    const hasStatusMessage = !!uploadResult?.statusMessage;
-    const didUploadResultAppear = !prevHadUploadResultRef.current;
-    const didUploadFinish = prevIsUploadingRef.current && !isUploading;
-    const hasUploadedFilesChanged =
-      prevUploadedFilesSignatureRef.current !== uploadedFilesSignature;
-    const shouldAnnounceStatusMessage =
-      hasStatusMessage &&
-      (didUploadResultAppear || didUploadFinish || hasUploadedFilesChanged);
-
-    if (!hasStatusMessage) {
-      clearTimeout(statusMessageTimeoutRef.current);
-      statusMessageTimeoutRef.current = undefined;
-      setSrOnlyStatusMessage(undefined);
-    } else if (shouldAnnounceStatusMessage) {
-      //NOTE: hvis vi får samme statusmelding to ganger på rad så må live region tømmes først for at skjermleser skal lese den opp på nytt
-      clearTimeout(statusMessageTimeoutRef.current);
-      setSrOnlyStatusMessage(undefined);
-      statusMessageTimeoutRef.current = window.setTimeout(() => {
-        setSrOnlyStatusMessage(uploadResult.statusMessage);
-        statusMessageTimeoutRef.current = undefined;
-      }, 120);
-    }
-
-    prevHadUploadResultRef.current = !!uploadResult;
-    prevIsUploadingRef.current = !!isUploading;
-    prevUploadedFilesSignatureRef.current = uploadedFilesSignature;
-  }, [uploadResult, isUploading, uploadedFilesSignature]);
-
-  useEffect(() => {
-    return (): void => {
-      clearTimeout(statusMessageTimeoutRef.current);
-    };
-  }, []);
+  const {
+    announceDeleteResult,
+    screenReaderAnnouncement,
+    screenReaderAriaLive,
+  } = useFileUploaderAccessibilityAnnouncer({
+    uploadResult,
+    uploadedFiles,
+    isUploading,
+  });
 
   useEffect(() => {
     if (uploadedFiles) {
@@ -255,16 +217,13 @@ export const FileUploader = (({
 
     if (deleted) {
       UpdateFocusAfterDelete(uploadedFiles, index);
-      setSrOnlyText(t('fileuploader.DeleteConfirmation'));
+      announceDeleteResult(t('fileuploader.DeleteConfirmation'));
     } else {
-      setSrOnlyText(t('fileuploader.GeneralDeleteError'));
+      announceDeleteResult(t('fileuploader.GeneralDeleteError'));
 
       // Behold fokus på nåværende knapp dersom sletting feiler
       deleteButtonRefs.current[key]?.focus();
     }
-    setTimeout(() => {
-      setSrOnlyText('');
-    }, 3000);
 
     setFilesPendingDelete((prevState) => ({ ...prevState, [key]: false }));
   };
@@ -414,13 +373,10 @@ export const FileUploader = (({
       )}
       <div
         className={styles.srOnly}
-        aria-live={uploadResult?.hasUploadFailed ? 'assertive' : 'polite'}
+        aria-live={screenReaderAriaLive}
         aria-atomic={'true'}
       >
-        {srOnlyStatusMessage}
-      </div>
-      <div className={styles.srOnly} aria-live={'polite'} aria-atomic={'true'}>
-        {srOnlyText}
+        {screenReaderAnnouncement}
       </div>
     </div>
   );
