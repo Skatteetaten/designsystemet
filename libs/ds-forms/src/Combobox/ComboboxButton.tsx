@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import { memo, type JSX, MouseEvent } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
@@ -12,7 +12,7 @@ import { ComboboxButtonProps } from './Combobox.types';
 
 import styles from './Combobox.module.scss';
 
-export const ComboboxButton = React.memo<ComboboxButtonProps>(
+export const ComboboxButton = memo<ComboboxButtonProps>(
   ({
     isOpen,
     onClick,
@@ -25,7 +25,7 @@ export const ComboboxButton = React.memo<ComboboxButtonProps>(
     const buttonClassName = `${styles.chevronButton} ${variant === 'large' ? styles.chevronButtonLarge : ''}`;
     const iconSize = variant === 'large' ? 'medium' : 'small';
 
-    const handleMouseDown = (e: React.MouseEvent<HTMLElement>): void => {
+    const handleMouseDown = (e: MouseEvent<HTMLElement>): void => {
       // Prevent focus from going to input
       e.preventDefault();
       onClick?.(e);

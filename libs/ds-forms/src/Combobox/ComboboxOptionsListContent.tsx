@@ -1,4 +1,4 @@
-import React, { type JSX, useMemo, useRef } from 'react';
+import { Fragment, type JSX, useMemo, useRef } from 'react';
 
 import { Divider } from '@skatteetaten/ds-content';
 import { CheckIcon } from '@skatteetaten/ds-icons';
@@ -246,7 +246,7 @@ export const ComboboxOptionsListContent = ({
           flatIndex++;
 
           return (
-            <React.Fragment key={item.option.value}>
+            <Fragment key={item.option.value}>
               {showDivider && (
                 <li role={'presentation'}>
                   <Divider ariaHidden />
@@ -263,7 +263,7 @@ export const ComboboxOptionsListContent = ({
                 handleButtonFocus={handleButtonFocus}
                 handleOptionSelect={handleOptionSelect}
               />
-            </React.Fragment>
+            </Fragment>
           );
         }
 
@@ -289,7 +289,7 @@ export const ComboboxOptionsListContent = ({
         });
 
         return (
-          <React.Fragment key={`group-${item.groupLabel}`}>
+          <Fragment key={`group-${item.groupLabel}`}>
             {showDivider && (
               <li role={'presentation'}>
                 <Divider ariaHidden />
@@ -305,7 +305,7 @@ export const ComboboxOptionsListContent = ({
                 </ul>
               </div>
             </li>
-          </React.Fragment>
+          </Fragment>
         );
       })}
     </>

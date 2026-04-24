@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { LinkProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -47,8 +47,8 @@ export interface FooterProps extends BaseProps {
   children?: ReactNode;
 }
 
-export interface FooterComponent extends React.FC<FooterProps> {
+export interface FooterComponent extends FunctionComponent<FooterProps> {
   Logo: typeof FooterLogo;
   Link: typeof FooterLink;
-  LinkFirstColumn: React.FC<Omit<LinkProps, 'color'>>;
+  LinkFirstColumn: FunctionComponent<Omit<LinkProps, 'color'>>;
 }

@@ -1,4 +1,11 @@
-import { useId, useContext, JSX, ChangeEvent, FocusEvent } from 'react';
+import {
+  useId,
+  useContext,
+  JSX,
+  ChangeEvent,
+  FocusEvent,
+  KeyboardEvent,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -53,9 +60,7 @@ export const Radio = ({
     onFocus && onFocus(event);
   };
 
-  const handleKeyDown = (
-    event: React.KeyboardEvent<HTMLInputElement>
-  ): void => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>): void => {
     if (
       context?.readOnly &&
       (event.key === ' ' ||

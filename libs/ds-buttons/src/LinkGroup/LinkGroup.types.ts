@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
@@ -21,7 +21,7 @@ export interface LinkGroupComponentCommonProps extends BaseProps {
 
 export type LinkGroupProps = LinkGroupComponentCommonProps;
 
-export interface LinkGroupComponent extends React.FC<LinkGroupProps> {
+export interface LinkGroupComponent extends FunctionComponent<LinkGroupProps> {
   Link: typeof Link;
 }
 

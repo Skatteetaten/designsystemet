@@ -1,4 +1,12 @@
-import { JSX, ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  JSX,
+  MouseEvent,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -150,9 +158,7 @@ export const TopBannerLangPicker = (({
     };
   }, [isMenuOpen, setOpenMenu, languages]);
 
-  const handleLanguageClick = (
-    e: React.MouseEvent<HTMLButtonElement>
-  ): void => {
+  const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
     setSelectedLangInternal(e.currentTarget.lang);
     setOpenMenu('None');
     menuButtonRefInternal?.current?.focus();

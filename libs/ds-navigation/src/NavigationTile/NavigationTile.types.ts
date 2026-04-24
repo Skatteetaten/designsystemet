@@ -1,4 +1,4 @@
-import { HTMLProps, ReactElement, ReactNode } from 'react';
+import { HTMLProps, ReactElement, ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs, Size } from '@skatteetaten/ds-core-utils';
 
@@ -22,7 +22,7 @@ export type NavigationTileSize = Extract<
 export interface NavigationTileComponentCommonProps
   extends NavigationTilePropsHTMLAttributes,
     BaseProps {
-  ref?: React.Ref<HTMLAnchorElement>;
+  ref?: Ref<HTMLAnchorElement>;
   classNames?: {
     container?: string;
     title?: string;

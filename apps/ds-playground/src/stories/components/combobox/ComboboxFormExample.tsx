@@ -1,4 +1,4 @@
-import { JSX, useState } from 'react';
+import { FormEvent, JSX, useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { Combobox, ComboboxOption } from '@skatteetaten/ds-forms';
@@ -11,9 +11,7 @@ const ComboboxFormExample = (): JSX.Element => {
   const [uncontrolledError, setUncontrolledError] = useState<string>('');
   const [controlledError, setControlledError] = useState<string>('');
 
-  const handleUncontrolledSubmit = (
-    e: React.FormEvent<HTMLFormElement>
-  ): void => {
+  const handleUncontrolledSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     setUncontrolledError(''); // Clear previous error
 
@@ -30,9 +28,7 @@ const ComboboxFormExample = (): JSX.Element => {
     alert(`Ukontrollert skjema sendt med: ${selectedKommuner.join(', ')}`);
   };
 
-  const handleControlledSubmit = (
-    e: React.FormEvent<HTMLFormElement>
-  ): void => {
+  const handleControlledSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     setControlledError(''); // Clear previous error
 
