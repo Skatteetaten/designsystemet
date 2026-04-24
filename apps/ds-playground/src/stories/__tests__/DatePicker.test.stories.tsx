@@ -18,7 +18,7 @@ import {
 } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -1023,12 +1023,17 @@ const TemplateWithScrollableContainer: StoryFn<typeof DatePicker> = (args) => (
     <aside className={'container-aside'}>
       <p>
         {
-          'Denne historien er laget for å teste rød ramme i kantlinjen når det er en feilmelding.'
+          'Denne historien er laget for å teste rød ramme i kantlinjen når det er en feilmelding. I tillegg tester vi om kalenderen åpner seg direkte under inputfeltet. For å teste dette, åpne kalenderen og sjekk at den åpner seg under inputfeltet. Rull ned og opp for å se kalenderen forbli i riktig posisjon.'
         }
       </p>
+      {Array.from({ length: 7 }, (_, i) => (
+        <p key={i}>{loremIpsum}</p>
+      ))}
     </aside>
     <main className={'container-main'}>
+      <p>{loremIpsum}</p>
       <DatePicker {...args} />
+      <p>{loremIpsum}</p>
     </main>
   </div>
 );
