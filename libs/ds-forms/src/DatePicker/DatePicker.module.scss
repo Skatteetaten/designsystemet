@@ -1,11 +1,12 @@
 .wrapper {
+  position: relative;
+
   &[data-has-spacing='true'] {
     margin-bottom: var(--spacing-m);
   }
 }
 
 .dateContainer {
-  position: relative;
   display: flex;
   width: 100%;
   max-width: 10.25rem;
@@ -150,7 +151,5 @@
 .calendarContainer {
   position: absolute;
   z-index: 55;
-  top: 100%;
-  left: 0;
   margin-top: var(--spacing-xs);
 }

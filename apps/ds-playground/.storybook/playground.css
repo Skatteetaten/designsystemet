@@ -563,4 +563,5 @@ dl.descriptionListTwoColumns {
 .container-main {
   overflow-y: scroll;
   max-height: 100%;
+  flex: 1;
 }
