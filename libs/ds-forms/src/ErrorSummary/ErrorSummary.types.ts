@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
@@ -26,7 +26,8 @@ export interface ErrorSummaryProps extends BaseProps {
   titleAs?: HeadingAs;
 }
 
-export interface ErrorSummaryComponent extends React.FC<ErrorSummaryProps> {
+export interface ErrorSummaryComponent
+  extends FunctionComponent<ErrorSummaryProps> {
   Error: typeof ErrorSummaryError;
   Group: typeof ErrorSummaryGroup;
 }

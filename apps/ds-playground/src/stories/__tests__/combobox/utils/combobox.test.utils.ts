@@ -1,5 +1,5 @@
 /* eslint-disable react-compiler/react-compiler */
-import React, { useRef } from 'react';
+import { createElement, useRef } from 'react';
 
 import { StoryFn } from '@storybook/react-vite';
 
@@ -21,10 +21,10 @@ export const wrapper = '.docs-story > div';
 export const ProgrammaticFocusTemplate: StoryFn<typeof Combobox> = () => {
   const comboboxRef = useRef<HTMLInputElement>(null);
 
-  return React.createElement(
+  return createElement(
     'div',
     null,
-    React.createElement(
+    createElement(
       'button',
       {
         className: 'mb-4',
@@ -36,7 +36,7 @@ export const ProgrammaticFocusTemplate: StoryFn<typeof Combobox> = () => {
       },
       'Fokuser på combobox'
     ),
-    React.createElement(Combobox, {
+    createElement(Combobox, {
       ref: comboboxRef,
       label: 'Velg land',
       options: defaultOptions,

@@ -1,4 +1,10 @@
-import { ComponentPropsWithoutRef, MouseEvent, ReactNode, Ref } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  FunctionComponent,
+  MouseEvent,
+  ReactNode,
+  Ref,
+} from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
@@ -157,6 +163,7 @@ export interface UploadedFile {
 
 export type FileUploaderProps = FileUploaderCommonProps;
 
-export interface FileUploaderComponent extends React.FC<FileUploaderProps> {
+export interface FileUploaderComponent
+  extends FunctionComponent<FileUploaderProps> {
   useFileUploader: typeof useFileUploader;
 }

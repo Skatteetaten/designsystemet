@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import { memo, type JSX } from 'react';
 
 import { Chips } from '@skatteetaten/ds-collections';
 
@@ -6,7 +6,7 @@ import type { ComboboxSelectedOptionsProps } from './Combobox.types';
 
 import styles from './Combobox.module.scss';
 
-export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
+export const ComboboxSelectedOptions = memo<ComboboxSelectedOptionsProps>(
   ({
     className,
     multiple,

@@ -1,4 +1,4 @@
-import React, { type JSX, useEffect, useState } from 'react';
+import { type JSX, memo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -11,7 +11,7 @@ import type { ComboboxState } from './utils/combobox-state-utils';
 
 import styles from './Combobox.module.scss';
 
-export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
+export const ComboboxOptions = memo<ComboboxOptionsProps>(
   ({
     isOpen,
     openTrigger,

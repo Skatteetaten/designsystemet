@@ -1,4 +1,9 @@
-import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  FunctionComponent,
+  ReactNode,
+  Ref,
+} from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
@@ -64,7 +69,8 @@ interface CheckboxGroupCommonProps
 
 export type CheckboxGroupProps = CheckboxGroupCommonProps;
 
-export interface CheckboxGroupComponent extends React.FC<CheckboxGroupProps> {
+export interface CheckboxGroupComponent
+  extends FunctionComponent<CheckboxGroupProps> {
   Checkbox: typeof Checkbox;
 }
 

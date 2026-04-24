@@ -1,4 +1,10 @@
-import { Dispatch, ReactNode, Ref, SetStateAction } from 'react';
+import {
+  Dispatch,
+  FunctionComponent,
+  ReactNode,
+  Ref,
+  SetStateAction,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -51,7 +57,7 @@ interface TabsCommonProps extends BaseProps {
 
 export type TabsProps = TabsCommonProps & TabsDiscriminatedValueProps;
 
-export interface TabsComponent extends React.FC<TabsProps> {
+export interface TabsComponent extends FunctionComponent<TabsProps> {
   List: typeof TabsList;
   Panel: typeof TabsPanel;
   Tab: typeof TabsTab;

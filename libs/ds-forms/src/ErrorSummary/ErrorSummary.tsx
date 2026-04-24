@@ -6,6 +6,7 @@ import {
   useEffect,
   useImperativeHandle,
   useRef,
+  ReactNode,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -22,7 +23,7 @@ import { ErrorSummaryGroup } from './ErrorSummaryGroup/ErrorSummaryGroup';
 
 import styles from './ErrorSummary.module.scss';
 
-const isGroupElement = (child: React.ReactNode): boolean => {
+const isGroupElement = (child: ReactNode): boolean => {
   return (
     isValidElement(child) &&
     (child.type === ErrorSummaryGroup ||
@@ -31,14 +32,14 @@ const isGroupElement = (child: React.ReactNode): boolean => {
   );
 };
 
-const countErrors = (childArray: React.ReactNode[]): number => {
+const countErrors = (childArray: ReactNode[]): number => {
   let count = 0;
   childArray.forEach((child) => {
     if (isValidElement(child)) {
       if (isGroupElement(child)) {
         // Tell feilene i gruppen
         const groupChildren = Children.toArray(
-          (child.props as { children?: React.ReactNode }).children
+          (child.props as { children?: ReactNode }).children
         );
         count += groupChildren.length;
       } else {
@@ -104,8 +105,8 @@ export const ErrorSummary = (({
 
     // Håndterer blandet innhold: grupper og enkeltstående feil
     // Samler sammenhengende ikke-gruppe-barn og pakker dem i LinkGroup
-    const result: React.ReactNode[] = [];
-    let currentErrors: React.ReactNode[] = [];
+    const result: ReactNode[] = [];
+    let currentErrors: ReactNode[] = [];
 
     childArray.forEach((child, index) => {
       if (isGroupElement(child)) {

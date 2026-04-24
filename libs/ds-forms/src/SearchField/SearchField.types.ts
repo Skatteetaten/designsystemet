@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  FunctionComponent,
   KeyboardEvent,
   MouseEvent,
   MouseEventHandler,
@@ -132,6 +133,7 @@ interface SearchFieldCommonProps
 
 export type SearchFieldProps = SearchFieldCommonProps & FormRequiredProps;
 
-export interface SearchFieldComponent extends React.FC<SearchFieldProps> {
+export interface SearchFieldComponent
+  extends FunctionComponent<SearchFieldProps> {
   Result: typeof SearchFieldResult;
 }

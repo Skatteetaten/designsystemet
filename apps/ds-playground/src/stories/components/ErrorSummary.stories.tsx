@@ -1,4 +1,4 @@
-import { useState, JSX } from 'react';
+import { useState, JSX, CSSProperties } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
@@ -186,9 +186,7 @@ export const WithContainerQuery: Story = {
         <div
           className={'containerQueryWrapper'}
           // eslint-disable-next-line react/forbid-dom-props -- dynamisk bredde krever inline style
-          style={
-            { '--container-query-width': `${width}px` } as React.CSSProperties
-          }
+          style={{ '--container-query-width': `${width}px` } as CSSProperties}
         >
           <ErrorSummary showErrorSummary>
             <ErrorSummary.Error referenceId={'field1'}>

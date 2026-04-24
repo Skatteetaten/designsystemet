@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
@@ -7,8 +7,6 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ComboboxButton } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxButton';
-
-type ComboboxButtonProps = React.ComponentProps<typeof ComboboxButton>;
 
 const meta = {
   component: ComboboxButton,
@@ -43,13 +41,7 @@ export const ClearButtonClick = {
     hasValue: true,
     onClear: fn(),
   },
-  play: async ({
-    args,
-    canvasElement,
-  }: {
-    args: ComboboxButtonProps;
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
     const clearButton = canvas.getByRole('button', {
@@ -67,13 +59,7 @@ export const DisabledStateHandling = {
     disabled: true,
     onClick: fn(),
   },
-  play: async ({
-    args,
-    canvasElement,
-  }: {
-    args: ComboboxButtonProps;
-    canvasElement: HTMLElement;
-  }): Promise<void> => {
+  play: async ({ args, canvasElement }): Promise<void> => {
     const chevron = canvasElement.querySelector('div[class*="chevronButton"]');
     await expect(chevron).toHaveStyle('pointer-events: none');
 

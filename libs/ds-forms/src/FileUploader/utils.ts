@@ -14,9 +14,7 @@ export function isChangeEvent(
 }
 
 export const getFiles = (
-  event:
-    | React.ChangeEvent<HTMLInputElement>
-    | React.DragEvent<HTMLButtonElement>
+  event: ChangeEvent<HTMLInputElement> | DragEvent<HTMLButtonElement>
 ): Array<File> => {
   if (isDragEvent(event) && event.dataTransfer) {
     const dt = event.dataTransfer;
