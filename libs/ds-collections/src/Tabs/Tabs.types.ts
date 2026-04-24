@@ -43,16 +43,6 @@ type TabsDiscriminatedValueProps =
 
 interface TabsCommonProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
-  /**
-   * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
-   * komponenten er controlled
-   */
-  value?: string;
-  /**
-   * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
-   * komponenten er uncontrolled. value må oppdateres via onChange-eventet
-   */
-  defaultValue?: string;
   /** Lar listen med tab'er flyte over flere linje hvis ikke plass på en linje */
   isMultiline?: boolean;
   /** Definerer stilen standard eller compact */

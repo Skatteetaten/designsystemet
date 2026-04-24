@@ -29,16 +29,19 @@ export const Tabs = (({
   onChange,
   children,
 }: TabsProps): JSX.Element => {
+  const baseId = useId();
   const [activeTab, setActiveTab] = useState(value ?? defaultValue);
+  const [index, setIndex] = useState<number>(0);
+
   useEffect(() => {
     if (!value) return;
     setActiveTab(value);
   }, [value]);
-  const [index, setIndex] = useState<number>(0);
+
   if (activeTab === undefined) {
     throw new Error(`prop 'defaultValue' eller 'value' må ha en satt verdi`);
   }
-  const baseId = useId();
+
   const contextValue = useMemo(
     () => ({
       activeTab,
@@ -55,6 +58,7 @@ export const Tabs = (({
     }),
     [activeTab, id, baseId, hasBorder, variant, isMultiline, index, onChange]
   );
+
   return (
     <div
       ref={ref}

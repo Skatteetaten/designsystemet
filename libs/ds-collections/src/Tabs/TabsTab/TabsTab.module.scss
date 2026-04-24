@@ -1,16 +1,20 @@
 .tab {
+  --tab-front-color: var(--semantic-interactive-main);
+  --tab-font-size: var(--font-size-m);
+  --tab-spacing: var(--spacing-s);
+
+  display: flex;
   padding: var(--spacing-s) var(--spacing-m);
   border: 0;
   background-color: transparent;
-  color: var(--front-color);
+  color: var(--tab-front-color);
   cursor: pointer;
-  font-size: var(--font-size-m);
+  font-size: var(--tab-font-size);
   font-weight: var(--font-weight-medium);
+  gap: var(--tab-spacing);
   line-height: var(--semantic-line-height-buttons);
   text-decoration: underline;
   white-space: nowrap;
-
-  --front-color: var(--semantic-interactive-main);
 
   &:hover {
     background-color: var(--semantic-interactive-background);
@@ -18,55 +22,32 @@
 
   &:focus-visible {
     z-index: 1;
-    background-repeat: no-repeat;
-    background-size:
-      100% 2px,
-      2px 100%;
     box-shadow:
       0 0 0 2px var(--palette-graphite-0),
       0 0 0 1px inset var(--semantic-interactive-main);
     outline: var(--semantic-interactive-main) solid 2px;
     outline-offset: 2px;
-
-    &:hover {
-      background-color: var(--semantic-interactive-background);
-    }
   }
 
-  &_active {
+  &[data-active='true'] {
+    --tab-front-color: var(--palette-graphite-0);
+
     background-color: var(--semantic-interactive-main);
-    color: var(--palette-graphite-0);
     text-decoration: none;
 
-    --front-color: var(--palette-graphite-0);
-
-    &:hover,
-    &:focus-visible,
-    &:hover:focus-visible {
+    &:hover {
       background-color: var(--semantic-interactive-main);
-      color: var(--palette-graphite-0);
-
-      --front-color: var(--palette-graphite-0);
     }
   }
 
-  svg {
-    margin: 0 var(--spacing-s);
-    fill: var(--front-color);
-    vertical-align: text-bottom;
-  }
+  &[data-variant='compact'] {
+    --tab-font-size: var(--font-size-s);
+    --tab-spacing: var(--spacing-xs);
 
-  &_compact {
     padding: var(--spacing-xs) var(--spacing-s);
-    margin: 0;
-    font-size: var(--font-size-s);
-
-    svg {
-      margin: 0 var(--spacing-xs);
-    }
   }
 
-  &_border {
+  &[data-has-border='true'] {
     border: 1px solid var(--semantic-interactive-main);
     margin-top: -1px;
     margin-bottom: -1px;
@@ -76,7 +57,9 @@
     }
   }
 
-  &_icon {
-    padding-left: 0;
+  .icon {
+    height: calc(var(--tab-font-size) * var(--semantic-line-height-buttons));
+    margin-left: calc(-1 * var(--tab-spacing));
+    fill: var(--tab-front-color);
   }
 }
