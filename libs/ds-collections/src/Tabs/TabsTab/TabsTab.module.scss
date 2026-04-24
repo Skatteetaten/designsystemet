@@ -1,4 +1,8 @@
 .tab {
+  --tab-front-color: var(--semantic-interactive-main);
+  --tab-font-size: var(--font-size-m);
+  --tab-spacing: var(--spacing-s);
+
   display: flex;
   padding: var(--spacing-s) var(--spacing-m);
   border: 0;
@@ -11,10 +15,6 @@
   line-height: var(--semantic-line-height-buttons);
   text-decoration: underline;
   white-space: nowrap;
-
-  --tab-front-color: var(--semantic-interactive-main);
-  --tab-font-size: var(--font-size-m);
-  --tab-spacing: var(--spacing-s);
 
   &:hover {
     background-color: var(--semantic-interactive-background);
@@ -30,10 +30,10 @@
   }
 
   &[data-active='true'] {
+    --tab-front-color: var(--palette-graphite-0);
+
     background-color: var(--semantic-interactive-main);
     text-decoration: none;
-
-    --tab-front-color: var(--palette-graphite-0);
 
     &:hover {
       background-color: var(--semantic-interactive-main);
@@ -41,10 +41,10 @@
   }
 
   &[data-variant='compact'] {
-    padding: var(--spacing-xs) var(--spacing-s);
-
     --tab-font-size: var(--font-size-s);
     --tab-spacing: var(--spacing-xs);
+
+    padding: var(--spacing-xs) var(--spacing-s);
   }
 
   &[data-has-border='true'] {
