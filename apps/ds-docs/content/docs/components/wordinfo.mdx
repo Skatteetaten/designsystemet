@@ -21,9 +21,9 @@ WordInfo brukes til å forklare ord og uttrykk direkte i løpende tekst. Kompone
 
 ## Hvorfor anbefalingene finnes?
 
-> - WordInfo skiller seg fra Popover fordi den er ment spesifikt for forklaring av ord i løpende tekst. Riktig komponentvalg gir riktig forventning og riktig semantikk for skjermlesere.
-> - Komponenten anbefales ikke for overskrifter fordi klikkflaten og semantikken kolliderer med overskriftens primærfunksjon som navigasjonslån for skjermlesere.
-> - Ikke for mange WordInfo-elementer i ett avsnitt fordi det fragmenterer leseopplevelsen og gjør det uklart hvilke begreper som faktisk er viktigst å forstå.
+- WordInfo skiller seg fra Popover fordi den er ment spesifikt for forklaring av ord i løpende tekst. Riktig komponentvalg gir riktig forventning og riktig semantikk for skjermlesere.
+- Komponenten anbefales ikke for overskrifter fordi klikkflaten og semantikken kolliderer med overskriftens primærfunksjon som navigasjonslån for skjermlesere.
+- Ikke for mange WordInfo-elementer i ett avsnitt fordi det fragmenterer leseopplevelsen og gjør det uklart hvilke begreper som faktisk er viktigst å forstå.
 
 ## Varianter (og når bruke dem)
 
@@ -40,13 +40,13 @@ WordInfo har ingen visuelle stilvarianter, men to hovedbruksmodi:
 - Kan brukes når mange ordforklaringer står tett i samme avsnitt, og ikonene tar for mye oppmerksomhet.
 - Må brukes med varsomhet — interaktivitet må fortsatt være tydelig.
 
-## Plassering og justering
+### Plassering og justering
 
 - WordInfo plasseres direkte i løpende tekst.
 - Sørg for at komponenten står på et ord eller uttrykk der det er naturlig å klikke for mer informasjon.
 - Unngå å bruke WordInfo på svært korte eller trivielle ord.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Begrepet er klikkbart og åpner et forklaringspanel (via PopOver).
 - Ikonet er rent dekorativt og skjult for skjermleser — funksjonen kommuniseres semantisk i knappen.
@@ -67,27 +67,3 @@ WordInfo har ingen visuelle stilvarianter, men to hovedbruksmodi:
 - Komponentens PopOver støtter `asSpan` slik at WordInfo kan brukes korrekt i blokkelementer som `<p>`.
 - Riktig HTML‑struktur må ivaretas:
   - Ikke legg block‑elementer som `<h1>`–`<h6>`, `<div>`, `<section>` inne i inline‑elementer.
-
-## Do
-
-- Bruk WordInfo for kortfattede forklaringer av begreper.
-- Bruk ikon når det gir mindre kognitiv last og bedre skille fra lenker.
-- Sikre semantikk og riktig HTML‑struktur.
-- Hold forklaringene korte og presise.
-
-## Don’t
-
-- Ikke bruk WordInfo for skjemaledetekster.
-- Ikke bruk for begreper som bør forklares direkte i teksten.
-- Ikke bruk for overskrifter.
-- Ikke bruk for mange WordInfo‑elementer i samme avsnitt.
-
-## Relaterte komponenter
-
-- [Popover](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/popover/)
-- Hjelpetekster i skjemafelt
-- [TextField](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tag/) (via beskrivelse/hjelpetekst)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/wordinfo/

@@ -28,14 +28,14 @@ Breadcrumbs (brødsmulesti) viser brukeren hvor de befinner seg i nettstedets hi
 
 **Ingen varianter**
 
-## Plassering og justering
+### Plassering og justering
 
 - Breadcrumbs skal alltid ligge øverst på siden: rett under toppbanneret og over sidetittelen.
 - På innloggede sider skal stien starte med _Min side_, deretter domenet og eventuelle undersider.
 - Tilbakelenker på innloggede sider skal peke til hovedsiden for tjenesten, eller _Min side_ dersom hovedside ikke finnes.
 - Lange stier forkortes automatisk, men kan vises i full lengde ved å sette `shouldCollapse` til `false`.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Brukeren kan utvide forkortet sti via ekspander-ikon.
 - På mobil flyttes fokus til første brødsmule når full sti vises.
@@ -48,21 +48,3 @@ Breadcrumbs (brødsmulesti) viser brukeren hvor de befinner seg i nettstedets hi
 
 - Komponenten bruker `<nav>` og annonserer “Jeg er her” med riktig språk.
 - Siste element markeres som gjeldende side med `aria-current="page"`, med mulighet for å skru av mekanismen (`showLastItemAsCurrentPage`).
-
-## Do
-
-- Plasser Breadcrumbs konsekvent øverst på siden.
-- Bruk riktig struktur for innloggede sider (start med _Min side_).
-
-## Don’t
-
-- Ikke bruk som steg‑navigasjon.
-- Ikke bruk når det kun finnes ett eller to nivåer.
-
-## Relaterte komponenter
-
-- [StepList](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/steplist/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/

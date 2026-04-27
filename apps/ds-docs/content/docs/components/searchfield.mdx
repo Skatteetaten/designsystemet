@@ -21,9 +21,9 @@ SearchField brukes når brukeren skal søke seg fram til et resultat i løsninge
 
 ## Hvorfor anbefalingene finnes?
 
-> - Vi skiller mellom SearchField og TextField fordi søk og skjemainput har ulike atferdsmmønstre: søk er optimalisert for hurtigoppslag og resultatlister, mens skjemafelt er for datainnsamling.
-> - Placeholder begrenses i publikumslløsninger fordi den kan forveksles med forhåndsutfylt innhold i kontrastkompliant design — brukere kan glattet ut feltet og må skrive på nytt.
-> - TODO: noe om søkeresultater/treffliste
+- Vi skiller mellom SearchField og TextField fordi søk og skjemainput har ulike atferdsmmønstre: søk er optimalisert for hurtigoppslag og resultatlister, mens skjemafelt er for datainnsamling.
+- Placeholder begrenses i publikumslløsninger fordi den kan forveksles med forhåndsutfylt innhold i kontrastkompliant design — brukere kan glattet ut feltet og må skrive på nytt.
+- TODO: noe om søkeresultater/treffliste
 
 ## Varianter (og når bruke dem)
 
@@ -47,14 +47,14 @@ SearchField brukes når brukeren skal søke seg fram til et resultat i løsninge
 - Ikon til høyre (forstørrelsesglass) eller knapp med teksten «Søk».
 - Kan inkludere hurtigoppslag som lar brukeren hoppe direkte til et enkelt resultat.
 
-## Plassering og justering
+### Plassering og justering
 
 - Søkefelt bør stå der brukeren forventer å søke — ofte i toppbanner, landingssider eller ved omfattende datasett.
 - Standard maksbredde er 400px / 25rem for å unngå unaturlig stor avstand mellom søketekst og knapp.
 - Komponenten tar som standard 100 % bredde hvis ikke annet er spesifisert.
 - Nullstillingsikon (kryss) skal være tilgjengelig for å slette søketeksten.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Klikk på søkeknappen tar brukeren til resultatsiden.
 - Ved «live»-søk tar både listevalg og søkeknappen brukeren til resultatvisning.
@@ -75,25 +75,3 @@ SearchField brukes når brukeren skal søke seg fram til et resultat i løsninge
 - Ikonet må suppleres med tekst eller aria‑label dersom det er eneste interaksjonselement.
 - Sørg for tydelig kontrast og fokusmarkering.
 - Hurtigoppslag må være navigerbare med tastatur.
-
-## Do
-
-- Bruk søk når det er den raskeste måten å finne innhold på.
-- Bruk «live»-søk kun når det finnes tydelig og relevant resultatliste.
-- Gi brukeren tydelig søkeikon eller «Søk»-knapp.
-
-## Don’t
-
-- Ikke bruk placeholder som hovedindikasjon på hva som skal skrives.
-- Ikke la feltet bli overdrevent bredt.
-- Ikke bruk SearchField for skjemaautofullføring.
-
-## Relaterte komponenter
-
-- [TextField](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/)
-- [Pagination](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/)
-- [List](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/list/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/

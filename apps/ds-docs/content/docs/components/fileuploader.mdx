@@ -19,9 +19,9 @@ FileUploader brukes når brukeren skal laste opp ett eller flere vedlegg fra ege
 
 ## Hvorfor anbefalingene finnes?
 
-> - Vi viser opplastingsstatus fil for fil (spinner, hake, feil) fordi brukeren ellers ikke vet om opplastingen lykkes. Tydelig tilbakemelding per fil reduserer usikkerhet og antall støtteanrop.
-> - Nye økter nullstiller Alert fra forrige for å forhindre at gammel feilstatus misoppfattes som pagående problem.
-> - Separate FileUploadere anbefales for sammensatte krav fordi kombinert validering (f.eks. Nøyaktig én fil av type A og én av type B) er vanskelig for brukeren å forstå som ett felt.
+- Vi viser opplastingsstatus fil for fil (spinner, hake, feil) fordi brukeren ellers ikke vet om opplastingen lykkes. Tydelig tilbakemelding per fil reduserer usikkerhet og antall støtteanrop.
+- Nye økter nullstiller Alert fra forrige for å forhindre at gammel feilstatus misoppfattes som pagående problem.
+- Separate FileUploadere anbefales for sammensatte krav fordi kombinert validering (f.eks. Nøyaktig én fil av type A og én av type B) er vanskelig for brukeren å forstå som ett felt.
 
 > TODO: noe om sesjoner?
 
@@ -29,13 +29,13 @@ FileUploader brukes når brukeren skal laste opp ett eller flere vedlegg fra ege
 
 FileUploader har ingen varianter utover funksjonelle tilstander (spinner, feilmeldinger, bekreftelser).
 
-## Plassering og justering
+### Plassering og justering
 
 - Plasser FileUploader der brukeren naturlig forventer å laste opp dokumentasjon.
 - Tenk i form av **økter**: én økt = alle filer brukeren legger til i én handling.
 - Etter hver økt skal komponenten gi visuell støtte for resultatet (spinner, hake, feilmelding).
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - **Start av økt:** Bruker legger til én eller flere filer via dra‑og‑slipp eller filvelger.
 - **Feil ved oppstart:** Vises hvis filtype er feil, ingen fil er valgt, eller antallet er for høyt.
@@ -55,25 +55,3 @@ FileUploader har ingen varianter utover funksjonelle tilstander (spinner, feilme
 - Skjermleser skal kunne lese når en økt feiler eller lykkes.
 - Når en fil slettes, skal skjermleser informere om dette.
 - Sørg for at eventuelle Alerts er tydelige og semantisk korrekte.
-
-## Do
-
-- Vis spinner mens opplasting pågår.
-- Marker filer som lastet vellykket én og én.
-- Gi tydelige feilmeldinger ved ugyldige eller manglende filer.
-- Bruk flere FileUploadere dersom krav til type/antall filer er sammensatt.
-
-## Don’t
-
-- Ikke bruk FileUploader som eneste måte å vise at filanalyse eller validering skjer — bruk spinner.
-- Ikke la feil fra tidligere økter ligge igjen når en ny opplasting startes.
-
-## Relaterte komponenter
-
-- [Alert](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/alert/)
-- [Button](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/button/)
-- [ErrorMessage](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errormessage/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fileuploader/

@@ -21,21 +21,21 @@ ErrorSummary brukes til å vise en samlet oversikt over to eller flere feil i et
 
 ## Hvorfor anbefalingene finnes?
 
-> - En samlet oppsummering med lenker til feltene hjelper alle brukere, men er særlig viktig for skjermleserbrukere som ellers må søke gjennom hele skjemaet for å finne feilene.
-> - Fokus flyttes automatisk til ErrorSummary slik at brukeren ikke overser den — uten dette er det lett å klikke «Send inn» gjentatte ganger uten å oppdage hva som må rettes.
-> - Feilmeldingene i oppsummeringen skal være identiske med feilmeldingene ved feltene — dette gir en gjenkjennbar kobling som hjelper brukeren å navigere.
+- En samlet oppsummering med lenker til feltene hjelper alle brukere, men er særlig viktig for skjermleserbrukere som ellers må søke gjennom hele skjemaet for å finne feilene.
+- Fokus flyttes automatisk til ErrorSummary slik at brukeren ikke overser den — uten dette er det lett å klikke «Send inn» gjentatte ganger uten å oppdage hva som må rettes.
+- Feilmeldingene i oppsummeringen skal være identiske med feilmeldingene ved feltene — dette gir en gjenkjennbar kobling som hjelper brukeren å navigere.
 
 ## Varianter (og når bruke dem)
 
 **Ingen varianter**
 
-## Plassering og justering
+### Plassering og justering
 
 - Plasseres over knappen som utløser innsending eller navigering, typisk «Neste» eller «Send inn».
 - Skal ikke vises før brukeren har utført en handling som fører til valideringsfeil.
 - I steglister bør hvert feilpunkt starte med feltets tittel eller en gjenkjennelig kortform.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Når ErrorSummary vises, skal fokus automatisk flyttes til toppen av oppsummeringen.
 - Lenker i listen skal hoppe til feltene som har feil — disse må ha unike id‑er.
@@ -52,24 +52,3 @@ ErrorSummary brukes til å vise en samlet oversikt over to eller flere feil i et
 - Fokus flyttes til komponenten slik at skjermlesere leser hele oppsummeringen.
 - Lenker må være korrekte slik at skjermleser og tastaturnavigasjon fungerer som forventet.
 - Komponentens struktur skal gjøre det tydelig hva som må rettes.
-
-## Do
-
-- Plasser ErrorSummary i nærheten av elementet som utløser valideringen.
-- Sørg for klare og konsistente feilmeldinger.
-- Bruk unike id‑er på feltene feilmeldingene peker til.
-
-## Don’t
-
-- Ikke vis ErrorSummary uten at en feil faktisk er oppstått.
-- Ikke bruk ved enkeltfeil brukeren enkelt oppdager selv.
-- Ikke bruk tekniske feilkoder som feilmeldinger.
-
-## Relaterte komponenter
-
-- [ErrorMessage](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errormessage/)
-- [Button](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/button/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errorsummary/

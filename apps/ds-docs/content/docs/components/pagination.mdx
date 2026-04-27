@@ -20,9 +20,9 @@ Pagination brukes til å dele opp store mengder innhold i flere sider slik at br
 
 ## Hvorfor anbefalingene finnes?
 
-> - Paginering fordeler innhold i håndterbare mengder for å redusere kognitiv belastning og lastetid. Å vise for mye innhold på én side gjer det vanskelig å orientere seg.
-> - Pagination er like bred som innholdet fordi det gir brukeren et intuitivt når-gjelder-dette-kontekst — plassert løsrevet fra innholdet er det uklart hva som pagineres.
-> - Uendelig scroll er et fundamentalt annerledes mønster som krever andre UU-hensyn (f.eks. fokusstyring ved innlasting) og passer ikke inn i Pagination-komponenten.
+- Paginering fordeler innhold i håndterbare mengder for å redusere kognitiv belastning og lastetid. Å vise for mye innhold på én side gjer det vanskelig å orientere seg.
+- Pagination er like bred som innholdet fordi det gir brukeren et intuitivt når-gjelder-dette-kontekst — plassert løsrevet fra innholdet er det uklart hva som pagineres.
+- Uendelig scroll er et fundamentalt annerledes mønster som krever andre UU-hensyn (f.eks. fokusstyring ved innlasting) og passer ikke inn i Pagination-komponenten.
 
 ## Varianter (og når bruke dem)
 
@@ -33,7 +33,7 @@ Kilden beskriver ingen visuelle varianter, men komponenten kan justeres:
 - Om tekst på forrige/neste-knapper vises eller skjules.
 - Om sideoppsummeringen vises eller skjules.
 
-## Plassering og justering
+### Plassering og justering
 
 - Pagination skal plasseres **rett under** og være **like bred som** innholdet den styrer (tabell, søkeresultat).
 - Tilpass antall synlige sidetall etter mengden data og forventet blabruk.
@@ -41,7 +41,7 @@ Kilden beskriver ingen visuelle varianter, men komponenten kan justeres:
 - Skjul komponenten når det ikke finnes flere sider.
 - For tydelighet kan du vise en kort tekst øverst i innholdet der pagination ellers ville vært.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Første og siste side vises alltid.
 - Det skal alltid være minst ett klikkbart sidetall ved siden av aktiv side.
@@ -58,24 +58,3 @@ Kilden beskriver ingen visuelle varianter, men komponenten kan justeres:
 - Tastaturfokus skal forbli innenfor komponenten.
 - Endring av sidetall skal annonseres av skjermleser.
 - Piler og sidetall må ha god kontrast mot bakgrunnen.
-
-## Do
-
-- Hold komponenten like bred som innholdet den paginerer.
-- Juster antall synlige tall etter skjermstørrelse.
-- Skjul komponenten når ingen paginering er nødvendig.
-
-## Don’t
-
-- Ikke bruk pagination for uendelig scroll‑innhold.
-- Ikke vis for mange tall på mobil.
-
-## Relaterte komponenter
-
-- [Table](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/table/)
-- [SearchField](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/)
-- [List](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/list/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/

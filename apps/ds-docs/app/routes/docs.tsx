@@ -95,7 +95,7 @@ const getParentTitleFromPath = async (path: string): Promise<string | null> => {
 const docsContentLoader =
   browserCollections.docs.createClientLoader<DocsContentProps>({
     component({ frontmatter, toc, default: Mdx }, { parentTitle }) {
-      const tocItems = toc.filter((item) => item.depth > 1) as TocItem[];
+      const tocItems = toc.filter((item) => item.depth === 2) as TocItem[];
 
       return (
         <div className={styles.mainContentWrapper}>

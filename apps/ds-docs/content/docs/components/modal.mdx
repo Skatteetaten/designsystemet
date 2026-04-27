@@ -23,9 +23,9 @@ Modal brukes for å styre brukerens fokus ved å vise et opphøyd innholdsvindu 
 
 ## Hvorfor anbefalingene finnes?
 
-> - [[Fokusfangst]] og [[retur av fokus]] er de viktigste UU-kravene for modal: uten dem kan tastaturbrukere «rømme» ut til bakgrunnen, som er visuelt utilgjengelig.
-> - Modal brukes for eksplisitt bekreftelse fordi det tvinger brukeren til å ta stilling til noe før de går videre — ved vanlige feilmeldinger er dette forstyrrende og unodvendige avbrytande.
-> - Vi anbefaler ikke modal for informasjon brukeren må referere til senere, fordi modalen lukkes og innholdet da er borte — bruk heller et kort, panel eller en seksjon på siden.
+- [[Fokusfangst]] og [[retur av fokus]] er de viktigste UU-kravene for modal: uten dem kan tastaturbrukere «rømme» ut til bakgrunnen, som er visuelt utilgjengelig.
+- Modal brukes for eksplisitt bekreftelse fordi det tvinger brukeren til å ta stilling til noe før de går videre — ved vanlige feilmeldinger er dette forstyrrende og unodvendige avbrytande.
+- Vi anbefaler ikke modal for informasjon brukeren må referere til senere, fordi modalen lukkes og innholdet da er borte — bruk heller et kort, panel eller en seksjon på siden.
 
 ## Varianter (og når bruke dem)
 
@@ -44,14 +44,14 @@ Modal brukes for å styre brukerens fokus ved å vise et opphøyd innholdsvindu 
 - Kun for viktige og alvorlige situasjoner.
 - Understreker at Skatteetaten er tydelig avsender i kritiske tilfeller.
 
-## Plassering og justering
+### Plassering og justering
 
 - Modal vises sentrert med duset bakgrunn.
 - Tittel er obligatorisk (kan skjules visuelt, men må alltid finnes for skjermleser).
 - Modal skal ha lukkekryss med mindre brukeren må ta et eksplisitt valg for å gå videre.
 - Autolukking (klikk utenfor eller trykk på ESC) kan deaktiveres ved behov for brukerstyrt bekreftelse.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Modal lukkes ved:
   - klikk utenfor
@@ -76,32 +76,3 @@ Modal brukes for å styre brukerens fokus ved å vise et opphøyd innholdsvindu 
 - Etter lukking skal fokus returnere til knappen som åpnet modalen.
 - Hele siden bak modalen skal tones ned og ikke kunne navigeres med tastatur.
 - Sjekk at kontrast og visuell struktur er tilstrekkelig.
-
-## Do
-
-- Hold innholdet kort og målrettet.
-- Bruk modal når du trenger eksplisitt bekreftelse.
-- Test [[tastaturnavigasjon::At hele funksjonen kan brukes kun med tastaturet, uten mus]] og fokusflyt.
-- Bruk illustrasjoner kun når de styrker innholdet.
-
-## Don’t
-
-- Ikke bruk modaler for generelle feilmeldinger.
-- Ikke legg inn komplekse skjema i modal.
-- Ikke bruk modal for informasjon brukeren må referere til senere.
-- Ikke la bakgrunn være aktiv når modalen er åpen.
-
-## [ENDRING 2026-03-25] Eksempel (sett inn her)
-
-- [ENDRING] Eksempel inn her: Modal med tydelig tittel, knappesett, fokusfangst og retur av fokus ved lukking.
-
-## Relaterte komponenter
-
-- [Button](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/button/)
-- [Alert](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/alert/)
-- [ErrorMessage](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errormessage/)
-- [OpenClose](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/openclose/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/modal/

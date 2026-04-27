@@ -23,8 +23,8 @@ RadioGroup brukes når brukeren skal velge **kun ett** alternativ blant et lite 
 
 ## Hvorfor anbefalingene finnes?
 
-> - Grensen på 2–7 alternativer er basert på UX-prinsipper om kognitiv belastning: flere valg gjør beslutningen vanskeligere og øker sannsynligheten for feilklikk.
-> - Veiledningen om forhåndsvalg er bevisst nyansert for å balansere effektivitet med brukerautonomi — et automatisk forhåndsvalg kan styre brukeren i feil retning dersom det ikke er gjennomtenkt.
+- Grensen på 2–7 alternativer er basert på UX-prinsipper om kognitiv belastning: flere valg gjør beslutningen vanskeligere og øker sannsynligheten for feilklikk.
+- Veiledningen om forhåndsvalg er bevisst nyansert for å balansere effektivitet med brukerautonomi — et automatisk forhåndsvalg kan styre brukeren i feil retning dersom det ikke er gjennomtenkt.
 
 ## Varianter (og når bruke dem)
 
@@ -40,13 +40,13 @@ RadioGroup brukes når brukeren skal velge **kun ett** alternativ blant et lite 
 - Blir automatisk vertikal i mobilvisning.
 - Kan **ikke** ha beskrivende tekst.
 
-## Plassering og justering
+### Plassering og justering
 
 - Plasseres der brukeren må ta et tydelig valg mellom få alternativer.
 - [[Legend::Gruppens ledetekst som forklarer hva valgene gjelder]]‑elementet fungerer som ledetekst for gruppen.
 - Legend kan skjules visuelt, men må beholdes for skjermleser.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Radioknapper lar brukeren velge kun ett alternativ om gangen.
 - Du kan sette **forhandsverdi** nar det finnes en trygg og forventet standard som passer de fleste brukere.
@@ -69,30 +69,3 @@ RadioGroup brukes når brukeren skal velge **kun ett** alternativ blant et lite 
 - Feilmeldinger skal referere direkte til ledeteksten (f.eks. «Type virksomhet må fylles ut»).
 - RadioGroup må alltid inneholde faktiske valg (children), selv om det teknisk er mulig å la den være tom.
 - Vertikal visning gir best støtte for beskrivelser og leseflyt.
-
-## Do
-
-- Begrens valgene til 2–7.
-- Bruk vertikal visning ved beskrivelser.
-- Hold alternativtekstene korte og konsistente.
-- Bruk forhåndsverdi kun når det faktisk gir tryggere og enklere flyt.
-
-## Don’t
-
-- Ikke bruk horisontal visning når du trenger beskrivelser.
-- Ikke bruk radioknapper hvis brukeren kan velge flere alternativer.
-- Ikke bruk radioknapper med lange, komplekse setninger.
-
-## [ENDRING 2026-03-25] Eksempel (sett inn her)
-
-- [ENDRING] Eksempel inn her: vertikal RadioGroup med `legend`, validering og et begrunnet forhandsvalg.
-
-## Relaterte komponenter
-
-- [Checkbox](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkbox/)
-- [CheckboxGroup](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/)
-- [Fieldset](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fieldset/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/

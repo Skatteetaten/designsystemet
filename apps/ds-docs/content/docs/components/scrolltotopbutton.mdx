@@ -22,10 +22,10 @@ ScrollToTopButton brukes for å gjøre det raskere og enklere for brukeren å na
 ## Hvorfor anbefalingene finnes?
 
 > **[FORSLAG 2026-03-25]** _Teksten er foreslått — gjennomgå og tilpass._
->
-> - Knappen vises kun etter scrolling for å unngå unnødvendig visuell støy på sider med lite innhold. Den er en effektivitetshjelp, ikke et fast navigasjonselement.
-> - Scroll-animasjon skal være moderat for å unngå å forårsake ubehag for brukere med bevegelsessensitivitet (jf. WCAG 2.3.3 Animation from Interactions).
-> - `aria-label` er obligatorisk fordi knappen kun har et ikon — uten tekstalternativ er funksjonen usynlig for skjermleserbrukere.
+
+- Knappen vises kun etter scrolling for å unngå unnødvendig visuell støy på sider med lite innhold. Den er en effektivitetshjelp, ikke et fast navigasjonselement.
+- Scroll-animasjon skal være moderat for å unngå å forårsake ubehag for brukere med bevegelsessensitivitet (jf. WCAG 2.3.3 Animation from Interactions).
+- `aria-label` er obligatorisk fordi knappen kun har et ikon — uten tekstalternativ er funksjonen usynlig for skjermleserbrukere.
 
 ## Varianter (og når bruke dem)
 
@@ -40,13 +40,13 @@ Kilden beskriver ingen egne visuelle varianter, men følgende atferd gjelder:
 
 - Kan justeres ved behov for å unngå kollisjon med andre faste elementer, som chat-knapper eller cookie-banner.
 
-## Plassering og justering
+### Plassering og justering
 
 - Skal ikke dekke viktig innhold eller interaksjonselementer.
 - Plasseres fast i en skjermkant, vanligvis nederst til høyre.
 - Juster avstand til kant ved overlapp med annet fast UI.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Knappen vises når siden scroller forbi et definert punkt.
 - Ved klikk scroller siden rolig tilbake til toppen.
@@ -63,19 +63,3 @@ Kilden beskriver ingen egne visuelle varianter, men følgende atferd gjelder:
 - Tekstalternativ (`aria-label="Gå til toppen"`) må settes for skjermlesere.
 - Kontrastkrav må oppfylles.
 - Scroll-animasjon skal ikke skape bevegelse som oppleves ubehagelig — bruk moderat hastighet.
-
-## Do
-
-- Bruk komponenten på sider med mye innhold.
-- Sørg for god synlighet uten å være påtrengende.
-- Legg inn korrekt aria-label.
-
-## Don’t
-
-- Ikke vis knappen konstant — kun når den faktisk trengs.
-- Ikke plasser den slik at den dekker primær interaksjon.
-- Ikke bruk i løsninger hvor toppen ikke inneholder relevant innhold for brukeren.
-
-## Relaterte komponenter
-
-- [NavigationTile](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/navigationtile/)

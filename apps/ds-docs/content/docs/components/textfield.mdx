@@ -22,9 +22,9 @@ TextField brukes når brukeren skal skrive inn korte tekster eller tall. Det er 
 
 ## Hvorfor anbefalingene finnes?
 
-> - Vi godtar brukervennlige variasjoner i input (mellomrom i telefonnummer, punktum i kontonummer) fordi overdreven validering skaper friksjon der formen ikke er kritisk for databehandlingen.
-> - Placeholder erstattes av label og beskrivelse fordi placeholderen forsvinner ved skriving — brukeren må da huske instruksjonen, noe som er krevende og dyrker feil.
-> - `disabled` anbefales ikke fordi skjermlesere kan ignorere deaktiverte felt. `readOnly` er et bedre alternativ når feltet ikke skal redigeres, men verdien fortsatt skal sendes med.
+- Vi godtar brukervennlige variasjoner i input (mellomrom i telefonnummer, punktum i kontonummer) fordi overdreven validering skaper friksjon der formen ikke er kritisk for databehandlingen.
+- Placeholder erstattes av label og beskrivelse fordi placeholderen forsvinner ved skriving — brukeren må da huske instruksjonen, noe som er krevende og dyrker feil.
+- `disabled` anbefales ikke fordi skjermlesere kan ignorere deaktiverte felt. `readOnly` er et bedre alternativ når feltet ikke skal redigeres, men verdien fortsatt skal sendes med.
 
 ## Varianter (og når bruke dem)
 
@@ -39,13 +39,13 @@ TextField brukes når brukeren skal skrive inn korte tekster eller tall. Det er 
 - Brukeren kan fortsatt navigere til feltet, markere og kopiere innhold.
 - Innholdet sendes inn med skjema — i motsetning til disabled‑felt.
 
-## Plassering og justering
+### Plassering og justering
 
 - [[Ledetekst]] og beskrivelse skal alltid stå **over** feltet for god synlighet, også på små skjermer.
 - Unngå at ledeteksten går over flere linjer — bruk beskrivelsesfeltet ved behov.
 - Bruk hjelpetekst via spørsmålstegn‑ikon for mer detaljert veiledning.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Godta brukervennlige variasjoner i input, så lenge innholdet er forståelig:
   - telefonnummer med mellomrom
@@ -79,32 +79,3 @@ Placeholder‑tekst skal ikke brukes fordi:
 - Feilmelding vises under feltet og må ha tilstrekkelig kontrast (min. 4.5:1).
 - Read‑only-felt skal være tilgjengelig for skjermlesere.
 - Bruk korrekt inputtype, men vær oppmerksom på klientsidevalidering i enkelte nettlesere.
-
-## Do
-
-- Godta input så lenge den er forståelig.
-- Tilpass inputtype og inputmode etter behov.
-- Bruk autocomplete på riktig måte.
-- Plasser label og beskrivelse konsekvent over feltet.
-
-## Don’t
-
-- Ikke bruk placeholder‑tekst.
-- Ikke stram valideringen mer enn nødvendig.
-- Ikke fjern muligheten til å kopiere/peke i tekstfeltet.
-- Ikke bruk disabled uten reell grunn (bruk heller read‑only eller vis ren tekst).
-
-## [ENDRING 2026-03-25] Eksempel (sett inn her)
-
-- [ENDRING] Eksempel inn her: TextField med label, beskrivelse, hjelpetekst, validering og feilmelding.
-
-## Relaterte komponenter
-
-- [TextArea](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textarea/)
-- [Select](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/select/)
-- [RadioGroup](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/)
-- [CheckboxGroup](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/

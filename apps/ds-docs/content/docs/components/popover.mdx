@@ -22,9 +22,9 @@ Popover brukes til å vise korte forklaringer eller utfyllende informasjon i et 
 
 ## Hvorfor anbefalingene finnes?
 
-> - Popover er ment for informasjon på forespørsel — innhold som ikke er kritisk, men som kan gi kontekst. Kritisk informasjon skal alltid vises direkte i siden.
-> - Fokusfangst og fokusretur er påkrevd for at tastatur- og skjermleserbrukere ikke mister oversikten over siden når popoveren åpnes og lukkes.
-> - Vi skiller mellom Popover (hjelp på forespørsel), Modal (bruker må ta stilling), WordInfo (begrepforklaring i tekst) og hjelpetekst (skjemakontekst) for å gi brukeren riktig forventning.
+- Popover er ment for informasjon på forespørsel — innhold som ikke er kritisk, men som kan gi kontekst. Kritisk informasjon skal alltid vises direkte i siden.
+- Fokusfangst og fokusretur er påkrevd for at tastatur- og skjermleserbrukere ikke mister oversikten over siden når popoveren åpnes og lukkes.
+- Vi skiller mellom Popover (hjelp på forespørsel), Modal (bruker må ta stilling), WordInfo (begrepforklaring i tekst) og hjelpetekst (skjemakontekst) for å gi brukeren riktig forventning.
 
 ## Varianter (og når bruke dem)
 
@@ -33,13 +33,13 @@ Kilden beskriver ikke egne visuelle varianter, men Popover kan:
 - vises ved klikk eller fokus
 - plasseres i ulike retninger avhengig av plass (over/under/venstre/høyre)
 
-## Plassering og justering
+### Plassering og justering
 
 - Popover skal plasseres nær elementet som utløser den.
 - Skal ikke overlappe annet kritisk innhold.
 - Velg plassering basert på skjermplass og unngå at popover skjules av andre elementer.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Åpnes og lukkes vanligvis ved klikk eller fokus.
 - Skal kunne lukkes med ESC eller klikk utenfor.
@@ -59,25 +59,3 @@ Kilden beskriver ikke egne visuelle varianter, men Popover kan:
   - returnere til trigger‑elementet ved lukking
 - Sørg for at popover kan navigeres med tastatur.
 - Popover skal ikke brukes for informasjon som brukeren må kunne lese over lengre tid.
-
-## Do
-
-- Bruk popover for korte, relevante forklaringer.
-- Sørg for tydelig trigger (ikon eller tekstlink).
-- Test fokusflyt med tastatur og skjermleser.
-
-## Don’t
-
-- Ikke bruk popover for omfattende innhold.
-- Ikke bruk når brukeren må respondere — bruk Modal.
-- Ikke plasser popover slik at den dekker viktig interaktivt innhold.
-
-## Relaterte komponenter
-
-- [Modal](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/modal/)
-- [OpenClose](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/openclose/)
-- [Tooltip](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tooltip/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/popover/

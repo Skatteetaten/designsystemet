@@ -21,9 +21,9 @@ StepList brukes når brukeren skal veiledes gjennom en serie steg, typisk i et s
 
 ## Hvorfor anbefalingene finnes?
 
-> - Oppsummeringssteg før innsending er obligatorisk for å gi brukeren mulighet til å kontrollere og rette svar. Dette er spesielt viktig i juridisk bindende skjemaer der feil er kostbare å korrigere.
-> - Fokus flyttes automatisk til toppen av hvert nytt steg for at skjermleserbrukere ikke skal måtte navigere forbi hele innholdet for å skjønne at siden har endret seg.
-> - ErrorSummary vises først etter «neste»-klikk — ikke under utfylling — for å unngå at feilmeldinger forstyrrer brukeren mens de skriver.
+- Oppsummeringssteg før innsending er obligatorisk for å gi brukeren mulighet til å kontrollere og rette svar. Dette er spesielt viktig i juridisk bindende skjemaer der feil er kostbare å korrigere.
+- Fokus flyttes automatisk til toppen av hvert nytt steg for at skjermleserbrukere ikke skal måtte navigere forbi hele innholdet for å skjønne at siden har endret seg.
+- ErrorSummary vises først etter «neste»-klikk — ikke under utfylling — for å unngå at feilmeldinger forstyrrer brukeren mens de skriver.
 
 ## Varianter (og når bruke dem)
 
@@ -33,14 +33,14 @@ Kilden beskriver ingen visuelle varianter — StepList er et fast mønster som v
 - Innhold per steg
 - Navigasjonsknapper («Neste», «Tilbake», «Send inn»)
 
-## Plassering og justering
+### Plassering og justering
 
 - StepList skal brukes som overordnet ramme rundt stegvis innhold.
 - Hvert steg skal fremstå som en egen side i løsningen.
 - Oppsummeringssteg før innsending skal alltid være et eget steg i listen.
 - Etter innsending skal bruker sendes til en egen kvitteringsside (ikke et steg).
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 ### Oppsummering før innsending
 
@@ -82,30 +82,3 @@ Kilden beskriver ingen visuelle varianter — StepList er et fast mønster som v
 - Komponenten oppretter automatisk et fokusmål-element med id `*-focus-target`.
 - «Endre»-knapper i oppsummeringssteg håndterer fokusflyt automatisk.
 - Sørg for korrekt bruk av legend/labels i skjemaelementer per steg.
-
-## Do
-
-- Bruk oppsummeringssteg før innsending.
-- Gi en tydelig og informativ kvitteringsside etter innsending.
-- Tillat hopping mellom steg der det er faglig forsvarlig.
-- Håndter feilmeldinger konsekvent med ErrorSummary.
-
-## Don’t
-
-- Ikke bruk StepList på små eller enkle skjemaer.
-- Ikke bruk for innholdsseksjonering uten klar trinnlogikk.
-- Ikke la brukeren fullføre uten mulighet til å se over opplysningene.
-
-## [ENDRING 2026-03-25] Eksempel (sett inn her)
-
-- [ENDRING] Eksempel inn her: komplett StepList-flyt med oppsummeringssteg, ErrorSummary og kvitteringsside.
-
-## Relaterte komponenter
-
-- [ErrorSummary](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errorsummary/)
-- [OpenClose](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/openclose/)
-- [Button](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/button/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/steplist/

@@ -21,9 +21,9 @@ TopBannerInternal brukes som toppbanner i interne løsninger for Skatteetatens a
 
 ## Hvorfor anbefalingene finnes?
 
-> - Burgundrød standardfarge på interne løsninger skaper visuell distinksjon fra publikumsflater og fra testmiljøer (svart/gul stripe). Dette reduserer risikoen for at ansatte blander produksjon og test.
-> - Testtstripe og alternativ farge er dokumentert som unntak fordi de skal være sjeldne — overbruk undergraver signaleffekten.
-> - «Hopp til hovedinnhold» er inkludert for at skjermleserbrukere ikke må navigere gjennom banneret på hver sidevisning — dette er et UU-krav som gjelder både interne og eksterne lløsninger.
+- Burgundrød standardfarge på interne løsninger skaper visuell distinksjon fra publikumsflater og fra testmiljøer (svart/gul stripe). Dette reduserer risikoen for at ansatte blander produksjon og test.
+- Testtstripe og alternativ farge er dokumentert som unntak fordi de skal være sjeldne — overbruk undergraver signaleffekten.
+- «Hopp til hovedinnhold» er inkludert for at skjermleserbrukere ikke må navigere gjennom banneret på hver sidevisning — dette er et UU-krav som gjelder både interne og eksterne lløsninger.
 
 ## Varianter (og når bruke dem)
 
@@ -37,7 +37,7 @@ TopBannerInternal brukes som toppbanner i interne løsninger for Skatteetatens a
 - En sort/gul teststripe kan vises øverst for å markere testmiljø.  
   Dette brukes kun for å skille test fra produksjon.
 
-## Plassering og justering
+### Plassering og justering
 
 - Logo vises til venstre og fungerer som snarvei til startsiden.
 - Tittelområde ligger til høyre for logoen og viser:
@@ -46,7 +46,7 @@ TopBannerInternal brukes som toppbanner i interne løsninger for Skatteetatens a
 - Innlogget bruker vises på høyre side når relevant.
 - Aksjonsmeny (valg/lenker) ligger under eller inne i banneret, avhengig av behov.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 ### Logo og tittel
 
@@ -84,26 +84,3 @@ TopBannerInternal brukes som toppbanner i interne løsninger for Skatteetatens a
 - Alle interaksjoner i toppbanneret skal ha tydelig fokusmarkering.
 - Navigasjonselementer og menyer skal være tilgjengelige via tastatur.
 - Logo kan skjules visuelt på mobil, men må fortsatt ha semantisk alt‑tekst dersom den er synlig.
-
-## Do
-
-- Bruk burgunder standardfarge i interne løsninger.
-- Plasser søk og knapper i raden under banneret hvis mulig.
-- Bruk aksjonsmeny for overordnet navigasjon.
-- Inkluder teststripe i testmiljøer.
-
-## Don’t
-
-- Ikke bruk TopBannerInternal i publikumsløsninger.
-- Ikke bruk for komplekse navigasjonsmønstre som ikke hører hjemme i toppbanneret.
-- Ikke legg for mange funksjoner i banneret – hold det oversiktlig og konsistent.
-
-## Relaterte komponenter
-
-- [TopBannerExternal](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/)
-- [RoleBanner](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolebanner/)
-- [RolePicker](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolepicker/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbanner-internal/

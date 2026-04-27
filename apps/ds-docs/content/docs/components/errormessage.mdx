@@ -20,20 +20,20 @@ ErrorMessage brukes til å vise feil som brukeren må rette for å komme videre,
 
 ## Hvorfor anbefalingene finnes?
 
-> - Feilmeldinger plassert rett under det aktuelle feltet minimerer kognitiv belastning — brukeren trenger ikke lete for å forstå hva som er feil og hva som må rettes.
-> - Innebygd `showError` brukes fremfor egne visningsregler for å sikre at skjermlesere fanger opp endringen automatisk.
-> - Vi skiller mellom ErrorMessage (enkeltfelt), Alert (hel side) og ErrorSummary (oppsummering) for å gi brukeren riktig kontekst og navigasjonsstøtte.
+- Feilmeldinger plassert rett under det aktuelle feltet minimerer kognitiv belastning — brukeren trenger ikke lete for å forstå hva som er feil og hva som må rettes.
+- Innebygd `showError` brukes fremfor egne visningsregler for å sikre at skjermlesere fanger opp endringen automatisk.
+- Vi skiller mellom ErrorMessage (enkeltfelt), Alert (hel side) og ErrorSummary (oppsummering) for å gi brukeren riktig kontekst og navigasjonsstøtte.
 
 ## Varianter (og når bruke dem)
 
 **Ingen varianter beskrevet i kilden.**
 
-## Plassering og justering
+### Plassering og justering
 
 - Feilmeldingen skal vises under feltet eller komponenten som feilen gjelder.
 - Ved generelle feilmeldinger kan den plasseres frittstående, men fortsatt i nær kontekst til det feilen angår.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Komponenten skal vises når brukeren har gjort en feil.
 - Når komponenten vises eller skjules må du bruke innebygd egenskap (`showError`) slik at skjermlesere oppfatter endringen.
@@ -50,22 +50,3 @@ ErrorMessage brukes til å vise feil som brukeren må rette for å komme videre,
 - Feilmeldingen skal ha tilstrekkelig kontrast (minst 4.5:1) mot bakgrunnen.
 - Feilmeldingen må være knyttet semantisk til feltet den gjelder.
 - Feilmeldingen skal annonseres av skjermleser når den dukker opp.
-
-## Do
-
-- Plasser feilmeldingen rett under feltet den gjelder.
-- Bruk tydelig og konkret språk.
-- Sørg for at skjermleser fanger opp endringer.
-
-## Don’t
-
-- Ikke bruk ErrorMessage til systemfeil eller generelle feil — bruk passende komponent (Alert eller ErrorSummary).
-- Ikke la feilmeldinger være for vage eller overlappe flere felt.
-
-## Relaterte komponenter
-
-- [ErrorSummary](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errorsten.no/stilogtone/designsystemet/komponenter/alert/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errormessage/

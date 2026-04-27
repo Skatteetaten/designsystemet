@@ -21,9 +21,9 @@ Combobox lar brukeren velge ett eller flere alternativer fra en liste. Den kombi
 
 ## Hvorfor anbefalingene finnes?
 
-> - Combobox kombinerer frihet til å skrive og strukturerte valg. Vi anbefaler den for store lister fordi nedtrekkslister med mange elementer er krevende å navigere, særlig med tastatur.
-> - Multiselect med chips er begrenset fordi et høyt antall valgte elementer raskt gjør feltet uoversiktlig og vanskelig å redigere — maks-grensen bør kommuniseres i label.
-> - Vi anbefaler ikke Combobox for få valg (< ca. 5–15) fordi [[RadioGroup]], [[CheckboxGroup]] eller [[Select]] da er enklere og mer forutsigbare.
+- Combobox kombinerer frihet til å skrive og strukturerte valg. Vi anbefaler den for store lister fordi nedtrekkslister med mange elementer er krevende å navigere, særlig med tastatur.
+- Multiselect med chips er begrenset fordi et høyt antall valgte elementer raskt gjør feltet uoversiktlig og vanskelig å redigere — maks-grensen bør kommuniseres i label.
+- Vi anbefaler ikke Combobox for få valg (< ca. 5–15) fordi [[RadioGroup]], [[CheckboxGroup]] eller [[Select]] da er enklere og mer forutsigbare.
 
 ## Varianter (og når bruke dem)
 
@@ -41,13 +41,13 @@ Combobox lar brukeren velge ett eller flere alternativer fra en liste. Den kombi
 - Skuffen med valg forblir åpen slik at det er enkelt å velge flere i samme operasjon.
 - Det er mulig å begrense antall valg (f.eks. maks tre).
 
-## Plassering og justering
+### Plassering og justering
 
 - Combobox med flervalg bør plasseres i fleksible oppsett som tåler at den vokser i høyden.
 - Fungerer best når innholdet i listen er av samme art.
 - Dersom innholdet består av flere kategorier, kan det være vanskelig for brukeren å finne frem.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Brukeren kan navigere i forslagene med piltaster.
 - I flervalg-modus annonserer skjermleser når forslag velges eller fjernes.
@@ -65,29 +65,3 @@ Combobox lar brukeren velge ett eller flere alternativer fra en liste. Den kombi
 - Ved flervalg skal hver endring (på/av) annonseres.
 - Maksgrense for valg må kommuniseres i ledeteksten.
 - Navigering med tastatur skal fungere i hele listen.
-
-## Do
-
-- Bruk combobox når brukeren trenger å filtrere mange alternativer.
-- Sørg for at listen inneholder elementer av samme type.
-- Sørg for at ledeteksten tydelig formidler begrensninger og mål.
-
-## Don’t
-
-- Ikke bruk combobox med få valg.
-- Ikke bruk ved behov for mye kontekst rundt valgene.
-- Ikke bland svært ulike kategorier i samme liste.
-
-## [ENDRING 2026-03-25] Eksempel (sett inn her)
-
-- [ENDRING] Eksempel inn her: Combobox med multiselect, chips og maks antall valg.
-
-## Relaterte komponenter
-
-- [TextField](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textfield/)
-- [Select](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/select/)
-- [CheckboxGroup](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/combobox/

@@ -15,9 +15,9 @@ Alert (varsel) brukes til å gi brukeren en aktuell statusbeskjed om en viktig h
 
 ## Hvorfor anbefalingene finnes?
 
-> - De fem variantene (suksess, nøytral, advarsel, feil, fare) er faste med faste farger for å gi brukerne konsekvent fargekoding på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
-> - Vi skiller mellom [[Alert]] (hel side/seksjon), [[ErrorMessage]] (enkeltfelt) og [[ErrorSummary]] (oppsummering) for å gi riktig informasjon på riktig sted — dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
-> - Innebygd `showAlert` brukes for å sikre at skjermlesere fanger opp endringen automatisk via `aria-live`.
+- De fem variantene (suksess, nøytral, advarsel, feil, fare) er faste med faste farger for å gi brukerne konsekvent fargekoding på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
+- Vi skiller mellom [[Alert]] (hel side/seksjon), [[ErrorMessage]] (enkeltfelt) og [[ErrorSummary]] (oppsummering) for å gi riktig informasjon på riktig sted — dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
+- Innebygd `showAlert` brukes for å sikre at skjermlesere fanger opp endringen automatisk via `aria-live`.
 
 ## Når ikke bruke komponenten
 
@@ -60,12 +60,12 @@ Alle varianter:
 - Har standardikon og eventuell mulighet for lukkekryss.
 - Har faste farger som ikke kan endres.
 
-## Plassering og justering
+### Plassering og justering
 
 - Bruk riktige farge- og ikonvalg for å understreke alvorlighetsgrad.
 - Alert kan brukes på farget bakgrunn ved å aktivere `backgroundBrightness` for økt kontrast.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - Når du viser eller skjuler komponenten, bruk den innebygde egenskapen `showAlert`.
 - Ikke lag egne visibility-regler, da dette kan hindre at skjermlesere fanger opp endringen.
@@ -81,24 +81,3 @@ Alle varianter:
 - Sørg for tilstrekkelig kontrast mellom tekst og bakgrunn (minst 4,5:1).
 - Meldingen bør være tydelig og lett å forstå for alle brukere.
 - Unngå å bruke `aria-live="off"` med mindre det er helt nødvendig, da dette kan forhindre opplesing.
-
-## Do
-
-- Bruk riktig variant for riktig alvorlighetsgrad.
-- Gi brukeren nok informasjon til å forstå situasjonen og eventuelt hva de kan gjøre videre.
-- Sørg for at Alert er kortfattet og lett å lese.
-
-## Don’t
-
-- Ikke bruk Alert for feltspesifikke feil (bruk ErrorMessage).
-- Ikke bruk Alert som statiske informasjonselementer (bruk Panel).
-- Ikke gi for mye tekst – unngå at varselet blir en informasjonsblokk.
-
-## Relaterte komponenter
-
-- [ErrorMessage](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errormessage/)
-- [Panel](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/panel/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/alert/

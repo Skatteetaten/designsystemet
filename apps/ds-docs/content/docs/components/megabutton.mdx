@@ -20,9 +20,9 @@ MegaButton brukes til tydelige hovedhandlinger som enten står alene på en side
 
 ## Hvorfor anbefalingene finnes?
 
-> - MegaButton skiller seg fra vanlig [[Button]] fordi den er ment for én tydelig primærhandling som trekker ekstra oppmerksomhet («Call to action»). Brukes den til sekundære handlinger, mister den sin signaleffekt.
-> - Når MegaButton er en lenke (`<a>`) men rendres som knapp, brukes `role="button"` for å sikre at skjermlesere leser opp riktig interaksjonstype.
-> - Vi anbefaler ikke MegaButton til skjemainnsending fordi vanlig Button gir bedre kontroll over knappevariant og hierarki i en skjemakontekst.
+- MegaButton skiller seg fra vanlig [[Button]] fordi den er ment for én tydelig primærhandling som trekker ekstra oppmerksomhet («Call to action»). Brukes den til sekundære handlinger, mister den sin signaleffekt.
+- Når MegaButton er en lenke (`<a>`) men rendres som knapp, brukes `role="button"` for å sikre at skjermlesere leser opp riktig interaksjonstype.
+- Vi anbefaler ikke MegaButton til skjemainnsending fordi vanlig Button gir bedre kontroll over knappevariant og hierarki i en skjemakontekst.
 
 ## Varianter (og når bruke dem)
 
@@ -37,13 +37,13 @@ Kilden beskriver ingen grafiske varianter, men MegaButton har to funksjonelle ti
 
 - Brukes når hovedhandlingen ligger på samme side.
 
-## Plassering og justering
+### Plassering og justering
 
 - Skal brukes når handlingen er tydelig hovedmål for siden.
 - Kan brukes alene eller sammen med et ikon (for eksempel ved eksterne lenker).
 - Fremheves best når den ikke konkurrerer med andre knapper i nærheten.
 
-## Interaksjon og tilstander
+### Interaksjon og tilstander
 
 - MegaButton endrer HTML‑tag automatisk basert på om du gir den `href`.
 - Når MegaButton peker til en ekstern side og bruker eksternt ikon, leses teksten «Til et annet nettsted» opp av skjermleser automatisk.
@@ -59,25 +59,3 @@ Kilden beskriver ingen grafiske varianter, men MegaButton har to funksjonelle ti
 - Når MegaButton er en lenke (`<a>`) brukes `role="button"` for å sikre riktig opplesning.
 - Ved eksterne lenker med ikon vil skjermlesere lese opp «Til et annet nettsted».
 - Ikoner må ha tilstrekkelig kontrast, og tekst må være tydelig og informativ.
-
-## Do
-
-- Bruk MegaButton for primærhandlinger som skiller seg tydelig fra annet innhold.
-- Bruk som lenke (`<a>`) når handlingen fører til ny side.
-- Sørg for at teksten uttrykker en klar handling.
-
-## Don’t
-
-- Ikke bruk til skjema‑innsending.
-- Ikke bruk når du allerede har en Button som hovedhandling.
-- Ikke bruk MegaButton for å overstyre vanlig informasjonsarkitektur.
-
-## Relaterte komponenter
-
-- [Button](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/button/)
-- [InlineButton](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/inlinebutton/)
-- [IconButton](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/iconbutton/)
-
-## Kilder og referanser
-
-- https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/megabutton/
