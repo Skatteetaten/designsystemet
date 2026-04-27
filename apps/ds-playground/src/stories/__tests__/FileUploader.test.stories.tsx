@@ -9,7 +9,11 @@ import {
   dsI18n,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
-import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
+import {
+  FileUploader,
+  FileUploaderProps,
+  TextField,
+} from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -83,6 +87,19 @@ const meta = {
 } satisfies Meta<typeof FileUploader>;
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+const getSuccessStatusMessage = (
+  canvasElement: HTMLElement,
+  statusMessageText: string
+): HTMLElement => {
+  const successAlert = canvasElement.querySelector('[data-variant="success"]');
+
+  if (!successAlert) {
+    throw new Error('Fant ikke suksess-alert');
+  }
+
+  return within(successAlert as HTMLElement).getByText(statusMessageText);
+};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -245,6 +262,75 @@ export const WithUploadResult: StoryObj<FileUploaderProps> = {
       },
       { name: 'grunnlag.jpg' },
     ],
+  },
+} satisfies Story;
+
+export const WithUploadResultAndNoFiles: StoryObj<FileUploaderProps> = {
+  name: 'With UploadResult And No Files',
+  args: {
+    uploadResult: { statusMessage: 'Lastet opp 1 fil' },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const statusMessageText = 'Lastet opp 1 fil';
+
+    await waitFor(() =>
+      expect(
+        getSuccessStatusMessage(canvasElement, statusMessageText)
+      ).toBeInTheDocument()
+    );
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+} satisfies Story;
+
+export const WithUploadResultInsideFormWithoutFlicker: Story = {
+  name: 'With UploadResult Inside Form Without Flicker',
+  render: (): JSX.Element => {
+    const FormWrapper = (): JSX.Element => {
+      const [value, setValue] = useState('');
+
+      return (
+        <form>
+          <TextField
+            label={'Navn'}
+            value={value}
+            onChange={(event) => setValue(event.target.value)}
+          />
+          <FileUploader uploadResult={{ statusMessage: 'Lastet opp 1 fil' }} />
+        </form>
+      );
+    };
+
+    return <FormWrapper />;
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textField = canvas.getByRole('textbox', { name: 'Navn' });
+    const statusMessageText = 'Lastet opp 1 fil';
+
+    await waitFor(() =>
+      expect(
+        getSuccessStatusMessage(canvasElement, statusMessageText)
+      ).toBeInTheDocument()
+    );
+
+    await userEvent.type(textField, 'abc');
+
+    await expect(
+      getSuccessStatusMessage(canvasElement, statusMessageText)
+    ).toBeInTheDocument();
+
+    await waitFor(
+      () =>
+        expect(
+          getSuccessStatusMessage(canvasElement, statusMessageText)
+        ).toBeInTheDocument(),
+      { timeout: 300 }
+    );
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
