@@ -1,0 +1,9 @@
+import{j as o}from"./iframe-B8GUhlLl.js";import{useMDXComponents as m}from"./index-B1QFP_Jr.js";import{M as i,P as s,a as n}from"./blocks-CYiXWkKb.js";import{P as p}from"./utils-DtoFmNuv.js";import{R as a,E as d}from"./RadioGroup.stories-j6H4-NGD.js";import{V as c}from"./VersionBadge-CwaAEZz3.js";import{D as x}from"./DocIntro-rS_Hg1WD.js";import{D as l}from"./DocHeaderWrapper-DN7xFaRJ.js";import"./preload-helper-PPVm8Dsz.js";import"./index-DDTI-MIw.js";import"./index-BnXejHSu.js";import"./lz-string-m9jzapWX.js";import"./index-C8bgUDlY.js";import"./DatePickerCalendar-PLUA6iCa.js";import"./index-I1QRqNj0.js";import"./index-ee2RFhIf.js";import"./index-BaKABx5v.js";import"./LabelWithHelp-Dpi57Wto.js";import"./Help-BlguQcoq.js";import"./Combobox.module-DRLQKUr5.js";import"./ComboboxButton-_x3P7a4_.js";import"./index-BMJe4OzN.js";import"./index-BQLODoD0.js";import"./ComboboxSelectedOptions-Ses0U7oF.js";import"./index-DTGjjx-m.js";import"./index-CQLLboVf.js";import"./icon.systems-B1LFOHPk.js";import"./icon.utils-BS6mXWCi.js";import"./stories.utils-BCId827v.js";function e(t){const r={code:"code",h1:"h1",h2:"h2",pre:"pre",...m(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(i,{of:a}),`
+`,o.jsxs(l,{componentName:"RadioGroup",children:[o.jsx(r.h1,{id:"radiogroup",children:"RadioGroup"}),o.jsx(c,{packageName:"forms"}),o.jsx(x,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/"})]}),`
+`,o.jsx(s,{}),`
+`,o.jsx(r.pre,{children:o.jsx(r.code,{className:"language-tsx",children:`import { RadioGroup } from '@skatteetaten/ds-forms';
+`})}),`
+`,o.jsx(n,{}),`
+`,o.jsx(r.h2,{id:"examples",children:"Examples"}),`
+`,o.jsx(p,{of:d})]})}function z(t={}){const{wrapper:r}={...m(),...t.components};return r?o.jsx(r,{...t,children:o.jsx(e,{...t})}):e(t)}export{z as default};
+//# sourceMappingURL=RadioGroup-CCyMgCXN.js.map

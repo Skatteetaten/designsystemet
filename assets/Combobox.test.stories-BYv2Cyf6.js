@@ -1,0 +1,747 @@
+import{d as m,j as u}from"./iframe-B8GUhlLl.js";import{c as _}from"./index-C8bgUDlY.js";import{A as U}from"./index-CQLLboVf.js";import{d as s}from"./combobox.test.utils-BVyp2Nw5.js";import"./preload-helper-PPVm8Dsz.js";import"./DatePickerCalendar-PLUA6iCa.js";import"./index-I1QRqNj0.js";import"./index-ee2RFhIf.js";import"./index-BaKABx5v.js";import"./LabelWithHelp-Dpi57Wto.js";import"./Help-BlguQcoq.js";import"./Combobox.module-DRLQKUr5.js";import"./ComboboxButton-_x3P7a4_.js";import"./index-BMJe4OzN.js";import"./index-BQLODoD0.js";import"./ComboboxSelectedOptions-Ses0U7oF.js";import"./index-DTGjjx-m.js";const{expect:e,fn:b,userEvent:i,waitFor:p,within:r}=__STORYBOOK_MODULE_TEST__,be={component:_,title:"Tester/Combobox",argTypes:{ref:{table:{disable:!0}},className:{table:{disable:!0}},id:{table:{disable:!0}},lang:{table:{disable:!0}},"data-testid":{table:{disable:!0}},classNames:{table:{disable:!0}},label:{table:{disable:!0}},options:{table:{disable:!0}},placeholder:{table:{disable:!0}},variant:{table:{disable:!0}},multiple:{table:{disable:!0}},value:{table:{disable:!0}},description:{table:{disable:!0}},errorMessage:{table:{disable:!0}},helpText:{table:{disable:!0}},hasSpacing:{table:{disable:!0}},hideLabel:{table:{disable:!0}},minSearchLength:{table:{disable:!0}},isLoading:{table:{disable:!0}},spinnerLabel:{table:{disable:!0}},helpSvgPath:{table:{disable:!0}},maxSelected:{table:{disable:!0}},spinnerProps:{table:{disable:!0}},titleHelpSvg:{table:{disable:!0}},accessKey:{table:{disable:!0}},form:{table:{disable:!0}},name:{table:{disable:!0}},disabled:{table:{disable:!0}},required:{table:{disable:!0}},ariaDescribedBy:{table:{disable:!0}},onBlur:{table:{disable:!0}},onFocus:{table:{disable:!0}},onSelectionChange:{table:{disable:!0}},onInputChange:{table:{disable:!0}},onHelpToggle:{table:{disable:!0}}},tags:["test"],parameters:{chromatic:{disableSnapshot:!1}}},d={name:"With Ref (FA1)",args:{...s,ref:t=>{t&&(t.id="dummyIdForwardedFromRef")}},argTypes:{ref:{table:{disable:!1}}},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await e(a).toHaveAttribute("id","dummyIdForwardedFromRef")}},v={name:"With Attributes (FA2-5)",args:{...s,id:"combobox-id",className:"dummyClassname",lang:"nb","data-testid":"123ID"},argTypes:{id:{table:{disable:!1}},className:{table:{disable:!1}},lang:{table:{disable:!1}},"data-testid":{table:{disable:!1}}},parameters:{a11y:{test:"off"},chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const n=r(t),a=n.getAllByRole("generic")[1];await e(a).toHaveClass("dummyClassname"),await e(a).toHaveAttribute("lang","nb");const o=n.getByRole("combobox");await e(o).toHaveAttribute("id","combobox-id"),await e(o).toHaveAttribute("data-testid","123ID")}},g={name:"With Custom ClassNames (FA3)",args:{...s,classNames:{container:"dummyClassname",options:"dummyClassname",errorMessage:"dummyClassname",label:"dummyClassname",helpText:"dummyClassname",description:"dummyClassname"},description:"Beskrivelse",helpText:"Hjelp!",errorMessage:"Error melding"},argTypes:{classNames:{table:{disable:!1}}},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await i.click(a);const o=n.getAllByRole("generic")[1],l=t.querySelector('div[class*="optionsListContainer"]'),c=t.querySelector("[id^=comboboxErrorId]>div"),K=n.getByText(s.label);await e(o).toHaveClass("dummyClassname"),await e(l).toHaveClass("dummyClassname"),await e(c).toHaveClass("dummyClassname"),await e(K).toHaveClass("dummyClassname");const j=n.getAllByRole("button")[0];await i.click(j);const z=t.querySelector('div[class*="helpBox"]'),G=n.getByText("Beskrivelse");await e(z).toHaveClass("dummyClassname"),await e(G).toHaveClass("dummyClassname")}},y={name:"Defaults (A1, B3, B6)",args:{...s},argTypes:{label:{table:{disable:!1}}},play:async({canvasElement:t})=>{const a=r(t).getByLabelText(s.label);await e(a).toBeInTheDocument(),await e(a).not.toBeRequired(),await e(a).not.toBeDisabled(),await e(a).toHaveAttribute("type","text"),await e(a).toHaveAttribute("role","combobox"),await e(a).toHaveAttribute("aria-expanded","false"),await e(a).toHaveAttribute("aria-autocomplete","list"),await e(a).toHaveAttribute("autoComplete","off"),await e(a).not.toHaveAttribute("aria-invalid"),await e(a).not.toHaveAttribute("aria-busy"),await e(a).toHaveAttribute("placeholder",m.t("ds_forms:combobox.TypeOrSelect"));const o=t.querySelector('div[class*="chevronButton"]');await e(o).toBeInTheDocument(),await e(o).toHaveAttribute("aria-hidden","true");const l=t.querySelector("[id^=comboboxErrorId]");await e(l).toBeInTheDocument();const c=t.querySelector('div[class*="srOnly"]');await e(c).toHaveAttribute("aria-live","polite"),await e(c).toHaveAttribute("aria-atomic","true"),await e(c).toHaveTextContent("")}},h={name:"With AriaDescribedBy",render:t=>{const n="combobox-alert-description-id";return u.jsxs(u.Fragment,{children:[u.jsx(_,{...t,ariaDescribedBy:n,hasSpacing:!0}),u.jsx(U,{id:n,variant:"warning",showAlert:!0,children:"Dette er en varselmelding for combobox"})]})},args:{...s},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await e(a).toHaveAttribute("aria-describedby");const o=n.getByText("Dette er en varselmelding for combobox");await e(o).toBeInTheDocument();const c=(a.getAttribute("aria-describedby")||"").split(" ").filter(Boolean);await e(c).toContain("combobox-alert-description-id")}},x={name:"With Long Option (A1)",args:{className:"width200",label:"Combobox with long option values",options:[{label:"Averylongoptionvaluethatexceedsnormallength",value:"1"},{label:"Another extremely lengthy option value for testing",value:"2"},{label:"Short",value:"3"}]},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await i.click(a)}},w={name:"With Long Value (A1)",args:{className:"width200",label:"Combobox with long option values",options:[{label:"Averylongoptionvaluethatexceedsnormallength",value:"1"},{label:"Another extremely lengthy option value for testing",value:"2"},{label:"Short",value:"3"}]},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await i.click(a);const o=n.getAllByRole("option");await i.click(o[0])}},B={name:"IsOpen (A1, B1)",args:{...s,id:"test-combobox"},argTypes:{variant:{table:{disable:!1}}},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await i.click(a),await e(a).toHaveAttribute("aria-expanded","true"),await e(a).toHaveAttribute("aria-controls","test-combobox-list");const o=n.getByRole("listbox");await e(o).toBeInTheDocument(),await e(o).toHaveAttribute("id","test-combobox-list"),await e(o).toHaveAttribute("aria-multiselectable","false");const l=n.getAllByRole("option");await e(l[0]).toHaveAttribute("id","test-combobox-option-0"),await e(l[0]).toHaveAttribute("aria-selected","false");const c=t.querySelector('div[class*="srOnly"]');await e(c).toHaveTextContent(m.t("ds_forms:combobox.OptionsAvailable",{count:3}))}},A={name:"Grouped Keyboard Selection",args:{label:"Velg element",options:[{label:"Ugruppert 1",value:"u1"},{label:"Eple",value:"apple",group:"Frukt"},{label:"Gulrot",value:"carrot",group:"Gront"},{label:"Banan",value:"banana",group:"Frukt"},{label:"Ugruppert 2",value:"u2"}]},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await i.click(a),await i.keyboard("{ArrowDown}{ArrowDown}{ArrowDown}{Enter}"),await e(a).toHaveValue("Banan")}},f={name:"With ErrorMessage (A2)",args:{...s,errorMessage:"Error melding"},argTypes:{errorMessage:{table:{disable:!1}}},play:async({canvasElement:t})=>{const n=r(t),a=t.querySelector("[id^=comboboxErrorId]");await e(a).toHaveAttribute("id");const o=n.getByRole("combobox",{description:"Error melding"});await e(o).toHaveAttribute("aria-invalid","true")}},S={name:"No Results (A6)",args:{...s},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await i.type(a,"xyz"),await e(a).toHaveValue("xyz");const o=n.getByRole("listbox");await e(o).toBeInTheDocument(),await e(o).toHaveTextContent(m.t("ds_forms:combobox.NoResults",{searchTerm:"xyz"}));const l=t.querySelector('div[class*="srOnly"]');await e(l).toHaveTextContent(m.t("ds_forms:combobox.NoResults",{searchTerm:"xyz"}))}},E={name:"Variant Large (A7)",args:{...s,variant:"large"},argTypes:{variant:{table:{disable:!1}}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await i.click(a)}},H={name:"With Value And Clear Value (A8, B2)",args:{...s},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await i.click(a);const o=n.getByRole("listbox");await e(o).toBeInTheDocument();const l=n.getAllByRole("option");await i.click(l[1]),await e(a).toHaveValue("Sverige"),await e(o).not.toBeInTheDocument();const c=n.getByRole("button",{name:m.t("ds_forms:combobox.ResetSuggestion")});await e(c).toBeInTheDocument(),await e(c).toHaveAttribute("type","button"),await i.click(c),await e(a).toHaveValue("")}},T={name:"Single Option Announcement (B1)",args:{...s,options:[{label:"Single Option",value:"1"}]},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await i.click(a);const o=t.querySelector('div[class*="srOnly"]');await e(o).toHaveTextContent(m.t("ds_forms:combobox.OneOptionAvailable"))}},C={name:"With Required (B4)",args:{...s,required:!0},argTypes:{required:{table:{disable:!1}}},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await e(a).toBeRequired(),await e(a).toHaveAttribute("aria-invalid","false")}},R={name:"With HideLabel (B5)",args:{...s,hideLabel:!0},argTypes:{hideLabel:{table:{disable:!1}}},play:async({canvasElement:t})=>{const a=r(t).getByText(s.label);await e(a).toBeInTheDocument()}},W={name:"With Placeholder (B6)",args:{...s,placeholder:"Søk etter kommune, fylke eller land"},argTypes:{placeholder:{table:{disable:!1}}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await e(a).toHaveAttribute("placeholder","Søk etter kommune, fylke eller land")}},k={name:"With MinSearchLength",args:{...s,minSearchLength:1},argTypes:{minSearchLength:{table:{disable:!1}}},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await e(a).not.toHaveAttribute("placeholder")}},L={name:"With MinSearchLength And Placeholder",args:{...s,placeholder:"Søk etter kommune, fylke eller land",minSearchLength:1},argTypes:{placeholder:{table:{disable:!1}},minSearchLength:{table:{disable:!1}}},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await e(a).toHaveAttribute("placeholder","Søk etter kommune, fylke eller land")}},I={name:"With AccessKey (B7)",args:{...s,accessKey:"c"},argTypes:{accessKey:{table:{disable:!1}}},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await e(a).toHaveAttribute("accesskey","c")}},D={name:"With Spacing",args:{...s,hasSpacing:!0},argTypes:{hasSpacing:{table:{disable:!1}}}},O={name:"With Disabled",args:{...s,disabled:!0,helpText:"Hjelpeknappen skal også være disabled"},argTypes:{disabled:{table:{disable:!1}}},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await e(a).toBeDisabled(),await e(a).toHaveStyle("cursor: not-allowed");const o=n.getByRole("button");await e(o).toBeDisabled()}},P={name:"With Loading (A13)",args:{...s,isLoading:!0},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await i.click(a);const o=await n.findByText(m.t("ds_progress:spinner.LoadingLabel"));await e(o).toBeInTheDocument(),await e(n.queryByRole("listbox")).not.toBeInTheDocument()}},q={name:"With SpinnerLabel",args:{...s,isLoading:!0,spinnerLabel:"Laster alternativer..."},play:async({canvasElement:t})=>{const n=r(t),a=n.getByRole("combobox");await i.click(a);const o=await n.findByText("Laster alternativer...");await e(o).toBeInTheDocument(),await e(a).toBeEnabled(),await i.type(a,"test"),await e(a).toHaveValue("test")}},M={name:"With Name",args:{...s,name:"category"},parameters:{chromatic:{disableSnapshot:!0}},play:async({canvasElement:t})=>{const a=r(t).getByRole("combobox");await e(a).toHaveAttribute("name","category")}},N={name:"With EventHandlers (A3)",args:{...s,onFocus:b(),onBlur:b(),onInputChange:b()},parameters:{chromatic:{disableSnapshot:!0}},play:async({args:t,canvasElement:n})=>{const o=r(n).getByRole("combobox");o.focus(),await p(()=>e(t.onFocus).toHaveBeenCalled()),await i.tab(),await p(()=>e(t.onBlur).toHaveBeenCalled()),await i.type(o,"X"),await e(o).toHaveValue("X"),await p(()=>e(t.onInputChange).toHaveBeenCalled())}},V={name:"OnSelectionChange (A3)",args:{...s,onSelectionChange:b()},parameters:{chromatic:{disableSnapshot:!0}},play:async({args:t,canvasElement:n})=>{const a=r(n),o=a.getByRole("combobox");await i.click(o);const l=a.getAllByRole("option");await i.click(l[0]),await e(o).toHaveValue("Norge"),await p(()=>e(t.onSelectionChange).toHaveBeenCalled())}},F={name:"OnHelpToggle",args:{...s,onHelpToggle:b(),helpText:"Dette er hjelpeteksten for comboboxen."},parameters:{chromatic:{disableSnapshot:!0}},play:async({args:t,canvasElement:n})=>{const o=r(n).getByRole("button");await i.click(o),await p(()=>e(t.onHelpToggle).toHaveBeenCalled())}};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+  name: 'With Ref (FA1)',
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLInputElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    }
+  },
+  argTypes: {
+    ref: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await expect(combobox).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  }
+} satisfies Story`,...d.parameters?.docs?.source}}};v.parameters={...v.parameters,docs:{...v.parameters?.docs,source:{originalSource:`{
+  name: 'With Attributes (FA2-5)',
+  args: {
+    ...defaultArgs,
+    id: 'combobox-id',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID'
+  },
+  argTypes: {
+    id: {
+      table: {
+        disable: false
+      }
+    },
+    className: {
+      table: {
+        disable: false
+      }
+    },
+    lang: {
+      table: {
+        disable: false
+      }
+    },
+    'data-testid': {
+      table: {
+        disable: false
+      }
+    }
+  },
+  parameters: {
+    a11y: {
+      test: 'off'
+    },
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(container).toHaveAttribute('lang', 'nb');
+    const combobox = canvas.getByRole('combobox');
+    await expect(combobox).toHaveAttribute('id', 'combobox-id');
+    await expect(combobox).toHaveAttribute('data-testid', '123ID');
+  }
+} satisfies Story`,...v.parameters?.docs?.source}}};g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      container: 'dummyClassname',
+      options: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+      label: 'dummyClassname',
+      helpText: 'dummyClassname',
+      description: 'dummyClassname'
+    },
+    description: 'Beskrivelse',
+    helpText: 'Hjelp!',
+    errorMessage: 'Error melding'
+  },
+  argTypes: {
+    classNames: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByRole('combobox');
+    await userEvent.click(input);
+    const container = canvas.getAllByRole('generic')[1];
+    const optionsContainer = canvasElement.querySelector('div[class*="optionsListContainer"]');
+    const errorMessageContainer = canvasElement.querySelector('[id^=comboboxErrorId]>div');
+    const label = canvas.getByText(defaultArgs.label as string);
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(optionsContainer).toHaveClass('dummyClassname');
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+    await expect(label).toHaveClass('dummyClassname');
+    const helpButton = canvas.getAllByRole('button')[0];
+    await userEvent.click(helpButton);
+    const helpTextContainer = canvasElement.querySelector('div[class*="helpBox"]');
+    const description = canvas.getByText('Beskrivelse');
+    await expect(helpTextContainer).toHaveClass('dummyClassname');
+    await expect(description).toHaveClass('dummyClassname');
+  }
+} satisfies Story`,...g.parameters?.docs?.source}}};y.parameters={...y.parameters,docs:{...y.parameters?.docs,source:{originalSource:`{
+  name: 'Defaults (A1, B3, B6)',
+  args: {
+    ...defaultArgs
+  },
+  argTypes: {
+    label: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByLabelText(defaultArgs.label as string);
+    await expect(combobox).toBeInTheDocument();
+    await expect(combobox).not.toBeRequired();
+    await expect(combobox).not.toBeDisabled();
+    await expect(combobox).toHaveAttribute('type', 'text');
+    await expect(combobox).toHaveAttribute('role', 'combobox');
+    await expect(combobox).toHaveAttribute('aria-expanded', 'false');
+    await expect(combobox).toHaveAttribute('aria-autocomplete', 'list');
+    await expect(combobox).toHaveAttribute('autoComplete', 'off');
+    await expect(combobox).not.toHaveAttribute('aria-invalid');
+    await expect(combobox).not.toHaveAttribute('aria-busy');
+    await expect(combobox).toHaveAttribute('placeholder', dsI18n.t('ds_forms:combobox.TypeOrSelect'));
+    const chevron = canvasElement.querySelector('div[class*="chevronButton"]');
+    await expect(chevron).toBeInTheDocument();
+    await expect(chevron).toHaveAttribute('aria-hidden', 'true');
+    const errorMessageContainer = canvasElement.querySelector('[id^=comboboxErrorId]');
+    await expect(errorMessageContainer).toBeInTheDocument();
+    const accessibilityAnnouncer = canvasElement.querySelector('div[class*="srOnly"]');
+    await expect(accessibilityAnnouncer).toHaveAttribute('aria-live', 'polite');
+    await expect(accessibilityAnnouncer).toHaveAttribute('aria-atomic', 'true');
+    await expect(accessibilityAnnouncer).toHaveTextContent('');
+  }
+} satisfies Story`,...y.parameters?.docs?.source}}};h.parameters={...h.parameters,docs:{...h.parameters?.docs,source:{originalSource:`{
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'combobox-alert-description-id';
+    return <>
+        <Combobox {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for combobox'}
+        </Alert>
+      </>;
+  },
+  args: {
+    ...defaultArgs
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await expect(combobox).toHaveAttribute('aria-describedby');
+    const alertText = canvas.getByText('Dette er en varselmelding for combobox');
+    await expect(alertText).toBeInTheDocument();
+    const describedBy = combobox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('combobox-alert-description-id');
+  }
+} satisfies Story`,...h.parameters?.docs?.source}}};x.parameters={...x.parameters,docs:{...x.parameters?.docs,source:{originalSource:`{
+  name: 'With Long Option (A1)',
+  args: {
+    className: 'width200',
+    label: 'Combobox with long option values',
+    options: [{
+      label: 'Averylongoptionvaluethatexceedsnormallength',
+      value: '1'
+    }, {
+      label: 'Another extremely lengthy option value for testing',
+      value: '2'
+    }, {
+      label: 'Short',
+      value: '3'
+    }]
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+  }
+} satisfies Story`,...x.parameters?.docs?.source}}};w.parameters={...w.parameters,docs:{...w.parameters?.docs,source:{originalSource:`{
+  name: 'With Long Value (A1)',
+  args: {
+    className: 'width200',
+    label: 'Combobox with long option values',
+    options: [{
+      label: 'Averylongoptionvaluethatexceedsnormallength',
+      value: '1'
+    }, {
+      label: 'Another extremely lengthy option value for testing',
+      value: '2'
+    }, {
+      label: 'Short',
+      value: '3'
+    }]
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+  }
+} satisfies Story`,...w.parameters?.docs?.source}}};B.parameters={...B.parameters,docs:{...B.parameters?.docs,source:{originalSource:`{
+  name: 'IsOpen (A1, B1)',
+  args: {
+    ...defaultArgs,
+    id: 'test-combobox'
+  },
+  argTypes: {
+    variant: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+    await expect(combobox).toHaveAttribute('aria-expanded', 'true');
+    await expect(combobox).toHaveAttribute('aria-controls', 'test-combobox-list');
+    const listbox = canvas.getByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+    await expect(listbox).toHaveAttribute('id', 'test-combobox-list');
+    await expect(listbox).toHaveAttribute('aria-multiselectable', 'false');
+    const options = canvas.getAllByRole('option');
+    await expect(options[0]).toHaveAttribute('id', 'test-combobox-option-0');
+    await expect(options[0]).toHaveAttribute('aria-selected', 'false');
+    const accessibilityAnnouncer = canvasElement.querySelector('div[class*="srOnly"]');
+    await expect(accessibilityAnnouncer).toHaveTextContent(dsI18n.t('ds_forms:combobox.OptionsAvailable', {
+      count: 3
+    }));
+  }
+} satisfies Story`,...B.parameters?.docs?.source}}};A.parameters={...A.parameters,docs:{...A.parameters?.docs,source:{originalSource:`{
+  name: 'Grouped Keyboard Selection',
+  args: {
+    label: 'Velg element',
+    options: [{
+      label: 'Ugruppert 1',
+      value: 'u1'
+    }, {
+      label: 'Eple',
+      value: 'apple',
+      group: 'Frukt'
+    }, {
+      label: 'Gulrot',
+      value: 'carrot',
+      group: 'Gront'
+    }, {
+      label: 'Banan',
+      value: 'banana',
+      group: 'Frukt'
+    }, {
+      label: 'Ugruppert 2',
+      value: 'u2'
+    }]
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+    await userEvent.keyboard('{ArrowDown}{ArrowDown}{ArrowDown}{Enter}');
+    await expect(combobox).toHaveValue('Banan');
+  }
+} satisfies Story`,...A.parameters?.docs?.source}}};f.parameters={...f.parameters,docs:{...f.parameters?.docs,source:{originalSource:`{
+  name: 'With ErrorMessage (A2)',
+  args: {
+    ...defaultArgs,
+    errorMessage: 'Error melding'
+  },
+  argTypes: {
+    errorMessage: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const errorMessageContainer = canvasElement.querySelector('[id^=comboboxErrorId]');
+    await expect(errorMessageContainer).toHaveAttribute('id');
+    const inputElement = canvas.getByRole('combobox', {
+      description: 'Error melding'
+    });
+    await expect(inputElement).toHaveAttribute('aria-invalid', 'true');
+  }
+} satisfies Story`,...f.parameters?.docs?.source}}};S.parameters={...S.parameters,docs:{...S.parameters?.docs,source:{originalSource:`{
+  name: 'No Results (A6)',
+  args: {
+    ...defaultArgs
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.type(inputElement, 'xyz');
+    await expect(inputElement).toHaveValue('xyz');
+    const listbox = canvas.getByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+    await expect(listbox).toHaveTextContent(dsI18n.t('ds_forms:combobox.NoResults', {
+      searchTerm: 'xyz'
+    }));
+    const accessibilityAnnouncer = canvasElement.querySelector('div[class*="srOnly"]');
+    await expect(accessibilityAnnouncer).toHaveTextContent(dsI18n.t('ds_forms:combobox.NoResults', {
+      searchTerm: 'xyz'
+    }));
+  }
+} satisfies Story`,...S.parameters?.docs?.source}}};E.parameters={...E.parameters,docs:{...E.parameters?.docs,source:{originalSource:`{
+  name: 'Variant Large (A7)',
+  args: {
+    ...defaultArgs,
+    variant: 'large'
+  },
+  argTypes: {
+    variant: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+  }
+} satisfies Story`,...E.parameters?.docs?.source}}};H.parameters={...H.parameters,docs:{...H.parameters?.docs,source:{originalSource:`{
+  name: 'With Value And Clear Value (A8, B2)',
+  args: {
+    ...defaultArgs
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+    const listbox = canvas.getByRole('listbox');
+    await expect(listbox).toBeInTheDocument();
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[1]);
+    await expect(combobox).toHaveValue('Sverige');
+    await expect(listbox).not.toBeInTheDocument();
+    const clearButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:combobox.ResetSuggestion')
+    });
+    await expect(clearButton).toBeInTheDocument();
+    await expect(clearButton).toHaveAttribute('type', 'button');
+    await userEvent.click(clearButton);
+    await expect(combobox).toHaveValue('');
+  }
+} satisfies Story`,...H.parameters?.docs?.source}}};T.parameters={...T.parameters,docs:{...T.parameters?.docs,source:{originalSource:`{
+  name: 'Single Option Announcement (B1)',
+  args: {
+    ...defaultArgs,
+    options: [{
+      label: 'Single Option',
+      value: '1'
+    }]
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+    const accessibilityAnnouncer = canvasElement.querySelector('div[class*="srOnly"]');
+    await expect(accessibilityAnnouncer).toHaveTextContent(dsI18n.t('ds_forms:combobox.OneOptionAvailable'));
+  }
+} satisfies Story`,...T.parameters?.docs?.source}}};C.parameters={...C.parameters,docs:{...C.parameters?.docs,source:{originalSource:`{
+  name: 'With Required (B4)',
+  args: {
+    ...defaultArgs,
+    required: true
+  },
+  argTypes: {
+    required: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toBeRequired();
+    await expect(inputElement).toHaveAttribute('aria-invalid', 'false');
+  }
+} satisfies Story`,...C.parameters?.docs?.source}}};R.parameters={...R.parameters,docs:{...R.parameters?.docs,source:{originalSource:`{
+  name: 'With HideLabel (B5)',
+  args: {
+    ...defaultArgs,
+    hideLabel: true
+  },
+  argTypes: {
+    hideLabel: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const labelElement = canvas.getByText(defaultArgs.label as string);
+    await expect(labelElement).toBeInTheDocument();
+  }
+} satisfies Story`,...R.parameters?.docs?.source}}};W.parameters={...W.parameters,docs:{...W.parameters?.docs,source:{originalSource:`{
+  name: 'With Placeholder (B6)',
+  args: {
+    ...defaultArgs,
+    placeholder: 'Søk etter kommune, fylke eller land'
+  },
+  argTypes: {
+    placeholder: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toHaveAttribute('placeholder', 'Søk etter kommune, fylke eller land');
+  }
+} satisfies Story`,...W.parameters?.docs?.source}}};k.parameters={...k.parameters,docs:{...k.parameters?.docs,source:{originalSource:`{
+  name: 'With MinSearchLength',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 1
+  },
+  argTypes: {
+    minSearchLength: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).not.toHaveAttribute('placeholder');
+  }
+} satisfies Story`,...k.parameters?.docs?.source}}};L.parameters={...L.parameters,docs:{...L.parameters?.docs,source:{originalSource:`{
+  name: 'With MinSearchLength And Placeholder',
+  args: {
+    ...defaultArgs,
+    placeholder: 'Søk etter kommune, fylke eller land',
+    minSearchLength: 1
+  },
+  argTypes: {
+    placeholder: {
+      table: {
+        disable: false
+      }
+    },
+    minSearchLength: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toHaveAttribute('placeholder', 'Søk etter kommune, fylke eller land');
+  }
+} satisfies Story`,...L.parameters?.docs?.source}}};I.parameters={...I.parameters,docs:{...I.parameters?.docs,source:{originalSource:`{
+  name: 'With AccessKey (B7)',
+  args: {
+    ...defaultArgs,
+    accessKey: 'c'
+  },
+  argTypes: {
+    accessKey: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toHaveAttribute('accesskey', 'c');
+  }
+} satisfies Story`,...I.parameters?.docs?.source}}};D.parameters={...D.parameters,docs:{...D.parameters?.docs,source:{originalSource:`{
+  name: 'With Spacing',
+  args: {
+    ...defaultArgs,
+    hasSpacing: true
+  },
+  argTypes: {
+    hasSpacing: {
+      table: {
+        disable: false
+      }
+    }
+  }
+} satisfies Story`,...D.parameters?.docs?.source}}};O.parameters={...O.parameters,docs:{...O.parameters?.docs,source:{originalSource:`{
+  name: 'With Disabled',
+  args: {
+    ...defaultArgs,
+    disabled: true,
+    helpText: 'Hjelpeknappen skal også være disabled'
+  },
+  argTypes: {
+    disabled: {
+      table: {
+        disable: false
+      }
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toBeDisabled();
+    await expect(inputElement).toHaveStyle('cursor: not-allowed');
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
+  }
+} satisfies Story`,...O.parameters?.docs?.source}}};P.parameters={...P.parameters,docs:{...P.parameters?.docs,source:{originalSource:`{
+  name: 'With Loading (A13)',
+  args: {
+    ...defaultArgs,
+    isLoading: true
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+    const spinner = await canvas.findByText(dsI18n.t('ds_progress:spinner.LoadingLabel'));
+    await expect(spinner).toBeInTheDocument();
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+  }
+} satisfies Story`,...P.parameters?.docs?.source}}};q.parameters={...q.parameters,docs:{...q.parameters?.docs,source:{originalSource:`{
+  name: 'With SpinnerLabel',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+    spinnerLabel: 'Laster alternativer...'
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+    const spinner = await canvas.findByText('Laster alternativer...');
+    await expect(spinner).toBeInTheDocument();
+
+    // Verifiser at input fortsatt er tilgjengelig for skriving
+    await expect(inputElement).toBeEnabled();
+    await userEvent.type(inputElement, 'test');
+    await expect(inputElement).toHaveValue('test');
+  }
+} satisfies Story`,...q.parameters?.docs?.source}}};M.parameters={...M.parameters,docs:{...M.parameters?.docs,source:{originalSource:`{
+  name: 'With Name',
+  args: {
+    ...defaultArgs,
+    name: 'category'
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).toHaveAttribute('name', 'category');
+  }
+} satisfies Story`,...M.parameters?.docs?.source}}};N.parameters={...N.parameters,docs:{...N.parameters?.docs,source:{originalSource:`{
+  name: 'With EventHandlers (A3)',
+  args: {
+    ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onInputChange: fn()
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    args,
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    inputElement.focus();
+    await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
+    await userEvent.tab();
+    await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+    await userEvent.type(inputElement, 'X');
+    await expect(inputElement).toHaveValue('X');
+    await waitFor(() => expect(args.onInputChange).toHaveBeenCalled());
+  }
+} satisfies Story`,...N.parameters?.docs?.source}}};V.parameters={...V.parameters,docs:{...V.parameters?.docs,source:{originalSource:`{
+  name: 'OnSelectionChange (A3)',
+  args: {
+    ...defaultArgs,
+    onSelectionChange: fn()
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    args,
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await userEvent.click(options[0]);
+    await expect(inputElement).toHaveValue('Norge');
+    await waitFor(() => expect(args.onSelectionChange).toHaveBeenCalled());
+  }
+} satisfies Story`,...V.parameters?.docs?.source}}};F.parameters={...F.parameters,docs:{...F.parameters?.docs,source:{originalSource:`{
+  name: 'OnHelpToggle',
+  args: {
+    ...defaultArgs,
+    onHelpToggle: fn(),
+    helpText: 'Dette er hjelpeteksten for comboboxen.'
+  },
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  },
+  play: async ({
+    args,
+    canvasElement
+  }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await userEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
+  }
+} satisfies Story`,...F.parameters?.docs?.source}}};const pe=["WithRef","WithAttributes","WithCustomClassNames","Defaults","WithAriaDescribedBy","WithLongOption","WithLongValue","IsOpen","GroupedKeyboardSelection","WithErrorMessage","NoResults","VariantLarge","WithValue","SingleOptionAnnouncement","WithRequired","WithHideLabel","WithPlaceholder","WithMinSearchLength","WithMinSearchLengthAndPlaceholder","WithAccessKey","WithSpacing","WithDisabled","WithLoading","WithSpinnerLabel","WithName","WithEventHandlers","OnSelectionChange","OnHelpToggle"];export{y as Defaults,A as GroupedKeyboardSelection,B as IsOpen,S as NoResults,F as OnHelpToggle,V as OnSelectionChange,T as SingleOptionAnnouncement,E as VariantLarge,I as WithAccessKey,h as WithAriaDescribedBy,v as WithAttributes,g as WithCustomClassNames,O as WithDisabled,f as WithErrorMessage,N as WithEventHandlers,R as WithHideLabel,P as WithLoading,x as WithLongOption,w as WithLongValue,k as WithMinSearchLength,L as WithMinSearchLengthAndPlaceholder,M as WithName,W as WithPlaceholder,d as WithRef,C as WithRequired,D as WithSpacing,q as WithSpinnerLabel,H as WithValue,pe as __namedExportsOrder,be as default};
+//# sourceMappingURL=Combobox.test.stories-BYv2Cyf6.js.map

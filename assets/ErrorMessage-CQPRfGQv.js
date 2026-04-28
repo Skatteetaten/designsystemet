@@ -1,0 +1,9 @@
+import{j as r}from"./iframe-B8GUhlLl.js";import{useMDXComponents as s}from"./index-B1QFP_Jr.js";import{M as m,P as n,a}from"./blocks-CYiXWkKb.js";import{P as i}from"./utils-DtoFmNuv.js";import{E as p,a as c}from"./ErrorMessage.stories-DZD_vvgl.js";import{V as x}from"./VersionBadge-CwaAEZz3.js";import{D as d}from"./DocIntro-rS_Hg1WD.js";import{D as l}from"./DocHeaderWrapper-DN7xFaRJ.js";import"./preload-helper-PPVm8Dsz.js";import"./index-DDTI-MIw.js";import"./index-BnXejHSu.js";import"./lz-string-m9jzapWX.js";import"./index-I1QRqNj0.js";import"./index-ee2RFhIf.js";import"./index-BaKABx5v.js";import"./index-C8bgUDlY.js";import"./DatePickerCalendar-PLUA6iCa.js";import"./LabelWithHelp-Dpi57Wto.js";import"./Help-BlguQcoq.js";import"./Combobox.module-DRLQKUr5.js";import"./ComboboxButton-_x3P7a4_.js";import"./index-BMJe4OzN.js";import"./index-BQLODoD0.js";import"./ComboboxSelectedOptions-Ses0U7oF.js";import"./index-DTGjjx-m.js";import"./index-CQLLboVf.js";import"./stories.utils-BCId827v.js";function t(e){const o={code:"code",h1:"h1",h2:"h2",pre:"pre",...s(),...e.components};return r.jsxs(r.Fragment,{children:[r.jsx(m,{of:p}),`
+`,r.jsxs(l,{componentName:"ErrorMessage",children:[r.jsx(o.h1,{id:"errormessage",children:"ErrorMessage"}),r.jsx(x,{packageName:"forms"}),r.jsx(d,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errormessage/"})]}),`
+`,r.jsx(n,{}),`
+`,r.jsx(o.pre,{children:r.jsx(o.code,{className:"language-tsx",children:`import { ErrorMessage } from '@skatteetaten/ds-forms';
+`})}),`
+`,r.jsx(a,{}),`
+`,r.jsx(o.h2,{id:"examples",children:"Examples"}),`
+`,r.jsx(i,{of:c})]})}function q(e={}){const{wrapper:o}={...s(),...e.components};return o?r.jsx(o,{...e,children:r.jsx(t,{...e})}):t(e)}export{q as default};
+//# sourceMappingURL=ErrorMessage-CQPRfGQv.js.map

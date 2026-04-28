@@ -1,0 +1,14 @@
+import{j as e}from"./iframe-B8GUhlLl.js";import{useMDXComponents as s}from"./index-B1QFP_Jr.js";import{M as a,P as o,a as p,A as l}from"./blocks-CYiXWkKb.js";import{P as t}from"./utils-DtoFmNuv.js";import{T as x,E as c,a as d}from"./TopBannerExternal.stories-CoH5Oqde.js";import{T as m}from"./TopBannerExternalUserMenu.stories-CfT0wPx4.js";import{V as u}from"./VersionBadge-CwaAEZz3.js";import{D as h}from"./DocIntro-rS_Hg1WD.js";import{D as j}from"./DocHeaderWrapper-DN7xFaRJ.js";import"./preload-helper-PPVm8Dsz.js";import"./index-DDTI-MIw.js";import"./index-BnXejHSu.js";import"./lz-string-m9jzapWX.js";import"./index-I1QRqNj0.js";import"./index-ee2RFhIf.js";import"./index-BaKABx5v.js";import"./index-BMJe4OzN.js";import"./index-BQLODoD0.js";import"./index-DzessJxh.js";import"./index-C8bgUDlY.js";import"./DatePickerCalendar-PLUA6iCa.js";import"./LabelWithHelp-Dpi57Wto.js";import"./Help-BlguQcoq.js";import"./Combobox.module-DRLQKUr5.js";import"./ComboboxButton-_x3P7a4_.js";import"./ComboboxSelectedOptions-Ses0U7oF.js";import"./index-DTGjjx-m.js";import"./index-CQLLboVf.js";import"./TopBannerButton-CYP_UvHY.js";import"./floating-ui.react-DwUZzIT7.js";import"./TopBannerLangPicker-C9zkvVDR.js";import"./TopBannerLangPickerButton-DGxqU4Tx.js";import"./TopBannerLogo-K5IiATFv.js";import"./TopBannerSkipLink-NmXdlVn0.js";import"./TopBannerUserButton-cwf7Eb9M.js";import"./index-BIN_iYuu.js";import"./index-BE1lNpbm.js";import"./custom-logo-Qmwv-dvM.js";import"./ske-logo-DcGvElYi.js";import"./stories.utils-BCId827v.js";import"./TopBannerExternalExample.module-D-cyqUXs.js";function i(n){const r={code:"code",h1:"h1",h2:"h2",p:"p",pre:"pre",...s(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(a,{of:x}),`
+`,e.jsxs(j,{componentName:"TopBannerExternal",children:[e.jsx(r.h1,{id:"topbannerexternal",children:"TopBannerExternal"}),e.jsx(u,{packageName:"layout"}),e.jsx(h,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/"})]}),`
+`,e.jsx(o,{}),`
+`,e.jsx(r.pre,{children:e.jsx(r.code,{className:"language-tsx",children:`import { TopBannerExternal } from '@skatteetaten/ds-layout';
+`})}),`
+`,e.jsx(p,{}),`
+`,e.jsx(r.h2,{id:"topbannerexternalusermenu",children:e.jsx(r.code,{children:"TopBannerExternal.UserMenu"})}),`
+`,e.jsx(o,{of:m}),`
+`,e.jsx(l,{of:m}),`
+`,e.jsx(r.h2,{id:"examples",children:"Examples"}),`
+`,e.jsx(r.p,{children:"For å åpne eller lukke hovedmenyen kan man bruke ref.openMenu() og ref.closeMenu(). Eksempelet under viser et tilfelle hvor vi har navigasjonslenker i menyen og ønsker at menyen skal lukkes når lenkene brukes til å navgiere til ny side."}),`
+`,e.jsx(t,{of:c}),`
+`,e.jsx(t,{of:d})]})}function te(n={}){const{wrapper:r}={...s(),...n.components};return r?e.jsx(r,{...n,children:e.jsx(i,{...n})}):i(n)}export{te as default};
+//# sourceMappingURL=TopBannerExternal-CmJ1zzWs.js.map
