@@ -2,7 +2,6 @@ import {
   ChangeEvent,
   DragEvent,
   useEffect,
-  useEffectEvent,
   useId,
   useRef,
   useState,
@@ -21,6 +20,7 @@ import {
   UploadedFile,
 } from './FileUploader.types';
 import { useFileUploader } from './useFileUploader';
+import { useFileUploaderAccessibilityAnnouncer } from './useFileUploaderAccessibilityAnnouncer';
 import { getFiles, isChangeEvent, normalize } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { FileUploaderFile } from './FileUploaderFile/FileUploaderFile';
@@ -72,9 +72,7 @@ export const FileUploader = (({
   const inputRef = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const deleteButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
-  const [srOnlyText, setSrOnlyText] = useState<string>();
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const [shouldRenderStatus, setShouldrenderStatus] = useState<boolean>(false);
   const generatedId = useId();
   const [filesPendingDelete, setFilesPendingDelete] = useState<
     Record<string, boolean>
@@ -82,16 +80,14 @@ export const FileUploader = (({
 
   const [newFiles, setNewFiles] = useState<UploadedFile[]>([]);
   const prevFilesRef = useRef<UploadedFile[] | undefined>(undefined);
-
-  //NOTE: hvis vi får samme statusmelding to ganger på rad så vil ikke skjermen lese det opp igjen med mindre vi tømmer den først
-  const refreshStatusMessage = useEffectEvent(() => {
-    if (!uploadResult) {
-      return;
-    }
-    setShouldrenderStatus(false);
-    setTimeout(() => {
-      setShouldrenderStatus(true);
-    }, 120);
+  const {
+    announceDeleteResult,
+    screenReaderAnnouncement,
+    screenReaderAriaLive,
+  } = useFileUploaderAccessibilityAnnouncer({
+    uploadResult,
+    uploadedFiles,
+    isUploading,
   });
 
   useEffect(() => {
@@ -110,10 +106,7 @@ export const FileUploader = (({
       }
 
       prevFilesRef.current = uploadedFiles;
-      refreshStatusMessage();
     }
-    //TODO: eslint plugin må oppdateres for at den skal forstå at refreshStatusMessage ikke trenger å være med i dependency array siden den bruker useEffectEvent
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uploadedFiles]);
 
   const id = externalId ?? generatedId;
@@ -224,16 +217,13 @@ export const FileUploader = (({
 
     if (deleted) {
       UpdateFocusAfterDelete(uploadedFiles, index);
-      setSrOnlyText(t('fileuploader.DeleteConfirmation'));
+      announceDeleteResult(t('fileuploader.DeleteConfirmation'));
     } else {
-      setSrOnlyText(t('fileuploader.GeneralDeleteError'));
+      announceDeleteResult(t('fileuploader.GeneralDeleteError'));
 
       // Behold fokus på nåværende knapp dersom sletting feiler
       deleteButtonRefs.current[key]?.focus();
     }
-    setTimeout(() => {
-      setSrOnlyText('');
-    }, 3000);
 
     setFilesPendingDelete((prevState) => ({ ...prevState, [key]: false }));
   };
@@ -348,9 +338,10 @@ export const FileUploader = (({
       <Alert
         showAlert={!!uploadResult}
         className={styles.alert}
+        ariaLive={'off'}
         variant={uploadResult?.hasUploadFailed ? 'error' : 'success'}
       >
-        {shouldRenderStatus && uploadResult?.statusMessage}
+        {uploadResult?.statusMessage}
       </Alert>
       {uploadedFiles && (
         <ul className={styles.fileList}>
@@ -380,8 +371,12 @@ export const FileUploader = (({
           })}
         </ul>
       )}
-      <div className={styles.srOnly} aria-live={'polite'} aria-atomic={'true'}>
-        {srOnlyText}
+      <div
+        className={styles.srOnly}
+        aria-live={screenReaderAriaLive}
+        aria-atomic={'true'}
+      >
+        {screenReaderAnnouncement}
       </div>
     </div>
   );
