@@ -50,7 +50,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    chromatic: { disableSnapshot: false },
   },
 } as Meta<typeof TopBannerLangPicker>;
 export default meta;
@@ -80,7 +80,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -105,6 +105,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
+    chromatic: { disableSnapshot: true },
     a11y: {
       test: 'off',
     },
@@ -203,7 +204,7 @@ export const CloseMenuWhenClickOnLangButton = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -247,7 +248,7 @@ export const WithKeyboardNavigation = {
     await expect(listItems[1].firstChild).toHaveFocus();
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
 } satisfies Story;
 
