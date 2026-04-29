@@ -170,9 +170,7 @@ export const ClickHelpButton = {
     helpText: defaultHelpText,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -193,9 +191,7 @@ export const ClickCloseButton = {
     helpText: defaultHelpText,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -219,9 +215,7 @@ export const WithHelpToggleEvent = {
     },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 

@@ -70,7 +70,7 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByTestId('123ID');
@@ -115,7 +115,6 @@ export const Defaults = {
   argTypes: {
     children: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const descriptionNode = canvas.getByText('Kenneth Performance');

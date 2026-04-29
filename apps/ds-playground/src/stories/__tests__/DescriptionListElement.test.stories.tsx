@@ -32,7 +32,7 @@ const meta = {
   ],
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    chromatic: { disableSnapshot: true },
   },
 } satisfies Meta<typeof DescriptionList.Element>;
 export default meta;
@@ -54,7 +54,6 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByTestId('123ID');

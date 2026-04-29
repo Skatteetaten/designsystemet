@@ -117,9 +117,7 @@ export const WithAriaDescribedby = {
     ariaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('aria-describedby', 'araiDescId'),
 } satisfies Story;

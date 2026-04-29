@@ -66,7 +66,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -213,6 +213,7 @@ export const WithTitleAs = {
   argTypes: {
     titleAs: { table: { disable: false } },
   },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading', { level: 1 });
@@ -283,7 +284,7 @@ export const WithShadowRootNode = {
       disable: true,
     },
     imageSnapshot: {
-      disable: true,
+      disableSnapshot: true,
     },
     customElementName: 'errorsummary-customelement',
   },
