@@ -22,9 +22,21 @@ export const filterOptions = (
 
   if (!searchTerm) return filteredOptions;
 
-  return filteredOptions.filter((option) =>
-    option.label.toLowerCase().startsWith(searchTerm.trim().toLowerCase())
+  const normalizedSearchTerm = searchTerm.trim().toLowerCase();
+
+  const startsWithMatches = filteredOptions.filter((option) =>
+    option.label.toLowerCase().startsWith(normalizedSearchTerm)
   );
+
+  const includesMatches = filteredOptions.filter((option) => {
+    const normalizedLabel = option.label.toLowerCase();
+    return (
+      !normalizedLabel.startsWith(normalizedSearchTerm) &&
+      normalizedLabel.includes(normalizedSearchTerm)
+    );
+  });
+
+  return [...startsWithMatches, ...includesMatches];
 };
 
 /**
