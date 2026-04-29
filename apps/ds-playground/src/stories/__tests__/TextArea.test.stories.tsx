@@ -644,9 +644,7 @@ export const WithHelpToggleEvent = {
     },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 

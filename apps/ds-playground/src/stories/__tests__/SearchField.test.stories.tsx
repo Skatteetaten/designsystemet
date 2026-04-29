@@ -667,9 +667,7 @@ export const WithHelpToggleEvent = {
     },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -700,7 +698,7 @@ export const WithControlled = {
   },
   name: 'With Controlled',
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

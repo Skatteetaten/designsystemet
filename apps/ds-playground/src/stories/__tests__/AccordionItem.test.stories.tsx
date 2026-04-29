@@ -128,6 +128,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
+    imageSnapshot: { disableSnapshot: true },
     a11y: {
       test: 'off',
     },
@@ -211,11 +212,6 @@ export const WithCustomIcon = {
     ...defaultArgs,
     svgPath: PersonSVGpath,
   },
-  parameters: {
-    imageSnapshot: {
-      disable: false,
-    },
-  },
 } satisfies Story;
 
 export const IsExpanded = {
@@ -262,9 +258,7 @@ export const WithOnClick = {
     onClick: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -287,9 +281,7 @@ export const PersistFocusOnClick = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -316,11 +308,6 @@ export const WithLineBreak = {
     ...defaultArgs,
     title: 'Tittel som\nbrekker over flere\nlinjer',
   },
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-  },
 } satisfies Story;
 
 export const WithTitleAs = {
@@ -330,9 +317,7 @@ export const WithTitleAs = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -378,9 +363,7 @@ export const WithPersistedState = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

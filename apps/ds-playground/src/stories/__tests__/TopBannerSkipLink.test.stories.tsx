@@ -182,9 +182,7 @@ export const WithShadowDom = {
   },
   decorators: [webComponent],
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
     customElementName: 'skiplink-customelement',
   },
   play: async ({ canvasElement }): Promise<void> => {

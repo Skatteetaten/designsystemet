@@ -199,33 +199,6 @@ export const WithIconRight = {
   },
 } satisfies Story;
 
-const TemplateWithContext: StoryFn<typeof OpenClose> = (args) => (
-  <>
-    <div>
-      {'I Skatteetaten definerer vi om du er pendler ut fra at en rekke vilkår må være oppfylt. For å få fradragene må du ' +
-        'blant annet være lønnstaker og overnatte borte på grunn av jobb. Pendlerfradrag gis kun for reiseutgifter som du selv (pendleren) ' +
-        'har for å besøke hjemmet ditt, ikke for familie som kommer på besøk til din pendlerbolig.'}
-    </div>
-    <OpenClose {...args}>
-      {}
-      {args.children}
-    </OpenClose>
-  </>
-);
-
-export const InContext = {
-  render: TemplateWithContext,
-  name: 'In Context (A1 delvis)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-  },
-} satisfies Story;
-
 export const WithoutUnderline = {
   name: 'Without Underline (A3)',
   args: {
@@ -354,9 +327,7 @@ export const WithOnClick = {
     onClick: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -384,9 +355,7 @@ export const WithIsOnClickOnlyFiredOnOpen = {
     isOnClickOnlyFiredOnOpen: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -404,9 +373,7 @@ export const WithChangingTitle = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -426,9 +393,7 @@ export const WithTitleAs = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

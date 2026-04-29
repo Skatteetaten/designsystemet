@@ -113,7 +113,7 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -634,7 +634,7 @@ export const WithCanManuallySetTitleFocus = {
   argTypes: {
     canManuallySetTitleFocus: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const panelHeading = canvas.getByRole('heading', { level: 3 });
@@ -678,7 +678,7 @@ export const WithPanelHeadingRef: Story = {
     canManuallySetTitleFocus: { table: { disable: false } },
     headingRef: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');

@@ -91,9 +91,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
@@ -294,9 +292,7 @@ export const WithType = {
     type: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
@@ -311,9 +307,7 @@ export const WithAriaDescribedby = {
     ariaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('aria-describedby', 'araiDescId'),
 } satisfies Story;
@@ -328,9 +322,7 @@ export const WithAriaExpanded = {
     ariaExpanded: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('aria-expanded', 'true'),
 } satisfies Story;
@@ -345,9 +337,7 @@ export const WithAccesskey = {
     accessKey: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('accessKey', 'a'),
 } satisfies Story;
