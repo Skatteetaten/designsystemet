@@ -1,11 +1,9 @@
 import { memo, type JSX, MouseEvent } from 'react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ChevronDownSVGpath,
   ChevronUpSVGpath,
   Icon,
-  CancelIcon,
 } from '@skatteetaten/ds-icons';
 
 import { ComboboxButtonProps } from './Combobox.types';
@@ -16,9 +14,6 @@ export const ComboboxButton = memo<ComboboxButtonProps>(
   ({
     isOpen,
     onClick,
-    hasValue,
-    onClear,
-    multiple,
     disabled,
     variant,
   }: ComboboxButtonProps): JSX.Element => {
@@ -30,21 +25,6 @@ export const ComboboxButton = memo<ComboboxButtonProps>(
       e.preventDefault();
       onClick?.(e);
     };
-
-    if (!multiple && hasValue && onClear) {
-      return (
-        <button
-          type={'button'}
-          className={buttonClassName}
-          aria-label={dsI18n.t('ds_forms:combobox.ResetSuggestion')}
-          disabled={disabled}
-          data-chevron-button
-          onClick={onClear}
-        >
-          <CancelIcon size={iconSize} />
-        </button>
-      );
-    }
 
     return (
       <div

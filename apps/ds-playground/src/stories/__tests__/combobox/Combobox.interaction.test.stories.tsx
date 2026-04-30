@@ -603,16 +603,11 @@ export const ClearRemovesSelectedMark = {
     );
     await expect(selectedOptions).toHaveLength(1);
 
-    // Nullstill fra knapp i input
-    const clearButton = canvasElement.querySelector(
-      'button[data-chevron-button]'
-    );
-    await expect(clearButton).toBeInTheDocument();
-    await userEvent.click(clearButton as Element);
-    await expect(inputElement).toHaveValue('');
-
-    // Åpne og verifiser at valgt markering er borte
+    // Nullstill ved å fjern tekst
     await userEvent.click(inputElement);
+    await userEvent.clear(inputElement);
+
+    // Verifiser at valgt markering er borte
     options = canvas.getAllByRole('option');
     selectedOptions = options.filter(
       (option) => option.getAttribute('aria-selected') === 'true'
