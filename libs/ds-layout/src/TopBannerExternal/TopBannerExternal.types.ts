@@ -109,7 +109,10 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
   logo?: TopBannerLogoProps;
   /** Legger til flere alternativer i språkvelgeren. */
   additionalLanguages?: TopBannerLangPickerProps['additionalLanguages'];
-  /** Lenke til samleside med innhold på andre språk. Vises nederst i språkmenyen. */
+  /**
+   * Lenke til samleside med innhold på andre språk. Vises nederst i
+   * språkmenyen.
+   */
   otherLanguagesURL?: string;
 }
 export interface TopBannerExternalComponent

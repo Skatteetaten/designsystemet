@@ -99,5 +99,6 @@
   ],
   "tui": {
     "autoExit": true
-  }
+  },
+  "analytics": false
 }
