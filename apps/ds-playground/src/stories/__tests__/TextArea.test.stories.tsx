@@ -845,12 +845,14 @@ export const WithCharacterLimitAndResetOnEmptyAString = {
     const textWith10Spaces = '          ';
 
     await userEvent.type(textArea, textWith10Spaces);
-    const remainingCount = await canvas.findByText('40 tegn igjen');
+    const remainingCount = await waitFor(() =>
+      canvas.findByText('40 tegn igjen')
+    );
     expect(remainingCount).toBeInTheDocument();
 
     await userEvent.keyboard('{Tab}');
 
-    const newRemainingCount = await canvas.findByText('50 tegn igjen');
-    expect(newRemainingCount).toBeInTheDocument();
+    const newRemainingCount = await canvas.findAllByText('50 tegn igjen');
+    expect(newRemainingCount[0]).toBeInTheDocument();
   },
 } satisfies Story;

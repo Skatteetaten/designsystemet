@@ -14,10 +14,41 @@ export const InputCounter = ({
   characterLimit,
 }: InputCounterProps): JSX.Element => {
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
-  const [charCount, setCharCount] = useState(0);
-  const [isFocused, setIsFocused] = useState(false);
+  const [uncontrolledCharCount, setUncontrolledCharCount] = useState(0);
+  const charCount = value !== undefined ? value.length : uncontrolledCharCount;
+
+  const charactersRemaining = characterLimit - charCount;
+  const isOverLimit = charactersRemaining < 0;
+
+  const getLabel = (count: number): string => {
+    const remainingCharacters = characterLimit - count;
+
+    return remainingCharacters >= 0
+      ? t('textarea.CharactersLeft', { ant: remainingCharacters })
+      : t('textarea.TooManyCharacters', {
+          ant: Math.abs(remainingCharacters),
+        });
+  };
+
+  const label = getLabel(charCount);
+  const [screenReaderLabel, setScreenReaderLabel] = useState(label);
 
   useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      setScreenReaderLabel(label);
+    }, 1000);
+
+    return (): void => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [label]);
+
+  // Lytter til native input kun i ukontrollert modus.
+  useEffect(() => {
+    if (value !== undefined) {
+      return;
+    }
+
     const input = inputRef?.current;
     if (!input) {
       return;
@@ -27,56 +58,29 @@ export const InputCounter = ({
     const { signal } = abortController;
 
     const updateCount = (): void => {
-      setCharCount(input.value.length);
-      setIsFocused(false);
-    };
-
-    const handleFocus = (): void => {
-      setIsFocused(true);
-    };
-
-    const handleBlur = (): void => {
-      setIsFocused(false);
+      setUncontrolledCharCount(input.value.length);
     };
 
     updateCount();
 
-    input.addEventListener('focus', handleFocus, { signal });
-    input.addEventListener('blur', handleBlur, { signal });
     input.addEventListener('input', updateCount, { signal });
     return (): void => {
       abortController.abort();
     };
-  }, [inputRef]);
-
-  useEffect(() => {
-    if (value !== undefined) {
-      setCharCount(value.length);
-    }
-  }, [value]);
-
-  const charactersRemaining = characterLimit - charCount;
-  const isOverLimit = charactersRemaining < 0;
-
-  // Setter aria-live til 'polite' når input har fokus eller når teksten er over 85% av tegnbegrensningen, ellers 'off'
-  const ariaLive =
-    isFocused || charCount >= Math.floor(characterLimit * 0.85)
-      ? 'polite'
-      : 'off';
+  }, [inputRef, value]);
 
   const concatenatedClassName =
     `${styles.inputCounter} ${isOverLimit ? styles.inputCounter_overLimit : ''}`.trim();
 
-  const label = !isOverLimit
-    ? t('textarea.CharactersLeft', { ant: charactersRemaining })
-    : t('textarea.TooManyCharacters', {
-        ant: Math.abs(charactersRemaining),
-      });
-
   return (
-    <div id={id} className={concatenatedClassName} aria-live={ariaLive}>
-      {label}
-    </div>
+    <>
+      <div className={concatenatedClassName} aria-hidden>
+        {label}
+      </div>
+      <span id={id} className={styles.srOnly} aria-live={'polite'}>
+        {screenReaderLabel}
+      </span>
+    </>
   );
 };
 
