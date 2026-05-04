@@ -221,7 +221,7 @@ const handleSelectionFocus = (
  * @param multiple - Whether combobox is in multi-select mode
  */
 const triggerSelectionCallback = (
-  selectedValues: ComboboxOption | ComboboxOption[],
+  selectedValues: ComboboxOption | ComboboxOption[] | null,
   onSelectionChange: ComboboxProps['onSelectionChange'],
   multiple: boolean
 ): void => {
@@ -233,7 +233,7 @@ const triggerSelectionCallback = (
     );
   } else {
     (onSelectionChange as (value: ComboboxOption | null) => void)(
-      selectedValues as ComboboxOption
+      selectedValues as ComboboxOption | null
     );
   }
 };
@@ -326,6 +326,7 @@ const selectMultipleOption = (
  * @param option - The option being selected
  * @param config - Configuration object containing state and handlers for
  *   single-select
+ * @param config.selectedValues - Currently selected options
  * @param config.setSelectedValues - Function to update selected values state
  * @param config.setSearchTerm - Function to update search input state
  * @param config.closeDropdown - Function to close the dropdown
@@ -336,6 +337,7 @@ const selectMultipleOption = (
 const selectSingleOption = (
   option: ComboboxOption,
   {
+    selectedValues,
     setSelectedValues,
     setSearchTerm,
     closeDropdown,
@@ -343,6 +345,7 @@ const selectSingleOption = (
     inputRef,
     onSelectionChange,
   }: {
+    selectedValues: ComboboxOption[];
     setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
@@ -351,6 +354,21 @@ const selectSingleOption = (
     onSelectionChange?: ComboboxProps['onSelectionChange'];
   }
 ): void => {
+  const isAlreadySelected = selectedValues.some(
+    (selected) => selected.value === option.value
+  );
+
+  if (isAlreadySelected) {
+    setSelectedValues([]);
+    setSearchTerm('');
+    closeDropdown();
+    setFocusedIndex(-1);
+    setTimeout(() => inputRef.current?.focus(), 0);
+
+    triggerSelectionCallback(null, onSelectionChange, false);
+    return;
+  }
+
   // Track selected option state in single-select mode
   setSelectedValues([option]);
 
@@ -428,6 +446,7 @@ export const selectOption = (
     });
   } else {
     selectSingleOption(option, {
+      selectedValues,
       setSelectedValues,
       setSearchTerm,
       closeDropdown,

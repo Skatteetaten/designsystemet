@@ -75,19 +75,6 @@ export const Chevron = {
   },
 } satisfies Story;
 
-export const CancelButton = {
-  name: 'Cancel button',
-  render: (args): JSX.Element => <Combobox {...args} value={'Norge'} />,
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    imageSnapshot: {
-      pseudoStates: ['hover', 'focus-visible', 'active'],
-    },
-  },
-} satisfies Story;
-
 export const Option = {
   render: (): JSX.Element => {
     const customListRef = useRef<HTMLDivElement | null>(null);

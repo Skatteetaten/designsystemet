@@ -446,14 +446,26 @@ export const WithValue = {
     await userEvent.click(options[1]);
     await expect(combobox).toHaveValue('Sverige');
     await expect(listbox).not.toBeInTheDocument();
+  },
+} satisfies Story;
 
-    const clearButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_forms:combobox.ResetSuggestion'),
-    });
-    await expect(clearButton).toBeInTheDocument();
-    await expect(clearButton).toHaveAttribute('type', 'button');
-
-    await userEvent.click(clearButton);
+export const SingleSelectKeyboardDeselect = {
+  name: 'Single-Select Keyboard Deselect',
+  args: {
+    ...defaultArgs,
+    onSelectionChange: fn(),
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+    await userEvent.click(canvas.getAllByRole('option')[0]);
+    await expect(combobox).toHaveValue('Norge');
+    await userEvent.click(combobox);
+    await userEvent.keyboard('{Enter}');
     await expect(combobox).toHaveValue('');
   },
 } satisfies Story;

@@ -185,9 +185,6 @@ export type LoadingMessageProps = {
 export type ComboboxButtonProps = {
   isOpen: boolean;
   onClick: (e?: MouseEvent) => void;
-  hasValue?: boolean;
-  onClear?: () => void;
-  multiple?: boolean;
   disabled?: boolean;
   variant?: ComboboxSize;
 };

@@ -159,29 +159,24 @@ const Combobox = memo(
       });
 
     // Use input handlers hook
-    const {
-      handleInputChange,
-      handleInputFocus,
-      handleInputBlur,
-      handleClearValue,
-    } = useComboboxInput({
-      multiple,
-      searchTerm,
-      selectedValues,
-      setSelectedValues,
-      setSearchTerm,
-      openDropdown,
-      closeDropdown,
-      inputRef,
-      onSelectionChange,
-      onInputChange,
-      onBlur,
-      onFocus,
-      value,
-      enabledIndices,
-      setFocusedIndex,
-      focusedIndex,
-    });
+    const { handleInputChange, handleInputFocus, handleInputBlur } =
+      useComboboxInput({
+        multiple,
+        searchTerm,
+        selectedValues,
+        setSelectedValues,
+        setSearchTerm,
+        openDropdown,
+        closeDropdown,
+        enabledIndices,
+        focusedIndex,
+        setFocusedIndex,
+        onSelectionChange,
+        onInputChange,
+        onBlur,
+        onFocus,
+        value,
+      });
 
     // Memoize keyboard dropdown handler to prevent unnecessary re-creations
     const keyboardOpenDropdown = useCallback(() => {
@@ -319,11 +314,8 @@ const Combobox = memo(
           </div>
           <ComboboxButton
             isOpen={chevronIsOpen}
-            hasValue={!multiple && !!searchTerm}
-            multiple={multiple}
             disabled={disabled}
             variant={resolvedVariant}
-            onClear={!multiple ? handleClearValue : undefined}
             onClick={handleChevronClick}
           />
           <ComboboxOptions

@@ -150,4 +150,34 @@ describe('useComboboxSelection', () => {
     expect(setFocusedIndex).toHaveBeenCalledWith(-1);
     expect(onSelectionChange).toHaveBeenCalledWith([]);
   });
+
+  it('selects a different option in single-select mode', () => {
+    const setSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+    const setSearchTerm = vi.fn<(term: string) => void>();
+    const closeDropdown = vi.fn<(manual?: boolean) => void>();
+    const setFocusedIndex = vi.fn<(index: number) => void>();
+    const onSelectionChange = vi.fn<(value: ComboboxOption | null) => void>();
+    const inputRef = { current: null };
+
+    renderHook(() =>
+      useComboboxSelection({
+        options,
+        multiple: false,
+        searchTerm: options[0].label,
+        selectedValues: [options[0]],
+        setSelectedValues,
+        setSearchTerm,
+        closeDropdown,
+        setFocusedIndex,
+        inputRef,
+        onSelectionChange,
+      })
+    ).result.current.handleOptionSelect(options[1], false);
+
+    expect(setSelectedValues).toHaveBeenCalledWith([options[1]]);
+    expect(setSearchTerm).toHaveBeenCalledWith(options[1].label);
+    expect(closeDropdown).toHaveBeenCalled();
+    expect(setFocusedIndex).toHaveBeenCalledWith(-1);
+    expect(onSelectionChange).toHaveBeenCalledWith(options[1]);
+  });
 });
