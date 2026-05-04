@@ -7,9 +7,11 @@ import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import mdx from 'fumadocs-mdx/vite';
+import reactDocgenTypescript from '@joshwooding/vite-plugin-react-docgen-typescript';
 import * as MdxConfig from './source.config';
 
 const rootDir = fileURLToPath(new URL('.', import.meta.url));
+const workspaceRoot = resolve(rootDir, '../..');
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
@@ -31,6 +33,25 @@ export default defineConfig(() => ({
     svgr(),
     nxViteTsPaths(),
     nxCopyAssetsPlugin(['*.md']),
+    reactDocgenTypescript({
+      tsconfigPath: resolve(rootDir, 'tsconfig.json'),
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
+      skipChildrenPropWithoutDoc: false,
+      propFilter: () => true,
+      include: [
+        resolve(workspaceRoot, 'libs/**/src/**/*.tsx'),
+        resolve(rootDir, 'app/**/*.tsx'),
+        resolve(rootDir, 'content/**/*.tsx'),
+      ],
+      exclude: [
+        '**/*.stories.tsx',
+        '**/*.test.tsx',
+        '**/*.spec.tsx',
+        '**/__tests__/**',
+        '**/ds-icons/**',
+      ],
+    }),
   ],
   // Uncomment this if you are using workers.
   // worker: {

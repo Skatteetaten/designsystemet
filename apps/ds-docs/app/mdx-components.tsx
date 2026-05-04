@@ -6,10 +6,15 @@ import { Link } from '@skatteetaten/ds-buttons';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { Canvas } from './components/canvas';
+import { ComponentWithDocgen, TypeTable } from './components/type-table';
 
 interface CanvasMdxProps {
   children?: ReactNode;
   examplesPath?: string;
+}
+
+interface TypeTableMdxProps {
+  of: ComponentWithDocgen;
 }
 
 const components = {
@@ -51,6 +56,7 @@ const components = {
   Canvas: ({ children, examplesPath }: CanvasMdxProps): JSX.Element => (
     <Canvas examplesPath={examplesPath}>{children}</Canvas>
   ),
+  TypeTable: ({ of }: TypeTableMdxProps): JSX.Element => <TypeTable of={of} />,
 };
 
 export function getMdxComponents(): MDXComponents {
