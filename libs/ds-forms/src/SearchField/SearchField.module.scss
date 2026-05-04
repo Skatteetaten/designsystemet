@@ -233,6 +233,7 @@
 .emptyResult {
   padding: var(--search-result-padding);
   color: var(--semantic-page-foreground);
+  overflow-y: auto;
 }
 
 .srOnly {
