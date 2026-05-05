@@ -30,7 +30,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
   },
 } as Meta<typeof TopBannerLangPickerButton>;
 export default meta;
@@ -54,9 +54,6 @@ export const WithRef = {
   },
   argTypes: {
     ref: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -106,6 +103,7 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
+      disableSnapshot: false,
       pseudoStates: ['hover', 'focus-visible', 'active'],
     },
   },
@@ -163,9 +161,6 @@ export const WithEventHandlers = {
   args: {
     ...defaultArgs,
     onClick: fn(),
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

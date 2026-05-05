@@ -45,6 +45,7 @@ const meta = {
     secondColumn: { control: 'text', table: { disable: true } },
     thirdColumn: { control: 'text', table: { disable: true } },
     additionalLanguages: { table: { disable: true } },
+    otherLanguagesURL: { table: { disable: true } },
     searchContent: { control: 'text', table: { disable: true } },
     // Events
     onSearchClick: { table: { disable: true } },
