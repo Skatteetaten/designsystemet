@@ -9,7 +9,11 @@
     "moduleResolution": "bundler",
     "rootDirs": [".", "./.react-router/types"]
   },
-  "files": ["../../types/svg.d.ts", "../../types/vite-env.d.ts"],
+  "files": [
+    "../../types/svg.d.ts",
+    "../../types/vite-env.d.ts",
+    "../../node_modules/@nx/react/typings/image.d.ts"
+  ],
   "include": [],
   "references": [
     {
