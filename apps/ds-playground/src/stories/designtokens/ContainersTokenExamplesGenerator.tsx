@@ -13,9 +13,9 @@ interface Breakpoint {
 
 const rootQuery = ':root,\n  :host';
 const breakpoints: Breakpoint[] = [
-  { name: 'Breakpoint S', query: '@media (width >= 640px)' },
-  { name: 'Breakpoint M', query: '@media (width >= 1024px)' },
-  { name: 'Breakpoint L', query: '@media (width >= 1366px)' },
+  { name: 'Breakpoint S\n(640 - 1023px)', query: '@media (width >= 640px)' },
+  { name: 'Breakpoint M\n(1024 - 1365px)', query: '@media (width >= 1024px)' },
+  { name: 'Breakpoint L\n(1366 - 1919px)', query: '@media (width >= 1366px)' },
 ];
 
 //eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -95,16 +95,16 @@ export const ContainersTokenExamplesGenerator = (): JSX.Element => {
         caption={
           'Når dynamiske container-tokens endres fra utgangspunktet (mobile)'
         }
-        variant={'compact'}
+        size={'extraSmall'}
       >
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell colSpan={2}>{''}</Table.HeaderCell>
-            <Table.HeaderCell className={'noWrap'}>
-              {'Mobile/Breakpoint XS'}
+            <Table.HeaderCell className={'pre'}>
+              {'Mobile/Breakpoint XS\n(320 - 639px)'}
             </Table.HeaderCell>
             {breakpoints.map((breakpoint) => (
-              <Table.HeaderCell key={breakpoint.name} className={'noWrap'}>
+              <Table.HeaderCell key={breakpoint.name} className={'pre'}>
                 {breakpoint.name}
               </Table.HeaderCell>
             ))}
