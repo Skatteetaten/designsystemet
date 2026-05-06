@@ -50,6 +50,13 @@ const meta = {
         defaultValue: { summary: getOpenCloseUnderlineDefault().toString() },
       },
     },
+    size: {
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'large' },
+      },
+    },
     title: { table: { category: category.props } },
     titleAs: {
       control: 'inline-radio',
@@ -128,6 +135,25 @@ export const KompaktVariant: Story = {
   },
 } satisfies Story;
 KompaktVariant.parameters = exampleParameters;
+
+export const LitenStorrelse: Story = {
+  name: 'Liten størrelse',
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <Paragraph>
+          {
+            'Liten størrelse bruker mindre fontstørrelse, og skal etter hvert erstatte kompakt variant.'
+          }
+        </Paragraph>
+        <OpenClose title={exampleTitle} size={'small'}>
+          {exampleContent}
+        </OpenClose>
+      </>
+    );
+  },
+} satisfies Story;
+LitenStorrelse.parameters = exampleParameters;
 
 export const EksempelSelvvalgtHjelpetekst: Story = {
   name: 'Eksempel - selvvalgt hjelpetekst',

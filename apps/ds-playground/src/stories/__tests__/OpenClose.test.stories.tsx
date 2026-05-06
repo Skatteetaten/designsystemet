@@ -26,6 +26,10 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    size: {
+      table: { disable: true },
+      control: 'inline-radio',
+    },
     variant: {
       table: { disable: true },
       control: 'inline-radio',
@@ -234,6 +238,17 @@ export const Compact = {
   },
 } satisfies Story;
 
+export const Small = {
+  name: 'Small (A1 delvis)',
+  args: {
+    ...defaultArgs,
+    size: 'small',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+} satisfies Story;
+
 export const CompactWithIconRight = {
   name: 'Compact With Icon Right (A1 delvis, A2)',
   args: {
@@ -243,6 +258,19 @@ export const CompactWithIconRight = {
   },
   argTypes: {
     variant: { table: { disable: false } },
+    iconPosition: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const SmallWithIconRight = {
+  name: 'Small With Icon Right (A1 delvis, A2)',
+  args: {
+    ...defaultArgs,
+    size: 'small',
+    iconPosition: 'right',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
   },
 } satisfies Story;
@@ -260,6 +288,19 @@ export const CompactWithUnderline = {
   },
 } satisfies Story;
 
+export const SmallWithUnderline = {
+  name: 'Small With Underline (A1 delvis, A3)',
+  args: {
+    ...defaultArgs,
+    size: 'small',
+    showUnderline: true,
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+    showUnderline: { table: { disable: false } },
+  },
+} satisfies Story;
+
 export const CompactWithIconRightAndUnderline = {
   name: 'Compact With Icon Right And Underline (A1 delvis, A2, A3)',
   args: {
@@ -270,6 +311,21 @@ export const CompactWithIconRightAndUnderline = {
   },
   argTypes: {
     variant: { table: { disable: false } },
+    iconPosition: { table: { disable: false } },
+    showUnderline: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const SmallWithIconRightAndUnderline = {
+  name: 'Small With Icon Right And Underline (A1 delvis, A2, A3)',
+  args: {
+    ...defaultArgs,
+    size: 'small',
+    iconPosition: 'right',
+    showUnderline: true,
+  },
+  argTypes: {
+    size: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
     showUnderline: { table: { disable: false } },
   },
@@ -303,6 +359,19 @@ export const CompactAndIsExpanded = {
   argTypes: {
     isExpanded: { table: { disable: false } },
     variant: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const SmallAndIsExpanded = {
+  name: 'With Small And IsExpanded (A4 delvis)',
+  args: {
+    ...defaultArgs,
+    isExpanded: true,
+    size: 'small',
+  },
+  argTypes: {
+    isExpanded: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
 } satisfies Story;
 
