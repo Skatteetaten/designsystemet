@@ -58,7 +58,13 @@ const meta = {
       },
     },
     defaultValue: { control: 'text', table: { category: category.props } },
-    selectedValue: { control: 'text', table: { category: category.props } },
+    value: { control: 'text', table: { category: category.props } },
+    selectedValue: {
+      control: 'text',
+      table: { category: category.props },
+      description:
+        '<strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Bruk <code>value</code> i stedet.',
+    },
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
@@ -105,7 +111,7 @@ export const Examples: Story = {
       <>
         <RadioGroup
           legend={'Type virksomhet'}
-          selectedValue={type}
+          value={type}
           required
           onChange={(e): void => setType(e.target.value)}
         >
@@ -121,7 +127,7 @@ export const Examples: Story = {
         <RadioGroup
           variant={'horizontal'}
           legend={'Har du sendt inn skattemeldingen?'}
-          selectedValue={svar}
+          value={svar}
           errorMessage={svarError}
           required
           onBlur={
