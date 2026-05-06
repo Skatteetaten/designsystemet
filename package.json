@@ -24,6 +24,7 @@
   },
   "scripts": {
     "start": "STORYBOOK_BUILD_VERSION=develop nx serve --host=127.0.0.1",
+    "start:docs": "nx serve ds-docs",
     "start:static": "npx http-server dist/storybook/ds-playground --port 4400",
     "prepare": "node -e \"if (process.env.CI !== 'true'){process.exit(1)} \" || npx lefthook install -a",
     "prebuild": "npm run lint:fix && node -e \"if (process.env.CI !== 'true' || !process.env.STORYBOOK_BUILD_VERSION?.startsWith('disable_reports_') ){process.exit(1)} \" || npm-run-all stylelint prettier typecheck",
