@@ -69,6 +69,8 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getOpenCloseVariantDefault() },
+        description:
+          '<strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Bruk <code>size</code> i stedet.',
       },
     },
     //Events
@@ -117,43 +119,42 @@ export const HoyrestiltIkon: Story = {
 } satisfies Story;
 HoyrestiltIkon.parameters = exampleParameters;
 
-export const KompaktVariant: Story = {
-  name: 'Kompakt variant',
+export const Sizes: Story = {
+  name: 'Størrelser',
   render: (_args): JSX.Element => {
     return (
       <>
-        <Paragraph>
+        <Paragraph hasSpacing>
           {
-            'Kompakt variant bruker mindre fontstørrelse, og brukes normalt i situasjoner der det er lite plass tilgjengelig.'
+            'Prop "size" kan brukes for å spesifisere størrelsen på OpenClose-komponenten, og erstatter "variant" i neste major. "small" og "large" tilsvarer dagens "compact" og "standard", mens "medium" er en ny størrelse som ligger mellom de to.'
           }
         </Paragraph>
-        <OpenClose title={exampleTitle} variant={'compact'}>
-          {exampleContent}
-        </OpenClose>
-      </>
-    );
-  },
-} satisfies Story;
-KompaktVariant.parameters = exampleParameters;
 
-export const LitenStorrelse: Story = {
-  name: 'Liten størrelse',
-  render: (_args): JSX.Element => {
-    return (
-      <>
-        <Paragraph>
-          {
-            'Liten størrelse bruker mindre fontstørrelse, og skal etter hvert erstatte kompakt variant.'
-          }
-        </Paragraph>
+        <Heading as={'h3'} level={4}>
+          {'Small'}
+        </Heading>
         <OpenClose title={exampleTitle} size={'small'}>
           {exampleContent}
         </OpenClose>
+
+        <Heading as={'h2'} level={4}>
+          {'Medium'}
+        </Heading>
+        <OpenClose title={exampleTitle} size={'medium'}>
+          {exampleContent}
+        </OpenClose>
+
+        <Heading as={'h2'} level={4}>
+          {'Large'}
+        </Heading>
+        <OpenClose title={exampleTitle} size={'large'}>
+          {exampleContent}
+        </OpenClose>
       </>
     );
   },
 } satisfies Story;
-LitenStorrelse.parameters = exampleParameters;
+Sizes.parameters = exampleParameters;
 
 export const EksempelSelvvalgtHjelpetekst: Story = {
   name: 'Eksempel - selvvalgt hjelpetekst',

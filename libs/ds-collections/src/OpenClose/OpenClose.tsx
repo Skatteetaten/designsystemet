@@ -48,7 +48,6 @@ export const OpenClose = ({
 
   const Tag = HeadingTag ?? 'div';
   const hasIconRight = iconPosition === 'right';
-  const isCompact = resolvedSize === 'small';
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     if (isOnClickOnlyFiredOnOpen) {
@@ -60,24 +59,23 @@ export const OpenClose = ({
   };
 
   const iconRightClassName = hasIconRight ? styles.openClose_hasIconRight : '';
-  const compactClassName = isCompact ? styles.openClose_compact : '';
-  const openCloseClassName =
-    `${styles.openClose} ${compactClassName} ${iconRightClassName}`.trim();
+  const openCloseClassName = `${styles.openClose} ${iconRightClassName}`.trim();
   const iconClassName = `${styles.icon} ${styles.icon_active} ${
     isExpanded ? styles.icon_open : styles.icon_closed
-  } ${isCompact ? styles.icon_compact : ''}`.trim();
-  const titleClassName = `${styles.title} ${
-    isCompact ? styles.title_compact : ''
-  } ${showUnderline ? styles.title_underline : ''}`.trim();
-  const contentClassName = `${styles.content} ${
-    isCompact ? styles.content_compact : ''
-  } ${hasIconRight ? styles.content_hasIconRight : ''}`.trim();
+  }`.trim();
+  const titleClassName =
+    `${styles.title} ${showUnderline ? styles.title_underline : ''}`.trim();
+  const contentClassName =
+    `${styles.content} ${hasIconRight ? styles.content_hasIconRight : ''}`.trim();
   const hiddenContentClassName = `${contentClassName} ${
     keepMounted && !isExpanded ? styles.content_hidden : ''
   }`.trim();
 
   return (
-    <div className={className}>
+    <div
+      className={`${styles.wrapper} ${className}`.trim()}
+      data-size={resolvedSize}
+    >
       <Tag className={styles.tag}>
         <button
           ref={ref}
@@ -92,7 +90,7 @@ export const OpenClose = ({
           <Icon
             svgPath={ChevronDownSVGpath}
             className={iconClassName}
-            size={isCompact ? 'medium' : 'large'}
+            size={resolvedSize === 'small' ? 'medium' : 'large'}
           />
 
           <span className={titleClassName}>{title}</span>
