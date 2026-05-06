@@ -28,6 +28,7 @@ export const OpenClose = ({
   title,
   titleAs: HeadingTag,
   variant = getOpenCloseVariantDefault(),
+  size,
   iconPosition = getOpenCloseIconPositionDefault(),
   isExpanded: isExpandedExternal,
   isDefaultExpanded,
@@ -43,10 +44,11 @@ export const OpenClose = ({
 
   const isExpanded =
     isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
+  const resolvedSize = size ?? (variant === 'compact' ? 'small' : 'large');
 
   const Tag = HeadingTag ?? 'div';
   const hasIconRight = iconPosition === 'right';
-  const isCompact = variant === 'compact';
+  const isCompact = resolvedSize === 'small';
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     if (isOnClickOnlyFiredOnOpen) {
