@@ -7,12 +7,12 @@
 }
 
 .article {
-  display: flex;
   width: var(--semantic-responsive-article);
-  box-sizing: border-box;
-  flex-direction: column;
   margin: 0 auto;
-  gap: var(--spacing-m);
+}
+
+.heading {
+  margin-bottom: var(--spacing-xl);
 }
 
 .label {
@@ -20,14 +20,6 @@
   color: var(--palette-graphite-70);
   font-size: initial;
   font-weight: initial;
-}
-
-.ingress {
-  padding-bottom: var(--spacing-m);
-}
-
-.link {
-  align-self: flex-start;
 }
 
 .openClose {

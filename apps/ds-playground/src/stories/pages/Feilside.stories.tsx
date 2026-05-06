@@ -34,12 +34,12 @@ const InnloggetTemplate = (): JSX.Element => {
     <main className={styles.mainContent}>
       <section className={styles.article}>
         <div>
-          <Heading as={'h1'} hasSpacing>
+          <Heading as={'h1'} className={styles.heading}>
             <span className={styles.label}>{'Statuskode 404'}</span>
             {'Siden finnes ikke'}
           </Heading>
         </div>
-        <Paragraph variant={'ingress'} className={styles.ingress}>
+        <Paragraph variant={'ingress'} hasSpacing>
           {
             'Beklager, denne siden kan være flyttet eller slettet, eller det er en feil i lenken.'
           }
@@ -47,7 +47,6 @@ const InnloggetTemplate = (): JSX.Element => {
 
         <Link
           svgPath={ArrowForwardSVGpath}
-          className={styles.link}
           href={'https://skatt.skatteetaten.no/web/minside/'}
         >
           {'Gå til Min Side'}
@@ -79,22 +78,18 @@ export const Uinnlogget = (): JSX.Element => {
     <main className={styles.mainContent}>
       <section className={styles.article}>
         <div>
-          <Heading as={'h1'} hasSpacing>
+          <Heading as={'h1'} className={styles.heading}>
             <span className={styles.label}>{'Statuskode 404'}</span>
             {'Siden finnes ikke'}
           </Heading>
         </div>
-        <Paragraph variant={'ingress'} className={styles.ingress}>
+        <Paragraph variant={'ingress'} hasSpacing>
           {
             'Beklager, denne siden kan være flyttet eller slettet, eller det er en feil i lenken.'
           }
         </Paragraph>
 
-        <Link
-          svgPath={ArrowForwardSVGpath}
-          href={'https://skatteetaten.no'}
-          className={styles.link}
-        >
+        <Link svgPath={ArrowForwardSVGpath} href={'https://skatteetaten.no'}>
           {'Gå til forsiden'}
         </Link>
 
