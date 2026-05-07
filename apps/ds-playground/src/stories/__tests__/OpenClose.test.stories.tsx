@@ -26,6 +26,10 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    size: {
+      table: { disable: true },
+      control: 'inline-radio',
+    },
     variant: {
       table: { disable: true },
       control: 'inline-radio',
@@ -234,6 +238,28 @@ export const Compact = {
   },
 } satisfies Story;
 
+export const Small = {
+  name: 'Small (A1 delvis)',
+  args: {
+    ...defaultArgs,
+    size: 'small',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const Medium = {
+  name: 'Medium (A1 delvis)',
+  args: {
+    ...defaultArgs,
+    size: 'medium',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+} satisfies Story;
+
 export const CompactWithIconRight = {
   name: 'Compact With Icon Right (A1 delvis, A2)',
   args: {
@@ -247,12 +273,38 @@ export const CompactWithIconRight = {
   },
 } satisfies Story;
 
-export const CompactWithUnderline = {
-  name: 'Compact With Underline (A1 delvis, A3)',
+export const SmallWithIconRight = {
+  name: 'Small With Icon Right (A1 delvis, A2)',
+  args: {
+    ...defaultArgs,
+    size: 'small',
+    iconPosition: 'right',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+    iconPosition: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const MediumWithIconRight = {
+  name: 'Medium With Icon Right (A1 delvis, A2)',
+  args: {
+    ...defaultArgs,
+    size: 'medium',
+    iconPosition: 'right',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+    iconPosition: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const CompactWithoutUnderline = {
+  name: 'Compact Without Underline (A1 delvis, A3)',
   args: {
     ...defaultArgs,
     variant: 'compact',
-    showUnderline: true,
+    showUnderline: false,
   },
   argTypes: {
     variant: { table: { disable: false } },
@@ -260,16 +312,72 @@ export const CompactWithUnderline = {
   },
 } satisfies Story;
 
-export const CompactWithIconRightAndUnderline = {
-  name: 'Compact With Icon Right And Underline (A1 delvis, A2, A3)',
+export const SmallWithoutUnderline = {
+  name: 'Small Without Underline (A1 delvis, A3)',
+  args: {
+    ...defaultArgs,
+    size: 'small',
+    showUnderline: false,
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+    showUnderline: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const MediumWithoutUnderline = {
+  name: 'Medium Without Underline (A1 delvis, A3)',
+  args: {
+    ...defaultArgs,
+    size: 'medium',
+    showUnderline: false,
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+    showUnderline: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const CompactWithIconRightAndNoUnderline = {
+  name: 'Compact With Icon Right And No Underline (A1 delvis, A2, A3)',
   args: {
     ...defaultArgs,
     variant: 'compact',
     iconPosition: 'right',
-    showUnderline: true,
+    showUnderline: false,
   },
   argTypes: {
     variant: { table: { disable: false } },
+    iconPosition: { table: { disable: false } },
+    showUnderline: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const SmallWithIconRightAndNoUnderline = {
+  name: 'Small With Icon Right And No Underline (A1 delvis, A2, A3)',
+  args: {
+    ...defaultArgs,
+    size: 'small',
+    iconPosition: 'right',
+    showUnderline: false,
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+    iconPosition: { table: { disable: false } },
+    showUnderline: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const MediumWithIconRightAndNoUnderline = {
+  name: 'Medium With Icon Right And No Underline (A1 delvis, A2, A3)',
+  args: {
+    ...defaultArgs,
+    size: 'medium',
+    iconPosition: 'right',
+    showUnderline: false,
+  },
+  argTypes: {
+    size: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
     showUnderline: { table: { disable: false } },
   },
@@ -303,6 +411,32 @@ export const CompactAndIsExpanded = {
   argTypes: {
     isExpanded: { table: { disable: false } },
     variant: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const SmallAndIsExpanded = {
+  name: 'With Small And IsExpanded (A4 delvis)',
+  args: {
+    ...defaultArgs,
+    isExpanded: true,
+    size: 'small',
+  },
+  argTypes: {
+    isExpanded: { table: { disable: false } },
+    size: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const MediumAndIsExpanded = {
+  name: 'With Medium And IsExpanded (A4 delvis)',
+  args: {
+    ...defaultArgs,
+    isExpanded: true,
+    size: 'medium',
+  },
+  argTypes: {
+    isExpanded: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
 } satisfies Story;
 
