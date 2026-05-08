@@ -66,6 +66,7 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
         onClose?.();
       }
     },
+    strategy: 'fixed',
     placement: kebabize(position) as UseFloatingReturn['placement'],
     whileElementsMounted: autoUpdate,
     middleware: [
