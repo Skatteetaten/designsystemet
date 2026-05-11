@@ -189,11 +189,13 @@
 }
 
 .list {
+  overflow: hidden;
   max-height: calc(100vh - 100px);
   box-sizing: border-box;
   padding: var(--spacing-xs) 0;
   border: 1px solid var(--palette-graphite-70);
   margin: 0;
+  background-color: var(--palette-graphite-0);
   box-shadow: 3px 2px 5px 0 var(--semantic-divider-30);
   list-style-type: none;
 
