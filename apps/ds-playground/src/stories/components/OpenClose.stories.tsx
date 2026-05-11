@@ -69,9 +69,9 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getOpenCloseVariantDefault() },
-        description:
-          '<strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Bruk <code>size</code> i stedet.',
       },
+      description:
+        '<strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Bruk <code>size</code> i stedet.',
     },
     //Events
     onClick: { ...htmlEventDescription },
