@@ -83,9 +83,7 @@ export const Radio = ({
         className={styles.radioInput}
         data-testid={dataTestId}
         checked={
-          context?.selectedValue === undefined
-            ? undefined
-            : context?.selectedValue === value
+          context?.value === undefined ? undefined : context?.value === value
         }
         defaultChecked={
           context?.defaultValue === undefined

@@ -89,6 +89,9 @@ export interface TextFieldCommonProps
    * Mellomrom eller komma brukes som skilletegn avhengig av språket som er
    * valgt OBS: husk at parsing av tallet må ta høyde for at skilletegn vil være
    * ulikt på norsk og engelsk.
+   *
+   * @deprecated Fjernes i neste major og erstattes av
+   *   [useFormattedInput](https://skatteetaten.github.io/designsystemet/?path=/docs/verkt%C3%B8y-formatters--docs#useformattedinput-hook)
    */
   thousandSeparator?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */

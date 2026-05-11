@@ -41,6 +41,7 @@ const meta = {
     readOnly: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
+    value: { table: { disable: true } },
     selectedValue: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
@@ -75,9 +76,11 @@ const Template: StoryFn<typeof RadioGroup> = (args) => {
     <RadioGroup
       {...args}
       onChange={(e): void => {
-        if (args.selectedValue) {
+        if (args.value !== undefined) {
+          setArgs({ value: e.target.value });
+        } else if (args.selectedValue !== undefined) {
           setArgs({ selectedValue: e.target.value });
-        } else if (args.defaultValue) {
+        } else if (args.defaultValue !== undefined) {
           setArgs({ defaultValue: e.target.value });
         }
       }}
@@ -273,12 +276,35 @@ export const WithSelectedValue = {
   },
 } satisfies Story;
 
+export const WithValue = {
+  render: Template,
+  name: 'With Value (A3)',
+  args: {
+    ...defaultArgs,
+    value: selectedValue,
+    defaultValue: undefined,
+  },
+  argTypes: {
+    value: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByRole('radio', { checked: true });
+
+    await expect(input).toHaveAttribute('value', selectedValue);
+  },
+} satisfies Story;
+
 export const WithDefaultValue = {
   render: Template,
   name: 'With DefaultValue (A3)',
   args: {
     ...defaultArgs,
     selectedValue: undefined,
+    value: undefined,
     defaultValue: selectedValue,
   },
   argTypes: {
@@ -298,7 +324,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
-    selectedValue: selectedValue,
+    value: selectedValue,
     defaultValue: undefined,
     helpText: 'Hjelpeknappen skal også være disabled',
   },
@@ -427,7 +453,7 @@ export const WithErrorMessage = {
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
-    selectedValue: selectedValue,
+    value: selectedValue,
     defaultValue: undefined,
   },
   argTypes: {
@@ -685,7 +711,7 @@ export const ReadOnly = {
   args: {
     ...defaultArgs,
     readOnly: true,
-    selectedValue: selectedValue,
+    value: selectedValue,
     defaultValue: undefined,
     description: 'Dette er en radiogruppe i read only modus',
   },
