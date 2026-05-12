@@ -1,4 +1,12 @@
-import { JSX, ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  JSX,
+  MouseEvent,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -13,8 +21,14 @@ import {
   FloatingFocusManager,
 } from '@floating-ui/react';
 
+import { Link } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { Icon, MenuDownSVGpath, MenuUpSVGpath } from '@skatteetaten/ds-icons';
+import {
+  EarthSVGpath,
+  Icon,
+  MenuDownSVGpath,
+  MenuUpSVGpath,
+} from '@skatteetaten/ds-icons';
 
 import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
 import { ReactComponent as NorwegianFlagIcon } from './Assets/no-flag.svg';
@@ -65,6 +79,7 @@ export const TopBannerLangPicker = (({
   showSami = getTopBannerLangPickerShowSamiDefault(),
   selectedLang: selectedLangExternal,
   additionalLanguages,
+  otherLanguagesURL,
   onLanguageClick,
   openMenu,
   isInMobileMenu,
@@ -101,6 +116,7 @@ export const TopBannerLangPicker = (({
   const { getFloatingProps, getReferenceProps } = interactions;
 
   const menuButtonRefInternal = useRef<HTMLButtonElement>(null);
+  const otherLanguagesLinkRef = useRef<HTMLAnchorElement>(null);
 
   const mergedButtonRef = useMergeRefs([
     refs.setReference,
@@ -131,15 +147,19 @@ export const TopBannerLangPicker = (({
 
     const handleKeyDown = (e: KeyboardEvent): void => {
       const languageLength = Object.keys(languages).length;
-      if (e.key === 'ArrowUp' || (e.key === 'Tab' && e.shiftKey)) {
+      const totalFocusableItems = otherLanguagesURL
+        ? languageLength + 1
+        : languageLength;
+
+      if (e.key === 'ArrowUp') {
         e.preventDefault();
-        setCurrentFocus((currentFocus) =>
-          currentFocus === 0 ? languageLength - 1 : currentFocus - 1
+        setCurrentFocus((prev) =>
+          prev === 0 ? totalFocusableItems - 1 : prev - 1
         );
-      } else if (e.key === 'ArrowDown' || e.key === 'Tab') {
+      } else if (e.key === 'ArrowDown') {
         e.preventDefault();
-        setCurrentFocus((currentFocus) =>
-          currentFocus === languageLength - 1 ? 0 : currentFocus + 1
+        setCurrentFocus((prev) =>
+          prev === totalFocusableItems - 1 ? 0 : prev + 1
         );
       }
     };
@@ -148,11 +168,15 @@ export const TopBannerLangPicker = (({
     return (): void => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isMenuOpen, setOpenMenu, languages]);
+  }, [isMenuOpen, setOpenMenu, languages, otherLanguagesURL]);
 
-  const handleLanguageClick = (
-    e: React.MouseEvent<HTMLButtonElement>
-  ): void => {
+  useEffect(() => {
+    if (currentFocus === Object.keys(languages).length && otherLanguagesURL) {
+      otherLanguagesLinkRef.current?.focus();
+    }
+  }, [currentFocus, languages, otherLanguagesURL]);
+
+  const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
     setSelectedLangInternal(e.currentTarget.lang);
     setOpenMenu('None');
     menuButtonRefInternal?.current?.focus();
@@ -228,13 +252,17 @@ export const TopBannerLangPicker = (({
                       flagIcon={getFlag(language.lang, additionalLanguages)}
                       focus={index === currentFocus}
                       onClick={handleLanguageClick}
+                      onFocus={(): void => {
+                        setCurrentFocus(index);
+                      }}
                       onKeyDown={(e): void => {
                         /* Hvis vi er på første eller siste element stopper vi propagering slik at
                          eventet ikke fanges av eventListener på document og vi får tilbake
                          standard oppførsel på tab og shift-tab. */
                         if (
                           (index === Object.keys(languages).length - 1 &&
-                            e.key === 'Tab') ||
+                            e.key === 'Tab' &&
+                            !otherLanguagesURL) ||
                           (index === 0 && e.shiftKey && e.key === 'Tab')
                         ) {
                           e.stopPropagation();
@@ -246,6 +274,23 @@ export const TopBannerLangPicker = (({
                   </li>
                 );
               })}
+              {otherLanguagesURL && (
+                <li
+                  key={'other-languages'}
+                  className={styles.otherLanguagesLink}
+                  onFocusCapture={(): void => {
+                    setCurrentFocus(Object.keys(languages).length);
+                  }}
+                >
+                  <Link
+                    ref={otherLanguagesLinkRef}
+                    href={otherLanguagesURL}
+                    svgPath={EarthSVGpath}
+                  >
+                    {'See more languages'}
+                  </Link>
+                </li>
+              )}
             </ul>
             <div
               ref={arrowRef}

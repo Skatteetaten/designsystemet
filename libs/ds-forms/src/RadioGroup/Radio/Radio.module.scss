@@ -1,7 +1,5 @@
 @use 'libs/ds-core-utils/src/mixins/styles' as style;
 
-$radio-transform-x: 2px;
-
 .radio {
   display: flex;
   width: fit-content;
@@ -11,9 +9,7 @@ $radio-transform-x: 2px;
   --radio-background-color: var(--semantic-page-background);
   --label-color: var(--semantic-page-foreground);
   --description-color: var(--palette-graphite-70);
-  --border-width: 2px;
-  --outline-width: 2px;
-  --outline-offset: 0;
+  --border-width: 0.125rem;
   --cursor: pointer;
 
   &:has(&Input:disabled) {
@@ -53,13 +49,11 @@ $radio-transform-x: 2px;
   }
 
   &:has(&Input[data-read-only='true']:not(:disabled)) {
-    --radio-outline-color: var(--semantic-disabled-foreground);
-    --radio-border-color: var(--semantic-disabled-foreground);
-    --radio-background-color: var(--semantic-disabled-foreground);
+    --radio-outline-color: var(--semantic-disabled-background);
+    --radio-border-color: var(--semantic-page-background);
+    --radio-background-color: var(--semantic-page-background);
     --label-color: var(--semantic-page-foreground);
     --description-color: var(--palette-graphite-70);
-    --outline-width: 3px;
-    --outline-offset: -1px;
     --cursor: default;
 
     pointer-events: none;
@@ -79,9 +73,10 @@ $radio-transform-x: 2px;
   }
 
   &:has(&Input[data-read-only='true']:checked:not(:disabled)) {
+    --radio-outline-color: var(--semantic-disabled-foreground);
     --radio-border-color: var(--semantic-disabled-foreground);
     --radio-background-color: var(--semantic-page-background);
-    --border-width: 5px;
+    --border-width: 0.3125rem;
   }
 
   &Input {
@@ -93,23 +88,19 @@ $radio-transform-x: 2px;
     border-radius: 50%;
     appearance: none;
     background-color: var(--radio-background-color);
+    box-shadow: 0 0 0 0.125rem var(--radio-outline-color);
     cursor: var(--cursor);
-    outline: var(--outline-width) solid var(--radio-outline-color);
-    outline-offset: var(--outline-offset);
-    transform: translate($radio-transform-x, 8px);
+    transform: translate(0.125rem, 0.5rem);
 
-    &:focus:not(:disabled)::before {
-      position: absolute;
-      border: 2px solid var(--semantic-interactive-main);
-      border-radius: 50%;
-      content: '';
-      inset: calc(-1 * 6px - var(--border-width));
+    &:focus:not(:disabled) {
+      outline: 0.125rem solid var(--semantic-interactive-main);
+      outline-offset: 0.25rem;
     }
   }
 
   &Label {
     padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs)
-      calc($radio-transform-x + 2px + var(--spacing-s));
+      var(--spacing-s-plus);
     color: var(--label-color);
     cursor: var(--cursor);
     font-size: var(--font-size-m);

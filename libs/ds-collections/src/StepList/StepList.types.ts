@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -10,6 +10,6 @@ export interface StepListProps extends BaseProps {
   children?: ReactNode;
 }
 
-export interface StepListComponent extends React.FC<StepListProps> {
+export interface StepListComponent extends FunctionComponent<StepListProps> {
   Step: typeof StepListStep;
 }

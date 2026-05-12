@@ -33,6 +33,7 @@ export const RadioGroup = (({
   helpSvgPath,
   helpText,
   legend,
+  value,
   selectedValue,
   titleHelpSvg,
   variant = getRadioGroupVariantDefault(),
@@ -56,6 +57,7 @@ export const RadioGroup = (({
   const errorId = `radioErrorId-${useId()}`;
   const uniqueNameId = `radioInputName-${useId()}`;
   const nameId = name ?? uniqueNameId;
+  const controlledValue = value ?? selectedValue;
 
   const variantClassName =
     variant === 'horizontal'
@@ -101,7 +103,7 @@ export const RadioGroup = (({
       classNames={{
         ...classNames,
         contentContainer:
-          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer}`.trim(),
+          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer ?? ''}`.trim(),
       }}
       lang={lang}
       data-testid={dataTestId}
@@ -123,7 +125,7 @@ export const RadioGroup = (({
           value={{
             defaultValue,
             errorId: errorMessage ? errorId : '',
-            selectedValue,
+            value: controlledValue,
             name: nameId,
             hasError: !!errorMessage,
             readOnly,

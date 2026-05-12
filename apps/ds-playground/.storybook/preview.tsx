@@ -173,6 +173,11 @@ const Spacing = [
   { title: 'Off', value: 'no-spacing' },
 ];
 
+const ScreenReaderText = [
+  { title: 'Hidden', value: 'hidden' },
+  { title: 'Visible', value: 'visible' },
+];
+
 const clearStyles = (element: HTMLElement): void => {
   for (const className of Object.values(Spacing)) {
     element.classList.remove(className.value);
@@ -192,6 +197,17 @@ const SpacingUpdater: Decorator = (Story, context) => {
       clearStyles(body);
     };
   }, [context.globals.spacing]);
+  return <Story />;
+};
+
+const ScreenReaderTextUpdater: Decorator = (Story, context) => {
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.setAttribute('data-sr-only', context.globals.screenReaderText);
+    return (): void => {
+      root.removeAttribute('data-sr-only');
+    };
+  }, [context.globals.screenReaderText]);
   return <Story />;
 };
 
@@ -215,6 +231,16 @@ const globalTypes = {
       items: Spacing,
     },
   },
+  screenReaderText: {
+    name: 'Screen Reader Text',
+    description: 'Show or hide text styled with srOnly',
+    defaultValue: ScreenReaderText[0].value,
+    toolbar: {
+      title: 'SR text',
+      icon: 'accessibility',
+      items: ScreenReaderText,
+    },
+  },
 } satisfies Preview['globalTypes'];
 
 const preview = {
@@ -224,6 +250,7 @@ const preview = {
     testBlock,
     mockDate,
     SpacingUpdater,
+    ScreenReaderTextUpdater,
   ],
   parameters,
   globalTypes,

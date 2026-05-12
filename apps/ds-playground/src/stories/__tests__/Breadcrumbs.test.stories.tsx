@@ -161,9 +161,7 @@ export const WithCollapse = {
 export const WithAriaLabel = {
   name: 'With AriaLabel (B1)',
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   render: WithoutCollapseTemplate,
   play: async ({ canvasElement }): Promise<void> => {

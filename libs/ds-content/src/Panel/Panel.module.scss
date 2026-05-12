@@ -1,7 +1,7 @@
 @use 'libs/ds-core-utils/src/mixins/styles';
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
-$border-outline: 6px;
+$border-outline: 0.375rem;
 
 .panel {
   --variant-outline-color: var(--palette-ochre-50);

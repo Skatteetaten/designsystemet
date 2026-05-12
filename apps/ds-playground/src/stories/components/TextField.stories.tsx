@@ -1,4 +1,11 @@
-import { useState, ChangeEvent, FocusEvent, JSX } from 'react';
+import {
+  useState,
+  ChangeEvent,
+  FocusEvent,
+  JSX,
+  ChangeEventHandler,
+  FocusEventHandler,
+} from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
@@ -54,7 +61,11 @@ const meta = {
       description:
         'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
     },
-    thousandSeparator: { table: { category: category.props } },
+    thousandSeparator: {
+      table: { category: category.props },
+      description:
+        '<strong>Deprecated:</strong> Prop skal fjernes i neste major versjon.',
+    },
     titleHelpSvg: {
       table: {
         category: category.props,
@@ -202,12 +213,12 @@ export const WithTimeInput: Story = {
       return `${HH}:${MM}`;
     };
 
-    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
       setErrorMessage('');
       setTimeValue(e.target.value);
     };
 
-    const handleBlur: React.FocusEventHandler<HTMLInputElement> = (e) => {
+    const handleBlur: FocusEventHandler<HTMLInputElement> = (e) => {
       const raw = e.currentTarget.value.trim();
       const formatted = formatTimeOnBlur(raw);
       const isValid = /^([01]?\d|2[0-3]):([0-5]\d)$/.test(formatted);

@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { BaseProps, Size, Weight } from '@skatteetaten/ds-core-utils';
 
@@ -34,6 +34,6 @@ export interface DescriptionListCommonProps extends BaseProps {
 export type DescriptionListProps = DescriptionListCommonProps;
 
 export interface DescriptionListComponent
-  extends React.FC<DescriptionListProps> {
+  extends FunctionComponent<DescriptionListProps> {
   Element: typeof DescriptionListElement;
 }

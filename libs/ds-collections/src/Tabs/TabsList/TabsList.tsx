@@ -51,14 +51,15 @@ export const TabsList = (({
   children,
 }: TabsListProps): JSX.Element => {
   const { isMultiline, ...context } = useContext(TabsContext);
-  const multilineClassName = isMultiline ? styles.tabList_multiline : '';
+
   return (
     <div
       ref={ref}
       id={id}
-      className={`${styles.tabList} ${multilineClassName} ${className}`.trim()}
+      className={`${styles.tabList} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-multiline={isMultiline ? 'true' : undefined}
       role={'tablist'}
       tabIndex={-1}
       aria-label={ariaLabel}

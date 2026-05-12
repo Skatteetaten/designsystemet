@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  FunctionComponent,
   ReactNode,
   Ref,
 } from 'react';
@@ -83,6 +84,6 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
 
 export type SelectProps = SelectCommonProps & FormRequiredProps;
 
-export interface SelectComponent extends React.FC<SelectProps> {
+export interface SelectComponent extends FunctionComponent<SelectProps> {
   Option: typeof SelectOption;
 }

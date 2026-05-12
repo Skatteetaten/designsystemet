@@ -93,6 +93,7 @@ export const WithAttributes = {
     a11y: {
       test: 'off',
     },
+    imageSnaphot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -183,7 +184,7 @@ export const WithOnClick = {
     }),
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

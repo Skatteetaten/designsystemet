@@ -14,11 +14,10 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
   getDatePickerPlaceholderDefault,
-  TextField,
 } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -138,6 +137,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
+    imageSnapshot: { disableSnapshot: true },
     a11y: {
       test: 'off',
     },
@@ -170,6 +170,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -226,6 +229,25 @@ export const Defaults = {
       '[id^=datepickerErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const DefaultsWithOpenCalendar = {
+  name: 'Defaults With Open Calendar',
+  args: {
+    ...defaultArgs,
+  },
+  argTypes: {
+    label: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button');
+    await fireEvent.click(calendarButton);
   },
 } satisfies Story;
 
@@ -559,6 +581,9 @@ export const WithInitialPickerDate = {
   argTypes: {
     initialPickerDate: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarButton = canvas.getByRole('button', {
@@ -823,30 +848,6 @@ export const OpenCalendarEscape = {
   },
 } satisfies Story;
 
-const MovesOverTemplate: StoryFn<typeof DatePicker> = (args) => {
-  return (
-    <>
-      <DatePicker {...args} />
-      <TextField label={'Organisasjonsnummer'} />
-    </>
-  );
-};
-
-export const OpenCalendarMovesOver = {
-  render: MovesOverTemplate,
-  name: 'Open Calendar Moves Over (Kalender A1 delvis)',
-  args: {
-    ...defaultArgs,
-    value: valueDate,
-    hasSpacing: true,
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const calendarButton = canvas.getByRole('button');
-    await fireEvent.click(calendarButton);
-  },
-} satisfies Story;
-
 export const WithShadowDom = {
   name: 'With ShadowDom',
   args: {
@@ -894,9 +895,7 @@ export const WithHelpToggleEvent = {
     },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -1015,5 +1014,46 @@ export const TabNavigationWithAllDatesDisabled = {
     await waitFor(() => {
       expect(calendarButton).toHaveFocus();
     });
+  },
+} satisfies Story;
+
+const TemplateWithScrollableContainer: StoryFn<typeof DatePicker> = (args) => (
+  <div className={'flex gapS'}>
+    <aside className={'container-aside'}>
+      <p>
+        {
+          'Denne historien er laget for å teste rød ramme i kantlinjen når det er en feilmelding. I tillegg tester vi om kalenderen åpner seg direkte under inputfeltet. For å teste dette, åpne kalenderen og sjekk at den åpner seg under inputfeltet. Rull ned og opp for å se kalenderen forbli i riktig posisjon.'
+        }
+      </p>
+      {Array.from({ length: 8 }, (_, i) => (
+        <p key={i}>{loremIpsum}</p>
+      ))}
+    </aside>
+    <main className={'container-main'}>
+      <p>{loremIpsum}</p>
+      <DatePicker {...args} />
+      <p>{loremIpsum}</p>
+    </main>
+  </div>
+);
+
+export const WithScrollableContainer = {
+  render: TemplateWithScrollableContainer,
+  name: 'Inside Scrollable Container',
+  args: {
+    ...defaultArgs,
+    errorMessage: 'Error',
+  },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+
+    await fireEvent.click(calendarButton);
   },
 } satisfies Story;

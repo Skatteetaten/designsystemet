@@ -1,4 +1,4 @@
-import { createRef } from 'react';
+import { createRef, RefObject } from 'react';
 
 import type { ComboboxOption } from '../../Combobox.types';
 import {
@@ -29,9 +29,36 @@ describe('combobox-utils', () => {
       expect(result).toEqual(mockOptions);
     });
 
-    it('Når searchTerm matcher noen options, så filtrerer den riktig (A5)', () => {
+    it('Når searchTerm matcher options som starter med søket, så vises de før andre treff (A5)', () => {
       const result = filterOptions(mockOptions, 'a');
-      expect(result).toEqual([{ label: 'Apple', value: 'apple' }]);
+      expect(result).toEqual([
+        { label: 'Apple', value: 'apple' },
+        { label: 'Banana', value: 'banana' },
+        { label: 'Date', value: 'date' },
+      ]);
+    });
+
+    it('Når searchTerm matcher inni label, så returnerer den også includes-treff etter startsWith-treff', () => {
+      const result = filterOptions(mockOptions, 'an');
+      expect(result).toEqual([{ label: 'Banana', value: 'banana' }]);
+    });
+
+    it('Når searchTerm matcher både startsWith og includes, så sorteres startsWith først', () => {
+      const mixedMatchOptions: ComboboxOption[] = [
+        { label: 'Banana', value: 'banana' },
+        { label: 'Cranberry', value: 'cranberry' },
+        { label: 'Ananas', value: 'ananas' },
+        { label: 'Mango', value: 'mango' },
+      ];
+
+      const result = filterOptions(mixedMatchOptions, 'an');
+
+      expect(result).toEqual([
+        { label: 'Ananas', value: 'ananas' },
+        { label: 'Banana', value: 'banana' },
+        { label: 'Cranberry', value: 'cranberry' },
+        { label: 'Mango', value: 'mango' },
+      ]);
     });
 
     it('Når searchTerm er case-insensitive, så filtrerer den riktig (A5)', () => {
@@ -44,9 +71,13 @@ describe('combobox-utils', () => {
       expect(result).toEqual([]);
     });
 
-    it('Når multiple er true, så returnerer den alle options uavhengig av selectedValues', () => {
+    it('Når søket gir både startsWith- og includes-treff, så beholdes den rangerte rekkefølgen', () => {
       const result = filterOptions(mockOptions, 'a');
-      expect(result).toEqual([{ label: 'Apple', value: 'apple' }]);
+      expect(result).toEqual([
+        { label: 'Apple', value: 'apple' },
+        { label: 'Banana', value: 'banana' },
+        { label: 'Date', value: 'date' },
+      ]);
     });
   });
 
@@ -142,7 +173,7 @@ describe('combobox-utils', () => {
     let mockOnSelectionChange: ReturnType<
       typeof vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>
     >;
-    let mockInputRef: React.RefObject<HTMLInputElement | null>;
+    let mockInputRef: RefObject<HTMLInputElement | null>;
 
     beforeEach(() => {
       mockSetSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();

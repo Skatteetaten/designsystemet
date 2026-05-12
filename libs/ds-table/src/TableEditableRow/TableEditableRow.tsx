@@ -8,10 +8,7 @@ import { TableEditableRowProps } from './TableEditableRow.types';
 import { getTableRowExpandButtonPositionDefault } from '../Table/defaults';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
-import {
-  RowWithLeftSideExpandButton,
-  RowWithRightSideExpandButton,
-} from '../TableRowWithIconButton/TableRowWithIconButton';
+import { TableRowWithIconButton } from '../TableRowWithIconButton/TableRowWithIconButton';
 
 import styles from './TableEditableRow.module.scss';
 
@@ -63,19 +60,15 @@ export const TableEditableRow = ({
     }, 0);
   };
 
-  const Tag =
-    editButtonPosition === 'left'
-      ? RowWithLeftSideExpandButton
-      : RowWithRightSideExpandButton;
-
   return (
-    <Tag
+    <TableRowWithIconButton
       ref={rowWithButtonRef}
       id={id}
       lang={lang}
       className={concatenatedClassNames}
       data-testid={dataTestId}
       classNames={{ expandedContent: styles.expandableContent }}
+      buttonPosition={editButtonPosition}
       isExpandButtonDisabled={!!context?.rowInEditModeId}
       isExpanded={isExpanded}
       rowType={'edit'}
@@ -125,7 +118,7 @@ export const TableEditableRow = ({
       }}
     >
       {children}
-    </Tag>
+    </TableRowWithIconButton>
   );
 };
 

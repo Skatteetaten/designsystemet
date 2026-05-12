@@ -1,0 +1,27 @@
+.mainContent {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: var(--spacing-xl) auto;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  margin: 0 auto;
+}
+
+.heading {
+  margin-bottom: var(--spacing-xl);
+}
+
+.label {
+  display: block;
+  color: var(--palette-graphite-70);
+  font-size: initial;
+  font-weight: initial;
+}
+
+.openClose {
+  padding-top: var(--spacing-s);
+}

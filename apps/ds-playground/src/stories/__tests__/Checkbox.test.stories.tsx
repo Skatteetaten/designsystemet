@@ -350,7 +350,7 @@ export const WithRequiredAndChecked = {
     required: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -27,7 +27,7 @@ export default {
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
-
+    hideOutline: { table: { category: category.props } },
     //HTML
     title: { table: { category: category.htmlAttribute } },
     //Aria

@@ -21,8 +21,7 @@ export interface ExpandableRowProps extends BaseProps {
   /**
    * Innholdet som vises når raden er utvidet. Hvis det ekspanderte innholdet
    * skal være flere tabellrader som skal aligneres med resten av tabellen så må
-   * radene ikke wrappes i React.Fragment, i stedet kan de sendes inn som
-   * array.
+   * radene ikke wrappes i et Fragment, i stedet kan de sendes inn som array.
    */
   expandableContent?: ReactNode;
   /** Om utvidelsesknappen skal ha synlig tekst. */
@@ -45,6 +44,7 @@ export interface ExpandableRowProps extends BaseProps {
   isExpanded?: boolean;
   /** Innholdet i raden. Bruk Table.DataCell for celler. */
   children?: ReactNode;
+  buttonPosition?: 'left' | 'right';
   classNames?: { expandedContent?: string };
   context: TableContextProps | null;
   svgPath: ReactElement<SVGPathElement>;

@@ -1,4 +1,4 @@
-import { PropsWithChildren, JSX } from 'react';
+import { PropsWithChildren, JSX, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -8,7 +8,7 @@ export const TableHeader = ({
   ...baseProps
 }: BaseProps &
   PropsWithChildren & {
-    ref?: React.Ref<HTMLTableSectionElement>;
+    ref?: Ref<HTMLTableSectionElement>;
   }): JSX.Element => (
   <thead ref={ref} {...baseProps}>
     {children}

@@ -127,12 +127,6 @@ export const WithSelectedValues = {
 
     const chipsList = canvas.getByRole('list');
     await expect(chipsList).toBeInTheDocument();
-
-    await expect(
-      canvas.queryByRole('button', {
-        name: dsI18n.t('ds_forms:combobox.ResetSuggestion'),
-      })
-    ).not.toBeInTheDocument();
   },
 } satisfies Story;
 

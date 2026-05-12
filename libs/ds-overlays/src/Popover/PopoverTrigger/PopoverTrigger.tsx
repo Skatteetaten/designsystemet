@@ -20,12 +20,12 @@ export const PopoverTrigger = ({
   ariaDescribedby,
   size,
   svgPath,
+  hideOutline,
   onClick,
   onBlur,
   onFocus,
 }: PopoverTriggerProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
-
   const titleHelpIcon = title ?? t('shared.Help');
 
   const { floatingData, setIsOpen, isOpen } = useContext(PopoverContext);
@@ -44,7 +44,7 @@ export const PopoverTrigger = ({
       size={size}
       ariaDescribedby={ariaDescribedby}
       ariaExpanded={isOpen}
-      isOutlined
+      isOutlined={!hideOutline}
       onClick={(event): void => {
         onClick?.(event);
         setIsOpen(!isOpen);

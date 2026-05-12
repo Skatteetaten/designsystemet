@@ -39,7 +39,6 @@ export default [
   {
     files: ['**/*.stories.tsx'],
     rules: {
-      'jest/no-standalone-expect': 'off',
       //'sonarjs/no-identical-functions': 'off',
       /* CSF-3 render() funksjoner oppdages ikke som react-komponenter */
       'react-hooks/rules-of-hooks': 'off',

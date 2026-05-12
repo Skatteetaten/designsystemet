@@ -1,4 +1,10 @@
-import { MouseEventHandler, ReactNode, Ref, RefObject } from 'react';
+import {
+  FunctionComponent,
+  MouseEventHandler,
+  ReactNode,
+  Ref,
+  RefObject,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { SearchFieldProps } from '@skatteetaten/ds-forms';
@@ -109,9 +115,14 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
   logo?: TopBannerLogoProps;
   /** Legger til flere alternativer i språkvelgeren. */
   additionalLanguages?: TopBannerLangPickerProps['additionalLanguages'];
+  /**
+   * Lenke til samleside med innhold på andre språk. Vises nederst i
+   * språkmenyen.
+   */
+  otherLanguagesURL?: string;
 }
 export interface TopBannerExternalComponent
-  extends React.FC<TopBannerExternalProps> {
+  extends FunctionComponent<TopBannerExternalProps> {
   UserMenu: typeof TopBannerExternalUserMenu;
 }
 

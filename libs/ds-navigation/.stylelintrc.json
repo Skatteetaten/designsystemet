@@ -4,7 +4,10 @@
   "overrides": [
     {
       "files": ["**/*.css"],
-      "rules": {}
+      "rules": {},
+      "extends": [
+        "../../libs/ds-dev-config/config/designsystem-stylelint-compat.js"
+      ]
     }
   ]
 }

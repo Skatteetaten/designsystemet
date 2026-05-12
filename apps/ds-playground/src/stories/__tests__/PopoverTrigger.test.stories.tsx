@@ -28,6 +28,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    hideOutline: { table: { disable: true } },
     size: { table: { disable: true } },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
@@ -116,9 +117,7 @@ export const WithAriaDescribedby = {
     ariaDescribedby: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('aria-describedby', 'araiDescId'),
 } satisfies Story;
@@ -143,5 +142,15 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
     await userEvent.click(iconButton);
     await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const WithoutOutline = {
+  name: 'Without Outline',
+  args: {
+    hideOutline: true,
+  },
+  argTypes: {
+    hideOutline: { table: { disable: false } },
   },
 } satisfies Story;

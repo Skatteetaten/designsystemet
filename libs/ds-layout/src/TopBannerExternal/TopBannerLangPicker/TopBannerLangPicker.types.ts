@@ -30,11 +30,12 @@ export interface TopBannerLangPickerProps extends BaseProps {
   menuButtonRef?: RefObject<HTMLButtonElement | null>;
   selectedLang?: string;
   additionalLanguages?: AdditionalLanguages;
+  otherLanguagesURL?: string;
   /** Tilpasser langpicker til visning i meny i stedet for topbanner. */
   isInMobileMenu?: boolean;
 }
 
 export interface TopBannerLangPickerComponent
-  extends React.FC<TopBannerLangPickerProps> {
+  extends FunctionComponent<TopBannerLangPickerProps> {
   Button: typeof TopBannerLangPickerButton;
 }

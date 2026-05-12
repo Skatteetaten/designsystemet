@@ -208,15 +208,7 @@ export const DatePicker = ({
     };
   }, [showCalendar]);
 
-  const placeholderValue = placeholder?.trim() === '' ? undefined : placeholder;
-
   const isLarge = variant === 'large';
-  const inputClassName = `${styles.input} ${
-    isLarge ? styles.input_large : ''
-  }`.trim();
-  const calendarButtonClassName = `${styles.calendarButton} ${
-    isLarge ? styles.calendarButton_large : ''
-  }`.trim();
 
   return (
     <div
@@ -247,12 +239,14 @@ export const DatePicker = ({
         <input
           ref={inputRef}
           id={datePickerId}
-          className={inputClassName}
+          className={`${styles.input} ${
+            isLarge ? styles.input_large : ''
+          }`.trim()}
           data-testid={dataTestId}
           autoComplete={autoComplete}
           disabled={disabled}
           name={name}
-          placeholder={placeholderValue}
+          placeholder={placeholder?.trim() === '' ? undefined : placeholder}
           readOnly={readOnly}
           required={required}
           value={inputValue}
@@ -275,7 +269,9 @@ export const DatePicker = ({
           <button
             ref={calenderButtonRef}
             type={'button'}
-            className={calendarButtonClassName}
+            className={`${styles.calendarButton} ${
+              isLarge ? styles.calendarButton_large : ''
+            }`.trim()}
             disabled={disabled}
             aria-expanded={showCalendar}
             onClick={(): void => {

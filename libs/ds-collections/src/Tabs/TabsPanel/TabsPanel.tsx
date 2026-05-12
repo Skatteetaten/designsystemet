@@ -20,9 +20,6 @@ export const TabsPanel = ({
 }: TabsPanelProps): JSX.Element | null => {
   const { activeTab, baseId } = useContext(TabsContext);
   const isActive = activeTab === value;
-  const panelClassName = `${styles.panel} ${
-    isActive ? styles.panel_active : ''
-  }`.trim();
 
   if (!valueRegex.test(value)) {
     throw new Error('Value kan kun inneholde tegn som er gyldig i en html id.');
@@ -36,9 +33,10 @@ export const TabsPanel = ({
     <div
       ref={ref}
       id={`ds-tab-panel-${baseId}-${value}`}
-      className={`${panelClassName} ${className}`.trim()}
+      className={`${styles.panel} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-active={isActive ? 'true' : undefined}
       role={'tabpanel'}
       aria-labelledby={`ds-tab-id-${baseId}-${value}`}
       hidden={keepMounted ? !isActive : undefined}

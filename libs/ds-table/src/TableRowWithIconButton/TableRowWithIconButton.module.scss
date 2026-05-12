@@ -4,8 +4,8 @@
   padding: var(--spacing-xs);
 
   &_small {
-    padding: var(--spacing-xs) var(--spacing-s)
-      calc(var(--spacing-xs) - var(--table-cell-border-width)) var(--spacing-s);
+    padding: calc(var(--spacing-xxs) - var(--table-cell-border-width))
+      var(--spacing-s);
   }
 
   &_medium {
@@ -50,7 +50,7 @@
 }
 
 .expandableLeftContent {
-  padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
+  padding: var(--spacing-m) var(--spacing-l) var(--spacing-l); // denne skal også gjelde for right content. fiks i neste major 3.0.0.
 }
 
 .expandedRow {

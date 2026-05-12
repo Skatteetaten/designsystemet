@@ -2,6 +2,7 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  FunctionComponent,
   ReactNode,
   Ref,
 } from 'react';
@@ -22,7 +23,7 @@ export interface RadioGroupContextProps {
   defaultValue?: string | number;
   errorId?: string;
   name: string;
-  selectedValue?: string | number;
+  value?: string | number;
   hasError?: boolean;
   readOnly?: boolean;
   required?: boolean;
@@ -95,6 +96,11 @@ interface RadioGroupComponentCommonProps
 type RadioGroupDiscriminatedCheckedProps =
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
+      value?: string | number;
+      /**
+       * @deprecated Prop skal fjernes ved lansering av neste major versjon.
+       *   Bruk `value` i stedet.
+       */
       selectedValue?: string | number;
       /**
        * Hvilke value som skal være satt til default checked (uncontrolled
@@ -104,6 +110,7 @@ type RadioGroupDiscriminatedCheckedProps =
     }
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
+      value?: never;
       selectedValue?: never;
       /**
        * Hvilke value som skal være satt til default checked (uncontrolled
@@ -116,6 +123,7 @@ export type RadioGroupProps = RadioGroupComponentCommonProps &
   FormRequiredProps &
   RadioGroupDiscriminatedCheckedProps;
 
-export interface RadioGroupComponent extends React.FC<RadioGroupProps> {
+export interface RadioGroupComponent
+  extends FunctionComponent<RadioGroupProps> {
   Radio: typeof Radio;
 }

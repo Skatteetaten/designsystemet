@@ -1,4 +1,10 @@
-import type { ComponentPropsWithoutRef, Ref, RefObject } from 'react';
+import type {
+  ComponentPropsWithoutRef,
+  FunctionComponent,
+  MouseEvent,
+  Ref,
+  RefObject,
+} from 'react';
 
 import type { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
@@ -42,6 +48,7 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
     {
       container?: string;
       options?: string;
+      inputContainer?: string;
       inputList?: string;
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
@@ -131,7 +138,7 @@ interface MultiComboboxProps extends ComboboxCommonProps {
 
 export type ComboboxProps = SingleComboboxProps | MultiComboboxProps;
 
-export type ComboboxComponent = React.FC<ComboboxProps>;
+export type ComboboxComponent = FunctionComponent<ComboboxProps>;
 
 export type ComboboxSelectedOptionsProps = {
   className?: string;
@@ -177,10 +184,7 @@ export type LoadingMessageProps = {
 
 export type ComboboxButtonProps = {
   isOpen: boolean;
-  onClick: (e?: React.MouseEvent) => void;
-  hasValue?: boolean;
-  onClear?: () => void;
-  multiple?: boolean;
+  onClick: (e?: MouseEvent) => void;
   disabled?: boolean;
   variant?: ComboboxSize;
 };

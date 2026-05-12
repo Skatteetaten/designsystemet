@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode, Ref } from 'react';
+import { FunctionComponent, MouseEventHandler, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -50,6 +50,6 @@ export interface TopBannerInternalProps extends BaseProps {
 }
 
 export interface TopBannerInternalComponent
-  extends React.FC<TopBannerInternalProps> {
+  extends FunctionComponent<TopBannerInternalProps> {
   ActionMenu: typeof TopBannerInternalActionMenu;
 }

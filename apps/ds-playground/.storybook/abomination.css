@@ -96,3 +96,11 @@
     z-index: 9999;
   }
 }
+
+.false,
+.true,
+.undefined,
+.null {
+  --note: '🚫 don‘t use boolean or null values as classNames';
+  outline: 2px solid var(--semantic-danger-foreground);
+}
