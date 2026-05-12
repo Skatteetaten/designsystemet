@@ -189,7 +189,7 @@
 }
 
 .list {
-  overflow: hidden;
+  overflow: hidden auto;
   max-height: calc(100vh - 100px);
   box-sizing: border-box;
   padding: var(--spacing-xs) 0;
