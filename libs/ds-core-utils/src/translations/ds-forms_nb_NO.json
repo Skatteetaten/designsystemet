@@ -67,5 +67,6 @@
   "searchfield.Focus": "Bruk piltaster ned/opp for å velge forslag når de vises",
   "searchfield.NumberOfResults": "{{ant}} forslag vises.",
   "textarea.CharactersLeft": "{{ant}} tegn igjen",
-  "textarea.TooManyCharacters": "{{ant}} tegn for mye"
+  "textarea.TooManyCharacters": "{{ant}} tegn for mye",
+  "textarea.TotalCharactersLimit": "Du kan skrive inn opptil {{ant}} tegn"
 }

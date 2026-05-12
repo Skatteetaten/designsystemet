@@ -66,5 +66,6 @@
   "searchfield.Focus": "Geavat vulos/bajás boaluid válljet evttohusaid",
   "searchfield.NumberOfResults": "{{ant}} evttohus/evttohusat.",
   "textarea.CharactersLeft": "{{ant}} mearkka liiggás",
-  "textarea.TooManyCharacters": "{{ant}} mearkka badjelmeare"
+  "textarea.TooManyCharacters": "{{ant}} mearkka badjelmeare",
+  "textarea.TotalCharactersLimit": "Du kan skrive inn opptil {{ant}} tegn"
 }

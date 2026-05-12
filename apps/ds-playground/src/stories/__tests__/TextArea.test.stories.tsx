@@ -5,6 +5,7 @@ import { useArgs } from 'storybook/preview-api';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextArea, TextAreaProps } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Alert } from '@skatteetaten/ds-status';
@@ -767,6 +768,32 @@ export const WithCharacterLimit = {
   },
   argTypes: {
     characterLimit: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithCharacterLimitAriaStaticText = {
+  name: 'With CharacterLimit Aria Static Text',
+  render: TemplateWithCharacterCounter,
+  args: {
+    ...defaultArgs,
+    characterLimit: 50,
+  },
+  argTypes: {
+    characterLimit: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textArea = canvas.getByRole('textbox');
+
+    const staticSRText = canvas.getByText(
+      dsI18n.t('ds_forms:textarea.TotalCharactersLimit', { ant: 50 })
+    );
+    expect(staticSRText).toBeInTheDocument();
+    await userEvent.type(textArea, 'Dette er en kort tekst.');
+    expect(staticSRText).toBeInTheDocument();
   },
 } satisfies Story;
 

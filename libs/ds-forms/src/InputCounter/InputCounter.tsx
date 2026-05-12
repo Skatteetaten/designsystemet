@@ -77,7 +77,10 @@ export const InputCounter = ({
       <div className={concatenatedClassName} aria-hidden>
         {label}
       </div>
-      <span id={id} className={styles.srOnly} aria-live={'polite'}>
+      <span id={id} className={styles.srOnly}>
+        {t('textarea.TotalCharactersLimit', { ant: characterLimit })}
+      </span>
+      <span className={styles.srOnly} aria-live={'polite'}>
         {screenReaderLabel}
       </span>
     </>
