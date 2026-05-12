@@ -88,8 +88,11 @@
   }
 
   &:has(
-    &Input[aria-invalid='true']:required:not([data-read-only='true'], :disabled)
-  ) {
+      &Input[aria-invalid='true']:required:not(
+          [data-read-only='true'],
+          :disabled
+        )
+    ) {
     background-color: var(--semantic-danger-background);
     box-shadow: calc(-1 * var(--spacing-xs)) 0 var(--semantic-danger-background);
   }
