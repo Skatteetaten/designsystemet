@@ -152,7 +152,7 @@
     "nx": "22.7.1",
     "nx-stylelint": "18.0.0",
     "nyc": "17.1.0",
-    "playroom": "0.43.1",
+    "playroom": "1.2.2",
     "playwright": "1.55.0",
     "postcss-js": "4.0.1",
     "prettier": "3.4.2",
