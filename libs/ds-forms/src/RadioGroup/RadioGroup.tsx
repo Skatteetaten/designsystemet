@@ -2,7 +2,6 @@ import { useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
 import {
   getCommonClassNameDefault,
-  getHasSpacingDefault,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
@@ -44,7 +43,7 @@ export const RadioGroup = (({
   name,
   readOnly,
   required,
-  hasSpacing = getHasSpacingDefault(),
+  hasSpacing,
   hideLegend,
   showRequiredMark,
   shadowRootNode,
