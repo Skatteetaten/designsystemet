@@ -2,8 +2,11 @@
   // Offset for å justere ikonene til venstre kant (ikon-størrelse + høyre-padding)
   --link-icon-offset: calc(-1 * var(--size-medium) - var(--spacing-s));
 
+  display: flex;
+  flex-direction: column;
   padding-left: calc(-1 * var(--link-icon-offset));
   margin: 0;
+  gap: var(--spacing-s);
   list-style-type: none;
 
   &[data-has-spacing='true'] {
@@ -13,7 +16,6 @@
   &Item {
     position: relative;
     width: fit-content;
-    margin: 0 0 var(--spacing-s);
 
     --icon-color: var(--semantic-interactive-main);
     --transform-icon: translateX(var(--link-icon-offset));
