@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
 import { Canvas } from '@storybook/addon-docs/blocks';
-import { createUrl } from 'playroom/utils';
+import { createUrl } from 'playroom';
 import ts from 'typescript';
 
 const convertReactHooks = (code: string): string => {
