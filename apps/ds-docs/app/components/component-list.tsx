@@ -32,13 +32,14 @@ const rawDocs = browserCollections.docs.raw;
 const componentEntries = Object.keys(rawDocs)
   .map((path) => path.replace(/^\.\//, ''))
   .filter(
-    (path) => path.startsWith('components/') && path !== 'components/index.mdx'
+    (path) =>
+      path.startsWith('komponenter/') && path !== 'komponenter/index.mdx'
   )
   .sort((left, right) => nbCollator.compare(left, right));
 
 const toLabel = (path: string): string =>
   path
-    .replace(/^components\//, '')
+    .replace(/^komponenter\//, '')
     .replace(/\.mdx$/, '')
     .replace(/([a-z])([A-Z])/g, '$1 $2')
     .replace(/([a-zA-Z])(\d)/g, '$1 $2')
@@ -138,34 +139,34 @@ export const ComponentList = (): JSX.Element => {
       <Paragraph variant={'ingress'} hasSpacing>
         {'Komponentene kan brukes både til løsninger for publikum og interne.'}
       </Paragraph>
-      <nav
-        aria-label={'Liste over alle komponentene i designsystemet'}
-        className={styles.nav}
-      >
-        {entries.map((entry) => (
-          <NavigationTile
-            key={entry.url}
-            title={entry.titleWithBreaks}
-            href={entry.url}
-            lang={'nb'}
-            description={
-              entry.icon ? (
-                <img
-                  src={entry.icon}
-                  className={styles.tileIcon}
-                  alt={''}
-                  aria-hidden
-                />
-              ) : undefined
-            }
-            size={'medium'}
-            className={styles.tile}
-            classNames={{
-              title: styles.tileTitle,
-              description: styles.tileDescription,
-            }}
-          />
-        ))}
+      <nav aria-label={'Liste over alle komponenter'}>
+        <ul className={styles.list}>
+          {entries.map((entry) => (
+            <li key={entry.url}>
+              <NavigationTile
+                title={entry.titleWithBreaks}
+                href={entry.url}
+                lang={'nb'}
+                description={
+                  entry.icon ? (
+                    <img
+                      src={entry.icon}
+                      className={styles.tileIcon}
+                      alt={''}
+                      aria-hidden
+                    />
+                  ) : undefined
+                }
+                size={'medium'}
+                className={styles.tile}
+                classNames={{
+                  title: styles.tileTitle,
+                  description: styles.tileDescription,
+                }}
+              />
+            </li>
+          ))}
+        </ul>
       </nav>
     </>
   );

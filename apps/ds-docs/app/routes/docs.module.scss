@@ -1,22 +1,51 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
 
-.mainContentWrapper {
-  display: flex;
+.contentWrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--semantic-responsive-internal-container-spacing);
-  align-items: flex-start;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      'heading nav'
+      'mdx nav';
+  }
 }
 
-.mainContent {
-  flex: 1;
+.headingContent {
+  min-width: 0;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    grid-area: heading;
+  }
 }
 
-.asideContent {
-  display: none;
+.navContent {
+  @include styles.sr-only;
 
   @media (min-width: breakpoints.$breakpoint-m) {
     display: block;
+    overflow: visible;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    white-space: normal;
+    grid-area: nav;
+    align-self: start;
+    justify-self: start;
+    width: max-content;
     position: sticky;
     top: var(--spacing-l);
+  }
+}
+
+.mdxContent {
+  min-width: 0;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    grid-area: mdx;
   }
 }
 
@@ -24,6 +53,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.parentTitle {
+  display: block;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-article);
+  margin-bottom: var(--spacing-m);
 }
 
 .mdxIcon {

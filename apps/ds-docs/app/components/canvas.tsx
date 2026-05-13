@@ -119,10 +119,8 @@ export const Canvas = ({
     !SelectedExampleComponent
   ) {
     return (
-      <div className={styles.wrapper}>
-        <div className={styles.canvas}>
-          <Paragraph>{`Fant ingen eksempler i "${examplesPath}".`}</Paragraph>
-        </div>
+      <div className={styles.canvas}>
+        <Paragraph>{`Fant ingen eksempler i "${examplesPath}".`}</Paragraph>
       </div>
     );
   }

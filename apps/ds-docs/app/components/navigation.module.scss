@@ -1,7 +1,13 @@
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
 .navCard {
   padding: var(--spacing-m);
   border: 1px solid var(--palette-graphite-50);
   box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--palette-denim-5);
+}
+
+.srOnly {
+  @include styles.sr-only;
 }

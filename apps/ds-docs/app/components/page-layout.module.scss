@@ -1,7 +1,10 @@
-.pageWrapper {
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
+.main {
   width: var(--semantic-responsive-container);
   padding: var(--semantic-responsive-container-spacing);
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .pageLayout {
@@ -15,6 +18,10 @@
   width: var(--container-aside-narrow);
 }
 
-.main {
+.section {
   flex: 1;
+}
+
+.srOnly {
+  @include styles.sr-only;
 }

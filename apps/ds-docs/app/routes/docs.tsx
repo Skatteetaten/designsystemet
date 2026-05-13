@@ -98,17 +98,15 @@ const docsContentLoader =
       const tocItems = toc.filter((item) => item.depth === 2) as TocItem[];
 
       return (
-        <div className={styles.mainContentWrapper}>
-          <div className={styles.mainContent}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.headingContent}>
             <title>{frontmatter.title}</title>
             <meta name={'description'} content={frontmatter.description} />
-            {parentTitle && (
-              <Paragraph variant={'ingress'}>
-                <strong>{parentTitle}</strong>
-              </Paragraph>
-            )}
             <div className={styles.headingWrapper}>
-              <Heading as={'h1'} hasSpacing={!frontmatter.icon}>
+              <Heading as={'h2'} level={1} hasSpacing>
+                {parentTitle && (
+                  <span className={styles.parentTitle}>{parentTitle}</span>
+                )}
                 {frontmatter.title}
               </Heading>
               {frontmatter.icon && (
@@ -120,16 +118,17 @@ const docsContentLoader =
                 />
               )}
             </div>
-            <Paragraph variant={'ingress'} hasSpacing>
-              {frontmatter.description}
-            </Paragraph>
-            <div>
-              <Mdx components={getMdxComponents()} />
-            </div>
+            <Paragraph variant={'ingress'}>{frontmatter.description}</Paragraph>
           </div>
+          {/* skjermleser må ha tidlig tilgang til innholdsfortegnelsen */}
           {tocItems.length > 0 && (
-            <aside className={styles.asideContent} aria-label={'Innhold'}>
-              <Heading as={'h4'}>{'Innhold'}</Heading>
+            <nav
+              className={styles.navContent}
+              aria-label={'Innholdsfortegnelse'}
+            >
+              <Heading as={'h2'} level={4}>
+                {'Innhold'}
+              </Heading>
               <LinkGroup variant={'anchors'}>
                 {tocItems.map((item) => (
                   <LinkGroup.Link key={item.url} href={item.url}>
@@ -137,8 +136,11 @@ const docsContentLoader =
                   </LinkGroup.Link>
                 ))}
               </LinkGroup>
-            </aside>
+            </nav>
           )}
+          <div className={styles.mdxContent}>
+            <Mdx components={getMdxComponents()} />
+          </div>
         </div>
       );
     },
