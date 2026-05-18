@@ -8,7 +8,7 @@ declare const classNames: {
   readonly expandButton: 'expandButton';
   readonly expandButton_extraSmall: 'expandButton_extraSmall';
   readonly expandButton_compact: 'expandButton_compact';
-  readonly expandableLeftContent: 'expandableLeftContent';
+  readonly expandedContent: 'expandedContent';
   readonly expandedRow: 'expandedRow';
   readonly row_noBorder: 'row_noBorder';
   readonly hideIcon: 'hideIcon';
