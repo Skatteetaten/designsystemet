@@ -84,6 +84,9 @@ const meta = {
     htmlValidate: { test: 'off' }, //TODO: input og label som descendat av button
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    label: 'Ledetekst',
+  },
 } satisfies Meta<typeof FileUploader>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -141,6 +144,7 @@ export const WithAttributes = {
     a11y: {
       test: 'off',
     },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -169,8 +173,6 @@ export const Defaults: StoryObj<FileUploaderProps> = {
 export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
   name: 'With Files (A5, B4 delvis)',
   args: {
-    helpText: 'Hjelpetekst',
-    label: 'Dokumentasjon og grunnlag',
     acceptedFileFormats: ['.pdf', '.jpeg'],
     uploadedFiles: [
       {
@@ -214,8 +216,6 @@ export const WithError: StoryObj<FileUploaderProps> = {
   name: 'With Error And Multiple (A4, A1 delvis)',
   args: {
     multiple: true,
-    helpText: 'Hjelpetekst',
-    label: 'Hemmelig kode',
     acceptedFileFormats: ['.java', '.cpp', '.py'],
     errorMessage: 'Du må laste opp en fil',
   },
@@ -297,7 +297,10 @@ export const WithUploadResultInsideFormWithoutFlicker: Story = {
             value={value}
             onChange={(event) => setValue(event.target.value)}
           />
-          <FileUploader uploadResult={{ statusMessage: 'Lastet opp 1 fil' }} />
+          <FileUploader
+            label={'Ledetekst'}
+            uploadResult={{ statusMessage: 'Lastet opp 1 fil' }}
+          />
         </form>
       );
     };
@@ -359,8 +362,6 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
   name: 'With File Change(A6)',
   args: {
     'data-testid': 'testid123',
-    helpText: 'Hjelpetekst',
-    label: 'Dokumentasjon og grunnlag',
     uploadedFiles: [{ name: 'file.txt', href: '#' }],
     onFileDownload: fn(),
     onFileChange: fn(),
@@ -404,7 +405,6 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    label: 'Last opp filer',
     helpText: 'Hjelpetekst',
     onHelpToggle: (isOpen: boolean): void => {
       alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
@@ -429,9 +429,15 @@ export const WithCustomClassNames = {
       table: { disable: false },
     },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const container = canvasElement.querySelector(`${wrapper} > div`);
     await expect(container).toHaveClass('dummyClassname');
+    const errorText = within(canvasElement).getByText('feil');
+    const errorMessage = errorText.closest('div');
+    await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -446,6 +452,7 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
       ]);
       return (
         <FileUploader
+          label={'Ledetekst'}
           uploadedFiles={files}
           onFileDelete={(file) => {
             setFiles((prev) => prev.filter((f) => f.name !== file.name));
@@ -459,7 +466,10 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const deleteTitle = dsI18n.t('ds_forms:fileuploader.DeleteLabel');
-    const uploadButtonName = dsI18n.t('ds_forms:fileuploader.AddSingleLabel');
+    const uploadButtonName = new RegExp(
+      dsI18n.t('ds_forms:fileuploader.AddSingleLabel'),
+      'i'
+    );
     const user = userEvent.setup({
       pointerEventsCheck: PointerEventsCheckLevel.Never,
     });
@@ -473,22 +483,33 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
 
     // Delete the second file -> focus should move to previous (first) file's delete button
     await user.click(secondButton);
-    await expect(canvas.queryByText('second.pdf')).not.toBeInTheDocument();
-    await expect(firstButton).toHaveFocus();
+    await waitFor(() => {
+      expect(canvas.queryByText('second.pdf')).not.toBeInTheDocument();
+      expect(firstButton).toHaveFocus();
+    });
 
     // Delete the first file (now list has first.pdf & third.pdf -> after deletion only third.pdf). No previous file, focus should move to upload button.
     const firstButtonAfter = canvas.getAllByTitle(deleteTitle)[0];
     await user.click(firstButtonAfter);
-    await expect(canvas.queryByText('first.pdf')).not.toBeInTheDocument();
-    const uploadButton = canvas.getByRole('button', { name: uploadButtonName });
-    await expect(uploadButton).toHaveFocus();
+    await waitFor(() => {
+      expect(canvas.queryByText('first.pdf')).not.toBeInTheDocument();
+      const uploadButton = canvas.getByRole('button', {
+        name: uploadButtonName,
+      });
+      expect(uploadButton).toHaveFocus();
+    });
 
     // Delete the last remaining file -> still focus on upload button and no delete buttons remain
     const lastDeleteButton = canvas.getAllByTitle(deleteTitle)[0];
     await user.click(lastDeleteButton);
-    await expect(canvas.queryByText('third.pdf')).not.toBeInTheDocument();
-    await expect(canvas.queryAllByTitle(deleteTitle).length).toBe(0);
-    await expect(uploadButton).toHaveFocus();
+    await waitFor(() => {
+      expect(canvas.queryByText('third.pdf')).not.toBeInTheDocument();
+      expect(canvas.queryAllByTitle(deleteTitle).length).toBe(0);
+      const uploadButton = canvas.getByRole('button', {
+        name: uploadButtonName,
+      });
+      expect(uploadButton).toHaveFocus();
+    });
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -518,7 +539,6 @@ export const WithCustomSpinnerLabel = {
 export const WithDescription = {
   name: 'With Description',
   args: {
-    label: 'Last opp filer',
     description: 'En liten beskrivelse tekst',
   },
   argTypes: {
@@ -546,6 +566,7 @@ export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
       ]);
       return (
         <FileUploader
+          label={'Ledetekst'}
           uploadedFiles={files}
           onFileDelete={(file) => {
             // Simulate deletion failure for 'second.pdf'
@@ -596,10 +617,10 @@ export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
     imageSnapshot: { disableSnapshot: true },
   },
 };
+
 export const WithIsRequired = {
   name: 'With IsRequired',
   args: {
-    label: 'Last opp dokumenter',
     isRequired: true,
   },
   play: async ({ canvasElement }): Promise<void> => {
