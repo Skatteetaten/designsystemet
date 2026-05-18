@@ -1,5 +1,3 @@
-@use '../shared';
-
 .dataCell {
   --table-font-size: var(--font-size-m);
 
@@ -30,10 +28,6 @@
       calc(var(--spacing-m) - var(--table-cell-border-width));
   }
 
-  &_standard {
-    @extend %cell-padding;
-  }
-
   &_left {
     text-align: left;
   }
@@ -49,12 +43,6 @@
   &_extraSmall {
     padding: var(--spacing-xs) var(--spacing-s)
       calc(var(--spacing-xs) - var(--table-cell-border-width));
-
-    --table-font-size: var(--font-size-s);
-  }
-
-  &_compact {
-    padding: var(--spacing-xs) var(--spacing-s);
 
     --table-font-size: var(--font-size-s);
   }

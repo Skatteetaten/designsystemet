@@ -48,13 +48,11 @@
 
     &_small,
     &_medium,
-    &_large,
-    &_standard {
+    &_large {
       padding: var(--spacing-s) var(--spacing-m);
     }
 
-    &_extraSmall,
-    &_compact {
+    &_extraSmall {
       padding: 0 var(--spacing-s);
       font-size: var(--font-size-s);
     }
@@ -65,14 +63,12 @@
   }
 
   &_medium,
-  &_large,
-  &_standard {
+  &_large {
     margin-bottom: var(--spacing-l);
   }
 
   &_extraSmall,
-  &_small,
-  &_compact {
+  &_small {
     margin-bottom: var(--spacing-m);
   }
 }

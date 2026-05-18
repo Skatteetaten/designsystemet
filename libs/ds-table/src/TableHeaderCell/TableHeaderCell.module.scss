@@ -1,5 +1,3 @@
-@use '../shared';
-
 .headerCell {
   --text-align: left;
 
@@ -97,14 +95,5 @@
   &_large {
     padding: var(--spacing-m) var(--spacing-m)
       calc(var(--spacing-m) - var(--table-header-border-width));
-  }
-
-  &_standard {
-    @extend %cell-padding;
-  }
-
-  &_compact {
-    padding: var(--spacing-s);
-    font-size: var(--font-size-s);
   }
 }

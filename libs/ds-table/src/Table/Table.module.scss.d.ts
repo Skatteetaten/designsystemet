@@ -6,16 +6,12 @@ declare const classNames: {
   readonly tableCaption_small: 'tableCaption_small';
   readonly tableCaption_medium: 'tableCaption_medium';
   readonly tableCaption_large: 'tableCaption_large';
-  readonly tableCaption_standard: 'tableCaption_standard';
   readonly tableCaption_extraSmall: 'tableCaption_extraSmall';
-  readonly tableCaption_compact: 'tableCaption_compact';
   readonly table_fullWidth: 'table_fullWidth';
   readonly table_medium: 'table_medium';
   readonly table_large: 'table_large';
-  readonly table_standard: 'table_standard';
   readonly table_extraSmall: 'table_extraSmall';
   readonly table_small: 'table_small';
-  readonly table_compact: 'table_compact';
   readonly hidden: 'hidden';
 };
 export default classNames;
