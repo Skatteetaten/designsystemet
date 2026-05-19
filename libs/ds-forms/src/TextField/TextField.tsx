@@ -81,7 +81,7 @@ export const TextField = ({
   useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
   const textboxClassName =
-    `${styles.textbox} $ ${label && !hideLabel ? styles.textboxMarginTop : ''} ${
+    `${styles.textbox} $ ${!hideLabel ? styles.textboxMarginTop : ''} ${
       classNames?.textbox ?? ''
     }`.trim();
 
