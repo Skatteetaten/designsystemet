@@ -41,7 +41,6 @@ export const CheckboxGroup = (({
   form,
   hasSpacing = getHasSpacingDefault(),
   hideLegend,
-  showRequiredMark,
   onHelpToggle,
   children,
 }: CheckboxGroupProps): JSX.Element => {
@@ -64,7 +63,6 @@ export const CheckboxGroup = (({
       form={form}
       legend={legend}
       hideLegend={hideLegend}
-      showRequiredMark={showRequiredMark}
       description={description}
       helpSvgPath={helpSvgPath}
       helpText={helpText}

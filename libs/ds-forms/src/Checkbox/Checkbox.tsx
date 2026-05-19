@@ -1,11 +1,7 @@
 import { useContext, useId, JSX, KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from './Checkbox.types';
 import { CheckboxContext } from '../CheckboxGroup/CheckboxContext';
@@ -40,14 +36,12 @@ export const Checkbox = ({
   ariaDescribedby,
   hasSpacing,
   hideLabel,
-  showRequiredMark,
   onChange,
   onBlur,
   onFocus,
   children,
 }: CheckboxProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const context = useContext(CheckboxContext);
   const errorIdExternal = context?.errorId;
 
@@ -118,11 +112,7 @@ export const Checkbox = ({
             classNames?.label ?? ''
           }`.trim()}
         >
-          <span
-            className={
-              !context && showRequiredMark ? styles.checkboxLabel_required : ''
-            }
-          >
+          <span>
             {children}
             {(readOnly || context?.readOnly) && (
               <span

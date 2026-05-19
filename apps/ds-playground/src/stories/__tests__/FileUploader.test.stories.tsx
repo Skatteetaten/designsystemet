@@ -45,7 +45,6 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     shouldNormalizeFileName: { table: { disable: true } },
     titleHelpSvg: {
       table: {

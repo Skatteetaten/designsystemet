@@ -34,7 +34,6 @@ const meta = {
     },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     disabled: { table: { disable: true } },
@@ -186,42 +185,6 @@ export const WithDescription = {
       selector: ":not([aria-hidden='true'])",
     });
     await expect(descriptionNode).toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const WithShowRequiredMark = {
-  name: 'With ShowRequiredMark (FS-A4)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithShowRequiredMarkAndLegend = {
-  name: 'With ShowRequiredMark And Legend Contains Markup (FS-A4)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h1'} level={3}>
-          {'Dette er en Heading i legend'}
-        </Heading>
-        <Paragraph variant={'ingress'}>
-          <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
-        </Paragraph>
-      </>
-    ),
-    showRequiredMark: true,
-  },
-  argTypes: {
-    legend: {
-      table: { disable: true },
-      control: { disable: true },
-    },
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 
