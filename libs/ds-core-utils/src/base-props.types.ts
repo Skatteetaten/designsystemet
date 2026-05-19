@@ -95,7 +95,3 @@ export const spacingArr = [
   'mega',
 ] as const;
 export type Spacing = (typeof spacingArr)[number];
-
-export interface FormRequiredProps {
-  required?: boolean;
-}

@@ -1,6 +1,4 @@
-import { useCallback, useEffect, useSyncExternalStore } from 'react';
-
-import { FormRequiredProps } from '../base-props.types';
+import { useCallback, useSyncExternalStore } from 'react';
 
 export const useMediaQuery = (query: string): boolean => {
   const subscribe = useCallback(
