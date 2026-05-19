@@ -1,5 +1,6 @@
 .headerCell {
   --text-align: left;
+  --table-header-border-width: 2px;
 
   border-bottom: solid 2px var(--semantic-divider-100);
   font-weight: var(--font-weight-bold);
