@@ -176,7 +176,11 @@ export const TableRowWithIconButton = ({
               className={hideIconButton ? styles.hideIcon : ''}
               svgPath={svgPath}
               title={`${expandButtonTitle} ${expandButtonScreenReaderText ?? ''}`.trim()}
-              size={context?.size === 'small' ? 'medium' : context?.size}
+              size={
+                context?.size === 'extraSmall' || context?.size === 'small'
+                  ? 'medium'
+                  : context?.size
+              }
               ariaDescribedby={expandButtonAriaDescribedby}
               ariaExpanded={iconButtonAriaExpanded}
               disabled={isExpandButtonDisabled}

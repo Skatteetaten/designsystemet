@@ -257,7 +257,6 @@ export const SearchField = ({
     sizeAttribute = 'extraLarge';
   }
   const hasVisibleLabel = !!label && !hideLabel;
-  const clearButtonSize = size === 'medium' ? 'extraSmall' : 'small';
   const resolvedClearButtonTitle =
     clearButtonTitle ?? t('searchfield.ClearButtonTitle');
   const resolvedSearchButtonTitle =
@@ -406,7 +405,7 @@ export const SearchField = ({
           {showClearButton && !disabled && !readOnly && (
             <IconButton
               className={styles.clearButton}
-              size={clearButtonSize}
+              size={'small'}
               svgPath={CancelSVGpath}
               title={resolvedClearButtonTitle}
               onClick={handleClearClick}

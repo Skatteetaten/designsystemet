@@ -57,7 +57,7 @@ export const IconButton = ({
       {!hasSpinner && (
         <Icon
           className={styles.icon}
-          size={size === 'extraSmall' ? 'small' : size}
+          size={size}
           svgPath={svgPath}
           title={title}
         />
@@ -66,7 +66,7 @@ export const IconButton = ({
         <Spinner
           className={styles.spinner}
           color={disabled ? 'black' : 'blue'}
-          size={size === 'extraSmall' ? 'small' : size}
+          size={size}
           hideTitle
         >
           {spinnerTitle}
