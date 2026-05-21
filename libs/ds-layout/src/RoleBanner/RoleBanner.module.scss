@@ -13,7 +13,7 @@
     background-color: var(--palette-graphite-5);
   }
 
-  &[data-scrolled='true'] {
+  &[data-scrolled='true'][data-sticky='true'] {
     max-height: 3.5rem;
 
     .nameWrapper {
