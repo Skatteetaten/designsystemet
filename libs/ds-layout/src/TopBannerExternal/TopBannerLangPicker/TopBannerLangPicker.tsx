@@ -42,6 +42,7 @@ import {
   TopBannerLangPickerProps,
 } from './TopBannerLangPicker.types';
 import { convertLocaleToLang, getCurrentLanguages, isLanguages } from './utils';
+import { topBannerAnalyticsIds } from '../analyticsIds';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerLangPickerButton } from '../TopBannerLangPickerButton/TopBannerLangPickerButton';
 
@@ -202,6 +203,7 @@ export const TopBannerLangPicker = (({
         lang={selectedLang}
         className={`${styles.menuButton} ${isMenuOpen ? styles.menuButton_open : ''} ${isInMobileMenu ? styles.menuButtonDesktopOnly : ''}`}
         ariaExpanded={isMenuOpen}
+        dataWebAnalyticsId={topBannerAnalyticsIds.languageMenu.root}
         onClick={handleMenuClick}
         onKeyDown={(e) => {
           if (e.shiftKey && e.key === 'Tab') {
@@ -249,6 +251,7 @@ export const TopBannerLangPicker = (({
                     <TopBannerLangPicker.Button
                       lang={language.lang}
                       ariaCurrent={language.lang === selectedLang}
+                      dataWebAnalyticsId={language.webAnalyticsId}
                       flagIcon={getFlag(language.lang, additionalLanguages)}
                       focus={index === currentFocus}
                       onClick={handleLanguageClick}

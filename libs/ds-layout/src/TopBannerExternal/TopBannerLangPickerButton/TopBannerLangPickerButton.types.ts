@@ -9,6 +9,8 @@ import {
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { TopBannerLanguageMenuAnalyticsId } from '../analyticsIds';
+
 type RequiredButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
   'onClick' | 'onKeyDown'
@@ -33,4 +35,5 @@ export interface TopBannerLangPickerButtonProps
   flagIcon: ReactNode;
   /** Navn på språket. */
   children: string;
+  dataWebAnalyticsId?: TopBannerLanguageMenuAnalyticsId;
 }

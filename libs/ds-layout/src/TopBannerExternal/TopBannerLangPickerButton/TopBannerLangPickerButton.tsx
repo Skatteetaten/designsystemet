@@ -13,6 +13,7 @@ export const TopBannerLangPickerButton = ({
   className = getCommonClassNameDefault(),
   lang,
   'data-testid': dataTestId,
+  dataWebAnalyticsId,
   flagIcon,
   ariaCurrent,
   focus,
@@ -37,6 +38,7 @@ export const TopBannerLangPickerButton = ({
       className={`${styles.button} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-webanalytics-id={dataWebAnalyticsId}
       aria-current={ariaCurrent}
       type={'button'}
       onClick={onClick}

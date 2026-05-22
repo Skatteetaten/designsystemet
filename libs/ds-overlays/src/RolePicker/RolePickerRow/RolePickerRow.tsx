@@ -14,6 +14,7 @@ export function RolePickerRow({
   description,
   svgPath,
   titleAs,
+  webAnalyticsId,
   onClick,
 }: RolePickerRowProps): JSX.Element {
   const ctx = useContext(RolePickerContext);
@@ -29,7 +30,12 @@ export function RolePickerRow({
   return (
     <div>
       <NavigationTile
-        ref={ref}
+        ref={(node) => {
+          ref.current = node;
+          if (node && webAnalyticsId) {
+            node?.setAttribute('data-webanalytics-id', webAnalyticsId);
+          }
+        }}
         href={'#'}
         className={`${hasError ? styles.withAlert : ''}`}
         titleAs={titleAs ?? 'h3'}
