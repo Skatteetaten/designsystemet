@@ -99,6 +99,11 @@ export interface SelectionBehavior {
    * multi-select: false
    */
   allowToggleOff: boolean;
+  /**
+   * Whether selected single option can be toggled off. Mouse: true, Keyboard:
+   * false
+   */
+  allowSingleToggleOff: boolean;
   /** Whether to reset focus index after selection. Mouse: true, Keyboard: false */
   resetFocusIndex: boolean;
   /** Whether to delay focus return to input. Mouse: true, Keyboard: false */
@@ -120,6 +125,7 @@ export const SELECTION_BEHAVIORS = {
    */
   MOUSE: {
     allowToggleOff: true,
+    allowSingleToggleOff: true,
     resetFocusIndex: true,
     delayedFocus: true,
   },
@@ -129,6 +135,7 @@ export const SELECTION_BEHAVIORS = {
    */
   KEYBOARD: {
     allowToggleOff: true,
+    allowSingleToggleOff: false,
     resetFocusIndex: false,
     delayedFocus: false,
   },
@@ -327,6 +334,7 @@ const selectMultipleOption = (
  * @param config - Configuration object containing state and handlers for
  *   single-select
  * @param config.selectedValues - Currently selected options
+ * @param config.behavior - Selection behavior configuration (mouse vs keyboard)
  * @param config.setSelectedValues - Function to update selected values state
  * @param config.setSearchTerm - Function to update search input state
  * @param config.closeDropdown - Function to close the dropdown
@@ -338,6 +346,7 @@ const selectSingleOption = (
   option: ComboboxOption,
   {
     selectedValues,
+    behavior,
     setSelectedValues,
     setSearchTerm,
     closeDropdown,
@@ -345,6 +354,7 @@ const selectSingleOption = (
     inputRef,
     onSelectionChange,
   }: {
+    behavior: SelectionBehavior;
     selectedValues: ComboboxOption[];
     setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
@@ -358,7 +368,7 @@ const selectSingleOption = (
     (selected) => selected.value === option.value
   );
 
-  if (isAlreadySelected) {
+  if (isAlreadySelected && behavior.allowSingleToggleOff) {
     setSelectedValues([]);
     setSearchTerm('');
     closeDropdown();
@@ -446,6 +456,7 @@ export const selectOption = (
     });
   } else {
     selectSingleOption(option, {
+      behavior,
       selectedValues,
       setSelectedValues,
       setSearchTerm,
