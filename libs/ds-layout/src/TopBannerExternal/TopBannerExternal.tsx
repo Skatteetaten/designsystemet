@@ -24,6 +24,7 @@ import {
   SearchSVGpath,
 } from '@skatteetaten/ds-icons';
 
+import { topBannerAnalyticsIds } from './analyticsIds';
 import { TopBannerButton } from './TopBannerButton/TopBannerButton';
 import {
   TopBannerExternalProps,
@@ -282,6 +283,7 @@ export const TopBannerExternal = (({
                 )}
                 <TopBannerButton
                   svgPath={LogOutSVGpath}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.logout}
                   onClick={onLogOutClick}
                 >
                   {t('topbannerbutton.Logout')}
@@ -292,6 +294,7 @@ export const TopBannerExternal = (({
               <TopBannerButton
                 svgPath={LockOutlineSVGpath}
                 variant={'filled'}
+                dataWebAnalyticsId={topBannerAnalyticsIds.login}
                 onClick={onLogInClick}
               >
                 {t('topbannerbutton.Login')}
@@ -305,6 +308,7 @@ export const TopBannerExternal = (({
                     openMenu === 'Search' ? CancelSVGpath : SearchSVGpath
                   }
                   ariaExpanded={isSearchOpen}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.search}
                   onClick={handleSearchClick}
                   onFocus={() => {
                     statusFlagRef.current.focusCaptured = isSearchOpen;
@@ -353,6 +357,7 @@ export const TopBannerExternal = (({
                     openMenu === 'MainMenu' ? CancelSVGpath : MenuSVGpath
                   }
                   ariaExpanded={isMenuOpen}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.mainMenu}
                   onClick={handleMenuClick}
                   onFocus={() => {
                     statusFlagRef.current.focusCaptured = isMenuOpen;
