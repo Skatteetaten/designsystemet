@@ -213,3 +213,29 @@ export const Mobile = {
     },
   },
 } satisfies Story;
+
+export const MobileAndScrolledWithoutSticky = {
+  render: TemplateWithTallContent,
+  name: 'Mobile Scrolled Without Sticky',
+  args: {
+    user: {
+      name: 'Et veldig langt navn som -ikke- vil bli avkortet når man scroller på mobil',
+      role: 'virksomhet',
+      identifier: '999 888 777',
+    },
+    isSticky: false,
+  },
+  argTypes: { isSticky: { table: { disable: false } } },
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const banner = canvas.getByRole('region');
+    // Manuelt sette data-scrolled for visuell testing
+    banner.setAttribute('data-scrolled', 'true');
+    await expect(banner).toHaveAttribute('data-scrolled', 'true');
+  },
+} satisfies Story;
