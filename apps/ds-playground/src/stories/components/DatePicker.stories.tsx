@@ -7,7 +7,6 @@ import { useArgs } from 'storybook/preview-api';
 import {
   getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
-  getCommonFormVariantDefault,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
@@ -61,13 +60,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getHelpTitleHelpSvgDefault() },
-      },
-    },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
       },
     },
     // HTML

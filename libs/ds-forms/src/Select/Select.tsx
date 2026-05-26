@@ -9,7 +9,6 @@ import {
 
 import {
   getCommonClassNameDefault,
-  getCommonFormVariantDefault,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
@@ -44,7 +43,6 @@ export const Select = (({
   label,
   placeholder = getSelectPlaceholderDefault(),
   titleHelpSvg,
-  variant = getCommonFormVariantDefault(),
   value,
   ariaDescribedBy,
   autoComplete,
@@ -71,14 +69,6 @@ export const Select = (({
   const generatedId = `selectId-${useId()}`;
   const descriptionId = `descId-${useId()}`;
   const selectId = externalId ?? generatedId;
-
-  const isLarge = variant === 'large';
-  const selectClassName = `${styles.select} ${
-    isLarge ? styles.select_large : ''
-  }`.trim();
-  const selectIconClassName = `${styles.selectIcon} ${
-    isLarge ? styles.selectIcon_large : ''
-  }`.trim();
 
   const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
   useLayoutEffect(() => {
@@ -131,7 +121,7 @@ export const Select = (({
         <select
           ref={selectRef}
           id={selectId}
-          className={selectClassName}
+          className={styles.select}
           data-testid={dataTestId}
           autoComplete={autoComplete}
           disabled={disabled}
@@ -157,7 +147,7 @@ export const Select = (({
           {!hidePlaceholder && <option value={''}>{placeholder}</option>}
           {children}
         </select>
-        <ChevronDownIcon className={selectIconClassName} />
+        <ChevronDownIcon className={styles.selectIcon} />
       </div>
       <ErrorMessage
         id={errorId}

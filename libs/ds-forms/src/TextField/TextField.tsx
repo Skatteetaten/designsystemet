@@ -1,23 +1,12 @@
-import {
-  ChangeEvent,
-  JSX,
-  ModifierKey,
-  useId,
-  useImperativeHandle,
-  useRef,
-  KeyboardEvent,
-} from 'react';
+import { JSX, useId, useImperativeHandle, useRef } from 'react';
 
 import {
   getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
-  getCommonFormVariantDefault,
   useValidateFormRequiredProps,
-  useInputHistory,
 } from '@skatteetaten/ds-core-utils';
 
 import { TextFieldProps } from './TextField.types';
-import { addSpacesOrCommas, removeNonNumeric } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { InputCounter } from '../InputCounter/InputCounter';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -45,7 +34,6 @@ export const TextField = ({
   helpText,
   label,
   titleHelpSvg,
-  variant = getCommonFormVariantDefault(),
   ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
   defaultValue,
@@ -129,7 +117,6 @@ export const TextField = ({
         id={textboxId}
         className={textboxClassName}
         data-testid={dataTestId}
-        data-variant={variant}
         autoComplete={autoComplete}
         defaultValue={defaultValue}
         disabled={disabled}

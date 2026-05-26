@@ -5,7 +5,6 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import {
   getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
-  getCommonFormVariantDefault,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
@@ -13,6 +12,7 @@ import {
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
   getSearchFieldIsLoadingDefault,
+  getSearchFieldSizeDefault,
   SearchField,
   type SearchFieldProps,
   searchInList,
@@ -90,7 +90,7 @@ const meta = {
       control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
+        defaultValue: { summary: getSearchFieldSizeDefault() },
       },
     },
     // HTML

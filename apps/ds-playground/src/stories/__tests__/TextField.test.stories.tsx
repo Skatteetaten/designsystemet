@@ -29,10 +29,6 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     classNames: {
       table: { disable: true },
     },
@@ -190,7 +186,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2, B2, FS-A2)',
+  name: 'Defaults (A1, A2, B2, FS-A2)',
   args: {
     ...defaultArgs,
   },
@@ -215,17 +211,6 @@ export const Defaults = {
       '[id^=textFieldErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
   },
 } satisfies Story;
 

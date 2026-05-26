@@ -43,10 +43,6 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     hidePlaceholder: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     label: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
@@ -186,7 +182,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2 delvis, A3, FS-A2, B2)',
+  name: 'Defaults (A1, A2 delvis, A3, FS-A2, B2)',
   args: {
     ...defaultArgs,
   },
@@ -247,40 +243,6 @@ export const WithAriaDescribedBy = {
     const describedBy = select.getAttribute('aria-describedby') || '';
     const describedByIds = describedBy.split(' ').filter(Boolean);
     await expect(describedByIds).toContain('select-alert-description-id');
-  },
-} satisfies Story;
-
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithVariantLargeAndLongText = {
-  name: 'With Variant Large And Long Text',
-  args: {
-    ...defaultArgs,
-    hidePlaceholder: true,
-    variant: 'large',
-    children: [
-      <Select.Option key={'option_1'} value={valueOption1}>
-        {'En lang tekst som ikke skal synes bak åpne ikonet'}
-      </Select.Option>,
-    ],
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-    children: { table: { disable: false } },
-  },
-  globals: {
-    viewport: {
-      value: '--mobile',
-    },
   },
 } satisfies Story;
 
@@ -574,7 +536,6 @@ export const WithLongInput = {
     ],
   },
   argTypes: {
-    variant: { table: { disable: false } },
     defaultValue: { table: { disable: false } },
   },
 } satisfies Story;
@@ -594,7 +555,6 @@ export const WithLongPlaceholder = {
     ],
   },
   argTypes: {
-    variant: { table: { disable: false } },
     placeholder: { table: { disable: false } },
   },
 } satisfies Story;

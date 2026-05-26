@@ -16,7 +16,6 @@ import {
   dsI18n,
   getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
-  getCommonFormVariantDefault,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
@@ -59,7 +58,6 @@ export const DatePicker = ({
   maxDate,
   titleHelpSvg,
   value,
-  variant = getCommonFormVariantDefault(),
   ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
   disabled,
@@ -208,8 +206,6 @@ export const DatePicker = ({
     };
   }, [showCalendar]);
 
-  const isLarge = variant === 'large';
-
   return (
     <div
       className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
@@ -239,9 +235,7 @@ export const DatePicker = ({
         <input
           ref={inputRef}
           id={datePickerId}
-          className={`${styles.input} ${
-            isLarge ? styles.input_large : ''
-          }`.trim()}
+          className={styles.input}
           data-testid={dataTestId}
           autoComplete={autoComplete}
           disabled={disabled}
@@ -269,9 +263,7 @@ export const DatePicker = ({
           <button
             ref={calenderButtonRef}
             type={'button'}
-            className={`${styles.calendarButton} ${
-              isLarge ? styles.calendarButton_large : ''
-            }`.trim()}
+            className={styles.calendarButton}
             disabled={disabled}
             aria-expanded={showCalendar}
             onClick={(): void => {
@@ -281,7 +273,6 @@ export const DatePicker = ({
             <CalendarIcon
               className={styles.icon}
               title={t('datepicker.ChooseDate')}
-              size={isLarge ? 'large' : 'medium'}
             />
           </button>
         )}

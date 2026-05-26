@@ -49,10 +49,6 @@
   outline: 0;
   outline-offset: 0;
 
-  &_large {
-    padding: var(--spacing-s);
-  }
-
   &[aria-invalid='true'] {
     box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
   }
@@ -105,10 +101,6 @@
 
   & .icon {
     fill: var(--palette-azure-70);
-  }
-
-  &_large {
-    padding: var(--spacing-s);
   }
 
   &:disabled {

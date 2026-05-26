@@ -11,7 +11,6 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   getCommonAutoCompleteDefault,
-  getCommonFormVariantDefault,
   getAutoCompletePropDescription,
   getHelpTitleHelpSvgDefault,
   useFormattedInput,
@@ -27,13 +26,6 @@ const meta = {
   title: 'Komponenter/TextField',
   argTypes: {
     // Props
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
-      },
-    },
     classNames: {
       control: false,
       table: { category: category.props },

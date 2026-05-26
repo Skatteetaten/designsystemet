@@ -10,7 +10,6 @@ import {
 import {
   BaseProps,
   FormRequiredProps,
-  FormSize,
   Prettify,
 } from '@skatteetaten/ds-core-utils';
 
@@ -72,8 +71,6 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   placeholder?: string;
   /** Skjuler placeholder */
   hidePlaceholder?: boolean;
-  /** Definerer stilen til Select */
-  variant?: FormSize;
   /** SelectOption-komponenter */
   children: ReactNode;
   /** Callback som kalles når hjelpetekst vises/skjules */
