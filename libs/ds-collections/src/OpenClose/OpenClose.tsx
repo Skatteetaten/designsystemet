@@ -7,7 +7,7 @@ import {
   getOpenCloseIconPositionDefault,
   getOpenCloseKeepMountedDefault,
   getOpenCloseUnderlineDefault,
-  getOpenCloseVariantDefault,
+  getOpenCloseSizeDefault,
 } from './defaults';
 import { OpenCloseProps } from './OpenClose.types';
 
@@ -27,8 +27,7 @@ export const OpenClose = ({
   'data-testid': dataTestId,
   title,
   titleAs: HeadingTag,
-  variant = getOpenCloseVariantDefault(),
-  size,
+  size = getOpenCloseSizeDefault(),
   iconPosition = getOpenCloseIconPositionDefault(),
   isExpanded: isExpandedExternal,
   isDefaultExpanded,
@@ -44,7 +43,6 @@ export const OpenClose = ({
 
   const isExpanded =
     isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
-  const resolvedSize = size ?? (variant === 'compact' ? 'small' : 'large');
 
   const Tag = HeadingTag ?? 'div';
   const hasIconRight = iconPosition === 'right';
@@ -72,10 +70,7 @@ export const OpenClose = ({
   }`.trim();
 
   return (
-    <div
-      className={`${styles.wrapper} ${className}`.trim()}
-      data-size={resolvedSize}
-    >
+    <div className={`${styles.wrapper} ${className}`.trim()} data-size={size}>
       <Tag className={styles.tag}>
         <button
           ref={ref}
@@ -90,7 +85,7 @@ export const OpenClose = ({
           <Icon
             svgPath={ChevronDownSVGpath}
             className={iconClassName}
-            size={resolvedSize === 'small' ? 'medium' : 'large'}
+            size={size === 'small' ? 'medium' : 'large'}
           />
 
           <span className={titleClassName}>{title}</span>
