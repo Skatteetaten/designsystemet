@@ -1,7 +1,6 @@
-@use '../shared';
-
 .headerCell {
   --text-align: left;
+  --table-header-border-width: 2px;
 
   border-bottom: solid 2px var(--semantic-divider-100);
   font-weight: var(--font-weight-bold);
@@ -97,14 +96,5 @@
   &_large {
     padding: var(--spacing-m) var(--spacing-m)
       calc(var(--spacing-m) - var(--table-header-border-width));
-  }
-
-  &_standard {
-    @extend %cell-padding;
-  }
-
-  &_compact {
-    padding: var(--spacing-s);
-    font-size: var(--font-size-s);
   }
 }

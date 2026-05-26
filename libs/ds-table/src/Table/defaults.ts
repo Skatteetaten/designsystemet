@@ -1,11 +1,11 @@
-import { Density, dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import { TableCellAs, TextAlignment } from './Table.types';
+import { TableCellAs, TableSize, TextAlignment } from './Table.types';
 import { EditButtonPosition } from '../TableEditableRow/TableEditableRow.types';
 
 export const getDataCellAsDefault = (): TableCellAs => 'td';
 export const getHeaderCellAsDefault = (): TableCellAs => 'th';
-export const getTableVariantDefault = (): Density => 'standard';
+export const getTableSizeDefault = (): TableSize => 'large';
 export const getTableRowExpandButtonPositionDefault = (): EditButtonPosition =>
   'left';
 export const getTableCellAlignmentDefault = (): TextAlignment => 'left';
