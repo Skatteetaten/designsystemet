@@ -26,7 +26,6 @@ const meta = {
     // Props
     canBeManuallyFocused: { table: { disable: true } },
     caption: { table: { disable: true } },
-    variant: { table: { disable: true } },
     size: { table: { disable: true } },
     hasFullWidth: { table: { disable: true } },
     showCaption: { table: { disable: true } },
@@ -47,7 +46,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof Table> = (args) => (
-  <Table {...args} variant={args.variant}>
+  <Table {...args}>
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
@@ -150,7 +149,7 @@ export const Defaults = {
 
 const TemplateScroll: StoryFn<typeof Table> = (args) => {
   const exampleTable = (
-    <Table {...args} variant={args.variant}>
+    <Table {...args}>
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell scope={'col'}>{'Forename'}</Table.HeaderCell>
@@ -195,7 +194,7 @@ export const WithScrollbar = {
 } satisfies Story;
 
 const TemplateAlignment: StoryFn<typeof Table> = (args) => (
-  <Table {...args} variant={'standard'}>
+  <Table {...args}>
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell alignment={'left'} scope={'col'}>
@@ -325,7 +324,6 @@ const ExpandEditSortTable = (
       {...args}
       sortState={sortState}
       setSortState={setSortState}
-      variant={args.variant}
       caption={'Månedoversikt'}
     >
       <Table.Header>
@@ -505,49 +503,6 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
     </Table.Sum>
   </Table>
 );
-
-export const WithVariantCompact = {
-  render: TemplateExpandEditSort,
-  name: 'Variant Compact (Table A1, A3, TableHeader A2, TableRow A3, A17, A19, A20)',
-  args: {
-    variant: 'compact',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const editableRow = canvas.getByTestId('row-0');
-    const editButton = within(editableRow).getByRole('button');
-    await fireEvent.click(editButton);
-    const expandableRow = canvas.getByTestId('row-expand-3');
-    const expandButton = within(expandableRow).getByRole('button');
-    await fireEvent.click(expandButton);
-  },
-} satisfies Story;
-
-export const WithVariantCompactAndRightButtonPosition = {
-  render: TemplateWithRightButtonPosition,
-  name: 'Variant Compact And Right Button Position',
-  args: {
-    variant: 'compact',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const editableRow = canvas.getByTestId('row-0');
-    const editButton = within(editableRow).getByRole('button');
-    await fireEvent.click(editButton);
-    const expandableRow = canvas.getByTestId('row-expand-3');
-    const expandButton = within(expandableRow).getByRole('button');
-    await fireEvent.click(expandButton);
-  },
-} satisfies Story;
 
 export const WithExpandEditSort = {
   render: TemplateExpandEditSort,

@@ -13,7 +13,7 @@ import { TableHeaderCellProps } from './TableHeaderCell.types';
 import {
   getHeaderCellAsDefault,
   getTableCellAlignmentDefault,
-  getTableVariantDefault,
+  getTableSizeDefault,
 } from '../Table/defaults';
 import { sortDirection } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
@@ -38,14 +38,12 @@ export const TableHeaderCell = ({
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const context = useContext(TableContext);
 
-  const variant = context?.variant ?? getTableVariantDefault();
+  const size = context?.size ?? getTableSizeDefault();
   const alignmentClassName = styles[`headerCell_${alignment}`];
 
-  const variantClassName = context?.size
-    ? styles[`headerCell_${context.size}`]
-    : styles[`headerCell_${variant}`];
+  const sizeClassName = styles[`headerCell_${size}`];
   const concatenatedClassNames = `${styles.headerCell} ${
-    isSortable ? styles.headerCell_noPadding : variantClassName
+    isSortable ? styles.headerCell_noPadding : sizeClassName
   } ${
     scope === 'row' ? styles.headerCell_row : ''
   } ${alignmentClassName} ${className}`.trim();
@@ -102,7 +100,7 @@ export const TableHeaderCell = ({
     >
       {isSortable ? (
         <button
-          className={`${styles.headerCellSortButton} ${variantClassName}`.trim()}
+          className={`${styles.headerCellSortButton} ${sizeClassName}`.trim()}
           type={'button'}
           disabled={isSortDisabled}
           onClick={handleOnSort}

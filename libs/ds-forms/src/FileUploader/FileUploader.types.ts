@@ -31,8 +31,7 @@ export type UploadResult = {
 };
 
 export interface FileUploaderCommonProps
-  extends FileUploaderHTMLAttributes,
-    BaseProps {
+  extends FileUploaderHTMLAttributes, BaseProps {
   ref?: Ref<HTMLDivElement>;
   classNames?: Prettify<
     {
@@ -60,7 +59,7 @@ export interface FileUploaderCommonProps
    */
   hideLabel?: LabelWithHelpProps['hideLabel'];
   /** Ledetekst */
-  label?: LabelWithHelpProps['children'];
+  label: LabelWithHelpProps['children'];
   /**
    * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
    * begreper, for eksempel med et span-element med lang-attributt.
@@ -163,7 +162,6 @@ export interface UploadedFile {
 
 export type FileUploaderProps = FileUploaderCommonProps;
 
-export interface FileUploaderComponent
-  extends FunctionComponent<FileUploaderProps> {
+export interface FileUploaderComponent extends FunctionComponent<FileUploaderProps> {
   useFileUploader: typeof useFileUploader;
 }

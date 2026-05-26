@@ -1,11 +1,9 @@
-@use '../shared';
-
 .dataCell {
   --table-font-size: var(--font-size-m);
 
   box-sizing: border-box; // for å unngå at datacell med inline button blir større på expand
   border-bottom: var(--table-cell-border-bottom);
-  background: var(--table-cell-background);
+  background: transparent;
   font-size: var(--table-font-size);
   font-weight: var(--semantic-font-weight-default);
   vertical-align: top;
@@ -30,10 +28,6 @@
       calc(var(--spacing-m) - var(--table-cell-border-width));
   }
 
-  &_standard {
-    @extend %cell-padding;
-  }
-
   &_left {
     text-align: left;
   }
@@ -49,12 +43,6 @@
   &_extraSmall {
     padding: var(--spacing-xs) var(--spacing-s)
       calc(var(--spacing-xs) - var(--table-cell-border-width));
-
-    --table-font-size: var(--font-size-s);
-  }
-
-  &_compact {
-    padding: var(--spacing-xs) var(--spacing-s);
 
     --table-font-size: var(--font-size-s);
   }
