@@ -8,7 +8,6 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { PopoverTriggerProps } from './PopoverTrigger.types';
-import { getPopoverTriggerIsOutlinedDefault } from '../defaults';
 import { PopoverContext } from '../PopoverContext';
 
 export const PopoverTrigger = ({
@@ -21,7 +20,7 @@ export const PopoverTrigger = ({
   ariaDescribedby,
   size,
   svgPath,
-  isOutlined = getPopoverTriggerIsOutlinedDefault(),
+  hideOutline,
   onClick,
   onBlur,
   onFocus,
@@ -45,7 +44,7 @@ export const PopoverTrigger = ({
       size={size}
       ariaDescribedby={ariaDescribedby}
       ariaExpanded={isOpen}
-      isOutlined={isOutlined}
+      isOutlined={!hideOutline}
       onClick={(event): void => {
         onClick?.(event);
         setIsOpen(!isOpen);

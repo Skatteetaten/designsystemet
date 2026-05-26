@@ -103,6 +103,6 @@
   border-right: 1px solid var(--semantic-divider-30);
 }
 
-.noWrap {
-  white-space: nowrap;
+.pre {
+  white-space: pre;
 }

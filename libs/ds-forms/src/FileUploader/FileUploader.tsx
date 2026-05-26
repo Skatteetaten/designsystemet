@@ -248,28 +248,25 @@ export const FileUploader = (({
       data-testid={dataTestId}
       data-has-spacing={hasSpacing}
     >
-      {label && (
-        <LabelWithHelp
-          classNames={classNames}
-          htmlFor={id}
-          hideLabel={hideLabel}
-          showRequiredMark={showRequiredMark}
-          description={description}
-          descriptionId={descriptionId}
-          helpSvgPath={helpSvgPath}
-          helpText={helpText}
-          titleHelpSvg={titleHelpSvg}
-          onHelpToggle={onHelpToggle}
-        >
-          {label}
-        </LabelWithHelp>
-      )}
-
+      <LabelWithHelp
+        classNames={classNames}
+        htmlFor={id}
+        hideLabel={hideLabel}
+        showRequiredMark={showRequiredMark}
+        description={description}
+        descriptionId={descriptionId}
+        helpSvgPath={helpSvgPath}
+        helpText={helpText}
+        titleHelpSvg={titleHelpSvg}
+        onHelpToggle={onHelpToggle}
+      >
+        {label}
+      </LabelWithHelp>
       <button
         ref={buttonRef}
         type={'button'}
         id={id}
-        className={`${styles.dropZone} ${label && !hideLabel ? styles.dropZoneMarginTop : ''} ${
+        className={`${styles.dropZone} ${!hideLabel ? styles.dropZoneMarginTop : ''} ${
           errorMessage ? styles.dropZone_error : ''
         } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`.trim()}
         disabled={isUploading}

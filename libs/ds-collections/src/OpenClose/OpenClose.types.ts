@@ -5,9 +5,12 @@ import {
   Density,
   HeadingAs,
   Position,
+  Size,
 } from '@skatteetaten/ds-core-utils';
 
 type IconPosition = Extract<Position, 'left' | 'right'>;
+
+type OpenCloseSize = Extract<Size, 'small' | 'medium' | 'large'>;
 
 export interface OpenCloseProps extends BaseProps {
   ref?: Ref<HTMLButtonElement>;
@@ -17,8 +20,14 @@ export interface OpenCloseProps extends BaseProps {
   title: string;
   /** Rendrer knappen som heading på gitt nivå */
   titleAs?: HeadingAs;
-  /** Viser en kompakt versjon med mindre tekst og avstander */
+  /**
+   * Viser en kompakt versjon med mindre tekst og avstander.
+   *
+   * @deprecated Erstattes av size i neste major.
+   */
   variant?: Density;
+  /** Størrelse */
+  size?: OpenCloseSize;
   /** Om innholdet skal vises */
   isExpanded?: boolean;
   /** Om innholdet skal vises når siden lastes? (Ukontrollert tilstand) */

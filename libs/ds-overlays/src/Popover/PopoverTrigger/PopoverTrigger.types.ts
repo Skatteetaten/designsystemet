@@ -5,7 +5,6 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type PropsFromIconButton = Pick<
   IconButtonProps,
-  | 'isOutlined'
   | 'size'
   | 'svgPath'
   | 'title'
@@ -17,6 +16,8 @@ type PropsFromIconButton = Pick<
 
 type PopoverTriggerCommonProps = BaseProps & {
   ref?: Ref<HTMLButtonElement>;
+  /** Om rammen til knappen skal skjules */
+  hideOutline?: boolean;
 };
 
 export interface PopoverTriggerProps

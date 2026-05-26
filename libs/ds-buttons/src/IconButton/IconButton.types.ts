@@ -31,7 +31,7 @@ export interface IconButtonProps
   ref?: Ref<HTMLButtonElement>;
   /** Om knappen har en ramme/sirkel. */
   isOutlined?: boolean;
-  /** Størrelse på knappen. */
+  /** Størrelse på knappen. extraSmall tas bort i neste major. */
   size?: Extract<Size, 'extraSmall' | 'small' | 'medium' | 'large'>;
   /**
    * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke.

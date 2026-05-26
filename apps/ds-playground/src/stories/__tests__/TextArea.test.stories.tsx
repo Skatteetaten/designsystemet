@@ -5,6 +5,7 @@ import { useArgs } from 'storybook/preview-api';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextArea, TextAreaProps } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Alert } from '@skatteetaten/ds-status';
@@ -770,6 +771,32 @@ export const WithCharacterLimit = {
   },
 } satisfies Story;
 
+export const WithCharacterLimitAriaStaticText = {
+  name: 'With CharacterLimit Aria Static Text',
+  render: TemplateWithCharacterCounter,
+  args: {
+    ...defaultArgs,
+    characterLimit: 50,
+  },
+  argTypes: {
+    characterLimit: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textArea = canvas.getByRole('textbox');
+
+    const staticSRText = canvas.getByText(
+      dsI18n.t('ds_forms:textarea.TotalCharactersLimit', { ant: 50 })
+    );
+    expect(staticSRText).toBeInTheDocument();
+    await userEvent.type(textArea, 'Dette er en kort tekst.');
+    expect(staticSRText).toBeInTheDocument();
+  },
+} satisfies Story;
+
 export const WithCharacterLimitExceeded = {
   name: 'With CharacterLimit Exceeded (A10)',
   render: TemplateWithCharacterCounter,
@@ -845,12 +872,14 @@ export const WithCharacterLimitAndResetOnEmptyAString = {
     const textWith10Spaces = '          ';
 
     await userEvent.type(textArea, textWith10Spaces);
-    const remainingCount = await canvas.findByText('40 tegn igjen');
+    const remainingCount = await waitFor(() =>
+      canvas.findByText('40 tegn igjen')
+    );
     expect(remainingCount).toBeInTheDocument();
 
     await userEvent.keyboard('{Tab}');
 
-    const newRemainingCount = await canvas.findByText('50 tegn igjen');
-    expect(newRemainingCount).toBeInTheDocument();
+    const newRemainingCount = await canvas.findAllByText('50 tegn igjen');
+    expect(newRemainingCount[0]).toBeInTheDocument();
   },
 } satisfies Story;

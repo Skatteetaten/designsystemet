@@ -118,7 +118,6 @@ export const dsI18n: typeof i18n = i18n.createInstance({
   lng: Languages.Bokmal,
   parseMissingKeyHandler: (_key) => '',
   debug: false,
-  showSupportNotice: false,
   interpolation: {
     escapeValue: false,
   },

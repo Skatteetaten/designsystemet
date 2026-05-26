@@ -67,5 +67,6 @@
   "searchfield.Focus": "Bruk piltastane ned og opp for å velje",
   "searchfield.NumberOfResults": "{{ant}} forslag blir vist.",
   "textarea.CharactersLeft": "{{ant}} teikn igjen",
-  "textarea.TooManyCharacters": "{{ant}} teikn for mykje"
+  "textarea.TooManyCharacters": "{{ant}} teikn for mykje",
+  "textarea.TotalCharactersLimit": "Du kan skrive inn opptil {{ant}} teikn"
 }
