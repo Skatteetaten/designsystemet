@@ -54,12 +54,6 @@ const meta = {
     },
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
-    selectedValue: {
-      control: 'text',
-      table: { category: category.props },
-      description:
-        '<strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Bruk <code>value</code> i stedet.',
-    },
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },

@@ -207,7 +207,7 @@ export const Ventevarsel: Story = {
           helpText={
             'Hver gang du beveger musepekeren, scroller eller gjør et tastetrykk, resettes timeren.'
           }
-          selectedValue={time}
+          value={time}
           onChange={(e): void => setTime(Number(e.target.value))}
         >
           <RadioGroup.Radio value={1200000}>

@@ -30,7 +30,6 @@ export const RadioGroup = (({
   helpText,
   legend,
   value,
-  selectedValue,
   titleHelpSvg,
   variant = getRadioGroupVariantDefault(),
   ariaDescribedBy,
@@ -51,7 +50,6 @@ export const RadioGroup = (({
   const errorId = `radioErrorId-${useId()}`;
   const uniqueNameId = `radioInputName-${useId()}`;
   const nameId = name ?? uniqueNameId;
-  const controlledValue = value ?? selectedValue;
 
   const variantClassName =
     variant === 'horizontal'
@@ -118,7 +116,7 @@ export const RadioGroup = (({
           value={{
             defaultValue,
             errorId: errorMessage ? errorId : '',
-            value: controlledValue,
+            value,
             name: nameId,
             hasError: !!errorMessage,
             readOnly,
