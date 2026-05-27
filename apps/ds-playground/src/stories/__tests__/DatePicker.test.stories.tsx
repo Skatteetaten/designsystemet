@@ -62,10 +62,6 @@ const meta = {
     minDate: { table: { disable: true }, control: 'date' },
     maxDate: { table: { disable: true }, control: 'date' },
     titleHelpSvg: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     // HTML
     autoComplete: { table: { disable: true } },
     disabled: { table: { disable: true } },
@@ -192,7 +188,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2, B2, B5)',
+  name: 'Defaults (A1, A2, B2, B5)',
   args: {
     ...defaultArgs,
   },
@@ -282,17 +278,6 @@ export const WithAriaDescribedBy = {
     const describedBy = textbox.getAttribute('aria-describedby') || '';
     const describedByIds = describedBy.split(' ').filter(Boolean);
     await expect(describedByIds).toContain('datepicker-alert-description-id');
-  },
-} satisfies Story;
-
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
   },
 } satisfies Story;
 

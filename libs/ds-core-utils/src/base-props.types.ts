@@ -43,12 +43,6 @@ export const sizeArr = [
 ] as const;
 export type Size = (typeof sizeArr)[number];
 
-export const formArrSize = [
-  'medium',
-  'large',
-] as const satisfies readonly Size[];
-export type FormSize = (typeof formArrSize)[number];
-
 export const positionArr = [
   'left',
   'right',

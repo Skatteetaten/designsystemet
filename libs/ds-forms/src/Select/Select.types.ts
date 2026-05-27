@@ -7,7 +7,7 @@ import {
   Ref,
 } from 'react';
 
-import { BaseProps, FormSize, Prettify } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import { SelectOption } from './SelectOption/SelectOption';
@@ -67,8 +67,6 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   placeholder?: string;
   /** Skjuler placeholder */
   hidePlaceholder?: boolean;
-  /** Definerer stilen til Select */
-  variant?: FormSize;
   /** SelectOption-komponenter */
   children: ReactNode;
   /** Callback som kalles når hjelpetekst vises/skjules */

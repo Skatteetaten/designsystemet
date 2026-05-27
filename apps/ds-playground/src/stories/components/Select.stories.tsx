@@ -2,10 +2,7 @@ import { ChangeEvent, useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getCommonFormVariantDefault,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -41,13 +38,6 @@ const meta = {
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
-      },
-    },
     label: { table: { category: category.props } },
     titleHelpSvg: {
       table: {

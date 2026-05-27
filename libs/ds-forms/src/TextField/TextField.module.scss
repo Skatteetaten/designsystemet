@@ -29,10 +29,6 @@
     margin-top: var(--spacing-xs);
   }
 
-  &[data-variant='large'] {
-    padding: var(--spacing-s);
-  }
-
   &::-webkit-calendar-picker-indicator {
     display: none !important;
   }

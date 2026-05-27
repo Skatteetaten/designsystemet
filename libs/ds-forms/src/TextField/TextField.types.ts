@@ -6,7 +6,7 @@ import {
   Ref,
 } from 'react';
 
-import { BaseProps, FormSize, Prettify } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -76,8 +76,6 @@ export interface TextFieldCommonProps
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Definerer stilen til TextField */
-  variant?: FormSize;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
