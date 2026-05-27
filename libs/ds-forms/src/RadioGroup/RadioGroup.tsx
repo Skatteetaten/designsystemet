@@ -1,9 +1,6 @@
 import { useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getHasSpacingDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getRadioGroupVariantDefault } from './defaults';
 import { Radio } from './Radio/Radio';
@@ -43,7 +40,7 @@ export const RadioGroup = (({
   name,
   readOnly,
   required,
-  hasSpacing = getHasSpacingDefault(),
+  hasSpacing,
   hideLegend,
   shadowRootNode,
   onBlur: onBlurExternal,

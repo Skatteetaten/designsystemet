@@ -7,7 +7,6 @@ import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
-import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';

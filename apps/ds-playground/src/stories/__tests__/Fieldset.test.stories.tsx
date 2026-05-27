@@ -6,7 +6,6 @@ import { expect, userEvent, within } from 'storybook/test';
 import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';

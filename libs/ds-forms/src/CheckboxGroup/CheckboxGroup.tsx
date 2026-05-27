@@ -1,9 +1,6 @@
 import { useId, JSX } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getHasSpacingDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxContext } from './CheckboxContext';
 import {
@@ -39,7 +36,7 @@ export const CheckboxGroup = (({
   ariaDescribedBy,
   disabled,
   form,
-  hasSpacing = getHasSpacingDefault(),
+  hasSpacing,
   hideLegend,
   onHelpToggle,
   children,
