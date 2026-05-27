@@ -60,6 +60,7 @@ const meta = {
     children: { table: { disable: true } },
     fileIconTitle: { table: { disable: true } },
     isUploading: { table: { disable: true } },
+    isRequired: { table: { disable: true } },
     invalidCharacterRegexp: {
       control: 'text',
       table: { disable: true },
@@ -148,8 +149,8 @@ export const WithAttributes = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
-    const button = canvas.getByRole('button');
-    await expect(button).toHaveAttribute('id', 'htmlId');
+    const input = canvas.getByTestId('123ID-input');
+    await expect(input).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
@@ -158,14 +159,32 @@ export const WithAttributes = {
 
 export const Defaults: StoryObj<FileUploaderProps> = {
   name: 'Defaults (A1 delvis)',
+  args: {
+    'data-testid': '123ID',
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(
       canvas.getByText(dsI18n.t('ds_forms:fileuploader.AddSingleLabel'))
     ).toBeInTheDocument();
-  },
-  parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+    const label = canvas.getByText('Ledetekst');
+    await expect(label).toBeInTheDocument();
+    await expect(label).toHaveAttribute('id');
+    const button = canvas.getByRole('button');
+    const input = canvas.getByTestId('123ID-input');
+    const inputId = input.getAttribute('id');
+    await expect(button).toHaveAttribute(
+      'aria-labelledby',
+      `${inputId}-label ${inputId}-button-text`
+    );
+    await expect(button).toHaveAttribute('type', 'button');
+    await expect(button).not.toHaveAttribute('aria-describedby');
+    await expect(button).not.toHaveAttribute('aria-invalid');
+    await expect(input).toBeInTheDocument();
+    await expect(input).toHaveAttribute('id', label.getAttribute('for'));
   },
 } satisfies Story;
 
@@ -197,8 +216,6 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
       canvas.getByText('dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf')
     ).toBeInTheDocument();
   },
-
-  parameters: {},
 } satisfies Story;
 
 export const WithIsUploading: StoryObj<FileUploaderProps> = {
@@ -223,6 +240,8 @@ export const WithError: StoryObj<FileUploaderProps> = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await expect(button).toHaveAttribute('aria-invalid', 'true');
     await expect(
       canvas.getByText('Du må laste opp en fil')
     ).toBeInTheDocument();
@@ -269,6 +288,9 @@ export const WithUploadResultAndNoFiles: StoryObj<FileUploaderProps> = {
   args: {
     uploadResult: { statusMessage: 'Lastet opp 1 fil' },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const statusMessageText = 'Lastet opp 1 fil';
 
@@ -277,9 +299,6 @@ export const WithUploadResultAndNoFiles: StoryObj<FileUploaderProps> = {
         getSuccessStatusMessage(canvasElement, statusMessageText)
       ).toBeInTheDocument()
     );
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -306,6 +325,9 @@ export const WithUploadResultInsideFormWithoutFlicker: Story = {
 
     return <FormWrapper />;
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textField = canvas.getByRole('textbox', { name: 'Navn' });
@@ -330,9 +352,6 @@ export const WithUploadResultInsideFormWithoutFlicker: Story = {
         ).toBeInTheDocument(),
       { timeout: 300 }
     );
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -366,6 +385,9 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
     onFileChange: fn(),
     onFileDelete: fn(),
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByTestId('testid123-input');
@@ -395,9 +417,6 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
         href: '#',
       })
     );
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
 
@@ -465,6 +484,9 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
     };
     return <FocusManagementWrapper />;
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const deleteTitle = dsI18n.t('ds_forms:fileuploader.DeleteLabel');
@@ -512,9 +534,6 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
       });
       expect(uploadButton).toHaveFocus();
     });
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
 };
 
@@ -584,6 +603,9 @@ export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
     };
     return <FocusManagementFailureWrapper />;
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const deleteTitle = dsI18n.t('ds_forms:fileuploader.DeleteLabel');
@@ -615,15 +637,15 @@ export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
       { timeout: 2000 }
     );
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
 };
 
 export const WithIsRequired = {
   name: 'With IsRequired',
   args: {
     isRequired: true,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -633,8 +655,5 @@ export const WithIsRequired = {
     await expect(requiredText).toBeInTheDocument();
     const className = requiredText.getAttribute('class');
     await expect(className).toContain('srOnly');
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
