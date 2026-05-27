@@ -72,14 +72,6 @@ export interface FileUploaderCommonProps
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /**
-   * Om FileUploader skal markeres med stjerne.
-   *
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer
-   *   om mønstre for obligatoriske felt på [stil og
-   *   tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
-   */
-  showRequiredMark?: LabelWithHelpProps['showRequiredMark'];
-  /**
    * Brukes i kombinasjon med shouldNormalizeFileName til å styre hvilke tegn
    * som skal erstattes
    */

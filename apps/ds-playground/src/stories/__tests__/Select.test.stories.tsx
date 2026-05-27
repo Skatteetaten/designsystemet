@@ -44,7 +44,6 @@ const meta = {
     hideLabel: { table: { disable: true } },
     hidePlaceholder: { table: { disable: true } },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
@@ -366,19 +365,6 @@ export const WithRequired = {
     const selectNode = canvas.getByRole('combobox');
     await expect(selectNode).toBeRequired();
     await expect(selectNode).toHaveAttribute('aria-invalid', 'false');
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B1, FS-A4 delvis)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 

@@ -6,11 +6,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -84,4 +80,4 @@ export interface TextFieldCommonProps
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
-export type TextFieldProps = TextFieldCommonProps & FormRequiredProps;
+export type TextFieldProps = TextFieldCommonProps;

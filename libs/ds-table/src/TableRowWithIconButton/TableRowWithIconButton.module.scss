@@ -44,8 +44,8 @@
   }
 }
 
-.expandableLeftContent {
-  padding: var(--spacing-m) var(--spacing-l) var(--spacing-l); // denne skal også gjelde for right content. fiks i neste major 3.0.0.
+.expandedContent {
+  padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
 }
 
 .expandedRow {

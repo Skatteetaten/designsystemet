@@ -16,7 +16,6 @@ import {
   dsI18n,
   getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
-  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 
@@ -67,7 +66,6 @@ export const DatePicker = ({
   required,
   hasSpacing,
   hideLabel,
-  showRequiredMark,
   onBlur,
   onChange,
   onFocus,
@@ -75,7 +73,6 @@ export const DatePicker = ({
   onCalendarToggle,
   onSelectDate,
 }: DatePickerProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
   const descriptionId = `descId-${useId()}`;
@@ -216,7 +213,6 @@ export const DatePicker = ({
         classNames={classNames}
         htmlFor={datePickerId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}

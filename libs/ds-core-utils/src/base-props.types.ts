@@ -89,16 +89,3 @@ export const spacingArr = [
   'mega',
 ] as const;
 export type Spacing = (typeof spacingArr)[number];
-
-export interface FormRequiredProps {
-  required?: boolean;
-  /**
-   * Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at
-   * required er tatt i bruk.
-   *
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer
-   *   om mønstre for obligatoriske felt på [stil og
-   *   tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
-   */
-  showRequiredMark?: boolean;
-}

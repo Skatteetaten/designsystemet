@@ -7,11 +7,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { Radio } from './Radio/Radio';
@@ -50,9 +46,7 @@ interface InputPropsHTMLAttributes extends InputHTMLAttributes {
 }
 
 interface RadioGroupComponentCommonProps
-  extends InputPropsHTMLAttributes,
-    RequiredFieldsetHTMLAttributes,
-    BaseProps {
+  extends InputPropsHTMLAttributes, RequiredFieldsetHTMLAttributes, BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
     { errorMessage?: string } & FieldsetProps['classNames']
@@ -85,6 +79,8 @@ interface RadioGroupComponentCommonProps
   name?: string;
   /** Om radioknappene skal være skrivebeskyttet */
   readOnly?: boolean;
+  /** Om en radio-knapp må være valgt */
+  required?: boolean;
   /** Definerer stilen til gruppen. */
   variant?: RadioGroupVariant;
   /** Callback som kalles når hjelpetekst vises/skjules */
@@ -120,10 +116,8 @@ type RadioGroupDiscriminatedCheckedProps =
     };
 
 export type RadioGroupProps = RadioGroupComponentCommonProps &
-  FormRequiredProps &
   RadioGroupDiscriminatedCheckedProps;
 
-export interface RadioGroupComponent
-  extends FunctionComponent<RadioGroupProps> {
+export interface RadioGroupComponent extends FunctionComponent<RadioGroupProps> {
   Radio: typeof Radio;
 }

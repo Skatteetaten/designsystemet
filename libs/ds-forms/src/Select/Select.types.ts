@@ -7,11 +7,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import { SelectOption } from './SelectOption/SelectOption';
@@ -79,7 +75,7 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   errorMessage?: string;
 }
 
-export type SelectProps = SelectCommonProps & FormRequiredProps;
+export type SelectProps = SelectCommonProps;
 
 export interface SelectComponent extends FunctionComponent<SelectProps> {
   Option: typeof SelectOption;

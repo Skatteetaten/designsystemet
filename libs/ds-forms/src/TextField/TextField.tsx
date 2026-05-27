@@ -3,7 +3,6 @@ import { JSX, useId, useImperativeHandle, useRef } from 'react';
 import {
   getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
-  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
 import { TextFieldProps } from './TextField.types';
@@ -51,14 +50,12 @@ export const TextField = ({
   value,
   hasSpacing,
   hideLabel,
-  showRequiredMark,
   onBlur,
   onChange,
   onFocus,
   onKeyDown,
   onHelpToggle,
 }: TextFieldProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `textFieldErrorId-${useId()}`;
   const generatedId = `textFieldTextboxId-${useId()}`;
   const characterCounterId = `textFieldCharacterCounter-${useId()}`;
@@ -93,7 +90,6 @@ export const TextField = ({
         classNames={classNames}
         htmlFor={textboxId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}

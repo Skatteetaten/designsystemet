@@ -1,10 +1,6 @@
 import { useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getHasSpacingDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getRadioGroupVariantDefault } from './defaults';
 import { Radio } from './Radio/Radio';
@@ -44,16 +40,14 @@ export const RadioGroup = (({
   name,
   readOnly,
   required,
-  hasSpacing = getHasSpacingDefault(),
+  hasSpacing,
   hideLegend,
-  showRequiredMark,
   shadowRootNode,
   onBlur: onBlurExternal,
   onChange: onChangeExternal,
   onHelpToggle,
   children,
 }: RadioGroupProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `radioErrorId-${useId()}`;
   const uniqueNameId = `radioInputName-${useId()}`;
   const nameId = name ?? uniqueNameId;
@@ -112,7 +106,6 @@ export const RadioGroup = (({
       form={form}
       legend={legend}
       hideLegend={hideLegend}
-      showRequiredMark={showRequiredMark}
       description={description}
       helpSvgPath={helpSvgPath}
       helpText={helpText}

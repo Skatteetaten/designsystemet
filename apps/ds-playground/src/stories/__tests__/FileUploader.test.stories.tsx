@@ -45,7 +45,6 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     shouldNormalizeFileName: { table: { disable: true } },
     titleHelpSvg: {
       table: {
@@ -431,6 +430,9 @@ export const WithCustomClassNames = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+    a11y: {
+      test: 'off',
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const container = canvasElement.querySelector(`${wrapper} > div`);

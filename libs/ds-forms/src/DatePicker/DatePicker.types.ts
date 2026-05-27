@@ -5,11 +5,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -29,7 +25,7 @@ interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
 }
 
 export interface DatePickerProps
-  extends DatePickerPropsHTMLAttributes, BaseProps, FormRequiredProps {
+  extends DatePickerPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {

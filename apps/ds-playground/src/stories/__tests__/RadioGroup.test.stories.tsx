@@ -7,7 +7,6 @@ import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
-import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -40,7 +39,6 @@ const meta = {
     legend: { table: { disable: true } },
     readOnly: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     value: { table: { disable: true } },
     selectedValue: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
@@ -362,41 +360,6 @@ export const WithRequired = {
       expect(input).toBeRequired();
       expect(input).toHaveAttribute('aria-invalid', 'false');
     });
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  render: Template,
-  name: 'With Required And Mark (A7, A8)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithRequiredAndMarkAndLegendAsMarkup = {
-  render: Template,
-  name: 'With Required And Mark And Legend As Markup (A7, A8)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h4'} level={3}>
-          {defaultLegendText}
-        </Heading>
-        <span>{'Med virksomhet så menes bla bla'}</span>
-      </>
-    ),
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 

@@ -7,10 +7,7 @@ import {
   useLayoutEffect,
 } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
 import { getSelectPlaceholderDefault } from './defaults';
@@ -53,15 +50,12 @@ export const Select = (({
   hasSpacing,
   hideLabel,
   hidePlaceholder,
-  showRequiredMark,
   onBlur,
   onChange,
   onFocus,
   onHelpToggle,
   children,
 }: SelectProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
-
   const selectRef = useRef<HTMLSelectElement>(null);
   useImperativeHandle(ref, () => selectRef?.current as HTMLSelectElement);
 
@@ -102,7 +96,6 @@ export const Select = (({
         classNames={classNames}
         htmlFor={selectId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}

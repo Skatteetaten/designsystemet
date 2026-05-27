@@ -57,7 +57,6 @@ export const FileUploader = (({
   spinnerLabel = getFileUploaderGetSpinnerLabelDefault(),
   hasSpacing,
   hideLabel,
-  showRequiredMark,
   shouldNormalizeFileName,
   multiple,
   isUploading,
@@ -252,7 +251,6 @@ export const FileUploader = (({
         classNames={classNames}
         htmlFor={id}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
