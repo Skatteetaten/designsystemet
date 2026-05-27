@@ -94,11 +94,6 @@ type RadioGroupDiscriminatedCheckedProps =
       /** Hvilke value som skal være satt til checked (controlled state) */
       value?: string | number;
       /**
-       * @deprecated Prop skal fjernes ved lansering av neste major versjon.
-       *   Bruk `value` i stedet.
-       */
-      selectedValue?: string | number;
-      /**
        * Hvilke value som skal være satt til default checked (uncontrolled
        * state)
        */
@@ -107,7 +102,6 @@ type RadioGroupDiscriminatedCheckedProps =
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
       value?: never;
-      selectedValue?: never;
       /**
        * Hvilke value som skal være satt til default checked (uncontrolled
        * state)

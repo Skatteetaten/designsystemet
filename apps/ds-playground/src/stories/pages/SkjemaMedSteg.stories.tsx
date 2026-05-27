@@ -228,7 +228,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                 </Paragraph>
                 <RadioGroup
                   legend={'Har du norsk adresse?'}
-                  selectedValue={hasLocalAddress}
+                  value={hasLocalAddress}
                   errorMessage={localAddressErrorMessage}
                   onBlur={setLocalAddressError}
                   onChange={(e): void => {

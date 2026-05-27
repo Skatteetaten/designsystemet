@@ -40,7 +40,6 @@ const meta = {
     readOnly: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
     value: { table: { disable: true } },
-    selectedValue: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -76,8 +75,6 @@ const Template: StoryFn<typeof RadioGroup> = (args) => {
       onChange={(e): void => {
         if (args.value !== undefined) {
           setArgs({ value: e.target.value });
-        } else if (args.selectedValue !== undefined) {
-          setArgs({ selectedValue: e.target.value });
         } else if (args.defaultValue !== undefined) {
           setArgs({ defaultValue: e.target.value });
         }
@@ -86,7 +83,7 @@ const Template: StoryFn<typeof RadioGroup> = (args) => {
   );
 };
 
-const selectedValue = 'annet';
+const value = 'annet';
 const defaultLegendText = 'Type virksomhet';
 const defaultArgs: RadioGroupProps = {
   legend: defaultLegendText,
@@ -252,34 +249,12 @@ export const WithHideLegend = {
   },
 } satisfies Story;
 
-export const WithSelectedValue = {
-  render: Template,
-  name: 'With SelectedValue (A3)',
-  args: {
-    ...defaultArgs,
-    selectedValue: selectedValue,
-    defaultValue: undefined,
-  },
-  argTypes: {
-    selectedValue: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const input = canvas.getByRole('radio', { checked: true });
-
-    await expect(input).toHaveAttribute('value', selectedValue);
-  },
-} satisfies Story;
-
 export const WithValue = {
   render: Template,
   name: 'With Value (A3)',
   args: {
     ...defaultArgs,
-    value: selectedValue,
+    value,
     defaultValue: undefined,
   },
   argTypes: {
@@ -292,7 +267,7 @@ export const WithValue = {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
 
-    await expect(input).toHaveAttribute('value', selectedValue);
+    await expect(input).toHaveAttribute('value', value);
   },
 } satisfies Story;
 
@@ -301,9 +276,8 @@ export const WithDefaultValue = {
   name: 'With DefaultValue (A3)',
   args: {
     ...defaultArgs,
-    selectedValue: undefined,
     value: undefined,
-    defaultValue: selectedValue,
+    defaultValue: value,
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
@@ -312,7 +286,7 @@ export const WithDefaultValue = {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
 
-    await expect(input).toHaveAttribute('value', selectedValue);
+    await expect(input).toHaveAttribute('value', value);
   },
 } satisfies Story;
 
@@ -322,7 +296,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
-    value: selectedValue,
+    value,
     defaultValue: undefined,
     helpText: 'Hjelpeknappen skal også være disabled',
   },
@@ -416,7 +390,7 @@ export const WithErrorMessage = {
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
-    value: selectedValue,
+    value,
     defaultValue: undefined,
   },
   argTypes: {
@@ -674,7 +648,7 @@ export const ReadOnly = {
   args: {
     ...defaultArgs,
     readOnly: true,
-    value: selectedValue,
+    value,
     defaultValue: undefined,
     description: 'Dette er en radiogruppe i read only modus',
   },
