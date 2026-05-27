@@ -100,6 +100,7 @@ export * from './InfoSquare';
 export * from './Key';
 export * from './Kroner';
 export * from './LanPending';
+export * from './Link';
 export * from './Linkedin';
 export * from './ListAdd';
 export * from './ListRemove';
