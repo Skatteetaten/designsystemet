@@ -196,7 +196,7 @@ export const TableRowWithIconButton = ({
         <tr className={`${styles.expandedRow} ${className}`.trim()}>
           <td colSpan={rowLength}>
             <div
-              className={`${buttonPosition === 'left' ? styles.expandableLeftContent : ''} ${
+              className={`${styles.expandedContent} ${
                 classNames?.expandedContent ?? ''
               }`.trim()}
             >
