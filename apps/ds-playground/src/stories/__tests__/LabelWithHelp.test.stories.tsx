@@ -32,7 +32,6 @@ const meta = {
       mapping: SystemSVGPaths,
     },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     htmlFor: { table: { disable: true } },
@@ -136,17 +135,6 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const descriptionNode = canvas.getByText(defaultDescription);
     await expect(descriptionNode).toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const WithShowRequiredMark = {
-  name: 'With ShowRequiredMark (FS-A4)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 

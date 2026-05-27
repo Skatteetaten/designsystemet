@@ -66,7 +66,6 @@ const meta = {
     helpText: { table: { disable: true } },
     enableSRNavigationHint: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -736,20 +735,6 @@ export const WithRequired = {
     const textbox = canvas.getByRole('searchbox');
     await expect(textbox).toBeRequired();
     await expect(textbox).toHaveAttribute('aria-invalid', 'false');
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark',
-  args: {
-    ...defaultArgs,
-    required: true,
-    hideLabel: false,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 

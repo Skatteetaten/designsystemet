@@ -30,7 +30,6 @@ export const Fieldset = ({
   form,
   hasSpacing,
   hideLegend,
-  showRequiredMark,
   onHelpToggle,
   children,
 }: FieldsetProps): JSX.Element => {
@@ -43,20 +42,11 @@ export const Fieldset = ({
     );
   }
 
-  let requiredMarkClassName = '';
-  if (showRequiredMark) {
-    requiredMarkClassName =
-      typeof legend === 'string'
-        ? styles.legend_required
-        : styles.legendWithMarkup_required;
-  }
   const hideLegendClassName = hideLegend ? styles.srOnly : '';
   const noMarginTopContentContainerClassName = hideLegend
     ? styles.contentContainerNoMarginTop
     : '';
-  const legendClassName = `${
-    styles.legend
-  } ${requiredMarkClassName} ${hideLegendClassName} ${
+  const legendClassName = `${styles.legend} ${hideLegendClassName} ${
     classNames?.legend ?? ''
   }`.trim();
 

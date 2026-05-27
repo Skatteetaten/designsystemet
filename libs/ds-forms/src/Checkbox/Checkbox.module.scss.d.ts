@@ -3,7 +3,6 @@ declare const classNames: {
   readonly checkbox: 'checkbox';
   readonly checkboxInput: 'checkboxInput';
   readonly checkboxLabel: 'checkboxLabel';
-  readonly checkboxLabel_required: 'checkboxLabel_required';
   readonly checkboxLabelDescription: 'checkboxLabelDescription';
   readonly srOnly: 'srOnly';
 };

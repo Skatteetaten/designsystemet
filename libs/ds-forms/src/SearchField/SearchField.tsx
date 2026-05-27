@@ -73,7 +73,6 @@ export const SearchField = (({
   placeholder,
   readOnly,
   required,
-  showRequiredMark,
   value,
   enableSRNavigationHint = getEnableSRNavigationHintDefault(),
   hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
@@ -376,7 +375,6 @@ export const SearchField = (({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
-        showRequiredMark={showRequiredMark}
         disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
