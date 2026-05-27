@@ -14,12 +14,7 @@ import {
   SaveSVGpath,
   TimelapseSVGpath,
 } from '@skatteetaten/ds-icons';
-import { Alert } from '@skatteetaten/ds-status';
-import {
-  getTableVariantDefault,
-  SortState,
-  Table,
-} from '@skatteetaten/ds-table';
+import { getTableSizeDefault, SortState, Table } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -32,16 +27,10 @@ const meta = {
     // Props
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTableVariantDefault() },
-      },
-    },
     size: {
       table: {
         category: category.props,
-        defaultValue: { summary: 'undefined' },
+        defaultValue: { summary: getTableSizeDefault() },
       },
     },
     showCaption: { table: { category: category.props } },
@@ -105,86 +94,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
-
-export const Variants: Story = {
-  render: (_args): JSX.Element => {
-    const klage = 'Klage på vedtak';
-    return (
-      <>
-        <Alert variant={'info'} className={'bottomSpacingXL'} showAlert>
-          {
-            '"variant" er deprecated og vil bli erstattet av "size" i neste major release. Bruk size="large" for standard tabell og size="extraSmall" for kompakt tabell.'
-          }
-        </Alert>
-        <div>
-          {'Standard table'}
-          <Table caption={'Dette er en standard tabell'} size={'large'}>
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
-                <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
-                <Table.HeaderCell scope={'col'}>
-                  {'Arbeidsoppgave'}
-                </Table.HeaderCell>
-                <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
-                <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
-            <Table.Body>
-              <Table.Row>
-                <Table.DataCell>{'10.03.2023'}</Table.DataCell>
-                <Table.DataCell>{'Kategori 2'}</Table.DataCell>
-                <Table.DataCell>{klage}</Table.DataCell>
-                <Table.DataCell>{'HAIKU HEDGE ASA'}</Table.DataCell>
-                <Table.DataCell>{'NY'}</Table.DataCell>
-              </Table.Row>
-              <Table.Row>
-                <Table.DataCell>{'11.04.2023'}</Table.DataCell>
-                <Table.DataCell>{'Kategori 4'}</Table.DataCell>
-                <Table.DataCell>{klage}</Table.DataCell>
-                <Table.DataCell>{'ATMOSPHERIC EXPLORER ASA'}</Table.DataCell>
-                <Table.DataCell>{'NY'}</Table.DataCell>
-              </Table.Row>
-            </Table.Body>
-          </Table>
-        </div>
-        <div>
-          {'Compact table'}
-          <Table caption={'Dette er en kompakt tabell.'} size={'extraSmall'}>
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
-                <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
-                <Table.HeaderCell scope={'col'}>
-                  {'Arbeidsoppgave'}
-                </Table.HeaderCell>
-                <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
-                <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
-            <Table.Body>
-              <Table.Row>
-                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
-                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
-                <Table.DataCell>{klage}</Table.DataCell>
-                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
-                <Table.DataCell>{'NY'}</Table.DataCell>
-              </Table.Row>
-              <Table.Row>
-                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
-                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
-                <Table.DataCell>{klage}</Table.DataCell>
-                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
-                <Table.DataCell>{'NY'}</Table.DataCell>
-              </Table.Row>
-            </Table.Body>
-          </Table>
-        </div>
-      </>
-    );
-  },
-} satisfies Story;
-Variants.parameters = exampleParameters;
 
 export const Sizes: Story = {
   render: (_args): JSX.Element => {
@@ -294,7 +203,7 @@ export const Sizes: Story = {
 
         <div>
           {'Large'}
-          <Table caption={'Dette er en stor tabell.'} size={'large'}>
+          <Table caption={'Dette er en stor tabell.'}>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
@@ -328,7 +237,7 @@ export const Sizes: Story = {
     );
   },
 } satisfies Story;
-Variants.parameters = exampleParameters;
+Sizes.parameters = exampleParameters;
 
 export const Sortable: Story = {
   render: (_args): JSX.Element => {
@@ -370,7 +279,6 @@ export const Sortable: Story = {
         sortState={sortState}
         setSortState={setSortState}
         caption={'High scores'}
-        size={'large'}
       >
         <Table.Header>
           <Table.Row>
@@ -497,7 +405,6 @@ export const Expandable: Story = {
         caption={'Firmaoversikt'}
         sortState={sortState}
         setSortState={setSortState}
-        size={'large'}
       >
         <Table.Header>
           <Table.Row>
@@ -645,7 +552,7 @@ export const ExpandableWithCustomExpandButtonProps: Story = {
     };
 
     return (
-      <Table caption={'Oppgaver'} size={'large'}>
+      <Table caption={'Oppgaver'}>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell sortKey={'firma'} scope={'col'} isSortable>
@@ -697,7 +604,7 @@ export const ExpandableWithCustomExpandButtonProps: Story = {
     );
   },
 } satisfies Story;
-Expandable.parameters = exampleParameters;
+ExpandableWithCustomExpandButtonProps.parameters = exampleParameters;
 
 export const Editable: Story = {
   render: (_args): JSX.Element => {
@@ -756,7 +663,6 @@ export const Editable: Story = {
         sortState={sortState}
         setSortState={setSortState}
         caption={'Månedoversikt'}
-        size={'large'}
       >
         <Table.Header>
           <Table.Row>
@@ -893,7 +799,6 @@ export const WithEmptyHeaders: Story = {
           caption={'Arbeidsoppgaver'}
           sortState={sortState}
           setSortState={setSortState}
-          size={'large'}
         >
           <Table.Header>
             <Table.Row>
@@ -1009,7 +914,7 @@ export const Selectable: Story = {
     const [isAllChecked, setIsAllChecked] = useState<boolean>(false);
 
     return (
-      <Table caption={'avgiftsstatus'} size={'large'}>
+      <Table caption={'avgiftsstatus'}>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell as={'td'}>
@@ -1162,7 +1067,7 @@ export const WithStripes: Story = {
 
     return (
       <>
-        <Table caption={'Firmaoversikt'} size={'large'}>
+        <Table caption={'Firmaoversikt'}>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell as={'td'} />
@@ -1196,7 +1101,7 @@ export const WithStripes: Story = {
             })}
           </Table.Body>
         </Table>
-        <Table caption={'Firmaoversikt'} size={'large'}>
+        <Table caption={'Firmaoversikt'}>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell scope={'col'}>{'Firma'}</Table.HeaderCell>

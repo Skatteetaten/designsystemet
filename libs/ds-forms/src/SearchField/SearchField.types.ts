@@ -9,12 +9,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-  Size,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
@@ -37,6 +32,7 @@ type RequiredSearchFieldHTMLAttributes = Pick<
   | 'name'
   | 'placeholder'
   | 'readOnly'
+  | 'required'
   | 'value'
 >;
 
@@ -57,8 +53,7 @@ export interface SearchResult {
 }
 
 interface SearchFieldCommonProps
-  extends SearchFieldPropsHTMLAttributes,
-    BaseProps {
+  extends SearchFieldPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
@@ -131,9 +126,8 @@ interface SearchFieldCommonProps
   enableSRNavigationHint?: boolean;
 }
 
-export type SearchFieldProps = SearchFieldCommonProps & FormRequiredProps;
+export type SearchFieldProps = SearchFieldCommonProps;
 
-export interface SearchFieldComponent
-  extends FunctionComponent<SearchFieldProps> {
+export interface SearchFieldComponent extends FunctionComponent<SearchFieldProps> {
   Result: typeof SearchFieldResult;
 }

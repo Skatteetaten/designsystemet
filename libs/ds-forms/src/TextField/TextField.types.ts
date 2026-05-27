@@ -6,12 +6,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  FormSize,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, FormSize, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -45,8 +40,7 @@ interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
 }
 
 export interface TextFieldCommonProps
-  extends TextFieldPropsHTMLAttributes,
-    BaseProps {
+  extends TextFieldPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
@@ -84,18 +78,8 @@ export interface TextFieldCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Definerer stilen til TextField */
   variant?: FormSize;
-  /**
-   * Setter inn tusenskilletegn for heltall og fjerner ikke-numeriske tegn.
-   * Mellomrom eller komma brukes som skilletegn avhengig av språket som er
-   * valgt OBS: husk at parsing av tallet må ta høyde for at skilletegn vil være
-   * ulikt på norsk og engelsk.
-   *
-   * @deprecated Fjernes i neste major og erstattes av
-   *   [useFormattedInput](https://skatteetaten.github.io/designsystemet/?path=/docs/verkt%C3%B8y-formatters--docs#useformattedinput-hook)
-   */
-  thousandSeparator?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
-export type TextFieldProps = TextFieldCommonProps & FormRequiredProps;
+export type TextFieldProps = TextFieldCommonProps;

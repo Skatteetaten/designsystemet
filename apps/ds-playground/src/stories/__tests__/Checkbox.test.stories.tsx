@@ -32,7 +32,6 @@ const meta = {
     errorMessage: { table: { disable: true } },
     hasSpacing: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     // HTML
     checked: { table: { disable: true } },
     disabled: { table: { disable: true } },
@@ -325,19 +324,6 @@ export const WithRequired = {
   },
 } satisfies Story;
 
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (A1, B3)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithRequiredAndChecked = {
   name: 'With Required And Checked (B3)',
   args: {
@@ -392,12 +378,10 @@ export const WithDisabledAndRequired = {
     ...defaultArgs,
     disabled: true,
     required: true,
-    showRequiredMark: true,
   },
   argTypes: {
     disabled: { table: { disable: false } },
     required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -414,12 +398,10 @@ export const WithErrorAndRequired = {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
     required: true,
-    showRequiredMark: true,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
     required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },

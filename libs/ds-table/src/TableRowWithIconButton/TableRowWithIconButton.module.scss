@@ -22,10 +22,6 @@
     padding: var(--spacing-xs) var(--spacing-xs)
       calc(var(--spacing-xs) - var(--table-cell-border-width));
   }
-
-  &_compact {
-    padding: var(--spacing-xs) var(--spacing-xs) 0;
-  }
 }
 
 .expandButton {
@@ -36,8 +32,7 @@
     --semantic-line-height-buttons: var(--semantic-line-height-table);
   }
 
-  &_extraSmall,
-  &_compact {
+  &_extraSmall {
     font-size: var(--font-size-s);
 
     > svg {
@@ -49,8 +44,8 @@
   }
 }
 
-.expandableLeftContent {
-  padding: var(--spacing-m) var(--spacing-l) var(--spacing-l); // denne skal også gjelde for right content. fiks i neste major 3.0.0.
+.expandedContent {
+  padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
 }
 
 .expandedRow {

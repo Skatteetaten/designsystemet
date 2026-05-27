@@ -36,7 +36,6 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     disabled: { table: { disable: true } },
@@ -227,28 +226,6 @@ export const LegendWithMarkup = {
   },
 } satisfies Story;
 
-export const LegendWithMarkupAndRequiredMark = {
-  name: 'Legend With Markup and Required Mark (B1)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h1'} level={3}>
-          {'Dette er en Heading i legend'}
-        </Heading>
-        <Paragraph variant={'ingress'}>
-          <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
-        </Paragraph>
-      </>
-    ),
-    showRequiredMark: true,
-  },
-  argTypes: {
-    legend: { table: { disable: false }, control: { disable: true } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithHideLegend = {
   name: 'With HideLegend (B1)',
   args: {
@@ -293,17 +270,6 @@ export const WithDisabledAndChecked = {
   },
   argTypes: {
     disabled: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithRequiredMark = {
-  name: 'With Required Mark (A1, B3)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 

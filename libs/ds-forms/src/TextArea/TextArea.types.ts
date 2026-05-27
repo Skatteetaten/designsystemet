@@ -5,11 +5,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -42,8 +38,7 @@ interface TextAreaPropsHTMLAttributes extends TextAreaHTMLAttributes {
 }
 
 export interface TextAreaCommonProps
-  extends TextAreaPropsHTMLAttributes,
-    BaseProps {
+  extends TextAreaPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLTextAreaElement>;
   classNames?: Prettify<
     {
@@ -85,4 +80,4 @@ export interface TextAreaCommonProps
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
-export type TextAreaProps = TextAreaCommonProps & FormRequiredProps;
+export type TextAreaProps = TextAreaCommonProps;

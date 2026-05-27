@@ -14,6 +14,7 @@ import {
   getCommonFormVariantDefault,
   getAutoCompletePropDescription,
   getHelpTitleHelpSvgDefault,
+  useFormattedInput,
 } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
@@ -56,16 +57,6 @@ const meta = {
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     label: { table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
-    thousandSeparator: {
-      table: { category: category.props },
-      description:
-        '<strong>Deprecated:</strong> Prop skal fjernes i neste major versjon.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,
@@ -128,9 +119,12 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   name: 'Beløp og postnummer',
   render: (_args): JSX.Element => {
-    const [creditInput, setCreditInput] = useState('10000');
+    const credit = useFormattedInput({
+      type: 'number',
+      initialValue: '10000',
+    });
 
-    const [postaCodeInput, setPostaCodeInput] = useState('');
+    const [postalCodeInput, setPostalCodeInput] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
     return (
@@ -139,19 +133,16 @@ export const Examples: Story = {
           label={'Ønsket kredittgrense (NOK)'}
           className={'textField300'}
           description={'Gjennomsnittlig oppgjør for fire dager'}
-          value={creditInput}
+          value={credit.value}
           hasSpacing
-          thousandSeparator
-          onChange={(e: ChangeEvent<HTMLInputElement>): void =>
-            setCreditInput(e.target.value)
-          }
+          onChange={credit.onChange}
         />
         <TextField
           label={'Postnummer'}
           name={'test'}
           className={'textField150'}
           errorMessage={errorMessage}
-          value={postaCodeInput}
+          value={postalCodeInput}
           maxLength={4}
           pattern={'\\d{4}'}
           required
@@ -161,7 +152,7 @@ export const Examples: Story = {
               setErrorMessage('Postnummer kan kun inneholde tall.');
             }
 
-            setPostaCodeInput(e.target.value);
+            setPostalCodeInput(e.target.value);
           }}
           onBlur={(e: FocusEvent<HTMLInputElement>): void => {
             if (e.target.validity.patternMismatch) {

@@ -38,7 +38,6 @@ export const CheckboxGroup = (({
   form,
   hasSpacing,
   hideLegend,
-  showRequiredMark,
   onHelpToggle,
   children,
 }: CheckboxGroupProps): JSX.Element => {
@@ -52,7 +51,7 @@ export const CheckboxGroup = (({
       classNames={{
         ...classNames,
         contentContainer:
-          `${styles.contentContainer} ${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer ?? ''}`.trim(),
+          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer ?? ''}`.trim(),
       }}
       lang={lang}
       data-testid={dataTestId}
@@ -61,7 +60,6 @@ export const CheckboxGroup = (({
       form={form}
       legend={legend}
       hideLegend={hideLegend}
-      showRequiredMark={showRequiredMark}
       description={description}
       helpSvgPath={helpSvgPath}
       helpText={helpText}
@@ -75,7 +73,7 @@ export const CheckboxGroup = (({
           readOnly,
         }}
       >
-        {children}
+        <div className={styles.checkboxGroupContainer}>{children}</div>
       </CheckboxContext.Provider>
       <ErrorMessage
         className={`${styles.errorMessage} ${

@@ -34,11 +34,6 @@ const meta = {
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
     readOnly: { table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk gruppe skal markeres med stjerne. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,

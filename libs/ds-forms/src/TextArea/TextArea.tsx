@@ -10,7 +10,6 @@ import {
 import {
   getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
-  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
 import { TextAreaProps } from './TextArea.types';
@@ -59,13 +58,11 @@ export const TextArea = ({
   value,
   hasSpacing,
   hideLabel,
-  showRequiredMark,
   onBlur,
   onChange,
   onFocus,
   onHelpToggle,
 }: TextAreaProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `textAreaErrorId-${useId()}`;
   const generatedId = `textAreaTextboxId-${useId()}`;
   const characterCounterId = `textAreaCharacterCounter-${useId()}`;
@@ -122,7 +119,6 @@ export const TextArea = ({
         classNames={classNames}
         htmlFor={textboxId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}

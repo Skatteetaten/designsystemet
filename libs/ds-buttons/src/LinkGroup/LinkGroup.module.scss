@@ -11,12 +11,16 @@
   }
 
   &Item {
-    position: relative;
-    width: fit-content;
-    margin: 0 0 var(--spacing-s);
-
     --icon-color: var(--semantic-interactive-main);
     --transform-icon: translateX(var(--link-icon-offset));
+
+    position: relative;
+    width: fit-content;
+    margin-bottom: var(--spacing-s);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &[data-color='white'] {
       --icon-color: var(--palette-graphite-0);
