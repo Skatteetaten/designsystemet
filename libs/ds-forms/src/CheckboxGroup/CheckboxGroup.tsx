@@ -51,7 +51,7 @@ export const CheckboxGroup = (({
     <Fieldset
       ref={ref}
       id={id}
-      className={className}
+      className={`${className} ${classNames?.container ?? ''}`.trim()}
       classNames={{
         ...classNames,
         contentContainer:

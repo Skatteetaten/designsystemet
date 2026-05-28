@@ -16,7 +16,11 @@ type FieldsetHTMLAttributes = Partial<RequiredFieldsetHTMLAttributes> & {
 export interface FieldsetProps extends FieldsetHTMLAttributes, BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
-    { legend?: string; contentContainer?: string } & HelpProps['classNames']
+    {
+      container?: string;
+      legend?: string;
+      contentContainer?: string;
+    } & HelpProps['classNames']
   >;
   /** Innhold */
   children: ReactNode;
