@@ -7,7 +7,7 @@ import {
   getOpenCloseIconPositionDefault,
   getOpenCloseKeepMountedDefault,
   getOpenCloseUnderlineDefault,
-  getOpenCloseVariantDefault,
+  getOpenCloseSizeDefault,
 } from '@skatteetaten/ds-collections';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -54,7 +54,7 @@ const meta = {
       control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: 'large' },
+        defaultValue: { summary: getOpenCloseSizeDefault() },
       },
     },
     title: { table: { category: category.props } },
@@ -63,15 +63,6 @@ const meta = {
       table: {
         category: category.props,
       },
-    },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseVariantDefault() },
-      },
-      description:
-        '<strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Bruk <code>size</code> i stedet.',
     },
     //Events
     onClick: { ...htmlEventDescription },

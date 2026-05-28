@@ -1,8 +1,7 @@
-import { Density } from '@skatteetaten/ds-core-utils';
+import { OpenCloseIconPosition, OpenCloseSize } from './OpenClose.types';
 
-import { IconPosition } from '../Accordion/Accordion.types';
-
-export const getOpenCloseIconPositionDefault = (): IconPosition => 'left';
+export const getOpenCloseIconPositionDefault = (): OpenCloseIconPosition =>
+  'left';
 export const getOpenCloseUnderlineDefault = (): boolean => true;
-export const getOpenCloseVariantDefault = (): Density => 'standard';
+export const getOpenCloseSizeDefault = (): OpenCloseSize => 'large';
 export const getOpenCloseKeepMountedDefault = (): boolean => false;

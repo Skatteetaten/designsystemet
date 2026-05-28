@@ -72,9 +72,6 @@ export type HeadingAs = (typeof headingAsArr)[number];
 export const subheadingAsArr = ['h2', 'h3', 'h4', 'h5', 'h6'] as const;
 export type SubheadingAs = (typeof subheadingAsArr)[number];
 
-export const densityArr = ['standard', 'compact'] as const;
-export type Density = (typeof densityArr)[number];
-
 export const weightArr = ['regular', 'medium', 'bold'] as const;
 export type Weight = (typeof weightArr)[number];
 
