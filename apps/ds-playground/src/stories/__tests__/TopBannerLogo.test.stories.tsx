@@ -30,11 +30,6 @@ const meta = {
       control: 'select',
       options: ['', customLogo],
     },
-    mobileLogo: {
-      table: { disable: true },
-      control: 'select',
-      options: ['', customMobileLogo],
-    },
     // HTML
     alt: { table: { disable: true } },
     href: { table: { disable: true } },
@@ -49,12 +44,10 @@ type Story = StoryObj<typeof meta>;
 
 const logoLinkText = dsI18n.t('ds_layout:topbanner.SkeLogoLinkText');
 const logoText = dsI18n.t('ds_layout:topbanner.SkeLogoImageText');
-const defaultArgs: TopBannerLogoProps = {};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLAnchorElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -77,7 +70,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'en',
@@ -107,10 +99,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A8, A9)',
-  args: {
-    ...defaultArgs,
-  },
-  argTypes: {},
+  args: {},
   parameters: {
     pseudoStates: ['focus-visible'],
   },
@@ -129,7 +118,6 @@ export const Defaults = {
 export const WithAs = {
   name: 'With As (A8)',
   args: {
-    ...defaultArgs,
     as: 'div',
   },
   argTypes: {
@@ -149,19 +137,16 @@ export const WithAs = {
   },
 } satisfies Story;
 
-export const WithLogoMobileLogoAltAndHref = {
-  name: 'With Logo, MobileLogo, Alt, And Href (A8, A10)',
+export const WithLogoAltAndHref = {
+  name: 'With Logo, Alt, And Href (A8, A10)',
   args: {
-    ...defaultArgs,
     as: 'a',
     logo: customLogo,
-    mobileLogo: customMobileLogo,
     alt: 'custom alt text',
     href: '#',
   },
   argTypes: {
     logo: { table: { disable: false } },
-    mobileLogo: { table: { disable: false } },
     alt: { table: { disable: false } },
     href: { table: { disable: false } },
   },
@@ -178,7 +163,6 @@ export const WithLogoMobileLogoAltAndHref = {
 export const WithOnClick = {
   name: 'With OnClick',
   args: {
-    ...defaultArgs,
     onClick: fn((e) => {
       e.preventDefault();
     }),
