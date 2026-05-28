@@ -26,7 +26,6 @@ export const TopBannerLogo = ({
   as: Tag = getTopBannerLogoAsDefault(),
   logo,
   href = getTopBannerLogoHrefDefault(),
-  mobileLogo, // deprecated
   alt,
   onClick,
 }: TopBannerLogoProps): JSX.Element => {

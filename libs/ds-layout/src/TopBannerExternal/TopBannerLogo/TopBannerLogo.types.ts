@@ -12,12 +12,9 @@ type TopBannerLogoDiscrimatedProps =
        * og url.
        */
       logo?: never;
-      /** Overskriver default logo for mobilvisning. */
-      mobileLogo?: never;
       /**
-       * Overskriver default alt-tekst for logo kun dersom logo og mobileLogo
-       * også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller
-       * ikke.
+       * Overskriver default alt-tekst for logo kun dersom logo også endres. NB!
+       * Alt-tekst må være tilpasset om logo er en lenke eller ikke.
        */
       alt?: never;
       /** Overskriver default URL. */
@@ -35,12 +32,9 @@ type TopBannerLogoDiscrimatedProps =
        * og url.
        */
       logo: string;
-      /** Overskriver default logo for mobilvisning. */
-      mobileLogo: string;
       /**
-       * Overskriver default alt-tekst for logo kun dersom logo og mobileLogo
-       * også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller
-       * ikke.
+       * Overskriver default alt-tekst for logo kun dersom logo også endres. NB!
+       * Alt-tekst må være tilpasset om logo er en lenke eller ikke.
        */
       alt: string;
       /** Overskriver default URL. */
@@ -58,12 +52,9 @@ type TopBannerLogoDiscrimatedProps =
        * og url.
        */
       logo: string;
-      /** Overskriver default logo for mobilvisning. */
-      mobileLogo: string;
       /**
-       * Overskriver default alt-tekst for logo kun dersom logo og mobileLogo
-       * også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller
-       * ikke.
+       * Overskriver default alt-tekst for logo kun dersom logo også endres. NB!
+       * Alt-tekst må være tilpasset om logo er en lenke eller ikke.
        */
       alt: string;
       /** Overskriver default URL. */

@@ -105,7 +105,6 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
   skipLink?: SkipLink;
   /**
    * Logo.logo: Overskriver default logo. Må også angi alt-tekst og url.
-   * **Deprecated logo.mobileLogo:** Overskriver default logo for mobilvisning.
    * logo.alt: Overskriver default alt-tekst for logo, kun dersom logo også
    * endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.
    * logo.href: Overskriver default URL. logo.as: HTML-tag for Logo. Styrer om
@@ -121,13 +120,11 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
    */
   otherLanguagesURL?: string;
 }
-export interface TopBannerExternalComponent
-  extends FunctionComponent<TopBannerExternalProps> {
+export interface TopBannerExternalComponent extends FunctionComponent<TopBannerExternalProps> {
   UserMenu: typeof TopBannerExternalUserMenu;
 }
 
-export interface TopBannerExternalHandle
-  extends RefObject<HTMLHeadElement | null> {
+export interface TopBannerExternalHandle extends RefObject<HTMLHeadElement | null> {
   /* Åpner menyen */
   openMenu: () => void;
   /* Lukker menyen */
