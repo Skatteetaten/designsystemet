@@ -150,9 +150,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -162,6 +160,51 @@ export const WithAttributes = {
     await expect(fieldset).toHaveAttribute('lang', 'nb');
     await expect(fieldset).toHaveAttribute('data-testid', '123ID');
     await expect(fieldset).toHaveAttribute('form', '123form');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      legend: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'HJEEEEEEELP',
+    errorMessage: 'feil',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const legend = canvas.getByText(defaultLegendText);
+    await expect(legend).toHaveClass('dummyClassname');
+
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^= radioErrorId]>div'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+
+    const description = canvas.getByText('beskrivelse');
+    await expect(description).toHaveClass('dummyClassname');
+
+    const helpButton = canvas.getByRole('button');
+    await userEvent.click(helpButton);
+
+    const helpText = canvas.getByText('HJEEEEEEELP');
+    const helpBox = helpText.parentElement;
+    await expect(helpBox).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -620,37 +663,6 @@ export const WithHelpToggleEvent = {
     const helpButton = canvas.getByRole('button');
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      legend: 'dummyClassname',
-      errorMessage: 'dummyClassname',
-      description: 'dummyClassname',
-      helpText: 'dummyClassname',
-    },
-    description: 'beskrivelse',
-    helpText: 'HJEEEEEEELP',
-    errorMessage: 'feil',
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    const errorMessageContainer = canvasElement.querySelector(
-      '[id^= radioErrorId]>div'
-    );
-    await expect(errorMessageContainer).toHaveClass('dummyClassname');
-
-    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

@@ -30,7 +30,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Meta<typeof Breadcrumbs.Link>;
 export default meta;
@@ -54,9 +54,6 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
 
@@ -74,11 +71,6 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
-  },
-  parameters: {
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

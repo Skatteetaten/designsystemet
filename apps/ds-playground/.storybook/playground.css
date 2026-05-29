@@ -59,7 +59,8 @@ code {
 .scrollToTopMainPusher {
   height: 200vh;
   padding-top: 100vh;
-  color: var(--palette-denim-5);
+  color: var(--palette-graphite-100);
+  background-color: var(--palette-graphite-10);
 }
 
 .width100 {

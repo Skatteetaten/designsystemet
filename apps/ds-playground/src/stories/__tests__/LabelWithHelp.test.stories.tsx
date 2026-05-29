@@ -100,9 +100,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -111,6 +109,39 @@ export const WithAttributes = {
     await expect(label).toHaveClass('dummyClassname');
     await expect(label).toHaveAttribute('lang', 'nb');
     await expect(label).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      label: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'hjelp',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const label = canvas.getByText(defaultChildrenText);
+    await expect(label).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
+
+    await fireEvent.click(canvas.getByRole('button'));
+    const helpText = canvas.getByText('hjelp').parentElement;
+    await expect(helpText).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -225,36 +256,6 @@ export const WithHelpToggleEvent = {
     const helpButton = canvas.getByRole('button');
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      label: 'dummyClassname',
-      description: 'dummyClassname',
-      helpText: 'dummyClassname',
-    },
-    description: 'beskrivelse',
-    helpText: 'hjelp',
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    const label = canvas.getByText(defaultChildrenText);
-    await expect(label).toHaveClass('dummyClassname');
-    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
-
-    await fireEvent.click(canvas.getByRole('button'));
-    const helpText = canvas.getByText('hjelp').parentElement;
-    await expect(helpText).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

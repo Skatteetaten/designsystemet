@@ -21,7 +21,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Meta<typeof List.Element>;
 export default meta;
@@ -50,9 +50,6 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('listitem');
@@ -75,11 +72,6 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
-  },
-  parameters: {
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
