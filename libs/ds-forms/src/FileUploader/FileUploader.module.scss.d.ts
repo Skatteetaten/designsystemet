@@ -9,9 +9,8 @@ declare const classNames: {
   readonly srOnly: 'srOnly';
   readonly fileFormatList: 'fileFormatList';
   readonly fileList: 'fileList';
-  readonly removePointerEvents: 'removePointerEvents';
   readonly alert: 'alert';
   readonly spinner: 'spinner';
-  readonly innerLabel: 'innerLabel';
+  readonly innerText: 'innerText';
 };
 export default classNames;
