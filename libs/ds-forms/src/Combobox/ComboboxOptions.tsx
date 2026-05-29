@@ -104,6 +104,7 @@ export const ComboboxOptions = memo<ComboboxOptionsProps>(
             id={listId}
             role={'listbox'}
             aria-multiselectable={multiple ? 'true' : 'false'}
+            tabIndex={-1}
             className={styles.optionsList}
             onMouseDown={(e) => e.preventDefault()}
           >
