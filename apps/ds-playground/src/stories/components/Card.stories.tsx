@@ -165,9 +165,7 @@ export const FileListExample: Story = {
   name: 'Liste med filer',
   render: (_args): JSX.Element => {
     return (
-      <div
-        className={'flex flexColumn gapS width400 topSpacingXL centerMargin'}
-      >
+      <div className={'fileList'}>
         <Card spacing={'xxs'} color={'denim'}>
           <Card.Content
             classNames={{ children: 'flex' }}
