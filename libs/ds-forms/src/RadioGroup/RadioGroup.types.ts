@@ -55,7 +55,7 @@ interface RadioGroupComponentCommonProps
     BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
-    { errorMessage?: string } & FieldsetProps['classNames']
+    { container?: string; errorMessage?: string } & FieldsetProps['classNames']
   >;
   /** Radio-komponenter */
   children: ReactNode;

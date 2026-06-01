@@ -25,7 +25,7 @@ interface CheckboxGroupCommonProps
     BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
-    { errorMessage?: string } & FieldsetProps['classNames']
+    { container?: string; errorMessage?: string } & FieldsetProps['classNames']
   >;
   /** Checkbox-komponenter */
   children: ReactNode;
