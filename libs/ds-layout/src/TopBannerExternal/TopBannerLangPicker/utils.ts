@@ -49,6 +49,7 @@ export const getCurrentLanguages = (
     se: {
       lang: 'se',
       displayName: 'Sámegiella',
+      webAnalyticsId: topBannerAnalyticsIds.languageMenu.samisk,
     },
   };
 

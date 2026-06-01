@@ -357,7 +357,7 @@ export const TopBannerExternal = (({
                     openMenu === 'MainMenu' ? CancelSVGpath : MenuSVGpath
                   }
                   ariaExpanded={isMenuOpen}
-                  dataWebAnalyticsId={topBannerAnalyticsIds.mainMenu}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.mainMenuToggle}
                   onClick={handleMenuClick}
                   onFocus={() => {
                     statusFlagRef.current.focusCaptured = isMenuOpen;
@@ -369,6 +369,7 @@ export const TopBannerExternal = (({
                   <div
                     ref={menuRef}
                     className={styles.mainMenu}
+                    web-analytics-id={topBannerAnalyticsIds.mainMenu}
                     onFocus={() => {
                       statusFlagRef.current.focusCaptured = isMenuOpen;
                     }}

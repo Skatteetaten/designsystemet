@@ -125,6 +125,7 @@ export const TopBannerExternalUserMenu = ({
             {...getFloatingProps()}
             ref={refs.setFloating}
             style={floatingStyles}
+            web-analytics-id={topBannerAnalyticsIds.userMenu.root}
           >
             <Heading as={'h4'}>
               {user.role !== 'meg' && (

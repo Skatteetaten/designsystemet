@@ -74,7 +74,7 @@ export const TopBannerUserMenuButton = ({
       }
       lang={lang}
       data-testid={dataTestId}
-      dataWebAnalyticsId={topBannerAnalyticsIds.userMenu.root}
+      dataWebAnalyticsId={topBannerAnalyticsIds.userMenuToggle}
       variant={'filled'}
       onClick={onClick}
     >
