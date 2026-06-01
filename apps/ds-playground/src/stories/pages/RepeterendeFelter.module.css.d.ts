@@ -3,8 +3,7 @@ declare const classNames: {
   readonly tabIndexNoOutline: 'tabIndexNoOutline';
   readonly miniNav: 'miniNav';
   readonly article: 'article';
-  readonly marginTopL: 'marginTopL';
-  readonly desciptionList: 'desciptionList';
+  readonly descriptionList: 'descriptionList';
   readonly repeatingFields: 'repeatingFields';
   readonly addNewButton: 'addNewButton';
   readonly editModal: 'editModal';

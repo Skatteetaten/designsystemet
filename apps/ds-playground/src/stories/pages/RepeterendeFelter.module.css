@@ -26,11 +26,7 @@
   margin: auto;
 }
 
-.marginTopL {
-  margin-top: var(--spacing-l);
-}
-
-.desciptionList {
+.descriptionList {
   display: grid;
   gap: var(--spacing-xs);
   grid-template-columns: 1fr 1fr;
