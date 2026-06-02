@@ -1,11 +1,14 @@
 export const topBannerAnalyticsIds = {
   logo: 'topbanner.logo',
+  languageMenuToggle: 'topbanner.language-menu.toggle',
   languageMenu: {
     root: 'topbanner.language-menu',
     norsk: 'topbanner.language-menu.norsk',
     nynorsk: 'topbanner.language-menu.nynorsk',
     english: 'topbanner.language-menu.english',
+    samisk: 'topbanner.language-menu.samisk',
   },
+  userMenuToggle: 'topbanner.user-menu.toggle',
   userMenu: {
     root: 'topbanner.user-menu',
     switchUser: 'topbanner.user-menu.switch-user',
@@ -18,6 +21,7 @@ export const topBannerAnalyticsIds = {
   login: 'topbanner.login',
   logout: 'topbanner.logout',
   search: 'topbanner.search',
+  mainMenuToggle: 'topbanner.main-menu.toggle',
   mainMenu: 'topbanner.main-menu',
 } as const;
 

@@ -203,7 +203,7 @@ export const TopBannerLangPicker = (({
         lang={selectedLang}
         className={`${styles.menuButton} ${isMenuOpen ? styles.menuButton_open : ''} ${isInMobileMenu ? styles.menuButtonDesktopOnly : ''}`}
         ariaExpanded={isMenuOpen}
-        dataWebAnalyticsId={topBannerAnalyticsIds.languageMenu.root}
+        dataWebAnalyticsId={topBannerAnalyticsIds.languageMenuToggle}
         onClick={handleMenuClick}
         onKeyDown={(e) => {
           if (e.shiftKey && e.key === 'Tab') {
@@ -243,6 +243,7 @@ export const TopBannerLangPicker = (({
             className={styles.menu}
             {...getFloatingProps()}
             style={floatingStyles}
+            web-analytics-id={topBannerAnalyticsIds.languageMenu.root}
           >
             <ul className={styles.list}>
               {Object.values(languages).map((language, index) => {
