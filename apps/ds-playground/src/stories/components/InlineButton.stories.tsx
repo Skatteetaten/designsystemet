@@ -2,17 +2,15 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  InlineButton,
-  getInlineButtonPositionDefault,
-  getInlineButtonBrightnessDefault,
-} from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
+import { InlineButton } from '@skatteetaten/ds-buttons';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
 import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -28,35 +26,14 @@ const meta = {
         defaultValue: { summary: getSpinnerLabelDefault() },
       },
     },
-    iconPosition: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getInlineButtonPositionDefault() },
-      },
-    },
-    brightness: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getInlineButtonBrightnessDefault() },
-      },
-    },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    iconPosition: { table: { category: category.props } },
+    brightness: { table: { category: category.props } },
+    svgPath: { ...svgPathDescription },
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
-    type: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonButtonTypeDefault() },
-      },
-    },
+    type: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events

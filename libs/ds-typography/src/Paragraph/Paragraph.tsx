@@ -1,8 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
-import { getParagraphVariantDefault } from './defaults';
 import { ParagraphProps } from './Paragraph.types';
 
 import styles from './Paragraph.module.scss';
@@ -16,12 +13,12 @@ import styles from './Paragraph.module.scss';
 export const Paragraph = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  variant = getParagraphVariantDefault(),
-  canBeManuallyFocused,
-  hasSpacing,
+  variant = 'standard',
+  canBeManuallyFocused = false,
+  hasSpacing = false,
   children,
 }: ParagraphProps): JSX.Element => {
   return (

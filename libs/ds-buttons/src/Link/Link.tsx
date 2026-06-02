@@ -18,10 +18,10 @@ import styles from './Link.module.scss';
 export const Link = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  isExternal,
+  isExternal = false,
   color,
   svgPath,
   href,

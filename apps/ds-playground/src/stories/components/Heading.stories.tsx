@@ -13,24 +13,11 @@ const meta = {
   title: 'Komponenter/Heading',
   argTypes: {
     // Props
-    as: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
+    as: { control: 'inline-radio', table: { category: category.props } },
     canBeManuallyFocused: { table: { category: category.props } },
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    level: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
+    level: { control: 'inline-radio', table: { category: category.props } },
   },
   args: {
     as: 'h2',

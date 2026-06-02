@@ -2,13 +2,8 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getScrollToMainDefault,
-  getScrollToTopButtonTextDefault,
-  getVisibilityThresholdDefault,
-  ScrollToTopButton,
-} from '@skatteetaten/ds-buttons';
-import { ExternalLayout } from '@skatteetaten/ds-core-utils';
+import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
+import { dsI18n, ExternalLayout } from '@skatteetaten/ds-core-utils';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -18,34 +13,19 @@ const meta = {
   title: 'Komponenter/ScrollToTopButton',
   argTypes: {
     // Props
-    classNames: {
-      control: false,
-      table: { category: category.props },
-    },
-    visibilityThreshold: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: String(getVisibilityThresholdDefault()) },
-      },
-    },
-    scrollToMain: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getScrollToMainDefault().toString() },
-      },
-    },
-    shadowRootNode: {
-      control: false,
-      table: { category: category.props },
-    },
+    classNames: { control: false, table: { category: category.props } },
+    visibilityThreshold: { table: { category: category.props } },
+    scrollToMain: { table: { category: category.props } },
+    shadowRootNode: { control: false, table: { category: category.props } },
     children: {
       table: {
         category: category.props,
-        defaultValue: { summary: getScrollToTopButtonTextDefault() },
+        defaultValue: {
+          summary: dsI18n.t('ds_buttons:scrolltotopbutton.Title'),
+        },
       },
     },
   },
-  args: {},
   globals: {
     backgrounds: {
       value: 'grey',

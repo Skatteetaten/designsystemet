@@ -1,16 +1,11 @@
 import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonButtonTypeDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon, Icon } from '@skatteetaten/ds-icons';
 import { Spinner, SpinnerColor } from '@skatteetaten/ds-progress';
 
 import { ButtonProps } from './Button.types';
-import { getButtonVariantDefault } from './defaults';
 
 import styles from './Button.module.scss';
 
@@ -23,21 +18,21 @@ import styles from './Button.module.scss';
 export const Button = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   spinnerTitle,
   svgPath,
-  variant = getButtonVariantDefault(),
+  variant = 'primary',
   accessKey,
-  disabled,
+  disabled = false,
   form,
   href,
-  type = getCommonButtonTypeDefault(),
+  type = 'button',
   ariaDescribedby,
   ariaCurrent,
-  hasSpinner,
-  isExternal,
+  hasSpinner = false,
+  isExternal = false,
   onBlur,
   onClick,
   onFocus,

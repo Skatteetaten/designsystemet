@@ -27,12 +27,7 @@ const meta = {
     accessKey: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
     href: { table: { category: category.htmlAttribute } },
-    type: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonButtonTypeDefault() },
-      },
-    },
+    type: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events

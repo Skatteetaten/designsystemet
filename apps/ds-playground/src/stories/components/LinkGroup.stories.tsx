@@ -2,10 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  LinkGroup,
-  getLinkGroupVariantDefault,
-} from '@skatteetaten/ds-buttons';
+import { LinkGroup, LinkGroupBase } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 
 import { category } from '../../../.storybook/helpers';
@@ -14,7 +11,7 @@ import { exampleParameters } from '../utils/stories.utils';
 LinkGroup.Link.displayName = 'LinkGroup.Link';
 
 const meta = {
-  component: LinkGroup,
+  component: LinkGroupBase,
   title: 'Komponenter/LinkGroup',
   argTypes: {
     // Props
@@ -22,18 +19,10 @@ const meta = {
     color: {
       options: [undefined, ...linkColorArr],
       control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
+      table: { category: category.props },
     },
     hasSpacing: { table: { category: category.props } },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getLinkGroupVariantDefault() },
-      },
-    },
+    variant: { control: 'inline-radio', table: { category: category.props } },
   },
   args: {
     children: [
@@ -52,7 +41,7 @@ const meta = {
       </LinkGroup.Link>,
     ],
   },
-} satisfies Meta<typeof LinkGroup>;
+} satisfies Meta<typeof LinkGroupBase>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

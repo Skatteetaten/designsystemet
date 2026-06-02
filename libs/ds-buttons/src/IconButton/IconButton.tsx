@@ -1,16 +1,8 @@
 import { JSX } from 'react';
 
-import {
-  getCommonButtonTypeDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import {
-  getIconButtonBrightnessDefault,
-  getIconButtonSizeDefault,
-} from './defaults';
 import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
@@ -24,21 +16,21 @@ import styles from './IconButton.module.scss';
 export const IconButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  brightness = getIconButtonBrightnessDefault(),
-  size = getIconButtonSizeDefault(),
+  brightness = 'default',
+  size = 'medium',
   spinnerTitle,
   svgPath,
   accessKey,
-  disabled,
+  disabled = false,
   title,
-  type = getCommonButtonTypeDefault(),
+  type = 'button',
   ariaDescribedby,
-  ariaExpanded,
-  hasSpinner,
-  isOutlined,
+  ariaExpanded = false,
+  hasSpinner = false,
+  isOutlined = false,
   onClick,
   onBlur,
   onFocus,

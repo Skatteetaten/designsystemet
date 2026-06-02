@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { HeadingProps } from './Heading.types';
 
 import styles from './Heading.module.scss';
@@ -15,13 +13,13 @@ import styles from './Heading.module.scss';
 export const Heading = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   as: Tag,
   level: externalLevel,
-  canBeManuallyFocused,
-  hasSpacing,
+  canBeManuallyFocused = false,
+  hasSpacing = false,
   children,
 }: HeadingProps): JSX.Element => {
   const TAG_LEVEL_MAP: Record<string, number> = {
