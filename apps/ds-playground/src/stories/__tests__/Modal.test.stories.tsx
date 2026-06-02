@@ -114,9 +114,6 @@ export const WithAttributes = {
   },
   parameters: {
     chromatic: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({
     canvasElement,
@@ -131,6 +128,33 @@ export const WithAttributes = {
     await expect(modal).toHaveClass('dummyClassname');
     await expect(modal).toHaveAttribute('lang', 'nb');
     await expect(modal).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  render: TemplateModal,
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      container: 'dummyClassName',
+      image: 'dummyClassName',
+    },
+    imageSource: farmerIllustration,
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+    const modal = canvas.getByLabelText(defaultTitle);
+    await expect(modal).toHaveClass('dummyClassName');
+    const image = modal.querySelector('img');
+    await expect(image).toHaveClass('dummyClassName');
   },
 } satisfies Story;
 
@@ -417,7 +441,6 @@ export const WithShadowDom = {
     chromatic: {
       disableSnapshot: true,
     },
-    a11y: { disable: true },
     customElementName: 'modal-customelement',
   },
   args: {

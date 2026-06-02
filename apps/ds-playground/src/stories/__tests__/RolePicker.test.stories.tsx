@@ -433,9 +433,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {

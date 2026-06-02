@@ -79,9 +79,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnaphot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {

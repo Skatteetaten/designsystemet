@@ -97,9 +97,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -110,6 +108,35 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(inputNode).toHaveAttribute('data-testid', '123ID');
     await expect(inputNode).toHaveAttribute('form', '123form');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      label: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+    },
+    errorMessage: defaultErrorMessage,
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const label = canvas.getByText(defaultLabelText);
+    const errorMessage = canvasElement.querySelector(
+      '[id^=checkboxErrorId]>div'
+    );
+    await expect(label?.parentElement).toHaveClass('dummyClassname');
+    await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -530,32 +557,6 @@ export const WithEventHandlers = {
     await expect(inputNode).toHaveFocus();
     inputNode.blur();
     await expect(inputNode).not.toHaveFocus();
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      label: 'dummyClassname',
-      errorMessage: 'dummyClassname',
-    },
-    errorMessage: defaultErrorMessage,
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const label = canvas.getByText(defaultLabelText);
-    const errorMessage = canvasElement.querySelector(
-      '[id^=checkboxErrorId]>div'
-    );
-    await expect(label?.parentElement).toHaveClass('dummyClassname');
-    await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

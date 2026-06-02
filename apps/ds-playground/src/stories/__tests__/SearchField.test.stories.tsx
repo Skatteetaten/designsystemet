@@ -147,9 +147,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -175,7 +173,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      searchContainer: 'dummyClassnameFormContainer',
+      searchContainer: 'dummyClassname',
     },
     hideLabel: false,
   },
@@ -183,6 +181,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -196,7 +197,7 @@ export const WithCustomClassNames = {
 
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(searchContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(searchContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

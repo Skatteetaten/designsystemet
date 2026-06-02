@@ -86,9 +86,6 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -97,6 +94,33 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      contentWrapper: 'dummyClassName',
+      closeButton: 'dummyClassName',
+    },
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getAllByRole('generic')[1];
+    const contentWrapper = container.querySelector(
+      '[class*="popoverContentWrapper"]'
+    );
+    await expect(contentWrapper).toHaveClass('dummyClassName');
+    const closeButton = canvas.getByRole('button');
+    await expect(closeButton).toHaveClass('dummyClassName');
   },
 } satisfies Story;
 
