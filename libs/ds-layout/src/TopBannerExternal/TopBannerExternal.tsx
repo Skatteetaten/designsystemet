@@ -330,11 +330,11 @@ export const TopBannerExternal = (({
                       <SearchField
                         ref={searchRef}
                         classNames={{ label: styles.mainMenuSearchLabel }}
-                        className={styles.mainMenuSearchSpacing}
                         label={t('topbanner.SearchLabel')}
                         variant={isMobile ? 'large' : 'extraLarge'}
                         hideLabel={false}
                         enableSRNavigationHint={false}
+                        hasSpacing
                         onSearch={onSearch}
                         onSearchClick={onSearchClick}
                       />

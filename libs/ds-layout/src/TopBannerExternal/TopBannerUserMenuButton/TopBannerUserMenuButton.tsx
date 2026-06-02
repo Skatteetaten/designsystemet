@@ -63,7 +63,7 @@ export const TopBannerUserMenuButton = ({
     <TopBannerButton
       ref={ref}
       id={id}
-      className={`${styles.menuButton} ${isMenuOpen ? styles.menuButton_open : ''} ${className}`.trim()}
+      className={`${isMenuOpen ? styles.menuButtonOpen : ''} ${className}`.trim()}
       classNames={
         user.role === 'meg'
           ? undefined
