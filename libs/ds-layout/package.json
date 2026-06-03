@@ -23,7 +23,7 @@
     "@skatteetaten/ds-progress": "2.10.0",
     "@floating-ui/react": "0.26.28",
     "@skatteetaten/ds-forms": "2.10.0",
-    "date-fns": "4.1.0",
+    "date-fns": "^4",
     "@skatteetaten/ds-status": "2.10.0",
     "@skatteetaten/ds-content": "2.10.0",
     "@skatteetaten/ds-overlays": "2.10.0",
