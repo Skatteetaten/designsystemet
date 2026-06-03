@@ -2,7 +2,11 @@ import { useId, useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { OpenClose, StepList } from '@skatteetaten/ds-collections';
+import {
+  OpenClose,
+  StepList,
+  StepListBase,
+} from '@skatteetaten/ds-collections';
 import { Card } from '@skatteetaten/ds-content';
 import { Checkbox, ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
 import { List, Paragraph } from '@skatteetaten/ds-typography';
@@ -11,7 +15,7 @@ import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
-  component: StepList,
+  component: StepListBase,
   title: 'Komponenter/StepList',
   argTypes: {
     // Props
@@ -32,7 +36,7 @@ const meta = {
       </StepList.Step>,
     ],
   },
-} satisfies Meta<typeof StepList>;
+} satisfies Meta<typeof StepListBase>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

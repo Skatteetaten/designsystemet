@@ -1,7 +1,7 @@
 import { Children, JSX, useImperativeHandle, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { ChipsComponent, ChipsProps } from './Chips.types';
 import { ChipsContext } from './ChipsContext';
@@ -16,10 +16,10 @@ import styles from './Chips.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-chips--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/chips/) - Brukerveiledning
  */
-export const Chips = (({
+export const ChipsBase = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   ariaLabel,
@@ -90,7 +90,9 @@ export const Chips = (({
       </ul>
     </ChipsContext.Provider>
   );
-}) as ChipsComponent;
+};
+
+export const Chips = ChipsBase as ChipsComponent;
 
 Chips.displayName = 'Chips';
 

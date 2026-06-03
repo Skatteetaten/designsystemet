@@ -3,12 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button, IconButton, Link } from '@skatteetaten/ds-buttons';
-import {
-  Accordion,
-  getAccordionBackgroundColorDefault,
-  getAccordionIconPositionDefault,
-  getAccordionSizeDefault,
-} from '@skatteetaten/ds-collections';
+import { Accordion, AccordionBase } from '@skatteetaten/ds-collections';
 import { DescriptionList } from '@skatteetaten/ds-content';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
@@ -39,38 +34,19 @@ const defaultChildren = [
 ];
 
 const meta = {
-  component: Accordion,
+  component: AccordionBase,
   title: 'Komponenter/Accordion',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
-    color: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getAccordionBackgroundColorDefault() },
-      },
-    },
-    size: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getAccordionSizeDefault() },
-      },
-    },
-    iconPosition: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getAccordionIconPositionDefault() },
-      },
-    },
+    color: { table: { category: category.props } },
+    size: { table: { category: category.props } },
+    iconPosition: { table: { category: category.props } },
   },
   args: {
-    iconPosition: 'right',
     children: defaultChildren,
   },
-} satisfies Meta<typeof Accordion>;
+} satisfies Meta<typeof AccordionBase>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -82,7 +58,6 @@ export const Preview: Story = {
 export const StandardRightIcon: Story = {
   name: 'Standard med høyreikon',
   args: {
-    iconPosition: 'right',
     children: defaultChildren,
   },
 } satisfies Story;

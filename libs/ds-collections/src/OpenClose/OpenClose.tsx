@@ -1,14 +1,7 @@
 import { useState, MouseEvent, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon, ChevronDownSVGpath } from '@skatteetaten/ds-icons';
 
-import {
-  getOpenCloseIconPositionDefault,
-  getOpenCloseKeepMountedDefault,
-  getOpenCloseUnderlineDefault,
-  getOpenCloseSizeDefault,
-} from './defaults';
 import { OpenCloseProps } from './OpenClose.types';
 
 import styles from './OpenClose.module.scss';
@@ -22,24 +15,23 @@ import styles from './OpenClose.module.scss';
 export const OpenClose = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,
   titleAs: HeadingTag,
-  size = getOpenCloseSizeDefault(),
-  iconPosition = getOpenCloseIconPositionDefault(),
-  isExpanded: isExpandedExternal,
-  isDefaultExpanded,
-  isOnClickOnlyFiredOnOpen,
-  showUnderline = getOpenCloseUnderlineDefault(),
-  keepMounted = getOpenCloseKeepMountedDefault(),
+  size = 'large',
+  iconPosition = 'left',
+  isExpanded: isExpandedExternal = false,
+  isDefaultExpanded = false,
+  isOnClickOnlyFiredOnOpen = false,
+  showUnderline = true,
+  keepMounted = false,
   onClick,
   children,
 }: OpenCloseProps): JSX.Element => {
-  const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
-    isDefaultExpanded ?? false
-  );
+  const [isExpandedInternal, setIsExpandedInternal] =
+    useState<boolean>(isDefaultExpanded);
 
   const isExpanded =
     isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;

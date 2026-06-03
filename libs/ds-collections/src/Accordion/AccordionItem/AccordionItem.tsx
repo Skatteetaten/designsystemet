@@ -1,46 +1,42 @@
 import { MouseEvent, useContext, useState, JSX } from 'react';
 
-import { Size, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { Size } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
+import { accordionSize } from '../Accordion';
 import { AccordionContext } from '../AccordionContext';
 import { AccordionItemProps } from './AccordionItem.types';
-import { getAccordionItemKeepMountedDefault } from './defaults';
-import { getAccordionSizeDefault } from '../defaults';
 
 import styles from './AccordionItem.module.scss';
 
 export const AccordionItem = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   classNames,
   title,
   subtitle,
-  titleAs,
-  isDefaultExpanded,
-  isExpanded: isExpandedExternal,
-  keepMounted = getAccordionItemKeepMountedDefault(),
+  titleAs: Tag = 'div',
+  isDefaultExpanded = false,
+  isExpanded: isExpandedExternal = false,
+  keepMounted = true,
   svgPath,
   onClick,
   children,
 }: AccordionItemProps): JSX.Element => {
-  const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
-    isDefaultExpanded ?? false
-  );
+  const [isExpandedInternal, setIsExpandedInternal] =
+    useState<boolean>(isDefaultExpanded);
 
-  const { size = getAccordionSizeDefault(), iconPosition } =
-    useContext(AccordionContext);
+  const { size = accordionSize, iconPosition } = useContext(AccordionContext);
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     onClick?.(e);
     setIsExpandedInternal(!isExpanded);
   };
 
-  const isExpanded =
-    isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
+  const isExpanded = isExpandedExternal || isExpandedInternal;
 
   const shouldDisplayCustomIcon = iconPosition === 'right' && !!svgPath;
 
@@ -76,8 +72,6 @@ export const AccordionItem = ({
   } ${shouldIndentContent ? styles[`content_${size}Indented`] : ''} ${
     classNames?.content ?? ''
   }`.trim();
-
-  const Tag = titleAs ?? 'div';
 
   return (
     <div className={styles.accordionItem}>

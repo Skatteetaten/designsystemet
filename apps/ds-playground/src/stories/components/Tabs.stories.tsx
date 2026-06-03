@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Tabs, getTabsVariantDefault } from '@skatteetaten/ds-collections';
+import { Tabs, TabsBase } from '@skatteetaten/ds-collections';
 import {
   AccountMultipleSVGpath,
   BriefcaseSVGpath,
@@ -14,7 +14,7 @@ import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
-  component: Tabs,
+  component: TabsBase,
   title: 'Komponenter/Tabs',
   argTypes: {
     // Baseprops
@@ -28,13 +28,7 @@ const meta = {
     value: { control: 'text', table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     isMultiline: { table: { category: category.props } },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTabsVariantDefault() },
-      },
-    },
+    variant: { control: 'inline-radio', table: { category: category.props } },
     hasBorder: { table: { category: category.props } },
     //Events
     onChange: { ...htmlEventDescription },
@@ -42,7 +36,7 @@ const meta = {
   args: {
     defaultValue: 'tab1',
   },
-} satisfies Meta<typeof Tabs>;
+} satisfies Meta<typeof TabsBase>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,15 +1,12 @@
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { JSX } from 'react';
 
 import { AccordionComponent, AccordionProps } from './Accordion.types';
 import { AccordionContext } from './AccordionContext';
 import { AccordionItem } from './AccordionItem/AccordionItem';
-import {
-  getAccordionBackgroundColorDefault,
-  getAccordionIconPositionDefault,
-  getAccordionSizeDefault,
-} from './defaults';
 
 import styles from './Accordion.module.scss';
+
+export const accordionSize = 'medium';
 
 /**
  * Accordion
@@ -17,17 +14,17 @@ import styles from './Accordion.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-accordion--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/accordion/) - Brukerveiledning
  */
-export const Accordion = (({
+export const AccordionBase = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  color = getAccordionBackgroundColorDefault(),
-  size = getAccordionSizeDefault(),
-  iconPosition = getAccordionIconPositionDefault(),
+  color = 'none',
+  size = accordionSize,
+  iconPosition = 'right',
   children,
-}: AccordionProps) => {
+}: AccordionProps): JSX.Element => {
   const colorClassName = color !== 'none' ? styles[`accordion_${color}`] : '';
   const concatenatedClassNames = `${colorClassName} ${className}`.trim();
 
@@ -44,7 +41,9 @@ export const Accordion = (({
       </div>
     </AccordionContext.Provider>
   );
-}) as AccordionComponent;
+};
+
+export const Accordion = AccordionBase as AccordionComponent;
 
 Accordion.displayName = 'Accordion';
 Accordion.Item = AccordionItem;

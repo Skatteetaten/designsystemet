@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { StepListComponent, StepListProps } from './StepList.types';
 import { StepListStep } from './StepListStep/StepListStep';
 
@@ -13,10 +11,10 @@ import styles from './StepList.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-steplist--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/steplist/) - Brukerveiledning
  */
-export const StepList = (({
+export const StepListBase = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   children,
@@ -32,7 +30,9 @@ export const StepList = (({
       {children}
     </ol>
   );
-}) as StepListComponent;
+};
+
+export const StepList = StepListBase as StepListComponent;
 
 StepList.displayName = 'StepList';
 StepList.Step = StepListStep;

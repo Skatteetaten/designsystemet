@@ -1,17 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  StepList,
-  getStepListStepTitleAsDefault,
-  getStepListStepVariantDefault,
-  getStepListStepShouldAutoFocusWhenActiveDefault,
-  getStepListStepEditButtonTextDefault,
-  getStepListStepNextButtonTextDefault,
-} from '@skatteetaten/ds-collections';
-import { getPanelTitleAsDefault } from '@skatteetaten/ds-content';
+import { StepList } from '@skatteetaten/ds-collections';
 
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 const meta = {
   component: StepList.Step,
@@ -22,70 +18,34 @@ const meta = {
     editButtonText: {
       table: {
         category: category.props,
-        defaultValue: { summary: getStepListStepEditButtonTextDefault() },
+        defaultValue: { summary: dsI18n.t('ds_collections:steplist.Edit') },
       },
     },
-    nextButtonProps: {
-      control: false,
-      table: {
-        category: category.props,
-      },
-    },
+    nextButtonProps: { control: false, table: { category: category.props } },
     nextButtonText: {
       table: {
         category: category.props,
-        defaultValue: { summary: getStepListStepNextButtonTextDefault() },
+        defaultValue: { summary: dsI18n.t('ds_collections:steplist.Next') },
       },
     },
-    introTitle: {
-      control: 'text',
-      table: { category: category.props, type: { summary: 'string' } },
-    },
+    introTitle: { table: { category: category.props } },
     introTitleAs: {
       control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPanelTitleAsDefault() },
-      },
+      table: { category: category.props },
     },
-    titleAs: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getStepListStepTitleAsDefault() },
-      },
-    },
-    introContent: {
-      control: 'text',
-      table: { category: category.props, type: { summary: 'ReactNode' } },
-    },
+    titleAs: { control: 'inline-radio', table: { category: category.props } },
+    introContent: { control: 'text', table: { category: category.props } },
     children: { table: { category: category.props }, control: 'text' },
     title: { table: { category: category.props } },
     stepNumber: { table: { category: category.props } },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    svgPath: { ...svgPathDescription },
     svgTitle: { table: { category: category.props } },
-    shouldAutoFocusWhenActive: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getStepListStepShouldAutoFocusWhenActiveDefault().toString(),
-        },
-      },
-    },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getStepListStepVariantDefault() },
-      },
-    },
+    shouldAutoFocusWhenActive: { table: { category: category.props } },
+    variant: { table: { category: category.props } },
     hasResultContentFullWidth: { table: { category: category.props } },
     // Event
-    onEdit: { table: { category: category.event } },
-    onNext: { table: { category: category.event } },
+    onEdit: { ...htmlEventDescription },
+    onNext: { ...htmlEventDescription },
   },
   args: {
     title: 'Overskrift',

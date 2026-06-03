@@ -10,6 +10,5 @@ export * from './LinkGroup/LinkGroup';
 export * from './LinkGroup/LinkGroup.types';
 export * from './MegaButton/MegaButton';
 export * from './MegaButton/MegaButton.types';
-export * from './ScrollToTopButton/defaults';
 export * from './ScrollToTopButton/ScrollToTopButton';
 export * from './ScrollToTopButton/ScrollToTopButton.types';
