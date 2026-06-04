@@ -8,11 +8,6 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath } from '@skatteetaten/ds-icons';
 
 import { PopoverContentProps } from './PopoverContent.types';
-import {
-  getPopoverColorDefault,
-  getPopoverContentAsDefault,
-  getPopoverRestoreFocusDefault,
-} from '../defaults';
 import { PopoverContext } from '../PopoverContext';
 
 import styles from './PopoverContent.module.scss';
@@ -20,11 +15,11 @@ import styles from './PopoverContent.module.scss';
 export const PopoverContent = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
-  as: Tag = getPopoverContentAsDefault(),
+  as: Tag = 'div',
   children,
 }: PopoverContentProps): JSX.Element | null => {
   const {
@@ -33,8 +28,8 @@ export const PopoverContent = ({
     arrowRef,
     isOpen,
     setIsOpen,
-    color = getPopoverColorDefault(),
-    shouldRestoreFocus = getPopoverRestoreFocusDefault(),
+    color = 'forest',
+    shouldRestoreFocus = true,
     onClose,
   } = useContext(PopoverContext);
   const { refs, floatingStyles, placement, middlewareData } = floatingData;

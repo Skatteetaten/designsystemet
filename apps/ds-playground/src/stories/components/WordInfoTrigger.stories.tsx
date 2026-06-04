@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { WordInfo, getWordInfoHasIconDefault } from '@skatteetaten/ds-overlays';
+import { WordInfo } from '@skatteetaten/ds-overlays';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -10,10 +10,7 @@ export default {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    hasIcon: {
-      table: { category: category.props },
-      defaultValue: { summary: getWordInfoHasIconDefault().toString() },
-    },
+    hasIcon: { table: { category: category.props } },
     //Events
     onClick: { ...htmlEventDescription },
   },

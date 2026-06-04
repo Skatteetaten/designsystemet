@@ -13,7 +13,7 @@ import { PopoverContext } from '../PopoverContext';
 export const PopoverTrigger = ({
   ref,
   id,
-  className,
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,

@@ -15,12 +15,6 @@ import {
 import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 
 import {
-  getPopoverColorDefault,
-  getPopoverContentAsDefault,
-  getPopoverPositionDefault,
-  getPopoverRestoreFocusDefault,
-} from './defaults';
-import {
   PopoverComponent,
   PopoverPosition,
   PopoverProps,
@@ -38,7 +32,7 @@ import { PopoverTrigger } from './PopoverTrigger/PopoverTrigger';
 export const Popover = ((props: PopoverProps): JSX.Element => {
   const {
     isOpen: controlledOpen,
-    position = getPopoverPositionDefault(),
+    position = 'bottomStart',
     disableAutoDismiss,
     disableAutoDismissOnMobile,
     children,
@@ -51,7 +45,7 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
   const isMobile = !useMediaQuery('(min-width: 640px)');
   const shouldAutoDismiss = Boolean(
     !disableAutoDismiss &&
-      (!isMobile || (!disableAutoDismissOnMobile && isMobile))
+    (!isMobile || (!disableAutoDismissOnMobile && isMobile))
   );
   const arrowLen = arrowRef.current?.offsetWidth ?? 0;
   const floatingOffset = Math.sqrt(2 * arrowLen ** 2) / 2;
@@ -126,14 +120,6 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
 }) as PopoverComponent;
 
 Popover.displayName = 'Popover';
-
-export {
-  getPopoverColorDefault,
-  getPopoverPositionDefault,
-  getPopoverRestoreFocusDefault,
-  getPopoverContentAsDefault,
-};
-
 Popover.Content = PopoverContent;
 Popover.Content.displayName = 'Popover.Content';
 Popover.Trigger = PopoverTrigger;
