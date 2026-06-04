@@ -4,9 +4,8 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { Fieldset, DatePicker } from '@skatteetaten/ds-forms';
-import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
@@ -16,8 +15,8 @@ const meta = {
   argTypes: {
     // Props
     classNames: { control: false, table: { category: category.props } },
-    children: { control: false, table: { category: category.props } },
-    description: { table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     helpText: { control: 'text', table: { category: category.props } },
     helpSvgPath: {
@@ -42,11 +41,11 @@ const meta = {
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
     // Events
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     legend: 'Hvilken periode trenger du bekreftelse for?',
-    children: <Paragraph>{'Innhold'}</Paragraph>,
+    children: 'Innhold',
   },
 } satisfies Meta<typeof Fieldset>;
 

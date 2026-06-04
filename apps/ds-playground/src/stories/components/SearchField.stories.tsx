@@ -8,11 +8,6 @@ import {
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
-  getEnableSRNavigationHintDefault,
-  getSearchFieldHasSearchButtonIconDefault,
-  getSearchFieldHideLabelDefault,
-  getSearchFieldIsLoadingDefault,
-  getSearchFieldSizeDefault,
   SearchField,
   type SearchFieldProps,
   searchInList,
@@ -30,27 +25,13 @@ const meta = {
     classNames: { control: false, table: { category: category.props } },
     clearButtonTitle: { table: { category: category.props } },
     searchButtonTitle: { table: { category: category.props } },
-    isLoading: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getSearchFieldIsLoadingDefault().toString(),
-        },
-      },
-    },
+    isLoading: { table: { category: category.props } },
     spinnerLabel: { table: { category: category.props } },
     spinnerProps: { table: { category: category.props } },
     results: { control: false, table: { category: category.props } },
-    hasSearchButtonIcon: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getSearchFieldHasSearchButtonIconDefault().toString(),
-        },
-      },
-    },
+    hasSearchButtonIcon: { table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     label: { table: { category: category.props } },
@@ -63,40 +44,20 @@ const meta = {
       },
     },
     helpText: { control: 'text', table: { category: category.props } },
-    hideLabel: {
-      table: { category: category.props },
-      defaultValue: { summary: getSearchFieldHideLabelDefault().toString() },
-    },
-    enableSRNavigationHint: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getEnableSRNavigationHintDefault().toString(),
-        },
-      },
-    },
+    hideLabel: { table: { category: category.props } },
+    enableSRNavigationHint: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
         defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getSearchFieldSizeDefault() },
-      },
-    },
+    variant: { control: 'inline-radio', table: { category: category.props } },
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
     autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
       description: getAutoCompletePropDescription(),
     },
     disabled: { table: { category: category.htmlAttribute } },
@@ -105,10 +66,7 @@ const meta = {
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
     required: { table: { category: category.htmlAttribute } },
-    value: {
-      control: 'text',
-      table: { category: category.htmlAttribute },
-    },
+    value: { control: 'text', table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
     // Events

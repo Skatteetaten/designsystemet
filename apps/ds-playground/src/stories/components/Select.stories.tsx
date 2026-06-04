@@ -2,8 +2,11 @@ import { ChangeEvent, useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
-import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
+import {
+  getAutoCompletePropDescription,
+  getHelpTitleHelpSvgDefault,
+} from '@skatteetaten/ds-core-utils';
+import { Select } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -18,13 +21,8 @@ const meta = {
     classNames: { control: false, table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
-    placeholder: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getSelectPlaceholderDefault() },
-      },
-    },
-    description: { table: { category: category.props } },
+    placeholder: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
@@ -46,7 +44,11 @@ const meta = {
       },
     },
     // HTML
-    autoComplete: { table: { category: category.htmlAttribute } },
+    autoComplete: {
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: getAutoCompletePropDescription(),
+    },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
@@ -57,7 +59,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     label: 'Farge',

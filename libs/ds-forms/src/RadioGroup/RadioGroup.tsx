@@ -1,8 +1,5 @@
 import { useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
-import { getRadioGroupVariantDefault } from './defaults';
 import { Radio } from './Radio/Radio';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
 import { RadioGroupContext } from './RadioGroupContext';
@@ -17,10 +14,10 @@ import styles from './RadioGroup.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-radiogroup--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/) - Brukerveiledning
  */
-export const RadioGroup = (({
+export const RadioGroup = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -31,16 +28,16 @@ export const RadioGroup = (({
   legend,
   value,
   titleHelpSvg,
-  variant = getRadioGroupVariantDefault(),
+  variant = 'standard',
   ariaDescribedBy,
   defaultValue,
-  disabled,
+  disabled = false,
   form,
   name,
-  readOnly,
-  required,
-  hasSpacing,
-  hideLegend,
+  readOnly = false,
+  required = false,
+  hasSpacing = false,
+  hideLegend = false,
   shadowRootNode,
   onBlur: onBlurExternal,
   onChange: onChangeExternal,
@@ -139,7 +136,9 @@ export const RadioGroup = (({
       </ErrorMessage>
     </Fieldset>
   );
-}) as RadioGroupComponent;
+};
+
+export default RadioGroup as RadioGroupComponent;
 
 RadioGroup.displayName = 'RadioGroup';
 RadioGroup.Radio = Radio;

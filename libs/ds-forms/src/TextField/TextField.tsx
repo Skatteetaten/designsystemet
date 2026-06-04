@@ -1,10 +1,5 @@
 import { JSX, useId, useImperativeHandle, useRef } from 'react';
 
-import {
-  getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
-
 import { TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { InputCounter } from '../InputCounter/InputCounter';
@@ -22,7 +17,7 @@ import styles from './TextField.module.scss';
 export const TextField = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -34,9 +29,9 @@ export const TextField = ({
   label,
   titleHelpSvg,
   ariaDescribedBy,
-  autoComplete = getCommonAutoCompleteDefault(),
+  autoComplete = 'off',
   defaultValue,
-  disabled,
+  disabled = false,
   form,
   inputMode,
   maxLength,
@@ -45,11 +40,11 @@ export const TextField = ({
   name,
   pattern,
   placeholder,
-  readOnly,
-  required,
+  readOnly = false,
+  required = false,
   value,
-  hasSpacing,
-  hideLabel,
+  hasSpacing = false,
+  hideLabel = false,
   onBlur,
   onChange,
   onFocus,

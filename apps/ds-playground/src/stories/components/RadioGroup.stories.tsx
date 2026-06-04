@@ -3,10 +3,7 @@ import { useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
-import {
-  RadioGroup,
-  getRadioGroupVariantDefault,
-} from '@skatteetaten/ds-forms';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -21,7 +18,7 @@ const meta = {
     // Props
     classNames: { control: false, table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
@@ -34,10 +31,7 @@ const meta = {
     },
     helpText: { control: 'text', table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
-    legend: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    legend: { control: 'text', table: { category: category.props } },
     readOnly: { table: { category: category.props } },
     shadowRootNode: { control: false, table: { category: category.props } },
     titleHelpSvg: {
@@ -46,12 +40,7 @@ const meta = {
         defaultValue: { summary: getHelpTitleHelpSvgDefault() },
       },
     },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getRadioGroupVariantDefault() },
-      },
-    },
+    variant: { table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
     // HTML

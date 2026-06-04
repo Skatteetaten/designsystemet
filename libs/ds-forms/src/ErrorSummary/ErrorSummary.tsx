@@ -11,11 +11,10 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Icon, WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getErrorSummaryTitleAsDefault } from './defaults';
 import { ErrorSummaryComponent, ErrorSummaryProps } from './ErrorSummary.types';
 import { ErrorSummaryContext } from './ErrorSummaryContext';
 import { ErrorSummaryError } from './ErrorSummaryError/ErrorSummaryError';
@@ -56,18 +55,18 @@ const countErrors = (childArray: ReactNode[]): number => {
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-errorsummary--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errorsummary/) - Brukerveiledning
  */
-export const ErrorSummary = (({
+export const ErrorSummary = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   content,
   shadowRootNode,
   title,
-  titleAs = getErrorSummaryTitleAsDefault(),
-  hasSpacing,
-  showErrorSummary,
+  titleAs = 'h2',
+  hasSpacing = false,
+  showErrorSummary = false,
   children,
 }: ErrorSummaryProps): JSX.Element => {
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
@@ -178,7 +177,9 @@ export const ErrorSummary = (({
       )}
     </div>
   );
-}) as ErrorSummaryComponent;
+};
+
+export default ErrorSummary as ErrorSummaryComponent;
 
 ErrorSummary.displayName = 'ErrorSummary';
 ErrorSummary.Error = ErrorSummaryError;

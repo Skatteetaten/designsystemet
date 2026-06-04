@@ -26,10 +26,7 @@ const meta = {
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
     value: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },

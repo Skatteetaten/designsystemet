@@ -26,16 +26,10 @@ const meta = {
   title: 'Komponenter/TextField',
   argTypes: {
     // Props
-    classNames: {
-      control: false,
-      table: { category: category.props },
-    },
-    defaultValue: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    classNames: { control: false, table: { category: category.props } },
+    defaultValue: { control: 'text', table: { category: category.props } },
     characterLimit: { table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
@@ -57,18 +51,11 @@ const meta = {
     },
     // HTML
     autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
       description: getAutoCompletePropDescription(),
     },
-    disabled: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     inputMode: {
       control: 'inline-radio',
@@ -80,14 +67,8 @@ const meta = {
     pattern: { table: { category: category.htmlAttribute } },
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
-    value: {
-      control: 'text',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
+    value: { control: 'text', table: { category: category.htmlAttribute } },
     list: { control: 'text', table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },

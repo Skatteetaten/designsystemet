@@ -7,10 +7,9 @@ import {
   useLayoutEffect,
 } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
-import { getSelectPlaceholderDefault } from './defaults';
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -25,10 +24,10 @@ import styles from './Select.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-select--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/select/) - Brukerveiledning
  */
-export const Select = (({
+export const Select = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -38,18 +37,18 @@ export const Select = (({
   helpSvgPath,
   helpText,
   label,
-  placeholder = getSelectPlaceholderDefault(),
+  placeholder = dsI18n.t('Shared:shared.ChooseValue'),
   titleHelpSvg,
   value,
   ariaDescribedBy,
-  autoComplete,
-  disabled,
+  autoComplete = 'off',
+  disabled = false,
   form,
   name,
-  required,
-  hasSpacing,
-  hideLabel,
-  hidePlaceholder,
+  required = false,
+  hasSpacing = false,
+  hideLabel = false,
+  hidePlaceholder = false,
   onBlur,
   onChange,
   onFocus,
@@ -151,7 +150,9 @@ export const Select = (({
       </ErrorMessage>
     </div>
   );
-}) as SelectComponent;
+};
+
+export default Select as SelectComponent;
 
 Select.displayName = 'Select';
 Select.Option = SelectOption;

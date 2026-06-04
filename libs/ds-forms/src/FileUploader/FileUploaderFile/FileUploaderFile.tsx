@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { IconButton, Link } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, DescriptionIcon } from '@skatteetaten/ds-icons';
 
 import { FileUploaderFileProps } from './FileUploaderFile.types';
@@ -13,7 +13,7 @@ import styles from './FileUploaderFile.module.scss';
 export const FileUploaderFile = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   fileIconTitle,
@@ -65,7 +65,7 @@ export const FileUploaderFile = ({
           <DescriptionIcon
             className={styles.fileListIcon}
             size={'small'}
-            title={fileIconTitle ?? t('fileuploader.FileIconLabel')}
+            title={fileIconTitle}
           />
           <div className={styles.fileNameContainer}>
             {href ? (

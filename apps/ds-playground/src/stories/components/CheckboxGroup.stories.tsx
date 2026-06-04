@@ -19,7 +19,7 @@ const meta = {
     // Props
     children: { control: false, table: { category: category.props } },
     classNames: { control: false, table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     helpSvgPath: {

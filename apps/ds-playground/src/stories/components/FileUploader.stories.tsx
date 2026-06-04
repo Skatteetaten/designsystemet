@@ -2,15 +2,13 @@ import { useState, JSX } from 'react';
 
 import { StoryObj, Meta } from '@storybook/react-vite';
 
-import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import {
-  Checkbox,
-  FileUploader,
-  getFileUploaderGetSpinnerLabelDefault,
-  UploadedFile,
-} from '@skatteetaten/ds-forms';
+  dsI18n,
+  getHelpTitleHelpSvgDefault,
+} from '@skatteetaten/ds-core-utils';
+import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
@@ -19,10 +17,20 @@ const meta = {
   title: 'Komponenter/FileUploader',
   argTypes: {
     // Props
+    children: { table: { category: category.props } },
     classNames: { control: false, table: { category: category.props } },
+    acceptedFileFormats: { table: { category: category.props } },
+    acceptedFileFormatsDescription: { table: { category: category.props } },
     acceptedFileFormatsDisplay: { table: { category: category.props } },
-    description: { table: { category: category.props } },
-    fileIconTitle: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
+    fileIconTitle: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: dsI18n.t('ds_forms:fileuploader.FileIconLabel'),
+        },
+      },
+    },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     helpSvgPath: {
@@ -45,10 +53,11 @@ const meta = {
     spinnerLabel: {
       table: {
         category: category.props,
-        defaultValue: { summary: getFileUploaderGetSpinnerLabelDefault() },
+        defaultValue: {
+          summary: dsI18n.t('ds_forms:fileuploader.InProgressLabel'),
+        },
       },
     },
-    acceptedFileFormats: { table: { category: category.props } },
     shouldNormalizeFileName: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
@@ -60,13 +69,11 @@ const meta = {
     uploadResult: { control: false, table: { category: category.props } },
     // HTML
     multiple: { table: { category: category.htmlAttribute } },
-    children: { table: { category: category.props } },
-    acceptedFileFormatsDescription: { table: { category: category.props } },
     // Events
-    onFileDelete: { table: { category: category.event } },
-    onFileDownload: { table: { category: category.event } },
-    onFileChange: { table: { category: category.event } },
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onFileDelete: { ...htmlEventDescription },
+    onFileDownload: { ...htmlEventDescription },
+    onFileChange: { ...htmlEventDescription },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     helpText: 'Hjelpetekst',

@@ -1,6 +1,7 @@
 import {
   ChangeEvent,
   DragEvent,
+  JSX,
   useEffect,
   useId,
   useRef,
@@ -8,12 +9,11 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { AttachFileIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { getFileUploaderGetSpinnerLabelDefault } from './defaults';
 import {
   FileUploaderComponent,
   FileUploaderProps,
@@ -34,10 +34,10 @@ import styles from './FileUploader.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fileuploader--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fileuploader/) - Brukerveiledning
  */
-export const FileUploader = (({
+export const FileUploader = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -46,7 +46,7 @@ export const FileUploader = (({
   acceptedFileFormatsDisplay,
   description,
   errorMessage,
-  fileIconTitle,
+  fileIconTitle = dsI18n.t('ds_forms:fileuploader.FileIconLabel'),
   helpSvgPath,
   helpText,
   label,
@@ -54,19 +54,19 @@ export const FileUploader = (({
   uploadResult,
   uploadedFiles,
   invalidCharacterRegexp,
-  spinnerLabel = getFileUploaderGetSpinnerLabelDefault(),
-  hasSpacing,
-  hideLabel,
-  shouldNormalizeFileName,
-  multiple,
-  isUploading,
-  isRequired,
+  spinnerLabel = dsI18n.t('ds_forms:fileuploader.InProgressLabel'),
+  hasSpacing = false,
+  hideLabel = false,
+  shouldNormalizeFileName = false,
+  multiple = false,
+  isUploading = false,
+  isRequired = false,
   onFileChange,
   onFileDelete,
   onFileDownload,
   onHelpToggle,
   children: buttonTextExternal,
-}: FileUploaderProps) => {
+}: FileUploaderProps): JSX.Element => {
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const inputRef = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -374,7 +374,9 @@ export const FileUploader = (({
       </div>
     </div>
   );
-}) as FileUploaderComponent;
+};
+
+export default FileUploader as FileUploaderComponent;
 
 FileUploader.useFileUploader = useFileUploader;
 

@@ -1,7 +1,5 @@
 import { JSX, useId } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { Help } from './Help/Help';
 import { LabelWithHelpProps } from './LabelWithHelp.types';
 
@@ -10,7 +8,7 @@ import styles from './LabelWithHelp.module.scss';
 export const LabelWithHelp = ({
   ref,
   id: idExternal,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -19,9 +17,9 @@ export const LabelWithHelp = ({
   helpText,
   helpSvgPath,
   titleHelpSvg,
-  disabled,
+  disabled = false,
   htmlFor,
-  hideLabel,
+  hideLabel = false,
   children,
   onHelpToggle,
 }: LabelWithHelpProps): JSX.Element => {
