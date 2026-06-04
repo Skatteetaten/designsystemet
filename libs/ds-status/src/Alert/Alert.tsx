@@ -2,7 +2,7 @@ import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   CancelSVGpath,
   CompletedSVGpath,
@@ -13,7 +13,6 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { AlertProps } from './Alert.types';
-import { getAlertBackgroundBrightnessDefault } from './defaults';
 
 import styles from './Alert.module.scss';
 
@@ -26,14 +25,14 @@ import styles from './Alert.module.scss';
 export const Alert = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  backgroundBrightness = getAlertBackgroundBrightnessDefault(),
+  backgroundBrightness = 'default',
   svgPath,
   variant,
-  ariaLive,
-  showAlert,
+  ariaLive = 'polite',
+  showAlert = false,
   children,
   onClose,
 }: AlertProps): JSX.Element => {

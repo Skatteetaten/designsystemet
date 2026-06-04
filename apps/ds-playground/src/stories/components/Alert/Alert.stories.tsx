@@ -1,11 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  Alert,
-  getAlertBackgroundBrightnessDefault,
-} from '@skatteetaten/ds-status';
+import { Alert } from '@skatteetaten/ds-status';
 
-import { category } from '../../../../.storybook/helpers';
+import { category, svgPathDescription } from '../../../../.storybook/helpers';
 import { SystemSVGPaths } from '../../utils/icon.systems';
 
 const meta = {
@@ -14,24 +11,12 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    backgroundBrightness: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getAlertBackgroundBrightnessDefault() },
-      },
-    },
+    backgroundBrightness: { table: { category: category.props } },
     showAlert: { table: { category: category.props } },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    svgPath: { ...svgPathDescription },
     variant: { table: { category: category.props } },
     // Aria
-    ariaLive: {
-      table: { category: category.aria },
-      defaultValue: { summary: 'polite' },
-    },
+    ariaLive: { table: { category: category.aria } },
     // Events
     onClose: { table: { category: category.event } },
   },
