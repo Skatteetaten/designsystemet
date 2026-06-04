@@ -13,13 +13,9 @@ import {
   InlineButton,
   InlineButtonProps,
 } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
-import {
-  getTableRowExpandButtonTitleDefault,
-  getTableRowIsExpandedDefault,
-} from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 
 import styles from './TableRowWithIconButton.module.scss';
@@ -49,7 +45,7 @@ const getScreenReaderText = (
 export const TableRowWithIconButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   onExpandClick,
@@ -60,12 +56,12 @@ export const TableRowWithIconButton = ({
   iconButtonAriaExpanded,
   rowType,
   expandableContent,
-  expandButtonTitle = getTableRowExpandButtonTitleDefault(),
+  expandButtonTitle = dsI18n.t('ds_tables:tablerow.Expandable'),
   expandButtonAriaDescribedby,
   expandButtonProps,
   showExpandButtonTitle,
   shouldInsertExpandAreaMarkers,
-  isExpanded = getTableRowIsExpandedDefault(),
+  isExpanded = false,
   isExpandButtonDisabled,
   hideIconButton,
   children,

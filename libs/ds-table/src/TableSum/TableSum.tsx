@@ -1,15 +1,11 @@
 import { Children, JSX } from 'react';
 
 import { TableSumProps } from './TableSum.types';
-import {
-  getTableSumLabelAlignmentDefault,
-  getTableSumTextDefault,
-  getTableSumValueAlignmentDefault,
-} from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 import { TableRow } from '../TableRow/TableRow';
 
 import styles from './TableSum.module.scss';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 export const TableSum = ({
   ref,
@@ -17,11 +13,11 @@ export const TableSum = ({
   className,
   lang,
   'data-testid': dataTestId,
-  labelAlignment = getTableSumLabelAlignmentDefault(),
-  valueAlignment = getTableSumValueAlignmentDefault(),
+  labelAlignment = 'left',
+  valueAlignment = 'right',
   colSpan,
-  hasTopSeparator,
-  sumText = getTableSumTextDefault(),
+  hasTopSeparator = false,
+  sumText = dsI18n.t('ds_tables:tablesum.Sum'),
   children,
 }: TableSumProps): JSX.Element => {
   const concatenatedClassName = `${styles.sum} ${

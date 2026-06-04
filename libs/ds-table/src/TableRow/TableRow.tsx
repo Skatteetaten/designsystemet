@@ -10,14 +10,10 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableRowProps } from './TableRow.types';
-import {
-  getTableRowExpandButtonPositionDefault,
-  getTableRowExpandButtonTitleDefault,
-} from '../Table/defaults';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
 import { TableRowWithIconButton } from '../TableRowWithIconButton/TableRowWithIconButton';
@@ -37,17 +33,17 @@ const isExpandableContentRows = (expandableContent: ReactNode): boolean => {
 export const TableRow = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   expandButtonTitle,
-  expandButtonPosition = getTableRowExpandButtonPositionDefault(),
+  expandButtonPosition = 'left',
   expandButtonProps,
   expandableContent,
   expandButtonAriaDescribedby,
-  showExpandButtonTitle,
-  isExpandable,
-  isExpanded: isExpandedExternal,
+  showExpandButtonTitle = false,
+  isExpandable = false,
+  isExpanded: isExpandedExternal = false,
   onExpand,
   onClose,
   children,
@@ -81,7 +77,7 @@ export const TableRow = ({
     expandButtonTitle ||
     (showExpandButtonTitle
       ? t('tablerow.ExpandText')
-      : getTableRowExpandButtonTitleDefault());
+      : t('tablerow.Expandable'));
 
   if (!isExpandable) {
     return (

@@ -1,7 +1,7 @@
 import { useContext, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ArrowDownSVGpath,
   ArrowUpDownSVGpath,
@@ -10,11 +10,6 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { TableHeaderCellProps } from './TableHeaderCell.types';
-import {
-  getHeaderCellAsDefault,
-  getTableCellAlignmentDefault,
-  getTableSizeDefault,
-} from '../Table/defaults';
 import { sortDirection } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
 
@@ -23,14 +18,14 @@ import styles from './TableHeaderCell.module.scss';
 export const TableHeaderCell = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  alignment = getTableCellAlignmentDefault(),
-  as: Tag = getHeaderCellAsDefault(),
+  alignment = 'left',
+  as: Tag = 'th',
   colSpan,
-  isSortDisabled,
-  isSortable,
+  isSortDisabled = false,
+  isSortable = false,
   scope,
   sortKey,
   children,
@@ -38,7 +33,7 @@ export const TableHeaderCell = ({
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const context = useContext(TableContext);
 
-  const size = context?.size ?? getTableSizeDefault();
+  const size = context?.size ?? 'large';
   const alignmentClassName = styles[`headerCell_${alignment}`];
 
   const sizeClassName = styles[`headerCell_${size}`];

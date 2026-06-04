@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import { getTableSizeDefault } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
 import { TableContext } from './TableContext';
 import { TableBody } from '../TableBody/TableBody';
@@ -23,19 +22,19 @@ import styles from './Table.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-table--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/table/) - Brukerveiledning
  */
-export const Table = (({
+export const Table = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   caption,
   rowInEditModeId: externalRowInEditModeId,
-  size = getTableSizeDefault(),
+  size = 'large',
   sortState,
-  canBeManuallyFocused,
-  hasFullWidth,
-  showCaption,
+  canBeManuallyFocused = false,
+  hasFullWidth = false,
+  showCaption = false,
   setSortState,
   children,
 }: TableProps): JSX.Element => {
@@ -160,7 +159,10 @@ export const Table = (({
       </div>
     </TableContext.Provider>
   );
-}) as TableComponent;
+};
+
+export default Table as TableComponent;
+
 Table.displayName = 'Table';
 Table.Header = TableHeader;
 Table.Header.displayName = 'Table.Header';
