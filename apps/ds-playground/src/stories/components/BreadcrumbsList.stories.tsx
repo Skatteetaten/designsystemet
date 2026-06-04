@@ -1,10 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  Breadcrumbs,
-  getBreadcrumbsListShouldCollapseDefault,
-  getBreadcrumbsListShowLastItemAsCurrentPageDefault,
-} from '@skatteetaten/ds-navigation';
+import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
 import { category } from '../../../.storybook/helpers';
 
@@ -18,23 +14,8 @@ const meta = {
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
-    shouldCollapse: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getBreadcrumbsListShouldCollapseDefault().toString(),
-        },
-      },
-    },
-    showLastItemAsCurrentPage: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary:
-            getBreadcrumbsListShowLastItemAsCurrentPageDefault().toString(),
-        },
-      },
-    },
+    shouldCollapse: { table: { category: category.props } },
+    showLastItemAsCurrentPage: { table: { category: category.props } },
   },
   args: {
     children: [

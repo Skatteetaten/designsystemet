@@ -6,12 +6,13 @@ import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
   NavigationTileProps,
-  getNavigationTileHeadingAsDefault,
-  getNavigationTileHideArrowDefault,
-  getNavigationTileSizeDefault,
 } from '@skatteetaten/ds-navigation';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
@@ -25,40 +26,15 @@ const meta = {
   argTypes: {
     // Props
     title: { control: 'text', table: { category: category.props } },
-    classNames: {
-      control: false,
-      table: { category: category.props },
-    },
-    titleAs: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getNavigationTileHeadingAsDefault() },
-      },
-    },
+    classNames: { control: false, table: { category: category.props } },
+    titleAs: { table: { category: category.props } },
     description: { control: 'text', table: { category: category.props } },
     hasSpinner: { table: { category: category.props } },
     isExternal: { table: { category: category.props } },
-    hideArrowIcon: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getNavigationTileHideArrowDefault().toString(),
-        },
-      },
-    },
-    size: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getNavigationTileSizeDefault() },
-      },
-    },
+    hideArrowIcon: { table: { category: category.props } },
+    size: { table: { category: category.props } },
     spinnerTitle: { table: { category: category.props } },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    svgPath: { ...svgPathDescription },
     // HTML
     href: { table: { category: category.htmlAttribute } },
     target: { table: { category: category.htmlAttribute } },

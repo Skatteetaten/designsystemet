@@ -3,7 +3,11 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { BreadcrumbsLinkProps, Breadcrumbs } from '@skatteetaten/ds-navigation';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 Breadcrumbs.Link.displayName = 'Breadcrumbs.Link';
@@ -21,11 +25,7 @@ const meta = {
         category: category.props,
       },
     },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    svgPath: { ...svgPathDescription },
     // HTML
     href: { table: { category: category.htmlAttribute } },
     // Aria
