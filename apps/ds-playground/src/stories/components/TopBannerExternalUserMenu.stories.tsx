@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getTopBannerExternalUserMenuHostnameDefault,
   TopBannerExternal,
   TopBannerExternalUserMenu,
   TopBannerExternalUserMenuProps,
@@ -17,19 +16,8 @@ const meta = {
     // Props
     notificationCount: { table: { category: category.props } },
     user: { table: { category: category.props } },
-    hostname: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getTopBannerExternalUserMenuHostnameDefault(),
-        },
-      },
-    },
-    hideDefaultLinks: {
-      table: {
-        category: category.props,
-      },
-    },
+    hostname: { table: { category: category.props } },
+    hideDefaultLinks: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     // Events
     onLogOutClick: { table: { category: category.event } },

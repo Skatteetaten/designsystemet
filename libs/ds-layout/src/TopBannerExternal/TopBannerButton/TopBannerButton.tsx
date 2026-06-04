@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { TopBannerButtonProps } from './TopBannerButton.types';
@@ -10,7 +9,7 @@ import styles from './TopBannerButton.module.scss';
 export const TopBannerButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

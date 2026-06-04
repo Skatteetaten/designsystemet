@@ -1,8 +1,5 @@
 import { useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
-import { getIconVariantDefault, getIconSizeDefault } from './defaults';
 import { IconProps } from './Icon.types';
 
 import styles from './Icon.module.scss';
@@ -16,12 +13,12 @@ import styles from './Icon.module.scss';
 export const Icon = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,
-  variant = getIconVariantDefault(),
-  size = getIconSizeDefault(),
+  variant = 'systemIcon',
+  size = 'medium',
   svgPath,
   ariaLabel,
 }: IconProps): JSX.Element => {

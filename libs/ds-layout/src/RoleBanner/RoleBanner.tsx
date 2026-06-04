@@ -1,11 +1,7 @@
 import { JSX, useEffect, useImperativeHandle, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  NON_BREAKING_SPACE,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, NON_BREAKING_SPACE } from '@skatteetaten/ds-core-utils';
 
 import { RoleBannerProps } from './RoleBanner.types';
 import { getRoleIcon } from './utils';
@@ -21,11 +17,11 @@ import styles from './RoleBanner.module.scss';
 export const RoleBanner = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   user,
-  isSticky,
+  isSticky = false,
 }: RoleBannerProps): JSX.Element => {
   const bannerRef = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => bannerRef?.current as HTMLDivElement);

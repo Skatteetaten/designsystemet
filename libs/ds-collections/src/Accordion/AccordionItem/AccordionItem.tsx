@@ -3,7 +3,6 @@ import { MouseEvent, useContext, useState, JSX } from 'react';
 import { Size } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
-import { accordionSize } from '../Accordion';
 import { AccordionContext } from '../AccordionContext';
 import { AccordionItemProps } from './AccordionItem.types';
 
@@ -29,7 +28,7 @@ export const AccordionItem = ({
   const [isExpandedInternal, setIsExpandedInternal] =
     useState<boolean>(isDefaultExpanded);
 
-  const { size = accordionSize, iconPosition } = useContext(AccordionContext);
+  const { size = 'medium', iconPosition } = useContext(AccordionContext);
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     onClick?.(e);

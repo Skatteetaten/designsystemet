@@ -6,8 +6,6 @@ import { AccordionItem } from './AccordionItem/AccordionItem';
 
 import styles from './Accordion.module.scss';
 
-export const accordionSize = 'medium';
-
 /**
  * Accordion
  *
@@ -21,7 +19,7 @@ export const AccordionBase = ({
   lang,
   'data-testid': dataTestId,
   color = 'none',
-  size = accordionSize,
+  size = 'medium',
   iconPosition = 'right',
   children,
 }: AccordionProps): JSX.Element => {
