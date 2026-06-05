@@ -2,7 +2,7 @@ import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Chips, ChipsBase } from '@skatteetaten/ds-collections';
+import { Chips } from '@skatteetaten/ds-collections';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -12,7 +12,7 @@ Chips.Toggle.displayName = 'Chips.Toggle';
 Chips.Removable.displayName = 'Chips.Removable';
 
 const meta = {
-  component: ChipsBase,
+  component: Chips,
   title: 'Komponenter/Chips',
   argTypes: {
     // Props
@@ -30,7 +30,7 @@ const meta = {
       <Chips.Removable key={'osl'}>{'Oslo'}</Chips.Removable>,
     ],
   },
-} satisfies Meta<typeof ChipsBase>;
+} satisfies Meta<typeof Chips>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

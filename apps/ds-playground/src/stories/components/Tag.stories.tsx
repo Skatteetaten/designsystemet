@@ -6,7 +6,6 @@ import { CheckSVGpath, WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Tag } from '@skatteetaten/ds-status';
 
 import { category, svgPathDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {

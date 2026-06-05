@@ -2,13 +2,13 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { List, ListBase, Paragraph } from '@skatteetaten/ds-typography';
+import { List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
-  component: ListBase,
+  component: List,
   title: 'Komponenter/List',
   argTypes: {
     // Props
@@ -29,7 +29,7 @@ const meta = {
       <List.Element key={'listElement3'}>{'Snakk med andre.'}</List.Element>,
     ],
   },
-} satisfies Meta<typeof ListBase>;
+} satisfies Meta<typeof List>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

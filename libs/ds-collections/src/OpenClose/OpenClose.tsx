@@ -19,7 +19,7 @@ export const OpenClose = ({
   lang,
   'data-testid': dataTestId,
   title,
-  titleAs: HeadingTag,
+  titleAs: HeadingTag = 'div',
   size = 'large',
   iconPosition = 'left',
   isExpanded: isExpandedExternal = false,
@@ -36,7 +36,6 @@ export const OpenClose = ({
   const isExpanded =
     isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
 
-  const Tag = HeadingTag ?? 'div';
   const hasIconRight = iconPosition === 'right';
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
@@ -63,7 +62,7 @@ export const OpenClose = ({
 
   return (
     <div className={`${styles.wrapper} ${className}`.trim()} data-size={size}>
-      <Tag className={styles.tag}>
+      <HeadingTag className={styles.tag}>
         <button
           ref={ref}
           id={id}
@@ -82,7 +81,7 @@ export const OpenClose = ({
 
           <span className={titleClassName}>{title}</span>
         </button>
-      </Tag>
+      </HeadingTag>
       {keepMounted ? (
         <div className={hiddenContentClassName}>{children}</div>
       ) : (

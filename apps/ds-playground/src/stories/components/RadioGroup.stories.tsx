@@ -5,8 +5,11 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 RadioGroup.Radio.displayName = 'RadioGroup.Radio';
@@ -21,14 +24,7 @@ const meta = {
     description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
@@ -56,7 +52,7 @@ const meta = {
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     legend: 'Type virksomhet',

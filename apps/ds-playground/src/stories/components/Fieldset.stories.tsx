@@ -5,8 +5,11 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { Fieldset, DatePicker } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -19,14 +22,7 @@ const meta = {
     description: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     helpText: { control: 'text', table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
     titleHelpSvg: {

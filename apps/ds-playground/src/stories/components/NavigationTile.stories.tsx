@@ -2,6 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
+import { getSpinnerLabelDefault } from '@skatteetaten/ds-core-utils';
 import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
@@ -13,7 +14,6 @@ import {
   htmlEventDescription,
   svgPathDescription,
 } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
 const defaultTitle = 'Skatt';
@@ -33,7 +33,12 @@ const meta = {
     isExternal: { table: { category: category.props } },
     hideArrowIcon: { table: { category: category.props } },
     size: { table: { category: category.props } },
-    spinnerTitle: { table: { category: category.props } },
+    spinnerTitle: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerLabelDefault() },
+      },
+    },
     svgPath: { ...svgPathDescription },
     // HTML
     href: { table: { category: category.htmlAttribute } },

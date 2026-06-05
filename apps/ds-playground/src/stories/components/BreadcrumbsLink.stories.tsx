@@ -8,7 +8,6 @@ import {
   htmlEventDescription,
   svgPathDescription,
 } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
 
 Breadcrumbs.Link.displayName = 'Breadcrumbs.Link';
 

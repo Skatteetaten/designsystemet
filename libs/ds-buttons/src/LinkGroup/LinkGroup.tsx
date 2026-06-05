@@ -18,7 +18,7 @@ import styles from './LinkGroup.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-linkgroup--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/linkgroup/) - Brukerveiledning
  */
-export const LinkGroupBase = ({
+export const LinkGroup = ({
   ref,
   id,
   className = '',
@@ -64,7 +64,7 @@ export const LinkGroupBase = ({
   );
 };
 
-export const LinkGroup = LinkGroupBase as LinkGroupComponent;
+export default LinkGroup as LinkGroupComponent;
 
 LinkGroup.displayName = 'LinkGroup';
 LinkGroup.Link = Link;

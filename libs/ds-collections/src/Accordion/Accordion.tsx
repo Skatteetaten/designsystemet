@@ -12,7 +12,7 @@ import styles from './Accordion.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-accordion--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/accordion/) - Brukerveiledning
  */
-export const AccordionBase = ({
+export const Accordion = ({
   ref,
   id,
   className = '',
@@ -41,7 +41,7 @@ export const AccordionBase = ({
   );
 };
 
-export const Accordion = AccordionBase as AccordionComponent;
+export default Accordion as AccordionComponent;
 
 Accordion.displayName = 'Accordion';
 Accordion.Item = AccordionItem;

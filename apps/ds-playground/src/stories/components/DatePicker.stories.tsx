@@ -7,13 +7,15 @@ import { useArgs } from 'storybook/preview-api';
 import {
   dsI18n,
   getAutoCompletePropDescription,
-  getCommonAutoCompleteDefault,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import { DatePicker, Combobox } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -29,14 +31,7 @@ const meta = {
     disabledDates: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     initialPickerDate: { table: { category: category.props }, control: 'date' },
@@ -49,7 +44,11 @@ const meta = {
       },
     },
     // HTML
-    autoComplete: { table: { category: category.htmlAttribute } },
+    autoComplete: {
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: getAutoCompletePropDescription(),
+    },
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     placeholder: {

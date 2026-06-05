@@ -2,8 +2,11 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Alert } from '@skatteetaten/ds-status';
 
-import { category, svgPathDescription } from '../../../../.storybook/helpers';
-import { SystemSVGPaths } from '../../utils/icon.systems';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../../.storybook/helpers';
 
 const meta = {
   component: Alert,
@@ -18,7 +21,7 @@ const meta = {
     // Aria
     ariaLive: { table: { category: category.aria } },
     // Events
-    onClose: { table: { category: category.event } },
+    onClose: { ...htmlEventDescription },
   },
   args: {
     children:

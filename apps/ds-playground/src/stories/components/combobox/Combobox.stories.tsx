@@ -4,10 +4,10 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   getHelpTitleHelpSvgDefault,
+  getSpinnerLabelDefault,
   dsI18n,
 } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import {
@@ -24,8 +24,11 @@ import { ComboboxTypedOptionsExample } from './ComboboxTypedOptionsExample';
 import comboboxTypedOptionsExampleSource from './ComboboxTypedOptionsExample.tsx?raw';
 import ComboboxValidationExample from './ComboboxValidationExample';
 import comboboxValidationExampleSource from './ComboboxValidationExample.tsx?raw';
-import { category, htmlEventDescription } from '../../../../.storybook/helpers';
-import { SystemSVGPaths } from '../../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../../.storybook/helpers';
 
 const meta = {
   title: 'Komponenter/Combobox',
@@ -44,14 +47,7 @@ const meta = {
     description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     isLoading: { table: { category: category.props } },

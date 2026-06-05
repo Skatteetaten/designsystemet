@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { StepList } from '@skatteetaten/ds-collections';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import {
   category,
   htmlEventDescription,
   svgPathDescription,
 } from '../../../.storybook/helpers';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 const meta = {
   component: StepList.Step,

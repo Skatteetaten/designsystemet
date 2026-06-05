@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button, IconButton, Link } from '@skatteetaten/ds-buttons';
-import { Accordion, AccordionBase } from '@skatteetaten/ds-collections';
+import { Accordion } from '@skatteetaten/ds-collections';
 import { DescriptionList } from '@skatteetaten/ds-content';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
@@ -34,7 +34,7 @@ const defaultChildren = [
 ];
 
 const meta = {
-  component: AccordionBase,
+  component: Accordion,
   title: 'Komponenter/Accordion',
   argTypes: {
     // Props
@@ -46,7 +46,7 @@ const meta = {
   args: {
     children: defaultChildren,
   },
-} satisfies Meta<typeof AccordionBase>;
+} satisfies Meta<typeof Accordion>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -17,10 +17,7 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    classNames: {
-      control: { disable: true },
-      table: { category: category.props },
-    },
+    classNames: { control: false, table: { category: category.props } },
     title: { table: { category: category.props } },
     subtitle: { control: 'text', table: { category: category.props } },
     isDefaultExpanded: { table: { category: category.props } },

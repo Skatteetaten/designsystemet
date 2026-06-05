@@ -1,4 +1,5 @@
 import { ArgTypes } from '@storybook/react-vite';
+
 import { SystemSVGPaths } from '../src/stories/utils/icon.systems';
 
 export const category = {
@@ -18,6 +19,15 @@ export const svgPathDescription: Partial<ArgTypes> = {
   options: Object.keys(SystemSVGPaths),
   mapping: SystemSVGPaths,
   table: { category: category.props },
+};
+
+export const helpSvgPathDescription: Partial<ArgTypes> = {
+  options: Object.keys(SystemSVGPaths),
+  mapping: SystemSVGPaths,
+  table: {
+    category: category.props,
+    defaultValue: { summary: 'HelpSimpleSVGpath' },
+  },
 };
 
 export const includeStylesTransform =

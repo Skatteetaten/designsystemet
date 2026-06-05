@@ -95,5 +95,3 @@ export const Help = ({
 };
 
 Help.displayName = 'Help';
-
-export { getHelpTitleHelpSvgDefault };

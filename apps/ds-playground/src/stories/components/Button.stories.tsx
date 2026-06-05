@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
+import { getSpinnerLabelDefault } from '@skatteetaten/ds-core-utils';
 
 import {
   category,
@@ -35,7 +35,7 @@ const meta = {
     isExternal: { table: { category: category.props } },
     type: { table: { category: category.htmlAttribute } },
     // Aria
-    ariaCurrent: { table: { category: category.aria } },
+    ariaCurrent: { control: 'text', table: { category: category.aria } },
     ariaDescribedby: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },

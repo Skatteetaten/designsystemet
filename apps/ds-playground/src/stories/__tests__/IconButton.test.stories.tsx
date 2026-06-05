@@ -4,7 +4,6 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import {
   AttachFileSVGpath,
   BellOutlineSVGpath,
@@ -141,7 +140,7 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
-    expect(iconButton).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(iconButton).toHaveAttribute('type', 'button');
 
     const svg = iconButton.querySelector('svg');
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');

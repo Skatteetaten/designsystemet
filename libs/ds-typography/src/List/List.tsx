@@ -11,7 +11,7 @@ import styles from './List.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-list--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography#list) - Brukerveiledning
  */
-export const ListBase = ({
+export const List = ({
   ref,
   id,
   className = '',
@@ -38,7 +38,7 @@ export const ListBase = ({
   );
 };
 
-export const List = ListBase as ListComponent;
+export default List as ListComponent;
 
 List.displayName = 'List';
 List.Element = ListElement;

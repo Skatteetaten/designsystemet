@@ -732,7 +732,7 @@ import '@skatteetaten/ds-core-designtokens';
 **Import base utilities:**
 
 ```typescript
-import { BaseProps, dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { BaseProps, dsI18n } from '@skatteetaten/ds-core-utils';
 ```
 
 **Import icons:**

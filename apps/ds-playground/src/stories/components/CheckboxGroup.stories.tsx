@@ -6,8 +6,11 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 CheckboxGroup.Checkbox.displayName = 'CheckboxGroup.Checkbox';
@@ -22,14 +25,7 @@ const meta = {
     description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
@@ -46,7 +42,7 @@ const meta = {
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
     // Events
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     children: [

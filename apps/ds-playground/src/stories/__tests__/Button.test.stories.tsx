@@ -4,10 +4,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonButtonTypeDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -139,7 +136,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(button).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
@@ -159,7 +156,7 @@ export const VariantSecondary = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(button).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
@@ -179,7 +176,7 @@ export const VariantTertiary = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(button).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
@@ -196,7 +193,7 @@ export const VariantDanger = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(button).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 

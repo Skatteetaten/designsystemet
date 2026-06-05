@@ -6,7 +6,7 @@ import {
   TopBannerExternalUserMenuProps,
 } from '@skatteetaten/ds-layout';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 
 TopBannerExternal.UserMenu.displayName = 'TopBannerExternal.UserMenu';
 
@@ -20,8 +20,8 @@ const meta = {
     hideDefaultLinks: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     // Events
-    onLogOutClick: { table: { category: category.event } },
-    onSwitchUserClick: { table: { category: category.event } },
+    onLogOutClick: { ...htmlEventDescription },
+    onSwitchUserClick: { ...htmlEventDescription },
   },
   args: {
     user: {

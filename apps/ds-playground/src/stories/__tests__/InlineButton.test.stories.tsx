@@ -4,7 +4,6 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -132,10 +131,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
     await expect(inlineButton).toBeInTheDocument();
-    await expect(inlineButton).toHaveAttribute(
-      'type',
-      getCommonButtonTypeDefault()
-    );
+    await expect(inlineButton).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 

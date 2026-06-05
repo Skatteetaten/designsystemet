@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { LinkGroup, LinkGroupBase } from '@skatteetaten/ds-buttons';
+import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 
 import { category } from '../../../.storybook/helpers';
@@ -11,7 +11,7 @@ import { exampleParameters } from '../utils/stories.utils';
 LinkGroup.Link.displayName = 'LinkGroup.Link';
 
 const meta = {
-  component: LinkGroupBase,
+  component: LinkGroup,
   title: 'Komponenter/LinkGroup',
   argTypes: {
     // Props
@@ -41,7 +41,7 @@ const meta = {
       </LinkGroup.Link>,
     ],
   },
-} satisfies Meta<typeof LinkGroupBase>;
+} satisfies Meta<typeof LinkGroup>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

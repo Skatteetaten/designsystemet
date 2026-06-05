@@ -3,8 +3,8 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
+import { getSpinnerLabelDefault } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 
 import {
   category,

@@ -16,11 +16,7 @@ import {
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { Divider } from '@skatteetaten/ds-content';
-import {
-  dsI18n,
-  formatOrganisationNumber,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
 import {
   InfoSquareSVGpath,
   BellSVGpath,

@@ -20,7 +20,7 @@ export const PopoverTrigger = ({
   ariaDescribedby,
   size,
   svgPath,
-  hideOutline,
+  hideOutline = false,
   onClick,
   onBlur,
   onFocus,

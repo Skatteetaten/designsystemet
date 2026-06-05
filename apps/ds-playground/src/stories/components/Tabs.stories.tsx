@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Tabs, TabsBase } from '@skatteetaten/ds-collections';
+import { Tabs } from '@skatteetaten/ds-collections';
 import {
   AccountMultipleSVGpath,
   BriefcaseSVGpath,
@@ -14,7 +14,7 @@ import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
-  component: TabsBase,
+  component: Tabs,
   title: 'Komponenter/Tabs',
   argTypes: {
     // Baseprops
@@ -36,7 +36,7 @@ const meta = {
   args: {
     defaultValue: 'tab1',
   },
-} satisfies Meta<typeof TabsBase>;
+} satisfies Meta<typeof Tabs>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

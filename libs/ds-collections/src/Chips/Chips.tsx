@@ -16,7 +16,7 @@ import styles from './Chips.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-chips--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/chips/) - Brukerveiledning
  */
-export const ChipsBase = ({
+export const Chips = ({
   ref,
   id,
   className = '',
@@ -92,7 +92,7 @@ export const ChipsBase = ({
   );
 };
 
-export const Chips = ChipsBase as ChipsComponent;
+export default Chips as ChipsComponent;
 
 Chips.displayName = 'Chips';
 

@@ -12,7 +12,7 @@ import { TabsTab } from './TabsTab/TabsTab';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-tabs--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tabs/) - Brukerveiledning
  */
-export const TabsBase = ({
+export const Tabs = ({
   ref,
   id,
   className = '',
@@ -71,7 +71,7 @@ export const TabsBase = ({
   );
 };
 
-export const Tabs = TabsBase as TabsComponent;
+export default Tabs as TabsComponent;
 
 Tabs.displayName = 'Tabs';
 Tabs.List = TabsList;

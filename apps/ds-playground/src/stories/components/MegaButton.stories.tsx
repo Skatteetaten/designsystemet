@@ -3,8 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { MegaButton } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
+import { getSpinnerLabelDefault } from '@skatteetaten/ds-core-utils';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

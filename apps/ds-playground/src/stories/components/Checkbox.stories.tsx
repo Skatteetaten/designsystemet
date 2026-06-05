@@ -27,7 +27,7 @@ const meta = {
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     required: { table: { category: category.htmlAttribute } },
-    value: { table: { category: category.htmlAttribute } },
+    value: { control: 'text', table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events
