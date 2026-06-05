@@ -1,31 +1,45 @@
-import { useState, JSX, useContext } from 'react';
+import { useState, JSX, useContext, ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  CancelSVGpath,
+  Icon,
+  InfoSquareSVGpath,
+  WarningStopSVGpath,
+  WarningSVGpath,
+} from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { CardAlertProps } from './CardAlert.types';
-import {
-  getCardAlertSvgPathDefault,
-  getCardAlertTitleAsDefault,
-  getCardAlertVariantDefault,
-} from './defaults';
+import { CardAlertProps, CardAlertVariant } from './CardAlert.types';
 import { CardContext } from '../CardContext';
 
 import styles from './CardAlert.module.scss';
 
+const getCardAlertDefaultSvgPath = (
+  variant: CardAlertVariant
+): ReactElement<SVGPathElement> => {
+  switch (variant) {
+    case 'warning':
+      return WarningSVGpath;
+    case 'danger':
+      return WarningStopSVGpath;
+    case 'info':
+      return InfoSquareSVGpath;
+  }
+};
+
 export const CardAlert = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,
-  titleAs = getCardAlertTitleAsDefault(),
-  variant = getCardAlertVariantDefault(),
-  svgPath = getCardAlertSvgPathDefault(variant),
+  titleAs = 'h3',
+  variant = 'warning',
+  svgPath,
   showAlert: showAlertExternal,
   onClose,
   children,
@@ -37,6 +51,8 @@ export const CardAlert = ({
 
   const showAlert =
     showAlertExternal !== undefined ? showAlertExternal : showAlertInternal;
+
+  const resolvedSvgPath = svgPath ?? getCardAlertDefaultSvgPath(variant);
 
   if (!showAlert) {
     return <> </>;
@@ -52,7 +68,7 @@ export const CardAlert = ({
       data-variant={variant}
     >
       <div className={styles.cardAlertHeadingContainer}>
-        <Icon className={styles.cardAlertIcon} svgPath={svgPath} />
+        <Icon className={styles.cardAlertIcon} svgPath={resolvedSvgPath} />
         <Heading id={alertHeadingId} level={5} as={titleAs}>
           {title}
         </Heading>

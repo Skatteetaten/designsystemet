@@ -8,14 +8,8 @@ const meta = {
   component: DescriptionList.Element,
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
-    term: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
+    term: { control: 'text', table: { category: category.props } },
   },
   args: {
     term: 'Navn',

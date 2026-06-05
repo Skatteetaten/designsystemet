@@ -1,19 +1,7 @@
-import { Children } from 'react';
+import { Children, JSX } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 
-import {
-  getDescriptionDirectionDefault,
-  getDescriptionListIsDescriptionVerticalOnMobileDefault,
-  getDescriptionListIsVerticalOnMobileDefault,
-  getDescriptionListSizeDefault,
-  getDescriptionListVariantDefault,
-  getDescriptionWeightDefault,
-  getTermWeightDefault,
-} from './defaults';
 import {
   DescriptionListComponent,
   DescriptionListProps,
@@ -28,22 +16,22 @@ import styles from './DescriptionList.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-descriptionlist--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/descriptionlist/) - Brukerveiledning
  */
-export const DescriptionList = (({
+export const DescriptionList = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  size = getDescriptionListSizeDefault(),
-  variant = getDescriptionListVariantDefault(),
-  descriptionDirection = getDescriptionDirectionDefault(),
-  descriptionWeight = getDescriptionWeightDefault(),
-  termWeight = getTermWeightDefault(),
-  hasSpacing,
-  isVerticalOnMobile = getDescriptionListIsVerticalOnMobileDefault(),
-  isDescriptionVerticalOnMobile = getDescriptionListIsDescriptionVerticalOnMobileDefault(),
+  size = 'medium',
+  variant = 'vertical',
+  descriptionDirection = 'horizontal',
+  descriptionWeight = 'regular',
+  termWeight = 'bold',
+  hasSpacing = false,
+  isVerticalOnMobile = true,
+  isDescriptionVerticalOnMobile = false,
   children,
-}: DescriptionListProps) => {
+}: DescriptionListProps): JSX.Element => {
   const isMobile = !useMediaQuery('(min-width: 640px)');
   const isHorizontal =
     variant === 'horizontal' && (!isMobile || !isVerticalOnMobile);
@@ -91,7 +79,9 @@ export const DescriptionList = (({
         : children}
     </dl>
   );
-}) as DescriptionListComponent;
+};
+
+export default DescriptionList as DescriptionListComponent;
 
 DescriptionList.displayName = 'DescriptionList';
 DescriptionList.Element = DescriptionListElement;

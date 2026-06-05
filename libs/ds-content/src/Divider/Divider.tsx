@@ -1,12 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
-import {
-  getDividerSpacingBottomDefault,
-  getDividerSpacingTopDefault,
-  getDividerVariantDefault,
-} from './defaults';
 import { DividerProps } from './Divider.types';
 
 import styles from './Divider.module.scss';
@@ -20,12 +13,12 @@ import styles from './Divider.module.scss';
 export const Divider = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  variant = getDividerVariantDefault(),
-  spacingTop = getDividerSpacingTopDefault(),
-  spacingBottom = getDividerSpacingBottomDefault(),
+  variant = 'subtle',
+  spacingTop = 's',
+  spacingBottom = 's',
   ariaHidden,
 }: DividerProps): JSX.Element => {
   const concatenatedClassName = `${styles.divider} ${className}`.trim();

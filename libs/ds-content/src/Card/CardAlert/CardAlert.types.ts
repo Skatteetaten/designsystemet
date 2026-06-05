@@ -14,7 +14,9 @@ export interface CardAlertCommonProps extends BaseProps {
   variant?: CardAlertVariant;
   /**
    * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke.
-   * Alternativt kan custom path sendes.
+   * Alternativt kan custom path sendes. Default ikon er WarningStopSVGpath.
+   *
+   * @see [ds-icons](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-icons--docs) for tilgjengelige ikoner.
    */
   svgPath?: ReactElement<SVGPathElement>;
   /** Innholdet i komponenten. */

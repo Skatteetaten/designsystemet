@@ -3,12 +3,7 @@ import { JSX, useRef } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { IconButton, InlineButton, Link } from '@skatteetaten/ds-buttons';
-import {
-  Card,
-  DescriptionList,
-  getCardColorDefault,
-  getCardSpacingDefault,
-} from '@skatteetaten/ds-content';
+import { Card, DescriptionList } from '@skatteetaten/ds-content';
 import {
   ArbeidTrygdPensjonIcon,
   CancelSVGpath,
@@ -36,23 +31,9 @@ const meta = {
   title: 'Komponenter/Card',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
-    spacing: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCardSpacingDefault() },
-      },
-    },
-    color: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCardColorDefault() },
-      },
-    },
+    children: { control: 'text', table: { category: category.props } },
+    spacing: { table: { category: category.props } },
+    color: { control: 'inline-radio', table: { category: category.props } },
     // Aria
     ariaLabelledBy: { table: { category: category.aria } },
   },
