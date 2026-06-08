@@ -5,6 +5,7 @@ import type { ComboboxState } from '../combobox-state-utils';
 import {
   getEnabledIndices,
   getFirstEnabledIndex,
+  getLastSelectedIndex,
   getNextEnabledIndex,
   getOptionState,
   getPreviousEnabledIndex,
@@ -261,6 +262,39 @@ describe('getFirstEnabledIndex', () => {
   it('returnerer korrekt index for single element', () => {
     const result = getFirstEnabledIndex([7]);
     expect(result).toBe(7);
+  });
+});
+
+describe('getLastSelectedIndex', () => {
+  it('returnerer indeksen til sist valgte option', () => {
+    const result = getLastSelectedIndex(mockOptions, [
+      mockOptions[0],
+      mockOptions[3],
+    ]);
+
+    expect(result).toBe(3);
+  });
+
+  it('sammenligner basert på value i stedet for objekt-referanse', () => {
+    const result = getLastSelectedIndex(mockOptions, [
+      { label: 'Annen label', value: '2' },
+    ]);
+
+    expect(result).toBe(1);
+  });
+
+  it('returnerer -1 når selectedValues er tom', () => {
+    const result = getLastSelectedIndex(mockOptions, []);
+
+    expect(result).toBe(-1);
+  });
+
+  it('returnerer -1 når sist valgte option ikke finnes i options', () => {
+    const result = getLastSelectedIndex(mockOptions, [
+      { label: 'Mangler', value: '999' },
+    ]);
+
+    expect(result).toBe(-1);
   });
 });
 
