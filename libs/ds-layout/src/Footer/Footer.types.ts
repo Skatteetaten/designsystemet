@@ -33,10 +33,7 @@ export interface FooterProps extends BaseProps {
   thirdColumn?: ReactNode;
   /** Om standard lenker skal skjules */
   hideDefaultLinks?: boolean;
-  /**
-   * Om standard lenker skal åpne i ny fane. Default er 'true'. Endres til
-   * 'false' i neste major.
-   */
+  /** Om standard lenker skal åpne i ny fane. Default er 'false'. */
   openDefaultLinksInNewTab?: boolean;
   /**
    * Footer.LinkFirstColumn, Footer.Logo eller Footer.Link:
