@@ -1,7 +1,0 @@
-import{j as e}from"./iframe-BQX7p2fO.js";import{useMDXComponents as p}from"./index-B-1r-e4r.js";import{M as h,I as s,b as m}from"./blocks-Cuqi8N1K.js";import{I as i}from"./index-CR6dT-y4.js";import{i as c}from"./icon.utils-1Ba-ROnh.js";import{S as l}from"./icon.systems-WAvM-z7u.js";import{T as j}from"./icon.themes-KgxgMBCf.js";import{V as x}from"./VersionBadge-nxpO8NQb.js";import{D as d}from"./DocIntro-Dqb5-ImU.js";import{D as I}from"./DocHeaderWrapper-B9gsE2PP.js";import"./preload-helper-PPVm8Dsz.js";import"./index-7aPZXNzx.js";import"./index-BX4RXkVG.js";import"./index-ZQJoFOIZ.js";import"./index-CsBqoXCA.js";function a(n){const o={h1:"h1",h2:"h2",...p(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(h,{title:"Komponenter/Icon/Icon Gallery"}),`
-`,e.jsxs(I,{componentName:"Icon",children:[e.jsx(o.h1,{id:"icon-gallery",children:"Icon Gallery"}),e.jsx(x,{packageName:"icons"}),e.jsx(d,{url:"https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/icon/"})]}),`
-`,e.jsx(o.h2,{id:"theme-icons",children:"Theme Icons"}),`
-`,e.jsx(s,{children:Object.entries(j).map(([t,r])=>e.jsx(m,{name:c(t),children:e.jsx(i,{svgPath:r,variant:"themeIcon"})},t))}),`
-`,e.jsx(o.h2,{id:"system-icons",children:"System Icons"}),`
-`,e.jsx(s,{children:Object.entries(l).map(([t,r])=>e.jsx(m,{name:c(t),children:e.jsx(i,{svgPath:r})},t))})]})}function O(n={}){const{wrapper:o}={...p(),...n.components};return o?e.jsx(o,{...n,children:e.jsx(a,{...n})}):a(n)}export{O as default};
-//# sourceMappingURL=IconGallery-BJ1nYUcT.js.map

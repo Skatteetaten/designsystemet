@@ -1,6 +1,0 @@
-import{T as n}from"./TopBannerButton-BuehTd8d.js";import{T as t}from"./TopBannerButton.test.stories-D9IrMzzX.js";import{c as a}from"./createSingleStory-C_qLg1mB.js";import"./iframe-BQX7p2fO.js";import"./preload-helper-PPVm8Dsz.js";import"./index-CR6dT-y4.js";import"./icon.systems-WAvM-z7u.js";import"./icon.utils-1Ba-ROnh.js";import"./index-BLTwn-id.js";const s={title:"Chromatic/TopBannerExternal/Button (intern)",component:n,tags:["chromatic","!autodocs"],parameters:{pseudoSelector:"> button"}},r=a(t,s),e=a(t,s,{viewport:"--mobile"}),o=a(t,s,{viewport:"--breakpoint-m"});r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:"createSingleStory(TopBannerButtonStories, meta)",...r.parameters?.docs?.source}}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`createSingleStory(TopBannerButtonStories, meta, {
-  viewport: '--mobile'
-})`,...e.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`createSingleStory(TopBannerButtonStories, meta, {
-  viewport: '--breakpoint-m'
-})`,...o.parameters?.docs?.source}}};const g=["Snapshots","Mobile","BreakpointM"];export{o as BreakpointM,e as Mobile,r as Snapshots,g as __namedExportsOrder,s as default};
-//# sourceMappingURL=TopBannerButton.chromatic.stories-_a9xwLih.js.map
