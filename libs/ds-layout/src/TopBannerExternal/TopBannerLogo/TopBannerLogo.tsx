@@ -6,6 +6,7 @@ import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 import defaultEnglishLogo from './ske-logo-en.svg';
 import defaultNorwegainLogo from './ske-logo.svg';
 import { TopBannerLogoProps } from './TopBannerLogo.types';
+import { topBannerAnalyticsIds } from '../analyticsIds';
 
 import styles from './TopBannerLogo.module.scss';
 
@@ -45,6 +46,7 @@ export const TopBannerLogo = ({
       className={concatenatedClassName}
       lang={lang}
       data-testid={dataTestId}
+      data-webanalytics-id={topBannerAnalyticsIds.logo}
       href={Tag === 'div' ? undefined : href}
       onClick={onClick}
     >

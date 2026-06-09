@@ -54,8 +54,9 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
     } & LabelWithHelpProps['classNames']
   >;
   /**
-   * Tilleggstekst. Typen er ReactNode for å kunne støtte språkmarkering av
-   * begreper, for eksempel med et span-element med lang-attributt.
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
    */
   description?: LabelWithHelpProps['description'];
   /** Feilmelding som vises under komponenten */

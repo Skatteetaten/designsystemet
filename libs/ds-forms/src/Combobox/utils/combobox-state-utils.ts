@@ -180,6 +180,26 @@ export const getFirstEnabledIndex = (enabledIndices: number[]): number => {
 };
 
 /**
+ * Finner indeksen til sist valgte option basert på value.
+ *
+ * @param options - Options å søke i
+ * @param selectedValues - Valgte options
+ * @returns Indeksen til sist valgte option, eller -1 hvis den ikke finnes
+ */
+export const getLastSelectedIndex = (
+  options: ComboboxOption[],
+  selectedValues: ComboboxOption[]
+): number => {
+  const selectedValue = selectedValues.at(-1)?.value;
+
+  if (!selectedValue) {
+    return -1;
+  }
+
+  return options.findIndex((option) => option.value === selectedValue);
+};
+
+/**
  * Checks if a specific index corresponds to a focusable option. Used to
  * validate focus targets before applying focus.
  *

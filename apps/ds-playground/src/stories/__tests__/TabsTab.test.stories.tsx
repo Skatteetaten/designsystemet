@@ -22,8 +22,8 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+    // turn off accessibility tests since the tabs.tab component requires a parent component
     a11y: {
-      // turn off accessibility tests since the tabs.tab component requires a parent component to fullfill accessibility requirements
       test: 'off',
     },
   },

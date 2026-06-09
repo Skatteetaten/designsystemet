@@ -322,6 +322,37 @@ export const GroupedOptionsSelectFromGroup = {
   },
 } satisfies Story;
 
+export const GroupedOptionsReopenArrowDownFocusesSelectedOption = {
+  name: 'Pil ned ved gjenapning fokuserer valgt gruppert alternativ',
+  args: {
+    ...defaultArgs,
+    options: groupedOptions,
+    value: 'bergen',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await expect(inputElement).toHaveValue('Bergen');
+
+    await userEvent.click(inputElement);
+    await userEvent.keyboard('{Escape}');
+
+    await expect(canvas.queryAllByRole('option')).toHaveLength(0);
+
+    await userEvent.keyboard('{ArrowDown}');
+
+    const activeDescendant = inputElement.getAttribute('aria-activedescendant');
+    await expect(activeDescendant).toBeTruthy();
+
+    const bergenOption = canvas.getByRole('option', { name: 'Bergen' });
+    await expect(bergenOption).toHaveAttribute('id', activeDescendant);
+  },
+} satisfies Story;
+
 export const GroupedOptionsVisualSnapshot = {
   name: 'Visuelt snapshot - grupperte alternativer',
   args: {

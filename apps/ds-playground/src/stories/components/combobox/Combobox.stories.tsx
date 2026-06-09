@@ -8,7 +8,7 @@ import {
   dsI18n,
 } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   groupedKommuneOptions,
@@ -207,50 +207,6 @@ export const MaxSelected: Story = {
         description={'Velg maksimalt 3 kommuner'}
         options={kommuneOptions}
         maxSelected={3}
-        multiple
-      />
-    </>
-  ),
-  parameters: {
-    controls: {
-      disable: true,
-    },
-  },
-} satisfies Story;
-
-export const MaxHeight: Story = {
-  name: 'Begrenset høyde på options liste',
-  render: (): JSX.Element => (
-    <>
-      <Paragraph hasSpacing>
-        {
-          'Eksempel på bruk av combobox med begrenset høyde på resultatlisten ved å bruke classNames.options. Når antall alternativer overstiger max-height, vil listen få scrollbar.'
-        }
-      </Paragraph>
-      <Heading as={'h2'} level={4} hasSpacing>
-        {'Enkeltvalg med begrenset høyde'}
-      </Heading>
-      <Combobox
-        className={'singleCombobox'}
-        label={'Kommune'}
-        options={kommuneOptions}
-        classNames={{
-          options: 'maxHeight300',
-        }}
-        hasSpacing
-      />
-
-      <Heading as={'h2'} level={4} hasSpacing>
-        {'Flervalg med begrenset høyde'}
-      </Heading>
-      <Combobox
-        className={'multipleCombobox'}
-        label={'Kommune'}
-        options={kommuneOptions}
-        classNames={{
-          options: 'maxHeight300',
-        }}
-        maxSelected={2}
         multiple
       />
     </>

@@ -99,9 +99,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -327,9 +324,6 @@ export const WithNotScrollToMain = {
     scrollToMain: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {

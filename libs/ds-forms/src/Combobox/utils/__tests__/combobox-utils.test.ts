@@ -149,6 +149,7 @@ describe('combobox-utils', () => {
     it('MOUSE behavior har riktige verdier', () => {
       expect(SELECTION_BEHAVIORS.MOUSE).toEqual({
         allowToggleOff: true,
+        allowSingleToggleOff: true,
         resetFocusIndex: true,
         delayedFocus: true,
       });
@@ -157,6 +158,7 @@ describe('combobox-utils', () => {
     it('KEYBOARD behavior har riktige verdier', () => {
       expect(SELECTION_BEHAVIORS.KEYBOARD).toEqual({
         allowToggleOff: true,
+        allowSingleToggleOff: false,
         resetFocusIndex: false,
         delayedFocus: false,
       });
@@ -238,6 +240,52 @@ describe('combobox-utils', () => {
             inputRef: mockInputRef,
           });
         }).not.toThrow();
+      });
+
+      it('Når allerede valgt option velges med MOUSE behavior, så deselekteres den', () => {
+        vi.useFakeTimers();
+        const option = mockOptions[0];
+
+        selectOption(option, {
+          multiple: false,
+          selectedValues: [option],
+          behavior: SELECTION_BEHAVIORS.MOUSE,
+          setSelectedValues: mockSetSelectedValues,
+          setSearchTerm: mockSetSearchTerm,
+          closeDropdown: mockCloseDropdown,
+          setFocusedIndex: mockSetFocusedIndex,
+          inputRef: mockInputRef,
+          onSelectionChange: mockOnSelectionChange,
+        });
+
+        expect(mockSetSelectedValues).toHaveBeenCalledWith([]);
+        expect(mockSetSearchTerm).toHaveBeenCalledWith('');
+        vi.runAllTimers();
+        expect(mockCloseDropdown).toHaveBeenCalled();
+        expect(mockOnSelectionChange).toHaveBeenCalledWith(null);
+
+        vi.useRealTimers();
+      });
+
+      it('Når allerede valgt option velges med KEYBOARD behavior, så beholdes valget', () => {
+        const option = mockOptions[0];
+
+        selectOption(option, {
+          multiple: false,
+          selectedValues: [option],
+          behavior: SELECTION_BEHAVIORS.KEYBOARD,
+          setSelectedValues: mockSetSelectedValues,
+          setSearchTerm: mockSetSearchTerm,
+          closeDropdown: mockCloseDropdown,
+          setFocusedIndex: mockSetFocusedIndex,
+          inputRef: mockInputRef,
+          onSelectionChange: mockOnSelectionChange,
+        });
+
+        expect(mockSetSelectedValues).toHaveBeenCalledWith([option]);
+        expect(mockSetSearchTerm).toHaveBeenCalledWith('Apple');
+        expect(mockCloseDropdown).toHaveBeenCalled();
+        expect(mockOnSelectionChange).toHaveBeenCalledWith(option);
       });
     });
 

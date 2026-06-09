@@ -102,9 +102,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -450,7 +447,7 @@ export const WithValue = {
 } satisfies Story;
 
 export const SingleSelectKeyboardDeselect = {
-  name: 'Single-Select Keyboard Deselect',
+  name: 'Single-Select Keyboard Keeps Selection',
   args: {
     ...defaultArgs,
     onSelectionChange: fn(),
@@ -466,7 +463,7 @@ export const SingleSelectKeyboardDeselect = {
     await expect(combobox).toHaveValue('Norge');
     await userEvent.click(combobox);
     await userEvent.keyboard('{Enter}');
-    await expect(combobox).toHaveValue('');
+    await expect(combobox).toHaveValue('Norge');
   },
 } satisfies Story;
 

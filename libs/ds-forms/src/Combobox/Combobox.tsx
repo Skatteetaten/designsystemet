@@ -180,10 +180,14 @@ const ComboboxContent = ({
     openDropdown('keyboard');
   }, [openDropdown]);
 
+  const keyboardOpenDropdownWithoutFocus = useCallback(() => {
+    openDropdown('keyboardNoFocus');
+  }, [openDropdown]);
+
   // Keyboard navigation hook
   useComboboxKeyboard({
     isOpen,
-    allOptions: options,
+    allOptions: allOptionsInOrder,
     displayOptions,
     enabledIndices,
     focusedIndex,
@@ -191,6 +195,7 @@ const ComboboxContent = ({
     moveFocusNext,
     moveFocusPrevious,
     openDropdown: keyboardOpenDropdown,
+    openDropdownWithoutFocus: keyboardOpenDropdownWithoutFocus,
     closeDropdown,
     setSearchTerm,
     inputRef,

@@ -122,9 +122,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -190,7 +187,12 @@ const TemplateScroll: StoryFn<typeof Table> = (args) => {
 export const WithScrollbar = {
   render: TemplateScroll,
   name: 'With Scroll (A5)',
-  parameters: { a11y: { disable: true } },
+  parameters: {
+    // color contrast issue
+    a11y: {
+      test: 'off',
+    },
+  },
 } satisfies Story;
 
 const TemplateAlignment: StoryFn<typeof Table> = (args) => (

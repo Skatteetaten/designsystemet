@@ -124,9 +124,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -137,6 +134,32 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      container: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+    },
+    errorMessage: 'feil',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    await expect(container).toHaveClass('dummyClassname');
+    const errorText = within(canvasElement).getByText('feil');
+    const errorMessage = errorText.closest('div');
+    await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -419,35 +442,6 @@ export const WithHelpToggleEvent = {
     });
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    classNames: {
-      container: 'dummyClassname',
-      errorMessage: 'dummyClassname',
-    },
-    errorMessage: 'feil',
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const container = canvasElement.querySelector(`${wrapper} > div`);
-    await expect(container).toHaveClass('dummyClassname');
-    const errorText = within(canvasElement).getByText('feil');
-    const errorMessage = errorText.closest('div');
-    await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

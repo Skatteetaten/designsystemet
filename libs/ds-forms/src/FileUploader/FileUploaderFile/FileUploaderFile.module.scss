@@ -135,6 +135,10 @@
     transition:
       transform 0.3s ease,
       opacity 0.3s ease;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   &Icon {

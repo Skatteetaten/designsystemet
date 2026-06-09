@@ -79,7 +79,7 @@ export const Help = ({
         </div>
       )}
       {description && (
-        <div
+        <span
           id={descriptionId}
           className={`${
             styles.description
@@ -88,7 +88,7 @@ export const Help = ({
           }`.trim()}
         >
           {description}
-        </div>
+        </span>
       )}
     </>
   );

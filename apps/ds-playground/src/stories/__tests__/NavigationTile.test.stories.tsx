@@ -165,9 +165,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -176,6 +174,37 @@ export const WithAttributes = {
     await expect(link).toHaveAttribute('id', elementId);
     await expect(link).toHaveAttribute('lang', 'nb');
     await expect(link).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    description: defaultDescription,
+    classNames: {
+      container: 'dummyClassname',
+      title: 'dummyClassname',
+      description: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('link');
+    const title = canvas.getByText(defaultTitle);
+    const description = canvas.getByText(defaultDescription);
+
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(title).toHaveClass('dummyClassname');
+    await expect(description).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -390,34 +419,6 @@ export const WithTilesInColumns = {
     size: {
       table: { disable: false },
     },
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    description: defaultDescription,
-    classNames: {
-      container: 'dummyClassname',
-      title: 'dummyClassname',
-      description: 'dummyClassname',
-    },
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const container = canvas.getByRole('link');
-    const title = canvas.getByText(defaultTitle);
-    const description = canvas.getByText(defaultDescription);
-
-    await expect(container).toHaveClass('dummyClassname');
-    await expect(title).toHaveClass('dummyClassname');
-    await expect(description).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

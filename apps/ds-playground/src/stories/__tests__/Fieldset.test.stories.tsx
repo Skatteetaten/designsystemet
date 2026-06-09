@@ -108,9 +108,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -120,6 +118,35 @@ export const WithAttributes = {
     await expect(fieldset).toHaveAttribute('lang', 'nb');
     await expect(fieldset).toHaveAttribute('data-testid', '123ID');
     await expect(fieldset).toHaveAttribute('form', '123form');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      container: 'dummyClassname',
+      legend: 'dummyClassname',
+      contentContainer: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('group');
+    await expect(container).toHaveClass('dummyClassname');
+    const legend = canvas.getByText(defaultLegendText);
+    await expect(legend).toHaveClass('dummyClassname');
+    const contentContainer = legend.nextElementSibling;
+    await expect(contentContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -309,25 +336,5 @@ export const WithHelpToggleEvent = {
     const helpButton = canvas.getByRole('button');
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      legend: 'dummyClassname',
-    },
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const legend = canvas.getByText(defaultLegendText);
-    await expect(legend).toHaveClass('dummyClassname');
   },
 } satisfies Story;

@@ -9,6 +9,8 @@ import {
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { TopBannerLanguageMenuAnalyticsId } from '../analyticsIds';
+
 type RequiredButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
   'onClick' | 'onKeyDown'
@@ -24,8 +26,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 }
 
 export interface TopBannerLangPickerButtonProps
-  extends ButtonPropsHTMLAttributes,
-    BaseProps {
+  extends ButtonPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLButtonElement>;
   /** Om komponenten skal være i fokus. */
   focus?: boolean;
@@ -33,4 +34,5 @@ export interface TopBannerLangPickerButtonProps
   flagIcon: ReactNode;
   /** Navn på språket. */
   children: string;
+  dataWebAnalyticsId?: TopBannerLanguageMenuAnalyticsId;
 }

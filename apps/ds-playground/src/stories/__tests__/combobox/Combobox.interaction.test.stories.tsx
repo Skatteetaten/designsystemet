@@ -101,6 +101,58 @@ export const KeyboardNavigation = {
   },
 } satisfies Story;
 
+export const AltArrowDownKeepsInputFocusWithSelectedValue = {
+  name: 'Alt+Pil ned beholder inputfokus ved valgt verdi',
+  args: {
+    ...defaultArgs,
+    value: 'no',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await expect(inputElement).toHaveValue('Norge');
+
+    await userEvent.click(inputElement);
+    await userEvent.keyboard('{Escape}');
+
+    await expect(canvas.queryAllByRole('option')).toHaveLength(0);
+
+    await userEvent.keyboard('{Alt>}{ArrowDown}{/Alt}');
+
+    const options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+    await expect(inputElement).not.toHaveAttribute('aria-activedescendant');
+    await expect(inputElement).toHaveFocus();
+  },
+} satisfies Story;
+
+export const ClickOpenFocusesSelectedValue = {
+  name: 'Klikk for aapning fokuserer valgt verdi',
+  args: {
+    ...defaultArgs,
+    value: 'no',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+
+    const activeDescendant = inputElement.getAttribute('aria-activedescendant');
+    await expect(activeDescendant).toBeTruthy();
+
+    const norgeOption = canvas.getByRole('option', { name: 'Norge' });
+    await expect(norgeOption).toHaveAttribute('id', activeDescendant);
+  },
+} satisfies Story;
+
 export const SearchFiltering = {
   name: 'Søk og filtrering av alternativer (A5)',
   args: {
@@ -422,6 +474,12 @@ export const ReopenShowsAllWithSelectedMark = {
       (option) => option.textContent?.trim() === 'Sverige'
     );
     await expect(selectedOption).toHaveAttribute('aria-selected', 'true');
+    await waitFor(() => {
+      expect(inputElement).toHaveAttribute(
+        'aria-activedescendant',
+        selectedOption?.getAttribute('id')
+      );
+    });
 
     const selectedIcon = selectedOption?.querySelector(
       'svg[aria-hidden="true"]'

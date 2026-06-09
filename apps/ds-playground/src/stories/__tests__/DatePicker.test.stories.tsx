@@ -133,9 +133,6 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -156,7 +153,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      dateContainer: 'dummyClassnameFormContainer',
+      dateContainer: 'dummyClassname',
       errorMessage: 'dummyClassname',
     },
     errorMessage: errorMessageText,
@@ -182,7 +179,7 @@ export const WithCustomClassNames = {
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(dateContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(dateContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;

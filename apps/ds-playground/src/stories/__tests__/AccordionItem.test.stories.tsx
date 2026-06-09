@@ -129,9 +129,6 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -140,6 +137,42 @@ export const WithAttributes = {
     await expect(button).toHaveAttribute('id', elementId);
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3, A10)',
+  args: {
+    ...defaultArgs,
+    subtitle: defaultSubtitle,
+    isExpanded: true,
+    classNames: {
+      container: 'dummyClassname',
+      title: 'dummyClassname',
+      subtitle: 'dummyClassname',
+      content: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const container = canvas.getByRole('button');
+    const title = canvas.getByText(defaultTitle);
+    const subtitle = canvas.getByText(defaultSubtitle);
+    const content = canvas.getByText(defaultContent);
+
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(title).toHaveClass('dummyClassname');
+    await expect(subtitle).toHaveClass('dummyClassname');
+    await expect(content).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -170,39 +203,6 @@ export const Defaults = {
     const svg = button.querySelector('svg');
     await expect(svg).toBeInTheDocument();
     await expect(svg).toHaveAttribute('aria-hidden', 'true');
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3, A10)',
-  args: {
-    ...defaultArgs,
-    subtitle: defaultSubtitle,
-    isExpanded: true,
-    classNames: {
-      container: 'dummyClassname',
-      title: 'dummyClassname',
-      subtitle: 'dummyClassname',
-      content: 'dummyClassname',
-    },
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    const container = canvas.getByRole('button');
-    const title = canvas.getByText(defaultTitle);
-    const subtitle = canvas.getByText(defaultSubtitle);
-    const content = canvas.getByText(defaultContent);
-
-    await expect(container).toHaveClass('dummyClassname');
-    await expect(title).toHaveClass('dummyClassname');
-    await expect(subtitle).toHaveClass('dummyClassname');
-    await expect(content).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

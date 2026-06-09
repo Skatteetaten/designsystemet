@@ -20,6 +20,7 @@ import {
   SearchSVGpath,
 } from '@skatteetaten/ds-icons';
 
+import { topBannerAnalyticsIds } from './analyticsIds';
 import { TopBannerButton } from './TopBannerButton/TopBannerButton';
 import {
   TopBannerExternalProps,
@@ -277,6 +278,7 @@ export const TopBannerExternal = ({
                 )}
                 <TopBannerButton
                   svgPath={LogOutSVGpath}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.logout}
                   onClick={onLogOutClick}
                 >
                   {t('topbannerbutton.Logout')}
@@ -287,6 +289,7 @@ export const TopBannerExternal = ({
               <TopBannerButton
                 svgPath={LockOutlineSVGpath}
                 variant={'filled'}
+                dataWebAnalyticsId={topBannerAnalyticsIds.login}
                 onClick={onLogInClick}
               >
                 {t('topbannerbutton.Login')}
@@ -300,6 +303,7 @@ export const TopBannerExternal = ({
                     openMenu === 'Search' ? CancelSVGpath : SearchSVGpath
                   }
                   ariaExpanded={isSearchOpen}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.search}
                   onClick={handleSearchClick}
                   onFocus={() => {
                     statusFlagRef.current.focusCaptured = isSearchOpen;
@@ -325,11 +329,11 @@ export const TopBannerExternal = ({
                       <SearchField
                         ref={searchRef}
                         classNames={{ label: styles.mainMenuSearchLabel }}
-                        className={styles.mainMenuSearchSpacing}
                         label={t('topbanner.SearchLabel')}
                         variant={isMobile ? 'large' : 'extraLarge'}
                         hideLabel={false}
                         enableSRNavigationHint={false}
+                        hasSpacing
                         onSearch={onSearch}
                         onSearchClick={onSearchClick}
                       />
@@ -348,6 +352,7 @@ export const TopBannerExternal = ({
                     openMenu === 'MainMenu' ? CancelSVGpath : MenuSVGpath
                   }
                   ariaExpanded={isMenuOpen}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.mainMenuToggle}
                   onClick={handleMenuClick}
                   onFocus={() => {
                     statusFlagRef.current.focusCaptured = isMenuOpen;
@@ -359,6 +364,7 @@ export const TopBannerExternal = ({
                   <div
                     ref={menuRef}
                     className={styles.mainMenu}
+                    web-analytics-id={topBannerAnalyticsIds.mainMenu}
                     onFocus={() => {
                       statusFlagRef.current.focusCaptured = isMenuOpen;
                     }}

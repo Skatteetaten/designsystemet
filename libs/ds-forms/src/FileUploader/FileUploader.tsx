@@ -337,9 +337,9 @@ export const FileUploader = ({
       >
         {uploadResult?.statusMessage}
       </Alert>
-      {uploadedFiles && (
+      {!!uploadedFiles?.length && (
         <ul className={styles.fileList}>
-          {uploadedFiles?.map((file, index) => {
+          {uploadedFiles.map((file, index) => {
             const isNewFile = newFiles.some(
               (newFile) => newFile.id === file.id
             );

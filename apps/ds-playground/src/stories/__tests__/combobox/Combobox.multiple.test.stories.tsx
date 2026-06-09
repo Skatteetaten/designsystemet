@@ -321,6 +321,58 @@ export const KeyboardSelectionRestoresOriginalFocusIndex = {
   },
 } satisfies Story;
 
+export const ClickOpenFocusesLastSelectedValue = {
+  name: 'Klikk for aapning fokuserer sist valgte verdi i flervalg',
+  args: {
+    ...defaultArgs,
+    multiple: true,
+    value: ['no', 'se'],
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+
+    const activeDescendant = inputElement.getAttribute('aria-activedescendant');
+    await expect(activeDescendant).toBeTruthy();
+
+    const sverigeOption = canvas.getByRole('option', { name: 'Sverige' });
+    await expect(sverigeOption).toHaveAttribute('id', activeDescendant);
+  },
+} satisfies Story;
+
+export const AltArrowDownKeepsInputFocusWithSelectedValues = {
+  name: 'Alt+Pil ned beholder inputfokus med valgte verdier i flervalg',
+  args: {
+    ...defaultArgs,
+    multiple: true,
+    value: ['no', 'se'],
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    await userEvent.click(inputElement);
+    await userEvent.keyboard('{Escape}');
+
+    await expect(canvas.queryAllByRole('option')).toHaveLength(0);
+
+    await userEvent.keyboard('{Alt>}{ArrowDown}{/Alt}');
+
+    const options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(3);
+    await expect(inputElement).not.toHaveAttribute('aria-activedescendant');
+    await expect(inputElement).toHaveFocus();
+  },
+} satisfies Story;
+
 export const WithName = {
   name: 'With Name',
   args: {

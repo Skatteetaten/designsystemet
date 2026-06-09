@@ -10,6 +10,8 @@ import {
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { TopBannerAnalyticsId } from '../analyticsIds';
+
 export const topBannerButtonVariantArr = ['filled'] as const;
 export type TopBannerButtonVariant = (typeof topBannerButtonVariantArr)[number];
 
@@ -27,8 +29,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 }
 
 export interface TopBannerButtonProps
-  extends ButtonPropsHTMLAttributes,
-    BaseProps {
+  extends ButtonPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLButtonElement>;
   classNames?: {
     container?: string;
@@ -36,6 +37,7 @@ export interface TopBannerButtonProps
   };
   /** Innhold eller tekst på knapp. */
   children: ReactNode;
+  dataWebAnalyticsId?: TopBannerAnalyticsId;
   /** HTML-path node. */
   svgPath?: ReactElement<SVGPathElement>;
   /** Hvis svgPath er meningsbærende, må ha en beskrivende tekst. */
