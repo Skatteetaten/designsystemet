@@ -13,6 +13,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 import { RolePickerBusinessListProps } from './RolePickerBusinessList.types';
 import { getBusinessTitle } from './utils';
+import { rolePickerAnalyticsIds } from '../analyticsIds';
 import { Business } from '../RolePicker.types';
 import { RolePickerContext } from '../RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
@@ -202,6 +203,11 @@ export const RolePickerBusinessList = ({
                         ? BriefcaseOffSVGpath
                         : BriefcaseMultipleSVGpath
                     }
+                    webAnalyticsId={
+                      item.isDeleted
+                        ? rolePickerAnalyticsIds.discontinuedBusiness
+                        : rolePickerAnalyticsIds.business
+                    }
                     onClick={() => {
                       handleEntityClicked(item);
                     }}
@@ -236,6 +242,9 @@ export const RolePickerBusinessList = ({
                                 ? BriefcaseOffSVGpath
                                 : BriefcaseSVGpath
                             }
+                            webAnalyticsId={
+                              rolePickerAnalyticsIds.businessSubunit
+                            }
                             onClick={() => {
                               handleEntityClicked(sub);
                             }}
@@ -257,6 +266,11 @@ export const RolePickerBusinessList = ({
                     title={getBusinessTitle(item)}
                     description={`${t('rolepicker.BusinessDescriptionPrefix')} ${formatOrganisationNumber(item.organizationNumber)}`}
                     svgPath={item.isDeleted ? BriefcaseOffSVGpath : svgPath}
+                    webAnalyticsId={
+                      item.isDeleted
+                        ? rolePickerAnalyticsIds.discontinuedBusiness
+                        : rolePickerAnalyticsIds.business
+                    }
                     onClick={() => {
                       handleEntityClicked(item);
                     }}

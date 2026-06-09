@@ -163,6 +163,57 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      container: 'dummyClassname',
+      legend: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'HJEEEEEEELP',
+    errorMessage: 'feil',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    a11y: {
+      test: 'off',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('group');
+    await expect(container).toHaveClass('dummyClassname');
+
+    const legend = canvas.getByText(defaultLegendText);
+    await expect(legend).toHaveClass('dummyClassname');
+
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^= radioErrorId]>div'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+
+    const description = canvas.getByText('beskrivelse');
+    await expect(description).toHaveClass('dummyClassname');
+
+    const helpButton = canvas.getByRole('button');
+    await userEvent.click(helpButton);
+
+    const helpText = canvas.getByText('HJEEEEEEELP');
+    const helpBox = helpText.parentElement;
+    await expect(helpBox).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
 export const Defaults = {
   render: Template,
   name: 'Defaults Variant Standard (A1, B1)',
@@ -672,37 +723,6 @@ export const WithHelpToggleEvent = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      legend: 'dummyClassname',
-      errorMessage: 'dummyClassname',
-      description: 'dummyClassname',
-      helpText: 'dummyClassname',
-    },
-    description: 'beskrivelse',
-    helpText: 'HJEEEEEEELP',
-    errorMessage: 'feil',
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    const errorMessageContainer = canvasElement.querySelector(
-      '[id^= radioErrorId]>div'
-    );
-    await expect(errorMessageContainer).toHaveClass('dummyClassname');
-
-    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

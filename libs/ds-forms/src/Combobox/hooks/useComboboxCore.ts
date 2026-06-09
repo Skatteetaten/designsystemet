@@ -16,6 +16,7 @@ import {
   getPreviousEnabledIndex,
   isIndexEnabled,
   getEnabledIndices,
+  getLastSelectedIndex,
 } from '../utils/combobox-state-utils';
 import {
   getSelectedValuesFromValue,
@@ -29,6 +30,7 @@ export type DropdownTrigger =
   | 'input'
   | 'click'
   | 'keyboard'
+  | 'keyboardNoFocus'
   | 'chevron';
 
 export interface UseComboboxCoreProps {
@@ -229,7 +231,12 @@ export function useComboboxCore({
       }
 
       // Reset manually closed flag for explicit user actions
-      if (trigger === 'chevron' || trigger === 'click' || trigger === 'input') {
+      if (
+        trigger === 'chevron' ||
+        trigger === 'click' ||
+        trigger === 'input' ||
+        trigger === 'keyboardNoFocus'
+      ) {
         if (manuallyClosed) {
           setManuallyClosed(false);
         }
@@ -241,6 +248,7 @@ export function useComboboxCore({
         trigger !== 'input' &&
         trigger !== 'chevron' &&
         trigger !== 'keyboard' &&
+        trigger !== 'keyboardNoFocus' &&
         trigger !== 'click'
       ) {
         return;
@@ -491,6 +499,33 @@ export function useComboboxCore({
       setFocusedIndex(-1);
     }
   }, [orderedDisplayOptions.length, focusedIndex]);
+
+  useEffect(() => {
+    // Etter åpning: gjenopprett fokus til sist valgte option når ingen fokusindeks er satt.
+    const hasNoFocusedOption = focusedIndex === -1;
+    const shouldRestoreSelectedFocus =
+      openTrigger === 'click' || openTrigger === 'chevron';
+
+    if (!isOpen || !hasNoFocusedOption || !shouldRestoreSelectedFocus) {
+      return;
+    }
+
+    const selectedIndex = getLastSelectedIndex(
+      orderedDisplayOptions,
+      selectedValues
+    );
+
+    if (selectedIndex !== -1) {
+      setFocusedIndexEnhanced(selectedIndex);
+    }
+  }, [
+    focusedIndex,
+    isOpen,
+    openTrigger,
+    orderedDisplayOptions,
+    selectedValues,
+    setFocusedIndexEnhanced,
+  ]);
 
   // Reset focus when options change during loading
   useEffect(() => {

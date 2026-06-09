@@ -14,6 +14,7 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { FavoriteSVGpath, LogOutSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
+import { rolePickerAnalyticsIds } from './analyticsIds';
 import {
   getRolePickerHideCloseButtonDefault,
   getRolePickerMinimumEntitiesForSearchDefault,
@@ -189,6 +190,7 @@ export const RolePicker = ({
                 description={getPersonDescription(me)}
                 svgPath={FavoriteSVGpath}
                 titleAs={'h2'}
+                webAnalyticsId={rolePickerAnalyticsIds.me}
                 onClick={() => handleEntitySelect(me)}
               />
             ) : null}
@@ -239,6 +241,12 @@ export const RolePicker = ({
             ) : (
               <>
                 <Button
+                  ref={(node) => {
+                    node?.setAttribute(
+                      'data-webanalytics-id',
+                      rolePickerAnalyticsIds.logout
+                    );
+                  }}
                   variant={'secondary'}
                   svgPath={LogOutSVGpath}
                   onClick={onLogout}

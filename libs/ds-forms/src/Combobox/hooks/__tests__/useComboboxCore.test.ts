@@ -220,6 +220,37 @@ describe('useComboboxCore', () => {
 
       expect(result.current.focusedIndex).toBe(-1);
     });
+
+    it('should restore selected option focus on click open', () => {
+      const { result } = renderHook(() =>
+        useComboboxCore({
+          ...defaultProps,
+          multiple: true,
+          value: ['1', '2'],
+        })
+      );
+
+      act(() => {
+        result.current.openDropdown('click');
+      });
+
+      expect(result.current.focusedIndex).toBe(1);
+    });
+
+    it('should not restore selected option focus on input open', () => {
+      const { result } = renderHook(() =>
+        useComboboxCore({
+          ...defaultProps,
+          value: '2',
+        })
+      );
+
+      act(() => {
+        result.current.openDropdown('input');
+      });
+
+      expect(result.current.focusedIndex).toBe(-1);
+    });
   });
 
   describe('State setters', () => {

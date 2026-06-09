@@ -14,6 +14,7 @@ export const TopBannerButton = ({
   classNames,
   lang,
   'data-testid': dataTestId,
+  dataWebAnalyticsId,
   svgPath,
   title,
   variant,
@@ -35,6 +36,7 @@ export const TopBannerButton = ({
       className={concatenatedClassName}
       lang={lang}
       data-testid={dataTestId}
+      data-webanalytics-id={dataWebAnalyticsId}
       aria-expanded={ariaExpanded}
       type={'button'}
       onFocus={onFocus}
