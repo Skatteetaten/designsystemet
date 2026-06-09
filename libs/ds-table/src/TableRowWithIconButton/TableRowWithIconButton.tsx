@@ -13,7 +13,7 @@ import {
   InlineButton,
   InlineButtonProps,
 } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
 import {
@@ -49,7 +49,7 @@ const getScreenReaderText = (
 export const TableRowWithIconButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   onExpandClick,

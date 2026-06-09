@@ -1,7 +1,6 @@
 import { JSX } from 'react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { getErrorSummaryGroupTitleAsDefault } from './defaults';
@@ -12,7 +11,7 @@ import styles from './ErrorSummaryGroup.module.scss';
 export const ErrorSummaryGroup = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,

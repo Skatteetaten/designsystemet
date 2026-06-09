@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { BlockquoteProps } from './Blockquote.types';
 import { getBlockquoteBorderColorDefault } from './defaults';
 
@@ -16,7 +14,7 @@ import styles from './Blockquote.module.scss';
 export const Blockquote = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   canBeManuallyFocused,

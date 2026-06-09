@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { BreadcrumbsComponent, BreadcrumbsProps } from './Breadcrumbs.types';
 import { BreadcrumbsItem } from './BreadcrumbsItem/BreadcrumbsItem';
@@ -17,7 +17,7 @@ import { BreadcrumbsList } from './BreadcrumbsList/BreadcrumbsList';
 export const Breadcrumbs = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   children,

@@ -1,6 +1,4 @@
 import { JSX } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { getTagColorDefault, getTagSizeDefault } from './defaults';
@@ -17,7 +15,7 @@ import styles from './Tag.module.scss';
 export const Tag = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   canBeManuallyFocused,

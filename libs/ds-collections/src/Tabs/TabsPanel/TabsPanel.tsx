@@ -1,7 +1,5 @@
 import { JSX, useContext } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { getTabsPanelKeepMountedDefault } from './defaults';
 import { TabsContext } from '../TabsContext';
 import { TabsPanelProps } from './TabsPanel.types';
@@ -11,7 +9,7 @@ import styles from './TabsPanel.module.scss';
 
 export const TabsPanel = ({
   ref,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   value,

@@ -1,7 +1,5 @@
 import { JSX, useEffect, useId, useState } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import {
   getSpinnerColorDefault,
   getSpinnerTitlePositionDefault,
@@ -21,7 +19,7 @@ import styles from './Spinner.module.scss';
 export const Spinner = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   classNames,

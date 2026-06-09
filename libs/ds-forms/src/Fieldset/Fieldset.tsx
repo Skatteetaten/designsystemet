@@ -1,7 +1,5 @@
 import { useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { FieldsetProps } from './Fieldset.types';
 import { Help } from '../LabelWithHelp/Help/Help';
 
@@ -16,7 +14,7 @@ import styles from './Fieldset.module.scss';
 export const Fieldset = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

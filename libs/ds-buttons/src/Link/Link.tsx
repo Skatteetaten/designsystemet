@@ -1,7 +1,7 @@
 import { useContext, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon, Icon } from '@skatteetaten/ds-icons';
 
 import { LinkProps } from './Link.types';
@@ -18,7 +18,7 @@ import styles from './Link.module.scss';
 export const Link = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   isExternal,

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useMergeRefs } from '@floating-ui/react';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath } from '@skatteetaten/ds-icons';
 
 import { PopoverContentProps } from './PopoverContent.types';
@@ -20,7 +20,7 @@ import styles from './PopoverContent.module.scss';
 export const PopoverContent = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

@@ -7,8 +7,6 @@ import {
   type JSX,
 } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer';
 import { ComboboxButton } from './ComboboxButton';
@@ -47,7 +45,7 @@ const Combobox = memo(
   ({
     ref,
     id,
-    className = getCommonClassNameDefault(),
+    className = '',
     lang,
     'data-testid': dataTestId,
     classNames,

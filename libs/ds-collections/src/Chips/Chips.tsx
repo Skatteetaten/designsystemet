@@ -1,7 +1,7 @@
 import { Children, JSX, useImperativeHandle, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { ChipsComponent, ChipsProps } from './Chips.types';
 import { ChipsContext } from './ChipsContext';
@@ -19,7 +19,7 @@ import styles from './Chips.module.scss';
 export const Chips = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   ariaLabel,

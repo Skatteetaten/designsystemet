@@ -1,7 +1,7 @@
 import { SyntheticEvent, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ArrowDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { getTopBannerSkipLinkTargetDefault } from './defaults';
@@ -12,7 +12,7 @@ import styles from './TopBannerSkipLink.module.scss';
 export const TopBannerSkipLink = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   shadowRootNode,

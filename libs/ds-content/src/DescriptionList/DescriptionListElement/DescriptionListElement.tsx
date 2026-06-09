@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { DescriptionListElementProps } from './DescriptionListElement.types';
 
 import styles from './DescriptionListElement.module.scss';
@@ -9,7 +7,7 @@ import styles from './DescriptionListElement.module.scss';
 export const DescriptionListElement = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   term,

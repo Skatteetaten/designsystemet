@@ -17,7 +17,6 @@ import { useTranslation } from 'react-i18next';
 import { IconButton } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
-  getCommonClassNameDefault,
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
@@ -47,7 +46,7 @@ import styles from './SearchField.module.scss';
 export const SearchField = (({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

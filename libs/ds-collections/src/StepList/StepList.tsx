@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { StepListComponent, StepListProps } from './StepList.types';
 import { StepListStep } from './StepListStep/StepListStep';
 
@@ -16,7 +14,7 @@ import styles from './StepList.module.scss';
 export const StepList = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   children,

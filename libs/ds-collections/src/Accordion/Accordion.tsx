@@ -1,5 +1,3 @@
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { AccordionComponent, AccordionProps } from './Accordion.types';
 import { AccordionContext } from './AccordionContext';
 import { AccordionItem } from './AccordionItem/AccordionItem';
@@ -20,7 +18,7 @@ import styles from './Accordion.module.scss';
 export const Accordion = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   color = getAccordionBackgroundColorDefault(),

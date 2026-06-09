@@ -15,7 +15,6 @@ import { isValid } from 'date-fns';
 import {
   dsI18n,
   getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 
@@ -41,7 +40,7 @@ import styles from './DatePicker.module.scss';
 export const DatePicker = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

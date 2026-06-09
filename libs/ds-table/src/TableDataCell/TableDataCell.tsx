@@ -1,7 +1,5 @@
 import { useContext, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { TableDataCellProps } from './TableDataCell.types';
 import {
   getDataCellAsDefault,
@@ -15,7 +13,7 @@ import styles from './TableDataCell.module.scss';
 export const TableDataCell = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   as: Tag = getDataCellAsDefault(),

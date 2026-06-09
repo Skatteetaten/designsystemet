@@ -22,7 +22,7 @@ import {
 } from '@floating-ui/react';
 
 import { Link } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   EarthSVGpath,
   Icon,
@@ -73,7 +73,7 @@ const getFlag = (
 export const TopBannerLangPicker = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   defaultLocale = getTopBannerLangPickerLocaleDefault(),

@@ -1,6 +1,4 @@
 import { KeyboardEvent, useCallback, useContext, JSX } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { TabsContext } from '../TabsContext';
@@ -11,7 +9,7 @@ import styles from './TabsTab.module.scss';
 
 export const TabsTab = ({
   ref,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   svgPath,

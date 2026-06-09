@@ -1,6 +1,4 @@
 import { useState, MouseEvent, JSX } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon, ChevronDownSVGpath } from '@skatteetaten/ds-icons';
 
 import {
@@ -22,7 +20,7 @@ import styles from './OpenClose.module.scss';
 export const OpenClose = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,

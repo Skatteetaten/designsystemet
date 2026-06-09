@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { getListAsDefault } from './defaults';
 import { ListProps, ListComponent, AnyHTMLListElement } from './List.types';
 import { ListElement } from './ListElement/ListElement';
@@ -17,7 +15,7 @@ import styles from './List.module.scss';
 export const List = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   as: Tag = getListAsDefault(),

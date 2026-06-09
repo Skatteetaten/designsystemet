@@ -7,10 +7,7 @@ import {
   useRef,
 } from 'react';
 
-import {
-  getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonAutoCompleteDefault } from '@skatteetaten/ds-core-utils';
 
 import { TextAreaProps } from './TextArea.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
@@ -29,7 +26,7 @@ import styles from './TextArea.module.scss';
 export const TextArea = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

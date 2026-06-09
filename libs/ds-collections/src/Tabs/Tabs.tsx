@@ -1,7 +1,5 @@
 import { useState, useId, JSX, useMemo, useEffect } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { getTabsVariantDefault } from './defaults';
 import { TabsProps, TabsComponent } from './Tabs.types';
 import { TabsContext } from './TabsContext';
@@ -18,7 +16,7 @@ import { TabsTab } from './TabsTab/TabsTab';
 export const Tabs = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   defaultValue,

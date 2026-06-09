@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import {
   dsI18n,
   getCommonButtonTypeDefault,
-  getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
@@ -22,7 +21,7 @@ import styles from './MegaButton.module.scss';
 export const MegaButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   spinnerTitle,

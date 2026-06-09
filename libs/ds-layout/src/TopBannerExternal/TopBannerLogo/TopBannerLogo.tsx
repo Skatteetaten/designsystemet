@@ -1,11 +1,7 @@
 import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  Languages,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 
 import {
   getTopBannerLogoAsDefault,
@@ -21,7 +17,7 @@ import styles from './TopBannerLogo.module.scss';
 export const TopBannerLogo = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   as: Tag = getTopBannerLogoAsDefault(),

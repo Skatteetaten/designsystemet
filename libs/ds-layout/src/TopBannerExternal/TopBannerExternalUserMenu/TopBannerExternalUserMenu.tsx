@@ -16,11 +16,7 @@ import {
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { Divider } from '@skatteetaten/ds-content';
-import {
-  dsI18n,
-  formatOrganisationNumber,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
 import {
   InfoSquareSVGpath,
   BellSVGpath,
@@ -43,7 +39,7 @@ import styles from './TopBannerExternalUserMenu.module.scss';
 export const TopBannerExternalUserMenu = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   notificationCount,

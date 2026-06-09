@@ -1,7 +1,5 @@
 import { JSX, useId, Children, isValidElement } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { CardComponent, CardProps } from './Card.types';
 import { CardActions } from './CardActions/CardActions';
 import { CardAlert } from './CardAlert/CardAlert';
@@ -21,7 +19,7 @@ import styles from './Card.module.scss';
 export const Card = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   color = getCardColorDefault(),

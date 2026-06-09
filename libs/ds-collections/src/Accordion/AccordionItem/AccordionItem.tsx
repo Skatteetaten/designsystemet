@@ -1,6 +1,6 @@
 import { MouseEvent, useContext, useState, JSX } from 'react';
 
-import { Size, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { Size } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { AccordionContext } from '../AccordionContext';
@@ -13,7 +13,7 @@ import styles from './AccordionItem.module.scss';
 export const AccordionItem = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   classNames,

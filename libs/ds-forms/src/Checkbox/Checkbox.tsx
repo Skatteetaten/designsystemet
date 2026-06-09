@@ -1,7 +1,7 @@
 import { useContext, useId, JSX, KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from './Checkbox.types';
 import { CheckboxContext } from '../CheckboxGroup/CheckboxContext';
@@ -19,7 +19,7 @@ import styles from './Checkbox.module.scss';
 export const Checkbox = ({
   ref,
   id: idExternal,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

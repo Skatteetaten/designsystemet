@@ -1,7 +1,5 @@
 import { useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { getRadioGroupVariantDefault } from './defaults';
 import { Radio } from './Radio/Radio';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
@@ -20,7 +18,7 @@ import styles from './RadioGroup.module.scss';
 export const RadioGroup = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

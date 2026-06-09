@@ -1,6 +1,4 @@
 import { JSX } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon, WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import { ErrorMessageProps } from './ErrorMessage.types';
@@ -16,7 +14,7 @@ import styles from './ErrorMessage.module.scss';
 export const ErrorMessage = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   hasSpacing,

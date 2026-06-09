@@ -7,8 +7,6 @@ import {
   JSX,
 } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { BreadcrumbsItemProps } from './BreadcrumbsItem.types';
 import { BreadcrumbsItemContext } from './BreadcrumbsItemContext';
 import { BreadcrumbsListContext } from '../BreadcrumbsList/BreadcrumbsListContext';
@@ -18,7 +16,7 @@ import styles from './BreadcrumbsItem.module.scss';
 export const BreadcrumbsItem = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   ariaCurrent,
