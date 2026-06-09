@@ -30,34 +30,32 @@ export const OpenClose = ({
   onClick,
   children,
 }: OpenCloseProps): JSX.Element => {
-  const [isExpandedInternal, setIsExpandedInternal] =
-    useState<boolean>(isDefaultExpanded);
-
-  const isExpanded =
-    isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
+  const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
+    isDefaultExpanded || isExpandedExternal
+  );
 
   const hasIconRight = iconPosition === 'right';
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     if (isOnClickOnlyFiredOnOpen) {
-      !isExpanded && onClick?.(e);
+      !isExpandedInternal && onClick?.(e);
     } else {
       onClick?.(e);
     }
-    setIsExpandedInternal(!isExpanded);
+    setIsExpandedInternal(!isExpandedInternal);
   };
 
   const iconRightClassName = hasIconRight ? styles.openClose_hasIconRight : '';
   const openCloseClassName = `${styles.openClose} ${iconRightClassName}`.trim();
   const iconClassName = `${styles.icon} ${styles.icon_active} ${
-    isExpanded ? styles.icon_open : styles.icon_closed
+    isExpandedInternal ? styles.icon_open : styles.icon_closed
   }`.trim();
   const titleClassName =
     `${styles.title} ${showUnderline ? styles.title_underline : ''}`.trim();
   const contentClassName =
     `${styles.content} ${hasIconRight ? styles.content_hasIconRight : ''}`.trim();
   const hiddenContentClassName = `${contentClassName} ${
-    keepMounted && !isExpanded ? styles.content_hidden : ''
+    keepMounted && !isExpandedInternal ? styles.content_hidden : ''
   }`.trim();
 
   return (
@@ -69,7 +67,7 @@ export const OpenClose = ({
           className={openCloseClassName}
           lang={lang}
           data-testid={dataTestId}
-          aria-expanded={isExpanded}
+          aria-expanded={isExpandedInternal}
           type={'button'}
           onClick={handleClick}
         >
@@ -85,7 +83,7 @@ export const OpenClose = ({
       {keepMounted ? (
         <div className={hiddenContentClassName}>{children}</div>
       ) : (
-        isExpanded && <div className={contentClassName}>{children}</div>
+        isExpandedInternal && <div className={contentClassName}>{children}</div>
       )}
     </div>
   );

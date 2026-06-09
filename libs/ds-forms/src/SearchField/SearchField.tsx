@@ -156,7 +156,7 @@ export const SearchField = ({
 
   useEffect(() => {
     updateShowResults();
-  }, [disabled, isLoading, results, updateShowResults]);
+  }, [disabled, isLoading, results]);
 
   useEffect(() => {
     if (!isResultsOpen) {

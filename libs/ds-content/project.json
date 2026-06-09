@@ -66,13 +66,6 @@
       "options": {
         "command": "npm publish dist/libs/ds-content {args.switches}"
       }
-    },
-    "test": {
-      "executor": "@nx/vitest:test",
-      "outputs": ["{options.reportsDirectory}"],
-      "options": {
-        "reportsDirectory": "{projectRoot}/../../coverage/libs/ds-content"
-      }
     }
   }
 }

@@ -21,7 +21,7 @@ export const RoleBanner = ({
   lang,
   'data-testid': dataTestId,
   user,
-  isSticky = false,
+  isSticky,
 }: RoleBannerProps): JSX.Element => {
   const bannerRef = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => bannerRef?.current as HTMLDivElement);

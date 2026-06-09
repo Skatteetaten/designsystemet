@@ -25,8 +25,8 @@ export const Checkbox = ({
   'data-testid': dataTestId,
   description,
   errorMessage,
-  checked = false,
-  defaultChecked = false,
+  checked,
+  defaultChecked,
   disabled = false,
   form,
   name,
@@ -50,7 +50,10 @@ export const Checkbox = ({
   const uniqueErrorId = `checkboxErrorId-${useId()}`;
   const errorIdInternal = errorIdExternal ?? uniqueErrorId;
   const descriptionId = `descId-${useId()}`;
-  const hasErrorInternal = errorIdExternal && !checked ? true : !!errorMessage;
+  const isControlled = checked !== undefined;
+  const isChecked = checked ?? defaultChecked ?? false;
+  const hasErrorInternal =
+    errorIdExternal && !isChecked ? true : !!errorMessage;
 
   const ariaDescribedbyInput = [
     description && descriptionId,
@@ -87,8 +90,7 @@ export const Checkbox = ({
           id={inputIdInternal}
           className={styles.checkboxInput}
           data-testid={dataTestId}
-          checked={checked}
-          defaultChecked={defaultChecked}
+          {...(isControlled ? { checked } : { defaultChecked })}
           disabled={disabled}
           form={form}
           name={name}

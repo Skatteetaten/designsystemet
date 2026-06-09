@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-import { expect, within } from 'storybook/test';
+import { expect, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { RoleBanner } from '@skatteetaten/ds-layout';
@@ -154,7 +154,9 @@ export const AllRoles = {
 
     await expect(banners[0]).toHaveAttribute('data-user', 'meg');
     await expect(banners[1]).toHaveAttribute('data-user', 'andre');
+    await expect(banners[1]).toHaveAttribute('data-sticky', 'true');
     await expect(banners[2]).toHaveAttribute('data-user', 'virksomhet');
+    await expect(banners[2]).toHaveAttribute('data-sticky', 'true');
 
     // 'meg' har ingen srOnly-tekst
     const megSrOnly = banners[0].querySelector('[class*="srOnly"]');
@@ -197,9 +199,22 @@ export const MobileAndScrolled = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const banner = canvas.getByRole('region');
-    // Manuelt sette data-scrolled for visuell testing
-    banner.setAttribute('data-scrolled', 'true');
-    await expect(banner).toHaveAttribute('data-scrolled', 'true');
+
+    const originalScrollY = window.scrollY;
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 100,
+    });
+    window.dispatchEvent(new Event('scroll'));
+
+    await waitFor(() => {
+      expect(banner).toHaveAttribute('data-scrolled', 'true');
+    });
+
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: originalScrollY,
+    });
   },
 } satisfies Story;
 
@@ -240,8 +255,21 @@ export const MobileAndScrolledWithoutSticky = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const banner = canvas.getByRole('region');
-    // Manuelt sette data-scrolled for visuell testing
-    banner.setAttribute('data-scrolled', 'true');
-    await expect(banner).toHaveAttribute('data-scrolled', 'true');
+
+    const originalScrollY = window.scrollY;
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 100,
+    });
+    window.dispatchEvent(new Event('scroll'));
+
+    await waitFor(() => {
+      expect(banner).toHaveAttribute('data-scrolled', 'true');
+    });
+
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: originalScrollY,
+    });
   },
 } satisfies Story;

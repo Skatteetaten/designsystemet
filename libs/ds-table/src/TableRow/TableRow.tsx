@@ -54,18 +54,17 @@ export const TableRow = ({
     () => testRef.current?.rowRef?.current as HTMLTableRowElement
   );
 
-  const [isExpandedInternal, setIsExpandedInternal] = useState(false);
+  const [isExpandedInternal, setIsExpandedInternal] =
+    useState(isExpandedExternal);
   const context = useContext(TableContext);
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
-
-  const isExpanded = isExpandedExternal ?? isExpandedInternal;
 
   useEffect(() => {
     setIsExpandedInternal(false);
   }, [context?.sortState]);
 
   const onExpandClick = (): void => {
-    if (isExpanded) {
+    if (isExpandedInternal) {
       onClose?.();
     } else {
       onExpand?.();
@@ -100,8 +99,8 @@ export const TableRow = ({
         lang={lang}
         data-testid={dataTestId}
         buttonPosition={expandButtonPosition}
-        isExpanded={isExpanded}
-        iconButtonAriaExpanded={isExpanded}
+        isExpanded={isExpandedInternal}
+        iconButtonAriaExpanded={isExpandedInternal}
         rowType={'expand'}
         expandButtonTitle={getButtonTitle()}
         expandButtonAriaDescribedby={expandButtonAriaDescribedby}
@@ -112,7 +111,7 @@ export const TableRow = ({
           expandableContent
         )}
         context={context}
-        svgPath={isExpanded ? ChevronUpSVGpath : ChevronDownSVGpath}
+        svgPath={isExpandedInternal ? ChevronUpSVGpath : ChevronDownSVGpath}
         onExpandClick={onExpandClick}
       >
         {children}

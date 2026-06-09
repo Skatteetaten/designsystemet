@@ -31,7 +31,7 @@ export const Alert = ({
   backgroundBrightness = 'default',
   svgPath,
   variant,
-  ariaLive = 'polite',
+  ariaLive,
   showAlert = false,
   children,
   onClose,
