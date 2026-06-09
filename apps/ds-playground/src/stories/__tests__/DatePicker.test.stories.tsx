@@ -11,10 +11,7 @@ import {
 } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import {
-  DatePicker,
-  getDatePickerPlaceholderDefault,
-} from '@skatteetaten/ds-forms';
+import { DatePicker } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
@@ -203,7 +200,7 @@ export const Defaults = {
     await expect(input).toHaveAttribute('id');
     await expect(input).toHaveAttribute(
       'placeholder',
-      getDatePickerPlaceholderDefault()
+      dsI18n.t('ds_forms:datepicker.TypeOrSelect')
     );
     await expect(input.tagName).toBe('INPUT');
     await expect(input).not.toBeRequired();

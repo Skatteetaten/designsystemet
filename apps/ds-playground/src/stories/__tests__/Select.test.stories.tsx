@@ -11,7 +11,7 @@ import {
 } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
+import { Select } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -200,7 +200,9 @@ export const Defaults = {
     await expect(selectNode).toBeInTheDocument();
     await expect(selectNode).toBeEnabled();
     await expect(selectNode).toHaveValue('');
-    await expect(selectNode).toHaveTextContent(getSelectPlaceholderDefault());
+    await expect(selectNode).toHaveTextContent(
+      dsI18n.t('Shared:shared.ChooseValue')
+    );
     await expect(selectNode).toHaveAttribute('id');
     await expect(selectNode.tagName).toBe('SELECT');
     await expect(selectNode).not.toBeRequired();
