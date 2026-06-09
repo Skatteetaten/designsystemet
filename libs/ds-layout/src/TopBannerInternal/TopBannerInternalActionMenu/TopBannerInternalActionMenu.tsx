@@ -15,7 +15,7 @@ import {
 } from '@floating-ui/react';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { MenuSVGpath } from '@skatteetaten/ds-icons';
 
 import { TopBannerInternalActionMenuProps } from './TopBannerInternalActionMenu.types';
@@ -28,7 +28,7 @@ import styles from './TopBannerInternalActionMenu.module.scss';
 export const TopBannerInternalActionMenu = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   menuActionsRef,

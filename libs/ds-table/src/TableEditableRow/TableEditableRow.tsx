@@ -1,7 +1,7 @@
 import { useContext, useId, useImperativeHandle, useRef, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { EditSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableEditableRowProps } from './TableEditableRow.types';
@@ -15,7 +15,7 @@ import styles from './TableEditableRow.module.scss';
 export const TableEditableRow = ({
   ref,
   id: idExternal,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   editButtonRef,

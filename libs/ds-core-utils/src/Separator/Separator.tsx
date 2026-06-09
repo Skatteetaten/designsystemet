@@ -1,14 +1,13 @@
 import { JSX, Ref } from 'react';
 
 import { BaseProps } from '../base-props.types';
-import { getCommonClassNameDefault } from '../defaults';
 
 import styles from './Separator.module.scss';
 
 export const Separator = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
 }: BaseProps & {

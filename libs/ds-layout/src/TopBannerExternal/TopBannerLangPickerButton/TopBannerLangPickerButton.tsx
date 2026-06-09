@@ -1,6 +1,4 @@
 import { JSX, useEffect, useImperativeHandle, useRef } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CheckSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { TopBannerLangPickerButtonProps } from './TopBannerLangPickerButton.types';
@@ -10,7 +8,7 @@ import styles from './TopBannerLangPickerButton.module.scss';
 export const TopBannerLangPickerButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   dataWebAnalyticsId,

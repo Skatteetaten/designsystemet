@@ -2,12 +2,7 @@ import { Children, isValidElement, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  Languages,
-  Separator,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages, Separator } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { getOpenDefaultLinksInNewTabDefault } from './defaults';
@@ -28,7 +23,7 @@ import styles from './Footer.module.scss';
 export const Footer = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   accessibilityURL,

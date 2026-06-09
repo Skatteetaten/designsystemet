@@ -1,7 +1,7 @@
 import { JSX, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   AccountMultipleIcon,
   BriefcaseIcon,
@@ -20,7 +20,7 @@ import styles from './TopBannerUserMenuButton.module.scss';
 export const TopBannerUserMenuButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   user,

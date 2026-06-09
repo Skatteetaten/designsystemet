@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import {
   getDividerSpacingBottomDefault,
   getDividerSpacingTopDefault,
@@ -20,7 +18,7 @@ import styles from './Divider.module.scss';
 export const Divider = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   variant = getDividerVariantDefault(),

@@ -1,9 +1,6 @@
 import { JSX } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { PersonIcon } from '@skatteetaten/ds-icons';
 
 import { getTopBannerInternalHideLogoOnMobileDefault } from './defaults';
@@ -26,7 +23,7 @@ import styles from './TopBannerInternal.module.scss';
 export const TopBannerInternal = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

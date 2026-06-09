@@ -10,11 +10,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { SearchField } from '@skatteetaten/ds-forms';
 import {
   CancelSVGpath,
@@ -50,7 +46,7 @@ import styles from './TopBannerExternal.module.scss';
 export const TopBannerExternal = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

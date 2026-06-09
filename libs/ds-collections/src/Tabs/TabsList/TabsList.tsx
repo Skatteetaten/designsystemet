@@ -1,7 +1,5 @@
 import { ReactNode, useContext, useMemo, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { TabsListProps, TabsListComponent } from './TabsList.types';
 import { TabsContextProps } from '../Tabs.types';
 import { TabsContext } from '../TabsContext';
@@ -44,7 +42,7 @@ const TabRenderComponent = ({
 export const TabsList = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   ariaLabel,

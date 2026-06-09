@@ -8,7 +8,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { AttachFileIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 import { Alert } from '@skatteetaten/ds-status';
@@ -37,7 +37,7 @@ import styles from './FileUploader.module.scss';
 export const FileUploader = (({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

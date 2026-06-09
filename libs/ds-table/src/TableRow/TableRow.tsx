@@ -10,7 +10,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableRowProps } from './TableRow.types';
@@ -37,7 +37,7 @@ const isExpandableContentRows = (expandableContent: ReactNode): boolean => {
 export const TableRow = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   expandButtonTitle,

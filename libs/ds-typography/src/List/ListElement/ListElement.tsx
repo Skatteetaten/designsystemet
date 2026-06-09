@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { ListElementProps } from './ListElement.types';
 
 import styles from './ListElement.module.scss';
@@ -9,7 +7,7 @@ import styles from './ListElement.module.scss';
 export const ListElement = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   children,

@@ -10,7 +10,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { FavoriteSVGpath, LogOutSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -46,7 +46,7 @@ import styles from './RolePicker.module.scss';
 export const RolePicker = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   me,

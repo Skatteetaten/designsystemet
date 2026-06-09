@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import {
   dsI18n,
   getCommonButtonTypeDefault,
-  getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon, Icon } from '@skatteetaten/ds-icons';
 import { Spinner, SpinnerColor } from '@skatteetaten/ds-progress';
@@ -23,7 +22,7 @@ import styles from './Button.module.scss';
 export const Button = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   spinnerTitle,

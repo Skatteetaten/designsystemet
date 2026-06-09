@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { getTableSizeDefault } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
@@ -26,7 +26,7 @@ import styles from './Table.module.scss';
 export const Table = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   caption,

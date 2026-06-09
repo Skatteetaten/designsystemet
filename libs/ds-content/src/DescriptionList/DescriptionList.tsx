@@ -1,9 +1,6 @@
 import { Children } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 
 import {
   getDescriptionDirectionDefault,
@@ -31,7 +28,7 @@ import styles from './DescriptionList.module.scss';
 export const DescriptionList = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   size = getDescriptionListSizeDefault(),

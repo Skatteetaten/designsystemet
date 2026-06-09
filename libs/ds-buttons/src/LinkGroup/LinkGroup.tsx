@@ -1,6 +1,4 @@
 import { Children, JSX } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
   ArrowForwardSVGpath,
   ArrowDownSVGpath,
@@ -23,7 +21,7 @@ import styles from './LinkGroup.module.scss';
 export const LinkGroup = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   hasSpacing,

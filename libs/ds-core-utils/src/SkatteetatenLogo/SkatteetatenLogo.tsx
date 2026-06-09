@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 import logo from './SKESquare40.svg';
 import { BaseProps } from '../base-props.types';
-import { getCommonClassNameDefault } from '../defaults';
 import { dsI18n } from '../i18n';
 
 import styles from './SkatteetatenLogo.module.scss';
@@ -11,7 +10,7 @@ import styles from './SkatteetatenLogo.module.scss';
 export const SkatteetatenLogo = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
 }: BaseProps & {

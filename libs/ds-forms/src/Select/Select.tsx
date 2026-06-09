@@ -6,8 +6,6 @@ import {
   JSX,
   useLayoutEffect,
 } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
 import { getSelectPlaceholderDefault } from './defaults';
@@ -28,7 +26,7 @@ import styles from './Select.module.scss';
 export const Select = (({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

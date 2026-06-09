@@ -1,7 +1,5 @@
 import { useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { CheckboxContext } from './CheckboxContext';
 import {
   CheckboxGroupComponent,
@@ -22,7 +20,7 @@ import styles from './CheckboxGroup.module.scss';
 export const CheckboxGroup = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

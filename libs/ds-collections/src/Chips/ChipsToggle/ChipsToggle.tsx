@@ -1,6 +1,4 @@
 import { JSX } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
   CircleRingSVGpath,
   CompletedSVGpath,
@@ -19,7 +17,7 @@ import styles from './ChipsToggle.module.scss';
 export const ChipsToggle = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   size = getChipDefaultSize(),

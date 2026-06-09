@@ -11,7 +11,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Icon, WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -59,7 +59,7 @@ const countErrors = (childArray: ReactNode[]): number => {
 export const ErrorSummary = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   content,

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import {
   getDefaultPageSize,
@@ -54,7 +54,7 @@ const validPropRanges = ({
 export const Pagination = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   currentPage: externalCurrentPage,

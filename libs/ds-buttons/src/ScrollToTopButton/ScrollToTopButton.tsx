@@ -1,6 +1,4 @@
 import { useEffect, useState, JSX } from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { MoveUpIcon } from '@skatteetaten/ds-icons';
 
 import {
@@ -21,7 +19,7 @@ import styles from './ScrollToTopButton.module.scss';
 export const ScrollToTopButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

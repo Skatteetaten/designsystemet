@@ -5,11 +5,7 @@ import * as MockDate from 'mockdate';
 import { useEffect, useGlobals } from 'storybook/preview-api';
 
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  Languages,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 
 import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
@@ -143,7 +139,6 @@ const argTypes = {
     table: {
       type: { summary: 'string' },
       category: category.baseProps,
-      defaultValue: { summary: getCommonClassNameDefault() },
     },
   },
   id: {

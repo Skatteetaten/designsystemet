@@ -1,9 +1,6 @@
 import { JSX } from 'react';
 
-import {
-  getCommonButtonTypeDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
@@ -24,7 +21,7 @@ import styles from './IconButton.module.scss';
 export const IconButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   brightness = getIconButtonBrightnessDefault(),

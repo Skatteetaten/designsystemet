@@ -2,7 +2,7 @@ import { useState, JSX, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -19,7 +19,7 @@ import styles from './CardAlert.module.scss';
 export const CardAlert = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,

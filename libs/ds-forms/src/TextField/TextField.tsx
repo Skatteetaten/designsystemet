@@ -1,9 +1,6 @@
 import { JSX, useId, useImperativeHandle, useRef } from 'react';
 
-import {
-  getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonAutoCompleteDefault } from '@skatteetaten/ds-core-utils';
 
 import { TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
@@ -22,7 +19,7 @@ import styles from './TextField.module.scss';
 export const TextField = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,

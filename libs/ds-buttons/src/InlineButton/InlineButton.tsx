@@ -1,10 +1,7 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { JSX } from 'react';
 
-import {
-  getCommonButtonTypeDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
@@ -25,7 +22,7 @@ import styles from './InlineButton.module.scss';
 export const InlineButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   iconPosition = getInlineButtonPositionDefault(),
