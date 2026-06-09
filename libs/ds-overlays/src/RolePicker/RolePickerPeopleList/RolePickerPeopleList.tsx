@@ -8,6 +8,7 @@ import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { RolePickerPeopleListProps } from './RolePickerPeopleList.types';
+import { rolePickerAnalyticsIds } from '../analyticsIds';
 import { Person } from '../RolePicker.types';
 import { RolePickerContext } from '../RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
@@ -104,6 +105,11 @@ export const RolePickerPeopleList = ({
                   title={`${item.name}${item.isDeleted ? ` (${t('rolepicker.Deceased')})` : ''}`}
                   description={getPersonDescription(item)}
                   svgPath={PersonSVGpath}
+                  webAnalyticsId={
+                    item.isDeleted
+                      ? rolePickerAnalyticsIds.deceasedPerson
+                      : rolePickerAnalyticsIds.person
+                  }
                   onClick={() => handleEntityClicked(item)}
                 />
               </li>

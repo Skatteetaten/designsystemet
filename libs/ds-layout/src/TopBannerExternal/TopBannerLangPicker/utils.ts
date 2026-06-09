@@ -1,6 +1,10 @@
 import { Languages } from '@skatteetaten/ds-core-utils';
 
 import { TopBannerLangPickerProps } from './TopBannerLangPicker.types';
+import {
+  topBannerAnalyticsIds,
+  TopBannerLanguageMenuAnalyticsId,
+} from '../analyticsIds';
 
 export const convertLocaleToLang = (locale: Languages): string => {
   return locale.substring(0, locale.indexOf('_'));
@@ -9,6 +13,7 @@ export const convertLocaleToLang = (locale: Languages): string => {
 export type LanguageItem = {
   lang: string;
   displayName: string;
+  webAnalyticsId?: TopBannerLanguageMenuAnalyticsId;
 };
 
 export type LanguageItems = {
@@ -27,20 +32,24 @@ export const getCurrentLanguages = (
     nb: {
       lang: 'nb',
       displayName: 'Bokmål',
+      webAnalyticsId: topBannerAnalyticsIds.languageMenu.norsk,
     },
     nn: {
       lang: 'nn',
       displayName: 'Nynorsk',
+      webAnalyticsId: topBannerAnalyticsIds.languageMenu.nynorsk,
     },
     en: {
       lang: 'en',
       displayName: 'English',
+      webAnalyticsId: topBannerAnalyticsIds.languageMenu.english,
     },
   };
   const se = {
     se: {
       lang: 'se',
       displayName: 'Sámegiella',
+      webAnalyticsId: topBannerAnalyticsIds.languageMenu.samisk,
     },
   };
 

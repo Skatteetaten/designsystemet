@@ -12,8 +12,6 @@ export default {
     children: {
       control: 'text',
       table: { category: category.props },
-      description:
-        'Innhold i popup-boksen. Må være string eller et HTML-element som er tillatt i en span. Finn ut hvilke <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content" target="_blank">elementer som er tillatt i en span</a>.',
     },
   },
 } satisfies Meta<typeof WordInfo.Content>;

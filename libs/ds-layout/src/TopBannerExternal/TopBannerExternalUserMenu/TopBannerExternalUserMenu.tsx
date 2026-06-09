@@ -32,6 +32,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 import { getTopBannerExternalUserMenuHostnameDefault } from './defaults';
 import { TopBannerExternalUserMenuProps } from './TopBannerExternalUserMenu.types';
+import { topBannerAnalyticsIds } from '../analyticsIds';
 import { TopBannerUserMenuButton } from '../TopBannerUserMenuButton/TopBannerUserMenuButton';
 
 import styles from './TopBannerExternalUserMenu.module.scss';
@@ -124,6 +125,7 @@ export const TopBannerExternalUserMenu = ({
             {...getFloatingProps()}
             ref={refs.setFloating}
             style={floatingStyles}
+            web-analytics-id={topBannerAnalyticsIds.userMenu.root}
           >
             <Heading as={'h4'}>
               {user.role !== 'meg' && (
@@ -138,6 +140,12 @@ export const TopBannerExternalUserMenu = ({
             )}
             {onSwitchUserClick && (
               <InlineButton
+                ref={(node) => {
+                  node?.setAttribute(
+                    'data-webanalytics-id',
+                    topBannerAnalyticsIds.userMenu.switchUser
+                  );
+                }}
                 className={styles.marginTopS}
                 data-testid={'switch-user'}
                 svgPath={PersonMoreSVGpath}
@@ -152,6 +160,12 @@ export const TopBannerExternalUserMenu = ({
                 <div className={styles.link}>
                   {user && (
                     <Link
+                      ref={(node) => {
+                        node?.setAttribute(
+                          'data-webanalytics-id',
+                          topBannerAnalyticsIds.userMenu.notifications
+                        );
+                      }}
                       className={styles.marginRightS}
                       svgPath={BellSVGpath}
                       href={`https://${hostname}/web/minside/${user.role === 'virksomhet' ? 'virksomhet' : 'person'}/varsler`}
@@ -174,6 +188,12 @@ export const TopBannerExternalUserMenu = ({
                 </div>
                 <div className={styles.link}>
                   <Link
+                    ref={(node) => {
+                      node?.setAttribute(
+                        'data-webanalytics-id',
+                        topBannerAnalyticsIds.userMenu.myPage
+                      );
+                    }}
                     svgPath={PersonSVGpath}
                     href={`https://${hostname}/web/minside/`}
                   >
@@ -185,6 +205,12 @@ export const TopBannerExternalUserMenu = ({
             {!hideDefaultLinks && user.role === 'virksomhet' && (
               <div className={styles.link}>
                 <Link
+                  ref={(node) => {
+                    node?.setAttribute(
+                      'data-webanalytics-id',
+                      topBannerAnalyticsIds.userMenu.aboutBusiness
+                    );
+                  }}
                   svgPath={InfoSquareSVGpath}
                   href={`https://${hostname}/web/minside/virksomhet/omvirksomheten`}
                 >
@@ -197,6 +223,12 @@ export const TopBannerExternalUserMenu = ({
             {!hideDefaultLinks && user.role === 'meg' && (
               <div className={styles.link}>
                 <Link
+                  ref={(node) => {
+                    node?.setAttribute(
+                      'data-webanalytics-id',
+                      topBannerAnalyticsIds.userMenu.aboutMe
+                    );
+                  }}
                   svgPath={InfoSquareSVGpath}
                   href={`https://${hostname}/web/minside/person/ommeg`}
                 >
@@ -206,7 +238,16 @@ export const TopBannerExternalUserMenu = ({
             )}
             {children}
             <Divider spacingTop={'m'}></Divider>
-            <InlineButton svgPath={LogOutSVGpath} onClick={onLogOutClick}>
+            <InlineButton
+              ref={(node) => {
+                node?.setAttribute(
+                  'data-webanalytics-id',
+                  topBannerAnalyticsIds.userMenu.logout
+                );
+              }}
+              svgPath={LogOutSVGpath}
+              onClick={onLogOutClick}
+            >
               {t('ds_overlays:rolepicker.Logout')}
             </InlineButton>
             <div

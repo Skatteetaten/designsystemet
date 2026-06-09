@@ -150,6 +150,7 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
+      container: 'dummyClassname',
       legend: 'dummyClassname',
       errorMessage: 'dummyClassname',
       description: 'dummyClassname',
@@ -169,6 +170,8 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
+    const container = canvas.getByRole('group');
+    await expect(container).toHaveClass('dummyClassname');
 
     const legend = canvas.getByText(defaultLegendText);
     await expect(legend).toHaveClass('dummyClassname');

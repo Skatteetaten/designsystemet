@@ -61,7 +61,7 @@ def overrides = [
 
 
 
-fileLoader.withGit('https://git.aurora.skead.no/scm/auf/designsystemet.git', "feature/chromatic", "aurora-bitbucket") {
+fileLoader.withGit('https://git.aurora.skead.no/scm/auf/designsystemet.git', "feature/aurora-pipeline-template", "aurora-bitbucket") {
   jenkinsfile = fileLoader.load('jenkins/template.groovy')
 }
 

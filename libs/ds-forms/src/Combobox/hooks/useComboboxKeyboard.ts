@@ -4,6 +4,7 @@ import type { ComboboxOption } from '../Combobox.types';
 import {
   closeDropdownAndResetFocus,
   getFirstEnabledIndex,
+  getLastSelectedIndex,
   isIndexEnabled,
   openDropdownWithFocus,
 } from '../utils/combobox-state-utils';
@@ -18,6 +19,7 @@ export interface UseComboboxKeyboardProps {
   moveFocusNext: () => void;
   moveFocusPrevious: () => void;
   openDropdown: () => void;
+  openDropdownWithoutFocus: () => void;
   closeDropdown: (manual?: boolean) => void;
   setSearchTerm: (term: string) => void;
   inputRef: RefObject<HTMLInputElement | null>;
@@ -88,8 +90,10 @@ const handleArrowDown = (
   const {
     isOpen,
     allOptions,
+    selectedValues,
     enabledIndices,
     openDropdown,
+    openDropdownWithoutFocus,
     setFocusedIndex,
     moveFocusNext,
     inputRef,
@@ -102,17 +106,25 @@ const handleArrowDown = (
     // Alt + Down Arrow: Display popup without moving focus
     // For Alt+Down, use normal minSearchLength logic
     if (!isOpen && canOpenDropdown(allOptions, inputRef, minSearchLength)) {
-      openDropdown();
+      openDropdownWithoutFocus();
     }
     return;
   }
 
   // Down Arrow: Move focus into popup or navigate within popup
+  // Focus the last selected value if it exists, otherwise focus the first enabled option
   // For regular Arrow Down, bypass minSearchLength and open if we have any options
   if (!isOpen && allOptions.length > 0) {
-    const firstEnabledIndex = getFirstEnabledIndex(enabledIndices);
-    if (firstEnabledIndex !== -1) {
-      openDropdownWithFocus(openDropdown, setFocusedIndex, firstEnabledIndex);
+    const selectedIndex = selectedValues
+      ? getLastSelectedIndex(allOptions, selectedValues)
+      : -1;
+    const indexToFocus =
+      selectedIndex !== -1
+        ? selectedIndex
+        : getFirstEnabledIndex(enabledIndices);
+
+    if (indexToFocus !== -1) {
+      openDropdownWithFocus(openDropdown, setFocusedIndex, indexToFocus);
     }
   } else if (isOpen) {
     moveFocusNext();

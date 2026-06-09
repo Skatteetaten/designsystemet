@@ -81,7 +81,8 @@ describe('useComboboxKeyboard', () => {
 
       // Assert: Verify popup opened but no focus change
       expect(mockEvent.preventDefault).toHaveBeenCalled();
-      expect(mockProps.openDropdown).toHaveBeenCalled();
+      expect(mockProps.openDropdownWithoutFocus).toHaveBeenCalled();
+      expect(mockProps.openDropdown).not.toHaveBeenCalled();
       expect(mockProps.setFocusedIndex).not.toHaveBeenCalled();
     });
 
@@ -107,6 +108,7 @@ describe('useComboboxKeyboard', () => {
       // Assert: Verify popup not opened due to search length requirement for Alt+Down
       expect(mockEvent.preventDefault).toHaveBeenCalled();
       expect(mockProps.openDropdown).not.toHaveBeenCalled();
+      expect(mockProps.openDropdownWithoutFocus).not.toHaveBeenCalled();
       expect(mockProps.setFocusedIndex).not.toHaveBeenCalled();
     });
 

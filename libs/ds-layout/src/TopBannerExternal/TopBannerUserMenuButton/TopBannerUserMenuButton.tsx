@@ -12,6 +12,7 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { TopBannerUserMenuButtonProps } from './TopBannerUserMenuButton.types';
+import { topBannerAnalyticsIds } from '../analyticsIds';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 
 import styles from './TopBannerUserMenuButton.module.scss';
@@ -73,6 +74,7 @@ export const TopBannerUserMenuButton = ({
       }
       lang={lang}
       data-testid={dataTestId}
+      dataWebAnalyticsId={topBannerAnalyticsIds.userMenuToggle}
       variant={'filled'}
       onClick={onClick}
     >
