@@ -7,11 +7,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { Radio } from './Radio/Radio';
@@ -50,9 +46,7 @@ interface InputPropsHTMLAttributes extends InputHTMLAttributes {
 }
 
 interface RadioGroupComponentCommonProps
-  extends InputPropsHTMLAttributes,
-    RequiredFieldsetHTMLAttributes,
-    BaseProps {
+  extends InputPropsHTMLAttributes, RequiredFieldsetHTMLAttributes, BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
     { container?: string; errorMessage?: string } & FieldsetProps['classNames']
@@ -86,6 +80,8 @@ interface RadioGroupComponentCommonProps
   name?: string;
   /** Om radioknappene skal være skrivebeskyttet */
   readOnly?: boolean;
+  /** Om en radio-knapp må være valgt */
+  required?: boolean;
   /** Definerer stilen til gruppen. */
   variant?: RadioGroupVariant;
   /** Callback som kalles når hjelpetekst vises/skjules */
@@ -99,11 +95,6 @@ type RadioGroupDiscriminatedCheckedProps =
       /** Hvilke value som skal være satt til checked (controlled state) */
       value?: string | number;
       /**
-       * @deprecated Prop skal fjernes ved lansering av neste major versjon.
-       *   Bruk `value` i stedet.
-       */
-      selectedValue?: string | number;
-      /**
        * Hvilke value som skal være satt til default checked (uncontrolled
        * state)
        */
@@ -112,7 +103,6 @@ type RadioGroupDiscriminatedCheckedProps =
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
       value?: never;
-      selectedValue?: never;
       /**
        * Hvilke value som skal være satt til default checked (uncontrolled
        * state)
@@ -121,10 +111,8 @@ type RadioGroupDiscriminatedCheckedProps =
     };
 
 export type RadioGroupProps = RadioGroupComponentCommonProps &
-  FormRequiredProps &
   RadioGroupDiscriminatedCheckedProps;
 
-export interface RadioGroupComponent
-  extends FunctionComponent<RadioGroupProps> {
+export interface RadioGroupComponent extends FunctionComponent<RadioGroupProps> {
   Radio: typeof Radio;
 }

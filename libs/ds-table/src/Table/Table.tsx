@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import { getTableVariantDefault } from './defaults';
+import { getTableSizeDefault } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
 import { TableContext } from './TableContext';
 import { TableBody } from '../TableBody/TableBody';
@@ -31,8 +31,7 @@ export const Table = (({
   'data-testid': dataTestId,
   caption,
   rowInEditModeId: externalRowInEditModeId,
-  variant = getTableVariantDefault(),
-  size,
+  size = getTableSizeDefault(),
   sortState,
   canBeManuallyFocused,
   hasFullWidth,
@@ -56,18 +55,12 @@ export const Table = (({
   }
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
 
-  const variantClassName = size
-    ? styles[`table_${size}`]
-    : styles[`table_${variant}`];
-  const captionVariantClassName = size
-    ? styles[`tableCaption_${size}`]
-    : styles[`tableCaption_${variant}`];
   const concatenatedClassName = `${styles.table} ${
     hasFullWidth ? styles.table_fullWidth : ''
-  } ${variantClassName} ${className}`.trim();
+  } ${styles[`table_${size}`]} ${className}`.trim();
   const captionClassName = `${styles.tableCaption} ${
     showCaption ? '' : styles.hidden
-  } ${captionVariantClassName}`.trim();
+  } ${styles[`tableCaption_${size}`]}`.trim();
   const wrapperClassName = `${isTableScrollable ? styles.wrapper : ''} ${
     shouldFadeLeft ? styles.wrapper_fadeLeft : ''
   }`.trim();
@@ -138,7 +131,6 @@ export const Table = (({
       value={{
         sortState,
         setSortState,
-        variant,
         size,
         rowInEditModeId,
         setRowInEditModeId: setInternalRowInEditModeId,

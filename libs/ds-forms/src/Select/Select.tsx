@@ -7,11 +7,7 @@ import {
   useLayoutEffect,
 } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getCommonFormVariantDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
 import { getSelectPlaceholderDefault } from './defaults';
@@ -44,7 +40,6 @@ export const Select = (({
   label,
   placeholder = getSelectPlaceholderDefault(),
   titleHelpSvg,
-  variant = getCommonFormVariantDefault(),
   value,
   ariaDescribedBy,
   autoComplete,
@@ -55,15 +50,12 @@ export const Select = (({
   hasSpacing,
   hideLabel,
   hidePlaceholder,
-  showRequiredMark,
   onBlur,
   onChange,
   onFocus,
   onHelpToggle,
   children,
 }: SelectProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
-
   const selectRef = useRef<HTMLSelectElement>(null);
   useImperativeHandle(ref, () => selectRef?.current as HTMLSelectElement);
 
@@ -71,14 +63,6 @@ export const Select = (({
   const generatedId = `selectId-${useId()}`;
   const descriptionId = `descId-${useId()}`;
   const selectId = externalId ?? generatedId;
-
-  const isLarge = variant === 'large';
-  const selectClassName = `${styles.select} ${
-    isLarge ? styles.select_large : ''
-  }`.trim();
-  const selectIconClassName = `${styles.selectIcon} ${
-    isLarge ? styles.selectIcon_large : ''
-  }`.trim();
 
   const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
   useLayoutEffect(() => {
@@ -112,7 +96,6 @@ export const Select = (({
         classNames={classNames}
         htmlFor={selectId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
@@ -131,7 +114,7 @@ export const Select = (({
         <select
           ref={selectRef}
           id={selectId}
-          className={selectClassName}
+          className={styles.select}
           data-testid={dataTestId}
           autoComplete={autoComplete}
           disabled={disabled}
@@ -157,7 +140,7 @@ export const Select = (({
           {!hidePlaceholder && <option value={''}>{placeholder}</option>}
           {children}
         </select>
-        <ChevronDownIcon className={selectIconClassName} />
+        <ChevronDownIcon className={styles.selectIcon} />
       </div>
       <ErrorMessage
         id={errorId}

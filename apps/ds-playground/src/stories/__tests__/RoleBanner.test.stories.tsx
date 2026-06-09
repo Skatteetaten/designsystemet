@@ -50,7 +50,9 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disableSnapshot: true } },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('region');
@@ -77,6 +79,9 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -113,6 +118,7 @@ export const AllRoles = {
     ...defaultArgs,
   },
   parameters: {
+    // Landmarks must have a unique aria-label
     a11y: {
       test: 'off',
     },

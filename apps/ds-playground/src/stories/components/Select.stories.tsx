@@ -2,10 +2,7 @@ import { ChangeEvent, useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getCommonFormVariantDefault,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
 import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -41,19 +38,7 @@ const meta = {
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
-      },
-    },
     label: { table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,

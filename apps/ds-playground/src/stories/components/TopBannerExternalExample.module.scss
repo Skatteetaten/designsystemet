@@ -22,7 +22,7 @@
 }
 
 @media (min-width: $breakpoint-m) {
-  .columns.columns {
+  .columns {
     grid-template-columns: 1fr 2fr;
   }
 

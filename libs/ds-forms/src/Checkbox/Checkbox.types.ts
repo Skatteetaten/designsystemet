@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, Ref } from 'react';
 
-import { BaseProps, FormRequiredProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type RequiredCheckboxHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
@@ -10,6 +10,7 @@ type RequiredCheckboxHTMLAttributes = Pick<
   | 'form'
   | 'name'
   | 'value'
+  | 'required'
   | 'onBlur'
   | 'onChange'
   | 'onFocus'
@@ -20,10 +21,7 @@ interface CheckboxPropsHTMLAttributes extends CheckboxHTMLAttributes {
   ariaDescribedby?: string;
 }
 
-export interface CheckboxProps
-  extends CheckboxPropsHTMLAttributes,
-    BaseProps,
-    FormRequiredProps {
+export interface CheckboxProps extends CheckboxPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement>;
   classNames?: { errorMessage?: string; label?: string };
   /** Ledetekst til checkboxen */

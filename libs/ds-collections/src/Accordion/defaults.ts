@@ -1,5 +1,10 @@
-import { AccordionColor, AccordionSize, IconPosition } from './Accordion.types';
+import {
+  AccordionColor,
+  AccordionSize,
+  AccordionIconPosition,
+} from './Accordion.types';
 
-export const getAccordionIconPositionDefault = (): IconPosition => 'right';
+export const getAccordionIconPositionDefault = (): AccordionIconPosition =>
+  'right';
 export const getAccordionBackgroundColorDefault = (): AccordionColor => 'none';
 export const getAccordionSizeDefault = (): AccordionSize => 'medium';

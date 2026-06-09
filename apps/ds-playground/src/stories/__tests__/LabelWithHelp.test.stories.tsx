@@ -1,5 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, userEvent, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
@@ -32,7 +39,6 @@ const meta = {
       mapping: SystemSVGPaths,
     },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     htmlFor: { table: { disable: true } },
@@ -94,9 +100,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -105,6 +109,39 @@ export const WithAttributes = {
     await expect(label).toHaveClass('dummyClassname');
     await expect(label).toHaveAttribute('lang', 'nb');
     await expect(label).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      label: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'hjelp',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const label = canvas.getByText(defaultChildrenText);
+    await expect(label).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
+
+    await fireEvent.click(canvas.getByRole('button'));
+    const helpText = canvas.getByText('hjelp').parentElement;
+    await expect(helpText).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -136,17 +173,6 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const descriptionNode = canvas.getByText(defaultDescription);
     await expect(descriptionNode).toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const WithShowRequiredMark = {
-  name: 'With ShowRequiredMark (FS-A4)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -220,42 +246,16 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      label: 'dummyClassname',
-      description: 'dummyClassname',
-      helpText: 'dummyClassname',
-    },
-    description: 'beskrivelse',
-    helpText: 'hjelp',
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-
-    const label = canvas.getByText(defaultChildrenText);
-    await expect(label).toHaveClass('dummyClassname');
-    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
-
-    await fireEvent.click(canvas.getByRole('button'));
-    const helpText = canvas.getByText('hjelp').parentElement;
-    await expect(helpText).toHaveClass('dummyClassname');
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 

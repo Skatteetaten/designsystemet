@@ -116,9 +116,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
 
   play: async ({ canvasElement }): Promise<void> => {
@@ -127,6 +125,29 @@ export const WithAttributes = {
     await expect(stepList).toHaveAttribute('id', 'htmlid');
     await expect(stepList).toHaveClass('dummyClassname');
     await expect(stepList).toHaveAttribute('lang', 'nb');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  render: Template,
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      content: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const step = canvas.getByRole('listitem');
+    const content = step.querySelector('[class*="stepContent"]');
+    expect(content).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

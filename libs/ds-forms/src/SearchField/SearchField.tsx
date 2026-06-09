@@ -18,7 +18,6 @@ import { IconButton } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
   getCommonClassNameDefault,
-  getCommonFormVariantDefault,
   getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
@@ -29,6 +28,7 @@ import {
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
   getSearchFieldIsLoadingDefault,
+  getSearchFieldSizeDefault,
 } from './defaults';
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
@@ -63,7 +63,7 @@ export const SearchField = (({
   isLoading = getSearchFieldIsLoadingDefault(),
   spinnerLabel,
   spinnerProps,
-  variant = getCommonFormVariantDefault(),
+  variant = getSearchFieldSizeDefault(),
   ariaDescribedBy,
   autoComplete = getCommonAutoCompleteDefault(),
   accessKey,
@@ -73,7 +73,6 @@ export const SearchField = (({
   placeholder,
   readOnly,
   required,
-  showRequiredMark,
   value,
   enableSRNavigationHint = getEnableSRNavigationHintDefault(),
   hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
@@ -376,7 +375,6 @@ export const SearchField = (({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
-        showRequiredMark={showRequiredMark}
         disabled={disabled}
         onHelpToggle={onHelpToggle}
       >

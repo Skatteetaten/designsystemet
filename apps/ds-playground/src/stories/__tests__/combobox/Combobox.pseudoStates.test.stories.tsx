@@ -101,12 +101,11 @@ export const Option = {
     );
   },
   parameters: {
+    // ARIA input fields must have an accessible name
     a11y: {
       test: 'off',
     },
-    imageSnapshot: {
-      pseudoStates: ['hover', 'focus-visible'],
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
 };
 

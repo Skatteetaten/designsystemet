@@ -57,7 +57,6 @@ export const FileUploader = (({
   spinnerLabel = getFileUploaderGetSpinnerLabelDefault(),
   hasSpacing,
   hideLabel,
-  showRequiredMark,
   shouldNormalizeFileName,
   multiple,
   isUploading,
@@ -110,6 +109,8 @@ export const FileUploader = (({
   }, [uploadedFiles]);
 
   const id = externalId ?? generatedId;
+  const labelId = `${id}-label`;
+  const buttonTextId = `${id}-button-text`;
 
   const descriptionId = `descId-${useId()}`;
   const errorId = `${useId()}-fileuploader-error`;
@@ -227,9 +228,6 @@ export const FileUploader = (({
 
     setFilesPendingDelete((prevState) => ({ ...prevState, [key]: false }));
   };
-  const concatenatedClassnames = `${styles.container} ${className} ${
-    classNames?.container ?? ''
-  }`.trim();
 
   const ariaDescribedBy = [
     description && descriptionId,
@@ -243,39 +241,39 @@ export const FileUploader = (({
   return (
     <div
       ref={ref}
-      className={concatenatedClassnames}
+      className={`${styles.container} ${className} ${
+        classNames?.container ?? ''
+      }`.trim()}
       lang={lang}
       data-testid={dataTestId}
       data-has-spacing={hasSpacing}
     >
-      {label && (
-        <LabelWithHelp
-          classNames={classNames}
-          htmlFor={id}
-          hideLabel={hideLabel}
-          showRequiredMark={showRequiredMark}
-          description={description}
-          descriptionId={descriptionId}
-          helpSvgPath={helpSvgPath}
-          helpText={helpText}
-          titleHelpSvg={titleHelpSvg}
-          onHelpToggle={onHelpToggle}
-        >
-          {label}
-        </LabelWithHelp>
-      )}
-
+      <LabelWithHelp
+        id={labelId}
+        classNames={classNames}
+        htmlFor={id}
+        hideLabel={hideLabel}
+        description={description}
+        descriptionId={descriptionId}
+        helpSvgPath={helpSvgPath}
+        helpText={helpText}
+        titleHelpSvg={titleHelpSvg}
+        onHelpToggle={onHelpToggle}
+      >
+        {label}
+      </LabelWithHelp>
       <button
         ref={buttonRef}
         type={'button'}
-        id={id}
-        className={`${styles.dropZone} ${label && !hideLabel ? styles.dropZoneMarginTop : ''} ${
+        className={`${styles.dropZone} ${!hideLabel ? styles.dropZoneMarginTop : ''} ${
           errorMessage ? styles.dropZone_error : ''
         } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`.trim()}
         disabled={isUploading}
+        aria-labelledby={`${labelId} ${buttonTextId}`}
         aria-describedby={
           ariaDescribedBy.trim() !== '' ? ariaDescribedBy : undefined
         }
+        aria-invalid={errorMessage ? 'true' : undefined}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
         onDragOver={handleDragOver}
@@ -286,42 +284,38 @@ export const FileUploader = (({
           }
         }}
       >
-        <div className={styles.removePointerEvents}>
-          {isUploading ? (
-            <Spinner
-              classNames={{ title: styles.spinner }}
-              size={'large'}
-              color={'blue'}
-            >
-              {spinnerLabel}
-            </Spinner>
-          ) : (
-            <AttachFileIcon className={styles.icon} size={'large'} />
+        {isUploading ? (
+          <Spinner
+            classNames={{ title: styles.spinner }}
+            size={'large'}
+            color={'blue'}
+          >
+            {spinnerLabel}
+          </Spinner>
+        ) : (
+          <AttachFileIcon className={styles.icon} size={'large'} />
+        )}
+        <span className={styles.innerText} id={buttonTextId}>
+          {!isUploading && buttonText}
+          {isRequired && (
+            <span className={styles.srOnly}>{t('fileuploader.required')}</span>
           )}
-          <label className={styles.innerLabel} htmlFor={id}>
-            {!isUploading && buttonText}
-            {isRequired && (
-              <span className={styles.srOnly}>
-                {t('fileuploader.required')}
-              </span>
-            )}
-          </label>
-          <input
-            ref={inputRef}
-            data-testid={`${dataTestId}-input`}
-            type={'file'}
-            accept={acceptedFormatsAsCommaSeparatedString}
-            multiple={multiple}
-            hidden
-            onChange={handleFileChange}
-          />
-        </div>
+        </span>
       </button>
+      <input
+        ref={inputRef}
+        id={id}
+        data-testid={dataTestId ? `${dataTestId}-input` : undefined}
+        type={'file'}
+        accept={acceptedFormatsAsCommaSeparatedString}
+        multiple={multiple}
+        hidden
+        onChange={handleFileChange}
+      />
       {acceptedFileFormats && (
         <span id={fileformatsId} className={styles.fileInfo}>
           {acceptedFileFormatsDescription ??
             `${t('fileuploader.FormatLabel')} `}
-
           <span className={styles.fileFormatList}>
             {acceptedFileFormatsDisplay ??
               acceptedFormatsAsCommaSeparatedString}
@@ -343,9 +337,9 @@ export const FileUploader = (({
       >
         {uploadResult?.statusMessage}
       </Alert>
-      {uploadedFiles && (
+      {!!uploadedFiles?.length && (
         <ul className={styles.fileList}>
-          {uploadedFiles?.map((file, index) => {
+          {uploadedFiles.map((file, index) => {
             const isNewFile = newFiles.some(
               (newFile) => newFile.id === file.id
             );

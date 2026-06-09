@@ -61,12 +61,7 @@ const meta = {
     initialPickerDate: { table: { disable: true }, control: 'date' },
     minDate: { table: { disable: true }, control: 'date' },
     maxDate: { table: { disable: true }, control: 'date' },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     // HTML
     autoComplete: { table: { disable: true } },
     disabled: { table: { disable: true } },
@@ -138,9 +133,6 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -161,7 +153,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      dateContainer: 'dummyClassnameFormContainer',
+      dateContainer: 'dummyClassname',
       errorMessage: 'dummyClassname',
     },
     errorMessage: errorMessageText,
@@ -187,13 +179,13 @@ export const WithCustomClassNames = {
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(dateContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(dateContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2, B2, B5)',
+  name: 'Defaults (A1, A2, B2, B5)',
   args: {
     ...defaultArgs,
   },
@@ -286,17 +278,6 @@ export const WithAriaDescribedBy = {
   },
 } satisfies Story;
 
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithDisabled = {
   name: 'With Disabled (B7)',
   args: {
@@ -355,19 +336,6 @@ export const WithRequired = {
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toBeRequired();
     await expect(textbox).toHaveAttribute('aria-invalid', 'false');
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (A1)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -890,12 +858,18 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: dsI18n.t('Shared:shared.Help'),
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 

@@ -1,5 +1,3 @@
-@use 'libs/ds-core-utils/src/mixins/styles';
-
 .rolePicker {
   display: flex;
   flex-direction: column;
@@ -15,12 +13,4 @@
 
 .container {
   width: var(--container-s);
-}
-
-.showMoreButton {
-  text-align: right;
-}
-
-.srOnly {
-  @include styles.sr-only;
 }

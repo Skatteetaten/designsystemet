@@ -196,7 +196,7 @@ export function RepeterendeFelter(): JSX.Element {
         <Heading as={'h1'} hasSpacing>
           {'Skjema eller oppgave'}
         </Heading>
-        <DescriptionList className={styles.desciptionList} hasSpacing>
+        <DescriptionList className={styles.descriptionList} hasSpacing>
           <DescriptionList.Element term={'Virksomhetens navn'}>
             {hoppOgSprettBarnehage.name}
           </DescriptionList.Element>
@@ -245,7 +245,7 @@ export function RepeterendeFelter(): JSX.Element {
                       descriptionDirection={
                         isMobile ? 'vertical' : 'horizontal'
                       }
-                      className={styles.desciptionList}
+                      className={styles.descriptionList}
                     >
                       <DescriptionList.Element term={'Adresse'}>
                         {card.adresse}

@@ -30,10 +30,6 @@ const meta = {
       table: { disable: true },
       control: 'inline-radio',
     },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     iconPosition: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
     isDefaultExpanded: { table: { disable: true } },
@@ -149,9 +145,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -192,52 +186,6 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithIconRight = {
-  name: 'With Icon Right (A2)',
-  args: {
-    ...defaultArgs,
-    iconPosition: 'right',
-  },
-  argTypes: {
-    iconPosition: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithoutUnderline = {
-  name: 'Without Underline (A3)',
-  args: {
-    ...defaultArgs,
-    showUnderline: false,
-  },
-  argTypes: {
-    showUnderline: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithIconRightAndNoUnderline = {
-  name: 'With Icon Right And No Underline (A2, A3)',
-  args: {
-    ...defaultArgs,
-    iconPosition: 'right',
-    showUnderline: false,
-  },
-  argTypes: {
-    iconPosition: { table: { disable: false } },
-    showUnderline: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const Compact = {
-  name: 'Compact (A1 delvis)',
-  args: {
-    ...defaultArgs,
-    variant: 'compact',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const Small = {
   name: 'Small (A1 delvis)',
   args: {
@@ -260,15 +208,13 @@ export const Medium = {
   },
 } satisfies Story;
 
-export const CompactWithIconRight = {
-  name: 'Compact With Icon Right (A1 delvis, A2)',
+export const WithIconRight = {
+  name: 'With Icon Right (A2)',
   args: {
     ...defaultArgs,
-    variant: 'compact',
     iconPosition: 'right',
   },
   argTypes: {
-    variant: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
   },
 } satisfies Story;
@@ -299,15 +245,13 @@ export const MediumWithIconRight = {
   },
 } satisfies Story;
 
-export const CompactWithoutUnderline = {
-  name: 'Compact Without Underline (A1 delvis, A3)',
+export const WithoutUnderline = {
+  name: 'Without Underline (A3)',
   args: {
     ...defaultArgs,
-    variant: 'compact',
     showUnderline: false,
   },
   argTypes: {
-    variant: { table: { disable: false } },
     showUnderline: { table: { disable: false } },
   },
 } satisfies Story;
@@ -338,16 +282,14 @@ export const MediumWithoutUnderline = {
   },
 } satisfies Story;
 
-export const CompactWithIconRightAndNoUnderline = {
-  name: 'Compact With Icon Right And No Underline (A1 delvis, A2, A3)',
+export const WithIconRightAndNoUnderline = {
+  name: 'With Icon Right And No Underline (A2, A3)',
   args: {
     ...defaultArgs,
-    variant: 'compact',
     iconPosition: 'right',
     showUnderline: false,
   },
   argTypes: {
-    variant: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
     showUnderline: { table: { disable: false } },
   },
@@ -398,19 +340,6 @@ export const IsExpanded = {
     await expect(content).toBeInTheDocument();
     const button = canvas.getByRole('button');
     await expect(button).toHaveAttribute('aria-expanded', 'true');
-  },
-} satisfies Story;
-
-export const CompactAndIsExpanded = {
-  name: 'With Compact And IsExpanded (A4 delvis)',
-  args: {
-    ...defaultArgs,
-    isExpanded: true,
-    variant: 'compact',
-  },
-  argTypes: {
-    isExpanded: { table: { disable: false } },
-    variant: { table: { disable: false } },
   },
 } satisfies Story;
 

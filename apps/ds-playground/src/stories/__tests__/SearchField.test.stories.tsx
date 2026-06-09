@@ -66,7 +66,6 @@ const meta = {
     helpText: { table: { disable: true } },
     enableSRNavigationHint: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -148,9 +147,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -176,7 +173,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      searchContainer: 'dummyClassnameFormContainer',
+      searchContainer: 'dummyClassname',
     },
     hideLabel: false,
   },
@@ -184,6 +181,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -197,7 +197,7 @@ export const WithCustomClassNames = {
 
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(searchContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(searchContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -662,12 +662,18 @@ export const WithHelpToggleEvent = {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: dsI18n.t('Shared:shared.Help'),
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -736,20 +742,6 @@ export const WithRequired = {
     const textbox = canvas.getByRole('searchbox');
     await expect(textbox).toBeRequired();
     await expect(textbox).toHaveAttribute('aria-invalid', 'false');
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark',
-  args: {
-    ...defaultArgs,
-    required: true,
-    hideLabel: false,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 

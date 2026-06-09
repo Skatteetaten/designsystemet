@@ -59,7 +59,8 @@ code {
 .scrollToTopMainPusher {
   height: 200vh;
   padding-top: 100vh;
-  color: var(--palette-denim-5);
+  color: var(--palette-graphite-100);
+  background-color: var(--palette-graphite-10);
 }
 
 .width100 {
@@ -83,18 +84,19 @@ code {
   display: block;
 }
 
-.centerMargin {
+.fileList {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--spacing-xl);
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  gap: var(--spacing-s);
 }
 
 .introImageContainer {
   margin-bottom: var(--spacing-xl) !important;
   background-color: var(--palette-denim-10);
-}
-
-.topSpacingXL {
-  margin-top: var(--spacing-xl);
 }
 
 .topSpacingL {
@@ -137,10 +139,6 @@ code {
 .emptyExpandedTableRow {
   height: 200px;
   width: 100%;
-}
-
-.rowSpanLeft {
-  border-left: solid 1px var(--semantic-divider-30);
 }
 
 .rowSpanRight {
@@ -229,11 +227,6 @@ code {
   height: 4rem;
 }
 
-.modalLink {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .topbannerButtonContainer {
   display: flex;
   gap: var(--spacing-s);
@@ -263,11 +256,6 @@ code {
   margin-left: var(--spacing-s);
 }
 
-.marginL {
-  margin-left: var(--spacing-l);
-  margin-right: var(--spacing-l);
-}
-
 .centerContent {
   min-height: 50vh;
   display: flex;
@@ -286,6 +274,7 @@ a.docs {
 }
 
 ul.fontSizeM {
+  list-style-type: none;
   li {
     font-size: var(--font-size-m);
   }
@@ -321,10 +310,6 @@ p.fontSizeM {
   margin-left: var(--spacing-l);
 }
 
-.marginLeftAccordionItem {
-  margin-left: calc(var(--size-medium) + var(--spacing-s));
-}
-
 .accordionWorkTaskExample {
   max-width: var(--semantic-responsive-wide-content);
   padding: var(--spacing-xl);
@@ -352,10 +337,6 @@ p.bold {
   max-width: 200px;
 }
 
-.width400 {
-  max-width: 400px;
-}
-
 svg.dangerIcon {
   fill: var(--semantic-danger-foreground);
 }
@@ -368,17 +349,9 @@ svg.blueIcon {
   padding: var(--spacing-xs);
 }
 
-.paddingM {
-  padding: var(--spacing-m);
-}
-
 .cardWidth {
   width: 254px;
   min-width: 254px;
-}
-
-.marginLeftS {
-  margin-left: var(--spacing-s);
 }
 
 a.resetLinkStyling {
@@ -432,10 +405,6 @@ a.resetLinkStyling {
   h1 {
     margin-bottom: 0;
   }
-}
-
-.itemsCenter {
-  align-items: center;
 }
 
 .componentIcon {
@@ -517,11 +486,6 @@ dl.descriptionListTwoColumns {
   > p {
     color: var(--palette-graphite-10);
   }
-}
-
-.docblock-argstable table {
-  /* for å skjule deprecated varsler */
-  display: none;
 }
 
 .positionRelative {

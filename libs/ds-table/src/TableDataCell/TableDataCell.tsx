@@ -6,7 +6,7 @@ import { TableDataCellProps } from './TableDataCell.types';
 import {
   getDataCellAsDefault,
   getTableCellAlignmentDefault,
-  getTableVariantDefault,
+  getTableSizeDefault,
 } from '../Table/defaults';
 import { TableContext } from '../Table/TableContext';
 
@@ -26,15 +26,13 @@ export const TableDataCell = ({
   children,
 }: TableDataCellProps): JSX.Element => {
   const context = useContext(TableContext);
-  const variant = context?.variant ?? getTableVariantDefault();
-  const variantClassName = context?.size
-    ? styles[`dataCell_${context.size}`]
-    : styles[`dataCell_${variant}`];
+  const size = context?.size ?? getTableSizeDefault();
+  const sizeClassName = styles[`dataCell_${size}`];
   const alignmentClassName = styles[`dataCell_${alignment}`];
 
   const concatenatedClassName = `${
     styles.dataCell
-  } ${variantClassName} ${alignmentClassName} ${
+  } ${sizeClassName} ${alignmentClassName} ${
     rowSpan ? styles.dataCell_rowspan : ''
   } ${className}`.trim();
 

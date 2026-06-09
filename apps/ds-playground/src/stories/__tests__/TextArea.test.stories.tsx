@@ -2,7 +2,14 @@ import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { useArgs } from 'storybook/preview-api';
-import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -55,7 +62,6 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: {
@@ -136,9 +142,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -173,6 +177,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -419,19 +426,6 @@ export const WithRequired = {
   },
 } satisfies Story;
 
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B4, FS-A4 delvis)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithMinAndMaxLength = {
   name: 'With MinLength And MaxLength (A4)',
   args: {
@@ -640,12 +634,16 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 

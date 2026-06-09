@@ -2,42 +2,8 @@
   /* css-regler som brukes til å teste hvordan komponenten blir seende ut med en konsument sine css-regler hvor det er ønskelig at disse skal komme etter css-reglene til en komponent */
 
   .dummyClassname {
-    color: black;
-    fill: lightgoldenrodyellow;
-  }
-
-  .dummyClassname::placeholder {
-    color: darkblue;
-  }
-
-  .dummyClassname:not(svg) {
+    color: darkmagenta;
     background-color: lightgoldenrodyellow;
-  }
-
-  svg.dummyClassname {
-    background-color: darkblue;
-  }
-
-  div#storybook-root .dummyClassname svg {
-    fill: darkblue;
-  }
-
-  .dummyClassname:disabled,
-  .dummyClassname:hover,
-  .dummyClassname:focus {
-    background-color: darkred;
-    color: lightskyblue;
-  }
-
-  div#storybook-root .dummyClassname:disabled svg,
-  div#storybook-root .dummyClassname:hover svg,
-  div#storybook-root .dummyClassname:focus svg {
-    fill: lightskyblue;
-  }
-
-  .dummyClassnameFormContainer {
-    width: 100%;
-    max-width: 200px;
   }
 
   .dummyPanelOverridesWidthAndPadding {
@@ -56,16 +22,9 @@
     --panel-padding-xs: var(--spacing-xxs);
   }
 
-  .dummySpacingTop {
-    margin-top: var(--spacing-l);
-  }
-
-  .dummyClassNamePinkBackground {
-    background-color: pink;
-  }
-
   .dummyClassNameDarkPinkBackground {
     background-color: darkmagenta;
+    color: white;
   }
 
   .dummyCustomTheme {

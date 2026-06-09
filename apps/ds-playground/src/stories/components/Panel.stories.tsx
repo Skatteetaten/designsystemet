@@ -132,7 +132,7 @@ export const Examples: Story = {
           </Paragraph>
           <Paragraph hasSpacing>{'Logg inn:'}</Paragraph>
           <MegaButton>{'Sjekk skatten'}</MegaButton>
-          <Paragraph className={'dummySpacingTop'}>
+          <Paragraph className={'topSpacingL'}>
             {
               'Ser du etter skattemeldingen? Hvis du oppdager feil eller har mottatt nye eller forsinkede oppplysniger, kan du fortsatt '
             }

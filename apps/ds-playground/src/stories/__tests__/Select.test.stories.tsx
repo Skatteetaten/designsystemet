@@ -10,6 +10,7 @@ import {
   within,
 } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
@@ -43,12 +44,7 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     hidePlaceholder: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
@@ -132,9 +128,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -155,7 +149,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      selectContainer: 'dummyClassnameFormContainer',
+      selectContainer: 'dummyClassname',
       errorMessage: 'dummyClassname',
     },
     errorMessage: errorMessageText,
@@ -164,6 +158,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -180,13 +177,13 @@ export const WithCustomClassNames = {
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(selectContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(selectContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2 delvis, A3, FS-A2, B2)',
+  name: 'Defaults (A1, A2 delvis, A3, FS-A2, B2)',
   args: {
     ...defaultArgs,
   },
@@ -247,40 +244,6 @@ export const WithAriaDescribedBy = {
     const describedBy = select.getAttribute('aria-describedby') || '';
     const describedByIds = describedBy.split(' ').filter(Boolean);
     await expect(describedByIds).toContain('select-alert-description-id');
-  },
-} satisfies Story;
-
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithVariantLargeAndLongText = {
-  name: 'With Variant Large And Long Text',
-  args: {
-    ...defaultArgs,
-    hidePlaceholder: true,
-    variant: 'large',
-    children: [
-      <Select.Option key={'option_1'} value={valueOption1}>
-        {'En lang tekst som ikke skal synes bak åpne ikonet'}
-      </Select.Option>,
-    ],
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-    children: { table: { disable: false } },
-  },
-  globals: {
-    viewport: {
-      value: '--mobile',
-    },
   },
 } satisfies Story;
 
@@ -404,19 +367,6 @@ export const WithRequired = {
     const selectNode = canvas.getByRole('combobox');
     await expect(selectNode).toBeRequired();
     await expect(selectNode).toHaveAttribute('aria-invalid', 'false');
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B1, FS-A4 delvis)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -550,12 +500,18 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: dsI18n.t('Shared:shared.Help'),
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -574,7 +530,6 @@ export const WithLongInput = {
     ],
   },
   argTypes: {
-    variant: { table: { disable: false } },
     defaultValue: { table: { disable: false } },
   },
 } satisfies Story;
@@ -594,7 +549,6 @@ export const WithLongPlaceholder = {
     ],
   },
   argTypes: {
-    variant: { table: { disable: false } },
     placeholder: { table: { disable: false } },
   },
 } satisfies Story;

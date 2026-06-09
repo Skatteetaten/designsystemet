@@ -22,20 +22,16 @@ export const LabelWithHelp = ({
   disabled,
   htmlFor,
   hideLabel,
-  showRequiredMark,
   children,
   onHelpToggle,
 }: LabelWithHelpProps): JSX.Element => {
   const uniqueLabelId = `labelId-${useId()}`;
   const labelId = idExternal ?? uniqueLabelId;
 
-  const requiredMarkClassName = showRequiredMark ? styles.label_required : '';
   const hideLabelClassName = hideLabel ? styles.srOnly : '';
   const concatenatedClassName = `${
     styles.label
-  } ${requiredMarkClassName} ${hideLabelClassName} ${className} ${
-    classNames?.label ?? ''
-  }`.trim();
+  } ${hideLabelClassName} ${className} ${classNames?.label ?? ''}`.trim();
 
   return (
     <>

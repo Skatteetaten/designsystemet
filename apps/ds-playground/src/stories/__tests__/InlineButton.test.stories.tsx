@@ -102,9 +102,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -424,6 +422,7 @@ export const WithBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
+    // color contrast issue
     a11y: {
       test: 'off',
     },

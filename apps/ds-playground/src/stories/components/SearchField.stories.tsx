@@ -5,7 +5,6 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import {
   getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
-  getCommonFormVariantDefault,
   getHelpTitleHelpSvgDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
@@ -13,6 +12,7 @@ import {
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,
   getSearchFieldIsLoadingDefault,
+  getSearchFieldSizeDefault,
   SearchField,
   type SearchFieldProps,
   searchInList,
@@ -75,11 +75,6 @@ const meta = {
         },
       },
     },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,
@@ -90,7 +85,7 @@ const meta = {
       control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
+        defaultValue: { summary: getSearchFieldSizeDefault() },
       },
     },
     // HTML

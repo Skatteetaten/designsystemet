@@ -52,7 +52,7 @@ const InnloggetTemplate = (): JSX.Element => {
         </Link>
 
         <OpenClose
-          variant={'compact'}
+          size={'small'}
           title={'Teknisk feilmelding'}
           className={styles.openClose}
         >
@@ -92,7 +92,7 @@ export const Uinnlogget = (): JSX.Element => {
         </Link>
 
         <OpenClose
-          variant={'compact'}
+          size={'small'}
           title={'Teknisk feilmelding'}
           className={styles.openClose}
         >

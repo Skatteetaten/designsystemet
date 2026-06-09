@@ -45,17 +45,9 @@ type Story = StoryObj<typeof meta>;
 
 const defaultTitleFirstColumn = 'Om Skatteetaten';
 const defaultFirstColumn = (
-  <>
-    <LinkGroup color={'white'} hasSpacing>
-      <LinkGroup.Link href={'#'}>{'Jobb i Skatteetaten'}</LinkGroup.Link>
-      <LinkGroup.Link href={'#'}>{'Om oss'}</LinkGroup.Link>
-      <LinkGroup.Link href={'#'}>{'Analyse og rapporter'}</LinkGroup.Link>
-      <LinkGroup.Link href={'#'}>{'Forskning'}</LinkGroup.Link>
-    </LinkGroup>
-    <Paragraph>
-      {'Legg inn en lang setning for å sjekke om kolonnebredden stemmer'}
-    </Paragraph>
-  </>
+  <Paragraph className={'topSpacingL'}>
+    {'Legg inn en lang setning for å sjekke om kolonnebredden stemmer'}
+  </Paragraph>
 );
 const defaultTitleSecondColumn = 'Følg oss';
 const defaultSecondColumn = (
@@ -136,9 +128,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

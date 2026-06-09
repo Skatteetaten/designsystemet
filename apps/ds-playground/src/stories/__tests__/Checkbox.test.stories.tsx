@@ -32,7 +32,6 @@ const meta = {
     errorMessage: { table: { disable: true } },
     hasSpacing: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     // HTML
     checked: { table: { disable: true } },
     disabled: { table: { disable: true } },
@@ -98,9 +97,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -111,6 +108,35 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(inputNode).toHaveAttribute('data-testid', '123ID');
     await expect(inputNode).toHaveAttribute('form', '123form');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      label: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+    },
+    errorMessage: defaultErrorMessage,
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const label = canvas.getByText(defaultLabelText);
+    const errorMessage = canvasElement.querySelector(
+      '[id^=checkboxErrorId]>div'
+    );
+    await expect(label?.parentElement).toHaveClass('dummyClassname');
+    await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -325,19 +351,6 @@ export const WithRequired = {
   },
 } satisfies Story;
 
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (A1, B3)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithRequiredAndChecked = {
   name: 'With Required And Checked (B3)',
   args: {
@@ -392,12 +405,10 @@ export const WithDisabledAndRequired = {
     ...defaultArgs,
     disabled: true,
     required: true,
-    showRequiredMark: true,
   },
   argTypes: {
     disabled: { table: { disable: false } },
     required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -414,12 +425,10 @@ export const WithErrorAndRequired = {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
     required: true,
-    showRequiredMark: true,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
     required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
@@ -548,32 +557,6 @@ export const WithEventHandlers = {
     await expect(inputNode).toHaveFocus();
     inputNode.blur();
     await expect(inputNode).not.toHaveFocus();
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      label: 'dummyClassname',
-      errorMessage: 'dummyClassname',
-    },
-    errorMessage: defaultErrorMessage,
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const label = canvas.getByText(defaultLabelText);
-    const errorMessage = canvasElement.querySelector(
-      '[id^=checkboxErrorId]>div'
-    );
-    await expect(label?.parentElement).toHaveClass('dummyClassname');
-    await expect(errorMessage).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
