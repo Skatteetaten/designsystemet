@@ -83,6 +83,16 @@ describe('Formatter', () => {
       expect(formatNumber('1234567')).toBe(formatNBS('1 234 567'));
     });
 
+    it('Når tall er stort men innenfor trygg presisjon returneres det i riktig format', () => {
+      expect(formatNumber('123456789012345')).toBe(
+        formatNBS('123 456 789 012 345')
+      );
+    });
+
+    it('Når heltall er større enn trygg presisjon returneres input uendret', () => {
+      expect(formatNumber('1234567901234567890')).toBe('1234567901234567890');
+    });
+
     it('Når tall er heltale og locale er en-BG returnerer den riktig format', () => {
       expect(formatNumber('1234567', { locale: 'en-GB' })).toBe('1,234,567');
     });

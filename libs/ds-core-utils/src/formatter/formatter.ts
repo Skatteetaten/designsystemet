@@ -105,13 +105,24 @@ const formatNumberFull = ({
   options = {},
 }: FormatNumberFullProps): FormattingResponseWithTail => {
   const inputAsString = input.toString();
+  const numberParser = new NumberParser(locale);
   const InputAsNumber =
-    typeof input === 'number'
-      ? input
-      : new NumberParser(locale).parse(inputAsString);
+    typeof input === 'number' ? input : numberParser.parse(inputAsString);
 
   //Hvis input ikke er et gyldig tall så returnerer vi input uten endring.
   if (isNaN(InputAsNumber)) {
+    return {
+      value: inputAsString,
+    };
+  }
+
+  const isUnsafeIntegerStringInput =
+    typeof input === 'string' &&
+    !inputAsString.includes(numberParser.getDecimalSeparator()) &&
+    Number.isInteger(InputAsNumber) &&
+    !Number.isSafeInteger(InputAsNumber);
+
+  if (isUnsafeIntegerStringInput) {
     return {
       value: inputAsString,
     };
