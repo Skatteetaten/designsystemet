@@ -5,7 +5,6 @@ import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { dsI18n, Languages, Separator } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getOpenDefaultLinksInNewTabDefault } from './defaults';
 import { FooterComponent, FooterProps } from './Footer.types';
 import { FooterLink } from './FooterLink/FooterLink';
 import { FooterLogo } from './FooterLogo/FooterLogo';
@@ -37,7 +36,7 @@ export const Footer = (({
   titleThirdColumn,
   hideLogo,
   hideDefaultLinks,
-  openDefaultLinksInNewTab = getOpenDefaultLinksInNewTabDefault(),
+  openDefaultLinksInNewTab = false,
   children,
 }: FooterProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });

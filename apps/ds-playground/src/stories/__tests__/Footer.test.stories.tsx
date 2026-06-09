@@ -539,7 +539,6 @@ export const WithDefaultLinksInNewTab = {
   args: {
     ...defaultArgs,
     firstColumn: defaultFirstColumn,
-    openDefaultLinksInNewTab: false,
   },
   argTypes: {
     openDefaultLinksInNewTab: { table: { disable: false } },

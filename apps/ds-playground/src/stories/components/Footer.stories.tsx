@@ -3,10 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import {
-  Footer,
-  getOpenDefaultLinksInNewTabDefault,
-} from '@skatteetaten/ds-layout';
+import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -30,9 +27,6 @@ const meta = {
     openDefaultLinksInNewTab: {
       table: {
         category: category.props,
-        defaultValue: {
-          summary: getOpenDefaultLinksInNewTabDefault().toString(),
-        },
       },
     },
     titleFirstColumn: { table: { category: category.props } },
@@ -94,7 +88,6 @@ export const Examples: Story = {
             </LinkGroup>
           </>
         }
-        openDefaultLinksInNewTab={false}
       >
         <Footer.LinkFirstColumn href={'#'}>
           {'Jobb i Skatteetaten'}
