@@ -2,10 +2,7 @@ import { useState, JSX } from 'react';
 
 import { StoryObj, Meta } from '@storybook/react-vite';
 
-import {
-  dsI18n,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
 
 import {
@@ -58,7 +55,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     uploadedFiles: { control: false, table: { category: category.props } },

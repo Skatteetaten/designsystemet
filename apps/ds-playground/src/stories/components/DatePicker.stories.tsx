@@ -6,8 +6,8 @@ import { useArgs } from 'storybook/preview-api';
 
 import {
   dsI18n,
-  getAutoCompletePropDescription,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import { DatePicker, Combobox } from '@skatteetaten/ds-forms';
 
@@ -40,14 +40,14 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
     autoComplete: {
       control: 'text',
       table: { category: category.htmlAttribute, type: { summary: 'string' } },
-      description: getAutoCompletePropDescription(),
+      description: autoCompletePropDescription,
     },
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },

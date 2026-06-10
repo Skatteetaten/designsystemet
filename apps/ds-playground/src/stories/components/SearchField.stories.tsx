@@ -3,8 +3,8 @@ import { JSX, useMemo, useState } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getAutoCompletePropDescription,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import {
   SearchField,
@@ -44,7 +44,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     variant: { control: 'inline-radio', table: { category: category.props } },
@@ -53,7 +53,7 @@ const meta = {
     autoComplete: {
       control: 'text',
       table: { category: category.htmlAttribute, type: { summary: 'string' } },
-      description: getAutoCompletePropDescription(),
+      description: autoCompletePropDescription,
     },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },

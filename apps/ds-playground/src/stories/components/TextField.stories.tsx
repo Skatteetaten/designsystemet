@@ -10,8 +10,8 @@ import {
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getAutoCompletePropDescription,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
   useFormattedInput,
 } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
@@ -41,14 +41,14 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
     autoComplete: {
       control: 'text',
       table: { category: category.htmlAttribute, type: { summary: 'string' } },
-      description: getAutoCompletePropDescription(),
+      description: autoCompletePropDescription,
     },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },

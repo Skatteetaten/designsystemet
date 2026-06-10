@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-core-utils';
+import { defaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
@@ -36,7 +36,7 @@ const meta = {
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: getSpinnerLabelDefault() },
+        defaultValue: { summary: defaultSpinnerLabel },
       },
     },
     svgPath: { ...svgPathDescription },

@@ -2,7 +2,7 @@ import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
+import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 
 import {
@@ -33,7 +33,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     variant: { table: { category: category.props } },

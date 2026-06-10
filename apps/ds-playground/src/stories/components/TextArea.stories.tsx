@@ -3,8 +3,8 @@ import { useState, ChangeEvent, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getAutoCompletePropDescription,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import { TextArea } from '@skatteetaten/ds-forms';
 
@@ -34,14 +34,14 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
     autoComplete: {
       control: 'text',
       table: { category: category.htmlAttribute, type: { summary: 'string' } },
-      description: getAutoCompletePropDescription(),
+      description: autoCompletePropDescription,
     },
     autoCorrect: {
       table: { category: category.htmlAttribute, type: { summary: 'string' } },

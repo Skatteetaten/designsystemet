@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-core-utils';
+import { defaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 import {
   category,
@@ -22,7 +22,7 @@ const meta = {
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: getSpinnerLabelDefault() },
+        defaultValue: { summary: defaultSpinnerLabel },
       },
     },
     svgPath: { ...svgPathDescription },

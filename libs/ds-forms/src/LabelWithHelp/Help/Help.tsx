@@ -2,10 +2,7 @@ import { JSX, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { HelpProps } from './Help.types';
@@ -19,7 +16,7 @@ export const Help = ({
   helpSvgPath,
   hideHelp,
   targetId,
-  titleHelpSvg = getHelpTitleHelpSvgDefault(),
+  titleHelpSvg = defaultHelpButtonTitle,
   disabled,
   onHelpToggle,
   className,
