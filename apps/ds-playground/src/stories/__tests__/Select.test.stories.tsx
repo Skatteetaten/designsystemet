@@ -10,8 +10,8 @@ import {
   within,
 } from 'storybook/test';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Select } from '@skatteetaten/ds-forms';
+import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { defaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -200,9 +200,7 @@ export const Defaults = {
     await expect(selectNode).toBeInTheDocument();
     await expect(selectNode).toBeEnabled();
     await expect(selectNode).toHaveValue('');
-    await expect(selectNode).toHaveTextContent(
-      dsI18n.t('Shared:shared.ChooseValue')
-    );
+    await expect(selectNode).toHaveTextContent(defaultSelectPlaceholder);
     await expect(selectNode).toHaveAttribute('id');
     await expect(selectNode.tagName).toBe('SELECT');
     await expect(selectNode).not.toBeRequired();
@@ -510,7 +508,7 @@ export const WithHelpToggleEvent = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      name: dsI18n.t('Shared:shared.Help'),
+      name: defaultHelpButtonTitle,
     });
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());

@@ -1,10 +1,9 @@
 import { useContext, JSX } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { useMergeRefs } from '@floating-ui/react';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { PopoverTriggerProps } from './PopoverTrigger.types';
@@ -25,8 +24,7 @@ export const PopoverTrigger = ({
   onBlur,
   onFocus,
 }: PopoverTriggerProps): JSX.Element => {
-  const { t } = useTranslation('Shared', { i18n: dsI18n });
-  const titleHelpIcon = title ?? t('shared.Help');
+  const titleHelpIcon = title ?? defaultHelpButtonTitle;
 
   const { floatingData, setIsOpen, isOpen } = useContext(PopoverContext);
   const { setReference } = floatingData.refs;

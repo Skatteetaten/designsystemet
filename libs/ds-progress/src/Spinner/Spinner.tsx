@@ -1,6 +1,6 @@
 import { JSX, useEffect, useId, useState } from 'react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { defaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 import { SpinnerProps } from './Spinner.types';
 
@@ -24,7 +24,7 @@ export const Spinner = ({
   size = 'medium',
   hideTitle = false,
   percentComplete,
-  children = dsI18n.t('ds_progress:spinner.LoadingLabel'),
+  children = defaultSpinnerLabel,
 }: SpinnerProps): JSX.Element => {
   const [isRendered, setIsRendered] = useState<boolean>(false);
   const generatedId = useId();
@@ -93,7 +93,7 @@ export const Spinner = ({
           } ${classNames?.title ?? ''}`.trim()}
         >
           {isInPercentageMode &&
-            `${dsI18n.t('ds_progress:spinner.LoadingLabel')} (${percentComplete} %)`}
+            `${defaultSpinnerLabel} (${percentComplete} %)`}
           {!isInPercentageMode && isRendered && children}
         </span>
       </span>

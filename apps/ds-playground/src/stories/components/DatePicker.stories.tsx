@@ -5,11 +5,14 @@ import { isWithinInterval, format } from 'date-fns';
 import { useArgs } from 'storybook/preview-api';
 
 import {
-  dsI18n,
   autoCompletePropDescription,
   defaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
-import { DatePicker, Combobox } from '@skatteetaten/ds-forms';
+import {
+  DatePicker,
+  Combobox,
+  defaultDatePickerPlaceholder,
+} from '@skatteetaten/ds-forms';
 
 import {
   category,
@@ -54,7 +57,7 @@ const meta = {
     placeholder: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: dsI18n.t('ds_forms:datepicker.TypeOrSelect') },
+        defaultValue: { summary: defaultDatePickerPlaceholder },
       },
     },
     readOnly: { table: { category: category.htmlAttribute } },

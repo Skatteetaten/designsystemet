@@ -2,8 +2,11 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, ExternalLayout } from '@skatteetaten/ds-core-utils';
+import {
+  defaultScrollToTopButtonTitle,
+  ScrollToTopButton,
+} from '@skatteetaten/ds-buttons';
+import { ExternalLayout } from '@skatteetaten/ds-core-utils';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -21,7 +24,7 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: {
-          summary: dsI18n.t('ds_buttons:scrolltotopbutton.Title'),
+          summary: defaultScrollToTopButtonTitle,
         },
       },
     },

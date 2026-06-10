@@ -1,8 +1,9 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { defaultEditButtonText } from 'libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import { expect, fn, waitFor, within } from 'storybook/test';
 
 import { StepList } from '@skatteetaten/ds-collections';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
@@ -238,7 +239,7 @@ export const WithEditAccessibleDescription = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const endreButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_collections:steplist.Edit'),
+      name: defaultEditButtonText,
     });
     expect(endreButton).toHaveAccessibleDescription('tittel');
   },

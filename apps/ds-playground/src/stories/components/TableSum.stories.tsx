@@ -1,8 +1,9 @@
 import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { defaultTableSumText } from 'libs/ds-table/src/TableSum/TableSum';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
 
 import { category } from '../../../.storybook/helpers';
@@ -16,7 +17,7 @@ const meta = {
     sumText: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_tables:tablesum.Sum') },
+        defaultValue: { summary: defaultTableSumText },
       },
     },
     labelAlignment: { table: { category: category.props } },

@@ -24,6 +24,10 @@ import { getAriaInvalid } from '../utils';
 
 import styles from './DatePicker.module.scss';
 
+export const defaultDatePickerPlaceholder = dsI18n.t(
+  'ds_forms:datepicker.TypeOrSelect'
+);
+
 /**
  * DatePicker
  *
@@ -53,7 +57,7 @@ export const DatePicker = ({
   autoComplete = 'off',
   disabled = false,
   name,
-  placeholder = dsI18n.t('ds_forms:datepicker.TypeOrSelect'),
+  placeholder = defaultDatePickerPlaceholder,
   readOnly = false,
   required = false,
   hasSpacing = false,

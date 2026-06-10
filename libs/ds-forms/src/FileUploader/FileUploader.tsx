@@ -28,6 +28,13 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './FileUploader.module.scss';
 
+export const defaultFileIconTitle = dsI18n.t(
+  'ds_forms:fileuploader.FileIconLabel'
+);
+export const defaultInProgressLabel = dsI18n.t(
+  'ds_forms:fileuploader.InProgressLabel'
+);
+
 /**
  * FileUploader
  *
@@ -46,7 +53,7 @@ export const FileUploader = ({
   acceptedFileFormatsDisplay,
   description,
   errorMessage,
-  fileIconTitle = dsI18n.t('ds_forms:fileuploader.FileIconLabel'),
+  fileIconTitle = defaultFileIconTitle,
   helpSvgPath,
   helpText,
   label,
@@ -54,7 +61,7 @@ export const FileUploader = ({
   uploadResult,
   uploadedFiles,
   invalidCharacterRegexp,
-  spinnerLabel = dsI18n.t('ds_forms:fileuploader.InProgressLabel'),
+  spinnerLabel = defaultInProgressLabel,
   hasSpacing = false,
   hideLabel = false,
   shouldNormalizeFileName = false,

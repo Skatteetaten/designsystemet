@@ -11,19 +11,22 @@ import { StepListStepProps } from './StepListStep.types';
 
 import styles from './StepListStep.module.scss';
 
+export const defaultEditButtonText = dsI18n.t('ds_collections:steplist.Edit');
+export const defaultNextButtonText = dsI18n.t('ds_collections:steplist.Next');
+
 export const StepListStep = ({
   ref,
   id,
   className = '',
   lang,
   'data-testid': dataTestId,
-  editButtonText = dsI18n.t('ds_collections:steplist.Edit'),
+  editButtonText = defaultEditButtonText,
   classNames,
   introContent,
   introTitle,
   introTitleAs,
   nextButtonProps,
-  nextButtonText = dsI18n.t('ds_collections:steplist.Next'),
+  nextButtonText = defaultNextButtonText,
   stepNumber,
   svgPath,
   svgTitle,

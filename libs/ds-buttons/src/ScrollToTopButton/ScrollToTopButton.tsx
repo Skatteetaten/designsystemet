@@ -7,6 +7,10 @@ import { ScrollToTopButtonProps } from './ScrollToTopButton.types';
 
 import styles from './ScrollToTopButton.module.scss';
 
+export const defaultScrollToTopButtonTitle = dsI18n.t(
+  'ds_buttons:scrolltotopbutton.Title'
+);
+
 /**
  * ScrollToTopButton
  *
@@ -23,7 +27,7 @@ export const ScrollToTopButton = ({
   shadowRootNode,
   visibilityThreshold = 1,
   scrollToMain = true,
-  children = dsI18n.t('ds_buttons:scrolltotopbutton.Title'),
+  children = defaultScrollToTopButtonTitle,
 }: ScrollToTopButtonProps): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(!visibilityThreshold);
   useEffect(() => {

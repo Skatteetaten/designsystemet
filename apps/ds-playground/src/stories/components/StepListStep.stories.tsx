@@ -1,7 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import {
+  defaultEditButtonText,
+  defaultNextButtonText,
+} from 'libs/ds-collections/src/StepList/StepListStep/StepListStep';
 
 import { StepList } from '@skatteetaten/ds-collections';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import {
   category,
@@ -18,14 +22,14 @@ const meta = {
     editButtonText: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_collections:steplist.Edit') },
+        defaultValue: { summary: defaultEditButtonText },
       },
     },
     nextButtonProps: { control: false, table: { category: category.props } },
     nextButtonText: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_collections:steplist.Next') },
+        defaultValue: { summary: defaultNextButtonText },
       },
     },
     introTitle: { table: { category: category.props } },

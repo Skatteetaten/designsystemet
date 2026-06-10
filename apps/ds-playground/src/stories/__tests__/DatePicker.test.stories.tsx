@@ -10,8 +10,11 @@ import {
   within,
 } from 'storybook/test';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { DatePicker } from '@skatteetaten/ds-forms';
+import { defaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  DatePicker,
+  defaultDatePickerPlaceholder,
+} from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
@@ -200,7 +203,7 @@ export const Defaults = {
     await expect(input).toHaveAttribute('id');
     await expect(input).toHaveAttribute(
       'placeholder',
-      dsI18n.t('ds_forms:datepicker.TypeOrSelect')
+      defaultDatePickerPlaceholder
     );
     await expect(input.tagName).toBe('INPUT');
     await expect(input).not.toBeRequired();
@@ -295,7 +298,7 @@ export const WithDisabled = {
     await expect(textbox).toBeDisabled();
     await expect(calendarButton).toBeDisabled();
     const helpButton = canvas.getByRole('button', {
-      name: dsI18n.t('Shared:shared.Help'),
+      name: defaultHelpButtonTitle,
     });
     await expect(helpButton).toBeDisabled();
   },
@@ -863,7 +866,7 @@ export const WithHelpToggleEvent = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      name: dsI18n.t('Shared:shared.Help'),
+      name: defaultHelpButtonTitle,
     });
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());

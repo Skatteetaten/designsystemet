@@ -18,6 +18,8 @@ import { SelectOption } from './SelectOption/SelectOption';
 
 import styles from './Select.module.scss';
 
+export const defaultSelectPlaceholder = dsI18n.t('Shared:shared.ChooseValue');
+
 /**
  * Select
  *
@@ -37,7 +39,7 @@ export const Select = ({
   helpSvgPath,
   helpText,
   label,
-  placeholder = dsI18n.t('Shared:shared.ChooseValue'),
+  placeholder = defaultSelectPlaceholder,
   titleHelpSvg,
   value,
   ariaDescribedBy,

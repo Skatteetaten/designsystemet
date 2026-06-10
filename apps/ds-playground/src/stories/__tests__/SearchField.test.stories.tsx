@@ -18,7 +18,11 @@ import {
   fn,
 } from 'storybook/test';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  defaultHelpButtonTitle,
+  defaultSpinnerLabel,
+  dsI18n,
+} from '@skatteetaten/ds-core-utils';
 import { SearchField, searchInList } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
@@ -366,7 +370,7 @@ export const WithDisabled = {
     await expect(textbox).toBeDisabled();
     await expect(searchButton).toBeDisabled();
     const helpButton = canvas.getByRole('button', {
-      name: dsI18n.t('Shared:shared.Help'),
+      name: defaultHelpButtonTitle,
     });
     await expect(helpButton).toBeDisabled();
   },
@@ -670,7 +674,7 @@ export const WithHelpToggleEvent = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      name: dsI18n.t('Shared:shared.Help'),
+      name: defaultHelpButtonTitle,
     });
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
@@ -808,9 +812,7 @@ export const WithLoading = {
 
     await userEvent.click(searchbox);
 
-    const spinner = await canvas.findByText(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
+    const spinner = await canvas.findByText(defaultSpinnerLabel);
     await expect(spinner).toBeInTheDocument();
     await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
   },
@@ -862,9 +864,7 @@ export const WithSpinnerProps = {
 
     await userEvent.click(searchbox);
 
-    const spinner = await canvas.findByText(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
+    const spinner = await canvas.findByText(defaultSpinnerLabel);
     await expect(spinner.parentElement).toHaveAttribute('data-size', 'small');
     await expect(spinner.parentElement).toHaveAttribute('data-color', 'black');
   },
