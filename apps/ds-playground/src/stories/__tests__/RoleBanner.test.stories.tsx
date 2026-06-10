@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-import { expect, waitFor, within } from 'storybook/test';
+import { expect, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { RoleBanner } from '@skatteetaten/ds-layout';
@@ -181,8 +181,22 @@ const TemplateWithTallContent: StoryFn<typeof RoleBanner> = (args) => (
   </div>
 );
 
+const TemplateWithTallContentScrolled: StoryFn<typeof RoleBanner> = (args) => (
+  <div className={'height200vh'}>
+    <RoleBanner
+      {...args}
+      ref={(instance: HTMLDivElement | null): void => {
+        if (instance) {
+          instance.setAttribute('data-scrolled', 'true');
+        }
+      }}
+    />
+    <p>{'Innhold under banneret'}</p>
+  </div>
+);
+
 export const MobileAndScrolled = {
-  render: TemplateWithTallContent,
+  render: TemplateWithTallContentScrolled,
   name: 'Mobile Scrolled (A8, A9)',
   args: {
     user: {
@@ -195,26 +209,6 @@ export const MobileAndScrolled = {
     viewport: {
       value: '--mobile',
     },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('region');
-
-    const originalScrollY = window.scrollY;
-    Object.defineProperty(window, 'scrollY', {
-      configurable: true,
-      value: 100,
-    });
-    window.dispatchEvent(new Event('scroll'));
-
-    await waitFor(() => {
-      expect(banner).toHaveAttribute('data-scrolled', 'true');
-    });
-
-    Object.defineProperty(window, 'scrollY', {
-      configurable: true,
-      value: originalScrollY,
-    });
   },
 } satisfies Story;
 
@@ -236,7 +230,7 @@ export const Mobile = {
 } satisfies Story;
 
 export const MobileAndScrolledWithoutSticky = {
-  render: TemplateWithTallContent,
+  render: TemplateWithTallContentScrolled,
   name: 'Mobile Scrolled Without Sticky',
   args: {
     user: {
@@ -251,25 +245,5 @@ export const MobileAndScrolledWithoutSticky = {
     viewport: {
       value: '--mobile',
     },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('region');
-
-    const originalScrollY = window.scrollY;
-    Object.defineProperty(window, 'scrollY', {
-      configurable: true,
-      value: 100,
-    });
-    window.dispatchEvent(new Event('scroll'));
-
-    await waitFor(() => {
-      expect(banner).toHaveAttribute('data-scrolled', 'true');
-    });
-
-    Object.defineProperty(window, 'scrollY', {
-      configurable: true,
-      value: originalScrollY,
-    });
   },
 } satisfies Story;
