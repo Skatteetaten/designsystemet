@@ -36,7 +36,7 @@ export const Footer = ({
   titleThirdColumn,
   hideLogo = false,
   hideDefaultLinks = false,
-  openDefaultLinksInNewTab = true,
+  openDefaultLinksInNewTab = false,
   children,
 }: FooterProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });

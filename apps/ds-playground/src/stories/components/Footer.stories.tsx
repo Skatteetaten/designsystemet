@@ -84,7 +84,6 @@ export const Examples: Story = {
             </LinkGroup>
           </>
         }
-        openDefaultLinksInNewTab={false}
       >
         <Footer.LinkFirstColumn href={'#'}>
           {'Jobb i Skatteetaten'}
