@@ -10,7 +10,7 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { TableHeaderCellProps } from './TableHeaderCell.types';
-import { defaultTableSize } from '../Table/Table';
+import { defaultTableSize } from '../Table/defaults';
 import { sortDirection } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
 

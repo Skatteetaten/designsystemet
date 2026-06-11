@@ -1,7 +1,7 @@
 import { useContext, JSX } from 'react';
 
 import { TableDataCellProps } from './TableDataCell.types';
-import { defaultTableSize } from '../Table/Table';
+import { defaultTableSize } from '../Table/defaults';
 import { TableContext } from '../Table/TableContext';
 
 import styles from './TableDataCell.module.scss';

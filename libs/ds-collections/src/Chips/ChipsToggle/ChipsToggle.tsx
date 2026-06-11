@@ -7,7 +7,7 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { ChipsToggleProps } from './ChipsToggle.types';
-import { defaultChipsSize } from '../Chips';
+import { defaultChipsSize } from '../defaults';
 
 import styles from './ChipsToggle.module.scss';
 

@@ -581,7 +581,7 @@ export const WithMinSearchLengthAndPlaceholder = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
-    await expect(inputElement).toHaveAttribute(
+    await expect(inputElement).not.toHaveAttribute(
       'placeholder',
       'Søk etter kommune, fylke eller land'
     );

@@ -1,17 +1,17 @@
 import { useId, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  defaultEditButtonText,
-  defaultNextButtonText,
-} from 'libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import { expect, userEvent, within } from 'storybook/test';
 
 import { StepList, StepListProps } from '@skatteetaten/ds-collections';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import {
+  defaultEditButtonText,
+  defaultNextButtonText,
+} from '../../../../../libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import { category } from '../../../.storybook/helpers';
 
 const meta = {

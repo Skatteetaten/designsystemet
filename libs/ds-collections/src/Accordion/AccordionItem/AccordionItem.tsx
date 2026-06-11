@@ -3,9 +3,9 @@ import { MouseEvent, useContext, useState, JSX } from 'react';
 import { Size } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
-import { defaultAccordionSize } from '../Accordion';
 import { AccordionContext } from '../AccordionContext';
 import { AccordionItemProps } from './AccordionItem.types';
+import { defaultAccordionSize } from './defaults';
 
 import styles from './AccordionItem.module.scss';
 

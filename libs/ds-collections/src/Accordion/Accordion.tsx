@@ -3,10 +3,9 @@ import { JSX } from 'react';
 import { AccordionComponent, AccordionProps } from './Accordion.types';
 import { AccordionContext } from './AccordionContext';
 import { AccordionItem } from './AccordionItem/AccordionItem';
+import { defaultAccordionSize } from './AccordionItem/defaults';
 
 import styles from './Accordion.module.scss';
-
-export const defaultAccordionSize = 'medium';
 
 /**
  * Accordion

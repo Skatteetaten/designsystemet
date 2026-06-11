@@ -1,6 +1,7 @@
 import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
+
 import { Table } from '@skatteetaten/ds-table';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries

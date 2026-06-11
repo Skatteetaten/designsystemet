@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
+import { defaultTableSize } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
 import { TableContext } from './TableContext';
 import { TableBody } from '../TableBody/TableBody';
@@ -15,8 +16,6 @@ import { TableSum } from '../TableSum/TableSum';
 import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
-
-export const defaultTableSize = 'large';
 
 /**
  * Table

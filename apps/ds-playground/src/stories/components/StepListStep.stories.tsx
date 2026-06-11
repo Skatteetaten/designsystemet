@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
+
+import { StepList } from '@skatteetaten/ds-collections';
+
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   defaultEditButtonText,
   defaultNextButtonText,
-} from 'libs/ds-collections/src/StepList/StepListStep/StepListStep';
-
-import { StepList } from '@skatteetaten/ds-collections';
-
+} from '../../../../../libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import {
   category,
   htmlEventDescription,

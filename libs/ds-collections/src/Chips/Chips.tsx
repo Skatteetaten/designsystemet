@@ -10,8 +10,6 @@ import { ChipsToggle } from './ChipsToggle/ChipsToggle';
 
 import styles from './Chips.module.scss';
 
-export const defaultChipsSize = 'medium';
-
 /**
  * Chips
  *
