@@ -76,6 +76,14 @@
         }
       ]
     },
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "cwd": "apps/ds-docs",
+        "reportsDirectory": "{projectRoot}/../../coverage/apps/ds-docs"
+      }
+    },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "dependsOn": ["build"],

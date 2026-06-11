@@ -1,8 +1,19 @@
 import { remarkCodeTab, remarkNpm } from 'fumadocs-core/mdx-plugins';
-import { defineConfig, defineDocs } from 'fumadocs-mdx/config';
+import {
+  defineCollections,
+  defineConfig,
+  defineDocs,
+} from 'fumadocs-mdx/config';
+
+import { remarkWordInfo } from './lib/remark-word-info';
 
 export const docs = defineDocs({
   dir: 'content/docs',
+});
+
+export const wordInfo = defineCollections({
+  type: 'doc',
+  dir: 'content/wordinfo',
 });
 
 export default defineConfig({
@@ -13,10 +24,6 @@ export default defineConfig({
         light: 'github-light',
       },
     },
-    remarkPlugins: [
-      // Add any remark plugins you want to use here
-      remarkCodeTab,
-      remarkNpm,
-    ],
+    remarkPlugins: [remarkCodeTab, remarkNpm, remarkWordInfo],
   },
 });
