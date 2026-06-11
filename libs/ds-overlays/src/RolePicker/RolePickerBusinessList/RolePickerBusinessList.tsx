@@ -27,7 +27,7 @@ export const RolePickerBusinessList = ({
   filterQuery,
   showInactiveBusinesses: externalShowInactiveBusinesses,
   showSubunits: externalShowSubUnits,
-}: RolePickerBusinessListProps): JSX.Element | null => {
+}: RolePickerBusinessListProps): JSX.Element => {
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
   const ctx = useContext(RolePickerContext);
   const [isExpanded, setIsExpanded] = useState(false);

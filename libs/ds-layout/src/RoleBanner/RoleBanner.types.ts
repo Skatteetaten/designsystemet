@@ -14,8 +14,10 @@ export interface RoleBannerProps extends BaseProps {
     role: 'meg' | 'andre' | 'virksomhet';
   };
   /**
-   * Skal banneret være sticky? Overstyrer standard oppførsel hvor banneret er
-   * sticky for 'andre' og 'virksomhet', og ikke sticky for 'meg'.
+   * Om banneret skal være sticky. Overstyrer standard oppførsel hvor banneret
+   * er sticky for 'andre' og 'virksomhet', og ikke sticky for 'meg'.
+   *
+   * @default undefined
    */
   isSticky?: boolean;
 }

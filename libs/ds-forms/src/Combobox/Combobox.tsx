@@ -30,11 +30,6 @@ import { getAriaInvalid } from '../utils';
 
 import styles from './Combobox.module.scss';
 
-const getComboboxPlaceholderDefault = (
-  minSearchLength: number
-): string | undefined =>
-  minSearchLength > 0 ? undefined : dsI18n.t('ds_forms:combobox.TypeOrSelect');
-
 /**
  * Combobox
  *
@@ -60,7 +55,7 @@ const ComboboxContent = ({
   minSearchLength = 0,
   multiple = false,
   options,
-  placeholder = getComboboxPlaceholderDefault(minSearchLength),
+  placeholder,
   spinnerProps,
   titleHelpSvg,
   value,
@@ -79,7 +74,6 @@ const ComboboxContent = ({
   maxSelected,
 }: Readonly<ComboboxProps>): JSX.Element => {
   const { safeFocus } = useBrowserCompatibility();
-
   const resolvedVariant = multiple ? 'large' : variant;
   const allOptionsInOrder = getOptionsInGroupOrder(options);
 
@@ -133,6 +127,14 @@ const ComboboxContent = ({
     moveFocusPrevious,
     getFocusedElementId,
   } = coreState;
+
+  const getComboboxPlaceholderDefault = (): string | undefined => {
+    if (minSearchLength > 0 || (multiple && selectedValues.length > 0)) {
+      return undefined;
+    }
+
+    return placeholder ?? dsI18n.t('ds_forms:combobox.TypeOrSelect');
+  };
 
   // Expose the input element to parent component via ref prop
   useImperativeHandle(ref, () => inputRef.current as HTMLInputElement, [
@@ -282,9 +284,7 @@ const ComboboxContent = ({
             accessKey={accessKey}
             form={form}
             name={multiple ? undefined : name}
-            placeholder={
-              multiple && selectedValues.length > 0 ? undefined : placeholder
-            }
+            placeholder={getComboboxPlaceholderDefault()}
             disabled={disabled}
             required={required}
             role={'combobox'}

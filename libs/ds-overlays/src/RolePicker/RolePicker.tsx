@@ -83,7 +83,7 @@ export const RolePicker = ({
     handleClose();
   };
 
-  const getRepresentationText = (): JSX.Element | null => {
+  const getRepresentationText = (): JSX.Element => {
     if (people && people.total > 0 && businesses && businesses.total > 0) {
       return (
         <Paragraph>
@@ -108,7 +108,7 @@ export const RolePicker = ({
         </Paragraph>
       );
     } else {
-      return null;
+      return <></>;
     }
   };
 

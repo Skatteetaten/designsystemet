@@ -83,6 +83,13 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   hideLabel?: boolean;
   /** Viser loading state med spinner */
   isLoading?: boolean;
+  /**
+   * Placeholder vises ikke når minSearchLength er satt eller når minst et
+   * alternativ er valgt i multi-select modus.
+   *
+   * @default Skriv eller velg
+   */
+  placeholder?: string;
   /** Kalles når hjelpeteksten vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }

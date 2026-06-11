@@ -72,12 +72,7 @@ const meta = {
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
-    placeholder: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: dsI18n.t('ds_forms:combobox.TypeOrSelect') },
-      },
-    },
+    placeholder: { table: { category: category.htmlAttribute } },
     required: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },

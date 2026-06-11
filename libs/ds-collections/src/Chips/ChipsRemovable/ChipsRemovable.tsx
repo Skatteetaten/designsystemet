@@ -5,6 +5,7 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { ChipsRemovableProps } from './ChipsRemovable.types';
+import { defaultChipsSize } from '../Chips';
 import { ChipsContext } from '../ChipsContext';
 
 import styles from './ChipsRemovable.module.scss';
@@ -15,7 +16,7 @@ export const ChipsRemovable = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  size = 'medium',
+  size = defaultChipsSize,
   disabled = false,
   onClose,
   children,

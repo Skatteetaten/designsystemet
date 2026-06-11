@@ -1,6 +1,7 @@
 import { useContext, JSX } from 'react';
 
 import { TableDataCellProps } from './TableDataCell.types';
+import { defaultTableSize } from '../Table/Table';
 import { TableContext } from '../Table/TableContext';
 
 import styles from './TableDataCell.module.scss';
@@ -19,7 +20,7 @@ export const TableDataCell = ({
   children,
 }: TableDataCellProps): JSX.Element => {
   const context = useContext(TableContext);
-  const size = context?.size ?? 'large';
+  const size = context?.size ?? defaultTableSize;
   const sizeClassName = styles[`dataCell_${size}`];
   const alignmentClassName = styles[`dataCell_${alignment}`];
 

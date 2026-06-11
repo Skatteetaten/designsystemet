@@ -3,6 +3,7 @@ import { ComponentPropsWithoutRef, ReactElement, ReactNode, Ref } from 'react';
 import { BaseProps, Brightness, Status } from '@skatteetaten/ds-core-utils';
 
 interface AlertHTMLAttributes {
+  /** @default 'polite' */
   ariaLive?: ComponentPropsWithoutRef<'div'>['aria-live'];
 }
 

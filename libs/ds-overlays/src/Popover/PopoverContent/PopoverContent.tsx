@@ -21,7 +21,7 @@ export const PopoverContent = ({
   'data-testid': dataTestId,
   as: Tag = 'div',
   children,
-}: PopoverContentProps): JSX.Element | null => {
+}: PopoverContentProps): JSX.Element => {
   const {
     floatingData,
     interactions,
@@ -51,7 +51,7 @@ export const PopoverContent = ({
   }[side];
 
   if (!isOpen) {
-    return null;
+    return <></>;
   }
 
   return (

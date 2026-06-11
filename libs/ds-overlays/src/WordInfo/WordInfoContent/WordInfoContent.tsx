@@ -12,7 +12,7 @@ export const WordInfoContent = ({
   lang,
   'data-testid': dataTestId,
   children,
-}: WordInfoContentProps): JSX.Element | null => {
+}: WordInfoContentProps): JSX.Element => {
   return (
     <PopoverContent
       ref={ref}

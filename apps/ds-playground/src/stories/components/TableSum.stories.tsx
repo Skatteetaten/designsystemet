@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { defaultTableSumText } from 'libs/ds-table/src/TableSum/TableSum';
+import { defaultTableSumText } from '../../../../../libs/ds-table/src/TableSum/TableSum';
 
 import { Table } from '@skatteetaten/ds-table';
 

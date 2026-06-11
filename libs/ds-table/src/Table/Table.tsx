@@ -16,6 +16,8 @@ import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
 
+export const defaultTableSize = 'large';
+
 /**
  * Table
  *
@@ -30,7 +32,7 @@ export const Table = ({
   'data-testid': dataTestId,
   caption,
   rowInEditModeId: externalRowInEditModeId,
-  size = 'large',
+  size = defaultTableSize,
   sortState,
   canBeManuallyFocused = false,
   hasFullWidth = false,

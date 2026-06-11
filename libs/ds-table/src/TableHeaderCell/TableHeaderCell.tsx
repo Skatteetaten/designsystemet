@@ -10,6 +10,7 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { TableHeaderCellProps } from './TableHeaderCell.types';
+import { defaultTableSize } from '../Table/Table';
 import { sortDirection } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
 
@@ -33,7 +34,7 @@ export const TableHeaderCell = ({
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const context = useContext(TableContext);
 
-  const size = context?.size ?? 'large';
+  const size = context?.size ?? defaultTableSize;
   const alignmentClassName = styles[`headerCell_${alignment}`];
 
   const sizeClassName = styles[`headerCell_${size}`];

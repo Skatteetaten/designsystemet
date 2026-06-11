@@ -19,7 +19,11 @@ const meta = {
     svgPath: { ...svgPathDescription },
     variant: { table: { category: category.props } },
     // Aria
-    ariaLive: { table: { category: category.aria } },
+    ariaLive: {
+      table: { category: category.aria },
+      description:
+        'Default verdi er "polite" for alle varianter unntatt "danger" som bruker "assertive". Bruk "off" hvis varselet ligger på siden når siden lastes. Les mer om aria-live på <a href="https://www.skatteetaten.no/en/stilogtone/designsystemet/komponenter/alert#statiske-og-dynamiske-varsler" target="_blank" rel="noopener noreferrer">stil og tone</a>.',
+    },
     // Events
     onClose: { ...htmlEventDescription },
   },

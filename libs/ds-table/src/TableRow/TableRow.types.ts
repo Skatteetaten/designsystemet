@@ -11,7 +11,13 @@ type ExpandButtonPosition = Extract<Position, 'left' | 'right'>;
 
 export interface TableRowProps extends BaseProps {
   ref?: Ref<HTMLTableRowElement>;
-  /** Overstyring av standard title/tekst for expandButton */
+  /**
+   * Overstyring av standard title/tekst for expandButton. Default tittel til
+   * utvid-knappen er 'Mer informasjon'. Default tekst, som er synlig når
+   * showExpandButtonTitle er satt til true, er 'Detaljer'.
+   *
+   * @default Mer informasjon / Detaljer
+   */
   expandButtonTitle?: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   expandButtonPosition?: ExpandButtonPosition;
