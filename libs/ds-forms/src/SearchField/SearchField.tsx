@@ -282,9 +282,9 @@ export const SearchField = ({
       ? t('searchfield.NumberOfResults', { ant: resultCount })
       : t('combobox.NoResults', { searchTerm: currentValue });
 
-  const renderResultsContent = (): JSX.Element => {
+  const renderResultsContent = (): JSX.Element | null => {
     if (!isResultsOpen) {
-      return <></>;
+      return null;
     }
 
     if (isLoading) {

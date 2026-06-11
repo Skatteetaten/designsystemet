@@ -14,7 +14,7 @@ export const TabsPanel = ({
   value,
   keepMounted = true,
   children,
-}: TabsPanelProps): JSX.Element => {
+}: TabsPanelProps): JSX.Element | null => {
   const { activeTab, baseId } = useContext(TabsContext);
   const isActive = activeTab === value;
 
@@ -23,7 +23,7 @@ export const TabsPanel = ({
   }
 
   if (!keepMounted && !isActive) {
-    return <></>;
+    return null;
   }
 
   return (

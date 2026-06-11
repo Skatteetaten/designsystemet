@@ -14,7 +14,7 @@ export const ComboboxSelectedOptions = memo<ComboboxSelectedOptionsProps>(
     onRemoveValue,
     labelId,
     disabled,
-  }: ComboboxSelectedOptionsProps): JSX.Element => {
+  }: ComboboxSelectedOptionsProps): JSX.Element | null => {
     const setChipsRef = (element: HTMLUListElement | null): void => {
       if (element && labelId) {
         element.setAttribute('aria-labelledby', labelId);
@@ -22,7 +22,7 @@ export const ComboboxSelectedOptions = memo<ComboboxSelectedOptionsProps>(
     };
 
     if (!multiple || selectedValues.length === 0) {
-      return <></>;
+      return null;
     }
 
     return (

@@ -60,7 +60,7 @@ export const Pagination = ({
   hidePageSummary = false,
   ariaLabel,
   onChange,
-}: PaginationProps): JSX.Element => {
+}: PaginationProps): JSX.Element | null => {
   const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
   const lastPageRef = useRef<HTMLButtonElement>(null);
   const firstPageRef = useRef<HTMLButtonElement>(null);
@@ -70,7 +70,7 @@ export const Pagination = ({
   const currentPage = externalCurrentPage ?? internalPage;
 
   if (!validPropRanges({ totalItems, currentPage, pageSize })) {
-    return <></>;
+    return null;
   }
   const handleChange = (page: number): void => {
     setInternalPage(page);

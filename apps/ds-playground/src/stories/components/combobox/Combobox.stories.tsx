@@ -5,7 +5,6 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
   defaultHelpButtonTitle,
   defaultSpinnerLabel,
-  dsI18n,
 } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';

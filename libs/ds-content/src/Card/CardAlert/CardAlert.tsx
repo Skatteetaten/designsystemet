@@ -43,7 +43,7 @@ export const CardAlert = ({
   showAlert: showAlertExternal = true,
   onClose,
   children,
-}: CardAlertProps): JSX.Element => {
+}: CardAlertProps): JSX.Element | null => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
   const [showAlertInternal, setShowAlertInternal] =
     useState<boolean>(showAlertExternal);
@@ -53,7 +53,7 @@ export const CardAlert = ({
   const resolvedSvgPath = svgPath ?? getCardAlertDefaultSvgPath(variant);
 
   if (!showAlertInternal) {
-    return <></>;
+    return null;
   }
 
   return (

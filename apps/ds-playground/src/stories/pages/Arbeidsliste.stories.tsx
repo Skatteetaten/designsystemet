@@ -76,7 +76,7 @@ const dataTilgjengeligeOppgaver = Array.from({ length: 10 }, (_, i) => {
   const fristPassertOptions = ['Ja', 'Nei'];
   const fristPassert =
     fristPassertOptions[Math.floor(Math.random() * fristPassertOptions.length)];
-  const getTag = (): JSX.Element => {
+  const getTag = (): JSX.Element | null => {
     if (fristPassert === 'Ja')
       return (
         <Tag svgPath={BellSVGpath} color={'burgundy'}>
@@ -87,9 +87,7 @@ const dataTilgjengeligeOppgaver = Array.from({ length: 10 }, (_, i) => {
       <Tag svgPath={PauseOutlineSVGpath} color={'graphite'}>
         {'Pauset'}
       </Tag>
-    ) : (
-      <></>
-    );
+    ) : null;
   };
   return {
     tag: getTag(),

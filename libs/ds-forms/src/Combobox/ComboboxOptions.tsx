@@ -32,7 +32,7 @@ export const ComboboxOptions = memo<ComboboxOptionsProps>(
     maxSelected,
     spinnerLabel,
     onMinSearchLengthDelayChange,
-  }: ComboboxOptionsProps): JSX.Element => {
+  }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     const [showMinSearchLengthText, setShowMinSearchLengthText] =
       useState(false);
@@ -69,7 +69,7 @@ export const ComboboxOptions = memo<ComboboxOptionsProps>(
     ]);
 
     if (!isOpen) {
-      return <></>;
+      return null;
     }
 
     if (isLoading) {
@@ -164,6 +164,6 @@ export const ComboboxOptions = memo<ComboboxOptionsProps>(
       );
     }
 
-    return <></>;
+    return null;
   }
 );
