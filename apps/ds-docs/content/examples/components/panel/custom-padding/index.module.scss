@@ -1,0 +1,13 @@
+.semanticArticle {
+  width: var(--semantic-responsive-article);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.bottomSpacing {
+  margin-bottom: var(--spacing-l);
+}
+
+.dummyPanelPaddingNoMargin > * {
+  max-width: 100%;
+}

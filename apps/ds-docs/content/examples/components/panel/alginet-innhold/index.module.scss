@@ -1,0 +1,11 @@
+.articleContainer {
+  width: var(--semantic-responsive-article);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.wideContentContainer {
+  width: var(--semantic-responsive-wide-content);
+  max-width: 100%;
+  margin: 0 auto;
+}

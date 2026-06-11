@@ -1,0 +1,14 @@
+import { Button } from '@skatteetaten/ds-buttons';
+
+import styles from './index.module.scss';
+
+export default function ButtonVariantsStateExample(): JSX.Element {
+  return (
+    <div className={styles.buttonRow}>
+      <Button variant={'primary'}>{'Send inn'}</Button>
+      <Button variant={'secondary'}>{'Avbryt'}</Button>
+      <Button variant={'tertiary'}>{'Se detaljer'}</Button>
+      <Button variant={'danger'}>{'Slett'}</Button>
+    </div>
+  );
+}
