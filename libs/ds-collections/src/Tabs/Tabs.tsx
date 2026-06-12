@@ -1,38 +1,44 @@
 import { useState, useId, JSX, useMemo, useEffect } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
-import { getTabsVariantDefault } from './defaults';
 import { TabsProps, TabsComponent } from './Tabs.types';
 import { TabsContext } from './TabsContext';
 import { TabsList } from './TabsList/TabsList';
 import { TabsPanel } from './TabsPanel/TabsPanel';
 import { TabsTab } from './TabsTab/TabsTab';
 
-export const Tabs = (({
+/**
+ * Tabs
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-tabs--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tabs/) - Brukerveiledning
+ */
+export const Tabs = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   defaultValue,
-  hasBorder,
-  isMultiline,
+  hasBorder = false,
+  isMultiline = false,
   value,
-  variant = getTabsVariantDefault(),
+  variant = 'standard',
   onChange,
   children,
 }: TabsProps): JSX.Element => {
+  const baseId = useId();
   const [activeTab, setActiveTab] = useState(value ?? defaultValue);
+  const [index, setIndex] = useState<number>(0);
+
   useEffect(() => {
     if (!value) return;
     setActiveTab(value);
   }, [value]);
-  const [index, setIndex] = useState<number>(0);
+
   if (activeTab === undefined) {
     throw new Error(`prop 'defaultValue' eller 'value' må ha en satt verdi`);
   }
-  const baseId = useId();
+
   const contextValue = useMemo(
     () => ({
       activeTab,
@@ -49,6 +55,7 @@ export const Tabs = (({
     }),
     [activeTab, id, baseId, hasBorder, variant, isMultiline, index, onChange]
   );
+
   return (
     <div
       ref={ref}
@@ -62,7 +69,9 @@ export const Tabs = (({
       </TabsContext.Provider>
     </div>
   );
-}) as TabsComponent;
+};
+
+export default Tabs as TabsComponent;
 
 Tabs.displayName = 'Tabs';
 Tabs.List = TabsList;

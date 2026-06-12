@@ -50,7 +50,10 @@ export const createMockProps = (
     enabledIndices: [0, 1, 2], // All options enabled by default
     focusedIndex: -1,
     setFocusedIndex: vi.fn(),
+    moveFocusNext: vi.fn(),
+    moveFocusPrevious: vi.fn(),
     openDropdown: vi.fn(),
+    openDropdownWithoutFocus: vi.fn(),
     closeDropdown: vi.fn(),
     setSearchTerm: vi.fn(),
     inputRef: overrides.inputRef ?? { current: mockInput },

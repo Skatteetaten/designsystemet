@@ -15,7 +15,7 @@ export interface AccordionItemProps extends BaseProps {
   /** Undertittel */
   subtitle?: string;
   /** Rendrer knappen som heading på gitt nivå */
-  titleAs?: HeadingAs;
+  titleAs?: HeadingAs | 'div';
   /** Er skuffen åpen når siden lastes? (Ukontrollert tilstand) */
   isDefaultExpanded?: boolean;
   /** Er skuffen åpen? (Kontrollert tilstand) */

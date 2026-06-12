@@ -1,8 +1,9 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
 import { ErrorSummaryError } from './ErrorSummaryError/ErrorSummaryError';
+import { ErrorSummaryGroup } from './ErrorSummaryGroup/ErrorSummaryGroup';
 
 export interface ErrorSummaryProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
@@ -25,8 +26,10 @@ export interface ErrorSummaryProps extends BaseProps {
   titleAs?: HeadingAs;
 }
 
-export interface ErrorSummaryComponent extends React.FC<ErrorSummaryProps> {
+export interface ErrorSummaryComponent
+  extends FunctionComponent<ErrorSummaryProps> {
   Error: typeof ErrorSummaryError;
+  Group: typeof ErrorSummaryGroup;
 }
 
 export interface ErrorSummaryContextProps {

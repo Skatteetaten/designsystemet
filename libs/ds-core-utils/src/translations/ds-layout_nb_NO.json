@@ -1,4 +1,8 @@
 {
+  "rolebanner.AriaLabel": "Representasjon",
+  "rolebanner.Business": "virksomhet",
+  "rolebanner.Person": "person",
+  "rolebanner.Represents": "Du representerer",
   "topbanner.InkLogoImageText": "Statens innkreving logo",
   "topbanner.InkLogoLinkText": "Forside Statens innkreving",
   "topbanner.LsoLogoImageText": "Lønnsstøtte",

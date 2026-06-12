@@ -1,6 +1,7 @@
 import {
   ChangeEvent,
   DragEvent,
+  JSX,
   useEffect,
   useId,
   useRef,
@@ -8,18 +9,18 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { AttachFileIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { getFileUploaderGetSpinnerLabelDefault } from './defaults';
 import {
   FileUploaderComponent,
   FileUploaderProps,
   UploadedFile,
 } from './FileUploader.types';
 import { useFileUploader } from './useFileUploader';
+import { useFileUploaderAccessibilityAnnouncer } from './useFileUploaderAccessibilityAnnouncer';
 import { getFiles, isChangeEvent, normalize } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { FileUploaderFile } from './FileUploaderFile/FileUploaderFile';
@@ -27,10 +28,23 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './FileUploader.module.scss';
 
-export const FileUploader = (({
+export const defaultFileIconTitle = dsI18n.t(
+  'ds_forms:fileuploader.FileIconLabel'
+);
+export const defaultInProgressLabel = dsI18n.t(
+  'ds_forms:fileuploader.InProgressLabel'
+);
+
+/**
+ * FileUploader
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fileuploader--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fileuploader/) - Brukerveiledning
+ */
+export const FileUploader = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -39,7 +53,7 @@ export const FileUploader = (({
   acceptedFileFormatsDisplay,
   description,
   errorMessage,
-  fileIconTitle,
+  fileIconTitle = defaultFileIconTitle,
   helpSvgPath,
   helpText,
   label,
@@ -47,24 +61,23 @@ export const FileUploader = (({
   uploadResult,
   uploadedFiles,
   invalidCharacterRegexp,
-  spinnerLabel = getFileUploaderGetSpinnerLabelDefault(),
-  hasSpacing,
-  hideLabel,
-  showRequiredMark,
-  shouldNormalizeFileName,
-  multiple,
-  isUploading,
-  isRequired,
+  spinnerLabel = defaultInProgressLabel,
+  hasSpacing = false,
+  hideLabel = false,
+  shouldNormalizeFileName = false,
+  multiple = false,
+  isUploading = false,
+  isRequired = false,
   onFileChange,
   onFileDelete,
   onFileDownload,
   onHelpToggle,
   children: buttonTextExternal,
-}: FileUploaderProps) => {
+}: FileUploaderProps): JSX.Element => {
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const inputRef = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const [srOnlyText, setSrOnlyText] = useState<string>();
+  const deleteButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const generatedId = useId();
   const [filesPendingDelete, setFilesPendingDelete] = useState<
@@ -73,6 +86,15 @@ export const FileUploader = (({
 
   const [newFiles, setNewFiles] = useState<UploadedFile[]>([]);
   const prevFilesRef = useRef<UploadedFile[] | undefined>(undefined);
+  const {
+    announceDeleteResult,
+    screenReaderAnnouncement,
+    screenReaderAriaLive,
+  } = useFileUploaderAccessibilityAnnouncer({
+    uploadResult,
+    uploadedFiles,
+    isUploading,
+  });
 
   useEffect(() => {
     if (uploadedFiles) {
@@ -94,6 +116,8 @@ export const FileUploader = (({
   }, [uploadedFiles]);
 
   const id = externalId ?? generatedId;
+  const labelId = `${id}-label`;
+  const buttonTextId = `${id}-button-text`;
 
   const descriptionId = `descId-${useId()}`;
   const errorId = `${useId()}-fileuploader-error`;
@@ -116,6 +140,8 @@ export const FileUploader = (({
     if (isUploading) {
       return;
     }
+    //NOTE: med Mac og VoiceOVer havner focus riktig på knappen automatisk, men for windows med jaws/NVDA er det nødvendig å bruke .focus()
+    buttonRef.current?.focus();
 
     const files = getFiles(event);
     if (shouldNormalizeFileName) {
@@ -153,8 +179,6 @@ export const FileUploader = (({
     event.preventDefault();
     event.stopPropagation();
   };
-
-  const deleteButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const UpdateFocusAfterDelete = (
     uploadedFiles: UploadedFile[] | undefined,
@@ -201,22 +225,16 @@ export const FileUploader = (({
 
     if (deleted) {
       UpdateFocusAfterDelete(uploadedFiles, index);
-      setSrOnlyText(t('fileuploader.DeleteConfirmation'));
+      announceDeleteResult(t('fileuploader.DeleteConfirmation'));
     } else {
-      setSrOnlyText(t('fileuploader.GeneralDeleteError'));
+      announceDeleteResult(t('fileuploader.GeneralDeleteError'));
 
       // Behold fokus på nåværende knapp dersom sletting feiler
       deleteButtonRefs.current[key]?.focus();
     }
-    setTimeout(() => {
-      setSrOnlyText('');
-    }, 3000);
 
     setFilesPendingDelete((prevState) => ({ ...prevState, [key]: false }));
   };
-  const concatenatedClassnames = `${styles.container} ${className} ${
-    classNames?.container ?? ''
-  }`.trim();
 
   const ariaDescribedBy = [
     description && descriptionId,
@@ -230,39 +248,39 @@ export const FileUploader = (({
   return (
     <div
       ref={ref}
-      className={concatenatedClassnames}
+      className={`${styles.container} ${className} ${
+        classNames?.container ?? ''
+      }`.trim()}
       lang={lang}
       data-testid={dataTestId}
       data-has-spacing={hasSpacing}
     >
-      {label && (
-        <LabelWithHelp
-          classNames={classNames}
-          htmlFor={id}
-          hideLabel={hideLabel}
-          showRequiredMark={showRequiredMark}
-          description={description}
-          descriptionId={descriptionId}
-          helpSvgPath={helpSvgPath}
-          helpText={helpText}
-          titleHelpSvg={titleHelpSvg}
-          onHelpToggle={onHelpToggle}
-        >
-          {label}
-        </LabelWithHelp>
-      )}
-
+      <LabelWithHelp
+        id={labelId}
+        classNames={classNames}
+        htmlFor={id}
+        hideLabel={hideLabel}
+        description={description}
+        descriptionId={descriptionId}
+        helpSvgPath={helpSvgPath}
+        helpText={helpText}
+        titleHelpSvg={titleHelpSvg}
+        onHelpToggle={onHelpToggle}
+      >
+        {label}
+      </LabelWithHelp>
       <button
         ref={buttonRef}
         type={'button'}
-        id={id}
-        className={`${styles.dropZone} ${label && !hideLabel ? styles.dropZoneMarginTop : ''} ${
+        className={`${styles.dropZone} ${!hideLabel ? styles.dropZoneMarginTop : ''} ${
           errorMessage ? styles.dropZone_error : ''
         } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`.trim()}
         disabled={isUploading}
+        aria-labelledby={`${labelId} ${buttonTextId}`}
         aria-describedby={
           ariaDescribedBy.trim() !== '' ? ariaDescribedBy : undefined
         }
+        aria-invalid={errorMessage ? 'true' : undefined}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
         onDragOver={handleDragOver}
@@ -273,42 +291,38 @@ export const FileUploader = (({
           }
         }}
       >
-        <div className={styles.removePointerEvents}>
-          {isUploading ? (
-            <Spinner
-              classNames={{ title: styles.spinner }}
-              size={'large'}
-              color={'blue'}
-            >
-              {spinnerLabel}
-            </Spinner>
-          ) : (
-            <AttachFileIcon className={styles.icon} size={'large'} />
+        {isUploading ? (
+          <Spinner
+            classNames={{ title: styles.spinner }}
+            size={'large'}
+            color={'blue'}
+          >
+            {spinnerLabel}
+          </Spinner>
+        ) : (
+          <AttachFileIcon className={styles.icon} size={'large'} />
+        )}
+        <span className={styles.innerText} id={buttonTextId}>
+          {!isUploading && buttonText}
+          {isRequired && (
+            <span className={styles.srOnly}>{t('fileuploader.required')}</span>
           )}
-          <label className={styles.innerLabel} htmlFor={id}>
-            {!isUploading && buttonText}
-            {isRequired && (
-              <span className={styles.srOnly}>
-                {t('fileuploader.required')}
-              </span>
-            )}
-          </label>
-          <input
-            ref={inputRef}
-            data-testid={`${dataTestId}-input`}
-            type={'file'}
-            accept={acceptedFormatsAsCommaSeparatedString}
-            multiple={multiple}
-            hidden
-            onChange={handleFileChange}
-          />
-        </div>
+        </span>
       </button>
+      <input
+        ref={inputRef}
+        id={id}
+        data-testid={dataTestId ? `${dataTestId}-input` : undefined}
+        type={'file'}
+        accept={acceptedFormatsAsCommaSeparatedString}
+        multiple={multiple}
+        hidden
+        onChange={handleFileChange}
+      />
       {acceptedFileFormats && (
         <span id={fileformatsId} className={styles.fileInfo}>
           {acceptedFileFormatsDescription ??
             `${t('fileuploader.FormatLabel')} `}
-
           <span className={styles.fileFormatList}>
             {acceptedFileFormatsDisplay ??
               acceptedFormatsAsCommaSeparatedString}
@@ -325,13 +339,14 @@ export const FileUploader = (({
       <Alert
         showAlert={!!uploadResult}
         className={styles.alert}
+        ariaLive={'off'}
         variant={uploadResult?.hasUploadFailed ? 'error' : 'success'}
       >
         {uploadResult?.statusMessage}
       </Alert>
-      {uploadedFiles && (
+      {!!uploadedFiles?.length && (
         <ul className={styles.fileList}>
-          {uploadedFiles?.map((file, index) => {
+          {uploadedFiles.map((file, index) => {
             const isNewFile = newFiles.some(
               (newFile) => newFile.id === file.id
             );
@@ -357,12 +372,18 @@ export const FileUploader = (({
           })}
         </ul>
       )}
-      <div className={styles.srOnly} aria-live={'polite'} aria-atomic={'true'}>
-        {srOnlyText}
+      <div
+        className={styles.srOnly}
+        aria-live={screenReaderAriaLive}
+        aria-atomic={'true'}
+      >
+        {screenReaderAnnouncement}
       </div>
     </div>
   );
-}) as FileUploaderComponent;
+};
+
+export default FileUploader as FileUploaderComponent;
 
 FileUploader.useFileUploader = useFileUploader;
 

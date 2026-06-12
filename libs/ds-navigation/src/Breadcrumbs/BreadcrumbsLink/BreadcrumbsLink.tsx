@@ -1,4 +1,4 @@
-import { JSX, useContext } from 'react';
+import { JSX, Ref, useContext } from 'react';
 
 import { Link } from '@skatteetaten/ds-buttons';
 
@@ -15,14 +15,14 @@ export const BreadcrumbsLink = ({
 
   if (displayAsCurrentPage) {
     return (
-      <span ref={ref as React.Ref<HTMLSpanElement>} {...rest}>
+      <span ref={ref as Ref<HTMLSpanElement>} {...rest}>
         {children}
       </span>
     );
   }
 
   return (
-    <Link ref={ref as React.Ref<HTMLAnchorElement>} href={href} {...rest}>
+    <Link ref={ref as Ref<HTMLAnchorElement>} href={href} {...rest}>
       {children}
     </Link>
   );

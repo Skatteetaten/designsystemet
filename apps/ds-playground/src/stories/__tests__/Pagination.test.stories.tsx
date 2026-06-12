@@ -12,11 +12,7 @@ import {
 } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import {
-  Pagination,
-  getDefaultPageSize,
-  getDefaultSibling,
-} from '@skatteetaten/ds-navigation';
+import { Pagination } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
 
 const meta = {
@@ -55,9 +51,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-  pageSize: getDefaultPageSize(),
   totalItems: 70,
-  sibling: getDefaultSibling(),
   onChange: fn(),
 };
 
@@ -97,9 +91,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -339,7 +331,6 @@ export const WithListLimit: Story = {
   args: {
     pageSize: 6,
     totalItems: data.length * 7,
-    sibling: getDefaultSibling(),
     currentPage: 1,
   },
   argTypes: {

@@ -3,17 +3,25 @@ import { JSX, useState } from 'react';
 import { StoryObj, Meta, StoryFn } from '@storybook/react-vite';
 // eslint-disable-next-line storybook/use-storybook-testing-library
 import { PointerEventsCheckLevel } from '@testing-library/user-event';
-import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
-
 import {
-  dsI18n,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
-import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
+
+import { defaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  defaultFileIconTitle,
+  FileUploader,
+  FileUploaderProps,
+  TextField,
+} from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import { helpSvgPathDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: FileUploader,
@@ -30,26 +38,12 @@ const meta = {
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasSpacing: { table: { disable: true } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        disable: true,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription, table: { disable: true } },
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     shouldNormalizeFileName: { table: { disable: true } },
-    titleHelpSvg: {
-      table: {
-        category: category.props,
-        disable: true,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
-      },
-    },
+    titleHelpSvg: { table: { disable: true } },
     uploadedFiles: { table: { disable: true } },
     acceptedFileFormatsDisplay: { table: { disable: true } },
     acceptedFileFormatsDescription: { table: { disable: true } },
@@ -57,15 +51,9 @@ const meta = {
     children: { table: { disable: true } },
     fileIconTitle: { table: { disable: true } },
     isUploading: { table: { disable: true } },
-    invalidCharacterRegexp: {
-      control: 'text',
-      table: { disable: true },
-    },
-    spinnerLabel: {
-      table: {
-        disable: true,
-      },
-    },
+    isRequired: { table: { disable: true } },
+    invalidCharacterRegexp: { control: 'text', table: { disable: true } },
+    spinnerLabel: { table: { disable: true } },
     acceptedFileFormats: { table: { disable: true } },
     // HTML
     multiple: { table: { disable: true } },
@@ -77,11 +65,28 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
+    htmlValidate: { test: 'off' }, //TODO: input og label som descendat av button
     imageSnapshot: { disableSnapshot: false },
+  },
+  args: {
+    label: 'Ledetekst',
   },
 } satisfies Meta<typeof FileUploader>;
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+const getSuccessStatusMessage = (
+  canvasElement: HTMLElement,
+  statusMessageText: string
+): HTMLElement => {
+  const successAlert = canvasElement.querySelector('[data-variant="success"]');
+
+  if (!successAlert) {
+    throw new Error('Fant ikke suksess-alert');
+  }
+
+  return within(successAlert as HTMLElement).getByText(statusMessageText);
+};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -120,39 +125,79 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
-    const button = canvas.getByRole('button');
-    await expect(button).toHaveAttribute('id', 'htmlId');
+    const input = canvas.getByTestId('123ID-input');
+    await expect(input).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
   },
 } satisfies Story;
 
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      container: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+    },
+    errorMessage: 'feil',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    await expect(container).toHaveClass('dummyClassname');
+    const errorText = within(canvasElement).getByText('feil');
+    const errorMessage = errorText.closest('div');
+    await expect(errorMessage).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
 export const Defaults: StoryObj<FileUploaderProps> = {
   name: 'Defaults (A1 delvis)',
+  args: {
+    'data-testid': '123ID',
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(
       canvas.getByText(dsI18n.t('ds_forms:fileuploader.AddSingleLabel'))
     ).toBeInTheDocument();
-  },
-  parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+    const label = canvas.getByText('Ledetekst');
+    await expect(label).toBeInTheDocument();
+    await expect(label).toHaveAttribute('id');
+    const button = canvas.getByRole('button');
+    const input = canvas.getByTestId('123ID-input');
+    const inputId = input.getAttribute('id');
+    await expect(button).toHaveAttribute(
+      'aria-labelledby',
+      `${inputId}-label ${inputId}-button-text`
+    );
+    await expect(button).toHaveAttribute('type', 'button');
+    await expect(button).not.toHaveAttribute('aria-describedby');
+    await expect(button).not.toHaveAttribute('aria-invalid');
+    await expect(input).toBeInTheDocument();
+    await expect(input).toHaveAttribute('id', label.getAttribute('for'));
   },
 } satisfies Story;
 
 export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
   name: 'With Files (A5, B4 delvis)',
   args: {
-    helpText: 'Hjelpetekst',
-    label: 'Dokumentasjon og grunnlag',
     acceptedFileFormats: ['.pdf', '.jpeg'],
     uploadedFiles: [
       {
@@ -170,7 +215,7 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(
-      canvas.getAllByText(dsI18n.t('ds_forms:fileuploader.FileIconLabel'))[0]
+      canvas.getAllByText(defaultFileIconTitle)[0]
     ).toBeInTheDocument();
     await expect(canvas.getByText('grunnlag.jpg')).toBeInTheDocument();
     await expect(canvas.getByText('test.png')).toBeInTheDocument();
@@ -178,8 +223,6 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
       canvas.getByText('dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf')
     ).toBeInTheDocument();
   },
-
-  parameters: {},
 } satisfies Story;
 
 export const WithIsUploading: StoryObj<FileUploaderProps> = {
@@ -196,8 +239,6 @@ export const WithError: StoryObj<FileUploaderProps> = {
   name: 'With Error And Multiple (A4, A1 delvis)',
   args: {
     multiple: true,
-    helpText: 'Hjelpetekst',
-    label: 'Hemmelig kode',
     acceptedFileFormats: ['.java', '.cpp', '.py'],
     errorMessage: 'Du må laste opp en fil',
   },
@@ -206,6 +247,8 @@ export const WithError: StoryObj<FileUploaderProps> = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await expect(button).toHaveAttribute('aria-invalid', 'true');
     await expect(
       canvas.getByText('Du må laste opp en fil')
     ).toBeInTheDocument();
@@ -247,6 +290,78 @@ export const WithUploadResult: StoryObj<FileUploaderProps> = {
   },
 } satisfies Story;
 
+export const WithUploadResultAndNoFiles: StoryObj<FileUploaderProps> = {
+  name: 'With UploadResult And No Files',
+  args: {
+    uploadResult: { statusMessage: 'Lastet opp 1 fil' },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const statusMessageText = 'Lastet opp 1 fil';
+
+    await waitFor(() =>
+      expect(
+        getSuccessStatusMessage(canvasElement, statusMessageText)
+      ).toBeInTheDocument()
+    );
+  },
+} satisfies Story;
+
+export const WithUploadResultInsideFormWithoutFlicker: Story = {
+  name: 'With UploadResult Inside Form Without Flicker',
+  render: (): JSX.Element => {
+    const FormWrapper = (): JSX.Element => {
+      const [value, setValue] = useState('');
+
+      return (
+        <form>
+          <TextField
+            label={'Navn'}
+            value={value}
+            onChange={(event) => setValue(event.target.value)}
+          />
+          <FileUploader
+            label={'Ledetekst'}
+            uploadResult={{ statusMessage: 'Lastet opp 1 fil' }}
+          />
+        </form>
+      );
+    };
+
+    return <FormWrapper />;
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textField = canvas.getByRole('textbox', { name: 'Navn' });
+    const statusMessageText = 'Lastet opp 1 fil';
+
+    await waitFor(() =>
+      expect(
+        getSuccessStatusMessage(canvasElement, statusMessageText)
+      ).toBeInTheDocument()
+    );
+
+    await userEvent.type(textField, 'abc');
+
+    await expect(
+      getSuccessStatusMessage(canvasElement, statusMessageText)
+    ).toBeInTheDocument();
+
+    await waitFor(
+      () =>
+        expect(
+          getSuccessStatusMessage(canvasElement, statusMessageText)
+        ).toBeInTheDocument(),
+      { timeout: 300 }
+    );
+  },
+} satisfies Story;
+
 export const WithTextOverrides: StoryObj<FileUploaderProps> = {
   name: 'With Text Overrides (A8)',
   args: {
@@ -272,12 +387,13 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
   name: 'With File Change(A6)',
   args: {
     'data-testid': 'testid123',
-    helpText: 'Hjelpetekst',
-    label: 'Dokumentasjon og grunnlag',
     uploadedFiles: [{ name: 'file.txt', href: '#' }],
     onFileDownload: fn(),
     onFileChange: fn(),
     onFileDelete: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -309,44 +425,24 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
       })
     );
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
 } satisfies Story;
 
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    label: 'Last opp filer',
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    classNames: {
-      container: 'dummyClassname',
-      errorMessage: 'dummyClassname',
-    },
-    errorMessage: 'feil',
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const container = canvasElement.querySelector(`${wrapper} > div`);
-    await expect(container).toHaveClass('dummyClassname');
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: defaultHelpButtonTitle,
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -361,6 +457,7 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
       ]);
       return (
         <FileUploader
+          label={'Ledetekst'}
           uploadedFiles={files}
           onFileDelete={(file) => {
             setFiles((prev) => prev.filter((f) => f.name !== file.name));
@@ -371,10 +468,16 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
     };
     return <FocusManagementWrapper />;
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const deleteTitle = dsI18n.t('ds_forms:fileuploader.DeleteLabel');
-    const uploadButtonName = dsI18n.t('ds_forms:fileuploader.AddSingleLabel');
+    const uploadButtonName = new RegExp(
+      dsI18n.t('ds_forms:fileuploader.AddSingleLabel'),
+      'i'
+    );
     const user = userEvent.setup({
       pointerEventsCheck: PointerEventsCheckLevel.Never,
     });
@@ -388,25 +491,33 @@ export const WithFocusManagement: StoryObj<FileUploaderProps> = {
 
     // Delete the second file -> focus should move to previous (first) file's delete button
     await user.click(secondButton);
-    await expect(canvas.queryByText('second.pdf')).not.toBeInTheDocument();
-    await expect(firstButton).toHaveFocus();
+    await waitFor(() => {
+      expect(canvas.queryByText('second.pdf')).not.toBeInTheDocument();
+      expect(firstButton).toHaveFocus();
+    });
 
     // Delete the first file (now list has first.pdf & third.pdf -> after deletion only third.pdf). No previous file, focus should move to upload button.
     const firstButtonAfter = canvas.getAllByTitle(deleteTitle)[0];
     await user.click(firstButtonAfter);
-    await expect(canvas.queryByText('first.pdf')).not.toBeInTheDocument();
-    const uploadButton = canvas.getByRole('button', { name: uploadButtonName });
-    await expect(uploadButton).toHaveFocus();
+    await waitFor(() => {
+      expect(canvas.queryByText('first.pdf')).not.toBeInTheDocument();
+      const uploadButton = canvas.getByRole('button', {
+        name: uploadButtonName,
+      });
+      expect(uploadButton).toHaveFocus();
+    });
 
     // Delete the last remaining file -> still focus on upload button and no delete buttons remain
     const lastDeleteButton = canvas.getAllByTitle(deleteTitle)[0];
     await user.click(lastDeleteButton);
-    await expect(canvas.queryByText('third.pdf')).not.toBeInTheDocument();
-    await expect(canvas.queryAllByTitle(deleteTitle).length).toBe(0);
-    await expect(uploadButton).toHaveFocus();
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    await waitFor(() => {
+      expect(canvas.queryByText('third.pdf')).not.toBeInTheDocument();
+      expect(canvas.queryAllByTitle(deleteTitle).length).toBe(0);
+      const uploadButton = canvas.getByRole('button', {
+        name: uploadButtonName,
+      });
+      expect(uploadButton).toHaveFocus();
+    });
   },
 };
 
@@ -433,7 +544,6 @@ export const WithCustomSpinnerLabel = {
 export const WithDescription = {
   name: 'With Description',
   args: {
-    label: 'Last opp filer',
     description: 'En liten beskrivelse tekst',
   },
   argTypes: {
@@ -461,6 +571,7 @@ export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
       ]);
       return (
         <FileUploader
+          label={'Ledetekst'}
           uploadedFiles={files}
           onFileDelete={(file) => {
             // Simulate deletion failure for 'second.pdf'
@@ -475,6 +586,9 @@ export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
       );
     };
     return <FocusManagementFailureWrapper />;
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -507,15 +621,15 @@ export const WithFocusManagementOnDeleteFailure: StoryObj<FileUploaderProps> = {
       { timeout: 2000 }
     );
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
 };
+
 export const WithIsRequired = {
   name: 'With IsRequired',
   args: {
-    label: 'Last opp dokumenter',
     isRequired: true,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -525,8 +639,5 @@ export const WithIsRequired = {
     await expect(requiredText).toBeInTheDocument();
     const className = requiredText.getAttribute('class');
     await expect(className).toContain('srOnly');
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;

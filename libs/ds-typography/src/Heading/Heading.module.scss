@@ -3,62 +3,68 @@
 
 .heading {
   margin: 0;
+  font-size: var(--heading-font-size);
   font-weight: var(--font-weight-bold);
+  line-height: var(--heading-line-height);
 
-  &_level1 {
-    font-size: var(--font-size-xxl);
-    line-height: var(--semantic-line-height-heading1);
+  &:where([data-level='1']) {
+    --heading-font-size: var(--font-size-xxl);
+    --heading-line-height: var(--semantic-line-height-heading1);
 
     @media (min-width: breakpoints.$breakpoint-s) {
-      font-size: var(--font-size-mega);
+      --heading-font-size: var(--font-size-mega);
     }
-  }
 
-  &_level2 {
-    font-size: var(--font-size-xl);
-    line-height: var(--semantic-line-height-heading2);
-
-    @media (min-width: breakpoints.$breakpoint-s) {
-      font-size: var(--font-size-xxl);
-    }
-  }
-
-  &_level3 {
-    font-size: var(--font-size-l);
-    line-height: var(--semantic-line-height-heading3);
-
-    @media (min-width: breakpoints.$breakpoint-s) {
-      font-size: var(--font-size-xl);
-    }
-  }
-
-  &_level4 {
-    font-size: var(--font-size-l);
-    line-height: var(--semantic-line-height-heading4);
-  }
-
-  &_level5 {
-    font-size: var(--font-size-m);
-    line-height: var(--semantic-line-height-article);
-  }
-
-  &_hasSpacingExtraSmall {
-    margin-bottom: var(--spacing-xs);
-  }
-
-  &_hasSpacingSmall {
-    margin-bottom: var(--spacing-s);
-  }
-
-  &_hasSpacingMedium {
-    margin-bottom: var(--spacing-m);
-  }
-
-  &_hasSpacingSmallMobileMediumOtherwise {
-    margin-bottom: var(--spacing-s);
-
-    @media (min-width: breakpoints.$breakpoint-s) {
+    &[data-has-spacing='true'] {
       margin-bottom: var(--spacing-m);
+    }
+  }
+
+  &:where([data-level='2']) {
+    --heading-font-size: var(--font-size-xl);
+    --heading-line-height: var(--semantic-line-height-heading2);
+
+    @media (min-width: breakpoints.$breakpoint-s) {
+      --heading-font-size: var(--font-size-xxl);
+    }
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-s);
+
+      @media (min-width: breakpoints.$breakpoint-s) {
+        margin-bottom: var(--spacing-m);
+      }
+    }
+  }
+
+  &:where([data-level='3']) {
+    --heading-font-size: var(--font-size-l);
+    --heading-line-height: var(--semantic-line-height-heading3);
+
+    @media (min-width: breakpoints.$breakpoint-s) {
+      --heading-font-size: var(--font-size-xl);
+    }
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-s);
+    }
+  }
+
+  &:where([data-level='4']) {
+    --heading-font-size: var(--font-size-l);
+    --heading-line-height: var(--semantic-line-height-heading4);
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-s);
+    }
+  }
+
+  &:where([data-level='5']) {
+    --heading-font-size: var(--font-size-m);
+    --heading-line-height: var(--semantic-line-height-article);
+
+    &[data-has-spacing='true'] {
+      margin-bottom: var(--spacing-xs);
     }
   }
 
@@ -66,5 +72,10 @@
     @include styles.link;
 
     font-weight: inherit;
+  }
+
+  > svg {
+    height: calc(var(--heading-font-size) * var(--heading-line-height));
+    vertical-align: bottom;
   }
 }

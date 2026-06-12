@@ -1,22 +1,26 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
-import { getTagColorDefault, getTagSizeDefault } from './defaults';
 import { TagProps } from './Tag.types';
 
 import styles from './Tag.module.scss';
 
+/**
+ * Tag
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-tag--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tag/) - Brukerveiledning
+ */
 export const Tag = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  canBeManuallyFocused,
-  color = getTagColorDefault(),
-  size = getTagSizeDefault(),
+  canBeManuallyFocused = false,
+  color = 'ochre',
+  size = 'medium',
   svgPath,
   children,
 }: TagProps): JSX.Element => {
@@ -32,9 +36,7 @@ export const Tag = ({
       data-size={size}
     >
       {svgPath && (
-        <div className={styles.iconWrapper} aria-hidden>
-          <Icon className={styles.icon} svgPath={svgPath} size={'small'} />
-        </div>
+        <Icon className={styles.icon} svgPath={svgPath} size={'small'} />
       )}
       {children}
     </div>

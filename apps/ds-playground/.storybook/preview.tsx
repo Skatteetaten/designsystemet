@@ -5,11 +5,7 @@ import * as MockDate from 'mockdate';
 import { useEffect, useGlobals } from 'storybook/preview-api';
 
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  Languages,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 
 import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
@@ -143,7 +139,6 @@ const argTypes = {
     table: {
       type: { summary: 'string' },
       category: category.baseProps,
-      defaultValue: { summary: getCommonClassNameDefault() },
     },
   },
   id: {
@@ -157,9 +152,8 @@ const argTypes = {
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   'data-testid': {
-    control: 'text',
     description: 'html data attributt som brukes for tester',
-    table: { type: { summary: 'string' }, category: category.baseProps },
+    table: { category: category.baseProps },
   },
 } satisfies Preview['argTypes'];
 
@@ -171,6 +165,11 @@ const langs = Object.entries(Languages).map(([key, value]) => ({
 const Spacing = [
   { title: 'On', value: 'spacing' },
   { title: 'Off', value: 'no-spacing' },
+];
+
+const ScreenReaderText = [
+  { title: 'Hidden', value: 'hidden' },
+  { title: 'Visible', value: 'visible' },
 ];
 
 const clearStyles = (element: HTMLElement): void => {
@@ -195,6 +194,17 @@ const SpacingUpdater: Decorator = (Story, context) => {
   return <Story />;
 };
 
+const ScreenReaderTextUpdater: Decorator = (Story, context) => {
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.setAttribute('data-sr-only', context.globals.screenReaderText);
+    return (): void => {
+      root.removeAttribute('data-sr-only');
+    };
+  }, [context.globals.screenReaderText]);
+  return <Story />;
+};
+
 const globalTypes = {
   locale: {
     name: 'Locale',
@@ -215,7 +225,17 @@ const globalTypes = {
       items: Spacing,
     },
   },
-};
+  screenReaderText: {
+    name: 'Screen Reader Text',
+    description: 'Show or hide text styled with srOnly',
+    defaultValue: ScreenReaderText[0].value,
+    toolbar: {
+      title: 'SR text',
+      icon: 'accessibility',
+      items: ScreenReaderText,
+    },
+  },
+} satisfies Preview['globalTypes'];
 
 const preview = {
   decorators: [
@@ -224,6 +244,7 @@ const preview = {
     testBlock,
     mockDate,
     SpacingUpdater,
+    ScreenReaderTextUpdater,
   ],
   parameters,
   globalTypes,

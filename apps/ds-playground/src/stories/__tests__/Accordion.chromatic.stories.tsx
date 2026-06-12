@@ -6,7 +6,7 @@ import * as AccordionStories from './Accordion.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/Accordion/Accordion',
+  title: 'Chromatic/Accordion',
   component: Accordion,
   tags: ['chromatic', '!autodocs'],
 } satisfies Meta<typeof Accordion>;

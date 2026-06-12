@@ -2,7 +2,7 @@ import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   CancelSVGpath,
   CompletedSVGpath,
@@ -13,21 +13,26 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { AlertProps } from './Alert.types';
-import { getAlertBackgroundBrightnessDefault } from './defaults';
 
 import styles from './Alert.module.scss';
 
+/**
+ * Alert
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-alert--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/alert/) - Brukerveiledning
+ */
 export const Alert = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  backgroundBrightness = getAlertBackgroundBrightnessDefault(),
+  backgroundBrightness = 'default',
   svgPath,
   variant,
   ariaLive,
-  showAlert,
+  showAlert = false,
   children,
   onClose,
 }: AlertProps): JSX.Element => {
@@ -56,8 +61,6 @@ export const Alert = ({
     }
   };
 
-  const concatenatedClassName = `${styles.alert} ${className}`.trim();
-
   return (
     <div
       ref={ref}
@@ -69,14 +72,14 @@ export const Alert = ({
     >
       {showAlert && children && (
         <div
-          className={concatenatedClassName}
+          className={`${styles.alert} ${className}`.trim()}
           data-variant={variant}
           data-brightness={backgroundBrightness}
         >
           <span className={styles.iconWrapper}>
             <Icon size={'large'} svgPath={svg} className={styles.icon} />
           </span>
-          <span className={styles.content}>{children}</span>
+          <div className={styles.content}>{children}</div>
           {onClose && (
             <IconButton
               className={styles.closeButton}

@@ -4,7 +4,7 @@ import { Icon } from '../Icon/Icon';
 import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 
 export const InfoSimpleSVGpath = (
-  <path d={'M10.75 8.4h2.5V6h-2.5v2.4Zm0 9.6h2.5v-7.2h-2.5V18Z'} />
+  <path d={'M13.9697 9V21H10.9697V9H13.9697ZM13.9697 6H10.9697V3H13.9697V6Z'} />
 );
 
 export function InfoSimpleIcon(props: IconPropsWithoutSvgPath): JSX.Element {

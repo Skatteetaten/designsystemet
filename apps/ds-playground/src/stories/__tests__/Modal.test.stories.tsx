@@ -4,6 +4,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, fireEvent, within, waitFor } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
@@ -113,9 +114,6 @@ export const WithAttributes = {
   },
   parameters: {
     chromatic: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({
     canvasElement,
@@ -130,6 +128,33 @@ export const WithAttributes = {
     await expect(modal).toHaveClass('dummyClassname');
     await expect(modal).toHaveAttribute('lang', 'nb');
     await expect(modal).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  render: TemplateModal,
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      container: 'dummyClassName',
+      image: 'dummyClassName',
+    },
+    imageSource: farmerIllustration,
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+    const modal = canvas.getByLabelText(defaultTitle);
+    await expect(modal).toHaveClass('dummyClassName');
+    const image = modal.querySelector('img');
+    await expect(image).toHaveClass('dummyClassName');
   },
 } satisfies Story;
 
@@ -282,12 +307,10 @@ export const WithVerticalScrolling = {
     viewport: {
       options: {
         maxHeight: {
-          maxHeight: { name: 'maxHeight', styles: { height: '500px' } },
+          name: 'maxHeight',
+          styles: { width: breakpoints['--breakpoint-m'], height: '500px' },
         },
       },
-    },
-    chromatic: {
-      modes: { maxHeight: { viewport: 'maxHeight' } },
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -418,7 +441,6 @@ export const WithShadowDom = {
     chromatic: {
       disableSnapshot: true,
     },
-    a11y: { disable: true },
     customElementName: 'modal-customelement',
   },
   args: {
@@ -806,5 +828,55 @@ export const WithFormValidationFocusRetention = {
       canvas.getByText('Navnet må være minst 3 tegn')
     ).toBeInTheDocument();
     await expect(closeButton).toHaveFocus();
+  },
+} satisfies Story;
+
+export const MinimumWidth = {
+  render: (args): JSX.Element => {
+    const ref = useRef<HTMLDialogElement>(null);
+    return (
+      <>
+        <Paragraph hasSpacing>{loremIpsum}</Paragraph>
+        <Button onClick={(): void => ref.current?.showModal()}>
+          {'Åpne modal'}
+        </Button>
+        <Modal {...args} ref={ref}>
+          <div className={'flex'}>
+            <Button className={'marginRightM'}>{'Ja'}</Button>
+            <Button
+              variant={'tertiary'}
+              onClick={(): void => ref.current?.close()}
+            >
+              {'Nei'}
+            </Button>
+          </div>
+        </Modal>
+      </>
+    );
+  },
+  name: 'Minimum width',
+  args: {
+    title: 'Er du her?',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+  },
+} satisfies Story;
+
+export const OnMobile = {
+  render: TemplateModal,
+  name: 'On Mobile',
+  args: {},
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
   },
 } satisfies Story;

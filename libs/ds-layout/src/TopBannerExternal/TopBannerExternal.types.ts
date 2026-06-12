@@ -1,4 +1,10 @@
-import { MouseEventHandler, ReactNode, Ref, RefObject } from 'react';
+import {
+  FunctionComponent,
+  MouseEventHandler,
+  ReactNode,
+  Ref,
+  RefObject,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { SearchFieldProps } from '@skatteetaten/ds-forms';
@@ -99,7 +105,6 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
   skipLink?: SkipLink;
   /**
    * Logo.logo: Overskriver default logo. Må også angi alt-tekst og url.
-   * **Deprecated logo.mobileLogo:** Overskriver default logo for mobilvisning.
    * logo.alt: Overskriver default alt-tekst for logo, kun dersom logo også
    * endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.
    * logo.href: Overskriver default URL. logo.as: HTML-tag for Logo. Styrer om
@@ -109,14 +114,17 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
   logo?: TopBannerLogoProps;
   /** Legger til flere alternativer i språkvelgeren. */
   additionalLanguages?: TopBannerLangPickerProps['additionalLanguages'];
+  /**
+   * Lenke til samleside med innhold på andre språk. Vises nederst i
+   * språkmenyen.
+   */
+  otherLanguagesURL?: string;
 }
-export interface TopBannerExternalComponent
-  extends React.FC<TopBannerExternalProps> {
+export interface TopBannerExternalComponent extends FunctionComponent<TopBannerExternalProps> {
   UserMenu: typeof TopBannerExternalUserMenu;
 }
 
-export interface TopBannerExternalHandle
-  extends RefObject<HTMLHeadElement | null> {
+export interface TopBannerExternalHandle extends RefObject<HTMLHeadElement | null> {
   /* Åpner menyen */
   openMenu: () => void;
   /* Lukker menyen */

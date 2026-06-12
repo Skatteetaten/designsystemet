@@ -12,7 +12,7 @@ import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const meta = {
   component: ErrorSummary,
-  title: 'Tester/ErrorSummary/ErrorSummary',
+  title: 'Tester/ErrorSummary',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -66,7 +66,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -91,9 +91,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -112,8 +110,6 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
     await expect(container).toBeInTheDocument();
-    await expect(container).toHaveAttribute('aria-live', 'assertive');
-    await expect(container).toHaveAttribute('aria-atomic');
     await expect(container).toHaveAttribute('tabIndex', '-1');
 
     const errorSummary = container.querySelector('div');
@@ -215,6 +211,7 @@ export const WithTitleAs = {
   argTypes: {
     titleAs: { table: { disable: false } },
   },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading', { level: 1 });
@@ -285,7 +282,7 @@ export const WithShadowRootNode = {
       disable: true,
     },
     imageSnapshot: {
-      disable: true,
+      disableSnapshot: true,
     },
     customElementName: 'errorsummary-customelement',
   },

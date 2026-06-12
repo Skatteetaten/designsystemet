@@ -1,38 +1,36 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { Popover } from '@skatteetaten/ds-overlays';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
-import { SystemSVGPaths } from '../utils/icon.systems';
 
 const availableSizes = [...sizeArr].slice(0, 4);
+
 export default {
   component: Popover.Trigger,
   title: 'Komponenter/Popover/Trigger',
   argTypes: {
     // Props
     size: {
-      control: 'radio',
       options: availableSizes,
       table: {
         category: category.props,
-        defaultValue: { summary: getIconButtonSizeDefault() },
+        defaultValue: { summary: 'medium' },
       },
     },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
-
-    //HTML
+    svgPath: { ...svgPathDescription },
+    hideOutline: { table: { category: category.props } },
+    // HTML
     title: { table: { category: category.htmlAttribute } },
     //Aria
     ariaDescribedby: { table: { category: category.aria } },
-    //Events
+    // Events
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },

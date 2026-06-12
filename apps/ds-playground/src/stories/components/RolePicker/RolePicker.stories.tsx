@@ -9,26 +9,20 @@ import {
   Entity,
   Person,
   RolePicker,
-  getModalDismissOnEscDefault,
-  getModalDismissOnOutsideClickDefault,
-  getRolePickerHideCloseButtonDefault,
   Paginated,
   OnEntitySelectHandler,
-  getRolePickerShowInactiveBusinessesDefault,
-  getRolePickerShowSubunitsDefault,
-  getRolePickerShowDeceasedPeopleDefault,
-  getRolePickerMinimumEntitiesForSearchDefault,
 } from '@skatteetaten/ds-overlays';
 
-import { RolePickerWithAlertExample } from './RolePickerWithAlertExample';
+import RolePickerWithAlertExample from './RolePickerWithAlertExample';
 import rolePickerWithAlertExample from './RolePickerWithAlertExample?raw';
-import { RolePickerWithTopBannerExternalExample } from './RolePickerWithTopBannerExternalExample';
+import RolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample';
 import rolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample?raw';
-import { category } from '../../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../../.storybook/helpers';
 
 const me: Person = {
   name: 'Ola Nordmann',
   personId: '10101012345',
+  dateOfBirth: new Date('1990-01-01'),
   type: 'Person',
 };
 
@@ -132,24 +126,28 @@ const people: Paginated<Person> = {
     {
       name: 'Antikvitet presis',
       personId: '13889999726',
+      dateOfBirth: new Date('1964-02-28'),
       type: 'Person',
       isDeleted: false,
     },
     {
       name: 'Bønne elegant',
       personId: '18849574503',
+      dateOfBirth: new Date('1932-10-10'),
       type: 'Person',
       isDeleted: true,
     },
     {
       name: 'Lomme filosofisk',
       personId: '08889674513',
+      dateOfBirth: new Date('1944-01-26'),
       type: 'Person',
       isDeleted: true,
     },
     {
       name: 'Adelsmann varm',
       personId: '14892449911',
+      dateOfBirth: new Date('1981-07-04'),
       type: 'Person',
       isDeleted: false,
     },
@@ -209,69 +207,18 @@ const meta = {
     me: { control: 'object', table: { category: category.props } },
     people: { control: 'object', table: { category: category.props } },
     businesses: { control: 'object', table: { category: category.props } },
-    dismissOnEsc: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getModalDismissOnEscDefault().toString() },
-      },
-    },
-    dismissOnOutsideClick: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getModalDismissOnOutsideClickDefault().toString(),
-        },
-      },
-    },
-    hideCloseButton: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerHideCloseButtonDefault().toString(),
-        },
-      },
-    },
-    minimumEntitiesForSearch: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerMinimumEntitiesForSearchDefault().toString(),
-        },
-      },
-    },
-    showInactiveBusinesses: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerShowInactiveBusinessesDefault().toString(),
-        },
-      },
-    },
-    showSubunits: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerShowSubunitsDefault().toString(),
-        },
-      },
-    },
-    showDeceasedPeople: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerShowDeceasedPeopleDefault().toString(),
-        },
-      },
-    },
-    title: {
-      table: {
-        category: category.props,
-      },
-    },
+    dismissOnEsc: { table: { category: category.props } },
+    dismissOnOutsideClick: { table: { category: category.props } },
+    hideCloseButton: { table: { category: category.props } },
+    minimumEntitiesForSearch: { table: { category: category.props } },
+    showInactiveBusinesses: { table: { category: category.props } },
+    showSubunits: { table: { category: category.props } },
+    showDeceasedPeople: { table: { category: category.props } },
+    title: { table: { category: category.props } },
     // Events
-    onClose: { control: false, table: { category: category.event } },
-    onEntitySelect: { control: false, table: { category: category.event } },
-    onLogout: { control: false, table: { category: category.event } },
+    onClose: { ...htmlEventDescription },
+    onEntitySelect: { ...htmlEventDescription },
+    onLogout: { ...htmlEventDescription },
   },
   args: {
     me,

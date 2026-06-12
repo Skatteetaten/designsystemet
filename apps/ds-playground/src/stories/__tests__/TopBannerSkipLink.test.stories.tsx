@@ -11,7 +11,7 @@ import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const meta = {
   component: TopBannerSkipLink,
-  title: 'Tester/TopBanner/TopBannerSkipLink (intern)',
+  title: 'Tester/TopBannerSkipLink (intern)',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -72,9 +72,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -182,9 +180,7 @@ export const WithShadowDom = {
   },
   decorators: [webComponent],
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
     customElementName: 'skiplink-customelement',
   },
   play: async ({ canvasElement }): Promise<void> => {

@@ -1,8 +1,12 @@
+import { RefObject } from 'react';
+
 import type { ComboboxProps, ComboboxOption } from '../Combobox.types';
 
 /**
- * Filters combobox options based on search term and selection state.
- * In multi-select mode, all options remain visible to show checkboxes for selected items.
+ * Filters combobox options based on search term and selection state. In
+ * multi-select mode, all options remain visible to show checkboxes for selected
+ * items.
+ *
  * @param options - Array of all available options to filter
  * @param searchTerm - Current search input value to match against option labels
  * @returns Filtered array of options matching the search criteria
@@ -18,15 +22,29 @@ export const filterOptions = (
 
   if (!searchTerm) return filteredOptions;
 
-  return filteredOptions.filter((option) =>
-    option.label.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  const normalizedSearchTerm = searchTerm.trim().toLowerCase();
+
+  const startsWithMatches = filteredOptions.filter((option) =>
+    option.label.toLowerCase().startsWith(normalizedSearchTerm)
   );
+
+  const includesMatches = filteredOptions.filter((option) => {
+    const normalizedLabel = option.label.toLowerCase();
+    return (
+      !normalizedLabel.startsWith(normalizedSearchTerm) &&
+      normalizedLabel.includes(normalizedSearchTerm)
+    );
+  });
+
+  return [...startsWithMatches, ...includesMatches];
 };
 
 /**
- * Converts external value prop to internal selected values array.
- * Only processes multi-select arrays, returns empty array for single-select.
- * @param value - External value from props (string, number, array, or undefined)
+ * Converts external value prop to internal selected values array. Only
+ * processes multi-select arrays, returns empty array for single-select.
+ *
+ * @param value - External value from props (string, number, array, or
+ *   undefined)
  * @param options - Available options to match values against
  * @param multiple - Whether combobox is in multi-select mode
  * @returns Array of ComboboxOption objects matching the provided values
@@ -43,10 +61,12 @@ export const getSelectedValuesFromValue = (
 };
 
 /**
- * Converts external value prop to display text for the input field.
- * For single-select: returns the label of matching option or stringified value.
- * For multi-select: always returns empty string (chips display selected values).
- * @param value - External value from props (string, number, array, or undefined)
+ * Converts external value prop to display text for the input field. For
+ * single-select: returns the label of matching option or stringified value. For
+ * multi-select: always returns empty string (chips display selected values).
+ *
+ * @param value - External value from props (string, number, array, or
+ *   undefined)
  * @param options - Available options to find label for the value
  * @param multiple - Whether combobox is in multi-select mode
  * @returns String to display in the input field
@@ -69,16 +89,29 @@ export const getSearchTermFromValue = (
 };
 
 /**
- * Configuration object defining how option selection behaves for different interaction methods.
- * Used to standardize behavior differences between mouse clicks and keyboard navigation.
+ * Configuration object defining how option selection behaves for different
+ * interaction methods. Used to standardize behavior differences between mouse
+ * clicks and keyboard navigation.
  */
 export interface SelectionBehavior {
-  /** Whether selected options can be toggled off. Mouse: true, Keyboard multi-select: false */
+  /**
+   * Whether selected options can be toggled off. Mouse: true, Keyboard
+   * multi-select: false
+   */
   allowToggleOff: boolean;
+  /**
+   * Whether selected single option can be toggled off. Mouse: true, Keyboard:
+   * false
+   */
+  allowSingleToggleOff: boolean;
   /** Whether to reset focus index after selection. Mouse: true, Keyboard: false */
   resetFocusIndex: boolean;
   /** Whether to delay focus return to input. Mouse: true, Keyboard: false */
   delayedFocus: boolean;
+}
+
+export interface PendingFocusTarget {
+  optionValue: ComboboxOption['value'];
 }
 
 /**
@@ -86,15 +119,23 @@ export interface SelectionBehavior {
  * Ensures consistent UX between different input methods.
  */
 export const SELECTION_BEHAVIORS = {
-  /** Behavior for mouse/click interactions - allows toggle, resets focus, delays input focus */
+  /**
+   * Behavior for mouse/click interactions - allows toggle, resets focus, delays
+   * input focus
+   */
   MOUSE: {
     allowToggleOff: true,
+    allowSingleToggleOff: true,
     resetFocusIndex: true,
     delayedFocus: true,
   },
-  /** Behavior for keyboard interactions - allows toggle, preserves focus, immediate input focus */
+  /**
+   * Behavior for keyboard interactions - allows toggle, preserves focus,
+   * immediate input focus
+   */
   KEYBOARD: {
     allowToggleOff: true,
+    allowSingleToggleOff: false,
     resetFocusIndex: false,
     delayedFocus: false,
   },
@@ -102,10 +143,13 @@ export const SELECTION_BEHAVIORS = {
 
 /**
  * Determines if an option can be selected without exceeding maximum limits.
+ *
  * @param option - The option to check for selection eligibility
  * @param selectedValues - Currently selected options
- * @param maxSelected - Maximum number of selections allowed (undefined = no limit)
- * @returns True if the option can be selected, false if max limit would be exceeded
+ * @param maxSelected - Maximum number of selections allowed (undefined = no
+ *   limit)
+ * @returns True if the option can be selected, false if max limit would be
+ *   exceeded
  */
 const canSelectOption = (
   option: ComboboxOption,
@@ -126,7 +170,9 @@ const canSelectOption = (
 };
 
 /**
- * Determines the selection action (ADD, REMOVE, NONE) based on current state and behavior.
+ * Determines the selection action (ADD, REMOVE, NONE) based on current state
+ * and behavior.
+ *
  * @param option - The option being processed
  * @param selectedValues - Currently selected options
  * @param behavior - Selection behavior configuration (mouse vs keyboard)
@@ -152,7 +198,9 @@ const getSelectionAction = (
 };
 
 /**
- * Handles focus management after option selection based on behavior configuration.
+ * Handles focus management after option selection based on behavior
+ * configuration.
+ *
  * @param behavior - Selection behavior configuration defining focus handling
  * @param setFocusedIndex - Function to update focused option index
  * @param inputRef - Ref to the input element for focus management
@@ -160,7 +208,7 @@ const getSelectionAction = (
 const handleSelectionFocus = (
   behavior: SelectionBehavior,
   setFocusedIndex: (index: number) => void,
-  inputRef: React.RefObject<HTMLInputElement | null>
+  inputRef: RefObject<HTMLInputElement | null>
 ): void => {
   if (behavior.resetFocusIndex) {
     setFocusedIndex(-1);
@@ -172,13 +220,15 @@ const handleSelectionFocus = (
 };
 
 /**
- * Triggers the appropriate selection change callback based on single/multi-select mode.
+ * Triggers the appropriate selection change callback based on
+ * single/multi-select mode.
+ *
  * @param selectedValues - The new selected values after selection change
  * @param onSelectionChange - Optional callback for selection changes
  * @param multiple - Whether combobox is in multi-select mode
  */
 const triggerSelectionCallback = (
-  selectedValues: ComboboxOption | ComboboxOption[],
+  selectedValues: ComboboxOption | ComboboxOption[] | null,
   onSelectionChange: ComboboxProps['onSelectionChange'],
   multiple: boolean
 ): void => {
@@ -190,22 +240,26 @@ const triggerSelectionCallback = (
     );
   } else {
     (onSelectionChange as (value: ComboboxOption | null) => void)(
-      selectedValues as ComboboxOption
+      selectedValues as ComboboxOption | null
     );
   }
 };
 
 /**
- * Handles option selection logic for multi-select mode.
- * Manages selection state, validation, focus, and callbacks for multiple selections.
+ * Handles option selection logic for multi-select mode. Manages selection
+ * state, validation, focus, and callbacks for multiple selections.
+ *
  * @param option - The option being selected
- * @param config - Configuration object containing state and handlers for multi-select
+ * @param config - Configuration object containing state and handlers for
+ *   multi-select
  * @param config.selectedValues - Currently selected options
  * @param config.behavior - Selection behavior configuration (mouse vs keyboard)
  * @param config.setSelectedValues - Function to update selected values state
  * @param config.setSearchTerm - Function to update search input state
  * @param config.setFocusedIndex - Function to update focused option index
  * @param config.inputRef - Ref to the input element for focus management
+ * @param config.setPendingFocusTarget - Function to queue focus remapping after
+ *   filtering is cleared
  * @param config.onSelectionChange - Optional callback for selection changes
  * @param config.maxSelected - Optional maximum number of selections allowed
  */
@@ -218,6 +272,7 @@ const selectMultipleOption = (
     setSearchTerm,
     setFocusedIndex,
     inputRef,
+    setPendingFocusTarget,
     onSelectionChange,
     maxSelected,
   }: {
@@ -226,7 +281,8 @@ const selectMultipleOption = (
     setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
     setFocusedIndex: (index: number) => void;
-    inputRef: React.RefObject<HTMLInputElement | null>;
+    inputRef: RefObject<HTMLInputElement | null>;
+    setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
   }
@@ -262,40 +318,76 @@ const selectMultipleOption = (
   // Handle focus management
   handleSelectionFocus(behavior, setFocusedIndex, inputRef);
 
+  if (!behavior.resetFocusIndex) {
+    setPendingFocusTarget?.({ optionValue: option.value });
+  }
+
   // Trigger callback
   triggerSelectionCallback(newSelectedValues, onSelectionChange, true);
 };
 
 /**
- * Handles option selection logic for single-select mode.
- * Updates search term, closes dropdown, and triggers callback for single selection.
+ * Handles option selection logic for single-select mode. Updates search term,
+ * closes dropdown, and triggers callback for single selection.
+ *
  * @param option - The option being selected
- * @param config - Configuration object containing state and handlers for single-select
+ * @param config - Configuration object containing state and handlers for
+ *   single-select
+ * @param config.selectedValues - Currently selected options
+ * @param config.behavior - Selection behavior configuration (mouse vs keyboard)
+ * @param config.setSelectedValues - Function to update selected values state
  * @param config.setSearchTerm - Function to update search input state
  * @param config.closeDropdown - Function to close the dropdown
  * @param config.setFocusedIndex - Function to update focused option index
+ * @param config.inputRef - Ref to input element for focus management
  * @param config.onSelectionChange - Optional callback for selection changes
  */
 const selectSingleOption = (
   option: ComboboxOption,
   {
+    selectedValues,
+    behavior,
+    setSelectedValues,
     setSearchTerm,
     closeDropdown,
     setFocusedIndex,
+    inputRef,
     onSelectionChange,
   }: {
+    behavior: SelectionBehavior;
+    selectedValues: ComboboxOption[];
+    setSelectedValues: (values: ComboboxOption[]) => void;
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
+    inputRef: RefObject<HTMLInputElement | null>;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
   }
 ): void => {
+  const isAlreadySelected = selectedValues.some(
+    (selected) => selected.value === option.value
+  );
+
+  if (isAlreadySelected && behavior.allowSingleToggleOff) {
+    setSelectedValues([]);
+    setSearchTerm('');
+    closeDropdown();
+    setFocusedIndex(-1);
+    setTimeout(() => inputRef.current?.focus(), 0);
+
+    triggerSelectionCallback(null, onSelectionChange, false);
+    return;
+  }
+
+  // Track selected option state in single-select mode
+  setSelectedValues([option]);
+
   // Update search term to selected option label
   setSearchTerm(option.label);
 
-  // Close dropdown and reset focus
   closeDropdown();
   setFocusedIndex(-1);
+  setTimeout(() => inputRef.current?.focus(), 0);
 
   // Trigger callback with selected option
   triggerSelectionCallback(option, onSelectionChange, false);
@@ -303,9 +395,12 @@ const selectSingleOption = (
 
 /**
  * Core option selection logic handling both single and multi-select modes.
- * Routes to appropriate handler based on selection mode and manages all selection state.
+ * Routes to appropriate handler based on selection mode and manages all
+ * selection state.
+ *
  * @param option - The option being selected
- * @param config - Configuration object containing all necessary state and handlers
+ * @param config - Configuration object containing all necessary state and
+ *   handlers
  * @param config.multiple - Whether combobox is in multi-select mode
  * @param config.selectedValues - Currently selected options
  * @param config.behavior - Selection behavior configuration (mouse vs keyboard)
@@ -314,6 +409,8 @@ const selectSingleOption = (
  * @param config.closeDropdown - Function to close the dropdown
  * @param config.setFocusedIndex - Function to update focused option index
  * @param config.inputRef - Ref to the input element for focus management
+ * @param config.setPendingFocusTarget - Function to queue focus remapping after
+ *   filtering is cleared
  * @param config.onSelectionChange - Optional callback for selection changes
  * @param config.maxSelected - Optional maximum number of selections allowed
  */
@@ -328,6 +425,7 @@ export const selectOption = (
     closeDropdown,
     setFocusedIndex,
     inputRef,
+    setPendingFocusTarget,
     onSelectionChange,
     maxSelected,
   }: {
@@ -338,7 +436,8 @@ export const selectOption = (
     setSearchTerm: (term: string) => void;
     closeDropdown: (manual?: boolean) => void;
     setFocusedIndex: (index: number) => void;
-    inputRef: React.RefObject<HTMLInputElement | null>;
+    inputRef: RefObject<HTMLInputElement | null>;
+    setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
   }
@@ -351,22 +450,28 @@ export const selectOption = (
       setSearchTerm,
       setFocusedIndex,
       inputRef,
+      setPendingFocusTarget,
       onSelectionChange,
       maxSelected,
     });
   } else {
     selectSingleOption(option, {
+      behavior,
+      selectedValues,
+      setSelectedValues,
       setSearchTerm,
       closeDropdown,
       setFocusedIndex,
+      inputRef,
       onSelectionChange,
     });
   }
 };
 
 /**
- * Removes a specific option from the selected values array.
- * Used primarily for chip removal in multi-select mode.
+ * Removes a specific option from the selected values array. Used primarily for
+ * chip removal in multi-select mode.
+ *
  * @param optionToRemove - The option to remove from selection
  * @param config - Configuration object containing state and handlers
  * @param config.selectedValues - Currently selected options
@@ -395,4 +500,163 @@ export const removeOption = (
       newSelectedValues
     );
   }
+};
+
+// ============================================================================
+// Grouping utilities
+// ============================================================================
+
+/**
+ * Representerer et element i den grupperte strukturen. Kan være en enkelt
+ * option (uten gruppe) eller en gruppe med flere options.
+ */
+export type GroupedItem =
+  | { type: 'option'; option: ComboboxOption }
+  | { type: 'group'; groupLabel: string; options: ComboboxOption[] };
+
+/**
+ * Sjekker om noen av options har group-feltet satt.
+ *
+ * @param options - Array med options å sjekke
+ * @returns True hvis minst én option har group definert
+ */
+export const hasGroupedOptions = (options: ComboboxOption[]): boolean => {
+  return options.some((option) => option.group !== undefined);
+};
+
+/**
+ * Bygger en gruppert struktur fra en flat options-liste. Options med samme
+ * group-verdi samles alltid i samme gruppe, uavhengig av posisjon i arrayet.
+ * Gruppene vises i den rekkefølgen de først forekommer.
+ *
+ * @example
+ *   const options = [
+ *     { label: 'Trondheim', value: 't', group: 'Trøndelag' },
+ *     { label: 'Oslo', value: 'o' },
+ *     { label: 'Steinkjer', value: 's', group: 'Trøndelag' },
+ *     { label: 'Bodø', value: 'b', group: 'Nordland' },
+ *   ];
+ *   // Returnerer:
+ *   // [
+ *   //   { type: 'group', groupLabel: 'Trøndelag', options: [Trondheim, Steinkjer] },
+ *   //   { type: 'option', option: Oslo },
+ *   //   { type: 'group', groupLabel: 'Nordland', options: [Bodø] },
+ *   // ]
+ *
+ * @param options - Flat array med options (noen kan ha group, andre ikke)
+ * @returns Array med GroupedItem - enten enkelt-options eller grupper
+ */
+export const buildGroupedStructure = (
+  options: ComboboxOption[]
+): GroupedItem[] => {
+  if (options.length === 0) {
+    return [];
+  }
+
+  const result: GroupedItem[] = [];
+  const groupMap = new Map<string, ComboboxOption[]>();
+
+  for (const option of options) {
+    if (option.group === undefined) {
+      // Ugruppert option - legg til direkte i resultatet
+      result.push({ type: 'option', option });
+    } else {
+      // Gruppert option - samle i map
+      const existingGroup = groupMap.get(option.group);
+      if (existingGroup) {
+        existingGroup.push(option);
+      } else {
+        // Ny gruppe - opprett og legg til placeholder i resultatet
+        const groupOptions: ComboboxOption[] = [option];
+        groupMap.set(option.group, groupOptions);
+        result.push({
+          type: 'group',
+          groupLabel: option.group,
+          options: groupOptions,
+        });
+      }
+    }
+  }
+
+  return result;
+};
+
+/**
+ * Returnerer en flat liste med options i samme rekkefølge som den grupperte
+ * visningen. Brukes for keyboard-navigasjon og fokus som følger visuell
+ * rekkefølge.
+ *
+ * @param options - Flat array med options
+ * @returns Flat array med options i visuell rekkefølge
+ */
+export const getOptionsInGroupOrder = (
+  options: ComboboxOption[]
+): ComboboxOption[] => {
+  if (!hasGroupedOptions(options)) {
+    return options;
+  }
+
+  const groupedStructure = buildGroupedStructure(options);
+  const result: ComboboxOption[] = [];
+
+  for (const item of groupedStructure) {
+    if (item.type === 'option') {
+      result.push(item.option);
+    } else {
+      result.push(...item.options);
+    }
+  }
+
+  return result;
+};
+
+/**
+ * Mapper en flat index til riktig option i den grupperte strukturen. Brukes for
+ * å beholde flat keyboard-navigasjon selv med visuell gruppering.
+ *
+ * @param flatIndex - Index i den flate options-listen
+ * @param groupedStructure - Den grupperte strukturen
+ * @returns Option på den gitte indeksen, eller undefined hvis utenfor grenser
+ */
+export const getOptionAtFlatIndex = (
+  flatIndex: number,
+  groupedStructure: GroupedItem[]
+): ComboboxOption | undefined => {
+  let currentIndex = 0;
+
+  for (const item of groupedStructure) {
+    if (item.type === 'option') {
+      if (currentIndex === flatIndex) {
+        return item.option;
+      }
+      currentIndex++;
+    } else {
+      for (const option of item.options) {
+        if (currentIndex === flatIndex) {
+          return option;
+        }
+        currentIndex++;
+      }
+    }
+  }
+
+  return undefined;
+};
+
+/**
+ * Teller totalt antall options i den grupperte strukturen. Gruppe-headers
+ * telles ikke, kun selve options.
+ *
+ * @param groupedStructure - Den grupperte strukturen
+ * @returns Totalt antall options
+ */
+export const countOptionsInGroupedStructure = (
+  groupedStructure: GroupedItem[]
+): number => {
+  return groupedStructure.reduce((count, item) => {
+    if (item.type === 'option') {
+      return count + 1;
+    }
+    return count + item.options.length;
+  }, 0);
 };

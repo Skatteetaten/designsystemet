@@ -10,12 +10,12 @@
     "--container-wide-content": "768px \n    ",
     "--semantic-responsive-container": "var(--container-xs)",
     "--semantic-responsive-container-spacing": "0 var(--spacing-m)",
+    "--semantic-responsive-wide-content": "var(--container-xs)",
     "--semantic-responsive-article": "var(--container-xs)",
     "--semantic-responsive-internal-container-display": "flex",
     "--semantic-responsive-internal-container-flex-direction": "column",
     "--semantic-responsive-internal-container-spacing": "var(--spacing-m)",
-    "--semantic-responsive-internal-aside": "var(--container-xs)",
-    "--semantic-responsive-wide-content": "var(--container-xs)"
+    "--semantic-responsive-internal-aside": "var(--container-xs)"
   },
   "@media (width >= 640px)": {
     ":root,\n  :host": {

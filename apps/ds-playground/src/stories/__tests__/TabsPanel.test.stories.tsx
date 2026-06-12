@@ -18,9 +18,6 @@ const meta = {
     children: { table: { disable: false } },
   },
   tags: ['test'],
-  parameters: {
-    imageSnapshot: { disableSnapshot: false },
-  },
 } satisfies Meta<typeof Tabs.Panel>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -60,9 +57,6 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -112,9 +106,6 @@ export const WithKeepMountedFalse = {
   },
   argTypes: {
     keepMounted: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -1,5 +1,7 @@
 import { ArgTypes } from '@storybook/react-vite';
 
+import { SystemSVGPaths } from '../src/stories/utils/icon.systems';
+
 export const category = {
   baseProps: 'BaseProps',
   props: 'Props',
@@ -11,6 +13,21 @@ export const category = {
 export const htmlEventDescription: Partial<ArgTypes> = {
   table: { category: category.event },
   control: { disable: true },
+};
+
+export const svgPathDescription: Partial<ArgTypes> = {
+  options: Object.keys(SystemSVGPaths),
+  mapping: SystemSVGPaths,
+  table: { category: category.props },
+};
+
+export const helpSvgPathDescription: Partial<ArgTypes> = {
+  options: Object.keys(SystemSVGPaths),
+  mapping: SystemSVGPaths,
+  table: {
+    category: category.props,
+    defaultValue: { summary: 'HelpSimpleSVGpath' },
+  },
 };
 
 export const includeStylesTransform =

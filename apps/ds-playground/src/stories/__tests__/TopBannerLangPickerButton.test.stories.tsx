@@ -11,12 +11,11 @@ import { ReactComponent as NorwegianFlagIcon } from '../../assets/no-flag.svg';
 
 const meta = {
   component: TopBannerLangPickerButton,
-  title: 'Tester/TopBanner/TopBannerLangPickerButton (intern)',
+  title: 'Tester/TopBannerExternal/LangPickerButton (intern)',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
-    classNames: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
@@ -30,7 +29,7 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
   },
 } as Meta<typeof TopBannerLangPickerButton>;
 export default meta;
@@ -55,9 +54,6 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -81,9 +77,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -106,6 +100,7 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
+      disableSnapshot: false,
       pseudoStates: ['hover', 'focus-visible', 'active'],
     },
   },
@@ -163,9 +158,6 @@ export const WithEventHandlers = {
   args: {
     ...defaultArgs,
     onClick: fn(),
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

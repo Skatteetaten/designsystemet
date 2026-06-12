@@ -1,6 +1,7 @@
 .mainExternal {
   width: var(--semantic-responsive-container);
   box-sizing: border-box;
+  flex: 1;
   padding: var(--semantic-responsive-container-spacing);
   margin: auto;
 }

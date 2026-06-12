@@ -11,7 +11,7 @@ const defaultContent =
 
 const meta = {
   component: Accordion,
-  title: 'Tester/Accordion/Accordion',
+  title: 'Tester/Accordion',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -118,9 +118,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

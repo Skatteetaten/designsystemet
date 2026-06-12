@@ -1,37 +1,35 @@
 import { MouseEvent, useContext, useState, JSX } from 'react';
 
-import { Size, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { Size } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { AccordionContext } from '../AccordionContext';
 import { AccordionItemProps } from './AccordionItem.types';
-import { getAccordionItemKeepMountedDefault } from './defaults';
-import { getAccordionSizeDefault } from '../defaults';
+import { defaultAccordionSize } from './defaults';
 
 import styles from './AccordionItem.module.scss';
 
 export const AccordionItem = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   classNames,
   title,
   subtitle,
-  titleAs,
-  isDefaultExpanded,
-  isExpanded: isExpandedExternal,
-  keepMounted = getAccordionItemKeepMountedDefault(),
+  titleAs: Tag = 'div',
+  isDefaultExpanded = false,
+  isExpanded: isExpandedExternal = false,
+  keepMounted = true,
   svgPath,
   onClick,
   children,
 }: AccordionItemProps): JSX.Element => {
-  const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
-    isDefaultExpanded ?? false
-  );
+  const [isExpandedInternal, setIsExpandedInternal] =
+    useState<boolean>(isDefaultExpanded);
 
-  const { size = getAccordionSizeDefault(), iconPosition } =
+  const { size = defaultAccordionSize, iconPosition } =
     useContext(AccordionContext);
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
@@ -39,8 +37,7 @@ export const AccordionItem = ({
     setIsExpandedInternal(!isExpanded);
   };
 
-  const isExpanded =
-    isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
+  const isExpanded = isExpandedExternal || isExpandedInternal;
 
   const shouldDisplayCustomIcon = iconPosition === 'right' && !!svgPath;
 
@@ -77,8 +74,6 @@ export const AccordionItem = ({
     classNames?.content ?? ''
   }`.trim();
 
-  const Tag = titleAs ?? 'div';
-
   return (
     <div className={styles.accordionItem}>
       <Tag className={styles.tag}>
@@ -93,23 +88,23 @@ export const AccordionItem = ({
           onClick={handleClick}
         >
           {svgPath && iconPosition !== 'left' && (
-            <div className={iconWrapperClassNames}>
+            <span className={iconWrapperClassNames}>
               <Icon svgPath={svgPath} size={iconSize} className={styles.icon} />
-            </div>
+            </span>
           )}
 
-          <div className={styles.titleWrapper}>
-            <div className={titleClassNames}>{title}</div>
-            {subtitle && <p className={subtitleClassNames}>{subtitle}</p>}
-          </div>
+          <span className={styles.titleWrapper}>
+            <span className={titleClassNames}>{title}</span>
+            {subtitle && <span className={subtitleClassNames}>{subtitle}</span>}
+          </span>
 
-          <div className={iconWrapperClassNames}>
+          <span className={iconWrapperClassNames}>
             <Icon
               svgPath={ChevronDownSVGpath}
               size={iconSize}
               className={chevronClassNames}
             />
-          </div>
+          </span>
         </button>
       </Tag>
       {keepMounted ? (

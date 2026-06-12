@@ -10,7 +10,7 @@ const elementId = 'htmlId';
 
 const meta = {
   component: Breadcrumbs,
-  title: 'Tester/Breadcrumbs/Breadcrumbs',
+  title: 'Tester/Breadcrumbs',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -88,9 +88,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -161,9 +159,7 @@ export const WithCollapse = {
 export const WithAriaLabel = {
   name: 'With AriaLabel (B1)',
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   render: WithoutCollapseTemplate,
   play: async ({ canvasElement }): Promise<void> => {

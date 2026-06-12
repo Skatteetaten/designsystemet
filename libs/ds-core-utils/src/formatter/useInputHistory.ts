@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 
 import type {
+  GetCurrentPositionFn,
   GetCurrentValueFn,
   HistoryState,
   InitializeFn,
@@ -113,6 +114,9 @@ export const useInputHistory = (
   const getCurrentValue: GetCurrentValueFn = () =>
     historyRef.current.current.value;
 
+  const getCurrentPosition: GetCurrentPositionFn = () =>
+    historyRef.current.current.cursorPosition;
+
   return {
     initialize,
     pushState,
@@ -120,5 +124,6 @@ export const useInputHistory = (
     redo,
     updateCursorPosition,
     getCurrentValue,
+    getCurrentPosition,
   };
 };

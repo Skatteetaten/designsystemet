@@ -2,11 +2,11 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { TopBannerExternalUserMenu } from '@skatteetaten/ds-layout';
+import { TopBannerExternal } from '@skatteetaten/ds-layout';
 
-const meta: Meta<typeof TopBannerExternalUserMenu> = {
-  title: 'Tester/TopBanner/TopBannerExternalUserMenu',
-  component: TopBannerExternalUserMenu,
+const meta: Meta<typeof TopBannerExternal.UserMenu> = {
+  title: 'Tester/TopBannerExternal/UserMenu',
+  component: TopBannerExternal.UserMenu,
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -33,6 +33,7 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
       person: {
         name: 'Buljo Tulljo',
         personId: '6969420420',
+        dateOfBirth: new Date('1984-02-13'),
         type: '',
       },
     },
@@ -42,7 +43,7 @@ const meta: Meta<typeof TopBannerExternalUserMenu> = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
-} satisfies Meta<typeof TopBannerExternalUserMenu>;
+} satisfies Meta<typeof TopBannerExternal.UserMenu>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

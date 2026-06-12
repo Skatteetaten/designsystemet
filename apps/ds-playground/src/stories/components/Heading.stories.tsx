@@ -2,6 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
+import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -12,28 +13,14 @@ const meta = {
   title: 'Komponenter/Heading',
   argTypes: {
     // Props
-    as: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
+    as: { control: 'inline-radio', table: { category: category.props } },
     canBeManuallyFocused: { table: { category: category.props } },
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    level: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
+    level: { control: 'inline-radio', table: { category: category.props } },
   },
   args: {
     as: 'h2',
-    level: 2,
     children: 'Overskrift',
   },
 } satisfies Meta<typeof Heading>;
@@ -47,22 +34,22 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Overskriftsnivå 1'}
         </Heading>
-        <Heading as={'h2'} level={2} hasSpacing>
+        <Heading as={'h2'} hasSpacing>
           {'Overskriftsnivå 2'}
         </Heading>
-        <Heading as={'h3'} level={3} hasSpacing>
+        <Heading as={'h3'} hasSpacing>
           {'Overskriftsnivå 3'}
         </Heading>
-        <Heading as={'h4'} level={4} hasSpacing>
+        <Heading as={'h4'} hasSpacing>
           {'Overskriftsnivå 4'}
         </Heading>
-        <Heading as={'h5'} level={5} hasSpacing>
+        <Heading as={'h5'} hasSpacing>
           {'Overskriftsnivå 5'}
         </Heading>
-        <Heading as={'h6'} level={5} hasSpacing>
+        <Heading as={'h6'} hasSpacing>
           {'Overskriftsnivå 6'}
         </Heading>
       </>
@@ -70,3 +57,16 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const HeadingWithIcon: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Heading as={'h1'}>
+        <Icon svgPath={CompletedSVGpath} size={'extraLarge'} />
+        {' Skjemaet er sendt inn.'}
+      </Heading>
+    );
+  },
+} satisfies Story;
+HeadingWithIcon.storyName = 'Overskrift med ikon';
+HeadingWithIcon.parameters = exampleParameters;

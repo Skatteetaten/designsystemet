@@ -3,12 +3,7 @@ import { JSX, useRef } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { IconButton, InlineButton, Link } from '@skatteetaten/ds-buttons';
-import {
-  Card,
-  DescriptionList,
-  getCardColorDefault,
-  getCardSpacingDefault,
-} from '@skatteetaten/ds-content';
+import { Card, DescriptionList } from '@skatteetaten/ds-content';
 import {
   ArbeidTrygdPensjonIcon,
   CancelSVGpath,
@@ -33,26 +28,12 @@ Card.Alert.displayName = 'Card.Alert';
 
 const meta = {
   component: Card,
-  title: 'Komponenter/Card/Card',
+  title: 'Komponenter/Card',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
-    spacing: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCardSpacingDefault() },
-      },
-    },
-    color: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCardColorDefault() },
-      },
-    },
+    children: { control: 'text', table: { category: category.props } },
+    spacing: { table: { category: category.props } },
+    color: { control: 'inline-radio', table: { category: category.props } },
     // Aria
     ariaLabelledBy: { table: { category: category.aria } },
   },
@@ -83,9 +64,7 @@ export const Examples: Story = {
               <Tag svgPath={InfoOutlineSVGpath}>{'Endret av deg'}</Tag>
             }
           >
-            <Heading as={'h3'} level={3}>
-              {'Andre inntekter'}
-            </Heading>
+            <Heading as={'h3'}>{'Andre inntekter'}</Heading>
           </Card.Header>
           <Card.Content>
             <DescriptionList>
@@ -114,9 +93,7 @@ export const Examples: Story = {
             }
           >
             <ArbeidTrygdPensjonIcon size={'extraLarge'} />
-            <Heading as={'h3'} level={3}>
-              {'Andre inntekter'}
-            </Heading>
+            <Heading as={'h3'}>{'Andre inntekter'}</Heading>
           </Card.Header>
           <Card.Content>
             <DescriptionList>
@@ -144,7 +121,7 @@ export const Examples: Story = {
               </Tag>
             }
           >
-            <Heading as={'h3'} level={3} hasSpacing>
+            <Heading as={'h3'} hasSpacing>
               {'Andre inntekter'}
             </Heading>
           </Card.Header>
@@ -169,9 +146,7 @@ export const FileListExample: Story = {
   name: 'Liste med filer',
   render: (_args): JSX.Element => {
     return (
-      <div
-        className={'flex flexColumn gapS width400 topSpacingXL centerMargin'}
-      >
+      <div className={'fileList'}>
         <Card spacing={'xxs'} color={'denim'}>
           <Card.Content
             classNames={{ children: 'flex' }}
@@ -233,7 +208,6 @@ export const AlertExample: Story = {
               ref={headingRef}
               id={'card-heading-1'}
               as={'h3'}
-              level={3}
               canBeManuallyFocused
             >
               {'Andre inntekter'}
@@ -270,7 +244,6 @@ export const AlertExample: Story = {
               ref={headingRef}
               id={'card-heading-2'}
               as={'h3'}
-              level={3}
               canBeManuallyFocused
             >
               {'Andre inntekter'}
@@ -307,7 +280,6 @@ export const AlertExample: Story = {
               ref={headingRef}
               id={'card-heading-3'}
               as={'h3'}
-              level={3}
               canBeManuallyFocused
             >
               {'Andre inntekter'}

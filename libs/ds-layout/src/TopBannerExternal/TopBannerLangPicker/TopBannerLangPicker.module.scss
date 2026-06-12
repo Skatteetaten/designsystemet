@@ -1,6 +1,17 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @use 'libs/ds-core-utils/src/mixins/styles';
 
+.otherLanguagesLink {
+  padding: var(--spacing-s) var(--spacing-m) var(--spacing-s-plus);
+  border-top: 1px solid var(--palette-graphite-10);
+  margin-bottom: calc(
+    -1 * var(--spacing-xs)
+  ); // for å kompensere for padding-bottom på listen
+
+  background-color: var(--palette-graphite-5);
+  white-space: nowrap;
+}
+
 .container {
   position: relative;
   width: fit-content;
@@ -178,23 +189,25 @@
 }
 
 .list {
+  overflow: hidden auto;
   max-height: calc(100vh - 100px);
   box-sizing: border-box;
-  padding: 0;
+  padding: var(--spacing-xs) 0;
   border: 1px solid var(--palette-graphite-70);
   margin: 0;
+  background-color: var(--palette-graphite-0);
   box-shadow: 3px 2px 5px 0 var(--semantic-divider-30);
   list-style-type: none;
 
   @media (min-width: breakpoints.$breakpoint-xs) {
-    width: 10.5rem;
+    width: 14.25rem;
   }
 
   &Item {
-    border-bottom: 1px solid var(--palette-graphite-70);
+    padding: 0 var(--spacing-s);
 
-    &:last-of-type {
-      border-bottom: none;
+    &:first-of-type > button {
+      border: none;
     }
   }
 }

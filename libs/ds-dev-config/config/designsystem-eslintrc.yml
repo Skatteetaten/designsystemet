@@ -4,9 +4,6 @@ env:
 extends:
   - 'eslint:recommended'
   - 'plugin:react/recommended'
-  - 'plugin:jest/recommended'
-  - 'plugin:jest/style'
-  - 'plugin:jest-dom/recommended'
   - 'plugin:testing-library/react'
   - 'plugin:sonarjs/recommended'
   - 'plugin:@nx/react'
@@ -35,16 +32,12 @@ parserOptions:
 plugins:
   - react
   - sonarjs
-  - jest
-  - jest-dom
   - testing-library
   - '@typescript-eslint'
   - import
 settings:
   react:
     version: detect
-  jest:
-    version: 27
 rules:
   react/jsx-boolean-value: 2 # forhindrer setting av values for boolean props
   react/jsx-curly-brace-presence:

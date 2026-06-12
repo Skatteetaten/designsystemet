@@ -1,24 +1,23 @@
 import { useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getHasSpacingDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
-
-import { getRadioGroupVariantDefault } from './defaults';
+import { Radio } from './Radio/Radio';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
+import { RadioGroupContext } from './RadioGroupContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { Fieldset } from '../Fieldset/Fieldset';
-import { Radio } from './Radio/Radio';
-import { RadioGroupContext } from './RadioGroupContext';
 
 import styles from './RadioGroup.module.scss';
 
-export const RadioGroup = (({
+/**
+ * RadioGroup
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-radiogroup--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/) - Brukerveiledning
+ */
+export const RadioGroup = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -27,24 +26,24 @@ export const RadioGroup = (({
   helpSvgPath,
   helpText,
   legend,
-  selectedValue,
+  value,
   titleHelpSvg,
-  variant = getRadioGroupVariantDefault(),
+  variant = 'standard',
+  ariaDescribedBy,
   defaultValue,
-  disabled,
+  disabled = false,
   form,
   name,
-  required,
-  hasSpacing = getHasSpacingDefault(),
-  hideLegend,
-  showRequiredMark,
+  readOnly = false,
+  required = false,
+  hasSpacing = false,
+  hideLegend = false,
   shadowRootNode,
   onBlur: onBlurExternal,
   onChange: onChangeExternal,
   onHelpToggle,
   children,
 }: RadioGroupProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `radioErrorId-${useId()}`;
   const uniqueNameId = `radioInputName-${useId()}`;
   const nameId = name ?? uniqueNameId;
@@ -89,15 +88,19 @@ export const RadioGroup = (({
     <Fieldset
       ref={ref}
       id={id}
-      className={className}
-      classNames={classNames}
+      className={`${className} ${classNames?.container ?? ''}`.trim()}
+      classNames={{
+        ...classNames,
+        contentContainer:
+          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer ?? ''}`.trim(),
+      }}
       lang={lang}
       data-testid={dataTestId}
+      ariaDescribedBy={ariaDescribedBy}
       disabled={disabled}
       form={form}
       legend={legend}
       hideLegend={hideLegend}
-      showRequiredMark={showRequiredMark}
       description={description}
       helpSvgPath={helpSvgPath}
       helpText={helpText}
@@ -110,9 +113,10 @@ export const RadioGroup = (({
           value={{
             defaultValue,
             errorId: errorMessage ? errorId : '',
-            selectedValue,
+            value,
             name: nameId,
             hasError: !!errorMessage,
+            readOnly,
             required,
             onChange: handleChange,
             onBlur: handleBlur,
@@ -132,7 +136,9 @@ export const RadioGroup = (({
       </ErrorMessage>
     </Fieldset>
   );
-}) as RadioGroupComponent;
+};
+
+export default RadioGroup as RadioGroupComponent;
 
 RadioGroup.displayName = 'RadioGroup';
 RadioGroup.Radio = Radio;

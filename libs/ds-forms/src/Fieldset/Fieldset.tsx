@@ -1,16 +1,20 @@
 import { useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { FieldsetProps } from './Fieldset.types';
 import { Help } from '../LabelWithHelp/Help/Help';
 
 import styles from './Fieldset.module.scss';
 
+/**
+ * Fieldset
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fieldset--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fieldset/) - Brukerveiledning
+ */
 export const Fieldset = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -19,11 +23,11 @@ export const Fieldset = ({
   helpText,
   legend,
   titleHelpSvg,
-  disabled,
+  ariaDescribedBy,
+  disabled = false,
   form,
-  hasSpacing,
-  hideLegend,
-  showRequiredMark,
+  hasSpacing = false,
+  hideLegend = false,
   onHelpToggle,
   children,
 }: FieldsetProps): JSX.Element => {
@@ -36,22 +40,11 @@ export const Fieldset = ({
     );
   }
 
-  let requiredMarkClassName = '';
-  if (showRequiredMark) {
-    requiredMarkClassName =
-      typeof legend === 'string'
-        ? styles.legend_required
-        : styles.legendWithMarkup_required;
-  }
   const hideLegendClassName = hideLegend ? styles.srOnly : '';
-  const noMarginBottomLegendClassName =
-    description || helpText ? styles.legendNoMarginBottom : '';
   const noMarginTopContentContainerClassName = hideLegend
     ? styles.contentContainerNoMarginTop
     : '';
-  const legendClassName = `${
-    styles.legend
-  } ${requiredMarkClassName} ${hideLegendClassName} ${noMarginBottomLegendClassName} ${
+  const legendClassName = `${styles.legend} ${hideLegendClassName} ${
     classNames?.legend ?? ''
   }`.trim();
 
@@ -60,33 +53,29 @@ export const Fieldset = ({
       ref={ref}
       id={id}
       data-testid={dataTestId}
-      className={`${styles.fieldset} ${className}`.trim()}
+      className={`${styles.fieldset} ${className} ${classNames?.container ?? ''}`.trim()}
       lang={lang}
+      aria-describedby={ariaDescribedBy}
       disabled={disabled}
       form={form}
       data-has-spacing={hasSpacing}
     >
-      <legend id={legendId} className={styles.srOnly}>
+      <legend id={legendId} className={legendClassName}>
         {legend}
-        {description && <span> {description}</span>}
+        <Help
+          classNames={classNames}
+          helpSvgPath={helpSvgPath}
+          helpText={helpText}
+          hideHelp={hideLegend}
+          targetId={legendId}
+          titleHelpSvg={titleHelpSvg}
+          description={description}
+          disabled={disabled}
+          onHelpToggle={onHelpToggle}
+        />
       </legend>
-
-      <div className={legendClassName} aria-hidden={'true'}>
-        {legend}
-      </div>
-      <Help
-        classNames={classNames}
-        helpSvgPath={helpSvgPath}
-        helpText={helpText}
-        hideHelp={hideLegend}
-        targetId={legendId}
-        titleHelpSvg={titleHelpSvg}
-        description={description}
-        hideDescriptionForScreenReader
-        onHelpToggle={onHelpToggle}
-      />
       <div
-        className={`${styles.contentContainer} ${noMarginTopContentContainerClassName}`.trim()}
+        className={`${styles.contentContainer} ${noMarginTopContentContainerClassName} ${classNames?.contentContainer ?? ''}`.trim()}
       >
         {children}
       </div>

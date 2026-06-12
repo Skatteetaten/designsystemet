@@ -1,4 +1,6 @@
 import storybookTest from '@storybook/addon-vitest/vitest-plugin';
+import { playwright } from '@vitest/browser-playwright';
+import { UserConfig } from 'vite';
 import { defineConfig } from 'vitest/config';
 
 import path from 'node:path';
@@ -32,6 +34,16 @@ export default defineConfig({
             configDir: path.join(dirname, 'apps/ds-playground/.storybook'),
             storybookUrl: 'http://127.0.0.1:4400',
           }),
+          // Workaround: addon-vitest 10.2.13 sets root to the storybook project dir
+          // but generates include/exclude globs relative to the workspace root,
+          // causing a doubled path. This post-order plugin overrides root back.
+          {
+            name: 'fix-storybook-root',
+            config: {
+              order: 'post' as const,
+              handler: (): UserConfig => ({ root: dirname }),
+            },
+          },
         ],
         test: {
           name: 'storybook',
@@ -39,7 +51,7 @@ export default defineConfig({
           browser: {
             enabled: true,
             headless: true,
-            provider: 'playwright',
+            provider: playwright(),
             instances: [
               {
                 browser: 'chromium',

@@ -1,38 +1,39 @@
 import { JSX, useEffect, useId, useState } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { defaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
-import {
-  getSpinnerColorDefault,
-  getSpinnerTitlePositionDefault,
-  getSpinnerSizeDefault,
-  getSpinnerLabelDefault,
-} from './defaults';
 import { SpinnerProps } from './Spinner.types';
 
 import styles from './Spinner.module.scss';
 
+/**
+ * Spinner
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-spinner--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/spinner/) - Brukerveiledning
+ */
 export const Spinner = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   classNames,
-  color = getSpinnerColorDefault(),
-  titlePosition = getSpinnerTitlePositionDefault(),
-  size = getSpinnerSizeDefault(),
-  hideTitle,
+  color = 'black',
+  titlePosition = 'bottom',
+  size = 'medium',
+  hideTitle = false,
   percentComplete,
-  children = getSpinnerLabelDefault(),
+  children = defaultSpinnerLabel,
 }: SpinnerProps): JSX.Element => {
   const [isRendered, setIsRendered] = useState<boolean>(false);
   const generatedId = useId();
   const titleId = `title-${id ?? generatedId}`;
 
   /**
-   * useEffect sørger for at div med role=status blir rendret før children.
-   * Dette gjør at skjermleser vet at den skal lytte etter tekster som må leses opp.
+   * UseEffect sørger for at div med role=status blir rendret før children.
+   * Dette gjør at skjermleser vet at den skal lytte etter tekster som må leses
+   * opp.
    */
   useEffect(() => {
     setTimeout(() => {
@@ -61,7 +62,7 @@ export const Spinner = ({
   };
   return (
     <>
-      <div
+      <span
         ref={ref}
         aria-labelledby={isInPercentageMode ? titleId : undefined}
         aria-live={!isInPercentageMode ? 'polite' : undefined}
@@ -78,7 +79,7 @@ export const Spinner = ({
         data-size={size}
         data-color={color}
       >
-        <div
+        <span
           className={`${styles.spinnerAnimation} ${
             classNames?.animation ?? ''
           }`.trim()}
@@ -92,28 +93,21 @@ export const Spinner = ({
           } ${classNames?.title ?? ''}`.trim()}
         >
           {isInPercentageMode &&
-            `${getSpinnerLabelDefault()} (${percentComplete} %)`}
+            `${defaultSpinnerLabel} (${percentComplete} %)`}
           {!isInPercentageMode && isRendered && children}
         </span>
-      </div>
+      </span>
       {isInPercentageMode && (
-        <div
+        <span
           className={styles.srOnly}
           aria-atomic={'true'}
           aria-live={'polite'}
         >
           {`${percentComplete} %`}
-        </div>
+        </span>
       )}
     </>
   );
 };
 
 Spinner.displayName = 'Spinner';
-
-export {
-  getSpinnerColorDefault,
-  getSpinnerSizeDefault,
-  getSpinnerTitlePositionDefault,
-  getSpinnerLabelDefault,
-};

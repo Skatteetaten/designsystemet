@@ -9,11 +9,19 @@ type RequiredFieldsetHTMLAttributes = Pick<
   'disabled' | 'form'
 >;
 
-export interface FieldsetProps
-  extends RequiredFieldsetHTMLAttributes,
-    BaseProps {
+type FieldsetHTMLAttributes = Partial<RequiredFieldsetHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
+
+export interface FieldsetProps extends FieldsetHTMLAttributes, BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
-  classNames?: Prettify<{ legend?: string } & HelpProps['classNames']>;
+  classNames?: Prettify<
+    {
+      container?: string;
+      legend?: string;
+      contentContainer?: string;
+    } & HelpProps['classNames']
+  >;
   /** Innhold */
   children: ReactNode;
   /** Ledetekst */
@@ -23,8 +31,12 @@ export interface FieldsetProps
    * skjermleser
    */
   hideLegend?: boolean;
-  /** Tilleggstekst */
-  description?: string;
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
+  description?: ReactNode;
   /** Margin under komponenten */
   hasSpacing?: boolean;
   /** Hjelpetekst */
@@ -33,14 +45,6 @@ export interface FieldsetProps
   helpSvgPath?: HelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: HelpProps['titleHelpSvg'];
-  /**
-   * Om legend skal markeres med stjerne.
-   *
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer
-   *   om mønstre for obligatoriske felt på [stil og
-   *   tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
-   */
-  showRequiredMark?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: HelpProps['onHelpToggle'];
 }

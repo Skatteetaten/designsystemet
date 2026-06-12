@@ -5,6 +5,9 @@ import {
   useId,
   useEffect,
   useMemo,
+  KeyboardEvent,
+  MouseEvent,
+  RefObject,
 } from 'react';
 
 import type { ComboboxOption, ComboboxProps } from '../Combobox.types';
@@ -13,11 +16,13 @@ import {
   getPreviousEnabledIndex,
   isIndexEnabled,
   getEnabledIndices,
+  getLastSelectedIndex,
 } from '../utils/combobox-state-utils';
 import {
   getSelectedValuesFromValue,
   getSearchTermFromValue,
   filterOptions,
+  getOptionsInGroupOrder,
 } from '../utils/combobox-utils';
 
 export type DropdownTrigger =
@@ -25,6 +30,7 @@ export type DropdownTrigger =
   | 'input'
   | 'click'
   | 'keyboard'
+  | 'keyboardNoFocus'
   | 'chevron';
 
 export interface UseComboboxCoreProps {
@@ -45,13 +51,14 @@ export interface UseComboboxCoreReturn {
   selectedValues: ComboboxOption[];
   setSelectedValues: (values: ComboboxOption[]) => void;
   isOpen: boolean;
+  openTrigger?: DropdownTrigger;
   focusedIndex: number;
   enabledIndices: number[];
   displayOptions: ComboboxOption[];
 
   // Refs
-  inputRef: React.RefObject<HTMLInputElement | null>;
-  containerRef: React.RefObject<HTMLDivElement | null>;
+  inputRef: RefObject<HTMLInputElement | null>;
+  containerRef: RefObject<HTMLDivElement | null>;
 
   // IDs
   comboboxId: string;
@@ -59,15 +66,15 @@ export interface UseComboboxCoreReturn {
   errorId: string;
 
   // Actions
-  openDropdown: (searchValue: string, trigger: DropdownTrigger) => void;
+  openDropdown: (trigger: DropdownTrigger) => void;
   closeDropdown: (manual?: boolean) => void;
   setFocusedIndex: (index: number) => void;
   resetFocus: () => void;
 
   // Event handlers
-  handleChevronClick: (e?: React.MouseEvent) => void;
-  handleContainerClick: (e: React.MouseEvent) => void;
-  handleContainerKeyDown: (e: React.KeyboardEvent<HTMLDivElement>) => void;
+  handleChevronClick: (e?: MouseEvent) => void;
+  handleContainerClick: (e: MouseEvent) => void;
+  handleContainerKeyDown: (e: KeyboardEvent<HTMLDivElement>) => void;
 
   // Focus utilities
   focusedOption: ComboboxOption | null;
@@ -78,7 +85,7 @@ export interface UseComboboxCoreReturn {
   handleButtonFocus: (index: number) => void;
 
   // Internal refs for coordination
-  chevronClickedRef: React.RefObject<boolean>;
+  chevronClickedRef: RefObject<boolean>;
 }
 
 /**
@@ -87,8 +94,9 @@ export interface UseComboboxCoreReturn {
  * What: Provides centralized state for dropdown open/close, focus management,
  * option filtering, keyboard navigation, and scroll behavior.
  *
- * Why: The combobox needs a single source of truth for state management to prevent
- * race conditions and ensure consistent behavior across all sub-hooks.
+ * Why: The combobox needs a single source of truth for state management to
+ * prevent race conditions and ensure consistent behavior across all sub-hooks.
+ *
  * @param props - The configuration object for the combobox core hook
  * @param props.options - Array of options available for selection
  * @param props.multiple - Whether multiple selections are allowed
@@ -118,6 +126,7 @@ export function useComboboxCore({
     getSelectedValuesFromValue(value, options, multiple)
   );
   const [isOpen, setIsOpen] = useState(false);
+  const [openTrigger, setOpenTrigger] = useState<DropdownTrigger>();
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const [manuallyClosed, setManuallyClosed] = useState(false);
   const [optionsChanged, setOptionsChanged] = useState(false);
@@ -150,27 +159,58 @@ export function useComboboxCore({
   const displayOptions = useMemo(() => {
     if (!isOpen) return []; // No options when dropdown is closed
     if (isLoading) return []; // Empty list while loading (spinner shows instead)
-    return filterOptions(options, searchTerm);
-  }, [options, searchTerm, isOpen, isLoading]);
+    if (searchTerm.length < minSearchLength) return [];
+
+    // In single-select mode, if input shows a selected option label,
+    // reopening should show full list while still keeping the label in input.
+    const selectedOptionLabelInSingleMode =
+      !multiple && selectedValues[0]?.label === searchTerm;
+
+    return filterOptions(
+      options,
+      selectedOptionLabelInSingleMode ? '' : searchTerm
+    );
+  }, [
+    options,
+    searchTerm,
+    isOpen,
+    isLoading,
+    minSearchLength,
+    multiple,
+    selectedValues,
+  ]);
+
+  const orderedDisplayOptions = useMemo(() => {
+    return getOptionsInGroupOrder(displayOptions);
+  }, [displayOptions]);
 
   // Calculate enabled indices for keyboard navigation
   // Use allOptions when closed (for keyboard opening), displayOptions when open (for navigation)
   const enabledIndices = useMemo(() => {
-    const optionsToUse = isOpen ? displayOptions : options;
+    const optionsToUse = isOpen
+      ? orderedDisplayOptions
+      : getOptionsInGroupOrder(options);
     return getEnabledIndices({
       options: optionsToUse,
       selectedValues,
       multiple,
       maxSelected,
     });
-  }, [isOpen, displayOptions, options, selectedValues, multiple, maxSelected]);
+  }, [
+    isOpen,
+    orderedDisplayOptions,
+    options,
+    selectedValues,
+    multiple,
+    maxSelected,
+  ]);
 
   // Get currently focused option
   const focusedOption = useMemo(() => {
-    return focusedIndex >= 0 && focusedIndex < displayOptions.length
-      ? displayOptions[focusedIndex]
+    return focusedIndex >= 0 && focusedIndex < orderedDisplayOptions.length
+      ? orderedDisplayOptions[focusedIndex]
       : null;
-  }, [focusedIndex, displayOptions]);
+  }, [focusedIndex, orderedDisplayOptions]);
 
   // Core actions
   /**
@@ -182,10 +222,7 @@ export function useComboboxCore({
    * to match user expectations and accessibility standards.
    */
   const openDropdown = useCallback(
-    (
-      searchValue: string,
-      trigger: 'focus' | 'input' | 'click' | 'keyboard' | 'chevron'
-    ): void => {
+    (trigger: DropdownTrigger): void => {
       const now = Date.now();
 
       // Block any openDropdown calls for 150ms after chevron action
@@ -194,7 +231,12 @@ export function useComboboxCore({
       }
 
       // Reset manually closed flag for explicit user actions
-      if (trigger === 'chevron' || trigger === 'click' || trigger === 'input') {
+      if (
+        trigger === 'chevron' ||
+        trigger === 'click' ||
+        trigger === 'input' ||
+        trigger === 'keyboardNoFocus'
+      ) {
         if (manuallyClosed) {
           setManuallyClosed(false);
         }
@@ -206,21 +248,16 @@ export function useComboboxCore({
         trigger !== 'input' &&
         trigger !== 'chevron' &&
         trigger !== 'keyboard' &&
+        trigger !== 'keyboardNoFocus' &&
         trigger !== 'click'
       ) {
         return;
       }
 
-      // Check minimum search length, but allow click to bypass
-      if (
-        searchValue.length >= minSearchLength ||
-        trigger === 'click' ||
-        trigger === 'chevron'
-      ) {
-        setIsOpen(true);
-      }
+      setOpenTrigger(trigger);
+      setIsOpen(true);
     },
-    [manuallyClosed, minSearchLength]
+    [manuallyClosed]
   );
 
   /**
@@ -228,10 +265,12 @@ export function useComboboxCore({
    *
    * What: Tracks whether user manually closed to prevent unwanted re-opening.
    *
-   * Why: Manual closes should be respected until user explicitly interacts again.
+   * Why: Manual closes should be respected until user explicitly interacts
+   * again.
    */
   const closeDropdown = useCallback((manual = false): void => {
     setIsOpen(false);
+    setOpenTrigger(undefined);
     setFocusedIndex(-1); // Reset focus when closing
     if (manual) {
       setManuallyClosed(true);
@@ -246,7 +285,8 @@ export function useComboboxCore({
   /**
    * Smoothly scrolls focused option into view with debouncing.
    *
-   * What: Prevents performance issues from rapid focus changes during navigation.
+   * What: Prevents performance issues from rapid focus changes during
+   * navigation.
    *
    * Why: Focused options must be visible for accessibility, but rapid scrolling
    * can cause performance issues and visual jank.
@@ -275,18 +315,21 @@ export function useComboboxCore({
   /**
    * Enhanced focus setter with validation and edge case handling.
    *
-   * What: Validates and corrects focus indices before setting them, handling disabled options,
-   * out-of-bounds indices, and options list changes.
+   * What: Validates and corrects focus indices before setting them, handling
+   * disabled options, out-of-bounds indices, and options list changes.
    *
-   * Why: Raw focus indices can be invalid due to disabled options, dynamic option changes,
-   * or out-of-bounds values, causing accessibility failures and broken keyboard navigation.
+   * Why: Raw focus indices can be invalid due to disabled options, dynamic
+   * option changes, or out-of-bounds values, causing accessibility failures and
+   * broken keyboard navigation.
    *
    * Behavior:
+   *
    * - If options changed: Reset focus to -1 (no focus)
    * - If index is -1: Set directly (valid unfocused state)
    * - If no enabled options: Force to -1
    * - If index points to disabled option: Find nearest enabled option
    * - If index out of bounds: Clamp to valid enabled range
+   *
    * @param index - The desired focus index to set
    */
   const setFocusedIndexEnhanced = useCallback(
@@ -370,7 +413,7 @@ export function useComboboxCore({
 
   // Event handlers from dropdown
   const handleChevronClick = useCallback(
-    (e?: React.MouseEvent): void => {
+    (e?: MouseEvent): void => {
       // Set flag IMMEDIATELY to prevent other handlers
       chevronClickedRef.current = true;
       chevronActionTimeRef.current = Date.now();
@@ -383,8 +426,7 @@ export function useComboboxCore({
       if (isOpen) {
         closeDropdown(true);
       } else {
-        const currentValue = inputRef.current?.value || '';
-        openDropdown(currentValue, 'chevron');
+        openDropdown('chevron');
 
         if (inputRef.current) {
           safeFocus(inputRef.current);
@@ -401,7 +443,7 @@ export function useComboboxCore({
   );
 
   const handleContainerClick = useCallback(
-    (e: React.MouseEvent): void => {
+    (e: MouseEvent): void => {
       const target = e.target as HTMLElement;
 
       // If chevron was just clicked, ignore this container click
@@ -419,8 +461,7 @@ export function useComboboxCore({
         return;
       }
 
-      const currentValue = inputRef.current?.value || '';
-      openDropdown(currentValue, 'click');
+      openDropdown('click');
 
       if (inputRef.current) {
         safeFocus(inputRef.current);
@@ -430,7 +471,7 @@ export function useComboboxCore({
   );
 
   const handleContainerKeyDown = useCallback(
-    (e: React.KeyboardEvent<HTMLDivElement>): void => {
+    (e: KeyboardEvent<HTMLDivElement>): void => {
       if ((e.target as HTMLElement).tagName === 'BUTTON') {
         return;
       }
@@ -454,10 +495,37 @@ export function useComboboxCore({
 
   // Reset focus when options change significantly
   useEffect(() => {
-    if (focusedIndex >= displayOptions.length) {
+    if (focusedIndex >= orderedDisplayOptions.length) {
       setFocusedIndex(-1);
     }
-  }, [displayOptions.length, focusedIndex]);
+  }, [orderedDisplayOptions.length, focusedIndex]);
+
+  useEffect(() => {
+    // Etter åpning: gjenopprett fokus til sist valgte option når ingen fokusindeks er satt.
+    const hasNoFocusedOption = focusedIndex === -1;
+    const shouldRestoreSelectedFocus =
+      openTrigger === 'click' || openTrigger === 'chevron';
+
+    if (!isOpen || !hasNoFocusedOption || !shouldRestoreSelectedFocus) {
+      return;
+    }
+
+    const selectedIndex = getLastSelectedIndex(
+      orderedDisplayOptions,
+      selectedValues
+    );
+
+    if (selectedIndex !== -1) {
+      setFocusedIndexEnhanced(selectedIndex);
+    }
+  }, [
+    focusedIndex,
+    isOpen,
+    openTrigger,
+    orderedDisplayOptions,
+    selectedValues,
+    setFocusedIndexEnhanced,
+  ]);
 
   // Reset focus when options change during loading
   useEffect(() => {
@@ -482,9 +550,10 @@ export function useComboboxCore({
     selectedValues,
     setSelectedValues,
     isOpen,
+    openTrigger,
     focusedIndex,
     enabledIndices,
-    displayOptions,
+    displayOptions: orderedDisplayOptions,
 
     // Refs
     inputRef,

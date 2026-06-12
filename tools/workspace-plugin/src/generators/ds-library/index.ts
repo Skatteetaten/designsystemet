@@ -103,7 +103,6 @@ export default async function (
   );
   updateJson(tree, tsconfigSpec, (tsconfigSpec): object => {
     tsconfigSpec.include = [
-      'jest.config.ts',
       '**/__tests__/*.test.ts',
       '**/__tests__/*.test.tsx',
       '**/*.d.ts',

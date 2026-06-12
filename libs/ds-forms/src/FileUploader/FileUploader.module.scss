@@ -31,7 +31,7 @@
     margin-top: var(--spacing-xs);
   }
 
-  &_error:not(:focus-visible, :hover) {
+  &_error:not(:focus, :hover) {
     border: 3px var(--semantic-danger-foreground) solid;
   }
 
@@ -45,7 +45,7 @@
     background: var(--semantic-interactive-background);
   }
 
-  &:focus-visible {
+  &:focus {
     outline: 2px solid var(--semantic-interactive-main);
     outline-offset: 2px;
   }
@@ -81,21 +81,16 @@
   list-style: none;
 }
 
-.removePointerEvents {
-  pointer-events: none;
-}
-
 .alert {
   margin: var(--spacing-m) 0 0;
 }
 
 .spinner {
   font-size: var(--font-size-m);
-  font-weight: var(--font-weight-medium);
   line-height: var(--semantic-line-height-buttons);
   overflow-wrap: anywhere;
 }
 
-.innerLabel {
+.innerText {
   display: block;
 }

@@ -12,6 +12,7 @@
     /* External */;
   --semantic-responsive-container: var(--container-xs);
   --semantic-responsive-container-spacing: 0 var(--spacing-m);
+  --semantic-responsive-wide-content: var(--container-xs);
   --semantic-responsive-article: var(--container-xs);
 
   /* Internal */
@@ -19,7 +20,6 @@
   --semantic-responsive-internal-container-flex-direction: column;
   --semantic-responsive-internal-container-spacing: var(--spacing-m);
   --semantic-responsive-internal-aside: var(--container-xs);
-  --semantic-responsive-wide-content: var(--container-xs);
 }
 
 /* breakpoint-s */

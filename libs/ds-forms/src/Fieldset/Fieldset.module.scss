@@ -13,22 +13,10 @@
 
 .legend {
   display: inline;
-  margin-bottom: var(--spacing-m);
   color: var(--palette-graphite-70);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-input);
-
-  &_required::after,
-  &WithMarkup_required > :first-child::after {
-    margin-left: var(--spacing-xxs);
-    color: var(--semantic-danger-foreground);
-    content: '*';
-  }
-
-  &NoMarginBottom {
-    margin-bottom: 0;
-  }
 }
 
 .contentContainer {
@@ -41,7 +29,4 @@
 
 .srOnly {
   @include styles.sr-only;
-
-  width: 200px;
-  white-space: normal;
 }

@@ -5,20 +5,20 @@ import { isWithinInterval, format } from 'date-fns';
 import { useArgs } from 'storybook/preview-api';
 
 import {
-  getAutoCompletePropDescription,
-  getCommonAutoCompleteDefault,
-  getCommonFormVariantDefault,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
-  getDatePickerDateFormat,
-  getDatePickerPlaceholderDefault,
-  TextArea,
+  Combobox,
+  defaultDatePickerPlaceholder,
 } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -28,77 +28,49 @@ const meta = {
     // Props
     classNames: { control: false, table: { category: category.props } },
     value: { table: { category: category.props }, control: 'date' },
-    description: { table: { category: category.props } },
-    dateFormat: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDatePickerDateFormat() },
-      },
-    },
+    description: { control: 'text', table: { category: category.props } },
+    dateFormat: { table: { category: category.props } },
     label: { table: { category: category.props } },
     disabledDates: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     initialPickerDate: { table: { category: category.props }, control: 'date' },
     minDate: { table: { category: category.props }, control: 'date' },
     maxDate: { table: { category: category.props }, control: 'date' },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
-      },
-    },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
     autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      description: getAutoCompletePropDescription(),
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: autoCompletePropDescription,
     },
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     placeholder: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: getDatePickerPlaceholderDefault() },
+        defaultValue: { summary: defaultDatePickerPlaceholder },
       },
     },
     readOnly: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { table: { category: category.event } },
-    onSelectDate: { table: { category: category.event } },
+    onCalendarToggle: { ...htmlEventDescription },
+    onHelpToggle: { ...htmlEventDescription },
+    onSelectDate: { ...htmlEventDescription },
   },
   args: {
     label: 'Fødselsdato',
@@ -109,6 +81,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
+  tags: ['!dev'],
   render: (args): JSX.Element => {
     const [, setArgs] = useArgs();
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
@@ -135,7 +108,24 @@ export const Preview: Story = {
   },
 } satisfies Story;
 
-export const Examples: Story = {
+export const Enkeltdato: Story = {
+  render: (_args): JSX.Element => {
+    const [value, setValue] = useState<Date | null>(null);
+
+    return (
+      <DatePicker
+        label={'Dato (dd.mm.åååå)'}
+        value={value}
+        required
+        onSelectDate={setValue}
+      />
+    );
+  },
+} satisfies Story;
+Enkeltdato.parameters = exampleParameters;
+
+export const MedMinOgMaxDato: Story = {
+  name: 'Med min- og maxdato',
   render: (_args): JSX.Element => {
     const [value, setValue] = useState<Date | null>(null);
     const [inputValue, setInputValue] = useState('');
@@ -157,7 +147,7 @@ export const Examples: Story = {
         setErrorMessage(
           `Dato må være mellom ${format(minDate, 'dd.MM.yyyy')} og ${format(
             maxDate,
-            'dd.MM.yyyy.'
+            'dd.MM.yyyy'
           )}.`
         );
       } else {
@@ -167,21 +157,55 @@ export const Examples: Story = {
       setValue(date);
     };
     return (
-      <>
-        <DatePicker
-          label={'Fødselsdato'}
-          value={value}
-          errorMessage={errorMessage}
-          maxDate={maxDate}
-          minDate={minDate}
-          hasSpacing
-          required
-          onSelectDate={handleSelect}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <TextArea className={'textField300'} label={'Andre opplysninger'} />
-      </>
+      <DatePicker
+        label={'Oppstartsdato (dd.mm.åååå)'}
+        value={value}
+        errorMessage={errorMessage}
+        maxDate={maxDate}
+        minDate={minDate}
+        hasSpacing
+        required
+        onSelectDate={handleSelect}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
     );
   },
 } satisfies Story;
-Examples.parameters = exampleParameters;
+MedMinOgMaxDato.parameters = exampleParameters;
+
+export const DatoOgKlokkeslett: Story = {
+  name: 'Dato og klokkeslett',
+  render: (_args): JSX.Element => {
+    const [date, setDate] = useState<Date | null>(null);
+    const [time, setTime] = useState<string>('');
+
+    // Generer klokkeslett fra 08:00 til 16:00 med 30 minutters intervall
+    const timeOptions = [];
+    for (let hour = 8; hour <= 16; hour++) {
+      for (let minute = 0; minute < 60; minute += 30) {
+        if (hour === 16 && minute > 0) break; // Stopp ved 16:00
+        const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+        timeOptions.push({ value: timeString, label: timeString });
+      }
+    }
+
+    return (
+      <div className={'flex gapM'}>
+        <DatePicker
+          label={'Dato (dd.mm.åååå)'}
+          value={date}
+          onSelectDate={setDate}
+        />
+        <Combobox
+          label={'Tid (tt:mm)'}
+          value={time}
+          options={timeOptions}
+          placeholder={''}
+          className={'textField150'}
+          onSelectionChange={(option) => setTime(option?.value ?? '')}
+        />
+      </div>
+    );
+  },
+} satisfies Story;
+DatoOgKlokkeslett.parameters = exampleParameters;

@@ -2,12 +2,14 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
+import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { Fieldset, DatePicker } from '@skatteetaten/ds-forms';
-import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -16,40 +18,30 @@ const meta = {
   argTypes: {
     // Props
     classNames: { control: false, table: { category: category.props } },
-    children: { control: false, table: { category: category.props } },
-    description: { table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     helpText: { control: 'text', table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om legend skal markeres med stjerne. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     legend: 'Hvilken periode trenger du bekreftelse for?',
-    children: <Paragraph>{'Innhold'}</Paragraph>,
+    children: 'Innhold',
   },
 } satisfies Meta<typeof Fieldset>;
 

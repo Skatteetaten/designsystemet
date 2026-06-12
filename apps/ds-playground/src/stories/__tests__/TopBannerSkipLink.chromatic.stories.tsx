@@ -7,7 +7,7 @@ import * as TopBannerSkipLinkStories from './TopBannerSkipLink.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/TopBannerSkipLink',
+  title: 'Chromatic/TopBannerSkipLink (intern)',
   component: TopBannerSkipLink,
   tags: ['chromatic', '!autodocs'],
   parameters: {

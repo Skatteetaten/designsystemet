@@ -14,9 +14,7 @@ export interface ModalProps extends BaseProps {
   };
   /** Innhold */
   children: ReactNode;
-  /**
-   * Definerer stilen til Modal.
-   */
+  /** Definerer stilen til Modal. */
   variant?: ModalVariant;
   /** Padding rundt Modal */
   padding?: ModalPadding;
@@ -28,16 +26,25 @@ export interface ModalProps extends BaseProps {
   hideCloseButton?: boolean;
   /** Om autolukking skal skrus på/av. Autolukking er skrudd på som default. */
   dismissOnOutsideClick?: boolean;
-  /** Om modalen kan lukkes ved Esc-trykk. Modalen lukkes ved Esc-trykk som default. */
+  /**
+   * Om modalen kan lukkes ved Esc-trykk. Modalen lukkes ved Esc-trykk som
+   * default.
+   */
   dismissOnEsc?: boolean;
   /** Source til illustrasjonsbilde øverst i Modal */
   imageSource?: string;
-  /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
+  /**
+   * Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på
+   * alt tekst.
+   */
   imageSourceAltText?: string;
   /** Icon-komponent som en funksjon som vises over overskriften */
   renderIcon?: () => ReactElement<IconProps>;
   /** Modal i shadowndom. */
   shadowRootNode?: Document | ShadowRoot;
-  /** Callback når modalen lukkes */
+  /**
+   * Callback når modalen lukkes (lukkeknapp, Esc-tast, eller klikk utenfor).
+   * Kjøres ikke når modalen lukkes programmatisk med ref.current.close().
+   */
   onClose?: () => void;
 }

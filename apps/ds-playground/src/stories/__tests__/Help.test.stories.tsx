@@ -1,10 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, within } from 'storybook/test';
+import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
-import {
-  dsI18n,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
@@ -19,6 +16,7 @@ const meta = {
     // Props
     description: { table: { disable: true } },
     classNames: { table: { disable: true } },
+    disabled: { table: { disable: true } },
     hideHelp: { table: { disable: true } },
     helpText: { table: { disable: true } },
     helpSvgPath: {
@@ -64,7 +62,7 @@ export const WithHelptext = {
     const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-    const helpSvg = canvas.getByLabelText(getHelpTitleHelpSvgDefault(), {
+    const helpSvg = canvas.getByLabelText(defaultHelpButtonTitle, {
       selector: 'svg',
     });
     await expect(helpSvg).toBeInTheDocument();
@@ -169,9 +167,7 @@ export const ClickHelpButton = {
     helpText: defaultHelpText,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -192,9 +188,7 @@ export const ClickCloseButton = {
     helpText: defaultHelpText,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -213,13 +207,31 @@ export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const WithDisabled = {
+  name: 'With Disabled',
+  args: {
+    helpText: 'Hjelpetekst',
+    disabled: true,
+  },
+  argTypes: {
+    disabled: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;

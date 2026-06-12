@@ -1,9 +1,18 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -31,17 +40,19 @@ const meta = {
     },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     disabled: { table: { disable: true } },
     form: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onHelpToggle: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+    htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
   },
 } satisfies Meta<typeof Fieldset>;
 export default meta;
@@ -97,9 +108,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -109,6 +118,35 @@ export const WithAttributes = {
     await expect(fieldset).toHaveAttribute('lang', 'nb');
     await expect(fieldset).toHaveAttribute('data-testid', '123ID');
     await expect(fieldset).toHaveAttribute('form', '123form');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      container: 'dummyClassname',
+      legend: 'dummyClassname',
+      contentContainer: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('group');
+    await expect(container).toHaveClass('dummyClassname');
+    const legend = canvas.getByText(defaultLegendText);
+    await expect(legend).toHaveClass('dummyClassname');
+    const contentContainer = legend.nextElementSibling;
+    await expect(contentContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -130,6 +168,41 @@ export const Defaults = {
   },
 } satisfies Story;
 
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'fieldset-alert-description-id';
+    return (
+      <>
+        <Fieldset {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for fieldset'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const fieldset = canvas.getByRole('group');
+    await expect(fieldset).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for fieldset'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = fieldset.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('fieldset-alert-description-id');
+  },
+} satisfies Story;
+
 export const WithDescription = {
   name: 'With Description (FS-A3)',
   args: {
@@ -148,42 +221,6 @@ export const WithDescription = {
   },
 } satisfies Story;
 
-export const WithShowRequiredMark = {
-  name: 'With ShowRequiredMark (FS-A4)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithShowRequiredMarkAndLegend = {
-  name: 'With ShowRequiredMark And Legend Contains Markup (FS-A4)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h1'} level={3}>
-          {'Dette er en Heading i legend'}
-        </Heading>
-        <Paragraph variant={'ingress'}>
-          <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
-        </Paragraph>
-      </>
-    ),
-    showRequiredMark: true,
-  },
-  argTypes: {
-    legend: {
-      table: { disable: true },
-      control: { disable: true },
-    },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithHideLegend = {
   name: 'With HideLegend (FS-A7)',
   args: {
@@ -197,10 +234,8 @@ export const WithHideLegend = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getAllByText(defaultLegendText)[0];
-    const descriptionNode = canvas.getByText(defaultDescription, {
-      selector: "[aria-hidden='true']",
-    });
+    const legend = canvas.getByText(defaultLegendText);
+    const descriptionNode = canvas.getByText(defaultDescription);
     const helpButtonNode = canvas.getByRole('button');
     await expect(legend).toBeInTheDocument();
     await expect(descriptionNode).toBeInTheDocument();
@@ -224,6 +259,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -235,6 +271,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const fieldset = canvas.getByRole('group');
     await expect(fieldset).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -253,26 +291,28 @@ export const WithHelpTextSvgPathAndTitle = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultLegendText,
-    });
+    const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     const svgNode = canvas.getByLabelText('Tooltip', { selector: 'svg' });
     await expect(svgNode).toBeInTheDocument();
-    const legend = canvas.getAllByText(defaultLegendText)[0];
+    const legend = canvas.getByText(defaultLegendText);
     await expect(helpButton).toHaveAttribute('aria-describedby', legend.id);
     await userEvent.click(helpButton);
   },
 } satisfies Story;
 
 export const WithLongLegend = {
-  name: 'With Long Legend',
+  name: 'With Long Legend And HelpText And Description',
   args: {
     ...defaultArgs,
     legend: loremIpsumWithoutSpaces,
+    helpText: defaultHelpText,
+    description: defaultDescription,
   },
   argTypes: {
     legend: { table: { disable: false } },
+    helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
   },
   globals: {
     viewport: {
@@ -286,33 +326,15 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      legend: 'dummyClassname',
-    },
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getAllByText(defaultLegendText)[1];
-    await expect(legend).toHaveClass('dummyClassname');
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;

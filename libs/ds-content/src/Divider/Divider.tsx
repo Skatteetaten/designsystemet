@@ -1,25 +1,24 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
-import {
-  getDividerSpacingBottomDefault,
-  getDividerSpacingTopDefault,
-  getDividerVariantDefault,
-} from './defaults';
 import { DividerProps } from './Divider.types';
 
 import styles from './Divider.module.scss';
 
+/**
+ * Divider
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-divider--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/divider/) - Brukerveiledning
+ */
 export const Divider = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  variant = getDividerVariantDefault(),
-  spacingTop = getDividerSpacingTopDefault(),
-  spacingBottom = getDividerSpacingBottomDefault(),
+  variant = 'subtle',
+  spacingTop = 's',
+  spacingBottom = 's',
   ariaHidden,
 }: DividerProps): JSX.Element => {
   const concatenatedClassName = `${styles.divider} ${className}`.trim();

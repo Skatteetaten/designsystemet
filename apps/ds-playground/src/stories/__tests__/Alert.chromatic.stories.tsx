@@ -9,6 +9,9 @@ const meta = {
   title: 'Chromatic/Alert',
   component: Alert,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: 'button',
+  },
 } satisfies Meta<typeof Alert>;
 export default meta;
 export const Snapshots = createSingleStory(AlertStories, meta);

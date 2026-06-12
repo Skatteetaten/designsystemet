@@ -1,7 +1,7 @@
 .panel {
   display: none;
 
-  &_active {
+  &[data-active='true'] {
     display: block;
   }
 }

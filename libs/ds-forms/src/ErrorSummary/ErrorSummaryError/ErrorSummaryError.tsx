@@ -1,7 +1,6 @@
 import { useContext, MouseEvent, JSX } from 'react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { ErrorProps } from './ErrorSummaryError.types';
 import { ErrorSummaryContext } from '../ErrorSummaryContext';
@@ -9,7 +8,7 @@ import { ErrorSummaryContext } from '../ErrorSummaryContext';
 export const ErrorSummaryError = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   referenceId,

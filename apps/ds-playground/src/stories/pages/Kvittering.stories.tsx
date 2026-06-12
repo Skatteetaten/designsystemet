@@ -43,6 +43,7 @@ export const Kvittering = (): JSX.Element => {
   const me: Person = {
     name: 'Knuslete Foxtrot',
     personId: '12345678910',
+    dateOfBirth: new Date('1984-02-13'),
     type: 'Person',
   };
 
@@ -55,7 +56,7 @@ export const Kvittering = (): JSX.Element => {
         <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
       </div>
       <div className={styles.article}>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Skjematittel'}
         </Heading>
         <DescriptionList hasSpacing>

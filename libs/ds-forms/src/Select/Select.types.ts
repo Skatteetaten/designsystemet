@@ -2,16 +2,12 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  FunctionComponent,
   ReactNode,
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  FormSize,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import { SelectOption } from './SelectOption/SelectOption';
@@ -27,7 +23,9 @@ type RequiredSelectHTMLAttributes = Pick<
   | 'value'
 >;
 
-type SelectHTMLAttributes = Partial<RequiredSelectHTMLAttributes>;
+type SelectHTMLAttributes = Partial<RequiredSelectHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface SelectPropsHTMLAttributes extends SelectHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLSelectElement>;
@@ -52,7 +50,11 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
   description?: LabelWithHelpProps['description'];
   /** Margin under komponenten */
   hasSpacing?: boolean;
@@ -66,8 +68,6 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   placeholder?: string;
   /** Skjuler placeholder */
   hidePlaceholder?: boolean;
-  /** Definerer stilen til Select */
-  variant?: FormSize;
   /** SelectOption-komponenter */
   children: ReactNode;
   /** Callback som kalles når hjelpetekst vises/skjules */
@@ -76,8 +76,8 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   errorMessage?: string;
 }
 
-export type SelectProps = SelectCommonProps & FormRequiredProps;
+export type SelectProps = SelectCommonProps;
 
-export interface SelectComponent extends React.FC<SelectProps> {
+export interface SelectComponent extends FunctionComponent<SelectProps> {
   Option: typeof SelectOption;
 }

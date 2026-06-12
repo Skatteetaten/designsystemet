@@ -2,24 +2,18 @@ import {
   useEffect,
   useCallback,
   useImperativeHandle,
+  useState,
   memo,
   type JSX,
 } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import type { ComboboxProps, ComboboxComponent } from './Combobox.types';
 import { ComboboxAccessibilityAnnouncer } from './ComboboxAccessibilityAnnouncer';
 import { ComboboxButton } from './ComboboxButton';
 import { ComboboxOptions } from './ComboboxOptions';
 import { ComboboxSelectedOptions } from './ComboboxSelectedOptions';
-import {
-  getComboboxPlaceholderDefault,
-  getComboboxMinSearchLengthDefault,
-  getComboboxIsMultiSelectDefault,
-  getComboboxIsLoadingDefault,
-  getComboboxVariantDefault,
-} from './defaults';
 import { useBrowserCompatibility } from './hooks/useBrowserCompatibility';
 import { useComboboxCore } from './hooks/useComboboxCore';
 import { useComboboxInput } from './hooks/useComboboxInput';
@@ -28,312 +22,344 @@ import { useComboboxSelection } from './hooks/useComboboxSelection';
 import {
   getSelectedValuesFromValue,
   getSearchTermFromValue,
+  getOptionsInGroupOrder,
 } from './utils/combobox-utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 
 import styles from './Combobox.module.scss';
 
 /**
- * Combobox allows users to select from a list of predefined options with search
- * functionality. Supports both single and multi-select modes, with controlled
- * and uncontrolled variants.
+ * Combobox
  *
- * #### Single Select Usage:
- *
- * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection
- *   events
- * - **Controlled**: Provide `value` prop, use `onSelectionChange` to update state
- * - **With search**: Use `onInputChange` for live search/filtering functionality
- *
- * #### Multi Select Usage:
- *
- * - Set `multiple={true}` prop
- * - **Uncontrolled**: Omit `value` prop, use `onSelectionChange` for selection
- *   events
- * - **Controlled**: Provide `value` as array, use `onSelectionChange` to update
- *   state
- * - Automatically uses 'large' variant for chip display space
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-combobox--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/combobox/) - Brukerveiledning
  */
-const Combobox = memo(
-  ({
-    ref,
-    id,
-    className = getCommonClassNameDefault(),
-    lang,
-    'data-testid': dataTestId,
-    classNames,
-    description,
-    errorMessage,
-    hasSpacing,
-    helpSvgPath,
-    helpText,
-    hideLabel,
-    isLoading = getComboboxIsLoadingDefault(),
-    label,
-    spinnerLabel,
-    minSearchLength = getComboboxMinSearchLengthDefault(),
-    multiple = getComboboxIsMultiSelectDefault(),
+const ComboboxContent = ({
+  ref,
+  id,
+  className = '',
+  lang,
+  'data-testid': dataTestId,
+  classNames,
+  description,
+  errorMessage,
+  hasSpacing = false,
+  helpSvgPath,
+  helpText,
+  hideLabel = false,
+  isLoading = false,
+  label,
+  spinnerLabel,
+  minSearchLength = 0,
+  multiple = false,
+  options,
+  placeholder,
+  spinnerProps,
+  titleHelpSvg,
+  value,
+  variant = 'medium',
+  accessKey,
+  ariaDescribedBy,
+  name,
+  disabled = false,
+  form,
+  required = false,
+  onBlur,
+  onFocus,
+  onHelpToggle,
+  onInputChange,
+  onSelectionChange,
+  maxSelected,
+}: Readonly<ComboboxProps>): JSX.Element => {
+  const { safeFocus } = useBrowserCompatibility();
+  const resolvedVariant = multiple ? 'large' : variant;
+  const allOptionsInOrder = getOptionsInGroupOrder(options);
+
+  // Track when minimum search length delay is complete (for delayed chevron display)
+  const [shouldShowChevronDelayed, setShouldShowChevronDelayed] =
+    useState(false);
+
+  const handleMinSearchLengthDelayChange = useCallback(
+    (isReady: boolean): void => {
+      setShouldShowChevronDelayed(isReady);
+    },
+    []
+  );
+
+  // UNIFIED CORE HOOK - consolidates dropdown + focus + state management
+  const coreState = useComboboxCore({
     options,
-    placeholder = getComboboxPlaceholderDefault(),
-    spinnerProps,
-    titleHelpSvg,
+    multiple,
     value,
-    variant = getComboboxVariantDefault(),
-    name,
-    disabled,
-    required,
-    onBlur,
-    onFocus,
-    onHelpToggle,
-    onInputChange,
-    onSelectionChange,
+    minSearchLength,
+    htmlAttributes: { id },
+    isLoading,
+    safeFocus,
     maxSelected,
-    ...htmlAttributes
-  }: Readonly<ComboboxProps>): JSX.Element => {
-    const { safeFocus } = useBrowserCompatibility();
+  });
 
-    const resolvedVariant = multiple ? 'large' : variant;
+  // Extract everything we need from unified core state
+  const {
+    searchTerm,
+    setSearchTerm,
+    selectedValues,
+    setSelectedValues,
+    isOpen,
+    openTrigger,
+    focusedIndex,
+    setFocusedIndex,
+    enabledIndices,
+    displayOptions,
+    inputRef,
+    containerRef,
+    comboboxId,
+    listId,
+    errorId,
+    openDropdown,
+    closeDropdown,
+    handleChevronClick,
+    handleContainerClick,
+    handleContainerKeyDown,
+    handleButtonFocus,
+    moveFocusNext,
+    moveFocusPrevious,
+    getFocusedElementId,
+  } = coreState;
 
-    // UNIFIED CORE HOOK - consolidates dropdown + focus + state management
-    const coreState = useComboboxCore({
-      options,
+  const getComboboxPlaceholderDefault = (): string | undefined => {
+    if (minSearchLength > 0 || (multiple && selectedValues.length > 0)) {
+      return undefined;
+    }
+
+    return placeholder ?? dsI18n.t('ds_forms:combobox.TypeOrSelect');
+  };
+
+  // Expose the input element to parent component via ref prop
+  useImperativeHandle(ref, () => inputRef.current as HTMLInputElement, [
+    inputRef,
+  ]);
+
+  // Use selection handlers hook
+  const { handleRemoveLastValue, handleOptionSelect, handleRemoveValue } =
+    useComboboxSelection({
+      options: allOptionsInOrder,
       multiple,
-      value,
-      minSearchLength,
-      htmlAttributes: { id },
-      isLoading,
-      safeFocus,
+      searchTerm,
+      selectedValues,
+      setSelectedValues,
+      setSearchTerm,
+      closeDropdown,
+      setFocusedIndex,
+      inputRef,
+      onSelectionChange,
       maxSelected,
     });
 
-    // Extract everything we need from unified core state
-    const {
+  // Use input handlers hook
+  const { handleInputChange, handleInputFocus, handleInputBlur } =
+    useComboboxInput({
+      multiple,
       searchTerm,
-      setSearchTerm,
       selectedValues,
       setSelectedValues,
-      isOpen,
-      focusedIndex,
-      setFocusedIndex,
-      enabledIndices,
-      displayOptions,
-      inputRef,
-      containerRef,
-      comboboxId,
-      listId,
-      errorId,
-      openDropdown,
-      closeDropdown,
-      handleChevronClick,
-      handleContainerClick,
-      handleContainerKeyDown,
-      handleButtonFocus,
-      chevronClickedRef,
-    } = coreState;
-
-    // Expose the input element to parent component via ref prop
-    useImperativeHandle(ref, () => inputRef.current as HTMLInputElement, [
-      inputRef,
-    ]);
-
-    // Use selection handlers hook
-    const { handleRemoveLastValue, handleOptionSelect, handleRemoveValue } =
-      useComboboxSelection({
-        multiple,
-        selectedValues,
-        setSelectedValues,
-        setSearchTerm,
-        closeDropdown,
-        setFocusedIndex,
-        inputRef,
-        onSelectionChange,
-        maxSelected,
-      });
-
-    // Use input handlers hook
-    const {
-      handleInputChange,
-      handleInputFocus,
-      handleInputBlur,
-      handleClearValue,
-    } = useComboboxInput({
-      multiple,
-      setSelectedValues,
       setSearchTerm,
       openDropdown,
       closeDropdown,
-      inputRef,
+      enabledIndices,
+      focusedIndex,
+      setFocusedIndex,
       onSelectionChange,
       onInputChange,
       onBlur,
       onFocus,
       value,
-      chevronClickedRef,
     });
 
-    // Memoize keyboard dropdown handler to prevent unnecessary re-creations
-    const keyboardOpenDropdown = useCallback(() => {
-      const currentValue = inputRef.current?.value || '';
-      openDropdown(currentValue, 'keyboard');
-    }, [openDropdown, inputRef]);
+  // Memoize keyboard dropdown handler to prevent unnecessary re-creations
+  const keyboardOpenDropdown = useCallback(() => {
+    openDropdown('keyboard');
+  }, [openDropdown]);
 
-    // Keyboard navigation hook
-    useComboboxKeyboard({
-      isOpen,
-      allOptions: options,
-      displayOptions,
-      enabledIndices,
-      focusedIndex,
-      setFocusedIndex,
-      openDropdown: keyboardOpenDropdown,
-      closeDropdown,
-      setSearchTerm,
-      inputRef,
-      minSearchLength,
-      onSelectionChange,
-      multiple,
-      selectedValues,
-      onRemoveLastValue: handleRemoveLastValue,
-      onOptionSelect: handleOptionSelect,
-    });
+  const keyboardOpenDropdownWithoutFocus = useCallback(() => {
+    openDropdown('keyboardNoFocus');
+  }, [openDropdown]);
 
-    // Update selected values for multi-select when external value changes
-    useEffect(() => {
-      if (multiple && Array.isArray(value)) {
-        setSelectedValues(getSelectedValuesFromValue(value, options, multiple));
-        setSearchTerm(''); // Keep search field clear in multi-select mode
-      } else if (!multiple && value !== undefined) {
-        // In controlled single mode, update searchTerm when value changes
-        setSearchTerm(getSearchTermFromValue(value, options, multiple));
-      }
-    }, [value, multiple, options, setSearchTerm, setSelectedValues]);
+  // Keyboard navigation hook
+  useComboboxKeyboard({
+    isOpen,
+    allOptions: allOptionsInOrder,
+    displayOptions,
+    enabledIndices,
+    focusedIndex,
+    setFocusedIndex,
+    moveFocusNext,
+    moveFocusPrevious,
+    openDropdown: keyboardOpenDropdown,
+    openDropdownWithoutFocus: keyboardOpenDropdownWithoutFocus,
+    closeDropdown,
+    setSearchTerm,
+    inputRef,
+    minSearchLength,
+    onSelectionChange,
+    multiple,
+    selectedValues,
+    onRemoveLastValue: handleRemoveLastValue,
+    onOptionSelect: handleOptionSelect,
+  });
 
-    const focusedOptionId =
-      focusedIndex >= 0 ? `${comboboxId}-option-${focusedIndex}` : undefined;
+  // Update selected values for multi-select when external value changes
+  useEffect(() => {
+    if (multiple && Array.isArray(value)) {
+      setSelectedValues(getSelectedValuesFromValue(value, options, multiple));
+      setSearchTerm(''); // Keep search field clear in multi-select mode
+    } else if (!multiple && value !== undefined) {
+      const selectedOption = options.find((option) => option.value === value);
+      setSelectedValues(selectedOption ? [selectedOption] : []);
+      // In controlled single mode, update searchTerm when value changes
+      setSearchTerm(getSearchTermFromValue(value, options, multiple));
+    }
+  }, [value, multiple, options, setSearchTerm, setSelectedValues]);
 
-    const labelId = `${comboboxId}-label`;
-    const descriptionId = `${comboboxId}-description`;
+  const focusedOptionId = getFocusedElementId();
 
-    const ariaDescribedBy =
-      [description && descriptionId, errorMessage && errorId]
-        .filter(Boolean)
-        .join(' ') || undefined;
+  // Chevron should reflect actual open state, except during delayed min-search hint flow.
+  const isBelowMinSearchLength = searchTerm.length < minSearchLength;
+  const chevronIsOpen =
+    isOpen &&
+    (openTrigger === 'chevron' ||
+      !isBelowMinSearchLength ||
+      shouldShowChevronDelayed);
 
-    return (
-      <div lang={lang} data-has-spacing={hasSpacing} className={className}>
-        <LabelWithHelp
-          id={labelId}
-          classNames={classNames}
-          htmlFor={comboboxId}
-          hideLabel={hideLabel}
-          description={description}
-          descriptionId={descriptionId}
-          helpSvgPath={helpSvgPath}
-          helpText={helpText}
-          titleHelpSvg={titleHelpSvg}
-          onHelpToggle={onHelpToggle}
-        >
-          {label}
-        </LabelWithHelp>
-        <div
-          className={`${styles.inputContainer} ${label && !hideLabel ? styles.inputContainerMarginTop : ''}`.trim()}
-          onClick={!disabled ? handleContainerClick : undefined}
-          onKeyDown={!disabled ? handleContainerKeyDown : undefined}
-        >
-          <div className={styles.inputContentArea}>
-            <ComboboxSelectedOptions
-              multiple={multiple}
-              selectedValues={selectedValues}
-              labelId={labelId}
-              disabled={disabled}
-              onRemoveValue={handleRemoveValue}
-            />
-            <input
-              ref={inputRef}
-              id={comboboxId}
-              type={'text'}
-              value={searchTerm}
-              placeholder={placeholder}
-              disabled={disabled}
-              required={required}
-              role={'combobox'}
-              className={styles.input}
-              aria-expanded={isOpen}
-              aria-autocomplete={'list'}
-              autoComplete={'off'}
-              aria-controls={listId}
-              aria-activedescendant={
-                focusedIndex >= 0 ? focusedOptionId : undefined
-              }
-              aria-describedby={ariaDescribedBy}
-              aria-invalid={!!errorMessage || undefined}
-              data-testid={dataTestId}
-              onChange={handleInputChange}
-              onFocus={handleInputFocus}
-              onBlur={handleInputBlur}
-              {...(multiple ? { name: undefined } : { name })}
-              {...htmlAttributes}
-            />
-            {/* Hidden inputs for form submission in multiple mode */}
-            {multiple &&
-              selectedValues.map((selectedValue) => (
-                <input
-                  key={selectedValue.value}
-                  type={'hidden'}
-                  name={name}
-                  value={selectedValue.value}
-                />
-              ))}
-          </div>
-          <ComboboxButton
-            isOpen={isOpen}
-            hasValue={!multiple && !!searchTerm}
-            multiple={multiple}
-            disabled={disabled}
-            variant={resolvedVariant}
-            onClear={!multiple ? handleClearValue : undefined}
-            onClick={handleChevronClick}
-          />
-          <ComboboxOptions
-            isOpen={isOpen}
-            isLoading={isLoading}
-            spinnerProps={spinnerProps}
-            displayOptions={displayOptions}
-            searchTerm={searchTerm}
-            minSearchLength={minSearchLength}
+  const labelId = `${comboboxId}-label`;
+  const descriptionId = `${comboboxId}-description`;
+
+  const resolvedAriaDescribedBy =
+    [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
+      .filter(Boolean)
+      .join(' ') || undefined;
+
+  return (
+    <div
+      lang={lang}
+      data-has-spacing={hasSpacing}
+      className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
+    >
+      <LabelWithHelp
+        id={labelId}
+        classNames={classNames}
+        htmlFor={comboboxId}
+        hideLabel={hideLabel}
+        description={description}
+        descriptionId={descriptionId}
+        helpSvgPath={helpSvgPath}
+        helpText={helpText}
+        titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
+        onHelpToggle={onHelpToggle}
+      >
+        {label}
+      </LabelWithHelp>
+      <div
+        className={`${styles.inputContainer} ${label && !hideLabel ? styles.inputContainerMarginTop : ''} ${classNames?.inputContainer ?? ''}`.trim()}
+        onClick={!disabled ? handleContainerClick : undefined}
+        onKeyDown={!disabled ? handleContainerKeyDown : undefined}
+      >
+        <div className={styles.inputContentArea}>
+          <ComboboxSelectedOptions
+            className={classNames?.inputList}
             multiple={multiple}
             selectedValues={selectedValues}
-            comboboxId={comboboxId}
-            listId={listId}
-            focusedIndex={focusedIndex}
-            className={classNames?.options}
-            handleButtonFocus={handleButtonFocus}
-            handleOptionSelect={handleOptionSelect}
-            customListRef={containerRef}
-            maxSelected={maxSelected}
-            spinnerLabel={spinnerLabel}
+            labelId={labelId}
+            disabled={disabled}
+            onRemoveValue={handleRemoveValue}
           />
+          {/*eslint-disable-next-line jsx-a11y/no-access-key*/}
+          <input
+            ref={inputRef}
+            id={comboboxId}
+            type={'text'}
+            value={searchTerm}
+            accessKey={accessKey}
+            form={form}
+            name={multiple ? undefined : name}
+            placeholder={getComboboxPlaceholderDefault()}
+            disabled={disabled}
+            required={required}
+            role={'combobox'}
+            className={styles.input}
+            aria-expanded={isOpen}
+            aria-autocomplete={'list'}
+            autoComplete={'off'}
+            aria-controls={listId}
+            aria-activedescendant={
+              focusedIndex >= 0 ? focusedOptionId : undefined
+            }
+            aria-describedby={resolvedAriaDescribedBy}
+            aria-invalid={getAriaInvalid(errorMessage, required)}
+            data-testid={dataTestId}
+            onChange={handleInputChange}
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
+          />
+          {/* Hidden inputs for form submission in multiple mode */}
+          {multiple &&
+            selectedValues.map((selectedValue) => (
+              <input
+                key={selectedValue.value}
+                type={'hidden'}
+                name={name}
+                value={selectedValue.value}
+              />
+            ))}
         </div>
-        <ErrorMessage
-          id={errorId}
-          showError={!!errorMessage}
-          className={classNames?.errorMessage}
-        >
-          {errorMessage}
-        </ErrorMessage>
-        <ComboboxAccessibilityAnnouncer
+        <ComboboxButton
+          isOpen={chevronIsOpen}
+          disabled={disabled}
+          variant={resolvedVariant}
+          onClick={handleChevronClick}
+        />
+        <ComboboxOptions
           isOpen={isOpen}
+          openTrigger={openTrigger}
+          isLoading={isLoading}
+          spinnerProps={spinnerProps}
           displayOptions={displayOptions}
           searchTerm={searchTerm}
+          minSearchLength={minSearchLength}
+          multiple={multiple}
           selectedValues={selectedValues}
+          comboboxId={comboboxId}
+          listId={listId}
           focusedIndex={focusedIndex}
+          className={classNames?.options}
+          handleButtonFocus={handleButtonFocus}
+          handleOptionSelect={handleOptionSelect}
+          customListRef={containerRef}
+          maxSelected={maxSelected}
+          spinnerLabel={spinnerLabel}
+          onMinSearchLengthDelayChange={handleMinSearchLengthDelayChange}
         />
       </div>
-    );
-  }
-) as ComboboxComponent;
+      <ErrorMessage
+        id={errorId}
+        showError={!!errorMessage}
+        className={classNames?.errorMessage}
+      >
+        {errorMessage}
+      </ErrorMessage>
+      <ComboboxAccessibilityAnnouncer
+        isOpen={isOpen}
+        displayOptions={displayOptions}
+        searchTerm={searchTerm}
+        selectedValues={selectedValues}
+        focusedIndex={focusedIndex}
+      />
+    </div>
+  );
+};
+
+export const Combobox = memo(ComboboxContent) as ComboboxComponent;
 
 Combobox.displayName = 'Combobox';
-
-export { Combobox };

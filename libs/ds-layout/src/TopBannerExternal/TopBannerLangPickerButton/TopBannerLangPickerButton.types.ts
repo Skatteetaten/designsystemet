@@ -1,5 +1,6 @@
 import {
   ComponentPropsWithoutRef,
+  FocusEventHandler,
   KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
@@ -7,6 +8,8 @@ import {
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+
+import { TopBannerLanguageMenuAnalyticsId } from '../analyticsIds';
 
 type RequiredButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
@@ -18,12 +21,12 @@ type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   ariaCurrent?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  onFocus?: FocusEventHandler<HTMLButtonElement>;
   onKeyDown?: KeyboardEventHandler<HTMLButtonElement>;
 }
 
 export interface TopBannerLangPickerButtonProps
-  extends ButtonPropsHTMLAttributes,
-    BaseProps {
+  extends ButtonPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLButtonElement>;
   /** Om komponenten skal være i fokus. */
   focus?: boolean;
@@ -31,4 +34,5 @@ export interface TopBannerLangPickerButtonProps
   flagIcon: ReactNode;
   /** Navn på språket. */
   children: string;
+  dataWebAnalyticsId?: TopBannerLanguageMenuAnalyticsId;
 }

@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import { memo, type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -7,7 +7,7 @@ import { MaxSelectedMessageProps } from './Combobox.types';
 
 import styles from './Combobox.module.scss';
 
-export const ComboboxMaxSelectedMessage = React.memo<MaxSelectedMessageProps>(
+export const ComboboxMaxSelectedMessage = memo<MaxSelectedMessageProps>(
   ({ selectedCount, maxSelected }: MaxSelectedMessageProps): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 

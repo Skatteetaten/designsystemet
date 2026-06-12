@@ -2,18 +2,26 @@ import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { useArgs } from 'storybook/preview-api';
-import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextArea, TextAreaProps } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
+import { Alert } from '@skatteetaten/ds-status';
 
 import {
   coolString,
   loremIpsum,
   wrapper,
 } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -36,53 +44,48 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    autosize: { table: { disable: true, category: category.props } },
-    classNames: {
-      table: { disable: true, category: category.props },
-    },
-    characterLimit: { table: { disable: true, category: category.props } },
+    autosize: { table: { disable: true } },
+    classNames: { table: { disable: true } },
+    characterLimit: { table: { disable: true } },
     defaultValue: {
       control: 'text',
-      table: { disable: true, category: category.props },
+      table: { disable: true },
     },
-    description: { table: { disable: true, category: category.props } },
-    errorMessage: { table: { disable: true, category: category.props } },
-    hasSpacing: { table: { disable: true, category: category.props } },
+    description: { table: { disable: true } },
+    errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     helpSvgPath: {
-      table: { disable: true, category: category.props },
+      table: { disable: true },
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    helpText: { table: { disable: true, category: category.props } },
-    hideLabel: { table: { disable: true, category: category.props } },
-    label: { table: { disable: true, category: category.props } },
-    showRequiredMark: { table: { disable: true, category: category.props } },
-    titleHelpSvg: { table: { disable: true, category: category.props } },
+    helpText: { table: { disable: true } },
+    hideLabel: { table: { disable: true } },
+    label: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: {
-      table: { disable: true, category: category.htmlAttribute },
+      table: { disable: true },
       type: 'string',
     },
-    autoCorrect: {
-      table: { disable: true, category: category.htmlAttribute },
-    },
-    disabled: { table: { disable: true, category: category.htmlAttribute } },
-    form: { table: { disable: true, category: category.htmlAttribute } },
-    name: { table: { disable: true, category: category.htmlAttribute } },
-    maxLength: { table: { disable: true, category: category.htmlAttribute } },
-    minLength: { table: { disable: true, category: category.htmlAttribute } },
-    placeholder: { table: { disable: true, category: category.htmlAttribute } },
-    readOnly: { table: { disable: true, category: category.htmlAttribute } },
-    required: { table: { disable: true, category: category.htmlAttribute } },
-    rows: { table: { disable: true, category: category.htmlAttribute } },
-    spellCheck: {
-      table: { disable: true, category: category.htmlAttribute },
-    },
-    value: { table: { disable: true, category: category.htmlAttribute } },
+    autoCorrect: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
+    name: { table: { disable: true } },
+    maxLength: { table: { disable: true } },
+    minLength: { table: { disable: true } },
+    placeholder: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
+    required: { table: { disable: true } },
+    rows: { table: { disable: true } },
+    spellCheck: { table: { disable: true } },
+    value: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
-    onBlur: { table: { disable: true, category: category.event } },
-    onChange: { table: { disable: true, category: category.event } },
-    onFocus: { table: { disable: true, category: category.event } },
+    onBlur: { table: { disable: true } },
+    onChange: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
   tags: ['test'],
@@ -139,9 +142,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -176,6 +177,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -223,12 +227,48 @@ export const Defaults = {
   },
 } satisfies Story;
 
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'textarea-alert-description-id';
+    return (
+      <>
+        <TextArea {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for textarea'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for textarea'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = textbox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('textarea-alert-description-id');
+  },
+} satisfies Story;
+
 export const WithDisabled = {
   name: 'With Disabled (B5)',
   args: {
     ...defaultArgs,
     disabled: true,
     value: valueText,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -240,6 +280,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -380,19 +422,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toBeRequired();
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B4, FS-A4 delvis)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
+    await expect(textbox).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -604,14 +634,16 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -737,6 +769,32 @@ export const WithCharacterLimit = {
   },
 } satisfies Story;
 
+export const WithCharacterLimitAriaStaticText = {
+  name: 'With CharacterLimit Aria Static Text',
+  render: TemplateWithCharacterCounter,
+  args: {
+    ...defaultArgs,
+    characterLimit: 50,
+  },
+  argTypes: {
+    characterLimit: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textArea = canvas.getByRole('textbox');
+
+    const staticSRText = canvas.getByText(
+      dsI18n.t('ds_forms:textarea.TotalCharactersLimit', { ant: 50 })
+    );
+    expect(staticSRText).toBeInTheDocument();
+    await userEvent.type(textArea, 'Dette er en kort tekst.');
+    expect(staticSRText).toBeInTheDocument();
+  },
+} satisfies Story;
+
 export const WithCharacterLimitExceeded = {
   name: 'With CharacterLimit Exceeded (A10)',
   render: TemplateWithCharacterCounter,
@@ -775,5 +833,51 @@ export const WithCharacterLimitAndError = {
   },
   argTypes: {
     characterLimit: { table: { disable: false } },
+  },
+} satisfies Story;
+
+const TemplateWithCharacterCounterAndOnBlur = (
+  args: TextAreaProps
+): JSX.Element => {
+  const [value, setValue] = useState('');
+
+  return (
+    <TextArea
+      {...args}
+      value={value}
+      characterLimit={50}
+      onChange={(e): void => {
+        setValue(e.target.value);
+      }}
+      onBlur={(e) => setValue(e.target.value.replaceAll(' ', ''))}
+    />
+  );
+};
+
+export const WithCharacterLimitAndResetOnEmptyAString = {
+  name: 'With CharacterLimit And Reset On Empty String',
+  render: TemplateWithCharacterCounterAndOnBlur,
+  args: {
+    ...defaultArgs,
+    characterLimit: 50,
+  },
+  argTypes: {
+    characterLimit: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textArea = canvas.getByRole('textbox');
+    const textWith10Spaces = '          ';
+
+    await userEvent.type(textArea, textWith10Spaces);
+    const remainingCount = await waitFor(() =>
+      canvas.findByText('40 tegn igjen')
+    );
+    expect(remainingCount).toBeInTheDocument();
+
+    await userEvent.keyboard('{Tab}');
+
+    const newRemainingCount = await canvas.findAllByText('50 tegn igjen');
+    expect(newRemainingCount[0]).toBeInTheDocument();
   },
 } satisfies Story;

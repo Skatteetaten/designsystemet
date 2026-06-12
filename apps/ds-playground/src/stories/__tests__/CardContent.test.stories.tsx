@@ -81,9 +81,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -92,6 +90,35 @@ export const WithAttributes = {
     await expect(cardNote).toHaveClass('dummyClassname');
     await expect(cardNote).toHaveAttribute('lang', 'en');
     await expect(cardNote).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames',
+  args: {
+    ...defaultArgs,
+    rightContent: 'høyrejustert innhold',
+    classNames: {
+      rightContent: 'dummyClassname',
+      children: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const content = canvas.getByText(defaultArgs.children);
+    const rightContent = canvas.getByText('høyrejustert innhold');
+
+    await expect(content).toHaveClass('dummyClassname');
+    await expect(rightContent).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -114,30 +141,5 @@ export const WithChildrenRigthContent: Story = {
   argTypes: {
     children: { table: { disable: false } },
     rightContent: { table: { disable: false } },
-  },
-} satisfies Story;
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames',
-  args: {
-    ...defaultArgs,
-    rightContent: 'høyrejustert innhold',
-    classNames: {
-      rightContent: 'dummyClassname',
-      children: 'dummyClassname',
-    },
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    const content = canvas.getByText(defaultArgs.children);
-    const rightContent = canvas.getByText('høyrejustert innhold');
-
-    await expect(content).toHaveClass('dummyClassname');
-    await expect(rightContent).toHaveClass('dummyClassname');
   },
 } satisfies Story;

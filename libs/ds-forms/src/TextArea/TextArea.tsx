@@ -7,23 +7,24 @@ import {
   useRef,
 } from 'react';
 
-import {
-  getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
-
 import { TextAreaProps } from './TextArea.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { InputCounter } from '../InputCounter/InputCounter';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 
 import styles from './TextArea.module.scss';
 
+/**
+ * TextArea
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-textarea--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textarea/) - Brukerveiledning
+ */
 export const TextArea = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -34,30 +35,29 @@ export const TextArea = ({
   helpText,
   label,
   titleHelpSvg,
-  autoComplete = getCommonAutoCompleteDefault(),
+  ariaDescribedBy,
+  autoComplete = 'off',
   autoCorrect,
   characterLimit,
   defaultValue,
-  disabled,
+  disabled = false,
   form,
   maxLength,
   minLength,
   name,
   placeholder,
-  readOnly,
-  required,
+  readOnly = false,
+  required = false,
   rows,
   spellCheck,
   value,
-  hasSpacing,
-  hideLabel,
-  showRequiredMark,
+  hasSpacing = false,
+  hideLabel = false,
   onBlur,
   onChange,
   onFocus,
   onHelpToggle,
 }: TextAreaProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `textAreaErrorId-${useId()}`;
   const generatedId = `textAreaTextboxId-${useId()}`;
   const characterCounterId = `textAreaCharacterCounter-${useId()}`;
@@ -94,8 +94,9 @@ export const TextArea = ({
       classNames?.textbox ?? ''
     }`.trim();
 
-  const ariaDescribedBy =
+  const resolvedAriaDescribedBy =
     [
+      ariaDescribedBy,
       description && descriptionId,
       errorMessage && errorId,
       characterLimit && characterCounterId,
@@ -113,12 +114,12 @@ export const TextArea = ({
         classNames={classNames}
         htmlFor={textboxId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}
@@ -142,8 +143,8 @@ export const TextArea = ({
         rows={rows}
         spellCheck={spellCheck}
         value={value}
-        aria-describedby={ariaDescribedBy}
-        aria-invalid={!!errorMessage || undefined}
+        aria-describedby={resolvedAriaDescribedBy}
+        aria-invalid={getAriaInvalid(errorMessage, required)}
         onBlur={onBlur}
         onChange={handleChange}
         onFocus={onFocus}
@@ -153,7 +154,7 @@ export const TextArea = ({
           inputRef={textboxRef}
           id={characterCounterId}
           characterLimit={characterLimit}
-          value={value ? String(value) : undefined}
+          value={value !== undefined ? String(value) : undefined}
         />
       ) : null}
       <ErrorMessage

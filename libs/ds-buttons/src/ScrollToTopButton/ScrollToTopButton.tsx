@@ -1,28 +1,33 @@
 import { useEffect, useState, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { MoveUpIcon } from '@skatteetaten/ds-icons';
 
-import {
-  getScrollToMainDefault,
-  getVisibilityThresholdDefault,
-  getScrollToTopButtonTextDefault,
-} from './defaults';
 import { ScrollToTopButtonProps } from './ScrollToTopButton.types';
 
 import styles from './ScrollToTopButton.module.scss';
 
+export const defaultScrollToTopButtonTitle = dsI18n.t(
+  'ds_buttons:scrolltotopbutton.Title'
+);
+
+/**
+ * ScrollToTopButton
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-scrolltotopbutton--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/scrolltotopbutton/) - Brukerveiledning
+ */
 export const ScrollToTopButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
   shadowRootNode,
-  visibilityThreshold = getVisibilityThresholdDefault(),
-  scrollToMain = getScrollToMainDefault(),
-  children = getScrollToTopButtonTextDefault(),
+  visibilityThreshold = 1,
+  scrollToMain = true,
+  children = defaultScrollToTopButtonTitle,
 }: ScrollToTopButtonProps): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(!visibilityThreshold);
   useEffect(() => {
@@ -59,7 +64,7 @@ export const ScrollToTopButton = ({
           main?.focus({ preventScroll: !scrollToMain });
         }}
       >
-        <div
+        <span
           className={`${styles.scrollToTopButtonIconContainer} ${
             classNames?.iconContainer ?? ''
           }`.trim()}
@@ -70,14 +75,14 @@ export const ScrollToTopButton = ({
               classNames?.icon ?? ''
             }`.trim()}
           />
-        </div>
-        <div
+        </span>
+        <span
           className={`${styles.scrollToTopButtonLabel} ${
             classNames?.label ?? ''
           }`.trim()}
         >
           {children}
-        </div>
+        </span>
       </button>
     </div>
   );

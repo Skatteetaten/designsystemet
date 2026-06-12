@@ -2,67 +2,38 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  IconButton,
-  getIconButtonBrightnessDefault,
-  getIconButtonSizeDefault,
-} from '@skatteetaten/ds-buttons';
-import {
-  getCommonButtonTypeDefault,
-  sizeArr,
-} from '@skatteetaten/ds-core-utils';
+import { IconButton } from '@skatteetaten/ds-buttons';
+import { defaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 import { PrintSVGpath } from '@skatteetaten/ds-icons';
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-
-const availableSizes = [...sizeArr].slice(0, 4);
 
 const meta = {
   component: IconButton,
   title: 'Komponenter/IconButton',
   argTypes: {
     // Props
-    brightness: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getIconButtonBrightnessDefault() },
-      },
-    },
+    brightness: { table: { category: category.props } },
     hasSpinner: { table: { category: category.props } },
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: getSpinnerLabelDefault() },
+        defaultValue: { summary: defaultSpinnerLabel },
       },
     },
     isOutlined: { table: { category: category.props } },
-    size: {
-      control: 'radio',
-      options: availableSizes,
-      table: {
-        category: category.props,
-        defaultValue: { summary: getIconButtonSizeDefault() },
-      },
-    },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    size: { table: { category: category.props } },
+    svgPath: { ...svgPathDescription },
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
     title: { table: { category: category.htmlAttribute } },
-    type: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonButtonTypeDefault() },
-      },
-    },
+    type: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     ariaExpanded: { table: { category: category.aria } },

@@ -2,15 +2,12 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  FunctionComponent,
   ReactNode,
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { Radio } from './Radio/Radio';
@@ -22,8 +19,9 @@ export interface RadioGroupContextProps {
   defaultValue?: string | number;
   errorId?: string;
   name: string;
-  selectedValue?: string | number;
+  value?: string | number;
   hasError?: boolean;
+  readOnly?: boolean;
   required?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   onBlur?: FocusEventHandler<HTMLInputElement>;
@@ -39,18 +37,19 @@ type RequiredFieldsetHTMLAttributes = Pick<
   'disabled' | 'form'
 >;
 
-type InputHTMLAttributes = Partial<RequiredInputHTMLAttributes>;
+type InputHTMLAttributes = Partial<RequiredInputHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
+
 interface InputPropsHTMLAttributes extends InputHTMLAttributes {
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 interface RadioGroupComponentCommonProps
-  extends InputPropsHTMLAttributes,
-    RequiredFieldsetHTMLAttributes,
-    BaseProps {
+  extends InputPropsHTMLAttributes, RequiredFieldsetHTMLAttributes, BaseProps {
   ref?: Ref<HTMLFieldSetElement>;
   classNames?: Prettify<
-    { errorMessage?: string } & FieldsetProps['classNames']
+    { container?: string; errorMessage?: string } & FieldsetProps['classNames']
   >;
   /** Radio-komponenter */
   children: ReactNode;
@@ -63,7 +62,11 @@ interface RadioGroupComponentCommonProps
   hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */
   legend: FieldsetProps['legend'];
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
   description?: FieldsetProps['description'];
   /** Margin under komponenten */
   hasSpacing?: boolean;
@@ -75,6 +78,10 @@ interface RadioGroupComponentCommonProps
   titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /** Overskriver autogenerert name */
   name?: string;
+  /** Om radioknappene skal være skrivebeskyttet */
+  readOnly?: boolean;
+  /** Om en radio-knapp må være valgt */
+  required?: boolean;
   /** Definerer stilen til gruppen. */
   variant?: RadioGroupVariant;
   /** Callback som kalles når hjelpetekst vises/skjules */
@@ -86,7 +93,7 @@ interface RadioGroupComponentCommonProps
 type RadioGroupDiscriminatedCheckedProps =
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
-      selectedValue?: string | number;
+      value?: string | number;
       /**
        * Hvilke value som skal være satt til default checked (uncontrolled
        * state)
@@ -95,7 +102,7 @@ type RadioGroupDiscriminatedCheckedProps =
     }
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
-      selectedValue?: never;
+      value?: never;
       /**
        * Hvilke value som skal være satt til default checked (uncontrolled
        * state)
@@ -104,9 +111,8 @@ type RadioGroupDiscriminatedCheckedProps =
     };
 
 export type RadioGroupProps = RadioGroupComponentCommonProps &
-  FormRequiredProps &
   RadioGroupDiscriminatedCheckedProps;
 
-export interface RadioGroupComponent extends React.FC<RadioGroupProps> {
+export interface RadioGroupComponent extends FunctionComponent<RadioGroupProps> {
   Radio: typeof Radio;
 }

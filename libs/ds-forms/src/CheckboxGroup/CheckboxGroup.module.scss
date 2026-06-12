@@ -3,3 +3,13 @@
 .errorMessage {
   margin-top: var(--spacing-m);
 }
+
+.contentContainerSpacing {
+  margin-top: var(--spacing-s);
+}
+
+.checkboxGroupContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}

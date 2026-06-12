@@ -83,9 +83,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -132,6 +130,12 @@ export const AllVariants = {
   name: 'All Variants (A7)',
   args: {
     ...defaultArgs,
+  },
+  parameters: {
+    /*vanligvis legger vi ikke tre alerts i samme card, men har det her for testen sin skyld.
+     * Må slå av siden alle tre henter samme id fra card sin context
+     */
+    htmlValidate: { test: 'off' },
   },
 } satisfies Story;
 

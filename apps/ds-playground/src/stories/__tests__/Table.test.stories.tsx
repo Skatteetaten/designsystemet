@@ -15,7 +15,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 const caption = 'tabellcaption';
 const meta = {
   component: Table,
-  title: 'Tester/Table/Table',
+  title: 'Tester/Table',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -26,7 +26,7 @@ const meta = {
     // Props
     canBeManuallyFocused: { table: { disable: true } },
     caption: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     hasFullWidth: { table: { disable: true } },
     showCaption: { table: { disable: true } },
     sortState: { table: { disable: true } },
@@ -46,7 +46,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof Table> = (args) => (
-  <Table {...args} variant={args.variant}>
+  <Table {...args}>
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
@@ -60,22 +60,22 @@ const Template: StoryFn<typeof Table> = (args) => (
           {'Edible'}
         </Table.DataCell>
         <Table.DataCell>{'Donuts'}</Table.DataCell>
-        <Table.DataCell>{'3,000'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'3,000'}</Table.DataCell>
       </Table.Row>
       <Table.Row>
         <Table.DataCell>{'Cake'}</Table.DataCell>
-        <Table.DataCell>{'3,000'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'3,000'}</Table.DataCell>
       </Table.Row>
       <Table.Row>
         <Table.DataCell rowSpan={2} className={'rowSpanRight'}>
           {'Non-Edible'}
         </Table.DataCell>
         <Table.DataCell>{'Stationery'}</Table.DataCell>
-        <Table.DataCell>{'18,000'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'18,000'}</Table.DataCell>
       </Table.Row>
       <Table.Row>
         <Table.DataCell>{'Batteries'}</Table.DataCell>
-        <Table.DataCell>{'9,000'}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{'9,000'}</Table.DataCell>
       </Table.Row>
     </Table.Body>
     <Table.Sum colSpan={2}>{'32,000'}</Table.Sum>
@@ -122,9 +122,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -149,7 +146,7 @@ export const Defaults = {
 
 const TemplateScroll: StoryFn<typeof Table> = (args) => {
   const exampleTable = (
-    <Table {...args} variant={args.variant}>
+    <Table {...args}>
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell scope={'col'}>{'Forename'}</Table.HeaderCell>
@@ -190,11 +187,16 @@ const TemplateScroll: StoryFn<typeof Table> = (args) => {
 export const WithScrollbar = {
   render: TemplateScroll,
   name: 'With Scroll (A5)',
-  parameters: { a11y: { disable: true } },
+  parameters: {
+    // color contrast issue
+    a11y: {
+      test: 'off',
+    },
+  },
 } satisfies Story;
 
 const TemplateAlignment: StoryFn<typeof Table> = (args) => (
-  <Table {...args} variant={'standard'}>
+  <Table {...args}>
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell alignment={'left'} scope={'col'}>
@@ -324,7 +326,6 @@ const ExpandEditSortTable = (
       {...args}
       sortState={sortState}
       setSortState={setSortState}
-      variant={args.variant}
       caption={'Månedoversikt'}
     >
       <Table.Header>
@@ -366,7 +367,7 @@ const ExpandEditSortTable = (
           ({ isExpandable, id, rowData, showExpandButtonTitle }, index) => {
             const content = (
               <>
-                <Table.DataCell alignment={'left'} id={id}>
+                <Table.DataCell alignment={'left'}>
                   {rowData.coverage}
                 </Table.DataCell>
                 <Table.DataCell alignment={'right'}>
@@ -390,7 +391,7 @@ const ExpandEditSortTable = (
                   showExpandButtonTitle={showExpandButtonTitle}
                   expandableContent={
                     <div className={'emptyExpandedTableRow'}>
-                      <Heading ref={redigerDataRef} as={'h2'} level={2}>
+                      <Heading ref={redigerDataRef} as={'h2'}>
                         {'data'}
                       </Heading>
                     </div>
@@ -449,7 +450,7 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
         ({ isExpandable, id, rowData, showExpandButtonTitle }, index) => {
           const content = (
             <>
-              <Table.DataCell alignment={'left'} id={id}>
+              <Table.DataCell alignment={'left'}>
                 {rowData.coverage}
               </Table.DataCell>
               <Table.DataCell alignment={'right'}>
@@ -474,9 +475,7 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
                 showExpandButtonTitle={showExpandButtonTitle}
                 expandableContent={
                   <div className={'emptyExpandedTableRow'}>
-                    <Heading as={'h2'} level={2}>
-                      {'data'}
-                    </Heading>
+                    <Heading as={'h2'}>{'data'}</Heading>
                   </div>
                 }
                 isExpandable
@@ -506,49 +505,6 @@ const TemplateWithRightButtonPosition: StoryFn<typeof Table> = (args) => (
     </Table.Sum>
   </Table>
 );
-
-export const WithVariantCompact = {
-  render: TemplateExpandEditSort,
-  name: 'Variant Compact (Table A1, A3, TableHeader A2, TableRow A3, A17, A19, A20)',
-  args: {
-    variant: 'compact',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const editableRow = canvas.getByTestId('row-0');
-    const editButton = within(editableRow).getByRole('button');
-    await fireEvent.click(editButton);
-    const expandableRow = canvas.getByTestId('row-expand-3');
-    const expandButton = within(expandableRow).getByRole('button');
-    await fireEvent.click(expandButton);
-  },
-} satisfies Story;
-
-export const WithVariantCompactAndRightButtonPosition = {
-  render: TemplateWithRightButtonPosition,
-  name: 'Variant Compact And Right Button Position',
-  args: {
-    variant: 'compact',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const editableRow = canvas.getByTestId('row-0');
-    const editButton = within(editableRow).getByRole('button');
-    await fireEvent.click(editButton);
-    const expandableRow = canvas.getByTestId('row-expand-3');
-    const expandButton = within(expandableRow).getByRole('button');
-    await fireEvent.click(expandButton);
-  },
-} satisfies Story;
 
 export const WithExpandEditSort = {
   render: TemplateExpandEditSort,
@@ -630,5 +586,61 @@ export const WithCanBeManuallyFocused: Story = {
     table.focus();
     await expect(table).toBeInTheDocument();
     await expect(table).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const WithSizeExtraSmall = {
+  render: TemplateExpandEditSort,
+  name: 'Size ExtraSmall',
+  args: {
+    size: 'extraSmall',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
+} satisfies Story;
+
+export const WithSizeSmall = {
+  render: TemplateExpandEditSort,
+  name: 'Size Small',
+  args: {
+    size: 'small',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
+} satisfies Story;
+
+export const WithSizeMedium = {
+  render: TemplateExpandEditSort,
+  name: 'Size Medium',
+  args: {
+    size: 'medium',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
+  },
+} satisfies Story;
+
+export const WithSizeLarge = {
+  render: TemplateExpandEditSort,
+  name: 'Size Large',
+  args: {
+    size: 'large',
+  },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Story;

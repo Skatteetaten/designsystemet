@@ -1,23 +1,20 @@
-import { ReactNode, useState, JSX, useRef } from 'react';
+import { JSX, ReactNode, useRef, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { TableRowProps } from 'libs/ds-table/src/TableRow/TableRow.types';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
 import { Checkbox, TextField } from '@skatteetaten/ds-forms';
 import {
+  CompletedSVGpath,
   CopySVGpath,
   DeleteSVGpath,
   EditSVGpath,
+  Icon,
   SaveSVGpath,
+  TimelapseSVGpath,
 } from '@skatteetaten/ds-icons';
-import {
-  Table,
-  getTableVariantDefault,
-  SortState,
-} from '@skatteetaten/ds-table';
+import { SortState, Table } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -25,26 +22,15 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Table,
-  title: 'Komponenter/Table/Table',
+  title: 'Komponenter/Table',
   argTypes: {
     // Props
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTableVariantDefault() },
-      },
-    },
+    size: { table: { category: category.props } },
     showCaption: { table: { category: category.props } },
-    sortState: {
-      control: false,
-      table: { category: category.props },
-    },
-    setSortState: {
-      control: false,
-      table: { category: category.props },
-    },
+    sortState: { control: false, table: { category: category.props } },
+    setSortState: { control: false, table: { category: category.props } },
     caption: { table: { category: category.props } },
     hasFullWidth: { table: { category: category.props } },
     rowInEditModeId: { table: { category: category.props } },
@@ -97,14 +83,17 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-export const Variants: Story = {
+export const Sizes: Story = {
   render: (_args): JSX.Element => {
     const klage = 'Klage på vedtak';
     return (
       <>
         <div>
-          {'Standard table'}
-          <Table caption={'Dette er en standard tabell'} variant={'standard'}>
+          {'Extra small'}
+          <Table
+            caption={'Dette er en ekstra liten tabell'}
+            size={'extraSmall'}
+          >
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
@@ -135,8 +124,74 @@ export const Variants: Story = {
           </Table>
         </div>
         <div>
-          {'Compact table'}
-          <Table caption={'Dette er en kompakt tabell.'} variant={'compact'}>
+          {'Small'}
+          <Table caption={'Dette er en liten tabell.'} size={'small'}>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>
+                  {'Arbeidsoppgave'}
+                </Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+            </Table.Body>
+          </Table>
+        </div>
+
+        <div>
+          {'Medium'}
+          <Table caption={'Dette er en medium tabell.'} size={'medium'}>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>
+                  {'Arbeidsoppgave'}
+                </Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
+                <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+              <Table.Row>
+                <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+                <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+                <Table.DataCell>{klage}</Table.DataCell>
+                <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+                <Table.DataCell>{'NY'}</Table.DataCell>
+              </Table.Row>
+            </Table.Body>
+          </Table>
+        </div>
+
+        <div>
+          {'Large'}
+          <Table caption={'Dette er en stor tabell.'}>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
@@ -170,7 +225,7 @@ export const Variants: Story = {
     );
   },
 } satisfies Story;
-Variants.parameters = exampleParameters;
+Sizes.parameters = exampleParameters;
 
 export const Sortable: Story = {
   render: (_args): JSX.Element => {
@@ -378,44 +433,11 @@ export const Expandable: Story = {
 } satisfies Story;
 Expandable.parameters = exampleParameters;
 
-const CustomExpandableRow = (props: TableRowProps): JSX.Element => {
-  const [isExpanded, setIsExpanded] = useState(props.isExpanded);
-  const [isSaving, setIsSaving] = useState(false);
-
-  const handleSave = async (): Promise<void> => {
-    setIsSaving(true);
-    await new Promise<void>((resolve) => {
-      setTimeout(() => {
-        setIsSaving(false);
-        setIsExpanded(false);
-        resolve();
-      }, 2000);
-    });
-  };
-
-  return (
-    <Table.Row
-      expandButtonPosition={'right'}
-      expandableContent={<div className={'emptyExpandedTableRow'}></div>}
-      expandButtonAriaDescribedby={props.expandButtonAriaDescribedby}
-      expandButtonTitle={isExpanded ? 'Lagre og lukk' : 'Åpne oppgave'}
-      expandButtonProps={{
-        svgPath: isExpanded ? SaveSVGpath : EditSVGpath,
-        hasSpinner: isSaving,
-        disabled: isSaving,
-      }}
-      isExpanded={isExpanded}
-      isExpandable
-      onExpand={() => setIsExpanded(true)}
-      onClose={handleSave}
-    >
-      {props.children}
-    </Table.Row>
-  );
-};
-
 export const ExpandableWithCustomExpandButtonProps: Story = {
   render: (_args): JSX.Element => {
+    const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
+    const [savingRows, setSavingRows] = useState<Set<string>>(new Set());
+
     const data = [
       {
         id: 'abcd',
@@ -491,6 +513,32 @@ export const ExpandableWithCustomExpandButtonProps: Story = {
       },
     ];
 
+    const handleExpand = (rowId: string): void => {
+      setExpandedRows((prev) => new Set(prev).add(rowId));
+    };
+
+    const handleClose = async (rowId: string): Promise<void> => {
+      setSavingRows((prev) => new Set(prev).add(rowId));
+
+      await new Promise<void>((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 2000);
+      });
+
+      setSavingRows((prev) => {
+        const next = new Set(prev);
+        next.delete(rowId);
+        return next;
+      });
+
+      setExpandedRows((prev) => {
+        const next = new Set(prev);
+        next.delete(rowId);
+        return next;
+      });
+    };
+
     return (
       <Table caption={'Oppgaver'}>
         <Table.Header>
@@ -508,16 +556,35 @@ export const ExpandableWithCustomExpandButtonProps: Story = {
         </Table.Header>
         <Table.Body>
           {data.map((row) => {
+            const isExpanded = expandedRows.has(row.id);
+            const isSaving = savingRows.has(row.id);
+
             return (
-              <CustomExpandableRow
+              <Table.Row
                 key={row.id}
+                expandButtonPosition={'right'}
+                expandableContent={
+                  <div className={'emptyExpandedTableRow'}></div>
+                }
                 expandButtonAriaDescribedby={row.id}
+                expandButtonTitle={
+                  isExpanded ? 'Lagre og lukk' : 'Åpne oppgave'
+                }
+                expandButtonProps={{
+                  svgPath: isExpanded ? SaveSVGpath : EditSVGpath,
+                  hasSpinner: isSaving,
+                  disabled: isSaving,
+                }}
+                isExpanded={isExpanded}
+                isExpandable
+                onExpand={() => handleExpand(row.id)}
+                onClose={() => handleClose(row.id)}
               >
                 <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
                 <Table.DataCell>{row.timestamp}</Table.DataCell>
                 <Table.DataCell>{row.status}</Table.DataCell>
                 <Table.DataCell>{row.eta}</Table.DataCell>
-              </CustomExpandableRow>
+              </Table.Row>
             );
           })}
         </Table.Body>
@@ -525,7 +592,7 @@ export const ExpandableWithCustomExpandButtonProps: Story = {
     );
   },
 } satisfies Story;
-Expandable.parameters = exampleParameters;
+ExpandableWithCustomExpandButtonProps.parameters = exampleParameters;
 
 export const Editable: Story = {
   render: (_args): JSX.Element => {
@@ -840,6 +907,7 @@ export const Selectable: Story = {
           <Table.Row>
             <Table.HeaderCell as={'td'}>
               <Checkbox
+                classNames={{ label: 'checkboxInTable' }}
                 checked={isAllChecked}
                 hideLabel
                 onChange={() => {
@@ -867,6 +935,7 @@ export const Selectable: Story = {
             <Table.Row key={item.id}>
               <Table.DataCell>
                 <Checkbox
+                  classNames={{ label: 'checkboxInTable' }}
                   checked={
                     isAllChecked || checkedState.some((it) => it === index)
                   }
@@ -989,13 +1058,13 @@ export const WithStripes: Story = {
         <Table caption={'Firmaoversikt'}>
           <Table.Header>
             <Table.Row>
+              <Table.HeaderCell as={'td'} />
               <Table.HeaderCell scope={'col'}>{'Firma'}</Table.HeaderCell>
               <Table.HeaderCell scope={'col'}>{'Startet'}</Table.HeaderCell>
               <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
               <Table.HeaderCell scope={'col'}>
                 {'Forventet behandlet'}
               </Table.HeaderCell>
-              <Table.HeaderCell as={'td'} />
             </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -1006,7 +1075,7 @@ export const WithStripes: Story = {
                   // .stripedTable:nth-of-type(even) { background-color: var(--palette-graphite-5);}
                   className={'stripedTable'}
                   expandableContent={
-                    <div className={'emptyExpandedTableRow'}></div>
+                    <div className={'emptyExpandedTableRow'}>{'Innhold'}</div>
                   }
                   expandButtonAriaDescribedby={row.id}
                   isExpandable
@@ -1042,7 +1111,7 @@ export const WithStripes: Story = {
                   className={index % 2 === 0 ? 'oddRow' : 'evenRow'}
                   expandButtonPosition={'right'}
                   expandableContent={
-                    <div className={'emptyExpandedTableRow'}></div>
+                    <div className={'emptyExpandedTableRow'}>{'Innhold'}</div>
                   }
                   expandButtonAriaDescribedby={row.id}
                   isExpandable
@@ -1240,10 +1309,10 @@ export const AddRow: Story = {
         </Button>
         <Table
           caption={'Personoversikt'}
-          variant={'compact'}
           rowInEditModeId={addRow ? 'addPerson' : undefined}
           sortState={sortState}
           setSortState={setSortState}
+          size={'extraSmall'}
         >
           <Table.Header>
             <Table.Row>
@@ -1364,3 +1433,45 @@ export const AddRow: Story = {
   },
 } satisfies Story;
 AddRow.parameters = exampleParameters;
+
+export const TableWithIcons: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Table caption={'Dette er en ekstra liten tabell'}>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>
+              {'Arbeidsoppgave'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          <Table.Row>
+            <Table.DataCell>{'10.03.2023'}</Table.DataCell>
+            <Table.DataCell>{'Kategori 2'}</Table.DataCell>
+            <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
+            <Table.DataCell>{'HAIKU HEDGE ASA'}</Table.DataCell>
+            <Table.DataCell>
+              <Icon svgPath={CompletedSVGpath} /> {'Fullført'}
+            </Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>{'11.04.2023'}</Table.DataCell>
+            <Table.DataCell>{'Kategori 4'}</Table.DataCell>
+            <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
+            <Table.DataCell>{'ATMOSPHERIC EXPLORER ASA'}</Table.DataCell>
+            <Table.DataCell>
+              <Icon svgPath={TimelapseSVGpath} /> {'Under arbeid'}
+            </Table.DataCell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    );
+  },
+} satisfies Story;
+TableWithIcons.storyName = 'Tabell med ikoner';
+TableWithIcons.parameters = exampleParameters;

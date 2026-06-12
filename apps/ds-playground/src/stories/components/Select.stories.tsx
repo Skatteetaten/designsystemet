@@ -3,13 +3,16 @@ import { ChangeEvent, useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getCommonFormVariantDefault,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
-import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
+import { Select } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -21,59 +24,38 @@ const meta = {
     classNames: { control: false, table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
-    placeholder: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getSelectPlaceholderDefault() },
-      },
-    },
-    description: { table: { category: category.props } },
+    placeholder: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
-      },
-    },
     label: { table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
-    autoComplete: { table: { category: category.htmlAttribute } },
+    autoComplete: {
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: autoCompletePropDescription,
+    },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     label: 'Farge',
@@ -101,12 +83,12 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [fruktOption, setFruktOption] = useState<number>(0);
+    const [fruitOption, setFruitOption] = useState<string>('');
     const [errorMessage, setErrorMessage] = useState<string>('');
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
       onError(e);
-      setFruktOption(Number(e.target.value));
+      setFruitOption(e.target.value);
     };
 
     const handleBlur = (e: ChangeEvent<HTMLSelectElement>): void => {
@@ -120,21 +102,23 @@ export const Examples: Story = {
       }
     };
 
+    type Fruit = '' | 'banan' | 'eple' | 'kiwi' | 'pære' | 'sitron';
+
     return (
       <Select
         label={'Fruktsort'}
-        value={fruktOption}
+        value={fruitOption}
         helpText={'Velg frukten du liker best.'}
         errorMessage={errorMessage}
         required
         onBlur={handleBlur}
         onChange={handleChange}
       >
-        <Select.Option value={1}>{'Banan'}</Select.Option>
-        <Select.Option value={2}>{'Eple'}</Select.Option>
-        <Select.Option value={3}>{'Kiwi'}</Select.Option>
-        <Select.Option value={4}>{'Pære'}</Select.Option>
-        <Select.Option value={5}>{'Sitron'}</Select.Option>
+        <Select.Option<Fruit> value={'banan'}>{'Banan'}</Select.Option>
+        <Select.Option<Fruit> value={'eple'}>{'Eple'}</Select.Option>
+        <Select.Option<Fruit> value={'kiwi'}>{'Kiwi'}</Select.Option>
+        <Select.Option<Fruit> value={'pære'}>{'Pære'}</Select.Option>
+        <Select.Option<Fruit> value={'sitron'}>{'Sitron'}</Select.Option>
       </Select>
     );
   },

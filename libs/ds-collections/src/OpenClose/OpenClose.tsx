@@ -1,46 +1,41 @@
 import { useState, MouseEvent, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon, ChevronDownSVGpath } from '@skatteetaten/ds-icons';
 
-import {
-  getOpenCloseIconPositionDefault,
-  getOpenCloseKeepMountedDefault,
-  getOpenCloseUnderlineDefault,
-  getOpenCloseVariantDefault,
-} from './defaults';
 import { OpenCloseProps } from './OpenClose.types';
 
 import styles from './OpenClose.module.scss';
 
+/**
+ * OpenClose
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-openclose--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/openclose/) - Brukerveiledning
+ */
 export const OpenClose = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,
-  titleAs: HeadingTag,
-  variant = getOpenCloseVariantDefault(),
-  iconPosition = getOpenCloseIconPositionDefault(),
-  isExpanded: isExpandedExternal,
-  isDefaultExpanded,
-  isOnClickOnlyFiredOnOpen,
-  showUnderline = getOpenCloseUnderlineDefault(),
-  keepMounted = getOpenCloseKeepMountedDefault(),
+  titleAs: HeadingTag = 'div',
+  size = 'large',
+  iconPosition = 'left',
+  isExpanded: isExpandedExternal = false,
+  isDefaultExpanded = false,
+  isOnClickOnlyFiredOnOpen = false,
+  showUnderline = true,
+  keepMounted = false,
   onClick,
   children,
 }: OpenCloseProps): JSX.Element => {
-  const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
-    isDefaultExpanded ?? false
-  );
+  const [isExpandedInternal, setIsExpandedInternal] =
+    useState<boolean>(isDefaultExpanded);
 
-  const isExpanded =
-    isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
+  const isExpanded = isExpandedExternal || isExpandedInternal;
 
-  const Tag = HeadingTag ?? 'div';
   const hasIconRight = iconPosition === 'right';
-  const isCompact = variant === 'compact';
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     if (isOnClickOnlyFiredOnOpen) {
@@ -52,25 +47,21 @@ export const OpenClose = ({
   };
 
   const iconRightClassName = hasIconRight ? styles.openClose_hasIconRight : '';
-  const compactClassName = isCompact ? styles.openClose_compact : '';
-  const openCloseClassName =
-    `${styles.openClose} ${compactClassName} ${iconRightClassName}`.trim();
+  const openCloseClassName = `${styles.openClose} ${iconRightClassName}`.trim();
   const iconClassName = `${styles.icon} ${styles.icon_active} ${
     isExpanded ? styles.icon_open : styles.icon_closed
-  } ${isCompact ? styles.icon_compact : ''}`.trim();
-  const titleClassName = `${styles.title} ${
-    isCompact ? styles.title_compact : ''
-  } ${showUnderline ? styles.title_underline : ''}`.trim();
-  const contentClassName = `${styles.content} ${
-    isCompact ? styles.content_compact : ''
-  } ${hasIconRight ? styles.content_hasIconRight : ''}`.trim();
+  }`.trim();
+  const titleClassName =
+    `${styles.title} ${showUnderline ? styles.title_underline : ''}`.trim();
+  const contentClassName =
+    `${styles.content} ${hasIconRight ? styles.content_hasIconRight : ''}`.trim();
   const hiddenContentClassName = `${contentClassName} ${
     keepMounted && !isExpanded ? styles.content_hidden : ''
   }`.trim();
 
   return (
-    <div className={className}>
-      <Tag className={styles.tag}>
+    <div className={`${styles.wrapper} ${className}`.trim()} data-size={size}>
+      <HeadingTag className={styles.tag}>
         <button
           ref={ref}
           id={id}
@@ -84,12 +75,12 @@ export const OpenClose = ({
           <Icon
             svgPath={ChevronDownSVGpath}
             className={iconClassName}
-            size={isCompact ? 'medium' : 'large'}
+            size={size === 'small' ? 'medium' : 'large'}
           />
 
           <span className={titleClassName}>{title}</span>
         </button>
-      </Tag>
+      </HeadingTag>
       {keepMounted ? (
         <div className={hiddenContentClassName}>{children}</div>
       ) : (

@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Tabs, getTabsVariantDefault } from '@skatteetaten/ds-collections';
+import { Tabs } from '@skatteetaten/ds-collections';
 import {
   AccountMultipleSVGpath,
   BriefcaseSVGpath,
@@ -15,7 +15,7 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Tabs,
-  title: 'Komponenter/Tabs/Tabs',
+  title: 'Komponenter/Tabs',
   argTypes: {
     // Baseprops
     id: {
@@ -28,13 +28,7 @@ const meta = {
     value: { control: 'text', table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     isMultiline: { table: { category: category.props } },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTabsVariantDefault() },
-      },
-    },
+    variant: { control: 'inline-radio', table: { category: category.props } },
     hasBorder: { table: { category: category.props } },
     //Events
     onChange: { ...htmlEventDescription },
@@ -100,25 +94,19 @@ export const Examples: Story = {
           </Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel value={'tab1'}>
-          <Heading as={'h3'} level={3}>
-            {'Mine oppgaver'}
-          </Heading>
+          <Heading as={'h3'}>{'Mine oppgaver'}</Heading>
           {
             'Lorem ipsum dolor sit amet, skattemyndighetene consectetuer adipiscing elit. Donec odio magna, sagittis eget rutrum quis, egestas vel nibh. Nullam eleifend ultricies eros, at accumsan nisl tincidunt sed. Vivamus vestibulum semper laoreet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Phasellus vel sapien eu magna laoreet rutrum. Curabitur eleifend tincidunt laoreet. Proin quam nibh, placerat vel blandit eu, placerat in tellus. Aenean lorem sem, malesuada in libero ut, mollis pretium turpis. Donec vitae sapien eu libero rutrum rutrum. Nam quis lacus neque. Pellentesque ultrices mattis odio. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas fermentum tortor at risus.'
           }
         </Tabs.Panel>
         <Tabs.Panel value={'tab2'}>
-          <Heading as={'h3'} level={3}>
-            {'Tildelt andre'}
-          </Heading>
+          <Heading as={'h3'}>{'Tildelt andre'}</Heading>
           {
             'Lorem ipsum dolor sit amet, skattemyndighetene consectetuer adipiscing elit. Donec odio magna, sagittis eget rutrum quis, egestas vel nibh. Nullam eleifend ultricies eros, at accumsan nisl tincidunt sed. Vivamus vestibulum semper laoreet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Phasellus vel sapien eu magna laoreet rutrum. Curabitur eleifend tincidunt laoreet. Proin quam nibh, placerat vel blandit eu, placerat in tellus. Aenean lorem sem, malesuada in libero ut, mollis pretium turpis. Donec vitae sapien eu libero rutrum rutrum. Nam quis lacus neque. Pellentesque ultrices mattis odio. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas fermentum tortor at risus.'
           }
         </Tabs.Panel>
         <Tabs.Panel value={'tab3'}>
-          <Heading as={'h3'} level={3}>
-            {'Ubehandlede'}
-          </Heading>
+          <Heading as={'h3'}>{'Ubehandlede'}</Heading>
           <ul>
             <li>{'oppgave 1'}</li>
             <li>{'oppgave2'}</li>

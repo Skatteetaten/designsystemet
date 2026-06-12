@@ -1,8 +1,11 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { defaultSpinnerLabel, dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { defaultArgs } from './utils/combobox.test.utils';
 
@@ -42,6 +45,8 @@ const meta = {
     name: { table: { disable: true } },
     disabled: { table: { disable: true } },
     required: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onFocus: { table: { disable: true } },
@@ -97,9 +102,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -118,6 +120,7 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
+      container: 'dummyClassname',
       options: 'dummyClassname',
       errorMessage: 'dummyClassname',
       label: 'dummyClassname',
@@ -141,9 +144,8 @@ export const WithCustomClassNames = {
 
     const input = canvas.getByRole('combobox');
     await userEvent.click(input);
-    const helpButton = canvas.getAllByRole('button')[0];
-    await userEvent.click(helpButton);
 
+    const container = canvas.getAllByRole('generic')[1];
     const optionsContainer = canvasElement.querySelector(
       'div[class*="optionsListContainer"]'
     );
@@ -151,14 +153,20 @@ export const WithCustomClassNames = {
       '[id^=comboboxErrorId]>div'
     );
     const label = canvas.getByText(defaultArgs.label as string);
+
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(optionsContainer).toHaveClass('dummyClassname');
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+    await expect(label).toHaveClass('dummyClassname');
+
+    const helpButton = canvas.getAllByRole('button')[0];
+    await userEvent.click(helpButton);
+
     const helpTextContainer = canvasElement.querySelector(
       'div[class*="helpBox"]'
     );
     const description = canvas.getByText('Beskrivelse');
 
-    await expect(optionsContainer).toHaveClass('dummyClassname');
-    await expect(errorMessageContainer).toHaveClass('dummyClassname');
-    await expect(label).toHaveClass('dummyClassname');
     await expect(helpTextContainer).toHaveClass('dummyClassname');
     await expect(description).toHaveClass('dummyClassname');
   },
@@ -205,6 +213,41 @@ export const Defaults = {
     await expect(accessibilityAnnouncer).toHaveAttribute('aria-live', 'polite');
     await expect(accessibilityAnnouncer).toHaveAttribute('aria-atomic', 'true');
     await expect(accessibilityAnnouncer).toHaveTextContent('');
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'combobox-alert-description-id';
+    return (
+      <>
+        <Combobox {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for combobox'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await expect(combobox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for combobox'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = combobox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('combobox-alert-description-id');
   },
 } satisfies Story;
 
@@ -267,6 +310,10 @@ export const IsOpen = {
     const combobox = canvas.getByRole('combobox');
     await userEvent.click(combobox);
     await expect(combobox).toHaveAttribute('aria-expanded', 'true');
+    await expect(combobox).toHaveAttribute(
+      'aria-controls',
+      'test-combobox-list'
+    );
 
     const listbox = canvas.getByRole('listbox');
     await expect(listbox).toBeInTheDocument();
@@ -283,6 +330,32 @@ export const IsOpen = {
     await expect(accessibilityAnnouncer).toHaveTextContent(
       dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
     );
+  },
+} satisfies Story;
+
+export const GroupedKeyboardSelection = {
+  name: 'Grouped Keyboard Selection',
+  args: {
+    label: 'Velg element',
+    options: [
+      { label: 'Ugruppert 1', value: 'u1' },
+      { label: 'Eple', value: 'apple', group: 'Frukt' },
+      { label: 'Gulrot', value: 'carrot', group: 'Gront' },
+      { label: 'Banan', value: 'banana', group: 'Frukt' },
+      { label: 'Ugruppert 2', value: 'u2' },
+    ],
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+
+    await userEvent.keyboard('{ArrowDown}{ArrowDown}{ArrowDown}{Enter}');
+
+    await expect(combobox).toHaveValue('Banan');
   },
 } satisfies Story;
 
@@ -370,15 +443,27 @@ export const WithValue = {
     await userEvent.click(options[1]);
     await expect(combobox).toHaveValue('Sverige');
     await expect(listbox).not.toBeInTheDocument();
+  },
+} satisfies Story;
 
-    const clearButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_forms:combobox.ResetSuggestion'),
-    });
-    await expect(clearButton).toBeInTheDocument();
-    await expect(clearButton).toHaveAttribute('type', 'button');
-
-    await userEvent.click(clearButton);
-    await expect(combobox).toHaveValue('');
+export const SingleSelectKeyboardDeselect = {
+  name: 'Single-Select Keyboard Keeps Selection',
+  args: {
+    ...defaultArgs,
+    onSelectionChange: fn(),
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    await userEvent.click(combobox);
+    await userEvent.click(canvas.getAllByRole('option')[0]);
+    await expect(combobox).toHaveValue('Norge');
+    await userEvent.click(combobox);
+    await userEvent.keyboard('{Enter}');
+    await expect(combobox).toHaveValue('Norge');
   },
 } satisfies Story;
 
@@ -421,6 +506,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toBeRequired();
+    await expect(inputElement).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -453,6 +539,49 @@ export const WithPlaceholder = {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toHaveAttribute(
+      'placeholder',
+      'Søk etter kommune, fylke eller land'
+    );
+  },
+} satisfies Story;
+
+export const WithMinSearchLength = {
+  name: 'With MinSearchLength',
+  args: {
+    ...defaultArgs,
+    minSearchLength: 1,
+  },
+  argTypes: {
+    minSearchLength: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).not.toHaveAttribute('placeholder');
+  },
+} satisfies Story;
+
+export const WithMinSearchLengthAndPlaceholder = {
+  name: 'With MinSearchLength And Placeholder',
+  args: {
+    ...defaultArgs,
+    placeholder: 'Søk etter kommune, fylke eller land',
+    minSearchLength: 1,
+  },
+  argTypes: {
+    placeholder: { table: { disable: false } },
+    minSearchLength: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+    await expect(inputElement).not.toHaveAttribute(
       'placeholder',
       'Søk etter kommune, fylke eller land'
     );
@@ -494,6 +623,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -503,6 +633,8 @@ export const WithDisabled = {
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toBeDisabled();
     await expect(inputElement).toHaveStyle('cursor: not-allowed');
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -517,9 +649,7 @@ export const WithLoading = {
     const inputElement = canvas.getByRole('combobox');
     await userEvent.click(inputElement);
 
-    const spinner = await canvas.findByText(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
+    const spinner = await canvas.findByText(defaultSpinnerLabel);
     await expect(spinner).toBeInTheDocument();
 
     await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();

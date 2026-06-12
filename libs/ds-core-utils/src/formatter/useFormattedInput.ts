@@ -1,41 +1,212 @@
-import { useCallback, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useEffectEvent,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import type { ChangeEvent, KeyboardEvent } from 'react';
 
 import { formatter } from './formatter';
 import { FormatTypes } from './formatter.types';
+import { NumberParser } from './NumberParser';
 import { useInputHistory } from './useInputHistory';
-import { maxLengths } from './utils';
+import {
+  escapeRegExp,
+  maxLengths,
+  NON_BREAKING_SPACE,
+  removeDuplicateCharsExceptFirstOccurrence,
+} from './utils';
 
-type InputFormatTypes = Exclude<FormatTypes, 'number'>;
+const DEFAULT_MAX_FRACTION_DIGITS = 2;
 
 /**
- * Ikke-bryteromstegn brukt som separator i formaterte verdier.
- * Brukes for å forhindre linjeskift innenfor formaterte tall.
+ * Oppretter regex som matcher tillatte symboler i input.
+ *
+ * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
+ * @param allowDecimals - Om desimaltall er tillatt
+ * @returns Regex som matcher siffer, minus og eventuelt desimalskilletegn
  */
-const NON_BREAKING_SPACE = '\u00A0';
-
-/**
- * Henter maksimalt tillatt lengde for en gitt formattype.
- * @param type - Formattypen å hente maksimallengde for
- * @returns Maksimallengde
- */
-const getMaxLength = (type: FormatTypes): number | undefined => {
-  return maxLengths[type as keyof typeof maxLengths];
+const createAllowedSymbolsRegex = (
+  decimalSeparator: string,
+  allowDecimals: boolean
+): RegExp => {
+  if (allowDecimals) {
+    return new RegExp(`\\d|-|${escapeRegExp(decimalSeparator)}`);
+  }
+  return /\d|-/;
 };
 
 /**
- * Konfigurasjonsalternativer for useFormattedInput-hooken.
+ * Oppretter regex som matcher ikke-tillatte symboler i input.
+ *
+ * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
+ * @param allowDecimals - Om desimaltall er tillatt
+ * @returns Regex med global flagg som matcher alle tegn unntatt siffer, minus
+ *   og eventuelt desimalskilletegn
  */
-interface UseFormattedInputOptions {
-  /** Typen formattering som skal anvendes */
-  type: InputFormatTypes;
-  /** Startverdi som skal formateres og vises (valgfritt) */
-  initialValue?: string;
+const createDisallowedSymbolsRegex = (
+  decimalSeparator: string,
+  allowDecimals: boolean
+): RegExp => {
+  if (allowDecimals) {
+    return new RegExp(`[^\\d-${escapeRegExp(decimalSeparator)}]`, 'g');
+  }
+  return /[^\d-]/g;
+};
+
+/**
+ * Henter maksimalt tillatt lengde for en gitt formattype.
+ *
+ * @param type - Formattypen å hente maksimallengde for
+ * @returns Maksimallengde
+ */
+const getMaxLength = (
+  type: FormatTypes,
+  hasDecimal = false,
+  hasMinus = false
+): number | undefined => {
+  const maxLength = maxLengths[type as keyof typeof maxLengths];
+  return maxLength + Number(hasDecimal) + Number(hasMinus);
+};
+
+/**
+ * Renser input-streng ved å fjerne ugyldige tegn basert på formattype.
+ * Håndterer desimaltall, begrenser antall desimaler og respekterer
+ * maksimallengde.
+ *
+ * @param input - Rå input-streng fra bruker
+ * @param type - Formattypen som bestemmer tillatte tegn
+ * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
+ * @param allowDecimals - Om desimaltall er tillatt for type 'number'
+ * @param maxFractionDigits - Maks antall desimaler
+ * @param onStatusChange - Callback som kalles med status ved trunkering
+ * @returns Renset streng med kun gyldige tegn
+ */
+const cleanInput = (
+  input: string,
+  type: FormatTypes,
+  decimalSeparator: string,
+  allowDecimals: boolean,
+  maxFractionDigits: number,
+  onStatusChange?: (status: FormattedInputStatus) => void
+): string => {
+  const digitsOnly = /[^\d]/g;
+  const escapedDecimal = escapeRegExp(decimalSeparator);
+  const digitsAndDecimal = new RegExp(`[^\\d${escapedDecimal}-]|(?!^)-`, 'g');
+  const digitsAndMinus = /[^\d-]|(?!^)-/g;
+
+  let cleanedInput: string;
+
+  if (type === 'number') {
+    cleanedInput = allowDecimals
+      ? input.replace(digitsAndDecimal, '')
+      : input.replace(digitsAndMinus, '');
+
+    if (allowDecimals) {
+      const decimalCount = (
+        cleanedInput.match(new RegExp(escapeRegExp(decimalSeparator), 'g')) ||
+        []
+      ).length;
+      cleanedInput = removeDuplicateCharsExceptFirstOccurrence(
+        cleanedInput,
+        decimalSeparator
+      );
+      if (decimalCount > 1) {
+        onStatusChange?.('duplicateDecimalSeparator');
+      }
+
+      const parts = cleanedInput.split(decimalSeparator);
+      if (parts.length === 2) {
+        const originalDecimalLength = parts[1].length;
+        parts[1] = parts[1].substring(0, maxFractionDigits);
+        if (parts[1].length < originalDecimalLength) {
+          onStatusChange?.('maxDecimalsReached');
+        }
+        cleanedInput = parts.join(decimalSeparator);
+      }
+    }
+  } else {
+    cleanedInput = input.replace(digitsOnly, '');
+  }
+
+  const hasDecimal = cleanedInput.includes(decimalSeparator);
+  const hasMinus = cleanedInput.includes('-');
+  const maxLength = getMaxLength(type, hasDecimal, hasMinus);
+  if (maxLength && cleanedInput.length > maxLength) {
+    cleanedInput = cleanedInput.substring(0, maxLength);
+    if (type === 'number') {
+      onStatusChange?.('maxDigitsReached');
+    }
+  }
+  return cleanedInput;
+};
+
+/**
+ * Teller antall siffer etter desimalskilletegnet. Begrenset til maksimalt 2
+ * siffer.
+ *
+ * @param rawValue - Råverdien som inneholder desimaltall
+ * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
+ * @param maxDecimalDigits - Maks antall desimalsiffer som skal telles
+ * @returns Antall desimalsiffer
+ */
+function countDecimalDigits(
+  rawValue: string,
+  decimalSeparator: string,
+  maxDecimalDigits: number
+): number {
+  const desimalIndex = rawValue.indexOf(decimalSeparator);
+  if (desimalIndex === -1) return 0;
+  const digitsAfterDecimal = rawValue.length - desimalIndex - 1;
+  const minimumFractionDigits = Math.min(digitsAfterDecimal, maxDecimalDigits);
+  return minimumFractionDigits;
 }
 
 /**
- * Returtype for useFormattedInput-hooken.
+ * Teller antall siffer før desimalskilletegnet (heltallsdelen). Inkluderer
+ * ledende nuller for å bevare dem ved formatering.
+ *
+ * @param rawValue - Råverdien som kan inneholde ledende nuller
+ * @param decimalSeparator - Desimalskilletegnet basert på lokalitet
+ * @returns Antall heltallssiffer inkludert ledende nuller (minimum 1)
  */
+function countIntegerDigits(
+  rawValue: string,
+  decimalSeparator: string
+): number {
+  const valueWithoutMinus = rawValue.replace(/^-/, '');
+  const decimalIndex = valueWithoutMinus.indexOf(decimalSeparator);
+  if (decimalIndex === -1) {
+    return Math.max(valueWithoutMinus.length, 1);
+  }
+  return Math.max(decimalIndex, 1);
+}
+
+/** Status for validering av input i useFormattedInput-hooken. */
+export type FormattedInputStatus =
+  | 'valid'
+  | 'maxDigitsReached'
+  | 'maxDecimalsReached'
+  | 'duplicateDecimalSeparator';
+
+/** Konfigurasjonsalternativer for useFormattedInput-hooken. */
+interface UseFormattedInputOptions {
+  /** Typen formattering som skal anvendes */
+  type: FormatTypes;
+  /** Startverdi som skal formateres og vises (valgfritt) */
+  initialValue?: string;
+  /** Lokalitet for tallformatering (valgfritt, standard er 'nb-NO') */
+  locale?: string;
+  /** Tillat desimaltall for type 'number' (valgfritt, standard er false) */
+  allowDecimals?: boolean;
+  /** Maks antall desimaler for type 'number' (valgfritt, standard er 2) */
+  maxFractionDigits?: number;
+}
+
+/** Returtype for useFormattedInput-hooken. */
 interface UseFormattedInputReturn {
   /** Den formaterte verdien for visning */
   value: string;
@@ -45,9 +216,30 @@ interface UseFormattedInputReturn {
   onKeyDown: (event: KeyboardEvent<HTMLInputElement>) => void;
   /** Den rå uformaterte verdien (bare tall) */
   rawValue: string;
+  /**
+   * Parsed tallverdi. Kun tilgjengelig når type er 'number', ellers undefined.
+   * Returnerer NaN for ugyldig input.
+   */
+  numberValue: number | undefined;
+  /** Status for validering. Kun relevant for type 'number'. */
+  status: FormattedInputStatus;
 }
 
-const checkIfAnyModifierKeyPressed = (
+type PendingCaretPosition = {
+  input: HTMLInputElement;
+  start: number;
+  end: number;
+  expectedValue: string;
+  revision: number;
+};
+
+/**
+ * Sjekker om en modifikatortast (Alt, Ctrl, Meta, Shift) er trykket.
+ *
+ * @param event - Tastaturhendelsen som skal sjekkes
+ * @returns True hvis en modifikatortast er aktiv
+ */
+const isModifierKeyPressed = (
   event: KeyboardEvent<HTMLInputElement>
 ): boolean => {
   const modifierKeys = ['Alt', 'AltGraph', 'Control', 'Meta', 'Shift'] as const;
@@ -55,81 +247,248 @@ const checkIfAnyModifierKeyPressed = (
 };
 
 /**
- * Posisjonerer markøren etter et bestemt antall siffer i et formatert input.
- * Bruker requestAnimationFrame for å sikre riktig timing med DOM-oppdateringer.
- * @param input - HTML input-elementet
+ * Finner markørposisjon etter et bestemt antall lovlige symboler i formatert
+ * input.
+ *
  * @param formattedValue - Den formaterte strengverdien
- * @param targetDigitCount - Antall siffer markøren skal posisjoneres etter
- * @returns new cursor position
+ * @param targetAllowedSymbolCount - Antall lovlige symboler markøren skal
+ *   posisjoneres etter
+ * @param allowedSymbols - Regex for lovlige symboler
+ * @returns New cursor position
  */
-const positionCursorAfterDigits = (
-  input: HTMLInputElement,
+const getCursorPositionAfterAllowedSymbols = (
   formattedValue: string,
-  targetDigitCount: number
+  targetAllowedSymbolCount: number,
+  allowedSymbols: RegExp
 ): number => {
   let newPosition = 0;
-  let digitCount = 0;
-  for (let i = 0; i < formattedValue.length; i++) {
-    if (/\d/.test(formattedValue[i])) {
-      digitCount++;
-      if (digitCount > targetDigitCount) {
-        break;
-      }
+  let allowedSymbolCount = 0;
+  let i = 0;
+  while (
+    allowedSymbolCount < targetAllowedSymbolCount &&
+    i < formattedValue.length
+  ) {
+    if (allowedSymbols.test(formattedValue[i])) {
+      allowedSymbolCount++;
+      newPosition = i + 1;
     }
-    newPosition = i + 1;
+    i++;
   }
-
-  requestAnimationFrame(() => {
-    input.setSelectionRange(newPosition, newPosition);
-  });
   return newPosition;
 };
 
 /**
- * (BETA - kan komme endringer)
- * Hook for å administrere formaterte inputfelt med automatisk formatering og markørposisjonering.
- * Støtter norske personnummer, organisasjonsnummer, kontonummer og telefonnummer.
+ * Teller antall lovlige tegn (siffer/desimal/minus) frem til en gitt posisjon.
+ *
+ * @param value - Strengen som skal analyseres
+ * @param countUntil - Posisjonen å telle frem til
+ * @param disallowedSymbols - Regex for ulovlige symboler som skal fjernes
+ * @returns Antall lovlige tegn
+ */
+function countAllowedSymbols(
+  value: string,
+  countUntil: number,
+  disallowedSymbols: RegExp
+): number {
+  return value.substring(0, countUntil).replace(disallowedSymbols, '').length;
+}
+/**
+ * (BETA - kan komme endringer) Hook for å administrere formaterte inputfelt med
+ * automatisk formatering og markørposisjonering. Støtter norske personnummer,
+ * organisasjonsnummer, kontonummer og telefonnummer.
  *
  * Funksjoner:
+ *
  * - Automatisk formatering under skriving
  * - Smart markørposisjonering etter formatendringer
  * - Korrekt håndtering av backspace/delete ved separatorgrenser
  * - Utvinning av råverdi (bare siffer)
  * - Lengdevalidering for spesifikke formater
+ *
+ * @example
+ *   ```tsx
+ *   const phoneFormatter = useFormattedInput({
+ *     type: 'phoneNumber',
+ *     initialValue: '12345678'
+ *   });
+ *
+ *   return (
+ *     <TextField
+ *       value={phoneFormatter.value}
+ *       onChange={phoneFormatter.onChange}
+ *       onKeyDown={phoneFormatter.onKeyDown}
+ *     />
+ *   );
+ *   ```;
+ *
  * @param options - Konfigurasjonsobjekt
  * @param options.type - Typen formatering som skal anvendes
  * @param options.initialValue - Startverdi som skal formateres og vises
+ * @param options.locale - Språk som bestemmer symboler for desimal og
+ *   tusenskille
+ * @param options.allowDecimals - Tillat desimaltall for type 'number'
+ * @param options.maxFractionDigits - Maks antall desimaler ( standard er 2)
+ *   Sett allowDecimals til false hvis du ikke ønsker desimaler.
  * @returns Objekt med formatert verdi, hendelseshåndterere og råverdi
- * @example
- * ```tsx
- * const phoneFormatter = useFormattedInput({
- *   type: 'phoneNumber',
- *   initialValue: '12345678'
- * });
- *
- * return (
- *   <TextField
- *     value={phoneFormatter.value}
- *     onChange={phoneFormatter.onChange}
- *     onKeyDown={phoneFormatter.onKeyDown}
- *   />
- * );
- * ```
  */
 export const useFormattedInput = ({
   type,
   initialValue = '',
+  locale = 'nb-NO',
+  allowDecimals: allowDecimalsExternal = false,
+  maxFractionDigits: maxFractionDigitsExternal = DEFAULT_MAX_FRACTION_DIGITS,
 }: UseFormattedInputOptions): UseFormattedInputReturn => {
+  const allowDecimals =
+    maxFractionDigitsExternal > 0 ? allowDecimalsExternal : false;
+  const maximumFractionDigits = allowDecimals ? maxFractionDigitsExternal : 0;
+  const localeRef = useRef(locale);
+  const numberParser = useMemo(() => new NumberParser(locale), [locale]);
+  const decimalSeparator = numberParser.getDecimalSeparator();
+  const thousandSeparator =
+    type === 'number'
+      ? numberParser.getThousandSeparator()
+      : NON_BREAKING_SPACE;
+
+  const allowedSymbols = useMemo(
+    () => createAllowedSymbolsRegex(decimalSeparator, allowDecimals),
+    [decimalSeparator, allowDecimals]
+  );
+  const disallowedSymbols = useMemo(
+    () => createDisallowedSymbolsRegex(decimalSeparator, allowDecimals),
+    [decimalSeparator, allowDecimals]
+  );
   const [rawValue, setRawValue] = useState(() => {
-    const cleaned = initialValue.replace(/[^\d]/g, '');
-    const maxLength = getMaxLength(type);
-    return maxLength ? cleaned.substring(0, maxLength) : cleaned;
+    return cleanInput(
+      initialValue,
+      type,
+      decimalSeparator,
+      allowDecimals,
+      maximumFractionDigits
+    );
+  });
+  const [status, setStatus] = useState<FormattedInputStatus>('valid');
+  const [caretFlushVersion, setCaretFlushVersion] = useState(0);
+  const pendingCaretPositionRef = useRef<PendingCaretPosition | null>(null);
+  const caretRevisionRef = useRef(0);
+  const hasDecimal = rawValue.includes(decimalSeparator);
+
+  const onLocaleChange = useEffectEvent((locale: string) => {
+    const separatorForCounting = new NumberParser(
+      localeRef.current
+    ).getDecimalSeparator();
+    const hasDecimal = rawValue.includes(separatorForCounting);
+    const minimumFractionDigits =
+      allowDecimals && hasDecimal
+        ? countDecimalDigits(
+            rawValue,
+            separatorForCounting,
+            maximumFractionDigits
+          )
+        : 0;
+    const minimumIntegerDigits = countIntegerDigits(
+      rawValue,
+      separatorForCounting
+    );
+    const newRawValue = formatter({
+      value: new NumberParser(localeRef.current).parse(rawValue).toString(),
+      type,
+      locale,
+      options: {
+        maximumFractionDigits,
+        minimumFractionDigits,
+        minimumIntegerDigits,
+      },
+    }).value;
+    setRawValue(
+      cleanInput(
+        newRawValue,
+        type,
+        decimalSeparator,
+        allowDecimals,
+        maximumFractionDigits
+      )
+    );
+    localeRef.current = locale;
   });
 
-  const displayValue = formatter({
+  //TODO: oppdatere eslint-plugin-react-hooks
+  useEffect(() => {
+    onLocaleChange(locale);
+    // eslint-disable-next-line react-compiler/react-compiler
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [locale]);
+
+  const minimumFractionDigits =
+    allowDecimals && hasDecimal
+      ? countDecimalDigits(rawValue, decimalSeparator, maximumFractionDigits)
+      : 0;
+  const minimumIntegerDigits = countIntegerDigits(rawValue, decimalSeparator);
+  const formatted = formatter({
     value: rawValue,
     type,
-  }).value;
+    locale,
+    options: {
+      maximumFractionDigits,
+      minimumFractionDigits,
+      minimumIntegerDigits,
+    },
+  });
+  const displayValue =
+    'valueWithDecimalTail' in formatted
+      ? (formatted.valueWithDecimalTail ?? '')
+      : formatted.value;
+
+  const queueCaretPosition = useCallback(
+    (
+      input: HTMLInputElement,
+      start: number,
+      expectedValue: string,
+      forceFlush = false
+    ): void => {
+      const revision = caretRevisionRef.current + 1;
+      caretRevisionRef.current = revision;
+      pendingCaretPositionRef.current = {
+        input,
+        start,
+        end: start,
+        expectedValue,
+        revision,
+      };
+
+      if (forceFlush) {
+        setCaretFlushVersion((version) => version + 1);
+      }
+    },
+    []
+  );
+
+  const applyPendingCaretPosition = useCallback((): void => {
+    const pendingCaretPosition = pendingCaretPositionRef.current;
+
+    if (!pendingCaretPosition) {
+      return;
+    }
+
+    if (pendingCaretPosition.revision !== caretRevisionRef.current) {
+      return;
+    }
+
+    if (
+      pendingCaretPosition.input.value !== pendingCaretPosition.expectedValue
+    ) {
+      return;
+    }
+
+    pendingCaretPosition.input.setSelectionRange(
+      pendingCaretPosition.start,
+      pendingCaretPosition.end
+    );
+    pendingCaretPositionRef.current = null;
+  }, []);
+
+  useLayoutEffect(() => {
+    applyPendingCaretPosition();
+  }, [displayValue, caretFlushVersion, applyPendingCaretPosition]);
 
   const inputHistory = useInputHistory({
     initialValue: displayValue,
@@ -145,21 +504,30 @@ export const useFormattedInput = ({
       if (previousState) {
         event.preventDefault();
 
-        // Extract raw value from formatted value
-        const newRawValue = previousState.value.replace(/[^\d]/g, '');
+        const newRawValue = cleanInput(
+          previousState.value,
+          type,
+          decimalSeparator,
+          allowDecimals,
+          maximumFractionDigits
+        );
         setRawValue(newRawValue);
 
-        // Set cursor position
-        requestAnimationFrame(() => {
-          const pos = Math.min(
-            previousState.cursorPosition,
-            previousState.value.length
-          );
-          input.setSelectionRange(pos, pos);
-        });
+        const pos = Math.min(
+          previousState.cursorPosition,
+          previousState.value.length
+        );
+        queueCaretPosition(input, pos, previousState.value);
       }
     },
-    [inputHistory]
+    [
+      inputHistory,
+      type,
+      decimalSeparator,
+      allowDecimals,
+      maximumFractionDigits,
+      queueCaretPosition,
+    ]
   );
 
   const handleRedo = useCallback(
@@ -172,21 +540,27 @@ export const useFormattedInput = ({
       if (nextState) {
         event.preventDefault();
 
-        // Extract raw value from formatted value
-        const newRawValue = nextState.value.replace(/[^\d]/g, '');
+        const newRawValue = cleanInput(
+          nextState.value,
+          type,
+          decimalSeparator,
+          allowDecimals,
+          maximumFractionDigits
+        );
         setRawValue(newRawValue);
 
-        // Set cursor position
-        requestAnimationFrame(() => {
-          const pos = Math.min(
-            nextState.cursorPosition,
-            nextState.value.length
-          );
-          input.setSelectionRange(pos, pos);
-        });
+        const pos = Math.min(nextState.cursorPosition, nextState.value.length);
+        queueCaretPosition(input, pos, nextState.value);
       }
     },
-    [inputHistory]
+    [
+      inputHistory,
+      type,
+      decimalSeparator,
+      allowDecimals,
+      maximumFractionDigits,
+      queueCaretPosition,
+    ]
   );
 
   const handleBackspaceAtSeparator = useCallback(
@@ -200,19 +574,20 @@ export const useFormattedInput = ({
         const formattedValue = formatter({
           value: newDigits,
           type,
+          locale,
         }).value;
 
-        const newPosition = positionCursorAfterDigits(
-          input,
+        const newPosition = getCursorPositionAfterAllowedSymbols(
           formattedValue,
-          digitsBeforeSeparator - 1
+          digitsBeforeSeparator - 1,
+          allowedSymbols
         );
+        queueCaretPosition(input, newPosition, formattedValue);
 
-        // Save to history after formatting
         inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type, inputHistory]
+    [rawValue, type, locale, allowedSymbols, inputHistory, queueCaretPosition]
   );
 
   const handleDeleteAtSeparator = useCallback(
@@ -226,19 +601,20 @@ export const useFormattedInput = ({
         const formattedValue = formatter({
           value: newDigits,
           type,
+          locale,
         }).value;
 
-        const newPosition = positionCursorAfterDigits(
-          input,
+        const newPosition = getCursorPositionAfterAllowedSymbols(
           formattedValue,
-          digitsBeforeSeparator
+          digitsBeforeSeparator,
+          allowedSymbols
         );
+        queueCaretPosition(input, newPosition, formattedValue);
 
-        // Save to history after formatting
         inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type, inputHistory]
+    [rawValue, type, locale, allowedSymbols, inputHistory, queueCaretPosition]
   );
 
   const handleDeleteAtDigit = useCallback(
@@ -252,19 +628,20 @@ export const useFormattedInput = ({
         const formattedValue = formatter({
           value: newDigits,
           type,
+          locale,
         }).value;
 
-        const newPosition = positionCursorAfterDigits(
-          input,
+        const newPosition = getCursorPositionAfterAllowedSymbols(
           formattedValue,
-          digitsBeforeCursor
+          digitsBeforeCursor,
+          allowedSymbols
         );
+        queueCaretPosition(input, newPosition, formattedValue);
 
-        // Save to history after formatting
         inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type, inputHistory]
+    [rawValue, type, locale, allowedSymbols, inputHistory, queueCaretPosition]
   );
 
   const handleKeyDown = useCallback(
@@ -273,19 +650,18 @@ export const useFormattedInput = ({
       const cursorPosition = input.selectionEnd || 0;
       const value = input.value;
       const isPreviousCharacterSeparator =
-        value[cursorPosition - 1] === NON_BREAKING_SPACE;
+        value[cursorPosition - 1] === thousandSeparator;
       const isNextCharacterSeparator =
-        value[cursorPosition] === NON_BREAKING_SPACE;
+        value[cursorPosition] === thousandSeparator;
 
       const selectionLength =
         (input.selectionEnd || 0) - (input.selectionStart || 0);
 
-      const isAnyModifierKeyPressed = checkIfAnyModifierKeyPressed(event);
+      const isAnyModifierKeyPressed = isModifierKeyPressed(event);
 
-      // Initialize history if empty (first interaction)
       inputHistory.initialize(value, cursorPosition);
+      setStatus('valid');
 
-      // Handle redo (Ctrl+Y / Command+Y or Ctrl+Shift+Z / Command+Shift+Z)
       if (
         (event.ctrlKey || event.metaKey) &&
         (event.key === 'y' || (event.shiftKey && event.key === 'z'))
@@ -294,7 +670,6 @@ export const useFormattedInput = ({
         return;
       }
 
-      // Handle undo (Ctrl+Z / Command+Z)
       if (
         (event.ctrlKey || event.metaKey) &&
         event.key === 'z' &&
@@ -309,26 +684,19 @@ export const useFormattedInput = ({
         !isAnyModifierKeyPressed &&
         selectionLength === 0
       ) {
-        // If cursor is right after a separator, delete the digit before the separator
         if (isPreviousCharacterSeparator && cursorPosition > 1) {
           event.preventDefault();
 
-          // Count digits before the separator to find which digit to remove
-          let digitCount = 0;
-          for (let i = 0; i < cursorPosition - 1; i++) {
-            if (/\d/.test(value[i])) {
-              digitCount++;
-            }
-          }
+          const digitCount = countAllowedSymbols(
+            value,
+            cursorPosition - 1,
+            disallowedSymbols
+          );
 
           handleBackspaceAtSeparator(input, digitCount);
-        }
-        // Normal backspace behavior - delete the digit before cursor
-        else if (cursorPosition > 0 && !isPreviousCharacterSeparator) {
-          // Let default behavior handle this case for digits
-          if (/\d/.test(value[cursorPosition - 1])) {
+        } else if (cursorPosition > 0 && !isPreviousCharacterSeparator) {
+          if (allowedSymbols.test(value[cursorPosition - 1])) {
             inputHistory.updateCursorPosition(cursorPosition);
-            // This will be handled by the default browser behavior and onChange
             return;
           }
         }
@@ -339,31 +707,25 @@ export const useFormattedInput = ({
         !isAnyModifierKeyPressed &&
         selectionLength === 0
       ) {
-        // Count digits up to the cursor position (before separator)
-        let digitsBeforeCursor = 0;
-        for (let i = 0; i < cursorPosition; i++) {
-          if (/\d/.test(value[i])) {
-            digitsBeforeCursor++;
-          }
-        }
+        const digitsBeforeCursor = countAllowedSymbols(
+          value,
+          cursorPosition,
+          disallowedSymbols
+        );
 
-        // If cursor is before a separator, delete the digit after the separator
         if (isNextCharacterSeparator) {
           event.preventDefault();
           handleDeleteAtSeparator(input, digitsBeforeCursor);
-        }
-        // If cursor is before a digit and delete is pressed, delete the next digit
-        else if (
+        } else if (
           cursorPosition < value.length &&
-          /\d/.test(value[cursorPosition])
+          allowedSymbols.test(value[cursorPosition])
         ) {
           event.preventDefault();
           handleDeleteAtDigit(input, digitsBeforeCursor);
         }
       }
 
-      // Prevent typing digits when max length is reached
-      const maxLength = getMaxLength(type);
+      const maxLength = getMaxLength(type, hasDecimal);
       if (
         maxLength &&
         rawValue.length >= maxLength &&
@@ -372,17 +734,63 @@ export const useFormattedInput = ({
         selectionLength === 0
       ) {
         event.preventDefault();
+        if (type === 'number') {
+          setStatus('maxDigitsReached');
+        }
+      }
+
+      // Hindre å legge inn flere desimaler hvis maks antall desimaler er nådd
+      if (
+        type === 'number' &&
+        allowDecimals &&
+        hasDecimal &&
+        /^[0-9]$/.test(event.key) &&
+        !isAnyModifierKeyPressed &&
+        selectionLength === 0
+      ) {
+        const decimalIndex = value.indexOf(decimalSeparator);
+        const isCursorAfterDecimal = cursorPosition > decimalIndex;
+        if (isCursorAfterDecimal) {
+          const currentDecimalDigits = countDecimalDigits(
+            rawValue,
+            decimalSeparator,
+            maximumFractionDigits + 1
+          );
+          if (currentDecimalDigits >= maximumFractionDigits) {
+            event.preventDefault();
+            setStatus('maxDecimalsReached');
+          }
+        }
+      }
+      // Hindre å legge inn desimalskilletegn hvis det allerede finnes ett
+      if (
+        type === 'number' &&
+        allowDecimals &&
+        hasDecimal &&
+        event.key === decimalSeparator &&
+        !isAnyModifierKeyPressed &&
+        selectionLength === 0
+      ) {
+        event.preventDefault();
+        setStatus('duplicateDecimalSeparator');
       }
     },
     [
       rawValue,
       type,
+      thousandSeparator,
       inputHistory,
+      allowedSymbols,
+      disallowedSymbols,
       handleUndo,
       handleRedo,
       handleBackspaceAtSeparator,
       handleDeleteAtSeparator,
       handleDeleteAtDigit,
+      hasDecimal,
+      allowDecimals,
+      decimalSeparator,
+      maximumFractionDigits,
     ]
   );
 
@@ -390,41 +798,82 @@ export const useFormattedInput = ({
     (event: ChangeEvent<HTMLInputElement>) => {
       const input = event.target as HTMLInputElement;
       const inputValue = input.value;
-
       const cursorPosition = input.selectionStart || 0;
-
-      const digitsBeforeCursor = inputValue
-        .substring(0, cursorPosition)
-        .replace(/[^\d]/g, '').length;
-
-      let digitsOnly = inputValue.replace(/[^\d]/g, '');
-
-      // Limit length based on type
-      const maxLength = getMaxLength(type);
-      if (maxLength && digitsOnly.length > maxLength) {
-        digitsOnly = digitsOnly.substring(0, maxLength);
-      }
-
-      setRawValue(digitsOnly);
-
-      const formattedValue = formatter({
-        value: digitsOnly,
-        type,
-      }).value;
-
-      const newPosition = positionCursorAfterDigits(
-        input,
-        formattedValue,
-        digitsBeforeCursor
+      const digitsBeforeCursor = countAllowedSymbols(
+        inputValue,
+        cursorPosition,
+        disallowedSymbols
       );
+      const cleanedInput = cleanInput(
+        inputValue,
+        type,
+        decimalSeparator,
+        allowDecimals,
+        maximumFractionDigits,
+        setStatus
+      );
+      setRawValue(cleanedInput);
 
-      // Update history after formatting and positioning cursor
+      const minimumFractionDigits = allowDecimals
+        ? countDecimalDigits(
+            cleanedInput,
+            decimalSeparator,
+            maximumFractionDigits
+          )
+        : 0;
+      const minimumIntegerDigits = countIntegerDigits(
+        cleanedInput,
+        decimalSeparator
+      );
+      const formatted = formatter({
+        value: cleanedInput,
+        type,
+        locale,
+        options: {
+          maximumFractionDigits,
+          minimumFractionDigits,
+          minimumIntegerDigits,
+        },
+      });
+      const formattedValue =
+        'valueWithDecimalTail' in formatted
+          ? (formatted.valueWithDecimalTail ?? '')
+          : formatted.value;
+
+      /* Hvis bruker skriver inn desimaltegn uten heltall først  vil formatteren legge på 0 foran desimaltegnet (f.eks ",1" formatteres til 0,1).
+      For å unngå at markøren hopper bakover må vi legge til 1 i antall siffer før markøren. */
+      const digitsBeforeCursorAfterFormatting =
+        formattedValue.startsWith(`0${decimalSeparator}`) &&
+        inputValue.startsWith(decimalSeparator)
+          ? digitsBeforeCursor + 1
+          : digitsBeforeCursor;
+
+      const newPosition = getCursorPositionAfterAllowedSymbols(
+        formattedValue,
+        digitsBeforeCursorAfterFormatting,
+        allowedSymbols
+      );
+      queueCaretPosition(input, newPosition, formattedValue);
+
       const previousFormattedValue = inputHistory.getCurrentValue();
       if (previousFormattedValue !== formattedValue) {
         inputHistory.pushState(formattedValue, newPosition);
+      } else {
+        const lastPosition = cursorPosition - 1;
+        queueCaretPosition(input, lastPosition, formattedValue, true);
       }
     },
-    [type, inputHistory]
+    [
+      type,
+      locale,
+      decimalSeparator,
+      allowDecimals,
+      maximumFractionDigits,
+      allowedSymbols,
+      disallowedSymbols,
+      inputHistory,
+      queueCaretPosition,
+    ]
   );
 
   return {
@@ -432,5 +881,7 @@ export const useFormattedInput = ({
     onChange: handleChange,
     onKeyDown: handleKeyDown,
     rawValue,
+    numberValue: type === 'number' ? numberParser.parse(rawValue) : undefined,
+    status,
   };
 };

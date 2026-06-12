@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { TopBannerButtonProps } from './TopBannerButton.types';
@@ -10,10 +9,11 @@ import styles from './TopBannerButton.module.scss';
 export const TopBannerButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
+  dataWebAnalyticsId,
   svgPath,
   title,
   variant,
@@ -35,6 +35,7 @@ export const TopBannerButton = ({
       className={concatenatedClassName}
       lang={lang}
       data-testid={dataTestId}
+      data-webanalytics-id={dataWebAnalyticsId}
       aria-expanded={ariaExpanded}
       type={'button'}
       onFocus={onFocus}

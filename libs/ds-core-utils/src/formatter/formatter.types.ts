@@ -32,7 +32,7 @@ export type FormatOptions<T extends FormatTypes = FormatTypes> = {
 };
 
 export type ValidData = {
-  [key in FormatTypes]?: number;
+  [key in FormatTypes]: number;
 };
 
 export type Converted = { value: string };

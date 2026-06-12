@@ -16,6 +16,8 @@ type PropsFromIconButton = Pick<
 
 type PopoverTriggerCommonProps = BaseProps & {
   ref?: Ref<HTMLButtonElement>;
+  /** Om rammen til knappen skal skjules */
+  hideOutline?: boolean;
 };
 
 export interface PopoverTriggerProps

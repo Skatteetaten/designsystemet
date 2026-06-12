@@ -1,0 +1,59 @@
+@use '@skatteetaten/ds-core-designtokens/designtokens/breakpoints' as *;
+
+.mainContent {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: var(--spacing-m) auto;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.wideContent {
+  width: var(--semantic-responsive-wide-content);
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.responsiveContainer {
+  display: flex;
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--spacing-m);
+  margin: 0 auto;
+  background-color: var(--palette-burgundy-5);
+}
+
+.responsiveWideContent {
+  display: flex;
+  width: var(--semantic-responsive-wide-content);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--spacing-m);
+  margin: 0 auto;
+  background-color: var(--palette-burgundy-10);
+}
+
+.responsiveArticle {
+  display: flex;
+  width: var(--semantic-responsive-article);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--spacing-m);
+  margin: 0 auto;
+  background-color: var(--palette-burgundy-30);
+}
+
+.marginBottomXL {
+  margin-bottom: var(--spacing-xl);
+}
+
+.marginTopS {
+  margin-top: var(--spacing-s);
+}

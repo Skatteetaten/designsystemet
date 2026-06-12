@@ -8,7 +8,7 @@ import illustration from '../../assets/designsystem_illustrasjon.png';
 export const IntroductionGenerator = (): JSX.Element => {
   return (
     <>
-      <Heading as={'h1'} level={1}>
+      <Heading as={'h1'} hasSpacing>
         {'Skatteetatens designsystem'}
       </Heading>
       <Paragraph hasSpacing>

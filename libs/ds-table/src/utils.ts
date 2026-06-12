@@ -1,18 +1,6 @@
 import { TFunction } from 'i18next';
 
-import { Density, Size } from '@skatteetaten/ds-core-utils';
-
 import { SortState } from './Table/Table.types';
-
-export const getIconButtonSize = (
-  isDesktop: boolean,
-  variant?: Density
-): Extract<Size, 'extraSmall' | 'medium' | 'large'> => {
-  if (variant === 'compact') {
-    return 'extraSmall';
-  }
-  return isDesktop ? 'large' : 'medium';
-};
 
 export const getScreenReaderSortDirectionText = (
   shouldShowSRText: boolean,

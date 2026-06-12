@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { WordInfoContentProps } from './WordInfoContent.types';
 import { PopoverContent } from '../../Popover/PopoverContent/PopoverContent';
 
@@ -10,11 +8,11 @@ import styles from './WordInfoContent.module.scss';
 export const WordInfoContent = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   children,
-}: WordInfoContentProps): JSX.Element | null => {
+}: WordInfoContentProps): JSX.Element => {
   return (
     <PopoverContent
       ref={ref}

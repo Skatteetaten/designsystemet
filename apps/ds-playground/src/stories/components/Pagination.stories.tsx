@@ -3,16 +3,10 @@ import { useState } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { JSX } from 'react/jsx-runtime';
 
-import {
-  Pagination,
-  getDefaultPageSize,
-  getDefaultSibling,
-  getDefaultHidePageSummary,
-  getDefaultHidePrevNextButtonTitle,
-} from '@skatteetaten/ds-navigation';
+import { Pagination } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -20,56 +14,20 @@ const meta = {
   title: 'Komponenter/Pagination',
   argTypes: {
     // Props
-    currentPage: {
-      table: { category: category.props },
-    },
-    defaultCurrent: {
-      table: { category: category.props },
-    },
-    sibling: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDefaultSibling().toString() },
-      },
-    },
-    hidePrevNextButtonTitle: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getDefaultHidePrevNextButtonTitle().toString(),
-        },
-      },
-    },
-    hidePageSummary: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDefaultHidePageSummary().toString() },
-      },
-    },
-    pageSize: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDefaultPageSize().toString() },
-      },
-    },
-    totalItems: {
-      table: {
-        category: category.props,
-      },
-    },
-    ariaLabel: {
-      table: {
-        category: category.aria,
-      },
-    },
+    currentPage: { table: { category: category.props } },
+    defaultCurrent: { table: { category: category.props } },
+    sibling: { table: { category: category.props } },
+    hidePrevNextButtonTitle: { table: { category: category.props } },
+    hidePageSummary: { table: { category: category.props } },
+    pageSize: { table: { category: category.props } },
+    totalItems: { table: { category: category.props } },
+    // Aria
+    ariaLabel: { table: { category: category.aria } },
     // Event
-    onChange: { table: { category: category.event } },
+    onChange: { ...htmlEventDescription },
   },
   args: {
-    pageSize: getDefaultPageSize(),
     totalItems: 70,
-    sibling: getDefaultSibling(),
-    defaultCurrent: 1,
   },
 } satisfies Meta<typeof Pagination>;
 

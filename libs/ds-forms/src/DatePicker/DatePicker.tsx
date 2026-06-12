@@ -12,35 +12,36 @@ import { useTranslation } from 'react-i18next';
 
 import { isValid } from 'date-fns';
 
-import {
-  dsI18n,
-  getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
-  getCommonFormVariantDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 
 import { DatePickerProps } from './DatePicker.types';
 import { DatePickerCalendar } from './DatePickerCalendar/DatePickerCalendar';
-import {
-  getDatePickerDateFormat,
-  getDatePickerPlaceholderDefault,
-} from './defaults';
 import { formatDateForInput, parseDateFromInput } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 
 import styles from './DatePicker.module.scss';
 
+export const defaultDatePickerPlaceholder = dsI18n.t(
+  'ds_forms:datepicker.TypeOrSelect'
+);
+
+/**
+ * DatePicker
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-datepicker--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/datepicker/) - Brukerveiledning
+ */
 export const DatePicker = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
-  dateFormat = getDatePickerDateFormat(),
+  dateFormat = 'dd.MM.yyyy',
   disabledDates,
   description,
   errorMessage,
@@ -52,23 +53,22 @@ export const DatePicker = ({
   maxDate,
   titleHelpSvg,
   value,
-  variant = getCommonFormVariantDefault(),
-  autoComplete = getCommonAutoCompleteDefault(),
-  disabled,
+  ariaDescribedBy,
+  autoComplete = 'off',
+  disabled = false,
   name,
-  placeholder = getDatePickerPlaceholderDefault(),
-  readOnly,
-  required,
-  hasSpacing,
-  hideLabel,
-  showRequiredMark,
+  placeholder = defaultDatePickerPlaceholder,
+  readOnly = false,
+  required = false,
+  hasSpacing = false,
+  hideLabel = false,
   onBlur,
   onChange,
   onFocus,
   onHelpToggle,
+  onCalendarToggle,
   onSelectDate,
 }: DatePickerProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
   const descriptionId = `descId-${useId()}`;
@@ -122,7 +122,7 @@ export const DatePicker = ({
 
   const handleFocus = (e: FocusEvent<HTMLInputElement>): void => {
     if (showCalendar) {
-      setShowCalendar(false);
+      handleCalendarOpenChange(false);
     }
     onFocus?.(e);
   };
@@ -137,15 +137,20 @@ export const DatePicker = ({
     onBlur?.(e);
   };
 
+  const handleCalendarOpenChange = (isOpen: boolean): void => {
+    setShowCalendar(isOpen);
+    onCalendarToggle?.(isOpen);
+  };
+
   const handleSelectDate = (date: Date): void => {
     setInputValue(formatDateForInput(dateFormat, date));
-    setShowCalendar(false);
+    handleCalendarOpenChange(false);
     inputRef.current?.focus();
     onSelectDate?.(date);
   };
 
   const closeCalendar = (): void => {
-    setShowCalendar(false);
+    handleCalendarOpenChange(false);
     calenderButtonRef?.current?.focus();
   };
 
@@ -163,7 +168,7 @@ export const DatePicker = ({
         !calendarRef?.current?.contains(node) &&
         !calenderButtonRef?.current?.contains(node)
       ) {
-        setShowCalendar(false);
+        handleCalendarOpenChange(false);
         event.type === 'click' && calenderButtonRef?.current?.focus();
       }
     };
@@ -194,16 +199,6 @@ export const DatePicker = ({
     };
   }, [showCalendar]);
 
-  const placeholderValue = placeholder?.trim() === '' ? undefined : placeholder;
-
-  const isLarge = variant === 'large';
-  const inputClassName = `${styles.input} ${
-    isLarge ? styles.input_large : ''
-  }`.trim();
-  const calendarButtonClassName = `${styles.calendarButton} ${
-    isLarge ? styles.calendarButton_large : ''
-  }`.trim();
-
   return (
     <div
       className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
@@ -214,12 +209,12 @@ export const DatePicker = ({
         classNames={classNames}
         htmlFor={datePickerId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}
@@ -232,22 +227,26 @@ export const DatePicker = ({
         <input
           ref={inputRef}
           id={datePickerId}
-          className={inputClassName}
+          className={styles.input}
           data-testid={dataTestId}
           autoComplete={autoComplete}
           disabled={disabled}
           name={name}
-          placeholder={placeholderValue}
+          placeholder={placeholder?.trim() === '' ? undefined : placeholder}
           readOnly={readOnly}
           required={required}
           value={inputValue}
           aria-describedby={
-            [description && descriptionId, errorMessage && errorId]
+            [
+              ariaDescribedBy,
+              description && descriptionId,
+              errorMessage && errorId,
+            ]
               .filter(Boolean)
               .join(' ')
               .trim() || undefined
           }
-          aria-invalid={!!errorMessage || undefined}
+          aria-invalid={getAriaInvalid(errorMessage, required)}
           onBlur={handleBlur}
           onChange={handleChange}
           onFocus={handleFocus}
@@ -256,15 +255,16 @@ export const DatePicker = ({
           <button
             ref={calenderButtonRef}
             type={'button'}
-            className={calendarButtonClassName}
+            className={styles.calendarButton}
             disabled={disabled}
             aria-expanded={showCalendar}
-            onClick={(): void => setShowCalendar(!showCalendar)}
+            onClick={(): void => {
+              handleCalendarOpenChange(!showCalendar);
+            }}
           >
             <CalendarIcon
               className={styles.icon}
               title={t('datepicker.ChooseDate')}
-              size={isLarge ? 'large' : 'medium'}
             />
           </button>
         )}

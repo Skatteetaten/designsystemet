@@ -1,7 +1,10 @@
+import { JSX } from 'react';
+
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
+import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
 import {
   Heading,
   HeadingProps,
@@ -36,10 +39,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const headingAsTest = 'h2';
 const defaultArgs: HeadingProps = {
-  as: headingAsTest,
-  level: 2,
+  as: 'h2',
   children: 'Dette er en heading',
 };
 
@@ -80,9 +81,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -117,9 +116,7 @@ export const Defaults = {
     const headings = canvas.getAllByRole('heading', { level: 2 });
     for (const [index, heading] of headings.entries()) {
       await expect(heading).toBeInTheDocument();
-      await expect(heading.classList.toString()).toContain(
-        `heading_level${headingLevelArr[index]}`
-      );
+      await expect(heading).toHaveAttribute('data-level', `${index + 1}`);
     }
   },
 } satisfies Story;
@@ -242,5 +239,21 @@ export const WithCanBeManuallyFocused: Story = {
     heading.focus();
     await expect(heading).toBeInTheDocument();
     await expect(heading).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const HeadingWithIcon: Story = {
+  args: {
+    ...defaultArgs,
+  },
+  render: (_args): JSX.Element => {
+    return (
+      <Heading as={'h1'}>
+        <Icon svgPath={CompletedSVGpath} size={'extraLarge'} />
+        {
+          ' Dette er en overskrift som inneholder et systemikon i begynnelsen av teksten.'
+        }
+      </Heading>
+    );
   },
 } satisfies Story;

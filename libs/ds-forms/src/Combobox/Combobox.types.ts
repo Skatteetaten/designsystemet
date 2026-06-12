@@ -1,15 +1,27 @@
-import type { ComponentPropsWithoutRef, Ref, RefObject } from 'react';
+import type {
+  ComponentPropsWithoutRef,
+  FunctionComponent,
+  MouseEvent,
+  Ref,
+  RefObject,
+} from 'react';
 
 import type { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
 import type { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
+import type { DropdownTrigger } from './hooks/useComboboxCore';
 
 export type ComboboxSize = Extract<Size, 'medium' | 'large'>;
 
 export type ComboboxOption = {
   label: string;
   value: string;
+  /**
+   * Gruppe som alternativet tilhører. Alternativer med samme group vises sammen
+   * under en felles overskrift.
+   */
+  group?: string;
 };
 
 export type TypedComboboxOption<TData> = ComboboxOption & {
@@ -26,18 +38,26 @@ export type ComboboxPropsHTMLAttributes = Pick<
   | 'onFocus'
   | 'form'
   | 'accessKey'
->;
+> & {
+  ariaDescribedBy?: string;
+};
 
 interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement | null>;
   classNames?: Prettify<
     {
+      container?: string;
       options?: string;
+      inputContainer?: string;
+      inputList?: string;
       errorMessage?: string;
     } & LabelWithHelpProps['classNames']
   >;
-
-  /** Tilleggstekst som vises under label */
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
   description?: LabelWithHelpProps['description'];
   /** Feilmelding som vises under komponenten */
   errorMessage?: string;
@@ -63,6 +83,13 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   hideLabel?: boolean;
   /** Viser loading state med spinner */
   isLoading?: boolean;
+  /**
+   * Placeholder vises ikke når minSearchLength er satt eller når minst et
+   * alternativ er valgt i multi-select modus.
+   *
+   * @default Skriv eller velg
+   */
+  placeholder?: string;
   /** Kalles når hjelpeteksten vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
@@ -119,9 +146,10 @@ interface MultiComboboxProps extends ComboboxCommonProps {
 
 export type ComboboxProps = SingleComboboxProps | MultiComboboxProps;
 
-export type ComboboxComponent = React.FC<ComboboxProps>;
+export type ComboboxComponent = FunctionComponent<ComboboxProps>;
 
 export type ComboboxSelectedOptionsProps = {
+  className?: string;
   multiple: boolean;
   selectedValues: ComboboxOption[];
   onRemoveValue: (value: ComboboxOption) => void;
@@ -131,6 +159,7 @@ export type ComboboxSelectedOptionsProps = {
 
 export type ComboboxOptionsProps = {
   isOpen: boolean;
+  openTrigger?: DropdownTrigger;
   isLoading?: boolean;
   spinnerProps?: Partial<Pick<SpinnerProps, 'size' | 'color'>>;
   displayOptions: ComboboxOption[];
@@ -147,6 +176,7 @@ export type ComboboxOptionsProps = {
   customListRef: RefObject<HTMLDivElement | null>;
   maxSelected?: number;
   spinnerLabel?: string;
+  onMinSearchLengthDelayChange?: (isReady: boolean) => void;
 };
 
 export type MaxSelectedMessageProps = {
@@ -162,10 +192,7 @@ export type LoadingMessageProps = {
 
 export type ComboboxButtonProps = {
   isOpen: boolean;
-  onClick: (e?: React.MouseEvent) => void;
-  hasValue?: boolean;
-  onClear?: () => void;
-  multiple?: boolean;
+  onClick: (e?: MouseEvent) => void;
   disabled?: boolean;
   variant?: ComboboxSize;
 };

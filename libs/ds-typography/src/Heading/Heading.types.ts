@@ -14,7 +14,7 @@ export interface HeadingProps extends BaseProps {
   /** Margin under heading */
   hasSpacing?: boolean;
   /** Hierarkinivå som styrer font størrelse, line height og spacing */
-  level: HeadingLevel;
+  level?: HeadingLevel;
   /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
   canBeManuallyFocused?: boolean;
 }

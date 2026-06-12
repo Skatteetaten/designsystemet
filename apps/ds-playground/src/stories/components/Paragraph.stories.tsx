@@ -2,11 +2,8 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getParagraphVariantDefault,
-  Heading,
-  Paragraph,
-} from '@skatteetaten/ds-typography';
+import { AttachFileSVGpath, Icon } from '@skatteetaten/ds-icons';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -20,12 +17,7 @@ const meta = {
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getParagraphVariantDefault() },
-      },
-    },
+    variant: { table: { category: category.props } },
   },
   args: {
     children: loremIpsum,
@@ -41,7 +33,7 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Flere oppgir kryptoverdier i skattemeldingen'}
         </Heading>
         <Paragraph variant={'ingress'} hasSpacing>
@@ -58,6 +50,8 @@ export const Examples: Story = {
             href={
               'https://www.skatteetaten.no/presse/nyhetsrommet/flere-oppgir-kryptoverdier-i-skattemeldingen/'
             }
+            target={'_blank'}
+            rel={'noreferrer'}
           >
             {'tidligere år'}
           </a>
@@ -70,3 +64,52 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const ParagraphWithLink: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Paragraph>
+        {'Dette er et eksempel på et avsnitt med en '}
+        <a
+          href={'https://www.skatteetaten.no/stilogtone/'}
+          target={'_blank'}
+          rel={'noreferrer'}
+        >
+          {'lenke til stil og tone'}
+        </a>
+        {' og som får  designsystemets typografi.'}
+      </Paragraph>
+    );
+  },
+} satisfies Story;
+ParagraphWithLink.storyName = 'Paragraf med lenke';
+ParagraphWithLink.parameters = exampleParameters;
+
+export const ParagraphWithInlineStyling: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Paragraph>
+        {'Noen ganger ønsker vi å fremheve tekst med '}
+        <strong>{'tydelig utheving'}</strong>
+        {', mens andre ganger holder det med '}
+        <em>{'lett betoning'}</em>
+        {'. Begge deler støttes automatisk i Paragraph.'}
+      </Paragraph>
+    );
+  },
+} satisfies Story;
+ParagraphWithInlineStyling.storyName = 'Paragraf med utheving';
+ParagraphWithInlineStyling.parameters = exampleParameters;
+
+export const ParagraphWithIcon: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Paragraph>
+        <Icon svgPath={AttachFileSVGpath} />
+        {' Siden inneholder et filvedlegg.'}
+      </Paragraph>
+    );
+  },
+} satisfies Story;
+ParagraphWithIcon.storyName = 'Paragraf med ikon';
+ParagraphWithIcon.parameters = exampleParameters;

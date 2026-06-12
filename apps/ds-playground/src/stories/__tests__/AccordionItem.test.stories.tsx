@@ -128,9 +128,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -139,6 +137,42 @@ export const WithAttributes = {
     await expect(button).toHaveAttribute('id', elementId);
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3, A10)',
+  args: {
+    ...defaultArgs,
+    subtitle: defaultSubtitle,
+    isExpanded: true,
+    classNames: {
+      container: 'dummyClassname',
+      title: 'dummyClassname',
+      subtitle: 'dummyClassname',
+      content: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const container = canvas.getByRole('button');
+    const title = canvas.getByText(defaultTitle);
+    const subtitle = canvas.getByText(defaultSubtitle);
+    const content = canvas.getByText(defaultContent);
+
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(title).toHaveClass('dummyClassname');
+    await expect(subtitle).toHaveClass('dummyClassname');
+    await expect(content).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -172,49 +206,11 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3, A10)',
-  args: {
-    ...defaultArgs,
-    subtitle: defaultSubtitle,
-    isExpanded: true,
-    classNames: {
-      container: 'dummyClassname',
-      title: 'dummyClassname',
-      subtitle: 'dummyClassname',
-      content: 'dummyClassname',
-    },
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    const container = canvas.getByRole('button');
-    const title = canvas.getByText(defaultTitle);
-    const subtitle = canvas.getByText(defaultSubtitle);
-    const content = canvas.getByText(defaultContent);
-
-    await expect(container).toHaveClass('dummyClassname');
-    await expect(title).toHaveClass('dummyClassname');
-    await expect(subtitle).toHaveClass('dummyClassname');
-    await expect(content).toHaveClass('dummyClassname');
-  },
-} satisfies Story;
-
 export const WithCustomIcon = {
   name: 'With Custom Icon (A8)',
   args: {
     ...defaultArgs,
     svgPath: PersonSVGpath,
-  },
-  parameters: {
-    imageSnapshot: {
-      disable: false,
-    },
   },
 } satisfies Story;
 
@@ -262,9 +258,7 @@ export const WithOnClick = {
     onClick: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -287,9 +281,7 @@ export const PersistFocusOnClick = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -316,11 +308,6 @@ export const WithLineBreak = {
     ...defaultArgs,
     title: 'Tittel som\nbrekker over flere\nlinjer',
   },
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-  },
 } satisfies Story;
 
 export const WithTitleAs = {
@@ -330,9 +317,7 @@ export const WithTitleAs = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -378,9 +363,7 @@ export const WithPersistedState = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

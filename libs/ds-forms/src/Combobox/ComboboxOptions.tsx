@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import { type JSX, memo, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -6,16 +6,15 @@ import { Spinner } from '@skatteetaten/ds-progress';
 
 import type { ComboboxOptionsProps } from './Combobox.types';
 import { ComboboxMaxSelectedMessage } from './ComboboxMaxSelectedMessage';
-import {
-  getOptionState,
-  type ComboboxState,
-} from './utils/combobox-state-utils';
+import { ComboboxOptionsListContent } from './ComboboxOptionsListContent';
+import type { ComboboxState } from './utils/combobox-state-utils';
 
 import styles from './Combobox.module.scss';
 
-export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
+export const ComboboxOptions = memo<ComboboxOptionsProps>(
   ({
     isOpen,
+    openTrigger,
     isLoading = false,
     spinnerProps,
     displayOptions,
@@ -32,19 +31,47 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
     customListRef,
     maxSelected,
     spinnerLabel,
+    onMinSearchLengthDelayChange,
   }: ComboboxOptionsProps): JSX.Element | null => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
+    const [showMinSearchLengthText, setShowMinSearchLengthText] =
+      useState(false);
+
+    const isBelowMinSearchLength = searchTerm.length < minSearchLength;
+
+    useEffect(() => {
+      if (!isOpen || minSearchLength === 0 || !isBelowMinSearchLength) {
+        setShowMinSearchLengthText(false);
+        onMinSearchLengthDelayChange?.(false);
+        return;
+      }
+
+      if (openTrigger === 'chevron') {
+        setShowMinSearchLengthText(true);
+        onMinSearchLengthDelayChange?.(true);
+        return;
+      }
+
+      const timeout = setTimeout(() => {
+        setShowMinSearchLengthText(true);
+        onMinSearchLengthDelayChange?.(true);
+      }, 1000);
+
+      return (): void => {
+        clearTimeout(timeout);
+      };
+    }, [
+      isBelowMinSearchLength,
+      isOpen,
+      minSearchLength,
+      openTrigger,
+      onMinSearchLengthDelayChange,
+    ]);
+
     if (!isOpen) {
       return null;
     }
 
-    /* Ikke vis liste hvis søketerm er kortere enn minSearchLength
-    TODO: Implementer løsning for FRONT-2179 */
-    if (searchTerm.length < minSearchLength) {
-      return null;
-    }
-
-    // Vis loading state
     if (isLoading) {
       return (
         <div
@@ -59,6 +86,13 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       );
     }
 
+    const comboboxState: ComboboxState = {
+      options: displayOptions,
+      selectedValues,
+      multiple,
+      maxSelected,
+    };
+
     // Vis options når vi har resultater
     if (displayOptions.length > 0) {
       return (
@@ -70,73 +104,19 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
             id={listId}
             role={'listbox'}
             aria-multiselectable={multiple ? 'true' : 'false'}
+            tabIndex={-1}
             className={styles.optionsList}
             onMouseDown={(e) => e.preventDefault()}
           >
-            {displayOptions.map((option, index) => {
-              const comboboxState: ComboboxState = {
-                options: displayOptions,
-                selectedValues,
-                multiple,
-                maxSelected,
-              };
-
-              const { isSelected, isDisabled } = getOptionState(
-                option,
-                comboboxState
-              );
-
-              /* In single select mode, we want to mark the option as selected with aria-selected
-               when its label matches the search term */
-              const isSelectedInSingleMode =
-                !multiple && option.label === searchTerm;
-              const ariaSelected = multiple
-                ? isSelected
-                : isSelectedInSingleMode;
-
-              const isFocused = index === focusedIndex;
-
-              return (
-                <li
-                  key={option.value}
-                  id={`${comboboxId}-option-${index}`}
-                  role={'option'} // We need to use <li> for screenreader support, even though sonarqube complains
-                  aria-selected={ariaSelected ? 'true' : 'false'}
-                  aria-disabled={isDisabled ? 'true' : undefined}
-                  className={`${styles.option} ${multiple ? styles.optionWithCheckbox : ''} ${isFocused ? styles.focused : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
-                  tabIndex={-1}
-                  onFocus={() => handleButtonFocus(index)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      if (!isDisabled) {
-                        handleOptionSelect(option, true); // true = fromKeyboard
-                      }
-                    }
-                  }}
-                  onClick={() => {
-                    if (!isDisabled) {
-                      handleOptionSelect(option, false); // false = fromMouse
-                    }
-                  }}
-                >
-                  {multiple && (
-                    <div
-                      className={`${styles.checkboxIcon} ${isSelected ? styles.checked : ''} ${isDisabled ? styles.disabled : ''}`.trim()}
-                    >
-                      {isSelected && (
-                        <div className={styles.checkboxIconCheck} />
-                      )}
-                    </div>
-                  )}
-                  <span
-                    className={`${styles.optionLabel} ${isDisabled ? styles.disabled : ''}`.trim()}
-                  >
-                    {option.label}
-                  </span>
-                </li>
-              );
-            })}
+            <ComboboxOptionsListContent
+              displayOptions={displayOptions}
+              comboboxId={comboboxId}
+              comboboxState={comboboxState}
+              multiple={multiple}
+              focusedIndex={focusedIndex}
+              handleButtonFocus={handleButtonFocus}
+              handleOptionSelect={handleOptionSelect}
+            />
           </ul>
           {multiple && maxSelected && selectedValues.length > 0 && (
             <ComboboxMaxSelectedMessage
@@ -148,8 +128,17 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
       );
     }
 
-    // Vis "ingen resultater" når bruker har søkt men ikke fått treff
-    if (searchTerm && displayOptions.length === 0) {
+    const shouldShowMinSearchLengthMessage =
+      isBelowMinSearchLength && showMinSearchLengthText;
+    const shouldShowNoResultsMessage =
+      !isBelowMinSearchLength && !!searchTerm && displayOptions.length === 0;
+
+    // Vis "skriv minst x tegn" eller "ingen resultater"
+    if (shouldShowMinSearchLengthMessage || shouldShowNoResultsMessage) {
+      const message = shouldShowMinSearchLengthMessage
+        ? t('combobox.minSearchLengthText', { ant: minSearchLength })
+        : t('combobox.NoResults', { searchTerm });
+
       return (
         <div
           ref={customListRef}
@@ -168,7 +157,7 @@ export const ComboboxOptions = React.memo<ComboboxOptionsProps>(
               aria-disabled={'true'}
               className={styles.emptyResult}
             >
-              {t('combobox.NoResults', { searchTerm })}
+              {message}
             </li>
           </ul>
         </div>

@@ -1,4 +1,4 @@
-import React, { type JSX } from 'react';
+import { memo, type JSX } from 'react';
 
 import { Chips } from '@skatteetaten/ds-collections';
 
@@ -6,8 +6,9 @@ import type { ComboboxSelectedOptionsProps } from './Combobox.types';
 
 import styles from './Combobox.module.scss';
 
-export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
+export const ComboboxSelectedOptions = memo<ComboboxSelectedOptionsProps>(
   ({
+    className,
     multiple,
     selectedValues,
     onRemoveValue,
@@ -25,7 +26,10 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
     }
 
     return (
-      <Chips ref={setChipsRef} className={styles.chips}>
+      <Chips
+        ref={setChipsRef}
+        className={`${styles.chips} ${className ?? ''}`.trim()}
+      >
         {selectedValues.map((selectedValue) => (
           <Chips.Removable
             key={selectedValue.value}
@@ -42,4 +46,4 @@ export const ComboboxSelectedOptions = React.memo<ComboboxSelectedOptionsProps>(
   }
 );
 
-ComboboxSelectedOptions.displayName = 'ComboboxComboboxSelectedOptions';
+ComboboxSelectedOptions.displayName = 'ComboboxSelectedOptions';

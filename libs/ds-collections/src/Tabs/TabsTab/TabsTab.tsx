@@ -1,6 +1,5 @@
 import { KeyboardEvent, useCallback, useContext, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { TabsContext } from '../TabsContext';
@@ -11,7 +10,7 @@ import styles from './TabsTab.module.scss';
 
 export const TabsTab = ({
   ref,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   svgPath,
@@ -21,11 +20,6 @@ export const TabsTab = ({
 }: TabsTabProps): JSX.Element => {
   const { activeTab, baseId, hasBorder, variant, setInternalActiveTab } =
     useContext(TabsContext);
-  const tabClassName = styles.tab;
-  const variantClassName = variant === 'compact' ? styles.tab_compact : '';
-  const activeClassName = activeTab === value ? styles.tab_active : '';
-  const borderClassName = hasBorder ? styles.tab_border : '';
-  const withIconClassName = svgPath ? styles.tab_icon : '';
 
   if (!valueRegex.test(value)) {
     throw new Error('Value kan kun inneholde tegn som er gyldig i en html id.');
@@ -60,13 +54,17 @@ export const TabsTab = ({
     },
     []
   );
+
   return (
     <button
       ref={ref}
       id={`ds-tab-id-${baseId}-${value}`}
-      className={`${tabClassName} ${variantClassName} ${borderClassName} ${activeClassName} ${withIconClassName} ${className}`.trim()}
+      className={`${styles.tab} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-variant={variant === 'compact' ? 'compact' : undefined}
+      data-active={activeTab === value ? 'true' : undefined}
+      data-has-border={hasBorder ? 'true' : undefined}
       role={'tab'}
       type={'button'}
       tabIndex={activeTab !== value ? -1 : 0}
@@ -85,8 +83,8 @@ export const TabsTab = ({
     >
       {svgPath && (
         <Icon
+          className={styles.icon}
           svgPath={svgPath}
-          variant={'systemIcon'}
           size={variant === 'compact' ? 'small' : 'medium'}
         />
       )}

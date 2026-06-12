@@ -1,4 +1,4 @@
-import { createRef } from 'react';
+import { createRef, RefObject } from 'react';
 
 import type { ComboboxOption } from '../../Combobox.types';
 import {
@@ -8,6 +8,11 @@ import {
   SELECTION_BEHAVIORS,
   selectOption,
   removeOption,
+  hasGroupedOptions,
+  buildGroupedStructure,
+  getOptionAtFlatIndex,
+  countOptionsInGroupedStructure,
+  getOptionsInGroupOrder,
 } from '../combobox-utils';
 
 describe('combobox-utils', () => {
@@ -24,12 +29,35 @@ describe('combobox-utils', () => {
       expect(result).toEqual(mockOptions);
     });
 
-    it('Når searchTerm matcher noen options, så filtrerer den riktig (A5)', () => {
+    it('Når searchTerm matcher options som starter med søket, så vises de før andre treff (A5)', () => {
       const result = filterOptions(mockOptions, 'a');
       expect(result).toEqual([
         { label: 'Apple', value: 'apple' },
         { label: 'Banana', value: 'banana' },
         { label: 'Date', value: 'date' },
+      ]);
+    });
+
+    it('Når searchTerm matcher inni label, så returnerer den også includes-treff etter startsWith-treff', () => {
+      const result = filterOptions(mockOptions, 'an');
+      expect(result).toEqual([{ label: 'Banana', value: 'banana' }]);
+    });
+
+    it('Når searchTerm matcher både startsWith og includes, så sorteres startsWith først', () => {
+      const mixedMatchOptions: ComboboxOption[] = [
+        { label: 'Banana', value: 'banana' },
+        { label: 'Cranberry', value: 'cranberry' },
+        { label: 'Ananas', value: 'ananas' },
+        { label: 'Mango', value: 'mango' },
+      ];
+
+      const result = filterOptions(mixedMatchOptions, 'an');
+
+      expect(result).toEqual([
+        { label: 'Ananas', value: 'ananas' },
+        { label: 'Banana', value: 'banana' },
+        { label: 'Cranberry', value: 'cranberry' },
+        { label: 'Mango', value: 'mango' },
       ]);
     });
 
@@ -43,7 +71,7 @@ describe('combobox-utils', () => {
       expect(result).toEqual([]);
     });
 
-    it('Når multiple er true, så returnerer den alle options uavhengig av selectedValues', () => {
+    it('Når søket gir både startsWith- og includes-treff, så beholdes den rangerte rekkefølgen', () => {
       const result = filterOptions(mockOptions, 'a');
       expect(result).toEqual([
         { label: 'Apple', value: 'apple' },
@@ -121,6 +149,7 @@ describe('combobox-utils', () => {
     it('MOUSE behavior har riktige verdier', () => {
       expect(SELECTION_BEHAVIORS.MOUSE).toEqual({
         allowToggleOff: true,
+        allowSingleToggleOff: true,
         resetFocusIndex: true,
         delayedFocus: true,
       });
@@ -129,6 +158,7 @@ describe('combobox-utils', () => {
     it('KEYBOARD behavior har riktige verdier', () => {
       expect(SELECTION_BEHAVIORS.KEYBOARD).toEqual({
         allowToggleOff: true,
+        allowSingleToggleOff: false,
         resetFocusIndex: false,
         delayedFocus: false,
       });
@@ -136,19 +166,24 @@ describe('combobox-utils', () => {
   });
 
   describe('selectOption', () => {
-    let mockSetSelectedValues: ReturnType<typeof vi.fn>;
-    let mockSetSearchTerm: ReturnType<typeof vi.fn>;
-    let mockCloseDropdown: ReturnType<typeof vi.fn>;
-    let mockSetFocusedIndex: ReturnType<typeof vi.fn>;
-    let mockOnSelectionChange: ReturnType<typeof vi.fn>;
-    let mockInputRef: React.RefObject<HTMLInputElement | null>;
+    let mockSetSelectedValues: ReturnType<
+      typeof vi.fn<(values: ComboboxOption[]) => void>
+    >;
+    let mockSetSearchTerm: ReturnType<typeof vi.fn<(term: string) => void>>;
+    let mockCloseDropdown: ReturnType<typeof vi.fn<(manual?: boolean) => void>>;
+    let mockSetFocusedIndex: ReturnType<typeof vi.fn<(index: number) => void>>;
+    let mockOnSelectionChange: ReturnType<
+      typeof vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>
+    >;
+    let mockInputRef: RefObject<HTMLInputElement | null>;
 
     beforeEach(() => {
-      mockSetSelectedValues = vi.fn();
-      mockSetSearchTerm = vi.fn();
-      mockCloseDropdown = vi.fn();
-      mockSetFocusedIndex = vi.fn();
-      mockOnSelectionChange = vi.fn();
+      mockSetSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+      mockSetSearchTerm = vi.fn<(term: string) => void>();
+      mockCloseDropdown = vi.fn<(manual?: boolean) => void>();
+      mockSetFocusedIndex = vi.fn<(index: number) => void>();
+      mockOnSelectionChange =
+        vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>();
       mockInputRef = createRef<HTMLInputElement | null>();
 
       // Mock HTMLInputElement
@@ -161,6 +196,10 @@ describe('combobox-utils', () => {
 
     describe('single-select mode', () => {
       it('Når en option velges, så oppdaterer den search term og lukker dropdown', () => {
+        // Mouse-seleksjon lukker dropdown med setTimeout(0) for å unngå
+        // click-through til elementer bak listen før klikksekvensen er ferdig.
+        // Derfor må testen styre timerne eksplisitt for å verifisere closeDropdown.
+        vi.useFakeTimers();
         const option = mockOptions[0];
 
         selectOption(option, {
@@ -176,9 +215,14 @@ describe('combobox-utils', () => {
         });
 
         expect(mockSetSearchTerm).toHaveBeenCalledWith('Apple');
+        // Kjør pending timeout slik at den forsinkede lukkingen faktisk skjer i testen.
+        vi.runAllTimers();
         expect(mockCloseDropdown).toHaveBeenCalled();
         expect(mockSetFocusedIndex).toHaveBeenCalledWith(-1);
         expect(mockOnSelectionChange).toHaveBeenCalledWith(option);
+
+        // Nullstill timer-oppsettet så det ikke lekker til andre tester.
+        vi.useRealTimers();
       });
 
       it('Når onSelectionChange ikke er definert, så krasjer den ikke', () => {
@@ -196,6 +240,52 @@ describe('combobox-utils', () => {
             inputRef: mockInputRef,
           });
         }).not.toThrow();
+      });
+
+      it('Når allerede valgt option velges med MOUSE behavior, så deselekteres den', () => {
+        vi.useFakeTimers();
+        const option = mockOptions[0];
+
+        selectOption(option, {
+          multiple: false,
+          selectedValues: [option],
+          behavior: SELECTION_BEHAVIORS.MOUSE,
+          setSelectedValues: mockSetSelectedValues,
+          setSearchTerm: mockSetSearchTerm,
+          closeDropdown: mockCloseDropdown,
+          setFocusedIndex: mockSetFocusedIndex,
+          inputRef: mockInputRef,
+          onSelectionChange: mockOnSelectionChange,
+        });
+
+        expect(mockSetSelectedValues).toHaveBeenCalledWith([]);
+        expect(mockSetSearchTerm).toHaveBeenCalledWith('');
+        vi.runAllTimers();
+        expect(mockCloseDropdown).toHaveBeenCalled();
+        expect(mockOnSelectionChange).toHaveBeenCalledWith(null);
+
+        vi.useRealTimers();
+      });
+
+      it('Når allerede valgt option velges med KEYBOARD behavior, så beholdes valget', () => {
+        const option = mockOptions[0];
+
+        selectOption(option, {
+          multiple: false,
+          selectedValues: [option],
+          behavior: SELECTION_BEHAVIORS.KEYBOARD,
+          setSelectedValues: mockSetSelectedValues,
+          setSearchTerm: mockSetSearchTerm,
+          closeDropdown: mockCloseDropdown,
+          setFocusedIndex: mockSetFocusedIndex,
+          inputRef: mockInputRef,
+          onSelectionChange: mockOnSelectionChange,
+        });
+
+        expect(mockSetSelectedValues).toHaveBeenCalledWith([option]);
+        expect(mockSetSearchTerm).toHaveBeenCalledWith('Apple');
+        expect(mockCloseDropdown).toHaveBeenCalled();
+        expect(mockOnSelectionChange).toHaveBeenCalledWith(option);
       });
     });
 
@@ -314,8 +404,10 @@ describe('combobox-utils', () => {
         vi.useRealTimers();
       });
 
-      it('Når KEYBOARD behavior brukes, så resettes ikke focusIndex og ingen delayed focus', () => {
-        const option = mockOptions[0];
+      it('Når KEYBOARD behavior brukes, så settes pending fokus uten å fokusere input', () => {
+        const option = mockOptions[2];
+        const mockSetPendingFocusTarget =
+          vi.fn<(target: { optionValue: string } | null) => void>();
 
         selectOption(option, {
           multiple: true,
@@ -326,22 +418,56 @@ describe('combobox-utils', () => {
           closeDropdown: mockCloseDropdown,
           setFocusedIndex: mockSetFocusedIndex,
           inputRef: mockInputRef,
+          setPendingFocusTarget: mockSetPendingFocusTarget,
           onSelectionChange: mockOnSelectionChange,
         });
 
         expect(mockSetFocusedIndex).not.toHaveBeenCalled();
+        expect(mockSetPendingFocusTarget).toHaveBeenCalledWith({
+          optionValue: 'cherry',
+        });
+        expect(mockInputRef.current?.focus).not.toHaveBeenCalled();
+      });
+
+      it('Når KEYBOARD behavior brukes på allerede valgt option, så settes pending fokus også ved toggle off', () => {
+        const option = mockOptions[0];
+        const mockSetPendingFocusTarget =
+          vi.fn<(target: { optionValue: string } | null) => void>();
+
+        selectOption(option, {
+          multiple: true,
+          selectedValues: [mockOptions[0]],
+          behavior: SELECTION_BEHAVIORS.KEYBOARD,
+          setSelectedValues: mockSetSelectedValues,
+          setSearchTerm: mockSetSearchTerm,
+          closeDropdown: mockCloseDropdown,
+          setFocusedIndex: mockSetFocusedIndex,
+          inputRef: mockInputRef,
+          setPendingFocusTarget: mockSetPendingFocusTarget,
+          onSelectionChange: mockOnSelectionChange,
+        });
+
+        expect(mockSetFocusedIndex).not.toHaveBeenCalled();
+        expect(mockSetPendingFocusTarget).toHaveBeenCalledWith({
+          optionValue: 'apple',
+        });
         expect(mockInputRef.current?.focus).not.toHaveBeenCalled();
       });
     });
   });
 
   describe('removeOption', () => {
-    let mockSetSelectedValues: ReturnType<typeof vi.fn>;
-    let mockOnSelectionChange: ReturnType<typeof vi.fn>;
+    let mockSetSelectedValues: ReturnType<
+      typeof vi.fn<(values: ComboboxOption[]) => void>
+    >;
+    let mockOnSelectionChange: ReturnType<
+      typeof vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>
+    >;
 
     beforeEach(() => {
-      mockSetSelectedValues = vi.fn();
-      mockOnSelectionChange = vi.fn();
+      mockSetSelectedValues = vi.fn<(values: ComboboxOption[]) => void>();
+      mockOnSelectionChange =
+        vi.fn<(selected: ComboboxOption | ComboboxOption[] | null) => void>();
     });
 
     it('Når en option fjernes, så oppdaterer den selectedValues og kaller callback', () => {
@@ -399,6 +525,202 @@ describe('combobox-utils', () => {
 
       expect(mockSetSelectedValues).toHaveBeenCalledWith([]);
       expect(mockOnSelectionChange).toHaveBeenCalledWith([]);
+    });
+  });
+
+  describe('hasGroupedOptions', () => {
+    it('Når ingen options har group, så returnerer den false', () => {
+      const result = hasGroupedOptions(mockOptions);
+      expect(result).toBe(false);
+    });
+
+    it('Når minst én option har group, så returnerer den true', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+      ];
+      const result = hasGroupedOptions(groupedOptions);
+      expect(result).toBe(true);
+    });
+
+    it('Når alle options har group, så returnerer den true', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+      ];
+      const result = hasGroupedOptions(groupedOptions);
+      expect(result).toBe(true);
+    });
+
+    it('Når options er tom array, så returnerer den false', () => {
+      const result = hasGroupedOptions([]);
+      expect(result).toBe(false);
+    });
+  });
+
+  describe('buildGroupedStructure', () => {
+    it('Når options er tom, så returnerer den tom array', () => {
+      const result = buildGroupedStructure([]);
+      expect(result).toEqual([]);
+    });
+
+    it('Når ingen options har group, så returnerer den alle som enkeltstående options', () => {
+      const result = buildGroupedStructure(mockOptions);
+      expect(result).toEqual([
+        { type: 'option', option: mockOptions[0] },
+        { type: 'option', option: mockOptions[1] },
+        { type: 'option', option: mockOptions[2] },
+        { type: 'option', option: mockOptions[3] },
+      ]);
+    });
+
+    it('Når påfølgende options har samme group, så grupperes de sammen', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+        { label: 'Cherry', value: 'cherry', group: 'Fruits' },
+      ];
+      const result = buildGroupedStructure(groupedOptions);
+      expect(result).toEqual([
+        {
+          type: 'group',
+          groupLabel: 'Fruits',
+          options: groupedOptions,
+        },
+      ]);
+    });
+
+    it('Når options har samme group men ikke ligger etter hverandre, så samles de i samme gruppe', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+      ];
+      const result = buildGroupedStructure(groupedOptions);
+      expect(result).toEqual([
+        {
+          type: 'group',
+          groupLabel: 'Fruits',
+          options: [groupedOptions[0], groupedOptions[2]],
+        },
+        {
+          type: 'group',
+          groupLabel: 'Vegetables',
+          options: [groupedOptions[1]],
+        },
+      ]);
+    });
+
+    it('Når options er blanding av grupperte og ugrupperte, så bevares rekkefølgen', () => {
+      const mixedOptions: ComboboxOption[] = [
+        { label: 'Ungrouped 1', value: 'u1' },
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+        { label: 'Ungrouped 2', value: 'u2' },
+        { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+      ];
+      const result = buildGroupedStructure(mixedOptions);
+      expect(result).toEqual([
+        { type: 'option', option: mixedOptions[0] },
+        {
+          type: 'group',
+          groupLabel: 'Fruits',
+          options: [mixedOptions[1], mixedOptions[2]],
+        },
+        { type: 'option', option: mixedOptions[3] },
+        {
+          type: 'group',
+          groupLabel: 'Vegetables',
+          options: [mixedOptions[4]],
+        },
+      ]);
+    });
+  });
+
+  describe('getOptionAtFlatIndex', () => {
+    const mixedOptions: ComboboxOption[] = [
+      { label: 'Ungrouped 1', value: 'u1' },
+      { label: 'Apple', value: 'apple', group: 'Fruits' },
+      { label: 'Banana', value: 'banana', group: 'Fruits' },
+      { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+    ];
+
+    it('Når index er 0 og første element er ugruppert, så returnerer den riktig option', () => {
+      const structure = buildGroupedStructure(mixedOptions);
+      const result = getOptionAtFlatIndex(0, structure);
+      expect(result).toEqual(mixedOptions[0]);
+    });
+
+    it('Når index peker til element innenfor gruppe, så returnerer den riktig option', () => {
+      const structure = buildGroupedStructure(mixedOptions);
+      expect(getOptionAtFlatIndex(1, structure)).toEqual(mixedOptions[1]);
+      expect(getOptionAtFlatIndex(2, structure)).toEqual(mixedOptions[2]);
+      expect(getOptionAtFlatIndex(3, structure)).toEqual(mixedOptions[3]);
+    });
+
+    it('Når index er utenfor grenser, så returnerer den undefined', () => {
+      const structure = buildGroupedStructure(mixedOptions);
+      expect(getOptionAtFlatIndex(-1, structure)).toBeUndefined();
+      expect(getOptionAtFlatIndex(10, structure)).toBeUndefined();
+    });
+
+    it('Når struktur er tom, så returnerer den undefined', () => {
+      expect(getOptionAtFlatIndex(0, [])).toBeUndefined();
+    });
+  });
+
+  describe('countOptionsInGroupedStructure', () => {
+    it('Når struktur er tom, så returnerer den 0', () => {
+      expect(countOptionsInGroupedStructure([])).toBe(0);
+    });
+
+    it('Når alle er enkeltstående options, så teller den riktig', () => {
+      const structure = buildGroupedStructure(mockOptions);
+      expect(countOptionsInGroupedStructure(structure)).toBe(4);
+    });
+
+    it('Når options er gruppert, så teller den kun options (ikke grupper)', () => {
+      const groupedOptions: ComboboxOption[] = [
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+        { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+      ];
+      const structure = buildGroupedStructure(groupedOptions);
+      expect(countOptionsInGroupedStructure(structure)).toBe(3);
+    });
+
+    it('Når struktur er blanding, så teller den alle options', () => {
+      const mixedOptions: ComboboxOption[] = [
+        { label: 'Ungrouped', value: 'u1' },
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+      ];
+      const structure = buildGroupedStructure(mixedOptions);
+      expect(countOptionsInGroupedStructure(structure)).toBe(3);
+    });
+  });
+
+  describe('getOptionsInGroupOrder', () => {
+    it('Når ingen options har group, så returnerer den samme rekkefølge', () => {
+      expect(getOptionsInGroupOrder(mockOptions)).toEqual(mockOptions);
+    });
+
+    it('Når options er gruppert, så returnerer den rekkefølge sortert etter grupper', () => {
+      const mixedOptions: ComboboxOption[] = [
+        { label: 'Ungrouped 1', value: 'u1' },
+        { label: 'Apple', value: 'apple', group: 'Fruits' },
+        { label: 'Carrot', value: 'carrot', group: 'Vegetables' },
+        { label: 'Banana', value: 'banana', group: 'Fruits' },
+        { label: 'Ungrouped 2', value: 'u2' },
+      ];
+
+      expect(getOptionsInGroupOrder(mixedOptions)).toEqual([
+        mixedOptions[0],
+        mixedOptions[1],
+        mixedOptions[3],
+        mixedOptions[2],
+        mixedOptions[4],
+      ]);
     });
   });
 });

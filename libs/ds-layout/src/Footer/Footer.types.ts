@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { LinkProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -33,7 +33,7 @@ export interface FooterProps extends BaseProps {
   thirdColumn?: ReactNode;
   /** Om standard lenker skal skjules */
   hideDefaultLinks?: boolean;
-  /** Om standard lenker skal åpne i ny fane */
+  /** Om standard lenker skal åpne i ny fane. Default er 'false'. */
   openDefaultLinksInNewTab?: boolean;
   /**
    * Footer.LinkFirstColumn, Footer.Logo eller Footer.Link:
@@ -44,8 +44,8 @@ export interface FooterProps extends BaseProps {
   children?: ReactNode;
 }
 
-export interface FooterComponent extends React.FC<FooterProps> {
+export interface FooterComponent extends FunctionComponent<FooterProps> {
   Logo: typeof FooterLogo;
   Link: typeof FooterLink;
-  LinkFirstColumn: React.FC<Omit<LinkProps, 'color'>>;
+  LinkFirstColumn: FunctionComponent<Omit<LinkProps, 'color'>>;
 }

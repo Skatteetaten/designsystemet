@@ -1,12 +1,19 @@
 import { FocusEvent, ChangeEvent, useState, JSX } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { TextField, TextFieldProps } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -29,55 +36,51 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    variant: {
-      table: { disable: true, category: category.props },
-      control: 'inline-radio',
-    },
     classNames: {
-      table: { disable: true, category: category.props },
+      table: { disable: true },
     },
-    characterLimit: { table: { disable: true, category: category.props } },
+    characterLimit: { table: { disable: true } },
     defaultValue: {
       control: 'text',
-      table: { disable: true, category: category.props },
+      table: { disable: true },
     },
-    description: { table: { disable: true, category: category.props } },
-    errorMessage: { table: { disable: true, category: category.props } },
-    hasSpacing: { table: { disable: true, category: category.props } },
+    description: { table: { disable: true } },
+    errorMessage: { table: { disable: true } },
+    hasSpacing: { table: { disable: true } },
     helpSvgPath: {
-      table: { disable: true, category: category.props },
+      table: { disable: true },
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    helpText: { table: { disable: true, category: category.props } },
-    hideLabel: { table: { disable: true, category: category.props } },
-    label: { table: { disable: true, category: category.props } },
-    list: { table: { disable: true, category: category.props } },
-    showRequiredMark: { table: { disable: true, category: category.props } },
-    thousandSeparator: { table: { disable: true, category: category.props } },
-    titleHelpSvg: { table: { disable: true, category: category.props } },
+    helpText: { table: { disable: true } },
+    hideLabel: { table: { disable: true } },
+    label: { table: { disable: true } },
+    list: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: {
-      table: { disable: true, category: category.htmlAttribute },
+      table: { disable: true },
       type: 'string',
     },
-    disabled: { table: { disable: true, category: category.htmlAttribute } },
-    form: { table: { disable: true, category: category.htmlAttribute } },
-    inputMode: { table: { disable: true, category: category.htmlAttribute } },
-    name: { table: { disable: true, category: category.htmlAttribute } },
-    maxLength: { table: { disable: true, category: category.htmlAttribute } },
-    minLength: { table: { disable: true, category: category.htmlAttribute } },
-    pattern: { table: { disable: true, category: category.htmlAttribute } },
-    placeholder: { table: { disable: true, category: category.htmlAttribute } },
-    readOnly: { table: { disable: true, category: category.htmlAttribute } },
-    required: { table: { disable: true, category: category.htmlAttribute } },
-    value: { table: { disable: true, category: category.htmlAttribute } },
+    disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
+    inputMode: { table: { disable: true } },
+    name: { table: { disable: true } },
+    maxLength: { table: { disable: true } },
+    minLength: { table: { disable: true } },
+    pattern: { table: { disable: true } },
+    placeholder: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
+    required: { table: { disable: true } },
+    value: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
-    onBlur: { table: { disable: true, category: category.event } },
-    onChange: { table: { disable: true, category: category.event } },
-    onFocus: { table: { disable: true, category: category.event } },
-    onHelpToggle: { table: { disable: true, category: category.event } },
-    onKeyDown: { table: { disable: true, category: category.event } },
+    onBlur: { table: { disable: true } },
+    onChange: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
+    onKeyDown: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
@@ -133,9 +136,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -171,6 +172,9 @@ export const WithCustomClassNames = {
       table: { disable: false },
     },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
@@ -189,7 +193,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2, B2, FS-A2)',
+  name: 'Defaults (A1, A2, B2, FS-A2)',
   args: {
     ...defaultArgs,
   },
@@ -217,23 +221,13 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithDisabled = {
   name: 'With Disabled (B1, B8)',
   args: {
     ...defaultArgs,
     disabled: true,
     value: valueText,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -243,6 +237,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -274,38 +270,6 @@ export const WithDefaultValue = {
     imageSnapshot: { disableSnapshot: true },
   },
   play: verifyAttribute('value', valueText),
-} satisfies Story;
-
-export const WithDefaultValueAndThousandSeparator = {
-  name: 'With DefaultValue and ThousandSeparator',
-  args: {
-    ...defaultArgs,
-    defaultValue: 10000,
-    thousandSeparator: true,
-  },
-  argTypes: {
-    defaultValue: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: verifyAttribute('value', '10 000'),
-} satisfies Story;
-
-export const WithValueAndThousandSeparator = {
-  name: 'With Value and ThousandSeparator',
-  args: {
-    ...defaultArgs,
-    value: 10000,
-    thousandSeparator: true,
-  },
-  argTypes: {
-    value: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: verifyAttribute('value', '10 000'),
 } satisfies Story;
 
 export const WithAutoCompleteInputModeNameAndPlaceholder = {
@@ -369,19 +333,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toBeRequired();
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B4, FS-A4 delvis)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
+    await expect(textbox).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -496,6 +448,41 @@ export const WithDescription = {
   },
 } satisfies Story;
 
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'textfield-alert-description-id';
+    return (
+      <>
+        <TextField {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for tekstfeltet'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for tekstfeltet'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = textbox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('textfield-alert-description-id');
+  },
+} satisfies Story;
+
 export const WithHideLabel = {
   name: 'With HideLabel (B2)',
   args: {
@@ -509,53 +496,6 @@ export const WithHideLabel = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
     await expect(textbox).toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const WithThousandSeparator = {
-  name: 'With ThousandSeparator As Input (A8 delvis)',
-  args: {
-    ...defaultArgs,
-    thousandSeparator: true,
-    onChange: fn(),
-  },
-  argTypes: {
-    thousandSeparator: { table: { disable: false } },
-  },
-  play: async ({ args, canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox.tagName).toBe('INPUT');
-
-    textbox.focus();
-    await userEvent.type(textbox, 'A10000');
-    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
-    await expect(textbox).toHaveValue('10 000');
-  },
-} satisfies Story;
-
-export const WithThousandSeparatorAndNegativeValue = {
-  name: 'With ThousandSeparator and negative number value',
-  args: {
-    ...defaultArgs,
-    thousandSeparator: true,
-    onChange: fn(),
-  },
-  argTypes: {
-    defaultValue: { table: { disable: false } },
-    thousandSeparator: { table: { disable: true } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ args, canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox.tagName).toBe('INPUT');
-    textbox.focus();
-    await userEvent.type(textbox, '-A10-000-');
-    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
-    await expect(textbox).toHaveValue('-10 000');
   },
 } satisfies Story;
 
@@ -643,14 +583,16 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -759,123 +701,5 @@ export const WithCharacterLimitAndError = {
   },
   argTypes: {
     characterLimit: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithThousandSeparatorAndUndoRedo = {
-  name: 'With ThousandSeparator and undo redo',
-  render: EventHandlersTemplate,
-  args: {
-    ...defaultArgs,
-    thousandSeparator: true,
-    onChange: fn(),
-  },
-  argTypes: {
-    defaultValue: { table: { disable: false } },
-    thousandSeparator: { table: { disable: true } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ args, canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox.tagName).toBe('INPUT');
-    textbox.focus();
-    await userEvent.type(textbox, '-A111-222333-');
-    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
-    await expect(textbox).toHaveValue('-111 222 333');
-    await userEvent.type(textbox, '111');
-
-    // Undo last input step (Cmd+Z)
-    await userEvent.keyboard('{Meta>}z{/Meta}');
-    await expect(textbox).toHaveValue('-11 122 233 311');
-
-    // Redo (Cmd+Shift+Z)
-    await userEvent.keyboard('{Meta>}{Shift>}z{/Shift}{/Meta}');
-    await expect(textbox).toHaveValue('-111 222 333 111');
-  },
-} satisfies Story;
-
-// Controlled template to verify that backspace near a thousands separator
-// triggers a change event that external code can observe.
-const ControlledTemplate = (args: TextFieldProps): JSX.Element => {
-  const [value, setValue] = useState<string>('10 000');
-  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setValue(e.target.value);
-    args.onChange?.(e);
-  };
-  return (
-    <>
-      <TextField
-        {...args}
-        value={value}
-        thousandSeparator
-        onChange={handleChange}
-      />
-      <pre>{`value: ${value}`}</pre>
-    </>
-  );
-};
-
-export const FiresOnChangeWhenBackspaceAtSeparator = {
-  name: 'With Fires onChange when Backspace at separator',
-  render: ControlledTemplate,
-  args: {
-    ...defaultArgs,
-    onChange: fn(),
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ args, canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-
-    // Initial formatted value
-    await expect(textbox).toHaveValue('10 000');
-    await expect(args.onChange).not.toHaveBeenCalled();
-
-    // Move cursor to just after the space separator: from end (index 6) to index 3
-    textbox.focus();
-    await userEvent.keyboard('{ArrowLeft}{ArrowLeft}{ArrowLeft}');
-    await expect(args.onChange).not.toHaveBeenCalled(); // Arrow keys should not trigger change
-
-    // Press Backspace (custom logic should fire synthetic onChange)
-    await userEvent.keyboard('{Backspace}');
-
-    await expect(textbox).toHaveValue('1 000');
-    await expect(args.onChange).toHaveBeenCalledTimes(1);
-  },
-} satisfies Story;
-
-export const FiresOnChangeWhenDeleteAtSeparator = {
-  name: 'With Fires onChange when Delete at separator',
-  render: ControlledTemplate,
-  args: {
-    ...defaultArgs,
-    onChange: fn(),
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
-  play: async ({ args, canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-
-    // Initial formatted value
-    await expect(textbox).toHaveValue('10 000');
-    await expect(args.onChange).not.toHaveBeenCalled();
-
-    // Move cursor to just after the before separator: from end (index 6) to index 2
-    textbox.focus();
-    await userEvent.keyboard('{ArrowLeft}{ArrowLeft}{ArrowLeft}{ArrowLeft}');
-    await expect(args.onChange).not.toHaveBeenCalled(); // Arrow keys should not trigger change
-
-    // Press Delete (custom logic should fire synthetic onChange)
-    await userEvent.keyboard('{Delete}');
-
-    await expect(textbox).toHaveValue('1 000');
-    await expect(args.onChange).toHaveBeenCalledTimes(1);
   },
 } satisfies Story;

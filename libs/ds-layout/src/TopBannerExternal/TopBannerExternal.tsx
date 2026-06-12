@@ -10,11 +10,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { SearchField } from '@skatteetaten/ds-forms';
 import {
   CancelSVGpath,
@@ -24,6 +20,7 @@ import {
   SearchSVGpath,
 } from '@skatteetaten/ds-icons';
 
+import { topBannerAnalyticsIds } from './analyticsIds';
 import { TopBannerButton } from './TopBannerButton/TopBannerButton';
 import {
   TopBannerExternalProps,
@@ -31,7 +28,6 @@ import {
   TopBannerExternalComponent,
 } from './TopBannerExternal.types';
 import { TopBannerExternalUserMenu } from './TopBannerExternalUserMenu/TopBannerExternalUserMenu';
-import { getTopBannerLangPickerLocaleDefault } from './TopBannerLangPicker/defaults';
 import { TopBannerLangPicker } from './TopBannerLangPicker/TopBannerLangPicker';
 import { convertLocaleToLang, isLanguages } from './TopBannerLangPicker/utils';
 import { TopBannerLogo } from './TopBannerLogo/TopBannerLogo';
@@ -40,23 +36,30 @@ import { TopBannerUserButton } from './TopBannerUserButton/TopBannerUserButton';
 
 import styles from './TopBannerExternal.module.scss';
 
-export const TopBannerExternal = (({
+/**
+ * TopBannerExternal
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-topbannerexternal--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/) - Brukerveiledning
+ */
+export const TopBannerExternal = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
   firstColumn,
-  defaultLocale = getTopBannerLangPickerLocaleDefault(),
+  defaultLocale = Languages.Bokmal,
   logo,
   secondColumn,
   skipLink,
   thirdColumn,
   user,
   additionalLanguages,
+  otherLanguagesURL,
   searchContent,
-  showSami,
+  showSami = true,
   children,
   onLanguageClick,
   onLogInClick,
@@ -182,6 +185,20 @@ export const TopBannerExternal = (({
     };
   }, [openMenu, isMenuOpen, isSearchOpen]);
 
+  useEffect(() => {
+    const handleLanguageChange = (language: string): void => {
+      setSelectedLang(
+        isLanguages(language) ? convertLocaleToLang(language) : language
+      );
+    };
+
+    dsI18n.on('languageChanged', handleLanguageChange);
+
+    return (): void => {
+      dsI18n.off('languageChanged', handleLanguageChange);
+    };
+  }, []);
+
   useImperativeHandle(ref, () => ({
     ...innerRef,
     openMenu: (): void => {
@@ -245,6 +262,7 @@ export const TopBannerExternal = (({
                 setOpenMenu={setOpenMenu}
                 menuButtonRef={languagePickerButtonRef}
                 additionalLanguages={additionalLanguages}
+                otherLanguagesURL={otherLanguagesURL}
                 selectedLang={selectedLang}
                 onLanguageClick={(e) => {
                   setSelectedLang(e.currentTarget.lang);
@@ -260,6 +278,7 @@ export const TopBannerExternal = (({
                 )}
                 <TopBannerButton
                   svgPath={LogOutSVGpath}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.logout}
                   onClick={onLogOutClick}
                 >
                   {t('topbannerbutton.Logout')}
@@ -270,6 +289,7 @@ export const TopBannerExternal = (({
               <TopBannerButton
                 svgPath={LockOutlineSVGpath}
                 variant={'filled'}
+                dataWebAnalyticsId={topBannerAnalyticsIds.login}
                 onClick={onLogInClick}
               >
                 {t('topbannerbutton.Login')}
@@ -283,6 +303,7 @@ export const TopBannerExternal = (({
                     openMenu === 'Search' ? CancelSVGpath : SearchSVGpath
                   }
                   ariaExpanded={isSearchOpen}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.search}
                   onClick={handleSearchClick}
                   onFocus={() => {
                     statusFlagRef.current.focusCaptured = isSearchOpen;
@@ -308,11 +329,11 @@ export const TopBannerExternal = (({
                       <SearchField
                         ref={searchRef}
                         classNames={{ label: styles.mainMenuSearchLabel }}
-                        className={styles.mainMenuSearchSpacing}
                         label={t('topbanner.SearchLabel')}
                         variant={isMobile ? 'large' : 'extraLarge'}
                         hideLabel={false}
                         enableSRNavigationHint={false}
+                        hasSpacing
                         onSearch={onSearch}
                         onSearchClick={onSearchClick}
                       />
@@ -331,6 +352,7 @@ export const TopBannerExternal = (({
                     openMenu === 'MainMenu' ? CancelSVGpath : MenuSVGpath
                   }
                   ariaExpanded={isMenuOpen}
+                  dataWebAnalyticsId={topBannerAnalyticsIds.mainMenuToggle}
                   onClick={handleMenuClick}
                   onFocus={() => {
                     statusFlagRef.current.focusCaptured = isMenuOpen;
@@ -342,6 +364,7 @@ export const TopBannerExternal = (({
                   <div
                     ref={menuRef}
                     className={styles.mainMenu}
+                    web-analytics-id={topBannerAnalyticsIds.mainMenu}
                     onFocus={() => {
                       statusFlagRef.current.focusCaptured = isMenuOpen;
                     }}
@@ -394,7 +417,9 @@ export const TopBannerExternal = (({
       </div>
     </header>
   );
-}) as TopBannerExternalComponent;
+};
+
+export default TopBannerExternal as TopBannerExternalComponent;
 
 TopBannerExternal.displayName = 'TopBannerExternal';
 TopBannerExternal.UserMenu = TopBannerExternalUserMenu;

@@ -5,7 +5,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 export interface ErrorMessageProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
   /** Tekst for feilmeldingen */
-  children?: string;
+  children?: string | null;
   /** Margin under feilmeldingen */
   hasSpacing?: boolean;
   /** Om feilmeldingen er synlig */

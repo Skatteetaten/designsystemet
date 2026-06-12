@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { IconButton, Link } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, DescriptionIcon } from '@skatteetaten/ds-icons';
 
 import { FileUploaderFileProps } from './FileUploaderFile.types';
@@ -13,7 +13,7 @@ import styles from './FileUploaderFile.module.scss';
 export const FileUploaderFile = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   fileIconTitle,
@@ -28,6 +28,8 @@ export const FileUploaderFile = ({
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const generatedId = useId();
   const id = externalId ?? generatedId;
+  //remove invalid whitespace from children to create a valid id
+  const fileId = `${id}-file-${children.replace(/\s/g, '_')}`;
 
   return (
     <li
@@ -55,7 +57,7 @@ export const FileUploaderFile = ({
               title={t('fileuploader.DeleteLabel')}
               spinnerTitle={t('fileuploader.DeleteInProgress')}
               hasSpinner={showSpinner}
-              ariaDescribedby={`${id}-file-${children}`}
+              ariaDescribedby={fileId}
               onClick={onClickDelete}
             />
           }
@@ -63,20 +65,15 @@ export const FileUploaderFile = ({
           <DescriptionIcon
             className={styles.fileListIcon}
             size={'small'}
-            title={fileIconTitle ?? t('fileuploader.FileIconLabel')}
+            title={fileIconTitle}
           />
           <div className={styles.fileNameContainer}>
             {href ? (
-              <Link
-                id={`${id}-file-${children}`}
-                href={href}
-                download
-                onClick={onClick}
-              >
+              <Link id={fileId} href={href} download onClick={onClick}>
                 {children}
               </Link>
             ) : (
-              <span id={`${id}-file-${children}`}>{children}</span>
+              <span id={fileId}>{children}</span>
             )}
           </div>
         </Card.Content>

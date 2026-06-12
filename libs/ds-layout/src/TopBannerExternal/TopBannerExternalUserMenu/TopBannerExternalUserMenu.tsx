@@ -16,11 +16,7 @@ import {
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { Divider } from '@skatteetaten/ds-content';
-import {
-  dsI18n,
-  formatOrganisationNumber,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
 import {
   InfoSquareSVGpath,
   BellSVGpath,
@@ -30,8 +26,8 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getTopBannerExternalUserMenuHostnameDefault } from './defaults';
 import { TopBannerExternalUserMenuProps } from './TopBannerExternalUserMenu.types';
+import { topBannerAnalyticsIds } from '../analyticsIds';
 import { TopBannerUserMenuButton } from '../TopBannerUserMenuButton/TopBannerUserMenuButton';
 
 import styles from './TopBannerExternalUserMenu.module.scss';
@@ -42,7 +38,7 @@ import styles from './TopBannerExternalUserMenu.module.scss';
 export const TopBannerExternalUserMenu = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   notificationCount,
@@ -50,8 +46,8 @@ export const TopBannerExternalUserMenu = ({
   onLogOutClick,
   onSwitchUserClick,
   children,
-  hostname = getTopBannerExternalUserMenuHostnameDefault(),
-  hideDefaultLinks,
+  hostname = 'skatt.skatteetaten.no',
+  hideDefaultLinks = false,
 }: TopBannerExternalUserMenuProps): JSX.Element => {
   const arrowRef = useRef<HTMLDivElement>(null);
   const arrowLen = arrowRef.current?.offsetWidth ?? 0;
@@ -124,12 +120,13 @@ export const TopBannerExternalUserMenu = ({
             {...getFloatingProps()}
             ref={refs.setFloating}
             style={floatingStyles}
+            web-analytics-id={topBannerAnalyticsIds.userMenu.root}
           >
-            <Heading as={'h4'} level={4}>
+            <Heading as={'h4'}>
               {user.role !== 'meg' && (
-                <div className={styles.namePrefix}>
+                <span className={styles.namePrefix}>
                   {t('ds_overlays:topbannerexternalusermenu.OnBehalfOf')}
-                </div>
+                </span>
               )}
               {user.role === 'virksomhet' ? user.name.toUpperCase() : user.name}
             </Heading>
@@ -138,6 +135,12 @@ export const TopBannerExternalUserMenu = ({
             )}
             {onSwitchUserClick && (
               <InlineButton
+                ref={(node) => {
+                  node?.setAttribute(
+                    'data-webanalytics-id',
+                    topBannerAnalyticsIds.userMenu.switchUser
+                  );
+                }}
                 className={styles.marginTopS}
                 data-testid={'switch-user'}
                 svgPath={PersonMoreSVGpath}
@@ -152,9 +155,15 @@ export const TopBannerExternalUserMenu = ({
                 <div className={styles.link}>
                   {user && (
                     <Link
+                      ref={(node) => {
+                        node?.setAttribute(
+                          'data-webanalytics-id',
+                          topBannerAnalyticsIds.userMenu.notifications
+                        );
+                      }}
                       className={styles.marginRightS}
                       svgPath={BellSVGpath}
-                      href={`https://${hostname}/web/minside/${user.role === 'meg' ? 'person' : 'virksomhet'}/varsler`}
+                      href={`https://${hostname}/web/minside/${user.role === 'virksomhet' ? 'virksomhet' : 'person'}/varsler`}
                       ariaDescribedby={'notificationCount'}
                     >
                       {t('ds_overlays:topbannerexternalusermenu.Notification')}
@@ -174,6 +183,12 @@ export const TopBannerExternalUserMenu = ({
                 </div>
                 <div className={styles.link}>
                   <Link
+                    ref={(node) => {
+                      node?.setAttribute(
+                        'data-webanalytics-id',
+                        topBannerAnalyticsIds.userMenu.myPage
+                      );
+                    }}
                     svgPath={PersonSVGpath}
                     href={`https://${hostname}/web/minside/`}
                   >
@@ -185,6 +200,12 @@ export const TopBannerExternalUserMenu = ({
             {!hideDefaultLinks && user.role === 'virksomhet' && (
               <div className={styles.link}>
                 <Link
+                  ref={(node) => {
+                    node?.setAttribute(
+                      'data-webanalytics-id',
+                      topBannerAnalyticsIds.userMenu.aboutBusiness
+                    );
+                  }}
                   svgPath={InfoSquareSVGpath}
                   href={`https://${hostname}/web/minside/virksomhet/omvirksomheten`}
                 >
@@ -197,6 +218,12 @@ export const TopBannerExternalUserMenu = ({
             {!hideDefaultLinks && user.role === 'meg' && (
               <div className={styles.link}>
                 <Link
+                  ref={(node) => {
+                    node?.setAttribute(
+                      'data-webanalytics-id',
+                      topBannerAnalyticsIds.userMenu.aboutMe
+                    );
+                  }}
                   svgPath={InfoSquareSVGpath}
                   href={`https://${hostname}/web/minside/person/ommeg`}
                 >
@@ -206,7 +233,16 @@ export const TopBannerExternalUserMenu = ({
             )}
             {children}
             <Divider spacingTop={'m'}></Divider>
-            <InlineButton svgPath={LogOutSVGpath} onClick={onLogOutClick}>
+            <InlineButton
+              ref={(node) => {
+                node?.setAttribute(
+                  'data-webanalytics-id',
+                  topBannerAnalyticsIds.userMenu.logout
+                );
+              }}
+              svgPath={LogOutSVGpath}
+              onClick={onLogOutClick}
+            >
               {t('ds_overlays:rolepicker.Logout')}
             </InlineButton>
             <div

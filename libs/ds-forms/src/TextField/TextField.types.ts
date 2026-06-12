@@ -6,12 +6,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  FormSize,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -33,7 +28,9 @@ type RequiredTextFieldHTMLAttributes = Pick<
   | 'pattern'
 >;
 
-type TextFieldHTMLAttributes = Partial<RequiredTextFieldHTMLAttributes>;
+type TextFieldHTMLAttributes = Partial<RequiredTextFieldHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;
@@ -43,8 +40,7 @@ interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
 }
 
 export interface TextFieldCommonProps
-  extends TextFieldPropsHTMLAttributes,
-    BaseProps {
+  extends TextFieldPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
@@ -69,7 +65,11 @@ export interface TextFieldCommonProps
   hideLabel?: boolean;
   /** Input eller textarea ledetekst */
   label: string;
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
   description?: LabelWithHelpProps['description'];
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
@@ -77,17 +77,8 @@ export interface TextFieldCommonProps
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Definerer stilen til TextField */
-  variant?: FormSize;
-  /**
-   * Setter inn tusenskilletegn for heltall og fjerner ikke-numeriske tegn.
-   * Mellomrom eller komma brukes som skilletegn avhengig av språket som er
-   * valgt OBS: husk at parsing av tallet må ta høyde for at skilletegn vil være
-   * ulikt på norsk og engelsk.
-   */
-  thousandSeparator?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
-export type TextFieldProps = TextFieldCommonProps & FormRequiredProps;
+export type TextFieldProps = TextFieldCommonProps;

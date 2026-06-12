@@ -1,12 +1,19 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { within as shadowWithin } from 'shadow-dom-testing-library';
 import { useArgs } from 'storybook/preview-api';
-import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
-import { Heading } from '@skatteetaten/ds-typography';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -14,7 +21,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: RadioGroup,
-  title: 'Tester/RadioGroup/RadioGroup',
+  title: 'Tester/RadioGroup',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -37,9 +44,9 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
-    selectedValue: { table: { disable: true } },
+    value: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -50,6 +57,8 @@ const meta = {
     form: { table: { disable: true } },
     name: { table: { disable: true } },
     required: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onChange: { table: { disable: true } },
     onBlur: { table: { disable: true } },
@@ -58,6 +67,7 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+    htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
   },
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
@@ -70,9 +80,9 @@ const Template: StoryFn<typeof RadioGroup> = (args) => {
     <RadioGroup
       {...args}
       onChange={(e): void => {
-        if (args.selectedValue) {
-          setArgs({ selectedValue: e.target.value });
-        } else if (args.defaultValue) {
+        if (args.value !== undefined) {
+          setArgs({ value: e.target.value });
+        } else if (args.defaultValue !== undefined) {
           setArgs({ defaultValue: e.target.value });
         }
       }}
@@ -80,7 +90,7 @@ const Template: StoryFn<typeof RadioGroup> = (args) => {
   );
 };
 
-const selectedValue = 'annet';
+const value = 'annet';
 const defaultLegendText = 'Type virksomhet';
 const defaultArgs: RadioGroupProps = {
   legend: defaultLegendText,
@@ -140,9 +150,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -152,6 +160,54 @@ export const WithAttributes = {
     await expect(fieldset).toHaveAttribute('lang', 'nb');
     await expect(fieldset).toHaveAttribute('data-testid', '123ID');
     await expect(fieldset).toHaveAttribute('form', '123form');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      container: 'dummyClassname',
+      legend: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'HJEEEEEEELP',
+    errorMessage: 'feil',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('group');
+    await expect(container).toHaveClass('dummyClassname');
+
+    const legend = canvas.getByText(defaultLegendText);
+    await expect(legend).toHaveClass('dummyClassname');
+
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^= radioErrorId]>div'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+
+    const description = canvas.getByText('beskrivelse');
+    await expect(description).toHaveClass('dummyClassname');
+
+    const helpButton = canvas.getByRole('button');
+    await userEvent.click(helpButton);
+
+    const helpText = canvas.getByText('HJEEEEEEELP');
+    const helpBox = helpText.parentElement;
+    await expect(helpBox).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -177,8 +233,43 @@ export const Defaults = {
     await expect(legend.tagName).toBe('LEGEND');
     radios.forEach((input) => {
       expect(input).toHaveAttribute('name');
-      expect(input).toHaveAttribute('aria-invalid', 'false');
+      expect(input).not.toHaveAttribute('aria-invalid');
     });
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'radiogroup-alert-description-id';
+    return (
+      <>
+        <RadioGroup {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for radiogroup'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const group = canvas.getByRole('group');
+    await expect(group).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for radiogroup'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = group.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('radiogroup-alert-description-id');
   },
 } satisfies Story;
 
@@ -211,22 +302,25 @@ export const WithHideLegend = {
   },
 } satisfies Story;
 
-export const WithSelectedValue = {
+export const WithValue = {
   render: Template,
-  name: 'With SelectedValue (A3)',
+  name: 'With Value (A3)',
   args: {
     ...defaultArgs,
-    selectedValue: selectedValue,
+    value,
     defaultValue: undefined,
   },
   argTypes: {
-    selectedValue: { table: { disable: false } },
+    value: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
 
-    await expect(input).toHaveAttribute('value', selectedValue);
+    await expect(input).toHaveAttribute('value', value);
   },
 } satisfies Story;
 
@@ -235,8 +329,8 @@ export const WithDefaultValue = {
   name: 'With DefaultValue (A3)',
   args: {
     ...defaultArgs,
-    selectedValue: undefined,
-    defaultValue: selectedValue,
+    value: undefined,
+    defaultValue: value,
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
@@ -245,7 +339,7 @@ export const WithDefaultValue = {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
 
-    await expect(input).toHaveAttribute('value', selectedValue);
+    await expect(input).toHaveAttribute('value', value);
   },
 } satisfies Story;
 
@@ -255,11 +349,15 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
-    selectedValue: selectedValue,
+    value,
     defaultValue: undefined,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -267,6 +365,8 @@ export const WithDisabled = {
     radios.forEach((input) => {
       expect(input).toBeDisabled();
     });
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -285,42 +385,8 @@ export const WithRequired = {
     const radios = canvas.getAllByRole('radio');
     radios.forEach((input) => {
       expect(input).toBeRequired();
+      expect(input).toHaveAttribute('aria-invalid', 'false');
     });
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  render: Template,
-  name: 'With Required And Mark (A7, A8)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithRequiredAndMarkAndLegendAsMarkup = {
-  render: Template,
-  name: 'With Required And Mark And Legend As Markup (A7, A8)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h4'} level={3}>
-          {defaultLegendText}
-        </Heading>
-        <span>{'Med virksomhet så menes bla bla'}</span>
-      </>
-    ),
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -377,11 +443,14 @@ export const WithErrorMessage = {
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
-    selectedValue: selectedValue,
+    value,
     defaultValue: undefined,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -442,9 +511,7 @@ export const WithHelpText = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultLegendText,
-    });
+    const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await userEvent.click(helpButton);
   },
@@ -589,48 +656,65 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
+export const ReadOnly = {
+  name: 'Read Only',
   args: {
     ...defaultArgs,
-    classNames: {
-      legend: 'dummyClassname',
-      errorMessage: 'dummyClassname',
-      description: 'dummyClassname',
-      helpText: 'dummyClassname',
-    },
-    description: 'beskrivelse',
-    helpText: 'HJEEEEEEELP',
-    errorMessage: 'feil',
+    readOnly: true,
+    value,
+    defaultValue: undefined,
+    description: 'Dette er en radiogruppe i read only modus',
   },
   argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-
-    const errorMessageContainer = canvasElement.querySelector(
-      '[id^= radioErrorId]>div'
-    );
-    await expect(errorMessageContainer).toHaveClass('dummyClassname');
-
-    await expect(
-      canvas.getByText('beskrivelse', {
-        selector: "[aria-hidden='true']",
-      })
-    ).toHaveClass('dummyClassname');
+    const radios = canvas.getAllByRole('radio');
+    for (const radio of radios) {
+      await expect(radio).toHaveAttribute('data-read-only', 'true');
+      expect(radio).toHaveAccessibleName(/skrivebeskyttet$/);
+    }
   },
+} satisfies Story;
+
+export const ReadOnlyAndDescription = {
+  name: 'Read Only And Description',
+  args: {
+    ...defaultArgs,
+    readOnly: true,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  render: (args): JSX.Element => (
+    <RadioGroup {...args}>
+      <RadioGroup.Radio
+        description={'Dette er en radiogruppe i read only modus'}
+      >
+        {'Enkeltpersonsforetak'}
+      </RadioGroup.Radio>
+      <RadioGroup.Radio
+        description={'Dette er en radiogruppe i read only modus'}
+      >
+        {'Aksjeselskap'}
+      </RadioGroup.Radio>
+    </RadioGroup>
+  ),
 } satisfies Story;

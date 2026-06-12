@@ -2,10 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  Blockquote,
-  getBlockquoteBorderColorDefault,
-} from '@skatteetaten/ds-typography';
+import { Blockquote } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -17,17 +14,9 @@ const meta = {
   argTypes: {
     // Props
     canBeManuallyFocused: { table: { category: category.props } },
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    borderColor: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getBlockquoteBorderColorDefault() },
-      },
-    },
+    borderColor: { table: { category: category.props } },
   },
   args: {
     children: loremIpsum,
@@ -51,3 +40,19 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const ExampleWithInlineStyling: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <Blockquote>
+        {'«God design handler om '}
+        <strong>{'klarhet'}</strong>
+        {', men også om '}
+        <em>{'forståelse'}</em>
+        {' og intensjon.»'}
+      </Blockquote>
+    );
+  },
+} satisfies Story;
+ExampleWithInlineStyling.storyName = 'Blockquote med utheving';
+ExampleWithInlineStyling.parameters = exampleParameters;

@@ -1,7 +1,7 @@
 import { useContext, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ArrowDownSVGpath,
   ArrowUpDownSVGpath,
@@ -10,11 +10,7 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { TableHeaderCellProps } from './TableHeaderCell.types';
-import {
-  getHeaderCellAsDefault,
-  getTableCellAlignmentDefault,
-  getTableVariantDefault,
-} from '../Table/defaults';
+import { defaultTableSize } from '../Table/defaults';
 import { sortDirection } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
 
@@ -23,14 +19,14 @@ import styles from './TableHeaderCell.module.scss';
 export const TableHeaderCell = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  alignment = getTableCellAlignmentDefault(),
-  as: Tag = getHeaderCellAsDefault(),
+  alignment = 'left',
+  as: Tag = 'th',
   colSpan,
-  isSortDisabled,
-  isSortable,
+  isSortDisabled = false,
+  isSortable = false,
   scope,
   sortKey,
   children,
@@ -38,11 +34,12 @@ export const TableHeaderCell = ({
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
   const context = useContext(TableContext);
 
-  const variant = context?.variant ?? getTableVariantDefault();
+  const size = context?.size ?? defaultTableSize;
   const alignmentClassName = styles[`headerCell_${alignment}`];
-  const variantClassName = styles[`headerCell_${variant}`];
+
+  const sizeClassName = styles[`headerCell_${size}`];
   const concatenatedClassNames = `${styles.headerCell} ${
-    isSortable ? styles.headerCell_noPadding : variantClassName
+    isSortable ? styles.headerCell_noPadding : sizeClassName
   } ${
     scope === 'row' ? styles.headerCell_row : ''
   } ${alignmentClassName} ${className}`.trim();
@@ -99,7 +96,7 @@ export const TableHeaderCell = ({
     >
       {isSortable ? (
         <button
-          className={`${styles.headerCellSortButton} ${variantClassName}`.trim()}
+          className={`${styles.headerCellSortButton} ${sizeClassName}`.trim()}
           type={'button'}
           disabled={isSortDisabled}
           onClick={handleOnSort}

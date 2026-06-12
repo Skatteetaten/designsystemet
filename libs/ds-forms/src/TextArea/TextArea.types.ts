@@ -5,11 +5,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -31,7 +27,9 @@ type RequiredTextAreaHTMLAttributes = Pick<
   | 'value'
 >;
 
-type TextAreaHTMLAttributes = Partial<RequiredTextAreaHTMLAttributes>;
+type TextAreaHTMLAttributes = Partial<RequiredTextAreaHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface TextAreaPropsHTMLAttributes extends TextAreaHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLTextAreaElement>;
@@ -40,8 +38,7 @@ interface TextAreaPropsHTMLAttributes extends TextAreaHTMLAttributes {
 }
 
 export interface TextAreaCommonProps
-  extends TextAreaPropsHTMLAttributes,
-    BaseProps {
+  extends TextAreaPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLTextAreaElement>;
   classNames?: Prettify<
     {
@@ -66,7 +63,11 @@ export interface TextAreaCommonProps
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
   description?: LabelWithHelpProps['description'];
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
@@ -80,4 +81,4 @@ export interface TextAreaCommonProps
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
-export type TextAreaProps = TextAreaCommonProps & FormRequiredProps;
+export type TextAreaProps = TextAreaCommonProps;

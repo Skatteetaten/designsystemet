@@ -22,21 +22,17 @@
     calc(2 * var(--spacing-s) + var(--size-medium) + 2px) var(--spacing-xs)
     var(--spacing-s);
 
-  &_large {
+  &:where([data-size='large']) {
     --clear-button-top: var(--spacing-s);
     --input-padding: var(--spacing-s);
-
-    // Calc = størrelse på knapp (+2px border) + spacing på begge sider
     --input-padding-with-value: var(--spacing-s)
       calc(2 * var(--spacing-s) + var(--size-large) + 2px) var(--spacing-s)
       var(--spacing-s);
   }
 
-  &_extraLarge {
+  &:where([data-size='extraLarge']) {
     --clear-button-top: var(--spacing-m);
     --input-padding: var(--spacing-m);
-
-    // Calc = størrelse på knapp (+2px border) + spacing på begge sider
     --input-padding-with-value: var(--spacing-m)
       calc(2 * var(--spacing-m) + var(--size-large) + 2px) var(--spacing-m)
       var(--spacing-m);
@@ -154,7 +150,7 @@
     fill: var(--semantic-interactive-main);
   }
 
-  &_large {
+  &:where([data-size='large']) {
     padding: var(--spacing-s);
 
     & .icon {
@@ -162,12 +158,19 @@
     }
   }
 
-  &_extraLarge {
+  &:where([data-size='extraLarge']) {
     padding: var(--spacing-m);
 
     & .icon {
       padding-top: 0;
     }
+  }
+
+  &:has(> svg):not(
+      :where([data-size='large']),
+      :where([data-size='extraLarge'])
+    ) {
+    padding: calc(var(--spacing-xs) + 0.0625rem) var(--spacing-s); // +1 pga ikon er litt lavere enn tekst
   }
 
   &:focus-visible {
@@ -185,10 +188,6 @@
     & .icon {
       fill: var(--semantic-disabled-foreground);
     }
-  }
-
-  &:has(> svg):not(&_large, &_extraLarge) {
-    padding: calc(var(--spacing-xs) + 0.0625rem) var(--spacing-s); // +1 pga ikon er litt lavere enn tekst
   }
 
   &:enabled:hover {
@@ -221,6 +220,20 @@
   background: var(--semantic-page-background);
   box-shadow: 3px 2px 5px 0 var(--semantic-divider-30);
   list-style-type: none;
+}
+
+.loadingContainer {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.emptyResult {
+  padding: var(--search-result-padding);
+  color: var(--semantic-page-foreground);
+  overflow-y: auto;
 }
 
 .srOnly {

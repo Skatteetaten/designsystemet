@@ -6,12 +6,6 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-input);
   overflow-wrap: anywhere;
-
-  &_required::after {
-    margin-left: var(--spacing-xxs);
-    color: var(--semantic-danger-foreground);
-    content: '*';
-  }
 }
 
 .srOnly {

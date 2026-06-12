@@ -109,6 +109,8 @@ export default [
         },
       ],
       'jsdoc/require-jsdoc': 'off',
+      'jsdoc/require-param': 'off',
+      'jsdoc/require-returns': 'off',
       'jsdoc/tag-lines': 'off', // Disabled to avoid conflict with prettier-plugin-jsdoc
     },
   },

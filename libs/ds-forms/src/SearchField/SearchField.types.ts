@@ -2,18 +2,15 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  FunctionComponent,
   KeyboardEvent,
   MouseEvent,
   MouseEventHandler,
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-  Size,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
+import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
@@ -25,7 +22,7 @@ export const searchArrSize = [
 ] as const satisfies readonly Size[];
 export type SearchSize = (typeof searchArrSize)[number];
 
-type RequiredDatePickerHTMLAttributes = Pick<
+type RequiredSearchFieldHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
   | 'accessKey'
   | 'autoComplete'
@@ -35,10 +32,13 @@ type RequiredDatePickerHTMLAttributes = Pick<
   | 'name'
   | 'placeholder'
   | 'readOnly'
+  | 'required'
   | 'value'
 >;
 
-type SearchFieldHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes>;
+type SearchFieldHTMLAttributes = Partial<RequiredSearchFieldHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface SearchFieldPropsHTMLAttributes extends SearchFieldHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;
@@ -53,8 +53,7 @@ export interface SearchResult {
 }
 
 interface SearchFieldCommonProps
-  extends SearchFieldPropsHTMLAttributes,
-    BaseProps {
+  extends SearchFieldPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
@@ -62,6 +61,7 @@ interface SearchFieldCommonProps
       errorMessage?: string;
       textbox?: string;
       searchContainer?: string;
+      searchResultsList?: string;
       searchResult?: string;
     } & LabelWithHelpProps['classNames']
   >;
@@ -74,7 +74,11 @@ interface SearchFieldCommonProps
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
   description?: LabelWithHelpProps['description'];
   /** Tekst på feilmelding */
   errorMessage?: string;
@@ -88,6 +92,12 @@ interface SearchFieldCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Overskriver default title på søkeknappen */
   searchButtonTitle?: string;
+  /** Viser loading state med spinner */
+  isLoading?: boolean;
+  /** Overskriver teksten som vises med spinner når isLoading = true. */
+  spinnerLabel?: string;
+  /** For å tilpasse størrelse eller farge på spinneren */
+  spinnerProps?: Prettify<Partial<Pick<SpinnerProps, 'size' | 'color'>>>;
   /** Definerer stilen til SearchField */
   variant?: SearchSize;
   /** Kalles ved trykk på knappen for resetting av søkefeltet */
@@ -117,8 +127,8 @@ interface SearchFieldCommonProps
   enableSRNavigationHint?: boolean;
 }
 
-export type SearchFieldProps = SearchFieldCommonProps & FormRequiredProps;
+export type SearchFieldProps = SearchFieldCommonProps;
 
-export interface SearchFieldComponent extends React.FC<SearchFieldProps> {
+export interface SearchFieldComponent extends FunctionComponent<SearchFieldProps> {
   Result: typeof SearchFieldResult;
 }

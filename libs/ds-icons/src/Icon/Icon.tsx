@@ -1,21 +1,24 @@
 import { useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
-import { getIconVariantDefault, getIconSizeDefault } from './defaults';
 import { IconProps } from './Icon.types';
 
 import styles from './Icon.module.scss';
 
+/**
+ * Icon
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-icon--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/icon/) - Brukerveiledning
+ */
 export const Icon = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,
-  variant = getIconVariantDefault(),
-  size = getIconSizeDefault(),
+  variant = 'systemIcon',
+  size = 'medium',
   svgPath,
   ariaLabel,
 }: IconProps): JSX.Element => {

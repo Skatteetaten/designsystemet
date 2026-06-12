@@ -66,13 +66,6 @@
       "options": {
         "command": "npm publish dist/libs/ds-layout {args.switches}"
       }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
-      "options": {
-        "reportsDirectory": "../../coverage/libs/ds-layout"
-      }
     }
   }
 }

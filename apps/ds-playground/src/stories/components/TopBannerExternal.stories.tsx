@@ -29,11 +29,6 @@ import {
 } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  getTopBannerLangPickerLocaleDefault,
-  getTopBannerLangPickerShowSamiDefault,
-} from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/defaults';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
@@ -47,21 +42,8 @@ const meta = {
   argTypes: {
     // Props
     classNames: { control: false, table: { category: category.props } },
-    showSami: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: String(getTopBannerLangPickerShowSamiDefault()),
-        },
-      },
-    },
-    defaultLocale: {
-      table: {
-        control: 'text',
-        category: category.props,
-        defaultValue: { summary: getTopBannerLangPickerLocaleDefault() },
-      },
-    },
+    showSami: { table: { category: category.props } },
+    defaultLocale: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     skipLink: { control: false, table: { category: category.props } },
     logo: {
@@ -77,27 +59,15 @@ const meta = {
       control: false,
       table: { category: category.props },
     },
-
+    otherLanguagesURL: { table: { category: category.props } },
     searchContent: { control: 'text', table: { category: category.props } },
     // Events
-    onSearchClick: {
-      ...htmlEventDescription,
-    },
-    onSearch: {
-      ...htmlEventDescription,
-    },
-    onLogInClick: {
-      ...htmlEventDescription,
-    },
-    onLogOutClick: {
-      ...htmlEventDescription,
-    },
-    onUserClick: {
-      ...htmlEventDescription,
-    },
-    onLanguageClick: {
-      ...htmlEventDescription,
-    },
+    onSearchClick: { ...htmlEventDescription },
+    onSearch: { ...htmlEventDescription },
+    onLogInClick: { ...htmlEventDescription },
+    onLogOutClick: { ...htmlEventDescription },
+    onUserClick: { ...htmlEventDescription },
+    onLanguageClick: { ...htmlEventDescription },
   },
   args: {
     // uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
@@ -129,6 +99,7 @@ export const ExampleWithRolePicker: Story = {
     const me: Person = {
       name: 'Ola Nordmann',
       personId: '10101012345',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
     };
 
@@ -400,12 +371,12 @@ export const ExampleWithRolePicker: Story = {
           }
           secondColumn={
             <>
-              <Heading as={'h2'} level={2} hasSpacing>
+              <Heading as={'h2'} hasSpacing>
                 {'Alle temaer'}
               </Heading>
               <div className={topBannerExternalExampleStyles.secondColumn}>
                 <div>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.PERSON_FORSIDE}>
                       {'For personer'}
                     </a>
@@ -426,7 +397,7 @@ export const ExampleWithRolePicker: Story = {
                       </LinkGroup.Link>
                     ))}
                   </LinkGroup>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
                       {'For bedrifter og organisasjoner'}
                     </a>
@@ -553,7 +524,42 @@ export const ExampleWithUserMenu: Story = {
     const me: Person = {
       name: 'Ola Nordmann',
       personId: '10101012345',
+      dateOfBirth: new Date('1984-02-13'),
       type: 'Person',
+    };
+
+    const people: Paginated<Person> = {
+      total: 4,
+      list: [
+        {
+          name: 'Antikvitet presis',
+          personId: '13889999726',
+          dateOfBirth: new Date('1964-02-28'),
+          type: 'Person',
+          isDeleted: false,
+        },
+        {
+          name: 'Bønne elegant',
+          personId: '18849574503',
+          dateOfBirth: new Date('1932-10-10'),
+          type: 'Person',
+          isDeleted: true,
+        },
+        {
+          name: 'Lomme filosofisk',
+          personId: '08889674513',
+          dateOfBirth: new Date('1944-01-26'),
+          type: 'Person',
+          isDeleted: true,
+        },
+        {
+          name: 'Adelsmann varm',
+          personId: '14892449911',
+          dateOfBirth: new Date('1981-07-04'),
+          type: 'Person',
+          isDeleted: false,
+        },
+      ],
     };
 
     const businesses: Paginated<Business> = {
@@ -824,12 +830,12 @@ export const ExampleWithUserMenu: Story = {
           }
           secondColumn={
             <>
-              <Heading as={'h2'} level={2} hasSpacing>
+              <Heading as={'h2'} hasSpacing>
                 {'Alle temaer'}
               </Heading>
               <div className={topBannerExternalExampleStyles.secondColumn}>
                 <div>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.PERSON_FORSIDE}>
                       {'For personer'}
                     </a>
@@ -850,7 +856,7 @@ export const ExampleWithUserMenu: Story = {
                       </LinkGroup.Link>
                     ))}
                   </LinkGroup>
-                  <Heading as={'h3'} level={3} hasSpacing>
+                  <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
                       {'For bedrifter og organisasjoner'}
                     </a>
@@ -942,6 +948,7 @@ export const ExampleWithUserMenu: Story = {
         <RolePicker
           ref={modalRef}
           me={me}
+          people={people}
           businesses={businesses}
           onEntitySelect={async (entity) => {
             let role: User['role'];

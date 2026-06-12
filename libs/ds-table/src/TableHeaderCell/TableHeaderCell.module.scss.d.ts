@@ -1,5 +1,4 @@
 declare const classNames: {
-  readonly headerCell_standard: 'headerCell_standard';
   readonly headerCell: 'headerCell';
   readonly headerCell_noPadding: 'headerCell_noPadding';
   readonly headerCellSortButton: 'headerCellSortButton';
@@ -8,6 +7,9 @@ declare const classNames: {
   readonly headerCell_right: 'headerCell_right';
   readonly headerCell_center: 'headerCell_center';
   readonly headerCell_row: 'headerCell_row';
-  readonly headerCell_compact: 'headerCell_compact';
+  readonly headerCell_extraSmall: 'headerCell_extraSmall';
+  readonly headerCell_small: 'headerCell_small';
+  readonly headerCell_medium: 'headerCell_medium';
+  readonly headerCell_large: 'headerCell_large';
 };
 export default classNames;

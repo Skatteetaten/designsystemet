@@ -2,10 +2,7 @@ import { JSX, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { HelpProps } from './Help.types';
@@ -18,9 +15,9 @@ export const Help = ({
   helpText,
   helpSvgPath,
   hideHelp,
-  hideDescriptionForScreenReader,
   targetId,
-  titleHelpSvg = getHelpTitleHelpSvgDefault(),
+  titleHelpSvg = defaultHelpButtonTitle,
+  disabled,
   onHelpToggle,
   className,
   classNames,
@@ -55,6 +52,7 @@ export const Help = ({
           svgPath={svgHelpIcon}
           title={titleHelpSvg}
           size={'extraSmall'}
+          disabled={disabled}
           ariaExpanded={showHelpText}
           ariaDescribedby={targetId}
           isOutlined
@@ -78,9 +76,8 @@ export const Help = ({
         </div>
       )}
       {description && (
-        <div
+        <span
           id={descriptionId}
-          aria-hidden={hideDescriptionForScreenReader}
           className={`${
             styles.description
           } ${marginTopClassName} ${hideHelpClassName} ${
@@ -88,12 +85,10 @@ export const Help = ({
           }`.trim()}
         >
           {description}
-        </div>
+        </span>
       )}
     </>
   );
 };
 
 Help.displayName = 'Help';
-
-export { getHelpTitleHelpSvgDefault };

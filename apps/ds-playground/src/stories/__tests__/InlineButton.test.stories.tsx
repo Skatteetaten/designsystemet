@@ -4,7 +4,6 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -102,9 +101,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -132,10 +129,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
     await expect(inlineButton).toBeInTheDocument();
-    await expect(inlineButton).toHaveAttribute(
-      'type',
-      getCommonButtonTypeDefault()
-    );
+    await expect(inlineButton).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
@@ -424,6 +418,7 @@ export const WithBrightness = {
     brightness: { table: { disable: false } },
   },
   parameters: {
+    // color contrast issue
     a11y: {
       test: 'off',
     },

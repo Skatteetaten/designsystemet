@@ -1,4 +1,10 @@
-import { Dispatch, ReactNode, Ref, SetStateAction } from 'react';
+import {
+  Dispatch,
+  FunctionComponent,
+  ReactNode,
+  Ref,
+  SetStateAction,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -37,16 +43,6 @@ type TabsDiscriminatedValueProps =
 
 interface TabsCommonProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
-  /**
-   * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
-   * komponenten er controlled
-   */
-  value?: string;
-  /**
-   * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når
-   * komponenten er uncontrolled. value må oppdateres via onChange-eventet
-   */
-  defaultValue?: string;
   /** Lar listen med tab'er flyte over flere linje hvis ikke plass på en linje */
   isMultiline?: boolean;
   /** Definerer stilen standard eller compact */
@@ -61,7 +57,7 @@ interface TabsCommonProps extends BaseProps {
 
 export type TabsProps = TabsCommonProps & TabsDiscriminatedValueProps;
 
-export interface TabsComponent extends React.FC<TabsProps> {
+export interface TabsComponent extends FunctionComponent<TabsProps> {
   List: typeof TabsList;
   Panel: typeof TabsPanel;
   Tab: typeof TabsTab;

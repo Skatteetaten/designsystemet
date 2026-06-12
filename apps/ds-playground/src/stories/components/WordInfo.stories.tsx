@@ -2,11 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getPopoverPositionDefault,
-  getPopoverRestoreFocusDefault,
-  WordInfo,
-} from '@skatteetaten/ds-overlays';
+import { WordInfo } from '@skatteetaten/ds-overlays';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -18,22 +14,23 @@ const meta = {
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
-    disableAutoDismiss: { table: { category: category.props } },
+    disableAutoDismiss: {
+      table: { category: category.props, defaultValue: { summary: 'true' } },
+    },
     position: {
       table: {
         category: category.props,
-        defaultValue: { summary: getPopoverPositionDefault().toString() },
+        defaultValue: { summary: 'bottomStart' },
       },
     },
     shouldRestoreFocus: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPopoverRestoreFocusDefault().toString() },
-      },
+      table: { category: category.props, defaultValue: { summary: 'true' } },
     },
-    isOpen: { table: { category: category.props } },
+    isOpen: {
+      table: { category: category.props, defaultValue: { summary: 'false' } },
+    },
     //Events
-    onClose: { ...htmlEventDescription, table: { disable: true } },
+    onClose: { ...htmlEventDescription },
   },
 } satisfies Meta<typeof WordInfo>;
 export default meta;

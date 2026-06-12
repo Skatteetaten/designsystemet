@@ -1,4 +1,10 @@
-import { ComponentPropsWithoutRef, MouseEvent, ReactNode, Ref } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  FunctionComponent,
+  MouseEvent,
+  ReactNode,
+  Ref,
+} from 'react';
 
 import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
@@ -25,8 +31,7 @@ export type UploadResult = {
 };
 
 export interface FileUploaderCommonProps
-  extends FileUploaderHTMLAttributes,
-    BaseProps {
+  extends FileUploaderHTMLAttributes, BaseProps {
   ref?: Ref<HTMLDivElement>;
   classNames?: Prettify<
     {
@@ -54,8 +59,12 @@ export interface FileUploaderCommonProps
    */
   hideLabel?: LabelWithHelpProps['hideLabel'];
   /** Ledetekst */
-  label?: LabelWithHelpProps['children'];
-  /** Tilleggstekst */
+  label: LabelWithHelpProps['children'];
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
   description?: LabelWithHelpProps['description'];
   /** Hjelpetekst */
   helpText?: LabelWithHelpProps['helpText'];
@@ -63,14 +72,6 @@ export interface FileUploaderCommonProps
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /**
-   * Om FileUploader skal markeres med stjerne.
-   *
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer
-   *   om mønstre for obligatoriske felt på [stil og
-   *   tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
-   */
-  showRequiredMark?: LabelWithHelpProps['showRequiredMark'];
   /**
    * Brukes i kombinasjon med shouldNormalizeFileName til å styre hvilke tegn
    * som skal erstattes
@@ -154,6 +155,6 @@ export interface UploadedFile {
 
 export type FileUploaderProps = FileUploaderCommonProps;
 
-export interface FileUploaderComponent extends React.FC<FileUploaderProps> {
+export interface FileUploaderComponent extends FunctionComponent<FileUploaderProps> {
   useFileUploader: typeof useFileUploader;
 }

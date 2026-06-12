@@ -25,7 +25,7 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
 const today = new Date('2024-01-15');
 const meta = {
   component: DatePickerCalendar,
-  title: 'Tester/DatePicker/DatePickerCalendar',
+  title: 'Tester/DatePicker/Calendar',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -98,9 +98,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -360,5 +358,38 @@ export const WithDisabledDateAsValue = {
     const canvas = within(canvasElement);
     const focusedButton = canvas.getByText('16');
     await expect(focusedButton).toHaveAttribute('tabindex', '0');
+  },
+} satisfies Story;
+
+export const WithAccessibleDayNames = {
+  name: 'With Accessible Day Names',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarTable = canvas.getByRole('table');
+    const headerCells = calendarTable.querySelectorAll('th');
+
+    // Verifiser at alle 7 ukedager har riktig struktur
+    await expect(headerCells.length).toBe(7);
+
+    // Sjekk at første header-celle (mandag) har riktig struktur
+    const firstHeaderCell = headerCells[0];
+    const ariaHiddenSpan = firstHeaderCell.querySelector(
+      'span[aria-hidden="true"]'
+    );
+    const srOnlySpan = firstHeaderCell.querySelectorAll('span')[1];
+
+    await expect(ariaHiddenSpan).toBeInTheDocument();
+    await expect(ariaHiddenSpan).toHaveTextContent(
+      dsI18n.t('ds_forms:datepicker.Mon')
+    );
+    await expect(srOnlySpan).toHaveTextContent(
+      dsI18n.t('ds_forms:datepicker.Monday')
+    );
   },
 } satisfies Story;

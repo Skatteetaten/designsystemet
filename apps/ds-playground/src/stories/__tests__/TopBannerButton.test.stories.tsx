@@ -17,7 +17,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: TopBannerButton,
-  title: 'Tester/TopBanner/TopBannerButton (intern)',
+  title: 'Tester/TopBannerExternal/Button (intern)',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -93,9 +93,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -107,8 +105,8 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
-export const WithClassNames = {
-  name: 'With ClassNames (FA3, Username A2)',
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3, Username A2)',
   args: {
     ...defaultArgs,
     classNames: {
@@ -119,12 +117,15 @@ export const WithClassNames = {
   argTypes: {
     classNames: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
-    const span = canvas.getByText(defaultButtonText);
+    const text = canvas.getByText(defaultButtonText);
     await expect(button).toHaveClass('dummyClassname');
-    await expect(span).toHaveClass('dummyClassname');
+    await expect(text).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

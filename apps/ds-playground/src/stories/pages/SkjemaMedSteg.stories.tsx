@@ -28,6 +28,9 @@ export default {
   title: 'Sidetyper/Ekstern/Skjema med steg',
   decorators: [withPageLayout],
   parameters: {
+    pageLayout: {
+      showRoleBanner: true,
+    },
     layout: 'fullscreen',
     controls: {
       disable: true,
@@ -44,6 +47,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
   const me: Person = {
     name: 'Knuslete Foxtrot',
     personId: '12345678910',
+    dateOfBirth: new Date('1984-02-13'),
     type: 'Person',
   };
 
@@ -186,7 +190,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
         <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
       </div>
       <div className={styles.article}>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Skjematittel'}
         </Heading>
         <DescriptionList hasSpacing>
@@ -203,7 +207,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
           </i>
         </Paragraph>
       </div>
-      <StepList className={styles.marginBottomL}>
+      <StepList className={styles.stepList}>
         {activeStep >= 1 && (
           <StepList.Step
             title={'Kort beskrivelse av steg'}
@@ -224,7 +228,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                 </Paragraph>
                 <RadioGroup
                   legend={'Har du norsk adresse?'}
-                  selectedValue={hasLocalAddress}
+                  value={hasLocalAddress}
                   errorMessage={localAddressErrorMessage}
                   onBlur={setLocalAddressError}
                   onChange={(e): void => {
@@ -290,23 +294,24 @@ export const SkjemaMedSteg = (): JSX.Element => {
                       onChange={handleInputChange('phone')}
                       onBlur={(e) => handleBlur('phone', e.target.value)}
                     />
-                    <ErrorSummary
-                      showErrorSummary={showErrorSummary}
-                      className={styles.marginTopM}
-                      title={'For å gå videre må du rette opp i følgende:'}
-                      titleAs={'h3'}
-                    >
-                      {Object.entries(contactsError)
-                        .filter(([_, error]) => error)
-                        .map(([field, error]) => (
-                          <ErrorSummary.Error
-                            key={field}
-                            referenceId={`input_${field}`}
-                          >
-                            {error}
-                          </ErrorSummary.Error>
-                        ))}
-                    </ErrorSummary>
+                    <div className={styles.errorSummaryWrapper}>
+                      <ErrorSummary
+                        showErrorSummary={showErrorSummary}
+                        title={'For å gå videre må du rette opp i følgende:'}
+                        titleAs={'h3'}
+                      >
+                        {Object.entries(contactsError)
+                          .filter(([_, error]) => error)
+                          .map(([field, error]) => (
+                            <ErrorSummary.Error
+                              key={field}
+                              referenceId={`input_${field}`}
+                            >
+                              {error}
+                            </ErrorSummary.Error>
+                          ))}
+                      </ErrorSummary>
+                    </div>
                   </>
                 )}
                 {hasLocalAddress === 'nei' && (

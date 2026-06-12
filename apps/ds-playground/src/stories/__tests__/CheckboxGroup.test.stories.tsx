@@ -1,7 +1,17 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -33,16 +43,18 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     disabled: { table: { disable: true } },
     form: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onHelpToggle: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
+    htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
     imageSnapshot: { disableSnapshot: false },
   },
 } satisfies Meta<typeof CheckboxGroup>;
@@ -120,9 +132,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -132,6 +142,54 @@ export const WithAttributes = {
     await expect(fieldsetNode).toHaveAttribute('lang', 'nb');
     await expect(fieldsetNode).toHaveAttribute('data-testid', '123ID');
     await expect(fieldsetNode).toHaveAttribute('form', '123form');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      container: 'dummyClassname',
+      legend: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'HJEEEEEEELP',
+    errorMessage: defaultErrorMessage,
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('group');
+    await expect(container).toHaveClass('dummyClassname');
+
+    const legend = canvas.getByText(defaultLegendText);
+    await expect(legend).toHaveClass('dummyClassname');
+
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=checkboxGroupErrorId]>div'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+
+    const description = canvas.getByText('beskrivelse');
+    await expect(description).toHaveClass('dummyClassname');
+
+    const helpButton = canvas.getByRole('button');
+    await userEvent.click(helpButton);
+
+    const helpText = canvas.getByText('HJEEEEEEELP');
+    const helpBox = helpText.parentElement;
+    await expect(helpBox).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -152,11 +210,52 @@ export const Defaults = {
     const legendNode = canvas.getAllByText(defaultLegendText)[0];
     await expect(legendNode).toBeInTheDocument();
     await expect(legendNode.tagName).toBe('LEGEND');
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=checkboxGroupErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
     const inputNodes = canvas.getAllByRole('checkbox');
     for (const input of inputNodes) {
-      await expect(input).toHaveAttribute('aria-invalid', 'false');
+      await expect(input).not.toHaveAttribute('aria-invalid');
       await expect(input).not.toBeRequired();
     }
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'checkboxgroup-alert-description-id';
+    return (
+      <>
+        <CheckboxGroup {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for checkboxgroup'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const group = canvas.getByRole('group');
+    await expect(group).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for checkboxgroup'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = group.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain(
+      'checkboxgroup-alert-description-id'
+    );
   },
 } satisfies Story;
 
@@ -177,28 +276,6 @@ export const LegendWithMarkup = {
   },
   argTypes: {
     legend: { table: { disable: false }, control: { disable: true } },
-  },
-} satisfies Story;
-
-export const LegendWithMarkupAndRequiredMark = {
-  name: 'Legend With Markup and Required Mark (B1)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h1'} level={3}>
-          {'Dette er en Heading i legend'}
-        </Heading>
-        <Paragraph variant={'ingress'}>
-          <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
-        </Paragraph>
-      </>
-    ),
-    showRequiredMark: true,
-  },
-  argTypes: {
-    legend: { table: { disable: false }, control: { disable: true } },
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -223,6 +300,7 @@ export const WithDisabled = {
   args: {
     ...defaultArgs,
     disabled: true,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -231,6 +309,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const fieldsetNode = canvas.getByRole('group');
     await expect(fieldsetNode).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -246,17 +326,6 @@ export const WithDisabledAndChecked = {
   },
 } satisfies Story;
 
-export const WithRequiredMark = {
-  name: 'With Required Mark (A1, B3)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithError = {
   name: 'With Error (A1, B5)',
   args: {
@@ -268,9 +337,10 @@ export const WithError = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[17];
-    await expect(errorMessageContainer).toBeInTheDocument();
-    await expect(errorMessageContainer).toHaveAttribute('id');
+    const errorMessage = canvasElement.querySelector(
+      '[id^=checkboxGroupErrorId]>div'
+    );
+    await expect(errorMessage).toBeInTheDocument();
     const inputNodes = canvas.getAllByRole('checkbox', {
       description: defaultErrorMessage,
     });
@@ -291,9 +361,7 @@ export const WithHelptext = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultLegendText,
-    });
+    const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await fireEvent.click(helpButton);
   },
@@ -322,47 +390,35 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
+export const WithReadOnly = {
+  name: 'With ReadOnly',
   args: {
     ...defaultArgs,
-    classNames: {
-      legend: 'dummyClassname',
-      errorMessage: 'dummyClassname',
-      description: 'dummyClassname',
-      helpText: 'dummyClassname',
-    },
-    description: 'beskrivelse',
-    helpText: 'HJEEEEEEELP',
-    errorMessage: defaultErrorMessage,
+    children: childrenWithOneChecked,
+    readOnly: true,
   },
   argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
+    readOnly: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-
-    const errorMessageContainer = canvasElement.querySelector(
-      '[id^=checkboxGroupErrorId]>div'
-    );
-    await expect(errorMessageContainer).toHaveClass('dummyClassname');
-    await expect(
-      canvas.getByText('beskrivelse', {
-        selector: "[aria-hidden='true']",
-      })
-    ).toHaveClass('dummyClassname');
+    const checkboxes = canvas.getAllByRole('checkbox');
+    for (const checkbox of checkboxes) {
+      await expect(checkbox).toHaveAttribute('data-read-only', 'true');
+      expect(checkbox).toHaveAccessibleName(/skrivebeskyttet$/);
+    }
   },
 } satisfies Story;

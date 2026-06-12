@@ -1,13 +1,7 @@
 import { useContext, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { TableDataCellProps } from './TableDataCell.types';
-import {
-  getDataCellAsDefault,
-  getTableCellAlignmentDefault,
-  getTableVariantDefault,
-} from '../Table/defaults';
+import { defaultTableSize } from '../Table/defaults';
 import { TableContext } from '../Table/TableContext';
 
 import styles from './TableDataCell.module.scss';
@@ -15,24 +9,24 @@ import styles from './TableDataCell.module.scss';
 export const TableDataCell = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  as: Tag = getDataCellAsDefault(),
-  alignment = getTableCellAlignmentDefault(),
+  as: Tag = 'td',
+  alignment = 'left',
   colSpan,
   rowSpan,
   scope,
   children,
 }: TableDataCellProps): JSX.Element => {
   const context = useContext(TableContext);
-  const variant = context?.variant ?? getTableVariantDefault();
-  const variantClassName = styles[`dataCell_${variant}`];
+  const size = context?.size ?? defaultTableSize;
+  const sizeClassName = styles[`dataCell_${size}`];
   const alignmentClassName = styles[`dataCell_${alignment}`];
 
   const concatenatedClassName = `${
     styles.dataCell
-  } ${variantClassName} ${alignmentClassName} ${
+  } ${sizeClassName} ${alignmentClassName} ${
     rowSpan ? styles.dataCell_rowspan : ''
   } ${className}`.trim();
 

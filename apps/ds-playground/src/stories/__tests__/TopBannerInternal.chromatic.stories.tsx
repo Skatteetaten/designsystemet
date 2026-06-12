@@ -6,7 +6,7 @@ import * as TopBannerInternalStories from './TopBannerInternal.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/TopBanner/TopBannerInternal',
+  title: 'Chromatic/TopBannerInternal',
   component: TopBannerInternal,
   tags: ['chromatic', '!autodocs'],
   parameters: {

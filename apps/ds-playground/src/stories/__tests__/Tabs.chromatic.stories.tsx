@@ -6,9 +6,12 @@ import * as TabsStories from './Tabs.test.stories';
 import { createSingleStory } from '../utils/createSingleStory';
 
 const meta = {
-  title: 'Chromatic/Tabs/Tabs',
+  title: 'Chromatic/Tabs',
   component: Tabs,
   tags: ['chromatic', '!autodocs'],
+  parameters: {
+    pseudoSelector: ['div > button:nth-child(1)', 'div > button:nth-child(3)'],
+  },
 } satisfies Meta<typeof Tabs>;
 export default meta;
 export const Snapshots = createSingleStory(TabsStories, meta);

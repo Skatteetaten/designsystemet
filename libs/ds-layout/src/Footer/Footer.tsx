@@ -2,15 +2,9 @@ import { Children, isValidElement, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  Languages,
-  Separator,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages, Separator } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getOpenDefaultLinksInNewTabDefault } from './defaults';
 import { FooterComponent, FooterProps } from './Footer.types';
 import { FooterLink } from './FooterLink/FooterLink';
 import { FooterLogo } from './FooterLogo/FooterLogo';
@@ -19,10 +13,16 @@ import defaultNorwegainLogo from './logo_no.svg';
 
 import styles from './Footer.module.scss';
 
-export const Footer = (({
+/**
+ * Footer
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-footer--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/footer/) - Brukerveiledning
+ */
+export const Footer = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   accessibilityURL,
@@ -34,9 +34,9 @@ export const Footer = (({
   titleFirstColumn,
   titleSecondColumn,
   titleThirdColumn,
-  hideLogo,
-  hideDefaultLinks,
-  openDefaultLinksInNewTab = getOpenDefaultLinksInNewTabDefault(),
+  hideLogo = false,
+  hideDefaultLinks = false,
+  openDefaultLinksInNewTab = false,
   children,
 }: FooterProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
@@ -175,7 +175,9 @@ export const Footer = (({
       </div>
     </footer>
   );
-}) as FooterComponent;
+};
+
+export default Footer as FooterComponent;
 
 Footer.displayName = 'Footer';
 Footer.Logo = FooterLogo;

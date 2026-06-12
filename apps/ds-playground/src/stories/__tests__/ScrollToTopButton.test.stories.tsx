@@ -2,9 +2,10 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import {
-  getScrollToTopButtonTextDefault,
+  defaultScrollToTopButtonTitle,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
+import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -44,10 +45,8 @@ type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof ScrollToTopButton> = (args) => (
   <div className={'height120vh'}>
-    <main className={'scrollToTopContainer'} tabIndex={-1}>
-      <ExternalLayout />
-      <ScrollToTopButton {...args} />
-    </main>
+    <ExternalLayout />
+    <ScrollToTopButton {...args} />
   </div>
 );
 
@@ -100,9 +99,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -113,7 +109,7 @@ export const WithAttributes = {
     await expect(scrollToTopButton).toHaveAttribute('data-testid', '123ID');
 
     const container = canvasElement.querySelector(
-      `${wrapper} > div > main > div:nth-child(2)`
+      `${wrapper} > div > div:nth-child(2)`
     );
     await expect(container).toHaveClass('dummyClassname');
   },
@@ -144,13 +140,13 @@ export const WithCustomClassNames = {
     const canvas = within(canvasElement);
 
     const container = canvasElement.querySelector(
-      `${wrapper} > div > main > div:nth-child(2)`
+      `${wrapper} > div > div:nth-child(2)`
     );
     const button = canvas.getByRole('button');
-    const iconContainer = button.querySelector('div');
+    const iconContainer = button.querySelector('span');
 
     const icon = canvas.getByRole('img', { hidden: true });
-    const label = canvas.getByText(getScrollToTopButtonTextDefault());
+    const label = canvas.getByText(defaultScrollToTopButtonTitle);
     await expect(container).toHaveClass('dummyClassname');
     await expect(button).toHaveClass('dummyClassname');
     await expect(iconContainer).toHaveClass('dummyClassname');
@@ -241,12 +237,10 @@ export const WithVisibilityThreshold = {
     viewport: {
       options: {
         maxHeight: {
-          maxHeight: { name: 'maxHeight', styles: { height: '500px' } },
+          name: 'maxHeight',
+          styles: { width: breakpoints['--breakpoint-m'], height: '500px' },
         },
       },
-    },
-    chromatic: {
-      modes: { maxHeight: { viewport: 'maxHeight' } },
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -269,10 +263,8 @@ const TemplateWithShadowDom: StoryFn<typeof ScrollToTopButton> = (args) => {
   const shadowRoot = element?.shadowRoot;
   return (
     <div className={'height100vh'}>
-      <main className={'scrollToTopContainer'} tabIndex={-1}>
-        <ExternalLayout />
-        <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />
-      </main>
+      <ExternalLayout />
+      <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />
     </div>
   );
 };
@@ -316,10 +308,8 @@ export const WithShadowDom = {
 const TemplateMainFarDown: StoryFn<typeof ScrollToTopButton> = (args) => (
   <div className={'height200vh'}>
     <div className={'scrollToTopMainPusher'}>{'Mainpusher'}</div>
-    <main className={'scrollToTopContainer'} tabIndex={-1}>
-      <ExternalLayout />
-      <ScrollToTopButton {...args} />
-    </main>
+    <ExternalLayout />
+    <ScrollToTopButton {...args} />
   </div>
 );
 
@@ -334,9 +324,6 @@ export const WithNotScrollToMain = {
     scrollToMain: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {

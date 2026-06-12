@@ -13,11 +13,10 @@ import { useTranslation } from 'react-i18next';
 import { addDays, getWeek, isEqual } from 'date-fns';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
 
 import { DatePickerCalendarProps } from './DatePickerCalendar.types';
-import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 import {
   findValidYear,
   getCalendarRows,
@@ -33,10 +32,16 @@ import { TextField } from '../../TextField/TextField';
 
 import styles from './DatePickerCalendar.module.scss';
 
+const getDatePickerCalendarSelectedDateDefault = (): Date => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return today;
+};
+
 export const DatePickerCalendar = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   disabledDates,
@@ -80,7 +85,7 @@ export const DatePickerCalendar = ({
 
   const [firstValidYear, lastValidYear] = [1, 9999];
   const [january, december] = [0, 11];
-  const { monthNames, dayNames } = getNameOfMonthsAndDays();
+  const { monthNames, dayNames, longDayNames } = getNameOfMonthsAndDays();
 
   const isFirstFocusableDateInView =
     firstFocusableDate.getFullYear() === selectedYear &&
@@ -355,10 +360,11 @@ export const DatePickerCalendar = ({
         >{`${monthNames[selectedMonthIndex]} ${selectedYear}`}</caption>
         <thead>
           <tr>
-            {dayNames.map((day: string): JSX.Element => {
+            {dayNames.map((day: string, index: number): JSX.Element => {
               return (
                 <th key={day} className={styles.calendarTableHeaderCell}>
-                  {day}
+                  <span aria-hidden={'true'}>{day}</span>
+                  <span className={styles.srOnly}>{longDayNames[index]}</span>
                 </th>
               );
             })}

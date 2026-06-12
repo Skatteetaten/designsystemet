@@ -1,37 +1,35 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { JSX } from 'react';
 
-import {
-  getCommonButtonTypeDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import {
-  getInlineButtonBrightnessDefault,
-  getInlineButtonPositionDefault,
-} from './defaults';
 import { InlineButtonProps } from './InlineButton.types';
 
 import styles from './InlineButton.module.scss';
 
+/**
+ * InlineButton
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-inlinebutton--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/inlinebutton/) - Brukerveiledning
+ */
 export const InlineButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  iconPosition = getInlineButtonPositionDefault(),
+  iconPosition = 'left',
   spinnerTitle,
   svgPath,
   accessKey,
-  disabled,
+  disabled = false,
   form,
-  type = getCommonButtonTypeDefault(),
+  type = 'button',
   ariaDescribedby,
-  brightness = getInlineButtonBrightnessDefault(),
-  hasSpinner,
+  brightness = 'default',
+  hasSpinner = false,
   onBlur,
   onClick,
   onFocus,

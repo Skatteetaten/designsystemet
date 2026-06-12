@@ -10,6 +10,7 @@
     "sharedGlobals": [
       "{workspaceRoot}/babel.config.json",
       "{workspaceRoot}/.stylelintrc.json",
+      "{workspaceRoot}/libs/.browserslistrc",
       "{workspaceRoot}/libs/ds-dev-config/build/rollup-config-factory.cjs",
       "{workspaceRoot}/libs/ds-dev-config/config/**/*"
     ],
@@ -47,7 +48,12 @@
       "cache": true
     },
     "@nx/eslint:lint": {
-      "inputs": ["default", "{workspaceRoot}/eslint.config.js"],
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/eslint.config.js",
+        "{workspaceRoot}/tools/eslint-rules/**/*"
+      ],
       "cache": true
     },
     "@nx/rollup:rollup": {
@@ -64,7 +70,7 @@
         "{projectRoot}/tsconfig.storybook.json"
       ]
     },
-    "@nx/vite:test": {
+    "@nx/vitest:test": {
       "cache": true,
       "inputs": ["default", "^production"]
     }
@@ -99,5 +105,6 @@
   ],
   "tui": {
     "autoExit": true
-  }
+  },
+  "analytics": false
 }

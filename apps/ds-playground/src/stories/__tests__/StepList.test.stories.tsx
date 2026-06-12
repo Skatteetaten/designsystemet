@@ -4,15 +4,19 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import { StepList, StepListProps } from '@skatteetaten/ds-collections';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import {
+  defaultEditButtonText,
+  defaultNextButtonText,
+} from '../../../../../libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: StepList,
-  title: 'Tester/StepList/StepList',
+  title: 'Tester/StepList',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -29,7 +33,6 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
-    a11y: { disable: true },
   },
 } satisfies Meta<typeof StepList>;
 export default meta;
@@ -73,9 +76,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -320,8 +321,8 @@ export const WithMultipleSteps = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const nextText = dsI18n.t('ds_collections:steplist.Next');
-    const editText = dsI18n.t('ds_collections:steplist.Edit');
+    const nextText = defaultNextButtonText;
+    const editText = defaultEditButtonText;
     await userEvent.click(canvas.getByText(nextText));
     await userEvent.click(canvas.getByText(editText));
     await userEvent.click(canvas.getByText(nextText));

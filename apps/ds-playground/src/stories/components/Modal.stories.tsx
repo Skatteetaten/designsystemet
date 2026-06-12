@@ -6,18 +6,12 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { UpdateSVGpath, WarningOutlineIcon } from '@skatteetaten/ds-icons';
-import {
-  Modal,
-  getModalDismissOnEscDefault,
-  getModalDismissOnOutsideClickDefault,
-  getModalPaddingDefault,
-  getModalVariantDefault,
-} from '@skatteetaten/ds-overlays';
+import { Modal } from '@skatteetaten/ds-overlays';
 import { List, Paragraph } from '@skatteetaten/ds-typography';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import skeLogo from '../../../../../libs/ds-core-utils/src/SkatteetatenLogo/SKESquare40.svg';
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -28,28 +22,10 @@ const meta = {
   title: 'Komponenter/Modal',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
-    classNames: {
-      control: { disable: true },
-      table: { category: category.props },
-    },
-    dismissOnEsc: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getModalDismissOnEscDefault().toString() },
-      },
-    },
-    dismissOnOutsideClick: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getModalDismissOnOutsideClickDefault().toString(),
-        },
-      },
-    },
+    children: { control: 'text', table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
+    dismissOnEsc: { table: { category: category.props } },
+    dismissOnOutsideClick: { table: { category: category.props } },
     hideCloseButton: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
     imageSource: {
@@ -58,12 +34,7 @@ const meta = {
       options: ['', farmerIllustration, waitIllustration],
     },
     imageSourceAltText: { table: { category: category.props } },
-    padding: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getModalPaddingDefault() },
-      },
-    },
+    padding: { table: { category: category.props } },
     renderIcon: {
       table: { category: category.props },
       control: 'select',
@@ -81,20 +52,12 @@ const meta = {
       table: { control: false, category: category.props },
     },
     title: { table: { category: category.props } },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getModalVariantDefault() },
-      },
-    },
+    variant: { table: { category: category.props } },
     // Events
-    onClose: {
-      control: { disable: true },
-      table: { category: category.event },
-    },
+    onClose: { ...htmlEventDescription },
   },
   args: {
-    children: <Paragraph>{loremIpsum}</Paragraph>,
+    children: loremIpsum,
     title: 'Modal title',
   },
 } satisfies Meta<typeof Modal>;
@@ -207,7 +170,7 @@ export const Ventevarsel: Story = {
           helpText={
             'Hver gang du beveger musepekeren, scroller eller gjør et tastetrykk, resettes timeren.'
           }
-          selectedValue={time}
+          value={time}
           onChange={(e): void => setTime(Number(e.target.value))}
         >
           <RadioGroup.Radio value={1200000}>

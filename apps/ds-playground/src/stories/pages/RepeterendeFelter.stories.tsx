@@ -193,10 +193,10 @@ export function RepeterendeFelter(): JSX.Element {
         <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
       </div>
       <div className={styles.article}>
-        <Heading as={'h1'} level={1} hasSpacing>
+        <Heading as={'h1'} hasSpacing>
           {'Skjema eller oppgave'}
         </Heading>
-        <DescriptionList className={styles.desciptionList} hasSpacing>
+        <DescriptionList className={styles.descriptionList} hasSpacing>
           <DescriptionList.Element term={'Virksomhetens navn'}>
             {hoppOgSprettBarnehage.name}
           </DescriptionList.Element>
@@ -216,7 +216,7 @@ export function RepeterendeFelter(): JSX.Element {
           className={styles.tabIndexNoOutline}
           tabIndex={-1}
         >
-          <Heading as={'h2'} level={2} hasSpacing>
+          <Heading as={'h2'} hasSpacing>
             {'Overskift/kategori'}
           </Heading>
         </div>
@@ -235,7 +235,7 @@ export function RepeterendeFelter(): JSX.Element {
                       className={styles.tabIndexNoOutline}
                       tabIndex={-1}
                     >
-                      <Heading as={'h3'} level={3} hasSpacing>
+                      <Heading as={'h3'} hasSpacing>
                         {card.navn}
                       </Heading>
                     </div>
@@ -245,7 +245,7 @@ export function RepeterendeFelter(): JSX.Element {
                       descriptionDirection={
                         isMobile ? 'vertical' : 'horizontal'
                       }
-                      className={styles.desciptionList}
+                      className={styles.descriptionList}
                     >
                       <DescriptionList.Element term={'Adresse'}>
                         {card.adresse}
@@ -351,7 +351,7 @@ export function RepeterendeFelter(): JSX.Element {
         className={styles.panel}
         hideGraphicMobile
       >
-        <Heading as={'h3'} level={3} hasSpacing>
+        <Heading as={'h3'} hasSpacing>
           {'Foreløpig oppsummering'}
         </Heading>
         <DescriptionList>

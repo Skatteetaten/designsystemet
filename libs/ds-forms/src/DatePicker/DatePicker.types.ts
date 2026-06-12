@@ -5,12 +5,7 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  FormSize,
-  Prettify,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -19,7 +14,9 @@ type RequiredDatePickerHTMLAttributes = Pick<
   'autoComplete' | 'disabled' | 'name' | 'placeholder' | 'readOnly' | 'required'
 >;
 
-type DatePickerHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes>;
+type DatePickerHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes> & {
+  ariaDescribedBy?: string;
+};
 
 interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
   onBlur?: FocusEventHandler<HTMLInputElement>;
@@ -28,9 +25,7 @@ interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
 }
 
 export interface DatePickerProps
-  extends DatePickerPropsHTMLAttributes,
-    BaseProps,
-    FormRequiredProps {
+  extends DatePickerPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
@@ -41,11 +36,18 @@ export interface DatePickerProps
   >;
   /** Tekst på feilmelding */
   errorMessage?: string;
-  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
+  /**
+   * Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for
+   * skjermleser.
+   */
   hideLabel?: boolean;
   /** Ledetekst */
   label: string;
-  /** Tilleggstekst */
+  /**
+   * Tilleggstekst. Må være string eller et HTML-element som er tillatt i en
+   * span. Finn ut hvilke [elementer som er tillatt i en
+   * span](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+   */
   description?: LabelWithHelpProps['description'];
   /** Margin under komponenten */
   hasSpacing?: boolean;
@@ -55,11 +57,12 @@ export interface DatePickerProps
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Definerer stilen til DatePicker */
-  variant?: FormSize;
   /** Hvilken dato som skal være satt. */
   value?: Date | null;
-  /** Initielt uthevet dato. (Hvis value har en dato, så blir den datoen uthevet istedenfor.) */
+  /**
+   * Initielt uthevet dato. (Hvis value har en dato, så blir den datoen uthevet
+   * istedenfor.)
+   */
   initialPickerDate?: Date;
   /** Liste med deaktiverte datoer. For eksempel helligdager/helg. */
   disabledDates?: Date[];
@@ -68,22 +71,19 @@ export interface DatePickerProps
   /** Maksimal tillatte dato */
   maxDate?: Date;
   /**
-   * Overskriver default datoformat for input-felt. Formater som kan brukes: https://date-fns.org/v3.3.1/docs/parse.
+   * Overskriver default datoformat for input-felt. Formater som kan brukes:
+   * https://date-fns.org/v3.3.1/docs/parse.
    *
-   * I tillegg til det valgte formatet, kan brukeren manuelt skrive inn dato på følgende formater som formateres automatisk i onBlur:
-   * 'dd.MM.yy',
-   * 'dd/MM/yy',
-   * 'dd-MM-yy',
-   * 'dd.MM.yyyy',
-   * 'dd/MM/yyyy',
-   * 'dd-MM-yyyy',
-   * 'ddMM',
-   * 'ddMMyy',
-   * 'ddMMyyyy',
+   * I tillegg til det valgte formatet, kan brukeren manuelt skrive inn dato på
+   * følgende formater som formateres automatisk i onBlur: 'dd.MM.yy',
+   * 'dd/MM/yy', 'dd-MM-yy', 'dd.MM.yyyy', 'dd/MM/yyyy', 'dd-MM-yyyy', 'ddMM',
+   * 'ddMMyy', 'ddMMyyyy',
    */
   dateFormat?: string;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
+  /** Callback som kalles når kalenderen åpnes/lukkes. */
+  onCalendarToggle?: (isOpen: boolean) => void;
   /** Callback som kalles når dato-verdien endres. */
   onSelectDate?: (date: Date | null) => void;
 }

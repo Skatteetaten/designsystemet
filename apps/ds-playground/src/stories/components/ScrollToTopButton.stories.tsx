@@ -3,9 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getScrollToMainDefault,
-  getScrollToTopButtonTextDefault,
-  getVisibilityThresholdDefault,
+  defaultScrollToTopButtonTitle,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
@@ -18,34 +16,19 @@ const meta = {
   title: 'Komponenter/ScrollToTopButton',
   argTypes: {
     // Props
-    classNames: {
-      control: false,
-      table: { category: category.props },
-    },
-    visibilityThreshold: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: String(getVisibilityThresholdDefault()) },
-      },
-    },
-    scrollToMain: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getScrollToMainDefault().toString() },
-      },
-    },
-    shadowRootNode: {
-      control: false,
-      table: { category: category.props },
-    },
+    classNames: { control: false, table: { category: category.props } },
+    visibilityThreshold: { table: { category: category.props } },
+    scrollToMain: { table: { category: category.props } },
+    shadowRootNode: { control: false, table: { category: category.props } },
     children: {
       table: {
         category: category.props,
-        defaultValue: { summary: getScrollToTopButtonTextDefault() },
+        defaultValue: {
+          summary: defaultScrollToTopButtonTitle,
+        },
       },
     },
   },
-  args: {},
   globals: {
     backgrounds: {
       value: 'grey',
@@ -60,10 +43,8 @@ export const Preview: Story = {
   decorators: [
     (Story): JSX.Element => (
       <div className={'height100vh'}>
-        <main className={'scrollToTopContainer'} tabIndex={-1}>
-          <ExternalLayout />
-          <Story />
-        </main>
+        <ExternalLayout />
+        <Story />
       </div>
     ),
   ],

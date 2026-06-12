@@ -7,25 +7,29 @@ import {
   useLayoutEffect,
 } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getCommonFormVariantDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
-import { getSelectPlaceholderDefault } from './defaults';
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
+import { getAriaInvalid } from '../utils';
 import { SelectOption } from './SelectOption/SelectOption';
 
 import styles from './Select.module.scss';
 
-export const Select = (({
+export const defaultSelectPlaceholder = dsI18n.t('Shared:shared.ChooseValue');
+
+/**
+ * Select
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-select--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/select/) - Brukerveiledning
+ */
+export const Select = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -35,27 +39,24 @@ export const Select = (({
   helpSvgPath,
   helpText,
   label,
-  placeholder = getSelectPlaceholderDefault(),
+  placeholder = defaultSelectPlaceholder,
   titleHelpSvg,
-  variant = getCommonFormVariantDefault(),
   value,
-  autoComplete,
-  disabled,
+  ariaDescribedBy,
+  autoComplete = 'off',
+  disabled = false,
   form,
   name,
-  required,
-  hasSpacing,
-  hideLabel,
-  hidePlaceholder,
-  showRequiredMark,
+  required = false,
+  hasSpacing = false,
+  hideLabel = false,
+  hidePlaceholder = false,
   onBlur,
   onChange,
   onFocus,
   onHelpToggle,
   children,
 }: SelectProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
-
   const selectRef = useRef<HTMLSelectElement>(null);
   useImperativeHandle(ref, () => selectRef?.current as HTMLSelectElement);
 
@@ -63,14 +64,6 @@ export const Select = (({
   const generatedId = `selectId-${useId()}`;
   const descriptionId = `descId-${useId()}`;
   const selectId = externalId ?? generatedId;
-
-  const isLarge = variant === 'large';
-  const selectClassName = `${styles.select} ${
-    isLarge ? styles.select_large : ''
-  }`.trim();
-  const selectIconClassName = `${styles.selectIcon} ${
-    isLarge ? styles.selectIcon_large : ''
-  }`.trim();
 
   const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
   useLayoutEffect(() => {
@@ -104,12 +97,12 @@ export const Select = (({
         classNames={classNames}
         htmlFor={selectId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
         {label}
@@ -122,7 +115,7 @@ export const Select = (({
         <select
           ref={selectRef}
           id={selectId}
-          className={selectClassName}
+          className={styles.select}
           data-testid={dataTestId}
           autoComplete={autoComplete}
           disabled={disabled}
@@ -132,11 +125,15 @@ export const Select = (({
           value={value}
           defaultValue={defaultValue}
           aria-describedby={
-            [description && descriptionId, errorMessage && errorId]
+            [
+              ariaDescribedBy,
+              description && descriptionId,
+              errorMessage && errorId,
+            ]
               .filter(Boolean)
               .join(' ') || undefined
           }
-          aria-invalid={!!errorMessage || undefined}
+          aria-invalid={getAriaInvalid(errorMessage, required)}
           onBlur={onBlur}
           onChange={handleChange}
           onFocus={onFocus}
@@ -144,7 +141,7 @@ export const Select = (({
           {!hidePlaceholder && <option value={''}>{placeholder}</option>}
           {children}
         </select>
-        <ChevronDownIcon className={selectIconClassName} />
+        <ChevronDownIcon className={styles.selectIcon} />
       </div>
       <ErrorMessage
         id={errorId}
@@ -155,7 +152,9 @@ export const Select = (({
       </ErrorMessage>
     </div>
   );
-}) as SelectComponent;
+};
+
+export default Select as SelectComponent;
 
 Select.displayName = 'Select';
 Select.Option = SelectOption;

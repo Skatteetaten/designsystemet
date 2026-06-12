@@ -1,17 +1,26 @@
-import { useState, ChangeEvent, FocusEvent, JSX } from 'react';
+import {
+  useState,
+  ChangeEvent,
+  FocusEvent,
+  JSX,
+  ChangeEventHandler,
+  FocusEventHandler,
+} from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getCommonAutoCompleteDefault,
-  getCommonFormVariantDefault,
-  getAutoCompletePropDescription,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
+  useFormattedInput,
 } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -19,62 +28,29 @@ const meta = {
   title: 'Komponenter/TextField',
   argTypes: {
     // Props
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
-      },
-    },
-    classNames: {
-      control: false,
-      table: { category: category.props },
-    },
-    defaultValue: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    classNames: { control: false, table: { category: category.props } },
+    defaultValue: { control: 'text', table: { category: category.props } },
     characterLimit: { table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     label: { table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
-    thousandSeparator: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
     autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      description: getAutoCompletePropDescription(),
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: autoCompletePropDescription,
     },
-    disabled: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     inputMode: {
       control: 'inline-radio',
@@ -86,15 +62,11 @@ const meta = {
     pattern: { table: { category: category.htmlAttribute } },
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
-    value: {
-      control: 'text',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
+    value: { control: 'text', table: { category: category.htmlAttribute } },
     list: { control: 'text', table: { category: category.htmlAttribute } },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
@@ -113,31 +85,32 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
+  name: 'Beløp og postnummer',
   render: (_args): JSX.Element => {
-    const [creditInput, setCreditInput] = useState('10000');
+    const credit = useFormattedInput({
+      type: 'number',
+      initialValue: '10000',
+    });
 
-    const [postaCodeInput, setPostaCodeInput] = useState('');
+    const [postalCodeInput, setPostalCodeInput] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
     return (
       <form noValidate>
         <TextField
-          label={'Ønsket kredittgrense'}
+          label={'Ønsket kredittgrense (NOK)'}
           className={'textField300'}
           description={'Gjennomsnittlig oppgjør for fire dager'}
-          value={creditInput}
+          value={credit.value}
           hasSpacing
-          thousandSeparator
-          onChange={(e: ChangeEvent<HTMLInputElement>): void =>
-            setCreditInput(e.target.value)
-          }
+          onChange={credit.onChange}
         />
         <TextField
           label={'Postnummer'}
           name={'test'}
           className={'textField150'}
           errorMessage={errorMessage}
-          value={postaCodeInput}
+          value={postalCodeInput}
           maxLength={4}
           pattern={'\\d{4}'}
           required
@@ -147,14 +120,14 @@ export const Examples: Story = {
               setErrorMessage('Postnummer kan kun inneholde tall.');
             }
 
-            setPostaCodeInput(e.target.value);
+            setPostalCodeInput(e.target.value);
           }}
           onBlur={(e: FocusEvent<HTMLInputElement>): void => {
             if (e.target.validity.patternMismatch) {
               setErrorMessage('Postnummer må inneholde fire tall.');
             }
             if (e.target.validity.valueMissing) {
-              setErrorMessage('Postnummer er påkrevd.');
+              setErrorMessage('Postnummer må fylles ut.');
             }
           }}
         />
@@ -164,7 +137,101 @@ export const Examples: Story = {
 } satisfies Story;
 Examples.parameters = exampleParameters;
 
+export const WithTimeInput: Story = {
+  name: 'Tidspunkt',
+  render: (_args): JSX.Element => {
+    const [timeValue, setTimeValue] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    // Eksempel på enkel formateringsfunksjon
+    const formatTimeOnBlur = (raw: string): string => {
+      const digits = raw.replace(/\D/g, '');
+
+      if (digits.length === 0) return '';
+
+      let hh = 0;
+      let mm = 0;
+
+      if (digits.length === 1) {
+        hh = Number(digits);
+      } else if (digits.length === 2) {
+        hh = Number(digits.slice(0, 2));
+      } else if (digits.length === 3) {
+        hh = Number(digits.slice(0, 1));
+        mm = Number(digits.slice(1, 3));
+      } else {
+        hh = Number(digits.slice(0, 2));
+        mm = Number(digits.slice(2, 4));
+      }
+
+      const HH = String(hh).padStart(2, '0');
+      const MM = String(mm).padStart(2, '0');
+
+      if (hh > 23 || mm > 59) return raw;
+
+      return `${HH}:${MM}`;
+    };
+
+    const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+      setErrorMessage('');
+      setTimeValue(e.target.value);
+    };
+
+    const handleBlur: FocusEventHandler<HTMLInputElement> = (e) => {
+      const raw = e.currentTarget.value.trim();
+      const formatted = formatTimeOnBlur(raw);
+      const isValid = /^([01]?\d|2[0-3]):([0-5]\d)$/.test(formatted);
+
+      if (!isValid) {
+        setTimeValue(raw);
+        setErrorMessage('Skriv tiden med 24-timersformat, for eksempel 14:30.');
+      } else {
+        setTimeValue(formatted);
+        setErrorMessage('');
+      }
+    };
+
+    return (
+      <form noValidate>
+        <TextField
+          className={'textField150'}
+          errorMessage={errorMessage}
+          inputMode={'numeric'}
+          label={'Tid (tt:mm)'}
+          list={'time-suggestions'}
+          value={timeValue}
+          required
+          onBlur={handleBlur}
+          onChange={handleChange}
+        />
+        <datalist id={'time-suggestions'}>
+          <option value={'08:00'} />
+          <option value={'08:30'} />
+          <option value={'09:00'} />
+          <option value={'09:30'} />
+          <option value={'10:00'} />
+          <option value={'10:30'} />
+          <option value={'11:00'} />
+          <option value={'11:30'} />
+          <option value={'12:00'} />
+          <option value={'12:30'} />
+          <option value={'13:00'} />
+          <option value={'13:30'} />
+          <option value={'14:00'} />
+          <option value={'14:30'} />
+          <option value={'15:00'} />
+          <option value={'15:30'} />
+          <option value={'16:00'} />
+        </datalist>
+      </form>
+    );
+  },
+} satisfies Story;
+WithTimeInput.parameters = exampleParameters;
+
 export const WithDataList: Story = {
+  name: 'Liste med land',
+
   render: (_args): JSX.Element => {
     const countries = [
       { text: 'Afghanistan', key: 'AF' },
@@ -172,7 +239,7 @@ export const WithDataList: Story = {
       { text: 'Albania', key: 'AL' },
       { text: 'Algeria', key: 'DZ' },
       { text: 'American Samoa', key: 'AS' },
-      { text: 'AndorrA', key: 'AD' },
+      { text: 'Andorra', key: 'AD' },
       { text: 'Angola', key: 'AO' },
       { text: 'Anguilla', key: 'AI' },
       { text: 'Antarctica', key: 'AQ' },
@@ -414,15 +481,11 @@ export const WithDataList: Story = {
 
     return (
       <form noValidate>
-        <TextField label={'Nettleser'} list={'browsers'} />
-        <datalist id={'browsers'}>
-          <option value={'Edge'} />
-          <option value={'Firefox'} />
-          <option value={'Chrome'} />
-          <option value={'Opera'} />
-          <option value={'Safari'} />
-        </datalist>
-        <TextField label={'Land'} list={'countries'} />
+        <TextField
+          className={'textField300'}
+          label={'Land'}
+          list={'countries'}
+        />
         <datalist id={'countries'}>
           {countries.map(({ text, key }) => (
             <option key={key} value={text} />

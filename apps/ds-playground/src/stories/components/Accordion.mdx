@@ -25,6 +25,18 @@ import { Accordion } from '@skatteetaten/ds-collections';
 
 <Controls />
 
+## Standard med høyreikon
+
+<Canvas of={AccordionStories.StandardRightIcon} />
+
+## Liten med venstreikon
+
+<Canvas of={AccordionStories.SmallLeftIcon} />
+
+## Bakgrunnsfarge
+
+<Canvas of={AccordionStories.BackgroundColor} />
+
 ## Lazy loading av innhold
 
 Standard oppførsel er at alt innhold i Accordion.Item-komponenten rendres i dom, men skjules med display: none dersom den er lukket. Hvis man ønsker at innholdet ikke rendres før elementet har blitt åpnet, kan man for eksempel bruke følgende wrapper:
@@ -43,7 +55,7 @@ const LazyAccordionItem = ({
 };
 ```
 
-## I venstremeny
+## Med virksomhetsinfo
 
 <Canvas of={AccordionStories.LeftMenu} />
 

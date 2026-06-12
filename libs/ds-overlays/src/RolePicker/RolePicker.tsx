@@ -10,52 +10,45 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  formatNationalIdentityNumber,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { FavoriteSVGpath, LogOutSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
-import {
-  getRolePickerHideCloseButtonDefault,
-  getRolePickerMinimumEntitiesForSearchDefault,
-  getRolePickerShowDeceasedPeopleDefault,
-  getRolePickerShowInactiveBusinessesDefault,
-  getRolePickerShowSubunitsDefault,
-} from './defaults';
+import { rolePickerAnalyticsIds } from './analyticsIds';
 import { Business, Entity, RolePickerProps } from './RolePicker.types';
-import {
-  getModalDismissOnEscDefault,
-  getModalDismissOnOutsideClickDefault,
-} from '../Modal/defaults';
 import { Modal } from '../Modal/Modal';
 import { RolePickerBusinessList } from './RolePickerBusinessList/RolePickerBusinessList';
 import { RolePickerContext } from './RolePickerContext';
 import { RolePickerFilterInput } from './RolePickerFilterInput/RolePickerFilterInput';
 import { RolePickerPeopleList } from './RolePickerPeopleList/RolePickerPeopleList';
 import { RolePickerRow } from './RolePickerRow/RolePickerRow';
+import { getPersonDescription } from './utils';
 
 import styles from './RolePicker.module.scss';
 
+/**
+ * RolePicker
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-rolepicker--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolepicker/) - Brukerveiledning
+ */
 export const RolePicker = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   me,
   businesses,
   people,
   title,
-  dismissOnEsc = getModalDismissOnEscDefault(),
-  dismissOnOutsideClick = getModalDismissOnOutsideClickDefault(),
-  hideCloseButton = getRolePickerHideCloseButtonDefault(),
-  minimumEntitiesForSearch = getRolePickerMinimumEntitiesForSearchDefault(),
-  showInactiveBusinesses = getRolePickerShowInactiveBusinessesDefault(),
-  showSubunits = getRolePickerShowSubunitsDefault(),
-  showDeceasedPeople = getRolePickerShowDeceasedPeopleDefault(),
+  dismissOnEsc = true,
+  dismissOnOutsideClick = true,
+  hideCloseButton = false,
+  minimumEntitiesForSearch = 11,
+  showInactiveBusinesses = false,
+  showSubunits = true,
+  showDeceasedPeople = false,
   onClose,
   onEntitySelect,
   onLogout,
@@ -124,7 +117,7 @@ export const RolePicker = ({
   const noValidBusinesses =
     !me && !people && businesses && businesses.total === 0;
 
-  let internalTitle = title ? title : t('rolepicker.Heading');
+  let internalTitle = title ?? t('rolepicker.Heading');
 
   if (noValidBusinesses) {
     internalTitle = t('rolepicker.NoBusinessesErrorTitle');
@@ -183,9 +176,10 @@ export const RolePicker = ({
               <RolePickerRow
                 id={me.personId}
                 title={t('rolepicker.MeHeading')}
-                description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(me.personId)}`}
+                description={getPersonDescription(me)}
                 svgPath={FavoriteSVGpath}
                 titleAs={'h2'}
+                webAnalyticsId={rolePickerAnalyticsIds.me}
                 onClick={() => handleEntitySelect(me)}
               />
             ) : null}
@@ -236,6 +230,12 @@ export const RolePicker = ({
             ) : (
               <>
                 <Button
+                  ref={(node) => {
+                    node?.setAttribute(
+                      'data-webanalytics-id',
+                      rolePickerAnalyticsIds.logout
+                    );
+                  }}
                   variant={'secondary'}
                   svgPath={LogOutSVGpath}
                   onClick={onLogout}

@@ -2,12 +2,7 @@ import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getPopoverColorDefault,
-  getPopoverPositionDefault,
-  getPopoverRestoreFocusDefault,
-  Popover,
-} from '@skatteetaten/ds-overlays';
+import { Popover } from '@skatteetaten/ds-overlays';
 import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -17,33 +12,33 @@ import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Popover,
-  title: 'Komponenter/Popover/Popover',
+  title: 'Komponenter/Popover',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
     color: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPopoverColorDefault() },
-      },
+      table: { category: category.props, defaultValue: { summary: 'forest' } },
     },
-    disableAutoDismiss: { table: { category: category.props } },
-    disableAutoDismissOnMobile: { table: { category: category.props } },
+    disableAutoDismiss: {
+      table: { category: category.props, defaultValue: { summary: 'true' } },
+    },
+    disableAutoDismissOnMobile: {
+      table: { category: category.props, defaultValue: { summary: 'true' } },
+    },
     position: {
       table: {
         category: category.props,
-        defaultValue: { summary: getPopoverPositionDefault().toString() },
+        defaultValue: { summary: 'bottomStart' },
       },
     },
     shouldRestoreFocus: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPopoverRestoreFocusDefault().toString() },
-      },
+      table: { category: category.props, defaultValue: { summary: 'true' } },
     },
-    isOpen: { table: { category: category.props } },
-    //Events
-    onClose: { ...htmlEventDescription, table: { disable: true } },
+    isOpen: {
+      table: { category: category.props, defaultValue: { summary: 'false' } },
+    },
+    // Events
+    onClose: { ...htmlEventDescription },
   },
 } satisfies Meta<typeof Popover>;
 export default meta;
@@ -70,7 +65,7 @@ export const Example: Story = {
     return (
       <>
         <div className={'flex gapS'}>
-          <Heading id={h2Id} as={'h2'} level={2}>
+          <Heading id={h2Id} as={'h2'}>
             {'Disse tingene må du huske på før du henter skattekortet'}
           </Heading>
           <Popover color={'ochre'} position={'bottomEnd'}>
@@ -94,7 +89,7 @@ export const Example: Story = {
         </Paragraph>
 
         <div className={'flex gapS'}>
-          <Heading id={h3Id} as={'h3'} level={3}>
+          <Heading id={h3Id} as={'h3'}>
             {'Disse tingene må du huske på før du henter skattekortet'}
           </Heading>
           <Popover color={'ochre'} position={'bottomEnd'}>
@@ -176,7 +171,7 @@ export const Example: Story = {
         </Table>
 
         <div className={'flex gapS'}>
-          <Heading id={controlledId} as={'h2'} level={2}>
+          <Heading id={controlledId} as={'h2'}>
             {'Controlled Popover'}
           </Heading>
           <Popover

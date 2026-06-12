@@ -5,7 +5,7 @@ import { DescriptionList } from '@skatteetaten/ds-content';
 
 const meta = {
   component: DescriptionList,
-  title: 'Tester/DescriptionList/DescriptionList',
+  title: 'Tester/DescriptionList',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -70,7 +70,7 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByTestId('123ID');
@@ -94,9 +94,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -115,7 +113,6 @@ export const Defaults = {
   argTypes: {
     children: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disable: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const descriptionNode = canvas.getByText('Kenneth Performance');

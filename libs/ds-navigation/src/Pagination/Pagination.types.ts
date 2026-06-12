@@ -1,4 +1,4 @@
-import { Ref } from 'react';
+import { FunctionComponent, Ref } from 'react';
 
 import { TFunction } from 'i18next';
 
@@ -65,7 +65,8 @@ type PaginationDiscriminatedProp =
 export type PaginationProps = PaginationCommonProps &
   PaginationDiscriminatedProp;
 
-export interface PaginationComponent extends React.FC<PaginationProps> {
+export interface PaginationComponent
+  extends FunctionComponent<PaginationProps> {
   List: typeof PaginationList;
 }
 

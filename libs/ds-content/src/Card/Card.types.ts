@@ -1,4 +1,9 @@
-import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  FunctionComponent,
+  ReactNode,
+  Ref,
+} from 'react';
 
 import { BaseProps, Color, Spacing } from '@skatteetaten/ds-core-utils';
 
@@ -37,7 +42,7 @@ export interface CardComponentCommonProps extends BaseProps {
 
 export type CardProps = CardComponentCommonProps;
 
-export interface CardComponent extends React.FC<CardProps> {
+export interface CardComponent extends FunctionComponent<CardProps> {
   Alert: typeof CardAlert;
   Actions: typeof CardActions;
   Content: typeof CardContent;

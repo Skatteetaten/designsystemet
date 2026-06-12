@@ -25,7 +25,7 @@ const LangPickerTemplate: StoryFn<typeof TopBannerLangPicker> = (args) => {
 
 const meta = {
   component: TopBannerLangPicker,
-  title: 'Tester/TopBanner/TopBannerLangPicker (intern)',
+  title: 'Tester/TopBannerExternal/LangPicker (intern)',
   render: LangPickerTemplate,
   argTypes: {
     // Baseprops
@@ -41,12 +41,16 @@ const meta = {
     openMenu: { table: { disable: true } },
     setOpenMenu: { table: { disable: true } },
     menuButtonRef: { table: { disable: true } },
+    additionalLanguages: { table: { disable: true } },
+    otherLanguagesURL: { table: { disable: true } },
+    isInMobileMenu: { table: { disable: true } },
+    selectedLang: { table: { disable: true } },
     // Events
     onLanguageClick: { table: { disable: true } },
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    chromatic: { disableSnapshot: false },
   },
 } as Meta<typeof TopBannerLangPicker>;
 export default meta;
@@ -76,7 +80,7 @@ export const WithRef = {
     ref: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -101,9 +105,8 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    chromatic: { disableSnapshot: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -199,7 +202,7 @@ export const CloseMenuWhenClickOnLangButton = {
     ...defaultArgs,
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -243,6 +246,25 @@ export const WithKeyboardNavigation = {
     await expect(listItems[1].firstChild).toHaveFocus();
   },
   parameters: {
-    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+} satisfies Story;
+
+const otherLanguagesURL =
+  'https://www.skatteetaten.no/person/utenlandsk/skal-du-arbeide-i-norge/film_no/';
+
+export const WithOtherLanguagesLink = {
+  args: {
+    ...defaultArgs,
+    otherLanguagesURL,
+  },
+  argTypes: { otherLanguagesURL: { table: { disable: false } } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button');
+    await userEvent.click(menuButton);
+    const otherLanguagesLink = canvas.getByRole('link');
+    await expect(otherLanguagesLink).toBeInTheDocument();
+    await expect(otherLanguagesLink).toHaveAttribute('href', otherLanguagesURL);
   },
 } satisfies Story;

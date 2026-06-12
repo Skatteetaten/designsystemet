@@ -68,10 +68,10 @@
       }
     },
     "test": {
-      "executor": "@nx/vite:test",
+      "executor": "@nx/vitest:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/libs/ds-forms"
+        "reportsDirectory": "{projectRoot}/../../coverage/libs/ds-forms"
       }
     }
   }

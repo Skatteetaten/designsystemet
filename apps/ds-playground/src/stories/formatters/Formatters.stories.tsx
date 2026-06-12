@@ -1,7 +1,29 @@
+import { useEffect, useState } from 'react';
+
 import { StoryObj } from '@storybook/react-vite';
 
-import { useFormattedInput } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  useFormattedInput,
+  type FormattedInputStatus,
+} from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
+
+const mapStatusToMessage = (
+  status: FormattedInputStatus
+): string | undefined => {
+  switch (status) {
+    case 'maxDigitsReached':
+      return 'Du kan ikke legge inn flere siffer';
+    case 'maxDecimalsReached':
+      return 'Du kan ikke legge inn flere desimaler';
+    case 'duplicateDecimalSeparator':
+      return 'Desimalskilletegn er allerede lagt inn';
+    case 'valid':
+      return undefined;
+  }
+};
 
 export default {
   title: 'Verktøy/Formatters',
@@ -19,6 +41,18 @@ const defaultArgs = {
 export const Formatters: StoryObj = {
   argTypes: defaultArgs,
   render: function Render() {
+    const [locale, setLocale] = useState(dsI18n.language.replace('_', '-'));
+
+    useEffect(() => {
+      const handleLanguageChange = (lng: string): void => {
+        setLocale(lng.replace('_', '-'));
+      };
+      dsI18n.on('languageChanged', handleLanguageChange);
+      return (): void => {
+        dsI18n.off('languageChanged', handleLanguageChange);
+      };
+    }, []);
+
     const phoneNumberFormatter = useFormattedInput({
       type: 'phoneNumber',
       initialValue: '12345678',
@@ -39,6 +73,22 @@ export const Formatters: StoryObj = {
       initialValue: '76940524802',
     });
 
+    const numberFormatter = useFormattedInput({
+      type: 'number',
+      initialValue: '50400,32',
+      locale: locale,
+    });
+
+    const decimalNumberFormatter = useFormattedInput({
+      type: 'number',
+      initialValue: '50400,32',
+      locale: locale,
+      allowDecimals: true,
+    });
+
+    console.log('displayValue: ', decimalNumberFormatter.value);
+    console.log('rawValue: ', decimalNumberFormatter.rawValue);
+    console.log('numberValue: ', decimalNumberFormatter.numberValue);
     return (
       <>
         <TextField
@@ -57,7 +107,6 @@ export const Formatters: StoryObj = {
           onChange={organisationNumberFormatter.onChange}
           onKeyDown={organisationNumberFormatter.onKeyDown}
         />
-
         <TextField
           label={'Fødselsnummer (11 siffer)'}
           value={nationalIdentityNumberFormatter.value}
@@ -70,9 +119,42 @@ export const Formatters: StoryObj = {
           label={'Kontonummer'}
           value={bankAccountNumberFormatter.value}
           className={'textField300'}
+          hasSpacing
           onChange={bankAccountNumberFormatter.onChange}
           onKeyDown={bankAccountNumberFormatter.onKeyDown}
         />
+        <TextField
+          label={'Beløp'}
+          description={`Formatert etter valgt språk: ${locale}`}
+          value={numberFormatter.value}
+          className={'textField300'}
+          hasSpacing
+          onChange={numberFormatter.onChange}
+          onKeyDown={numberFormatter.onKeyDown}
+        />
+        <Alert
+          className={'textField300'}
+          variant={'warning'}
+          showAlert={numberFormatter.status !== 'valid'}
+        >
+          {mapStatusToMessage(numberFormatter.status)}
+        </Alert>
+        <TextField
+          label={'Beløp med desimal'}
+          description={`Formatert etter valgt språk: ${locale}`}
+          value={decimalNumberFormatter.value}
+          className={'textField300'}
+          hasSpacing
+          onChange={decimalNumberFormatter.onChange}
+          onKeyDown={decimalNumberFormatter.onKeyDown}
+        />
+        <Alert
+          className={'textField300'}
+          variant={'warning'}
+          showAlert={decimalNumberFormatter.status !== 'valid'}
+        >
+          {mapStatusToMessage(decimalNumberFormatter.status)}
+        </Alert>
       </>
     );
   },

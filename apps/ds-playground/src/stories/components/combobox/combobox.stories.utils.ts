@@ -3,6 +3,81 @@ import type {
   TypedComboboxOption,
 } from '@skatteetaten/ds-forms';
 
+export const kommuneOptions: ComboboxOption[] = [
+  {
+    label: 'Agdenes',
+    value: 'agdenes',
+  },
+  {
+    label: 'Balestrand',
+    value: 'balestrand',
+  },
+  {
+    label: 'Finnøy',
+    value: 'finnoy',
+  },
+  {
+    label: 'Forsand',
+    value: 'forsand',
+  },
+  {
+    label: 'Grimstad',
+    value: 'grimstad',
+  },
+  {
+    label: 'Kristiansand',
+    value: 'kristiansand',
+  },
+  {
+    label: 'Kvalsund',
+    value: 'kvalsund',
+  },
+  {
+    label: 'Mandal',
+    value: 'mandal',
+  },
+  {
+    label: 'Meløy',
+    value: 'meloy',
+  },
+  {
+    label: 'Midsund',
+    value: 'midsund',
+  },
+  {
+    label: 'Nordre Flesberg Kommune',
+    value: 'nordre_flesberg_kommune',
+  },
+  {
+    label: 'Nordre Follo',
+    value: 'nordre_follo',
+  },
+  {
+    label: 'Oslo',
+    value: 'oslo',
+  },
+  {
+    label: 'Rennesøy',
+    value: 'rennesoy',
+  },
+  {
+    label: 'Songdalen',
+    value: 'songdalen',
+  },
+  {
+    label: 'Trondheim',
+    value: 'trondheim',
+  },
+  {
+    label: 'Tysfjord',
+    value: 'tysfjord',
+  },
+  {
+    label: 'Vennesla',
+    value: 'vennesla',
+  },
+];
+
 export const comboboxStoryOptions: ComboboxOption[] = [
   { label: 'Aker', value: 'aker' },
   { label: 'Ankenes', value: 'ankenes' },
@@ -344,11 +419,10 @@ export const typedKommuneOptions: TypedComboboxOption<KommuneTestMetaData>[] = [
   },
 ];
 
-export const getComboboxStoryOptions = (count = 15): ComboboxOption[] => {
-  const shuffled = [...comboboxStoryOptions].sort(() => 0.5 - Math.random());
-  return shuffled
-    .slice(0, count)
-    .sort((a, b) => a.label.localeCompare(b.label));
+export const getComboboxStoryOptions = (): ComboboxOption[] => {
+  return [...comboboxStoryOptions].sort((a, b) =>
+    a.label.localeCompare(b.label, 'nb')
+  );
 };
 
 export const generatePerformanceTestData = (
@@ -370,3 +444,70 @@ export const generatePerformanceTestData = (
 
   return result;
 };
+
+export const groupedKommuneOptions: ComboboxOption[] = [
+  { label: 'Bodø', value: 'bodo', group: 'Nordland' },
+  { label: 'Bergen', value: 'bergen', group: 'Vestland' },
+  { label: 'Drammen', value: 'drammen', group: 'Oslo og Viken' },
+  { label: 'Eigersund', value: 'eigersund', group: 'Rogaland' },
+  { label: 'Fredrikstad', value: 'fredrikstad', group: 'Oslo og Viken' },
+  { label: 'Førde', value: 'forde', group: 'Vestland' },
+  { label: 'Haugesund', value: 'haugesund', group: 'Rogaland' },
+  { label: 'Levanger', value: 'levanger', group: 'Trøndelag' },
+  { label: 'Lillestrøm', value: 'lillestrom', group: 'Oslo og Viken' },
+  { label: 'Mo i Rana', value: 'mo-i-rana', group: 'Nordland' },
+  { label: 'Mosjøen', value: 'mosjoen', group: 'Nordland' },
+  { label: 'Narvik', value: 'narvik', group: 'Nordland' },
+  { label: 'Orkland', value: 'orkland', group: 'Trøndelag' },
+  { label: 'Oslo', value: 'oslo', group: 'Oslo og Viken' },
+  { label: 'Sandnes', value: 'sandnes', group: 'Rogaland' },
+  { label: 'Sarpsborg', value: 'sarpsborg', group: 'Oslo og Viken' },
+  { label: 'Sogndal', value: 'sogndal', group: 'Vestland' },
+  { label: 'Stavanger', value: 'stavanger', group: 'Rogaland' },
+  { label: 'Steinkjer', value: 'steinkjer', group: 'Trøndelag' },
+  { label: 'Stjørdal', value: 'stjordal', group: 'Trøndelag' },
+  { label: 'Trondheim', value: 'trondheim', group: 'Trøndelag' },
+  { label: 'Voss', value: 'voss', group: 'Vestland' },
+];
+
+export const groupedOptions: ComboboxOption[] = [
+  { label: 'Alexander', value: 'alexander', group: 'Riggmestere' },
+  { label: 'Ann', value: 'ann', group: 'Riggmestere' },
+  { label: 'August', value: 'august', group: 'Riggmestere' },
+  { label: 'Cecilie', value: 'cecilie', group: 'Riggmestere' },
+  { label: 'Johannes', value: 'johannes', group: 'Riggmestere' },
+  { label: 'Jørgen', value: 'jorgen', group: 'Riggmestere' },
+  { label: 'Marion', value: 'marion', group: 'Riggmestere' },
+  { label: 'Marit', value: 'marit', group: 'Riggmestere' },
+  { label: 'Naser', value: 'naser', group: 'Riggmestere' },
+  { label: 'Olav', value: 'olav', group: 'Riggmestere' },
+  { label: 'Torbjørn', value: 'torbjorn', group: 'Riggmestere' },
+  { label: 'Vivek', value: 'vivek', group: 'Riggmestere' },
+  { label: 'Saja', value: 'saja', group: 'Navigatører' },
+  { label: 'Trond', value: 'trond', group: 'Navigatører' },
+  { label: 'Andreas', value: 'andreas', group: 'Kartografer' },
+  { label: 'Camilla', value: 'camilla', group: 'Kartografer' },
+  { label: 'Eivind', value: 'eivind', group: 'Kartografer' },
+  { label: 'Ken', value: 'ken', group: 'Styring' },
+  { label: 'Nina', value: 'nina', group: 'Styring' },
+  { label: 'Iuliia', value: 'iuliia', group: 'Speidere' },
+  { label: 'Khoa', value: 'khoa', group: 'Speidere' },
+  { label: 'Ove', value: 'ove', group: 'Speidere' },
+];
+
+/** Eksempel med blanding av grupperte og ugrupperte options */
+export const mixedGroupedOptions: ComboboxOption[] = [
+  // Ugrupperte alternativer først
+  { label: 'Alle kommuner', value: 'alle' },
+  { label: 'Ingen valgt', value: 'ingen' },
+  // Grupperte alternativer
+  { label: 'Trondheim', value: 'trondheim', group: 'Trøndelag' },
+  { label: 'Steinkjer', value: 'steinkjer', group: 'Trøndelag' },
+  { label: 'Bergen', value: 'bergen', group: 'Vestland' },
+  { label: 'Voss', value: 'voss', group: 'Vestland' },
+  // Ugrupperte alternativer mellom grupper
+  { label: 'Annen kommune', value: 'annen' },
+  // Flere grupperte
+  { label: 'Stavanger', value: 'stavanger', group: 'Rogaland' },
+  { label: 'Sandnes', value: 'sandnes', group: 'Rogaland' },
+];

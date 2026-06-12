@@ -3,49 +3,47 @@ import { useTranslation } from 'react-i18next';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { Panel } from '@skatteetaten/ds-content';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { CheckIcon, EditSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import {
-  getStepListStepEditButtonTextDefault,
-  getStepListStepNextButtonTextDefault,
-  getStepListStepShouldAutoFocusWhenActiveDefault,
-  getStepListStepTitleAsDefault,
-  getStepListStepVariantDefault,
-} from './defaults';
 import { StepListStepProps } from './StepListStep.types';
 
 import styles from './StepListStep.module.scss';
 
+export const defaultEditButtonText = dsI18n.t('ds_collections:steplist.Edit');
+export const defaultNextButtonText = dsI18n.t('ds_collections:steplist.Next');
+
 export const StepListStep = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  editButtonText = getStepListStepEditButtonTextDefault(),
+  editButtonText = defaultEditButtonText,
+  classNames,
   introContent,
   introTitle,
   introTitleAs,
   nextButtonProps,
-  nextButtonText = getStepListStepNextButtonTextDefault(),
+  nextButtonText = defaultNextButtonText,
   stepNumber,
   svgPath,
   svgTitle,
   title,
-  titleAs = getStepListStepTitleAsDefault(),
-  variant = getStepListStepVariantDefault(),
+  titleAs = 'h3',
+  variant = 'passive',
   onEdit,
   onNext,
-  hasResultContentFullWidth,
-  shouldAutoFocusWhenActive = getStepListStepShouldAutoFocusWhenActiveDefault(),
+  hasResultContentFullWidth = false,
+  shouldAutoFocusWhenActive = true,
   children,
 }: StepListStepProps): JSX.Element => {
   const { t } = useTranslation('ds_collections', { i18n: dsI18n });
   const innerRef = useRef<HTMLDivElement>(null);
   const generatedId = useId();
   const titleId = `steptitle-${id ?? generatedId}`;
+  const isMobile = !useMediaQuery('(min-width: 640px)');
 
   useEffect(() => {
     if (
@@ -112,7 +110,7 @@ export const StepListStep = ({
         id={titleId}
         className={styles.stepHeading}
         as={titleAs}
-        level={5}
+        level={isMobile ? 5 : 4}
       >
         {title}
       </Heading>
@@ -129,7 +127,7 @@ export const StepListStep = ({
       )}
 
       <div
-        className={styles.stepContent}
+        className={`${styles.stepContent} ${classNames?.content ?? ''}`.trim()}
         data-full-width={hasResultContentFullWidth || undefined}
       >
         <div>{children}</div>

@@ -1,20 +1,25 @@
-import { useContext, useId, JSX } from 'react';
+import { useContext, useId, JSX, KeyboardEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import {
-  getCommonClassNameDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from './Checkbox.types';
 import { CheckboxContext } from '../CheckboxGroup/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { getAriaInvalid } from '../utils';
 
 import styles from './Checkbox.module.scss';
 
+/**
+ * Checkbox
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-checkbox--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkbox/) - Brukerveiledning
+ */
 export const Checkbox = ({
   ref,
   id: idExternal,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -22,21 +27,21 @@ export const Checkbox = ({
   errorMessage,
   checked,
   defaultChecked,
-  disabled,
+  disabled = false,
   form,
   name,
-  required,
+  readOnly = false,
+  required = false,
   value,
   ariaDescribedby,
-  hasSpacing,
-  hideLabel,
-  showRequiredMark,
+  hasSpacing = false,
+  hideLabel = false,
   onChange,
   onBlur,
   onFocus,
   children,
 }: CheckboxProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
+  const { t } = useTranslation('Shared', { i18n: dsI18n });
   const context = useContext(CheckboxContext);
   const errorIdExternal = context?.errorId;
 
@@ -45,17 +50,10 @@ export const Checkbox = ({
   const uniqueErrorId = `checkboxErrorId-${useId()}`;
   const errorIdInternal = errorIdExternal ?? uniqueErrorId;
   const descriptionId = `descId-${useId()}`;
-  const hasErrorInternal = errorIdExternal && !checked ? true : !!errorMessage;
-
-  const spacingBottomClassName = context ? styles.containerSpacingBottom : '';
-  const checkboxErrorClassName = hasErrorInternal
-    ? styles.labelCheckbox_error
-    : '';
-  const labelErrorClassName =
-    hasErrorInternal && !context && required ? styles.label_error : '';
-  const labelRequiredClassName =
-    !context && showRequiredMark ? styles.labelContent_required : '';
-  const hideLabelClassName = hideLabel ? styles.srOnly : '';
+  const isControlled = checked !== undefined;
+  const isChecked = checked ?? defaultChecked ?? false;
+  const hasErrorInternal =
+    errorIdExternal && !isChecked ? true : !!errorMessage;
 
   const ariaDescribedbyInput = [
     description && descriptionId,
@@ -66,54 +64,77 @@ export const Checkbox = ({
     .join(' ')
     .trim();
 
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>): void => {
+    if (
+      (context?.readOnly || readOnly) &&
+      (event.key === ' ' ||
+        event.key === 'Enter' ||
+        event.key === 'ArrowUp' ||
+        event.key === 'ArrowDown' ||
+        event.key === 'ArrowLeft' ||
+        event.key === 'ArrowRight')
+    ) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <div
-      className={`${styles.container} ${spacingBottomClassName} ${className}`.trim()}
+      className={`${styles.container} ${className}`.trim()}
       lang={lang}
       data-has-spacing={hasSpacing}
     >
-      <input
-        ref={ref}
-        id={inputIdInternal}
-        className={styles.input}
-        data-testid={dataTestId}
-        checked={checked}
-        defaultChecked={defaultChecked}
-        disabled={disabled}
-        form={form}
-        name={name}
-        required={required}
-        type={'checkbox'}
-        value={value}
-        aria-describedby={ariaDescribedbyInput || undefined}
-        aria-invalid={hasErrorInternal}
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-      />
-      <label
-        htmlFor={inputIdInternal}
-        className={`${styles.label} ${labelErrorClassName} ${
-          classNames?.label ?? ''
-        }`.trim()}
-      >
-        <span
-          className={`${styles.labelCheckbox} ${checkboxErrorClassName}`.trim()}
+      <div className={styles.checkbox}>
+        <input
+          ref={ref}
+          id={inputIdInternal}
+          className={styles.checkboxInput}
+          data-testid={dataTestId}
+          {...(isControlled ? { checked } : { defaultChecked })}
+          disabled={disabled}
+          form={form}
+          name={name}
+          required={required}
+          type={'checkbox'}
+          value={value}
+          data-read-only={readOnly || context?.readOnly || undefined}
+          aria-describedby={ariaDescribedbyInput || undefined}
+          aria-invalid={getAriaInvalid(
+            errorMessage || errorIdExternal,
+            required
+          )}
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+          onKeyDown={handleKeyDown}
+        />
+        <label
+          htmlFor={inputIdInternal}
+          className={`${styles.checkboxLabel} ${hideLabel ? styles.srOnly : ''} ${
+            classNames?.label ?? ''
+          }`.trim()}
         >
-          <span className={styles.labelCheckboxCheck}></span>
-        </span>
-        <span className={`${styles.labelContent} ${hideLabelClassName}`.trim()}>
-          <span className={labelRequiredClassName}>
+          <span>
             {children}
-            {description && <>&nbsp;</>}
+            {(readOnly || context?.readOnly) && (
+              <span
+                className={styles.srOnly}
+              >{`, ${t('shared.ReadOnly')}`}</span>
+            )}
           </span>
           {description && (
-            <span id={descriptionId} className={styles.labelContentDescription}>
-              {description}
-            </span>
+            <>
+              &nbsp;
+              <span
+                id={descriptionId}
+                className={styles.checkboxLabelDescription}
+              >
+                {description}
+              </span>
+            </>
           )}
-        </span>
-      </label>
+        </label>
+      </div>
       {!context && (
         <ErrorMessage
           id={errorIdInternal}

@@ -12,7 +12,7 @@ import {
 
 const meta = {
   component: TopBannerInternal.ActionMenu,
-  title: 'Tester/TopBanner/TopBannerInternalActionMenu',
+  title: 'Tester/TopBannerInternal/ActionMenu',
   argTypes: {
     children: { control: 'text', table: { disable: true } },
     id: { table: { disable: true } },
@@ -27,6 +27,10 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+    // color contrast issue
+    a11y: {
+      test: 'off',
+    },
   },
   globals: {
     backgrounds: {
@@ -37,6 +41,25 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+export const WithRef = {
+  name: 'With Ref (FA1)',
+  args: {
+    ref: (instance: HTMLElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await expect(button).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+} satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes',
@@ -54,31 +77,6 @@ export const WithAttributes = {
     await expect(actionMenu).toHaveAttribute('lang', 'en');
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
-    imageSnapshot: { disableSnapshot: true },
-  },
-} satisfies Story;
-
-export const WithRef = {
-  name: 'With Ref (FA1)',
-  args: {
-    ref: (instance: HTMLElement | null): void => {
-      if (instance) {
-        instance.id = 'dummyIdForwardedFromRef';
-      }
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await expect(button).toHaveAttribute('id', 'dummyIdForwardedFromRef');
-  },
-  parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;
@@ -92,9 +90,6 @@ export const WithDefaults = {
     await fireEvent.click(menuButton);
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
@@ -144,10 +139,5 @@ export const WithImperativeActions = {
     await expect(menuContent).not.toBeInTheDocument();
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
     await expect(menuButton).toHaveFocus();
-  },
-  parameters: {
-    a11y: {
-      test: 'off',
-    },
   },
 } satisfies Story;

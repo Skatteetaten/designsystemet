@@ -1,4 +1,9 @@
-import { ComponentPropsWithoutRef, ReactNode, Ref } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  FunctionComponent,
+  ReactNode,
+  Ref,
+} from 'react';
 
 import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
 
@@ -9,6 +14,7 @@ export type ChipSize = Extract<Size, 'small' | 'medium'>;
 
 interface ChipsHTMLAttributes {
   ariaLabel?: ComponentPropsWithoutRef<'ul'>['aria-label'];
+  ariaLabelledBy?: ComponentPropsWithoutRef<'ul'>['aria-labelledby'];
 }
 
 export interface ChipsProps extends BaseProps, ChipsHTMLAttributes {
@@ -28,7 +34,7 @@ export interface ChipCommonProps extends BaseProps, ChipHTMLAttributes {
   children: string | string[];
 }
 
-export interface ChipsComponent extends React.FC<ChipsProps> {
+export interface ChipsComponent extends FunctionComponent<ChipsProps> {
   Toggle: typeof ChipsToggle;
   Removable: typeof ChipsRemovable;
 }

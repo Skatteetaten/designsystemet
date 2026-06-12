@@ -2,23 +2,25 @@ import { MouseEventHandler, ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
-  Density,
   HeadingAs,
   Position,
+  Size,
 } from '@skatteetaten/ds-core-utils';
 
-type IconPosition = Extract<Position, 'left' | 'right'>;
+export type OpenCloseIconPosition = Extract<Position, 'left' | 'right'>;
+
+export type OpenCloseSize = Extract<Size, 'small' | 'medium' | 'large'>;
 
 export interface OpenCloseProps extends BaseProps {
   ref?: Ref<HTMLButtonElement>;
   /** Posisjonen til ikonet */
-  iconPosition?: IconPosition;
+  iconPosition?: OpenCloseIconPosition;
   /** Tekst på knappen */
   title: string;
   /** Rendrer knappen som heading på gitt nivå */
-  titleAs?: HeadingAs;
-  /** Viser en kompakt versjon med mindre tekst og avstander */
-  variant?: Density;
+  titleAs?: HeadingAs | 'div';
+  /** Størrelse */
+  size?: OpenCloseSize;
   /** Om innholdet skal vises */
   isExpanded?: boolean;
   /** Om innholdet skal vises når siden lastes? (Ukontrollert tilstand) */

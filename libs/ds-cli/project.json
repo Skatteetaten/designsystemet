@@ -58,10 +58,10 @@
       }
     },
     "test": {
-      "executor": "@nx/vite:test",
+      "executor": "@nx/vitest:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/libs/ds-cli"
+        "reportsDirectory": "{projectRoot}/../../coverage/libs/ds-cli"
       }
     }
   }

@@ -6,7 +6,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: Card,
-  title: 'Tester/Card/Card',
+  title: 'Tester/Card',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -78,9 +78,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -158,7 +156,7 @@ const TemplateWithAlert: StoryFn<typeof Card> = (args) => (
   <Card {...args}>
     <Card.Alert title={'Informasjon'}>{'Alert message content'}</Card.Alert>
     <Card.Header>
-      <Heading id={args.ariaLabelledBy} as={'h3'} level={3}>
+      <Heading id={args.ariaLabelledBy} as={'h3'}>
         {'Card Heading'}
       </Heading>
     </Card.Header>

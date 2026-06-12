@@ -81,9 +81,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -92,6 +90,28 @@ export const WithAttributes = {
     await expect(cardNote).toHaveClass('dummyClassname');
     await expect(cardNote).toHaveAttribute('lang', 'en');
     await expect(cardNote).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      rightContent: 'dummyClassname',
+    },
+    rightContent: <Tag svgPath={InfoOutlineSVGpath}>{'Endret av deg'}</Tag>,
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const rightContent = canvas.getByText('Endret av deg');
+    await expect(rightContent?.parentElement).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

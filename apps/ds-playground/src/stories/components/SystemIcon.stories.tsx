@@ -2,16 +2,9 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  Icon,
-  getIconVariantDefault,
-  getIconSizeDefault,
-  DeploySVGpath,
-  DeployIcon,
-} from '@skatteetaten/ds-icons';
+import { Icon, DeploySVGpath, DeployIcon } from '@skatteetaten/ds-icons';
 
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import { category, svgPathDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -19,26 +12,10 @@ const meta = {
   title: 'Komponenter/Icon/SystemIcon',
   argTypes: {
     // Props
-    size: {
-      control: 'select',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getIconSizeDefault() },
-      },
-    },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    size: { table: { category: category.props } },
+    svgPath: { ...svgPathDescription },
     title: { table: { category: category.props } },
-    variant: {
-      control: { disable: true },
-      table: {
-        category: category.props,
-        defaultValue: { summary: getIconVariantDefault() },
-      },
-    },
+    variant: { control: false, table: { category: category.props } },
     // Aria
     ariaLabel: { table: { category: category.aria } },
   },

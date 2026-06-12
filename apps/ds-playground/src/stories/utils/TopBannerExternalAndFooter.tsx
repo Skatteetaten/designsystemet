@@ -12,6 +12,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import {
   Footer,
+  RoleBanner,
   TopBannerExternal,
   TopBannerExternalHandle,
   User,
@@ -30,12 +31,18 @@ import styles from './TopBannerExternalAndFooter.module.scss';
 
 export function TopBannerExternalAndFooter({
   children,
+  showAsSignedIn,
+  showRoleBanner,
 }: {
   children: ReactNode;
+  showAsSignedIn?: boolean;
+  showRoleBanner?: boolean;
 }): JSX.Element {
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const modalRef = useRef<HTMLDialogElement>(null);
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User | undefined>(
+    showAsSignedIn ? { name: 'Ola Nordmann', role: 'meg' } : undefined
+  );
 
   const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
     const lang = e.currentTarget.lang;
@@ -43,14 +50,38 @@ export function TopBannerExternalAndFooter({
   };
 
   const me: Person = {
+    type: 'Person',
     name: 'Ola Nordmann',
     personId: '10101012345',
-    type: 'Person',
+    dateOfBirth: new Date('1984-02-13'),
   };
-
+  const people: Paginated<Person> = {
+    total: 2,
+    list: [
+      {
+        name: 'Kenneth Performance Hansen',
+        personId: '0101200112345',
+        dateOfBirth: new Date('2001-01-01'),
+        type: 'Person',
+      },
+      {
+        name: 'Bobby Boblejacke',
+        personId: '0101200112346',
+        dateOfBirth: new Date('1972-05-17'),
+        type: 'Person',
+      },
+    ],
+  };
   const businesses: Paginated<Business> = {
     total: 3,
     list: [
+      {
+        name: 'Bobby Boblejacke Trefelling og Taksidermi Gode Betingelser Alle Rettigheter',
+        organizationNumber: '123456777',
+        isDeleted: false,
+        unitType: 'Andelslag',
+        type: 'Organization',
+      },
       {
         name: 'Costco AS',
         organizationNumber: '123456777',
@@ -231,7 +262,7 @@ export function TopBannerExternalAndFooter({
   ];
 
   return (
-    <>
+    <div className={styles.pageWrapper}>
       <TopBannerExternal
         ref={topBannerRef}
         classNames={{
@@ -308,12 +339,12 @@ export function TopBannerExternalAndFooter({
         }
         secondColumn={
           <>
-            <Heading as={'h2'} level={2} hasSpacing>
+            <Heading as={'h2'} hasSpacing>
               {'Alle temaer'}
             </Heading>
             <div className={topBannerExternalExampleStyles.secondColumn}>
               <div>
-                <Heading as={'h3'} level={3} hasSpacing>
+                <Heading as={'h3'} hasSpacing>
                   <a href={LenkerUinnlogget.PERSON_FORSIDE}>{'For personer'}</a>
                 </Heading>
                 <LinkGroup
@@ -332,7 +363,7 @@ export function TopBannerExternalAndFooter({
                     </LinkGroup.Link>
                   ))}
                 </LinkGroup>
-                <Heading as={'h3'} level={3} hasSpacing>
+                <Heading as={'h3'} hasSpacing>
                   <a href={LenkerUinnlogget.VIRKSOMHET_FORSIDE}>
                     {'For bedrifter og organisasjoner'}
                   </a>
@@ -417,10 +448,23 @@ export function TopBannerExternalAndFooter({
           />
         )}
       </TopBannerExternal>
+      {showRoleBanner && user && user.role !== 'meg' && (
+        <RoleBanner
+          user={{
+            name: user?.name ?? '',
+            role: user?.role ?? 'meg',
+            identifier:
+              user.role === 'virksomhet'
+                ? (user.orgnr ?? '123 456 789')
+                : (user.person?.personId ?? '01.01.2026'),
+          }}
+        />
+      )}
       <RolePicker
         ref={modalRef}
         me={me}
         businesses={businesses}
+        people={people}
         onEntitySelect={async (entity) => {
           let role: User['role'];
           if (entity.name === me.name) {
@@ -504,6 +548,6 @@ export function TopBannerExternalAndFooter({
           {'Koronatiltak'}
         </Footer.Link>
       </Footer>
-    </>
+    </div>
   );
 }

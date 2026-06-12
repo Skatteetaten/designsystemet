@@ -1,30 +1,20 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Chips, getChipDefaultSize } from '@skatteetaten/ds-collections';
+import { Chips } from '@skatteetaten/ds-collections';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: Chips.Removable,
   title: 'Komponenter/Chips/Removable',
   argTypes: {
     // Props
-    size: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getChipDefaultSize() },
-      },
-    },
+    size: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     // HTML
-    disabled: {
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
+    disabled: { table: { category: category.htmlAttribute } },
     // Events
-    onClose: { control: false, table: { category: category.event } },
+    onClose: { ...htmlEventDescription },
   },
   args: {
     children: 'Trondheim',

@@ -1,8 +1,8 @@
-import { JSX } from 'react';
+import { JSX, ReactNode } from 'react';
 
 type DocHeaderWrapperProps = {
   componentName: string;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export const DocHeaderWrapper = ({

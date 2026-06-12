@@ -5,7 +5,7 @@ import { List, ListProps, Paragraph } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: List,
-  title: 'Tester/List/List',
+  title: 'Tester/List',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -82,9 +82,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

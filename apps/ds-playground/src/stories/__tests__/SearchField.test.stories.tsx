@@ -19,13 +19,14 @@ import {
 } from 'storybook/test';
 
 import {
+  defaultHelpButtonTitle,
+  defaultSpinnerLabel,
   dsI18n,
-  getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
 import { SearchField, searchInList } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -62,33 +63,30 @@ const meta = {
     hasSearchButtonIcon: { table: { disable: true } },
     clearButtonTitle: { table: { disable: true } },
     searchButtonTitle: { table: { disable: true } },
+    isLoading: { table: { disable: true } },
+    spinnerLabel: { table: { disable: true } },
+    spinnerProps: { table: { disable: true } },
     results: { table: { disable: true } },
     helpText: { table: { disable: true } },
     enableSRNavigationHint: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
       control: 'inline-radio',
     },
     // HTML
-    accessKey: { table: { disable: true, category: category.htmlAttribute } },
-    autoComplete: {
-      table: {
-        disable: true,
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-      },
-      type: 'string',
-    },
-    disabled: { table: { disable: true, category: category.htmlAttribute } },
-    form: { table: { disable: true, category: category.htmlAttribute } },
-    name: { table: { disable: true, category: category.htmlAttribute } },
-    placeholder: { table: { disable: true, category: category.htmlAttribute } },
-    readOnly: { table: { disable: true, category: category.htmlAttribute } },
-    required: { table: { disable: true, category: category.htmlAttribute } },
-    value: { table: { disable: true, category: category.htmlAttribute } },
+    accessKey: { table: { disable: true } },
+    autoComplete: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
+    name: { table: { disable: true } },
+    placeholder: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
+    required: { table: { disable: true } },
+    value: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -153,9 +151,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -181,7 +177,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      searchContainer: 'dummyClassnameFormContainer',
+      searchContainer: 'dummyClassname',
     },
     hideLabel: false,
   },
@@ -189,6 +185,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -202,7 +201,7 @@ export const WithCustomClassNames = {
 
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(searchContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(searchContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -247,6 +246,7 @@ export const Defaults = {
     await expect(searchbox).toBeEnabled();
     await expect(searchbox).toHaveAttribute('id');
     await expect(searchbox.tagName).toBe('INPUT');
+    await expect(searchbox).not.toHaveAttribute('aria-invalid');
     await expect(searchbox).not.toBeRequired();
     const searchButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_forms:searchfield.ButtonTitle'),
@@ -257,6 +257,41 @@ export const Defaults = {
 
     const sRtexst = dsI18n.t('ds_forms:searchfield.Focus');
     await expect(await canvas.findByText(sRtexst)).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'searchfield-alert-description-id';
+    return (
+      <>
+        <SearchField {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for searchfield'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchbox = canvas.getByRole('searchbox');
+    await expect(searchbox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for searchfield'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = searchbox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('searchfield-alert-description-id');
   },
 } satisfies Story;
 
@@ -320,6 +355,8 @@ export const WithDisabled = {
     ...defaultArgs,
     disabled: true,
     value: 'En lang tekst som ikke skal synes bak reset-ikonet',
+    hideLabel: false,
+    helpText: 'hjelpetekst',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -327,9 +364,15 @@ export const WithDisabled = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('searchbox');
-    const searchButton = canvas.getByRole('button');
+    const searchButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:searchfield.ButtonTitle'),
+    });
     await expect(textbox).toBeDisabled();
     await expect(searchButton).toBeDisabled();
+    const helpButton = canvas.getByRole('button', {
+      name: defaultHelpButtonTitle,
+    });
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -623,14 +666,18 @@ export const WithHelpToggleEvent = {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: defaultHelpButtonTitle,
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -646,7 +693,9 @@ const ResetButtonTemplate: StoryFn<typeof SearchField> = (args) => {
           args.onChange?.(event);
         }}
       />
-      <button onClick={() => setValue('')}>{'reset'}</button>
+      <button type={'button'} onClick={() => setValue('')}>
+        {'reset'}
+      </button>
     </>
   );
 };
@@ -659,7 +708,7 @@ export const WithControlled = {
   },
   name: 'With Controlled',
   parameters: {
-    imageSnapshot: { disable: true },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -696,20 +745,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('searchbox');
     await expect(textbox).toBeRequired();
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark',
-  args: {
-    ...defaultArgs,
-    required: true,
-    hideLabel: false,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
+    await expect(textbox).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -758,6 +794,82 @@ export const WithLongInput = {
   },
 } satisfies Story;
 
+export const WithLoading = {
+  name: 'With Loading',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+  },
+  argTypes: {
+    isLoading: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchbox = canvas.getByRole('searchbox');
+
+    await userEvent.click(searchbox);
+
+    const spinner = await canvas.findByText(defaultSpinnerLabel);
+    await expect(spinner).toBeInTheDocument();
+    await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithCustomSpinnerLabel = {
+  name: 'With Custom Spinner Label',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+    spinnerLabel: 'Laster søk...',
+  },
+  argTypes: {
+    spinnerLabel: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchbox = canvas.getByRole('searchbox');
+
+    await userEvent.click(searchbox);
+
+    const spinner = await canvas.findByText('Laster søk...');
+    await expect(spinner).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithSpinnerProps = {
+  name: 'With Spinner Props',
+  args: {
+    ...defaultArgs,
+    isLoading: true,
+    spinnerProps: {
+      size: 'small',
+      color: 'black',
+    },
+  },
+  argTypes: {
+    spinnerProps: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchbox = canvas.getByRole('searchbox');
+
+    await userEvent.click(searchbox);
+
+    const spinner = await canvas.findByText(defaultSpinnerLabel);
+    await expect(spinner.parentElement).toHaveAttribute('data-size', 'small');
+    await expect(spinner.parentElement).toHaveAttribute('data-color', 'black');
+  },
+} satisfies Story;
+
 const TwoSearchFields: StoryFn<typeof SearchField> = () => {
   return (
     <div className={'flex gapS'}>
@@ -793,5 +905,74 @@ export const WithEnableSRNavigationHintsFalse = {
     const canvas = within(canvasElement);
     const sRtexst = dsI18n.t('ds_forms:searchfield.Focus');
     await expect(canvas.queryByText(sRtexst)).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+const TemplateWithTabIndex: StoryFn<typeof SearchField> = () => {
+  const [value, setValue] = useState<string>('');
+
+  const options = useMemo(() => {
+    return [
+      {
+        title: 'Ert',
+        description:
+          'Sukkererter er en deilig grønnsak som kan spises rå eller lett kokt.',
+      },
+      {
+        title: 'Sellerirot',
+        description:
+          'En rotgrønnsak med en karakteristisk smak, ofte brukt i supper og gryteretter.',
+      },
+      {
+        title: 'Sukkermais',
+        description: 'Søte maiskolber som kan grilles, kokes eller spises rå.',
+      },
+      {
+        title: 'Østerssopp',
+        description: 'En deilig soppvariant som kan brukes i ulike retter.',
+      },
+      {
+        title: 'Aubergine',
+        description:
+          'Også kjent som eggplante, flott for grilling eller steking.',
+      },
+      {
+        title: 'Cherrytomat',
+        description:
+          'Små, søte tomater som er perfekte for salater eller snacks.',
+      },
+    ];
+  }, []);
+
+  const results = useMemo(
+    () => (value.length >= 2 ? searchInList(options, value) : undefined),
+    [value, options]
+  );
+
+  return (
+    <div tabIndex={-1}>
+      <SearchField
+        classNames={{ searchResultsList: 'searchResultsList' }}
+        label={'Søk etter grønnsaker'}
+        results={results}
+        hideLabel={false}
+        value={value}
+        onChange={(event) => {
+          setValue(event.target.value);
+        }}
+        onClear={() => setValue('')}
+      />
+    </div>
+  );
+};
+
+export const WithTabIndexScope = {
+  name: 'With TabIndex Scope',
+  render: TemplateWithTabIndex,
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;

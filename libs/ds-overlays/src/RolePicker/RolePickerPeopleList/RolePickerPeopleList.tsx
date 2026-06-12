@@ -2,18 +2,17 @@ import { useCallback, useContext, useMemo, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  formatNationalIdentityNumber,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { RolePickerPeopleListProps } from './RolePickerPeopleList.types';
+import { rolePickerAnalyticsIds } from '../analyticsIds';
 import { Person } from '../RolePicker.types';
 import { RolePickerContext } from '../RolePickerContext';
 import { RolePickerRow } from '../RolePickerRow/RolePickerRow';
+import { getDateOfBirthAsLocaleString, getPersonDescription } from '../utils';
 
 import styles from './RolePickerPeopleList.module.scss';
 
@@ -23,7 +22,7 @@ export const RolePickerPeopleList = ({
   people,
   filterQuery,
   showDeceasedPeople: showDeceasedPeopleExternal,
-}: RolePickerPeopleListProps): JSX.Element | null => {
+}: RolePickerPeopleListProps): JSX.Element => {
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
   const [isExpanded, setIsExpanded] = useState(false);
   const [showDeceasedPeople, setShowDeceasedPeople] = useState(
@@ -47,17 +46,22 @@ export const RolePickerPeopleList = ({
   };
 
   const visibleItems = useMemo(() => {
-    // lager en dyp kopiering av person-listen for å unngå mutasjon
-    let items: Person[] = JSON.parse(JSON.stringify(people.list));
+    // lager en kopi av person-listen for å unngå mutasjon
+    let items: Person[] = people.list.slice();
 
     items = !showDeceasedPeople ? items.filter((p) => !p.isDeleted) : items;
 
     if (filterQuery) {
-      return items.filter(
-        (f) =>
+      return items.filter((f) => {
+        const personIdentifier = f.dateOfBirth
+          ? getDateOfBirthAsLocaleString(f.dateOfBirth, dsI18n.language)
+          : f.personId;
+
+        return (
           f.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
-          f.personId.includes(filterQuery.toLowerCase())
-      );
+          personIdentifier.includes(filterQuery.toLowerCase())
+        );
+      });
     }
     if (isExpanded) {
       return items;
@@ -99,8 +103,13 @@ export const RolePickerPeopleList = ({
                 <RolePickerRow
                   id={item.personId}
                   title={`${item.name}${item.isDeleted ? ` (${t('rolepicker.Deceased')})` : ''}`}
-                  description={`${t('rolepicker.PeopleDescriptionPrefix')} ${formatNationalIdentityNumber(item.personId)}`}
+                  description={getPersonDescription(item)}
                   svgPath={PersonSVGpath}
+                  webAnalyticsId={
+                    item.isDeleted
+                      ? rolePickerAnalyticsIds.deceasedPerson
+                      : rolePickerAnalyticsIds.person
+                  }
                   onClick={() => handleEntityClicked(item)}
                 />
               </li>

@@ -1,43 +1,40 @@
 import { JSX, useImperativeHandle, useRef } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import {
-  getPanelVariantDefault,
-  getPanelSpacingDefault,
-  getPanelColorDefault,
-  getPanelTitleAsDefault,
-  getPanelSubtitleAsDefault,
-  getPanelPaddingDefault,
-} from './defaults';
 import { PanelPadding, PanelProps, PanelSpacing } from './Panel.types';
 
 import styles from './Panel.module.scss';
 
+/**
+ * Panel
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-panel--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/panel/) - Brukerveiledning
+ */
 export const Panel = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   headingRef,
-  canManuallySetTitleFocus,
-  color = getPanelColorDefault(),
+  canManuallySetTitleFocus = false,
+  color = 'ochre',
   classNames,
   imageSource,
   imageSourceAltText,
-  hasResponsivePadding,
-  padding = getPanelPaddingDefault(),
-  spacing = getPanelSpacingDefault(),
+  hasResponsivePadding = false,
+  padding = 'xl',
+  spacing = 'xxs',
   subtitle,
-  subtitleAs = getPanelSubtitleAsDefault(),
+  subtitleAs = 'h4',
   title,
-  titleAs = getPanelTitleAsDefault(),
-  variant = getPanelVariantDefault(),
-  hideGraphicMobile,
-  hideSubtitle,
-  hideTitle,
+  titleAs = 'h3',
+  variant = 'outline',
+  hideGraphicMobile = false,
+  hideSubtitle = false,
+  hideTitle = false,
   renderIcon,
   children,
 }: PanelProps): JSX.Element => {

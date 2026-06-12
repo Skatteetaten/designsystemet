@@ -1,6 +1,5 @@
 import { JSX, useEffect, useImperativeHandle, useRef } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CheckSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { TopBannerLangPickerButtonProps } from './TopBannerLangPickerButton.types';
@@ -10,20 +9,18 @@ import styles from './TopBannerLangPickerButton.module.scss';
 export const TopBannerLangPickerButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
+  dataWebAnalyticsId,
   flagIcon,
   ariaCurrent,
   focus,
   onClick,
+  onFocus,
   onKeyDown,
   children,
 }: TopBannerLangPickerButtonProps): JSX.Element => {
-  const concatenatedClassNames = `${
-    ariaCurrent ? styles.buttonCurrent : ''
-  } ${styles.button} ${className}`.trim();
-
   const refInternal = useRef<HTMLButtonElement>(null);
   useImperativeHandle(ref, () => refInternal?.current as HTMLButtonElement);
 
@@ -37,12 +34,14 @@ export const TopBannerLangPickerButton = ({
     <button
       ref={refInternal}
       id={id}
-      className={concatenatedClassNames}
+      className={`${styles.button} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-webanalytics-id={dataWebAnalyticsId}
       aria-current={ariaCurrent}
       type={'button'}
       onClick={onClick}
+      onFocus={onFocus}
       onKeyDown={onKeyDown}
     >
       <span className={styles.flagWrapper}>{flagIcon}</span>

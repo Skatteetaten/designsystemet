@@ -1,12 +1,8 @@
 import { JSX } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { PersonIcon } from '@skatteetaten/ds-icons';
 
-import { getTopBannerInternalHideLogoOnMobileDefault } from './defaults';
 import defaultLogo from './logo-sak.svg';
 import {
   TopBannerInternalComponent,
@@ -17,10 +13,16 @@ import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 
 import styles from './TopBannerInternal.module.scss';
 
-export const TopBannerInternal = (({
+/**
+ * TopBannerInternal
+ *
+ * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-topbannerinternal--docs) - Teknisk dokumentasjon
+ * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbanner-internal/) - Brukerveiledning
+ */
+export const TopBannerInternal = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -31,10 +33,10 @@ export const TopBannerInternal = (({
   children,
   title,
   description,
-  constructionBandTitle,
+  constructionBandTitle = 'Test',
   onLogoClick,
-  isUnderConstruction,
-  hideLogoOnMobile = getTopBannerInternalHideLogoOnMobileDefault(),
+  isUnderConstruction = false,
+  hideLogoOnMobile = false,
 }: TopBannerInternalProps): JSX.Element => {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   const isMobile = !useMediaQuery('(min-width: 640px)');
@@ -63,7 +65,7 @@ export const TopBannerInternal = (({
       {isUnderConstruction && (
         <div className={styles.constructionBand}>
           <div className={styles.constructionBandTitle}>
-            {constructionBandTitle ?? 'test'}
+            {constructionBandTitle}
           </div>
         </div>
       )}
@@ -102,7 +104,9 @@ export const TopBannerInternal = (({
       </div>
     </header>
   );
-}) as TopBannerInternalComponent;
+};
+
+export default TopBannerInternal as TopBannerInternalComponent;
 
 TopBannerInternal.displayName = 'TopBannerInternal';
 TopBannerInternal.ActionMenu = TopBannerInternalActionMenu;

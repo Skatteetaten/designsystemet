@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getListAsDefault, List, Paragraph } from '@skatteetaten/ds-typography';
+import { List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -12,20 +12,13 @@ const meta = {
   title: 'Komponenter/List',
   argTypes: {
     // Props
-    as: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getListAsDefault() },
-      },
-    },
+    as: { control: 'inline-radio', table: { category: category.props } },
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
-    hasSpacing: {
-      table: { category: category.props, defaultValue: { summary: 'false' } },
-    },
+    hasSpacing: { table: { category: category.props } },
   },
   args: {
+    as: 'ul',
     children: [
       <List.Element key={'listElement1'}>
         {'Kjenner du behovet til brukeren?'}
@@ -77,3 +70,24 @@ export const Examples: Story = {
   },
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const ExampleWithInlineStyling: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <List>
+        <List.Element key={'element_1'}>
+          {`Første punkt med `}
+          <strong>{'utheving'}</strong>
+          {' og '}
+          <em>{'betoning'}</em>
+          {' i samme linje.'}
+        </List.Element>
+        <List.Element key={'element_2'}>
+          {'Andre punkt uten utheving.'}
+        </List.Element>
+      </List>
+    );
+  },
+} satisfies Story;
+ExampleWithInlineStyling.storyName = 'Liste med utheving';
+ExampleWithInlineStyling.parameters = exampleParameters;

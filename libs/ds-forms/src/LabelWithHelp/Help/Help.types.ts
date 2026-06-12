@@ -16,11 +16,11 @@ export interface HelpProps {
   /** Label eller legend id */
   targetId?: string;
   /** Beskrivelse */
-  description?: string;
+  description?: ReactNode;
   /** Id til beskrivelse */
   descriptionId?: string;
-  /** Skjuler beskrivelse for skjermleser */
-  hideDescriptionForScreenReader?: boolean;
+  /** Om hjelpeknappen er deaktivert */
+  disabled?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: OnHelpToggleHandler;
   className?: BaseProps['className'];

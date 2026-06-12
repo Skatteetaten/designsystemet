@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from 'react';
+import { FunctionComponent, ReactNode, Ref } from 'react';
 
 import { BaseProps, Color, Position, Size } from '@skatteetaten/ds-core-utils';
 
@@ -10,7 +10,7 @@ export type AccordionColor =
 
 export type AccordionSize = Extract<Size, 'small' | 'medium' | 'large'>;
 
-export type IconPosition = Extract<Position, 'left' | 'right'>;
+export type AccordionIconPosition = Extract<Position, 'left' | 'right'>;
 export interface AccordionProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
   /** Bakgrunnsfarge */
@@ -18,12 +18,12 @@ export interface AccordionProps extends BaseProps {
   /** Størrelse */
   size?: AccordionSize;
   /** Posisjonen til ikonet */
-  iconPosition?: IconPosition;
+  iconPosition?: AccordionIconPosition;
   /** Tekst eller markup som vises/skjules. */
   children?: ReactNode;
 }
 
-export interface AccordionComponent extends React.FC<AccordionProps> {
+export interface AccordionComponent extends FunctionComponent<AccordionProps> {
   Item: typeof AccordionItem;
 }
 

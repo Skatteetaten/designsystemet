@@ -8,9 +8,11 @@
   "table.Sortable": "Sortable",
   "table.SortedAscending": "Sorted ascending",
   "table.SortedDescending": "Sorted descending",
-  "tablerow.Editable": "Edit row",
+  "tablerow.EditButtonScreenReaderText": "Opens the editing panel after this row and moves focus there.",
   "tablerow.EditData": "Edit data",
-  "tablerow.Expandable": "More information",
+  "tablerow.Editable": "Edit row",
+  "tablerow.ExpandButtonScreenReaderText": "Shows or hides content after this row.",
   "tablerow.ExpandText": "Details",
+  "tablerow.Expandable": "More information",
   "tablesum.Sum": "Sum"
 }

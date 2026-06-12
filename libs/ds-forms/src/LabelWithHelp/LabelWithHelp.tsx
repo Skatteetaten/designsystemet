@@ -1,7 +1,5 @@
 import { JSX, useId } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { Help } from './Help/Help';
 import { LabelWithHelpProps } from './LabelWithHelp.types';
 
@@ -10,7 +8,7 @@ import styles from './LabelWithHelp.module.scss';
 export const LabelWithHelp = ({
   ref,
   id: idExternal,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -19,22 +17,19 @@ export const LabelWithHelp = ({
   helpText,
   helpSvgPath,
   titleHelpSvg,
+  disabled = false,
   htmlFor,
-  hideLabel,
-  showRequiredMark,
+  hideLabel = false,
   children,
   onHelpToggle,
 }: LabelWithHelpProps): JSX.Element => {
   const uniqueLabelId = `labelId-${useId()}`;
   const labelId = idExternal ?? uniqueLabelId;
 
-  const requiredMarkClassName = showRequiredMark ? styles.label_required : '';
   const hideLabelClassName = hideLabel ? styles.srOnly : '';
   const concatenatedClassName = `${
     styles.label
-  } ${requiredMarkClassName} ${hideLabelClassName} ${className} ${
-    classNames?.label ?? ''
-  }`.trim();
+  } ${hideLabelClassName} ${className} ${classNames?.label ?? ''}`.trim();
 
   return (
     <>
@@ -58,6 +53,7 @@ export const LabelWithHelp = ({
         titleHelpSvg={titleHelpSvg}
         description={description}
         descriptionId={descriptionId}
+        disabled={disabled}
         onHelpToggle={onHelpToggle}
       />
     </>

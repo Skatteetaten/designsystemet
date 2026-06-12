@@ -60,13 +60,6 @@
       "options": {
         "command": "npm publish dist/libs/ds-progress {args.switches}"
       }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
-      "options": {
-        "reportsDirectory": "../../coverage/libs/ds-progress"
-      }
     }
   }
 }

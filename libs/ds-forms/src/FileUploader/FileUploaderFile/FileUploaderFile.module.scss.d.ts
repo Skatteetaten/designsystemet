@@ -1,5 +1,4 @@
 declare const classNames: {
-  readonly fileSpinner: 'fileSpinner';
   readonly fileDeleteButton: 'fileDeleteButton';
   readonly fileContentRight: 'fileContentRight';
   readonly fileNameContainer: 'fileNameContainer';

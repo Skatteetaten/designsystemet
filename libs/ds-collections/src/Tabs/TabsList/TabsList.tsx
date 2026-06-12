@@ -1,7 +1,5 @@
 import { ReactNode, useContext, useMemo, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { TabsListProps, TabsListComponent } from './TabsList.types';
 import { TabsContextProps } from '../Tabs.types';
 import { TabsContext } from '../TabsContext';
@@ -44,22 +42,25 @@ const TabRenderComponent = ({
 export const TabsList = (({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
+  ariaLabel,
   children,
 }: TabsListProps): JSX.Element => {
   const { isMultiline, ...context } = useContext(TabsContext);
-  const multilineClassName = isMultiline ? styles.tabList_multiline : '';
+
   return (
     <div
       ref={ref}
       id={id}
-      className={`${styles.tabList} ${multilineClassName} ${className}`.trim()}
+      className={`${styles.tabList} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-multiline={isMultiline ? 'true' : undefined}
       role={'tablist'}
       tabIndex={-1}
+      aria-label={ariaLabel}
     >
       <TabRenderComponent context={context}>{children}</TabRenderComponent>
     </div>

@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
@@ -10,14 +10,16 @@ import {
   within,
 } from 'storybook/test';
 
-import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
+import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { defaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: Select,
-  title: 'Tester/Select/Select',
+  title: 'Tester/Select',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -42,12 +44,7 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     hidePlaceholder: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
@@ -55,6 +52,8 @@ const meta = {
     form: { table: { disable: true } },
     name: { table: { disable: true } },
     required: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -129,9 +128,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -152,7 +149,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      selectContainer: 'dummyClassnameFormContainer',
+      selectContainer: 'dummyClassname',
       errorMessage: 'dummyClassname',
     },
     errorMessage: errorMessageText,
@@ -161,6 +158,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -177,13 +177,13 @@ export const WithCustomClassNames = {
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(selectContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(selectContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2 delvis, A3, FS-A2, B2)',
+  name: 'Defaults (A1, A2 delvis, A3, FS-A2, B2)',
   args: {
     ...defaultArgs,
   },
@@ -200,7 +200,7 @@ export const Defaults = {
     await expect(selectNode).toBeInTheDocument();
     await expect(selectNode).toBeEnabled();
     await expect(selectNode).toHaveValue('');
-    await expect(selectNode).toHaveTextContent(getSelectPlaceholderDefault());
+    await expect(selectNode).toHaveTextContent(defaultSelectPlaceholder);
     await expect(selectNode).toHaveAttribute('id');
     await expect(selectNode.tagName).toBe('SELECT');
     await expect(selectNode).not.toBeRequired();
@@ -214,37 +214,36 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'select-alert-description-id';
+    return (
+      <>
+        <Select {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for select'}
+        </Alert>
+      </>
+    );
+  },
   args: {
     ...defaultArgs,
-    variant: 'large',
   },
-  argTypes: {
-    variant: { table: { disable: false } },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
-} satisfies Story;
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const select = canvas.getByRole('combobox');
+    await expect(select).toHaveAttribute('aria-describedby');
 
-export const WithVariantLargeAndLongText = {
-  name: 'With Variant Large And Long Text',
-  args: {
-    ...defaultArgs,
-    hidePlaceholder: true,
-    variant: 'large',
-    children: [
-      <Select.Option key={'option_1'} value={valueOption1}>
-        {'En lang tekst som ikke skal synes bak åpne ikonet'}
-      </Select.Option>,
-    ],
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-    children: { table: { disable: false } },
-  },
-  globals: {
-    viewport: {
-      value: '--mobile',
-    },
+    const alertText = canvas.getByText('Dette er en varselmelding for select');
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = select.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('select-alert-description-id');
   },
 } satisfies Story;
 
@@ -254,6 +253,7 @@ export const WithDisabled = {
     ...defaultArgs,
     disabled: true,
     value: valueOption1,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -265,6 +265,8 @@ export const WithDisabled = {
     const canvas = within(canvasElement);
     const selectNode = canvas.getByRole('combobox');
     await expect(selectNode).toBeDisabled();
+    const helpButton = canvas.getByRole('button');
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -364,19 +366,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const selectNode = canvas.getByRole('combobox');
     await expect(selectNode).toBeRequired();
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B1, FS-A4 delvis)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
+    await expect(selectNode).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -510,14 +500,18 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: defaultHelpButtonTitle,
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -536,7 +530,6 @@ export const WithLongInput = {
     ],
   },
   argTypes: {
-    variant: { table: { disable: false } },
     defaultValue: { table: { disable: false } },
   },
 } satisfies Story;
@@ -556,7 +549,6 @@ export const WithLongPlaceholder = {
     ],
   },
   argTypes: {
-    variant: { table: { disable: false } },
     placeholder: { table: { disable: false } },
   },
 } satisfies Story;

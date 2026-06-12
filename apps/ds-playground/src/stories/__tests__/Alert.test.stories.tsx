@@ -9,6 +9,7 @@ import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { loremIpsum } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Alert,
@@ -47,7 +48,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultText =
-  'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
+  'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.';
 
 const defaultArgs = {
   showAlert: false,
@@ -95,9 +96,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -268,6 +267,21 @@ export const AllVariantsMobile = {
   },
 } satisfies Story;
 
+export const AllVariantsWithCloseButtonMobile = {
+  render: TemplateAllVariants,
+  name: 'All Variants On Small Screen (A1)',
+  args: {
+    ...defaultArgs,
+    showAlert: true,
+    onClose: fn(),
+  },
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
+  },
+} satisfies Story;
+
 export const AllLightVariants = {
   render: TemplateAllVariants,
   name: 'All Light Variants',
@@ -292,8 +306,7 @@ export const WithLongText = {
   name: 'With Long Text (A2)',
   args: {
     ...defaultArgs,
-    children:
-      'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon. Dersom teksten går over flere linjer, så vil ikonene beholde plasseringen sin.',
+    children: loremIpsum,
     showAlert: true,
   },
   argTypes: {
@@ -314,6 +327,11 @@ export const WithLongTextAndBreaking = {
   argTypes: {
     children: {
       table: { disable: false },
+    },
+  },
+  globals: {
+    viewport: {
+      value: '--mobile',
     },
   },
 } satisfies Story;
@@ -371,6 +389,9 @@ export const WithCloseButton = {
     ...defaultArgs,
     showAlert: true,
     onClose: fn(),
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
 } satisfies Story;
 

@@ -189,6 +189,7 @@ export const isWithinMinMaxRange = (
 export const getNameOfMonthsAndDays = (): {
   monthNames: string[];
   dayNames: string[];
+  longDayNames: string[];
 } => {
   return {
     monthNames: [
@@ -213,6 +214,15 @@ export const getNameOfMonthsAndDays = (): {
       dsI18n.t('ds_forms:datepicker.Fri'),
       dsI18n.t('ds_forms:datepicker.Sat'),
       dsI18n.t('ds_forms:datepicker.Sun'),
+    ],
+    longDayNames: [
+      dsI18n.t('ds_forms:datepicker.Monday'),
+      dsI18n.t('ds_forms:datepicker.Tuesday'),
+      dsI18n.t('ds_forms:datepicker.Wednesday'),
+      dsI18n.t('ds_forms:datepicker.Thursday'),
+      dsI18n.t('ds_forms:datepicker.Friday'),
+      dsI18n.t('ds_forms:datepicker.Saturday'),
+      dsI18n.t('ds_forms:datepicker.Sunday'),
     ],
   };
 };

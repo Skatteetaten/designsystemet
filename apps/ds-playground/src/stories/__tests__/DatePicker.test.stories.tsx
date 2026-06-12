@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import {
@@ -10,17 +10,14 @@ import {
   within,
 } from 'storybook/test';
 
-import {
-  dsI18n,
-  getCommonAutoCompleteDefault,
-} from '@skatteetaten/ds-core-utils';
+import { defaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
-  getDatePickerPlaceholderDefault,
-  TextField,
+  defaultDatePickerPlaceholder,
 } from '@skatteetaten/ds-forms';
+import { Alert } from '@skatteetaten/ds-status';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -38,7 +35,7 @@ const verifyAttribute =
 const today = new Date('2024-01-15');
 const meta = {
   component: DatePicker,
-  title: 'Tester/DatePicker/DatePicker',
+  title: 'Tester/DatePicker',
   argTypes: {
     // Baseprops
     ref: { table: { disable: true } },
@@ -64,33 +61,21 @@ const meta = {
     initialPickerDate: { table: { disable: true }, control: 'date' },
     minDate: { table: { disable: true }, control: 'date' },
     maxDate: { table: { disable: true }, control: 'date' },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     // HTML
-    autoComplete: {
-      table: {
-        disable: true,
-        defaultValue: {
-          summary: getCommonAutoCompleteDefault(),
-        },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      control: 'text',
-    },
+    autoComplete: { table: { disable: true } },
     disabled: { table: { disable: true } },
     name: { table: { disable: true } },
     placeholder: { table: { disable: true } },
     required: { table: { disable: true } },
     readOnly: { table: { disable: true } },
+    // Aria
+    ariaDescribedBy: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
+    onCalendarToggle: { table: { disable: true } },
     onSelectDate: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
@@ -147,9 +132,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -170,7 +153,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      dateContainer: 'dummyClassnameFormContainer',
+      dateContainer: 'dummyClassname',
       errorMessage: 'dummyClassname',
     },
     errorMessage: errorMessageText,
@@ -179,6 +162,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -193,13 +179,13 @@ export const WithCustomClassNames = {
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(dateContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(dateContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2, B2, B5)',
+  name: 'Defaults (A1, A2, B2, B5)',
   args: {
     ...defaultArgs,
   },
@@ -217,7 +203,7 @@ export const Defaults = {
     await expect(input).toHaveAttribute('id');
     await expect(input).toHaveAttribute(
       'placeholder',
-      getDatePickerPlaceholderDefault()
+      defaultDatePickerPlaceholder
     );
     await expect(input.tagName).toBe('INPUT');
     await expect(input).not.toBeRequired();
@@ -238,14 +224,57 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
+export const DefaultsWithOpenCalendar = {
+  name: 'Defaults With Open Calendar',
   args: {
     ...defaultArgs,
-    variant: 'large',
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    label: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button');
+    await fireEvent.click(calendarButton);
+  },
+} satisfies Story;
+
+export const WithAriaDescribedBy = {
+  name: 'With AriaDescribedBy',
+  render: (args): JSX.Element => {
+    const alertId = 'datepicker-alert-description-id';
+    return (
+      <>
+        <DatePicker {...args} ariaDescribedBy={alertId} hasSpacing />
+        <Alert id={alertId} variant={'warning'} showAlert>
+          {'Dette er en varselmelding for datepicker'}
+        </Alert>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+
+    const alertText = canvas.getByText(
+      'Dette er en varselmelding for datepicker'
+    );
+    await expect(alertText).toBeInTheDocument();
+
+    const describedBy = textbox.getAttribute('aria-describedby') || '';
+    const describedByIds = describedBy.split(' ').filter(Boolean);
+    await expect(describedByIds).toContain('datepicker-alert-description-id');
   },
 } satisfies Story;
 
@@ -255,6 +284,7 @@ export const WithDisabled = {
     ...defaultArgs,
     disabled: true,
     value: valueDate,
+    helpText: 'Hjelpeknappen skal også være disabled',
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -262,9 +292,15 @@ export const WithDisabled = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    const calendarButton = canvas.getByRole('button');
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
     await expect(textbox).toBeDisabled();
     await expect(calendarButton).toBeDisabled();
+    const helpButton = canvas.getByRole('button', {
+      name: defaultHelpButtonTitle,
+    });
+    await expect(helpButton).toBeDisabled();
   },
 } satisfies Story;
 
@@ -299,19 +335,7 @@ export const WithRequired = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toBeRequired();
-  },
-} satisfies Story;
-
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (A1)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
+    await expect(textbox).toHaveAttribute('aria-invalid', 'false');
   },
 } satisfies Story;
 
@@ -525,6 +549,9 @@ export const WithInitialPickerDate = {
   argTypes: {
     initialPickerDate: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarButton = canvas.getByRole('button', {
@@ -620,6 +647,7 @@ export const ClickCalendarButton = {
     onBlur: fn(),
     onChange: fn(),
     onFocus: fn(),
+    onCalendarToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -632,6 +660,84 @@ export const ClickCalendarButton = {
     await fireEvent.click(calendarButton);
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(calendarButton);
+  },
+} satisfies Story;
+
+const WithCalendarToggleEventTemplate: StoryFn<typeof DatePicker> = (args) => {
+  const [statusText, setStatusText] = useState('Tester onCalendarToggle event');
+  return (
+    <div>
+      <pre>{statusText}</pre>
+      <DatePicker
+        {...args}
+        onCalendarToggle={(isOpen): void => {
+          setStatusText(
+            isOpen
+              ? 'Kalender er åpen, onCalendarToggle har blitt trigget'
+              : 'Kalender er lukket, onCalendarToggle har blitt trigget'
+          );
+          args.onCalendarToggle && args.onCalendarToggle(isOpen);
+        }}
+      />
+    </div>
+  );
+};
+
+export const WithCalendarToggleEvent = {
+  name: 'With onCalendarToggle Event',
+  render: WithCalendarToggleEventTemplate,
+  args: {
+    ...defaultArgs,
+    onCalendarToggle: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(true)
+    );
+
+    const dateButton = canvas.getByText('5');
+    await userEvent.click(dateButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(false)
+    );
+
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(true)
+    );
+
+    await userEvent.keyboard('[Escape]');
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(false)
+    );
+
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(true)
+    );
+
+    await fireEvent.click(canvas.getByLabelText(defaultLabelText));
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(false)
+    );
+
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(true)
+    );
+    await userEvent.click(calendarButton);
+    await waitFor(() =>
+      expect(args.onCalendarToggle).toHaveBeenLastCalledWith(false)
+    );
   },
 } satisfies Story;
 
@@ -710,30 +816,6 @@ export const OpenCalendarEscape = {
   },
 } satisfies Story;
 
-const MovesOverTemplate: StoryFn<typeof DatePicker> = (args) => {
-  return (
-    <>
-      <DatePicker {...args} />
-      <TextField label={'Organisasjonsnummer'} />
-    </>
-  );
-};
-
-export const OpenCalendarMovesOver = {
-  render: MovesOverTemplate,
-  name: 'Open Calendar Moves Over (Kalender A1 delvis)',
-  args: {
-    ...defaultArgs,
-    value: valueDate,
-    hasSpacing: true,
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const calendarButton = canvas.getByRole('button');
-    await fireEvent.click(calendarButton);
-  },
-} satisfies Story;
-
 export const WithShadowDom = {
   name: 'With ShadowDom',
   args: {
@@ -776,14 +858,18 @@ export const WithHelpToggleEvent = {
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: defaultHelpButtonTitle,
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -902,5 +988,46 @@ export const TabNavigationWithAllDatesDisabled = {
     await waitFor(() => {
       expect(calendarButton).toHaveFocus();
     });
+  },
+} satisfies Story;
+
+const TemplateWithScrollableContainer: StoryFn<typeof DatePicker> = (args) => (
+  <div className={'flex gapS'}>
+    <aside className={'container-aside'}>
+      <p>
+        {
+          'Denne historien er laget for å teste rød ramme i kantlinjen når det er en feilmelding. I tillegg tester vi om kalenderen åpner seg direkte under inputfeltet. For å teste dette, åpne kalenderen og sjekk at den åpner seg under inputfeltet. Rull ned og opp for å se kalenderen forbli i riktig posisjon.'
+        }
+      </p>
+      {Array.from({ length: 8 }, (_, i) => (
+        <p key={i}>{loremIpsum}</p>
+      ))}
+    </aside>
+    <main className={'container-main'}>
+      <p>{loremIpsum}</p>
+      <DatePicker {...args} />
+      <p>{loremIpsum}</p>
+    </main>
+  </div>
+);
+
+export const WithScrollableContainer = {
+  render: TemplateWithScrollableContainer,
+  name: 'Inside Scrollable Container',
+  args: {
+    ...defaultArgs,
+    errorMessage: 'Error',
+  },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+
+    await fireEvent.click(calendarButton);
   },
 } satisfies Story;
