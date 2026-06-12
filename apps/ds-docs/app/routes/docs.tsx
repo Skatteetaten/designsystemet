@@ -9,12 +9,6 @@ import { getMdxComponents } from '../mdx-components';
 
 import styles from './docs.module.scss';
 
-// interface DocsContentProps {
-//   // TODO: Ta i bruk når vi kan lenke til andre markdown-filer i MDX-innholdet
-//   // markdownUrl: string;
-//   path: string;
-// }
-
 interface ClientLoaderProps {
   parentTitle: string | null;
   markdownUrl: string;

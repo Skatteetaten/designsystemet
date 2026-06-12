@@ -14,7 +14,14 @@ type BasePropsHTMLAttributes = Pick<
   'className' | 'id' | 'lang'
 >;
 
-export interface BaseProps extends BasePropsHTMLAttributes {
+export interface BaseProps {
+  /** Html class attributt til noden. */
+  className?: BasePropsHTMLAttributes['className'];
+  /** Html id attributt. */
+  id?: BasePropsHTMLAttributes['id'];
+  /** Html lang attributt. */
+  lang?: BasePropsHTMLAttributes['lang'];
+  /** Html data attributt som brukes for tester. */
   'data-testid'?: string;
 }
 

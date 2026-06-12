@@ -2,6 +2,10 @@
   margin-bottom: var(--spacing-l);
 }
 
+.table tr[class*='expandedRow'] > td {
+  background-color: var(--palette-denim-5);
+}
+
 .tag {
   border: 2px solid var(--palette-denim-70);
   margin-bottom: var(--spacing-s);

@@ -3,7 +3,6 @@ import { JSX } from 'react';
 import { DescriptionList } from '@skatteetaten/ds-content';
 import { Tag } from '@skatteetaten/ds-status';
 import { Table } from '@skatteetaten/ds-table';
-import { Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './type-table.module.scss';
 
@@ -54,16 +53,30 @@ const getTypeValue = (type?: DocgenType): string => {
   return type?.name ?? '';
 };
 
+const isFunctionType = (typeValue: string): boolean => {
+  return typeValue.includes('=>');
+};
+
+const isObjectType = (typeValue: string): boolean => {
+  return typeValue.trimStart().startsWith('{');
+};
+
+const getDisplayTypeValue = (typeValue: string): string => {
+  if (isFunctionType(typeValue)) {
+    return 'function';
+  }
+  if (isObjectType(typeValue)) {
+    return 'object';
+  }
+  return typeValue;
+};
+
 const getDefaultValue = (defaultValue: DocgenDefaultValue | null): string => {
   if (defaultValue?.value === undefined) {
     return '';
   }
 
   return String(defaultValue.value);
-};
-
-const getPropName = (prop: DocgenProp): string => {
-  return prop.required ? prop.name : `${prop.name}?`;
 };
 
 export const TypeTable = ({ of }: TypeTableProps): JSX.Element => {
@@ -79,7 +92,9 @@ export const TypeTable = ({ of }: TypeTableProps): JSX.Element => {
     >
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>{displayName}</Table.HeaderCell>
+          <Table.HeaderCell>{'Navn'}</Table.HeaderCell>
+          <Table.HeaderCell>{'Type'}</Table.HeaderCell>
+          <Table.HeaderCell>{''}</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
@@ -88,15 +103,11 @@ export const TypeTable = ({ of }: TypeTableProps): JSX.Element => {
           const description = prop.description;
 
           return (
-            <Table.Row key={prop.name}>
-              <Table.DataCell>
-                <Tag color={'denim'} className={styles.tag}>
-                  {getPropName(prop)}
-                </Tag>
-                <DescriptionList
-                  variant={'vertical'}
-                  descriptionDirection={'vertical'}
-                >
+            <Table.Row
+              key={prop.name}
+              expandButtonPosition={'right'}
+              expandableContent={
+                <DescriptionList descriptionDirection={'vertical'}>
                   <DescriptionList.Element term={'Type'}>
                     <code className={styles.code}>
                       {getTypeValue(prop.type)}
@@ -104,17 +115,25 @@ export const TypeTable = ({ of }: TypeTableProps): JSX.Element => {
                   </DescriptionList.Element>
                   {defaultValue && (
                     <DescriptionList.Element term={'Default'}>
-                      <code className={styles.code}>
-                        {getDefaultValue(prop.defaultValue)}
-                      </code>
+                      <code className={styles.code}>{defaultValue}</code>
                     </DescriptionList.Element>
                   )}
                   {description && (
                     <DescriptionList.Element term={'Beskrivelse'}>
-                      {prop.description}
+                      {description}
                     </DescriptionList.Element>
                   )}
                 </DescriptionList>
+              }
+              isExpandable
+            >
+              <Table.DataCell>
+                <strong>{prop.required ? prop.name : `${prop.name}?`}</strong>
+              </Table.DataCell>
+              <Table.DataCell>
+                <code className={styles.code}>
+                  {getDisplayTypeValue(getTypeValue(prop.type))}
+                </code>
               </Table.DataCell>
             </Table.Row>
           );
