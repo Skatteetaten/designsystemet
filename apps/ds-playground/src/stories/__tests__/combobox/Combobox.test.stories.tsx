@@ -24,7 +24,7 @@ const meta = {
     label: { table: { disable: true } },
     options: { table: { disable: true } },
     placeholder: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     multiple: { table: { disable: true } },
     value: { table: { disable: true } },
     description: { table: { disable: true } },
@@ -303,7 +303,7 @@ export const IsOpen = {
     id: 'test-combobox',
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -407,14 +407,14 @@ export const NoResults = {
   },
 } satisfies Story;
 
-export const VariantLarge = {
-  name: 'Variant Large (A7)',
+export const WithSizeLarge = {
+  name: 'Size Large (A7)',
   args: {
     ...defaultArgs,
-    variant: 'large',
+    size: 'large',
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

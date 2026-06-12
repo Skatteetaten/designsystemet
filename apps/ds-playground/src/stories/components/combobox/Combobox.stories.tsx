@@ -65,7 +65,7 @@ const meta = {
       },
     },
     value: { control: 'text', table: { category: category.props } },
-    variant: { table: { category: category.props } },
+    size: { table: { category: category.props } },
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
@@ -101,12 +101,12 @@ export const Single: Story = {
 export const Multiple: Story = {
   name: 'Flervalg',
   render: (args): JSX.Element => {
-    const { variant, onSelectionChange, ...rest } = args;
+    const { size, onSelectionChange, ...rest } = args;
     return <Combobox className={'multipleCombobox'} {...rest} multiple />;
   },
   argTypes: {
     multiple: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
   },
 };
 

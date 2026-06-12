@@ -47,7 +47,7 @@ const meta = {
         defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
-    variant: { control: 'inline-radio', table: { category: category.props } },
+    size: { control: 'inline-radio', table: { category: category.props } },
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
     autoComplete: {

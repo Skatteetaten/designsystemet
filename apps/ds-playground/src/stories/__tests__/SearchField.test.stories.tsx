@@ -71,10 +71,7 @@ const meta = {
     enableSRNavigationHint: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
+    size: { table: { disable: true } },
     // HTML
     accessKey: { table: { disable: true } },
     autoComplete: { table: { disable: true } },
@@ -225,7 +222,7 @@ export const WithLongLabel = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1a, A2, A3, B1, B4)',
+  name: 'Defaults (A1a, A2, A3, B1, B4)',
   args: {
     ...defaultArgs,
   },
@@ -295,51 +292,49 @@ export const WithAriaDescribedBy = {
   },
 } satisfies Story;
 
-const AllVariantsTemplate: StoryFn<typeof SearchField> = (
-  args
-): JSX.Element => {
+const AllSizesTemplate: StoryFn<typeof SearchField> = (args): JSX.Element => {
   return (
     <>
-      <SearchField variant={'medium'} {...args} />
-      <SearchField variant={'large'} {...args} />
-      <SearchField variant={'extraLarge'} {...args} />
+      <SearchField size={'medium'} {...args} />
+      <SearchField size={'large'} {...args} />
+      <SearchField size={'extraLarge'} {...args} />
     </>
   );
 };
 
-export const WithVariants = {
-  name: 'With Variants (A1b, A2)',
+export const WithSizes = {
+  name: 'With Sizes (A1b, A2)',
   args: {
     ...defaultArgs,
     hideLabel: false,
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
-  render: AllVariantsTemplate,
+  render: AllSizesTemplate,
 } satisfies Story;
 
-export const WithVariantsNoIcon = {
-  name: 'With Variants Without Icon (A1b, A2)',
-  render: AllVariantsTemplate,
+export const WithoutIcon = {
+  name: 'Without Icon (A1b, A2)',
+  render: AllSizesTemplate,
   args: {
     ...defaultArgs,
     hasSearchButtonIcon: false,
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
 } satisfies Story;
 
-export const WithVariantLargeAndLongText = {
-  name: 'With Variant Large And Long Text',
+export const WithSizeLargeAndLongText = {
+  name: 'With Size Large And Long Text',
   args: {
     ...defaultArgs,
-    variant: 'large',
+    size: 'large',
     value: 'En lang tekst som ikke skal synes bak reset-ikonet',
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    size: { table: { disable: false } },
     value: { table: { disable: false } },
   },
   globals: {
