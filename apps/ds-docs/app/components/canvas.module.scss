@@ -1,7 +1,6 @@
 .canvas {
   margin-bottom: var(--spacing-l);
-  border: 1px solid var(--palette-graphite-70);
-  background-color: var(--semantic-page-background-default);
+  overflow: hidden;
 }
 
 .chips {
@@ -16,26 +15,6 @@
   text-align: right;
   padding: var(--spacing-s) var(--spacing-l);
   background-color: var(--palette-graphite-5);
-}
-
-.codePanel {
-  display: grid;
-  overflow: hidden;
-  border: 1px solid var(--palette-graphite-70);
-}
-
-.codeHeader {
-  display: flex;
-  gap: var(--spacing-s);
-  padding: var(--spacing-s) var(--spacing-m);
-  background-color: var(--palette-graphite-5);
-  justify-content: space-between;
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-medium);
-}
-
-.codeTabs {
-  min-width: 0;
 }
 
 .codeBlock {

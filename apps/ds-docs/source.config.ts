@@ -18,12 +18,6 @@ export const wordInfo = defineCollections({
 
 export default defineConfig({
   mdxOptions: {
-    rehypeCodeOptions: {
-      themes: {
-        dark: 'github-dark',
-        light: 'github-light',
-      },
-    },
     remarkPlugins: [remarkCodeTab, remarkNpm, remarkWordInfo],
   },
 });

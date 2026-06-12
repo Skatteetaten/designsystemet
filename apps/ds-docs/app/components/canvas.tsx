@@ -11,10 +11,12 @@ import { useShikiDynamic } from 'fumadocs-core/highlight/shiki/react';
 
 import { IconButton, InlineButton } from '@skatteetaten/ds-buttons';
 import { Chips, Tabs } from '@skatteetaten/ds-collections';
-import { CodeSVGpath, CopySVGpath } from '@skatteetaten/ds-icons';
+import { Card } from '@skatteetaten/ds-content';
+import { CodeSVGpath, CopySVGpath, EditSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { ExampleDescriptor, getExamples } from './canvas.utils';
+import { skeCodeTheme } from '../../lib/code-theme';
 
 import styles from './canvas.module.scss';
 
@@ -50,7 +52,7 @@ const HighlightedCode = ({
         </pre>
       ),
       lang: language,
-      theme: 'github-dark',
+      theme: skeCodeTheme,
       components: {
         pre: (props): JSX.Element => (
           <pre {...props} className={styles.codeBlock} />
@@ -160,67 +162,60 @@ export const Canvas = ({
           ))}
         </Chips>
       )}
-      <div className={styles.canvas}>
+      <Card className={styles.canvas}>
         <div className={styles.example}>
           <SelectedExampleComponent key={selectedExample.key} />
         </div>
         <div className={styles.actions}>
-          <InlineButton
-            type={'button'}
+          <IconButton
+            svgPath={CopySVGpath}
+            title={copyStatus === 'copied' ? 'Koden er kopiert' : 'Kopier kode'}
+            onClick={handleCopyCode}
+          />
+
+          <IconButton svgPath={EditSVGpath} title={'Rediger i Stackblitz'} />
+          <IconButton
             svgPath={CodeSVGpath}
+            ariaExpanded={isCodeVisible}
+            title={isCodeVisible ? 'Skjul kode' : 'Vis kode'}
             ariaDescribedby={codePanelId}
             onClick={() => setIsCodeVisible((currentValue) => !currentValue)}
-          >
-            {isCodeVisible ? 'Skjul kode' : 'Vis kode'}
-          </InlineButton>
+          />
         </div>
-      </div>
-      {isCodeVisible && (
-        <div id={codePanelId} className={styles.codePanel}>
-          <div className={styles.codeHeader}>
-            <span>{selectedExample.label}</span>
-            <IconButton
-              type={'button'}
-              size={'small'}
-              svgPath={CopySVGpath}
-              title={
-                copyStatus === 'copied' ? 'Koden er kopiert' : 'Kopier kode'
-              }
-              onClick={handleCopyCode}
-            />
-          </div>
-          {selectedExample.codeFiles.length > 1 ? (
-            <Tabs
-              className={styles.codeTabs}
-              defaultValue={selectedCodeFile.key}
-              value={selectedCodeFile.tabValue}
-              isMultiline
-              onChange={handleCodeFileChange}
-            >
-              <Tabs.List>
+        {isCodeVisible && (
+          <div id={codePanelId}>
+            {selectedExample.codeFiles.length > 1 ? (
+              <Tabs
+                defaultValue={selectedCodeFile.key}
+                value={selectedCodeFile.tabValue}
+                isMultiline
+                onChange={handleCodeFileChange}
+              >
+                <Tabs.List>
+                  {selectedExample.codeFiles.map((file) => (
+                    <Tabs.Tab key={file.key} value={file.tabValue}>
+                      {file.fileName}
+                    </Tabs.Tab>
+                  ))}
+                </Tabs.List>
                 {selectedExample.codeFiles.map((file) => (
-                  <Tabs.Tab key={file.key} value={file.tabValue}>
-                    {file.fileName}
-                  </Tabs.Tab>
+                  <Tabs.Panel key={file.key} value={file.tabValue}>
+                    <HighlightedCode
+                      code={file.source}
+                      language={file.language}
+                    />
+                  </Tabs.Panel>
                 ))}
-              </Tabs.List>
-              {selectedExample.codeFiles.map((file) => (
-                <Tabs.Panel key={file.key} value={file.tabValue}>
-                  <HighlightedCode
-                    code={file.source}
-                    language={file.language}
-                  />
-                </Tabs.Panel>
-              ))}
-            </Tabs>
-          ) : (
-            <HighlightedCode
-              code={selectedCodeFile.source}
-              language={selectedCodeFile.language}
-            />
-          )}
-        </div>
-      )}
+              </Tabs>
+            ) : (
+              <HighlightedCode
+                code={selectedCodeFile.source}
+                language={selectedCodeFile.language}
+              />
+            )}
+          </div>
+        )}
+      </Card>
     </>
   );
 };
