@@ -1,5 +1,4 @@
 declare const classNames: {
-  readonly spacing: 'spacing';
   readonly descriptionList: 'descriptionList';
   readonly descriptionListDescriptionBold: 'descriptionListDescriptionBold';
   readonly descriptionListTermRegular: 'descriptionListTermRegular';
