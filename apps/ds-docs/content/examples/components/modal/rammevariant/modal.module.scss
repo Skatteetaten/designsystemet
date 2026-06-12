@@ -1,0 +1,11 @@
+.buttonRow {
+  display: flex;
+  gap: var(--spacing-s);
+  flex-wrap: wrap;
+}
+
+.actionRow {
+  display: flex;
+  gap: var(--spacing-s);
+  flex-wrap: wrap;
+}
