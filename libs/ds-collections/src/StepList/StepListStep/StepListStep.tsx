@@ -7,16 +7,12 @@ import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { CheckIcon, EditSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import {
-  getStepListStepEditButtonTextDefault,
-  getStepListStepNextButtonTextDefault,
-  getStepListStepShouldAutoFocusWhenActiveDefault,
-  getStepListStepTitleAsDefault,
-  getStepListStepVariantDefault,
-} from './defaults';
 import { StepListStepProps } from './StepListStep.types';
 
 import styles from './StepListStep.module.scss';
+
+export const defaultEditButtonText = dsI18n.t('ds_collections:steplist.Edit');
+export const defaultNextButtonText = dsI18n.t('ds_collections:steplist.Next');
 
 export const StepListStep = ({
   ref,
@@ -24,23 +20,23 @@ export const StepListStep = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  editButtonText = getStepListStepEditButtonTextDefault(),
+  editButtonText = defaultEditButtonText,
   classNames,
   introContent,
   introTitle,
   introTitleAs,
   nextButtonProps,
-  nextButtonText = getStepListStepNextButtonTextDefault(),
+  nextButtonText = defaultNextButtonText,
   stepNumber,
   svgPath,
   svgTitle,
   title,
-  titleAs = getStepListStepTitleAsDefault(),
-  variant = getStepListStepVariantDefault(),
+  titleAs = 'h3',
+  variant = 'passive',
   onEdit,
   onNext,
-  hasResultContentFullWidth,
-  shouldAutoFocusWhenActive = getStepListStepShouldAutoFocusWhenActiveDefault(),
+  hasResultContentFullWidth = false,
+  shouldAutoFocusWhenActive = true,
   children,
 }: StepListStepProps): JSX.Element => {
   const { t } = useTranslation('ds_collections', { i18n: dsI18n });

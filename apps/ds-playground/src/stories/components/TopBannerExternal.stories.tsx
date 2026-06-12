@@ -29,11 +29,6 @@ import {
 } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  getTopBannerLangPickerLocaleDefault,
-  getTopBannerLangPickerShowSamiDefault,
-} from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/defaults';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
@@ -47,21 +42,8 @@ const meta = {
   argTypes: {
     // Props
     classNames: { control: false, table: { category: category.props } },
-    showSami: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: String(getTopBannerLangPickerShowSamiDefault()),
-        },
-      },
-    },
-    defaultLocale: {
-      table: {
-        control: 'text',
-        category: category.props,
-        defaultValue: { summary: getTopBannerLangPickerLocaleDefault() },
-      },
-    },
+    showSami: { table: { category: category.props } },
+    defaultLocale: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     skipLink: { control: false, table: { category: category.props } },
     logo: {
@@ -80,24 +62,12 @@ const meta = {
     otherLanguagesURL: { table: { category: category.props } },
     searchContent: { control: 'text', table: { category: category.props } },
     // Events
-    onSearchClick: {
-      ...htmlEventDescription,
-    },
-    onSearch: {
-      ...htmlEventDescription,
-    },
-    onLogInClick: {
-      ...htmlEventDescription,
-    },
-    onLogOutClick: {
-      ...htmlEventDescription,
-    },
-    onUserClick: {
-      ...htmlEventDescription,
-    },
-    onLanguageClick: {
-      ...htmlEventDescription,
-    },
+    onSearchClick: { ...htmlEventDescription },
+    onSearch: { ...htmlEventDescription },
+    onLogInClick: { ...htmlEventDescription },
+    onLogOutClick: { ...htmlEventDescription },
+    onUserClick: { ...htmlEventDescription },
+    onLanguageClick: { ...htmlEventDescription },
   },
   args: {
     // uten undefined så blir funksjonene initalisert med mockConstructor i Storybook

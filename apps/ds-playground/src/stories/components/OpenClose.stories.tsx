@@ -2,13 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  OpenClose,
-  getOpenCloseIconPositionDefault,
-  getOpenCloseKeepMountedDefault,
-  getOpenCloseUnderlineDefault,
-  getOpenCloseSizeDefault,
-} from '@skatteetaten/ds-collections';
+import { OpenClose } from '@skatteetaten/ds-collections';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -20,51 +14,20 @@ const meta = {
   title: 'Komponenter/OpenClose',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
     iconPosition: {
       control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseIconPositionDefault() },
-      },
+      table: { category: category.props },
     },
     isOnClickOnlyFiredOnOpen: { table: { category: category.props } },
     isExpanded: { table: { category: category.props } },
-    isDefaultExpanded: {
-      table: {
-        category: category.props,
-      },
-    },
-    keepMounted: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseKeepMountedDefault().toString() },
-      },
-    },
-    showUnderline: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseUnderlineDefault().toString() },
-      },
-    },
-    size: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseSizeDefault() },
-      },
-    },
+    isDefaultExpanded: { table: { category: category.props } },
+    keepMounted: { table: { category: category.props } },
+    showUnderline: { table: { category: category.props } },
+    size: { control: 'inline-radio', table: { category: category.props } },
     title: { table: { category: category.props } },
-    titleAs: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
-    //Events
+    titleAs: { control: 'inline-radio', table: { category: category.props } },
+    // Events
     onClick: { ...htmlEventDescription },
   },
   args: {

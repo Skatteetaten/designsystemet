@@ -12,19 +12,16 @@ import {
   within,
 } from 'storybook/test';
 
+import { defaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
 import {
-  dsI18n,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
-import {
+  defaultFileIconTitle,
   FileUploader,
   FileUploaderProps,
   TextField,
 } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import { helpSvgPathDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: FileUploader,
@@ -41,25 +38,12 @@ const meta = {
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasSpacing: { table: { disable: true } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        disable: true,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription, table: { disable: true } },
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     label: { table: { disable: true } },
     shouldNormalizeFileName: { table: { disable: true } },
-    titleHelpSvg: {
-      table: {
-        category: category.props,
-        disable: true,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
-      },
-    },
+    titleHelpSvg: { table: { disable: true } },
     uploadedFiles: { table: { disable: true } },
     acceptedFileFormatsDisplay: { table: { disable: true } },
     acceptedFileFormatsDescription: { table: { disable: true } },
@@ -68,15 +52,8 @@ const meta = {
     fileIconTitle: { table: { disable: true } },
     isUploading: { table: { disable: true } },
     isRequired: { table: { disable: true } },
-    invalidCharacterRegexp: {
-      control: 'text',
-      table: { disable: true },
-    },
-    spinnerLabel: {
-      table: {
-        disable: true,
-      },
-    },
+    invalidCharacterRegexp: { control: 'text', table: { disable: true } },
+    spinnerLabel: { table: { disable: true } },
     acceptedFileFormats: { table: { disable: true } },
     // HTML
     multiple: { table: { disable: true } },
@@ -238,7 +215,7 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(
-      canvas.getAllByText(dsI18n.t('ds_forms:fileuploader.FileIconLabel'))[0]
+      canvas.getAllByText(defaultFileIconTitle)[0]
     ).toBeInTheDocument();
     await expect(canvas.getByText('grunnlag.jpg')).toBeInTheDocument();
     await expect(canvas.getByText('test.png')).toBeInTheDocument();
@@ -462,7 +439,7 @@ export const WithHelpToggleEvent = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      name: dsI18n.t('Shared:shared.Help'),
+      name: defaultHelpButtonTitle,
     });
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());

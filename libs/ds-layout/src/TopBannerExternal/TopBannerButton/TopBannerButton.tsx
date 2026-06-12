@@ -1,4 +1,5 @@
 import { JSX } from 'react';
+
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { TopBannerButtonProps } from './TopBannerButton.types';

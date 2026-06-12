@@ -1,4 +1,5 @@
 import { JSX } from 'react';
+
 import {
   CircleRingSVGpath,
   CompletedSVGpath,
@@ -6,11 +7,7 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { ChipsToggleProps } from './ChipsToggle.types';
-import {
-  getChipsToggleDefaultShowCheckmark,
-  getChipsToggleDefaultIsSelected,
-} from './defaults';
-import { getChipDefaultSize } from '../defaults';
+import { defaultChipsSize } from '../defaults';
 
 import styles from './ChipsToggle.module.scss';
 
@@ -20,10 +17,10 @@ export const ChipsToggle = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  size = getChipDefaultSize(),
-  disabled,
-  isSelected = getChipsToggleDefaultIsSelected(),
-  showCheckmark = getChipsToggleDefaultShowCheckmark(),
+  size = defaultChipsSize,
+  disabled = false,
+  isSelected = false,
+  showCheckmark = true,
   onClick,
   children,
 }: ChipsToggleProps): JSX.Element => {

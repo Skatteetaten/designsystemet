@@ -3,10 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 
-import {
-  getTopBannerLogoAsDefault,
-  getTopBannerLogoHrefDefault,
-} from './defaults';
 import defaultEnglishLogo from './ske-logo-en.svg';
 import defaultNorwegainLogo from './ske-logo.svg';
 import { TopBannerLogoProps } from './TopBannerLogo.types';
@@ -20,9 +16,9 @@ export const TopBannerLogo = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  as: Tag = getTopBannerLogoAsDefault(),
+  as: Tag = 'a',
   logo,
-  href = getTopBannerLogoHrefDefault(),
+  href = dsI18n.t('Shared:shared.SkeLogoURL'),
   alt,
   onClick,
 }: TopBannerLogoProps): JSX.Element => {

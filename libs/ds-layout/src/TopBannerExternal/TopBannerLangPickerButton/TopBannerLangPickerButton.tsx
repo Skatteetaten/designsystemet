@@ -1,4 +1,5 @@
 import { JSX, useEffect, useImperativeHandle, useRef } from 'react';
+
 import { CheckSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { TopBannerLangPickerButtonProps } from './TopBannerLangPickerButton.types';

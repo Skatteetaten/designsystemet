@@ -24,10 +24,10 @@ export const Fieldset = ({
   legend,
   titleHelpSvg,
   ariaDescribedBy,
-  disabled,
+  disabled = false,
   form,
-  hasSpacing,
-  hideLegend,
+  hasSpacing = false,
+  hideLegend = false,
   onHelpToggle,
   children,
 }: FieldsetProps): JSX.Element => {

@@ -17,7 +17,7 @@ import styles from './CheckboxGroup.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-checkboxgroup--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/) - Brukerveiledning
  */
-export const CheckboxGroup = (({
+export const CheckboxGroup = ({
   ref,
   id,
   className = '',
@@ -29,13 +29,13 @@ export const CheckboxGroup = (({
   helpSvgPath,
   helpText,
   legend,
-  readOnly,
+  readOnly = false,
   titleHelpSvg,
   ariaDescribedBy,
-  disabled,
+  disabled = false,
   form,
-  hasSpacing,
-  hideLegend,
+  hasSpacing = false,
+  hideLegend = false,
   onHelpToggle,
   children,
 }: CheckboxGroupProps): JSX.Element => {
@@ -84,7 +84,9 @@ export const CheckboxGroup = (({
       </ErrorMessage>
     </Fieldset>
   );
-}) as CheckboxGroupComponent;
+};
+
+export default CheckboxGroup as CheckboxGroupComponent;
 
 CheckboxGroup.displayName = 'CheckboxGroup';
 CheckboxGroup.Checkbox = Checkbox;

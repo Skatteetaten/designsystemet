@@ -1,11 +1,7 @@
 import { useContext, JSX } from 'react';
 
 import { TableDataCellProps } from './TableDataCell.types';
-import {
-  getDataCellAsDefault,
-  getTableCellAlignmentDefault,
-  getTableSizeDefault,
-} from '../Table/defaults';
+import { defaultTableSize } from '../Table/defaults';
 import { TableContext } from '../Table/TableContext';
 
 import styles from './TableDataCell.module.scss';
@@ -16,15 +12,15 @@ export const TableDataCell = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  as: Tag = getDataCellAsDefault(),
-  alignment = getTableCellAlignmentDefault(),
+  as: Tag = 'td',
+  alignment = 'left',
   colSpan,
   rowSpan,
   scope,
   children,
 }: TableDataCellProps): JSX.Element => {
   const context = useContext(TableContext);
-  const size = context?.size ?? getTableSizeDefault();
+  const size = context?.size ?? defaultTableSize;
   const sizeClassName = styles[`dataCell_${size}`];
   const alignmentClassName = styles[`dataCell_${alignment}`];
 

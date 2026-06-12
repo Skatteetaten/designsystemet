@@ -25,7 +25,7 @@ export const TopBannerUserMenuButton = ({
   'data-testid': dataTestId,
   user,
   notificationCount,
-  isMenuOpen,
+  isMenuOpen = false,
   onClick,
 }: TopBannerUserMenuButtonProps): JSX.Element => {
   const { t } = useTranslation(['ds_layout', 'ds_overlays'], { i18n: dsI18n });

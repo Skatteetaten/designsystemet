@@ -1,12 +1,7 @@
 import { useState, MouseEvent, JSX } from 'react';
+
 import { Icon, ChevronDownSVGpath } from '@skatteetaten/ds-icons';
 
-import {
-  getOpenCloseIconPositionDefault,
-  getOpenCloseKeepMountedDefault,
-  getOpenCloseUnderlineDefault,
-  getOpenCloseSizeDefault,
-} from './defaults';
 import { OpenCloseProps } from './OpenClose.types';
 
 import styles from './OpenClose.module.scss';
@@ -24,25 +19,22 @@ export const OpenClose = ({
   lang,
   'data-testid': dataTestId,
   title,
-  titleAs: HeadingTag,
-  size = getOpenCloseSizeDefault(),
-  iconPosition = getOpenCloseIconPositionDefault(),
-  isExpanded: isExpandedExternal,
-  isDefaultExpanded,
-  isOnClickOnlyFiredOnOpen,
-  showUnderline = getOpenCloseUnderlineDefault(),
-  keepMounted = getOpenCloseKeepMountedDefault(),
+  titleAs: HeadingTag = 'div',
+  size = 'large',
+  iconPosition = 'left',
+  isExpanded: isExpandedExternal = false,
+  isDefaultExpanded = false,
+  isOnClickOnlyFiredOnOpen = false,
+  showUnderline = true,
+  keepMounted = false,
   onClick,
   children,
 }: OpenCloseProps): JSX.Element => {
-  const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
-    isDefaultExpanded ?? false
-  );
+  const [isExpandedInternal, setIsExpandedInternal] =
+    useState<boolean>(isDefaultExpanded);
 
-  const isExpanded =
-    isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
+  const isExpanded = isExpandedExternal || isExpandedInternal;
 
-  const Tag = HeadingTag ?? 'div';
   const hasIconRight = iconPosition === 'right';
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
@@ -69,7 +61,7 @@ export const OpenClose = ({
 
   return (
     <div className={`${styles.wrapper} ${className}`.trim()} data-size={size}>
-      <Tag className={styles.tag}>
+      <HeadingTag className={styles.tag}>
         <button
           ref={ref}
           id={id}
@@ -88,7 +80,7 @@ export const OpenClose = ({
 
           <span className={titleClassName}>{title}</span>
         </button>
-      </Tag>
+      </HeadingTag>
       {keepMounted ? (
         <div className={hiddenContentClassName}>{children}</div>
       ) : (

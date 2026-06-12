@@ -2,14 +2,9 @@ import { JSX, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getTableRowExpandButtonPositionDefault,
-  getTableRowExpandButtonTitleDefault,
-  getTableRowIsExpandedDefault,
-  Table,
-} from '@skatteetaten/ds-table';
+import { Table } from '@skatteetaten/ds-table';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -18,53 +13,17 @@ const meta = {
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
-    isExpandable: {
-      control: 'boolean',
-      table: { category: category.props },
-      description: 'Om raden er utvidbar.',
-    },
-    isExpanded: {
-      control: 'boolean',
-      table: {
-        defaultValue: { summary: getTableRowIsExpandedDefault().toString() },
-        category: category.props,
-      },
-    },
+    isExpandable: { table: { category: category.props } },
+    isExpanded: { table: { category: category.props } },
     expandButtonAriaDescribedby: { table: { category: category.aria } },
-    expandButtonTitle: {
-      table: {
-        defaultValue: { summary: getTableRowExpandButtonTitleDefault() },
-        category: category.props,
-      },
-    },
-    expandButtonPosition: {
-      control: 'inline-radio',
-      options: ['left', 'right'],
-      table: {
-        defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
-        category: category.props,
-      },
-      description: 'Posisjonen til utvidelsesknappen.',
-    },
-    expandableContent: {
-      control: 'text',
-      table: { category: category.props },
-    },
-    expandButtonProps: {
-      table: { category: category.props },
-    },
+    expandButtonTitle: { table: { category: category.props } },
+    expandButtonPosition: { table: { category: category.props } },
+    expandableContent: { control: 'text', table: { category: category.props } },
+    expandButtonProps: { control: false, table: { category: category.props } },
     showExpandButtonTitle: { table: { category: category.props } },
     // Event
-    onExpand: {
-      control: false,
-      table: { category: category.event },
-      description: 'Callback når raden utvides.',
-    },
-    onClose: {
-      control: false,
-      table: { category: category.event },
-      description: 'Callback når raden lukkes.',
-    },
+    onExpand: { ...htmlEventDescription },
+    onClose: { ...htmlEventDescription },
   },
   args: {
     children: [

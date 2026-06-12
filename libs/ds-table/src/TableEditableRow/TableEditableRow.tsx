@@ -5,7 +5,6 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { EditSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableEditableRowProps } from './TableEditableRow.types';
-import { getTableRowExpandButtonPositionDefault } from '../Table/defaults';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
 import { TableContext } from '../Table/TableContext';
 import { TableRowWithIconButton } from '../TableRowWithIconButton/TableRowWithIconButton';
@@ -22,8 +21,8 @@ export const TableEditableRow = ({
   editableContentRef,
   editableContent,
   editButtonAriaDescribedby,
-  editButtonPosition = getTableRowExpandButtonPositionDefault(),
-  isNew,
+  editButtonPosition = 'left',
+  isNew = false,
   onEdit,
   children,
 }: TableEditableRowProps): JSX.Element => {

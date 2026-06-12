@@ -21,22 +21,9 @@ const meta = {
   component: RoleBanner,
   title: 'Komponenter/RoleBanner',
   argTypes: {
-    // Baseprops
-    ref: { table: { category: category.baseProps } },
-    id: { table: { category: category.baseProps } },
-    className: { table: { category: category.baseProps } },
-    lang: { table: { category: category.baseProps } },
-    'data-testid': { table: { category: category.baseProps } },
     // Props
-    user: {
-      table: { category: category.props },
-    },
-    isSticky: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'undefined' },
-      },
-    },
+    user: { table: { category: category.props } },
+    isSticky: { table: { category: category.props } },
   },
   args: {
     user: {

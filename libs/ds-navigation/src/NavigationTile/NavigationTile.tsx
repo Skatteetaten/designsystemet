@@ -9,11 +9,6 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import {
-  getNavigationTileHeadingAsDefault,
-  getNavigationTileHideArrowDefault,
-  getNavigationTileSizeDefault,
-} from './defaults';
 import { NavigationTileProps } from './NavigationTile.types';
 
 import styles from './NavigationTile.module.scss';
@@ -31,13 +26,13 @@ export const NavigationTile = ({
   lang,
   'data-testid': dataTestId,
   title,
-  titleAs: TitleTag = getNavigationTileHeadingAsDefault(),
+  titleAs: TitleTag = 'h2',
   classNames,
   description,
-  hasSpinner,
-  isExternal,
-  hideArrowIcon = getNavigationTileHideArrowDefault(),
-  size = getNavigationTileSizeDefault(),
+  hasSpinner = false,
+  isExternal = false,
+  hideArrowIcon = false,
+  size = 'large',
   spinnerTitle,
   svgPath,
   href,
@@ -149,9 +144,3 @@ export const NavigationTile = ({
 };
 
 NavigationTile.displayName = 'NavigationTile';
-
-export {
-  getNavigationTileHeadingAsDefault,
-  getNavigationTileHideArrowDefault,
-  getNavigationTileSizeDefault,
-};

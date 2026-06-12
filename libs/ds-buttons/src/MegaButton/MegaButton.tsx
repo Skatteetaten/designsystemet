@@ -1,10 +1,7 @@
 import { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonButtonTypeDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
@@ -26,12 +23,12 @@ export const MegaButton = ({
   'data-testid': dataTestId,
   spinnerTitle,
   accessKey,
-  disabled,
+  disabled = false,
   href,
-  type = getCommonButtonTypeDefault(),
+  type = 'button',
   ariaDescribedby,
-  hasSpinner,
-  isExternal,
+  hasSpinner = false,
+  isExternal = false,
   onBlur,
   onClick,
   onFocus,

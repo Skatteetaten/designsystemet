@@ -1,14 +1,15 @@
 import { useEffect, useState, JSX } from 'react';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { MoveUpIcon } from '@skatteetaten/ds-icons';
 
-import {
-  getScrollToMainDefault,
-  getVisibilityThresholdDefault,
-  getScrollToTopButtonTextDefault,
-} from './defaults';
 import { ScrollToTopButtonProps } from './ScrollToTopButton.types';
 
 import styles from './ScrollToTopButton.module.scss';
+
+export const defaultScrollToTopButtonTitle = dsI18n.t(
+  'ds_buttons:scrolltotopbutton.Title'
+);
 
 /**
  * ScrollToTopButton
@@ -24,9 +25,9 @@ export const ScrollToTopButton = ({
   lang,
   'data-testid': dataTestId,
   shadowRootNode,
-  visibilityThreshold = getVisibilityThresholdDefault(),
-  scrollToMain = getScrollToMainDefault(),
-  children = getScrollToTopButtonTextDefault(),
+  visibilityThreshold = 1,
+  scrollToMain = true,
+  children = defaultScrollToTopButtonTitle,
 }: ScrollToTopButtonProps): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(!visibilityThreshold);
   useEffect(() => {

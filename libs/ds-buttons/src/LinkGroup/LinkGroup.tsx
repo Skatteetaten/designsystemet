@@ -1,11 +1,11 @@
 import { Children, JSX } from 'react';
+
 import {
   ArrowForwardSVGpath,
   ArrowDownSVGpath,
   Icon,
 } from '@skatteetaten/ds-icons';
 
-import { getLinkGroupVariantDefault } from './defaults';
 import { LinkContext } from './LinkContext';
 import { LinkGroupComponent, LinkGroupProps } from './LinkGroup.types';
 import { Link } from '../Link/Link';
@@ -18,15 +18,15 @@ import styles from './LinkGroup.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-linkgroup--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/linkgroup/) - Brukerveiledning
  */
-export const LinkGroup = (({
+export const LinkGroup = ({
   ref,
   id,
   className = '',
   lang,
   'data-testid': dataTestId,
-  hasSpacing,
+  hasSpacing = false,
   color,
-  variant = getLinkGroupVariantDefault(),
+  variant = 'list',
   children,
 }: LinkGroupProps): JSX.Element => {
   const links = Children.toArray(children);
@@ -62,7 +62,9 @@ export const LinkGroup = (({
       </LinkContext.Provider>
     </ul>
   );
-}) as LinkGroupComponent;
+};
+
+export default LinkGroup as LinkGroupComponent;
 
 LinkGroup.displayName = 'LinkGroup';
 LinkGroup.Link = Link;

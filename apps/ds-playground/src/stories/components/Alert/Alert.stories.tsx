@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  Alert,
-  getAlertBackgroundBrightnessDefault,
-} from '@skatteetaten/ds-status';
+import { Alert } from '@skatteetaten/ds-status';
 
-import { category } from '../../../../.storybook/helpers';
-import { SystemSVGPaths } from '../../utils/icon.systems';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../../.storybook/helpers';
 
 const meta = {
   component: Alert,
@@ -14,26 +14,18 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    backgroundBrightness: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getAlertBackgroundBrightnessDefault() },
-      },
-    },
+    backgroundBrightness: { table: { category: category.props } },
     showAlert: { table: { category: category.props } },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    svgPath: { ...svgPathDescription },
     variant: { table: { category: category.props } },
     // Aria
     ariaLive: {
       table: { category: category.aria },
-      defaultValue: { summary: 'polite' },
+      description:
+        'Default verdi er "polite" for alle varianter unntatt "danger" som bruker "assertive". Bruk "off" hvis varselet ligger på siden når siden lastes. Les mer om aria-live på <a href="https://www.skatteetaten.no/en/stilogtone/designsystemet/komponenter/alert#statiske-og-dynamiske-varsler" target="_blank" rel="noopener noreferrer">stil og tone</a>.',
     },
     // Events
-    onClose: { table: { category: category.event } },
+    onClose: { ...htmlEventDescription },
   },
   args: {
     children:

@@ -10,7 +10,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { SearchField } from '@skatteetaten/ds-forms';
 import {
   CancelSVGpath,
@@ -28,7 +28,6 @@ import {
   TopBannerExternalComponent,
 } from './TopBannerExternal.types';
 import { TopBannerExternalUserMenu } from './TopBannerExternalUserMenu/TopBannerExternalUserMenu';
-import { getTopBannerLangPickerLocaleDefault } from './TopBannerLangPicker/defaults';
 import { TopBannerLangPicker } from './TopBannerLangPicker/TopBannerLangPicker';
 import { convertLocaleToLang, isLanguages } from './TopBannerLangPicker/utils';
 import { TopBannerLogo } from './TopBannerLogo/TopBannerLogo';
@@ -43,7 +42,7 @@ import styles from './TopBannerExternal.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-topbannerexternal--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/) - Brukerveiledning
  */
-export const TopBannerExternal = (({
+export const TopBannerExternal = ({
   ref,
   id,
   className = '',
@@ -51,7 +50,7 @@ export const TopBannerExternal = (({
   lang,
   'data-testid': dataTestId,
   firstColumn,
-  defaultLocale = getTopBannerLangPickerLocaleDefault(),
+  defaultLocale = Languages.Bokmal,
   logo,
   secondColumn,
   skipLink,
@@ -60,7 +59,7 @@ export const TopBannerExternal = (({
   additionalLanguages,
   otherLanguagesURL,
   searchContent,
-  showSami,
+  showSami = true,
   children,
   onLanguageClick,
   onLogInClick,
@@ -418,7 +417,9 @@ export const TopBannerExternal = (({
       </div>
     </header>
   );
-}) as TopBannerExternalComponent;
+};
+
+export default TopBannerExternal as TopBannerExternalComponent;
 
 TopBannerExternal.displayName = 'TopBannerExternal';
 TopBannerExternal.UserMenu = TopBannerExternalUserMenu;

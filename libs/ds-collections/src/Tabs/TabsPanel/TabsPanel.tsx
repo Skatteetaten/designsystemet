@@ -1,6 +1,5 @@
 import { JSX, useContext } from 'react';
 
-import { getTabsPanelKeepMountedDefault } from './defaults';
 import { TabsContext } from '../TabsContext';
 import { TabsPanelProps } from './TabsPanel.types';
 import { valueRegex } from '../utils';
@@ -13,7 +12,7 @@ export const TabsPanel = ({
   lang,
   'data-testid': dataTestId,
   value,
-  keepMounted = getTabsPanelKeepMountedDefault(),
+  keepMounted = true,
   children,
 }: TabsPanelProps): JSX.Element | null => {
   const { activeTab, baseId } = useContext(TabsContext);

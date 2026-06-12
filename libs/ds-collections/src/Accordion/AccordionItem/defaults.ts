@@ -1,1 +1,1 @@
-export const getAccordionItemKeepMountedDefault = (): boolean => true;
+export const defaultAccordionSize = 'medium';

@@ -18,7 +18,7 @@ export interface OpenCloseProps extends BaseProps {
   /** Tekst på knappen */
   title: string;
   /** Rendrer knappen som heading på gitt nivå */
-  titleAs?: HeadingAs;
+  titleAs?: HeadingAs | 'div';
   /** Størrelse */
   size?: OpenCloseSize;
   /** Om innholdet skal vises */

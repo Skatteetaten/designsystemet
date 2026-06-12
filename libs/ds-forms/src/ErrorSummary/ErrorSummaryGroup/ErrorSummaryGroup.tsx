@@ -3,7 +3,6 @@ import { JSX } from 'react';
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getErrorSummaryGroupTitleAsDefault } from './defaults';
 import { ErrorSummaryGroupProps } from './ErrorSummaryGroup.types';
 
 import styles from './ErrorSummaryGroup.module.scss';
@@ -15,7 +14,7 @@ export const ErrorSummaryGroup = ({
   lang,
   'data-testid': dataTestId,
   title,
-  titleAs = getErrorSummaryGroupTitleAsDefault(),
+  titleAs = 'h3',
   children,
 }: ErrorSummaryGroupProps): JSX.Element => {
   return (

@@ -1,7 +1,7 @@
 import { JSX } from 'react';
+
 import { Icon } from '@skatteetaten/ds-icons';
 
-import { getTagColorDefault, getTagSizeDefault } from './defaults';
 import { TagProps } from './Tag.types';
 
 import styles from './Tag.module.scss';
@@ -18,9 +18,9 @@ export const Tag = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  canBeManuallyFocused,
-  color = getTagColorDefault(),
-  size = getTagSizeDefault(),
+  canBeManuallyFocused = false,
+  color = 'ochre',
+  size = 'medium',
   svgPath,
   children,
 }: TagProps): JSX.Element => {

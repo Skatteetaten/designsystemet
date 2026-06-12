@@ -65,7 +65,7 @@ export const FileUploaderFile = ({
           <DescriptionIcon
             className={styles.fileListIcon}
             size={'small'}
-            title={fileIconTitle ?? t('fileuploader.FileIconLabel')}
+            title={fileIconTitle}
           />
           <div className={styles.fileNameContainer}>
             {href ? (

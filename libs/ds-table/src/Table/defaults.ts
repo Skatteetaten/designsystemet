@@ -1,18 +1,1 @@
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-
-import { TableCellAs, TableSize, TextAlignment } from './Table.types';
-import { EditButtonPosition } from '../TableEditableRow/TableEditableRow.types';
-
-export const getDataCellAsDefault = (): TableCellAs => 'td';
-export const getHeaderCellAsDefault = (): TableCellAs => 'th';
-export const getTableSizeDefault = (): TableSize => 'large';
-export const getTableRowExpandButtonPositionDefault = (): EditButtonPosition =>
-  'left';
-export const getTableCellAlignmentDefault = (): TextAlignment => 'left';
-export const getTableSumLabelAlignmentDefault = (): TextAlignment => 'left';
-export const getTableSumValueAlignmentDefault = (): TextAlignment => 'right';
-export const getTableRowIsExpandedDefault = (): boolean => false;
-export const getTableSumTextDefault = (): string =>
-  dsI18n.t('ds_tables:tablesum.Sum');
-export const getTableRowExpandButtonTitleDefault = (): string =>
-  dsI18n.t('ds_tables:tablerow.Expandable');
+export const defaultTableSize = 'large';

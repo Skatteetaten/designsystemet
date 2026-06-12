@@ -19,7 +19,7 @@ import styles from './Footer.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-footer--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/footer/) - Brukerveiledning
  */
-export const Footer = (({
+export const Footer = ({
   ref,
   id,
   className = '',
@@ -34,8 +34,8 @@ export const Footer = (({
   titleFirstColumn,
   titleSecondColumn,
   titleThirdColumn,
-  hideLogo,
-  hideDefaultLinks,
+  hideLogo = false,
+  hideDefaultLinks = false,
   openDefaultLinksInNewTab = false,
   children,
 }: FooterProps): JSX.Element => {
@@ -175,7 +175,9 @@ export const Footer = (({
       </div>
     </footer>
   );
-}) as FooterComponent;
+};
+
+export default Footer as FooterComponent;
 
 Footer.displayName = 'Footer';
 Footer.Logo = FooterLogo;

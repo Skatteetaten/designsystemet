@@ -13,7 +13,6 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { AlertProps } from './Alert.types';
-import { getAlertBackgroundBrightnessDefault } from './defaults';
 
 import styles from './Alert.module.scss';
 
@@ -29,11 +28,11 @@ export const Alert = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  backgroundBrightness = getAlertBackgroundBrightnessDefault(),
+  backgroundBrightness = 'default',
   svgPath,
   variant,
   ariaLive,
-  showAlert,
+  showAlert = false,
   children,
   onClose,
 }: AlertProps): JSX.Element => {

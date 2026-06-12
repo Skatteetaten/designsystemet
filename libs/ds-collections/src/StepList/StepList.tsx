@@ -11,7 +11,7 @@ import styles from './StepList.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-steplist--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/steplist/) - Brukerveiledning
  */
-export const StepList = (({
+export const StepList = ({
   ref,
   id,
   className = '',
@@ -30,7 +30,9 @@ export const StepList = (({
       {children}
     </ol>
   );
-}) as StepListComponent;
+};
+
+export default StepList as StepListComponent;
 
 StepList.displayName = 'StepList';
 StepList.Step = StepListStep;

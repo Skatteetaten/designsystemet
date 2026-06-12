@@ -4,11 +4,7 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import breakpointsJson from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
-import {
-  ErrorSummary,
-  TextField,
-  getErrorSummaryTitleAsDefault,
-} from '@skatteetaten/ds-forms';
+import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -22,19 +18,10 @@ const meta = {
     children: { control: false, table: { category: category.props } },
     content: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    shadowRootNode: {
-      control: false,
-      table: { control: false, category: category.props },
-    },
+    shadowRootNode: { control: false, table: { category: category.props } },
     showErrorSummary: { table: { category: category.props } },
     title: { table: { category: category.props } },
-    titleAs: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getErrorSummaryTitleAsDefault() },
-      },
-    },
+    titleAs: { control: 'inline-radio', table: { category: category.props } },
   },
   args: {
     showErrorSummary: true,

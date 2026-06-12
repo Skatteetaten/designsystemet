@@ -7,10 +7,6 @@ import { HorizontalDotsSVGpath } from '@skatteetaten/ds-icons';
 
 import { BreadcrumbsListProps } from './BreadcrumbsList.types';
 import { BreadcrumbsListContext } from './BreadcrumbsListContext';
-import {
-  getBreadcrumbsListShouldCollapseDefault,
-  getBreadcrumbsListShowLastItemAsCurrentPageDefault,
-} from './defaults';
 
 import styles from './BreadcrumbsList.module.scss';
 
@@ -20,8 +16,8 @@ export const BreadcrumbsList = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  shouldCollapse = getBreadcrumbsListShouldCollapseDefault(),
-  showLastItemAsCurrentPage = getBreadcrumbsListShowLastItemAsCurrentPageDefault(),
+  shouldCollapse = true,
+  showLastItemAsCurrentPage = true,
   children,
 }: BreadcrumbsListProps): JSX.Element => {
   const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
@@ -82,8 +78,3 @@ export const BreadcrumbsList = ({
 };
 
 BreadcrumbsList.displayName = 'BreadcrumbsList';
-
-export {
-  getBreadcrumbsListShouldCollapseDefault,
-  getBreadcrumbsListShowLastItemAsCurrentPageDefault,
-};

@@ -14,7 +14,7 @@ import { BreadcrumbsList } from './BreadcrumbsList/BreadcrumbsList';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-breadcrumbs--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/) - Brukerveiledning
  */
-export const Breadcrumbs = (({
+export const Breadcrumbs = ({
   ref,
   id,
   className = '',
@@ -36,7 +36,9 @@ export const Breadcrumbs = (({
       {children}
     </nav>
   );
-}) as BreadcrumbsComponent;
+};
+
+export default Breadcrumbs as BreadcrumbsComponent;
 
 Breadcrumbs.displayName = 'Breadcrumbs';
 

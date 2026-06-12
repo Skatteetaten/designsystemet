@@ -1,6 +1,5 @@
 import { useId, JSX } from 'react';
 
-import { getIconVariantDefault, getIconSizeDefault } from './defaults';
 import { IconProps } from './Icon.types';
 
 import styles from './Icon.module.scss';
@@ -18,8 +17,8 @@ export const Icon = ({
   lang,
   'data-testid': dataTestId,
   title,
-  variant = getIconVariantDefault(),
-  size = getIconSizeDefault(),
+  variant = 'systemIcon',
+  size = 'medium',
   svgPath,
   ariaLabel,
 }: IconProps): JSX.Element => {

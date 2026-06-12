@@ -1,10 +1,5 @@
 import { JSX } from 'react';
 
-import {
-  getDividerSpacingBottomDefault,
-  getDividerSpacingTopDefault,
-  getDividerVariantDefault,
-} from './defaults';
 import { DividerProps } from './Divider.types';
 
 import styles from './Divider.module.scss';
@@ -21,9 +16,9 @@ export const Divider = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  variant = getDividerVariantDefault(),
-  spacingTop = getDividerSpacingTopDefault(),
-  spacingBottom = getDividerSpacingBottomDefault(),
+  variant = 'subtle',
+  spacingTop = 's',
+  spacingBottom = 's',
   ariaHidden,
 }: DividerProps): JSX.Element => {
   const concatenatedClassName = `${styles.divider} ${className}`.trim();

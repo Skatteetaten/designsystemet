@@ -22,7 +22,7 @@ export const RolePickerPeopleList = ({
   people,
   filterQuery,
   showDeceasedPeople: showDeceasedPeopleExternal,
-}: RolePickerPeopleListProps): JSX.Element | null => {
+}: RolePickerPeopleListProps): JSX.Element => {
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
   const [isExpanded, setIsExpanded] = useState(false);
   const [showDeceasedPeople, setShowDeceasedPeople] = useState(

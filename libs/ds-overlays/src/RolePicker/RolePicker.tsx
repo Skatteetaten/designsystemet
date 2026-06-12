@@ -15,18 +15,7 @@ import { FavoriteSVGpath, LogOutSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { rolePickerAnalyticsIds } from './analyticsIds';
-import {
-  getRolePickerHideCloseButtonDefault,
-  getRolePickerMinimumEntitiesForSearchDefault,
-  getRolePickerShowDeceasedPeopleDefault,
-  getRolePickerShowInactiveBusinessesDefault,
-  getRolePickerShowSubunitsDefault,
-} from './defaults';
 import { Business, Entity, RolePickerProps } from './RolePicker.types';
-import {
-  getModalDismissOnEscDefault,
-  getModalDismissOnOutsideClickDefault,
-} from '../Modal/defaults';
 import { Modal } from '../Modal/Modal';
 import { RolePickerBusinessList } from './RolePickerBusinessList/RolePickerBusinessList';
 import { RolePickerContext } from './RolePickerContext';
@@ -53,13 +42,13 @@ export const RolePicker = ({
   businesses,
   people,
   title,
-  dismissOnEsc = getModalDismissOnEscDefault(),
-  dismissOnOutsideClick = getModalDismissOnOutsideClickDefault(),
-  hideCloseButton = getRolePickerHideCloseButtonDefault(),
-  minimumEntitiesForSearch = getRolePickerMinimumEntitiesForSearchDefault(),
-  showInactiveBusinesses = getRolePickerShowInactiveBusinessesDefault(),
-  showSubunits = getRolePickerShowSubunitsDefault(),
-  showDeceasedPeople = getRolePickerShowDeceasedPeopleDefault(),
+  dismissOnEsc = true,
+  dismissOnOutsideClick = true,
+  hideCloseButton = false,
+  minimumEntitiesForSearch = 11,
+  showInactiveBusinesses = false,
+  showSubunits = true,
+  showDeceasedPeople = false,
   onClose,
   onEntitySelect,
   onLogout,
@@ -128,7 +117,7 @@ export const RolePicker = ({
   const noValidBusinesses =
     !me && !people && businesses && businesses.total === 0;
 
-  let internalTitle = title ? title : t('rolepicker.Heading');
+  let internalTitle = title ?? t('rolepicker.Heading');
 
   if (noValidBusinesses) {
     internalTitle = t('rolepicker.NoBusinessesErrorTitle');

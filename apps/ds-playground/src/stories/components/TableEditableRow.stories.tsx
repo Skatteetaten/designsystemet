@@ -2,12 +2,9 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  Table,
-  getTableRowExpandButtonPositionDefault,
-} from '@skatteetaten/ds-table';
+import { Table } from '@skatteetaten/ds-table';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: Table.EditableRow,
@@ -18,18 +15,12 @@ const meta = {
     editButtonRef: { control: false, table: { category: category.props } },
     editableContent: { table: { category: category.props } },
     editableContentRef: { control: false, table: { category: category.props } },
-    editButtonPosition: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
-      },
-    },
+    editButtonPosition: { table: { category: category.props } },
     isNew: { table: { category: category.props } },
     // Aria
     editButtonAriaDescribedby: { table: { category: category.aria } },
     // Event
-    onEdit: { table: { category: category.event } },
+    onEdit: { ...htmlEventDescription },
   },
   args: {
     children: [

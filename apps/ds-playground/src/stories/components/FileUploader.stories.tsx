@@ -2,16 +2,20 @@ import { useState, JSX } from 'react';
 
 import { StoryObj, Meta } from '@storybook/react-vite';
 
-import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
+import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import {
   Checkbox,
+  defaultFileIconTitle,
+  defaultInProgressLabel,
   FileUploader,
-  getFileUploaderGetSpinnerLabelDefault,
   UploadedFile,
 } from '@skatteetaten/ds-forms';
 
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -19,20 +23,23 @@ const meta = {
   title: 'Komponenter/FileUploader',
   argTypes: {
     // Props
+    children: { table: { category: category.props } },
     classNames: { control: false, table: { category: category.props } },
+    acceptedFileFormats: { table: { category: category.props } },
+    acceptedFileFormatsDescription: { table: { category: category.props } },
     acceptedFileFormatsDisplay: { table: { category: category.props } },
-    description: { table: { category: category.props } },
-    fileIconTitle: { table: { category: category.props } },
-    errorMessage: { table: { category: category.props } },
-    hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
+    description: { control: 'text', table: { category: category.props } },
+    fileIconTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
+        defaultValue: {
+          summary: defaultFileIconTitle,
+        },
       },
     },
+    errorMessage: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     invalidCharacterRegexp: {
@@ -45,28 +52,27 @@ const meta = {
     spinnerLabel: {
       table: {
         category: category.props,
-        defaultValue: { summary: getFileUploaderGetSpinnerLabelDefault() },
+        defaultValue: {
+          summary: defaultInProgressLabel,
+        },
       },
     },
-    acceptedFileFormats: { table: { category: category.props } },
     shouldNormalizeFileName: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     uploadedFiles: { control: false, table: { category: category.props } },
     uploadResult: { control: false, table: { category: category.props } },
     // HTML
     multiple: { table: { category: category.htmlAttribute } },
-    children: { table: { category: category.props } },
-    acceptedFileFormatsDescription: { table: { category: category.props } },
     // Events
-    onFileDelete: { table: { category: category.event } },
-    onFileDownload: { table: { category: category.event } },
-    onFileChange: { table: { category: category.event } },
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onFileDelete: { ...htmlEventDescription },
+    onFileDownload: { ...htmlEventDescription },
+    onFileChange: { ...htmlEventDescription },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     helpText: 'Hjelpetekst',

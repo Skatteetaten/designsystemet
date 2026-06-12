@@ -13,10 +13,9 @@ import {
 import {
   TopBannerInternal,
   ActionMenuActionsRef,
-  getTopBannerInternalHideLogoOnMobileDefault,
 } from '@skatteetaten/ds-layout';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import demoLogo from '../../assets/demo-logo-white.svg';
 import { exampleParameters } from '../utils/stories.utils';
 
@@ -35,16 +34,9 @@ const meta = {
     constructionBandTitle: { table: { category: category.props } },
     logoHref: { table: { category: category.props } },
     logo: { table: { category: category.props } },
-    hideLogoOnMobile: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getTopBannerInternalHideLogoOnMobileDefault().toString(),
-        },
-      },
-    },
+    hideLogoOnMobile: { table: { category: category.props } },
     // Event
-    onLogoClick: { control: false, table: { category: category.event } },
+    onLogoClick: { ...htmlEventDescription },
   },
   args: {
     logoHref: '/start',

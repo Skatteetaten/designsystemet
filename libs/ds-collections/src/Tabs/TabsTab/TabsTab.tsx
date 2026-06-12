@@ -1,4 +1,5 @@
 import { KeyboardEvent, useCallback, useContext, JSX } from 'react';
+
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { TabsContext } from '../TabsContext';

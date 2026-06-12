@@ -1,7 +1,6 @@
 import { JSX } from 'react';
 
 import { BlockquoteProps } from './Blockquote.types';
-import { getBlockquoteBorderColorDefault } from './defaults';
 
 import styles from './Blockquote.module.scss';
 
@@ -17,9 +16,9 @@ export const Blockquote = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  canBeManuallyFocused,
-  hasSpacing,
-  borderColor = getBlockquoteBorderColorDefault(),
+  canBeManuallyFocused = false,
+  hasSpacing = false,
+  borderColor = 'ochre',
   children,
 }: BlockquoteProps): JSX.Element => {
   return (

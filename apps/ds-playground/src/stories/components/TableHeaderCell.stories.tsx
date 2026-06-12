@@ -1,10 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getHeaderCellAsDefault,
-  getTableCellAlignmentDefault,
-  Table,
-} from '@skatteetaten/ds-table';
+import { Table } from '@skatteetaten/ds-table';
 
 import { category } from '../../../.storybook/helpers';
 
@@ -13,26 +9,12 @@ const meta = {
   title: 'Komponenter/Table/HeaderCell',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
     isSortDisabled: { table: { category: category.props } },
     isSortable: { table: { category: category.props } },
     sortKey: { table: { category: category.props } },
-    alignment: {
-      table: {
-        defaultValue: { summary: getTableCellAlignmentDefault() },
-        category: category.props,
-      },
-    },
-    as: {
-      control: 'inline-radio',
-      table: {
-        defaultValue: { summary: getHeaderCellAsDefault() },
-        category: category.props,
-      },
-    },
+    alignment: { table: { category: category.props } },
+    as: { table: { category: category.props } },
     // HTML
     colSpan: { table: { category: category.htmlAttribute } },
     scope: { table: { category: category.htmlAttribute } },

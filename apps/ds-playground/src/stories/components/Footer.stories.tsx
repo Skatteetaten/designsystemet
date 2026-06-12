@@ -24,11 +24,7 @@ const meta = {
     accessibilityURL: { table: { category: category.props } },
     hideLogo: { table: { category: category.props } },
     hideDefaultLinks: { table: { category: category.props } },
-    openDefaultLinksInNewTab: {
-      table: {
-        category: category.props,
-      },
-    },
+    openDefaultLinksInNewTab: { table: { category: category.props } },
     titleFirstColumn: { table: { category: category.props } },
     titleSecondColumn: { table: { category: category.props } },
     titleThirdColumn: { table: { category: category.props } },

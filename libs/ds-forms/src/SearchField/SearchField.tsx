@@ -15,20 +15,10 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonAutoCompleteDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import {
-  getEnableSRNavigationHintDefault,
-  getSearchFieldHasSearchButtonIconDefault,
-  getSearchFieldHideLabelDefault,
-  getSearchFieldIsLoadingDefault,
-  getSearchFieldSizeDefault,
-} from './defaults';
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -43,7 +33,7 @@ import styles from './SearchField.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-searchfield--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/) - Brukerveiledning
  */
-export const SearchField = (({
+export const SearchField = ({
   ref,
   id: externalId,
   className = '',
@@ -59,24 +49,24 @@ export const SearchField = (({
   label,
   titleHelpSvg,
   searchButtonTitle,
-  isLoading = getSearchFieldIsLoadingDefault(),
+  isLoading = false,
   spinnerLabel,
   spinnerProps,
-  variant = getSearchFieldSizeDefault(),
+  variant = 'medium',
   ariaDescribedBy,
-  autoComplete = getCommonAutoCompleteDefault(),
+  autoComplete = 'off',
   accessKey,
-  disabled,
+  disabled = false,
   form,
   name,
   placeholder,
-  readOnly,
-  required,
+  readOnly = false,
+  required = false,
   value,
-  enableSRNavigationHint = getEnableSRNavigationHintDefault(),
-  hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
-  hasSpacing,
-  hideLabel = getSearchFieldHideLabelDefault(),
+  enableSRNavigationHint = true,
+  hasSearchButtonIcon = true,
+  hasSpacing = false,
+  hideLabel = true,
   onBlur,
   onChange,
   onFocus,
@@ -166,7 +156,6 @@ export const SearchField = (({
 
   useEffect(() => {
     updateShowResults();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [disabled, isLoading, results]);
 
   useEffect(() => {
@@ -453,7 +442,9 @@ export const SearchField = (({
       </ErrorMessage>
     </div>
   );
-}) as SearchFieldComponent;
+};
+
+export default SearchField as SearchFieldComponent;
 
 SearchField.displayName = 'SearchField';
 SearchField.Result = SearchFieldResult;

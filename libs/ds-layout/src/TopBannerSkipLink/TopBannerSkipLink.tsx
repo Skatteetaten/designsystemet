@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ArrowDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
-import { getTopBannerSkipLinkTargetDefault } from './defaults';
 import { TopBannerSkipLinkProps } from './TopBannerSkipLink.types';
 
 import styles from './TopBannerSkipLink.module.scss';
@@ -16,7 +15,7 @@ export const TopBannerSkipLink = ({
   lang,
   'data-testid': dataTestId,
   shadowRootNode,
-  target = getTopBannerSkipLinkTargetDefault(),
+  target = 'main',
   children,
 }: TopBannerSkipLinkProps): JSX.Element => {
   const { t } = useTranslation('ds_layout', { i18n: dsI18n });

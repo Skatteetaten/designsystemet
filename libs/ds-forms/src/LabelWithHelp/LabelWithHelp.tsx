@@ -17,9 +17,9 @@ export const LabelWithHelp = ({
   helpText,
   helpSvgPath,
   titleHelpSvg,
-  disabled,
+  disabled = false,
   htmlFor,
-  hideLabel,
+  hideLabel = false,
   children,
   onHelpToggle,
 }: LabelWithHelpProps): JSX.Element => {

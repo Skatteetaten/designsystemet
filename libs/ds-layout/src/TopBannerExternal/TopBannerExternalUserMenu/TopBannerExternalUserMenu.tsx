@@ -26,7 +26,6 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getTopBannerExternalUserMenuHostnameDefault } from './defaults';
 import { TopBannerExternalUserMenuProps } from './TopBannerExternalUserMenu.types';
 import { topBannerAnalyticsIds } from '../analyticsIds';
 import { TopBannerUserMenuButton } from '../TopBannerUserMenuButton/TopBannerUserMenuButton';
@@ -47,8 +46,8 @@ export const TopBannerExternalUserMenu = ({
   onLogOutClick,
   onSwitchUserClick,
   children,
-  hostname = getTopBannerExternalUserMenuHostnameDefault(),
-  hideDefaultLinks,
+  hostname = 'skatt.skatteetaten.no',
+  hideDefaultLinks = false,
 }: TopBannerExternalUserMenuProps): JSX.Element => {
   const arrowRef = useRef<HTMLDivElement>(null);
   const arrowLen = arrowRef.current?.offsetWidth ?? 0;

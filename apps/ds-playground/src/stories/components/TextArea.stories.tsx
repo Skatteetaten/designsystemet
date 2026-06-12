@@ -3,14 +3,16 @@ import { useState, ChangeEvent, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getCommonAutoCompleteDefault,
-  getAutoCompletePropDescription,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import { TextArea } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -19,79 +21,52 @@ const meta = {
   argTypes: {
     // Props
     autosize: { table: { category: category.props } },
-    classNames: {
-      control: false,
-      table: { category: category.props },
-    },
-    defaultValue: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    classNames: { control: false, table: { category: category.props } },
+    defaultValue: { control: 'text', table: { category: category.props } },
     characterLimit: { table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     label: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
     autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      description: getAutoCompletePropDescription(),
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: autoCompletePropDescription,
     },
     autoCorrect: {
-      table: {
-        category: category.htmlAttribute,
-        type: { summary: 'string' },
-      },
-      type: 'string',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
     },
-    disabled: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     maxLength: { table: { category: category.htmlAttribute } },
     minLength: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
     rows: { table: { category: category.htmlAttribute } },
-    spellCheck: { table: { category: category.htmlAttribute } },
-    value: {
+    spellCheck: {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
+    value: { control: 'text', table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     label: 'Andre opplysninger',

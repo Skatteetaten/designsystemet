@@ -5,19 +5,20 @@ import { isWithinInterval, format } from 'date-fns';
 import { useArgs } from 'storybook/preview-api';
 
 import {
-  getAutoCompletePropDescription,
-  getCommonAutoCompleteDefault,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  defaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
-  getDatePickerDateFormat,
-  getDatePickerPlaceholderDefault,
   Combobox,
+  defaultDatePickerPlaceholder,
 } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -27,25 +28,13 @@ const meta = {
     // Props
     classNames: { control: false, table: { category: category.props } },
     value: { table: { category: category.props }, control: 'date' },
-    description: { table: { category: category.props } },
-    dateFormat: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDatePickerDateFormat() },
-      },
-    },
+    description: { control: 'text', table: { category: category.props } },
+    dateFormat: { table: { category: category.props } },
     label: { table: { category: category.props } },
     disabledDates: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     initialPickerDate: { table: { category: category.props }, control: 'date' },
@@ -54,41 +43,34 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
     // HTML
     autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      description: getAutoCompletePropDescription(),
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: autoCompletePropDescription,
     },
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     placeholder: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: getDatePickerPlaceholderDefault() },
+        defaultValue: { summary: defaultDatePickerPlaceholder },
       },
     },
     readOnly: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onCalendarToggle: { table: { category: category.event } },
-    onHelpToggle: { table: { category: category.event } },
-    onSelectDate: { table: { category: category.event } },
+    onCalendarToggle: { ...htmlEventDescription },
+    onHelpToggle: { ...htmlEventDescription },
+    onSelectDate: { ...htmlEventDescription },
   },
   args: {
     label: 'Fødselsdato',

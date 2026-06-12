@@ -1,4 +1,5 @@
 import { JSX } from 'react';
+
 import { Icon, WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import { ErrorMessageProps } from './ErrorMessage.types';
@@ -17,8 +18,8 @@ export const ErrorMessage = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  hasSpacing,
-  showError,
+  hasSpacing = false,
+  showError = false,
   children,
 }: ErrorMessageProps): JSX.Element => {
   return (

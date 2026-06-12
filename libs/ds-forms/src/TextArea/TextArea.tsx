@@ -7,8 +7,6 @@ import {
   useRef,
 } from 'react';
 
-import { getCommonAutoCompleteDefault } from '@skatteetaten/ds-core-utils';
-
 import { TextAreaProps } from './TextArea.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { InputCounter } from '../InputCounter/InputCounter';
@@ -38,23 +36,23 @@ export const TextArea = ({
   label,
   titleHelpSvg,
   ariaDescribedBy,
-  autoComplete = getCommonAutoCompleteDefault(),
+  autoComplete = 'off',
   autoCorrect,
   characterLimit,
   defaultValue,
-  disabled,
+  disabled = false,
   form,
   maxLength,
   minLength,
   name,
   placeholder,
-  readOnly,
-  required,
+  readOnly = false,
+  required = false,
   rows,
   spellCheck,
   value,
-  hasSpacing,
-  hideLabel,
+  hasSpacing = false,
+  hideLabel = false,
   onBlur,
   onChange,
   onFocus,

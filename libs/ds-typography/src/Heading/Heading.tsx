@@ -18,8 +18,8 @@ export const Heading = ({
   'data-testid': dataTestId,
   as: Tag,
   level: externalLevel,
-  canBeManuallyFocused,
-  hasSpacing,
+  canBeManuallyFocused = false,
+  hasSpacing = false,
   children,
 }: HeadingProps): JSX.Element => {
   const TAG_LEVEL_MAP: Record<string, number> = {

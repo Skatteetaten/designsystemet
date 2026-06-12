@@ -3,11 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { AttachFileSVGpath, Icon } from '@skatteetaten/ds-icons';
-import {
-  getParagraphVariantDefault,
-  Heading,
-  Paragraph,
-} from '@skatteetaten/ds-typography';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -21,12 +17,7 @@ const meta = {
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getParagraphVariantDefault() },
-      },
-    },
+    variant: { table: { category: category.props } },
   },
   args: {
     children: loremIpsum,

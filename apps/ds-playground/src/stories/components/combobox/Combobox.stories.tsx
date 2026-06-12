@@ -3,12 +3,10 @@ import { JSX } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  Combobox,
-  getComboboxMinSearchLengthDefault,
-  getComboboxPlaceholderDefault,
-  getComboboxVariantDefault,
-} from '@skatteetaten/ds-forms';
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
+  defaultHelpButtonTitle,
+  defaultSpinnerLabel,
+} from '@skatteetaten/ds-core-utils';
+import { Combobox } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import {
@@ -25,8 +23,11 @@ import { ComboboxTypedOptionsExample } from './ComboboxTypedOptionsExample';
 import comboboxTypedOptionsExampleSource from './ComboboxTypedOptionsExample.tsx?raw';
 import ComboboxValidationExample from './ComboboxValidationExample';
 import comboboxValidationExampleSource from './ComboboxValidationExample.tsx?raw';
-import { category, htmlEventDescription } from '../../../../.storybook/helpers';
-import { SystemSVGPaths } from '../../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../../.storybook/helpers';
 
 const meta = {
   title: 'Komponenter/Combobox',
@@ -42,54 +43,35 @@ const meta = {
     label: { table: { category: category.props } },
     options: { control: false, table: { category: category.props } },
     classNames: { control: false, table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     isLoading: { table: { category: category.props } },
     maxSelected: { table: { category: category.props } },
-    minSearchLength: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getComboboxMinSearchLengthDefault().toString(),
-        },
-      },
-    },
+    minSearchLength: { table: { category: category.props } },
     multiple: { table: { category: category.props } },
     spinnerLabel: {
       table: { category: category.props },
-      defaultValue: { summary: getSpinnerLabelDefault() },
+      defaultValue: { summary: defaultSpinnerLabel },
     },
     spinnerProps: { control: false, table: { category: category.props } },
-    titleHelpSvg: { table: { category: category.props } },
-    value: { control: 'text', table: { category: category.props } },
-    variant: {
+    titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getComboboxVariantDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
+    value: { control: 'text', table: { category: category.props } },
+    variant: { table: { category: category.props } },
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
-    placeholder: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getComboboxPlaceholderDefault(0) },
-      },
-    },
+    placeholder: { table: { category: category.htmlAttribute } },
     required: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },

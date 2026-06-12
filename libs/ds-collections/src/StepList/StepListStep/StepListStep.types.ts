@@ -1,9 +1,7 @@
 import { ReactElement, ReactNode, Ref } from 'react';
 
 import { ButtonProps } from '@skatteetaten/ds-buttons';
-import { PanelProps } from '@skatteetaten/ds-content';
-import { BaseProps } from '@skatteetaten/ds-core-utils';
-import { HeadingProps } from '@skatteetaten/ds-typography';
+import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
 //eslint-disable-next-line @typescript-eslint/no-explicit-any
 type DistributiveOmit<T, K extends PropertyKey> = T extends any
@@ -46,7 +44,7 @@ export interface StepListStepProps extends BaseProps {
   /** Tittel på steget. */
   title: string;
   /** Heading tag h1-6 */
-  titleAs?: HeadingProps['as'];
+  titleAs?: HeadingAs;
   /** Definerer stilen til steget. */
   variant?: StepVariant;
   /** Kalles når endre knappen klikkes. Knappen fjernes når onEdit er undefined. */
@@ -54,11 +52,11 @@ export interface StepListStepProps extends BaseProps {
   /** Kalles når neste knappen klikkes. Knappen fjernes når onNext er undefined. */
   onNext?: () => void;
   /** Tittel på intro til resultatsteg */
-  introTitle?: PanelProps['title'];
+  introTitle?: string;
   /** Heading tag h1-6 på intro til resultatsteg */
-  introTitleAs?: PanelProps['titleAs'];
+  introTitleAs?: HeadingAs;
   /** Innhold i intro til resultatsteg */
-  introContent?: PanelProps['children'];
+  introContent?: ReactNode;
   /**
    * Styrer om innholdet i stegene skal ha maks bredde container-article eller
    * skal ta plassen som er tilgjengelig.

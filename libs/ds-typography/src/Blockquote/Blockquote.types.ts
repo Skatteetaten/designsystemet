@@ -13,7 +13,7 @@ export interface BlockquoteProps extends BaseProps {
   children: ReactNode;
   /** Margin under sitatet */
   hasSpacing?: boolean;
-  /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
+  /** Lar komponenten være fokuserbar ved å sette tabIndex: -1 */
   canBeManuallyFocused?: boolean;
   /** Farge på border */
   borderColor?: BlockquoteColor;

@@ -6,7 +6,7 @@ import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { ChipsRemovableProps } from './ChipsRemovable.types';
 import { ChipsContext } from '../ChipsContext';
-import { getChipDefaultSize } from '../defaults';
+import { defaultChipsSize } from '../defaults';
 
 import styles from './ChipsRemovable.module.scss';
 
@@ -16,8 +16,8 @@ export const ChipsRemovable = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  size = getChipDefaultSize(),
-  disabled,
+  size = defaultChipsSize,
+  disabled = false,
   onClose,
   children,
 }: ChipsRemovableProps): JSX.Element => {

@@ -21,7 +21,7 @@ export const Link = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  isExternal,
+  isExternal = false,
   color,
   svgPath,
   href,

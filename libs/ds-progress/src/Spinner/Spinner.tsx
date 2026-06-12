@@ -1,11 +1,7 @@
 import { JSX, useEffect, useId, useState } from 'react';
 
-import {
-  getSpinnerColorDefault,
-  getSpinnerTitlePositionDefault,
-  getSpinnerSizeDefault,
-  getSpinnerLabelDefault,
-} from './defaults';
+import { defaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
+
 import { SpinnerProps } from './Spinner.types';
 
 import styles from './Spinner.module.scss';
@@ -23,12 +19,12 @@ export const Spinner = ({
   lang,
   'data-testid': dataTestId,
   classNames,
-  color = getSpinnerColorDefault(),
-  titlePosition = getSpinnerTitlePositionDefault(),
-  size = getSpinnerSizeDefault(),
-  hideTitle,
+  color = 'black',
+  titlePosition = 'bottom',
+  size = 'medium',
+  hideTitle = false,
   percentComplete,
-  children = getSpinnerLabelDefault(),
+  children = defaultSpinnerLabel,
 }: SpinnerProps): JSX.Element => {
   const [isRendered, setIsRendered] = useState<boolean>(false);
   const generatedId = useId();
@@ -97,7 +93,7 @@ export const Spinner = ({
           } ${classNames?.title ?? ''}`.trim()}
         >
           {isInPercentageMode &&
-            `${getSpinnerLabelDefault()} (${percentComplete} %)`}
+            `${defaultSpinnerLabel} (${percentComplete} %)`}
           {!isInPercentageMode && isRendered && children}
         </span>
       </span>
@@ -115,10 +111,3 @@ export const Spinner = ({
 };
 
 Spinner.displayName = 'Spinner';
-
-export {
-  getSpinnerColorDefault,
-  getSpinnerSizeDefault,
-  getSpinnerTitlePositionDefault,
-  getSpinnerLabelDefault,
-};

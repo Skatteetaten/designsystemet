@@ -1,9 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  ErrorSummary,
-  getErrorSummaryGroupTitleAsDefault,
-} from '@skatteetaten/ds-forms';
+import { ErrorSummary } from '@skatteetaten/ds-forms';
 
 import { category } from '../../../.storybook/helpers';
 
@@ -13,13 +10,7 @@ const meta = {
     // Props
     children: { control: false, table: { category: category.props } },
     title: { table: { category: category.props } },
-    titleAs: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getErrorSummaryGroupTitleAsDefault() },
-      },
-    },
+    titleAs: { control: 'inline-radio', table: { category: category.props } },
   },
   args: {
     title: 'Mottaker 1 av fullmakt',

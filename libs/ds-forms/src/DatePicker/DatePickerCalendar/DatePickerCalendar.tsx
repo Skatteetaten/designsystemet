@@ -17,7 +17,6 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
 
 import { DatePickerCalendarProps } from './DatePickerCalendar.types';
-import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 import {
   findValidYear,
   getCalendarRows,
@@ -32,6 +31,12 @@ import { Select } from '../../Select/Select';
 import { TextField } from '../../TextField/TextField';
 
 import styles from './DatePickerCalendar.module.scss';
+
+const getDatePickerCalendarSelectedDateDefault = (): Date => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return today;
+};
 
 export const DatePickerCalendar = ({
   ref,

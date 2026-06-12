@@ -1,10 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getDataCellAsDefault,
-  getTableCellAlignmentDefault,
-  Table,
-} from '@skatteetaten/ds-table';
+import { Table } from '@skatteetaten/ds-table';
 
 import { category } from '../../../.storybook/helpers';
 
@@ -13,22 +9,9 @@ const meta = {
   title: 'Komponenter/Table/DataCell',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
-    as: {
-      table: {
-        defaultValue: { summary: getDataCellAsDefault() },
-        category: category.props,
-      },
-    },
-    alignment: {
-      table: {
-        defaultValue: { summary: getTableCellAlignmentDefault() },
-        category: category.props,
-      },
-    },
+    children: { control: 'text', table: { category: category.props } },
+    as: { table: { category: category.props } },
+    alignment: { table: { category: category.props } },
     // HTML
     colSpan: { table: { category: category.htmlAttribute } },
     rowSpan: { table: { category: category.htmlAttribute } },

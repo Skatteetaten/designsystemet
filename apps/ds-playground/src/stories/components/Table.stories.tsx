@@ -14,7 +14,7 @@ import {
   SaveSVGpath,
   TimelapseSVGpath,
 } from '@skatteetaten/ds-icons';
-import { getTableSizeDefault, SortState, Table } from '@skatteetaten/ds-table';
+import { SortState, Table } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -27,27 +27,15 @@ const meta = {
     // Props
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
-    size: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTableSizeDefault() },
-      },
-    },
+    size: { table: { category: category.props } },
     showCaption: { table: { category: category.props } },
-    sortState: {
-      control: false,
-      table: { category: category.props },
-    },
-    setSortState: {
-      control: false,
-      table: { category: category.props },
-    },
+    sortState: { control: false, table: { category: category.props } },
+    setSortState: { control: false, table: { category: category.props } },
     caption: { table: { category: category.props } },
     hasFullWidth: { table: { category: category.props } },
     rowInEditModeId: { table: { category: category.props } },
   },
   args: {
-    size: 'large',
     caption: 'Dette er en tabell.',
     children: [
       <Table.Header key={'header'}>

@@ -16,10 +16,6 @@ import {
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
-import {
-  getTableRowExpandButtonTitleDefault,
-  getTableRowIsExpandedDefault,
-} from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 
 import styles from './TableRowWithIconButton.module.scss';
@@ -60,12 +56,12 @@ export const TableRowWithIconButton = ({
   iconButtonAriaExpanded,
   rowType,
   expandableContent,
-  expandButtonTitle = getTableRowExpandButtonTitleDefault(),
+  expandButtonTitle = dsI18n.t('ds_tables:tablerow.Expandable'),
   expandButtonAriaDescribedby,
   expandButtonProps,
   showExpandButtonTitle,
   shouldInsertExpandAreaMarkers,
-  isExpanded = getTableRowIsExpandedDefault(),
+  isExpanded = false,
   isExpandButtonDisabled,
   hideIconButton,
   children,

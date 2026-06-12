@@ -8,10 +8,7 @@ import {
   MegaButtonComponentCommonProps,
   MegaButtonDiscriminatedProp,
 } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonButtonTypeDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 const defaultMegaButtonText = 'Klikk her';
 
@@ -129,10 +126,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
     await expect(megaButton).toBeInTheDocument();
-    await expect(megaButton).toHaveAttribute(
-      'type',
-      getCommonButtonTypeDefault()
-    );
+    await expect(megaButton).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 

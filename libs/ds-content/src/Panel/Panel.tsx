@@ -1,14 +1,7 @@
 import { JSX, useImperativeHandle, useRef } from 'react';
+
 import { Heading } from '@skatteetaten/ds-typography';
 
-import {
-  getPanelVariantDefault,
-  getPanelSpacingDefault,
-  getPanelColorDefault,
-  getPanelTitleAsDefault,
-  getPanelSubtitleAsDefault,
-  getPanelPaddingDefault,
-} from './defaults';
 import { PanelPadding, PanelProps, PanelSpacing } from './Panel.types';
 
 import styles from './Panel.module.scss';
@@ -26,22 +19,22 @@ export const Panel = ({
   lang,
   'data-testid': dataTestId,
   headingRef,
-  canManuallySetTitleFocus,
-  color = getPanelColorDefault(),
+  canManuallySetTitleFocus = false,
+  color = 'ochre',
   classNames,
   imageSource,
   imageSourceAltText,
-  hasResponsivePadding,
-  padding = getPanelPaddingDefault(),
-  spacing = getPanelSpacingDefault(),
+  hasResponsivePadding = false,
+  padding = 'xl',
+  spacing = 'xxs',
   subtitle,
-  subtitleAs = getPanelSubtitleAsDefault(),
+  subtitleAs = 'h4',
   title,
-  titleAs = getPanelTitleAsDefault(),
-  variant = getPanelVariantDefault(),
-  hideGraphicMobile,
-  hideSubtitle,
-  hideTitle,
+  titleAs = 'h3',
+  variant = 'outline',
+  hideGraphicMobile = false,
+  hideSubtitle = false,
+  hideTitle = false,
   renderIcon,
   children,
 }: PanelProps): JSX.Element => {

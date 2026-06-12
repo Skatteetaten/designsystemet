@@ -29,8 +29,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 }
 
 export interface TopBannerButtonProps
-  extends ButtonPropsHTMLAttributes,
-    BaseProps {
+  extends ButtonPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLButtonElement>;
   classNames?: {
     container?: string;

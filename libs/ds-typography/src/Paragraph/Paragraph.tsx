@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { getParagraphVariantDefault } from './defaults';
 import { ParagraphProps } from './Paragraph.types';
 
 import styles from './Paragraph.module.scss';
@@ -17,9 +16,9 @@ export const Paragraph = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  variant = getParagraphVariantDefault(),
-  canBeManuallyFocused,
-  hasSpacing,
+  variant = 'standard',
+  canBeManuallyFocused = false,
+  hasSpacing = false,
   children,
 }: ParagraphProps): JSX.Element => {
   return (

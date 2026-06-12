@@ -12,24 +12,21 @@ import { useTranslation } from 'react-i18next';
 
 import { isValid } from 'date-fns';
 
-import {
-  dsI18n,
-  getCommonAutoCompleteDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 
 import { DatePickerProps } from './DatePicker.types';
 import { DatePickerCalendar } from './DatePickerCalendar/DatePickerCalendar';
-import {
-  getDatePickerDateFormat,
-  getDatePickerPlaceholderDefault,
-} from './defaults';
 import { formatDateForInput, parseDateFromInput } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 import { getAriaInvalid } from '../utils';
 
 import styles from './DatePicker.module.scss';
+
+export const defaultDatePickerPlaceholder = dsI18n.t(
+  'ds_forms:datepicker.TypeOrSelect'
+);
 
 /**
  * DatePicker
@@ -44,7 +41,7 @@ export const DatePicker = ({
   classNames,
   lang,
   'data-testid': dataTestId,
-  dateFormat = getDatePickerDateFormat(),
+  dateFormat = 'dd.MM.yyyy',
   disabledDates,
   description,
   errorMessage,
@@ -57,14 +54,14 @@ export const DatePicker = ({
   titleHelpSvg,
   value,
   ariaDescribedBy,
-  autoComplete = getCommonAutoCompleteDefault(),
-  disabled,
+  autoComplete = 'off',
+  disabled = false,
   name,
-  placeholder = getDatePickerPlaceholderDefault(),
-  readOnly,
-  required,
-  hasSpacing,
-  hideLabel,
+  placeholder = defaultDatePickerPlaceholder,
+  readOnly = false,
+  required = false,
+  hasSpacing = false,
+  hideLabel = false,
   onBlur,
   onChange,
   onFocus,

@@ -22,7 +22,7 @@ import {
 } from '@floating-ui/react';
 
 import { Link } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 import {
   EarthSVGpath,
   Icon,
@@ -33,10 +33,6 @@ import {
 import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
 import { ReactComponent as NorwegianFlagIcon } from './Assets/no-flag.svg';
 import { ReactComponent as SamiFlagIcon } from './Assets/sa-flag.svg';
-import {
-  getTopBannerLangPickerLocaleDefault,
-  getTopBannerLangPickerShowSamiDefault,
-} from './defaults';
 import {
   TopBannerLangPickerComponent,
   TopBannerLangPickerProps,
@@ -76,8 +72,8 @@ export const TopBannerLangPicker = (({
   className = '',
   lang,
   'data-testid': dataTestId,
-  defaultLocale = getTopBannerLangPickerLocaleDefault(),
-  showSami = getTopBannerLangPickerShowSamiDefault(),
+  defaultLocale = Languages.Bokmal,
+  showSami = true,
   selectedLang: selectedLangExternal,
   additionalLanguages,
   otherLanguagesURL,

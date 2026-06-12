@@ -2,14 +2,14 @@ import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
-import {
-  RadioGroup,
-  getRadioGroupVariantDefault,
-} from '@skatteetaten/ds-forms';
+import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 RadioGroup.Radio.displayName = 'RadioGroup.Radio';
@@ -21,37 +21,22 @@ const meta = {
     // Props
     classNames: { control: false, table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
-    legend: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    legend: { control: 'text', table: { category: category.props } },
     readOnly: { table: { category: category.props } },
     shadowRootNode: { control: false, table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: defaultHelpButtonTitle },
       },
     },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getRadioGroupVariantDefault() },
-      },
-    },
+    variant: { table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
     // HTML
@@ -67,7 +52,7 @@ const meta = {
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     legend: 'Type virksomhet',

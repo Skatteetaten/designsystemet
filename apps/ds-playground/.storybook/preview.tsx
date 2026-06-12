@@ -152,9 +152,8 @@ const argTypes = {
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   'data-testid': {
-    control: 'text',
     description: 'html data attributt som brukes for tester',
-    table: { type: { summary: 'string' }, category: category.baseProps },
+    table: { category: category.baseProps },
   },
 } satisfies Preview['argTypes'];
 

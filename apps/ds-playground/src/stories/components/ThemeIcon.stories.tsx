@@ -3,13 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { sizeArr } from '@skatteetaten/ds-core-utils';
-import {
-  Icon,
-  getIconVariantDefault,
-  getIconSizeDefault,
-  GaveArvSVGpath,
-  GaveArvIcon,
-} from '@skatteetaten/ds-icons';
+import { Icon, GaveArvSVGpath, GaveArvIcon } from '@skatteetaten/ds-icons';
 
 import { category } from '../../../.storybook/helpers';
 import { ThemeSVGPaths } from '../utils/icon.themes';
@@ -29,7 +23,7 @@ const meta = {
       table: {
         type: { summary: [...themeIconSizeArr].toString() },
         category: category.props,
-        defaultValue: { summary: getIconSizeDefault() },
+        defaultValue: { summary: 'medium' },
       },
     },
     svgPath: {
@@ -42,7 +36,7 @@ const meta = {
       control: { disable: true },
       table: {
         category: category.props,
-        defaultValue: { summary: getIconVariantDefault() },
+        defaultValue: { summary: 'themeIcon' },
       },
     },
     // Aria

@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { getListAsDefault } from './defaults';
 import { ListProps, ListComponent, AnyHTMLListElement } from './List.types';
 import { ListElement } from './ListElement/ListElement';
 
@@ -12,15 +11,15 @@ import styles from './List.module.scss';
  * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-list--docs) - Teknisk dokumentasjon
  * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography#list) - Brukerveiledning
  */
-export const List = (({
+export const List = ({
   ref,
   id,
   className = '',
   lang,
   'data-testid': dataTestId,
-  as: Tag = getListAsDefault(),
-  canBeManuallyFocused,
-  hasSpacing,
+  as: Tag = 'ul',
+  canBeManuallyFocused = false,
+  hasSpacing = false,
   children,
 }: ListProps): JSX.Element => {
   return (
@@ -37,7 +36,9 @@ export const List = (({
       {children}
     </Tag>
   );
-}) as ListComponent;
+};
+
+export default List as ListComponent;
 
 List.displayName = 'List';
 List.Element = ListElement;

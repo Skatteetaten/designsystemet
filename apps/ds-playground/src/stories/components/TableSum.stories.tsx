@@ -2,13 +2,10 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  Table,
-  getTableSumLabelAlignmentDefault,
-  getTableSumTextDefault,
-  getTableSumValueAlignmentDefault,
-} from '@skatteetaten/ds-table';
+import { Table } from '@skatteetaten/ds-table';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { defaultTableSumText } from '../../../../../libs/ds-table/src/TableSum/TableSum';
 import { category } from '../../../.storybook/helpers';
 
 const meta = {
@@ -16,29 +13,17 @@ const meta = {
   title: 'Komponenter/Table/Sum',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
     sumText: {
       table: {
         category: category.props,
-        defaultValue: { summary: getTableSumTextDefault() },
+        defaultValue: { summary: defaultTableSumText },
       },
     },
-    labelAlignment: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTableSumLabelAlignmentDefault() },
-      },
-    },
-    valueAlignment: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTableSumValueAlignmentDefault() },
-      },
-    },
+    labelAlignment: { table: { category: category.props } },
+    valueAlignment: { table: { category: category.props } },
     hasTopSeparator: { table: { category: category.props } },
+    // HTML
     colSpan: { table: { category: category.htmlAttribute } },
   },
   args: {
