@@ -15,12 +15,7 @@ import type { SpinnerProps } from '@skatteetaten/ds-progress';
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
 
-export const searchArrSize = [
-  'medium',
-  'large',
-  'extraLarge',
-] as const satisfies readonly Size[];
-export type SearchSize = (typeof searchArrSize)[number];
+export type SearchSize = Extract<Size, 'medium' | 'large' | 'extraLarge'>;
 
 type RequiredSearchFieldHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
@@ -99,7 +94,7 @@ interface SearchFieldCommonProps
   /** For å tilpasse størrelse eller farge på spinneren */
   spinnerProps?: Prettify<Partial<Pick<SpinnerProps, 'size' | 'color'>>>;
   /** Definerer stilen til SearchField */
-  variant?: SearchSize;
+  size?: SearchSize;
   /** Kalles ved trykk på knappen for resetting av søkefeltet */
   onClear?: MouseEventHandler<HTMLButtonElement>;
   /** Callback som kalles når hjelpetekst vises/skjules */

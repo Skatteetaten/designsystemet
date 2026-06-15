@@ -40,7 +40,7 @@ const meta = {
     label: { table: { disable: true } },
     options: { table: { disable: true } },
     placeholder: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     multiple: { table: { disable: true } },
     value: { table: { disable: true } },
     description: { table: { disable: true } },
@@ -373,12 +373,12 @@ export const GroupedOptionsVisualSnapshot = {
   },
 } satisfies Story;
 
-export const GroupedOptionsLargeVariant = {
-  name: 'Large variant med grupperte alternativer',
+export const GroupedOptionsLargeSize = {
+  name: 'Large size med grupperte alternativer',
   args: {
     ...defaultArgs,
     options: groupedOptions,
-    variant: 'large',
+    size: 'large',
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

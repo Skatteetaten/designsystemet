@@ -330,7 +330,7 @@ export const TopBannerExternal = ({
                         ref={searchRef}
                         classNames={{ label: styles.mainMenuSearchLabel }}
                         label={t('topbanner.SearchLabel')}
-                        variant={isMobile ? 'large' : 'extraLarge'}
+                        size={isMobile ? 'large' : 'extraLarge'}
                         hideLabel={false}
                         enableSRNavigationHint={false}
                         hasSpacing

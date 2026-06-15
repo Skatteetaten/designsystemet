@@ -52,7 +52,7 @@ export const SearchField = ({
   isLoading = false,
   spinnerLabel,
   spinnerProps,
-  variant = 'medium',
+  size = 'medium',
   ariaDescribedBy,
   autoComplete = 'off',
   accessKey,
@@ -248,8 +248,8 @@ export const SearchField = ({
     onSearchClick?.(event, currentValue);
   };
 
-  const isLarge = variant === 'large';
-  const isExtraLarge = variant === 'extraLarge';
+  const isLarge = size === 'large';
+  const isExtraLarge = size === 'extraLarge';
   let sizeAttribute: 'medium' | 'large' | 'extraLarge' = 'medium';
   if (isLarge) {
     sizeAttribute = 'large';
@@ -257,7 +257,7 @@ export const SearchField = ({
     sizeAttribute = 'extraLarge';
   }
   const hasVisibleLabel = !!label && !hideLabel;
-  const clearButtonSize = variant === 'medium' ? 'extraSmall' : 'small';
+  const clearButtonSize = size === 'medium' ? 'extraSmall' : 'small';
   const resolvedClearButtonTitle =
     clearButtonTitle ?? t('searchfield.ClearButtonTitle');
   const resolvedSearchButtonTitle =

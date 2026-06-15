@@ -14,7 +14,7 @@ const meta = {
     // Props
     isOpen: { table: { disable: true } },
     disabled: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     onClick: { table: { disable: true } },
   },
   tags: ['test'],

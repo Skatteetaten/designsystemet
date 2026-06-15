@@ -59,7 +59,7 @@ const ComboboxContent = ({
   spinnerProps,
   titleHelpSvg,
   value,
-  variant = 'medium',
+  size = 'medium',
   accessKey,
   ariaDescribedBy,
   name,
@@ -74,7 +74,7 @@ const ComboboxContent = ({
   maxSelected,
 }: Readonly<ComboboxProps>): JSX.Element => {
   const { safeFocus } = useBrowserCompatibility();
-  const resolvedVariant = multiple ? 'large' : variant;
+  const resolvedSize = multiple ? 'large' : size;
   const allOptionsInOrder = getOptionsInGroupOrder(options);
 
   // Track when minimum search length delay is complete (for delayed chevron display)
@@ -317,7 +317,7 @@ const ComboboxContent = ({
         <ComboboxButton
           isOpen={chevronIsOpen}
           disabled={disabled}
-          variant={resolvedVariant}
+          size={resolvedSize}
           onClick={handleChevronClick}
         />
         <ComboboxOptions

@@ -101,7 +101,7 @@ interface SingleComboboxProps extends ComboboxCommonProps {
    * Størrelsen på combobox. For multi-select er størrelsen automatisk satt til
    * 'large'.
    */
-  variant?: ComboboxSize;
+  size?: ComboboxSize;
   /**
    * Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert
    * modus
@@ -124,7 +124,7 @@ interface MultiComboboxProps extends ComboboxCommonProps {
    * Størrelsen på combobox. For multi-select er størrelsen automatisk satt til
    * 'large'.
    */
-  variant?: never;
+  size?: never;
   /**
    * Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert
    * modus
@@ -194,7 +194,7 @@ export type ComboboxButtonProps = {
   isOpen: boolean;
   onClick: (e?: MouseEvent) => void;
   disabled?: boolean;
-  variant?: ComboboxSize;
+  size?: ComboboxSize;
 };
 
 export type ComboboxAccessibilityAnnouncerProps = {
