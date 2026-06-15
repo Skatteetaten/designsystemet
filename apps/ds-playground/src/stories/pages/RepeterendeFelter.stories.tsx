@@ -6,7 +6,7 @@ import {
   formatOrganisationNumber,
   useMediaQuery,
 } from '@skatteetaten/ds-core-utils';
-import { TextField } from '@skatteetaten/ds-forms';
+import { TextField, FileUploader } from '@skatteetaten/ds-forms';
 import {
   AddSVGpath,
   ArrowBackSVGpath,
@@ -18,8 +18,8 @@ import {
 import { type Business, Modal } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './RepeterendeFelter.module.css';
-import stylesAsString from './RepeterendeFelter.module.css?raw';
+import styles from './RepeterendeFelter.module.scss';
+import stylesAsString from './RepeterendeFelter.module.scss?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
 import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 
