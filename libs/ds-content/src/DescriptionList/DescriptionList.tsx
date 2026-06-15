@@ -48,7 +48,6 @@ export const DescriptionList = ({
     : verticalClassName;
 
   const sizeClassName = size === 'small' ? styles.descriptionList_small : '';
-  const spacingClassName = hasSpacing ? styles.spacing : '';
 
   const termClassName =
     termWeight === 'regular' ? styles.descriptionListTermRegular : '';
@@ -56,7 +55,7 @@ export const DescriptionList = ({
     descriptionWeight === 'bold' ? styles.descriptionListDescriptionBold : '';
 
   const descriptionListClassname =
-    `${styles.descriptionList} ${variantClassName} ${spacingClassName} ${sizeClassName} ${termClassName} ${descriptionClassName} ${className}`.trim();
+    `${styles.descriptionList} ${variantClassName} ${sizeClassName} ${termClassName} ${descriptionClassName} ${className}`.trim();
 
   return (
     <dl
@@ -65,6 +64,7 @@ export const DescriptionList = ({
       className={descriptionListClassname}
       lang={lang}
       data-testid={dataTestId}
+      data-has-spacing={hasSpacing ? 'true' : undefined}
     >
       {variant === 'horizontal' && (!isMobile || !isVerticalOnMobile)
         ? Children.map(children, (child) => (
