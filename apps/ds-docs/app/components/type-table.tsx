@@ -85,9 +85,8 @@ export const TypeTable = ({ of }: TypeTableProps): JSX.Element => {
 
   return (
     <Table
-      caption={displayName}
+      caption={`Props for ${displayName}}`}
       className={styles.table}
-      size={'large'}
       hasFullWidth
     >
       <Table.Header>
