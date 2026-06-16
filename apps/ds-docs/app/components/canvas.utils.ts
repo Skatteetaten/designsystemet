@@ -29,6 +29,10 @@ interface CodeEntry {
   source: string;
 }
 
+interface OrderModule {
+  default: string[];
+}
+
 const exampleModules = import.meta.glob<ExampleModule>(
   '../../content/examples/**/*.tsx',
   { eager: true }
@@ -38,6 +42,47 @@ const exampleCodeSources = import.meta.glob<string>(
   '../../content/examples/**/*.{css,jsx,json,md,mdx,scss,ts,tsx}',
   { eager: true, import: 'default', query: '?raw' }
 );
+
+const exampleOrderModules = import.meta.glob<OrderModule>(
+  '../../content/examples/**/_order.json',
+  { eager: true }
+);
+
+/**
+ * Resolves the example folder ordering for a given prefix.
+ *
+ * - Listed folders render in the given order.
+ * - Unlisted folders sort alphabetically after the listed ones.
+ * - No _order.json → fully alphabetical.
+ */
+const getOrderForPrefix = (prefix: string): string[] => {
+  const orderModule = exampleOrderModules[`${prefix}_order.json`];
+
+  return orderModule?.default ?? [];
+};
+
+const sortFoldersByOrder = (folders: string[], order: string[]): string[] => {
+  const orderIndex = new Map(order.map((name, index) => [name, index]));
+
+  return [...folders].sort((a, b) => {
+    const aIndex = orderIndex.get(a);
+    const bIndex = orderIndex.get(b);
+
+    if (aIndex !== undefined && bIndex !== undefined) {
+      return aIndex - bIndex;
+    }
+
+    if (aIndex !== undefined) {
+      return -1;
+    }
+
+    if (bIndex !== undefined) {
+      return 1;
+    }
+
+    return a.localeCompare(b, 'nb');
+  });
+};
 
 const toExampleLabel = (fileName: string): string => {
   return fileName
@@ -163,6 +208,7 @@ const getModuleEntries = (prefix: string): ModuleEntry[] => {
 const getCodeEntries = (prefix: string): CodeEntry[] => {
   return Object.entries(exampleCodeSources)
     .filter(([path]) => path.startsWith(prefix))
+    .filter(([path]) => !path.endsWith('/_order.json'))
     .map(([path, source]) => ({
       path: path.slice(prefix.length),
       source,
@@ -204,9 +250,13 @@ export const getExamples = (examplesPath: string): ExampleDescriptor[] => {
   const moduleEntries = getModuleEntries(prefix);
   const codeEntries = getCodeEntries(prefix);
   const directChildFolders = getDirectChildFolders(moduleEntries, codeEntries);
+  const orderedFolders = sortFoldersByOrder(
+    directChildFolders,
+    getOrderForPrefix(prefix)
+  );
 
-  if (directChildFolders.length > 0) {
-    return directChildFolders.flatMap((folderName) => {
+  if (orderedFolders.length > 0) {
+    return orderedFolders.flatMap((folderName) => {
       const example = createExample(
         toExampleLabel(folderName),
         folderName,
