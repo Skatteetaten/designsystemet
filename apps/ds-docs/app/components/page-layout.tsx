@@ -23,7 +23,7 @@ export const PageLayout = ({
       </Heading>
       <div className={styles.pageLayout}>
         <aside className={styles.aside} aria-label={'Sidemeny'}>
-          <Navigation />
+          <Navigation pageTree={pageTree} />
         </aside>
         <section className={styles.section} aria-label={'Hovedinnhold'}>
           {children}

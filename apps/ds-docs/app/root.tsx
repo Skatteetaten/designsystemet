@@ -56,7 +56,7 @@ export function Layout({ children }: { children: ReactNode }): JSX.Element {
       </head>
       <body>
         <TopBannerExternal />
-        <PageLayout>{children}</PageLayout>
+        {children}
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -65,7 +65,11 @@ export function Layout({ children }: { children: ReactNode }): JSX.Element {
 }
 
 export default function App(): ReactElement {
-  return <Outlet />;
+  return (
+    <PageLayout>
+      <Outlet />
+    </PageLayout>
+  );
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type

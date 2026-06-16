@@ -28,8 +28,8 @@ export const DocsBreadcrumbs = ({
   return (
     <Breadcrumbs className={styles.breadcrumbs}>
       <Breadcrumbs.List>
-        {items.map((item) => (
-          <Breadcrumbs.Item key={item.url}>
+        {items.map((item, index) => (
+          <Breadcrumbs.Item key={`${item.name}-${index}`}>
             {item.url ? (
               <Breadcrumbs.Link href={item.url}>
                 {item.name as string}
