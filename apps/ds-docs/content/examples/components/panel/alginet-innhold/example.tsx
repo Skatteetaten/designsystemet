@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Panel } from '@skatteetaten/ds-content';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 

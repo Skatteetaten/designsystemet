@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { FileUploader } from '@skatteetaten/ds-forms';
 
 export default function FileUploaderPreviewStateExample(): JSX.Element {

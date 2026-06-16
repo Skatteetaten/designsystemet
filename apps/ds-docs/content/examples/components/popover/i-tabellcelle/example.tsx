@@ -1,7 +1,7 @@
 import { type ReactElement } from 'react';
 
-import { Table } from '@skatteetaten/ds-table';
 import { Popover } from '@skatteetaten/ds-overlays';
+import { Table } from '@skatteetaten/ds-table';
 
 import styles from './popover.module.scss';
 

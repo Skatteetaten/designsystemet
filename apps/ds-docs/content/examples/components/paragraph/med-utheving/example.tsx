@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 export default function ParagraphWithEmphasisStateExample(): JSX.Element {

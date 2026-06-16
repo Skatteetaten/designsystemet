@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { Pagination } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';

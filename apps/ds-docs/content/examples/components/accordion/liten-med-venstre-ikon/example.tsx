@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Accordion } from '@skatteetaten/ds-collections';
 import { Paragraph } from '@skatteetaten/ds-typography';
 

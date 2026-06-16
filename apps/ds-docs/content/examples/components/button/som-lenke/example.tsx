@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Button } from '@skatteetaten/ds-buttons';
 
 export default function ButtonAsLinkStateExample(): JSX.Element {

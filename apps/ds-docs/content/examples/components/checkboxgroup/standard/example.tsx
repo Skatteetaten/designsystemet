@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 
 export default function CheckboxGroupPreviewStateExample(): JSX.Element {

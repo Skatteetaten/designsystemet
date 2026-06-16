@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Combobox } from '@skatteetaten/ds-forms';
 
 const options = [

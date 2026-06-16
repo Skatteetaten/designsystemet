@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { DatePicker } from '@skatteetaten/ds-forms';
 
 const minDate = new Date(2026, 0, 1);

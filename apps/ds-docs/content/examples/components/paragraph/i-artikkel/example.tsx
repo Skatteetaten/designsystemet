@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 export default function ParagraphNewsStandardStateExample(): JSX.Element {

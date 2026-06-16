@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, JSX } from 'react';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { Card, DescriptionList, Divider } from '@skatteetaten/ds-content';

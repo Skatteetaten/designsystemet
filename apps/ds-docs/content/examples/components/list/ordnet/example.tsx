@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { List } from '@skatteetaten/ds-typography';
 
 export default function ListOrderedStateExample(): JSX.Element {

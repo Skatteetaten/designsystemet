@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Heading } from '@skatteetaten/ds-typography';
 
 export default function HeadingLevelsStateExample(): JSX.Element {

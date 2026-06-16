@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { OpenClose } from '@skatteetaten/ds-collections';
 import { Tag } from '@skatteetaten/ds-status';

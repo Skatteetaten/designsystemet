@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Link } from '@skatteetaten/ds-buttons';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
 

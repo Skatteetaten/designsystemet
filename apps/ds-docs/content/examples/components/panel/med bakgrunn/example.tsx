@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Panel } from '@skatteetaten/ds-content';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';

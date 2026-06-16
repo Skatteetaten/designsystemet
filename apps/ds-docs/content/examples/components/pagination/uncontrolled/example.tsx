@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Pagination } from '@skatteetaten/ds-navigation';
 
 export default function PaginationUncontrolledStateExample(): JSX.Element {

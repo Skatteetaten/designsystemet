@@ -1,7 +1,7 @@
 import { type ReactElement } from 'react';
 
-import { Paragraph } from '@skatteetaten/ds-typography';
 import { Popover } from '@skatteetaten/ds-overlays';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 export default function PopoverStandardExample(): ReactElement {
   return (

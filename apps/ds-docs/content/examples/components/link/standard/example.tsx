@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Link } from '@skatteetaten/ds-buttons';
 
 export default function LinkStandardStateExample(): JSX.Element {

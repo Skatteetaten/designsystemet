@@ -1,9 +1,9 @@
-import { JSX, useState } from "react";
+import { JSX, useState } from 'react';
 
-import { Combobox } from "@skatteetaten/ds-forms";
-import { Paragraph } from "@skatteetaten/ds-typography";
+import { Combobox } from '@skatteetaten/ds-forms';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { generatePerformanceTestData } from "./combobox.stories.utils";
+import { generatePerformanceTestData } from './combobox.stories.utils';
 
 const ComboboxLoadingStatesExample = (): JSX.Element => {
   const [asyncLoading, setAsyncLoading] = useState(false);
@@ -19,7 +19,7 @@ const ComboboxLoadingStatesExample = (): JSX.Element => {
 
     const performanceData = generatePerformanceTestData(5000);
     const filteredOptions = performanceData.filter((option) =>
-      option.label.toLowerCase().includes(value.toLowerCase()),
+      option.label.toLowerCase().includes(value.toLowerCase())
     );
 
     const processingTime = performance.now() - startTime;
@@ -45,13 +45,13 @@ const ComboboxLoadingStatesExample = (): JSX.Element => {
     <>
       <Paragraph hasSpacing>
         {
-          "Eksempel på bruk av combobox med lastetilstander og asynkront søk med 5000 elementer. Skriv minst 2 tegn i søkefeltet for å simulere et API-kall som henter og filtrerer alternativer."
+          'Eksempel på bruk av combobox med lastetilstander og asynkront søk med 5000 elementer. Skriv minst 2 tegn i søkefeltet for å simulere et API-kall som henter og filtrerer alternativer.'
         }
       </Paragraph>
 
       <Combobox
-        label={"Gruppe"}
-        description={"Skriv minst 2 tegn for å søke"}
+        label={'Gruppe'}
+        description={'Skriv minst 2 tegn for å søke'}
         isLoading={asyncLoading}
         options={asyncOptions}
         minSearchLength={2}

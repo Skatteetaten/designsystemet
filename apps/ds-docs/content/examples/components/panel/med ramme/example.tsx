@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Link, MegaButton } from '@skatteetaten/ds-buttons';
 import { Panel } from '@skatteetaten/ds-content';
 import { Paragraph } from '@skatteetaten/ds-typography';

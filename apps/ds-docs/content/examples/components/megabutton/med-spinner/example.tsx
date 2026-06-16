@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { MegaButton } from '@skatteetaten/ds-buttons';
 

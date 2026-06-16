@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 

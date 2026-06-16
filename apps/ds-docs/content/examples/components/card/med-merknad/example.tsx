@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
 import { Heading } from '@skatteetaten/ds-typography';

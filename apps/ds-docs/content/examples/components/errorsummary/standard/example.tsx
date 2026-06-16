@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { ErrorSummary } from '@skatteetaten/ds-forms';
 
 export default function ErrorSummaryPreviewStateExample(): JSX.Element {

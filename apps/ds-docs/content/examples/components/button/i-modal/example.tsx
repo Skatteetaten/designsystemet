@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, JSX } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { DeleteSVGpath } from '@skatteetaten/ds-icons';

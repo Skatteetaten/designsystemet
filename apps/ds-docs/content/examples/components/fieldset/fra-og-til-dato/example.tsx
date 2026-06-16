@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { DatePicker, Fieldset } from '@skatteetaten/ds-forms';
 
 import styles from './index.module.scss';

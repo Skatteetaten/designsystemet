@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { PrintSVGpath } from '@skatteetaten/ds-icons';

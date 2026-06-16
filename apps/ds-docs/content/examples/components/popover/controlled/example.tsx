@@ -1,7 +1,7 @@
 import { type ReactElement, useState } from 'react';
 
-import { Heading } from '@skatteetaten/ds-typography';
 import { Popover } from '@skatteetaten/ds-overlays';
+import { Heading } from '@skatteetaten/ds-typography';
 
 import styles from './popover.module.scss';
 

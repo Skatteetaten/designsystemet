@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 
 export default function LinkGroupPreviewStateExample(): JSX.Element {

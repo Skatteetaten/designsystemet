@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 

@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Footer } from '@skatteetaten/ds-layout';
 
 export default function FooterPreviewStateExample(): JSX.Element {

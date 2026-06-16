@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Blockquote } from '@skatteetaten/ds-typography';
 
 export default function BlockquotePreviewStateExample(): JSX.Element {

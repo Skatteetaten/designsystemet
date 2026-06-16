@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { MegaButton } from '@skatteetaten/ds-buttons';
 
 export default function MegaButtonStandardStateExample(): JSX.Element {

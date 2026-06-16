@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
 export default function BreadcrumbsNoCollapseStateExample(): JSX.Element {

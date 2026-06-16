@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 

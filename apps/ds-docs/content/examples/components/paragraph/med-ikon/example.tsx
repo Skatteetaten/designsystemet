@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { AttachFileSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 

@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Heading } from '@skatteetaten/ds-typography';
 
 import styles from './index.module.scss';

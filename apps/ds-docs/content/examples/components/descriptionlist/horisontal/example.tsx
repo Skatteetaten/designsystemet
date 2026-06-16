@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { DescriptionList } from '@skatteetaten/ds-content';
 
 export default function DescriptionListHorizontalStateExample(): JSX.Element {

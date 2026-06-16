@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Divider } from '@skatteetaten/ds-content';
 import { DescriptionList } from '@skatteetaten/ds-content';
 import { Card } from '@skatteetaten/ds-content';

@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { FileUploader } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
