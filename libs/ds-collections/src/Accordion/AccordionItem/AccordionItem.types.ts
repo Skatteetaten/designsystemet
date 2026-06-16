@@ -30,7 +30,7 @@ export interface AccordionItemProps extends BaseProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   /**
    * Om innholdet skal forbli i DOM når skjult (true) eller fjernes helt
-   * (false). Standard: true
+   * (false).
    */
   keepMounted?: boolean;
   /** Tekst eller markup som vises/skjules. */

@@ -32,7 +32,8 @@ export type OnEntitySelectHandler = (
 ) => Promise<{ error: string } | void>;
 
 export interface RolePickerProps
-  extends BaseProps,
+  extends
+    BaseProps,
     Partial<
       Pick<
         ModalProps,
@@ -50,7 +51,7 @@ export interface RolePickerProps
   businesses?: Paginated<Business>;
   /**
    * Minimum antall personer/virksomheter som kreves for at søkefelt skal være
-   * synlig. Default: 11.
+   * synlig.
    */
   minimumEntitiesForSearch?: number;
   /** Om avviklede virksomheter skal vises som standard når rollevelger åpnes. */
