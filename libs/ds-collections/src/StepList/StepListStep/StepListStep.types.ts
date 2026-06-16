@@ -64,10 +64,9 @@ export interface StepListStepProps extends BaseProps {
   hasResultContentFullWidth?: boolean;
 
   /**
-   * Styrer om aktivt steg skal få fokus automatisk. Hvis denne settes til false
-   * må man håndtere fokus selv. Når man bruker id propen så vil komponenten gi
-   * elementet som skal få fokus id=`${id}-focus-target` slik at man kan finne
-   * elementet.
+   * Styrer om aktivt steg skal få fokus. Ved klikk på 'Endre' eller 'Neste' får
+   * steget automatisk fokus. Når man bruker id for å sette fokus, finner man
+   * elementet gjennom id=`${id}-focus-target`.
    */
   shouldAutoFocusWhenActive?: boolean;
   /** Innholdet i steget */
