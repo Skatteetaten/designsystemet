@@ -1,3 +1,5 @@
+@use '@skatteetaten/ds-core-designtokens/designtokens/breakpoints' as *;
+
 .mainExternal {
   width: var(--semantic-responsive-container);
   box-sizing: border-box;
@@ -79,11 +81,11 @@
 
 .panelContent {
   display: flex;
-  flex-direction: row;
-  gap: var(--spacing-l);
+  flex-direction: column;
+  gap: var(--spacing-s);
 
-  @media (width <= 640px) {
-    flex-direction: column;
-    gap: var(--spacing-s);
+  @media (min-width: $breakpoint-s) {
+    flex-direction: row;
+    gap: var(--spacing-l);
   }
 }

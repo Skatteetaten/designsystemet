@@ -1,3 +1,5 @@
+@use '@skatteetaten/ds-core-designtokens/designtokens/breakpoints' as *;
+
 .mainExternal {
   width: var(--semantic-responsive-container);
   box-sizing: border-box;
@@ -19,7 +21,7 @@
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-bold);
 
-  @media (width >= 480px) {
+  @media (min-width: $breakpoint-xs) {
     font-size: var(--font-size-m);
   }
 }
@@ -52,7 +54,7 @@
   color: var(--step-circle-foreground);
   outline-offset: 2px;
 
-  @media (width >= 1024px) {
+  @media (min-width: $breakpoint-m) {
     display: flex;
   }
 
