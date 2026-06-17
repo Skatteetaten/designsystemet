@@ -33,7 +33,8 @@ const componentEntries = Object.keys(rawDocs)
   .map((path) => path.replace(/^\.\//, ''))
   .filter(
     (path) =>
-      path.startsWith('komponenter/') && path !== 'komponenter/index.mdx'
+      path.startsWith('byggeklosser/komponenter/') &&
+      path !== 'byggeklosser/komponenter/index.mdx'
   )
   .sort((left, right) => nbCollator.compare(left, right));
 

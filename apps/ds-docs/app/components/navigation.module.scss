@@ -1,18 +1,18 @@
 @use 'libs/ds-core-utils/src/mixins/styles' as styles;
 
 .navCard {
+  box-sizing: border-box;
   padding: var(--spacing-m);
   border: 1px solid var(--palette-graphite-50);
-  box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--palette-denim-5);
 }
 
 .navList {
-  list-style: none;
   padding: 0;
   margin: 0;
   font-size: var(--font-size-s);
+  list-style: none;
 }
 
 .folderHeading {
@@ -24,17 +24,16 @@
 }
 
 .expandable {
-  width: 100%;
   display: flex;
+  width: 100%;
   align-items: center;
-  gap: var(--spacing-s);
   justify-content: space-between;
-  padding: 0;
+  padding: 0 var(--spacing-xs);
   border: 0;
   background: transparent;
   color: inherit;
   cursor: pointer;
-  padding: 0 var(--spacing-xs);
+  gap: var(--spacing-s);
 
   &:focus-visible {
     outline: 2px solid var(--semantic-interactive-main);
@@ -51,11 +50,11 @@
 }
 
 .navLink {
-  color: var(--semantic-page-foreground);
-  text-decoration: none;
-  cursor: pointer;
   display: flex;
   padding: 0 var(--spacing-xs);
+  color: var(--semantic-page-foreground);
+  cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     background-color: var(--semantic-interactive-background);

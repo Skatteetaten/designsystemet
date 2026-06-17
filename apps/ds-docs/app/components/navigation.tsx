@@ -92,8 +92,8 @@ const renderLinkItem = (
         aria-current={isActive ? 'page' : undefined}
         className={
           shouldIndent
-            ? `${styles.navLink} ${styles.navLinkIndented} ${isActive ? styles.navLinkActive : ''}`
-            : `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+            ? `${styles.navLink} ${styles.navLinkIndented} ${isActive ? styles.navLinkActive : ''}`.trim()
+            : `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`.trim()
         }
       >
         {label}
@@ -116,8 +116,8 @@ const renderOverviewItem = (
         aria-current={isActive ? 'page' : undefined}
         className={
           shouldIndent
-            ? `${styles.navLinkOverview} ${styles.navLink} ${styles.navLinkIndented} ${isActive ? styles.navLinkActive : ''}`
-            : `${styles.navLinkOverview} ${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+            ? `${styles.navLinkOverview} ${styles.navLink} ${styles.navLinkIndented} ${isActive ? styles.navLinkActive : ''}`.trim()
+            : `${styles.navLinkOverview} ${styles.navLink} ${isActive ? styles.navLinkActive : ''}`.trim()
         }
       >
         <EyeOutlineIcon />

@@ -2,9 +2,9 @@
 
 .main {
   width: var(--semantic-responsive-container);
+  box-sizing: border-box;
   padding: var(--semantic-responsive-container-spacing);
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .pageLayout {

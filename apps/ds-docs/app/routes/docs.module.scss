@@ -3,14 +3,14 @@
 
 .contentWrapper {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
   gap: var(--semantic-responsive-internal-container-spacing);
+  grid-template-columns: minmax(0, 1fr);
 
   @media (min-width: breakpoints.$breakpoint-m) {
-    grid-template-columns: minmax(0, 1fr) max-content;
     grid-template-areas:
       'heading nav'
       'mdx nav';
+    grid-template-columns: minmax(0, 1fr) max-content;
   }
 }
 
@@ -26,18 +26,17 @@
   @include styles.sr-only;
 
   @media (min-width: breakpoints.$breakpoint-m) {
+    position: sticky;
+    top: var(--spacing-l);
     display: block;
     overflow: visible;
+    width: max-content;
     height: auto;
     margin: 0;
     clip: auto;
-    white-space: normal;
     grid-area: nav;
-    align-self: start;
-    justify-self: start;
-    width: max-content;
-    position: sticky;
-    top: var(--spacing-l);
+    place-self: start start;
+    white-space: normal;
   }
 }
 
@@ -57,10 +56,10 @@
 
 .parentTitle {
   display: block;
+  margin-bottom: var(--spacing-m);
   font-size: var(--font-size-l);
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-article);
-  margin-bottom: var(--spacing-m);
 }
 
 .mdxIcon {
