@@ -10,7 +10,7 @@ export interface TabsPanelProps extends BaseProps {
   value: string;
   /**
    * Om innholdet skal forbli i DOM når skjult (true) eller fjernes helt
-   * (false). Standard: true
+   * (false).
    */
   keepMounted?: boolean;
 }
