@@ -5,8 +5,6 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { DatePickerCalendar } from '../../../../../libs/ds-forms/src/DatePicker/DatePickerCalendar/DatePickerCalendar';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { DatePickerCalendarProps } from '../../../../../libs/ds-forms/src/DatePicker/DatePickerCalendar/DatePickerCalendar.types';
 
 const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
   /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
@@ -23,6 +21,7 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
 };
 
 const today = new Date('2024-01-15');
+
 const meta = {
   component: DatePickerCalendar,
   title: 'Tester/DatePicker/Calendar',
@@ -48,21 +47,18 @@ const meta = {
     mockDate: today,
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    selectedDate: today,
+    onSelectDate: (): void => {
+      Function.prototype();
+    },
+  },
 } satisfies Meta<typeof DatePickerCalendar>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs: DatePickerCalendarProps = {
-  selectedDate: today,
-  onSelectDate: () => {
-    Function.prototype();
-  },
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -85,7 +81,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'en',
@@ -112,9 +107,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1 delvis, B1, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -180,7 +173,6 @@ export const Defaults = {
 export const WithSelectedDate = {
   name: 'WithSelectedDate (B2)',
   args: {
-    ...defaultArgs,
     selectedDate: new Date('2024-01-31'),
   },
   argTypes: {
@@ -199,7 +191,6 @@ minDate.setHours(1, 1, 1, 1);
 export const WithMinDate = {
   name: 'With MinDate (A3 delvis)',
   args: {
-    ...defaultArgs,
     minDate,
   },
   argTypes: {
@@ -220,7 +211,6 @@ maxDate.setHours(1, 1, 1, 1);
 export const WithMaxDate = {
   name: 'With MaxDate (A3 delvis)',
   args: {
-    ...defaultArgs,
     maxDate,
   },
   argTypes: {
@@ -238,7 +228,6 @@ export const WithMaxDate = {
 export const WithMaxDateWhereSelectedDateIsWithinTheRange = {
   name: 'With MaxDate Where Selected Date Is Within The Range',
   args: {
-    ...defaultArgs,
     selectedDate: new Date('2024-01-16'),
     maxDate: new Date('2024-01-15'),
   },
@@ -259,9 +248,7 @@ export const WithMaxDateWhereSelectedDateIsWithinTheRange = {
 
 export const WithBreakpointMobile = {
   name: 'With Breakpoint-mobile (A1 delvis)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {},
   globals: {
     viewport: {
@@ -272,9 +259,7 @@ export const WithBreakpointMobile = {
 
 export const ClickAndChangeMonthAndYear = {
   name: 'Click And Change Month And Year (A5 delvis)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -316,7 +301,6 @@ export const ClickAndChangeMonthAndYear = {
 export const WithDisabledDates = {
   name: 'With DisabledDates',
   args: {
-    ...defaultArgs,
     disabledDates: [
       new Date('2024-01-04'),
       new Date('2024-01-06'),
@@ -348,7 +332,6 @@ export const WithDisabledDates = {
 export const WithDisabledDateAsValue = {
   name: 'With DisabledDate As Value',
   args: {
-    ...defaultArgs,
     disabledDates: [new Date('2024-01-15')],
   },
   argTypes: {
@@ -363,9 +346,7 @@ export const WithDisabledDateAsValue = {
 
 export const WithAccessibleDayNames = {
   name: 'With Accessible Day Names',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },

@@ -4,7 +4,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
-import { Paragraph, ParagraphProps } from '@skatteetaten/ds-typography';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 
@@ -31,18 +31,15 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: loremIpsum,
+  },
 } satisfies Meta<typeof Paragraph>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs: ParagraphProps = {
-  children: loremIpsum,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLParagraphElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -63,7 +60,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -90,9 +86,7 @@ export const WithAttributes = {
 
 export const IsPElement = {
   name: 'Is <p>-element (B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -138,9 +132,7 @@ const TemplateWithMarkup: StoryFn<typeof Paragraph> = (args) => (
 export const WithMarkup = {
   render: TemplateWithMarkup,
   name: 'With Markup (A2, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: {
       table: { disable: false },
@@ -159,9 +151,7 @@ const TemplateWithTwoParagraphs: StoryFn<typeof Paragraph> = (args) => (
 export const Defaults = {
   render: TemplateWithTwoParagraphs,
   name: 'Defaults Variant Standard (A1, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -171,7 +161,6 @@ export const VariantIngress = {
   render: TemplateWithTwoParagraphs,
   name: 'Variant Ingress (A1)',
   args: {
-    ...defaultArgs,
     variant: 'ingress',
   },
   argTypes: {
@@ -183,7 +172,6 @@ export const WithSpacing = {
   render: TemplateWithTwoParagraphs,
   name: 'With Spacing Variant Standard (A3)',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
   },
   argTypes: {
@@ -195,7 +183,6 @@ export const VariantIngressWithSpacing = {
   render: TemplateWithTwoParagraphs,
   name: 'With Spacing Variant Ingress (A3)',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
     variant: 'ingress',
   },
@@ -208,7 +195,6 @@ export const VariantIngressWithSpacing = {
 export const WithCanBeManuallyFocused: Story = {
   render: TemplateWithTwoParagraphs,
   args: {
-    ...defaultArgs,
     canBeManuallyFocused: true,
   },
   argTypes: {
@@ -224,9 +210,7 @@ export const WithCanBeManuallyFocused: Story = {
 } satisfies Story;
 
 export const ParagraphWithIcon: Story = {
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   render: (_args): JSX.Element => {
     return (
       <Paragraph>

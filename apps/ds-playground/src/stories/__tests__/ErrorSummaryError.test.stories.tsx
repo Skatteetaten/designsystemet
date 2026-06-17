@@ -24,19 +24,17 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: 'Husk å fylle ut type varer',
+    referenceId: 'referenceId_1',
+  },
 } satisfies Meta<typeof ErrorSummary.Error>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  children: 'Husk å fylle ut type varer',
-  referenceId: 'referenceId_1',
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLAnchorElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -59,7 +57,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -86,9 +83,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     referenceId: { table: { disable: false } },
   },

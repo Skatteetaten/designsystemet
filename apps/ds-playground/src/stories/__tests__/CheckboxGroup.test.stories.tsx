@@ -16,6 +16,9 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
+const defaultLegendText = 'Velg det som passer deg';
+const defaultErrorMessage = 'Velg minst ett av alternativene';
+
 const meta = {
   component: CheckboxGroup,
   title: 'Tester/CheckboxGroup',
@@ -57,23 +60,24 @@ const meta = {
     htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    legend: defaultLegendText,
+    children: [
+      <CheckboxGroup.Checkbox key={'checkboxGroupOption_1'}>
+        {'Har barn over 16 år'}
+      </CheckboxGroup.Checkbox>,
+      <CheckboxGroup.Checkbox key={'checkboxGroupOption_2'}>
+        {'Har barn under 12 år'}
+      </CheckboxGroup.Checkbox>,
+      <CheckboxGroup.Checkbox key={'checkboxGroupOption_4'}>
+        {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
+      </CheckboxGroup.Checkbox>,
+    ],
+  },
 } satisfies Meta<typeof CheckboxGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultLegendText = 'Velg det som passer deg';
-const defaultErrorMessage = 'Velg minst ett av alternativene';
-const defaultChildren = [
-  <CheckboxGroup.Checkbox key={'checkboxGroupOption_1'}>
-    {'Har barn over 16 år'}
-  </CheckboxGroup.Checkbox>,
-  <CheckboxGroup.Checkbox key={'checkboxGroupOption_2'}>
-    {'Har barn under 12 år'}
-  </CheckboxGroup.Checkbox>,
-  <CheckboxGroup.Checkbox key={'checkboxGroupOption_4'}>
-    {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
-  </CheckboxGroup.Checkbox>,
-];
 const childrenWithOneChecked = [
   <CheckboxGroup.Checkbox key={'checkboxGroupOption_1'} checked>
     {'Har barn over 16 år'}
@@ -85,16 +89,9 @@ const childrenWithOneChecked = [
     {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
   </CheckboxGroup.Checkbox>,
 ];
-
-const defaultArgs = {
-  legend: defaultLegendText,
-  children: defaultChildren,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLFieldSetElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -117,7 +114,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -148,7 +144,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       legend: 'dummyClassname',
@@ -195,9 +190,7 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1, B5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     legend: { table: { disable: false } },
     children: { table: { disable: false } },
@@ -235,9 +228,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -262,7 +253,6 @@ export const WithAriaDescribedBy = {
 export const LegendWithMarkup = {
   name: 'Legend With Markup (B1)',
   args: {
-    ...defaultArgs,
     legend: (
       <>
         <Heading as={'h1'} level={3}>
@@ -282,7 +272,6 @@ export const LegendWithMarkup = {
 export const WithHideLegend = {
   name: 'With HideLegend (B1)',
   args: {
-    ...defaultArgs,
     hideLegend: true,
   },
   argTypes: {
@@ -298,7 +287,6 @@ export const WithHideLegend = {
 export const WithDisabled = {
   name: 'With Disabled (A1, B2)',
   args: {
-    ...defaultArgs,
     disabled: true,
     helpText: 'Hjelpeknappen skal også være disabled',
   },
@@ -317,7 +305,6 @@ export const WithDisabled = {
 export const WithDisabledAndChecked = {
   name: 'With Disabled And Checked (A1)',
   args: {
-    ...defaultArgs,
     children: childrenWithOneChecked,
     disabled: true,
   },
@@ -329,7 +316,6 @@ export const WithDisabledAndChecked = {
 export const WithError = {
   name: 'With Error (A1, B5)',
   args: {
-    ...defaultArgs,
     errorMessage: defaultErrorMessage,
   },
   argTypes: {
@@ -353,7 +339,6 @@ export const WithError = {
 export const WithHelptext = {
   name: 'With HelpText (A1)',
   args: {
-    ...defaultArgs,
     helpText: 'Vi trenger å vite om du har barn.',
   },
   argTypes: {
@@ -370,7 +355,6 @@ export const WithHelptext = {
 export const WithDescription = {
   name: 'With Description (A1)',
   args: {
-    ...defaultArgs,
     description: 'Vi trenger å vite om du har barn.',
   },
   argTypes: {
@@ -388,7 +372,6 @@ export const WithDescription = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     onHelpToggle: fn(),
   },
@@ -406,7 +389,6 @@ export const WithHelpToggleEvent = {
 export const WithReadOnly = {
   name: 'With ReadOnly',
   args: {
-    ...defaultArgs,
     children: childrenWithOneChecked,
     readOnly: true,
   },

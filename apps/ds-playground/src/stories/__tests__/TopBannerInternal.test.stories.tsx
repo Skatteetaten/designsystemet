@@ -351,7 +351,6 @@ export const WithCustomTheme = {
 
 export const WithOneChildMobile = {
   args: {
-    title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
     children: (
@@ -380,7 +379,6 @@ export const WithOneChildMobile = {
 
 export const WithLongDescriptionAndThreeChildrenMobile = {
   args: {
-    title: 'MVA',
     description: 'FOLK OG TRUBADURSERVICE WOODIE GUTHRIE 999 999 999',
     user: 'Etternavnesen Fornavn',
     children: defaultChildren,
@@ -405,7 +403,6 @@ export const WithLongDescriptionAndThreeChildrenMobile = {
 
 export const WithThreeChildrenBreakpointS = {
   args: {
-    title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
     children: defaultChildren,
@@ -430,7 +427,6 @@ export const WithThreeChildrenBreakpointS = {
 
 export const WithThreeChildrenBreakpointM = {
   args: {
-    title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
     children: defaultChildren,

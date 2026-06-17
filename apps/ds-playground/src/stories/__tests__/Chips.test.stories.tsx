@@ -3,10 +3,8 @@ import { useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
-import { Chips, ChipsProps } from '@skatteetaten/ds-collections';
+import { Chips } from '@skatteetaten/ds-collections';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-
-const elementId = 'htmlId';
 
 const meta = {
   component: Chips,
@@ -24,6 +22,15 @@ const meta = {
     ariaLabel: { table: { disable: true } },
     ariaLabelledBy: { table: { disable: true } },
   },
+  args: {
+    children: [
+      <Chips.Toggle key={'trd'} showCheckmark={false}>
+        {'Trondheim'}
+      </Chips.Toggle>,
+      <Chips.Toggle key={'bgo'}>{'Bergen'}</Chips.Toggle>,
+      <Chips.Removable key={'osl'}>{'Oslo'}</Chips.Removable>,
+    ],
+  },
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
@@ -31,16 +38,6 @@ const meta = {
 } satisfies Meta<typeof Chips>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs: ChipsProps = {
-  children: [
-    <Chips.Toggle key={'trd'} showCheckmark={false}>
-      {'Trondheim'}
-    </Chips.Toggle>,
-    <Chips.Toggle key={'bgo'}>{'Bergen'}</Chips.Toggle>,
-    <Chips.Removable key={'osl'}>{'Oslo'}</Chips.Removable>,
-  ],
-};
 
 const defaultLocations = ['Trondheim', 'Bergen', 'Oslo'];
 
@@ -75,7 +72,6 @@ export const WithRef = {
         instance.id = 'dummyIdForwardedFromRef';
       }
     },
-    ...defaultArgs,
   },
   argTypes: {
     ref: { table: { disable: false } },
@@ -93,11 +89,10 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
-    ...defaultArgs,
   },
   argTypes: {
     id: { table: { disable: false } },
@@ -112,7 +107,7 @@ export const WithAttributes = {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('list');
     await expect(container).toHaveClass('dummyClassname');
-    await expect(container).toHaveAttribute('id', elementId);
+    await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
   },
@@ -120,7 +115,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (B2 delvis)',
-  args: defaultArgs,
+  args: {},
 } satisfies Story;
 
 const label = 'Kontorsted';
@@ -129,7 +124,6 @@ export const WithAriaLabel = {
   name: 'With AriaLabel (B2 delvis)',
   args: {
     ariaLabel: label,
-    ...defaultArgs,
   },
   argTypes: {
     ariaLabel: { table: { disable: false } },
@@ -150,7 +144,6 @@ export const WithAriaLabelledBy = {
   name: 'With AriaLabelledBy',
   args: {
     ariaLabelledBy: labelId,
-    ...defaultArgs,
   },
   argTypes: {
     ariaLabelledBy: { table: { disable: false } },

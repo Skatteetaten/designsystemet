@@ -159,9 +159,7 @@ export const WithMoreThan99Notifications: Story = {
 };
 
 export const SwitchUser: Story = {
-  args: {
-    onSwitchUserClick: fn(),
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },

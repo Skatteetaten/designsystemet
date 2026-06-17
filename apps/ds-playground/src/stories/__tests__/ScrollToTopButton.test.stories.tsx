@@ -39,6 +39,9 @@ const meta = {
       value: 'grey',
     },
   },
+  args: {
+    visibilityThreshold: 0,
+  },
 } satisfies Meta<typeof ScrollToTopButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -49,16 +52,10 @@ const Template: StoryFn<typeof ScrollToTopButton> = (args) => (
     <ScrollToTopButton {...args} />
   </div>
 );
-
-const defaultArgs = {
-  visibilityThreshold: 0,
-};
-
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -86,7 +83,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -119,7 +115,6 @@ export const WithCustomClassNames = {
   render: Template,
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       button: 'dummyClassname',
@@ -158,9 +153,7 @@ export const WithCustomClassNames = {
 export const Defaults = {
   render: Template,
   name: 'Defaults (A1, A3, B4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     visibilityThreshold: { table: { disable: false } },
   },
@@ -176,7 +169,6 @@ export const WithChildren = {
   render: Template,
   name: 'With Children (A2)',
   args: {
-    ...defaultArgs,
     children: 'dummy string',
   },
   argTypes: {
@@ -194,9 +186,7 @@ export const WithChildren = {
 export const WithMobileScreen = {
   render: Template,
   name: 'With Small Screen (A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },
@@ -210,9 +200,7 @@ export const WithMobileScreen = {
 export const WithWideScreen = {
   render: Template,
   name: 'With Wide Screen (A6)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-xl',
@@ -224,7 +212,6 @@ export const WithVisibilityThreshold = {
   render: Template,
   name: 'With VisibilityThreshold and Scrolling (A7, A8)',
   args: {
-    ...defaultArgs,
     visibilityThreshold: 3,
   },
   argTypes: {
@@ -272,9 +259,7 @@ const TemplateWithShadowDom: StoryFn<typeof ScrollToTopButton> = (args) => {
 export const WithShadowDom = {
   render: TemplateWithShadowDom,
   name: 'With ShadowDom (B4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   decorators: [webComponent],
   parameters: {
     imageSnapshot: {
@@ -317,7 +302,6 @@ export const WithNotScrollToMain = {
   render: TemplateMainFarDown,
   name: 'Not Scroll To Main',
   args: {
-    ...defaultArgs,
     scrollToMain: false,
   },
   argTypes: {

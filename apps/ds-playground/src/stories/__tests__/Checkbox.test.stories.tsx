@@ -14,6 +14,9 @@ const verifyAttribute =
     await expect(button).toHaveAttribute(attribute, expectedValue);
   };
 
+const defaultLabelText = 'Checkbox';
+const defaultErrorMessage = 'Du må lese og forstå innholdet for å gå videre';
+
 const meta = {
   component: Checkbox,
   title: 'Tester/Checkbox',
@@ -50,20 +53,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultLabelText,
+  },
 } satisfies Meta<typeof Checkbox>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultLabelText = 'Checkbox';
-const defaultErrorMessage = 'Du må lese og forstå innholdet for å gå videre';
-const defaultArgs = {
-  children: defaultLabelText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLInputElement | null): void => {
       if (instance) {
         instance.name = 'dummyNameForwardedFromRef';
@@ -82,7 +81,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -114,7 +112,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       label: 'dummyClassname',
       errorMessage: 'dummyClassname',
@@ -142,9 +139,7 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -171,7 +166,6 @@ export const Defaults = {
 export const WithDescription = {
   name: 'With Description (A1)',
   args: {
-    ...defaultArgs,
     description: 'En beskrivelse av punktet',
   },
   argTypes: {
@@ -194,7 +188,6 @@ export const WithDescription = {
 export const WithDescriptionAndLongText = {
   name: 'With Description And Long Text (A1)',
   args: {
-    ...defaultArgs,
     children:
       'Får ekstra lang reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning eller annen fritidsordning',
     description:
@@ -213,7 +206,6 @@ export const WithDescriptionAndLongText = {
 export const WithDescriptionAndDisabled = {
   name: 'With Description And Disabled (A1)',
   args: {
-    ...defaultArgs,
     description: 'En beskrivelse av punktet',
     disabled: true,
   },
@@ -226,7 +218,6 @@ export const WithDescriptionAndDisabled = {
 export const WithLongText = {
   name: 'With Long Text (A2)',
   args: {
-    ...defaultArgs,
     children:
       'Får ekstra lang reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning eller annen fritidsordning',
   },
@@ -243,7 +234,6 @@ export const WithLongText = {
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A2)',
   args: {
-    ...defaultArgs,
     children:
       'Fårekstrareiseveitiljobbpågrunnavleveringtilbarnehageellerskolefritidsordning',
   },
@@ -260,7 +250,6 @@ export const WithLongTextAndBreaking = {
 export const WithHideLabel = {
   name: 'With HideLabel (A2)',
   args: {
-    ...defaultArgs,
     hideLabel: true,
   },
   argTypes: {
@@ -276,7 +265,6 @@ export const WithHideLabel = {
 export const WithChecked = {
   name: 'With Checked (A1, A3)',
   args: {
-    ...defaultArgs,
     checked: true,
   },
   argTypes: {
@@ -296,7 +284,6 @@ export const WithChecked = {
 export const WithDisabled = {
   name: 'With Disabled (A1, A5 delvis, B2)',
   args: {
-    ...defaultArgs,
     disabled: true,
   },
   argTypes: {
@@ -315,7 +302,6 @@ export const WithDisabled = {
 export const WithDisabledAndChecked = {
   name: 'With Disabled And Checked (A1, A5 delvis, B2)',
   args: {
-    ...defaultArgs,
     checked: true,
     disabled: true,
   },
@@ -337,7 +323,6 @@ export const WithDisabledAndChecked = {
 export const WithRequired = {
   name: 'With Required (B3)',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -354,7 +339,6 @@ export const WithRequired = {
 export const WithRequiredAndChecked = {
   name: 'With Required And Checked (B3)',
   args: {
-    ...defaultArgs,
     checked: true,
     required: true,
   },
@@ -377,7 +361,6 @@ export const WithRequiredAndChecked = {
 export const WithError = {
   name: 'With ErrorMessage (A1, B4)',
   args: {
-    ...defaultArgs,
     errorMessage: defaultErrorMessage,
   },
   argTypes: {
@@ -402,7 +385,6 @@ export const WithError = {
 export const WithDisabledAndRequired = {
   name: 'With Disabled And Required (A1)',
   args: {
-    ...defaultArgs,
     disabled: true,
     required: true,
   },
@@ -422,7 +404,6 @@ export const WithDisabledAndRequired = {
 export const WithErrorAndRequired = {
   name: 'With Error And Required (A1)',
   args: {
-    ...defaultArgs,
     errorMessage: 'Feilmelding',
     required: true,
   },
@@ -444,7 +425,6 @@ export const WithErrorAndRequired = {
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B1)',
   args: {
-    ...defaultArgs,
     ariaDescribedby: 'testID',
   },
   argTypes: {
@@ -467,7 +447,6 @@ export const WithAriaDescribedby = {
 export const WithValue = {
   name: 'With Value',
   args: {
-    ...defaultArgs,
     value: 'test_value_checkbox',
   },
   argTypes: {
@@ -482,7 +461,6 @@ export const WithValue = {
 export const WithDefaultChecked = {
   name: 'With DefaultChecked',
   args: {
-    ...defaultArgs,
     defaultChecked: true,
   },
   argTypes: {
@@ -501,7 +479,6 @@ export const WithDefaultChecked = {
 export const WithName = {
   name: 'With Name',
   args: {
-    ...defaultArgs,
     name: 'test_name_checkbox',
   },
   argTypes: {
@@ -540,7 +517,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers',
   args: {
-    ...defaultArgs,
     onBlur: fn(),
     onChange: fn(),
     onFocus: fn(),
@@ -563,7 +539,6 @@ export const WithEventHandlers = {
 export const WithReadOnly = {
   name: 'With ReadOnly',
   args: {
-    ...defaultArgs,
     readOnly: true,
     description: 'Dette er en checkbox i read only modus',
   },
@@ -584,7 +559,6 @@ export const WithReadOnly = {
 export const WithReadOnlyAndChecked = {
   name: 'With ReadOnly And Checked',
   args: {
-    ...defaultArgs,
     readOnly: true,
     checked: true,
     description: 'Dette er en checkbox i read only modus',

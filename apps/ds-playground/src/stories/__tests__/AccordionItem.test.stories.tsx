@@ -10,12 +10,11 @@ import {
   within,
 } from 'storybook/test';
 
-import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
+import { Accordion } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 
-const elementId = 'htmlId';
 const defaultTitle = 'Meg selv';
 const defaultSubtitle = 'Beskrivelse';
 const defaultContent =
@@ -47,6 +46,10 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+  },
+  args: {
+    title: defaultTitle,
+    children: defaultContent,
   },
 } satisfies Meta<typeof Accordion.Item>;
 export default meta;
@@ -82,15 +85,9 @@ const TemplateWithAllHeadings: StoryFn<typeof Accordion.Item> = (args) => (
   </>
 );
 
-const defaultArgs: AccordionItemProps = {
-  title: defaultTitle,
-  children: defaultContent,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -115,8 +112,7 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -134,7 +130,7 @@ export const WithAttributes = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toHaveClass('dummyClassname');
-    await expect(button).toHaveAttribute('id', elementId);
+    await expect(button).toHaveAttribute('id', 'htmlId');
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
   },
@@ -143,7 +139,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3, A10)',
   args: {
-    ...defaultArgs,
     subtitle: defaultSubtitle,
     isExpanded: true,
     classNames: {
@@ -178,9 +173,7 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Defaults (A2, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     title: { table: { disable: false } },
   },
@@ -209,7 +202,6 @@ export const Defaults = {
 export const WithCustomIcon = {
   name: 'With Custom Icon (A8)',
   args: {
-    ...defaultArgs,
     svgPath: PersonSVGpath,
   },
 } satisfies Story;
@@ -217,7 +209,6 @@ export const WithCustomIcon = {
 export const IsExpanded = {
   name: 'With IsExpanded (A6 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
   },
   argTypes: {
@@ -235,7 +226,6 @@ export const IsExpanded = {
 export const IsDefaultExpanded = {
   name: 'With IsDefaultExpanded (A6 delvis)',
   args: {
-    ...defaultArgs,
     isDefaultExpanded: true,
   },
   argTypes: {
@@ -254,7 +244,6 @@ export const WithOnClick = {
   render: TemplateWithOnClick,
   name: 'With OnClick (A5, B1,B2)',
   args: {
-    ...defaultArgs,
     onClick: fn(),
   },
   parameters: {
@@ -277,9 +266,7 @@ export const WithOnClick = {
 export const PersistFocusOnClick = {
   render: TemplateWithOnClick,
   name: 'With Persist Focus On Click (C1))',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -305,7 +292,6 @@ export const PersistFocusOnClick = {
 export const WithLineBreak = {
   name: 'With Title Line Break (A3)',
   args: {
-    ...defaultArgs,
     title: 'Tittel som\nbrekker over flere\nlinjer',
   },
 } satisfies Story;
@@ -313,9 +299,7 @@ export const WithLineBreak = {
 export const WithTitleAs = {
   render: TemplateWithAllHeadings,
   name: 'With TitleAs (B3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -359,9 +343,7 @@ export const WithPersistedState = {
     );
   },
   name: 'With Persisted State',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -384,7 +366,6 @@ export const WithPersistedState = {
 export const WithKeepMountedFalse = {
   name: 'With KeepMounted False (A11)',
   args: {
-    ...defaultArgs,
     keepMounted: false,
   },
   argTypes: {

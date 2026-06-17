@@ -5,6 +5,9 @@ import { Card, CardAlertVariant } from '@skatteetaten/ds-content';
 import { SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
+const defaultText =
+  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
+
 const meta = {
   component: Card.Alert,
   title: 'Tester/Card/Alert',
@@ -32,22 +35,17 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultText,
+    title: 'Merknad',
+  },
 } satisfies Meta<typeof Card.Alert>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultText =
-  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
-
-const defaultArgs = {
-  children: defaultText,
-  title: 'Merknad',
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -70,7 +68,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'en',
@@ -98,7 +95,6 @@ export const WithAttributes = {
 export const WithSvgPath = {
   name: 'With custom icon, children and title (A7)',
   args: {
-    ...defaultArgs,
     svgPath: SkattetrekkSVGpath,
   },
   argTypes: {
@@ -112,7 +108,7 @@ const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
     {variantsArr.map((variant, index) => {
       return (
         <Card.Alert
-          title={defaultArgs.title}
+          title={'Merknad'}
           {...args}
           key={`card_${index}`}
           className={'bottomSpacingXL'}
@@ -128,9 +124,7 @@ const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
 export const AllVariants = {
   render: TemplateAllVariants,
   name: 'All Variants (A7)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     /*vanligvis legger vi ikke tre alerts i samme card, men har det her for testen sin skyld.
      * Må slå av siden alle tre henter samme id fra card sin context
@@ -142,7 +136,6 @@ export const AllVariants = {
 export const WithOnClose = {
   name: 'With OnClose',
   args: {
-    ...defaultArgs,
     children: (
       <>
         <Heading as={'h1'} level={4}>
@@ -172,9 +165,7 @@ export const WithOnClose = {
 
 export const WithCloseButtonPseudoStates = {
   name: 'With CloseButton Pseudo States',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
   },

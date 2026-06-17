@@ -6,6 +6,9 @@ import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { Tag } from '@skatteetaten/ds-status';
 import { List } from '@skatteetaten/ds-typography';
 
+const defaultText =
+  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
+
 const meta = {
   component: Card.Content,
   title: 'Tester/Card/Content',
@@ -31,21 +34,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultText,
+  },
 } satisfies Meta<typeof Card.Content>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultText =
-  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
-
-const defaultArgs = {
-  children: defaultText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -68,7 +66,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'en',
@@ -96,7 +93,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames',
   args: {
-    ...defaultArgs,
     rightContent: 'høyrejustert innhold',
     classNames: {
       rightContent: 'dummyClassname',
@@ -114,7 +110,7 @@ export const WithCustomClassNames = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
-    const content = canvas.getByText(defaultArgs.children);
+    const content = canvas.getByText(defaultText);
     const rightContent = canvas.getByText('høyrejustert innhold');
 
     await expect(content).toHaveClass('dummyClassname');

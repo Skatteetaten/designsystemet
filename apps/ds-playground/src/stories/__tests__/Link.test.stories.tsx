@@ -3,13 +3,12 @@ import { useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
-import { Link, LinkProps } from '@skatteetaten/ds-buttons';
+import { Link } from '@skatteetaten/ds-buttons';
 import { dsI18n, linkColorArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-const elementId = 'htmlId';
 const systemIconViewBox = '0 0 24 24';
 const defaultLinkText = 'Er du pendler?';
 
@@ -63,6 +62,10 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    href: '#storybook-root',
+    children: defaultLinkText,
+  },
 } as Meta<typeof Link>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -73,17 +76,10 @@ const Template: StoryFn<typeof Link> = (args) => (
     {args.children}
   </Link>
 );
-
-const defaultArgs: LinkProps = {
-  href: '#storybook-root',
-  children: defaultLinkText,
-};
-
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLAnchorElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -103,8 +99,7 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -122,7 +117,7 @@ export const WithAttributes = {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
     await expect(link).toHaveClass('dummyClassname');
-    await expect(link).toHaveAttribute('id', elementId);
+    await expect(link).toHaveAttribute('id', 'htmlId');
     await expect(link).toHaveAttribute('lang', 'nb');
     await expect(link).toHaveAttribute('data-testid', '123ID');
   },
@@ -131,9 +126,7 @@ export const WithAttributes = {
 export const Defaults = {
   render: Template,
   name: 'Defaults (A1 delvis, A2, A3 delvis, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     href: { table: { disable: false } },
     children: { table: { disable: false } },
@@ -157,7 +150,6 @@ export const WithLongText = {
   render: Template,
   name: 'With Long Text (A1 delvis)',
   args: {
-    ...defaultArgs,
     children:
       'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.',
   },
@@ -170,7 +162,6 @@ export const WithLongTextIconAndExternalIcon = {
   render: Template,
   name: 'With Long Text And Icons (A1 delvis)',
   args: {
-    ...defaultArgs,
     isExternal: true,
     svgPath: CalendarSVGpath,
     children:
@@ -187,7 +178,6 @@ export const WithIcon = {
   render: Template,
   name: 'With Icon (A4, B2)',
   args: {
-    ...defaultArgs,
     svgPath: CalendarSVGpath,
   },
   argTypes: {
@@ -207,7 +197,6 @@ export const WithExternalIcon = {
   render: Template,
   name: 'With External Icon (A5)',
   args: {
-    ...defaultArgs,
     isExternal: true,
   },
   argTypes: {
@@ -230,7 +219,6 @@ export const WithColor = {
   render: Template,
   name: 'With Color (A6)',
   args: {
-    ...defaultArgs,
     color: 'white',
     isExternal: true,
     svgPath: AddOutlineSVGpath,
@@ -254,7 +242,6 @@ export const WithTarget = {
   render: Template,
   name: 'With Target (A2)',
   args: {
-    ...defaultArgs,
     target: '_blank',
   },
   argTypes: {
@@ -275,7 +262,6 @@ export const WithDownload = {
   render: Template,
   name: 'With Download',
   args: {
-    ...defaultArgs,
     download: 'testFil.txt',
   },
   argTypes: {
@@ -295,8 +281,7 @@ export const WithAriaDescribedby = {
   render: Template,
   name: 'With AriaDescribedby (B3)',
   args: {
-    ...defaultArgs,
-    ariaDescribedby: elementId,
+    ariaDescribedby: 'htmlId',
   },
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
@@ -304,13 +289,12 @@ export const WithAriaDescribedby = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: verifyAttribute('aria-describedby', elementId),
+  play: verifyAttribute('aria-describedby', 'htmlId'),
 } satisfies Story;
 
 export const WithAriaCurrent = {
   name: 'With AriaCurrent',
   args: {
-    ...defaultArgs,
     ariaCurrent: true,
   },
   argTypes: {
@@ -345,7 +329,6 @@ export const WithOnClick = {
   render: OnClickTemplate,
   name: 'With onClick (A3 delvis)',
   args: {
-    ...defaultArgs,
     svgPath: CalendarSVGpath,
     onClick: fn(),
   },

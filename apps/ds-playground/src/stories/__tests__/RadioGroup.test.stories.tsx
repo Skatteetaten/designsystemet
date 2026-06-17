@@ -12,12 +12,15 @@ import {
   within,
 } from 'storybook/test';
 
-import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const value = 'annet';
+const defaultLegendText = 'Type virksomhet';
 
 const meta = {
   component: RadioGroup,
@@ -69,6 +72,20 @@ const meta = {
     imageSnapshot: { disableSnapshot: false },
     htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
   },
+  args: {
+    legend: defaultLegendText,
+    children: [
+      <RadioGroup.Radio key={'radioGroupRadio_1'} value={'foretak'}>
+        {'Enkeltpersonsforetak'}
+      </RadioGroup.Radio>,
+      <RadioGroup.Radio key={'radioGroupRadio_2'} value={'selskap'}>
+        {'Aksjeselskap'}
+      </RadioGroup.Radio>,
+      <RadioGroup.Radio key={'radioGroupRadio_3'} value={'annet'}>
+        {'Annet'}
+      </RadioGroup.Radio>,
+    ],
+  },
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -90,28 +107,10 @@ const Template: StoryFn<typeof RadioGroup> = (args) => {
   );
 };
 
-const value = 'annet';
-const defaultLegendText = 'Type virksomhet';
-const defaultArgs: RadioGroupProps = {
-  legend: defaultLegendText,
-  children: [
-    <RadioGroup.Radio key={'radioGroupRadio_1'} value={'foretak'}>
-      {'Enkeltpersonsforetak'}
-    </RadioGroup.Radio>,
-    <RadioGroup.Radio key={'radioGroupRadio_2'} value={'selskap'}>
-      {'Aksjeselskap'}
-    </RadioGroup.Radio>,
-    <RadioGroup.Radio key={'radioGroupRadio_3'} value={'annet'}>
-      {'Annet'}
-    </RadioGroup.Radio>,
-  ],
-};
-
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLFieldSetElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -135,7 +134,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -166,7 +164,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       legend: 'dummyClassname',
@@ -214,9 +211,7 @@ export const WithCustomClassNames = {
 export const Defaults = {
   render: Template,
   name: 'Defaults Variant Standard (A1, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
     legend: { table: { disable: false } },
@@ -251,9 +246,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -277,7 +270,6 @@ export const VariantHorizontal = {
   render: Template,
   name: 'Variant Horizontal (A6)',
   args: {
-    ...defaultArgs,
     variant: 'horizontal',
   },
   argTypes: {
@@ -289,7 +281,6 @@ export const WithHideLegend = {
   render: Template,
   name: 'With HideLegend (B1)',
   args: {
-    ...defaultArgs,
     hideLegend: true,
   },
   argTypes: {
@@ -306,7 +297,6 @@ export const WithValue = {
   render: Template,
   name: 'With Value (A3)',
   args: {
-    ...defaultArgs,
     value,
     defaultValue: undefined,
   },
@@ -328,7 +318,6 @@ export const WithDefaultValue = {
   render: Template,
   name: 'With DefaultValue (A3)',
   args: {
-    ...defaultArgs,
     value: undefined,
     defaultValue: value,
   },
@@ -347,7 +336,6 @@ export const WithDisabled = {
   render: Template,
   name: 'With Disabled (A4 delvis)',
   args: {
-    ...defaultArgs,
     disabled: true,
     value,
     defaultValue: undefined,
@@ -374,7 +362,6 @@ export const WithRequired = {
   render: Template,
   name: 'With Required (A7)',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -394,7 +381,6 @@ export const WithName = {
   render: Template,
   name: 'With Name (B1)',
   args: {
-    ...defaultArgs,
     name: 'nameFraKonsument',
   },
   argTypes: {
@@ -415,9 +401,7 @@ export const WithName = {
 export const WithoutErrorMessage = {
   render: Template,
   name: 'Without ErrorMessage (B4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     errorMessage: { table: { disable: false } },
   },
@@ -441,7 +425,6 @@ export const WithErrorMessage = {
   render: Template,
   name: 'With ErrorMessage (B4, A3)',
   args: {
-    ...defaultArgs,
     errorMessage: 'Feilmelding',
     value,
     defaultValue: undefined,
@@ -473,7 +456,6 @@ export const WithErrorMessageAndAriaDescribedby = {
   render: Template,
   name: 'With ErrorMessage And AriaDescribedby (B4)',
   args: {
-    ...defaultArgs,
     children: [
       <RadioGroup.Radio
         key={'radioGroupRadio_1'}
@@ -503,7 +485,6 @@ export const WithHelpText = {
   render: Template,
   name: 'With HelpText (A1)',
   args: {
-    ...defaultArgs,
     helpText: 'Vi trenger å vite din type virksomhet.',
   },
   argTypes: {
@@ -520,7 +501,6 @@ export const WithHelpText = {
 export const WithDescription = {
   name: 'With Description (A1)',
   args: {
-    ...defaultArgs,
     description: 'Vi trenger å vite din type virksomhet.',
   },
   argTypes: {
@@ -588,7 +568,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers',
   args: {
-    ...defaultArgs,
     onChange: fn(),
   },
   parameters: {
@@ -616,7 +595,6 @@ export const WithOnBlurEvent = {
   name: 'With onBlur Event',
   decorators: [webComponent],
   args: {
-    ...defaultArgs,
     onBlur: fn(),
   },
   parameters: {
@@ -654,7 +632,6 @@ export const WithOnBlurEvent = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     onHelpToggle: fn(),
   },
@@ -672,7 +649,6 @@ export const WithHelpToggleEvent = {
 export const ReadOnly = {
   name: 'Read Only',
   args: {
-    ...defaultArgs,
     readOnly: true,
     value,
     defaultValue: undefined,
@@ -697,7 +673,6 @@ export const ReadOnly = {
 export const ReadOnlyAndDescription = {
   name: 'Read Only And Description',
   args: {
-    ...defaultArgs,
     readOnly: true,
   },
   argTypes: {

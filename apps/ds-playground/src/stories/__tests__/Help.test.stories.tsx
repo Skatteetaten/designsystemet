@@ -9,6 +9,10 @@ import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 import { Help } from '../../../../../libs/ds-forms/src/LabelWithHelp/Help/Help';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
+const defaultHelpText =
+  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
+const defaultDescription = 'En liten beskrivelse';
+
 const meta = {
   component: Help,
   title: 'Tester/Help (intern)',
@@ -36,10 +40,6 @@ const meta = {
 } satisfies Meta<typeof Help>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultDescription = 'En liten beskrivelse';
-const defaultHelpText =
-  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
 
 export const Defaults = {
   name: 'Defaults',
@@ -104,6 +104,7 @@ export const WithLongHelpTextAndDescription = {
   },
   argTypes: {
     helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
   },
   globals: {
     viewport: {

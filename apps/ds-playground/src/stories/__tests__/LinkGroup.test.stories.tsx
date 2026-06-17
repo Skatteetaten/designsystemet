@@ -1,7 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
-import { LinkGroup, LinkGroupProps } from '@skatteetaten/ds-buttons';
+import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
 
@@ -35,40 +35,38 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: [
+      <LinkGroup.Link
+        key={'linkGroupLink_1'}
+        href={'#storybook-root'}
+        onClick={(e): void => e.preventDefault()}
+      >
+        {'Er du pendler?'}
+      </LinkGroup.Link>,
+      <LinkGroup.Link
+        key={'linkGroupLink_2'}
+        href={'#storybook-root'}
+        onClick={(e): void => e.preventDefault()}
+      >
+        {'Pendler du mye?'}
+      </LinkGroup.Link>,
+      <LinkGroup.Link
+        key={'linkGroupLink_3'}
+        href={'#storybook-root'}
+        onClick={(e): void => e.preventDefault()}
+      >
+        {'Pendler du dagen lang?'}
+      </LinkGroup.Link>,
+    ],
+  },
 } satisfies Meta<typeof LinkGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs: LinkGroupProps = {
-  children: [
-    <LinkGroup.Link
-      key={'linkGroupLink_1'}
-      href={'#storybook-root'}
-      onClick={(e): void => e.preventDefault()}
-    >
-      {'Er du pendler?'}
-    </LinkGroup.Link>,
-    <LinkGroup.Link
-      key={'linkGroupLink_2'}
-      href={'#storybook-root'}
-      onClick={(e): void => e.preventDefault()}
-    >
-      {'Pendler du mye?'}
-    </LinkGroup.Link>,
-    <LinkGroup.Link
-      key={'linkGroupLink_3'}
-      href={'#storybook-root'}
-      onClick={(e): void => e.preventDefault()}
-    >
-      {'Pendler du dagen lang?'}
-    </LinkGroup.Link>,
-  ],
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLUListElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -88,7 +86,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -115,9 +112,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults Variant List (A1 delvis, A4 delvis, A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: {
       table: { disable: false },
@@ -128,7 +123,6 @@ export const Defaults = {
 export const VariantAnchors = {
   name: 'Variant Anchors (A1 delvis, A4 delvis, A6)',
   args: {
-    ...defaultArgs,
     variant: 'anchors',
   },
   argTypes: {
@@ -143,7 +137,6 @@ export const VariantAnchors = {
 export const WithLongTextAndIcons = {
   name: 'With Long Text And Icons (A2)',
   args: {
-    ...defaultArgs,
     children: [
       <LinkGroup.Link
         key={'linkGroupLink_1'}
@@ -179,7 +172,6 @@ export const WithSpacing = {
   render: TemplateWithTwoLinkGroups,
   name: 'With Spacing (A3)',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
   },
   argTypes: {
@@ -190,7 +182,6 @@ export const WithSpacing = {
 export const WithColor = {
   name: 'With Color (A7)',
   args: {
-    ...defaultArgs,
     color: 'white',
   },
   argTypes: {
