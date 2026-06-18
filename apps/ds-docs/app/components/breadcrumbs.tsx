@@ -6,11 +6,31 @@ import type { Root } from 'fumadocs-core/page-tree';
 
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
+import { useRouterLinkClick } from './router-link';
+
 import styles from './breadcrumbs.module.scss';
 
 interface DocsBreadcrumbsProps {
   pageTree: Root;
 }
+
+interface RouterBreadcrumbsLinkProps {
+  href: string;
+  children: string;
+}
+
+const RouterBreadcrumbsLink = ({
+  href,
+  children,
+}: RouterBreadcrumbsLinkProps): JSX.Element => {
+  const handleClick = useRouterLinkClick(href);
+
+  return (
+    <Breadcrumbs.Link href={href} onClick={handleClick}>
+      {children}
+    </Breadcrumbs.Link>
+  );
+};
 
 export const DocsBreadcrumbs = ({
   pageTree,
@@ -31,9 +51,9 @@ export const DocsBreadcrumbs = ({
         {items.map((item, index) => (
           <Breadcrumbs.Item key={`${item.name}-${index}`}>
             {item.url ? (
-              <Breadcrumbs.Link href={item.url}>
+              <RouterBreadcrumbsLink href={item.url}>
                 {item.name as string}
-              </Breadcrumbs.Link>
+              </RouterBreadcrumbsLink>
             ) : (
               item.name
             )}

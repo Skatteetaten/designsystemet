@@ -2,12 +2,12 @@ import { JSX, ReactNode } from 'react';
 
 import type { MDXComponents } from 'mdx/types';
 
-import { Link } from '@skatteetaten/ds-buttons';
 import { WordInfo } from '@skatteetaten/ds-overlays';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import browserCollections from '../.source/browser';
 import { Canvas } from './components/canvas';
+import { RouterDsLink } from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
 
 interface CanvasMdxProps {
@@ -101,7 +101,7 @@ const components = {
     <List.Element>{children}</List.Element>
   ),
   a: ({ children, href }: { children: string; href?: string }): JSX.Element => (
-    <Link href={href || ''}>{children}</Link>
+    <RouterDsLink href={href || ''}>{children}</RouterDsLink>
   ),
   Canvas: ({ children, examplesPath }: CanvasMdxProps): JSX.Element => (
     <Canvas examplesPath={examplesPath}>{children}</Canvas>

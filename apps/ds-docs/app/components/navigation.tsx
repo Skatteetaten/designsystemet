@@ -1,5 +1,7 @@
 import { Fragment, JSX, useState, type ReactNode } from 'react';
-import { useLocation } from 'react-router';
+import { Link, useLocation } from 'react-router';
+
+import type { Root } from 'fumadocs-core/page-tree';
 
 import type { Root } from 'fumadocs-core/page-tree';
 
@@ -88,8 +90,8 @@ const renderLinkItem = (
 
   return (
     <li key={key}>
-      <a
-        href={href}
+      <Link
+        to={href}
         aria-current={isActive ? 'page' : undefined}
         className={
           shouldIndent
@@ -98,7 +100,7 @@ const renderLinkItem = (
         }
       >
         {label}
-      </a>
+      </Link>
     </li>
   );
 };
@@ -112,8 +114,8 @@ const renderOverviewItem = (
 
   return (
     <li key={String(page.$id)}>
-      <a
-        href={page.url}
+      <Link
+        to={page.url}
         aria-current={isActive ? 'page' : undefined}
         className={
           shouldIndent
@@ -123,7 +125,7 @@ const renderOverviewItem = (
       >
         <EyeOutlineIcon />
         {'Oversikt'}
-      </a>
+      </Link>
     </li>
   );
 };

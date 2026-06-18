@@ -3,6 +3,7 @@ import { JSX, useEffect, useState } from 'react';
 import { NavigationTile } from '@skatteetaten/ds-navigation';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
+import { useRouterLinkClick } from './router-link';
 import browserCollections from '../../.source/browser';
 
 import styles from './component-list.module.scss';
@@ -143,32 +144,45 @@ export const ComponentList = (): JSX.Element => {
       <nav aria-label={'Liste over alle komponenter'}>
         <ul className={styles.list}>
           {entries.map((entry) => (
-            <li key={entry.url}>
-              <NavigationTile
-                title={entry.titleWithBreaks}
-                href={entry.url}
-                lang={'nb'}
-                description={
-                  entry.icon ? (
-                    <img
-                      src={entry.icon}
-                      className={styles.tileIcon}
-                      alt={''}
-                      aria-hidden
-                    />
-                  ) : undefined
-                }
-                size={'medium'}
-                className={styles.tile}
-                classNames={{
-                  title: styles.tileTitle,
-                  description: styles.tileDescription,
-                }}
-              />
-            </li>
+            <ComponentTile key={entry.url} entry={entry} />
           ))}
         </ul>
       </nav>
     </>
+  );
+};
+
+interface ComponentTileProps {
+  entry: ComponentEntry;
+}
+
+const ComponentTile = ({ entry }: ComponentTileProps): JSX.Element => {
+  const handleClick = useRouterLinkClick(entry.url);
+
+  return (
+    <li>
+      <NavigationTile
+        title={entry.titleWithBreaks}
+        href={entry.url}
+        lang={'nb'}
+        description={
+          entry.icon ? (
+            <img
+              src={entry.icon}
+              className={styles.tileIcon}
+              alt={''}
+              aria-hidden
+            />
+          ) : undefined
+        }
+        size={'medium'}
+        className={styles.tile}
+        classNames={{
+          title: styles.tileTitle,
+          description: styles.tileDescription,
+        }}
+        onClick={handleClick}
+      />
+    </li>
   );
 };
