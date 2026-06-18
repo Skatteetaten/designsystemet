@@ -1,5 +1,6 @@
-.fileDeleteButton {
-  margin-top: var(--spacing-xxs);
+.fileSpinner {
+  height: calc(var(--semantic-line-height-default) * var(--size-small));
+  margin-right: var(--spacing-xs);
 }
 
 .fileContentRight {

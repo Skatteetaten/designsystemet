@@ -51,7 +51,6 @@ export const FileUploaderFile = ({
           rightContent={
             <IconButton
               ref={deleteButtonRef}
-              className={styles.fileDeleteButton}
               svgPath={CancelSVGpath}
               size={'small'}
               title={t('fileuploader.DeleteLabel')}
