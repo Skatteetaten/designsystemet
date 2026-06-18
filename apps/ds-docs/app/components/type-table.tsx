@@ -1,7 +1,6 @@
 import { JSX } from 'react';
 
 import { DescriptionList } from '@skatteetaten/ds-content';
-import { Tag } from '@skatteetaten/ds-status';
 import { Table } from '@skatteetaten/ds-table';
 
 import styles from './type-table.module.scss';

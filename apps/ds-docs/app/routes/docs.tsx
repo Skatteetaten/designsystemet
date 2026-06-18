@@ -96,23 +96,29 @@ const docsContentLoader =
           <div className={styles.headingContent}>
             <title>{frontmatter.title}</title>
             <meta name={'description'} content={frontmatter.description} />
-            <div className={styles.headingWrapper}>
-              <Heading as={'h2'} level={1} hasSpacing>
-                {parentTitle && (
-                  <span className={styles.parentTitle}>{parentTitle}</span>
+            {frontmatter.title && (
+              <div className={styles.headingWrapper}>
+                <Heading as={'h2'} level={1} hasSpacing>
+                  {parentTitle && (
+                    <span className={styles.parentTitle}>{parentTitle}</span>
+                  )}
+                  {frontmatter.title}
+                </Heading>
+                {frontmatter.icon && (
+                  <img
+                    src={frontmatter.icon}
+                    className={styles.mdxIcon}
+                    alt={''}
+                    aria-hidden
+                  />
                 )}
-                {frontmatter.title}
-              </Heading>
-              {frontmatter.icon && (
-                <img
-                  src={frontmatter.icon}
-                  className={styles.mdxIcon}
-                  alt={''}
-                  aria-hidden
-                />
-              )}
-            </div>
-            <Paragraph variant={'ingress'}>{frontmatter.description}</Paragraph>
+              </div>
+            )}
+            {frontmatter.description && (
+              <Paragraph variant={'ingress'}>
+                {frontmatter.description}
+              </Paragraph>
+            )}
           </div>
           {/* skjermleser må ha tidlig tilgang til innholdsfortegnelsen */}
           {tocItems.length > 0 && (

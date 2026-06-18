@@ -1,6 +1,7 @@
 import { Fragment, JSX, useState, type ReactNode } from 'react';
-import type { Root } from 'fumadocs-core/page-tree';
 import { useLocation } from 'react-router';
+
+import type { Root } from 'fumadocs-core/page-tree';
 
 import { ChevronDownIcon, EyeOutlineIcon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';

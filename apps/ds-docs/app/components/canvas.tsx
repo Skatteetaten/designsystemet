@@ -9,7 +9,7 @@ import {
 
 import { useShikiDynamic } from 'fumadocs-core/highlight/shiki/react';
 
-import { IconButton, InlineButton } from '@skatteetaten/ds-buttons';
+import { IconButton } from '@skatteetaten/ds-buttons';
 import { Chips, Tabs } from '@skatteetaten/ds-collections';
 import { Card } from '@skatteetaten/ds-content';
 import { CodeSVGpath, CopySVGpath, EditSVGpath } from '@skatteetaten/ds-icons';
