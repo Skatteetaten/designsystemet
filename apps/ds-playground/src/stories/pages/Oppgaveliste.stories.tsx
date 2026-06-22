@@ -16,8 +16,8 @@ import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 import { Tag, TagColor } from '@skatteetaten/ds-status';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import styles from './Oppgaveliste.module.css';
-import stylesAsString from './Oppgaveliste.module.css?raw';
+import styles from './Oppgaveliste.module.scss';
+import stylesAsString from './Oppgaveliste.module.scss?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
 import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
 

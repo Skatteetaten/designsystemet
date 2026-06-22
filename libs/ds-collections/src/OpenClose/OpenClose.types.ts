@@ -31,7 +31,7 @@ export interface OpenCloseProps extends BaseProps {
   showUnderline?: boolean;
   /**
    * Om innholdet skal forbli i DOM når skjult (true) eller fjernes helt
-   * (false). Standard: false
+   * (false).
    */
   keepMounted?: boolean;
   /** Callback når knappen OpenClose trykkes på */
