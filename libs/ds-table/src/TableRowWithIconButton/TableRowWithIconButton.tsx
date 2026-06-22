@@ -125,8 +125,13 @@ export const TableRowWithIconButton = ({
     ? styles[`buttonCell_${context?.size}`]
     : '';
 
-  const expandButtonSizeClassName =
-    context?.size === 'extraSmall' ? styles.expandButton_extraSmall : '';
+  const expandButtonWithLabelSizeClassName =
+    context?.size === 'extraSmall'
+      ? styles.expandButtonWithLabel_extraSmall
+      : '';
+
+  const expandIconButtonSizeClassName =
+    context?.size === 'extraSmall' ? styles.expandIconButton_extraSmall : '';
 
   const expandButtonScreenReaderText =
     buttonPosition === 'left' && shouldShowScreenReaderText && rowType
@@ -153,7 +158,7 @@ export const TableRowWithIconButton = ({
           {showExpandButtonTitle ? (
             <InlineButtonWithScreenReaderText
               ref={buttonRef}
-              className={`${styles.expandButton} ${expandButtonSizeClassName}`.trim()}
+              className={`${styles.expandButtonWithLabel} ${expandButtonWithLabelSizeClassName}`.trim()}
               svgPath={svgPath}
               ariaDescribedby={expandButtonAriaDescribedby}
               disabled={isExpandButtonDisabled}
@@ -173,7 +178,7 @@ export const TableRowWithIconButton = ({
           ) : (
             <IconButton
               ref={buttonRef}
-              className={hideIconButton ? styles.hideIcon : ''}
+              className={`${hideIconButton ? styles.hideIcon : ''} ${expandIconButtonSizeClassName}`.trim()}
               svgPath={svgPath}
               title={`${expandButtonTitle} ${expandButtonScreenReaderText ?? ''}`.trim()}
               size={

@@ -41,7 +41,7 @@
   }
 
   &_extraSmall {
-    padding: var(--spacing-xs) var(--spacing-s)
+    padding: calc(var(--spacing-xs) * 1.5) var(--spacing-s)
       calc(var(--spacing-xs) - var(--table-cell-border-width));
 
     --table-font-size: var(--font-size-s);

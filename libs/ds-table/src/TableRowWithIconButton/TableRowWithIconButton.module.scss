@@ -19,12 +19,18 @@
   }
 
   &_extraSmall {
-    padding: var(--spacing-xs) var(--spacing-xs)
-      calc(var(--spacing-xs) - var(--table-cell-border-width));
+    padding: var(--spacing-xxs) var(--spacing-xs)
+      calc(var(--spacing-xxs) - var(--table-cell-border-width));
   }
 }
 
-.expandButton {
+.expandIconButton {
+  &_extraSmall {
+    padding: var(--spacing-xxs);
+  }
+}
+
+.expandButtonWithLabel {
   line-height: var(--semantic-line-height-table);
   white-space: nowrap; // litt usikker på denne
 
