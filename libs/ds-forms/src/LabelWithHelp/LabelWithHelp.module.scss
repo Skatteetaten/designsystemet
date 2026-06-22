@@ -1,5 +1,13 @@
 @use 'libs/ds-core-utils/src/mixins/styles';
 
+.container {
+  margin-bottom: var(--spacing-xs);
+
+  &[data-helptext='true'] {
+    margin-bottom: var(--spacing-xxs);
+  }
+}
+
 .label {
   color: var(--palette-graphite-70);
   font-size: var(--font-size-m);

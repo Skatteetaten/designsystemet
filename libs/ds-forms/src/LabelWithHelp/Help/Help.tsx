@@ -40,7 +40,6 @@ export const Help = ({
     onHelpToggle?.(false);
   };
 
-  const marginTopClassName = showHelpText ? styles.descriptionMarginTop : '';
   const hideHelpClassName = hideHelp ? styles.srOnly : '';
 
   return (
@@ -78,9 +77,7 @@ export const Help = ({
       {description && (
         <span
           id={descriptionId}
-          className={`${
-            styles.description
-          } ${marginTopClassName} ${hideHelpClassName} ${
+          className={`${styles.description} ${hideHelpClassName} ${
             classNames?.description ?? ''
           }`.trim()}
         >

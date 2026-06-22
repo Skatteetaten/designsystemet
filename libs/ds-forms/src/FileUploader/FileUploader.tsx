@@ -272,7 +272,7 @@ export const FileUploader = ({
       <button
         ref={buttonRef}
         type={'button'}
-        className={`${styles.dropZone} ${!hideLabel ? styles.dropZoneMarginTop : ''} ${
+        className={`${styles.dropZone} ${
           errorMessage ? styles.dropZone_error : ''
         } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`.trim()}
         disabled={isUploading}

@@ -256,7 +256,6 @@ export const SearchField = ({
   } else if (isExtraLarge) {
     sizeAttribute = 'extraLarge';
   }
-  const hasVisibleLabel = !!label && !hideLabel;
   const resolvedClearButtonTitle =
     clearButtonTitle ?? t('searchfield.ClearButtonTitle');
   const resolvedSearchButtonTitle =
@@ -266,9 +265,8 @@ export const SearchField = ({
   const containerClassName = `${styles.topContainer} ${className} ${
     classNames?.container ?? ''
   }`.trim();
-  const searchContainerClassName = `${styles.searchContainer} ${
-    hasVisibleLabel ? styles.searchContainerMarginTop : ''
-  } ${classNames?.searchContainer ?? ''}`.trim();
+  const searchContainerClassName =
+    `${styles.searchContainer} ${classNames?.searchContainer ?? ''}`.trim();
   const inputClassName = `${styles.input} ${classNames?.textbox ?? ''} ${
     showClearButton && !disabled ? styles.inputWithValue : ''
   }`.trim();
