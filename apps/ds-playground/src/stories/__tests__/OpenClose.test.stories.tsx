@@ -178,7 +178,7 @@ export const Defaults = {
     const title = canvas.getByText(defaultTitle);
     await expect(title).toBeInTheDocument();
     const content = canvas.queryByText(defaultContent);
-    await expect(content).not.toBeInTheDocument();
+    await expect(content).toBeInTheDocument();
 
     const svg = button.querySelector('svg');
     await expect(svg).toBeInTheDocument();
@@ -397,11 +397,11 @@ export const WithOnClick = {
     const button = canvas.getByRole('button');
     await expect(button).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(button);
-    const content = canvas.getByText(defaultContent);
     await expect(button).toHaveAttribute('aria-expanded', 'true');
-    await expect(content).toBeInTheDocument();
+    const content = canvas.getByText(defaultContent);
+    await expect(content).toBeVisible();
     await fireEvent.click(button);
-    await expect(content).not.toBeInTheDocument();
+    await expect(content).not.toBeVisible();
     await waitFor(() => expect(args.onClick).toHaveBeenCalledTimes(2));
   },
 } satisfies Story;
@@ -508,11 +508,11 @@ export const IsDefaultExpanded = {
   },
 } satisfies Story;
 
-export const WithKeepMountedTrue = {
-  name: 'With KeepMounted True (A9)',
+export const WithKeepMountedFalse = {
+  name: 'With KeepMounted False (A9)',
   args: {
     ...defaultArgs,
-    keepMounted: true,
+    keepMounted: false,
   },
   argTypes: {
     keepMounted: { table: { disable: false } },
@@ -524,15 +524,16 @@ export const WithKeepMountedTrue = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
 
-    // Initially content should be in DOM but hidden when keepMounted=true
+    // Initially content should not be in DOM when keepMounted=false and collapsed
     await expect(button).toHaveAttribute('aria-expanded', 'false');
-    const content = canvas.getByText(defaultContent);
-    await expect(content).toBeInTheDocument();
-    await expect(content).not.toBeVisible();
+    let content = canvas.queryByText(defaultContent);
+    await expect(content).not.toBeInTheDocument();
 
     // Expand OpenClose
     await fireEvent.click(button);
     await expect(button).toHaveAttribute('aria-expanded', 'true');
+    content = canvas.getByText(defaultContent);
+    await expect(content).toBeInTheDocument();
     await expect(content).toBeVisible();
 
     // Collapse OpenClose
@@ -540,7 +541,7 @@ export const WithKeepMountedTrue = {
     await expect(button).toHaveAttribute('aria-expanded', 'false');
 
     // Content should still be in DOM but hidden when keepMounted=true
-    await expect(content).toBeInTheDocument();
-    await expect(content).not.toBeVisible();
+    content = canvas.queryByText(defaultContent);
+    await expect(content).not.toBeInTheDocument();
   },
 } satisfies Story;

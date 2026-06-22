@@ -26,7 +26,7 @@ export const OpenClose = ({
   isDefaultExpanded = false,
   isOnClickOnlyFiredOnOpen = false,
   showUnderline = true,
-  keepMounted = false,
+  keepMounted = true,
   onClick,
   children,
 }: OpenCloseProps): JSX.Element => {
