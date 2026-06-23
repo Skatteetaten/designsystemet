@@ -4,7 +4,7 @@
 }
 
 .description {
-  margin: var(--description-list-dd-margin);
+  margin: var(--description-list-dd-margin, 0);
   font-weight: var(--description-dd-weight);
-  text-align: var(--description-list-dd-align);
+  text-align: var(--description-list-dd-align, left);
 }
