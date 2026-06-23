@@ -47,8 +47,10 @@ export const DescriptionList = ({
       lang={lang}
       data-testid={dataTestId}
       data-size={size}
-      data-variant={variant}
-      data-description-direction={descriptionDirection}
+      data-variant={isHorizontal ? 'horizontal' : 'vertical'}
+      data-description-direction={
+        isDescriptionHorizontal ? 'horizontal' : 'vertical'
+      }
       data-description-weight={descriptionWeight}
       data-term-weight={termWeight}
       data-has-spacing={hasSpacing ? 'true' : undefined}
