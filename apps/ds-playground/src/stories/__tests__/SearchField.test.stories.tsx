@@ -188,9 +188,7 @@ export const WithCustomClassNames = {
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(longLabelText);
 
-    const searchContainer = canvasElement.querySelector(
-      `${wrapper} > div > div`
-    );
+    const searchContainer = canvasElement.querySelector(`${wrapper} > div`);
 
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
