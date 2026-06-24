@@ -16,9 +16,9 @@ icon: /illustrations/radiogroup.svg
 
 ## Når ikke bruke komponenten
 
-- Ikke bruk når brukeren kan velge **flere** alternativer – bruk **[CheckboxGroup]**.
-- Ikke bruk når det finnes **kun ett** valg – da bør du bruke **[Checkbox]**.
-- Ikke bruk når det er **mer enn 7 valg**, da dette blir uoversiktlig.  
+- Ikke bruk når brukeren kan velge flere alternativer – bruk [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) i stedet.
+- Ikke bruk når det finnes kun ett valg – da bør du bruke [Checkbox](/byggeklosser/komponenter/checkbox)\*\*.
+- Ikke bruk når det er mer enn 7 valg, da dette blir uoversiktlig.  
   Vurder om valgene kan deles opp i mindre grupper.
 
 ## Hvorfor anbefalingene finnes?
@@ -43,21 +43,21 @@ icon: /illustrations/radiogroup.svg
 ### Plassering og justering
 
 - Plasseres der brukeren må ta et tydelig valg mellom få alternativer.
-- [[Legend::Gruppens ledetekst som forklarer hva valgene gjelder]]‑elementet fungerer som ledetekst for gruppen.
+- [Legend](wordinfo:legend)‑elementet fungerer som ledetekst for gruppen.
 - Legend kan skjules visuelt, men må beholdes for skjermleser.
 
 ### Interaksjon og tilstander
 
 - Radioknapper lar brukeren velge kun ett alternativ om gangen.
-- Du kan sette **forhandsverdi** nar det finnes en trygg og forventet standard som passer de fleste brukere.
-- Forhandsvalg ma aldri skjule et viktig valg eller presse brukeren i feil retning.
+- Du kan sette forhandsverdi når det finnes en trygg og forventet standard som passer de fleste brukere.
+- Forhandsvalg må aldri skjule et viktig valg eller presse brukeren i feil retning.
 - Hvis du er i tvil, start uten forhandsvalg og la brukeren velge aktivt.
 - Beskrivelsestekster legges direkte under hvert alternativ.
 
 ## Tekst og språkbruk
 
 - Svaralternativene skal være korte og lett skannbare.
-- Alle alternativer bør ha **samme språklige form**:
+- Alle alternativer bør ha samme språklige form:
   - lik tid (presens)
   - lik ordklasse
   - lik setningsstruktur
@@ -65,7 +65,7 @@ icon: /illustrations/radiogroup.svg
 
 ## Tilgjengelighet (UU / WCAG)
 
-- Spørsmål/ledetekst skal alltid ligge i `[[<legend>]]`.
+- Spørsmål/ledetekst skal alltid ligge i `[<legend>](wordinfo:legend)`.
 - Feilmeldinger skal referere direkte til ledeteksten (f.eks. «Type virksomhet må fylles ut»).
 - RadioGroup må alltid inneholde faktiske valg (children), selv om det teknisk er mulig å la den være tom.
 - Vertikal visning gir best støtte for beskrivelser og leseflyt.
