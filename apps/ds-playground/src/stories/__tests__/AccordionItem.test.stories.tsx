@@ -133,7 +133,8 @@ export const WithAttributes = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
-    await expect(button).toHaveClass('dummyClassname');
+    const container = button.parentElement?.parentElement;
+    await expect(container).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('id', elementId);
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
