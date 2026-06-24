@@ -54,10 +54,13 @@ export const AccordionItem = ({
     size !== 'small' ? styles[`chevron_${size}`] : ''
   } ${isExpanded ? styles.chevron_open : styles.chevron_closed} `.trim();
 
+  const containerClassNames =
+    `${styles.accordionItem} ${className} ${classNames?.container ?? ''}`.trim();
+
   const headerClassNames = `${styles.header} ${
     iconPosition === 'left' ? styles.header_iconLeft : ''
-  } ${size !== 'small' ? styles[`header_${size}`] : ''} ${className} ${
-    classNames?.container ?? ''
+  } ${size !== 'small' ? styles[`header_${size}`] : ''} ${
+    classNames?.button ?? ''
   }`.trim();
 
   const titleClassNames = `${styles.title} ${
@@ -75,7 +78,7 @@ export const AccordionItem = ({
   }`.trim();
 
   return (
-    <div className={styles.accordionItem}>
+    <div className={containerClassNames}>
       <Tag className={styles.tag}>
         <button
           ref={ref}
