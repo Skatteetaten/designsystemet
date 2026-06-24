@@ -1,5 +1,102 @@
 ---
 title: For utviklere
+description: Som utvikler samarbeider du med designer for å best mulig sikre at dere følger prinsippene i designsystemet. Videre ser du hvordan du kommer i gang for å bruke designsystemet når du jobber.
 ---
 
-Innhold for utviklere kommer her.
+## Legg til komponentbiblioteket i prosjektet
+
+CSS med fargekoder, brekkpunkter og fonter finner man i pakken `@skatteetaten/ds-core-designtokens` og den vil du ha med som et minimum. I tillegg så installerer du de npm-pakkene som innholder komponentene du har bruk for. Det finnes avhengigheter på tvers av npm-pakkene, men det tas hånd om av de pakkene du bruker. For eksempel bruker `IconButton`-komponenten i `@skatteetaten/ds-buttons` ikoner fra `@skatteetaten/ds-icons`, men du behøver bare å importere `@skatteetaten/ds-buttons` i ditt prosjekt.
+
+```
+npm install @skatteetaten/ds-core-designtokens@2.8.0 @skatteetaten/ds-buttons@2.8.0
+```
+
+Merk: Bruk låst versjon av komponenten slik som ds-forms@1.2.3 inntil videre. Vi har for tiden problemer med byggesystemet som fører til at latest tag henter peker til feil npm-pakke. Dette gjelder også hvis man ikke spesifiserer versjonsnummer.
+
+## Ta så i bruk komponentene i applikasjonen din (App.js):
+
+```
+import '@skatteetaten/ds-core-designtokens/index.css';
+import { Button } from '@skatteetaten/ds-buttons';
+
+export default App = () => (
+  <Button variant='primary'>
+    Eksempelknapp
+  </Button>
+);
+```
+
+## Bruk av designtokens i CSS
+
+Når pakken er importert kan du bruke CSS-variabler for å benytte designtokens.
+
+```css
+// Eksempel på bruk av palette css custom properties
+ 
+.myClass {
+  background-color: var(--palette-burgundy-100);
+}
+```
+
+## Bruke brekkpunkter i CSS
+
+Slik bruker du brekkpunktene i CSS:
+
+```css
+@import '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.scss';
+
+.myClass {
+  background-color: red;
+}
+
+// Stiler som vil gjelde på nettbrett og oppover
+@media (min-width: $breakpoint-s) {
+  .myClass {
+    background-color: yellow;
+  }
+}
+// Stiler som vil gjelde på smale desktops og oppover
+@media (min-width: $breakpoint-m) {
+  .myClass {
+    background-color: lime;
+  }
+}
+```
+
+## Teknisk innhold i designtokens-pakken
+
+Pakken med designtokens består av:
+
+- \_reset.css: Brukes for å minimere inkonsistenser fra nettlesere og sørge for at DS-komponenter oppfører seg likt designtokens: Vi tilbyr palette, spacing, font-size weight og line-height og icon-size som designtokens. Designtokens leveres i form av CSS-custom-properties. De importeres bare én gang i applikasjonen og lever deretter i rotnoden i DOM'en. De kan dermed aksesseres overalt i felles-scope og skal ikke importeres fra [css|scss] filer
+- \_default.css: Det settes opp i :root og :host en default font-family size og weight, color og background-color.
+- themes: Vi leverer SKE som default, INK og LSO Innholdet i pakken kommer i form .css og .json-filer. Man kan velge å importere alle ressursene ved å legge en css import statement til index, eller ved å importere de ulike css ressursene hver for seg. Import settes i applikasjons entry.[ts|js], eller hoved index.[tsx|jsx]/App.[tsx|jsx].
+
+```tsx
+//Eksempel på import av alle ressursene. Man får reset stylesheet, alle designtokens, og SKE theme som default.
+
+import '@skatteetaten/ds-core-designtokens/index.css';
+
+// Her kan man velge å importere en annen theme dersom man ønsker å overskrive default
+//Eksempel på import av enkelte ressurs
+import '@skatteetaten/ds-core-designtokens/_reset.css';
+import '@skatteetaten/ds-core-designtokens/designtokens/palette.css';
+import '@skatteetaten/ds-core-designtokens/theme/INK.css';
+```
+
+Har man behov for å bruke designtokens i js ifbm f.eks node scripts, kan man require .json filer.
+
+```tsx
+//Eksempel på import av spacing token i json.
+const spacingJson = require('@skatteetaten/ds-core-designtokens/designtokens/spacing.json');
+
+export const SpacingTokenExamplesGenerator = (): JSX.Element => {
+  const spacingsTokens = spacingJson[':root,\n:host'];
+  return (
+    <>
+      {Object.keys(spacingsTokens).map((value: string, index: number) => {
+        return <p>{`${value} (${spacingsTokens[value]})`}</p>;
+      })}
+    </>
+  );
+};
+```

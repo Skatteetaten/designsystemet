@@ -87,10 +87,22 @@ const components = {
     children?: ReactNode;
     id?: string;
   }): JSX.Element => (
-    <Heading as={'h3'} id={id} hasSpacing={false}>
+    <Heading as={'h2'} level={3} id={id} hasSpacing={false}>
       {children}
     </Heading>
   ),
+  h3: ({
+    children,
+    id,
+  }: {
+    children?: ReactNode;
+    id?: string;
+  }): JSX.Element => (
+    <Heading as={'h3'} level={4} id={id} hasSpacing={false}>
+      {children}
+    </Heading>
+  ),
+
   p: ({ children }: { children?: ReactNode }): JSX.Element => (
     <Paragraph hasSpacing>{children}</Paragraph>
   ),

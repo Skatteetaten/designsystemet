@@ -1,5 +1,56 @@
 ---
 title: Designsystemet
+description: Dette er designsystemet til Skatteetaten. Her tilbyr vi komponenter og eksempler for at det skal være enkelt å lage gode digitale løsninger for brukerne våre.
 ---
 
-[Komponenter](/komponenter)
+import { NavigationTile } from '@skatteetaten/ds-navigation';
+import styles from './index.module.scss';
+
+## Kom i gang
+
+<nav aria-label={'Kom i gang'} className={styles.navSection}>
+  <NavigationTile
+    title={'Start med design'}
+    description={'Figma og samarbeid'}
+    href={'/grunnleggende/kom-i-gang/for-designere'}
+    size={'medium'}
+  />
+
+  <NavigationTile
+    title={'Start med utvikling'}
+    description={'Installasjon og oppsett'}
+    href={'/grunnleggende/kom-i-gang/for-utviklere'}
+    size={'medium'}
+  />
+</nav>
+
+## Bidra
+
+<nav aria-label={'Bidrag'} className={styles.navSection}>
+  <NavigationTile
+    title={'Rapporter en bug'}
+    description={'Meld inn feil og forbedringer'}
+    href={'#'}
+    target={'_blank'}
+    size={'medium'}
+  />
+
+  <NavigationTile
+    title={'Få hjelp i kanalen'}
+    description={'Hjelp og gode råd'}
+    href={'https://github.com/Skatteetaten/designsystemet/discussions'}
+    target={'_blank'}
+    size={'medium'}
+  />
+</nav>
+
+## Hold deg oppdatert
+
+<nav aria-label={'Oppdatering'} className={styles.navSection}>
+  <NavigationTile
+    title={'Se endringslogg'}
+    description={'Versjoner og nyheter'}
+    href={'/grunnleggende/endringslogg'}
+    size={'medium'}
+  />
+</nav>

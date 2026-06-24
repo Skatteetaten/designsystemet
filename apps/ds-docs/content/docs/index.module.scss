@@ -1,0 +1,6 @@
+.navSection {
+  display: grid;
+  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-m);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
