@@ -58,16 +58,16 @@ export default function TableEditableRowExample(): ReactElement {
     <Table
       sortState={sortState}
       setSortState={setSortState}
-      caption={'Manedoversikt'}
+      caption={'Månedsoversikt'}
     >
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell as={'td'} />
           <Table.HeaderCell alignment={'right'} scope={'col'}>
-            {'Maned'}
+            {'Måned'}
           </Table.HeaderCell>
           <Table.HeaderCell scope={'col'} sortKey={'amount'} isSortable>
-            {'Belop'}
+            {'Beløp'}
           </Table.HeaderCell>
           <Table.HeaderCell scope={'col'}>{'Dekningsgrad'}</Table.HeaderCell>
           <Table.HeaderCell alignment={'right'} scope={'col'}>

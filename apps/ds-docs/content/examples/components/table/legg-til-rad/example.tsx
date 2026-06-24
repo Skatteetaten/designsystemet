@@ -64,7 +64,7 @@ const EditablePersonForm = ({
     <div className={'editableContent'}>
       <div className={'flex gapM bottomSpacingXL'}>
         <TextField
-          label={'Fodselsnummer (11 siffer)'}
+          label={'Fødselsnummer (11 siffer)'}
           value={personNumber}
           errorMessage={personNumberError}
           onChange={(e: ChangeEvent<HTMLInputElement>) => {
@@ -87,7 +87,7 @@ const EditablePersonForm = ({
         />
       </div>
       <TextField
-        label={'Belop i kroner'}
+        label={'Beløp i kroner'}
         className={'textField150 bottomSpacingXL'}
         value={amount}
         errorMessage={amountError}
@@ -165,16 +165,16 @@ export default function TableAddRowExample(): ReactElement {
 
   const validateField = (field: string, value: string): string => {
     if (field === 'personNumber') {
-      if (value.trim() === '') return 'Fodselsnummer ma fylles ut';
-      if (value.length !== 11) return 'Fodselsnummer ma vaere 11 siffer';
+      if (value.trim() === '') return 'Fødselsnummer må fylles ut';
+      if (value.length !== 11) return 'Fødselsnummer må være 11 siffer';
     }
     if (field === 'lastName') {
-      if (value.trim() === '') return 'Etternavn ma fylles ut';
+      if (value.trim() === '') return 'Etternavn må fylles ut';
     }
     if (field === 'amount') {
-      if (value.trim() === '') return 'Belop ma fylles ut';
+      if (value.trim() === '') return 'Beløp må fylles ut';
       if (value !== '' && Number.isNaN(Number(value)))
-        return 'Belop ma vaere et tall';
+        return 'Beløp må være et tall';
     }
     return '';
   };
@@ -203,10 +203,10 @@ export default function TableAddRowExample(): ReactElement {
             <Table.HeaderCell scope={'col'} sortKey={'dato'} isSortable>
               {'Sist endret'}
             </Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'Fodselsnummer'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Fødselsnummer'}</Table.HeaderCell>
             <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
             <Table.HeaderCell scope={'col'} alignment={'right'}>
-              {'Belop'}
+              {'Beløp'}
             </Table.HeaderCell>
             <Table.HeaderCell as={'td'} />
           </Table.Row>

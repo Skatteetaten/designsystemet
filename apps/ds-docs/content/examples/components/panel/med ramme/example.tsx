@@ -19,12 +19,12 @@ export default function PanelPreviewStateExample(): JSX.Element {
     >
       <Paragraph hasSpacing>
         <Link href={'#'}>
-          {'Vi varsler deg nar skatteoppgjoret ditt er klart.'}
+          {'Vi varsler deg når skatteoppgjøret ditt er klart.'}
         </Link>
       </Paragraph>
       <Paragraph hasSpacing>
         {
-          'Vi kan dessverre ikke gi deg en konkret dato for nar du far oppgjoret ditt, verken pa telefon, facebook eller chat.'
+          'Vi kan dessverre ikke gi deg en konkret dato for når du får oppgjøret ditt, verken på telefon, facebook eller chat.'
         }
       </Paragraph>
       <Paragraph>{'Logg inn:'}</Paragraph>

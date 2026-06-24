@@ -3,7 +3,7 @@ import { type ReactElement } from 'react';
 import { Table } from '@skatteetaten/ds-table';
 
 export default function TableSizesExample(): ReactElement {
-  const klage = 'Klage pa vedtak';
+  const klage = 'Klage på vedtak';
 
   return (
     <>

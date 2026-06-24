@@ -20,14 +20,14 @@ export default function TableWithIconsExample(): ReactElement {
       <Table.Body>
         <Table.Row>
           <Table.DataCell>{'10.03.2023'}</Table.DataCell>
-          <Table.DataCell>{'Klage pa vedtak'}</Table.DataCell>
+          <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
           <Table.DataCell>
-            <Icon svgPath={CompletedSVGpath} /> {'Fullfort'}
+            <Icon svgPath={CompletedSVGpath} /> {'Fullført'}
           </Table.DataCell>
         </Table.Row>
         <Table.Row>
           <Table.DataCell>{'11.04.2023'}</Table.DataCell>
-          <Table.DataCell>{'Klage pa vedtak'}</Table.DataCell>
+          <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
           <Table.DataCell>
             <Icon svgPath={TimelapseSVGpath} /> {'Under arbeid'}
           </Table.DataCell>

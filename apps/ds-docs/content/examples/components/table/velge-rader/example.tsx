@@ -72,7 +72,7 @@ export default function TableSelectableRowsExample(): ReactElement {
           </Table.HeaderCell>
           <Table.HeaderCell>{'Fastsatt'}</Table.HeaderCell>
           <Table.HeaderCell>{'avgiftstype'}</Table.HeaderCell>
-          <Table.HeaderCell alignment={'right'}>{'Belop'}</Table.HeaderCell>
+          <Table.HeaderCell alignment={'right'}>{'Beløp'}</Table.HeaderCell>
           <Table.HeaderCell>{'Status'}</Table.HeaderCell>
         </Table.Row>
       </Table.Header>

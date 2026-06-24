@@ -6,7 +6,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import styles from './popover.module.scss';
 
 const contentText =
-  'Bolignummeret er et nummer som unikt identifiserer en leilighet. Nummeret bestar av en bokstav etterfulgt av fire tall, f.eks. H0101. Bolignummeret star som regel pa et klistemerke i dorkarmen til inngangsdoren.';
+  'Bolignummeret er et nummer som unikt identifiserer en leilighet. Nummeret består av en bokstav etterfulgt av fire tall, f.eks. H0101. Bolignummeret står som regel på et klistemerke i dørkarmen til inngangsdøren.';
 
 export default function PopoverInHeadingExample(): ReactElement {
   const h3Id = 'popover-heading-h3';

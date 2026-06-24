@@ -15,7 +15,7 @@ export default function PanelCustomPaddingStateExample(): JSX.Element {
         <Paragraph>
           {'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt'}
           {
-            'litt fylltekst eller bare surfet rundt pa nettet har antageligvis sett'
+            'litt fylltekst eller bare surfet rundt på nettet har antageligvis sett'
           }
           {
             'disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med'
@@ -35,7 +35,7 @@ export default function PanelCustomPaddingStateExample(): JSX.Element {
           'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt'
         }
         {
-          'fylltekst eller bare surfet rundt pa nettet har antageligvis sett disse'
+          'fylltekst eller bare surfet rundt på nettet har antageligvis sett disse'
         }
         {
           'ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske'

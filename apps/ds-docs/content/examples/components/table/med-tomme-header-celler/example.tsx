@@ -26,7 +26,7 @@ export default function TableWithEmptyHeaderCellsExample(): ReactElement {
     },
     {
       deadline: '12.04.2023',
-      task: 'Klage pa vedtak',
+      task: 'Klage på vedtak',
       name: 'LIMERICKS PARTNER ASA',
       status: 'Ny',
       id: '4b90',
@@ -34,13 +34,13 @@ export default function TableWithEmptyHeaderCellsExample(): ReactElement {
     {
       deadline: '13.04.2023',
       task: 'Mottatt tilbakemelding',
-      name: 'ENCKEL OG WIRCKE LOSNINGER',
+      name: 'ENCKEL OG WIRCKE LØSNINGER',
       status: 'Ny',
       id: '8c6f',
     },
     {
       deadline: '15.04.2023',
-      task: 'Klage pa vedtak',
+      task: 'Klage på vedtak',
       name: 'CORWOOD INDUSTRIES NORGE',
       status: 'Tilgjengelig',
       id: '8182',

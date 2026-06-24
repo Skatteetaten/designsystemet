@@ -27,7 +27,7 @@ export default function PopoverControlledExample(): ReactElement {
         />
         <Popover.Content>
           {
-            'Bolignummeret er et nummer som unikt identifiserer en leilighet. Nummeret bestar av en bokstav etterfulgt av fire tall, f.eks. H0101.'
+            'Bolignummeret er et nummer som unikt identifiserer en leilighet. Nummeret består av en bokstav etterfulgt av fire tall, f.eks. H0101.'
           }
         </Popover.Content>
       </Popover>
