@@ -215,7 +215,6 @@ export const SkjemaMedSteg = (): JSX.Element => {
             stepNumber={1}
             variant={activeStep === 1 ? 'active' : 'passive'}
             nextButtonProps={{ ariaDescribedby: 'infoNextButton' }}
-            shouldAutoFocusWhenActive={false}
             onNext={handleNextStep}
             onEdit={activeStep > 1 ? (): void => setActiveStep(1) : undefined}
           >
