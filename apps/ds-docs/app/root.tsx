@@ -15,11 +15,8 @@ import {
   type SerializedPageTree,
 } from 'fumadocs-core/source/client';
 
-import { TopBannerExternal } from '@skatteetaten/ds-layout';
-
 import '@skatteetaten/ds-core-designtokens/index.css';
 import type { Route } from './+types/root';
-import { PageLayout } from './components/page-layout';
 
 export interface RootLoaderData {
   pageTree: SerializedPageTree;
@@ -55,7 +52,6 @@ export function Layout({ children }: { children: ReactNode }): JSX.Element {
         <Links />
       </head>
       <body>
-        <TopBannerExternal />
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -65,11 +61,7 @@ export function Layout({ children }: { children: ReactNode }): JSX.Element {
 }
 
 export default function App(): ReactElement {
-  return (
-    <PageLayout>
-      <Outlet />
-    </PageLayout>
-  );
+  return <Outlet />;
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type

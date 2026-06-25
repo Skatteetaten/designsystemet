@@ -18,6 +18,7 @@ const createExample = (
   entryFileName: 'example.tsx',
   key: 'standard',
   label: 'Standard',
+  urlPath: '/byggeblokker/komponenter/dummy',
   Component: DummyComponent,
   ...overrides,
 });

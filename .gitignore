@@ -66,6 +66,8 @@ build-storybook.log
 .claude/worktrees
 .claude/settings.local.json
 
+CONTEXT.md
+
 # ds-docs
 .cache
 .source

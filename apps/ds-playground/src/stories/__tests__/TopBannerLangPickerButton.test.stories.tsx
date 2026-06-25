@@ -5,7 +5,6 @@ import { expect, userEvent, within, waitFor, fn } from 'storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPickerButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPickerButton/TopBannerLangPickerButton';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { ReactComponent as NorwegianFlagIcon } from '../../assets/no-flag.svg';
 
 const buttonText = 'Bokmål';

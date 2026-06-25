@@ -1,6 +1,6 @@
 .canvas {
   overflow: hidden;
-  margin-bottom: var(--spacing-l);
+  border: 1px solid var(--palette-graphite-50);
 }
 
 .chips {
@@ -8,21 +8,22 @@
 }
 
 .example {
-  padding: var(--spacing-l);
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
 }
 
 .actions {
-  padding: var(--spacing-s) var(--spacing-l);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) var(--spacing-m);
   background-color: var(--palette-graphite-5);
+  gap: var(--spacing-s);
   text-align: right;
 }
 
-.codeBlock {
-  box-sizing: border-box;
-  padding: var(--spacing-m);
-  margin: 0;
-  background-color: var(--palette-graphite-70);
-  font-size: var(--font-size-s);
-  line-height: 1.5;
-  overflow-x: auto;
+.codeSection {
+  margin-bottom: var(--spacing-l);
 }
