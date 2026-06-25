@@ -179,21 +179,21 @@ export const WithIconTitleAS = {
     await expect(heading.tagName).toBe('H2');
     const focused = canvasElement.querySelector('[aria-current="step"]');
     await waitFor(async () => {
-      await expect(focused).toHaveFocus();
+      await expect(focused).not.toHaveFocus();
     });
   },
 } satisfies Story;
 
-export const WithShouldAutoFocusWhenActiveFalse = {
+export const WithShouldAutoFocusWhenActiveTrue = {
   render: Template,
-  name: 'With shouldAutoFocusWhenActive False ',
+  name: 'With shouldAutoFocusWhenActive True ',
   args: {
     variant: 'active',
     stepNumber: 13,
     title: 'jeg er en tittel',
     titleAs: 'h2',
     children: loremIpsum,
-    shouldAutoFocusWhenActive: false,
+    shouldAutoFocusWhenActive: true,
     onEdit: undefined,
   },
   argTypes: {
@@ -201,7 +201,7 @@ export const WithShouldAutoFocusWhenActiveFalse = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const focused = canvasElement.querySelector('[aria-current="step"]');
-    await expect(focused).not.toHaveFocus();
+    await expect(focused).toHaveFocus();
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -258,7 +258,6 @@ export const NextButtonWithSpinner = {
     children: loremIpsum,
     nextButtonProps: { hasSpinner: true },
     onNext: (): void => console.log('next'),
-    shouldAutoFocusWhenActive: false,
   },
   argTypes: {
     nextButtonProps: { table: { disable: false } },
@@ -275,7 +274,6 @@ export const NextButtonWithDisabled = {
     children: loremIpsum,
     nextButtonProps: { disabled: true },
     onNext: (): void => console.log('next'),
-    shouldAutoFocusWhenActive: false,
   },
   argTypes: {
     nextButtonProps: { table: { disable: false } },
