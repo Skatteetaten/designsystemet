@@ -129,7 +129,8 @@ export const WithAttributes = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
-    await expect(button).toHaveClass('dummyClassname');
+    const container = button.parentElement?.parentElement;
+    await expect(container).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('id', 'htmlId');
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
@@ -143,6 +144,7 @@ export const WithCustomClassNames = {
     isExpanded: true,
     classNames: {
       container: 'dummyClassname',
+      button: 'dummyClassname',
       title: 'dummyClassname',
       subtitle: 'dummyClassname',
       content: 'dummyClassname',
@@ -159,12 +161,14 @@ export const WithCustomClassNames = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
-    const container = canvas.getByRole('button');
+    const button = canvas.getByRole('button');
+    const container = button.parentElement?.parentElement;
     const title = canvas.getByText(defaultTitle);
     const subtitle = canvas.getByText(defaultSubtitle);
     const content = canvas.getByText(defaultContent);
 
     await expect(container).toHaveClass('dummyClassname');
+    await expect(button).toHaveClass('dummyClassname');
     await expect(title).toHaveClass('dummyClassname');
     await expect(subtitle).toHaveClass('dummyClassname');
     await expect(content).toHaveClass('dummyClassname');
