@@ -5,8 +5,6 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerSkipLink } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/TopBannerSkipLink';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerSkipLinkProps } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/TopBannerSkipLink.types';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const meta = {
@@ -33,7 +31,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const skipLinkText = 'ds_layout:topbanner.SkipLinkText';
-const defaultArgs: TopBannerSkipLinkProps = {};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -87,9 +84,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { pseudoStates: ['focus-visible'] },
   },
@@ -115,7 +110,6 @@ export const WithTargetAndChildren = {
   render: MainTemplate,
   name: 'With Target And Children (A3 delvis)',
   args: {
-    ...defaultArgs,
     target: `#${mainId}`,
     children: 'Snarvei til hovedinnhold',
   },
@@ -142,10 +136,7 @@ export const WithTargetAndChildren = {
 export const ClickSkipLink = {
   render: MainTemplate,
   name: 'Click SkipLink (A3, C1 delvis)',
-  args: {
-    ...defaultArgs,
-  },
-  argTypes: {},
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -175,9 +166,7 @@ const TemplateWithShadowDom: StoryFn<typeof TopBannerSkipLink> = (args) => {
 export const WithShadowDom = {
   render: TemplateWithShadowDom,
   name: 'With ShadowDom',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   decorators: [webComponent],
   parameters: {
     imageSnapshot: { disableSnapshot: true },

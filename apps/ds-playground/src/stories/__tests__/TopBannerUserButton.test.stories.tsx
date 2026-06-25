@@ -6,19 +6,7 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerUserButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerUserButton/TopBannerUserButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  TopBannerUserButtonProps,
-  userRoleArr,
-} from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerUserButton/TopBannerUserButton.types';
-
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute(attribute, expectedValue);
-  };
+import { userRoleArr } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerUserButton/TopBannerUserButton.types';
 
 const meta = {
   component: TopBannerUserButton,
@@ -39,20 +27,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    user: { role: 'meg' },
+  },
 } as Meta<typeof TopBannerUserButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs: TopBannerUserButtonProps = {
-  user: {
-    role: 'meg',
-  },
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -65,13 +49,18 @@ export const WithRef = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('button')).toHaveAttribute(
+      'id',
+      'dummyIdForwardedFromRef'
+    );
+  },
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -98,9 +87,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (Username A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     user: { table: { disable: false } },
   },
@@ -139,9 +126,7 @@ const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
 export const WithAllRoles = {
   render: TemplateWithAllRoles,
   name: 'With All Roles (Username A2, A3, A6, A7)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     user: {
       table: { disable: false },
@@ -176,9 +161,7 @@ export const WithAllRoles = {
 export const WithMobileScreen = {
   render: TemplateWithAllRoles,
   name: 'With Small Screen (Username A2, A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--mobile',
@@ -189,9 +172,7 @@ export const WithMobileScreen = {
 export const WithBreakpointXS = {
   render: TemplateWithAllRoles,
   name: 'With Breakpoint-xs (Username A2, A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-xs',
@@ -202,9 +183,7 @@ export const WithBreakpointXS = {
 export const WithBreakpointS = {
   render: TemplateWithAllRoles,
   name: 'With Breakpoint-s (Username A2, A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-s',
@@ -215,9 +194,7 @@ export const WithBreakpointS = {
 export const WithBreakpointM = {
   render: TemplateWithAllRoles,
   name: 'With Breakpoint-m (Username A2, A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-m',

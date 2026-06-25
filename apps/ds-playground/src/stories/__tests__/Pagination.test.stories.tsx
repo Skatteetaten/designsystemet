@@ -40,6 +40,8 @@ const meta = {
   args: {
     defaultCurrent: undefined,
     currentPage: undefined,
+    totalItems: 70,
+    onChange: fn(),
   },
   tags: ['test'],
   parameters: {
@@ -49,16 +51,9 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs = {
-  totalItems: 70,
-  onChange: fn(),
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     defaultCurrent: 1,
     ref: (instance: HTMLElement | null): void => {
       if (instance) {
@@ -77,7 +72,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     defaultCurrent: 1,
     id: 'htmlId',
     className: 'dummyClassname',
@@ -114,7 +108,6 @@ export const Defaults = {
 export const HidePrevNextButtonTitle = {
   name: 'Hide Prev/Next-button Title (A1)',
   args: {
-    ...defaultArgs,
     defaultCurrent: 1,
     hidePrevNextButtonTitle: true,
   },
@@ -126,7 +119,6 @@ export const HidePrevNextButtonTitle = {
 export const WithTextNextPref: Story = {
   name: 'With Prev Next Text (A2)',
   args: {
-    ...defaultArgs,
     defaultCurrent: 2,
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -145,7 +137,6 @@ export const WithTextNextPref: Story = {
 export const WithListLength: Story = {
   name: 'With List Length (A3)',
   args: {
-    ...defaultArgs,
     pageSize: 4,
     defaultCurrent: 1,
   },
@@ -178,7 +169,6 @@ export const WithListLength: Story = {
 export const Sibling = {
   name: 'Width Sibling (A4)',
   args: {
-    ...defaultArgs,
     defaultCurrent: 3,
     sibling: 2,
   },
@@ -202,7 +192,6 @@ export const Sibling = {
 export const WithNavigation: Story = {
   name: 'With Navigation (A7, B2 delvis)',
   args: {
-    ...defaultArgs,
     defaultCurrent: 2,
   },
   parameters: {
@@ -249,7 +238,6 @@ export const WithNavigation: Story = {
 export const WithPrevNextLabel: Story = {
   name: 'PrevNext Alternative Label (B5)',
   args: {
-    ...defaultArgs,
     defaultCurrent: 1,
     hidePrevNextButtonTitle: true,
   },
@@ -366,7 +354,6 @@ export const WithListLimit: Story = {
 export const WithCustomAriaLabel: Story = {
   name: 'With Custom Aria Label (B1 delvis)',
   args: {
-    ...defaultArgs,
     ariaLabel: 'Egen tekst på nav-elementets aria-label',
     defaultCurrent: 1,
   },
@@ -389,7 +376,6 @@ export const WithCustomAriaLabel: Story = {
 export const WithPageSummary: Story = {
   name: 'With Page Summary (A6)',
   args: {
-    ...defaultArgs,
     defaultCurrent: 1,
   },
   parameters: {
@@ -406,7 +392,6 @@ export const WithPageSummary: Story = {
 export const WithHiddenPageSummary: Story = {
   name: 'With Page Summary Hidden (A5)',
   args: {
-    ...defaultArgs,
     hidePageSummary: true,
     defaultCurrent: 1,
   },

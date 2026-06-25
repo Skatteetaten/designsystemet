@@ -11,10 +11,7 @@ export const defaultOptions = [
   { label: 'Danmark', value: 'dk' },
 ];
 
-export const defaultArgs = {
-  label: 'Velg land',
-  options: defaultOptions,
-};
+export const defaultLabel = 'Velg land';
 
 export const wrapper = '.docs-story > div';
 

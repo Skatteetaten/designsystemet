@@ -7,7 +7,7 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
-import { defaultArgs } from './utils/combobox.test.utils';
+import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
 
 const meta = {
   component: Combobox,
@@ -16,6 +16,10 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabel,
+    options: defaultOptions,
+  },
 } satisfies Meta<typeof Combobox>;
 
 export default meta;
@@ -23,9 +27,7 @@ type Story = StoryObj<typeof meta>;
 
 export const SelectOptionInteraction = {
   name: 'Åpne dropdown og velg alternativ (A4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -57,9 +59,7 @@ export const SelectOptionInteraction = {
 
 export const KeyboardNavigation = {
   name: 'Tastaturnavigasjon med piltaster (B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -104,7 +104,6 @@ export const KeyboardNavigation = {
 export const AltArrowDownKeepsInputFocusWithSelectedValue = {
   name: 'Alt+Pil ned beholder inputfokus ved valgt verdi',
   args: {
-    ...defaultArgs,
     value: 'no',
   },
   parameters: {
@@ -133,7 +132,6 @@ export const AltArrowDownKeepsInputFocusWithSelectedValue = {
 export const ClickOpenFocusesSelectedValue = {
   name: 'Klikk for aapning fokuserer valgt verdi',
   args: {
-    ...defaultArgs,
     value: 'no',
   },
   parameters: {
@@ -155,9 +153,7 @@ export const ClickOpenFocusesSelectedValue = {
 
 export const SearchFiltering = {
   name: 'Søk og filtrering av alternativer (A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -207,9 +203,7 @@ export const SearchFiltering = {
 
 export const EscapeKeyBehavior = {
   name: 'Escape key lukker dropdown (A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -257,9 +251,7 @@ export const EscapeKeyBehavior = {
 
 export const ClickOutsideToClose = {
   name: 'Klikk utenfor lukker dropdown (A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -306,9 +298,7 @@ export const ClickOutsideToClose = {
 
 export const KeyBoardFocusDoesNotOpen = {
   name: 'Tastaturfokus åpner ikke dropdown automatisk',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -326,9 +316,7 @@ export const KeyBoardFocusDoesNotOpen = {
 
 export const MouseClickOpens = {
   name: 'Musklikk åpner dropdown',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -347,7 +335,6 @@ export const MouseClickOpens = {
 export const MinSearchLengthTextOnChevronClick = {
   name: 'Min søkelengde viser "skriv minst x tegn" ved chevron-klikk',
   args: {
-    ...defaultArgs,
     minSearchLength: 3,
   },
   parameters: {
@@ -374,7 +361,6 @@ export const MinSearchLengthTextOnChevronClick = {
 export const MinSearchLengthTextOnMouseClick = {
   name: 'Min søkelengde viser "skriv minst x tegn" ved musklikk',
   args: {
-    ...defaultArgs,
     minSearchLength: 3,
   },
   parameters: {
@@ -418,7 +404,6 @@ export const MinSearchLengthTextOnMouseClick = {
 export const MinSearchLengthTextBeforeThreshold = {
   name: 'Min søkelengde viser "skriv minst x tegn" før terskel',
   args: {
-    ...defaultArgs,
     minSearchLength: 3,
   },
   parameters: {
@@ -448,9 +433,7 @@ export const MinSearchLengthTextBeforeThreshold = {
 
 export const ReopenShowsAllWithSelectedMark = {
   name: 'Gjenåpning viser alle alternativer med valgt markering',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -490,9 +473,7 @@ export const ReopenShowsAllWithSelectedMark = {
 
 export const BlurRevertsToLastSelectedValue = {
   name: 'Blur gjenoppretter sist valgte verdi i single-select',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -517,9 +498,7 @@ export const BlurRevertsToLastSelectedValue = {
 
 export const BlurAfterPartialDeleteRevertsToLastSelectedValue = {
   name: 'Blur etter delvis sletting gjenoppretter siste valg',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -544,9 +523,7 @@ export const BlurAfterPartialDeleteRevertsToLastSelectedValue = {
 
 export const BlurAfterDeletingAllTextClearsSelection = {
   name: 'Blur etter sletting av all tekst nullstiller valg',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -578,9 +555,7 @@ export const BlurAfterDeletingAllTextClearsSelection = {
 
 export const BlurClearsTypedTextWithoutSelection = {
   name: 'Blur tømmer fritekst uten valgt verdi',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -601,13 +576,11 @@ export const BlurClearsTypedTextWithoutSelection = {
 
 export const SelectingOverlappingOptionDoesNotFocusUnderlyingCombobox = {
   name: 'Valg i overlappende liste fokuserer ikke combobox under',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   render: (): JSX.Element => (
     <div className={'width200'}>
-      <Combobox label={'Oveste combobox'} options={defaultArgs.options} />
-      <Combobox label={'Nederste combobox'} options={defaultArgs.options} />
+      <Combobox label={'Oveste combobox'} options={defaultOptions} />
+      <Combobox label={'Nederste combobox'} options={defaultOptions} />
     </div>
   ),
   parameters: {
@@ -637,9 +610,7 @@ export const SelectingOverlappingOptionDoesNotFocusUnderlyingCombobox = {
 
 export const ClearRemovesSelectedMark = {
   name: 'Nullstilling fjerner valgt markering',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },

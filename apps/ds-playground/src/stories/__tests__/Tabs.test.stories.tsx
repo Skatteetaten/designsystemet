@@ -4,7 +4,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
+import { Tabs } from '@skatteetaten/ds-collections';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 
 const meta = {
@@ -31,14 +31,12 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    defaultValue: 'tab1',
+  },
 } satisfies Meta<typeof Tabs>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs: TabsProps = {
-  defaultValue: 'tab1',
-};
-
 const TemplateTabs: StoryFn<typeof Tabs> = (args) => {
   return (
     <Tabs
@@ -91,7 +89,6 @@ const TemplateTabsWithOnClick: StoryFn<typeof Tabs> = (args) => {
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -116,7 +113,6 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
-    defaultValue: 'tab1',
   },
   argTypes: {
     id: { table: { disable: false } },
@@ -140,9 +136,7 @@ export const WithAttributes = {
 export const Defaults = {
   name: 'Defaults (A2)',
   render: TemplateTabs,
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     defaultValue: { table: { disable: false } },
   },
@@ -182,7 +176,6 @@ export const WithVariantCompact = {
   name: 'With Variant Compact (A1)',
   render: TemplateTabs,
   args: {
-    ...defaultArgs,
     variant: 'compact',
   },
   argTypes: {
@@ -194,7 +187,6 @@ export const WithBorder = {
   name: 'With Border (A1)',
   render: TemplateTabs,
   args: {
-    ...defaultArgs,
     hasBorder: true,
   },
   argTypes: {
@@ -208,7 +200,6 @@ export const WithBorder = {
 export const WithValue = {
   name: 'With Value',
   args: {
-    ...defaultArgs,
     defaultValue: undefined,
     value: 'tab2',
   },
@@ -265,7 +256,6 @@ export const WithValue = {
 export const WithMultiline = {
   name: 'With Multiline (A5)',
   args: {
-    ...defaultArgs,
     isMultiline: true,
   },
   argTypes: {
@@ -300,7 +290,6 @@ export const WithTabClick = {
   name: 'With Tab Click (A2, B2, B3, B4)',
   render: TemplateTabs,
   args: {
-    ...defaultArgs,
     onChange: fn(),
   },
   parameters: {
@@ -327,9 +316,7 @@ export const WithTabClick = {
 export const WithTabOnClickEvent = {
   name: 'With Tab OnClick Event',
   render: TemplateTabsWithOnClick,
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -354,7 +341,6 @@ export const WithId = {
   render: TemplateTabs,
   args: {
     id: 'skatt',
-    defaultValue: 'tab1',
   },
   argTypes: {
     id: { table: { disable: false } },

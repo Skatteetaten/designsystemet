@@ -27,24 +27,24 @@ const meta = {
     },
   },
   tags: ['test'],
+  args: {
+    title: 'Mottaker 1 av fullmakt',
+    children: [
+      <ErrorSummary.Error key={'errorSummaryError_1'} referenceId={'id_1'}>
+        {'Fornavn må fylles ut'}
+      </ErrorSummary.Error>,
+      <ErrorSummary.Error key={'errorSummaryError_2'} referenceId={'id_2'}>
+        {'Etternavn må fylles ut'}
+      </ErrorSummary.Error>,
+    ],
+  },
 } satisfies Meta<typeof ErrorSummary.Group>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultChildren = [
-  <ErrorSummary.Error key={'errorSummaryError_1'} referenceId={'id_1'}>
-    {'Fornavn må fylles ut'}
-  </ErrorSummary.Error>,
-  <ErrorSummary.Error key={'errorSummaryError_2'} referenceId={'id_2'}>
-    {'Etternavn må fylles ut'}
-  </ErrorSummary.Error>,
-];
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    title: 'Personopplysninger',
-    children: defaultChildren,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -71,8 +71,6 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
-    title: 'Personopplysninger',
-    children: defaultChildren,
   },
   argTypes: {
     id: { table: { disable: false } },
@@ -94,10 +92,7 @@ export const WithAttributes = {
 
 export const WithTitle = {
   name: 'With Title',
-  args: {
-    title: 'Mottaker 1 av fullmakt',
-    children: defaultChildren,
-  },
+  args: {},
   argTypes: {
     title: { table: { disable: false } },
     children: { table: { disable: false } },
@@ -118,9 +113,7 @@ export const WithTitle = {
 export const WithTitleAs = {
   name: 'With TitleAs',
   args: {
-    title: 'Mottaker 1 av fullmakt',
     titleAs: 'h4',
-    children: defaultChildren,
   },
   argTypes: {
     titleAs: { table: { disable: false } },
@@ -179,10 +172,7 @@ const WithinErrorSummaryTemplate = (): JSX.Element => (
 
 export const WithinErrorSummary = {
   name: 'Within ErrorSummary',
-  args: {
-    title: 'Mottaker 1 av fullmakt',
-    children: defaultChildren,
-  },
+  args: {},
   render: WithinErrorSummaryTemplate,
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -201,10 +191,7 @@ export const WithinErrorSummary = {
 
 export const WithinErrorSummaryOnMobile = {
   name: 'Within ErrorSummary on Mobile',
-  args: {
-    title: 'Mottaker 1 av fullmakt',
-    children: defaultChildren,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--mobile',

@@ -61,15 +61,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    stepNumber: 1,
+    title: 'title',
+    children: loremIpsum,
+    onNext: fn(),
+  },
 } as Meta<typeof StepList.Step>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  stepNumber: 1,
-  title: 'title',
-  onNext: fn(),
-};
 const Template: StoryFn<typeof StepList.Step> = (args) => (
   <StepList>
     <StepList.Step {...args} />
@@ -80,7 +81,6 @@ export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLLIElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -104,7 +104,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -133,7 +132,6 @@ export const WithCustomClassNames = {
   render: Template,
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       content: 'dummyClassname',
     },
@@ -148,7 +146,7 @@ export const WithCustomClassNames = {
     const canvas = within(canvasElement);
     const step = canvas.getByRole('listitem');
     const content = step.querySelector('[class*="stepContent"]');
-    expect(content).toHaveClass('dummyClassname');
+    await expect(content).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -159,10 +157,10 @@ export const WithIconTitleAS = {
     variant: 'active',
     title: 'jeg er en tittel',
     titleAs: 'h2',
-    children: loremIpsum,
     svgPath: TimersandSVGpath,
     svgTitle: 'svg-tittel',
     onEdit: undefined,
+    onNext: undefined,
   },
   argTypes: {
     children: { table: { disable: false } },
@@ -192,7 +190,6 @@ export const WithShouldAutoFocusWhenActiveTrue = {
     stepNumber: 13,
     title: 'jeg er en tittel',
     titleAs: 'h2',
-    children: loremIpsum,
     shouldAutoFocusWhenActive: true,
     onEdit: undefined,
   },
@@ -214,7 +211,6 @@ export const WithFullWidthResult = {
   args: {
     variant: 'neutralResult',
     title: 'jeg er en tittel',
-    children: loremIpsum,
     onEdit: undefined,
     hasResultContentFullWidth: true,
   },
@@ -227,10 +223,8 @@ export const WithEditAccessibleDescription = {
   render: Template,
   name: 'With edit button accessible description (B2 delvis)',
   args: {
-    stepNumber: 1,
     variant: 'active',
     title: 'tittel',
-    children: loremIpsum,
     onEdit: fn(),
   },
   argTypes: {
@@ -252,10 +246,8 @@ export const NextButtonWithSpinner = {
   render: Template,
   name: 'With Spinner In Next Button',
   args: {
-    stepNumber: 1,
     variant: 'active',
     title: 'tittel',
-    children: loremIpsum,
     nextButtonProps: { hasSpinner: true },
     onNext: (): void => console.log('next'),
   },
@@ -268,10 +260,8 @@ export const NextButtonWithDisabled = {
   render: Template,
   name: 'With Disabled Next Button',
   args: {
-    stepNumber: 1,
     variant: 'active',
     title: 'tittel',
-    children: loremIpsum,
     nextButtonProps: { disabled: true },
     onNext: (): void => console.log('next'),
   },

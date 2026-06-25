@@ -8,15 +8,6 @@ import { Popover } from '@skatteetaten/ds-overlays';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const iconButton = canvas.getByRole('button');
-    await expect(iconButton).toBeInTheDocument();
-    await expect(iconButton).toHaveAttribute(attribute, expectedValue);
-  };
-
 const meta = {
   component: Popover.Trigger,
   title: 'Tester/Popover/Trigger',
@@ -117,7 +108,13 @@ export const WithAriaDescribedby = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: verifyAttribute('aria-describedby', 'araiDescId'),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('button')).toHaveAttribute(
+      'aria-describedby',
+      'araiDescId'
+    );
+  },
 } satisfies Story;
 
 export const WithEventHandlers = {

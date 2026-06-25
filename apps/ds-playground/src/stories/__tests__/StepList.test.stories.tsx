@@ -61,6 +61,7 @@ export const WithRef = {
     await expect(stepList).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
 } satisfies Story;
+
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {

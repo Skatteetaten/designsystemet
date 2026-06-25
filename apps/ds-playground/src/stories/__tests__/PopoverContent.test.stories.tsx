@@ -8,6 +8,9 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 
+const defaultText =
+  'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
+
 const meta = {
   component: Popover.Content,
   title: 'Tester/Popover/Content',
@@ -35,21 +38,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultText,
+  },
 } satisfies Meta<typeof Popover.Content>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultText =
-  'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
-
-const defaultArgs = {
-  children: defaultText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -72,7 +70,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'en',
@@ -100,7 +97,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       contentWrapper: 'dummyClassName',
       closeButton: 'dummyClassName',
@@ -126,9 +122,7 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Defaults',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -139,7 +133,6 @@ export const Defaults = {
 export const WithMarkup = {
   name: 'With Markup (A6)',
   args: {
-    ...defaultArgs,
     children: (
       <>
         <Heading as={'h1'} level={4}>
@@ -170,7 +163,6 @@ export const VerticalScroll = {
 export const AsSpan = {
   name: 'As Span (A11)',
   args: {
-    ...defaultArgs,
     as: 'span',
   },
   argTypes: {

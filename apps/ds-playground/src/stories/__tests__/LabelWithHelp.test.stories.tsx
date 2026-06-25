@@ -13,9 +13,12 @@ import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { LabelWithHelp } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { LabelWithHelpProps } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp.types';
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const defaultChildrenText = 'Ledetekst';
+const defaultHelpText =
+  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
+const defaultDescription = 'Kort hjelpetekst';
 
 const meta = {
   component: LabelWithHelp,
@@ -49,22 +52,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultChildrenText,
+  },
 } satisfies Meta<typeof LabelWithHelp>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultDescription = 'Kort hjelpetekst';
-const defaultHelpText =
-  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
-const defaultChildrenText = 'Ledetekst';
-const defaultArgs: LabelWithHelpProps = {
-  children: defaultChildrenText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLLabelElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -87,7 +84,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -115,7 +111,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       label: 'dummyClassname',
       description: 'dummyClassname',
@@ -147,9 +142,7 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Default (FS-A1, FS-A2, FS-A4, FS-B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -163,7 +156,6 @@ export const Defaults = {
 export const WithDescription = {
   name: 'With Description (FS-A3)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
   },
   argTypes: {
@@ -179,7 +171,6 @@ export const WithDescription = {
 export const WithHideLabel = {
   name: 'With HideLabel (FS-A7)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
     helpText: defaultHelpText,
     hideLabel: true,
@@ -201,7 +192,6 @@ export const WithHideLabel = {
 export const WithHelpTextSvgPathAndTitle = {
   name: 'With HelpText HelpSvgPath And TitleHelpSvg (FS-A1, FS-A5 delvis, FS-B2 delvis)',
   args: {
-    ...defaultArgs,
     helpText: defaultHelpText,
     helpSvgPath: WarningSVGpath,
     titleHelpSvg: 'Tooltip',
@@ -228,7 +218,6 @@ export const WithHelpTextSvgPathAndTitle = {
 export const WithLongChildren = {
   name: 'With Long Children',
   args: {
-    ...defaultArgs,
     children: loremIpsumWithoutSpaces,
   },
   argTypes: {
@@ -244,7 +233,6 @@ export const WithLongChildren = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     onHelpToggle: fn(),
   },
@@ -262,7 +250,6 @@ export const WithHelpToggleEvent = {
 export const WithDisabled = {
   name: 'With Disabled',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     disabled: true,
   },

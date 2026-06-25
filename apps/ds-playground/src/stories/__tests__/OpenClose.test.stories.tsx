@@ -3,10 +3,9 @@ import { MouseEvent, useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within, waitFor, fn } from 'storybook/test';
 
-import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
+import { OpenClose } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 
-const elementId = 'htmlId';
 const defaultTitle = 'Er jeg pendler?';
 const defaultContent =
   'En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for ' +
@@ -46,6 +45,10 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+  },
+  args: {
+    title: defaultTitle,
+    children: defaultContent,
   },
 } satisfies Meta<typeof OpenClose>;
 export default meta;
@@ -98,16 +101,9 @@ const TemplateWithAllHeadings: StoryFn<typeof OpenClose> = (args) => (
     })}
   </>
 );
-
-const defaultArgs: OpenCloseProps = {
-  title: defaultTitle,
-  children: defaultContent,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -132,8 +128,7 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -152,7 +147,7 @@ export const WithAttributes = {
     const button = canvas.getByRole('button');
     const wrapper = canvas.getAllByRole('generic')[1];
     await expect(wrapper).toHaveClass('dummyClassname');
-    await expect(button).toHaveAttribute('id', elementId);
+    await expect(button).toHaveAttribute('id', 'htmlId');
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
   },
@@ -160,9 +155,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A2, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     title: { table: { disable: false } },
   },
@@ -189,7 +182,6 @@ export const Defaults = {
 export const Small = {
   name: 'Small (A1 delvis)',
   args: {
-    ...defaultArgs,
     size: 'small',
   },
   argTypes: {
@@ -200,7 +192,6 @@ export const Small = {
 export const Medium = {
   name: 'Medium (A1 delvis)',
   args: {
-    ...defaultArgs,
     size: 'medium',
   },
   argTypes: {
@@ -211,7 +202,6 @@ export const Medium = {
 export const WithIconRight = {
   name: 'With Icon Right (A2)',
   args: {
-    ...defaultArgs,
     iconPosition: 'right',
   },
   argTypes: {
@@ -222,7 +212,6 @@ export const WithIconRight = {
 export const SmallWithIconRight = {
   name: 'Small With Icon Right (A1 delvis, A2)',
   args: {
-    ...defaultArgs,
     size: 'small',
     iconPosition: 'right',
   },
@@ -235,7 +224,6 @@ export const SmallWithIconRight = {
 export const MediumWithIconRight = {
   name: 'Medium With Icon Right (A1 delvis, A2)',
   args: {
-    ...defaultArgs,
     size: 'medium',
     iconPosition: 'right',
   },
@@ -248,7 +236,6 @@ export const MediumWithIconRight = {
 export const WithoutUnderline = {
   name: 'Without Underline (A3)',
   args: {
-    ...defaultArgs,
     showUnderline: false,
   },
   argTypes: {
@@ -259,7 +246,6 @@ export const WithoutUnderline = {
 export const SmallWithoutUnderline = {
   name: 'Small Without Underline (A1 delvis, A3)',
   args: {
-    ...defaultArgs,
     size: 'small',
     showUnderline: false,
   },
@@ -272,7 +258,6 @@ export const SmallWithoutUnderline = {
 export const MediumWithoutUnderline = {
   name: 'Medium Without Underline (A1 delvis, A3)',
   args: {
-    ...defaultArgs,
     size: 'medium',
     showUnderline: false,
   },
@@ -285,7 +270,6 @@ export const MediumWithoutUnderline = {
 export const WithIconRightAndNoUnderline = {
   name: 'With Icon Right And No Underline (A2, A3)',
   args: {
-    ...defaultArgs,
     iconPosition: 'right',
     showUnderline: false,
   },
@@ -298,7 +282,6 @@ export const WithIconRightAndNoUnderline = {
 export const SmallWithIconRightAndNoUnderline = {
   name: 'Small With Icon Right And No Underline (A1 delvis, A2, A3)',
   args: {
-    ...defaultArgs,
     size: 'small',
     iconPosition: 'right',
     showUnderline: false,
@@ -313,7 +296,6 @@ export const SmallWithIconRightAndNoUnderline = {
 export const MediumWithIconRightAndNoUnderline = {
   name: 'Medium With Icon Right And No Underline (A1 delvis, A2, A3)',
   args: {
-    ...defaultArgs,
     size: 'medium',
     iconPosition: 'right',
     showUnderline: false,
@@ -328,7 +310,6 @@ export const MediumWithIconRightAndNoUnderline = {
 export const IsExpanded = {
   name: 'With IsExpanded (A4 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
   },
   argTypes: {
@@ -346,7 +327,6 @@ export const IsExpanded = {
 export const SmallAndIsExpanded = {
   name: 'With Small And IsExpanded (A4 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
     size: 'small',
   },
@@ -359,7 +339,6 @@ export const SmallAndIsExpanded = {
 export const MediumAndIsExpanded = {
   name: 'With Medium And IsExpanded (A4 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
     size: 'medium',
   },
@@ -372,7 +351,6 @@ export const MediumAndIsExpanded = {
 export const IconRightContent = {
   name: 'With IsExpanded And Icon Right (A1 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
     iconPosition: 'right',
   },
@@ -386,7 +364,6 @@ export const WithOnClick = {
   render: TemplateWithOnClick,
   name: 'With OnClick (A4 delvis, B1 delvis)',
   args: {
-    ...defaultArgs,
     onClick: fn(),
   },
   parameters: {
@@ -410,7 +387,6 @@ export const WithIsOnClickOnlyFiredOnOpen = {
   render: TemplateWithOnClick,
   name: 'With IsOnClickOnlyFiredOnOpen (A4 delvis)',
   args: {
-    ...defaultArgs,
     isOnClickOnlyFiredOnOpen: true,
     onClick: fn(),
   },
@@ -432,9 +408,7 @@ export const WithIsOnClickOnlyFiredOnOpen = {
 export const WithChangingTitle = {
   render: TemplateWithChangingTitle,
   name: 'With Changing Title (A4 delvis)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -452,9 +426,7 @@ export const WithChangingTitle = {
 export const WithTitleAs = {
   render: TemplateWithAllHeadings,
   name: 'With TitleAs (B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -472,7 +444,6 @@ export const WithTitleAs = {
 export const WithLongTitle = {
   name: 'With Long Title (A1 delvis)',
   args: {
-    ...defaultArgs,
     title:
       'Denneknappenharenveldiglangtekst.Dentekstengåroverflerelinjerfordidenersålangogdablirikonetriktigplassert.' +
       'Fordetkanjoskjeattittelengåroverflerelinjerhvisdeterenveldiglitenskjerm.Sådamåvisjekkeatdetikkeserrartut.',
@@ -490,7 +461,6 @@ export const WithLongTitle = {
 export const IsDefaultExpanded = {
   name: 'With IsDefaultExpanded',
   args: {
-    ...defaultArgs,
     isDefaultExpanded: true,
   },
   argTypes: {
@@ -511,7 +481,6 @@ export const IsDefaultExpanded = {
 export const WithKeepMountedTrue = {
   name: 'With KeepMounted True (A9)',
   args: {
-    ...defaultArgs,
     keepMounted: true,
   },
   argTypes: {
