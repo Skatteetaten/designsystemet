@@ -12,6 +12,15 @@
       'mdx nav';
     grid-template-columns: minmax(0, 1fr) max-content;
   }
+
+  &_noToc {
+    @media (min-width: breakpoints.$breakpoint-m) {
+      grid-template-areas:
+        'heading'
+        'mdx';
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
 }
 
 .headingContent {

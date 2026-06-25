@@ -90,9 +90,12 @@ const docsContentLoader =
   browserCollections.docs.createClientLoader<DocsContentProps>({
     component({ frontmatter, toc, default: Mdx }, { parentTitle }) {
       const tocItems = toc.filter((item) => item.depth === 2) as TocItem[];
+      const showToc = !frontmatter.hideToc && tocItems.length > 0;
 
       return (
-        <div className={styles.contentWrapper}>
+        <div
+          className={`${styles.contentWrapper} ${showToc ? '' : styles.contentWrapper_noToc}`.trim()}
+        >
           <div className={styles.headingContent}>
             <title>{frontmatter.title}</title>
             <meta name={'description'} content={frontmatter.description} />
@@ -121,7 +124,7 @@ const docsContentLoader =
             )}
           </div>
           {/* skjermleser må ha tidlig tilgang til innholdsfortegnelsen */}
-          {tocItems.length > 0 && (
+          {showToc && (
             <nav
               className={styles.navContent}
               aria-label={'Innholdsfortegnelse'}
