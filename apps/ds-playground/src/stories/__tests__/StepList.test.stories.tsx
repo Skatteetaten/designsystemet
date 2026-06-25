@@ -107,7 +107,6 @@ const TemplateExample: StoryFn<StepListProps> = () => {
           title={'aktivt'}
           variant={'active'}
           stepNumber={3}
-          shouldAutoFocusWhenActive={false}
           onNext={(): void => console.log('next')}
         >
           {
