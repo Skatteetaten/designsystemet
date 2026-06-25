@@ -2,6 +2,10 @@ import { JSX, MouseEvent, MouseEventHandler, useCallback } from 'react';
 import { useLinkClickHandler } from 'react-router';
 
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
+import {
+  NavigationTile,
+  NavigationTileProps,
+} from '@skatteetaten/ds-navigation';
 
 // Behandle kun interne ruter på klienten. Eksterne lenker og rene anker (#foo) skal følge nettleserens standardoppførsel.
 const isInternalRoute = (href: string): boolean =>
@@ -48,4 +52,17 @@ export const RouterDsLink = ({
       {children}
     </Link>
   );
+};
+
+type RouterNavigationTileProps = Omit<NavigationTileProps, 'onClick'>;
+
+// NavigationTile koblet til react-router slik at interne lenker navigerer
+// på klient. Brukes typisk i MDX-innhold for navigasjonsruter.
+export const RouterNavigationTile = ({
+  href,
+  ...rest
+}: RouterNavigationTileProps): JSX.Element => {
+  const onClick = useRouterLinkClick(href ?? '');
+
+  return <NavigationTile {...rest} href={href} onClick={onClick} />;
 };

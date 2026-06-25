@@ -7,7 +7,7 @@ import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import browserCollections from '../.source/browser';
 import { Canvas } from './components/canvas';
-import { RouterDsLink } from './components/router-link';
+import { RouterDsLink, RouterNavigationTile } from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
 
 interface CanvasMdxProps {
@@ -119,6 +119,7 @@ const components = {
     <Canvas examplesPath={examplesPath}>{children}</Canvas>
   ),
   TypeTable: ({ of }: TypeTableMdxProps): JSX.Element => <TypeTable of={of} />,
+  NavigationTile: RouterNavigationTile,
   WordInfoTerm,
 };
 
