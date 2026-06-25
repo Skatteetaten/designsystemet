@@ -337,3 +337,26 @@ Use this order consistently in components, when destructuring props, and in type
 ---
 
 These guidelines aim to create a consistent development experience and maintain a high-quality design system. All team members should follow these standards when contributing to the component library.
+
+# Repo-spesifikke UI-føringer
+
+Bruk disse føringene for frontend- og UI-arbeid i dette repoet.
+
+## Mal-modus er standard
+
+**Standard oppførsel ved UI-arbeid: finn dokumentert eksempelkode først, kopier strukturen, og tilpass innholdet til situasjonen.** Ikke lag ny arkitektur eller lokale varianter hvis eksempel finnes.
+
+## Videre føringer
+
+- Ved arbeid med skjemaer, sider, tabeller, navigasjon, varsler, tilgjengelighet eller komponentvalg: vurder først om [designsystem-skillen](skills/designsystem/SKILL.md) er relevant (eller bruk `/designsystem` direkte).
+- Standard oppførsel i UI-arbeid er mal-modus: finn dokumentert eksempelkode først, kopier struktur, og tilpass innhold til situasjonen.
+- Ved side-nivå UI: foretrekk relevante sidetyper og eksempelsider i Storybook som startpunkt for topp, bunn, containere og overordnet struktur.
+- For tekstlig og semantisk innhold: foretrekk dokumenterte designsystem-komponenter som `Heading`, `Paragraph`, `List`, `Link`, `Blockquote` og `DescriptionList` før rå HTML med lokal styling.
+- For stegvise skjemaer: foretrekk `StepList` med `StepList.Step` (ikke lag lokal stepper), og verifiser API før props foreslås.
+- For stegvise skjemaer i dette repoet: vis hjelpeteksten «Alle felt må fylles ut med mindre feltet er merket valgfritt.» over steglisten.
+- Når CSS eller styling må skrives: foretrekk definerte designtokens foran oppdiktede verdier, lokale CSS-variabler og vilkårlige pixel- eller hex-verdier.
+- Foretrekk dokumenterte komponenter og mønstre fra Skatteetatens designsystem før lokal custom UI.
+- For UI-endringer skal universell utforming vurderes tidlig, spesielt semantikk, etiketter, fokusrekkefølge, tastaturstøtte og statusmeldinger.
+- Ikke dikt opp komponent-API-er, propnavn eller tokennavn. Verifiser dem fra dokumentasjon før de foreslås i kode.
+- Ved udekket behov: foretrekk teamdialog eller sak fremfor lokal engangsløsning.
+- Hold anbefalinger og kodeforslag korte, praktiske og konsistente med eksisterende React + TypeScript-oppsett i repoet.
