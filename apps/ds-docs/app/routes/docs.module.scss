@@ -8,17 +8,17 @@
 
   @media (min-width: breakpoints.$breakpoint-m) {
     grid-template-areas:
-      'heading nav'
-      'mdx nav';
-    grid-template-columns: minmax(0, 1fr) max-content;
+      'heading'
+      'mdx';
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  &_noToc {
+  &_withToc {
     @media (min-width: breakpoints.$breakpoint-m) {
       grid-template-areas:
-        'heading'
-        'mdx';
-      grid-template-columns: minmax(0, 1fr);
+        'heading nav'
+        'mdx nav';
+      grid-template-columns: minmax(0, 1fr) max-content;
     }
   }
 }

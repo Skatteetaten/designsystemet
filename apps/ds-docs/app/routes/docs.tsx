@@ -94,7 +94,7 @@ const docsContentLoader =
 
       return (
         <div
-          className={`${styles.contentWrapper} ${showToc ? '' : styles.contentWrapper_noToc}`.trim()}
+          className={`${styles.contentWrapper} ${showToc ? styles.contentWrapper_withToc : ''}`.trim()}
         >
           <div className={styles.headingContent}>
             <title>{frontmatter.title}</title>
