@@ -38,7 +38,7 @@ Eksempel på verifisert tokennavn:
 Bruk funksjonelle beskrivelser som:
 
 - semantic token for primar tekst
-- semantic token for sekundar tekst
+- semantic token for sekundær tekst
 - semantic token for container-bakgrunn
 - semantic token for feilstatus
 - semantic token for fokus eller interaktiv tilstand
