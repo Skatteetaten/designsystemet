@@ -112,7 +112,7 @@ export const Static: Story = {
         <div className={'flex flexColumn gapXl'}>
           <Alert variant={'info'} ariaLive={'off'} showAlert>
             {
-              'Vi jobber med a utvikle denne siden, og du vil kunne se flere av sakene dine etter hvert.'
+              'Vi jobber med å utvikle denne siden, og du vil kunne se flere av sakene dine etter hvert.'
             }
           </Alert>
           <Alert variant={'warning'} ariaLive={'off'} showAlert>
