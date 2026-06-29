@@ -27,10 +27,6 @@
   line-height: var(--semantic-line-height-buttons);
   text-align: center;
 
-  &MarginTop {
-    margin-top: var(--spacing-xs);
-  }
-
   &_error:not(:focus, :hover) {
     border: 3px var(--semantic-danger-foreground) solid;
   }

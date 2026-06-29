@@ -168,16 +168,6 @@ export const WithCustomSVGPath = {
   },
 } satisfies Story;
 
-export const WithSizeExtraSmall = {
-  name: 'With Size Extra Small (A1)',
-  args: {
-    size: 'extraSmall',
-  },
-  argTypes: {
-    size: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithSizeSmall = {
   name: 'With Size Small (A1)',
   args: {
@@ -195,18 +185,6 @@ export const WithSizeLarge = {
   },
   argTypes: {
     size: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithSizeExtraSmallAndOutline = {
-  name: 'With Size Extra Small and Outline (A1)',
-  args: {
-    size: 'extraSmall',
-    isOutlined: true,
-  },
-  argTypes: {
-    size: { table: { disable: false } },
-    isOutlined: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -371,13 +349,6 @@ const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
       <IconButton
         {...args}
         hasSpinner={false}
-        size={'extraSmall'}
-        className={'marginRightM'}
-        isOutlined
-      />
-      <IconButton
-        {...args}
-        hasSpinner={false}
         size={'small'}
         className={'marginRightM'}
         isOutlined
@@ -393,12 +364,6 @@ const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
     <div className={'bottomSpacingXL'}>
       <IconButton
         {...args}
-        size={'extraSmall'}
-        className={'marginRightM'}
-        isOutlined
-      />
-      <IconButton
-        {...args}
         size={'small'}
         className={'marginRightM'}
         isOutlined
@@ -410,19 +375,12 @@ const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
       <IconButton
         {...args}
         hasSpinner={false}
-        size={'extraSmall'}
-        className={'marginRightM'}
-      />
-      <IconButton
-        {...args}
-        hasSpinner={false}
         size={'small'}
         className={'marginRightM'}
       />
       <IconButton {...args} hasSpinner={false} className={'marginRightM'} />
       <IconButton {...args} hasSpinner={false} size={'large'} />
     </div>
-    <IconButton {...args} size={'extraSmall'} className={'marginRightM'} />
     <IconButton {...args} size={'small'} className={'marginRightM'} />
     <IconButton {...args} className={'marginRightM'} />
     <IconButton {...args} size={'large'} />

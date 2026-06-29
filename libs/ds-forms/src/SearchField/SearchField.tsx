@@ -256,8 +256,6 @@ export const SearchField = ({
   } else if (isExtraLarge) {
     sizeAttribute = 'extraLarge';
   }
-  const hasVisibleLabel = !!label && !hideLabel;
-  const clearButtonSize = size === 'medium' ? 'extraSmall' : 'small';
   const resolvedClearButtonTitle =
     clearButtonTitle ?? t('searchfield.ClearButtonTitle');
   const resolvedSearchButtonTitle =
@@ -267,9 +265,8 @@ export const SearchField = ({
   const containerClassName = `${styles.topContainer} ${className} ${
     classNames?.container ?? ''
   }`.trim();
-  const searchContainerClassName = `${styles.searchContainer} ${
-    hasVisibleLabel ? styles.searchContainerMarginTop : ''
-  } ${classNames?.searchContainer ?? ''}`.trim();
+  const searchContainerClassName =
+    `${styles.searchContainer} ${classNames?.searchContainer ?? ''}`.trim();
   const inputClassName = `${styles.input} ${classNames?.textbox ?? ''} ${
     showClearButton && !disabled ? styles.inputWithValue : ''
   }`.trim();
@@ -406,7 +403,7 @@ export const SearchField = ({
           {showClearButton && !disabled && !readOnly && (
             <IconButton
               className={styles.clearButton}
-              size={clearButtonSize}
+              size={'small'}
               svgPath={CancelSVGpath}
               title={resolvedClearButtonTitle}
               onClick={handleClearClick}

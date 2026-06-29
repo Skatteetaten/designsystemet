@@ -169,7 +169,7 @@ export const WithCustomClassNames = {
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(defaultLabelText);
 
-    const dateContainer = canvasElement.querySelector(`${wrapper} > div > div`);
+    const dateContainer = canvasElement.querySelector(`${wrapper} > div`);
 
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=datepickerErrorId]>div'

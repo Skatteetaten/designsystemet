@@ -23,10 +23,6 @@
   outline-offset: 0;
   overflow-y: auto;
 
-  &MarginTop {
-    margin-top: var(--spacing-xs);
-  }
-
   &::-webkit-calendar-picker-indicator {
     display: none !important;
   }

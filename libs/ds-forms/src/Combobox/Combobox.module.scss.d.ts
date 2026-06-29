@@ -2,7 +2,6 @@ declare const classNames: {
   readonly srOnly: 'srOnly';
   readonly wrapper: 'wrapper';
   readonly inputContainer: 'inputContainer';
-  readonly inputContainerMarginTop: 'inputContainerMarginTop';
   readonly input: 'input';
   readonly inputContentArea: 'inputContentArea';
   readonly chips: 'chips';

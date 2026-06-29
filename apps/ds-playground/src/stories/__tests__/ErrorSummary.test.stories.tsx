@@ -349,7 +349,7 @@ export const WithFocus = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await userEvent.click(button);
-    const errorSummary = canvas.getAllByRole('generic')[4];
+    const errorSummary = canvas.getAllByRole('generic')[5];
     await waitFor(() => expect(errorSummary).toHaveFocus());
   },
 } satisfies Story;

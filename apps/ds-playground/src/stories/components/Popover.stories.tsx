@@ -139,7 +139,7 @@ export const Example: Story = {
                   <Popover position={'bottomStart'} color={'ochre'}>
                     <Popover.Trigger
                       ariaDescribedby={filesId}
-                      size={'extraSmall'}
+                      size={'small'}
                       className={'dummySpacingLeft'}
                     />
                     <Popover.Content>

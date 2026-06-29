@@ -97,7 +97,7 @@ export const Examples: Story = {
                 <Popover>
                   <Popover.Trigger
                     className={'dummySpacingLeft'}
-                    size={'extraSmall'}
+                    size={'small'}
                   />
                   <Popover.Content>
                     {
@@ -121,7 +121,7 @@ export const Examples: Story = {
           <DescriptionList.Element term={'Adresse'}>
             {'Adresseveien 1 '}
             <IconButton
-              size={'extraSmall'}
+              size={'small'}
               title={'kopier'}
               svgPath={CopySVGpath}
               onClick={() => {

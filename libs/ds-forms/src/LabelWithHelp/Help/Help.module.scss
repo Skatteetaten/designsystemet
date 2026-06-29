@@ -21,13 +21,11 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-input);
   overflow-wrap: anywhere;
-
-  &MarginTop {
-    margin-top: var(--spacing-xs);
-  }
 }
 
 .helpButton {
+  position: relative;
+  top: -1px;
   margin-left: var(--spacing-s);
   vertical-align: top;
 }
@@ -37,7 +35,8 @@
   width: fit-content;
   box-sizing: border-box;
   border: 2px solid var(--palette-forest-30);
-  margin-top: var(--spacing-xs);
+  margin-top: var(--spacing-xxs);
+  margin-bottom: var(--spacing-xs);
   animation-duration: 0.3s;
   animation-fill-mode: both;
   animation-name: animationhelpbox;

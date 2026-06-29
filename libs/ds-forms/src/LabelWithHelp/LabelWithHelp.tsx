@@ -32,7 +32,11 @@ export const LabelWithHelp = ({
   } ${hideLabelClassName} ${className} ${classNames?.label ?? ''}`.trim();
 
   return (
-    <>
+    <div
+      className={styles.container}
+      data-helptext={!!helpText}
+      data-hidelabel={hideLabel}
+    >
       <label
         ref={ref as (instance: HTMLLabelElement | null) => void}
         id={labelId}
@@ -56,7 +60,7 @@ export const LabelWithHelp = ({
         disabled={disabled}
         onHelpToggle={onHelpToggle}
       />
-    </>
+    </div>
   );
 };
 

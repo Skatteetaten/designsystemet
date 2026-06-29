@@ -1,6 +1,5 @@
 declare const classNames: {
   readonly searchContainer: 'searchContainer';
-  readonly searchContainerMarginTop: 'searchContainerMarginTop';
   readonly topContainer: 'topContainer';
   readonly clearButton: 'clearButton';
   readonly inputWrapper: 'inputWrapper';

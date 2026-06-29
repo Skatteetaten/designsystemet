@@ -164,7 +164,7 @@ export const WithCustomClassNames = {
     const label = canvas.getByText(defaultLabelText);
 
     const selectContainer = canvasElement.querySelector(
-      `${wrapper} > div > div`
+      `${wrapper} > div > div > div`
     );
 
     const errorMessageContainer = canvasElement.querySelector(
