@@ -17,6 +17,7 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { ExampleDescriptor, getExamples } from './canvas.utils';
 import { skeCodeTheme } from '../../lib/code-theme';
+import { openExampleInStackblitz } from '../../lib/stackblitz';
 
 import styles from './canvas.module.scss';
 
@@ -79,6 +80,9 @@ export const Canvas = ({
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>(
     'idle'
   );
+  const [stackblitzStatus, setStackblitzStatus] = useState<'idle' | 'error'>(
+    'idle'
+  );
 
   const selectedExample =
     getSelectedExample(examples, selectedExampleKey) ?? examples[0] ?? null;
@@ -136,6 +140,15 @@ export const Canvas = ({
     }
   };
 
+  const handleOpenInStackblitz = (): void => {
+    try {
+      openExampleInStackblitz(selectedExample);
+      setStackblitzStatus('idle');
+    } catch {
+      setStackblitzStatus('error');
+    }
+  };
+
   const handleCodeFileChange = (value: string): void => {
     const matchingFile = selectedExample.codeFiles.find(
       (file) => file.tabValue === value
@@ -173,7 +186,15 @@ export const Canvas = ({
             onClick={handleCopyCode}
           />
 
-          <IconButton svgPath={EditSVGpath} title={'Rediger i Stackblitz'} />
+          <IconButton
+            svgPath={EditSVGpath}
+            title={
+              stackblitzStatus === 'error'
+                ? 'Kunne ikke åpne i Stackblitz'
+                : 'Rediger i Stackblitz'
+            }
+            onClick={handleOpenInStackblitz}
+          />
           <IconButton
             svgPath={CodeSVGpath}
             ariaExpanded={isCodeVisible}

@@ -6,6 +6,7 @@ export interface ExampleModule {
 
 export interface ExampleDescriptor {
   codeFiles: ExampleFileDescriptor[];
+  entryFileName: string;
   key: string;
   label: string;
   Component: ComponentType;
@@ -190,6 +191,7 @@ const createExample = (
 
   return {
     codeFiles: getCodeFiles(codeEntries, codeFilePaths),
+    entryFileName: renderEntries[0].path,
     key,
     label,
     Component: renderEntries[0].Component,

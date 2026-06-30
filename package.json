@@ -59,6 +59,7 @@
     "@floating-ui/react": "0.26.28",
     "@react-router/node": "7.15.1",
     "@skatteetaten/ds-core-designtokens": "file:dist/libs/ds-core-designtokens",
+    "@stackblitz/sdk": "1.11.0",
     "@swc/helpers": "0.5.19",
     "@types/mdx": "2.0.13",
     "chalk": "5.4.1",

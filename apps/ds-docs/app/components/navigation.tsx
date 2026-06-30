@@ -3,8 +3,6 @@ import { Link, useLocation } from 'react-router';
 
 import type { Root } from 'fumadocs-core/page-tree';
 
-import type { Root } from 'fumadocs-core/page-tree';
-
 import { ChevronDownIcon, EyeOutlineIcon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
