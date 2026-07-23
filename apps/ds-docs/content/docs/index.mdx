@@ -4,53 +4,34 @@ description: Dette er designsystemet til Skatteetaten. Her tilbyr vi komponenter
 hideToc: true
 ---
 
+<img
+  alt="Illustrasjon av team som lager desigmsystem"
+  src="/images/designsystem.png"
+  width="100%"
+/>
+
 import styles from './index.module.scss';
 
-## Kom i gang
-
-<nav aria-label={'Kom i gang'} className={styles.navSection}>
+<nav aria-label={'Kom i gang med designsystemet'} className={styles.navSection}>
   <NavigationTile
-    title={'Start med design'}
+    title={'Kom i gang med design'}
     description={'Figma og samarbeid'}
     href={'/guider/kom-i-gang/for-designere'}
     size={'medium'}
   />
 
-  <NavigationTile
-    title={'Start med utvikling'}
-    description={'Installasjon og oppsett'}
-    href={'/guider/kom-i-gang/for-utviklere'}
-    size={'medium'}
-  />
-</nav>
+<NavigationTile
+  title={'Start med utvikling'}
+  description={'Installasjon og oppsett'}
+  href={'/guider/kom-i-gang/for-utviklere'}
+  size={'medium'}
+/>
 
-## Bidra
+<NavigationTile
+  title={'Se endringslogg'}
+  description={'Versjoner og nyheter'}
+  href={'/guider/endringslogg'}
+  size={'medium'}
+/>
 
-<nav aria-label={'Bidrag'} className={styles.navSection}>
-  <NavigationTile
-    title={'Rapporter en bug'}
-    description={'Meld inn feil og forbedringer'}
-    href={'#'}
-    target={'_blank'}
-    size={'medium'}
-  />
-
-  <NavigationTile
-    title={'Få hjelp i kanalen'}
-    description={'Hjelp og gode råd'}
-    href={'https://github.com/Skatteetaten/designsystemet/discussions'}
-    target={'_blank'}
-    size={'medium'}
-  />
-</nav>
-
-## Hold deg oppdatert
-
-<nav aria-label={'Oppdatering'} className={styles.navSection}>
-  <NavigationTile
-    title={'Se endringslogg'}
-    description={'Versjoner og nyheter'}
-    href={'/guider/endringslogg'}
-    size={'medium'}
-  />
 </nav>
