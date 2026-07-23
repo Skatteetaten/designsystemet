@@ -27,18 +27,6 @@ På de underliggende sidene finner du informasjon om hver formatterer, inkludert
 - [Kontornummer](formattere/bank-account): bankAccountNumber (11 siffer)
 - [Beløp](formattere/amount): number
 
-## Språk og lokalisering
-
-Presentasjon av informasjon varierer mellom språk og markeder. Formattererne håndterer disse forskjellene slik at samme data kan presenteres riktig for den aktuelle brukeren.
-
-For eksempel kan et beløp vises forskjellig avhengig av språk:
-
-**Norsk:** 1 234 567,89
-
-**Engelsk:** 1,234,567.89
-
-Ved å bruke formattererne slipper du å implementere og vedlikeholde slike regler selv.
-
 ## Grupperingshjelper for org.- fødsels-, konto- og telefonnummer
 
 Fødselsnummer, organisasjonsnummer, kontonummer og telefonnummer viser grupperte siffer som skilles med mellomrom. Nevnte grupperingen er lik for alle språk. F.eks så grupperes organisasjonsnummer med tre og tre siffer. 123 456 789 Den generiske funksjonen tar imot alle typer tegn, fjerner alle tegn som ikke er gyldig med valgt type og retunerer siffer som er gruppert.
