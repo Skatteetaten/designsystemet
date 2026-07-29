@@ -1,5 +1,49 @@
 ---
-title: Datoer
+title: Datoer og klokkeslett
+description: Her viser vi eksempler på registrering av datoer og klokkeslett i ulike situasjoner.
 ---
 
-Innhold her.
+## Hvorfor anbefaler vi flere løsninger?
+
+Valg av løsning avhenger av konteksten.
+
+- **DatePicker** fungerer best når kalenderen er relevant for brukeren, for eksempel når brukeren skal velge en dato som ligger nær i tid, eller på bestemte ukedager.
+- **Tekstfelt** er raskt å bruke når brukeren vet nøyaktig dato.
+- **Separate felt** (Dag/Måned/År) er tydelig, og kan fungere godt når det er et stort spenn i brukergruppen som er vant til ulike datoformater.
+- Uansett løsning: angi datoformatet tydelig i toppen (for eksempel "dd.mm.åååå") for bedre skjermleserstøtte.
+
+## Datoer nær i tid
+
+Bruk DatePicker når brukeren skal velge en dato som ligger nær i tid og det er nyttig å se en kalender.
+
+<Canvas examplesPath="composed/datoer/besoksdato" />
+
+## Tekstfelt med formattering
+
+For datoer langt tilbake (som fødselsdato) er det ofte enklere å la brukeren taste inn datoen. Tekstfelt kan formatere mens brukeren skriver.
+
+<Canvas examplesPath="composed/datoer/fodselsdato-textfield" />
+
+## Separate tekstfelt
+
+Et alternativ er tre separate felt for dag, måned og år. Dette gir mulighet for felt med begrenset antall tegn og større kontroll underveis. Det gjør det imidlertid vanskeligere å kopiere inn eller ut datoer, og mer krevende å validere.
+
+<Canvas examplesPath="composed/datoer/fodselsdato-separatFelter" />
+
+## Fra-dato og til-dato
+
+Når du skal velge et intervall skal begge datoene være i samme fieldset. Validering må fungere begge veier – hvis brukeren endrer fra-datoen må den ikke være senere enn til-datoen, og omvendt.
+
+<Canvas examplesPath="composed/datoer/fraTilDato" />
+
+## Dato og klokkeslett
+
+Når brukeren skal velge både dato og tidspunkt, bruk DatePicker for dato og Combobox for tid side ved side. Du kan eventuelt bruke et vanlig tekstfelt hvis brukeren må kunne registrere tidspunkt med høy nøyaktighet (for eksempel 13:37).
+
+<Canvas examplesPath="composed/datoer/datoOgTid" />
+
+## 12-timers klokke og tidssone
+
+For avanserte tidsvalg kan du kombinere Tekstfelt for nøyaktig tidspunkt, Select for AM/PM og Combobox for tidssonesøk. På denne måten kan brukeren søke etter tidssonen sin (for eksempel "Europe/Oslo").
+
+<Canvas examplesPath="composed/datoer/klokkeOgTidssone" />
