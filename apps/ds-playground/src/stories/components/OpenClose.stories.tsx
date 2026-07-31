@@ -80,7 +80,7 @@ export const Sizes: Story = {
       <>
         <Paragraph hasSpacing>
           {
-            'Prop "size" kan brukes for å spesifisere størrelsen på OpenClose-komponenten, og erstatter "variant" i neste major. "small" og "large" tilsvarer dagens "compact" og "standard", mens "medium" er en ny størrelse som ligger mellom de to.'
+            'Prop "size" kan brukes for å spesifisere størrelsen på OpenClose-komponenten.'
           }
         </Paragraph>
 
