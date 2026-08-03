@@ -35,7 +35,7 @@ export default function PopoverInTableCellExample(): ReactElement {
             <Popover position={'bottomStart'} color={'ochre'}>
               <Popover.Trigger
                 ariaDescribedby={filesId}
-                size={'extraSmall'}
+                size={'small'}
                 className={styles.triggerSpacing}
               />
               <Popover.Content>
