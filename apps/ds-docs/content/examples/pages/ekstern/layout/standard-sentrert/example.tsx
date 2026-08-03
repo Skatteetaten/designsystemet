@@ -23,14 +23,7 @@ export default function StandardSentrertLayout(): JSX.Element {
 
   return (
     <>
-      <TopBannerExternal
-        homeHref={'#'}
-        logoHref={'#'}
-        menyItems={[
-          { label: 'Hjem', href: '#' },
-          { label: 'Tjenester', href: '#' },
-        ]}
-      />
+      <TopBannerExternal />
       <main className={styles.mainContent}>
         <Breadcrumbs className={styles.marginBottomXL}>
           <Breadcrumbs.List shouldCollapse>

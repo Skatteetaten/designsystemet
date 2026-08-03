@@ -1,26 +1,20 @@
-import { type ReactElement, useRef, useState } from 'react';
+import { useRef, useState, type ReactElement } from 'react';
 
 import { formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
-import {
-  RoleBanner,
-  TopBannerExternal,
-  type User,
-} from '@skatteetaten/ds-layout';
-import { RolePicker, type Entity } from '@skatteetaten/ds-overlays';
+import { RoleBanner, TopBannerExternal } from '@skatteetaten/ds-layout';
+import { Business, Entity, RolePicker } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { businesses, mapBusinessToUser } from './data';
 
 export default function ServiceWithRequiredRepresentationExample(): ReactElement {
   const rolePickerRef = useRef<HTMLDialogElement>(null);
-  const [user, setUser] = useState<User | undefined>(undefined);
+  const [business, setBusiness] = useState<Business | undefined>(undefined);
 
   const handleBusinessSelect = async (entity: Entity): Promise<void> => {
-    if (entity.type !== 'Organization') {
-      return;
-    }
+    const business = entity as Business;
 
-    setUser(mapBusinessToUser(entity.name, entity.organizationNumber));
+    setBusiness(business);
     rolePickerRef.current?.close();
   };
 
@@ -32,24 +26,26 @@ export default function ServiceWithRequiredRepresentationExample(): ReactElement
         }
       </Paragraph>
       <TopBannerExternal
-        user={user}
+        user={business ? mapBusinessToUser(business) : undefined}
         onLogInClick={() => rolePickerRef.current?.showModal()}
-        onLogOutClick={() => setUser(undefined)}
+        onLogOutClick={() => setBusiness(undefined)}
       >
-        {user && (
+        {business && (
           <TopBannerExternal.UserMenu
-            user={user}
-            onLogOutClick={() => setUser(undefined)}
+            user={mapBusinessToUser(business)}
+            onLogOutClick={() => setBusiness(undefined)}
             onSwitchUserClick={() => rolePickerRef.current?.showModal()}
           />
         )}
       </TopBannerExternal>
-      {user && (
+      {business && (
         <RoleBanner
           user={{
-            name: user.name,
+            name: business.name ?? '',
             role: 'virksomhet',
-            identifier: formatOrganisationNumber(user.orgnr ?? '123456789'),
+            identifier: formatOrganisationNumber(
+              business.organizationNumber ?? '123456789'
+            ),
           }}
         />
       )}

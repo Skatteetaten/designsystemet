@@ -268,25 +268,18 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
         businesses={businesses}
         onEntitySelect={async (entity) => {
           let role: User['role'];
-          let orgnr: string | undefined;
-          let person: User['person'] | undefined;
 
           if (entity.name === me.name) {
             role = 'meg';
-            person = entity.type === 'Person' ? entity : undefined;
           } else if (entity.type === 'Organization') {
             role = 'virksomhet';
-            orgnr = entity.organizationNumber;
           } else {
             role = 'andre';
-            person = entity;
           }
 
           setUser({
             role: role,
-            ...(role !== 'meg' && { name: entity.name }),
-            orgnr,
-            person,
+            name: entity.name,
           });
           modalRef.current?.close();
         }}

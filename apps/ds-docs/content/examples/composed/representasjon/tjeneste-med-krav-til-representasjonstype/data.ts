@@ -28,11 +28,8 @@ export const businesses: Paginated<Business> = {
   ],
 };
 
-export const mapBusinessToUser = (
-  name: string,
-  organizationNumber: string
-): User => ({
+export const mapBusinessToUser = (business: Business): User => ({
   role: 'virksomhet',
-  name,
-  orgnr: organizationNumber,
+  name: business.name,
+  orgnr: business.organizationNumber,
 });
