@@ -1,0 +1,48 @@
+---
+title: Å velge blant flere
+description: Tjenestene våre er fulle av valg som folk må ta. De kan ta ett valg, mange samtidig, på stor og liten plass og i ulike sammenhenger. Denne siden inneholder anbefalinger og eksempler på denne type valg.
+---
+
+## 5 eller færre valg
+
+Bruk [radioknapper](/byggeklosser/komponenter/radiogroup) når du skal velge ett element i en kort liste.
+
+<Canvas examplesPath="composed/mange-valg/radiogroup" />
+
+Bruk [avhukingsbokser](/byggeklosser/komponenter/checkboxgroup) når du kan velge flere elementer innenfor samme liste.
+
+<Canvas examplesPath="composed/mange-valg/checkboxgroup" />
+
+Hvis du har flere spørsmål eller valg kan det være nyttig å dele dem opp i gjensidig utlukkende grupper.
+
+<Canvas examplesPath="composed/mange-valg/mutually-exclusive-groups" />
+
+Når det er viktigere å vise brukerens valg enn å tilby oversikt over alle oppgaver, kan du legge valgene i en Modal.
+
+<Canvas examplesPath="composed/mange-valg/modal-selection" />
+
+## 5 til 15 valg
+
+Når brukeren har behov for å få en oversikt over alle valg, bør du etterstrebe å vise dem, for eksempel i en [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup). Da kan brukeren se alle valgene samtidig og ta flere valg på en gang.
+
+<Canvas examplesPath="composed/mange-valg/checkboxgroup-long-list" />
+
+Når du har kompakte elementer som er lette å «sortere» kan du plassere dem løpende i form av [Chips](/byggeklosser/komponenter/chips). Da kan brukeren se alle valgene samtidig og ta flere valg på en gang.
+
+<Canvas examplesPath="composed/mange-valg/chips-selection" />
+
+Bruk [nedtrekksmeny](/byggeklosser/komponenter/select) hvis du har mindre plass og ikke trenger å tilby oversikt over alle mulige valg.
+
+<Canvas examplesPath="composed/mange-valg/select-month" />
+
+## Mange valg
+
+Hvis du har mange valg og brukeren ikke trenger å se alle valgene samtidig kan du bruke en ComboBox. Da kan brukeren søke seg eller bla seg frem til valget sitt.
+
+<Canvas examplesPath="composed/mange-valg/combobox" />
+
+ComboBox støtter også flervalg ved å bruke `multiple`-egenskapen:
+
+<Canvas examplesPath="composed/mange-valg/combobox-multiple" />
+
+Hvis det er veldig sannsynlig at brukeren vet nøyaktig hva valget er, kan du alternativt bruke [Textfield](/byggeklosser/komponenter/textfield) med datalist for autofullfør. Dette fungerer godt for mindre lister og etablerte søketermer.

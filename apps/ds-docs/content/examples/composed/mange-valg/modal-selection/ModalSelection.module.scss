@@ -1,0 +1,19 @@
+.regionsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-m);
+  gap: var(--spacing-s);
+}
+
+.regionCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: var(--spacing-xs);
+}
+
+.modalActions {
+  display: flex;
+  margin-top: var(--spacing-l);
+  gap: var(--spacing-m);
+}
