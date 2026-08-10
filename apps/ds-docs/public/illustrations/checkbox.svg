@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #cde1f9;
+      }
+
+      .cls-5 {
+        fill: #fff;
+        stroke: url(#New_Pattern_Swatch_1-3);
+        stroke-width: 2px;
+      }
+
+      .cls-5, .cls-6, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        fill: url(#New_Pattern_Swatch_1);
+        stroke: url(#New_Pattern_Swatch_1-2);
+      }
+
+      .cls-6, .cls-2 {
+        stroke-width: 4px;
+      }
+
+      .cls-7 {
+        fill: #093e61;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #093e61;
+      }
+
+      .cls-3 {
+        stroke-width: 10px;
+      }
+
+      .cls-8 {
+        fill: url(#New_Pattern_Swatch_4);
+      }
+    </style>
+    <pattern id="New_Pattern_Swatch_4" data-name="New Pattern Swatch 4" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-2764.2 -1230.25) scale(.7)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-4" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1" data-name="New Pattern Swatch 1" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-630 1015.4)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-7" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1-2" data-name="New Pattern Swatch 1" patternTransform="translate(-2277.23 4382.85) scale(.79 1.39)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_1-3" data-name="New Pattern Swatch 1" patternTransform="translate(-2279.23 4380.85) scale(.79 1.39)" xlink:href="#New_Pattern_Swatch_1"/>
+  </defs>
+  <circle class="cls-8" cx="99" cy="100.21" r="55.44"/>
+  <rect class="cls-6" x="31.28" y="86.27" width="31.46" height="31.46"/>
+  <rect class="cls-5" x="29.28" y="84.27" width="31.46" height="31.46"/>
+  <g>
+    <polyline class="cls-2" points="55.21 94.41 41.92 105.59 34.81 99.6"/>
+    <line class="cls-3" x1="82.7" y1="100" x2="170.72" y2="100"/>
+  </g>
+</svg>

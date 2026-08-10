@@ -1,0 +1,57 @@
+---
+title: NavigationTile
+description: NavigationTile brukes til å presentere ett eller flere navigasjonsvalg som visuelt tydelige fliser. Dette gjør det enkelt for brukerne å forstå hvilke hovedvalg de har, og gir en oversiktlig inngang til nye områder eller innhold.
+icon: /illustrations/navigationtile.svg
+---
+
+<Canvas examplesPath="components/navigationtile" />
+
+## Når bruke komponenten
+
+- Når du skal tilby flere tydelige navigasjonsvalg på en side.
+- Når du vil gruppere valg på en visuelt ryddig måte.
+- Når innholdet har karakter av “valgmeny” snarere enn løpende tekst.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk for vanlige tekstlenker i brødtekst — bruk Link.
+- Ikke bruk NavigationTile når det kun finnes ett valg.
+- Ikke bruk for ustrukturert innhold eller informasjon som ikke representerer navigasjon.
+
+## Hvorfor anbefalingene finnes?
+
+- Fliser er effektive for navigasjon mellom distinkte områder fordi de har større klikkflate og er lettere å oppdage enn enkeltlenker i tekst.
+- En enkelt tile gir ikke nok kontekst til at brukeren forstår at det finnes valg å ta — da er vanlig lenke mer intuitiv.
+- Hele flisen må være semantisk lenke (ikke kun pil-ikonet) slik at tastatur- og skjermleserbrukere kan aktivere den på en forutsigbar måte.
+
+## Varianter (og når bruke dem)
+
+Kilden beskriver ikke egne under‑varianter, men NavigationTile har to grunnleggende bruksmåter:
+
+- **Fliser som lenker til eksterne sider:** Pilen peker til høyre.
+- **Fliser som ankerlenker på samme side:** Pilen peker nedover.
+
+### Plassering og justering
+
+- Brukes typisk som en seksjon med valg på topp‑ eller mellomnivå i løsningen.
+- Fliser kan stå i én eller flere kolonner, avhengig av plass.
+- Må plasseres slik at hierarkiet er tydelig: brukeren skal forstå at dette er valg, ikke informasjon.
+
+### Interaksjon og tilstander
+
+- Hele flisen er klikkbar.
+- Pilen viser om navigasjonen går videre (→) eller nedover i samme side (↓).
+- Fargerkontrast og hoverstil skal gjøre det tydelig at flisen er interaktiv.
+
+## Tekst og språkbruk
+
+- Bruk korte og presise titler.
+- Unngå løpende setninger — NavigationTile skal formidle valg, ikke beskrive innhold.
+- Teksten skal gi mening i isolasjon og forklare hvor brukeren kommer.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Sørg for tilstrekkelig kontrast på flisens tekst og interaksjonselementer.
+- Hele flisen må være semantisk lenke, ikke kun pil‑ikonet.
+- Lenketeksten må være unik for hver tile.
+- Ikonet skal være dekorativt og skjules for skjermleser.

@@ -1,0 +1,91 @@
+---
+title: TopBannerExternal
+description: TopBannerExternal brukes som toppbanner i alle publikumsløsninger. Den gir brukeren tilgang til sentrale funksjoner som innlogging, meny, søk, språkvalg, representasjonsbytte og varsler. Formålet er å sikre en gjenkjennbar, effektiv og konsistent navigasjonsopplevelse på tvers av tjenester.
+icon: /illustrations/topbannerexternal.svg
+---
+
+<Canvas examplesPath="components/topbannerexternal" />
+
+## Når bruke komponenten
+
+- Når løsningen er rettet mot publikum (innbyggere, profesjonelle eller virksomheter).
+- Når du trenger en standardisert toppnavigasjon med støtte for innlogging og representasjon.
+- Når du vil at navigasjon, søk og brukerfunksjoner skal være likt på tvers av løsninger.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk i interne løsninger — bruk [TopBannerInternal](/byggerklosser/komponenter/topbannerinternal) i stedet.
+- Ikke bruk på sider der kompleksiteten i toppfunksjonaliteten er unødvendig (se spesialsider under).
+
+## Hvorfor anbefalingene finnes?
+
+- Et konsistent toppbanner på tvers av alle publikumslløsninger gir brukerne én gjenkjennelig struktur for navigasjon, innlogging og representasjon — dette øker tillit og reduserer forvirring mellom tjenester.
+- Funksjoner skjules i oppgavemodus for å redusere distraksjoner og hjelpe brukeren fokusere på oppgaven — dette er spesielt viktig i skjema- og prosessflyter.
+- «Hopp til hovedinnhold»-snarvei er et UU-krav for at skjermleserbrukere ikke må navigere gjennom hele banneret på hver sidevisning.
+
+## Varianter (og når bruke dem)
+
+Komponenten har ingen egne stilvarianter, men funksjonaliteten blir tilpasset basert på:
+
+- innlogget/ikke innlogget bruker
+- om bruker representerer seg selv, virksomhet eller andre personer
+- type side (vanlig visning, oppgave, spesialside)
+- skjermstørrelse
+
+### Plassering og justering
+
+- Plasseres alltid i toppen av siden.
+- Skal være det første interaktive elementet, med snarvei for å hoppe til hovedinnhold.
+- Kan forenkles på sider der hele toppbannerets funksjonalitet ikke er nødvendig (se under «Spesialsider»).
+
+### Interaksjon og tilstander
+
+### Snarvei til hovedinnhold
+
+- For skjermleserbrukere vises en snarvei som hopper direkte til hovedinnholdet.
+- Når brukeren går til en ny side, blir ikke toppbanneren lest opp på nytt. [1](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/)
+
+### Innlogging
+
+- **Ikke innlogget:** Knapp for «Logg inn».
+- **Innlogget:** Visningen tilpasses basert på representasjonsmuligheter:
+  - Bruker representerer kun seg selv: går direkte til Min side. [1](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/)
+  - Bruker representerer personer/virksomheter: viser **RolePicker**.
+  - Profesjonelle brukere (regnskapsførere, m.fl.) kan få spesialvisning.
+
+### Normalvisning (innlogget)
+
+Standardinnhold:
+
+- språkvelger
+- logg ut-knapp
+- søkefunksjon
+- brukermeny (inkl. representasjonsvelger og varsler)
+- meny (tre innholdsblokker for elementer)
+
+### I en oppgave
+
+Når brukeren utfører en aktivitet (f.eks. skjema eller prosess):
+
+- meny, søk og brukermeny skjules for å redusere distraksjoner
+- et grått felt vises for å vise hvem brukeren representerer
+
+### Spesialsider
+
+På sider der toppfunksjonalitet er unødvendig eller forstyrrende:
+
+- toppbanneret kan forenkles ved å skjule funksjoner som innlogging, varsler eller representasjon
+- eksempler: «Jobb i Skatteetaten», «Deling av data»
+
+## Tekst og språkbruk
+
+- Språkvelger støtter bokmål, nynorsk og engelsk.
+- Samisk kan brukes i løsninger hvor det er relevant.
+- Tekst for menyer og knapper må være konsis, tydelig og selvforklarende.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Første tabstopp må være «Hopp til hovedinnhold».
+- Banneret leses ikke automatisk på nytt når bruker navigerer – gir mindre støy for skjermleserbrukere.
+- Alle interaksjonselementer må ha tydelige fokustilstander.
+- Språkvelger og representasjonsvalg skal være tilgjengelig og semantisk korrekt.

@@ -64,7 +64,7 @@ export interface RolePickerProps
   /** Om avdøde personer skal vises som standard når rollevelger åpnes. */
   showDeceasedPeople?: boolean;
   /** Tilbakekallingsfunksjon for å håndtere valg av virksomhet/person. */
-  onEntitySelect?: OnEntitySelectHandler;
+  onEntitySelect?: (entity: Entity) => Promise<{ error: string } | void>;
   /** Tilbakekallingsfunksjon for å håndtere utlogging. */
   onLogout?: () => void;
   /** Eventuelt annet innhold som rendres etter listen med roller. */

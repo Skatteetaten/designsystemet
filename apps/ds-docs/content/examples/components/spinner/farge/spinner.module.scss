@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.whiteBackground {
+  display: inline-flex;
+  width: fit-content;
+  padding: var(--spacing-m);
+  border-radius: var(--border-radius-s);
+  background-color: var(--palette-denim-100);
+}

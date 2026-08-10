@@ -1,0 +1,49 @@
+---
+title: Breadcrumbs
+description: Breadcrumbs (brødsmulesti) viser brukeren hvor de befinner seg i nettstedets hierarki og gjør det enkelt å navigere tilbake til høyere nivåer i strukturen.
+icon: /illustrations/breadcrumbs.svg
+---
+
+<Canvas examplesPath="components/breadcrumbs" />
+
+## Når bruke komponenten
+
+- Når du vil vise brukeren hvor de er i sidestrukturen.
+- Når brukeren skal kunne hoppe tilbake til et høyere nivå.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk til lineær navigasjon i steg eller prosesser (bruk StepList).
+- Ikke bruk hvis løsningen kun har ett eller to nivåer.  
+   Da brukes i stedet en tilbakelenke.
+
+## Hvorfor anbefalingene finnes?
+
+- Brødsmulestien hjelper brukeren å forstå hvor i hierarkiet de befinner seg og navigere opp i strukturen. På dype sider reduserer dette frafall og forvirring.
+- Vi anbefaler ikke Breadcrumbs for korte stier (1–2 nivåer) fordi det gir liten navigasjonsverdi, men tar opp plass og legger til kognitivt innhold.
+- Breadcrumbs er navigasjon, ikke steg-oversikt — for steg-basert flyt brukes StepList, som kommuniserer fremdrift og har andre UU-krav.
+
+## Varianter (og når bruke dem)
+
+**Ingen varianter**
+
+### Plassering og justering
+
+- Breadcrumbs skal alltid ligge øverst på siden: rett under toppbanneret og over sidetittelen.
+- På innloggede sider skal stien starte med _Min side_, deretter domenet og eventuelle undersider.
+- Tilbakelenker på innloggede sider skal peke til hovedsiden for tjenesten, eller _Min side_ dersom hovedside ikke finnes.
+- Lange stier forkortes automatisk, men kan vises i full lengde ved å sette `shouldCollapse` til `false`.
+
+### Interaksjon og tilstander
+
+- Brukeren kan utvide forkortet sti via ekspander-ikon.
+- På mobil flyttes fokus til første brødsmule når full sti vises.
+
+## Tekst og språkbruk
+
+**Ingen egne språkføringer**
+
+## Tilgjengelighet (UU / WCAG)
+
+- Komponenten bruker `<nav>` og annonserer “Jeg er her” med riktig språk.
+- Siste element markeres som gjeldende side med `aria-current="page"`, med mulighet for å skru av mekanismen (`showLastItemAsCurrentPage`).

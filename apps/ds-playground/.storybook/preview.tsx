@@ -135,7 +135,6 @@ const argTypes = {
   className: {
     control: 'select',
     options: ['', 'dummyClassname'],
-    description: 'html class attributt til noden',
     table: {
       type: { summary: 'string' },
       category: category.baseProps,
@@ -143,16 +142,13 @@ const argTypes = {
   },
   id: {
     control: 'text',
-    description: 'html id attributt',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   lang: {
     control: 'text',
-    description: 'html lang attributt',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   'data-testid': {
-    description: 'html data attributt som brukes for tester',
     table: { category: category.baseProps },
   },
 } satisfies Preview['argTypes'];

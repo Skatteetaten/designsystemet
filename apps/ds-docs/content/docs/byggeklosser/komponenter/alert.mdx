@@ -1,0 +1,82 @@
+---
+title: Alert
+description: Alert (varsel) brukes til å gi brukeren en aktuell statusbeskjed om en viktig hendelse eller konsekvenser av en handling. Formålet er å hjelpe brukeren med å løse oppgaven sin og gi trygghet slik at de opplever kontroll over situasjonen.
+icon: /illustrations/alert.svg
+---
+
+<Canvas examplesPath="components/alert" />
+
+## Når bruke komponenten
+
+- Når du vil fange brukerens oppmerksomhet med korte, viktige meldinger de må ta hensyn til.
+- Når meldingen gjelder hele siden eller en større seksjon.
+- Når du skal vise systemfeil der deler av tjenesten eller enkeltdata er utilgjengelige.
+
+## Hvorfor anbefalingene finnes?
+
+- De fem variantene (suksess, nøytral, advarsel, feil, fare) er faste med faste farger for å gi brukerne konsekvent fargekoding på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
+- Vi skiller mellom [Alert](/byggeklosser/komponenter/alert) (hel side/seksjon), [ErrorMessage](/byggeklosser/komponenter/errormessage) (enkeltfelt) og [ErrorSummary](/byggeklosser/komponenter/errorsummary) (oppsummering) for å gi riktig informasjon på riktig sted — dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
+- Innebygd `showAlert` brukes for å sikre at skjermlesere fanger opp endringen automatisk via `aria-live`.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk for feil knyttet til enkeltfelt – bruk da **ErrorMessage** i stedet.
+- Ikke bruk til statiske informasjonsbokser – bruk **Panel**.
+
+## Varianter (og når bruke dem)
+
+Alert har fem forhåndsdefinerte varianter:
+
+### Suksess
+
+- Brukes til å bekrefte en vellykket operasjon.
+- Farge: [forest].
+
+### Nøytral
+
+- Brukes til nøytrale meldinger som kan være nyttige for brukeren.
+- Farge: [denim].
+
+### Advarsel
+
+- Brukes til advarsler, ustabilitet, unntak eller midlertidige feil.
+- Farge: [ochre].
+- Egnet ved systemvarsler hvor deler av tjenesten er utilgjengelig.
+
+### Feil
+
+- Brukes til feil som har oppstått og der brukeren trenger veiledning for hvordan de kan komme videre.
+- Vanlig for kritiske systemfeil.
+
+### Fare
+
+- En spesielt uthevet variant.
+- Brukes når brukeren kan miste opplysninger eller ved strengt fortrolig informasjon.
+- Farge: rød med kraftig rød kantlinje.
+
+Alle varianter:
+
+- Har standardikon og eventuell mulighet for lukkekryss.
+- Har faste farger som ikke kan endres.
+
+### Plassering og justering
+
+- Bruk riktige farge- og ikonvalg for å understreke alvorlighetsgrad.
+- Alert kan brukes på farget bakgrunn ved å aktivere `backgroundBrightness` for økt kontrast.
+
+### Interaksjon og tilstander
+
+- Når du viser eller skjuler komponenten, bruk den innebygde egenskapen `showAlert`.
+- Ikke lag egne visibility-regler, da dette kan hindre at skjermlesere fanger opp endringen.
+
+## Tekst og språkbruk
+
+- Hold innholdet kort og presist.
+- Bruk tydelig språk som gjenspeiler alvorlighetsgrad.
+- Skil mellom feil brukeren kan rette selv, og større systemfeil som krever annen informasjon.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Sørg for tilstrekkelig kontrast mellom tekst og bakgrunn (minst 4,5:1).
+- Meldingen bør være tydelig og lett å forstå for alle brukere.
+- Unngå å bruke `aria-live="off"` med mindre det er helt nødvendig, da dette kan forhindre opplesing.

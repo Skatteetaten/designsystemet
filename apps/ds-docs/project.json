@@ -1,0 +1,97 @@
+{
+  "name": "ds-docs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ds-docs",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "cache": true,
+      "dependsOn": [
+        "^build",
+        { "projects": "ds-core-designtokens", "target": "build" }
+      ],
+      "inputs": [
+        "production",
+        "^production",
+        { "externalDependencies": ["@react-router/dev"] }
+      ],
+      "outputs": ["{workspaceRoot}/dist/ds-docs/build/client"],
+      "command": "react-router build",
+      "options": {
+        "cwd": "apps/ds-docs"
+      }
+    },
+    "serve": {
+      "continuous": true,
+      "dependsOn": [{ "projects": "ds-core-designtokens", "target": "build" }],
+      "command": "react-router dev",
+      "options": {
+        "cwd": "apps/ds-docs"
+      }
+    },
+    "preview": {
+      "continuous": true,
+      "dependsOn": [
+        "build",
+        { "projects": "ds-core-designtokens", "target": "build" }
+      ],
+      "executor": "@nx/web:file-server",
+      "options": {
+        "staticFilePath": "dist/ds-docs/build/client",
+        "spa": true,
+        "watch": false
+      }
+    },
+    "typegen": {
+      "cache": true,
+      "inputs": [
+        "production",
+        "^production",
+        { "externalDependencies": ["@react-router/dev"] }
+      ],
+      "outputs": ["{workspaceRoot}/apps/ds-docs/.react-router/types"],
+      "command": "react-router typegen",
+      "options": {
+        "cwd": "apps/ds-docs"
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ds-docs/**/*.css", "apps/ds-docs/**/*.scss"]
+      }
+    },
+    "tsc": {
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json"]
+      },
+      "dependsOn": [
+        "typegen",
+        {
+          "projects": "ds-core-designtokens",
+          "target": "build"
+        }
+      ]
+    },
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "cwd": "apps/ds-docs",
+        "reportsDirectory": "{projectRoot}/../../coverage/apps/ds-docs"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "dependsOn": ["build"],
+      "options": {
+        "staticFilePath": "dist/ds-docs/build/client",
+        "spa": true,
+        "watch": false
+      }
+    }
+  }
+}

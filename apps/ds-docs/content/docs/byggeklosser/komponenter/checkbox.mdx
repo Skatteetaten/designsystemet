@@ -1,0 +1,49 @@
+---
+title: Checkbox
+description: Checkbox (avkrysningsboks) brukes for et **binært ja/nei-valg** knyttet til ett utsagn, typisk som en bekreftelse på at innhold er lest eller forstått.
+icon: /illustrations/checkbox.svg
+---
+
+<Canvas examplesPath="components/checkbox" />
+
+## Når bruke komponenten
+
+- Når du skal be brukeren bekrefte at de har lest eller forstått noe.
+- Når ett enkelt valg skal avkrysses.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk Checkbox når brukeren skal velge **mellom flere** alternativer — bruk da [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup).
+- Ikke bruk Checkbox når brukeren må velge **kun ett av flere** alternativer — bruk [RadioGroup](/byggeklosser/komponenter/radiogroup).
+
+## Hvorfor anbefalingene finnes?
+
+- En enkeltstående Checkbox representerer ett binært ja/nei-valg. Å bruke den for valg mellom alternativer er en kjent UX-feil som kan forvirre brukere og skjermlesere.
+- Vi skiller tydelig mellom [Checkbox](/byggeklosser/komponenter/checkbox) (bekreftelse), [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) (flervalg) og [RadioGroup](/byggeklosser/komponenter/radiogroup) (enkeltvalg mellom alternativer) for å gjøre samhandlingsmønstrene forutsigbare og konsistente på tvers av løsninger.
+
+## Varianter (og når bruke dem)
+
+**Ingen varianter**
+
+### Plassering og justering
+
+- Bruk komponenten som et enkeltstående element i kontekster der brukeren skal avgi en tydelig bekreftelse.
+- Spørsmål eller [ledetekst](wordinfo:ledetekst) skal ligge i et `legend`‑element dersom det er flere checkboxer i en gruppe (i CheckboxGroup).  
+  For enkeltstående checkbox gjelder dette ikke.
+
+### Interaksjon og tilstander
+
+- En enkelt Checkbox fungerer som en binær av/på‑handling.
+- Brukeren kan velge eller fjerne avkrysning uten konsekvens for andre elementer.
+
+## Tekst og språkbruk
+
+- Teksten skal tydelig beskrive hva som bekreftes.
+- Bruk fullstendige, klare setninger som gjør det tydelig hva avkrysningen betyr.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Dersom Checkbox opptrer i en gruppe, skal gruppens spørsmål ligge i `legend`.
+- Selv om `legend` skjules visuelt, må det fortsatt formidle kontekst til skjermlesere.
+- Feilmeldinger skal referere eksplisitt til spørsmålet/ledeteksten, f.eks.  
+  «Type virksomhet må fylles ut».

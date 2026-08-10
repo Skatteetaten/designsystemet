@@ -1,0 +1,63 @@
+---
+title: OpenClose
+description: OpenClose brukes til å vise og skjule utdypende informasjon slik at siden blir enklere å skanne. Kun brukere som trenger detaljene åpner dem, mens andre kan hoppe videre uten visuell støy.
+icon: /illustrations/openclose.svg
+---
+
+<Canvas examplesPath="components/openclose" />
+
+## Når bruke komponenten
+
+- Når siden inneholder informasjon som bare enkelte brukere har behov for.
+- Når du ønsker å redusere mengden synlig informasjon uten å fjerne den.
+- Når du vil gi brukeren kontroll over å åpne/lukke detaljer i innholdet.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk OpenClose til å forklare spørsmål i skjema (bruk hjelpetekster).
+- Ikke bruk til svært små mengder innhold — vis det heller direkte.
+- Ikke bruk når informasjonen er kritisk for alle brukere og må være synlig.
+
+## Hvorfor anbefalingene finnes?
+
+- OpenClose skiller seg fra Accordion fordi den er ment for enkeltvis innhold som kan ekspanderes — ikke for en gruppe parallelle seksjoner. Riktig komponentvalg gir mer forutsigbar atferd.
+- Ikonplassering er dokumentert for å sikre konsistens i løsninger som bruker komponenten mange steder. Variasjon i ikonplassering øker kognitiv belastning.
+- Vi anbefaler ikke OpenClose for skjemahjelp fordi hjelpetekst-mønsteret (spørsmålstegn-ikon + Popover) er mer tilgjengelig og mer intuitivt i skjemakontekst.
+
+## Varianter (og når bruke dem)
+
+### Stor og liten variant
+
+- **Stor:** Ved lengre tekster eller når innholdet er viktigere.
+- **Liten:** For mindre detaljer eller kompakte flater.
+
+### Ikonplassering
+
+- **Ikon til venstre:** Standard anbefaling. Best for universell utforming, siden ikonet kommer først i lese- og tabrekkefølge.
+- **Ikon til høyre:** Tar mindre plass på mobil og gir visuelt renere uttrykk.
+
+### Plassering og justering
+
+- Plasser OpenClose i løpende innhold som trenger å struktureres bedre.
+- Unngå at mange OpenClose‑elementer står etter hverandre uten klar relevans.
+- Hold åpne/lukk-knappens tekst kort og meningsbærende.
+
+### Interaksjon og tilstander
+
+- Komponentens ikon roteres ved åpning/lukking.
+- Ikonet er dekorativt og skjules for skjermleser — funksjonen ivaretas i koden.
+- Teksten i knappen skal tydelig indikere hva som åpnes/lukkes.
+- Åpne/lukke‑tilstanden må kommuniseres semantisk for skjermleser.
+
+## Tekst og språkbruk
+
+- Knappeteksten skal være kort, tydelig og gi brukeren en klar forventning om innholdet.
+- Unngå unødvendige ord som «Vis mer informasjon om …».
+- Bruk klare og selvforklarende begreper.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Standard ikonplassering er til venstre fordi det gir best støtte for brukere med skjermforstørring og forutsigbar leserekkefølge.
+- Det meningsbærende ikonet er skjult for skjermleser fordi funksjonen håndteres [semantisk](wordinfo:semantisk).
+- Sikre god kontrast og tydelige fokusmarkeringer.
+- Teksten må alene fortelle hva som skjer når komponenten åpnes eller lukkes.

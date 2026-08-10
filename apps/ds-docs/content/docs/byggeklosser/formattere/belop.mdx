@@ -1,0 +1,71 @@
+---
+title: Beløp
+description: Formateringsfunksjon for beløp som følger Skatteetatens skriveregler og er basert på standard nettleserfunksjonalitet.
+---
+
+<Canvas examplesPath="formatters/amount" />
+
+Formatering av beløp er basert på Intl.NumberFormat. Formateringsfunksjonen vil som standard følge Skatteetatens skriveregler, men det er også mulig å sende inn et options object som overstyrer instillingene til Intl.NumberFormat.
+
+Input kan være enten number eller string. Hvis input er string vil formatteren forsøke å tolke den som et tall i henhold til valgt locale. Hvis input ikke inneholder et gyldig tall så returneres input igjen som string uten noen endringer.
+
+## Språk og lokalisering
+
+Presentasjon av informasjon varierer mellom språk og markeder. Formattererne håndterer disse forskjellene slik at samme data kan presenteres riktig for den aktuelle brukeren.
+
+For eksempel kan et beløp vises forskjellig avhengig av språk:
+
+**Norsk:** 1 234 567,89
+
+**Engelsk:** 1,234,567.89
+
+Ved å bruke formattererne slipper du å implementere og vedlikeholde slike regler selv.
+
+## Tusenskille
+
+Tusenskille på norsk:
+
+```tsx
+import { formatter, formatNumber } from '@skatteetaten/ds-core-utils';
+const amount = formatter({
+  value: '1234567',
+  type: 'number',
+});
+// 1 234 567
+
+formatNumber('1234567');
+// 1 234 567
+```
+
+Formatering med engelsk format med komma som tusenskille og punktum som desimalskille:
+
+```tsx
+formatNumber(1234567, { locale: 'en-GB' });
+// 1,234,567
+```
+
+## Valuta
+
+Valuta blir NOK som default, men det er mulig med vilkårlige kombinasjoner av locale og currency:
+
+```tsx
+const result = formatNumber('12345.6', {
+  locale: 'en-GB',
+  style: 'currency',
+  currency: 'GBP',
+});
+// £12,345.60
+
+const result = formatNumber('12345.6789', {
+  style: 'currency',
+});
+// 12 345,68 kr
+```
+
+## Formatter returner
+
+- value - Formatert visningsverdi
+- onChange - Endringshåndterer
+- onKeyDown - Tastaturhåndterer
+- rawValue - Uformatert verdi (bare siffer)
+- numberValue - verdi som javascript number (hvis type er 'number' ellers undefined)

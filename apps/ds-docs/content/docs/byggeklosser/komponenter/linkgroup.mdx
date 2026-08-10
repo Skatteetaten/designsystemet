@@ -1,0 +1,65 @@
+---
+title: LinkGroup
+description: LinkGroup brukes til å vise en liste med navigasjonslenker som enten leder til eksterne sider eller til seksjoner på samme side. Den gir brukeren et tydelig, strukturert sett med valg med piler som viser retningen.
+icon: /illustrations/linkgroup.svg
+---
+
+<Canvas examplesPath="components/linkgroup" />
+
+## Når bruke komponenten
+
+- Når du har flere etterfølgende navigasjonsvalg.
+- Når du vil tilby en strukturert liste med lenker som hører sammen.
+- Når du har behov for tydelige visuelle piler som viser om lenken går videre (→) eller nedover (↓).
+
+## Når ikke bruke komponenten
+
+- Ikke bruk LinkGroup for enkeltstående lenker i tekst — bruk [Link](/byggeklosser/komponenter/link).
+- Ikke bruk LinkGroup når du kun trenger én lenke med pil — bruk [Link](/byggeklosser/komponenter/link) med ikon.
+
+## Hvorfor anbefalingene finnes?
+
+- Strukturerte lister av navigasjonslenker gir kontekst om at valgene hører sammen. En enkelt lenke uten gruppering kommuniserer ikke at det finnes valg.
+- Vi bruker pil-ikoner konsekvent (→ for videre navigasjon, ↓ for interne ankere) fordi konsekvente retningssignaler reduserer kognitiv belastning.
+- Ekstern lenkevisning med tydelig kontrast på mork bakgrunn brukes fordi standard interaksjonsfarge lenke blir uleselig på mørke bakgrunner — en vanlig feil i footer og innlogget toppseksjon.
+
+## Varianter (og når bruke dem)
+
+### Lenker (eksterne eller interne sider)
+
+- Viser en liste med navigasjonslenker som peker mot høyre.
+- Brukes for å navigere til andre sider eller eksterne ressurser.
+
+### Ankre (interne lenker på samme side)
+
+- Brukes for intern sidenavigasjon.
+- Pilen peker nedover for å indikere at brukeren hopper ned i innholdet på samme side.
+
+### Plassering og justering
+
+- Lenketekst skal ha tydelig interaksjonsstil (blå + understreket).
+- Ved mørk bakgrunn (f.eks. i innlogget TopBanner eller Footer) kan en annen farge brukes for å ivareta kontrastkrav.
+- LinkGroup brukes typisk i navigasjonsseksjoner, sidefelt eller som oversikt over valg.
+
+### Interaksjon og tilstander
+
+- Hver lenke skal være tydelig klikkbar.
+- Pilen angir retning:
+  - høyre → for ekstern navigasjon
+  - nedover ↓ for interne ankerlenker
+- Lenkene må bruke riktig semantikk for å sikre god navigasjon.
+
+## Tekst og språkbruk
+
+- Lenketekst må være tydelig og forklare hva brukeren går til.
+- Teksten skal gi mening også når den leses isolert.
+- Unngå generiske formuleringer som «Les mer».
+- Følg de samme prinsippene som for vanlig lenketekst.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Lenker skal ha minst to visuelle hint (blå + understrek).
+- Kontrastkrav:
+  - 4.5:1 for liten tekst
+  - 3.0:1 for stor eller fet tekst
+- Alternativ tekst for grafiske lenker må forklare mål for lenken.
