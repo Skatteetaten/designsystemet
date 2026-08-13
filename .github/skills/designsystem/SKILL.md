@@ -1,7 +1,7 @@
 ---
 name: designsystem
-description: 'Use when designing, building, reviewing, refactoring, or assessing UI in this repo with the Skatteetaten design system. Relevant for forms, pages, tables, navigation, alerts, accessibility, universal design, component choice, validation, interaction patterns, semantic design tokens, and template-first implementation from Storybook examples.'
-argument-hint: 'Describe the feature or screen, target users, constraints, and whether you want template mode (default) or strict review.'
+description: 'Use when designing, building, reviewing, refactoring, or assessing UI in this repo with the Skatteetaten design system. Relevant for forms, pages, tables, navigation, alerts, accessibility, universal design, component choice, validation, interaction patterns, semantic design tokens, and template-first implementation from MDX docs and linked examples (local now, published externally when available), with Storybook as a secondary source.'
+argument-hint: 'Describe the feature or screen, target users, constraints, and preferred mode: quick, template (default), strict, or experiment.'
 ---
 
 # Skatteetaten Design System Skill
@@ -30,8 +30,8 @@ En streng, men hjelpsom designsystem-kollega. Foretrekker dokumenterte mønstre,
 **Mal-modus er standard.** Slik bruker du skillen raskt:
 
 1. **Beskriv hva du trenger**: "Jeg trenger et skjema for..." eller "Jeg skal lage en kvitteringsside"
-2. **Skillen finner eksempelet**: Søker først i [Storybook-sidetyper](https://skatteetaten.github.io/designsystemet/) etter relevante maler
-3. **Du kopierer og tilpasser**: Tar strukturen fra eksempelet, endre bare tekst, labels og felt
+2. **Skillen finner eksempelet**: Søker først i MDX-kilder (lokalt nå, publiseres eksternt når tilgjengelig) og koblede eksempler (se [eksempeloppslag.md](./eksempeloppslag.md))
+3. **Du kopierer og tilpasser**: Tar strukturen fra eksempelet, endrer bare tekst, labels og felt
 4. **Resultat**: Raskere implementasjon, konsistent kvalitet, innebygd tilgjengelighet
 
 **For spørsmål** ("Hvilken komponent bør jeg...?") → skillen går automatisk til hurtigmodus og gir kort svar.
@@ -70,40 +70,49 @@ Når skillen stopper, gir den alltid:
 - Hvilke alternativer som ble vurdert
 - En konkret anbefaling om teamdialog, sak eller avklaringsspørsmål
 
+**Obligatorisk stoppregel ved manglende primærkilder:**
+
+- Hvis MDX-kilder eller koblede eksempler ikke er tilgjengelige etter live-tilgangssjekk, skal skillen stoppe før kodeforslag.
+- Skillen skal be brukeren velge eksplisitt mellom:
+  - starte/fikse lokal docs-tilgang først, eller
+  - fortsette midlertidig med sekundærkilder + tydelig merket fallback.
+- Skillen skal ikke gå videre til implementasjon uten at brukeren har valgt en av disse to.
+
 ## Kilder og prioritet
 
 Bruk kildene ut fra hva du trenger å verifisere, ikke som en tung sjekkliste hver gang.
 
-### Eksterne kilder først for orientering
+### Primærkilder først (MDX, eksempler og tokens)
 
-Merk: Midlertidig oppsett. Foreløpig brukes lokal dokumentasjon fra branchen `feature/loom-vite` i designsystemet, og denne må kjøres lokalt for at skillen skal virke. Dette byttes ut med ekstern kilde når den er klar.
+Merk: Kildene er lokale i dag og kan bli publisert eksternt senere. Prioriteten endres ikke av hvor de hostes. Bruk samme rekkefølge uansett om kilden leses lokalt eller fra publisert URL.
 
-Kildeprioritet for eksempelkode:
+Kildeprioritet for verifisering og eksempelkode:
 
-1. Rå markdown/MDX eller annen direkte source-endepunkt for komponent/sidetype (foretrukket)
-2. Tydelig source-lenke (for eksempel StackBlitz eller repository-lenke) hvis den finnes
-3. Canvas/iframe-side brukes kun som orientering og validering av atferd, ikke som eneste kilde til eksempelkode
+1. **MDX-kilder og koblede eksempler** via rå kildefiler (for eksempel Vite `/@fs/`) – primærkilde for API, mønster, eksempelkode og anbefalt sammensetting
+2. **Semantiske tokens** i [semantic-tokens.md](./semantic-tokens.md) og tilhørende tokenkilder – primærkilde for tokenvalg og semantisk styling
+3. **Storybook** (inkludert API-tabeller via `read_page`) – sekundærkilde for orientering, validering og alternativer
+4. **Stil og tone / designsystemets nettsider** – sekundærkilde for mønsterforståelse og støttekontekst
+5. TypeScript-typedefinisjoner i `node_modules/@skatteetaten/ds-*` – fallback når primærkilder ikke dekker et konkret API-spørsmål
 
-Hvis lokal dokumentasjon ikke er tilgjengelig:
+Regel: Sekundærkilder brukes for orientering og krysssjekk. Fastslå ikke nye props, varianter eller API-støtte uten dekning i primærkilde eller eksplisitt fallback.
 
-- gjennomfor live-tilgangssjekk minst en gang per sesjon, og alltid for du hevder at dokumentasjonen er tilgjengelig
-- bruk en eksplisitt sjekk mot lokal docs, for eksempel:
-  - curl -sS -o /dev/null -w "localhost %{http_code}\\n" http://localhost:3000/byggeklosser/komponenter/combobox
-  - curl -g -sS -o /dev/null -w "::1 %{http_code}\\n" 'http://[::1]:3000/byggeklosser/komponenter/combobox'
-- merk: noen oppsett lytter kun pa IPv6 ([::1]). Da kan localhost fungere mens 127.0.0.1 feiler.
-- tolkning: HTTP 200-399 betyr tilgjengelig, HTTP 000 eller tilkoblingsfeil betyr utilgjengelig
-- ikke oppgi at dokumentasjonen er tilgjengelig uten vellykket live-sjekk i aktiv sesjon
+Merk: `/examples/`- og `/_source/`-endepunkter returnerer HTML-404, ikke kildekode.
 
-- stopp med tydelig beskjed om at lokal docs-server må startes
-- be om oppstart av lokal dokumentasjon i `feature/loom-vite`
-- ikke gjett API-er, props eller kode basert kun på renderet innhold
+Detaljerte oppslag er flyttet til hjelpefiler for å holde denne filen kort og operativ:
 
-1. Komponentdokumentasjon (lokal dev): http://localhost:3000/byggeklosser/komponenter/
-2. URL-mønster for komponentsider: `http://localhost:3000/byggeklosser/komponenter/<komponentslug>`
-3. Eksempel: `http://localhost:3000/byggeklosser/komponenter/card`
-4. Kommende dokumentasjonsområder: `/byggeklosser/ikoner/` og `/byggeklosser/formattere/`
-5. [semantic-tokens.md](./semantic-tokens.md) for praktiske føringer om semantiske tokens
-6. Hvis en forventet komponentside mangler, skal skillen be om avklaring i stedet for å gjette URL.
+- [kildeoppslag.md](./kildeoppslag.md): `/@fs`-arbeidsflyt, lokal tilgangssjekk, URL-mønstre og fallback-regler
+- [eksempeloppslag.md](./eksempeloppslag.md): MDX-indeks, behovstype-tabell og sidetype-/eksempellenker
+- [stegvise-skjemaer.md](./stegvise-skjemaer.md): `StepList`-mønster, API-sjekker og dynamiske steg
+
+Hvis primærkilder ikke er tilgjengelige:
+
+- gjennomfør live-tilgangssjekk
+- marker gapet tydelig
+- bruk sekundærkilder kun til orientering
+- ikke gjett API-er, props eller kode basert kun på rendret innhold
+- stopp og be om eksplisitt brukerbeslutning før eventuell fallback-implementasjon
+
+Når du har funnet et dokumentert treff, skal du ikke stoppe ved at komponenten finnes. Du skal også lese dokumenterte eksempler, anbefalte bruksområder og eventuelle alternativer før du foreslår kode. Hvis dokumentasjonen viser flere plausible løsninger, eller løsningen avhenger av kontekst, skal du stoppe og stille et kort avklaringsspørsmål før du foreslår implementasjon.
 
 ### Innholdskomponenter som skal foretrekkes foran rå HTML når de dekker behovet
 
@@ -116,30 +125,23 @@ Hvis lokal dokumentasjon ikke er tilgjengelig:
 
 ### Autoritative kilder for verifisering
 
-1. Storybook og komponentenes API: https://skatteetaten.github.io/designsystemet/
-2. Interaksjonsmønstre: https://www.skatteetaten.no/stilogtone/monster/
-3. Bruk, eksempler og designdokumentasjon: https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/
-4. Kom i gang for utviklere: https://www.skatteetaten.no/stilogtone/designsystemet/kom-i-gang/for-utviklere/
-5. Verifiserte tokenkilder for farge, containere, typografi, størrelser og spacing i designsystemets token-dokumentasjon
+Primærkilder:
+
+1. MDX-kilder (lokalt nå, publiseres eksternt når tilgjengelig) og koblede eksempler.
+2. Verifiserte tokenkilder, inkludert [semantic-tokens.md](./semantic-tokens.md)
+
+Sekundærkilder:
+
+3. Storybook og komponentenes API: https://skatteetaten.github.io/designsystemet/
+4. Interaksjonsmønstre: https://www.skatteetaten.no/stilogtone/monster/
+5. Bruk, eksempler og designdokumentasjon: https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/
+6. Kom i gang for utviklere: https://www.skatteetaten.no/stilogtone/designsystemet/kom-i-gang/for-utviklere/
 
 ### Sidetyper og eksempelsider som startpunkt
 
-Når oppgaven gjelder en hel side, en hel flyt eller et større sideoppsett, bruk relevante sidetyper og eksempelsider i Storybook som første kandidat før du komponerer fra enkeltkomponenter.
+Når oppgaven gjelder en hel side, en hel flyt eller et større sideoppsett, start med MDX-kilder (lokalt nå, publiseres eksternt når tilgjengelig) og koblede eksempler. Bruk relevante sidetyper og eksempelsider i Storybook som sekundærkilde for orientering og alternativer.
 
-Eksterne sidetyper:
-
-1. Skjema: https://skatteetaten.github.io/designsystemet/?path=/docs/sidetyper-ekstern-skjema-med-steg--docs
-2. Kvittering: https://skatteetaten.github.io/designsystemet/?path=/story/sidetyper-ekstern-kvittering--kvittering
-3. Generell publikumsløsning med innhold: https://skatteetaten.github.io/designsystemet/?path=/story/sidetyper-ekstern-layout--standard-layout
-4. Oppgaveliste med oppgaver i valgfri rekkefølge: https://skatteetaten.github.io/designsystemet/?path=/story/sidetyper-ekstern-oppgaveliste-beta--oppgaveliste
-5. Skjema med steg i bestemt rekkefølge: https://skatteetaten.github.io/designsystemet/?path=/story/sidetyper-ekstern-skjema-med-steg--skjema-med-steg
-6. Repeterende felter med legg til og fjern: https://skatteetaten.github.io/designsystemet/?path=/story/sidetyper-ekstern-repeterende-felter--repeterende-felter
-7. Toppbanner med innhold og rollevalg: https://skatteetaten.github.io/designsystemet/?path=/story/komponenter-topbannerexternal--example-with-user-menu
-
-Interne sidetyper:
-
-1. Intern saksvisning: https://skatteetaten.github.io/designsystemet/?path=/docs/sidetyper-intern-saksvisning--docs
-2. Arbeidsliste: https://skatteetaten.github.io/designsystemet/?path=/story/sidetyper-intern-arbeidsliste--arbeidsliste
+Se [eksempeloppslag.md](./eksempeloppslag.md) for full liste over sidetyper og eksempelsider.
 
 Hvis kildene er motstridende:
 
@@ -225,7 +227,7 @@ Mal-modus er standard med mindre brukeren ber om noe annet.
 
 I mal-modus skal du:
 
-- finne nærmeste dokumenterte eksempel i Storybook eller lokal komponentdokumentasjon
+- finne nærmeste dokumenterte eksempel i MDX-kilder og koblede eksempler (lokalt nå, publiseres eksternt når tilgjengelig)
 - kopiere struktur, komponentvalg og API-bruk fra eksempelet først
 - tilpasse kun det som trengs: tekst, labels, felter, validering, dataflyt og innhold
 - beholde layout, topp/bunn, containere og hovedstruktur i tråd med valgt sidetype
@@ -243,7 +245,7 @@ Bruk hurtigmodus når brukeren vil komme raskt videre med implementasjon eller e
 
 I hurtigmodus skal du:
 
-- bruke ekstern dokumentasjon til å snevre inn kandidater
+- bruke ekstern dokumentasjon som sekundærkilde for å snevre inn kandidater når primærkilder ikke er nok
 - verifisere bare de komponentene og tokenene du faktisk foreslår
 - holde svaret kort og handlingsrettet
 
@@ -265,15 +267,19 @@ I streng modus skal du:
 - identifiser brukermål, kontekst, feilsituasjoner og suksessituasjoner
 - bekreft plattformrammer: React + TypeScript i dette repoet
 - avklar om oppgaven best matches av en sidetype eller eksempelside før du går ned på komponentnivå
+- **avklar om behovet matcher en anbefalt helhetsløsning under `helpe-bruker-med` eller `spørre-bruker-om` — gjør dette FØR du leter etter enkeltkomponenter**
 - avklar hvilken dokumentert mal som skal være utgangspunkt før du skriver kode
 - ved spørsmål om oppsett, installasjon, avhengigheter eller import: bruk "Kom i gang for utviklere" som primærkilde
 - verifiser at nødvendige designsystem-pakker eller komponenter finnes i prosjektet før du foreslår implementasjon
 
 2. Velg kandidater.
 
+- **for behovstyper som involverer kombinasjoner av komponenter: sjekk anbefalt helhetsløsning under `helpe-bruker-med` eller `spørre-bruker-om` FØR komponentdokumentasjon**
+  - helhetseksempler definerer hvilke komponenter som alltid hører sammen, og overstyrer det du kan utlede fra enkeltkomponent-dokumentasjon
+  - bruk behovstype-tabellen i [eksempeloppslag.md](./eksempeloppslag.md) for å finne riktig eksempelside raskt
 - for side-nivå oppgaver: start med relevant sidetype eller eksempelside som ramme for topp, bunn, containere og hovedstruktur
 - for komponentnivå oppgaver: start med komponentens dokumenterte eksempelkode før lokale varianter
-- for stegvise skjemaer: start med `StepList` og den dokumenterte underkomponenten `StepList.Step`, ikke en lokal stepper
+- for stegvise skjemaer: start med `StepList` og `StepList.Step`; følg [stegvise-skjemaer.md](./stegvise-skjemaer.md) før du vurderer lokale avvik
 - for innhold og typografi: start med dokumenterte innholdskomponenter før rå HTML-elementer som `h1`, `p`, `ul`, `ol`, `a`, `blockquote` eller `dl`
 - map behovet til eksisterende komponenter og mønstre før du vurderer custom UI
 - hvis bruker ber om "ny komponent", tolk først behovet som sammensetting av eksisterende komponenter
@@ -290,8 +296,7 @@ I streng modus skal du:
 - slå opp komponentens props, events og API i Storybook eller TypeScript-definisjoner før du foreslår bruk
 - ikke gjett på props, eventnavn eller støttede varianter
 - bruk dokumenterte interaksjonsmønstre for validering, progresjon, tilbakemelding og bekreftelse
-- for `StepList`: verifiser både `StepList` og `StepList.Step` API før forslag, inkludert gyldige `variant`-verdier og hvilke callback-props som finnes
-- hvis stegene er avhengige av tidligere svar: følg dokumentert mønster med ett nytt steg per «Neste», kollaps av forrige steg og nullstilling av avhengige senere steg ved endringer
+- for stegvise skjemaer: verifiser `StepList`-API og dynamisk stegoppførsel som beskrevet i [stegvise-skjemaer.md](./stegvise-skjemaer.md)
 
 5. Vurder universell utforming.
 
@@ -350,15 +355,14 @@ For rådgivende oppgaver, lever:
 ## Føringer
 
 - mal-modus er standard: bruk dokumentert eksempelkode som utgangspunkt før du lager lokale tilpasninger
-- ved side-nivå UI: foretrekk relevante sidetyper og eksempelsider i Storybook som startpunkt før du setter sammen layout fra bunnen av
+- ved side-nivå UI: start med MDX-kilder (lokalt nå, publiseres eksternt når tilgjengelig) og koblede eksempler; bruk Storybook som sekundærkilde for orientering og alternativer
 - når designsystemet har en dokumentert innholdskomponent, bruk den foran rå HTML med lokal styling
 - foretrekk `Heading` foran rå `h1`-`h6`, `Paragraph` foran rå `p`, `List` foran rå `ul`/`ol`, `Link` foran rå `a`, `Blockquote` foran rå `blockquote`, og `DescriptionList` foran rå `dl`/`dt`/`dd`
 - bruk kun rå HTML for disse innholdstypene hvis dokumentasjonen eksplisitt krever det eller komponenten ikke dekker behovet
 - når CSS eller styling foreslås: bruk definerte designtokens foran oppdiktede verdier, lokale CSS-variabler eller tilfeldige pixel- og hex-verdier
 - hvis eksakt tokennavn ikke er verifisert: beskriv tokenbehovet funksjonelt i stedet for å gjette
 - bruk dokumenterte komponenter før du lager tilpasset UI
-- for stegvise skjemaer: bruk `StepList` + `StepList.Step` før du vurderer lokal stepper-løsning
-- for stegvise skjemaer i dette repoet: vis hjelpeteksten «Alle felt må fylles ut med mindre feltet er merket valgfritt.» over steglisten
+- for stegvise skjemaer: følg [stegvise-skjemaer.md](./stegvise-skjemaer.md) fremfor å beskrive en lokal stepper eller oppdiktet API
 - slå alltid opp API før du foreslår konkrete props eller bruksmønstre
 - hev aldri støtte for en komponent, et mønster eller et tokennavn uten dokumentasjon
 - ikke fall tilbake til hardkodede verdier hvis et relevant semantisk token dekker behovet

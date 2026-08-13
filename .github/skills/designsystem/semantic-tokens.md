@@ -8,7 +8,7 @@ Bruk denne referansen når du skal:
 
 - foreslå stylingvalg i kode
 - anbefale riktige tokenkategorier
-- unngå hardkodede farger, spacing-verdier, storrelser eller typografi
+- unngå hardkodede farger, spacing-verdier, størrelser eller typografi
 
 ## Hovedregel
 
@@ -21,29 +21,17 @@ Foretrekk semantiske tokens fremfor direkte verdier eller palettbaserte tokens n
 - Hvis eksakt tokennavn er ukjent, beskriv tokenbehovet funksjonelt i stedet for å gjette.
 - Bruk verifiserte tokennavn direkte når de er kjent, for eksempel `--semantic-interactive-main` for interaktive elementer.
 
-## Foreslått struktur for omtale
-
-Beskriv tokens i denne formen når eksakt navn ikke er verifisert:
-
-- `--semantic-` + kategori + hensikt
-- `--semantic-` + rolle + tilstand
-- `--semantic-` + område + variant
-
-Eksempel på verifisert tokennavn:
-
-- `--semantic-interactive-main` brukes til interaktive elementer.
-
 ## Hvordan tokens bør omtales
 
 Bruk funksjonelle beskrivelser som:
 
-- semantic token for primær tekst
-- semantic token for sekundær tekst
-- semantic token for container-bakgrunn
-- semantic token for feilstatus
-- semantic token for fokus eller interaktiv tilstand
-- semantic token for spacing mellom relaterte elementer
-- semantic token for typografi i overskrift eller brødtekst
+- semantisk token for primær tekst
+- semantisk token for sekundær tekst
+- semantisk token for container-bakgrunn
+- semantisk token for feilstatus
+- semantisk token for fokus eller interaktiv tilstand
+- semantisk token for spacing mellom relaterte elementer
+- semantisk token for typografi i overskrift eller brødtekst
 
 ## Faktiske tokens fra designsystemet
 
@@ -127,7 +115,7 @@ Bra:
 
 Svakere:
 
-- Sett teksten til graa.
+- Sett teksten til grå.
 - Legg inn 14px margin fordi det ser passe ut.
 
 Verifisert eksempel fra designsystemet:
