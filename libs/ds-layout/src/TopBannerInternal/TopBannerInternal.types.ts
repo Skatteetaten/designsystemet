@@ -49,7 +49,6 @@ export interface TopBannerInternalProps extends BaseProps {
   hideLogoOnMobile?: boolean;
 }
 
-export interface TopBannerInternalComponent
-  extends FunctionComponent<TopBannerInternalProps> {
+export interface TopBannerInternalComponent extends FunctionComponent<TopBannerInternalProps> {
   ActionMenu: typeof TopBannerInternalActionMenu;
 }

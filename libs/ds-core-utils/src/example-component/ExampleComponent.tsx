@@ -10,8 +10,7 @@ type ExampleComponentPropsHTMLAttributes = Pick<
 
 // Her er alle de custom propsene
 // Så kan typene fra html-attribute overskrives når man f.eks ønsker å begrense type på dem
-interface ExampleComponentCustomProps
-  extends ExampleComponentPropsHTMLAttributes {
+interface ExampleComponentCustomProps extends ExampleComponentPropsHTMLAttributes {
   ref?: Ref<HTMLButtonElement>;
   variant?: 'primary' | 'secondary' | 'tertiary';
   children: string;
@@ -19,8 +18,7 @@ interface ExampleComponentCustomProps
 
 // Her samler jeg interfacet med BaseProps som er et set med properties som alle komponentene våre skal tilby
 export interface ExampleComponentProps
-  extends ExampleComponentCustomProps,
-    BaseProps {}
+  extends ExampleComponentCustomProps, BaseProps {}
 
 export const ExampleComponent = ({
   ref,

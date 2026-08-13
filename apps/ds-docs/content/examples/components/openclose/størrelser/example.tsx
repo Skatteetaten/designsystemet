@@ -13,11 +13,15 @@ export default function OpenCloseSizesExample(): ReactElement {
       </OpenClose>
 
       <OpenClose title={'Medium OpenClose'} size={'medium'}>
-        <Paragraph>{'Standard variant for de fleste innholdsflater.'}</Paragraph>
+        <Paragraph>
+          {'Standard variant for de fleste innholdsflater.'}
+        </Paragraph>
       </OpenClose>
 
       <OpenClose title={'Large OpenClose'} size={'large'}>
-        <Paragraph>{'Stor variant når teksten trenger mer visuell tyngde.'}</Paragraph>
+        <Paragraph>
+          {'Stor variant når teksten trenger mer visuell tyngde.'}
+        </Paragraph>
       </OpenClose>
     </div>
   );

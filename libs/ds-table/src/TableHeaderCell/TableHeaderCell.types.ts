@@ -12,8 +12,7 @@ type TableHeaderCellHTMLAttributes =
   Partial<RequiredTableHeaderCellHTMLAttributes>;
 
 export interface TableHeaderCellCommonProps
-  extends TableHeaderCellHTMLAttributes,
-    BaseProps {
+  extends TableHeaderCellHTMLAttributes, BaseProps {
   ref?: Ref<HTMLTableCellElement>;
   /** Tekstjustering */
   alignment?: TextAlignment;

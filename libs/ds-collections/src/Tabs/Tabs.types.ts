@@ -65,8 +65,10 @@ export interface TabsComponent extends FunctionComponent<TabsProps> {
 
 export type TabsArr = string[];
 
-export interface TabsContextProps
-  extends Omit<TabsProps, 'children' | 'defaultValue'> {
+export interface TabsContextProps extends Omit<
+  TabsProps,
+  'children' | 'defaultValue'
+> {
   /** Setter for activeTab */
   setInternalActiveTab: (value: string) => void;
   /** Tab som er aktiv - key er tabsKey */
