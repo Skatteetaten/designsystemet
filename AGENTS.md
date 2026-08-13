@@ -132,6 +132,8 @@ existing component solves the problem.
 Components with user-facing built-in text use `react-i18next` with `dsI18n`.
 Follow the namespace and key patterns in the affected package.
 
+- Never edit translation JSON files. The CMS is the source of truth, and
+  translations are downloaded manually with `npm run downloadTranslations`.
 - Maintain Norwegian Bokmål and English translations.
 - Include screen-reader-only text, labels, and status messages.
 - Do not hard-code a translated string when the component already has an i18n
