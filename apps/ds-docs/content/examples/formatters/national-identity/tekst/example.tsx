@@ -1,18 +1,18 @@
 import { type ReactElement } from 'react';
 
 import { DescriptionList } from '@skatteetaten/ds-content';
-import { useFormattedInput } from '@skatteetaten/ds-core-utils';
+import { formatter } from '@skatteetaten/ds-core-utils';
 
 export default function TextFieldFormattingExample(): ReactElement {
-  const organisationNumberFormatter = useFormattedInput({
-    type: 'organisationNumber',
-    initialValue: '987654321',
+  const nationalIdentityNumber = formatter({
+    value: '22113344566',
+    type: 'nationalIdentityNumber',
   });
 
   return (
     <DescriptionList>
-      <DescriptionList.Element term={'Organisasjonsnummer'}>
-        {organisationNumberFormatter.value}
+      <DescriptionList.Element term={'Fødselsnummer'}>
+        {nationalIdentityNumber.value}
       </DescriptionList.Element>
     </DescriptionList>
   );
