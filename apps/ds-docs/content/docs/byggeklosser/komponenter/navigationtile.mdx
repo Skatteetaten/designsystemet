@@ -26,28 +26,30 @@ icon: /illustrations/navigationtile.svg
 
 ## Varianter (og når bruke dem)
 
-Kilden beskriver ikke egne under‑varianter, men NavigationTile har to grunnleggende bruksmåter:
+Komponenten kan vises i tre ulike størrelser:
 
-- **Fliser som lenker til eksterne sider:** Pilen peker til høyre.
-- **Fliser som ankerlenker på samme side:** Pilen peker nedover.
+- medium
+- large (default)
+- extraLarge (med ikon)
+
+Størrelsen ExtraLarge brukes normalt på landingssider.
 
 ### Plassering og justering
 
 - Brukes typisk som en seksjon med valg på topp‑ eller mellomnivå i løsningen.
-- Fliser kan stå i én eller flere kolonner, avhengig av plass.
-- Må plasseres slik at hierarkiet er tydelig: brukeren skal forstå at dette er valg, ikke informasjon.
+- Grupper av navigasjonsfliser bør fordeles ut over flere kolonner for å gi et ryddig inntrykk.
+- De bør plasseres slik at hierarkiet er tydelig: brukeren skal forstå at dette er navigasjonselementer, ikke statisk informasjon.
 
 ### Interaksjon og tilstander
 
 - Hele flisen er klikkbar.
-- Pilen viser om navigasjonen går videre (→) eller nedover i samme side (↓).
-- Fargerkontrast og hoverstil skal gjøre det tydelig at flisen er interaktiv.
+- Pilen er et visuelt hint om det er en lenke som tar brukeren til en ny side. Pilen kan skjules dersom navigasjonen kommer tydelig frem gjennom teksten.
 
 ## Tekst og språkbruk
 
 - Bruk korte og presise titler.
-- Unngå løpende setninger — NavigationTile skal formidle valg, ikke beskrive innhold.
-- Teksten skal gi mening i isolasjon og forklare hvor brukeren kommer.
+- Unngå løpende setninger — NavigationTile skal formidle valg, ikke beskrive innhold. Bruk korte ord og uttrykk i beskrivelsen, slik at innholdet blir raskt å skanne.
+- Teksten skal gi mening på egenhånd og forklare hvor brukeren kommer.
 
 ## Tilgjengelighet (UU / WCAG)
 

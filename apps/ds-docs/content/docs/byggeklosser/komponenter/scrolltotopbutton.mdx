@@ -20,24 +20,22 @@ icon: /illustrations/scrolltotopbutton.svg
 
 ## Hvorfor anbefalingene finnes?
 
-> **[FORSLAG 2026-03-25]** _Teksten er foreslått — gjennomgå og tilpass._
-
 - Knappen vises kun etter scrolling for å unngå unnødvendig visuell støy på sider med lite innhold. Den er en effektivitetshjelp, ikke et fast navigasjonselement.
 - Scroll-animasjon skal være moderat for å unngå å forårsake ubehag for brukere med bevegelsessensitivitet (jf. WCAG 2.3.3 Animation from Interactions).
 - `aria-label` er obligatorisk fordi knappen kun har et ikon — uten tekstalternativ er funksjonen usynlig for skjermleserbrukere.
 
 ## Varianter (og når bruke dem)
 
-Kilden beskriver ingen egne visuelle varianter, men følgende atferd gjelder:
+Komponenten har ingen egne visuelle varianter, men kan tilpasses med props og plasseres etter behov.
 
-### Standard
+### Standard oppførsel
 
 - Vises først når brukeren har scrollet et stykke ned på siden.
-- Plasseres flytende nederst i høyre hjørne som standard.
+- Plasseres flytende nederst i høyre hjørne som standard, på bred skjerm og midt på siden på mobil.
 
 ### Tilpasset plassering
 
-- Kan justeres ved behov for å unngå kollisjon med andre faste elementer, som chat-knapper eller cookie-banner.
+- Kan justeres ved behov (med CSS) for å unngå kollisjon med andre faste elementer, som chat-knapper eller cookie-banner.
 
 ### Plassering og justering
 
