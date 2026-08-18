@@ -6,12 +6,12 @@ import { useArgs } from 'storybook/preview-api';
 
 import {
   autoCompletePropDescription,
-  defaultHelpButtonTitle,
+  getDefaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
   Combobox,
-  defaultDatePickerPlaceholder,
+  getDefaultDatePickerPlaceholder,
 } from '@skatteetaten/ds-forms';
 
 import {
@@ -43,7 +43,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultHelpButtonTitle },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
     // HTML
@@ -57,7 +57,7 @@ const meta = {
     placeholder: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: defaultDatePickerPlaceholder },
+        defaultValue: { summary: getDefaultDatePickerPlaceholder() },
       },
     },
     readOnly: { table: { category: category.htmlAttribute } },

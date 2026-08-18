@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  defaultScrollToTopButtonTitle,
+  getDefaultScrollToTopButtonText,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
@@ -24,7 +24,7 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: {
-          summary: defaultScrollToTopButtonTitle,
+          summary: getDefaultScrollToTopButtonText(),
         },
       },
     },

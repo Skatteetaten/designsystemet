@@ -9,8 +9,8 @@ import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
-  defaultEditButtonText,
-  defaultNextButtonText,
+  getDefaultEditButtonText,
+  getDefaultNextButtonText,
 } from '../../../../../libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import { category } from '../../../.storybook/helpers';
 
@@ -321,8 +321,8 @@ export const WithMultipleSteps = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const nextText = defaultNextButtonText;
-    const editText = defaultEditButtonText;
+    const nextText = getDefaultNextButtonText();
+    const editText = getDefaultEditButtonText();
     await userEvent.click(canvas.getByText(nextText));
     await userEvent.click(canvas.getByText(editText));
     await userEvent.click(canvas.getByText(nextText));

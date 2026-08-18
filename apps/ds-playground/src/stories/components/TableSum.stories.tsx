@@ -5,7 +5,7 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import { Table } from '@skatteetaten/ds-table';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { defaultTableSumText } from '../../../../../libs/ds-table/src/TableSum/TableSum';
+import { getDefaultTableSumText } from '../../../../../libs/ds-table/src/TableSum/TableSum';
 import { category } from '../../../.storybook/helpers';
 
 const meta = {
@@ -17,7 +17,7 @@ const meta = {
     sumText: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultTableSumText },
+        defaultValue: { summary: getDefaultTableSumText() },
       },
     },
     labelAlignment: { table: { category: category.props } },

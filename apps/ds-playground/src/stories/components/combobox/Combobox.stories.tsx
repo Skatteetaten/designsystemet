@@ -3,8 +3,8 @@ import { JSX } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  defaultHelpButtonTitle,
-  defaultSpinnerLabel,
+  getDefaultHelpButtonTitle,
+  getDefaultSpinnerLabel,
 } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
@@ -55,13 +55,13 @@ const meta = {
     multiple: { table: { category: category.props } },
     spinnerLabel: {
       table: { category: category.props },
-      defaultValue: { summary: defaultSpinnerLabel },
+      defaultValue: { summary: getDefaultSpinnerLabel() },
     },
     spinnerProps: { control: false, table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultHelpButtonTitle },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
     value: { control: 'text', table: { category: category.props } },

@@ -10,10 +10,10 @@ import {
   within,
 } from 'storybook/test';
 
-import { defaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
+import { getDefaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
-  defaultDatePickerPlaceholder,
+  getDefaultDatePickerPlaceholder,
 } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
@@ -198,7 +198,7 @@ export const Defaults = {
     await expect(input).toHaveAttribute('id');
     await expect(input).toHaveAttribute(
       'placeholder',
-      defaultDatePickerPlaceholder
+      getDefaultDatePickerPlaceholder()
     );
     await expect(input.tagName).toBe('INPUT');
     await expect(input).not.toBeRequired();
@@ -288,7 +288,7 @@ export const WithDisabled = {
     await expect(textbox).toBeDisabled();
     await expect(calendarButton).toBeDisabled();
     const helpButton = canvas.getByRole('button', {
-      name: defaultHelpButtonTitle,
+      name: getDefaultHelpButtonTitle(),
     });
     await expect(helpButton).toBeDisabled();
   },
@@ -834,7 +834,7 @@ export const WithHelpToggleEvent = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      name: defaultHelpButtonTitle,
+      name: getDefaultHelpButtonTitle(),
     });
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());

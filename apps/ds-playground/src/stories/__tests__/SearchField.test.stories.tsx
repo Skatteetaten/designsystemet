@@ -19,8 +19,8 @@ import {
 } from 'storybook/test';
 
 import {
-  defaultHelpButtonTitle,
-  defaultSpinnerLabel,
+  getDefaultHelpButtonTitle,
+  getDefaultSpinnerLabel,
   dsI18n,
 } from '@skatteetaten/ds-core-utils';
 import { SearchField, searchInList } from '@skatteetaten/ds-forms';
@@ -350,7 +350,7 @@ export const WithDisabled = {
     await expect(textbox).toBeDisabled();
     await expect(searchButton).toBeDisabled();
     const helpButton = canvas.getByRole('button', {
-      name: defaultHelpButtonTitle,
+      name: getDefaultHelpButtonTitle(),
     });
     await expect(helpButton).toBeDisabled();
   },
@@ -416,7 +416,7 @@ export const WithHelpText = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      description: defaultLabelText,
+      name: getDefaultHelpButtonTitle(),
     });
     await expect(helpButton).toBeInTheDocument();
     await fireEvent.click(helpButton);
@@ -643,7 +643,7 @@ export const WithHelpToggleEvent = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      name: defaultHelpButtonTitle,
+      name: getDefaultHelpButtonTitle(),
     });
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
@@ -775,7 +775,7 @@ export const WithLoading = {
 
     await userEvent.click(searchbox);
 
-    const spinner = await canvas.findByText(defaultSpinnerLabel);
+    const spinner = await canvas.findByText(getDefaultSpinnerLabel());
     await expect(spinner).toBeInTheDocument();
     await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
   },
@@ -825,7 +825,7 @@ export const WithSpinnerProps = {
 
     await userEvent.click(searchbox);
 
-    const spinner = await canvas.findByText(defaultSpinnerLabel);
+    const spinner = await canvas.findByText(getDefaultSpinnerLabel());
     await expect(spinner.parentElement).toHaveAttribute('data-size', 'small');
     await expect(spinner.parentElement).toHaveAttribute('data-color', 'black');
   },
