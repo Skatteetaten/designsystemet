@@ -153,10 +153,15 @@ export const StepListStep = ({
           <div className={styles.nextLine}></div>
           <span className={styles.buttonWrapper}>
             <Button
-              onClick={(): void => {
+              onClick={(e): void => {
+                const currentLi = e.currentTarget.closest('li');
                 onNext();
                 setTimeout(() => {
-                  innerRef?.current?.focus();
+                  const nextLi = currentLi?.nextElementSibling;
+                  const focusTarget = nextLi?.querySelector<HTMLElement>(
+                    `.${styles.stepSideWrapper}`
+                  );
+                  focusTarget?.focus();
                 });
               }}
               {...nextButtonProps}

@@ -72,6 +72,11 @@ export const Kvittering = (): JSX.Element => {
       Derfor skal fokus settes hit. */}
       <div tabIndex={-1} className={styles.noFocusVisible}>
         <Panel
+          headingRef={(node) => {
+            if (node) {
+              node.focus();
+            }
+          }}
           className={styles.panel}
           variant={'outline'}
           color={'forest'}
@@ -82,6 +87,7 @@ export const Kvittering = (): JSX.Element => {
               <CheckIcon size={'large'} className={styles.checkIcon} />
             </div>
           )}
+          canManuallySetTitleFocus
         >
           <Paragraph className={styles.marginTopM}>
             {'Det kan ta inntil 4 uker før du får svar.'}
