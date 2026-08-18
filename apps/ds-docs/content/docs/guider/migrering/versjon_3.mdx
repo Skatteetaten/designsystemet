@@ -220,6 +220,24 @@ Les mer på mønster for obligatoriske felt: [https://www.skatteetaten.no/stilog
 
 ## Endrede standardverdier
 
+### OpenClose: `keepMounted` har ny default-verdi
+
+Default-verdien for `keepMounted` er endret fra `false` til `true`. Innholdet forblir nå i DOM-en når `OpenClose` er lukket. Sett propen eksplisitt til `false` dersom innholdet fortsatt skal fjernes fra DOM-en når det skjules.
+
+**Før (innholdet ble fjernet fra DOM-en automatisk):**
+
+```tsx
+<OpenClose title={'Mer info'}>{content}</OpenClose>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<OpenClose title={'Mer info'} keepMounted={false}>
+  {content}
+</OpenClose>
+```
+
 ### Footer: `openDefaultLinksInNewTab` har ny default-verdi
 
 Default-verdien for `openDefaultLinksInNewTab` er endret fra `true` til `false`. Standardlenkene i `Footer` åpnes nå i samme fane. Sett propen eksplisitt til `true` om du ønsker tidligere oppførsel.
