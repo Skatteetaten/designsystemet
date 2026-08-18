@@ -280,6 +280,7 @@ export const FileUploader = ({
         aria-describedby={
           ariaDescribedBy.trim() !== '' ? ariaDescribedBy : undefined
         }
+        // aria-invalid på button-element gir advarsler i terminal og validatorer, men kan ikke settes på input-elementet da det er satt til hidden. Det fungerer allikevel fint for skjermlesere å løse det på denne måten.
         aria-invalid={errorMessage ? 'true' : undefined}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
