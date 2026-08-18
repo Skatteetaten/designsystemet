@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Alert } from '@skatteetaten/ds-status';
@@ -8,7 +10,6 @@ import {
   htmlEventDescription,
   svgPathDescription,
 } from '../../../../.storybook/helpers';
-import { JSX } from 'react';
 
 const meta = {
   component: Alert,
