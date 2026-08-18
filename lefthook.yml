@@ -4,8 +4,8 @@ pre-commit:
     linter: # lint using eslint
       run: npx nx affected --target=lint --uncommitted --output-style=static
 
-    formatter: # check formatting using prettier
-      run: npx nx format:check --uncommitted --output-style=static
+    formatter:
+      run: npx oxfmt --check --no-error-on-unmatched-pattern {staged_files}
 
     stylelint:
       run: npx nx affected --target=stylelint --uncommitted --output-style=static

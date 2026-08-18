@@ -11,8 +11,7 @@ type RequiredTableDataCellHTMLAttributes = Pick<
 type TableDataCellHTMLAttributes = Partial<RequiredTableDataCellHTMLAttributes>;
 
 export interface TableDataCellProps
-  extends TableDataCellHTMLAttributes,
-    BaseProps {
+  extends TableDataCellHTMLAttributes, BaseProps {
   ref?: Ref<HTMLTableCellElement>;
   /** Tekstjustering */
   alignment?: TextAlignment;

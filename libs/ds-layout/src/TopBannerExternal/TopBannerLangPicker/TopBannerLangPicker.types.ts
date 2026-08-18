@@ -35,7 +35,6 @@ export interface TopBannerLangPickerProps extends BaseProps {
   isInMobileMenu?: boolean;
 }
 
-export interface TopBannerLangPickerComponent
-  extends FunctionComponent<TopBannerLangPickerProps> {
+export interface TopBannerLangPickerComponent extends FunctionComponent<TopBannerLangPickerProps> {
   Button: typeof TopBannerLangPickerButton;
 }

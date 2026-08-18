@@ -67,8 +67,7 @@ export type MegaButtonDiscriminatedProp =
     } & Pick<ComponentPropsWithoutRef<'button'>, 'type'>);
 
 export interface MegaButtonComponentCommonProps
-  extends MegaButtonPropsHTMLAttributes,
-    BaseProps {
+  extends MegaButtonPropsHTMLAttributes, BaseProps {
   /** Tekst på knapp */
   children: string;
 }

@@ -27,8 +27,7 @@ interface InlineButtonPropsHTMLAttributes extends InlineButtonHTMLAttributes {
 export type InlineButtonBrightness = Extract<Brightness, 'light' | 'default'>;
 
 export interface InlineButtonProps
-  extends InlineButtonPropsHTMLAttributes,
-    BaseProps {
+  extends InlineButtonPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLButtonElement>;
   /** Tekst på knapp. */
   children: string;

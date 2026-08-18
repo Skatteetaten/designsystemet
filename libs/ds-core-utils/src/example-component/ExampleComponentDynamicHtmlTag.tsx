@@ -9,8 +9,7 @@ type ExampleComponentPropsHTMLAttributes = Pick<
   'title' | 'onClick' | 'children'
 >;
 
-export interface ExampleComponentCustomProps
-  extends ExampleComponentPropsHTMLAttributes {
+export interface ExampleComponentCustomProps extends ExampleComponentPropsHTMLAttributes {
   ref?: Ref<HTMLButtonElement | HTMLDivElement>;
   as?: 'button' | 'div';
   children?: string;

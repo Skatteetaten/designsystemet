@@ -21,5 +21,4 @@ type PopoverTriggerCommonProps = BaseProps & {
 };
 
 export interface PopoverTriggerProps
-  extends PopoverTriggerCommonProps,
-    Partial<PropsFromIconButton> {}
+  extends PopoverTriggerCommonProps, Partial<PropsFromIconButton> {}
