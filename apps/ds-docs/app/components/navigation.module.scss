@@ -35,6 +35,10 @@
   cursor: pointer;
   gap: var(--spacing-s);
 
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
   &:focus-visible {
     outline: 2px solid var(--semantic-interactive-main);
   }
