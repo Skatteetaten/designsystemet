@@ -182,7 +182,7 @@ export const Saksvisning = (): JSX.Element => (
             <IconButton
               svgPath={CopySVGpath}
               title={'Kopier saksnummeret'}
-              size={'extraSmall'}
+              size={'small'}
               onClick={() => {
                 navigator.clipboard.writeText('2024-999999');
               }}

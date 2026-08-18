@@ -35,40 +35,30 @@ export const DescriptionList = ({
   const isMobile = !useMediaQuery('(min-width: 640px)');
   const isHorizontal =
     variant === 'horizontal' && (!isMobile || !isVerticalOnMobile);
-
   const isDescriptionHorizontal =
     descriptionDirection === 'horizontal' &&
     (!isMobile || !isDescriptionVerticalOnMobile);
-  const verticalClassName = isDescriptionHorizontal
-    ? styles.descriptionList_vertical
-    : styles.descriptionList_verticalVertical;
-
-  const variantClassName = isHorizontal
-    ? styles.descriptionList_horizontal
-    : verticalClassName;
-
-  const sizeClassName = size === 'small' ? styles.descriptionList_small : '';
-
-  const termClassName =
-    termWeight === 'regular' ? styles.descriptionListTermRegular : '';
-  const descriptionClassName =
-    descriptionWeight === 'bold' ? styles.descriptionListDescriptionBold : '';
-
-  const descriptionListClassname =
-    `${styles.descriptionList} ${variantClassName} ${sizeClassName} ${termClassName} ${descriptionClassName} ${className}`.trim();
 
   return (
     <dl
       ref={ref}
       id={id}
-      className={descriptionListClassname}
+      className={`${styles.descriptionList} ${className}`.trim()}
       lang={lang}
       data-testid={dataTestId}
+      data-size={size}
+      data-variant={isHorizontal ? 'horizontal' : 'vertical'}
+      data-description-direction={
+        isDescriptionHorizontal ? 'horizontal' : 'vertical'
+      }
+      data-description-weight={descriptionWeight}
+      data-term-weight={termWeight}
       data-has-spacing={hasSpacing ? 'true' : undefined}
     >
-      {variant === 'horizontal' && (!isMobile || !isVerticalOnMobile)
-        ? Children.map(children, (child) => (
+      {isHorizontal
+        ? Children.map(children, (child, index) => (
             <div
+              key={`description-list-item-${index}`}
               className={
                 isDescriptionHorizontal ? styles.childWrapper : undefined
               }

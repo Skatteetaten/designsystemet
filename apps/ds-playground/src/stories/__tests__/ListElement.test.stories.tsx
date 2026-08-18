@@ -23,13 +23,12 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
+  args: {
+    children: 'Kjenner du behovet til brukeren?',
+  },
 } satisfies Meta<typeof List.Element>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs = {
-  children: 'Kjenner du behovet til brukeren?',
-};
 const Template: StoryFn<typeof List.Element> = (args) => (
   <ul>
     <List.Element {...args} />
@@ -40,7 +39,6 @@ export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLLIElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -61,7 +59,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',

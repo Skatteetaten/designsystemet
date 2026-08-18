@@ -1,0 +1,69 @@
+---
+title: Panel
+description: Panel brukes til å ramme inn og fremheve informasjon eller oppgaver som hører sammen. Det gjør at viktig eller relatert innhold skiller seg tydelig fra resten av siden, uten at det dominerer helhetsopplevelsen.
+icon: /illustrations/panel.svg
+---
+
+<Canvas examplesPath="components/panel" />
+
+## Når bruke komponenten
+
+- Når du skal vise innhold og handlinger om et tema som bør fremheves.
+- Når informasjon skal grupperes visuelt for å gjøre siden mer oversiktlig.
+- Når innholdet kan stå alene som en tydelig seksjon i løsningen.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk Panel til statusbeskjeder — bruk [Alert](/byggeklosser/komponenter/alert) i stedet.
+- Ikke bruk Panel som hovedinnhold på en side — det skal støtte, ikke erstatte, hovedinnholdet.
+
+## Hvorfor anbefalingene finnes?
+
+- Panel er et presentasjonselement som står statisk på siden - ikke et varsel som dynamisk spretter opp. Vi skiller mellom Panel (informasjon) og Alert (systemvarsel eller brukerutløst feil) for å sikre at brukeren tolker innholdet med riktig alvorlighetsgrad, og for bedre tilgjengelighet.
+- Illustrasjoner begrenses til innholdssttende bruk for å unngå at visuelle elementer trekker oppmerksomhet vekk fra viktig informasjon, og for å holde dekorativ innhold ute av tilgjengelighetslesingen.
+- Fargebetydningen i Panel (gul/blå/grønn/rød) er ment å samsvare med Alert-fargene for å forsterke en konsekvent fargesemantikk på tvers av løsninger.
+
+## Varianter (og når bruke dem)
+
+### Panel med ramme
+
+- Nøytral ramme rundt innhold.
+- Egnet når du ønsker tydelig, men rolig fremheving.
+
+### Panel med bakgrunnsfarge
+
+- Har fylt bakgrunn i én av designsystemets fargevalg.
+- Brukes når du vil skape ekstra visuell oppmerksomhet eller formidle tone (nøytral, advarsel, suksess).
+
+### Fargebetydning
+
+Panel følger samme fargesystem som Alert:
+
+- **Gul** – nøytral informasjon.
+- **Blå** – nøytral informasjon.
+- **Grønn** – suksess eller nøytral informasjon.
+- **Rød** – advarsel.
+
+### Plassering og justering
+
+- Panel skal brukes der det gir mening å samle innhold, f.eks. informasjonssnutter, oppgaver eller korte informative seksjoner.
+- Kan brukes med tittel, ikon eller illustrasjon.
+- Illustrasjoner skal kun brukes når de faktisk styrker forståelsen.
+
+### Interaksjon og tilstander
+
+- Panel er et rent presentasjonselement og har ingen interaktive tilstander.
+- Kan inneholde knapper eller lenker som representerer videre handlinger.
+
+## Tekst og språkbruk
+
+- Tekst i panel skal være ryddig og kortfattet.
+- Avsnitt i Panel skal ligge i `<p>`‑elementer (bruk Paragraph‑komponenten).
+- Ikonets betydning skal komme tydelig frem i tekst dersom det tilfører meningsinnhold.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Ikoner som gir merverdi må ha alternativ tekst.
+- Illustrasjoner er definert som pynt og trenger ikke alt‑tekst.
+- Sørg for god kontrast mellom bakgrunn og tekst.
+- Innholdet skal kunne fungere uten visuelle virkemidler.

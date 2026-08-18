@@ -61,20 +61,6 @@ export const Examples: Story = {
           <IconButton
             className={'exampleSpacing'}
             svgPath={PrintSVGpath}
-            size={'extraSmall'}
-            title={'Skriv ut'}
-            isOutlined
-          />
-          <IconButton
-            svgPath={PrintSVGpath}
-            size={'extraSmall'}
-            title={'Skriv ut'}
-          />
-        </div>
-        <div>
-          <IconButton
-            className={'exampleSpacing'}
-            svgPath={PrintSVGpath}
             size={'small'}
             title={'Skriv ut'}
             isOutlined

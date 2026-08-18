@@ -69,7 +69,7 @@ export const RolePickerFilterInput = ({
           {showClearButton && (
             <IconButton
               className={styles.clearButton}
-              size={'extraSmall'}
+              size={'small'}
               svgPath={CancelSVGpath}
               title={formsT('searchfield.ClearButtonTitle')}
               onClick={(event) => {

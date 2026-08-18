@@ -1,0 +1,69 @@
+---
+title: DescriptionList
+description: DescriptionList brukes til å vise en gruppe verdier med tilhørende ledetekster. Den gjør det enklere å presentere ikke‑interaktive opplysninger på en strukturert og lett skannbar måte.
+icon: /illustrations/descriptionlist.svg
+---
+
+<Canvas examplesPath="components/descriptionlist" />
+
+## Når bruke komponenten
+
+- For å liste opp en samling av ikke‑interaktive opplysninger.
+- For å fordele opplysninger over flere kolonner.
+- For å vise oppsummeringer, for eksempel før innsending av skjema.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk i skjemaer med vanlig innsending eller når tab‑navigering er viktig.  
+   Bruk heller [TextField](/byggeklosser/komponenter/textfield) i readonly‑modus.
+
+  ## Hvorfor anbefalingene finnes?
+
+  > - DescriptionList bygger på [semantiske](wordinfo:semantisk) `dl`/`dt`/`dd`-elementer som gir skjermlesere korrekt informasjon om at innholdet er par av ledetekster og verdier — noe som gjør lister mer skannbare for alle.
+  > - Komponenten ikke har innebygd styring av fokus, så for interaktive/redigerbare felter er det viktig å se i sammenheng med Textfield sin `readOnly`-tilstand.
+  > - Horisontal og vertikal variant er ikke et rent estetisk valg: horisontal krever mer bredde og bør automatisk falle tilbake til vertikal på små skjermer for å opprettholde lesbarhet.
+
+## Varianter (og når bruke dem)
+
+### Horisontal visning
+
+- Brukes når innhold skal organiseres i flere kolonner.
+- Fungerer best på større skjermer.
+
+### Vertikal visning
+
+- Viser opplysninger i én kolonne.
+- Ofte best på mobil.
+- Kan automatisk aktiveres med `isVerticalOnMobile`.
+
+### Størrelser
+
+- **Small** – brukes kun når plassen er svært begrenset.
+- **Medium** – standard.
+
+### Uthevet tekst
+
+- Standard er at ledeteksten er uthevet.
+- Kan overstyres slik at verdien er uthevet i stedet.
+
+### Plassering og justering
+
+- Egnet i bokser, oversikter, oppsummeringssteg og kort.
+- Horisontal variant krever mer bredde.
+- Vertikal variant fungerer best på mobilflater.
+
+### Interaksjon og tilstander
+
+Komponenten er **ikke interaktiv**.  
+Den viser kun informasjon.
+
+## Tekst og språkbruk
+
+- Bruk korte, presise og lett skannbare ledetekster og verdier.
+- Prioriter tydelig struktur.
+- (Kilden gir ingen ytterligere språkføringer.)
+
+## Tilgjengelighet (UU / WCAG)
+
+- Bygget på semantiske `dl`/`dt`/`dd`‑elementer.
+- Det kreves at både ledetekst og verdi faktisk har innhold.

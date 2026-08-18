@@ -4,7 +4,7 @@ import { expect, within } from 'storybook/test';
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { GaveArvSVGpath, Icon } from '@skatteetaten/ds-icons';
-import { Footer, FooterProps } from '@skatteetaten/ds-layout';
+import { Footer } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import logo from '../../assets/ske-logo-horizontal-white.png';
@@ -39,11 +39,13 @@ const meta = {
     layout: 'fullscreen',
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    titleFirstColumn: 'Om Skatteetaten',
+  },
 } satisfies Meta<typeof Footer>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultTitleFirstColumn = 'Om Skatteetaten';
 const defaultFirstColumn = (
   <Paragraph className={'topSpacingL'}>
     {'Legg inn en lang setning for å sjekke om kolonnebredden stemmer'}
@@ -84,15 +86,9 @@ const defaultThirdColumn = (
     </LinkGroup>
   </>
 );
-
-const defaultArgs: FooterProps = {
-  titleFirstColumn: defaultTitleFirstColumn,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -115,7 +111,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -142,9 +137,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Default (A1, A4, A7, A11, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     titleFirstColumn: { table: { disable: false } },
   },
@@ -183,7 +176,6 @@ export const Defaults = {
 export const WithCustomURL = {
   name: 'With Custom URL (A4)',
   args: {
-    ...defaultArgs,
     accessibilityURL: '#root',
     contactUsURL: '#root',
     securityURL: '#root',
@@ -205,7 +197,6 @@ export const WithCustomURL = {
 export const WithHideDefaultLinks = {
   name: 'With HideDefaultLinks (A4)',
   args: {
-    ...defaultArgs,
     hideDefaultLinks: true,
     children: (
       <Footer.LinkFirstColumn href={'#'}>{'skattekart'}</Footer.LinkFirstColumn>
@@ -247,7 +238,6 @@ export const WithHideDefaultLinks = {
 export const WithHideLogo = {
   name: 'With HideLogo (A5)',
   args: {
-    ...defaultArgs,
     hideLogo: true,
   },
   argTypes: {
@@ -277,9 +267,7 @@ const TemplateWithLogo: StoryFn<typeof Footer> = (args) => (
 export const WithCustomLogo = {
   render: TemplateWithLogo,
   name: 'With Custom Logo (A5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -303,9 +291,7 @@ const TemplateWithLink: StoryFn<typeof Footer> = (args) => (
 export const WithLinks = {
   render: TemplateWithLink,
   name: 'With Links (A8)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -323,7 +309,6 @@ export const WithLinks = {
 export const WithThreeColumnsBreakpointXs = {
   name: 'With Three Columns Breakpoint Xs (A3, A6, A8)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
     secondColumn: defaultSecondColumn,
     thirdColumn: defaultThirdColumn,
@@ -348,7 +333,6 @@ export const WithThreeColumnsBreakpointXs = {
 export const WithThreeColumnsBreakpointS = {
   name: 'With Three Columns Breakpoint S (A3, A6, A8)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
     secondColumn: defaultSecondColumn,
     thirdColumn: defaultThirdColumn,
@@ -373,7 +357,6 @@ export const WithThreeColumnsBreakpointS = {
 export const WithThreeColumnsBreakpointM = {
   name: 'With Three Columns Breakpoint M (A3, A6, A8)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
     secondColumn: defaultSecondColumn,
     thirdColumn: defaultThirdColumn,
@@ -398,7 +381,6 @@ export const WithThreeColumnsBreakpointM = {
 export const WithThreeColumnsBreakpointL = {
   name: 'With Three Columns Breakpoint L (A3, A6, A8)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
     secondColumn: defaultSecondColumn,
     thirdColumn: defaultThirdColumn,
@@ -423,7 +405,6 @@ export const WithThreeColumnsBreakpointL = {
 export const WithTwoColumnsBreakpointXs = {
   name: 'With Two Columns Breakpoint Xs (A3)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
     secondColumn: defaultSecondColumn,
     titleSecondColumn: defaultTitleSecondColumn,
@@ -444,7 +425,6 @@ export const WithTwoColumnsBreakpointXs = {
 export const WithTwoColumnsBreakpointS = {
   name: 'With Two Columns Breakpoint S (A3)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
     secondColumn: defaultSecondColumn,
     titleSecondColumn: defaultTitleSecondColumn,
@@ -465,7 +445,6 @@ export const WithTwoColumnsBreakpointS = {
 export const WithTwoColumnsBreakpointM = {
   name: 'With Two Columns Breakpoint M (A3)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
     secondColumn: defaultSecondColumn,
     titleSecondColumn: defaultTitleSecondColumn,
@@ -486,7 +465,6 @@ export const WithTwoColumnsBreakpointM = {
 export const WithOneColumnBreakpointXs = {
   name: 'With One Column Breakpoint Xs (A3, A9)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
   },
   argTypes: {
@@ -503,7 +481,6 @@ export const WithOneColumnBreakpointXs = {
 export const WithOneColumnBreakpointS = {
   name: 'With One Column Breakpoint S (A3, A9)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
   },
   argTypes: {
@@ -520,7 +497,6 @@ export const WithOneColumnBreakpointS = {
 export const WithOneColumnBreakpointM = {
   name: 'With One Column Breakpoint M (A3, A9)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
   },
   argTypes: {
@@ -537,7 +513,6 @@ export const WithOneColumnBreakpointM = {
 export const WithDefaultLinksInNewTab = {
   name: 'With default links in new tab false (A4)',
   args: {
-    ...defaultArgs,
     firstColumn: defaultFirstColumn,
   },
   argTypes: {

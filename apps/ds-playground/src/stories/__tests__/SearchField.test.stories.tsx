@@ -38,6 +38,9 @@ const verifyAttribute =
     await expect(button).toHaveAttribute(attribute, expectedValue);
   };
 
+const valueText = 'skattekort';
+const defaultLabelText = 'Hva leter du etter?';
+
 const meta = {
   component: SearchField,
   title: 'Tester/SearchField',
@@ -98,21 +101,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabelText,
+  },
 } satisfies Meta<typeof SearchField>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const valueText = 'skattekort';
-
-const defaultLabelText = 'Hva leter du etter?';
-const defaultArgs = {
-  label: defaultLabelText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLInputElement | null): void => {
       if (instance) {
         instance.name = 'dummyNameForwardedFromRef';
@@ -131,7 +129,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -169,7 +166,6 @@ const longLabelText =
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames and Long Label (FA3)',
   args: {
-    ...defaultArgs,
     label: longLabelText,
     classNames: {
       container: 'dummyClassname',
@@ -192,9 +188,7 @@ export const WithCustomClassNames = {
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(longLabelText);
 
-    const searchContainer = canvasElement.querySelector(
-      `${wrapper} > div > div`
-    );
+    const searchContainer = canvasElement.querySelector(`${wrapper} > div`);
 
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
@@ -205,7 +199,6 @@ export const WithCustomClassNames = {
 export const WithLongLabel = {
   name: 'With Long Label',
   args: {
-    ...defaultArgs,
     label: longLabelText,
     description: 'Med en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG beskrivelse?',
     helpText: 'hjelpetekst',
@@ -223,9 +216,7 @@ export const WithLongLabel = {
 
 export const Defaults = {
   name: 'Defaults (A1a, A2, A3, B1, B4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     label: { table: { disable: false } },
     helpText: { table: { disable: false } },
@@ -270,9 +261,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -305,7 +294,6 @@ const AllSizesTemplate: StoryFn<typeof SearchField> = (args): JSX.Element => {
 export const WithSizes = {
   name: 'With Sizes (A1b, A2)',
   args: {
-    ...defaultArgs,
     hideLabel: false,
   },
   argTypes: {
@@ -318,7 +306,6 @@ export const WithoutIcon = {
   name: 'Without Icon (A1b, A2)',
   render: AllSizesTemplate,
   args: {
-    ...defaultArgs,
     hasSearchButtonIcon: false,
   },
   argTypes: {
@@ -329,7 +316,6 @@ export const WithoutIcon = {
 export const WithSizeLargeAndLongText = {
   name: 'With Size Large And Long Text',
   args: {
-    ...defaultArgs,
     size: 'large',
     value: 'En lang tekst som ikke skal synes bak reset-ikonet',
   },
@@ -347,7 +333,6 @@ export const WithSizeLargeAndLongText = {
 export const WithDisabled = {
   name: 'With Disabled',
   args: {
-    ...defaultArgs,
     disabled: true,
     value: 'En lang tekst som ikke skal synes bak reset-ikonet',
     hideLabel: false,
@@ -374,7 +359,6 @@ export const WithDisabled = {
 export const WithValue = {
   name: 'With Value',
   args: {
-    ...defaultArgs,
     value: valueText,
   },
   argTypes: {
@@ -389,7 +373,6 @@ export const WithValue = {
 export const WithDefaultValue = {
   name: 'With DefaultValue',
   args: {
-    ...defaultArgs,
     defaultValue: valueText,
   },
   argTypes: {
@@ -404,7 +387,6 @@ export const WithDefaultValue = {
 export const WithDescription = {
   name: 'With Description (0b, B2)',
   args: {
-    ...defaultArgs,
     description: 'En liten beskrivelse tekst',
     hideLabel: false,
   },
@@ -425,7 +407,6 @@ export const WithDescription = {
 export const WithHelpText = {
   name: 'With HelpText (0b, B2)',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
   },
@@ -445,7 +426,6 @@ export const WithHelpText = {
 export const WithNameAndPlaceholder = {
   name: 'With Name And Placeholder (A3, B3)',
   args: {
-    ...defaultArgs,
     name: 'test_name',
     placeholder: valueText,
   },
@@ -464,7 +444,6 @@ export const WithNameAndPlaceholder = {
 export const WithCustomButtonTitles = {
   name: 'With Custom Button Titles (A2, A5)',
   args: {
-    ...defaultArgs,
     value: valueText,
     clearButtonTitle: 'clear test',
     searchButtonTitle: 'search test',
@@ -484,7 +463,6 @@ export const WithCustomButtonTitles = {
 export const WithCustomButtonTitleText = {
   name: 'With Custom Button Title Text (A2)',
   args: {
-    ...defaultArgs,
     searchButtonTitle: 'search test',
     hasSearchButtonIcon: false,
   },
@@ -536,7 +514,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A7)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onSearchClick: fn(),
@@ -603,7 +580,6 @@ export const WithArrowKeyNavigation = {
   name: 'With ArrowKeyNavgitaion (C2)',
   render: KeyboardNavigationTemplate,
   args: {
-    ...defaultArgs,
     onResultClick: fn(),
   },
   parameters: {
@@ -643,7 +619,6 @@ export const WithArrowKeyNavigation = {
 export const WithAccesskey = {
   name: 'With Accesskey (B5)',
   args: {
-    ...defaultArgs,
     accessKey: 'j',
   },
   argTypes: {
@@ -658,7 +633,6 @@ export const WithAccesskey = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
     onHelpToggle: fn(),
@@ -697,7 +671,6 @@ const ResetButtonTemplate: StoryFn<typeof SearchField> = (args) => {
 
 export const WithControlled = {
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
   },
@@ -727,7 +700,6 @@ export const WithControlled = {
 export const WithRequired = {
   name: 'With Required',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -749,7 +721,6 @@ const errorMessageText = 'Søkefeltet er obligatorisk';
 export const WithErrorMessage = {
   name: 'With ErrorMessage',
   args: {
-    ...defaultArgs,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -767,7 +738,6 @@ export const WithErrorMessage = {
 
 export const WithLongPlaceholder = {
   args: {
-    ...defaultArgs,
     placeholder: 'En lang placeholder som ikke skal synes bak reset-ikonet',
   },
   argTypes: {
@@ -779,7 +749,6 @@ export const WithLongPlaceholder = {
 
 export const WithLongInput = {
   args: {
-    ...defaultArgs,
     defaultValue: 'En lang value som ikke skal synes bak reset-ikonet',
   },
   argTypes: {
@@ -792,7 +761,6 @@ export const WithLongInput = {
 export const WithLoading = {
   name: 'With Loading',
   args: {
-    ...defaultArgs,
     isLoading: true,
   },
   argTypes: {
@@ -816,7 +784,6 @@ export const WithLoading = {
 export const WithCustomSpinnerLabel = {
   name: 'With Custom Spinner Label',
   args: {
-    ...defaultArgs,
     isLoading: true,
     spinnerLabel: 'Laster søk...',
   },
@@ -840,7 +807,6 @@ export const WithCustomSpinnerLabel = {
 export const WithSpinnerProps = {
   name: 'With Spinner Props',
   args: {
-    ...defaultArgs,
     isLoading: true,
     spinnerProps: {
       size: 'small',
@@ -890,7 +856,6 @@ export const WithEnableSRNavigationHintsFalse = {
     },
   },
   args: {
-    ...defaultArgs,
     enableSRNavigationHint: false,
   },
   parameters: {
@@ -964,9 +929,7 @@ const TemplateWithTabIndex: StoryFn<typeof SearchField> = () => {
 export const WithTabIndexScope = {
   name: 'With TabIndex Scope',
   render: TemplateWithTabIndex,
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },

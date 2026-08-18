@@ -89,10 +89,9 @@ export const TextArea = ({
   };
 
   const autosizeTextarea = autosize ? styles.textarea_autosize : '';
-  const textboxClassName =
-    `${styles.textarea}  ${autosizeTextarea} ${label && !hideLabel ? styles.textareaMarginTop : ''} ${
-      classNames?.textbox ?? ''
-    }`.trim();
+  const textboxClassName = `${styles.textarea}  ${autosizeTextarea} ${
+    classNames?.textbox ?? ''
+  }`.trim();
 
   const resolvedAriaDescribedBy =
     [

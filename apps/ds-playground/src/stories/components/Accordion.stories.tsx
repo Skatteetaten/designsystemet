@@ -155,7 +155,7 @@ export const LeftMenu: Story = {
               <IconButton
                 svgPath={CopySVGpath}
                 title={'Kopier organisasjonsnummeret'}
-                size={'extraSmall'}
+                size={'small'}
                 onClick={() => {
                   navigator.clipboard.writeText('999999999');
                 }}
@@ -236,10 +236,7 @@ export const WorkTask: Story = {
         </DescriptionList>
         <Accordion iconPosition={'left'} className={'bottomSpacingL'}>
           <Accordion.Item title={'Informasjon fra skattemeldingen'}>
-            <Table
-              caption={'Informasjon fra skattemeldingen'}
-              size={'extraSmall'}
-            >
+            <Table caption={'Informasjon fra skattemeldingen'} size={'small'}>
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell scope={'col'}>

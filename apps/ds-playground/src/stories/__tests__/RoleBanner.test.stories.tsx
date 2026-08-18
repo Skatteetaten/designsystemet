@@ -25,22 +25,20 @@ const meta = {
     imageSnapshot: { disableSnapshot: false },
     htmlValidate: { rules: { 'no-redundant-role': 'off' } },
   },
+  args: {
+    user: {
+      name: 'navn navnerson',
+      role: 'meg',
+      identifier: '123456789',
+    },
+  },
 } satisfies Meta<typeof RoleBanner>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  user: {
-    name: 'navn navnerson',
-    role: 'meg' as const,
-    identifier: '123456789',
-  },
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -63,16 +61,10 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
-    user: {
-      name: 'navn navnerson',
-      role: 'meg',
-      identifier: '123456789',
-    },
   },
   argTypes: {
     id: { table: { disable: false } },
@@ -95,9 +87,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -114,9 +104,7 @@ export const Defaults = {
 
 export const AllRoles = {
   name: 'All Role Variants (A2, A5 B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     // Landmarks must have a unique aria-label
     a11y: {

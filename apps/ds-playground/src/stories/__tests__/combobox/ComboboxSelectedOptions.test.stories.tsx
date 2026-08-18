@@ -8,6 +8,12 @@ import type { ComboboxOption } from '@skatteetaten/ds-forms';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ComboboxSelectedOptions } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxSelectedOptions';
 
+const mockOptions: ComboboxOption[] = [
+  { label: 'Norge', value: 'no' },
+  { label: 'Sverige', value: 'se' },
+  { label: 'Danmark', value: 'dk' },
+];
+
 const meta = {
   component: ComboboxSelectedOptions,
   title: 'Tester/Combobox/SelectedOptions',
@@ -18,29 +24,19 @@ const meta = {
     onRemoveValue: { table: { disable: true } },
   },
   tags: ['test'],
+  args: {
+    multiple: true,
+    selectedValues: mockOptions,
+    onRemoveValue: fn(),
+  },
 } satisfies Meta<typeof ComboboxSelectedOptions>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const mockOptions: ComboboxOption[] = [
-  { label: 'Norge', value: 'no' },
-  { label: 'Sverige', value: 'se' },
-  { label: 'Danmark', value: 'dk' },
-];
-
-const defaultProps = {
-  multiple: true,
-  selectedValues: mockOptions,
-  onRemoveValue: fn(),
-};
-
 export const OnRemoveValueCallback = {
   name: 'onRemoveValue callback (A11)',
-  args: {
-    ...defaultProps,
-    onRemoveValue: fn(),
-  },
+  args: {},
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
@@ -59,7 +55,6 @@ export const OnRemoveValueCallback = {
 export const WithDisabledChips = {
   name: 'Disabled chips',
   args: {
-    ...defaultProps,
     disabled: true,
   },
   parameters: {

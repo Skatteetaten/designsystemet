@@ -51,9 +51,8 @@ export const FileUploaderFile = ({
           rightContent={
             <IconButton
               ref={deleteButtonRef}
-              className={styles.fileDeleteButton}
               svgPath={CancelSVGpath}
-              size={'extraSmall'}
+              size={'small'}
               title={t('fileuploader.DeleteLabel')}
               spinnerTitle={t('fileuploader.DeleteInProgress')}
               hasSpinner={showSpinner}

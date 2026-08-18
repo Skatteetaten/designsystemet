@@ -8,8 +8,6 @@ import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-const defaultButtonText = 'Legg til rapport';
-
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
   async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
@@ -56,18 +54,15 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: 'Legg til rapport',
+  },
 } satisfies Meta<typeof InlineButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs = {
-  children: defaultButtonText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -86,7 +81,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -116,9 +110,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -136,7 +128,6 @@ export const Defaults = {
 export const WithLongText = {
   name: 'With Long Text (A1)',
   args: {
-    ...defaultArgs,
     children:
       'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert. ' +
       'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
@@ -149,7 +140,6 @@ export const WithLongText = {
 export const WithIcon = {
   name: 'With Icon (A3, A4, B4)',
   args: {
-    ...defaultArgs,
     svgPath: AddOutlineSVGpath,
   },
   argTypes: {
@@ -171,7 +161,6 @@ export const WithIcon = {
 export const WithCustomIcon = {
   name: 'With Custom Icon (A3)',
   args: {
-    ...defaultArgs,
     svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
   },
   argTypes: {
@@ -185,7 +174,6 @@ export const WithCustomIcon = {
 export const WithLongTextAndIcon = {
   name: 'With Long Text And Icon (A3)',
   args: {
-    ...defaultArgs,
     svgPath: AddOutlineSVGpath,
     iconPosition: 'right',
     children:
@@ -201,7 +189,6 @@ export const WithLongTextAndIcon = {
 export const WithIconRight = {
   name: 'With Icon Right (A5)',
   args: {
-    ...defaultArgs,
     svgPath: AddOutlineSVGpath,
     iconPosition: 'right',
   },
@@ -215,7 +202,6 @@ export const WithIconRight = {
 export const WithDisabled = {
   name: 'With Disabled (B5)',
   args: {
-    ...defaultArgs,
     disabled: true,
   },
   argTypes: {
@@ -233,7 +219,6 @@ export const WithDisabled = {
 export const WithDisabledAndIcon = {
   name: 'With Disabled And Icon (B5)',
   args: {
-    ...defaultArgs,
     svgPath: AddOutlineSVGpath,
     disabled: true,
   },
@@ -249,7 +234,6 @@ export const WithDisabledAndIcon = {
 export const WithDisabledAndBrightness = {
   name: 'With Disabled And Icon And Brightness (B5)',
   args: {
-    ...defaultArgs,
     svgPath: AddOutlineSVGpath,
     disabled: true,
     brightness: 'light',
@@ -272,7 +256,6 @@ export const WithDisabledAndBrightness = {
 export const WithType = {
   name: 'With Type (B1)',
   args: {
-    ...defaultArgs,
     type: 'submit',
   },
   argTypes: {
@@ -287,7 +270,6 @@ export const WithType = {
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B2)',
   args: {
-    ...defaultArgs,
     ariaDescribedby: 'testid1234',
   },
   argTypes: {
@@ -302,7 +284,6 @@ export const WithAriaDescribedby = {
 export const WithAccesskey = {
   name: 'With Accesskey (B3)',
   args: {
-    ...defaultArgs,
     accessKey: 'j',
   },
   argTypes: {
@@ -341,7 +322,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A2 delvis)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onClick: fn(),
     onBlur: fn(),
@@ -399,7 +379,6 @@ export const WithSpinner = {
   render: TemplateWithSpinner,
   name: 'With Spinner (A8)',
   args: {
-    ...defaultArgs,
     hasSpinner: true,
   },
   argTypes: {
@@ -410,7 +389,6 @@ export const WithSpinner = {
 export const WithBrightness = {
   name: 'With Brightness (A9)',
   args: {
-    ...defaultArgs,
     brightness: 'light',
     svgPath: AddOutlineSVGpath,
   },

@@ -108,7 +108,7 @@ export const Select = ({
         {label}
       </LabelWithHelp>
       <div
-        className={`${styles.selectContainer} ${label && !hideLabel ? styles.selectContainerMarginTop : ''} ${
+        className={`${styles.selectContainer} ${
           classNames?.selectContainer ?? ''
         }`.trim()}
       >

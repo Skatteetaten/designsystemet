@@ -1,0 +1,28 @@
+.canvas {
+  overflow: hidden;
+  margin-bottom: var(--spacing-l);
+}
+
+.chips {
+  margin-bottom: var(--spacing-m);
+}
+
+.example {
+  padding: var(--spacing-l);
+}
+
+.actions {
+  padding: var(--spacing-s) var(--spacing-l);
+  background-color: var(--palette-graphite-5);
+  text-align: right;
+}
+
+.codeBlock {
+  box-sizing: border-box;
+  padding: var(--spacing-m);
+  margin: 0;
+  background-color: var(--palette-graphite-70);
+  font-size: var(--font-size-s);
+  line-height: 1.5;
+  overflow-x: auto;
+}

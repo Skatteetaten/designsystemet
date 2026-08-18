@@ -262,7 +262,7 @@ const ComboboxContent = ({
         {label}
       </LabelWithHelp>
       <div
-        className={`${styles.inputContainer} ${label && !hideLabel ? styles.inputContainerMarginTop : ''} ${classNames?.inputContainer ?? ''}`.trim()}
+        className={`${styles.inputContainer} ${classNames?.inputContainer ?? ''}`.trim()}
         onClick={!disabled ? handleContainerClick : undefined}
         onKeyDown={!disabled ? handleContainerKeyDown : undefined}
       >

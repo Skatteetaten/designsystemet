@@ -1,0 +1,9 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+}
+
+.triggerSpacing {
+  margin-left: var(--spacing-xs);
+}

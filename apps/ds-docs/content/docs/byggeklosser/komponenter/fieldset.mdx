@@ -1,0 +1,48 @@
+---
+title: Fieldset
+description: Fieldset brukes til å gruppere relaterte skjemafelt og gi dem en felles ledetekst.
+icon: /illustrations/fieldset.svg
+---
+
+<Canvas examplesPath="components/fieldset" />
+
+## Når bruke komponenten
+
+- Når du har en liste med radioknapper, avkrysningsbokser eller andre skjemafelt som inngår i samme spørsmål.
+- Når skjemaet må deles inn i tydelige seksjoner med en felles ledetekst.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk Fieldset til å gruppere elementer som ligger utenfor et faktisk `<form>`‑element.
+- Ikke bruk Fieldset som erstatning for vanlige overskrifter når feltene ikke hører sammen tematisk.
+
+## Hvorfor anbefalingene finnes?
+
+- Bruker HTML-elementene fieldset og legend som gjør at skjermlesere forstår at en gruppe av felt hørere sammen, er svar på ett og samme spørsmål. Uten dette leses hvert felt isolert, uten konteksten brukeren trenger — noe som er spesielt problematisk for radioknapper og avkrysningsbokser.
+- Vi prioriterer semantisk struktur fremfor fri layout for å gjøre det enkelt å bygge skjemaer som fungerer konsekvent for alle brukere, uavhengig av teknologi.
+
+## Varianter (og når bruke dem)
+
+Ingen varianter.
+
+### Plassering og justering
+
+- Bruk Fieldset når det er nødvendig å vise at feltene hører sammen.
+- Bruk `legend` som seksjonens ledetekst — det er denne som gir semantisk gruppering.
+- `legend` kan skjules visuelt, men skal alltid være tilgjengelig for skjermlesere.
+
+### Interaksjon og tilstander
+
+- Fieldset har ingen interaksjon i seg selv, men påvirker hvordan feltene inne i gruppen oppfattes semantisk.
+- Feilmeldinger for feltene i gruppen skal referere til ledeteksten i `legend`.
+
+## Tekst og språkbruk
+
+- `legend` skal beskrive hva alle feltene i gruppen handler om.
+- Ikke bruk identiske tekster i steg-titler (for eksempel i StepList) og i `legend` — disse har ulik funksjon.
+
+## Tilgjengelighet (UU / WCAG)
+
+- `legend` må brukes for at skjermlesere skal kunne tolke gruppen som ett spørsmål.
+- Skjulte `legend`-elementer skal fortsatt gi meningsfull kontekst.
+- Ikke erstatt `legend` med en vanlig visuell overskrift — det bryter semantikken.

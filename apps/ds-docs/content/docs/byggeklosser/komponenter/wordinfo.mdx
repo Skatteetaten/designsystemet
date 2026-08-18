@@ -1,0 +1,68 @@
+---
+title: WordInfo
+description: WordInfo brukes til å forklare ord og uttrykk direkte i løpende tekst. Komponenten gjør det mulig å gi forklaringer uten at brukeren trenger å navigere bort fra konteksten. Den senker terskelen for å forstå fagbegreper og øker leseflyt og tilgjengelighet.
+icon: /illustrations/wordinfo.svg
+---
+
+<Canvas examplesPath="components/wordinfo" />
+
+## Når bruke komponenten
+
+- Når du vil forklare fremmedord, faguttrykk eller begreper som kan være ukjente.
+- Når begrepet ikke er kritisk for å løse oppgaven, men hvor tilleggsinformasjon kan gi bedre forståelse.
+- Når du ønsker å forbedre lesbarheten uten å bryte flyten.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk WordInfo for å forklare overskrifter — bruk heller hjelpetekstikon eller PopOver.
+- Ikke bruk for å forklare [ledetekster](wordinfo:ledetekst) i skjemafelt — bruk gode feltnavn, beskrivelsestekst eller hjelpetekster.
+- Ikke bruk hvis begrepet er så viktig at forklaringen bør vises direkte i teksten.
+
+## Hvorfor anbefalingene finnes?
+
+- WordInfo skiller seg fra Popover fordi den er ment spesifikt for forklaring av ord i løpende tekst. Riktig komponentvalg gir riktig forventning og riktig semantikk for skjermlesere.
+- Komponenten anbefales ikke for overskrifter fordi klikkflaten og semantikken kolliderer med overskriftens primærfunksjon som navigasjonslån for skjermlesere.
+- Ikke for mange WordInfo-elementer i ett avsnitt fordi det fragmenterer leseopplevelsen og gjør det uklart hvilke begreper som faktisk er viktigst å forstå.
+
+## Varianter (og når bruke dem)
+
+WordInfo har ingen visuelle stilvarianter, men to hovedbruksmodi:
+
+### Med ikon (anbefalt)
+
+- Viser et informasjonsikon ved siden av ordet.
+- Klart signal om at ordet er klikkbart og skiller det fra vanlige lenker.
+- Anbefales i de fleste situasjoner.
+
+### Uten ikon
+
+- Kan brukes når mange ordforklaringer står tett i samme avsnitt, og ikonene tar for mye oppmerksomhet.
+- Må brukes med varsomhet — interaktivitet må fortsatt være tydelig.
+
+### Plassering og justering
+
+- WordInfo plasseres direkte i løpende tekst.
+- Sørg for at komponenten står på et ord eller uttrykk der det er naturlig å klikke for mer informasjon.
+- Unngå å bruke WordInfo på svært korte eller trivielle ord.
+
+### Interaksjon og tilstander
+
+- Begrepet er klikkbart og åpner et forklaringspanel (via PopOver).
+- Ikonet er rent dekorativt og skjult for skjermleser — funksjonen kommuniseres semantisk i knappen.
+- Panelet kan lukkes med klikk utenfor eller via ESC avhengig av PopOver‑logikken.
+
+## Tekst og språkbruk
+
+- Bruk korte og presise forklaringer.
+- Ordene som merkes med WordInfo bør være begreper:
+  - som ikke kan omskrives naturlig i teksten
+  - som brukeren sannsynligvis ikke kjenner
+- Unngå å bruke WordInfo på begreper som allerede er forklart i konteksten.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Knappen inneholder skjult beskrivende tekst for skjermlesere.
+- WordInfo med ikon anbefales for å tydeliggjøre interaktivitet visuelt.
+- Komponentens PopOver støtter `asSpan` slik at WordInfo kan brukes korrekt i blokkelementer som `<p>`.
+- Riktig HTML‑struktur må ivaretas:
+  - Ikke legg block‑elementer som `<h1>`–`<h6>`, `<div>`, `<section>` inne i inline‑elementer.

@@ -1,0 +1,46 @@
+---
+title: Formattere
+description: Formatterere er hjelpefunksjoner som sørger for at data presenteres på en konsistent måte på tvers av løsninger. Denne siden gir oversikt over formattere som finnes i designsystemet.
+---
+
+## Hvorfor bruke formatterere?
+
+Formattererne i designsystemet gjør mer enn å formatere data. De bygger inn etablerte prinsipper og anbefalinger for hvordan informasjon skal presenteres til brukere. Dette bidrar til at like typer informasjon vises konsistent på tvers av produkter og tjenester.
+
+Ved å bruke formattererne får du:
+
+- konsistent presentasjon av data
+- mindre duplisert logikk
+- enklere vedlikehold
+- felles praksis på tvers av løsninger
+- støtte for lokalisering og språktilpasning
+
+## Tilgjengelige formatterere
+
+Designsystemet tilbyr en funksjon formatter som grupperer en rekke typer tall. I tillegg tilbys også en rekke wrapper-funksjoner som benytter formateringsfunksjonen og som gjør det enklere å håndtere de ulike talltypene. For å formatere inputfelter har designsystemet også en hook useFormattedInput.
+
+På de underliggende sidene finner du informasjon om hver formatterer, inkludert bruk, API og eksempler for:
+
+- [Norske telefonnummer](formattere/phone): phoneNumer (8 siffer)
+- [Organiasjonsnummer](formattere/organization): organisationNumber (9 siffer)
+- [Fødselsnummer](formattere/national-identity): nationalIdentityNumber (11 siffer)
+- [Kontornummer](formattere/bank-account): bankAccountNumber (11 siffer)
+- [Beløp](formattere/amount): number
+
+## Grupperingshjelper for org.- fødsels-, konto- og telefonnummer
+
+Fødselsnummer, organisasjonsnummer, kontonummer og telefonnummer viser grupperte siffer som skilles med mellomrom. Nevnte grupperingen er lik for alle språk. F.eks så grupperes organisasjonsnummer med tre og tre siffer. 123 456 789 Den generiske funksjonen tar imot alle typer tegn, fjerner alle tegn som ikke er gyldig med valgt type og retunerer siffer som er gruppert.
+
+For eksempel "234,456-890" => "234 456 890"
+
+Fordi formateringsfunksjonen ikke er en controlled component så må vi regne med at input til funksjonen alltid kan inneholde alle typer tegn. Det vil si at returnert verdi fra formateringsfunksjonen alltid må kunne tolkes korrekt hvis brukt som value prop til formatter-funksjonen en gang til.
+
+## useFormattedInput Hook
+
+Hook for håndtering av formaterte input-felt med automatisk formatering og markørposisjonering. Støtter norske telefonnummer, organisasjonsnummer, fødselsnummer og kontonummer. Når hooken brukes med type 'number' anbefales det å bruke numberValue i stedet for rawValue fordi hooken håndterer desimaltegn og tusenskille basert på locale. Hooken tilbyr:
+
+- Automatisk formatering under skriving
+- Smart markørposisjonering etter formatendringer
+- Backspace/delete-håndtering ved separatorgrenser
+- Råverdi-utvinning (bare siffer)
+- Lengdevalidering for spesifikke formater

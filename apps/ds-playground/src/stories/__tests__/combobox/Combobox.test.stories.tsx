@@ -7,7 +7,7 @@ import { defaultSpinnerLabel, dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { defaultArgs } from './utils/combobox.test.utils';
+import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
 
 const meta = {
   component: Combobox,
@@ -58,6 +58,10 @@ const meta = {
   parameters: {
     chromatic: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabel,
+    options: defaultOptions,
+  },
 } satisfies Meta<typeof Combobox>;
 
 export default meta;
@@ -66,7 +70,6 @@ type Story = StoryObj<typeof meta>;
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLInputElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -89,7 +92,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'combobox-id',
     className: 'dummyClassname',
     lang: 'nb',
@@ -118,7 +120,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       options: 'dummyClassname',
@@ -152,7 +153,7 @@ export const WithCustomClassNames = {
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=comboboxErrorId]>div'
     );
-    const label = canvas.getByText(defaultArgs.label as string);
+    const label = canvas.getByText(defaultLabel);
 
     await expect(container).toHaveClass('dummyClassname');
     await expect(optionsContainer).toHaveClass('dummyClassname');
@@ -174,15 +175,13 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Defaults (A1, B3, B6)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     label: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const combobox = canvas.getByLabelText(defaultArgs.label as string);
+    const combobox = canvas.getByLabelText(defaultLabel);
     await expect(combobox).toBeInTheDocument();
     await expect(combobox).not.toBeRequired();
     await expect(combobox).not.toBeDisabled();
@@ -229,9 +228,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     chromatic: { disableSnapshot: true },
   },
@@ -299,7 +296,6 @@ export const WithLongValue = {
 export const IsOpen = {
   name: 'IsOpen (A1, B1)',
   args: {
-    ...defaultArgs,
     id: 'test-combobox',
   },
   argTypes: {
@@ -362,7 +358,6 @@ export const GroupedKeyboardSelection = {
 export const WithErrorMessage = {
   name: 'With ErrorMessage (A2)',
   args: {
-    ...defaultArgs,
     errorMessage: 'Error melding',
   },
   argTypes: {
@@ -383,9 +378,7 @@ export const WithErrorMessage = {
 
 export const NoResults = {
   name: 'No Results (A6)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
@@ -410,7 +403,6 @@ export const NoResults = {
 export const WithSizeLarge = {
   name: 'Size Large (A7)',
   args: {
-    ...defaultArgs,
     size: 'large',
   },
   argTypes: {
@@ -425,9 +417,7 @@ export const WithSizeLarge = {
 
 export const WithValue = {
   name: 'With Value And Clear Value (A8, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     chromatic: { disableSnapshot: true },
   },
@@ -445,32 +435,9 @@ export const WithValue = {
     await expect(listbox).not.toBeInTheDocument();
   },
 } satisfies Story;
-
-export const SingleSelectKeyboardDeselect = {
-  name: 'Single-Select Keyboard Keeps Selection',
-  args: {
-    ...defaultArgs,
-    onSelectionChange: fn(),
-  },
-  parameters: {
-    chromatic: { disableSnapshot: true },
-  },
-  play: async ({ args, canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const combobox = canvas.getByRole('combobox');
-    await userEvent.click(combobox);
-    await userEvent.click(canvas.getAllByRole('option')[0]);
-    await expect(combobox).toHaveValue('Norge');
-    await userEvent.click(combobox);
-    await userEvent.keyboard('{Enter}');
-    await expect(combobox).toHaveValue('Norge');
-  },
-} satisfies Story;
-
 export const SingleOptionAnnouncement = {
   name: 'Single Option Announcement (B1)',
   args: {
-    ...defaultArgs,
     options: [{ label: 'Single Option', value: '1' }],
   },
   parameters: {
@@ -493,7 +460,6 @@ export const SingleOptionAnnouncement = {
 export const WithRequired = {
   name: 'With Required (B4)',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -513,7 +479,6 @@ export const WithRequired = {
 export const WithHideLabel = {
   name: 'With HideLabel (B5)',
   args: {
-    ...defaultArgs,
     hideLabel: true,
   },
   argTypes: {
@@ -521,7 +486,7 @@ export const WithHideLabel = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const labelElement = canvas.getByText(defaultArgs.label as string);
+    const labelElement = canvas.getByText(defaultLabel);
     await expect(labelElement).toBeInTheDocument();
   },
 } satisfies Story;
@@ -529,7 +494,6 @@ export const WithHideLabel = {
 export const WithPlaceholder = {
   name: 'With Placeholder (B6)',
   args: {
-    ...defaultArgs,
     placeholder: 'Søk etter kommune, fylke eller land',
   },
   argTypes: {
@@ -548,7 +512,6 @@ export const WithPlaceholder = {
 export const WithMinSearchLength = {
   name: 'With MinSearchLength',
   args: {
-    ...defaultArgs,
     minSearchLength: 1,
   },
   argTypes: {
@@ -567,7 +530,6 @@ export const WithMinSearchLength = {
 export const WithMinSearchLengthAndPlaceholder = {
   name: 'With MinSearchLength And Placeholder',
   args: {
-    ...defaultArgs,
     placeholder: 'Søk etter kommune, fylke eller land',
     minSearchLength: 1,
   },
@@ -591,7 +553,6 @@ export const WithMinSearchLengthAndPlaceholder = {
 export const WithAccessKey = {
   name: 'With AccessKey (B7)',
   args: {
-    ...defaultArgs,
     accessKey: 'c',
   },
   argTypes: {
@@ -610,7 +571,6 @@ export const WithAccessKey = {
 export const WithSpacing = {
   name: 'With Spacing',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
   },
   argTypes: {
@@ -621,7 +581,6 @@ export const WithSpacing = {
 export const WithDisabled = {
   name: 'With Disabled',
   args: {
-    ...defaultArgs,
     disabled: true,
     helpText: 'Hjelpeknappen skal også være disabled',
   },
@@ -641,7 +600,6 @@ export const WithDisabled = {
 export const WithLoading = {
   name: 'With Loading (A13)',
   args: {
-    ...defaultArgs,
     isLoading: true,
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -659,7 +617,6 @@ export const WithLoading = {
 export const WithSpinnerLabel = {
   name: 'With SpinnerLabel',
   args: {
-    ...defaultArgs,
     isLoading: true,
     spinnerLabel: 'Laster alternativer...',
   },
@@ -681,7 +638,6 @@ export const WithSpinnerLabel = {
 export const WithName = {
   name: 'With Name',
   args: {
-    ...defaultArgs,
     name: 'category',
   },
   parameters: {
@@ -697,7 +653,6 @@ export const WithName = {
 export const WithEventHandlers = {
   name: 'With EventHandlers (A3)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onInputChange: fn(),
@@ -723,7 +678,6 @@ export const WithEventHandlers = {
 export const OnSelectionChange = {
   name: 'OnSelectionChange (A3)',
   args: {
-    ...defaultArgs,
     onSelectionChange: fn(),
   },
   parameters: {
@@ -746,7 +700,6 @@ export const OnSelectionChange = {
 export const OnHelpToggle = {
   name: 'OnHelpToggle',
   args: {
-    ...defaultArgs,
     onHelpToggle: fn(),
     helpText: 'Dette er hjelpeteksten for comboboxen.',
   },

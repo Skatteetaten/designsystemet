@@ -1,0 +1,48 @@
+---
+title: Nettlesere
+description: Designsystemet er utviklet for moderne nettlesere på mobil, nettbrett og PC. Komponentene bygger på etablerte webstandarder og er testet for å fungere på tvers av de mest brukte nettleserne blant brukere av Skatteetatens tjenester. På denne siden finner du informasjon om hvilke nettlesere vi tester med, hvilke nettlesere vi forventer skal fungere, og hvilke som ikke støttes.
+---
+
+## Testede nettlesere
+
+Vi tester designsystemet jevnlig i de mest brukte nettleserne på mobil og desktop. Testingen er primært rettet mot:
+
+- Chrome
+- Edge
+- Safari
+- Samsung Internet
+- Firefox
+
+Chrome, Edge, Safari og Samsung Internet utgjør hoveddelen av testdekningen vår. Vi tester også mot Firefox, men i mindre omfang fordi den brukes av færre av brukerne av Skatteetatens tjenester. I tillegg bruker vi anbefalte verktøy for å [avdekke problemer med universell utforming](https://www.skatteetaten.no/stilogtone/god-praksis/universell-utforming/testing/).
+
+## Støttede nettlesere
+
+Designsystemet bygger på moderne webstandarder og nettleserfunksjoner, og derfor forventer vi at komponentene fungerer i flere nettlesere og versjoner enn dem vi tester aktivt.
+
+Denne [Browserslist-spørringen](https://browsersl.ist/#q=defaults%2C+not+dead%2C+supports+css-has+and+supports+css-container-queries) viser hvilke nettlesere og versjoner vi forventer at designsystemet fungerer med.
+
+Nettleserne i listen testes ikke nødvendigvis jevnlig av designsystemteamet, men oppfyller de tekniske kravene som komponentene er avhengige av.
+
+## Ikke støttede nettlesere
+
+Nettlesere som er eldre enn de støttede versjonene er utenfor designsystemets støtteområde.
+
+Vi kjenner til at disse nettleserne mangler funksjonalitet som designsystemets komponenter er avhengige av. Dette kan føre til at enkelte komponenter ikke fungerer, at brukergrensesnittet vises feil eller at tilgjengeligheten blir redusert.
+
+Hvis tjenesten din må fungere i eldre nettlesere, må du selv teste løsningen og vurdere om det er behov for tilpasninger.
+
+## Hvis brukeren har en gammel nettleser
+
+Vi anbefaler at løsninger som bruker designsystemet varsler brukere med nettlesere som ikke støttes. Varslet bør forklare at brukeren kan oppleve feil eller manglende funksjonalitet, og lenke til informasjon som hjelper brukeren videre.
+
+Eksempel på melding:
+
+import { Alert } from '@skatteetaten/ds-status';
+
+<Alert showAlert variant="warning">
+  <>
+    Du bruker en utdatert nettleser og kan oppleve feil eller mangler i
+    løsningen. Vi anbefaler at du [oppdaterer til en annen
+    nettleser](https://www.skatteetaten.no/system/nettlesersjekk2/).
+  </>
+</Alert>

@@ -1,0 +1,88 @@
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
+.navCard {
+  box-sizing: border-box;
+  padding: var(--spacing-m);
+  border: 1px solid var(--palette-graphite-50);
+  border-radius: 4px;
+  background-color: var(--palette-denim-5);
+}
+
+.navList {
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-s);
+  list-style: none;
+}
+
+.folderHeading {
+  padding: 0 var(--spacing-xs);
+}
+
+.marginBottomM {
+  margin-bottom: var(--spacing-m);
+}
+
+.expandable {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xs);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  gap: var(--spacing-s);
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--semantic-interactive-main);
+  }
+}
+
+.expandIcon {
+  fill: var(--semantic-interactive-main);
+  transition: transform 0.2s ease;
+
+  &Expanded {
+    transform: scaleY(-1);
+  }
+}
+
+.navLink {
+  display: flex;
+  padding: 0 var(--spacing-xs);
+  color: var(--semantic-page-foreground);
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--semantic-interactive-main);
+  }
+
+  &Active {
+    background-color: var(--semantic-interactive-background);
+    box-shadow: -4px 0 0 var(--semantic-interactive-foreground);
+  }
+
+  &Indented {
+    padding-left: var(--spacing-l);
+  }
+
+  &Overview {
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+}
+
+.srOnly {
+  @include styles.sr-only;
+}

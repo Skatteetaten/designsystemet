@@ -9,6 +9,8 @@ import { Tag } from '@skatteetaten/ds-status';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 
+const defaultText = 'Særavgift';
+
 const meta = {
   component: Tag,
   title: 'Tester/Tag',
@@ -37,20 +39,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultText,
+  },
 } satisfies Meta<typeof Tag>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultText = 'Særavgift';
-
-const defaultArgs = {
-  children: defaultText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -73,7 +71,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'en',
@@ -100,9 +97,7 @@ export const WithAttributes = {
 
 export const DefaultYellow = {
   name: 'Default Variant (ochre) (A3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     color: {
       table: { disable: false },
@@ -112,9 +107,7 @@ export const DefaultYellow = {
 
 export const AllVariants = {
   name: 'All color variants (A3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   render: ({ children }): JSX.Element => (
     <>
       <Tag color={'ochre'}>{children}</Tag>
@@ -130,7 +123,6 @@ export const AllVariants = {
 export const Small = {
   name: 'Small (A1)',
   args: {
-    ...defaultArgs,
     size: 'small',
   },
   argTypes: {
@@ -143,7 +135,6 @@ export const Small = {
 export const WithCustomIcon = {
   name: 'With Custom Icon (A5)',
   args: {
-    ...defaultArgs,
     svgPath: WarningSVGpath,
     color: 'burgundy',
   },
@@ -156,7 +147,6 @@ export const WithCustomIcon = {
 
 export const WithCanBeManuallyFocused: Story = {
   args: {
-    ...defaultArgs,
     svgPath: WarningSVGpath,
     canBeManuallyFocused: true,
   },

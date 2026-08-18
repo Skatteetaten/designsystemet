@@ -1,0 +1,59 @@
+---
+title: DatePicker
+description: DatePicker gjør det enklere for brukeren å oppgi riktig dato, særlig når datoen ligger nær i tid eller når det er nyttig å kunne se ukedager i valgprosessen.
+icon: /illustrations/datepicker.svg
+---
+
+<Canvas examplesPath="components/datepicker" />
+
+## Når bruke komponenten
+
+- Når brukeren skal velge en spesifikk dato, spesielt datoer nært i tid.
+- Når det finnes begrensninger for hvilke datoer som kan velges.
+- Når brukeren ikke kan forventes å huske datoer nøyaktig.
+- Når det er nyttig at bruker kan se kalenderen og ukedager.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk til valg av datoer langt tilbake eller langt frem i tid.
+- Ikke bruk for kjente datoer som fødselsdato.
+- Ikke bruk for valg av klokkeslett.
+- Ikke bruk når brukeren kun skal velge årstall uten måned og dag.
+
+## Hvorfor anbefalingene finnes?
+
+- DatePicker reduserer feil ved datoinnlegging fordi brukeren kan se kalender og unngår feil format. Det er spesielt nyttig for datoer nær i tid med komplekse begrensninger, eller når det er viktig å se ukedager.
+- Vi anbefaler TextField for datoer langt tilbake i tid (f.eks. fødselsdato) fordi en kalender krever mange klikk og er ineffektiv for slike tilfeller.
+
+## Varianter (og når bruke dem)
+
+DatePicker kommer i to størrelser:
+
+- **Normal**
+- **Stor**
+
+Valg av variant bør følge tilgjengelig plass og visuell prioritet.
+
+### Plassering og justering
+
+- Brukeren kan enten skrive inn dato direkte eller velge fra kalender.
+- Feltet bør plasseres på områder der brukerens fokus naturlig ligger på tidsnære eller avgrensede valg.
+- Ved flateoppsett med begrenset plass bør man sikre at kalenderen ikke kolliderer med øvrige elementer.
+
+### Interaksjon og tilstander
+
+- Brukeren kan skrive dato i flere vanlige formater. Dokumenter tydelig hvilke formater som stottes i losningen (for eksempel `dd.mm.åååå`).
+- Kalenderen kan åpnes via kalenderknappen, ikke ved klikk i feltet.
+- Datoer utenfor gyldig periode skal være utilgjengelige og grået ut.
+- Dersom bruker skriver en ugyldig dato eller dato utenfor grenser, må det gis en fornuftig feilmelding.
+
+## Tekst og språkbruk
+
+- [Ledetekst](wordinfo:ledetekst) bør forklare eventuelle begrensninger, som periode eller start-/sluttdato.
+- Følg Skatteetatens skriveregler for datoformat.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Skjermleser annonserer datoer, antall treff og posisjon i kalenderen.
+- Begrensninger i valg av dager må kommuniseres i ledeteksten.
+- I tilfeller der datointervallet er stort kan DatePicker være lite effektiv — vurder TextField som alternativ.

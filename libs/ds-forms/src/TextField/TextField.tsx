@@ -60,10 +60,9 @@ export const TextField = ({
   const textboxRef = useRef<HTMLInputElement>(null);
   useImperativeHandle(ref, () => textboxRef.current as HTMLInputElement);
 
-  const textboxClassName =
-    `${styles.textbox} $ ${!hideLabel ? styles.textboxMarginTop : ''} ${
-      classNames?.textbox ?? ''
-    }`.trim();
+  const textboxClassName = `${styles.textbox} ${
+    classNames?.textbox ?? ''
+  }`.trim();
 
   const resolvedAriaDescribedBy =
     [

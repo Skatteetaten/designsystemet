@@ -1,0 +1,12 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.gapM {
+  gap: var(--semantic-spacing-m, 1rem);
+}
+
+.cardWidth {
+  width: 18rem;
+}

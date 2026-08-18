@@ -1,0 +1,56 @@
+---
+title: FileUploader
+description: FileUploader brukes når brukeren skal laste opp ett eller flere vedlegg fra egen enhet. Den støtter både filvelger og dra‑og‑slipp, og kan håndtere bilder og andre filtyper.
+icon: /illustrations/fileuploader.svg
+---
+
+<Canvas examplesPath="components/fileuploader" />
+
+## Når bruke komponenten
+
+- Når brukeren skal legge ved dokumentasjon eller filer som del av et skjema.
+- Når filer brukes som datakilde i tjenesten.
+- Når det er behov for å kunne laste opp flere filer i én operasjon.
+
+## Når ikke bruke komponenten
+
+- Ikke bruk én FileUploader hvis tjenesten stiller sammensatte krav til antall eller type filer (for eksempel nøyaktig to filer i ulike formater). Da bør du bruke to separate FileUploadere.
+
+## Hvorfor anbefalingene finnes?
+
+- Vi viser opplastingsstatus fil for fil (spinner, hake, feil) fordi brukeren ellers ikke vet om opplastingen lykkes. Tydelig tilbakemelding per fil reduserer usikkerhet og antall støtteanrop.
+- Nye økter nullstiller Alert fra forrige for å forhindre at gammel feilstatus misoppfattes som pagående problem.
+- Separate FileUploadere anbefales for sammensatte krav fordi kombinert validering (f.eks. Nøyaktig én fil av type A og én av type B) er vanskelig for brukeren å forstå som ett felt.
+
+> TODO: noe om sesjoner?
+
+## Varianter (og når bruke dem)
+
+FileUploader har ingen varianter utover funksjonelle tilstander (spinner, feilmeldinger, bekreftelser).
+
+### Plassering og justering
+
+- Plasser FileUploader der brukeren naturlig forventer å laste opp dokumentasjon.
+- Tenk i form av **økter**: én økt = alle filer brukeren legger til i én handling.
+- Etter hver økt skal komponenten gi visuell støtte for resultatet (spinner, hake, feilmelding).
+
+### Interaksjon og tilstander
+
+- **Start av økt:** Bruker legger til én eller flere filer via dra‑og‑slipp eller filvelger.
+- **Feil ved oppstart:** Vises hvis filtype er feil, ingen fil er valgt, eller antallet er for høyt.
+- **Spinner:** Vises mens opplasting pågår.
+- **Vellykket opplasting:** Hver fil markeres med grønn hake; til slutt vises en oppsummerende Alert.
+- **Feil underveis:** Hvis én eller flere filer feiler, vises en Alert med feilen og hvilke filer det gjelder.
+- **Ny økt:** Ved opplasting i ny økt fjernes Alert fra forrige.
+
+## Tekst og språkbruk
+
+- Bruk tydelig og enkel tekst som forklarer hva brukeren kan gjøre.
+- Gi klare feilmeldinger ved ugyldige filvalg eller tekniske feil.
+- Oppsummeringsmeldinger bør være korte og informere om antall filer som ble lastet opp.
+
+## Tilgjengelighet (UU / WCAG)
+
+- Skjermleser skal kunne lese når en økt feiler eller lykkes.
+- Når en fil slettes, skal skjermleser informere om dette.
+- Sørg for at eventuelle Alerts er tydelige og semantisk korrekte.

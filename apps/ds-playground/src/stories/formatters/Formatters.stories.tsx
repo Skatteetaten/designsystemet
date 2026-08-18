@@ -29,17 +29,15 @@ export default {
   title: 'Verktøy/Formatters',
 };
 
-const defaultArgs = {
-  className: { table: { disable: true } },
-  'data-testid': { table: { disable: true } },
-  id: { table: { disable: true } },
-  key: { table: { disable: true } },
-  lang: { table: { disable: true } },
-  ref: { table: { disable: true } },
-};
-
 export const Formatters: StoryObj = {
-  argTypes: defaultArgs,
+  argTypes: {
+    className: { table: { disable: true } },
+    'data-testid': { table: { disable: true } },
+    id: { table: { disable: true } },
+    key: { table: { disable: true } },
+    lang: { table: { disable: true } },
+    ref: { table: { disable: true } },
+  },
   render: function Render() {
     const [locale, setLocale] = useState(dsI18n.language.replace('_', '-'));
 

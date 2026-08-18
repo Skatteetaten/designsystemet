@@ -36,7 +36,7 @@ export const StepListStep = ({
   onEdit,
   onNext,
   hasResultContentFullWidth = false,
-  shouldAutoFocusWhenActive = true,
+  shouldAutoFocusWhenActive = false,
   children,
 }: StepListStepProps): JSX.Element => {
   const { t } = useTranslation('ds_collections', { i18n: dsI18n });
@@ -152,7 +152,20 @@ export const StepListStep = ({
         <>
           <div className={styles.nextLine}></div>
           <span className={styles.buttonWrapper}>
-            <Button onClick={onNext} {...nextButtonProps}>
+            <Button
+              onClick={(e): void => {
+                const currentLi = e.currentTarget.closest('li');
+                onNext();
+                setTimeout(() => {
+                  const nextLi = currentLi?.nextElementSibling;
+                  const focusTarget = nextLi?.querySelector<HTMLElement>(
+                    `.${styles.stepSideWrapper}`
+                  );
+                  focusTarget?.focus();
+                });
+              }}
+              {...nextButtonProps}
+            >
               {nextButtonText}
             </Button>
           </span>

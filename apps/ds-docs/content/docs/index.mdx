@@ -1,0 +1,37 @@
+---
+title: Designsystemet
+description: Dette er designsystemet til Skatteetaten. Her tilbyr vi komponenter og eksempler for at det skal være enkelt å lage gode digitale løsninger for brukerne våre.
+hideToc: true
+---
+
+<img
+  alt="Illustrasjon av team som lager desigmsystem"
+  src="/images/designsystem.png"
+  width="100%"
+/>
+
+import styles from './index.module.scss';
+
+<nav aria-label={'Kom i gang med designsystemet'} className={styles.navSection}>
+  <NavigationTile
+    title={'Kom i gang med design'}
+    description={'Figma og samarbeid'}
+    href={'/guider/kom-i-gang/for-designere'}
+    size={'medium'}
+  />
+
+<NavigationTile
+  title={'Start med utvikling'}
+  description={'Installasjon og oppsett'}
+  href={'/guider/kom-i-gang/for-utviklere'}
+  size={'medium'}
+/>
+
+<NavigationTile
+  title={'Se endringslogg'}
+  description={'Versjoner og nyheter'}
+  href={'/guider/endringslogg'}
+  size={'medium'}
+/>
+
+</nav>

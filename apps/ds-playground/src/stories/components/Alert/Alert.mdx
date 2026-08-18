@@ -1,5 +1,4 @@
-import { Meta, Primary, Controls } from '@storybook/addon-docs/blocks';
-import { PlayroomCanvas as Canvas } from '../../../playroom/utils';
+import { Canvas, Meta, Primary, Controls } from '@storybook/addon-docs/blocks';
 import * as AlertStories from './Alert.stories';
 import { VersionBadge } from '../../utils/VersionBadge';
 import { DocIntro } from '../../utils/DocIntro';
@@ -44,3 +43,11 @@ import { Alert } from '@skatteetaten/ds-status';
 ## Danger
 
 <Canvas of={AlertStories.Danger} />
+
+## Statiske varsler
+
+<Canvas of={AlertStories.Static} />
+
+## Dynamiske varsler
+
+<Canvas of={AlertStories.Dynamic} />

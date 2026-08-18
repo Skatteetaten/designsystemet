@@ -6,6 +6,7 @@ export interface AccordionItemProps extends BaseProps {
   ref?: Ref<HTMLButtonElement>;
   classNames?: {
     container?: string;
+    button?: string;
     title?: string;
     subtitle?: string;
     content?: string;
