@@ -62,7 +62,6 @@
     "@stackblitz/sdk": "1.11.0",
     "@swc/helpers": "0.5.19",
     "@types/mdx": "2.0.13",
-    "chalk": "5.4.1",
     "core-js": "3.39.0",
     "core-js-pure": "3.39.0",
     "date-fns": "4.1.0",
@@ -71,7 +70,6 @@
     "fumadocs-mdx": "15.2.3",
     "i18next": "26.2.0",
     "isbot": "4.4.0",
-    "meow": "14.0.0",
     "minimatch": "10.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -79,7 +77,6 @@
     "react-router": "7.18.2",
     "regenerator-runtime": "0.14.1",
     "storybook": "10.2.13",
-    "ts-morph": "27.0.2",
     "tslib": "2.8.1"
   },
   "devDependencies": {
