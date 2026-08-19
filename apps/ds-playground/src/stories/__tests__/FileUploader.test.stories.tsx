@@ -12,9 +12,9 @@ import {
   within,
 } from 'storybook/test';
 
-import { defaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
+import { getDefaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
 import {
-  defaultFileIconTitle,
+  getDefaultFileIconTitle,
   FileUploader,
   FileUploaderProps,
   TextField,
@@ -215,7 +215,7 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(
-      canvas.getAllByText(defaultFileIconTitle)[0]
+      canvas.getAllByText(getDefaultFileIconTitle())[0]
     ).toBeInTheDocument();
     await expect(canvas.getByText('grunnlag.jpg')).toBeInTheDocument();
     await expect(canvas.getByText('test.png')).toBeInTheDocument();
@@ -439,7 +439,7 @@ export const WithHelpToggleEvent = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      name: defaultHelpButtonTitle,
+      name: getDefaultHelpButtonTitle(),
     });
     await fireEvent.click(helpButton);
     await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());

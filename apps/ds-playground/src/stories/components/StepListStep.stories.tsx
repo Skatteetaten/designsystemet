@@ -4,8 +4,8 @@ import { StepList } from '@skatteetaten/ds-collections';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
-  defaultEditButtonText,
-  defaultNextButtonText,
+  getDefaultEditButtonText,
+  getDefaultNextButtonText,
 } from '../../../../../libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import {
   category,
@@ -22,14 +22,14 @@ const meta = {
     editButtonText: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultEditButtonText },
+        defaultValue: { summary: getDefaultEditButtonText() },
       },
     },
     nextButtonProps: { control: false, table: { category: category.props } },
     nextButtonText: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultNextButtonText },
+        defaultValue: { summary: getDefaultNextButtonText() },
       },
     },
     introTitle: { table: { category: category.props } },

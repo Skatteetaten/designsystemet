@@ -2,11 +2,11 @@ import { useState, JSX } from 'react';
 
 import { StoryObj, Meta } from '@storybook/react-vite';
 
-import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import {
   Checkbox,
-  defaultFileIconTitle,
-  defaultInProgressLabel,
+  getDefaultFileIconTitle,
+  getDefaultInProgressLabel,
   FileUploader,
   UploadedFile,
 } from '@skatteetaten/ds-forms';
@@ -33,7 +33,7 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: {
-          summary: defaultFileIconTitle,
+          summary: getDefaultFileIconTitle(),
         },
       },
     },
@@ -53,7 +53,7 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: {
-          summary: defaultInProgressLabel,
+          summary: getDefaultInProgressLabel(),
         },
       },
     },
@@ -61,7 +61,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultHelpButtonTitle },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
     uploadedFiles: { control: false, table: { category: category.props } },

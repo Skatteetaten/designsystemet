@@ -18,7 +18,7 @@
   visibility: hidden;
   will-change: transform;
 
-  @media (min-width: breakpoints.$breakpoint-m) {
+  @media (width >= 1170px) {
     position: fixed;
     z-index: 100;
     bottom: 0;
@@ -29,7 +29,7 @@
     opacity: 1;
     visibility: visible;
 
-    @media (min-width: breakpoints.$breakpoint-m) {
+    @media (width >= 1170px) {
       bottom: var(--spacing-xl);
     }
   }

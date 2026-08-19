@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
-import { dsI18n, defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
@@ -62,7 +62,7 @@ export const WithHelptext = {
     const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-    const helpSvg = canvas.getByLabelText(defaultHelpButtonTitle, {
+    const helpSvg = canvas.getByLabelText(getDefaultHelpButtonTitle(), {
       selector: 'svg',
     });
     await expect(helpSvg).toBeInTheDocument();

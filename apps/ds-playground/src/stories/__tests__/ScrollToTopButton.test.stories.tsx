@@ -2,7 +2,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, within } from 'storybook/test';
 
 import {
-  defaultScrollToTopButtonTitle,
+  getDefaultScrollToTopButtonText,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
@@ -141,7 +141,7 @@ export const WithCustomClassNames = {
     const iconContainer = button.querySelector('span');
 
     const icon = canvas.getByRole('img', { hidden: true });
-    const label = canvas.getByText(defaultScrollToTopButtonTitle);
+    const label = canvas.getByText(getDefaultScrollToTopButtonText());
     await expect(container).toHaveClass('dummyClassname');
     await expect(button).toHaveClass('dummyClassname');
     await expect(iconContainer).toHaveClass('dummyClassname');

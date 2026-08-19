@@ -8,7 +8,8 @@ import { TableRow } from '../TableRow/TableRow';
 
 import styles from './TableSum.module.scss';
 
-export const defaultTableSumText = dsI18n.t('ds_tables:tablesum.Sum');
+export const getDefaultTableSumText = (): string =>
+  dsI18n.t('ds_tables:tablesum.Sum');
 
 export const TableSum = ({
   ref,
@@ -20,7 +21,7 @@ export const TableSum = ({
   valueAlignment = 'right',
   colSpan,
   hasTopSeparator = false,
-  sumText = defaultTableSumText,
+  sumText = getDefaultTableSumText(),
   children,
 }: TableSumProps): JSX.Element => {
   const concatenatedClassName = `${styles.sum} ${

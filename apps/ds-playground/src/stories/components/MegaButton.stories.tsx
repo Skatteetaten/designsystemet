@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { MegaButton } from '@skatteetaten/ds-buttons';
-import { defaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -18,7 +18,7 @@ const meta = {
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultSpinnerLabel },
+        defaultValue: { summary: getDefaultSpinnerLabel() },
       },
     },
     isExternal: { table: { category: category.props } },

@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   autoCompletePropDescription,
-  defaultHelpButtonTitle,
+  getDefaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import {
   SearchField,
@@ -44,7 +44,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultHelpButtonTitle },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
     size: { control: 'inline-radio', table: { category: category.props } },

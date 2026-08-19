@@ -3,7 +3,7 @@ import { useContext, JSX } from 'react';
 import { useMergeRefs } from '@floating-ui/react';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { defaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { PopoverTriggerProps } from './PopoverTrigger.types';
@@ -24,7 +24,7 @@ export const PopoverTrigger = ({
   onBlur,
   onFocus,
 }: PopoverTriggerProps): JSX.Element => {
-  const titleHelpIcon = title ?? defaultHelpButtonTitle;
+  const titleHelpIcon = title ?? getDefaultHelpButtonTitle();
 
   const { floatingData, setIsOpen, isOpen } = useContext(PopoverContext);
   const { setReference } = floatingData.refs;

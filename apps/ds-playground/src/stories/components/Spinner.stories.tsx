@@ -3,7 +3,7 @@ import { useEffect, useState, JSX, useRef } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { defaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 import { Spinner } from '@skatteetaten/ds-progress';
 
 import { category } from '../../../.storybook/helpers';
@@ -18,7 +18,7 @@ const meta = {
     children: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultSpinnerLabel },
+        defaultValue: { summary: getDefaultSpinnerLabel() },
       },
     },
     size: { table: { category: category.props } },

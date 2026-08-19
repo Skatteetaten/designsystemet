@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
-import { defaultSpinnerLabel, dsI18n } from '@skatteetaten/ds-core-utils';
+import { getDefaultSpinnerLabel, dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
@@ -607,7 +607,7 @@ export const WithLoading = {
     const inputElement = canvas.getByRole('combobox');
     await userEvent.click(inputElement);
 
-    const spinner = await canvas.findByText(defaultSpinnerLabel);
+    const spinner = await canvas.findByText(getDefaultSpinnerLabel());
     await expect(spinner).toBeInTheDocument();
 
     await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();

@@ -11,7 +11,7 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   autoCompletePropDescription,
-  defaultHelpButtonTitle,
+  getDefaultHelpButtonTitle,
   useFormattedInput,
 } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
@@ -41,7 +41,7 @@ const meta = {
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: defaultHelpButtonTitle },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
     // HTML
