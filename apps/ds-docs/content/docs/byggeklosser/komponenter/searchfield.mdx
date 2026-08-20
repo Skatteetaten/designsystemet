@@ -15,14 +15,15 @@ icon: /illustrations/searchfield.svg
 ## Når ikke bruke komponenten
 
 - Ikke bruk når innholdet er så lite at brukeren enkelt kan navigere uten søk.
-- Ikke bruk for autofullføring i skjema — bruk **TextField** med datalist eller passende mønster.
+- Ikke bruk for autofullføring i skjema — bruk [TextField](/byggeklosser/komponenter/textfield) med datalist eller passende mønster.
 - Ikke bruk dersom oppgaven krever filtrering eller sortering fremfor søk.
+- Ikke bruk som et skjemafelt når brukeren skal søke etter og velge et element, og valget skal bli stående i skjemaet. Bruk [Combobox](/byggeklosser/komponenter/combobox) i stedet.
 
 ## Hvorfor anbefalingene finnes?
 
 - Vi skiller mellom SearchField og TextField fordi søk og skjemainput har ulike atferdsmønstre: søk er optimalisert for hurtigoppslag og resultatlister, mens skjemafelt er for datainnsamling.
 - Placeholder begrenses i publikumsløsninger fordi den kan forveksles med forhåndsutfylt innhold i kontrastkompliant design — brukere kan glattet ut feltet og må skrive på nytt.
-- TODO: noe om søkeresultater/treffliste
+- Søk bør lede til en tydelig treffliste som viser søkesultatet. Det gjør det enklere for brukeren å vurdere og velge riktig resultat, også når søket ikke gir treff.
 
 ## Varianter (og når bruke dem)
 

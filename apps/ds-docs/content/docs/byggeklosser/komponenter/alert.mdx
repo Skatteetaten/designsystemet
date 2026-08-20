@@ -11,53 +11,56 @@ icon: /illustrations/alert.svg
 - Når du vil fange brukerens oppmerksomhet med korte, viktige meldinger de må ta hensyn til.
 - Når meldingen gjelder hele siden eller en større seksjon.
 - Når du skal vise systemfeil der deler av tjenesten eller enkeltdata er utilgjengelige.
+- Når du skal gi beskjed om midlertidige feil i systemet.
 
 ## Når ikke bruke komponenten
 
-- Ikke bruk for feil knyttet til enkeltfelt – bruk da **ErrorMessage** i stedet.
-- Ikke bruk til statiske informasjonsbokser – bruk **Panel**.
+- Ikke bruk for feil knyttet til enkeltfelt – bruk da ErrorMessage i stedet.
+- Ikke bruk til statiske informasjonsbokser – bruk Panel i stedet.
 
 ## Hvorfor anbefalingene finnes?
 
-- De fem variantene (suksess, nøytral, advarsel, feil, fare) er faste med faste farger for å gi brukerne konsekvent fargekoding på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
+- De fem variantene (suksess, nøytral, advarsel, feil, fare) har faste farger for å gi brukerne konsekvent fargekoding på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
 - Vi skiller mellom [Alert](/byggeklosser/komponenter/alert) (hel side/seksjon), [ErrorMessage](/byggeklosser/komponenter/errormessage) (enkeltfelt) og [ErrorSummary](/byggeklosser/komponenter/errorsummary) (oppsummering) for å gi riktig informasjon på riktig sted — dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
 - Innebygd `showAlert` brukes for å sikre at skjermlesere fanger opp endringen automatisk via `aria-live`.
 
 ## Varianter (og når bruke dem)
 
+### Alvorligshetsgrad
+
 Alert har fem forhåndsdefinerte varianter:
 
-### Suksess
+#### Suksess
 
 - Brukes til å bekrefte en vellykket operasjon.
 - Farge: [forest].
 
-### Nøytral
+#### Nøytral
 
 - Brukes til nøytrale meldinger som kan være nyttige for brukeren.
 - Farge: [denim].
 
-### Advarsel
+#### Advarsel
 
 - Brukes til advarsler, ustabilitet, unntak eller midlertidige feil.
 - Farge: [ochre].
 - Egnet ved systemvarsler hvor deler av tjenesten er utilgjengelig.
 
-### Feil
+#### Feil
 
 - Brukes til feil som har oppstått og der brukeren trenger veiledning for hvordan de kan komme videre.
 - Vanlig for kritiske systemfeil.
 
-### Fare
+#### Fare
 
 - En spesielt uthevet variant.
 - Brukes når brukeren kan miste opplysninger eller ved strengt fortrolig informasjon.
 - Farge: rød med kraftig rød kantlinje.
 
-Alle varianter:
+#### Alle varianter:
 
 - Har standardikon og eventuell mulighet for lukkekryss.
-- Har faste farger som ikke kan endres.
+- Har faste farger som ikke kan endres - men ikon kan overstyres.
 
 ### Plassering og justering
 
