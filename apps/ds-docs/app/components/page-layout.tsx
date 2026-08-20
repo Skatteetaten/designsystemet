@@ -19,7 +19,7 @@ export const PageLayout = ({
     <main className={styles.main}>
       <DocsBreadcrumbs pageTree={pageTree} />
       <Heading as={'h1'} className={styles.srOnly}>
-        {'Dokumentsjon for komponenter'}
+        {'Dokumentasjon for komponenter'}
       </Heading>
       <div className={styles.pageLayout}>
         <aside className={styles.aside} aria-label={'Sidemeny'}>

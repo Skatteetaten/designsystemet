@@ -26,7 +26,7 @@ export default function PopoverInHeadingExample(): ReactElement {
       </div>
       <Paragraph>
         {
-          'Smaller trigger kan egne seg når overskriften er mindre eller når du vil redusere visuell vekt i tett layout.'
+          'PopOver kan egne seg når overskriften er mindre eller når du vil redusere visuell vekt i tett layout.'
         }
       </Paragraph>
     </>

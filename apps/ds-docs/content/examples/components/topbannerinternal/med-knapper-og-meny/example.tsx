@@ -29,7 +29,7 @@ export default function TopBannerInternalWithButtonsAndMenuExample(): ReactEleme
         {'Dokumentasjon'}
       </InlineButton>
       <InlineButton svgPath={EditSVGpath} brightness={'light'}>
-        {'Opprett RF-Ortiatten'}
+        {'Opprett RF-Ørtiatten'}
       </InlineButton>
       <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
         <InlineButton
@@ -39,7 +39,7 @@ export default function TopBannerInternalWithButtonsAndMenuExample(): ReactEleme
             menuRef?.current?.close?.();
           }}
         >
-          {'Legg til RF-skjema ortifemten'}
+          {'Legg til RF-skjema ørtifemten'}
         </InlineButton>
         <LinkGroup>
           <LinkGroup.Link

@@ -14,8 +14,8 @@ export default function TopBannerInternalWithSearchExample(): ReactElement {
   return (
     <TopBannerInternal title={'Global Skatt'} logoHref={'/home'}>
       <SearchField
-        label={'Sok etter sak, virksomhet, dokument'}
-        placeholder={'Sok etter sak, virksomhet, dokument...'}
+        label={'Søk etter sak, virksomhet, dokument'}
+        placeholder={'Søk etter sak, virksomhet, dokument...'}
       />
       <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
         <InlineButton

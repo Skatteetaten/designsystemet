@@ -21,14 +21,9 @@ export default function PanelAlignedWithContainersStateExample(): JSX.Element {
 
       <div className={styles.wideContentContainer}>
         <Panel variant={'filled'} spacing={'l'}>
-          {'Dette panelet ligger i en container med bredden'}
           {
-            '--semantic-responsive-wide-content. Innholdet i Panel har en innebygd'
+            'Dette panelet ligger i en container med bredden --semantic-responsive-wide-content. Innholdet i Panel har en innebygd containerbredde på --semantic-responsive-article, for å venstre- og høyrejustere denne teksten med resten av siden.'
           }
-          {
-            'containerbredde på --semantic-responsive-article, for å venstre- og'
-          }
-          {'høyrejustere denne teksten med resten av siden.'}
         </Panel>
       </div>
 

@@ -13,14 +13,9 @@ export default function PanelCustomPaddingStateExample(): JSX.Element {
           {'Tekst utenfor Panel'}
         </Heading>
         <Paragraph>
-          {'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt'}
           {
-            'litt fylltekst eller bare surfet rundt på nettet har antageligvis sett'
+            'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.'
           }
-          {
-            'disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med'
-          }
-          {'latinske liksomsetninger.'}
         </Paragraph>
       </div>
 
@@ -32,15 +27,8 @@ export default function PanelCustomPaddingStateExample(): JSX.Element {
         hasResponsivePadding
       >
         {
-          'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt'
+          'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.'
         }
-        {
-          'fylltekst eller bare surfet rundt på nettet har antageligvis sett disse'
-        }
-        {
-          'ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske'
-        }
-        {'liksomsetninger.'}
       </Panel>
     </>
   );

@@ -7,7 +7,7 @@ export default function LinkOpenInNewTabStateExample(): JSX.Element {
   return (
     <Paragraph>
       {'Er det noe du er usikker på, kan du lese'}{' '}
-      <Link href={'https://www.nav.no'} target={'_blank'}>
+      <Link href={'https://www.nav.no'} target={'_blank'} isExternal>
         {'rettledningen hos Nav (åpnes i ny fane)'}
       </Link>
       {'.'}
