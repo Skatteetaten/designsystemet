@@ -21,7 +21,7 @@ const getAnnouncementMessage = (
   t: ReturnType<typeof useTranslation>['t']
 ): string => {
   if (previousSelectedValues.length > selectedValues.length) {
-    const removed = previousSelectedValues.at(-1);
+    const removed = previousSelectedValues[previousSelectedValues.length - 1];
     //Hvis fokus stod på den som ble fjernet så leser skjermleser allerede opp og vi trenger ikke ekstra melding
     if (
       !selectedValues.some((item) => item.value === removed?.value) &&
