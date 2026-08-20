@@ -38,6 +38,9 @@ const getSelectedExample = (
   return examples.find((example) => example.key === selectedExampleKey) ?? null;
 };
 
+const capitalizeFirstLetter = (text: string): string =>
+  `${text[0].toUpperCase()}${text.slice(1).toLowerCase()}`;
+
 const HighlightedCode = ({
   code,
   language,
@@ -170,7 +173,7 @@ export const Canvas = ({
               isSelected={example.key === selectedExample.key}
               onClick={() => setSelectedExampleKey(example.key)}
             >
-              {example.label}
+              {capitalizeFirstLetter(example.label)}
             </Chips.Toggle>
           ))}
         </Chips>
