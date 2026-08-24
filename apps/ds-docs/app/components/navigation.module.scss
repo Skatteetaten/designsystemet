@@ -11,7 +11,7 @@
 .navList {
   padding: 0;
   margin: 0;
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-m);
   list-style: none;
 }
 
@@ -34,6 +34,7 @@
   color: inherit;
   cursor: pointer;
   gap: var(--spacing-s);
+  line-height: inherit;
 
   &:hover {
     background-color: var(--semantic-interactive-background);

@@ -7,6 +7,7 @@ import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import browserCollections from '../.source/browser';
 import { Canvas } from './components/canvas';
+import { MdxCode, MdxPre } from './components/code-block';
 import { RouterDsLink, RouterNavigationTile } from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
 
@@ -75,7 +76,8 @@ const components = {
     children?: ReactNode;
     id?: string;
   }): JSX.Element => (
-    <Heading as={'h1'} id={id}>
+    // Vi har en skjult h1 på hver side, så vi starter på h2 her.
+    <Heading as={'h2'} id={id}>
       {children}
     </Heading>
   ),
@@ -87,7 +89,7 @@ const components = {
     children?: ReactNode;
     id?: string;
   }): JSX.Element => (
-    <Heading as={'h2'} level={3} id={id} hasSpacing={false}>
+    <Heading as={'h3'} level={3} id={id} hasSpacing={false}>
       {children}
     </Heading>
   ),
@@ -98,7 +100,7 @@ const components = {
     children?: ReactNode;
     id?: string;
   }): JSX.Element => (
-    <Heading as={'h3'} level={4} id={id} hasSpacing={false}>
+    <Heading as={'h4'} level={4} id={id} hasSpacing={false}>
       {children}
     </Heading>
   ),
@@ -115,6 +117,8 @@ const components = {
   a: ({ children, href }: { children: string; href?: string }): JSX.Element => (
     <RouterDsLink href={href || ''}>{children}</RouterDsLink>
   ),
+  code: MdxCode,
+  pre: MdxPre,
   Canvas: ({ children, examplesPath }: CanvasMdxProps): JSX.Element => (
     <Canvas examplesPath={examplesPath}>{children}</Canvas>
   ),

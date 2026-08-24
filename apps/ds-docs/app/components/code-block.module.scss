@@ -1,0 +1,47 @@
+.codeCard {
+  overflow: hidden;
+  border: 1px solid var(--palette-graphite-50);
+  margin-bottom: var(--spacing-l);
+}
+
+.codeBlock {
+  box-sizing: border-box;
+  padding: var(--spacing-m);
+  margin: 0;
+  background-color: var(--palette-graphite-0);
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) var(--spacing-m);
+  background-color: var(--palette-graphite-5);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.filename {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
+}
+
+.inlineCode {
+  display: inline-flex;
+  padding: 0 0.375rem;
+  border: 2px solid var(--palette-graphite-0);
+  border-radius: var(--spacing-xs);
+  background-color: var(--palette-graphite-10);
+  color: var(--palette-graphite-100);
+  font-family: inherit;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--semantic-line-height-default);
+}

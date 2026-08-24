@@ -190,7 +190,7 @@ export const getLastSelectedIndex = (
   options: ComboboxOption[],
   selectedValues: ComboboxOption[]
 ): number => {
-  const selectedValue = selectedValues.at(-1)?.value;
+  const selectedValue = selectedValues[selectedValues.length - 1]?.value;
 
   if (!selectedValue) {
     return -1;

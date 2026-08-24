@@ -9,6 +9,7 @@ export interface ExampleDescriptor {
   entryFileName: string;
   key: string;
   label: string;
+  urlPath: string;
   Component: ComponentType;
 }
 
@@ -94,32 +95,21 @@ const toExampleLabel = (fileName: string): string => {
     .join(' ');
 };
 
+const languageByExtension: Record<string, string> = {
+  css: 'css',
+  jsx: 'jsx',
+  json: 'json',
+  md: 'markdown',
+  mdx: 'mdx',
+  scss: 'scss',
+  ts: 'ts',
+  tsx: 'tsx',
+};
+
 const getLanguageFromFileName = (fileName: string): string => {
-  if (fileName.endsWith('.tsx')) {
-    return 'tsx';
-  }
+  const extension = fileName.slice(fileName.lastIndexOf('.') + 1);
 
-  if (fileName.endsWith('.ts')) {
-    return 'ts';
-  }
-
-  if (fileName.endsWith('.scss')) {
-    return 'scss';
-  }
-
-  if (fileName.endsWith('.css')) {
-    return 'css';
-  }
-
-  if (fileName.endsWith('.json')) {
-    return 'json';
-  }
-
-  if (fileName.endsWith('.mdx')) {
-    return 'mdx';
-  }
-
-  return 'text';
+  return languageByExtension[extension] ?? 'text';
 };
 
 const getFileNameFromPath = (path: string): string => {
@@ -174,6 +164,7 @@ const getCodeFiles = (
 const createExample = (
   label: string,
   key: string,
+  urlPath: string,
   moduleEntries: ModuleEntry[],
   codeEntries: CodeEntry[]
 ): ExampleDescriptor | null => {
@@ -194,6 +185,7 @@ const createExample = (
     entryFileName: renderEntries[0].path,
     key,
     label,
+    urlPath,
     Component: renderEntries[0].Component,
   };
 };
@@ -262,6 +254,7 @@ export const getExamples = (examplesPath: string): ExampleDescriptor[] => {
       const example = createExample(
         toExampleLabel(folderName),
         folderName,
+        `${normalizedPath}/${folderName}`,
         stripFolderPrefix(moduleEntries, folderName),
         stripFolderPrefix(codeEntries, folderName)
       );
@@ -273,9 +266,44 @@ export const getExamples = (examplesPath: string): ExampleDescriptor[] => {
   const singleExample = createExample(
     rootExampleLabel,
     normalizedPath,
+    normalizedPath,
     moduleEntries,
     codeEntries
   );
 
   return singleExample ? [singleExample] : [];
+};
+
+/**
+ * Resolver ett enkelt eksempel fra en full URL-sti (uten "/example/"-prefix).
+ *
+ * - Prøver først stien som et enkelt-eksempel-mappe.
+ * - Faller tilbake til å tolke siste segment som eksempelnøkkel i foreldremappen.
+ */
+export const getExampleByPath = (
+  fullPath: string
+): ExampleDescriptor | null => {
+  const normalizedPath = fullPath.replace(/^\/+|\/+$/g, '');
+
+  if (!normalizedPath) {
+    return null;
+  }
+
+  const asSingle = getExamples(normalizedPath);
+
+  if (asSingle.length === 1 && asSingle[0].urlPath === normalizedPath) {
+    return asSingle[0];
+  }
+
+  const segments = normalizedPath.split('/');
+
+  if (segments.length < 2) {
+    return null;
+  }
+
+  const parentPath = segments.slice(0, -1).join('/');
+  const key = segments.at(-1);
+  const parentExamples = getExamples(parentPath);
+
+  return parentExamples.find((example) => example.key === key) ?? null;
 };
