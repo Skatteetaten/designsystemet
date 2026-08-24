@@ -7,6 +7,7 @@ import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import browserCollections from '../.source/browser';
 import { Canvas } from './components/canvas';
+import { MdxCode, MdxPre } from './components/code-block';
 import { RouterDsLink, RouterNavigationTile } from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
 
@@ -116,6 +117,8 @@ const components = {
   a: ({ children, href }: { children: string; href?: string }): JSX.Element => (
     <RouterDsLink href={href || ''}>{children}</RouterDsLink>
   ),
+  code: MdxCode,
+  pre: MdxPre,
   Canvas: ({ children, examplesPath }: CanvasMdxProps): JSX.Element => (
     <Canvas examplesPath={examplesPath}>{children}</Canvas>
   ),

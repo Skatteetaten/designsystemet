@@ -7,23 +7,21 @@ description: Som utvikler samarbeider du med designer for å best mulig sikre at
 
 CSS med fargekoder, brekkpunkter og fonter finner man i pakken `@skatteetaten/ds-core-designtokens` og den vil du ha med som et minimum. I tillegg så installerer du de npm-pakkene som innholder komponentene du har bruk for. Det finnes avhengigheter på tvers av npm-pakkene, men det tas hånd om av de pakkene du bruker. For eksempel bruker `IconButton`-komponenten i `@skatteetaten/ds-buttons` ikoner fra `@skatteetaten/ds-icons`, men du behøver bare å importere `@skatteetaten/ds-buttons` i ditt prosjekt.
 
-```
+```bash filename="Terminal"
 npm install @skatteetaten/ds-core-designtokens@2.8.0 @skatteetaten/ds-buttons@2.8.0
 ```
 
 Merk: Bruk låst versjon av komponenten slik som ds-forms@1.2.3 inntil videre. Vi har for tiden problemer med byggesystemet som fører til at latest tag henter peker til feil npm-pakke. Dette gjelder også hvis man ikke spesifiserer versjonsnummer.
 
-## Ta så i bruk komponentene i applikasjonen din (App.js):
+## Ta så i bruk komponentene i applikasjonen din:
 
-```
+```typescript filename="App.tsx"
 import '@skatteetaten/ds-core-designtokens/index.css';
 import { Button } from '@skatteetaten/ds-buttons';
 
-export default App = () => (
-  <Button variant='primary'>
-    Eksempelknapp
-  </Button>
-);
+export default App = () => {
+ return <Button variant="primary">Eksempelknapp</Button>;
+}
 ```
 
 ## Bruk av designtokens i CSS
@@ -32,7 +30,7 @@ Når pakken er importert kan du bruke CSS-variabler for å benytte designtokens.
 
 ```css
 // Eksempel på bruk av palette css custom properties
- 
+
 .myClass {
   background-color: var(--palette-burgundy-100);
 }

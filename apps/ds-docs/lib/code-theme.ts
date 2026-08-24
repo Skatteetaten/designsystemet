@@ -1,9 +1,9 @@
 import type { ThemeRegistrationRaw } from 'shiki';
+import githubLightDefault from 'shiki/themes/github-light-default.mjs';
 
 import paletteJson from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
 
-// palette.json har selektoren (":root,\n:host") som top-level nøkkel
-const palette = Object.values(paletteJson)[0] as Record<string, string>;
+const palette = paletteJson[':root,\n:host'] as Record<string, string>;
 
 const token = (name: string): string => {
   const value = palette[`--palette-${name}`];
@@ -13,20 +13,24 @@ const token = (name: string): string => {
   return value;
 };
 
-// Egendefinert fargetema for kodeblokker, basert på designtokens
-// Bakgrunn er sort, tekstfarger bruker 30-tokens for god kontrast
+// Basetema: github-light-default fra Shiki.
+// Overstyringer legges på toppen via egne tokenColors-regler.
+// Senere regler vinner i Shiki/TextMate, så våre overrides trumfer basetemaet.
+const baseTokenColors =
+  githubLightDefault.tokenColors ?? githubLightDefault.settings ?? [];
+
 export const skeCodeTheme: ThemeRegistrationRaw = {
-  name: 'ske-dark',
-  type: 'dark',
+  ...githubLightDefault,
+  name: 'ske-light',
+  type: 'light',
   colors: {
-    'editor.background': token('graphite-100'),
-    'editor.foreground': token('graphite-0'),
+    ...githubLightDefault.colors,
+    'editor.background': token('graphite-0'),
+    'editor.foreground': token('graphite-100'),
   },
-  settings: [
-    {
-      scope: ['source', 'punctuation'],
-      settings: { foreground: token('graphite-0') }, // vanlig tekst
-    },
+  tokenColors: [
+    ...baseTokenColors,
+    // Designsystemet-overstyringer (mørkere palette-varianter)
     {
       scope: [
         'keyword',
@@ -37,13 +41,10 @@ export const skeCodeTheme: ThemeRegistrationRaw = {
         'storage.modifier',
         'variable.language',
         'constant.language',
-        'support.type.primitive',
-        // SCSS/CSS nøkkelord
         'keyword.control.at-rule',
         'keyword.other.important',
-        'punctuation.definition.keyword',
       ],
-      settings: { foreground: token('burgundy-30') }, // nøkkelord
+      settings: { foreground: token('burgundy-100') },
     },
     {
       scope: [
@@ -52,7 +53,19 @@ export const skeCodeTheme: ThemeRegistrationRaw = {
         'string.template',
         'punctuation.definition.string',
       ],
-      settings: { foreground: token('denim-30') }, // tekststrenger
+      settings: { foreground: token('forest-100') },
+    },
+    {
+      scope: [
+        'entity.name.tag',
+        'support.class.component',
+        'entity.name.class',
+        'entity.name.type.class',
+        'entity.name.type',
+        'entity.name.tag.css',
+        'entity.name.tag.scss',
+      ],
+      settings: { foreground: token('denim-100') },
     },
     {
       scope: [
@@ -60,42 +73,25 @@ export const skeCodeTheme: ThemeRegistrationRaw = {
         'meta.object-literal.key',
         'variable.parameter',
         'support.type.property-name',
-        // SCSS: property-navn og variabler
         'support.type.property-name.css',
         'support.type.property-name.scss',
         'variable.scss',
         'variable.other.scss',
-        'variable.other.readwrite',
         'variable.css',
       ],
-      settings: { foreground: token('denim-30') }, // props/attributter
+      settings: { foreground: token('azure-100') },
     },
     {
       scope: [
-        'entity.name.tag',
-        'support.class.component',
-        'support.class',
-        'entity.name.class',
-        'entity.name.type.class',
-        'entity.name.type',
-        'meta.tag',
-        // SCSS-selektorer
-        'entity.name.tag.css',
-        'entity.name.tag.scss',
-        'entity.other.attribute-name.class',
-        'entity.other.attribute-name.class.css',
-        'entity.other.attribute-name.id',
-        'entity.other.attribute-name.id.css',
-        'entity.other.attribute-name.pseudo-class',
-        'entity.other.attribute-name.pseudo-element',
-        'entity.name.function.scss',
-        'support.function.misc.css',
+        'constant.numeric',
+        'constant.language.boolean',
+        'constant.other',
       ],
-      settings: { foreground: token('ochre-30') }, // komponenter
+      settings: { foreground: token('ochre-100') },
     },
     {
       scope: ['comment', 'punctuation.definition.comment'],
-      settings: { foreground: token('graphite-30'), fontStyle: 'italic' },
+      settings: { foreground: token('graphite-50'), fontStyle: 'italic' },
     },
   ],
 };
