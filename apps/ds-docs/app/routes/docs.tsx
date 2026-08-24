@@ -1,26 +1,27 @@
 import { Children, JSX, ReactNode, isValidElement } from 'react';
+import { useLocation } from 'react-router';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import type { Route } from './+types/docs';
+import { getParentTitle } from './docs.utils';
 import browserCollections from '../../.source/browser';
 import { getMdxComponents } from '../mdx-components';
+import { useRootLoaderData } from '../root';
 
 import styles from './docs.module.scss';
 
 interface ClientLoaderProps {
-  parentTitle: string | null;
   markdownUrl: string;
   path: string;
 }
 
 interface DocsContentProps {
-  parentTitle: string | null;
+  parentTitle: ReactNode | null;
 }
 
 interface DocsPageProps {
-  parentTitle?: string | null;
   markdownUrl: string;
   path: string;
 }
@@ -47,45 +48,6 @@ const toTocTitle = (title: ReactNode): string => {
   return Children.toArray(title).map(toTocTitle).join('');
 };
 
-const getParentIndexPath = (path: string): string | null => {
-  const segments = path.split('/');
-
-  if (path === 'index.mdx') {
-    return null;
-  }
-
-  if (path.endsWith('/index.mdx')) {
-    return segments.length > 2
-      ? `${segments.slice(0, -2).join('/')}/index.mdx`
-      : 'index.mdx';
-  }
-
-  return segments.length > 1
-    ? `${segments.slice(0, -1).join('/')}/index.mdx`
-    : null;
-};
-
-const getDocImport = (
-  path: string
-): (() => Promise<{ frontmatter: { title?: string } }>) | undefined => {
-  return (browserCollections.docs.raw[path] ??
-    browserCollections.docs.raw[`./${path}`]) as
-    | (() => Promise<{ frontmatter: { title?: string } }>)
-    | undefined;
-};
-
-const getParentTitleFromPath = async (path: string): Promise<string | null> => {
-  const parentIndexPath = getParentIndexPath(path);
-
-  if (!parentIndexPath) {
-    return null;
-  }
-
-  const loadDoc = getDocImport(parentIndexPath);
-  const parentDoc = loadDoc ? await loadDoc() : null;
-
-  return parentDoc?.frontmatter.title ?? null;
-};
 const docsContentLoader =
   browserCollections.docs.createClientLoader<DocsContentProps>({
     component({ frontmatter, toc, default: Mdx }, { parentTitle }) {
@@ -162,29 +124,26 @@ const getDocPath = (slug?: string): string | null => {
   return candidates.find((candidate) => docPaths.has(candidate)) ?? null;
 };
 
-export async function clientLoader({
+export function clientLoader({
   params,
-}: Route.ClientLoaderArgs): Promise<ClientLoaderProps> {
+}: Route.ClientLoaderArgs): ClientLoaderProps {
   const path = getDocPath(params['*']);
   if (!path) {
     throw new Response('Not found', { status: 404 });
   }
 
   return {
-    parentTitle: await getParentTitleFromPath(path),
     path,
     markdownUrl: '',
   };
 }
 
-export const DocsPage = ({ parentTitle, path }: DocsPageProps): JSX.Element => {
-  return (
-    <>
-      {docsContentLoader.useContent(path, {
-        parentTitle: parentTitle ?? null,
-      })}
-    </>
-  );
+export const DocsPage = ({ path }: DocsPageProps): JSX.Element => {
+  const { pathname } = useLocation();
+  const { pageTree } = useRootLoaderData();
+  const parentTitle = getParentTitle(pathname, pageTree);
+
+  return <>{docsContentLoader.useContent(path, { parentTitle })}</>;
 };
 
 export default function Page({
