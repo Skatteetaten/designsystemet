@@ -1,0 +1,45 @@
+---
+title: Farger
+---
+
+import { IconButton } from '@skatteetaten/ds-buttons';
+import { CopySVGpath } from '@skatteetaten/ds-icons';
+import { Table } from '@skatteetaten/ds-table';
+import paletteJson from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
+
+<Table caption={'Fargepalett'} size={'medium'}>
+  <Table.Header>
+    <Table.Row>
+      <Table.HeaderCell scope={'col'}>{'Farge'}</Table.HeaderCell>
+      <Table.HeaderCell scope={'col'}>{'Token'}</Table.HeaderCell>
+      <Table.HeaderCell scope={'col'}>{'Kopier'}</Table.HeaderCell>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    {Object.entries(paletteJson[':root,\n:host']).map(([name, value]) => (
+      <Table.Row key={name}>
+        <Table.DataCell>
+          <span
+            aria-label={`${name} farge`}
+            style={{
+              display: 'inline-block',
+              width: '1.5rem',
+              height: '1.5rem',
+              backgroundColor: value,
+              verticalAlign: 'middle',
+            }}
+          />
+        </Table.DataCell>
+        <Table.DataCell>{name}</Table.DataCell>
+        <Table.DataCell>
+          <IconButton
+            svgPath={CopySVGpath}
+            title={`Kopier ${name}`}
+            onClick={() => navigator.clipboard.writeText(name)}
+            size={'small'}
+          />
+        </Table.DataCell>
+      </Table.Row>
+    ))}
+  </Table.Body>
+</Table>

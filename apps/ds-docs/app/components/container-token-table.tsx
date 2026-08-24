@@ -1,0 +1,137 @@
+import { JSX } from 'react';
+
+import containersJson from '@skatteetaten/ds-core-designtokens/designtokens/containers.json';
+import { Table } from '@skatteetaten/ds-table';
+import { Paragraph } from '@skatteetaten/ds-typography';
+
+import styles from './container-token-table.module.scss';
+
+interface Breakpoint {
+  name: string;
+  query: string;
+}
+
+const rootQuery = ':root,\n  :host';
+const breakpoints: Breakpoint[] = [
+  { name: 'Breakpoint S\n(640 - 1023px)', query: '@media (width >= 640px)' },
+  { name: 'Breakpoint M\n(1024 - 1365px)', query: '@media (width >= 1024px)' },
+  { name: 'Breakpoint L\n(1366 - 1919px)', query: '@media (width >= 1366px)' },
+];
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const containersJsonTyped: any = containersJson;
+
+const generateTableRows = (
+  tokens: Record<string, string>,
+  breakpoints: Breakpoint[],
+  category: string,
+  start: number,
+  end: number
+): JSX.Element[] => {
+  return Object.keys(tokens)
+    .map((key, index) => (
+      <Table.Row key={key}>
+        {index === start && (
+          <Table.DataCell rowSpan={Math.floor(end - start)}>
+            <strong>{category}</strong>
+          </Table.DataCell>
+        )}
+        <Table.DataCell className={styles.cellWithLeftBorder}>
+          <strong>{key}</strong>
+        </Table.DataCell>
+        <Table.DataCell className={styles.cellWithLeftBorder}>
+          {tokens[key]}
+        </Table.DataCell>
+        {breakpoints.map((breakpoint) => {
+          const value =
+            containersJsonTyped[breakpoint.query][rootQuery][key] || '';
+          const className = value ? styles.cellWithLeftBorder : undefined;
+
+          return (
+            <Table.DataCell key={breakpoint.name} className={className}>
+              {value}
+            </Table.DataCell>
+          );
+        })}
+      </Table.Row>
+    ))
+    .slice(start, end);
+};
+
+const responsiveTokens = Object.fromEntries(
+  Object.entries(containersJson[':root,\n:host']).filter(([key]) =>
+    key.includes('responsive')
+  )
+);
+
+const externalTokenOrder = [
+  '--semantic-responsive-container',
+  '--semantic-responsive-container-spacing',
+  '--semantic-responsive-wide-content',
+  '--semantic-responsive-article',
+];
+
+const internalTokenOrder = [
+  '--semantic-responsive-internal-container-display',
+  '--semantic-responsive-internal-container-flex-direction',
+  '--semantic-responsive-internal-container-spacing',
+  '--semantic-responsive-internal-aside',
+  '--semantic-responsive-wide-content',
+];
+
+const externalTokens = Object.fromEntries(
+  externalTokenOrder.map((key) => [key, responsiveTokens[key]])
+);
+
+const internalTokens = Object.fromEntries(
+  internalTokenOrder.map((key) => [key, responsiveTokens[key]])
+);
+
+export const ContainerTokenTable = (): JSX.Element => {
+  return (
+    <>
+      <Paragraph>
+        {'Når dynamiske container-tokens endres fra utgangspunktet (mobile):'}
+      </Paragraph>
+
+      <Table
+        caption={
+          'Når dynamiske container-tokens endres fra utgangspunktet (mobile)'
+        }
+        size={'extraSmall'}
+        className={styles.table}
+        hasFullWidth
+      >
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell colSpan={2}>{''}</Table.HeaderCell>
+            <Table.HeaderCell className={styles.pre}>
+              {'Mobile/Breakpoint XS\n(320 - 639px)'}
+            </Table.HeaderCell>
+            {breakpoints.map((breakpoint) => (
+              <Table.HeaderCell key={breakpoint.name} className={styles.pre}>
+                {breakpoint.name}
+              </Table.HeaderCell>
+            ))}
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {generateTableRows(
+            externalTokens,
+            breakpoints,
+            'External',
+            0,
+            externalTokenOrder.length
+          )}
+          {generateTableRows(
+            internalTokens,
+            breakpoints,
+            'Internal',
+            0,
+            internalTokenOrder.length
+          )}
+        </Table.Body>
+      </Table>
+    </>
+  );
+};
