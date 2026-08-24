@@ -11,6 +11,13 @@ interface Breakpoint {
   query: string;
 }
 
+interface TokenGroup {
+  category: string;
+  tokenNames: string[];
+}
+
+type TokenValues = Record<string, string>;
+
 const rootQuery = ':root,\n  :host';
 const breakpoints: Breakpoint[] = [
   { name: 'Breakpoint S\n(640 - 1023px)', query: '@media (width >= 640px)' },
@@ -18,45 +25,10 @@ const breakpoints: Breakpoint[] = [
   { name: 'Breakpoint L\n(1366 - 1919px)', query: '@media (width >= 1366px)' },
 ];
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const containersJsonTyped: any = containersJson;
-
-const generateTableRows = (
-  tokens: Record<string, string>,
-  breakpoints: Breakpoint[],
-  category: string,
-  start: number,
-  end: number
-): JSX.Element[] => {
-  return Object.keys(tokens)
-    .map((key, index) => (
-      <Table.Row key={key}>
-        {index === start && (
-          <Table.DataCell rowSpan={Math.floor(end - start)}>
-            <strong>{category}</strong>
-          </Table.DataCell>
-        )}
-        <Table.DataCell className={styles.cellWithLeftBorder}>
-          <strong>{key}</strong>
-        </Table.DataCell>
-        <Table.DataCell className={styles.cellWithLeftBorder}>
-          {tokens[key]}
-        </Table.DataCell>
-        {breakpoints.map((breakpoint) => {
-          const value =
-            containersJsonTyped[breakpoint.query][rootQuery][key] || '';
-          const className = value ? styles.cellWithLeftBorder : undefined;
-
-          return (
-            <Table.DataCell key={breakpoint.name} className={className}>
-              {value}
-            </Table.DataCell>
-          );
-        })}
-      </Table.Row>
-    ))
-    .slice(start, end);
-};
+const tokensByBreakpoint = containersJson as unknown as Record<
+  string,
+  Record<string, TokenValues>
+>;
 
 const responsiveTokens = Object.fromEntries(
   Object.entries(containersJson[':root,\n:host']).filter(([key]) =>
@@ -64,28 +36,59 @@ const responsiveTokens = Object.fromEntries(
   )
 );
 
-const externalTokenOrder = [
-  '--semantic-responsive-container',
-  '--semantic-responsive-container-spacing',
-  '--semantic-responsive-wide-content',
-  '--semantic-responsive-article',
+const tokenGroups: TokenGroup[] = [
+  {
+    category: 'External',
+    tokenNames: [
+      '--semantic-responsive-container',
+      '--semantic-responsive-container-spacing',
+      '--semantic-responsive-wide-content',
+      '--semantic-responsive-article',
+    ],
+  },
+  {
+    category: 'Internal',
+    tokenNames: [
+      '--semantic-responsive-internal-container-display',
+      '--semantic-responsive-internal-container-flex-direction',
+      '--semantic-responsive-internal-container-spacing',
+      '--semantic-responsive-internal-aside',
+      '--semantic-responsive-wide-content',
+    ],
+  },
 ];
 
-const internalTokenOrder = [
-  '--semantic-responsive-internal-container-display',
-  '--semantic-responsive-internal-container-flex-direction',
-  '--semantic-responsive-internal-container-spacing',
-  '--semantic-responsive-internal-aside',
-  '--semantic-responsive-wide-content',
-];
+const generateTableRows = ({
+  category,
+  tokenNames,
+}: TokenGroup): JSX.Element[] => {
+  return tokenNames.map((tokenName, index) => (
+    <Table.Row key={tokenName}>
+      {index === 0 && (
+        <Table.DataCell rowSpan={tokenNames.length}>
+          <strong>{category}</strong>
+        </Table.DataCell>
+      )}
+      <Table.DataCell className={styles.cellWithLeftBorder}>
+        <strong>{tokenName}</strong>
+      </Table.DataCell>
+      <Table.DataCell className={styles.cellWithLeftBorder}>
+        {responsiveTokens[tokenName]}
+      </Table.DataCell>
+      {breakpoints.map((breakpoint) => {
+        const value =
+          tokensByBreakpoint[breakpoint.query]?.[rootQuery]?.[tokenName] ?? '';
+        const className = value ? styles.cellWithLeftBorder : undefined;
 
-const externalTokens = Object.fromEntries(
-  externalTokenOrder.map((key) => [key, responsiveTokens[key]])
-);
-
-const internalTokens = Object.fromEntries(
-  internalTokenOrder.map((key) => [key, responsiveTokens[key]])
-);
+        return (
+          <Table.DataCell key={breakpoint.name} className={className}>
+            {value}
+          </Table.DataCell>
+        );
+      })}
+    </Table.Row>
+  ));
+};
 
 export const ContainerTokenTable = (): JSX.Element => {
   return (
@@ -105,32 +108,17 @@ export const ContainerTokenTable = (): JSX.Element => {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell colSpan={2}>{''}</Table.HeaderCell>
-            <Table.HeaderCell className={styles.pre}>
+            <Table.HeaderCell>
               {'Mobile/Breakpoint XS\n(320 - 639px)'}
             </Table.HeaderCell>
             {breakpoints.map((breakpoint) => (
-              <Table.HeaderCell key={breakpoint.name} className={styles.pre}>
+              <Table.HeaderCell key={breakpoint.name}>
                 {breakpoint.name}
               </Table.HeaderCell>
             ))}
           </Table.Row>
         </Table.Header>
-        <Table.Body>
-          {generateTableRows(
-            externalTokens,
-            breakpoints,
-            'External',
-            0,
-            externalTokenOrder.length
-          )}
-          {generateTableRows(
-            internalTokens,
-            breakpoints,
-            'Internal',
-            0,
-            internalTokenOrder.length
-          )}
-        </Table.Body>
+        <Table.Body>{tokenGroups.flatMap(generateTableRows)}</Table.Body>
       </Table>
     </>
   );
