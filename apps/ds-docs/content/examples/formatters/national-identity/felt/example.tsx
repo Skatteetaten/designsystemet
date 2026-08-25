@@ -4,19 +4,19 @@ import { useFormattedInput } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
 export default function TextFieldFormattingExample(): ReactElement {
-  const organisationNumberFormatter = useFormattedInput({
-    type: 'organisationNumber',
-    initialValue: '987654321',
+  const nationalIdentityNumberFormatter = useFormattedInput({
+    type: 'nationalIdentityNumber',
+    initialValue: '22113344566',
   });
 
   return (
     <TextField
-      label={'Organisasjonsnummer (9 siffer)'}
-      value={organisationNumberFormatter.value}
+      label={'Fødselsnummer (11 siffer)'}
+      value={nationalIdentityNumberFormatter.value}
       hideLabel={false}
       hasSpacing
-      onChange={organisationNumberFormatter.onChange}
-      onKeyDown={organisationNumberFormatter.onKeyDown}
+      onChange={nationalIdentityNumberFormatter.onChange}
+      onKeyDown={nationalIdentityNumberFormatter.onKeyDown}
     />
   );
 }
