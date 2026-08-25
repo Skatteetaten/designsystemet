@@ -1,6 +1,12 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
 .navSection {
   display: grid;
   margin-bottom: var(--spacing-xl);
   gap: var(--spacing-m);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: breakpoints.$breakpoint-s) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
