@@ -1,5 +1,1017 @@
 ---
 title: Endringslogg
+description: Historikk over viktige endringer i designsystemet. Den nyeste versjonen vises først.
 ---
 
-Historikk over viktige endringer i designsystemet.
+import { Accordion } from '@skatteetaten/ds-collections';
+
+## Versjon 3.0.0 – 10. september 2026
+
+Dette er et fiktivt eksempel på hvordan endringer i en release dokumenteres. Innholdet oppdateres før lansering.
+
+### Feilrettinger og forbedringer
+
+- Button: Fiktivt eksempel: Knappene har fått oppdatert tastaturnavigasjon for bedre støtte ved bruk av tastatur.
+- Accordion: Fiktivt eksempel: Komponenten har fått forbedret håndtering av lange titler på små skjermer.
+- Skjemakomponenter: Fiktivt eksempel: Komponentene gir tydeligere tilbakemelding når et obligatorisk felt mangler en verdi.
+- Containere: Fiktivt eksempel: Containerne har fått justert responsiv oppførsel ved høy zoom.
+
+### Oppdatert dokumentasjon og eksempler
+
+- Designtokens: Fiktivt eksempel: Dokumentasjonen har fått et eksempel på bruk av et semantisk token for avstand mellom beslektede innholdsseksjoner.
+
+Se [migreringsguiden for versjon 3.0](/guider/migrering/versjon_3/).
+
+<Accordion iconPosition={'right'}>
+<Accordion.Item title={'Versjon 2'} titleAs={'h2'}>
+
+### Versjon 2.10.0 – 9. juni 2026
+
+#### Feilrettinger og forbedringer
+
+##### Combobox
+
+- Når man redigerer verdien og trykker Tab, beholdes nå valgt verdi.
+- Når listen åpnes med en valgt verdi, scroller den automatisk til valgt element.
+- Setter max-height som standard på options. Rettet også en feil der valglisten fikk et uønsket tab-stopp i forbindelse med max-height.
+
+##### RadioGroup/CheckboxGroup
+
+- Lagt til referanse til container i classNames.
+- Rettet en feil der komponenten kunne generere ugyldig HTML når description ble brukt (en &lt;div&gt; kan ikke være underelement av &lt;legend&gt;).
+
+##### RoleBanner
+
+- Komponenten forkorter ikke lenger teksten når den er satt til å ikke være sticky.
+
+##### Icon
+
+- Lagt til et nytt ikon som representerer lenke.
+
+##### TextArea/TextField
+
+- Lagt til manglende samisk oversettelse på skjermlesertekst.
+
+##### TopBannerExternal
+
+- Lagt til flere unike ID-er på utvalgte interaktive elementer. Dette gir bedre grunnlag for samordnet måling og analyse på tvers av tjenester.
+
+##### ds-layout
+
+- Retter en feil med versjonnummer til date-fns.
+
+#### Oppdatert dokumentasjon og eksempler
+
+- Fjernet statuskode (404) fra feilside-eksemplet.
+
+### Versjon 2.9.0 – 12. mai 2026
+
+#### Feilrettinger og forbedringer
+
+##### TopBannerExternal
+
+- Lagt til støtte for lenking til innhold på andre språk (for skatteetaten.no).
+- Komponenten lytter nå til endringer i språkvalg og oppdaterer visningen automatisk.
+
+##### Alert
+
+- På små skjermer vises ikonet nå på en egen linje.
+
+##### Popover
+
+- Justert oppførsel ved scrolling av innhold. For bedre støtte til brukere med høy zoom lukkes ikke komponenten lenger når siden scrolles. (Gjelder også WordInfo)
+- Lagt til mulighet for å skjule outline på trigger-ikonet.
+
+##### SearchField
+
+- Rettet feil i aria-attributt for søkeforslag.
+- Forbedret håndtering av søk uten treff.
+- Ny prop: isLoading
+
+##### TextField
+
+- Lagt til varsel om prop thousandSeparator som fases ut i neste major-versjon.
+- Forbedring av opplesing med skjermleser når feltet viste feil og ved telling av gjenstående tegn.
+
+##### TextArea
+
+- Forbedring av opplesing med skjermleser når feltet viste feil og ved telling av gjenstående tegn.
+
+##### Tabs
+
+- Rettet feil der rammen ikke alltid var synlig på mobil.
+
+##### OpenClose
+
+- Ny størrelsesskala: small, medium og large. Nåværende standard og compact fases ut ved neste major-versjon. Small tilsvarer compact, mens large tilsvarer standard.
+
+##### Table
+
+- Visuell justering av knappestørrelsen i liten variant.
+
+##### RoleBanner
+
+- Fjernet aria-rollen region.
+
+##### DatePicker
+
+- Forbedret CSS for å sikre at kalenderen alltid dukker opp korrekt plassert i tilknytning til feltet.
+
+##### RadioButtonGroup
+
+- Visuell justering av readonly-tilstanden.
+- Ny prop: value. Erstatter selectedValue som fases ut i neste major-versjon for mer konsistent navngiving av props i skjemakomponenter.
+
+##### ComboBox
+
+- Forbedret søkefunksjonalitet slik at man kan søke på deler av ord inne i tekststrengen, ikke bare starten av ord.
+- Lagt til mulighet for å style inputfeltet (classNames.inputContainer).
+- Fjernet kryssikon fra inputfeltet.
+
+##### ErrorMessage
+
+- Tillater nå null som children.
+
+#### Oppdatert dokumentasjon og eksempler
+
+- Lagt til dokumentasjon om nettleserstøtte (browserlist).
+- Lagt til dokumentasjon om minste støttede skjermstørrelse.
+- Nytt eksempel på feilsider (404).
+
+### Versjon 2.8.1 – 28. april 2026
+
+#### Feilrettinger
+
+- FileUploader: Rettet en feil der statusbeskjed ikke ble vist i noen tilfeller.
+
+### Versjon 2.8.0 – 13. april 2026
+
+#### Feilrettinger og forbedringer
+
+##### Skjemakomponenter
+
+- Hjelpetekst: Beskrivelsen (description) støtter nå rik tekst (ReactNode).
+- Alle skjemakomponenter støtter nå aria-describedby.
+
+##### Combobox
+
+- Verdien nullstilles dersom brukeren forlater feltet uten å velge en gyldig verdi.
+- Escape-tasten tømmer ikke input-feltet.
+- Forbedret visning av valgliste når minSearchLength er satt.
+- Fjerner default placeholder når minSearchLength er satt.
+- Rettet en feil der nederste del av fokusrammen ikke alltid var synlig.
+- Rettet en feil der klikkhendelser kunne påvirke elementer bak listen.
+- Rettet en feil der valgliste ikke vises ved fokus via tastatur.
+- Enkeltvalg:
+- Første element får fokus og kan velges med Tab eller Enter.
+- Element velges automatisk når brukeren taster inn hele verdien.
+- Valgliste vises også når input-feltet får fokus på nytt etter at en verdi er valgt. I tillegg er aktivt valg markert med checkmark.
+- Flervalg:
+- Standard placeholder skjules etter at minst ett valg er gjort.
+- Justert checkbox alignment til toppen når valgte alternativer brytes over flere linjer.
+- Forbedret fokushåndtering.
+- Forbedret tastaturstøtte for raskt valg av elementer.
+
+##### Formatter
+
+- Økt antall tillatte tegn.
+- Forbedret håndtering av desimaltegn.
+- useFormattedInput med type=number returnerer nå også feilmelding dersom input er ugyldig.
+
+##### RolePicker
+
+- Rettet uforutsigbar oppførsel i filtrering.
+- Støtte for visning av fødselsdato. Ny prop dateOfBirth på Person-type.
+
+##### Chips
+
+- Endret skjermleser-tekst fra «Fjern filter» til «Fjern».
+
+##### FileUploader
+
+- Rettet en feil der komponenten kunne blinke når den ble brukt sammen med Alert.
+- Forbedret intern håndtering av filer med mellomrom i filnavn.
+
+##### SearchField
+
+- Rettet en feil der rullefelt ikke var klikkbart.
+- Retter en infinite-loop feil.
+
+##### Table
+
+- Rettet en feil der man ikke kunne navigere horisontalt med tastaturet i tabell med overflow på Safari.
+
+#### Visuelle justeringer
+
+- Sette riktig farge på lukke-ikon i active state i Popover, Modal, Alert og Help.
+
+#### HTML
+
+- Fikset HTML-validering på enkelte elementer.
+
+#### Oppdatert dokumentasjon og eksempler
+
+- Oppdaterte eksempler og dokumentasjon, blant annet Combobox, OpenClose, RolePicker, Arbeidsliste.
+
+### Versjon 2.7.1 – 12. mars 2026
+
+- Table: Rettet en feil i visningen av redigerbart og ekspanderbart innhold i tabell, som kunne føre til at tekstinnhold i raden over ble kuttet.
+
+### Versjon 2.7.0 – 4. mars 2026
+
+#### Nye komponenter og funksjoner
+
+- RoleBanner (beta): Ny komponent for publikumsløsninger som viser hvilken rolle den innloggede brukeren representerer. Brukes sammen med ekstern toppbanner.
+- DatePicker: Ny prop onCalendarToggle.
+- StepList: Legge til classNames for å kunne justere stylingen til stepContent. I tillegg ble stepContent satt til container-type: inline-size for å justere utseende til ErrorSummary i StepList.
+- TabsList: Ny prop (ariaLabel) for å gi et skjermleservennlig navn på fanegruppen (valgfritt).
+- useFormattedInput: Støtte for å øke antall desimaler.
+
+#### Andre feilrettinger og forbedringer
+
+- Alle skjemakomponenter: Når et skjemakomponent er deaktivert, blir hjelpeknappen nå også deaktivert. I tillegg en mindre visuell justering av hjelpeikon for bedre posisjonering ved siden av ledetekst.
+- ComboBox: Retter en feil der tastaturnavigasjon kunne føre til feil valg i grupperte lister.
+- Ikon: Visuelle forbedringer av InfoSimple-ikonet.
+- Link: Mindre visuell justering av ikon for bedre posisjonering ved siden av tekst.
+- Select: Innfører valgfri sterk typing av options.
+- Radio: Retter feil i readonly-tilstand der det var for mye luft mellom beskrivelse og ledetekst.
+- Table: Retter feil der kolonneheader endret bredden når tabellraden ble utvidet.
+- Tag: Visuell justering slik at ikon plasseres øverst når teksten går over flere linjer.
+- TextArea: Feilretting: Ved bruk av prop characterLimit, ble ikke teksten for antall tegn oppdatert hvis konsumenten sendte inn en tom streng.
+- TopBannerExternal: Retter en feil der skjult skjermlesertekst ble synlig.
+- CSS-robusthet: Komponentene håndterer nå at løsninger kan bruke box-sizing: border-box globalt. (Påvirker Checkbox, pil i StepList, TopbannerLogo og pil i CardAlert.)
+- i18n: Skrur av reklame.
+- z-index: Justere z-index til Combobox, DatePicker og Popover for å unngå overlapping når RoleBanner er i bruk.
+- Paragraph, Heading, TableCell: Legge til stiler for bedre posisjonering av ikoner i kombinasjon med tekst. Opprettet nye eksempler til dette.
+
+#### Oppdatert dokumentasjon og eksempler
+
+- Alert: Opprettet navngitte eksempler.
+- Accordion: Opprettet navngitte eksempler.
+- Datepicker: Opprettet navngitte eksempler.
+
+### Versjon 2.6.1 – 30. januar 2026
+
+- FileUploader: Rettet en feil med unødvendig rerendring som førte til flimring av komponenten.
+
+### Versjon 2.6.0 – 28. januar 2026
+
+#### Nye komponenter og funksjoner
+
+- ErrorSummary: Legger til støtte for gruppering med underoverskrifter, samt støtte for container queries for plassering i flater med begrenset plass.
+- RadioButton og Checkbox: Ny readonly-tilstand.
+- Combobox: Legger til støtte for gruppering av valg.
+- Chips: Lagt til aria-labelledby for å kunne koble en chip-gruppe til en overskrift.
+- Heading: Det er ikke lenger nødvendig å bruke både level og as-props. as er tilstrekkelig, og standard level brukes automatisk. level kan fortsatt benyttes for å overstyre standard.
+- (BETA) Legger til formateringfunksjon (type=number) for beløp. Denne er ment å erstatte funksjonen for tusenskille i TextField i en fremtidig release.
+
+#### Andre feilrettinger og forbedringer
+
+- Skjemafelt: Legger til aria-invalid="false" for bedre skjermleserstøtte ved obligatoriske felt.
+- DatePicker: Forbedret skjermleseroppførsel – ukedager leses nå opp i stedet for forkortelser.
+- ErrorSummary: Fjerner aria-live og aria-atomic for mindre påtrengende opplesing i skjermleser.
+- RadioGroup, Checkbox, CheckboxGroup og FileUploader: Fikser en feil hvor fokus ikke var synlig når man navigerte fra ErrorSummary.
+- Brukermeny i ekstern toppbanner: Retter feil lenke til varseloversikt når man representerer en annen person.
+
+#### Oppdatert dokumentasjon og eksempler
+
+- Modal: Dokumentasjon om at modalRef.current?.close() ikke kaller onClose for modalen.
+- Footer: Dokumentasjon om innebygde lenker og oppførsel ved åpning i ny fane.
+- Opprettet Ny sidetype: Intern arbeidsliste
+- Typografi: Eksempler på utheving (bold, italic)
+- Forbedret JSDoc for flere komponenter.
+
+### Versjon 2.5.2 – 9. januar 2026
+
+#### Andre feilrettinger og forbedringer
+
+- Retter en feil hvor type på dsI18n ikke kunne resolves og dermed endte opp som any.
+
+### Versjon 2.5.1 – 8. januar 2026
+
+#### Andre feilrettinger og forbedringer
+
+- Table: Forbedret håndtering av ResizeObserver for å unngå feil om:
+- ResizeObserver loop completed with undelivered notifications.
+
+### Versjon 2.5.0 – 17. desember 2025
+
+#### Nye funksjoner
+
+- Table: Nytt størrelseshierarki. Dagens varianter fungerer inntil videre, men vil fases ut etter hvert. Nye størrelser:
+- xSmall (dagens compact)
+- Small (liten padding, men 16px fontstørrelse)
+- Medium (dagens mobile)
+- Large (dagens normal)
+- Table: Det er nå mulig å sende inn props til knappen for ekspanderbar rad.
+- Combobox: classNames er nå utvidet slik at det er mulig å styre størrelsen på feltet med valgte verdier.
+- Sidetyper: viser nytt eksempel på sentrert sidelayout for publikumsløsning.
+- Containers (designtokens): viser anbefalinger om container-bruk og side-oppsett for publikumsløsning.
+
+#### Andre feilrettinger og forbedringer
+
+- RadioGroup og CheckBox: Forbedret skjermleseroppførsel når feltet er satt til required og ved bruk av description (sistnevnte gjelder også Fieldset).
+- RadioGroup og CheckBox: Avstanden mellom ledetekst og felt er redusert.
+- Modal: Fjerner unødvendig marg fra hver side, slik at standard størrelse vil kunne ha plass til noe mer innhold.
+- TableSum: plassering av Sum-teksten har endret default verdien fra høyre til venstre.
+- StepList: Kan nå plasseres på mindre flater, som for eksempel inni Modal.
+- FileUploader: Forbedret fokusoppførsel hvis sletting av filer feiler, og i forbindelse med visning av statusmeldinger.
+- FileUploader: Ny prop isRequired.
+- RolePicker: Endret engelsk oversettelse fra «Enterprise» til «Business» gjennomgående.
+- Combobox: Forbedret skjermleseroppførsel ved å legge til aria-live.
+- TextField: Viser et eksempel på registrering av klokkeslett.
+- Storybook: Oppdatert til nyeste versjon, forbedret mappestruktur, kodevisning i playroom og markinger av beta-komponenter.
+- Oppdatert til nyeste react patchversjon med sikkerhetsfiks.
+
+### Versjon 2.4.1 – 26. november 2025
+
+- TextField: Retter en som feil ved bruk av komponenten i “controlled” modus (med både value og onChange) hvor feltets viste verdi kunne avvike fra den faktisk value hos konsumenten. Feilen oppstord når bruker trykket Backspace eller Delete rett foran eller bak et mellomrom eller komma (separator).
+- ErrorSummary: Retter en feil i med engelsk oversettelse av tekst.
+
+### Versjon 2.4.0 – 13. november 2025
+
+#### Nye komponenter og funksjoner
+
+- Combobox (beta): Ny komponent for å velge ett eller flere element fra store datasett.
+- Litt mindre fremtredende fokushåndtering på knapper og andre interaktive elementer når man bruker mus eller touch. (Gjennomgående endring fra å bruke pseudoklassen :focus til :focus-visible.)
+- FileUploader: legger til mulighet for å endre tekst i loading state.
+
+#### Andre feilrettinger og forbedringer
+
+- TextField: når man har et beløpsfelt og bruker tusenseparartor, så håndterer komponenten markørplassering ved undo/redo.
+- Card: Legger til en semantisk relasjon med merknad og kortet.
+- TopBannerExternal: justerer visuell bug i engelsk flagg.
+- Select: Harmonere ramme og tekstfarge på disabled-tilstand.
+- Table: Retter en feil som førte til unødvendig feilhåndteringskall ved bruk av tabell i endre-modus. (ResizeObserver).
+- Oppdaterte eksempler på stil og tone og storybook.
+- Representasjonvelger og visning av feil
+- Tabell, velge alle
+
+### Versjon 2.3.2 – 31. oktober 2025
+
+- Feilretting
+
+#### @skatteetaten/ds-cli: Fikser sårbarhet i kommandolinjeverktøy
+
+### Versjon 2.3.1 – 22. oktober 2025
+
+#### Forbedringer
+
+- TopBannerExternal: Når man navigerer til skatteetaten.no via logo, og har endret språket, vil URLen peke til tilsvarende språkutgave av skatteetaten.no.
+
+### Versjon 2.3.0 – 16. oktober 2025
+
+#### Nye komponenter og funksjoner
+
+- Accordion, OpenClose og Tabs: legger til prop for å styre rendering av skjult innhold.
+- Blockquote: Lagt til mulighet for å endre farge på venstre border til grønn, blå eller grå.
+- DescriptionList: lagt til prop for å håndtere vertical visning på mobil (isDescriptionVerticalOnMobile).
+- Skjemafelt: markerer showRequiredMark som deprecated. Denne vil fjernes i neste major-versjon.
+- Spinner: lagt til størrelse extraLarge.
+- StepList: Endret plassering av endre-knapp på steg, fra å ligge til høyre for beskrivelsen til å ligge under.
+- Table.EditableRow: lagt til prop som brukes ved oppretting av nye rader (isNew).
+- Tag: Lagt til hvit og blå bakgrunner.
+- WordInfo: Ny komponent for å vise forklaring av vanskelige ord i løpende tekst.
+
+#### Andre feilrettinger og forbedringer
+
+- FileUploader: Bedre håndtering av fokus ved sletting av vedlegg.
+- Ikon: Retter en feil hvor ikoner ble skalert feil hvis border-box var satt, samt en feil med ikonstørrelse ved ikke-standard fontstørrelse i nettleser.
+- Modal: retter en en feil hvor alt innhold ikke alltid ble vist på mobil.
+- Popover.Content: Legge til classNames for å kunne style innholdet i pop-upboksen.
+- RolePicker: Klikk på avbryt-knapp kaller nå onClose.
+- SearchField: Utvider classNames for å kunne style søkeresultat.
+- Storybook: Oppdaterte eksempler og dokumentasjon.
+- Tabs: Når man setter id til Tab manuelt, prefikser vi ikke lenger id til Tab.Tabs og id til Tab.Panel.
+- TopBannerExternal: bedre håndtering av tekst/oversettelser ved én eller flere varsler.
+- Table.Row: Setter riktig colspan på tabellrad i edit mode ved første render. Retter en sirkulær avhengighet.
+- Fikset skalering av noen komponenter ved ikke-standard font-størrelse i nettleser.
+
+### Versjon 2.2.2 – 30. september 2025
+
+#### Feilrettinger
+
+- TopBannerExternal.UserMenu: Retter en feil i lenke til minside (manglende "/").
+
+### Versjon 2.2.1 – 30. september 2025
+
+#### Feilrettinger
+
+- TopBannerExternal: Retter en lenke som pekte feil, og gir mulighet til å styre hostname/domene og synlighet på standard lenker i brukerskuff.
+- Retter feil som førte til at brukerskuff og eksisterende brukerknapp kunne være synlig samtidig.
+- Oppdaterer også kodeeksempel i Storybook for logg ut-knapp slik at den harmonerer med anbefalt mønster.
+- RolePicker: Retter en feil hvor feilmelding ikke ble resatt ved gyldig valg av representasjon.
+
+### Versjon 2.2.0 – 28. august 2025
+
+#### Nye komponenter og funksjoner
+
+##### Ekstern toppbanner:
+
+- Ny brukermeny i ekstern toppbanner. Se dokumentasjonen til komponenten for detaljer rundt dette mønsteret.
+- Legger til en mekanisme som flytter språkvelgeren på mobil.
+- Oppdatert lenker og tekster i menyen.
+- Table: Legger til mulighet til å deaktivere sortering av en kolonne mens en rad er ekspandert.
+- Legger til mulighet for å legge inn luft under alle skjemakomponenter (hasSpacing). Dermed er det også mulig å fjerne luft under CheckboxGroup og RadioGroup ved å sette hasSpacing til false.
+- Eksponerer og dokumenterer hjelpestiler (SCSS mixins) for link og sr-only.
+- Eksponerer utils fra DatePicker.
+- Beta: Legger til funksjon (hook) useFormattedInput for formatering av fødselsnummer, organisasjonsnummer, telefonnummer og bankkontonummer i TextField.
+- Beta: Legger til ny funksjon for å formatere beløp
+
+#### Andre feilrettinger og forbedringer
+
+- TextField: Retter en feil hvor felt med med hjelpetekst var 1px høyere enn uten.
+- Modal: Retter en feil hvor fokuset ble tilbakestilt ved tabbing ut av inputfelt.
+- SearchField: Setter type="button" på søkeknappen.
+- Footer: Legger til mulighet for at innebygde lenker ikke åpnes i ny fane. (Dette forventer vi å gjøre til standard oppførsel i neste major-versjon).
+- DatePicker: Popup lukkes ikke om man tabber gjennom side med ingen fokuserbare datoer.
+
+#### Maler og eksempler:
+
+- Legge til ny rad i tabell.
+- Legge til gruppe av repeterende felter (med Card).
+- Oppgaveliste (beta): eksempel på liste med oppgaver som ikke trenger å utføres i sekvens.
+- Breadcrumbs med container-bredder, og plassering i interne og eksterne løsninger.
+- Nye ikoner: homeMultiple og homeValue.
+- Retter en sirkulær avhengighet i Table.
+- Åpne for v25.x.x av i18next.
+
+### Versjon 2.1.0 – 12. juni 2025
+
+#### Nye komponenter og funksjoner
+
+- Divider: Ny komponent for skillelinje.
+- TopBannerExternal:
+- Legger til mulighet for søk og tilhørende søkeskuff
+- Viser alltid navnetrekket i toppen (tidligere har det kun vært logoen uten teksten på mobil.)
+- Endret responsivitetsregler, slik at innhold brekker over flere linjer hvis det tar for mye plass.
+- Oppdatert eksempel med innhold i meny.
+- FileUploader: Oppdatert dokumentasjon og eksempelkode.
+- TextField/TextArea: Legger til mulighet for å vise opptelling av antall tegn.
+- Sidetype: skjema med steg - eksempelkode for skjema med steplist.
+- Sidetype: kvittering - eksempelkode for kvitteringsside.
+- Table: Legger til mulighet for å vise tekst på knapp for ekspandering av rad.
+
+#### Andre feilrettinger og forbedringer
+
+- TextField: visuell justering av Textfield slik at med og uten hjelpetekst tar samme høyde (Var 1px forskjell).
+- SearchField: Retter en feil med fokushåndteringen hvis man bruker Shift + tab for å navigere tilbake fra trefflisten.
+- SearchField: Retter en feil hvor fokus ble låst til forrige søk.
+- SearchField: Retter en feil hvor resultatlisten ble vist uten at feltet hadde fokus.
+- RolePicker: Hvis man bruker Alert etter å ha klikket på en person/virksomhet settes nå fokus tilbake til knappen når Alert lukkes.
+- Storybook: Visuell utheving av stil og tone-sidene. Legger til en playroom-funksjon på eksempler (Beta). Merk: eksempler med ekstern bildeimport funger ikke, og vil bli rettet i en kommende release.
+- Card: Fjerner ubrukt prop for spacingVertical. Komponenten tas ut av beta.
+- Table: Nytt eksempel på hvordan man kan lage «sebrastriper» med CSS.
+- Tabs: Justert størrelse på ikoner.
+- Nytt design-token for ikoner på 32px.
+- Tag og AccordionItem: Bruker nå riktig token med rem i stedet for px på fontstørrelse.
+
+### Versjon 2.0.1 – 8. mai 2025
+
+#### Feilrettinger
+
+- Table: En justering som rettet feil i visningen av props til Table i storybook er rullet tilbake fordi den førte til at flere av Table-komponentene ikke vises riktig.
+
+### Versjon 2.0.0 – 10. april 2025
+
+- Majorversjon for å støtte React 19 og etablerte mønstre for helhetlige brukeropplevelser på tvers.
+
+#### Breaking changes
+
+- Alert har fått justert varianter :
+- info = Blå (ny variant)
+- success = Grønn (samme som tidligere)
+- warning = Gul (tidligere rød)
+- error = Rød (ny variant)
+- danger = Kraftig rød ramme (samme som tidligere)
+- neutral utgår (hadde tidligere samme bakgrunnsfarge som ny warning dvs. ochre10 eller ochre5 på mørke bakgrunner)
+- Card: Card.Alert sin variant neutral har endret navn til info
+- Designtokens for container tokens har fått ny verdi:
+- --container-s: 560px → 576px
+- --container-l: 1160px → 1152px
+- --container-aside: 380px → 384px
+- --container-wide-content: 760px → 768px
+- --semantic-responsive-internal-container-display: grid → flex
+- Følgende container tokens har endret navn:
+- --semantic-responsive-container-padding → --semantic-responsive-container-spacing
+- --semantic-responsive-internal-container-padding → ==semantic-responsive-internal-container-spacing
+- FileUploader: Checkmark-icon brukes ikke lengre i listen over opplastede filer, og propen 'successIconTitle' er derfor fjernet.
+- Modal: varianten important har blitt faset ut. Bruk ‘outline’ i stedet.
+- TextField: prop 'as' er faset ut. TextField har nå alltid HTML-tag “input”. For “textarea” kan den nye komponenten TextArea brukes i stedet.
+- StepList: StepList.Step sin prop shouldAutoFocusWhenActive setter focus for NeutralResult og PositiveResult i tillegg til Active
+- TopBannerInternal: prop title er blitt required og logoAltText er fjernet
+- Icon:
+- Komponenten har fått min-width. Icon size small har fått min-width: small, Icon size medium har fått min-width: medium, Icon size large har fått min-width: large, Icon size extraLarge har fått min-width: extra-large. Hvis konsumenten har valgt å overstyre størrelsen til Icon med en annen width, burde de legge til en min-width i samme størrelse. I tillegg trenges ikke flex-shrink: 0 på ikoner når de ligger i en flexbox.
+- Tidligere ble ikke `size`-propen korrekt videreført til `ThemeIcon`-komponenten når man brukte et `ThemeIcon` direkte, som for eksempel `&lt;GaveArvIcon size={'large'} /&gt;`. Uansett hvilken størrelse som ble spesifisert, ble ikonet alltid rendret med `size = 'medium'`. Nå er koden oppdatert slik at `size`-propen fungerer som forventet, og ikonet kan vises i stor størrelse når `size = 'large'` er angitt.
+- Ikonnavn: WaringOutline rettet skrivefeil til WarningOutline
+- Ikonnavn: VerticalDotsCircle endret til HorizontalDotsCircle
+- Ikonnavn: VerticalDotsCircleSolid endret til HorizontalDotsCircleSolid
+- Ikonnavn: VerticalDots endret til HorizontalDots
+
+#### Oppdaterte avhengigheter
+
+- React oppdatert fra 18 til 19 se https://react.dev/blog/2024/04/25/react-19-upgrade-guide
+- I18next oppdatert fra 23 til 24 se https://www.i18next.com/misc/migration-guide#v23.x.x-to-v24.0.0
+- React-i18next oppdatert fra 14 til 15 https://github.com/i18next/react-i18next/blob/master/CHANGELOG.md#1500
+- date-fns fra 3 til 4 https://blog.date-fns.org/v40-with-time-zone-support/
+
+#### Andre feilrettinger og forbedringer
+
+#### Generelt:
+
+- Komponentene tar nå hensyn til nettleserinnstillinger for fontstørrelse.
+- Lagt til nye container tokens:
+- --container-xl
+- --container-aside-narrow
+- --semantic-responsive-internal-container-flex-direction
+- Lagt inn tekster som manglet oversetting.
+- Ny pakke for kommandolinjeverktøy. (ds-cli)
+- BreadCrumbs: Retter en feil hvor lange tekster ikke brakk riktig på liten skjerm.
+- FileUploader: Filene bruker nå Card-komponenten til å vise opplastede filer.
+- Footer: Faste lenker åpnes nå i ny fane. Komponenten har i tillegg et valg om å skjule standardlenkene.
+- Inpultfelter:
+- Fjerner nå 2px luft som lå over feltet når ledeteksten var skjult.
+- Wrapper nå hjelpeteksten i &lt;div&gt; i stedet for &lt;span&gt; for å forhindre potensielt uu-brudd.
+
+##### RolePicker:
+
+- Legger til en mekanisme som forhindrer at selskapstypen vises to ganger.
+- Endret ledetekst for søkefelt
+- Lagt til en prop for å styre når søkefelt vises
+- Er nå mulig å kollapse listen med parter etter at den er ekspandert.
+- SearchField: Justerer innslagspunktet hvor feilmeldingen kommer (semantisk).
+
+##### Select:
+
+- Retter en feil hvor teksten i menyen fikk feil farge på Windows.
+- Legger til ... (ellipsis) når teksten blir for lang.
+- TextArea: Ny komponent - trukket ut funksjonalitet fra TextField-komponenten. Se breaking changes.
+
+##### TopbannerExternal:
+
+- Legger til en skjul div som kan motta fokus
+- Legger til onClick på logo
+
+##### TopbannerInternal:
+
+- Legger til en skjul div som kan motta fokus
+- Fjerner prop for logoAltText
+
+##### Storybook:
+
+- Forbedret controls og tekstinput til alle komponenter
+- Lagt til eksempelkode til Intern layout (Saksvisning)
+
+</Accordion.Item>
+
+<Accordion.Item title={'Versjon 1'} titleAs={'h2'}>
+
+### Versjon 1.6.2 – 26. november 2025
+
+- TextField: Retter en som feil ved bruk av komponenten i “controlled” modus (med både value og onChange) hvor feltets viste verdi kunne avvike fra den faktisk value hos konsumenten. Feilen oppstord når bruker trykket Backspace eller Delete rett foran eller bak et mellomrom eller komma (separator).
+
+### Versjon 1.6.1 – 8. mai 2025
+
+- Dette er en release som tar inn noen sentrale feilrettingene fra 2.0.0. Versjonen er i per dags dato kun tilgjengelig internt i Skatteetaten.
+
+#### Feilrettinger
+
+- ToppBannerExternal: Retter en feil der menyknappen ikke registrerte valg på mobil.
+- RolePicker: Legger til en mekanisme som forhindrer at selskapstypen vises to ganger.
+- Inputfelter: Wrapper nå hjelpeteksten i &lt;div&gt; i stedet for &lt;span&gt; for å forhindre potensielt uu-brudd.
+- ToppBanner: Legger til en skjult div som kan motta fokus
+- Select: Retter en feil hvor teksten i menyen fikk feil farge på Windows.
+
+### Versjon 1.6.0 – 27.02.2025
+
+#### Feilrettinger og forbedringer
+
+##### TopBannerInternal:
+
+- Forbedret reponsivitet ved å bruke hele plassen i toppbaner på en mer fleksibel måte.
+- Lagt til underkomponenten ActionMenu.
+- Lagt til mulighet for å skjule logo på mobil eller små skjermer
+- Både logo og tittel er nå klikkbart område.
+- Bedre støtte for andre profiler ved å støtte ikke-kvadratiske logoer og strek mellom logo og tittel.
+- SearchField:
+- Lagt til mulighet for å sette required og vise feilmelding.
+
+##### RolePicker:
+
+- Lagt til filter for visning av avdøde personer
+- Fikset feil visning av varsel ved innsending av tom liste med personer.
+- InlineButton og IconButton:
+- Lagt til støtte for plassering på mørk bakgrunn (brightness) (fortrinnsvis til bruk i intern toppbanner). InlineButton har justert fokusmarkering med fylt bakgrunnsfarge.
+- NavigationTile:
+- Oppdatert fokus slik at rammen ikke lenger dekker neste element.
+
+#### Andre forbedringer
+
+- Oppdatert eksempel for Link for å vise hvordan man bruker react-router.
+- Modal: varianten "important" er markert som deprekert og vil bli fjernet i neste major-versjon. Denne varianten er ikke i tråd med det som er beskrevet i mønster for systemvarsler.
+- I komponenter hvor vi krever string vil ikke komponenten lenger kræsje hvis strengen fjernes i runtime. I stedet gir vi advarsel i konsoll.
+- Forbedret opplevelser på leselist for enkelte komponenter som hadde etterfølgende span-elementer.
+
+### Versjon 1.5.1 – 11.02.2025
+
+- Retter en feil i engelsk oversettelse på RolePicker.
+- Retter en feil med Modal sin fokusoppførsel dersom den lukkes programmatisk.
+
+### Versjon 1.5.0 – 30.01.2025
+
+#### Nye komponenter
+
+- RolePicker (beta): representasjonsvelger som brukes i innloggede løsninger for å velge om man representerer seg selv, en virksomhet eller andre.
+- Card (beta): fleksibel komponent for å gruppere opplysninger av samme type.
+- Nytt bibliotek med hjelpefunksjoner (beta): formatering av organisasjonsnummer, fødselsnummer, kontornummer og telefonnummer.
+
+#### Feilrettinger og forbedringer
+
+- Spinner: støtte for prosentvisning.
+- ErrorSummary: komponenten får nå automatisk fokus når den vises.
+- Modal: retter en feil hvor komponenten ble lukket ved klikk på innhold.
+- Modal: har fått en ny prop renderIcon.
+- TopBannerExternal: retter en feil som gjorde at valgt språk ble nullstilt hvis man bruker egne tilleggsspråk.
+- Footer: retter utdatert url i lenke på nynorsk.
+- Alert: visuell justering av ramme (1px).
+- ScrollToTopButton: legger til mulighet for å scrolle til visuell topp og beholde fokus på main.
+- DatePicker: løser at initiell fokus i kalender havnet på deaktivert dato dersom minDate var satt til en fremtidig dato.
+- NavigationTile: lagt til mulighet for å vise spinner.
+- StepList: fjerner visuell fokusmarkering av nummer.
+
+#### Andre forbedringer
+
+- Chips, Breadcrumbs, DescriptionList er ikke lenger i beta.
+- Kodeeksempler på bruk av Accordion: i venstremeny, i arbeidsoppgave og «lazy loading» av innhold.
+- Kodeeksempel på bruk av Modal: Feilmelding, samtykke- og ventevarsel.
+- Nye ikoner for konsern, fritaksberettiget kjøretøy, tilhører barn. Retter en skrivefeil i ikonnavn: WaringOutline og WarningOutline. Ikonene er duplikater inntil videre.
+- Oppdatering av NPM-avhengigheter.
+
+### Versjon 1.4.0 – 28.11.2024
+
+- I denne versjonen har vi hatt et spesielt fokus på fokus, altså hvordan komponentene oppfører seg med tanke på tastaturbruk og opplesing for skjermlesere.
+
+#### Feilrettinger og forbedringer
+
+- Alert: Legger til ramme for øke kontrast på komponent for å kunne bruke den på fargede flater.
+- DescriptionList: Liten justering av CSSen som brukes til å dele opp i kolonner.
+- FileUploader: Bedre støtte for skjermlesere når fileopplastingknappen er i feiltilstand (leser opp feilmeldingen)
+- Panel: Mulighet for custom padding for ulike brekkpunkter.
+- SearchField: Retter en feil hvor nullstillknapp ble stående når man programmatisk fjernet tekst.
+- StepList: Legger til mulighet for å automatisk sette fokus på aktivt steg.
+- Table: Retter en feil som førte til komponenten crashet når et required attributt ble fjernet.
+- Table: Legger til mulighet for flere etterfølgende rader, inkludert flere summeringer.
+- Tabs: Legger til onClick på Tabs for å tilby mulighet for å hindre bytte
+- Tabs: Setter aria-hidden på faneinnhold som ikke er synlig.
+
+#### Andre forbedringer
+
+- Lagt til et nytt mønster for å styre fokus i ensideapplikasjoner (SPA)
+
+### Versjon 1.3.0 – 31.10.2024
+
+#### @skatteetaten/ds-collections
+
+- Ny komponent: Chips (Beta – endringer kan forekomme)
+
+#### Feilrettinger og forbedringer
+
+- Accordion: Kollapset innhold beholdes i DOM, men skjules visuelt med display:none
+- Checkbox: legger til onBlur og onFocus
+- DatePicker: legger til mulighet for å ekskludere datoer i kalendervisningen. Forbedret oppførsel ved feil og når bruker taster inn ugyldig dato.
+- Panel: Mulighet for å legge til tabindex="-1" på overskriften. Default padding på mobil er redusert til spacing-m.
+- Radio: Legger til onBlur, onChange og onFocus
+- Table: legger til flere ref-props for å hjelpe til styring av fokus når man legger til eller fjerner rader.
+- TopBannerExternal: legger til mulighet for egendefinerte språk i språkvelger (Beta – endringer kan forekomme).
+
+#### Andre forbedringer
+
+- Designtoken: Legger til nytt designtoken; spacing-s-plus, som tilsvarer 0.75rem (12px).
+- Skjemafelt: justering av timingfunksjon når feilmelding vises. Dette for å forbedre oppførselen ved knappetrykk under skjema-elementene.
+- Ikoner: Endret ikon for feil (fra sirkel til trekant) for å følge felles offentlig mønster. Visuell finpuss av strektykkelse og posisjonering på utvalgte ikoner.
+
+### Versjon 1.2.0 - 26. september 2024
+
+#### @skatteetaten/ds-navigation
+
+- Ny komponent: Breadcrumbs (Beta – endringer kan forekomme)
+
+##### @skatteetaten/ds-content
+
+- Ny komponent: DescriptionList (Beta – endringer kan forekomme)
+
+#### Andre feilrettinger og forbedringer
+
+- Table: Legger til tredje klikk på sorteringskolonne for å resette sortering. Hvis man har sortering på tabell må denne tilstanden håndteres.
+- Legger til prop for å sette tabIndex="-1" Blockqoute, Fieldset, Heading, List, Paragraph, Table og Tag. Dette til i bruk i tilfeller hvor man manuelt styrer fokus.
+- RadioGroup: legger til støtte for onBlur
+- TextArea: Legger til mulighet for å trigge autosize utenfra.
+- Link, LinkGroup: Fokus-stiler er justert for bedre kontrast.
+- OpenClose: Legger til ny prop; isDefaultExpanded
+- Pagination: Retter en feil som gjorde at komponenten kræsjet når antall elementer var 0.
+- TextField: Tilbyr nå mulighet for å legge til list-prop, for hjelp til å velge i en lang liste med elementer. Propen aktiverer nettleserens native funksjonalitet for dette. Beta: Endringer kan forekomme.
+- TextField: Forbedret oppførsel på cursoren når man redigerer i felt med aktiv tusenseparator.
+- Lagt til noen nye ikoner, og justering av strektykkelse på enkelte ikoner.
+
+### Versjon 1.1.1 - 12. september 2024
+
+- Modal: Retter en feil som førte til at onClose ble kalt utilsiktet ved trykk på tastaturet.
+
+### Versjon 1.1.0 - 21. august 2024
+
+#### Nytt i denne versjonen
+
+- Setter gjennomsiktig bakgrunn i stedet for hvit på følgende steder: OpenClose, Button (tertiær) og TextField i readonly-modus
+- Skjemaelementer: det er nå mulig å overstyre bredden på hjelpetekster ved å bruke classNames.
+- Link: Legger til mulighet for å angi «aria-current».
+- Icon: Legger til minus-ikon, og justerer "Add".
+
+#### Feilrettinger og forbedringer
+
+- Skjemaelementer: Retter en feil hvor komponentene kræsjer dersom man bruker showRequiredMark uten required
+- Footer: Retter en feil der logo ikke lastes ved bytte av språk til engelsk
+- Pagination: Retter en feil i feilmelding for sidetall.
+- Modal: Retter en feil hvor dismissOnEsc likevel tillot lukking med escape-tasten. Retter også et tilfelle hvor klikk i modal trigger lukking feilaktig, samt bedre håndtering av events.
+- TextField: Retter en feil hvor komponenten ikke ble lastet med en gammel versjon av Safari (IOS 16.3 og eldre).
+- Fieldset: Ved lange ledetekster vil ikon for hjelpetekst nå komme like etter teksten i stedet for på egen linje.
+- FileUploader: bedre tekstbrytning ved lange filnavn.
+- TopBannerExternal: Oppdaterer logo-svg som hadde for lav oppløsning, og legger til en nynorsk oversetting på innloggingsknapp som manglet.
+
+### Versjon 1.0.0 - 27. juni 2024
+
+- Designsystemet sin første major-versjon! Innholdet representerer et løft av forrige utgave av designsystemet (frontend-components) over på ny arkitektur, og med det en erstatning av de gamle komponentene. For å oppgradere henviser vi til migrasjonsguidene på dokumentasjonssidene.
+
+#### Breaking changes
+
+- Alert: showAlert kan ikke lenger være undefined. Komponenten har også en ny prop onClose, som styrer når lukkekrysset vises (erstatter showCloseButton).
+- DatePicker, Checkbox, CheckboxGroup, TextField, Select, RadioGroup, FileUploader: hasError er fjernet. For å vise feilmelding er det nå tilstrekkelig å bruke errorMessage propen alene.
+- DatePicker: defaultValue-prop er fjernet. Bruk value i stedet.
+- OpenClose: className er flyttet til rotelementet i komponenten.
+- StepList.Step: HasNextButtonSpinner er fjernet. NextButtonProps kan brukes til å sette props på knappen og til å vise spinner.
+- react-i18next er oppdatert til major-versjon 14
+
+#### Nytt i denne versjonen
+
+- Alert: showAlert har defaultverdi false. Komponenten tillater nå tom string.
+- Button: lagt til href-prop som rendrer knapp som lenke.
+- DatePicker: Når man taster inn årstall i kalenderen kommer nå numerisk tastatur på mobil.
+- Designtokens: Oppdatert farge på beskrivelsesfeltet til inputfelt (graphite-70).
+- ErrorMessage: showError har nå default verdi false
+- SearchField: Retter en feil hvor man ikke kunne overstyre tekst på søkeknappen.
+- StepList: Har nå mulighet for å sende props videre til nesteknappen (NextButtonProps).
+- Table: retter en feil hvor tekst i sorterbare kolonneheader ikke ble justert korrekt.
+- Tabs: Retter en feil hvor Tabs ikke fungerte som kontrollert komponent.
+- TextField: Retter en feil hvor autosize ble vist feil når det ble plassert i en modal.
+
+</Accordion.Item>
+
+<Accordion.Item title={'Versjon 0'} titleAs={'h2'}>
+
+### Versjon 0.8.0 - 13. juni 2024
+
+#### @skatteetaten/ds-collections
+
+- Ny komponent: Accordion
+- Ny komponent: Tabs
+
+##### @skatteetaten/ds-overlays
+
+- Ny komponent: Popover
+
+##### @skatteetaten/ds-nvaigation
+
+- Ny komponent: NavigationTile
+
+##### @skatteetaten/ds-layout
+
+- Ny komponent: TopBannerInternal
+
+#### Andre forbedringer og feilrettinger
+
+- Table: mulighet for å programmatisk åpne ekspandere en redigerbar rad. Retter en feil hvor horisontal skrollbar blir vist uten behov.
+- Footer: Logo endres når språk endres til engelsk
+- Hjelpetekster: Aksepterer nå andre elementer enn kun string, for å kunne vise lenker. Legger også til callback-funksjon for å kjøre kode når hjelpetekst vises.
+- StepList: Mulighet for å videresende props til neste-knapp. Fikser er visuell bug knyttet til Endre-knappen.
+- Datepicker: retter en feil på samsung-enheter hvor kalenderen ble lukket for tidlig når brukeren tastet inn årstall i kalendervindu.
+- Pagination: retter en feil hvor komponenten henger på første side.
+- FileUploader: legger til mulighet for å vise spinner ved sletting av fil.
+
+### Versjon 0.7.1 – 2. mai 2024
+
+- DatePicker: Retter en feil hvor kalender ikke ble åpnet ved klikk.
+- Pagination: Retter en feil antall elementer i liste ble vist feil.
+- Select/TextField: visuell justering av rammetykkelse (large) for å matche resten av komponentene.
+
+### Versjon 0.7.0 – 11. april 2024
+
+#### @skatteetaten/ds-forms
+
+- Ny komponent DatePicker
+- Ny komponent SearchField
+
+##### @skatteetaten/ds-navigation
+
+- Ny komponent Pagination
+
+##### @skatteetaten/ds-status
+
+- Ny komponent Tag
+
+#### Andre forbedringer og feilrettinger
+
+- Select: Retter en feil som førte til at placeholderfargen fikk feil tekstfarge.
+- TextField: Retter en feil som gjorde at man ikke kunne skrive negative tall med tusenseparator.
+- TextField: Retter en feil som førte til at textarea-variant ikke beholdt høyden når den ble forhåndsutfylt.
+- OpenClose: Understrek skrudd på som default (på grunn av funn i brukertest).
+- Visuell justering av fokusmarking på Select og TextField for å harmonere utseende med nye input-komponenter.
+- Legger til mulighet for å sette form-attributt på native html-komponenter.
+- Mer fleksibelt å sette required i skjema-elementer.
+- Fikser en visuell bug for grupper av InlineButton med både høyre og venstre-ikon.
+
+### Versjon 0.6.1 – 29. februar 2024
+
+- Modal: Fikset en feil med dismissOnEsc og dismissOnOutsideClick
+- ErrorSummary: endret type til React.Node, for å støtte tomme underelement.
+- TopBannerExternal: Noen mindre justeringer på padding og responsivitet for knappene.
+- FileUploader: onClick og mulighet for forhåndsutfylle i liste over filer, samt noen små CSS-justeringer.
+
+### Versjon 0.6.0 - 21. februar 2024
+
+#### @skatteetaten/ds-forms
+
+- Lagt til nye komponenter:
+
+##### FileUploader
+
+##### @skatteetaten/ds-layout
+
+- Lagt til nye komponenter:
+
+##### TopBannerExternal
+
+#### Annet
+
+- Visuell justering på panel
+- Spinner i knapper og StepList
+
+### Versjon 0.5.2 – 7. desember 2023
+
+- - 0.5.0 ble bumpet til 0.5.2 i forbindelse med bygging av releasen.
+
+#### @skatteetaten/ds-forms
+
+- Lagt til nye komponenter:
+
+##### Select
+
+##### @skatteetaten/ds-overlays
+
+- Lagt til nye komponenter:
+
+##### Modal
+
+##### @skatteetaten/ds-progress
+
+- Lagt til nye komponenter:
+
+##### Spinner
+
+#### Annet
+
+- Lagt til dokumentasjon av container-basert layout.
+- Fikser en feil i inputfelter og fieldset hvor scrollbar kunne oppstå ved lange ledetekster.
+- Designtoken graphite-50 er oppdatert for å møte kontrastkrav for inaktive elementer.
+
+### Versjon 0.4.0 – 11. oktober 2023
+
+#### @skatteetaten/ds-forms
+
+- Lagt til nye komponenter:
+
+##### ErrorSummary
+
+- Fieldset
+
+##### TextField
+
+- I tillegg har Checkbox og RadioGroup fått mulighet til å vise hjelpetekster.
+
+##### @skatteetaten/ds-layout
+
+- Lagt til ny komponent:
+
+##### Footer
+
+##### @skatteetaten/ds-collections
+
+- Lagt til ny komponent:
+
+##### StepList
+
+### Versjon 0.3.1 – 30. august 2023
+
+- Feilretting av hvordan komponentene laster inn stilsett. Denne endringen bør ikke være merkbar for de fleste, men vi anbefaler alle å oppdatere.
+
+### Versjon 0.3.0 – 28. juni 2023
+
+#### @skatteetaten/ds-forms
+
+- Lagt til nye komponenter:
+- RadioGroup
+
+##### Checkbox
+
+##### CheckboxGroup
+
+##### ErrorMessage
+
+##### @skatteetaten/ds-table
+
+- Lagt til ny komponent:
+
+##### Table
+
+- Notis: Skjermleseren VoiceOver kan i noen tilfeller ikke fange opp endring i kolonnesortering. Vi mener at vår kode burde fungere, og undersøker om dette er en sak knyttet til VoiceOver.
+
+##### @skatteetaten/ds-collections
+
+- Lagt til ny komponent:
+
+##### OpenClose
+
+##### @skatteetaten/ds-content
+
+- Lagt til ny komponent:
+- Panel
+
+##### @skatteetaten/ds-status
+
+- Lagt til ny komponent:
+
+##### Alert
+
+### Versjon 0.2.0 – 17. mars 2023
+
+#### ds-core-designtokens
+
+- Lagt til farger for inaktive elementer, for- og bakgrunn.
+
+##### ds-buttons
+
+- Lagt til ny komponenter:
+- ScrollToTopButton
+
+##### Link
+
+- LinkGroup
+
+##### ds-typography
+
+- Lagt til nye komponenter for typografi:
+- Heading
+- Paragraph
+- Blockquote
+- List
+
+##### ds-core-utils
+
+- Støtte for oversetting av komponenter til norsk bokmål, nynorsk, engelsk og samisk, samt oversetting av innebyggede tekster.
+
+### Versjon 0.1.0 – 7. desember 2022
+
+- Første versjon av de nye designkomponentene. Vi oppretter følgende pakker:
+- ds-buttons – knapper og lenker
+- ds-core-designtokens - gjenbrukbare designvariabler/tokens
+- ds-core-utils - verktøy og støttefunksjoner
+- ds-dev-config - konfigurasjonsfiler som brukes på tvers av pakker.
+- ds-forms - skjemakomponenter
+- ds-icons - ikoner, system og tema-ikoner.
+
+#### ds-buttons
+
+- Lagt til nye komponenter:
+- Button
+- IconButton
+- InlineButton
+- MegaButton
+- Feilretting ds-buttons@0.1.1
+- Legger til mulighet for å sette type-attributt på alle knappekomponenter.
+
+##### ds-core-designtokens
+
+- Opprettet mekanisme for fargetema
+- Lagt til følgende tokentyper:
+- Brekkpunkter
+- Kontainerbredder
+- Fontstørrelser og linjeavstand
+- Fargepalett
+- Luft/avstander
+
+##### ds-icons
+
+- Lagt til Icon-komponent
+- Lagt til systemikoner som svg.
+- Lagt til temaikoner som svg
+
+</Accordion.Item>
+</Accordion>
