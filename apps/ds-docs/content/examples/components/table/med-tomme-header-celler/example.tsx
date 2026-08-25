@@ -73,10 +73,8 @@ export default function TableWithEmptyHeaderCellsExample(): ReactElement {
     <>
       <Paragraph>
         {
-          'Hvis vi har en tabell med med minst 3 kolonner uten kolonnetitler så bør '
+          'Hvis vi har en tabell med minst 3 kolonner uten kolonnetitler så bør vi legge på sr-only tekster som th for at det skulle bli lettere for skjermleserbrukere å forstå tabellen.'
         }
-        {'vi legge på sr-only tekster som th for at det skulle bli lettere for'}
-        {'skjermleserbrukere å forstå tabellen.'}
       </Paragraph>
       <Table
         caption={'Arbeidsoppgaver'}

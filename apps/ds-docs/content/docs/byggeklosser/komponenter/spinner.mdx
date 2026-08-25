@@ -20,8 +20,8 @@ icon: /illustrations/spinner.svg
 
 ## Hvorfor anbefalingene finnes?
 
-- Spinner kun for operasjoner over ett sekund for å unngå at lette handlinger oppleves tregere enn de er. Vises spinneren for korte operasjoner, skaper det unnødvendig visuell uro.
-- Spinner har innebygget tittel. En spinner uten tekstalternativ er usynlig for skjermlesere — brukeren vet da ikke at systemet jobber, og kan tro at tjenesten har hængt seg.
+- Spinner kun for operasjoner over ett sekund for å unngå at lette handlinger oppleves tregere enn de er. Vises spinneren for korte operasjoner, skaper det unødvendig visuell uro.
+- Spinner har innebygget tittel. En spinner uten tekstalternativ er usynlig for skjermlesere — brukeren vet da ikke at systemet jobber, og kan tro at tjenesten har sluttet å fungere.
 - Vi anbefaler kun én spinner av gangen fordi flere samtidige spinnere gir ingen nødvendig informasjon og skaper kaotisk visuell opplevelse.
 
 ## Varianter (og når bruke dem)
@@ -49,23 +49,20 @@ Spinner kommer i tre størrelser:
 ### Plassering og justering
 
 - Plasser spinneren i nærheten av det som lastes.
-- Ved lasting av seksjoner: plasser spinneren under seksjonen.
+- Ved lasting av seksjoner: plasser spinneren inni seksjonen eller i forbindelse med en beskrivende tittel, slik at det er tydelig hva som lastes.
 - Unngå at spinneren dekker interaktive elementer som brukeren ikke skal forhindres fra å bruke.
 
 ### Interaksjon og tilstander
 
-- Spinner vises mens data eller prosesser lastes.
-- Når innlasting er ferdig, fjern spinneren umiddelbart.
-- Ikke bruk spinnere sammen med andre visuelle lasteindikatorer.
+- Vis spinneren mens data eller prosesser lastes.
+- Ved forsinkelser under ett sekund trenger du vanligvis ikke vise en spinner.
+- Fjern spinneren så snart innlastingen er ferdig.
+- Hvis ventetiden kan bli lengre enn ti sekunder, må du gi brukeren tydelig informasjon om ventetiden. Legg også til rette for at brukeren kan avslutte og komme tilbake senere.
+- Ikke bruk flere visuelle lasteindikatorer samtidig.
 
 ## Tekst og språkbruk
 
-- Forklar gjerne **hva** som lastes eller **hvorfor** brukeren må vente.  
-  Eksempler:
-  - «Laster data …»
-  - «Henter informasjon …»
-- Bruk kort og tydelig språk.
-- Teksten bør stå i vanlig brødtekstformat.
+Bruk kort og tydelig tekst som forklarer hva som lastes, eller hvorfor brukeren må vente. For eksempel «Laster data …» eller «Henter informasjon …».
 
 ## Tilgjengelighet (UU / WCAG)
 

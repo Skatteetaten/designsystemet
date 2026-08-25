@@ -6,14 +6,10 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './index.module.scss';
 
-const farmerIllustration = new URL('./farmer-illustration.svg', import.meta.url)
-  .href;
-
 export default function PanelPreviewStateExample(): JSX.Element {
   return (
     <Panel
       title={'Når kommer skattepengene?'}
-      imageSource={farmerIllustration}
       spacing={'xl'}
       variant={'outline'}
     >

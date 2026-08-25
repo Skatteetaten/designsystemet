@@ -33,10 +33,10 @@ export default function FodselsdatoSeparateFelterExample(): JSX.Element {
   return (
     <Fieldset
       legend={'Fødselsdato'}
+      description={'For eksempel 17 5 1990'}
       classNames={{
         contentContainer: styles.contentContainer,
       }}
-      hideLegend
     >
       <TextField
         label={'Dag'}
