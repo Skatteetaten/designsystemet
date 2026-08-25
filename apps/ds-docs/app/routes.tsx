@@ -6,7 +6,7 @@ import {
 } from '@react-router/dev/routes';
 
 export default [
-  route('example/*', 'routes/example.tsx'),
+  route('example.html', 'routes/example.tsx'),
   layout('routes/docs-layout.tsx', [
     index('routes/index.tsx'),
     route('*', 'routes/docs.tsx'),

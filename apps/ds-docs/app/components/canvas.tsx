@@ -16,6 +16,7 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { ExampleDescriptor, getExamples } from './canvas.utils';
 import { CodeBlock } from './code-block';
+import { getExampleUrl } from '../../lib/example-url';
 import { openExampleInStackblitz } from '../../lib/stackblitz';
 
 import styles from './canvas.module.scss';
@@ -26,9 +27,6 @@ interface CanvasProps {
 }
 
 const MIN_IFRAME_HEIGHT = 200;
-
-const getExampleUrl = (urlPath: string, isEmbedded = false): string =>
-  `/example/${urlPath}${isEmbedded ? '#embedded' : ''}`;
 
 const getSelectedExample = (
   examples: ExampleDescriptor[],
