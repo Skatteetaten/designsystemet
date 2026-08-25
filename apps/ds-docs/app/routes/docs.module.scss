@@ -75,3 +75,22 @@
 .mdxIcon {
   width: 6rem;
 }
+
+.errorPage {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.notFound {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: var(--spacing-xl) auto;
+}
+
+.notFoundArticle {
+  width: var(--semantic-responsive-article);
+  margin: 0 auto;
+}
