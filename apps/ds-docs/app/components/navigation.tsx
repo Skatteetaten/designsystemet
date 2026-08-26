@@ -1,4 +1,4 @@
-import { Fragment, JSX, useState, type ReactNode } from 'react';
+import { Fragment, JSX, useEffect, useState, type ReactNode } from 'react';
 import { Link, useLocation } from 'react-router';
 
 import type { Root } from 'fumadocs-core/page-tree';
@@ -19,18 +19,24 @@ interface NavigationProps {
 interface ExpandableItemProps {
   title: ReactNode;
   content: JSX.Element;
-  isInitiallyExpanded?: boolean;
+  activePath?: string;
 }
 
 const ExpandableItem = ({
   title,
   content,
-  isInitiallyExpanded = false,
+  activePath,
 }: ExpandableItemProps): JSX.Element => {
-  const [isExpanded, setIsExpanded] = useState(isInitiallyExpanded);
+  const [isExpanded, setIsExpanded] = useState(activePath !== undefined);
   const iconClassName = isExpanded
     ? `${styles.expandIcon} ${styles.expandIconExpanded}`
     : styles.expandIcon;
+
+  useEffect(() => {
+    if (activePath !== undefined) {
+      setIsExpanded(true);
+    }
+  }, [activePath]);
 
   return (
     <>
@@ -187,13 +193,13 @@ const renderNode = (
   }
 
   const childItems = buildFolderChildItems(node, pathname, true);
-  const shouldExpandInitially = folderContainsPath(node, pathname);
+  const containsActivePath = folderContainsPath(node, pathname);
 
   return (
     <li key={String(node.$id)}>
       <ExpandableItem
         title={node.name}
-        isInitiallyExpanded={shouldExpandInitially}
+        activePath={containsActivePath ? pathname : undefined}
         content={<ul className={styles.navList}>{childItems}</ul>}
       />
     </li>
