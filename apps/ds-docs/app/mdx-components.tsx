@@ -8,7 +8,11 @@ import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 import browserCollections from '../.source/browser';
 import { Canvas } from './components/canvas';
 import { MdxCode, MdxPre } from './components/code-block';
-import { RouterDsLink, RouterNavigationTile } from './components/router-link';
+import {
+  RouterDsLink,
+  RouterDsLinkGroup,
+  RouterNavigationTile,
+} from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
 
 interface CanvasMdxProps {
@@ -123,6 +127,7 @@ const components = {
     <Canvas examplesPath={examplesPath}>{children}</Canvas>
   ),
   TypeTable: ({ of }: TypeTableMdxProps): JSX.Element => <TypeTable of={of} />,
+  LinkGroup: RouterDsLinkGroup,
   NavigationTile: RouterNavigationTile,
   WordInfoTerm,
 };

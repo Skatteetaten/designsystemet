@@ -1,7 +1,12 @@
 import { JSX, MouseEvent, MouseEventHandler, useCallback } from 'react';
 import { useLinkClickHandler } from 'react-router';
 
-import { Link, LinkProps } from '@skatteetaten/ds-buttons';
+import {
+  Link,
+  LinkGroup,
+  LinkGroupProps,
+  LinkProps,
+} from '@skatteetaten/ds-buttons';
 import {
   NavigationTile,
   NavigationTileProps,
@@ -53,6 +58,11 @@ export const RouterDsLink = ({
     </Link>
   );
 };
+
+export const RouterDsLinkGroup = Object.assign(
+  (props: LinkGroupProps): JSX.Element => <LinkGroup {...props} />,
+  { Link: RouterDsLink }
+);
 
 type RouterNavigationTileProps = Omit<NavigationTileProps, 'onClick'>;
 
