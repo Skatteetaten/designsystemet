@@ -4,24 +4,18 @@ import {
   ReactElement,
   ReactNode,
   isValidElement,
-  useState,
 } from 'react';
 
 import { useShikiDynamic } from 'fumadocs-core/highlight/shiki/react';
 
-import { IconButton } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
 import { Select } from '@skatteetaten/ds-forms';
-import {
-  CheckSVGpath,
-  CopySVGpath,
-  ErrorSVGpath,
-} from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { skeCodeTheme } from '../../lib/code-theme';
 
 import styles from './code-block.module.scss';
+import { CopyButton } from './copy-button';
 
 interface CodeBlockProps {
   code: string;
@@ -82,29 +76,6 @@ export const CodeBlock = ({
   fileSelect,
   language,
 }: CodeBlockProps): JSX.Element => {
-  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>(
-    'idle'
-  );
-  const copyButtonLabel = {
-    copied: 'Koden er kopiert',
-    error: 'Kunne ikke kopiere',
-    idle: 'Kopier kode',
-  }[copyStatus];
-  const copyButtonIcon = {
-    copied: CheckSVGpath,
-    error: ErrorSVGpath,
-    idle: CopySVGpath,
-  }[copyStatus];
-
-  const handleCopyCode = async (): Promise<void> => {
-    try {
-      await navigator.clipboard.writeText(code);
-      setCopyStatus('copied');
-      setTimeout(() => setCopyStatus('idle'), 1000);
-    } catch {
-      setCopyStatus('error');
-    }
-  };
   const highlighted = useShikiDynamic(
     () =>
       import('fumadocs-core/highlight').then((mod) => mod.getHighlighter('js')),
@@ -148,10 +119,10 @@ export const CodeBlock = ({
             </Heading>
           )}
         </div>
-        <IconButton
-          svgPath={copyButtonIcon}
-          title={copyButtonLabel}
-          onClick={handleCopyCode}
+        <CopyButton
+          copyText={code}
+          title={'Kopier kode'}
+          copiedTitle={'Koden er kopiert'}
         />
       </div>
       {highlighted}

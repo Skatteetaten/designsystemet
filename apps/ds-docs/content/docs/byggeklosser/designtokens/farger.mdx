@@ -2,17 +2,18 @@
 title: Farger
 ---
 
-import { IconButton } from '@skatteetaten/ds-buttons';
-import { CopySVGpath } from '@skatteetaten/ds-icons';
 import { Table } from '@skatteetaten/ds-table';
 import paletteJson from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
+import { CopyButton } from '../../../../app/components/copy-button';
 
 <Table caption={'Fargepalett'} size={'medium'}>
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell scope={'col'}>{'Farge'}</Table.HeaderCell>
       <Table.HeaderCell scope={'col'}>{'Token'}</Table.HeaderCell>
-      <Table.HeaderCell scope={'col'}>{'Kopier'}</Table.HeaderCell>
+      <Table.HeaderCell scope={'col'} alignment={'center'}>
+        {'Kopier'}
+      </Table.HeaderCell>
     </Table.Row>
   </Table.Header>
   <Table.Body>
@@ -31,12 +32,12 @@ import paletteJson from '@skatteetaten/ds-core-designtokens/designtokens/palette
           />
         </Table.DataCell>
         <Table.DataCell>{name}</Table.DataCell>
-        <Table.DataCell>
-          <IconButton
-            svgPath={CopySVGpath}
+        <Table.DataCell alignment={'center'}>
+          <CopyButton
+            copyText={name}
             title={`Kopier ${name}`}
-            onClick={() => navigator.clipboard.writeText(name)}
-            size={'small'}
+            copiedTitle={`${name} er kopiert`}
+            errorTitle={`Kunne ikke kopiere ${name}`}
           />
         </Table.DataCell>
       </Table.Row>
