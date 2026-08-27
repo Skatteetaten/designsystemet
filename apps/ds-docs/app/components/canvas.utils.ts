@@ -145,7 +145,7 @@ const getCodeFiles = (
   codeEntries: CodeEntry[],
   filePaths: string[]
 ): ExampleFileDescriptor[] => {
-  return codeEntries
+  const codeFiles = codeEntries
     .filter((entry) => filePaths.includes(entry.path))
     .map((entry) => {
       const fileName = getFileNameFromPath(entry.path);
@@ -157,8 +157,13 @@ const getCodeFiles = (
         source: entry.source,
         tabValue: toTabValue(entry.path),
       };
-    })
+    });
+  const exampleFile = codeFiles.find((file) => file.fileName === 'example.tsx');
+  const otherFiles = codeFiles
+    .filter((file) => file !== exampleFile)
     .sort((a, b) => a.fileName.localeCompare(b.fileName, 'nb'));
+
+  return exampleFile ? [exampleFile, ...otherFiles] : otherFiles;
 };
 
 const createExample = (
