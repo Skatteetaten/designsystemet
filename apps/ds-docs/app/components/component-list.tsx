@@ -114,7 +114,7 @@ const loadEntriesWithFrontmatter = async (
 };
 
 export const ComponentList = (): JSX.Element => {
-  const [entries, setEntries] = useState<ComponentEntry[]>(defaultEntries);
+  const [entries, setEntries] = useState<ComponentEntry[]>();
 
   useEffect((): (() => void) => {
     let isMounted = true;
@@ -142,11 +142,13 @@ export const ComponentList = (): JSX.Element => {
         {'Komponentene kan brukes både til løsninger for publikum og interne.'}
       </Paragraph>
       <nav aria-label={'Liste over alle komponenter'}>
-        <ul className={styles.list}>
-          {entries.map((entry) => (
-            <ComponentTile key={entry.url} entry={entry} />
-          ))}
-        </ul>
+        {entries ? (
+          <ul className={styles.list}>
+            {entries.map((entry) => (
+              <ComponentTile key={entry.url} entry={entry} />
+            ))}
+          </ul>
+        ) : null}
       </nav>
     </>
   );
