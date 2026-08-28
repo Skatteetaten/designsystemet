@@ -163,11 +163,7 @@ export const Footer = ({
           {links.length > 0 && (
             <ul className={styles.linkContainer}>
               {links.map((link, index) => {
-                return (
-                  <li key={index} className={styles.linkList}>
-                    {link}
-                  </li>
-                );
+                return <li key={index}>{link}</li>;
               })}
             </ul>
           )}
