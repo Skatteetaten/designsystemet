@@ -4,9 +4,10 @@ import { BaseProps, Color, Position, Size } from '@skatteetaten/ds-core-utils';
 
 import { AccordionItem } from './AccordionItem/AccordionItem';
 
-export type AccordionColor =
-  | Extract<Color, 'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'>
-  | 'none';
+export type AccordionColor = Extract<
+  Color,
+  'white' | 'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'
+>;
 
 export type AccordionSize = Extract<Size, 'small' | 'medium' | 'large'>;
 
