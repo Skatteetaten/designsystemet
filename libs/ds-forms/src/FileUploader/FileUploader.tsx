@@ -294,7 +294,7 @@ export const FileUploader = ({
           <Spinner
             classNames={{ title: styles.spinner }}
             size={'large'}
-            color={'blue'}
+            color={'interactive'}
           >
             {spinnerLabel}
           </Spinner>

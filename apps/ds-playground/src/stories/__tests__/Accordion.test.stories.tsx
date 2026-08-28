@@ -49,9 +49,7 @@ const TemplateWithAllColors: StoryFn<typeof Accordion> = () => {
 
   return (
     <>
-      <Accordion className={'bottomSpacingXL'} color={'none'}>
-        {items}
-      </Accordion>
+      <Accordion className={'bottomSpacingXL'}>{items}</Accordion>
       <Accordion className={'bottomSpacingXL'} color={'burgundy'}>
         {items}
       </Accordion>

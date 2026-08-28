@@ -25,7 +25,7 @@ export const LinkGroup = ({
   lang,
   'data-testid': dataTestId,
   hasSpacing = false,
-  color,
+  color = 'interactive',
   variant = 'list',
   children,
 }: LinkGroupProps): JSX.Element => {

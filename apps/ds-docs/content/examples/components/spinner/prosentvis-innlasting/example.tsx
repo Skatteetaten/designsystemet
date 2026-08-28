@@ -48,7 +48,7 @@ export default function SpinnerPercentCompleteExample(): ReactElement {
           percentComplete={progress}
           className={'bottomSpacingXL'}
           size={'large'}
-          color={'blue'}
+          color={'interactive'}
           titlePosition={'right'}
         />
       )}

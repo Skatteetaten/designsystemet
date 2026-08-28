@@ -54,7 +54,7 @@ export const Button = ({
     } else if (variant === 'danger') {
       return 'black';
     } else {
-      return 'blue';
+      return 'interactive';
     }
   };
 

@@ -22,7 +22,7 @@ export const Link = ({
   lang,
   'data-testid': dataTestId,
   isExternal = false,
-  color,
+  color = 'interactive',
   svgPath,
   href,
   target,
@@ -45,7 +45,7 @@ export const Link = ({
       href={href}
       rel={target === '_blank' ? 'noreferrer' : undefined}
       target={target}
-      data-color={color ?? context?.color}
+      data-color={context?.color ?? color}
       aria-current={ariaCurrent}
       aria-describedby={ariaDescribedby}
       download={download}

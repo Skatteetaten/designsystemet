@@ -68,7 +68,7 @@ export const Examples: Story = {
             percentComplete={progress}
             className={'bottomSpacingXL'}
             size={'large'}
-            color={'blue'}
+            color={'interactive'}
             titlePosition={'right'}
           />
         )}
