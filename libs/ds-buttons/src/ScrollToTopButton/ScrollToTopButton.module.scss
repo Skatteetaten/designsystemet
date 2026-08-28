@@ -18,7 +18,8 @@
   visibility: hidden;
   will-change: transform;
 
-  @media (width >= 1170px) {
+  // avvikende brekkpunkt fordi knappen får for lite plass mellom 1024 og 1200 px
+  @media (width >= 1200px) {
     position: fixed;
     z-index: 100;
     bottom: 0;
@@ -29,7 +30,7 @@
     opacity: 1;
     visibility: visible;
 
-    @media (width >= 1170px) {
+    @media (width >= 1200px) {
       bottom: var(--spacing-xl);
     }
   }
