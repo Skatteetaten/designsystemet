@@ -21,7 +21,6 @@ icon: /illustrations/textfield.svg
 
 ## Hvorfor anbefalingene finnes?
 
-- Vi godtar brukervennlige variasjoner i input (mellomrom i telefonnummer, punktum i kontonummer) fordi overdreven validering skaper friksjon der formen ikke er kritisk for databehandlingen.
 - Placeholder erstattes av label og beskrivelse fordi placeholderen forsvinner ved skriving — brukeren må da huske instruksjonen, noe som er krevende og dyrker feil.
 - `disabled` anbefales ikke fordi skjermlesere kan ignorere deaktiverte felt. `readOnly` er et bedre alternativ når feltet ikke skal redigeres, men verdien fortsatt skal sendes med.
 
@@ -41,13 +40,9 @@ icon: /illustrations/textfield.svg
 
 ### Interaksjon og tilstander
 
-- Godta brukervennlige variasjoner i input, så lenge innholdet er forståelig:
-  - telefonnummer med mellomrom
-  - kontonummer med punktum
-  - e‑post med mellomrom til slutt
 - Autocomplete kan brukes:
-  - **På** for personlig informasjon (navn, adresse, søk)
-  - **Av** for ikke-personlig informasjon (virksomheter, beløp, datoer)
+  - På: for personlig informasjon (navn, adresse, søk)
+  - Av: for ikke-personlig informasjon (virksomheter, beløp, datoer)
 - Ulike nettlesere har varierende støtte for autocomplete.
 - Bruk passende `inputmode` som passer typen informasjon (`tel`, `search`, `email`, etc.).
 

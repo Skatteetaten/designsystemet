@@ -22,16 +22,14 @@ icon: /illustrations/fileuploader.svg
 - Nye økter nullstiller Alert fra forrige for å forhindre at gammel feilstatus misoppfattes som pågående problem.
 - Separate FileUploadere anbefales for sammensatte krav fordi kombinert validering (f.eks. Nøyaktig én fil av type A og én av type B) er vanskelig for brukeren å forstå som ett felt.
 
-> TODO: noe om sesjoner?
-
 ## Varianter (og når bruke dem)
 
-FileUploader har ingen varianter utover funksjonelle tilstander (spinner, feilmeldinger, bekreftelser).
+FileUploader har ingen spesielle varianter, men har flere innebygde funksjonelle tilstander.
 
 ### Plassering og justering
 
 - Plasser FileUploader der brukeren naturlig forventer å laste opp dokumentasjon.
-- Tenk i form av **økter**: én økt = alle filer brukeren legger til i én handling.
+- Behandle opplasting i form av økter: én økt = alle filer brukeren legger til i én handling.
 - Etter hver økt skal komponenten gi visuell støtte for resultatet (spinner, hake, feilmelding).
 
 ### Interaksjon og tilstander

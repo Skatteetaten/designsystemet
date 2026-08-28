@@ -14,21 +14,19 @@ icon: /illustrations/checkboxgroup.svg
 
 ## Når ikke bruke komponenten
 
-- Ikke bruk CheckboxGroup når brukeren kun skal ta **ett** valg — bruk [RadioGroup](/byggeklosser/komponenter/radiogroup) i stedet.
+- Ikke bruk CheckboxGroup når brukeren kun skal ta ett valg — bruk [RadioGroup](/byggeklosser/komponenter/radiogroup) i stedet.
 
 ## Hvorfor anbefalingene finnes?
 
 - Grupperingen med ledetekst (`legend`-element) sørger for at skjermlesere forstår at valgene hører til samme spørsmål. Uten dette leses hvert enkelt valg opp uten kontekst.
 - Vertikal layout er standard for å gi bedre lesbarhet og forutsigbar skalering på tvers av skjermstørrelser — horisontal opplisting av mange valg fungerer ofte ikke så godt på små skjermer.
-- Å tillate null valg (ingen avhuking) er et bevisst design-valg: det er ikke alle som har noe å velge, og tvunget valg skaper feil data.
+- Å tillate null valg (ingen avhuking) er et bevisst valg: det er ikke alle som har noe å velge, og tvunget valg kan føre til feil data.
 
 ## Varianter (og når bruke dem)
 
-**Ingen varianter**
-
 ### Plassering og justering
 
-- Alle checkboxer i gruppen skal plasseres **vertikalt**.
+- Alle checkboxer i gruppen skal plasseres vertikalt
 - Det skal være mulig å velge null, ett eller flere alternativer.
 
 ### Interaksjon og tilstander

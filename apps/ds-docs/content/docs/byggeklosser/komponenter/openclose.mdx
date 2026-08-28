@@ -8,21 +8,19 @@ icon: /illustrations/openclose.svg
 
 ## Når bruke komponenten
 
-- Når siden inneholder informasjon som bare enkelte brukere har behov for.
-- Når du ønsker å redusere mengden synlig informasjon uten å fjerne den.
+- Når siden inneholder informasjon som bare enkelte brukere trenger.
+- Når du ønsker å redusere mengden synlig informasjon og samtidig kunne ha den tilgjengelig.
 - Når du vil gi brukeren kontroll over å åpne/lukke detaljer i innholdet.
 
 ## Når ikke bruke komponenten
 
-- Ikke bruk OpenClose til å forklare spørsmål i skjema (bruk hjelpetekster).
+- Ikke bruk når informasjonen eller handlinger er viktige for alle brukere og må være synlig.
 - Ikke bruk til svært små mengder innhold — vis det heller direkte.
-- Ikke bruk når informasjonen er kritisk for alle brukere og må være synlig.
 
 ## Hvorfor anbefalingene finnes?
 
-- OpenClose skiller seg fra Accordion fordi den er ment for enkeltvis innhold som kan ekspanderes — ikke for en gruppe parallelle seksjoner. Riktig komponentvalg gir mer forutsigbar atferd.
-- Ikonplassering er dokumentert for å sikre konsistens i løsninger som bruker komponenten mange steder. Variasjon i ikonplassering øker kognitiv belastning.
-- Vi anbefaler ikke OpenClose for skjemahjelp fordi hjelpetekst-mønsteret (spørsmålstegn-ikon + Popover) er mer tilgjengelig og mer intuitivt i skjemakontekst.
+- OpenClose brukes for innhold som vises enkeltvis, mens Accordion brukes for grupper av seksjoner.
+- Ikonet til venstre gjør det lettere å oppfatte at overskriften kan åpnes og lukkes, særlig for brukere med skjermforstørring og ved lange tekster. En standard plassering gjør også komponenten mer forutsigbar når den brukes flere steder.
 
 ## Varianter (og når bruke dem)
 
@@ -33,12 +31,11 @@ icon: /illustrations/openclose.svg
 
 ### Ikonplassering
 
-- **Ikon til venstre:** Standard anbefaling. Best for universell utforming, siden ikonet kommer først i lese- og tabrekkefølge.
-- **Ikon til høyre:** Tar mindre plass på mobil og gir visuelt renere uttrykk.
+- Ikon til venstre (standard): Best for universell utforming, siden ikonet kommer først i lese- og tabrekkefølge.
+- Ikon til høyre: Tar mindre plass på mobil og gir visuelt renere uttrykk.
 
 ### Plassering og justering
 
-- Plasser OpenClose i løpende innhold som trenger å struktureres bedre.
 - Unngå at mange OpenClose‑elementer står etter hverandre uten klar relevans.
 - Hold åpne/lukk-knappens tekst kort og meningsbærende.
 
@@ -47,7 +44,7 @@ icon: /illustrations/openclose.svg
 - Komponentens ikon roteres ved åpning/lukking.
 - Ikonet er dekorativt og skjules for skjermleser — funksjonen ivaretas i koden.
 - Teksten i knappen skal tydelig indikere hva som åpnes/lukkes.
-- Åpne/lukke‑tilstanden må kommuniseres semantisk for skjermleser.
+- Åpne/lukke‑tilstanden kommuniseres semantisk for skjermleser.
 
 ## Tekst og språkbruk
 
@@ -57,7 +54,7 @@ icon: /illustrations/openclose.svg
 
 ## Tilgjengelighet (UU / WCAG)
 
-- Standard ikonplassering er til venstre fordi det gir best støtte for brukere med skjermforstørring og forutsigbar leserekkefølge.
+- Standard ikonplassering er til venstre fordi pilen da kommer tydelig frem ved bruk av skjermforstørring, også når overskriften er lang. Det gjør det enklere å oppfatte hvor man kan åpne og lukke innholdet.
 - Det meningsbærende ikonet er skjult for skjermleser fordi funksjonen håndteres [semantisk](wordinfo:semantisk).
 - Sikre god kontrast og tydelige fokusmarkeringer.
 - Teksten må alene fortelle hva som skjer når komponenten åpnes eller lukkes.
