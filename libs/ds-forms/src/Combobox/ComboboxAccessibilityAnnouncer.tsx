@@ -1,4 +1,4 @@
-import { JSX, useRef, memo, useState, useEffect } from 'react';
+import { JSX, useEffect, useMemo, useRef, useState, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -61,21 +61,26 @@ const ComboboxAccessibilityAnnouncerComponent = ({
   // This ensures immediate announcements for important accessibility events
   const shouldDebounce =
     isOpen && searchTerm.length > 0 && displayOptions.length > 1;
-  const debouncedDisplayOptions = useDebounce(
-    displayOptions,
+  const searchResult = useMemo(
+    () => ({ displayOptions, searchTerm }),
+    [displayOptions, searchTerm]
+  );
+  const debouncedSearchResult = useDebounce(
+    searchResult,
     shouldDebounce ? 500 : 0
   );
 
-  // Use immediate options when not debouncing to avoid async delay
-  const effectiveDisplayOptions = shouldDebounce
-    ? debouncedDisplayOptions
-    : displayOptions;
+  // Keep options and search term in sync so stale options are not announced
+  // as "no results" while a new search is being debounced.
+  const effectiveSearchResult = shouldDebounce
+    ? debouncedSearchResult
+    : searchResult;
 
   useEffect(() => {
     const newMessage = getAnnouncementMessage(
       isOpen,
-      effectiveDisplayOptions,
-      searchTerm,
+      effectiveSearchResult.displayOptions,
+      effectiveSearchResult.searchTerm,
       previousSelectedValuesRef.current ?? [],
       selectedValues,
       focusedIndex,
@@ -95,7 +100,7 @@ const ComboboxAccessibilityAnnouncerComponent = ({
     }
 
     return undefined;
-  }, [isOpen, effectiveDisplayOptions, searchTerm, t, selectedValues]);
+  }, [isOpen, effectiveSearchResult, t, selectedValues]);
 
   return (
     <div
