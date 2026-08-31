@@ -28,7 +28,7 @@ export const IconButton = ({
   title,
   type = 'button',
   ariaDescribedby,
-  ariaExpanded = false,
+  ariaExpanded,
   hasSpinner = false,
   isOutlined = false,
   onClick,
