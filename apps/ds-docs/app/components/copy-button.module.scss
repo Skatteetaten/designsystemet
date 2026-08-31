@@ -1,0 +1,5 @@
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
+.status {
+  @include styles.sr-only;
+}
