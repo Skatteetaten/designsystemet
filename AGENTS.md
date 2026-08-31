@@ -202,8 +202,8 @@ npm run build
 npm run build:playground
 
 # Formatting
-npm run prettier
-npm run prettier:fix
+npm run format
+npm run format:fix
 ```
 
 Run type checking, linting, style linting, tests, and builds only where relevant

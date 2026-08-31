@@ -1,10 +1,11 @@
-import { JSX } from 'react';
+import { JSX, MouseEvent } from 'react';
 import { isRouteErrorResponse, Outlet } from 'react-router';
 
 import { Link } from '@skatteetaten/ds-buttons';
 import { OpenClose } from '@skatteetaten/ds-collections';
 import { Footer } from '@skatteetaten/ds-layout';
 import { ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
+import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import type { Route } from './+types/docs-layout';
@@ -14,6 +15,11 @@ import { PageLayout } from '../components/page-layout';
 import styles from './docs.module.scss';
 
 export default function DocsLayout(): JSX.Element {
+  const handleLanguageClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    const language = event.currentTarget.lang;
+    dsI18n.changeLanguage(langToLocale[language]);
+  };
+
   return (
     <>
       <DocsTopBanner />
