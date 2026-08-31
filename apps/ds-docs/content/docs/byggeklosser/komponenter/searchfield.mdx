@@ -22,7 +22,7 @@ icon: /illustrations/searchfield.svg
 ## Hvorfor anbefalingene finnes?
 
 - Vi skiller mellom SearchField og TextField fordi søk og skjemainput har ulike atferdsmønstre: søk er optimalisert for hurtigoppslag og resultatlister, mens skjemafelt er for datainnsamling.
-- Placeholder begrenses i publikumsløsninger fordi den kan forveksles med forhåndsutfylt innhold i kontrastkompliant design — brukere kan glattet ut feltet og må skrive på nytt.
+- Placeholder begrenses i publikumsløsninger fordi den lett kan forveksles med forhåndsutfylt tekst, og fordi den forsvinner så snart brukeren begynner å skrive.
 - Søk bør lede til en tydelig treffliste som viser søkesultatet. Det gjør det enklere for brukeren å vurdere og velge riktig resultat, også når søket ikke gir treff.
 
 ## Varianter (og når bruke dem)
@@ -50,19 +50,18 @@ icon: /illustrations/searchfield.svg
 ### Plassering og justering
 
 - Søkefelt bør stå der brukeren forventer å søke — ofte i toppbanner, landingssider eller ved omfattende datasett.
-- Standard maksbredde er 400px / 25rem for å unngå unaturlig stor avstand mellom søketekst og knapp.
-- Komponenten tar som standard 100 % bredde hvis ikke annet er spesifisert.
-- Nullstillingsikon (kryss) skal være tilgjengelig for å slette søketeksten.
+- Standard maksbredde er 400px / 25rem for å unngå unaturlig stor avstand mellom søketeksten og knappen.
 
 ### Interaksjon og tilstander
 
 - Klikk på søkeknappen tar brukeren til resultatsiden.
 - Ved «live»-søk tar både listevalg og søkeknappen brukeren til resultatvisning.
 - Hurtigoppslag kan føre direkte til detaljvisning (for eksempel et spesifikt kjøretøy eller en virksomhet).
+- Nullstillingsknapp (kryss) brukes til å nullstille søkestrengen.
 
 ## Tekst og språkbruk
 
-- SearchField skal alltid ha en label, men den vises vanligvis skjult.
+- SearchField skal alltid ha en beskrivende label, men den holdes vanligvis skjult.
 - Unngå placeholder‑tekst i publikumsløsninger fordi:
   - lav kontrast kan oppfattes som forhåndsutfylt informasjon
   - teksten forsvinner når brukeren skriver, og må derfor gjentas i label

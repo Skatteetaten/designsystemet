@@ -20,28 +20,26 @@ icon: /illustrations/steplist.svg
 
 ## Hvorfor anbefalingene finnes?
 
-- Oppsummeringssteg før innsending er obligatorisk for å gi brukeren mulighet til å kontrollere og rette svar. Dette er spesielt viktig i juridisk bindende skjemaer der feil er kostbare å korrigere.
+- Oppsummeringssteg før innsending er obligatorisk for å gi brukeren mulighet til å kontrollere og rette opp svar.
 - Fokus flyttes automatisk til toppen av hvert nytt steg for at skjermleserbrukere ikke skal måtte navigere forbi hele innholdet for å skjønne at siden har endret seg.
 - ErrorSummary vises først etter «neste»-klikk — ikke under utfylling — for å unngå at feilmeldinger forstyrrer brukeren mens de skriver.
 
 ## Varianter (og når bruke dem)
 
-Komponenten har som helhet ingen varianter, men her fungerer som rammen for for skjemaer og veivisere med flere steg.
+Komponenten har som helhet ingen varianter, men den fungerer som rammen for skjemaer og veivisere med flere steg.
 
-- Stegindikator
-- Innhold per steg
-- Navigasjonsknapper («Neste», «Tilbake», «Send inn»)
+- Stegnummer som viser rekkefølgen til stegene
+- Innhold per steg, som kan være aktivt eller passivt
+- Handlingsknapp for å gå videre («Neste» og «Send inn»)
 
 ### Plassering og justering
 
 - StepList skal brukes som overordnet ramme rundt stegvis innhold.
-- Hvert steg skal fremstå som en egen side i løsningen.
+- Hvert steg skal fremstå som en egen seksjon i løsningen.
 - Oppsummeringssteg før innsending skal alltid være et eget steg i listen.
 - Etter innsending skal bruker sendes til en egen kvitteringsside (ikke et steg).
 
 ### Interaksjon og tilstander
-
-### Stegenes tiltander
 
 Et steg kan som hovedregel ha to tilstander, aktivt eller passivt. Aktivt brukes når brukerne redigerer i innholdet, mens passivt brukes til å vise et fullført steg. Tillegg finnes en spesialvariant av steget, som brukes å vise resultatet av hele prosessen - for eksempel å vise utfallet av en veiviser.
 
@@ -61,7 +59,7 @@ Kvitteringssiden skal inneholde:
 - Dato og tidspunkt
 - Forventet behandlingstid og hvor bruker får svar
 - Hvor skjemaet kan finnes igjen
-- Opplysningene som ble sendt inn (gjerne med [OpenClose](/byggeklosser/komponenter/openclose)))
+- Opplysningene som ble sendt inn (gjerne med [OpenClose](/byggeklosser/komponenter/openclose))
 
 ### Feilhåndtering
 

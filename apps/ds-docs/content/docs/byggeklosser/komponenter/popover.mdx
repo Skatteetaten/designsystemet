@@ -22,24 +22,29 @@ icon: /illustrations/popover.svg
 ## Hvorfor anbefalingene finnes?
 
 - Popover er ment for informasjon på forespørsel — innhold som ikke er kritisk, men som kan gi kontekst. Kritisk informasjon skal alltid vises direkte i siden.
-- Fokusfangst og fokusretur er påkrevd for at tastatur- og skjermleserbrukere ikke mister oversikten over siden når popoveren åpnes og lukkes.
+- [Fokusfangst](wordinfo:fokusfangst) og [fokusretur](wordinfo:retur-av-fokus) er påkrevd for at tastatur- og skjermleserbrukere ikke mister oversikten over siden når popoveren åpnes og lukkes.
 - Vi skiller mellom Popover (hjelp på forespørsel), Modal (bruker må ta stilling), WordInfo (begrepforklaring i tekst) og hjelpetekst (skjemakontekst) for å gi brukeren riktig forventning.
 
 ## Varianter (og når bruke dem)
 
-Ingen varianter.
+### Farger
+
+Vi bruker fargene gul, grønn og hvit.
+
+- Grønn (standard): hjelpetekster
+- Gul: tips og veiledning
+- Hvit: nøytral informasjon
 
 ### Plassering og justering
 
-- Popover skal plasseres nær elementet som utløser den.
-- Skal ikke overlappe annet kritisk innhold.
-- Velg plassering basert på skjermplass og unngå at popover skjules av andre elementer.
+- Popover-innholdet vises nær triggeren som åpner det.
+- For å unngå at Popover dekker viktig innhold eller handlinger kan du bruke `position` for å styre retningen. Komponenten kan overstyre plasseringen automatisk hvis det er for lite plass på skjermen.
 
 ### Interaksjon og tilstander
 
-- Åpnes og lukkes vanligvis ved klikk eller fokus.
+- Popover skal vises etter at brukeren har aktivert triggeren, og ikke automatisk når siden lastes.
 - Skal kunne lukkes med ESC eller klikk utenfor.
-- Får fokus når den åpnes, og gir fokus tilbake til utløseren når den lukkes.
+- Lukkeknappen gir fokus tilbake til triggeren når Popover lukkes.
 
 ## Tekst og språkbruk
 

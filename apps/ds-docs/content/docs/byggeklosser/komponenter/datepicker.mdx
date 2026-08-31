@@ -16,8 +16,7 @@ icon: /illustrations/datepicker.svg
 ## Når ikke bruke komponenten
 
 - Ikke bruk til valg av datoer langt tilbake eller langt frem i tid.
-- Ikke bruk for kjente datoer som fødselsdato.
-- Ikke bruk for valg av klokkeslett.
+- Unngå å bruke for kjente datoer som fødselsdato – disse er ofte raskere å bare taste rett inn.
 - Ikke bruk når brukeren kun skal velge årstall uten måned og dag.
 
 ## Hvorfor anbefalingene finnes?
@@ -27,25 +26,18 @@ icon: /illustrations/datepicker.svg
 
 ## Varianter (og når bruke dem)
 
-DatePicker kommer i to størrelser:
-
-- **Normal**
-- **Stor**
-
-Valg av variant bør følge tilgjengelig plass og visuell prioritet.
-
 ### Plassering og justering
 
 - Brukeren kan enten skrive inn dato direkte eller velge fra kalender.
 - Feltet bør plasseres på områder der brukerens fokus naturlig ligger på tidsnære eller avgrensede valg.
-- Ved flateoppsett med begrenset plass bør man sikre at kalenderen ikke kolliderer med øvrige elementer.
+- Ved bruk i oppsett med begrenset plass bør man sikre at kalenderen ikke kolliderer med øvrige elementer eller vises på en god måte. Å plassere DatePicker inni Modal kan føre til at brukeren må scrolle nedover i modalen for å se kalenderen.
 
 ### Interaksjon og tilstander
 
-- Brukeren kan skrive dato i flere vanlige formater. Dokumenter tydelig hvilke formater som støttes i løsningen (for eksempel `dd.mm.åååå`).
+- Brukeren kan skrive dato i flere vanlige skrivemåter, og komponenten vil automatisk forsøke å formatere til rett format. For eksempel vil "170526" formateres til "17.05.2026".
 - Kalenderen kan åpnes via kalenderknappen, ikke ved klikk i feltet.
 - Datoer utenfor gyldig periode skal være utilgjengelige og grået ut.
-- Dersom bruker skriver en ugyldig dato eller dato utenfor grenser, må det gis en fornuftig feilmelding.
+- DatePicker har ikke en innebygd feilmelding for ugyldige datoer eller datoer utenfor grensene. Du må derfor selv vise en passende feilmelding når brukeren skriver inn en slik dato.
 
 ## Tekst og språkbruk
 

@@ -20,7 +20,7 @@ icon: /illustrations/alert.svg
 
 ## Hvorfor anbefalingene finnes?
 
-- De fem variantene (suksess, nøytral, advarsel, feil, fare) har faste farger for å gi brukerne konsekvent fargekoding på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
+- De fem variantene (suksess, nøytral, advarsel, feil, fare) har faste farger for at bruken skal være konsekvent på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
 - Vi skiller mellom [Alert](/byggeklosser/komponenter/alert) (hel side/seksjon), [ErrorMessage](/byggeklosser/komponenter/errormessage) (enkeltfelt) og [ErrorSummary](/byggeklosser/komponenter/errorsummary) (oppsummering) for å gi riktig informasjon på riktig sted — dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
 - Innebygd `showAlert` brukes for å sikre at skjermlesere fanger opp endringen automatisk via `aria-live`.
 
@@ -30,37 +30,16 @@ icon: /illustrations/alert.svg
 
 Alert har fem forhåndsdefinerte varianter:
 
-#### Suksess
-
-- Brukes til å bekrefte en vellykket operasjon.
-- Farge: [forest].
-
-#### Nøytral
-
-- Brukes til nøytrale meldinger som kan være nyttige for brukeren.
-- Farge: [denim].
-
-#### Advarsel
-
-- Brukes til advarsler, ustabilitet, unntak eller midlertidige feil.
-- Farge: [ochre].
-- Egnet ved systemvarsler hvor deler av tjenesten er utilgjengelig.
-
-#### Feil
-
-- Brukes til feil som har oppstått og der brukeren trenger veiledning for hvordan de kan komme videre.
-- Vanlig for kritiske systemfeil.
-
-#### Fare
-
-- En spesielt uthevet variant.
-- Brukes når brukeren kan miste opplysninger eller ved strengt fortrolig informasjon.
-- Farge: rød med kraftig rød kantlinje.
+- Suksess (Grønn): Brukes til å bekrefte en vellykket operasjon.
+- Nøytral (Blå): Brukes til nøytrale meldinger som kan være nyttige for brukeren.
+- Advarsel (Gul): Brukes til advarsler, ustabilitet, unntak eller midlertidige feil. Egnet ved systemvarsler hvor deler av tjenesten er utilgjengelig.
+- Feil (Rød): Brukes til feil som har oppstått og der brukeren trenger veiledning for hvordan de kan komme videre. Vanlig for kritiske systemfeil.
+- Fare (Rød med kraftig kant): En spesielt uthevet variant. Brukes når brukeren kan miste opplysninger eller ved strengt fortrolig informasjon.
 
 #### Alle varianter:
 
-- Har standardikon og eventuell mulighet for lukkekryss.
-- Har faste farger som ikke kan endres - men ikon kan overstyres.
+- Har standardikon og valgfritt lukkekryss.
+- Har faste farger som ikke kan endres, men ikon kan overstyres.
 
 ### Plassering og justering
 

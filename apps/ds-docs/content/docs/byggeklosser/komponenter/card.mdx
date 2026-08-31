@@ -28,33 +28,32 @@ icon: /illustrations/card.svg
 
 Card har flere fargevarianter:
 
-- Gul ([[Ochre]])
-- Grønn ([[Forest]])
-- Rød ([[Burgundy]])
-- Blå ([[Denim]])
-- Grå ([[Graphite]])
-- Hvit ([[White]])
+- Gul (Ochre)
+- Grønn (Forest)
+- Rød (Burgundy)
+- Blå (Denim)
+- Grå (Graphite)
+- Hvit (White)
 
 Bakgrunns- og rammefarge hører sammen og kan ikke velges separat.
 
 ### Plassering og justering
 
 - Card er fleksibel og kan brukes både enkeltvis og i lister eller grid‑strukturer.
+- Innholdet inni kortet kan settes opp gjennom underkomponentene Header, Content og Actions.
 - Padding kan settes på hele kortet eller per underkomponent.
 - Underkomponentene arver padding fra hovedkomponenten, med mulighet for overstyring.
 
 ### Interaksjon og tilstander
 
-**Ingen interaksjonstilstander utover klikkbare elementer inne i kortet (f.eks. knapper).**
+Card inneholder en mekanisme for å vise et varsel øverst i kortet. Den kan brukes når man ønsker at brukeren skal gjøres oppmerksom på noe i kortet, for eksempel i forbindelse med dulting. Egenskapen `showAlert` styrer om varselet vises, og `onClose` viser et lukkekryss som kan brukes til å skjule det.
 
 ## Tekst og språkbruk
 
-**Ingen eksplisitte språkføringer**  
-Kort bør likevel ha tydelige overskrifter og konsis informasjon.
+Card har ingen særskilte retningslinjer for tekst og språkbruk, men kort bør likevel ha tydelige overskrifter og konsis informasjon slik at de blir lette å skanne.
 
 ## Tilgjengelighet (UU / WCAG)
 
-- Card støtter semantisk oppbygging gjennom underkomponenter som Header, Content og Actions.
 - Klar og tydelig struktur bidrar til bedre navigasjon og oppfattelse for brukere av hjelpeteknologi.
 
 import { Card } from '@skatteetaten/ds-content';
