@@ -87,13 +87,9 @@ export const CodeBlock = ({
     code,
     {
       defaultValue: (
-        <pre
-          aria-label={'Kodevisning'}
-          role={'region'}
-          className={styles.codeBlock}
-        >
+        <CodeBlockPre>
           <code>{code}</code>
-        </pre>
+        </CodeBlockPre>
       ),
       lang: language,
       theme: skeCodeTheme,
