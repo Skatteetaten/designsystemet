@@ -65,7 +65,9 @@ const docsContentLoader =
               <div className={styles.headingWrapper}>
                 <Heading as={'h2'} level={1} hasSpacing>
                   {parentTitle && (
-                    <span className={styles.parentTitle}>{parentTitle}</span>
+                    <span className={styles.parentTitle}>
+                      {parentTitle}&nbsp;
+                    </span>
                   )}
                   {frontmatter.title}
                 </Heading>
