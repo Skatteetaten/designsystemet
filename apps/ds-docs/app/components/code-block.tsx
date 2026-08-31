@@ -12,10 +12,10 @@ import { Card } from '@skatteetaten/ds-content';
 import { Select } from '@skatteetaten/ds-forms';
 import { Heading } from '@skatteetaten/ds-typography';
 
+import { CopyButton } from './copy-button';
 import { skeCodeTheme } from '../../lib/code-theme';
 
 import styles from './code-block.module.scss';
-import { CopyButton } from './copy-button';
 
 interface CodeBlockProps {
   code: string;
@@ -67,7 +67,12 @@ const extractText = (node: ReactNode): string => {
 };
 
 const CodeBlockPre = (props: JSX.IntrinsicElements['pre']): JSX.Element => (
-  <pre {...props} className={styles.codeBlock} />
+  <pre
+    aria-label={'Kodevisning'}
+    role={'region'}
+    {...props}
+    className={styles.codeBlock}
+  />
 );
 
 export const CodeBlock = ({
@@ -82,9 +87,9 @@ export const CodeBlock = ({
     code,
     {
       defaultValue: (
-        <pre className={styles.codeBlock}>
+        <CodeBlockPre>
           <code>{code}</code>
-        </pre>
+        </CodeBlockPre>
       ),
       lang: language,
       theme: skeCodeTheme,

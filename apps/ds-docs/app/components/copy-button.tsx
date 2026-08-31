@@ -1,4 +1,4 @@
-import { JSX, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
 import {
@@ -6,6 +6,8 @@ import {
   CopySVGpath,
   ErrorSVGpath,
 } from '@skatteetaten/ds-icons';
+
+import styles from './copy-button.module.scss';
 
 export interface CopyButtonProps {
   copyText: string;
@@ -36,22 +38,35 @@ export const CopyButton = ({
     idle: CopySVGpath,
   }[copyStatus];
 
+  useEffect((): (() => void) | undefined => {
+    if (copyStatus !== 'copied') {
+      return;
+    }
+
+    const timeoutId = setTimeout(() => setCopyStatus('idle'), 1000);
+    return () => clearTimeout(timeoutId);
+  }, [copyStatus]);
+
   const handleCopy = async (): Promise<void> => {
     try {
       await navigator.clipboard.writeText(copyText);
       setCopyStatus('copied');
-      setTimeout(() => setCopyStatus('idle'), 1000);
     } catch {
       setCopyStatus('error');
     }
   };
 
   return (
-    <IconButton
-      svgPath={buttonIcon}
-      title={buttonTitle}
-      size={size}
-      onClick={handleCopy}
-    />
+    <>
+      <IconButton
+        svgPath={buttonIcon}
+        title={buttonTitle}
+        size={size}
+        onClick={handleCopy}
+      />
+      <span className={styles.status} role={'status'} aria-live={'polite'}>
+        {copyStatus === 'idle' ? '' : buttonTitle}
+      </span>
+    </>
   );
 };
