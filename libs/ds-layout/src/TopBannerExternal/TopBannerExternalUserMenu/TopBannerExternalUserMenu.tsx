@@ -19,10 +19,10 @@ import { Divider } from '@skatteetaten/ds-content';
 import { dsI18n, formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
 import {
   InfoSquareSVGpath,
-  BellSVGpath,
   PersonSVGpath,
   LogOutSVGpath,
   PersonMoreSVGpath,
+  EmailSVGpath,
 } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -158,15 +158,15 @@ export const TopBannerExternalUserMenu = ({
                       ref={(node) => {
                         node?.setAttribute(
                           'data-webanalytics-id',
-                          topBannerAnalyticsIds.userMenu.notifications
+                          topBannerAnalyticsIds.userMenu.inbox
                         );
                       }}
                       className={styles.marginRightS}
-                      svgPath={BellSVGpath}
-                      href={`https://${hostname}/web/minside/${user.role === 'virksomhet' ? 'virksomhet' : 'person'}/varsler`}
+                      svgPath={EmailSVGpath}
+                      href={`https://${hostname}/web/minside/innboks/`}
                       ariaDescribedby={'notificationCount'}
                     >
-                      {t('ds_overlays:topbannerexternalusermenu.Notification')}
+                      {t('ds_overlays:topbannerexternalusermenu.Inbox')}
                     </Link>
                   )}
                   {!!notificationCount && notificationCount > 0 && (

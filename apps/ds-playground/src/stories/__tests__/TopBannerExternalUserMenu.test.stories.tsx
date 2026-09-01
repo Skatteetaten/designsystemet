@@ -342,12 +342,12 @@ export const WithCustomHostname: Story = {
     await expect(menuButton).toBeInTheDocument();
     await userEvent.click(menuButton);
 
-    const notificationLink = canvas.getByRole('link', {
-      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.Notification'),
+    const inboxLink = canvas.getByRole('link', {
+      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.Inbox'),
     });
-    await expect(notificationLink).toHaveAttribute(
+    await expect(inboxLink).toHaveAttribute(
       'href',
-      'https://test.skatteetaten.no/web/minside/virksomhet/varsler'
+      'https://test.skatteetaten.no/web/minside/innboks/'
     );
   },
 };
