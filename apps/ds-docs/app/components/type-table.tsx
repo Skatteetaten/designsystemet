@@ -93,7 +93,7 @@ export const TypeTable = ({ of }: TypeTableProps): JSX.Element => {
         <Table.Row>
           <Table.HeaderCell>{'Navn'}</Table.HeaderCell>
           <Table.HeaderCell>{'Type'}</Table.HeaderCell>
-          <Table.HeaderCell>{''}</Table.HeaderCell>
+          <Table.HeaderCell as={'td'}>{''}</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
