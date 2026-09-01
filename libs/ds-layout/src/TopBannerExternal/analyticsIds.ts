@@ -12,7 +12,7 @@ export const topBannerAnalyticsIds = {
   userMenu: {
     root: 'topbanner.user-menu',
     switchUser: 'topbanner.user-menu.switch-user',
-    notifications: 'topbanner.user-menu.notifications',
+    inbox: 'topbanner.user-menu.inbox',
     myPage: 'topbanner.user-menu.my-page',
     aboutMe: 'topbanner.user-menu.about-me',
     aboutBusiness: 'topbanner.user-menu.about-business',
