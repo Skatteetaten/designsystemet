@@ -14,7 +14,7 @@
     --spinner-color: var(--palette-graphite-100);
   }
 
-  &:where([data-color='blue']) {
+  &:where([data-color='interactive']) {
     --spinner-color: var(--semantic-interactive-main);
   }
 

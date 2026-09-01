@@ -78,7 +78,7 @@ export const InlineButton = ({
       {hasSpinner && (
         <Spinner
           className={styles.spinner}
-          color={disabled ? 'black' : 'blue'}
+          color={disabled ? 'black' : 'interactive'}
           size={'small'}
           hideTitle
         >

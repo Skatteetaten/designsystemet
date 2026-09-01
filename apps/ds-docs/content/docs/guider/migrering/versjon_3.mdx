@@ -47,8 +47,6 @@ Vi fjerner størrelsen `large` fra `DatePicker`, `Select` og `TextField`. Prop `
 <TextField label={'Navn'} classNames={{ textbox: 'min-textfield' }} />
 ```
 
-with
-
 ```css
 .min-textfield {
   padding: var(--spacing-s);
@@ -216,6 +214,54 @@ Les mer på mønster for obligatoriske felt: [https://www.skatteetaten.no/stilog
 ```tsx
 <TextField label={'Navn'} required />
 <Select label={'Velg'} required>{/* … */}</Select>
+```
+
+### Accordion: `color` har ny default-verdi
+
+Fargen er som før, men default-verdien for `color` er endret fra `none` til `white`.
+
+**Før:**
+
+```tsx
+<Accordion color={'none'}>{...}</Accordion>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<Accordion color={'white'}>{...}</Accordion>
+```
+
+### Spinner: `color="blue"` har endret verdi
+
+Fargen er som før, men verdien for `color` er endret fra `blue` til `interactive`.
+
+**Før:**
+
+```tsx
+<Spinner color={'blue'}>{...}</Spinner>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<Spinner color={'interactive'}>{...}</Spinner>
+```
+
+### Link/LinkGroup: `color` har endret default-verdi
+
+Fargen er som før, men default-verdien for `color` er endret fra `undefined` til `interactive`.
+
+**Før:**
+
+```tsx
+<Link color={undefined}>{...}</Link>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<Link color={'interactive'}>{...}</Link>
 ```
 
 ## Endrede standardverdier

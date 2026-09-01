@@ -61,7 +61,7 @@ export const positionArr = [
 ] as const;
 export type Position = (typeof positionArr)[number];
 
-export const linkColorArr = ['white'] as const;
+export const linkColorArr = ['interactive', 'white'] as const;
 export type LinkColor = (typeof linkColorArr)[number];
 
 export const statusArr = [

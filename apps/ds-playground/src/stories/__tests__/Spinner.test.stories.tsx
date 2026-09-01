@@ -191,15 +191,10 @@ export const WithColorsLightBackground = {
   render: (args): JSX.Element => {
     return (
       <>
-        <Spinner
-          className={'bottomSpacingXL'}
-          color={'black'}
-          size={'medium'}
-          {...args}
-        >
+        <Spinner className={'bottomSpacingXL'} {...args}>
           {'Henter innhold'}
         </Spinner>
-        <Spinner color={'blue'} size={'medium'} {...args}>
+        <Spinner color={'interactive'} {...args}>
           {'Henter innhold'}
         </Spinner>
       </>

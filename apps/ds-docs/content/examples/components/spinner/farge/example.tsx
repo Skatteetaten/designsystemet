@@ -7,9 +7,9 @@ import styles from './spinner.module.scss';
 export default function SpinnerColorExample(): ReactElement {
   return (
     <div className={styles.container}>
-      <Spinner color={'black'}>{'Laster inn'}</Spinner>
-      <Spinner color={'blue'}>{'Laster inn'}</Spinner>
-      <div className={styles.whiteBackground}>
+      <Spinner>{'Laster inn'}</Spinner>
+      <Spinner color={'interactive'}>{'Laster inn'}</Spinner>
+      <div className={styles.darkBackground}>
         <Spinner color={'white'}>{'Laster inn'}</Spinner>
       </div>
     </div>

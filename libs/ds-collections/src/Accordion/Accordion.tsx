@@ -19,22 +19,20 @@ export const Accordion = ({
   className = '',
   lang,
   'data-testid': dataTestId,
-  color = 'none',
+  color = 'white',
   size = defaultAccordionSize,
   iconPosition = 'right',
   children,
 }: AccordionProps): JSX.Element => {
-  const colorClassName = color !== 'none' ? styles[`accordion_${color}`] : '';
-  const concatenatedClassNames = `${colorClassName} ${className}`.trim();
-
   return (
     <AccordionContext.Provider value={{ size, iconPosition }}>
       <div
         ref={ref}
-        className={concatenatedClassNames}
+        className={`${styles.accordion} ${className}`.trim()}
         lang={lang}
         id={id}
         data-testid={dataTestId}
+        data-color={color}
       >
         {children}
       </div>

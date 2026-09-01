@@ -112,7 +112,7 @@ export const NavigationTile = ({
         {hasSpinner && (
           <Spinner
             className={spinnerClassNames}
-            color={'blue'}
+            color={'interactive'}
             size={size === 'extraLarge' ? 'large' : 'medium'}
             hideTitle
           >
