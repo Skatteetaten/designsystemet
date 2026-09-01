@@ -119,7 +119,7 @@ export const CodeBlock = ({
               ))}
             </Select>
           ) : (
-            <Heading as={'h4'} level={5} className={styles.filename}>
+            <Heading as={'h3'} level={5} className={styles.filename}>
               {filename ?? language}
             </Heading>
           )}
