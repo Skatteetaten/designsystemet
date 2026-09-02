@@ -9,10 +9,10 @@ export default function ErrorSummaryPreviewStateExample(): JSX.Element {
       showErrorSummary
     >
       <ErrorSummary.Error referenceId={'fornavn'}>
-        {'Fornavn er påkrevd.'}
+        {'Fornavn må fylles ut.'}
       </ErrorSummary.Error>
       <ErrorSummary.Error referenceId={'fodselsnummer'}>
-        {'Fødselsnummer er ugyldig.'}
+        {'Fødselsnummer er ikke skrevet på riktig format.'}
       </ErrorSummary.Error>
     </ErrorSummary>
   );
