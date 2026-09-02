@@ -9,7 +9,7 @@ import {
 } from 'react';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { Chips, OpenClose } from '@skatteetaten/ds-collections';
+import { OpenClose, Tabs } from '@skatteetaten/ds-collections';
 import { Card } from '@skatteetaten/ds-content';
 import { EditSVGpath, ExternalSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
@@ -179,22 +179,8 @@ export const Canvas = ({
     }
   };
 
-  return (
+  const canvasContent = (
     <>
-      {examples.length > 1 && (
-        <Chips ariaLabel={'Velg eksempel'} className={styles.chips}>
-          {examples.map((example) => (
-            <Chips.Toggle
-              key={example.key}
-              size={'small'}
-              isSelected={example.key === selectedExample.key}
-              onClick={() => setSelectedExampleKey(example.key)}
-            >
-              {capitalizeFirstLetter(example.label)}
-            </Chips.Toggle>
-          ))}
-        </Chips>
-      )}
       <Card className={styles.canvas}>
         <iframe
           ref={iframeRef}
@@ -251,5 +237,47 @@ export const Canvas = ({
         )}
       </OpenClose>
     </>
+  );
+
+  if (examples.length === 1) {
+    return canvasContent;
+  }
+
+  const selectedExampleTabValue = `example-${examples.indexOf(selectedExample)}`;
+
+  const handleExampleChange = (value: string): void => {
+    const matchingExample = examples.find(
+      (_, index) => `example-${index}` === value
+    );
+
+    if (matchingExample) {
+      setSelectedExampleKey(matchingExample.key);
+    }
+  };
+
+  return (
+    <Tabs
+      value={selectedExampleTabValue}
+      variant={'compact'}
+      isMultiline
+      onChange={handleExampleChange}
+    >
+      <Tabs.List ariaLabel={'Velg eksempel'} className={styles.exampleTabs}>
+        {examples.map((example, index) => (
+          <Tabs.Tab key={example.key} value={`example-${index}`}>
+            {capitalizeFirstLetter(example.label)}
+          </Tabs.Tab>
+        ))}
+      </Tabs.List>
+      {examples.map((example, index) => (
+        <Tabs.Panel
+          key={example.key}
+          value={`example-${index}`}
+          keepMounted={false}
+        >
+          {example.key === selectedExample.key ? canvasContent : null}
+        </Tabs.Panel>
+      ))}
+    </Tabs>
   );
 };
