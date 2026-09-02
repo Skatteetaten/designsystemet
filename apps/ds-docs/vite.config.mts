@@ -62,6 +62,9 @@ export default defineConfig(() => ({
     outDir: '../../dist/apps/ds-docs',
     emptyOutDir: true,
     reportCompressedSize: true,
+    // Work around https://github.com/vitejs/vite/issues/3924, which reverses
+    // component and consumer CSS order when CSS is split across chunks.
+    cssCodeSplit: false,
     commonjsOptions: {
       transformMixedEsModules: true,
     },

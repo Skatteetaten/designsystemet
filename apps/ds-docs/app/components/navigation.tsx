@@ -187,8 +187,6 @@ const buildFolderChildItems = (
 const isFolderNode = (node: PageTreeNode): node is FolderNode =>
   node.type === 'folder';
 
-const includePage = (): boolean => true;
-
 const renderNode = (
   node: PageTreeNode,
   pathname: string,
@@ -253,7 +251,7 @@ const renderFolderSection = (
 
 export const Navigation = ({
   pageTree,
-  filterPage = includePage,
+  filterPage = (): boolean => true,
 }: NavigationProps): JSX.Element => {
   const { pathname } = useLocation();
   const [filterValue, setFilterValue] = useState('');
