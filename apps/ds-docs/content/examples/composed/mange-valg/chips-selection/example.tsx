@@ -18,20 +18,28 @@ export default function ChipsSelectionExample(): JSX.Element {
     'November',
     'Desember',
   ];
-  const [selectedMonth, setSelectedMonth] = useState<string>('Januar');
+  const [selectedMonths, setSelectedMonths] = useState<string[]>([]);
+
+  const toggleMonth = (month: string): void => {
+    setSelectedMonths((previous) =>
+      previous.includes(month)
+        ? previous.filter((selected) => selected !== month)
+        : [...previous, month]
+    );
+  };
 
   return (
     <>
       <Heading level={5} as={'h2'} id={'month-heading'} hasSpacing>
-        {'Velg måned'}
+        {'Velg måneder'}
       </Heading>
       <Chips ariaLabelledBy={'month-heading'}>
         {months.map((month) => (
           <Chips.Toggle
             key={month}
-            isSelected={selectedMonth === month}
+            isSelected={selectedMonths.includes(month)}
             showCheckmark={false}
-            onClick={(): void => setSelectedMonth(month)}
+            onClick={(): void => toggleMonth(month)}
           >
             {month}
           </Chips.Toggle>
