@@ -29,6 +29,7 @@ type PageNode = Extract<PageTreeNode, { type: 'page' }>;
 interface NavigationProps {
   pageTree: Root;
   filterPage?: PageTreeFilter;
+  onNavigate?: () => void;
 }
 
 interface ExpandableItemProps {
@@ -252,6 +253,7 @@ const renderFolderSection = (
 export const Navigation = ({
   pageTree,
   filterPage = (): boolean => true,
+  onNavigate,
 }: NavigationProps): JSX.Element => {
   const { pathname } = useLocation();
   const [filterValue, setFilterValue] = useState('');
@@ -263,6 +265,7 @@ export const Navigation = ({
   const handleNavigationClick = (event: MouseEvent<HTMLDivElement>): void => {
     if (event.target instanceof Element && event.target.closest('a')) {
       setFilterValue('');
+      onNavigate?.();
     }
   };
 
