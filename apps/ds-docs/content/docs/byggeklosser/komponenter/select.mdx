@@ -8,20 +8,21 @@ icon: /illustrations/select.svg
 
 ## Bruk Select når
 
-- Når det finnes 5 eller flere alternativer.
-- Når du trenger å flere valg på liten plass.
-- Når valget skal presenteres kompakt og brukeren kun kan velge ett alternativ.
+- det er omtrent 5–15 alternativer å velge mellom
+- du trenger å vise flere valg på liten plass
+- valget skal presenteres kompakt og brukeren kun kan velge ett alternativ
 
 ## Unngå Select når
 
-- Ikke bruk til navigasjon mellom sider eller seksjoner.
-- Ikke bruk når brukeren skal velge flere alternativer (velg da [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) eller annen flervalgskomponent).
-- Når det finnes få valg, er [RadioGroup](/byggeklosser/komponenter/radiogroup) ofte best fordi brukeren kan se alle alternativene samtidig. Select kan likevel brukes når det er begrenset plass.
+- du skal navigere mellom sider eller seksjoner
+- brukeren skal velge flere alternativer (velg da [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) eller annen flervalgskomponent)
+- brukeren trenger oversikt over alle alternativene samtidig — vis dem heller med [RadioGroup](/byggeklosser/komponenter/radiogroup) eller [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup)
+- listen er lang og brukeren har behov for å søke seg frem — bruk [Combobox](/byggeklosser/komponenter/combobox)
 
 ## Hvorfor vi anbefaler dette
 
 - Native select brukes for å gi brukerne forutsigbar og tilgjengelig atferd — nettleserens innebygde select har god støtte for skjermlesere og tastatur på alle plattformer.
-- Grensen på 7+ alternativer er den øvre terskelen for RadioGroup: færre valg er lettere å sammenligne visuelt, men mange valg gjør listen uoversiktlig i et åpent format.
+- 5–15 alternativer er en [anbefaling fra NN Group](https://www.nngroup.com/articles/listbox-dropdown/), ikke en hard grense. Med få alternativer bør du heller vise dem alle slik at brukeren kan sammenligne, og med mange alternativer blir en lukket liste tung å navigere. Se [Å velge blant flere](/eksempler/spørre-bruker-om/mange-valg) for en samlet oversikt.
 
 ## Varianter og når bør du bruke dem
 

@@ -9,21 +9,20 @@ icon: /illustrations/radiogroup.svg
 
 ## Bruk RadioGroup når
 
-- Når brukeren skal velge ett av 2–7 alternativer.
-- Når valgene er gjensidig utelukkende.
-- Når valget påvirker hva som vises videre (f.eks. neste steg i et skjema).
-- Når alternativer må presenteres tydelig for sammenligning.
+- brukeren skal velge ett av omtrent 2–5 alternativer
+- valgene er gjensidig utelukkende
+- valget påvirker hva som vises videre (f.eks. neste steg i et skjema)
+- alternativer må presenteres tydelig for sammenligning
 
 ## Unngå RadioGroup når
 
-- Ikke bruk når brukeren kan velge flere alternativer – bruk [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) i stedet.
-- Ikke bruk når det finnes kun ett valg – da bør du bruke [Checkbox](/byggeklosser/komponenter/checkbox).
-- Ikke bruk når det er mer enn 7 valg, da dette blir uoversiktlig.  
-  Vurder om valgene kan deles opp i mindre grupper.
+- brukeren kan velge flere alternativer – bruk [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) i stedet
+- det finnes kun ett valg – da bør du bruke [Checkbox](/byggeklosser/komponenter/checkbox)
+- listen blir uoversiktlig fordi den har mange alternativer – vurder om valgene kan deles opp i mindre grupper, eller bruk [Select](/byggeklosser/komponenter/select)
 
 ## Hvorfor vi anbefaler dette
 
-- Grensen på 2–7 alternativer er basert på UX-prinsipper om kognitiv belastning: flere valg gjør beslutningen vanskeligere og øker sannsynligheten for feilklikk.
+- 2–5 alternativer er en [anbefaling fra NN Group](https://www.nngroup.com/articles/listbox-dropdown/), ikke en hard grense. Få alternativer kan sammenlignes visuelt uten å åpne en liste, mens mange alternativer i et åpent format øker kognitiv belastning og sannsynligheten for feilklikk. Se [Å velge blant flere](/eksempler/spørre-bruker-om/mange-valg) for en samlet oversikt.
 - Veiledningen om forhåndsvalg er bevisst nyansert for å balansere effektivitet med brukerautonomi — et automatisk forhåndsvalg kan styre brukeren i feil retning dersom det ikke er gjennomtenkt.
 
 ## Varianter og når bør du bruke dem
