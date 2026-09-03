@@ -57,7 +57,7 @@ export default function StepListStandardExample(): ReactElement {
         <StepList.Step
           id={`${stepId}-3`}
           variant={activeStep === 3 ? 'active' : 'passive'}
-          title={'Salg av varer og tjenester'}
+          title={'Selger du varer og tjenester for egen regning?'}
           stepNumber={3}
           onEdit={
             activeStep > 3 && activeStep < 5
@@ -74,18 +74,6 @@ export default function StepListStandardExample(): ReactElement {
         >
           {activeStep === 3 ? (
             <>
-              <OpenClose title={'Hva er egen regning og risiko?'}>
-                <Paragraph hasSpacing>
-                  {
-                    'At du driver for egen regning og risiko innebærer at det er du som har det økonomiske ansvaret for gjeld og forpliktelser. Det innebærer også at det er du som dekker kostnadene i virksomheten, for eksempel kostnader til materiale eller andre driftskostnader.'
-                  }{' '}
-                </Paragraph>
-                <Paragraph>
-                  {
-                    'I tillegg vil du ha det kontraktsmessige ansvaret for at oppdrag blir utført og ansvar for å dekke et eventuelt underskudd.'
-                  }
-                </Paragraph>
-              </OpenClose>
               <RadioGroup
                 legend={
                   'Selger du varer og tjenester for egen regning og risiko?'
@@ -106,6 +94,22 @@ export default function StepListStandardExample(): ReactElement {
                 </RadioGroup.Radio>
                 <RadioGroup.Radio value={'nei'}>{'Nei'}</RadioGroup.Radio>
               </RadioGroup>
+
+              <OpenClose
+                title={'Hva mener vi med egen regning og risiko?'}
+                size={'small'}
+              >
+                <Paragraph hasSpacing>
+                  {
+                    'At du driver for egen regning og risiko innebærer at det er du som har det økonomiske ansvaret for gjeld og forpliktelser. Det innebærer også at det er du som dekker kostnadene i virksomheten, for eksempel kostnader til materiale eller andre driftskostnader.'
+                  }{' '}
+                </Paragraph>
+                <Paragraph>
+                  {
+                    'I tillegg vil du ha det kontraktsmessige ansvaret for at oppdrag blir utført og ansvar for å dekke et eventuelt underskudd.'
+                  }
+                </Paragraph>
+              </OpenClose>
               <ErrorSummary showErrorSummary={hasStep3Error}>
                 <ErrorSummary.Error referenceId={'step3radio'}>
                   {'Selger du varer og tjenester for egen regning?'}

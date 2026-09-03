@@ -23,7 +23,7 @@ export default function BreadcrumbsNoCollapseStateExample(): JSX.Element {
         </Breadcrumbs.Item>
         <Breadcrumbs.Item>
           <Breadcrumbs.Link href={'#informasjon'}>
-            {'Informasjon'}
+            {'Tittel knyttet til oppgave'}
           </Breadcrumbs.Link>
         </Breadcrumbs.Item>
       </Breadcrumbs.List>

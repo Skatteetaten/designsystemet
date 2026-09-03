@@ -13,7 +13,7 @@ export default function FileUploaderWithErrorStateExample(): JSX.Element {
         label={'Last opp dokumentasjon'}
         acceptedFileFormats={['.pdf']}
         errorMessage={
-          'Du kan ikke laste opp filer av denne typen. Prøv et annet format.'
+          'Filtypen og filendelsen stemmer ikke overens, for eksempel kan en Word-fil ha filendelsen .pdf. Lagre filen på nytt i et støttet format og prøv igjen.'
         }
       />
     </>
