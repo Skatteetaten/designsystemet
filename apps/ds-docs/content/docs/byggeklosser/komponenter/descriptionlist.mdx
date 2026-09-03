@@ -6,23 +6,23 @@ icon: /illustrations/descriptionlist.svg
 
 <Canvas examplesPath="components/descriptionlist" />
 
-## Når bruke komponenten
+## Bruk DescriptionList når
 
-- For å liste opp en samling av ikke‑interaktive opplysninger.
-- For å fordele opplysninger over flere kolonner.
-- For å vise oppsummeringer, for eksempel før innsending av skjema.
+- du skal liste opp en samling av ikke‑interaktive opplysninger
+- du skal fordele opplysninger over flere kolonner
+- du skal vise oppsummeringer, for eksempel før innsending av skjema
 
-## Når ikke bruke komponenten
+## Unngå DescriptionList når
 
-- Ikke bruk i skjemaer med vanlig innsending eller når tab‑navigering er viktig. Bruk heller [TextField](/byggeklosser/komponenter/textfield) i readonly‑modus.
+- du er i et skjema med vanlig innsending, eller tab‑navigering er viktig — bruk heller [TextField](/byggeklosser/komponenter/textfield) i readonly‑modus
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - DescriptionList bygger på [semantiske](wordinfo:semantisk) `dl`/`dt`/`dd`-elementer som gir skjermlesere korrekt informasjon om at innholdet er par av ledetekster og verdier — noe som gjør lister mer skannbare for alle.
 - Komponenten ikke har innebygd styring av fokus, så for interaktive/redigerbare felter er det viktig å se i sammenheng med Textfield sin `readOnly`-tilstand.
 - Horisontal og vertikal variant er ikke et rent estetisk valg: horisontal krever mer bredde og bør automatisk falle tilbake til vertikal på små skjermer for å opprettholde lesbarhet.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Horisontal visning
 
@@ -55,12 +55,12 @@ icon: /illustrations/descriptionlist.svg
 
 Komponenten er ikke interaktiv og er laget for å vise informasjon. Det er imidlertid mulig å legge til interaktive elementer sammen med verdien, slik som for eksempel en kopier-knapp. Bruk da [InlineButton](/byggeklosser/komponenter/inlinebutton) eller [IconButton](/byggeklosser/komponenter/iconbutton).
 
-## Tekst og språkbruk
+## Tekst
 
 - Bruk korte, presise og lett skannbare ledetekster og verdier.
 - Prioriter tydelig struktur.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Bygget på semantiske `dl`/`dt`/`dd`‑elementer.
 - Det kreves at både ledetekst og verdi faktisk har innhold.

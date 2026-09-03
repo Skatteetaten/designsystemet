@@ -6,25 +6,25 @@ icon: /illustrations/alert.svg
 
 <Canvas examplesPath="components/alert" />
 
-## Når bruke komponenten
+## Bruk Alert når
 
-- Når du vil fange brukerens oppmerksomhet med korte, viktige meldinger de må ta hensyn til.
-- Når meldingen gjelder hele siden eller en større seksjon.
-- Når du skal vise systemfeil der deler av tjenesten eller enkeltdata er utilgjengelige.
-- Når du skal gi beskjed om midlertidige feil i systemet.
+- du vil fange brukerens oppmerksomhet med korte, viktige meldinger de må ta hensyn til
+- meldingen gjelder hele siden eller en større seksjon
+- du skal vise systemfeil der deler av tjenesten eller enkeltdata er utilgjengelige
+- du skal gi beskjed om midlertidige feil i systemet
 
-## Når ikke bruke komponenten
+## Unngå Alert når
 
-- Ikke bruk for feil knyttet til enkeltfelt – bruk da ErrorMessage i stedet.
-- Ikke bruk til statiske informasjonsbokser – bruk Panel i stedet.
+- meldingen gjelder feil knyttet til enkeltfelt – bruk da ErrorMessage i stedet
+- du trenger en statisk informasjonsboks – bruk Panel i stedet
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - De fem variantene (suksess, nøytral, advarsel, feil, fare) har faste farger for at bruken skal være konsekvent på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
 - Vi skiller mellom [Alert](/byggeklosser/komponenter/alert) (hel side/seksjon), [ErrorMessage](/byggeklosser/komponenter/errormessage) (enkeltfelt) og [ErrorSummary](/byggeklosser/komponenter/errorsummary) (oppsummering) for å gi riktig informasjon på riktig sted — dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
 - Innebygd `showAlert` brukes for å sikre at skjermlesere fanger opp endringen automatisk via `aria-live`.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Alvorligshetsgrad
 
@@ -51,13 +51,13 @@ Alert har fem forhåndsdefinerte varianter:
 - Når du viser eller skjuler komponenten, bruk den innebygde egenskapen `showAlert`.
 - Ikke lag egne visibility-regler, da dette kan hindre at skjermlesere fanger opp endringen.
 
-## Tekst og språkbruk
+## Tekst
 
 - Hold innholdet kort og presist.
 - Bruk tydelig språk som gjenspeiler alvorlighetsgrad.
 - Skill mellom feil brukeren kan rette selv, og større systemfeil som krever annen informasjon.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Sørg for tilstrekkelig kontrast mellom tekst og bakgrunn (minst 4,5:1).
 - Meldingen bør være tydelig og lett å forstå for alle brukere.

@@ -71,7 +71,7 @@ export default function TableSelectableRowsExample(): ReactElement {
             </Checkbox>
           </Table.HeaderCell>
           <Table.HeaderCell>{'Fastsatt'}</Table.HeaderCell>
-          <Table.HeaderCell>{'avgiftstype'}</Table.HeaderCell>
+          <Table.HeaderCell>{'Avgiftstype'}</Table.HeaderCell>
           <Table.HeaderCell alignment={'right'}>{'Beløp'}</Table.HeaderCell>
           <Table.HeaderCell>{'Status'}</Table.HeaderCell>
         </Table.Row>

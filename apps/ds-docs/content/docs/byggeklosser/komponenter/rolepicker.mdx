@@ -6,26 +6,26 @@ icon: /illustrations/rolepicker.svg
 
 <Canvas examplesPath="components/rolepicker" />
 
-## Når bruke komponenten
+## Bruk RolePicker når
 
-- Når brukeren har flere mulige representasjoner (privatperson, virksomheter, vergeroller).
-- Når brukeren må velge rolle før tjenesten kan starte.
-- Når representasjonsvalg påvirker tilgjengelige data, oppgaver eller tillatelser.
-- Når brukeren skal kunne bytte representasjon i etterkant via toppbanneret.
+- brukeren har flere mulige representasjoner (privatperson, virksomheter, vergeroller)
+- brukeren må velge rolle før tjenesten kan starte
+- representasjonsvalg påvirker tilgjengelige data, oppgaver eller tillatelser
+- brukeren skal kunne bytte representasjon i etterkant via toppbanneret
 
-## Når ikke bruke komponenten
+## Unngå RolePicker når
 
-- Ikke bruk i interne løsninger.
-- Ikke bruk når brukeren kun har én representasjon (privatperson) og ingen valg trengs.
-- Ikke bruk når valget allerede er tatt tidligere i tjenesteflyten og ikke skal endres.
+- løsningen er intern
+- brukeren kun har én representasjon (privatperson) og ingen valg trengs
+- valget allerede er tatt tidligere i tjenesteflyten og ikke skal endres
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Vi tvinger brukeren til å velge representasjon før de starter tjenesten for å unngå at handlinger utføres på vegne av feil aktør. Det er enklere å velge riktig ved start enn å rette feil i etterkant.
 - Søkevariant vises ved ti eller flere representasjoner for å holde listen navigerbar. En lang liste uten søk er krevende for alle brukere, men særlig for de med hjelpemiddelteknologi.
 - Lukkekrysset skjules ved førstegangsvalg fordi brukeren må ta stilling til representasjonen før de går videre — å la dem avslutte uten valg skaper en udefinert tilstand i tjenesten.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Direkte visning
 
@@ -60,13 +60,13 @@ icon: /illustrations/rolepicker.svg
 - Dersom tjenesten kun er tilgjengelig for virksomheter:
   - En innebygd feilmelding vises dersom ingen virksomheter finnes.
 
-## Tekst og språkbruk
+## Tekst
 
 - Rollene skal presenteres med navn og forståelige betegnelser.
 - Avviklede virksomheter og underenheter skal merkes tydelig.
 - Språket skal være konsist og forklare valg uten juridiske eller tekniske uttrykk.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Opp til fire nivåer med overskrifter kan forekomme, avhengig av om underenheter/avviklede virksomheter listes.
 - Søkefunksjonen varsler skjermleser når resultatlisten oppdateres — både under skriving og ved ferdig søk.

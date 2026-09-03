@@ -6,26 +6,25 @@ icon: /illustrations/textarea.svg
 
 <Canvas examplesPath="components/textarea" />
 
-## Når bruke komponenten
+## Bruk TextArea når
 
-- Når brukeren skal skrive inn lengre tekster.
-- Når innholdet er åpent, ustrukturert eller beskrivende.
-- Når svarlengden er ukjent eller kan variere betydelig.
+- brukeren skal skrive inn lengre tekster
+- innholdet er åpent, ustrukturert eller beskrivende
+- svarlengden er ukjent eller kan variere betydelig
 
-## Når ikke bruke komponenten
+## Unngå TextArea når
 
-- Ikke bruk TextArea for korte eller strukturerte data (navn, dato, fødselsnummer).  
-  Bruk [TextField](/byggeklosser/komponenter/textfield) i stedet.
-- Ikke bruk TextArea når formatert tekst (f.eks. Markdown) er nødvendig.
-- Ikke bruk hvis brukeren skal velge et forhåndsdefinert alternativ.
+- dataene er korte eller strukturerte (navn, dato, fødselsnummer) — bruk [TextField](/byggeklosser/komponenter/textfield) i stedet
+- formatert tekst (f.eks. Markdown) er nødvendig
+- brukeren skal velge et forhåndsdefinert alternativ
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Placeholder forsvinner når brukeren begynner å skrive, og all nødvendig informasjon må derfor uansett stille i label og beskrivelse. Å bruke placeholder i tillegg er dermed redundant og kan være forvirrende.
 - `readOnly` skilles fra `disabled` fordi `readOnly`-innhold fortsatt sendes med skjemaet og er tilgjengelig for skjermlesere — viktig for korrekt datainnsamling.
 - Fritekst-svar er krevende å validere og behandle. Vi styrer brukeren mot kortere, strukturerte felt når det er mulig, og bruker TextArea bare når åpent svar er nødvendig.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Standard (skrivefelt)
 
@@ -49,7 +48,7 @@ Brukes som vanlig i skjema der fritekst ønskes.
 - Feilmelding skal vises rett under feltet.
 - Read-only felt inngår i innsending; disabled gjør det ikke.
 
-## Tekst og språkbruk
+## Tekst
 
 - Ledetekst skal være kort og presis.
 - Beskrivelse skal brukes til å forklare hva brukeren skal gjøre.
@@ -65,7 +64,7 @@ Komponenten fraråder bruk av placeholder‑tekst fordi:
 
 All nødvendig informasjon skal ligge i ledetekst og beskrivelse, ikke placeholder.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - TextArea må alltid ha ledetekst (label eller aria‑label).
 - Label skal ikke være identisk med placeholder hvis placeholder brukes unntaksvis.

@@ -6,25 +6,25 @@ icon: /illustrations/scrolltotopbutton.svg
 
 <Canvas examplesPath="components/scrolltotopbutton" />
 
-## Når bruke komponenten
+## Bruk ScrollToTopButton når
 
-- Når siden inneholder mye innhold som gjør scroll-strekningen lang.
-- Når brukeren typisk beveger seg langt ned i lister, tabeller, søkeresultater eller dokumentasjon.
-- Når det er viktig å gjøre navigasjon tilbake til toppen effektiv og tilgjengelig.
+- siden inneholder mye innhold som gjør scroll-strekningen lang
+- brukeren typisk beveger seg langt ned i lister, tabeller, søkeresultater eller dokumentasjon
+- det er viktig å gjøre navigasjon tilbake til toppen effektiv og tilgjengelig
 
-## Når ikke bruke komponenten
+## Unngå ScrollToTopButton når
 
-- Ikke bruk hvis siden er kort og ikke krever scrolling.
-- Ikke bruk dersom andre navigasjonsmønstre (f.eks. feste av toppnavigasjon) allerede løser behovet.
-- Ikke bruk på sider der fokus skal være lineært og ikke krever hyppige hopp.
+- siden er kort og ikke krever scrolling
+- andre navigasjonsmønstre (f.eks. feste av toppnavigasjon) allerede løser behovet
+- siden har et lineært fokus og ikke krever hyppige hopp
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Knappen vises kun etter scrolling for å unngå unødvendig visuell støy på sider med lite innhold. Den er en effektivitetshjelp, ikke et fast navigasjonselement.
 - Scroll-animasjon skal være moderat for å unngå å forårsake ubehag for brukere med bevegelsessensitivitet (jf. WCAG 2.3.3 Animation from Interactions).
 - `aria-label` er obligatorisk fordi knappen kun har et ikon — uten tekstalternativ er funksjonen usynlig for skjermleserbrukere.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 Komponenten har ingen egne visuelle varianter, men kan tilpasses med props og plasseres etter behov.
 
@@ -49,12 +49,12 @@ Komponenten har ingen egne visuelle varianter, men kan tilpasses med props og pl
 - Ved klikk scroller siden rolig tilbake til toppen.
 - Skal være synlig nok til å bli oppdaget, men ikke forstyrrende.
 
-## Tekst og språkbruk
+## Tekst
 
 - Komponenten bruker ikon (pil opp), og trenger som regel ikke tekst.
 - Dersom tekst brukes, skal den være kort, som «Til toppen».
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Knappen skal være fokusérbar med tastatur.
 - Tekstalternativ (`aria-label="Gå til toppen"`) må settes for skjermlesere.

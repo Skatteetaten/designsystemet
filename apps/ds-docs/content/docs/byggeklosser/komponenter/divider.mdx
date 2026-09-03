@@ -6,24 +6,24 @@ icon: /illustrations/divider.svg
 
 <Canvas examplesPath="components/divider" />
 
-## Når bruke komponenten
+## Bruk Divider når
 
-- Når du vil skape en tydelig oppdeling av innhold, for eksempel under en temaoverskrift.
-- Når du vil hjelpe brukeren å skille mellom ulike seksjoner på en side.
-- Når luft alene ikke gir tilstrekkelig visuelt skille.
+- du vil skape en tydelig oppdeling av innhold, for eksempel under en temaoverskrift
+- du vil hjelpe brukeren å skille mellom ulike seksjoner på en side
+- luft alene ikke gir tilstrekkelig visuelt skille
 
-## Når ikke bruke komponenten
+## Unngå Divider når
 
-- Ikke bruk når naturlig spacing eller andre visuelle virkemidler gir godt nok skille.
-- Ikke bruk mange delelinjer tett etter hverandre – det kan skape et rotete og tungt visuelt uttrykk.
+- naturlig spacing eller andre visuelle virkemidler gir godt nok skille
+- du vurderer mange delelinjer tett etter hverandre – det kan skape et rotete og tungt visuelt uttrykk
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - En dekorativ linje uten semantisk hensikt er støy for skjermlesere. `ariaHidden` skal brukes på rent dekorative dividers for å holde markupen ren.
 - Mange delelinjer tett etter hverandre er et signal om at innholdet trenger bedre strukturering med overskrifter og avstand — ikke flere linjer.
 - Den uthevede varianten (full opasitet) brukes kun når det svakere skillet ikke er visuelt tilstrekkelig — overbruk av uthevet variant gjør siden tyngre og mer fragmentert.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 - **Nedtonet (standard):** 50 % gjennomsiktighet, brukt i de fleste situasjoner.
 - **Uthevet:** Full opasitet, brukes når du trenger et sterkere visuelt skille.
@@ -37,11 +37,11 @@ icon: /illustrations/divider.svg
 
 Divider er et statisk element uten interaksjon eller tilstander.
 
-## Tekst og språkbruk
+## Tekst
 
 Ikke relevant – komponenten inneholder ingen tekst.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Divider representeres som `<hr>` i HTML og gir skjermlesere informasjon om tematiske skiller.
 - Hvis Divider kun brukes dekorativt, bør den settes med `ariaHidden` for å hindre unødvendig opplesing.

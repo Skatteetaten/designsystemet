@@ -6,23 +6,23 @@ icon: /illustrations/paragraph.svg
 
 <Canvas examplesPath="components/paragraph" />
 
-## Når bruke komponenten
+## Bruk Paragraph når
 
-- Når du skriver brødtekst som forklarer eller beskriver innhold.
-- Når du ønsker å introdusere seksjoner med en ingress.
+- du skriver brødtekst som forklarer eller beskriver innhold
+- du ønsker å introdusere seksjoner med en ingress
 
-## Når ikke bruke komponenten
+## Unngå Paragraph når
 
-- Ikke bruk Paragraph for overskrifter — bruk Heading.
-- Ikke bruk Paragraph for sitater — bruk Blockquote.
+- teksten er en overskrift — bruk Heading
+- teksten er et sitat — bruk Blockquote
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Vi skiller mellom ingress og brødtekst for å gi innholdet tydelig typografisk hierarki. Lesere skanner typisk ingress for å avgjre om de vil lese videre — riktig bruk av ingress øker lesestart.
 - Tom paragraph skal ikke brukes til spacing fordi avstand bør håndteres av layout-komponenter, CSS, eller innebygget hasSpacing-mekanisme — å bruke tomme tekstelementer for luft gir feil semantikk og kan forvirre skjermlesere.
 - Overskrifter inne i Paragraph bryter HTML-semantikken og kan føre til uforutsigbar rendering og deilige tilgjengelighetsutfordringer.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 - **Ingress** – brukes som introduksjon til en seksjon.
 - **Standard** – brukes for vanlig løpende innhold (Brødtekst).
@@ -41,12 +41,12 @@ Paragraph støtter inline‑elementer:
 - `<a>` for lenker  
   Komponenten håndterer typografisk styling for disse automatisk.
 
-## Tekst og språkbruk
+## Tekst
 
 - Skriv korte avsnitt med klar og presis informasjon.
 - Unngå unødvendig langt innhold uten visuell struktur.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Sørg for god avsnittsdeling slik at skjermlesere lettere kan navigere teksten.
 - Lenker bør være tydelige og selvforklarende.

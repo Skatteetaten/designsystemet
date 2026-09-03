@@ -6,25 +6,25 @@ icon: /illustrations/steplist.svg
 
 <Canvas examplesPath="components/steplist" />
 
-## Når bruke komponenten
+## Bruk StepList når
 
-- Når et skjema eller en prosess har flere steg som må fullføres i rekkefølge.
-- Når komplekse oppgaver bør deles opp i mindre, håndterbare deler.
-- Når en veiviser leder til en konklusjon, for eksempel en anbefaling eller et resultat.
+- et skjema eller en prosess har flere steg som må fullføres i rekkefølge
+- komplekse oppgaver bør deles opp i mindre, håndterbare deler
+- en veiviser leder til en konklusjon, for eksempel en anbefaling eller et resultat
 
-## Når ikke bruke komponenten
+## Unngå StepList når
 
-- Ikke bruk for små skjemaer.
-- Ikke bruk for å dele inn tekstsider i seksjoner (bruk andre innholdsstrukturer).
-- Ikke bruk når prosessen ikke har tydelige steg eller rekkefølge.
+- skjemaet er lite
+- du skal dele inn tekstsider i seksjoner (bruk andre innholdsstrukturer)
+- prosessen ikke har tydelige steg eller rekkefølge
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Oppsummeringssteg før innsending er obligatorisk for å gi brukeren mulighet til å kontrollere og rette opp svar.
 - Fokus flyttes automatisk til toppen av hvert nytt steg for at skjermleserbrukere ikke skal måtte navigere forbi hele innholdet for å skjønne at siden har endret seg.
 - ErrorSummary vises først etter «neste»-klikk — ikke under utfylling — for å unngå at feilmeldinger forstyrrer brukeren mens de skriver.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 Komponenten har som helhet ingen varianter, men den fungerer som rammen for skjemaer og veivisere med flere steg.
 
@@ -71,13 +71,13 @@ Kvitteringssiden skal inneholde:
 - Hvis det ikke finnes avhengigheter: senere steg beholder sine verdier.
 - Hvis det finnes avhengigheter: senere steg nullstilles ved endring i tidligere steg.
 
-## Tekst og språkbruk
+## Tekst
 
 - Stegtitler skal være korte og tydelige.
 - Navigasjonsknapper skal ha entydige beskrivelser («Neste», «Tilbake», «Send inn»).
 - Oppsummeringssteg skal beskrive hva brukeren skal kontrollere.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Når brukeren klikker «Neste», skal fokus flyttes til toppen av det nye steget.
 - Komponenten oppretter automatisk et fokusmål-element med id `*-focus-target`.

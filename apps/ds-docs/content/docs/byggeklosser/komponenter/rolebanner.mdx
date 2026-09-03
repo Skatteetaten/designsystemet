@@ -5,26 +5,26 @@ description: RoleBanner brukes i innloggede løsninger for å vise brukeren hvem
 
 <Canvas examplesPath="components/rolebanner" />
 
-## Når bruke komponenten
+## Bruk RoleBanner når
 
-- Når brukeren er logget inn i en publikumsløsning.
-- Når brukeren representerer andre enn seg selv (person eller virksomhet).
-- Når innlogget bruker skal vises i skjema eller prosesser, og toppbanneret ikke viser denne informasjonen.
-- Når brukerens representasjon må være synlig uansett hvor langt ned på siden de scroller.
+- brukeren er logget inn i en publikumsløsning
+- brukeren representerer andre enn seg selv (person eller virksomhet)
+- innlogget bruker skal vises i skjema eller prosesser, og toppbanneret ikke viser denne informasjonen
+- brukerens representasjon må være synlig uansett hvor langt ned på siden de scroller
 
-## Når ikke bruke komponenten
+## Unngå RoleBanner når
 
-- Ikke bruk i interne systemer — disse har andre mekanismer for rollevisning.
-- Ikke bruk for feilmeldinger eller varselmeldinger — bruk mønster for systemvarsler.
-- Ikke bruk før identiteten/rollen til brukeren er kjent.
+- løsningen er et internt system — disse har andre mekanismer for rollevisning
+- du skal vise feilmeldinger eller varselmeldinger — bruk mønster for systemvarsler
+- identiteten/rollen til brukeren ennå ikke er kjent
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Gul sticky banner er valgt for representasjonsvisning fordi det er kritisk at brukeren alltid vet hvem de handler på vegne av. Feil representasjon kan ha juridiske og økonomiske konsekvenser.
 - Grå variant brukes når brukeren representerer seg selv fordi det er informativt, men ikke like kritisk — vi bruker visuell vekting bevisst for å formidle viktighet.
 - Vi anbefaler ikke RoleBanner før identiteten er kjent for å unngå at en tom eller feil representasjon vises — det kan skape forvirring og feil handling.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Bakgrunnsfarger
 
@@ -56,13 +56,13 @@ description: RoleBanner brukes i innloggede løsninger for å vise brukeren hvem
   - Vis språkvelger og «Logg ut»
   - Bruk grå variant av RoleBanner
 
-## Tekst og språkbruk
+## Tekst
 
 - Teksten skal være tydelig og direkte: «Du representerer …».
 - Rolleangivelsen skal være kort, korrekt og lett å skanne.
 - Unngå tekniske betegnelser eller intern terminologi brukeren ikke kjenner.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Banneret skal vises på et konsistent og forutsigbart sted.
 - Representasjonen må formidles både visuelt og semantisk.
