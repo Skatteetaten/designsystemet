@@ -6,24 +6,24 @@ icon: /illustrations/table.svg
 
 <Canvas examplesPath="components/table" />
 
-## Når bruke komponenten
+## Bruk Table når
 
 - Når du skal vise data som egner seg for sammenligning i rader og kolonner.
 - Når informasjonen kan struktureres som en datasamling med tydelige attributter.
 - Når tabellariske data er mest effektiv måte å formidle innholdet på.
 
-## Når ikke bruke komponenten
+## Unngå Table når
 
 - Ikke bruk tabell for å strukturere generelt innhold på en side — bruk riktig sidelayout-komponent.
 - Ikke bruk til store mengder data på mobil, der tabeller kan bli vanskelige å lese og krever horisontal scrolling.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Tabeller er sterke for sammenligning av strukturerte data, men svake for lange fritekster. Å styre bruk mot korte celler gir bedre lesbarhet og bedre UU.
 - `<caption>` er påkrevd fordi skjermlesere trenger et navn på tabellen for å gi brukeren kontekst. En tabell uten caption er vanskelig å identifisere i et dokument.
 - Vi prioriterer forutsigbar tabellatferd (sortering, tastatur, caption) fremfor maksimal frihet, for å sikre konsistente og tilgjengelige tabeller på tvers av løsninger.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Størrelser
 
@@ -67,13 +67,13 @@ Alle tabeller kan:
 - Kolonner skal kunne sorteres med tastatur.
 - Sorteringsstatus (stigende, synkende) skal kunne oppfattes med skjermleser.
 
-## Tekst og språkbruk
+## Tekst
 
 - Kolonneoverskrifter skal være korte, presise og beskrivende.
 - Unngå unødvendige forkortelser.
 - Vurder om radoverskrifter er nødvendig for å gjøre tabellen mer forståelig.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Bruk `<th>` for kolonneoverskrifter og eventuelt radoverskrifter.
 - Bruk `scope="col"` og `scope="row"` for å tydeliggjøre struktur.

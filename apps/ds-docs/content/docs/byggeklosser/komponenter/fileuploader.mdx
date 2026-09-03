@@ -6,23 +6,23 @@ icon: /illustrations/fileuploader.svg
 
 <Canvas examplesPath="components/fileuploader" />
 
-## Når bruke komponenten
+## Bruk FileUploader når
 
 - Når brukeren skal legge ved dokumentasjon eller filer som del av et skjema.
 - Når filer brukes som datakilde i tjenesten.
 - Når det er behov for å kunne laste opp flere filer i én operasjon.
 
-## Når ikke bruke komponenten
+## Unngå FileUploader når
 
 - Ikke bruk én FileUploader hvis tjenesten stiller sammensatte krav til antall eller type filer (for eksempel nøyaktig to filer i ulike formater). Da bør du bruke to separate FileUploadere.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Vi viser opplastingsstatus fil for fil (spinner, hake, feil) fordi brukeren ellers ikke vet om opplastingen lykkes. Tydelig tilbakemelding per fil reduserer usikkerhet og antall støtteanrop.
 - Nye økter nullstiller Alert fra forrige for å forhindre at gammel feilstatus misoppfattes som pågående problem.
 - Separate FileUploadere anbefales for sammensatte krav fordi kombinert validering (f.eks. Nøyaktig én fil av type A og én av type B) er vanskelig for brukeren å forstå som ett felt.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 FileUploader har ingen spesielle varianter, men har flere innebygde funksjonelle tilstander.
 
@@ -41,13 +41,13 @@ FileUploader har ingen spesielle varianter, men har flere innebygde funksjonelle
 - **Feil underveis:** Hvis én eller flere filer feiler, vises en Alert med feilen og hvilke filer det gjelder.
 - **Ny økt:** Ved opplasting i ny økt fjernes Alert fra forrige.
 
-## Tekst og språkbruk
+## Tekst
 
 - Bruk tydelig og enkel tekst som forklarer hva brukeren kan gjøre.
 - Gi klare feilmeldinger ved ugyldige filvalg eller tekniske feil.
 - Oppsummeringsmeldinger bør være korte og informere om antall filer som ble lastet opp.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Skjermleser skal kunne lese når en økt feiler eller lykkes.
 - Når en fil slettes, skal skjermleser informere om dette.

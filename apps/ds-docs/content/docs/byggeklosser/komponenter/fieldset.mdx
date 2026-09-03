@@ -6,22 +6,22 @@ icon: /illustrations/fieldset.svg
 
 <Canvas examplesPath="components/fieldset" />
 
-## Når bruke komponenten
+## Bruk Fieldset når
 
 - Når du har en liste med radioknapper, avkrysningsbokser eller andre skjemafelt som inngår i samme spørsmål.
 - Når skjemaet må deles inn i tydelige seksjoner med en felles ledetekst.
 
-## Når ikke bruke komponenten
+## Unngå Fieldset når
 
 - Ikke bruk Fieldset til å gruppere elementer som ligger utenfor et faktisk `<form>`‑element.
 - Ikke bruk Fieldset som erstatning for vanlige overskrifter når feltene ikke hører sammen tematisk.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Bruker HTML-elementene fieldset og legend som gjør at skjermlesere forstår at en gruppe av felt hører sammen. Uten dette leses hvert felt isolert, uten konteksten brukeren trenger noe som er spesielt problematisk for radioknapper og avkrysningsbokser.
 - Vi prioriterer semantisk struktur fremfor fri layout for å gjøre det enkelt å bygge skjemaer som fungerer konsekvent for alle brukere, uavhengig av teknologi.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Plassering og justering
 
@@ -34,12 +34,12 @@ icon: /illustrations/fieldset.svg
 - Fieldset har ingen interaksjon i seg selv, men påvirker hvordan feltene inne i gruppen oppfattes semantisk.
 - Feilmeldinger for feltene i gruppen skal referere til ledeteksten i `legend`.
 
-## Tekst og språkbruk
+## Tekst
 
 - `legend` skal beskrive hva alle feltene i gruppen handler om.
 - Ikke bruk identiske tekster i steg-titler (for eksempel i StepList) og i `legend` — disse har ulik funksjon.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - `legend` må brukes for at skjermlesere skal kunne tolke gruppen som ett spørsmål.
 - Skjulte `legend`-elementer skal fortsatt gi meningsfull kontekst.

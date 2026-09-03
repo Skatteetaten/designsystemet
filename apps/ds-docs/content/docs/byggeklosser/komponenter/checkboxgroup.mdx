@@ -6,23 +6,23 @@ icon: /illustrations/checkboxgroup.svg
 
 <Canvas examplesPath="components/checkboxgroup" />
 
-## Når bruke komponenten
+## Bruk CheckboxGroup når
 
 - Når brukeren skal kunne velge mellom flere uavhengige valg.
 - Når det er et gyldig alternativ for brukeren å ikke krysse av noe.
 - Når du skal innhente bekreftelser som kan innebære flere valg samtidig.
 
-## Når ikke bruke komponenten
+## Unngå CheckboxGroup når
 
 - Ikke bruk CheckboxGroup når brukeren kun skal ta ett valg — bruk [RadioGroup](/byggeklosser/komponenter/radiogroup) i stedet.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Grupperingen med ledetekst (`legend`-element) sørger for at skjermlesere forstår at valgene hører til samme spørsmål. Uten dette leses hvert enkelt valg opp uten kontekst.
 - Vertikal layout er standard for å gi bedre lesbarhet og forutsigbar skalering på tvers av skjermstørrelser — horisontal opplisting av mange valg fungerer ofte ikke så godt på små skjermer.
 - Å tillate null valg (ingen avhuking) er et bevisst valg: det er ikke alle som har noe å velge, og tvunget valg kan føre til feil data.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Plassering og justering
 
@@ -34,13 +34,13 @@ icon: /illustrations/checkboxgroup.svg
 - Alle valg er uavhengige av hverandre — avkrysning i én boks påvirker ikke de andre.
 - Komponentgruppen må alltid inneholde underkomponenter (children).
 
-## Tekst og språkbruk
+## Tekst
 
 - Spørsmål eller [ledetekst](wordinfo:ledetekst) for gruppen skal stå i et legend‑element.  
   Dette gir nødvendig kontekst for alle brukere.
 - Selv om `legend` skjules visuelt, må det være semantisk tilgjengelig.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - `legend` skal beskrive hva brukeren skal ta stilling til.
 - Feilmeldinger skal henvise til spørsmålet eller ledeteksten, f.eks.:  

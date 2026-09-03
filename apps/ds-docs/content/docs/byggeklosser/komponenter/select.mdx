@@ -6,24 +6,24 @@ icon: /illustrations/select.svg
 
 <Canvas examplesPath="components/select" />
 
-## Når bruke komponenten
+## Bruk Select når
 
 - Når det finnes 5 eller flere alternativer.
 - Når du trenger å flere valg på liten plass.
 - Når valget skal presenteres kompakt og brukeren kun kan velge ett alternativ.
 
-## Når ikke bruke komponenten
+## Unngå Select når
 
 - Ikke bruk til navigasjon mellom sider eller seksjoner.
 - Ikke bruk når brukeren skal velge flere alternativer (velg da [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) eller annen flervalgskomponent).
 - Når det finnes få valg, er [RadioGroup](/byggeklosser/komponenter/radiogroup) ofte best fordi brukeren kan se alle alternativene samtidig. Select kan likevel brukes når det er begrenset plass.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Native select brukes for å gi brukerne forutsigbar og tilgjengelig atferd — nettleserens innebygde select har god støtte for skjermlesere og tastatur på alle plattformer.
 - Grensen på 7+ alternativer er den øvre terskelen for RadioGroup: færre valg er lettere å sammenligne visuelt, men mange valg gjør listen uoversiktlig i et åpent format.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Standard atferd
 
@@ -44,13 +44,13 @@ Det gir:
 - Select kan utvides med grupperte alternativer (optgroup) dersom listen er lang.
 - Brukeren får kun velge ett valg — ingen multiple‑valgstøtte i designsystemets bruksmønster.
 
-## Tekst og språkbruk
+## Tekst
 
 - Ledetekst skal alltid brukes og plasseres over feltet.
 - Ledeteksten bør være kort (helst én linje).
 - Hvis Select er plassert inne i en tabell, kan ledeteksten skjules (men skal fortsatt eksistere semantisk).
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Select‑komponenten følger systemets native tilgjengelighetsmønster.
 - Sørg for:

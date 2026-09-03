@@ -6,24 +6,24 @@ icon: /illustrations/breadcrumbs.svg
 
 <Canvas examplesPath="components/breadcrumbs" />
 
-## Når bruke komponenten
+## Bruk Breadcrumbs når
 
 - Når du vil vise brukeren hvor de er i sidestrukturen.
 - Når brukeren skal kunne hoppe tilbake til et høyere nivå.
 
-## Når ikke bruke komponenten
+## Unngå Breadcrumbs når
 
 - Ikke bruk til lineær navigasjon i steg eller prosesser (bruk StepList).
 - Ikke bruk hvis løsningen kun har ett eller to nivåer.  
    Da brukes i stedet en tilbakelenke.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Brødsmulestien hjelper brukeren å forstå hvor i hierarkiet de befinner seg og navigere opp i strukturen. På dype sider reduserer dette frafall og forvirring.
 - Vi anbefaler ikke Breadcrumbs for korte stier (1–2 nivåer) fordi det gir liten navigasjonsverdi, men tar opp plass og legger til kognitivt innhold.
 - Breadcrumbs er navigasjon, ikke steg-oversikt — for steg-basert flyt brukes StepList, som kommuniserer fremdrift og har andre UU-krav.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 **Ingen varianter**
 
@@ -39,11 +39,11 @@ icon: /illustrations/breadcrumbs.svg
 - Brukeren kan utvide forkortet sti via ekspander-ikon.
 - På mobil flyttes fokus til første brødsmule når full sti vises.
 
-## Tekst og språkbruk
+## Tekst
 
 **Ingen egne språkføringer**
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Komponenten bruker `<nav>` og annonserer “Jeg er her” med riktig språk.
 - Siste element markeres som gjeldende side med `aria-current="page"`, med mulighet for å skru av mekanismen (`showLastItemAsCurrentPage`).

@@ -6,26 +6,26 @@ icon: /illustrations/searchfield.svg
 
 <Canvas examplesPath="components/searchfield" />
 
-## Når bruke komponenten
+## Bruk SearchField når
 
 - Når brukeren skal finne relevant innhold raskt gjennom søk.
 - Når det finnes en resultatside eller oversikt det kan søkes i, for eksempel en kjøretøyoversikt eller personsøk.
 - Når søk er den mest effektive måten å navigere til ønsket innhold.
 
-## Når ikke bruke komponenten
+## Unngå SearchField når
 
 - Ikke bruk når innholdet er så lite at brukeren enkelt kan navigere uten søk.
 - Ikke bruk for autofullføring i skjema — bruk [TextField](/byggeklosser/komponenter/textfield) med datalist eller passende mønster.
 - Ikke bruk dersom oppgaven krever filtrering eller sortering fremfor søk.
 - Ikke bruk som et skjemafelt når brukeren skal søke etter og velge et element, og valget skal bli stående i skjemaet. Bruk [Combobox](/byggeklosser/komponenter/combobox) i stedet.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Vi skiller mellom SearchField og TextField fordi søk og skjemainput har ulike atferdsmønstre: søk er optimalisert for hurtigoppslag og resultatlister, mens skjemafelt er for datainnsamling.
 - Placeholder begrenses i publikumsløsninger fordi den lett kan forveksles med forhåndsutfylt tekst, og fordi den forsvinner så snart brukeren begynner å skrive.
 - Søk bør lede til en tydelig treffliste som viser søkesultatet. Det gjør det enklere for brukeren å vurdere og velge riktig resultat, også når søket ikke gir treff.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Medium
 
@@ -59,7 +59,7 @@ icon: /illustrations/searchfield.svg
 - Hurtigoppslag kan føre direkte til detaljvisning (for eksempel et spesifikt kjøretøy eller en virksomhet).
 - Nullstillingsknapp (kryss) brukes til å nullstille søkestrengen.
 
-## Tekst og språkbruk
+## Tekst
 
 - SearchField skal alltid ha en beskrivende label, men den holdes vanligvis skjult.
 - Unngå placeholder‑tekst i publikumsløsninger fordi:
@@ -68,7 +68,7 @@ icon: /illustrations/searchfield.svg
 - Placeholder kan brukes unntaksvis i interne flater hvor plassen er begrenset.
 - Knappeteksten skal være «Søk» når tekstknapp brukes.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Søkefelt trenger en [semantisk](wordinfo:semantisk) label selv når label er visuelt skjult.
 - Ikonet må suppleres med tekst eller aria‑label dersom det er eneste interaksjonselement.

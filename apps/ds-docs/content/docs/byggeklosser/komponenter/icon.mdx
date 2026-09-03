@@ -6,26 +6,26 @@ icon: /illustrations/icon.svg
 
 <Canvas examplesPath="components/icon" />
 
-## Når bruke komponenten
+## Bruk Icon når
 
 - Når et ikon kan forenkle navigasjonen.
 - Når ikoner gir tydelig visuell støtte til tekstlig innhold.
 - Når du trenger en visuell markør for handlinger, kategorier eller seksjoner.
 
-## Når ikke bruke komponenten
+## Unngå Icon når
 
 - Ikke bruk ikoner kun som dekorasjon uten funksjon.
 - Ikke bruk temaikoner som interaktive elementer, bortsett fra:
   - som del av en forsideknapp
   - som del av en seksjon eller et innholdskort der andre interaksjonselementer ligger ved siden av
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Meningsbærende ikoner uten tekstalternativ er usynlige for skjermleserbrukere og brukere med svaksyn. Vi krever `aria-label` eller `title` for å sikre at funksjonen kommuniseres til alle.
 - Dekorative ikoner skal skjules for skjermlesere ([aria-hidden](wordinfo:aria-hidden)) for å unngå unødvendig støy i lesingen.
 - Vi skiller mellom systemikoner (handlinger/navigasjon) og temaikoner (seksjonsmarkering) fordi de har ulike størrelser, formater og brukskontekster — konsekvent bruk gjør grensesnittet mer forutsigbart.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Systemikoner
 
@@ -52,12 +52,12 @@ icon: /illustrations/icon.svg
 - Ikoner med `title` viser tooltip ved hover.
 - Ikoner som uttrykker en handling (systemikoner) skal ha riktig semantikk hvis de er interaktive.
 
-## Tekst og språkbruk
+## Tekst
 
 - Ikoner som formidler informasjon eller funksjon skal ha et tekstalternativ (`aria-label` eller `title`).
 - Dekorative ikoner skal skjules for skjermleser (`aria-hidden="true"`).
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Meningsbærende ikoner må ha tekstalternativ.
 - Dekorative ikoner skal skjules for skjermlesere.

@@ -7,26 +7,26 @@ icon: /illustrations/radiogroup.svg
 
 <Canvas examplesPath="components/radiogroup" />
 
-## Når bruke komponenten
+## Bruk RadioGroup når
 
 - Når brukeren skal velge ett av 2–7 alternativer.
 - Når valgene er gjensidig utelukkende.
 - Når valget påvirker hva som vises videre (f.eks. neste steg i et skjema).
 - Når alternativer må presenteres tydelig for sammenligning.
 
-## Når ikke bruke komponenten
+## Unngå RadioGroup når
 
 - Ikke bruk når brukeren kan velge flere alternativer – bruk [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) i stedet.
 - Ikke bruk når det finnes kun ett valg – da bør du bruke [Checkbox](/byggeklosser/komponenter/checkbox).
 - Ikke bruk når det er mer enn 7 valg, da dette blir uoversiktlig.  
   Vurder om valgene kan deles opp i mindre grupper.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Grensen på 2–7 alternativer er basert på UX-prinsipper om kognitiv belastning: flere valg gjør beslutningen vanskeligere og øker sannsynligheten for feilklikk.
 - Veiledningen om forhåndsvalg er bevisst nyansert for å balansere effektivitet med brukerautonomi — et automatisk forhåndsvalg kan styre brukeren i feil retning dersom det ikke er gjennomtenkt.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Vertikal
 
@@ -52,13 +52,13 @@ icon: /illustrations/radiogroup.svg
 - Du kan sette en forhåndsvalgt verdi når det finnes en trygg og forventet standard som passer de fleste brukere. Et slikt forhåndsvalg må aldri skjule et viktig valg eller presse brukeren i feil retning. Hvis du er i tvil, start uten forhåndsvalg og la brukeren velge aktivt.
 - Beskrivelsestekster legges direkte under hvert alternativ.
 
-## Tekst og språkbruk
+## Tekst
 
 - Svaralternativene skal være korte og lett skannbare.
 - Alle alternativer bør ha samme språklige form med lik setningsstruktur.
 - Bruk tydelige begreper som gjør skillet mellom valgene forståelig.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Spørsmål/ledetekst skal alltid ligge i `[<legend>](wordinfo:legend)`.
 - Feilmeldinger skal referere direkte til ledeteksten (f.eks. «Type virksomhet må fylles ut»).

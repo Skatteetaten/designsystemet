@@ -6,26 +6,26 @@ icon: /illustrations/link.svg
 
 <Canvas examplesPath="components/link" />
 
-## Når bruke komponenten
+## Bruk Link når
 
 - Når du skal lenke til en side internt eller eksternt.
 - Når brukeren skal åpne en fil, faner eller laste ned innhold.
 - Når du skal lenke til et annet sted på samme side.
 - Når du har en lenke i løpende tekst.
 
-## Når ikke bruke komponenten
+## Unngå Link når
 
 - Ikke bruk Link til handlinger som skjer på samme side, som «Lagre» eller «Send inn».  
   Bruk [InlineButton](/byggeklosser/komponenter/inlinebutton) i stedet.
 - Ikke bruk Link i lister med flere lenker — bruk [LinkGroup](/byggeklosser/komponenter/linkgroup).
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - To visuelle signaler (farge + understreking) er nødvendig fordi kun farge ikke er tilstrekkelig for å skille lenker fra tekst for brukere med fargeblindhet (WCAG 1.4.1).
 - Unike lenketekster er påkrevd fordi skjermleserbrukere kan hoppe mellom lenker alfabetisk. «Les mer» × 5 gir ingen informasjon om destinasjon.
 - Åpning i ny fane er begrenset til klart begrunnede unntak fordi det tar fra brukeren kontrollen over nettleseren og forstyrrer navigasjonshistorikken.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Vanlig lenke
 
@@ -53,14 +53,14 @@ icon: /illustrations/link.svg
 - Lenker skal kommunisere tydelig at de er klikkbare.
 - Eksterne lenker skal bruke ikon og tekstforklaring når de åpnes i ny fane: `(åpnes i ny fane)`.
 
-## Tekst og språkbruk
+## Tekst
 
 - Lenker skal være selvforklarende og gi mening også isolert.
 - Unngå generiske tekster som «Gå til», «Klikk her», «Les mer».
 - Bruk tydelige triggerord tidlig i lenketeksten.
 - Alle lenker på samme side må ha unike lenketekster.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Lenker skal ha minst to visuelle signaler (vi bruker blå farge + understreking).
 - Kontrastkrav:

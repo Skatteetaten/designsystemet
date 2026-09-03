@@ -6,25 +6,25 @@ icon: /illustrations/wordinfo.svg
 
 <Canvas examplesPath="components/wordinfo" />
 
-## Når bruke komponenten
+## Bruk WordInfo når
 
 - Når du vil forklare fremmedord, faguttrykk eller begreper som kan være ukjente.
 - Når begrepet ikke er kritisk for å løse oppgaven, men hvor tilleggsinformasjon kan gi bedre forståelse.
 - Når du ønsker å forbedre lesbarheten uten å bryte flyten.
 
-## Når ikke bruke komponenten
+## Unngå WordInfo når
 
 - Ikke bruk WordInfo for å forklare overskrifter — bruk heller hjelpetekstikon eller PopOver.
 - Ikke bruk for å forklare [ledetekster](wordinfo:ledetekst) i skjemafelt — bruk gode feltnavn, beskrivelsestekst eller hjelpetekster.
 - Ikke bruk hvis begrepet er så viktig at forklaringen bør vises direkte i teksten.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - WordInfo skiller seg fra Popover fordi den er ment spesifikt for forklaring av ord i løpende tekst. Riktig komponentvalg gir riktig forventning og riktig semantikk for skjermlesere.
 - Komponenten er ikke ment for bruk i overskrifter. Overskrifter skal hjelpe brukeren med å finne fram i innholdet, mens komponenten tilfører en klikkbar handling som kan forstyrre navigasjonen og gjøre innholdet vanskeligere å skanne – spesielt for de som bruker hjelpemiddelteknologi.
 - Ikke for mange WordInfo-elementer i ett avsnitt fordi det fragmenterer leseopplevelsen og gjør det uklart hvilke begreper som faktisk er viktigst å forstå.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 WordInfo har ingen visuelle stilvarianter, men to hovedbruksmodi:
 
@@ -51,7 +51,7 @@ WordInfo har ingen visuelle stilvarianter, men to hovedbruksmodi:
 - Ikonet er rent dekorativt og skjult for skjermleser — funksjonen kommuniseres semantisk i knappen.
 - Panelet kan lukkes med klikk utenfor eller via ESC avhengig av PopOver‑logikken.
 
-## Tekst og språkbruk
+## Tekst
 
 - Bruk korte og presise forklaringer.
 - Ordene som merkes med WordInfo bør være begreper:
@@ -59,7 +59,7 @@ WordInfo har ingen visuelle stilvarianter, men to hovedbruksmodi:
   - som brukeren sannsynligvis ikke kjenner
 - Unngå å bruke WordInfo på begreper som allerede er forklart i konteksten.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Knappen inneholder skjult beskrivende tekst for skjermlesere.
 - WordInfo med ikon anbefales for å tydeliggjøre interaktivitet visuelt.

@@ -6,25 +6,25 @@ icon: /illustrations/combobox.svg
 
 <Canvas examplesPath="components/combobox" />
 
-## Når bruke komponenten
+## Bruk Combobox når
 
 - Når det finnes mange valg og det er begrenset plass.
 - Når brukeren skal kunne velge flere alternativer fra samme liste.
 - Når det er nyttig at brukeren kan filtrere ved å skrive.
 
-## Når ikke bruke komponenten
+## Unngå Combobox når
 
 - Ikke bruk når det kun finnes få valg (ca. 5–15). Da bør du bruke nedtrekksliste eller radioknapper.
 - Ikke bruk når brukeren trenger mer kontekst eller veiledning for å ta et valg.
 - Ikke bruk når listen består av svært ulike kategorier — dette kan gjøre søket vanskelig.
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Combobox kombinerer frihet til å skrive og strukturerte valg. Vi anbefaler den for store lister fordi nedtrekkslister med mange elementer er krevende å navigere, særlig med tastatur.
 - Multiselect med chips er begrenset fordi et høyt antall valgte elementer raskt gjør feltet uoversiktlig og vanskelig å redigere — maks-grensen bør kommuniseres i label.
 - Vi anbefaler ikke Combobox for få valg (< ca. 5–15) fordi [RadioGroup](/byggeklosser/komponenter/radiogroup), [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) eller [Select](/byggeklosser/komponenter/select) da er enklere og mer forutsigbare.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Velge ett alternativ (standard)
 
@@ -53,12 +53,12 @@ icon: /illustrations/combobox.svg
 - Når grense for maksimalt antall valg er nådd, skal dette annonseres.
 - Antall treff og posisjon i listen annonseres for skjermleser.
 
-## Tekst og språkbruk
+## Tekst
 
 - Ledeteksten bør informere om eventuelle begrensninger, som maks antall valg.
 - Alternativene bør ha korte og tydelige navn.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Skjermleser skal kunne lese posisjon, valgstatus og søkeresultater.
 - Ved flervalg skal hver endring (på/av) annonseres.
