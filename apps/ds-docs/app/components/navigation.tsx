@@ -1,10 +1,24 @@
-import { Fragment, JSX, useEffect, useState, type ReactNode } from 'react';
+import {
+  Fragment,
+  JSX,
+  useEffect,
+  useState,
+  type MouseEvent,
+  type ReactNode,
+} from 'react';
 import { Link, useLocation } from 'react-router';
 
 import type { Root } from 'fumadocs-core/page-tree';
 
 import { ChevronDownIcon, EyeOutlineIcon } from '@skatteetaten/ds-icons';
-import { Heading } from '@skatteetaten/ds-typography';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+
+import { NavigationFilter } from './navigation-filter';
+import {
+  filterPageTree,
+  pageMatchesFilter,
+  type PageTreeFilter,
+} from './navigation.utils';
 
 import styles from './navigation.module.scss';
 
@@ -14,29 +28,32 @@ type PageNode = Extract<PageTreeNode, { type: 'page' }>;
 
 interface NavigationProps {
   pageTree: Root;
+  filterPage?: PageTreeFilter;
 }
 
 interface ExpandableItemProps {
   title: ReactNode;
   content: JSX.Element;
   activePath?: string;
+  expandByDefault?: boolean;
 }
 
 const ExpandableItem = ({
   title,
   content,
   activePath,
+  expandByDefault = false,
 }: ExpandableItemProps): JSX.Element => {
-  const [isExpanded, setIsExpanded] = useState(activePath !== undefined);
+  const [isExpanded, setIsExpanded] = useState(
+    activePath !== undefined || expandByDefault
+  );
   const iconClassName = isExpanded
     ? `${styles.expandIcon} ${styles.expandIconExpanded}`
     : styles.expandIcon;
 
   useEffect(() => {
-    if (activePath !== undefined) {
-      setIsExpanded(true);
-    }
-  }, [activePath]);
+    setIsExpanded(activePath !== undefined || expandByDefault);
+  }, [activePath, expandByDefault]);
 
   return (
     <>
@@ -137,18 +154,25 @@ const renderOverviewItem = (
 const renderNodes = (
   nodes: PageTreeNode[],
   pathname: string,
-  shouldIndent = false
+  shouldIndent = false,
+  expandFolders = false
 ): JSX.Element[] =>
   nodes
-    .map((child) => renderNode(child, pathname, shouldIndent))
+    .map((child) => renderNode(child, pathname, shouldIndent, expandFolders))
     .filter((child): child is JSX.Element => child !== null);
 
 const buildFolderChildItems = (
   folder: FolderNode,
   pathname: string,
-  shouldIndent = false
+  shouldIndent = false,
+  expandFolders = false
 ): JSX.Element[] => {
-  const children = renderNodes(folder.children, pathname, shouldIndent);
+  const children = renderNodes(
+    folder.children,
+    pathname,
+    shouldIndent,
+    expandFolders
+  );
 
   if (!folder.index) {
     return children;
@@ -166,7 +190,8 @@ const isFolderNode = (node: PageTreeNode): node is FolderNode =>
 const renderNode = (
   node: PageTreeNode,
   pathname: string,
-  shouldIndent = false
+  shouldIndent = false,
+  expandFolders = false
 ): JSX.Element | null => {
   if (node.type === 'page') {
     return renderLinkItem(
@@ -192,7 +217,7 @@ const renderNode = (
     );
   }
 
-  const childItems = buildFolderChildItems(node, pathname, true);
+  const childItems = buildFolderChildItems(node, pathname, true, expandFolders);
   const containsActivePath = folderContainsPath(node, pathname);
 
   return (
@@ -200,6 +225,7 @@ const renderNode = (
       <ExpandableItem
         title={node.name}
         activePath={containsActivePath ? pathname : undefined}
+        expandByDefault={expandFolders}
         content={<ul className={styles.navList}>{childItems}</ul>}
       />
     </li>
@@ -208,7 +234,8 @@ const renderNode = (
 
 const renderFolderSection = (
   folder: FolderNode,
-  pathname: string
+  pathname: string,
+  expandFolders = false
 ): JSX.Element => {
   return (
     <Fragment>
@@ -216,25 +243,43 @@ const renderFolderSection = (
         {folder.name}
       </Heading>
       <ul className={`${styles.navList} ${styles.marginBottomM}`}>
-        {buildFolderChildItems(folder, pathname)}
+        {buildFolderChildItems(folder, pathname, false, expandFolders)}
       </ul>
     </Fragment>
   );
 };
 
-export const Navigation = ({ pageTree }: NavigationProps): JSX.Element => {
+export const Navigation = ({
+  pageTree,
+  filterPage = (): boolean => true,
+}: NavigationProps): JSX.Element => {
   const { pathname } = useLocation();
+  const [filterValue, setFilterValue] = useState('');
+  const isFiltering = filterValue.trim().length > 0;
+  const filteredPageTree = filterPageTree(
+    pageTree,
+    (page) => filterPage(page) && pageMatchesFilter(page, filterValue)
+  );
+  const handleNavigationClick = (event: MouseEvent<HTMLDivElement>): void => {
+    if (event.target instanceof Element && event.target.closest('a')) {
+      setFilterValue('');
+    }
+  };
 
   return (
-    <div className={styles.navCard}>
+    <div className={styles.navCard} onClick={handleNavigationClick}>
       <Heading as={'h2'} className={styles.srOnly}>
         {'Sidemeny'}
       </Heading>
-      {pageTree.children.filter(isFolderNode).map((folder) => (
+      <NavigationFilter value={filterValue} onChange={setFilterValue} />
+      {filteredPageTree.children.filter(isFolderNode).map((folder) => (
         <Fragment key={String(folder.$id)}>
-          {renderFolderSection(folder, pathname)}
+          {renderFolderSection(folder, pathname, isFiltering)}
         </Fragment>
       ))}
+      {isFiltering && filteredPageTree.children.length === 0 ? (
+        <Paragraph>{'Ingen treff i sidemenyen.'}</Paragraph>
+      ) : null}
     </div>
   );
 };
