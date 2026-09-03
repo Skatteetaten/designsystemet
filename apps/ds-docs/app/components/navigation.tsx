@@ -278,9 +278,7 @@ export const Navigation = ({
         </Fragment>
       ))}
       {isFiltering && filteredPageTree.children.length === 0 ? (
-        <Paragraph className={styles.emptyResult}>
-          {'Ingen treff i sidemenyen.'}
-        </Paragraph>
+        <Paragraph>{'Ingen treff i sidemenyen.'}</Paragraph>
       ) : null}
     </div>
   );
