@@ -16,11 +16,7 @@ const meta = {
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
-    color: {
-      options: [undefined, ...linkColorArr],
-      control: 'inline-radio',
-      table: { category: category.props },
-    },
+    color: { control: 'inline-radio', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     variant: { control: 'inline-radio', table: { category: category.props } },
   },
