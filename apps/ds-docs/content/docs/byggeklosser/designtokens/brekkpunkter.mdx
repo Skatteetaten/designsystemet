@@ -1,24 +1,43 @@
 ---
 title: Brekkpunkter
+description: Vi støtter skjermer fra 320px og oppover.
 ---
 
 import breakpointsJson from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
-import { Paragraph } from '@skatteetaten/ds-typography';
-import { CodeBlock } from '../../../../app/components/code-block';
-import { TokenList } from '../../../../app/components/token-list';
+import { Table } from '@skatteetaten/ds-table';
+import { CopyButton } from '../../../../app/components/copy-button';
 
-export const breakpointMediaQueries = Object.keys(breakpointsJson)
-  .map((key) => `@media (min-width: $${key})`)
-  .join('\n');
+<style>{`
+  .copy-button-cell {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+`}</style>
 
-<TokenList tokenType={'breakpoints'} />
-
-<Paragraph hasSpacing>
-  Vi støtter skjermbredder på 320 piksler og oppover.
-</Paragraph>
-
-<CodeBlock
-  language={'scss'}
-  code={`@import '@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
-
-${breakpointMediaQueries}`} />
+<Table caption={'Brekkpunkttokens'} size={'medium'}>
+  <Table.Header>
+    <Table.Row>
+      <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
+      <Table.HeaderCell scope={'col'} alignment={'right'}>
+        {'Verdi'}
+      </Table.HeaderCell>
+      <Table.HeaderCell scope={'col'}>{''}</Table.HeaderCell>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    {Object.entries(breakpointsJson).map(([name, value]) => (
+      <Table.Row key={name}>
+        <Table.DataCell>{name}</Table.DataCell>
+        <Table.DataCell alignment={'right'}>{value}</Table.DataCell>
+        <Table.DataCell className={'copy-button-cell'}>
+          <CopyButton
+            copyText={name}
+            title={`Kopier ${name}`}
+            copiedTitle={`${name} er kopiert`}
+            errorTitle={`Kunne ikke kopiere ${name}`}
+          />
+        </Table.DataCell>
+      </Table.Row>
+    ))}
+  </Table.Body>
+</Table>
