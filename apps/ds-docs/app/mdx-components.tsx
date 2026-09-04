@@ -15,8 +15,6 @@ import {
 } from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
 
-import styles from './mdx-components.module.scss';
-
 interface CanvasMdxProps {
   children?: ReactNode;
   examplesPath?: string;
@@ -65,7 +63,7 @@ const WordInfoTerm = ({
   return (
     <WordInfo>
       <WordInfo.Trigger>{children}</WordInfo.Trigger>
-      <WordInfo.Content className={styles.wordInfoContent}>
+      <WordInfo.Content>
         {wordInfoContentLoader.useContent(wordInfoPath, {
           components: getMdxComponents(),
         })}
