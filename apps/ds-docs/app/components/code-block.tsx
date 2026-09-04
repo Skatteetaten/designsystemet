@@ -10,7 +10,6 @@ import { useShikiDynamic } from 'fumadocs-core/highlight/shiki/react';
 
 import { Card } from '@skatteetaten/ds-content';
 import { Select } from '@skatteetaten/ds-forms';
-import { Heading } from '@skatteetaten/ds-typography';
 
 import { CopyButton } from './copy-button';
 import { skeCodeTheme } from '../../lib/code-theme';
@@ -119,9 +118,7 @@ export const CodeBlock = ({
               ))}
             </Select>
           ) : (
-            <Heading as={'h3'} level={5} className={styles.filename}>
-              {filename ?? language}
-            </Heading>
+            <span className={styles.filename}>{filename ?? language}</span>
           )}
         </div>
         <CopyButton
