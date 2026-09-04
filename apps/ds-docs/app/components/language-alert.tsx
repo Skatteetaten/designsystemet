@@ -1,4 +1,4 @@
-import { JSX, useEffect, useState } from 'react';
+import { JSX, useEffect, useRef, useState } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Alert } from '@skatteetaten/ds-status';
@@ -12,6 +12,7 @@ const languageAvailabilityMessages: Partial<Record<string, string>> = {
 
 const LanguageAlert = (): JSX.Element => {
   const [selectedLang, setSelectedLang] = useState<string>(dsI18n.language);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleLanguageChange = (language: string): void => {
@@ -25,12 +26,22 @@ const LanguageAlert = (): JSX.Element => {
     };
   }, []);
 
+  const handleClose = (): void => {
+    dsI18n.changeLanguage('nb_NO');
+
+    const sectionElement = ref.current?.closest('section');
+    if (sectionElement) {
+      (sectionElement as HTMLElement).focus();
+    }
+  };
+
   return (
     <Alert
+      ref={ref}
       className={styles.languageAlert}
       variant={'info'}
       showAlert={selectedLang !== 'nb_NO'}
-      onClose={() => dsI18n.changeLanguage('nb_NO')}
+      onClose={handleClose}
     >
       {languageAvailabilityMessages[selectedLang]}
     </Alert>
