@@ -6,25 +6,25 @@ icon: /illustrations/textfield.svg
 
 <Canvas examplesPath="components/textfield" />
 
-## Når bruke komponenten
+## Bruk TextField når
 
-- Når brukeren skal skrive korte fritekstsvar.
-- Når brukeren skal skrive tall, som beløp eller antall.
-- Når det er enklere for brukeren å skrive informasjon fremfor å velge fra liste.
-- Når svarene ikke følger strengt format, men likevel må kunne valideres.
+- brukeren skal skrive korte fritekstsvar
+- brukeren skal skrive tall, som beløp eller antall
+- det er enklere for brukeren å skrive informasjon fremfor å velge fra liste
+- svarene ikke følger strengt format, men likevel må kunne valideres
 
-## Når ikke bruke komponenten
+## Unngå TextField når
 
-- Ikke bruk for formatert tekst (for eksempel Markdown) — bruk da annen komponent.
-- Ikke bruk der valget er begrenset og forutsigbart — bruk [RadioGroup](/byggeklosser/komponenter/radiogroup), [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup), [Select](/byggeklosser/komponenter/select) eller [Combobox](/byggeklosser/komponenter/combobox).
-- Ikke bruk når svaret forventes å være lengre enn én linje — bruk [TextArea](/byggeklosser/komponenter/textarea).
+- teksten skal være formatert (for eksempel Markdown) — bruk da annen komponent
+- valget er begrenset og forutsigbart — bruk [RadioGroup](/byggeklosser/komponenter/radiogroup), [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup), [Select](/byggeklosser/komponenter/select) eller [Combobox](/byggeklosser/komponenter/combobox)
+- svaret forventes å være lengre enn én linje — bruk [TextArea](/byggeklosser/komponenter/textarea)
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Placeholder erstattes av label og beskrivelse fordi placeholderen forsvinner ved skriving — brukeren må da huske instruksjonen, noe som er krevende og dyrker feil.
 - `disabled` anbefales ikke fordi skjermlesere kan ignorere deaktiverte felt. `readOnly` er et bedre alternativ når feltet ikke skal redigeres, men verdien fortsatt skal sendes med.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Read-only
 
@@ -46,7 +46,7 @@ icon: /illustrations/textfield.svg
 - Ulike nettlesere har varierende støtte for autocomplete.
 - Bruk passende `inputmode` som passer typen informasjon (`tel`, `search`, `email`, etc.).
 
-## Tekst og språkbruk
+## Tekst
 
 - Ledetekst skal være konsis og meningsfull.
 - Bruk beskrivelse for å forklare detaljer.
@@ -61,7 +61,7 @@ Placeholder‑tekst skal ikke brukes fordi:
 - Den er ofte usynlig for skjermlesere.
 - Kontrastkravet (minst 4.5:1) gjør at placeholder ser fylt ut og kan forvirre brukeren. All nødvendig informasjon skal ligge i ledetekst og/eller beskrivelse.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Alle felter skal ha label eller aria‑label.
 - Ikke bruk placeholder som eneste informasjonsbærer.

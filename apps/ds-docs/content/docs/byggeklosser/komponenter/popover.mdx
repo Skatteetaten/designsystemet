@@ -6,26 +6,26 @@ icon: /illustrations/popover.svg
 
 <Canvas examplesPath="components/popover" />
 
-## Når bruke komponenten
+## Bruk Popover når
 
-- Når brukeren trenger kort og presis tilleggsinformasjon.
-- Når du ønsker å forklare et begrep eller gi ekstra veiledning uten å åpne en ny side.
-- Når informasjonen skal være tilgjengelig på forespørsel, men ikke vises permanent.
+- brukeren trenger kort og presis tilleggsinformasjon
+- du ønsker å forklare et begrep eller gi ekstra veiledning uten å åpne en ny side
+- informasjonen skal være tilgjengelig på forespørsel, men ikke vises permanent
 
-## Når ikke bruke komponenten
+## Unngå Popover når
 
-- Ikke bruk til lange eller komplekse forklaringer.
-- Ikke bruk der hjelpetekster i skjema er mer passende.
-- Ikke bruk når informasjonen er kritisk og bør være synlig som standard.
-- Ikke bruk som alternativ til Modal når det kreves at brukeren tar stilling til noe.
+- forklaringen er lang eller kompleks
+- hjelpetekster i skjema er mer passende
+- informasjonen er kritisk og bør være synlig som standard
+- det kreves at brukeren tar stilling til noe — bruk Modal
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Popover er ment for informasjon på forespørsel — innhold som ikke er kritisk, men som kan gi kontekst. Kritisk informasjon skal alltid vises direkte i siden.
 - [Fokusfangst](wordinfo:fokusfangst) og [fokusretur](wordinfo:retur-av-fokus) er påkrevd for at tastatur- og skjermleserbrukere ikke mister oversikten over siden når popoveren åpnes og lukkes.
 - Vi skiller mellom Popover (hjelp på forespørsel), Modal (bruker må ta stilling), WordInfo (begrepforklaring i tekst) og hjelpetekst (skjemakontekst) for å gi brukeren riktig forventning.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Farger
 
@@ -46,13 +46,13 @@ Vi bruker fargene gul, grønn og hvit.
 - Skal kunne lukkes med ESC eller klikk utenfor.
 - Lukkeknappen gir fokus tilbake til triggeren når Popover lukkes.
 
-## Tekst og språkbruk
+## Tekst
 
 - Hold teksten kort, presis og lett å skanne.
 - Unngå fullstendige avsnitt — bruk korte forklaringer.
 - Språket skal tydelig beskrive det brukeren trenger å forstå i konteksten.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Popover må fanges opp av skjermleser når den åpnes.
 - Fokus må være kontrollert:

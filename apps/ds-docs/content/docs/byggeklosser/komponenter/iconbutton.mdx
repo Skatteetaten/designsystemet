@@ -6,24 +6,24 @@ icon: /illustrations/iconbutton.svg
 
 <Canvas examplesPath="components/iconbutton" />
 
-## Når bruke komponenten
+## Bruk IconButton når
 
-- Når du vil hjelpe brukeren å huske tilgjengelige handlinger, f.eks. en print‑knapp.
-- Når plass er begrenset.
-- Når en ikon‑basert handling er tydelig nok uten tekst.
+- du vil hjelpe brukeren å huske tilgjengelige handlinger, f.eks. en print‑knapp
+- plass er begrenset
+- en ikon‑basert handling er tydelig nok uten tekst
 
-## Når ikke bruke komponenten
+## Unngå IconButton når
 
-- Ikke bruk når handlingen er viktig eller sentral — bruk da vanlig Button.
-- Ikke bruk når ikonet alene ikke tydelig kommuniserer funksjonen — bruk InlineButton.
+- handlingen er viktig eller sentral — bruk da vanlig Button
+- ikonet alene ikke tydelig kommuniserer funksjonen — bruk InlineButton
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - `disabled`-tilstand anbefales ikke fordi lav kontrast gjør den vanskelig å se, og skjermlesere kan ignorere deaktiverte elementer. En aktiv knapp med forklaring er mer tilgjengelig.
 - Ikonet alene er ikke alltid selvforklarende, og riktig `aria-label` eller `title` sikrer at alle brukere forstår funksjonen — inklusivt sansehemmede og brukere som når ikoner med tastatur.
 - Vi skiller mellom IconButton (kompakt isolert handling) og [Button](/byggeklosser/komponenter/button) (sentral handling) for å bevare et konsistent knapphierarki på tvers av løsninger.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 IconButton finnes i to hovedvarianter:
 
@@ -50,12 +50,12 @@ Varianter finnes også i flere størrelser; størrelse og sirkel påvirker synli
 - Bruk `title` for å vise forklarende tekst som tooltip.
 - Skal ikke brukes som lenke til andre sider — kun punkt‑handlinger.
 
-## Tekst og språkbruk
+## Tekst
 
 - Gi alltid meningsbærende IconButtons et forklarende `title` eller `aria-label`.
 - Unngå tvetydige ikoner som brukerne ikke umiddelbart forstår.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Bruk `title` eller `aria-label` for å beskrive knappens funksjon for skjermlesere.
 - Ikke bruk inaktiv (disabled) IconButton:

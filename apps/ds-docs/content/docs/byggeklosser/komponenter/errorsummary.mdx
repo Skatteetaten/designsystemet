@@ -6,25 +6,25 @@ icon: /illustrations/errorsummary.svg
 
 <Canvas examplesPath="components/errorsummary" />
 
-## Når bruke komponenten
+## Bruk ErrorSummary når
 
-- Når brukeren skal få oversikt over flere feil før innsending.
-- Når brukeren må kunne navigere direkte til feltene med feil.
-- Når det er hensiktsmessig å samle flere feilmeldinger på ett sted.
+- brukeren skal få oversikt over flere feil før innsending
+- brukeren må kunne navigere direkte til feltene med feil
+- det er hensiktsmessig å samle flere feilmeldinger på ett sted
 
-## Når ikke bruke komponenten
+## Unngå ErrorSummary når
 
-- Ikke bruk ErrorSummary hvis det bare er én feil og brukeren lett kan oppdage den — da brukes [ErrorMessage](/byggeklosser/komponenter/errormessage).
-- Ikke bruk når feilen er teknisk og ikke forståelig for brukeren.
-- Ikke bruk til lange og komplekse feilmeldinger.
+- det bare er én feil og brukeren lett kan oppdage den — da brukes [ErrorMessage](/byggeklosser/komponenter/errormessage)
+- feilen er teknisk og ikke forståelig for brukeren
+- feilmeldingene er lange og komplekse
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - En samlet oppsummering med lenker til feltene hjelper alle brukere, men er særlig viktig for skjermleserbrukere som ellers må søke gjennom hele skjemaet for å finne feilene.
 - Fokus flyttes automatisk til ErrorSummary slik at brukeren ikke overser den — uten dette er det lett å klikke «Send inn» gjentatte ganger uten å oppdage hva som må rettes.
 - Feilmeldingene i oppsummeringen skal være identiske med feilmeldingene ved feltene — dette gir en gjenkjennbar kobling som hjelper brukeren å navigere.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Plassering og justering
 
@@ -38,13 +38,13 @@ icon: /illustrations/errorsummary.svg
 - Lenker i listen skal hoppe til feltene som har feil — disse må ha unike id‑er.
 - Visning og skjuling skal håndteres via komponentens innebygde mekanisme (`showErrorSummary`).
 
-## Tekst og språkbruk
+## Tekst
 
 - Feilmeldingene skal være likt formulert som ved feltet, og gjenfortelle hvilket felt som har feil.
 - Korte feilmeldinger er nok ved enkle feil.
 - Bruk «du‑språk» ved mer komplekse feil som krever forklaring.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Fokus flyttes til komponenten slik at skjermlesere leser hele oppsummeringen.
 - Lenker må være korrekte slik at skjermleser og tastaturnavigasjon fungerer som forventet.

@@ -6,24 +6,24 @@ icon: /illustrations/pagination.svg
 
 <Canvas examplesPath="components/pagination" />
 
-## Når bruke komponenten
+## Bruk Pagination når
 
-- Når store mengder relatert innhold må fordeles over flere sider.
-- Når brukeren skal kunne navigere mellom sider i en seksjon.
-- Når søkeresultater deles opp på flere sider.
+- store mengder relatert innhold må fordeles over flere sider
+- brukeren skal kunne navigere mellom sider i en seksjon
+- søkeresultater deles opp på flere sider
 
-## Når ikke bruke komponenten
+## Unngå Pagination når
 
-- Ikke bruk for uendelig eller kontinuerlig innhold.
-- Ikke bruk når det kun finnes én side med innhold.
+- innholdet er uendelig eller kontinuerlig
+- det kun finnes én side med innhold
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Paginering fordeler innhold i håndterbare mengder for å redusere kognitiv belastning og lastetid. Å vise for mye innhold på én side gjør det vanskelig å orientere seg.
 - Pagination er like bred som innholdet fordi det gir brukeren et intuitivt når-gjelder-dette-kontekst — plassert løsrevet fra innholdet er det uklart hva som pagineres.
 - Uendelig scroll er et fundamentalt annerledes mønster som krever andre UU-hensyn (f.eks. fokusstyring ved innlasting) og passer ikke inn i Pagination-komponenten.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 Komponenten har ingen visuelle varianter, men er fleksibel og kan justeres med props:
 
@@ -47,11 +47,11 @@ Komponenten har ingen visuelle varianter, men er fleksibel og kan justeres med p
 - Fokus skal forbli på valgt element ved tastaturnavigasjon.
 - Skjermleser skal lese opp hva som vises når sidetall endres.
 
-## Tekst og språkbruk
+## Tekst
 
 - Hvis du skjuler tekst på forrige/neste-knapper, sjekk at pilikonene alene er tilstrekkelige.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Tastaturfokus skal forbli innenfor komponenten.
 - Endring av sidetall skal annonseres av skjermleser.

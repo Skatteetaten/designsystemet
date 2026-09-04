@@ -6,25 +6,25 @@ icon: /illustrations/panel.svg
 
 <Canvas examplesPath="components/panel" />
 
-## Når bruke komponenten
+## Bruk Panel når
 
-- Når du skal vise innhold og handlinger om et tema som bør fremheves.
-- Når informasjon skal grupperes visuelt for å gjøre siden mer oversiktlig.
-- Når innholdet kan stå alene som en tydelig seksjon i løsningen.
+- du skal vise innhold og handlinger om et tema som bør fremheves
+- informasjon skal grupperes visuelt for å gjøre siden mer oversiktlig
+- innholdet kan stå alene som en tydelig seksjon i løsningen
 
-## Når ikke bruke komponenten
+## Unngå Panel når
 
-- Ikke bruk Panel til dynamiske statusbeskjeder — bruk [Alert](/byggeklosser/komponenter/alert) i stedet.
-- Ikke bruk Panel som hovedinnhold på en side — det skal støtte, ikke erstatte, hovedinnholdet.
-- Ikke bruk Panel til oppsummeringsteget i en stegliste.
+- du skal vise dynamiske statusbeskjeder — bruk [Alert](/byggeklosser/komponenter/alert) i stedet
+- Panel ville blitt hovedinnholdet på siden — det skal støtte, ikke erstatte, hovedinnholdet
+- du er i oppsummeringssteget i en stegliste
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Panel viser informasjon som er en del av siden. Alert på sin side brukes til systemvarsler og feil som oppstår mens brukeren arbeider. Det gjør det lettere å forstå hvor viktig informasjonen er, og gir en mer forutsigbar brukeropplevelse.
 - Vi anbefaler illustrasjoner bare når de gjør innholdet lettere å forstå. Dekorative illustrasjoner kan trekke oppmerksomheten bort fra viktig informasjon og gjøre innholdet mindre tilgjengelig.
 - Panel og Alert bruker noen av de samme fargene, men fargene kan ha ulik betydning. I Panel brukes gul og blå til nøytral informasjon, mens grønn og rød kan brukes for å vise henholdsvis suksess og advarsel.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Panel med ramme
 
@@ -56,13 +56,13 @@ Panel følger samme fargesystem som Alert:
 - Panel er et rent presentasjonselement og har ingen interaktive tilstander.
 - Kan inneholde knapper eller lenker som representerer videre handlinger.
 
-## Tekst og språkbruk
+## Tekst
 
 - Tekst i panel skal være ryddig og kortfattet.
 - Avsnitt i Panel skal ligge i `<p>`‑elementer (bruk Paragraph‑komponenten).
 - Ikonets betydning skal komme tydelig frem i tekst dersom det tilfører meningsinnhold.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Ikoner som gir merverdi må ha alternativ tekst.
 - Illustrasjoner er definert som pynt og trenger ikke alt‑tekst.

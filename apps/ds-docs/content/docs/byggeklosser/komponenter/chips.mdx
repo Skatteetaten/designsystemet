@@ -6,26 +6,26 @@ icon: /illustrations/chips.svg
 
 <Canvas examplesPath="components/chips" />
 
-## Når bruke komponenten
+## Bruk Chips når
 
-- For å filtrere data, for eksempel i lister eller tabeller.
-- For å vise valgte elementer i en gruppe.
-- For å la brukeren veksle mellom ulike visninger eller valg.
+- brukeren skal filtrere data, for eksempel i lister eller tabeller
+- du skal vise valgte elementer i en gruppe
+- brukeren skal veksle mellom ulike visninger eller valg
 
-## Når ikke bruke komponenten
+## Unngå Chips når
 
-- Ikke bruk til menyer (f.eks. sidemeny eller hovedmeny).
-- Ikke bruk til statisk metadata — bruk [Tag](/byggeklosser/komponenter/tag) i stedet.
-- Ikke bruk som aksjons- eller innsendingselementer i skjema — bruk [Button](/byggeklosser/komponenter/button).
-- Ikke bruk én enkelt chip alene; Chips er ment som en samlet gruppe.
+- du lager menyer (f.eks. sidemeny eller hovedmeny)
+- innholdet er statisk metadata — bruk [Tag](/byggeklosser/komponenter/tag) i stedet
+- du trenger aksjons- eller innsendingselementer i skjema — bruk [Button](/byggeklosser/komponenter/button)
+- du bare har én enkelt chip — Chips er ment som en samlet gruppe
 
-## Hvorfor anbefalingene finnes?
+## Hvorfor vi anbefaler dette
 
 - Chips er ment for kompakte, raske valg i grupper. En enkelt chip gir ikke nok kontekst for at brukeren forstår at de kan velge — da er en knapp eller et annet element mer intuitivt.
 - Vi skiller mellom lukkbar og valgbar variant for å gi tydelig forventning om hva som skjer når brukeren klikker.
 - For lukkbare chips er det å styre fokus et kjent tilgjengelighetsproblem: tastaturbrukere risikerer å miste fokus når et valgt element fjernes, og må orientere seg på nytt.
 
-## Varianter (og når bruke dem)
+## Varianter og når bør du bruke dem
 
 ### Lukkbar variant
 
@@ -52,12 +52,12 @@ icon: /illustrations/chips.svg
 - Når en chip fjernes via tastatur, skal fokus automatisk flyttes til neste chip.
 - Når alle chips er fjernet, settes fokus til en skjult tekst: «Ingen flere filtre».
 
-## Tekst og språkbruk
+## Tekst
 
 - Valgene skal være korte og lettleste.
 - Bruk ord og begreper som er enkle å skanne og sortere.
 
-## Tilgjengelighet (UU / WCAG)
+## Tilgjengelighet (UU og WCAG)
 
 - Fokusflyt må være tydelig og forutsigbar ved fjerning av chips.
 - Skjult tekst brukes for å formidle tilstand når alle chips fjernes.
