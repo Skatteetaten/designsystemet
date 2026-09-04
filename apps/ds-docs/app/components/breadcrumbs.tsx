@@ -19,6 +19,11 @@ interface RouterBreadcrumbsLinkProps {
   children: string;
 }
 
+const skatteKartetBreadcrumb = {
+  name: 'Skattekartet',
+  url: 'https://www.skatteetaten.no/skattekartet',
+};
+
 const RouterBreadcrumbsLink = ({
   href,
   children,
@@ -40,10 +45,13 @@ export const DocsBreadcrumbs = ({
     includePage: true,
   });
 
-  const items =
-    pathname !== '/' && breadcrumbItems[0]?.url !== '/'
-      ? [{ name: 'Designsystemet', url: '/' }, ...breadcrumbItems]
-      : breadcrumbItems;
+  const docsItems =
+    pathname === '/'
+      ? [{ name: 'Designsystemet' }]
+      : breadcrumbItems[0]?.url !== '/'
+        ? [{ name: 'Designsystemet', url: '/' }, ...breadcrumbItems]
+        : breadcrumbItems;
+  const items = [skatteKartetBreadcrumb, ...docsItems];
 
   return (
     <Breadcrumbs className={styles.breadcrumbs}>
