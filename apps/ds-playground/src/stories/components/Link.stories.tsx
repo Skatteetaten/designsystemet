@@ -18,13 +18,7 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    color: {
-      options: [undefined, ...linkColorArr],
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
+    color: { control: 'inline-radio', table: { category: category.props } },
     isExternal: { table: { category: category.props } },
     svgPath: { ...svgPathDescription },
     // HTML
