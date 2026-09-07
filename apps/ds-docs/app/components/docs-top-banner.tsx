@@ -81,6 +81,7 @@ export const DocsTopBanner = (): JSX.Element => {
           </>
         ) : undefined
       }
+      showSami={false}
       onLanguageClick={handleLanguageClick}
     />
   );
