@@ -7,9 +7,9 @@ import { ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import type { Route } from './+types/docs-layout';
 import { DocsTopBanner } from '../components/docs-top-banner';
 import { PageLayout } from '../components/page-layout';
+import type { Route } from './+types/docs-layout';
 
 import styles from './docs.module.scss';
 

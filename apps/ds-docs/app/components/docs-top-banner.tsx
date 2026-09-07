@@ -1,7 +1,11 @@
-import { JSX, useRef } from 'react';
+import { JSX, useRef, MouseEvent } from 'react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { useMediaQuery } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  langToLocale,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 import {
   TopBannerExternal,
   type TopBannerExternalHandle,
@@ -38,6 +42,12 @@ export const DocsTopBanner = (): JSX.Element => {
   const { pageTree } = useRootLoaderData();
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const showPageNavigationInMenu = !useMediaQuery('(min-width: 1024px)');
+
+  const handleLanguageClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    const language = event.currentTarget.lang;
+    dsI18n.changeLanguage(langToLocale[language]);
+  };
+
   const closeMenu = (): void => topBannerRef.current?.closeMenu();
 
   return (
@@ -71,6 +81,8 @@ export const DocsTopBanner = (): JSX.Element => {
           </>
         ) : undefined
       }
+      showSami={false}
+      onLanguageClick={handleLanguageClick}
     />
   );
 };
