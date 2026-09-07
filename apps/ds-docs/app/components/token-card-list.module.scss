@@ -1,0 +1,116 @@
+.card {
+  margin-bottom: var(--spacing-m);
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  align-items: center;
+  padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) 0;
+  border-bottom: 1px solid var(--semantic-divider-30);
+  gap: var(--spacing-s);
+  grid-template-columns: 4rem minmax(0, 1fr) auto;
+
+  &WithoutPreview {
+    padding-left: var(--spacing-m);
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.preview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--palette-burgundy-100);
+  font-size: var(--semantic-font-size-default);
+  font-weight: var(--semantic-font-weight-default);
+  line-height: 1;
+
+  &[data-token='--font-size-reference'] {
+    font-size: var(--font-size-reference);
+  }
+
+  &[data-token='--font-size-xxs'] {
+    font-size: var(--font-size-xxs);
+  }
+
+  &[data-token='--font-size-xs'] {
+    font-size: var(--font-size-xs);
+  }
+
+  &[data-token='--font-size-s'] {
+    font-size: var(--font-size-s);
+  }
+
+  &[data-token='--font-size-m'] {
+    font-size: var(--font-size-m);
+  }
+
+  &[data-token='--font-size-l'] {
+    font-size: var(--font-size-l);
+  }
+
+  &[data-token='--font-size-xl'] {
+    font-size: var(--font-size-xl);
+  }
+
+  &[data-token='--font-size-xxl'] {
+    font-size: var(--font-size-xxl);
+  }
+
+  &[data-token='--font-size-mega'] {
+    font-size: var(--font-size-mega);
+  }
+
+  &[data-token='--semantic-font-size-default'] {
+    font-size: var(--semantic-font-size-default);
+  }
+
+  &[data-token='--font-weight-regular'] {
+    font-weight: var(--font-weight-regular);
+  }
+
+  &[data-token='--font-weight-medium'] {
+    font-weight: var(--font-weight-medium);
+  }
+
+  &[data-token='--font-weight-bold'] {
+    font-weight: var(--font-weight-bold);
+  }
+
+  &[data-token='--semantic-font-weight-default'] {
+    font-weight: var(--semantic-font-weight-default);
+  }
+}
+
+.name {
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+.value {
+  margin: 0;
+  color: var(--palette-graphite-70);
+  font-size: var(--font-size-s);
+}
