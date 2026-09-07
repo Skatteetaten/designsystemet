@@ -33,7 +33,7 @@
     "build:testmode": "nx build ds-playground --parallel=8 -- --test",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
     "build:preparePublish": " node --no-warnings=ExperimentalWarning --loader ts-node/esm ./libs/ds-dev-config/src/scripts/preparePublish.ts",
-    "deploy:gh-pages": "gh-pages --nojekyll -d dist/storybook/ds-playground -p 0 -r https://github.com/Skatteetaten/designsystemet.git",
+    "deploy:gh-pages": "gh-pages --nojekyll -d dist/ds-docs/build/client -p 0 -r https://github.com/Skatteetaten/designsystemet.git",
     "test": "rimraf .nyc_output/* && nx run-many --target=test",
     "test:storybook": "vitest --project=storybook",
     "test:coverage": "FORCE_COLOR=false nx run-many --target=test -- --coverage && node --no-warnings=ExperimentalWarning --loader ts-node/esm libs/ds-dev-config/src/scripts/mergeCoverage.ts",
