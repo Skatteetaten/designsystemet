@@ -5,8 +5,8 @@ import { Link } from '@skatteetaten/ds-buttons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import exampleStylesUrl from './example.scss?url';
-import { getExampleByPath } from '../components/canvas.utils';
 import { getExamplePathFromSearch } from '../../lib/example-url';
+import { getExampleByPath } from '../components/canvas.utils';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: exampleStylesUrl },
