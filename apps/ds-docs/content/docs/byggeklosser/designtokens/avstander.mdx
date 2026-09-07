@@ -4,42 +4,13 @@ description: Avstander som brukes til marginer, padding og gap.
 ---
 
 import spacingJson from '@skatteetaten/ds-core-designtokens/designtokens/spacing.json';
-import { Table } from '@skatteetaten/ds-table';
-import { CopyButton } from '../../../../app/components/copy-button';
+import { TokenTable } from '../../../../app/components/token-table';
 
-<style>{`
-  .copy-button-cell {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-`}</style>
-
-<Table caption={'Avstandstokens'} size={'medium'}>
-  <Table.Header>
-    <Table.Row>
-      <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
-      <Table.HeaderCell scope={'col'} alignment={'right'}>
-        {'Verdi'}
-      </Table.HeaderCell>
-      <Table.HeaderCell scope={'col'}>{''}</Table.HeaderCell>
-    </Table.Row>
-  </Table.Header>
-  <Table.Body>
-    {Object.entries(spacingJson[':root,\n:host'])
-      .filter(([name]) => !name.includes('semantic'))
-      .map(([name, value]) => (
-        <Table.Row key={name}>
-          <Table.DataCell>{name}</Table.DataCell>
-          <Table.DataCell alignment={'right'}>{value}</Table.DataCell>
-          <Table.DataCell className={'copy-button-cell'}>
-            <CopyButton
-              copyText={name}
-              title={`Kopier ${name}`}
-              copiedTitle={`${name} er kopiert`}
-              errorTitle={`Kunne ikke kopiere ${name}`}
-            />
-          </Table.DataCell>
-        </Table.Row>
-      ))}
-  </Table.Body>
-</Table>
+<TokenTable
+  caption={'Avstandstokens'}
+  tokens={Object.fromEntries(
+    Object.entries(spacingJson[':root,\n:host']).filter(
+      ([name]) => !name.includes('semantic')
+    )
+  )}
+/>

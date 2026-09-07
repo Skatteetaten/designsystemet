@@ -7,7 +7,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { CopyButton } from './copy-button';
 
-import styles from './container-tokens.module.scss';
+import styles from './token-containers.module.scss';
 
 type TokenValues = Record<string, string>;
 
@@ -97,10 +97,11 @@ export const ContainerTokensOverview = (): JSX.Element => {
           <Heading as={'h3'}>{'Baseverdier'}</Heading>
         </Card.Header>
         <Card.Content classNames={{ children: styles.cardContent }}>
-          <DescriptionList className={styles.descriptionList}>
+          <ul className={styles.list}>
             {Object.entries(baseContainerTokens).map(([key, value]) => (
-              <DescriptionList.Element key={key} term={key}>
-                <span>{`${value}`}</span>
+              <li key={key} className={styles.listItem}>
+                <span className={styles.listItemKey}>{key}</span>
+                <span className={styles.listItemValue}>{value}</span>
                 <CopyButton
                   copyText={key}
                   title={`Kopier ${key}`}
@@ -108,9 +109,9 @@ export const ContainerTokensOverview = (): JSX.Element => {
                   errorTitle={`Kunne ikke kopiere ${key}`}
                   size={'small'}
                 />
-              </DescriptionList.Element>
+              </li>
             ))}
-          </DescriptionList>
+          </ul>
         </Card.Content>
       </Card>
 
@@ -164,14 +165,7 @@ export const ContainerTokensOverview = (): JSX.Element => {
                         breakpointEntries[entryIndex + 1]?.index
                       )}
                     >
-                      <span>{`${breakpointValue}`}</span>
-                      <CopyButton
-                        copyText={key}
-                        title={`Kopier ${key}`}
-                        copiedTitle={`${key} er kopiert`}
-                        errorTitle={`Kunne ikke kopiere ${key}`}
-                        size={'small'}
-                      />
+                      <span>{breakpointValue}</span>
                     </DescriptionList.Element>
                   )
                 )}

@@ -7,7 +7,7 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 import { CopyButton } from './copy-button';
 
-import styles from './token-card-list.module.scss';
+import styles from './token-fonts.module.scss';
 
 interface TokenCardListProps {
   title: string;
