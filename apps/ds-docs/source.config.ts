@@ -21,6 +21,14 @@ export const docs = defineDocs({
   docs: {
     schema: pageSchema.extend({
       hideToc: z.boolean().optional(),
+      tocItems: z
+        .array(
+          z.object({
+            title: z.string(),
+            url: z.string(),
+          })
+        )
+        .optional(),
     }),
   },
 });

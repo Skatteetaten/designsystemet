@@ -12,6 +12,32 @@
   flex: 1;
 }
 
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: grid;
+  margin-bottom: var(--spacing-s);
+  column-gap: var(--spacing-s);
+  grid-template-columns: minmax(0, 1fr) max-content max-content;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &Key {
+    font-weight: var(--font-weight-bold);
+    overflow-wrap: anywhere;
+  }
+
+  &Value {
+    text-align: right;
+  }
+}
+
 .descriptionList dd {
   display: flex;
   flex-wrap: wrap;

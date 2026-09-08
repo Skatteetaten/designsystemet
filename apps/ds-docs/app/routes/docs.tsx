@@ -30,7 +30,6 @@ interface DocsPageProps {
 interface TocItem {
   title: string;
   url: string;
-  depth: number;
 }
 
 const toTocTitle = (title: ReactNode): string => {
@@ -52,7 +51,9 @@ const toTocTitle = (title: ReactNode): string => {
 const docsContentLoader =
   browserCollections.docs.createClientLoader<DocsContentProps>({
     component({ frontmatter, toc, default: Mdx }, { parentTitle }) {
-      const tocItems = toc.filter((item) => item.depth === 2) as TocItem[];
+      const tocItems =
+        frontmatter.tocItems ??
+        (toc.filter((item) => item.depth === 2) as TocItem[]);
       const showToc = !frontmatter.hideToc && tocItems.length > 0;
 
       return (

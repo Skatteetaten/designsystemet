@@ -1,0 +1,45 @@
+---
+title: Font
+tocItems:
+  - title: Fontstørrelser
+    url: '#font-sizes'
+  - title: Fontvekter
+    url: '#font-weights'
+  - title: Linjehøyder
+    url: '#line-heights'
+---
+
+import fontJson from '@skatteetaten/ds-core-designtokens/designtokens/font.json';
+
+import { TokenCardList } from '../../../../app/components/token-fonts';
+
+<TokenCardList
+  id={'font-sizes'}
+  title={'Fontstørrelser'}
+  tokens={Object.fromEntries(
+    Object.entries(fontJson[':root,\n:host']).filter(([name]) =>
+      name.includes('font-size')
+    )
+  )}
+/>
+
+<TokenCardList
+  id={'font-weights'}
+  title={'Fontvekter'}
+  tokens={Object.fromEntries(
+    Object.entries(fontJson[':root,\n:host']).filter(([name]) =>
+      name.includes('font-weight')
+    )
+  )}
+/>
+
+<TokenCardList
+  id={'line-heights'}
+  title={'Linjehøyder'}
+  showPreview={false}
+  tokens={Object.fromEntries(
+    Object.entries(fontJson[':root,\n:host']).filter(([name]) =>
+      name.includes('line-height')
+    )
+  )}
+/>

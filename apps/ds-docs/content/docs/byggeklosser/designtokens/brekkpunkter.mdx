@@ -1,24 +1,9 @@
 ---
 title: Brekkpunkter
+description: Vi støtter skjermer fra 320px og oppover.
 ---
 
 import breakpointsJson from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
-import { Paragraph } from '@skatteetaten/ds-typography';
-import { CodeBlock } from '../../../../app/components/code-block';
-import { TokenList } from '../../../../app/components/token-list';
+import { TokenTable } from '../../../../app/components/token-table';
 
-export const breakpointMediaQueries = Object.keys(breakpointsJson)
-  .map((key) => `@media (min-width: $${key})`)
-  .join('\n');
-
-<TokenList tokenType={'breakpoints'} />
-
-<Paragraph hasSpacing>
-  Vi støtter skjermbredder på 320 piksler og oppover.
-</Paragraph>
-
-<CodeBlock
-  language={'scss'}
-  code={`@import '@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
-
-${breakpointMediaQueries}`} />
+<TokenTable caption={'Brekkpunkttokens'} tokens={breakpointsJson} />
