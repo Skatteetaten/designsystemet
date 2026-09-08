@@ -2,6 +2,7 @@
 
 .wrapper {
   max-width: var(--container-s);
+  margin-top: calc(var(--semantic-responsive-internal-container-spacing) * -1);
 }
 
 .card {
