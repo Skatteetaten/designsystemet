@@ -253,7 +253,7 @@ const globalTypes = {
     defaultValue: Font[0].value,
     toolbar: {
       title: 'Font',
-      icon: 'font',
+      icon: 'bold',
       items: Font,
     },
   },
