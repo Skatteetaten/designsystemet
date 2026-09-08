@@ -48,8 +48,12 @@ Alert har fem forhåndsdefinerte varianter:
 
 ### Interaksjon og tilstander
 
-- Når du viser eller skjuler komponenten, bruk den innebygde egenskapen `showAlert`.
-- Ikke lag egne visibility-regler, da dette kan hindre at skjermlesere fanger opp endringen.
+- Alert kan brukes både til varsler som er synlige når siden lastes, og til varsler som vises eller endres etter at brukeren har gjort noe.
+- Velg `ariaLive` ut fra om varselet er statisk eller dynamisk. Ikke la standardverdien stå uten en bevisst vurdering:
+  - Bruk `ariaLive="off"` når varselet allerede er synlig når siden lastes, eller når varselet er en fast del av innholdet på siden eller i skjemaet. Innholdet er fortsatt tilgjengelig for skjermleserbrukere når de navigerer til varselet, men det blir ikke lest opp automatisk.
+  - Bruk `ariaLive="polite"` når varselet vises eller endres dynamisk, for eksempel etter at brukeren har gjort et valg, lagret noe eller det har skjedd en endring på siden. Meldingen blir lest opp av skjermleser på et passende tidspunkt. Dette er standardverdien for alle varianter unntatt `danger`.
+  - Bruk `ariaLive="assertive"` bare når meldingen er kritisk eller tidssensitiv, og brukeren må få den med seg med en gang. Denne verdien kan avbryte det skjermleseren allerede leser, og skal derfor brukes sjelden.
+- Når du viser eller skjuler komponenten, bruk den innebygde egenskapen `showAlert`. Ikke lag egne visibility-regler, da dette kan hindre at skjermlesere fanger opp endringen.
 
 ## Tekst
 
