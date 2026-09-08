@@ -1,4 +1,5 @@
 declare const classNames: {
+  readonly srOnly: 'srOnly';
   readonly alert: 'alert';
   readonly iconWrapper: 'iconWrapper';
   readonly content: 'content';

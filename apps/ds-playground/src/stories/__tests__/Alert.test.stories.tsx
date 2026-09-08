@@ -430,3 +430,16 @@ export const WithAriaLiveOff = {
     await expect(container).toHaveAttribute('aria-live', 'off');
   },
 } satisfies Story;
+
+export const InFlexColumnContainer = {
+  render: (args): JSX.Element => {
+    return (
+      <div className={'flex flexColumn gapM'}>
+        <Paragraph>{'Dette er en tekst som ligger over varselet'}</Paragraph>
+        <Alert {...args}>{args.children}</Alert>
+        <Paragraph>{'Dette er en tekst som ligger under varselet'}</Paragraph>
+      </div>
+    );
+  },
+  args: {},
+} satisfies Story;

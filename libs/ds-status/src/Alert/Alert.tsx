@@ -66,6 +66,7 @@ export const Alert = ({
       ref={ref}
       id={id}
       lang={lang}
+      className={showAlert ? '' : styles.srOnly}
       data-testid={dataTestId}
       aria-live={getAriaLive()}
       aria-atomic
