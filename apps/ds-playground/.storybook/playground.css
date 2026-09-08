@@ -1,7 +1,8 @@
 @import 'inter.css';
 
 :root {
-  font-family: 'Inter';
+  --storybook-font-family: 'Inter';
+  font-family: var(--storybook-font-family);
   --storybook-sr-only-position: absolute;
   --storybook-sr-only-overflow: hidden;
   --storybook-sr-only-width: 1px;
@@ -18,8 +19,15 @@
   --storybook-sr-only-badge-display: none;
 }
 
+/* lar utvikler teste designsystemets faktiske produksjonsfont-stack i stedet for Inter, se _default.css */
+:root[data-font='system'] {
+  --storybook-font-family:
+    'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans L',
+    sans-serif;
+}
+
 :host {
-  font-family: 'Inter';
+  font-family: var(--storybook-font-family);
 }
 
 :root[data-sr-only='visible'] {
