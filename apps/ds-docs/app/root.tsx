@@ -28,7 +28,17 @@ export const meta: MetaFunction = () => [
   },
 ];
 
-export const links: LinksFunction = () => [];
+export const links: LinksFunction = () => [
+  {
+    rel: 'icon',
+    href: '/favicon.ico',
+  },
+  {
+    rel: 'icon',
+    href: '/favicon-white.ico',
+    media: '(prefers-color-scheme: dark)',
+  },
+];
 
 // eslint-disable-next-line no-empty-pattern
 export async function loader({}: Route.LoaderArgs): Promise<RootLoaderData> {
