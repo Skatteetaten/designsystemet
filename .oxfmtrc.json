@@ -15,6 +15,7 @@
     "/.nx/cache",
     "/.nx/workspace-data",
     ".nx/self-healing",
+    "**/*.scss.d.ts",
     "**/*.mdx"
   ],
   "jsdoc": false,
