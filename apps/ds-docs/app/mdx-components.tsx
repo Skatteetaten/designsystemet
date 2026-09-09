@@ -123,6 +123,7 @@ const components = {
     <RouterDsLink href={href || ''}>{children}</RouterDsLink>
   ),
   img: PublicImage,
+  PublicImage,
   code: MdxCode,
   pre: MdxPre,
   Canvas: ({ children, examplesPath }: CanvasMdxProps): JSX.Element => (
