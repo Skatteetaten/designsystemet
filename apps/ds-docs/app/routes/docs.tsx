@@ -96,7 +96,7 @@ const docsContentLoader =
               className={styles.navContent}
               aria-label={'Innholdsfortegnelse'}
             >
-              <Heading as={'h2'} level={4}>
+              <Heading as={'h3'} level={4}>
                 {'Innhold'}
               </Heading>
               <LinkGroup variant={'anchors'}>
