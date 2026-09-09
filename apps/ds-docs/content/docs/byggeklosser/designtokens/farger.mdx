@@ -1,46 +1,67 @@
 ---
 title: Farger
+description: Fargepaletten vår består av et sett basefarger, og et sett semantiske farger. De semantiske fargene viser til navngitte bruksområder (f.eks. en knapp som trykkes på, eller en status) eller flatene de settes på (f.eks. bakgrunn eller kantlinjer).
+tocItems:
+  - title: Basefarger
+    url: '#base-colors'
+  - title: Semantiske farger
+    url: '#semantic-colors'
 ---
 
-import { Table } from '@skatteetaten/ds-table';
 import paletteJson from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
-import { CopyButton } from '../../../../app/components/copy-button';
 
-<Table caption={'Fargepalett'} size={'medium'}>
-  <Table.Header>
-    <Table.Row>
-      <Table.HeaderCell scope={'col'}>{'Farge'}</Table.HeaderCell>
-      <Table.HeaderCell scope={'col'}>{'Token'}</Table.HeaderCell>
-      <Table.HeaderCell scope={'col'} alignment={'center'}>
-        {'Kopier'}
-      </Table.HeaderCell>
-    </Table.Row>
-  </Table.Header>
-  <Table.Body>
-    {Object.entries(paletteJson[':root,\n:host']).map(([name, value]) => (
-      <Table.Row key={name}>
-        <Table.DataCell>
-          <span
-            aria-label={`${name} farge`}
-            style={{
-              display: 'inline-block',
-              width: '1.5rem',
-              height: '1.5rem',
-              backgroundColor: value,
-              verticalAlign: 'middle',
-            }}
-          />
-        </Table.DataCell>
-        <Table.DataCell>{name}</Table.DataCell>
-        <Table.DataCell alignment={'center'}>
-          <CopyButton
-            copyText={name}
-            title={`Kopier ${name}`}
-            copiedTitle={`${name} er kopiert`}
-            errorTitle={`Kunne ikke kopiere ${name}`}
-          />
-        </Table.DataCell>
-      </Table.Row>
-    ))}
-  </Table.Body>
-</Table>
+import { TokenCardList } from '../../../../app/components/token-palette';
+
+<TokenCardList
+  id={'base-colors'}
+  title={'Basefarger'}
+  tokens={Object.fromEntries(
+    Object.entries(paletteJson[':root,\n:host']).filter(
+      ([name]) => name.includes('palette') && !name.includes('alpha')
+    )
+  )}
+/>
+
+<TokenCardList
+  id={'semantic-colors'}
+  title={'Sidestyling'}
+  description={'Bakgrunnsfarger, rammer og tekstfarger du ofte bruker.'}
+  showValue={false}
+  icon={'sidestyling'}
+  tokens={Object.fromEntries(
+    Object.entries(paletteJson[':root,\n:host']).filter(
+      ([name]) =>
+        name.includes('semantic-page') || name.includes('semantic-divider')
+    )
+  )}
+/>
+
+<TokenCardList
+  title={'Interaksjon'}
+  description={'Farger som brukes til elementer du kan klikke på.'}
+  showValue={false}
+  icon={'interaksjon'}
+  tokens={Object.fromEntries(
+    Object.entries(paletteJson[':root,\n:host']).filter(([name]) =>
+      name.includes('interactive')
+    )
+  )}
+/>
+
+<TokenCardList
+  title={'Statusfarger'}
+  description={
+    'Farger som brukes til positive, nøytrale eller negative statusmeldinger.'
+  }
+  showValue={false}
+  icon={'status'}
+  tokens={Object.fromEntries(
+    Object.entries(paletteJson[':root,\n:host']).filter(
+      ([name]) =>
+        name.includes('success') ||
+        name.includes('warning') ||
+        name.includes('danger') ||
+        name.includes('disabled')
+    )
+  )}
+/>
