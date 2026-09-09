@@ -13,8 +13,9 @@ export default function CardWithAlertStateExample(): JSX.Element {
         showAlert
         onClose={() => undefined}
       >
-        {'Fristen for å levere er 30. april. Sørg for at alle opplysninger er'}
-        {'riktige.'}
+        {
+          'Fristen for å levere er 30. april. Sørg for at alle opplysninger er riktige.'
+        }
       </Card.Alert>
       <Card.Header>
         <Heading as={'h3'}>{'Skattemelding 2026'}</Heading>

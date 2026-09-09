@@ -11,8 +11,9 @@ export default function DividerSubtleStateExample(): JSX.Element {
   return (
     <>
       <Paragraph hasSpacing>
-        {'Delestrek (nedtonet) som er meningsbærende og dermed ikke skjult for'}
-        {'skjermleser.'}
+        {
+          'Delestrek (nedtonet) som er meningsbærende og dermed ikke skjult for skjermleser.'
+        }
       </Paragraph>
       <Card className={styles.dividerCard}>
         <Card.Header>
