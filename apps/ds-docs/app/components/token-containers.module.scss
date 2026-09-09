@@ -1,4 +1,4 @@
-@import '@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .wrapper {
   max-width: var(--container-s);
@@ -44,7 +44,7 @@
   flex-wrap: wrap;
   column-gap: var(--spacing-s);
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     justify-content: flex-end;
   }
 }
