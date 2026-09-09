@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { BreadcrumbsLinkProps, Breadcrumbs } from '@skatteetaten/ds-navigation';
 
 import {
@@ -17,13 +16,7 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    color: {
-      options: [undefined, ...linkColorArr],
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
+    color: { control: 'inline-radio', table: { category: category.props } },
     svgPath: { ...svgPathDescription },
     // HTML
     href: { table: { category: category.htmlAttribute } },

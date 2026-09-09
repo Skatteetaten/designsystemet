@@ -4,7 +4,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Link } from '@skatteetaten/ds-buttons';
-import { dsI18n, linkColorArr } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -35,11 +35,7 @@ const meta = {
     // Props
     children: { table: { disable: true } },
     isExternal: { table: { disable: true } },
-    color: {
-      table: { disable: true },
-      options: [undefined, ...linkColorArr],
-      control: 'inline-radio',
-    },
+    color: { table: { disable: true }, control: 'inline-radio' },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
