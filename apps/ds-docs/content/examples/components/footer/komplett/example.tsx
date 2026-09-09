@@ -20,19 +20,20 @@ export default function FooterWithCustomLinksStateExample(): JSX.Element {
       thirdColumn={
         <>
           <Paragraph hasSpacing>
-            {'Pressemeldinger, pressekontakter og annen informasjon for'}
-            {'journalister.'}
+            {
+              'Pressemeldinger, pressekontakter og annen informasjon for journalister.'
+            }
           </Paragraph>
           <LinkGroup color={'white'} hasSpacing>
-            <LinkGroup.Link href={'#'}>{'Se vart presserom'}</LinkGroup.Link>
+            <LinkGroup.Link href={'#'}>{'Se vårt presserom'}</LinkGroup.Link>
           </LinkGroup>
           <Heading as={'h2'} level={3} hasSpacing>
             {'Bruke data fra Skatteetaten'}
           </Heading>
           <Paragraph hasSpacing>
-            {'Skatteetaten deler data som andre virksomheter og etater kan'}
-            {'gjenbruke for å forenkle og effektivisere eksisterende og nye'}
-            {'digitale tjenester.'}
+            {
+              'Skatteetaten deler data som andre virksomheter og etater kan gjenbruke for å forenkle og effektivisere eksisterende og nye digitale tjenester.'
+            }
           </Paragraph>
           <LinkGroup color={'white'}>
             <LinkGroup.Link href={'#'}>

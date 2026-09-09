@@ -16,8 +16,9 @@ export default function AccordionStandardRightIconStateExample(): JSX.Element {
 
       <Accordion.Item title={'Restskatt under 1 000 kroner'}>
         <Paragraph>
-          {'Hvis restskatten er under 1 000 kroner, gjelder egne regler for'}
-          {'innbetaling.'}
+          {
+            'Hvis restskatten er under 1 000 kroner, gjelder egne regler for innbetaling.'
+          }
         </Paragraph>
       </Accordion.Item>
     </Accordion>
