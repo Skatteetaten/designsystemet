@@ -14,6 +14,7 @@ import {
   RouterNavigationTile,
 } from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
+import { PublicImage } from './components/public-image';
 
 interface CanvasMdxProps {
   children?: ReactNode;
@@ -121,6 +122,7 @@ const components = {
   a: ({ children, href }: { children: string; href?: string }): JSX.Element => (
     <RouterDsLink href={href || ''}>{children}</RouterDsLink>
   ),
+  img: PublicImage,
   code: MdxCode,
   pre: MdxPre,
   Canvas: ({ children, examplesPath }: CanvasMdxProps): JSX.Element => (

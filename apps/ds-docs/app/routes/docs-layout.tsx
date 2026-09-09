@@ -1,7 +1,6 @@
 import { JSX } from 'react';
 import { isRouteErrorResponse, Outlet } from 'react-router';
 
-import { Link } from '@skatteetaten/ds-buttons';
 import { OpenClose } from '@skatteetaten/ds-collections';
 import { ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
 import { Footer } from '@skatteetaten/ds-layout';
@@ -9,6 +8,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { DocsTopBanner } from '../components/docs-top-banner';
 import { PageLayout } from '../components/page-layout';
+import { RouterDsLink } from '../components/router-link';
 import type { Route } from './+types/docs-layout';
 
 import styles from './docs.module.scss';
@@ -67,9 +67,9 @@ export function ErrorBoundary({
               ? 'Beklager, denne siden kan være flyttet eller slettet, eller det er en feil i lenken.'
               : 'Beklager, det oppstod en feil. Prøv igjen senere.'}
           </Paragraph>
-          <Link svgPath={ArrowForwardSVGpath} href={'/'}>
+          <RouterDsLink svgPath={ArrowForwardSVGpath} href={'/'}>
             {'Gå til forsiden'}
-          </Link>
+          </RouterDsLink>
           <OpenClose title={'Teknisk feilmelding'} size={'small'}>
             <Paragraph>{`Feilkode: ${errorCode}`}</Paragraph>
           </OpenClose>

@@ -5,6 +5,8 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { useRouterLinkClick } from './router-link';
 import browserCollections from '../../.source/browser';
+import { getPublicUrl } from '../../lib/public-url';
+import { PublicImage } from './public-image';
 
 import styles from './component-list.module.scss';
 
@@ -165,11 +167,11 @@ const ComponentTile = ({ entry }: ComponentTileProps): JSX.Element => {
     <li>
       <NavigationTile
         title={entry.titleWithBreaks}
-        href={entry.url}
+        href={getPublicUrl(entry.url)}
         lang={'nb'}
         description={
           entry.icon ? (
-            <img
+            <PublicImage
               src={entry.icon}
               className={styles.tileIcon}
               alt={''}
