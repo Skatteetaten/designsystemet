@@ -43,11 +43,11 @@
   "topbannerexternalusermenu.AboutMe": "Om meg",
   "topbannerexternalusermenu.AboutTheOrganisation": "Om virksomheten",
   "topbannerexternalusermenu.Inbox": "Innboks",
+  "topbannerexternalusermenu.InboxCountMessage": "{{count}} uåpnede meldinger",
   "topbannerexternalusermenu.MyPage": "Min side",
   "topbannerexternalusermenu.Notification": "Varsel",
-  "topbannerexternalusermenu.NotificationCountMessage": "{{count}} uleste varsler",
   "topbannerexternalusermenu.OnBehalfOf": "På vegne av",
-  "topbannerexternalusermenu.OneNotificationMessage": "1 ulest varsel",
+  "topbannerexternalusermenu.OneInboxMessage": "1 uåpnet melding",
   "topbannerexternalusermenu.SwitchUser": "Bytt bruker",
   "wordinfo.WordExplanation": "ordforklaring"
 }
