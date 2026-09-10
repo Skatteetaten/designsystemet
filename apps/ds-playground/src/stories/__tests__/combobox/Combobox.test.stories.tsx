@@ -206,9 +206,9 @@ export const Defaults = {
     );
     await expect(errorMessageContainer).toBeInTheDocument();
 
-    const accessibilityAnnouncer = canvasElement.querySelector(
+    const accessibilityAnnouncer = canvasElement.querySelectorAll(
       'div[class*="srOnly"]'
-    );
+    )[1];
     await expect(accessibilityAnnouncer).toHaveAttribute('aria-live', 'polite');
     await expect(accessibilityAnnouncer).toHaveAttribute('aria-atomic', 'true');
     await expect(accessibilityAnnouncer).toHaveTextContent('');
@@ -320,9 +320,9 @@ export const IsOpen = {
     await expect(options[0]).toHaveAttribute('id', 'test-combobox-option-0');
     await expect(options[0]).toHaveAttribute('aria-selected', 'false');
 
-    const accessibilityAnnouncer = canvasElement.querySelector(
+    const accessibilityAnnouncer = canvasElement.querySelectorAll(
       'div[class*="srOnly"]'
-    );
+    )[1];
     await expect(accessibilityAnnouncer).toHaveTextContent(
       dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
     );
@@ -391,9 +391,9 @@ export const NoResults = {
       dsI18n.t('ds_forms:combobox.NoResults', { searchTerm: 'xyz' })
     );
 
-    const accessibilityAnnouncer = canvasElement.querySelector(
+    const accessibilityAnnouncer = canvasElement.querySelectorAll(
       'div[class*="srOnly"]'
-    );
+    )[1];
     await expect(accessibilityAnnouncer).toHaveTextContent(
       dsI18n.t('ds_forms:combobox.NoResults', { searchTerm: 'xyz' })
     );
@@ -435,6 +435,7 @@ export const WithValue = {
     await expect(listbox).not.toBeInTheDocument();
   },
 } satisfies Story;
+
 export const SingleOptionAnnouncement = {
   name: 'Single Option Announcement (B1)',
   args: {
@@ -448,9 +449,9 @@ export const SingleOptionAnnouncement = {
     const combobox = canvas.getByRole('combobox');
     await userEvent.click(combobox);
 
-    const accessibilityAnnouncer = canvasElement.querySelector(
+    const accessibilityAnnouncer = canvasElement.querySelectorAll(
       'div[class*="srOnly"]'
-    );
+    )[1];
     await expect(accessibilityAnnouncer).toHaveTextContent(
       dsI18n.t('ds_forms:combobox.OneOptionAvailable')
     );
