@@ -15,6 +15,7 @@ const workspaceRoot = resolve(rootDir, '../..');
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
+  base: '/designsystemet/',
   cacheDir: '../../node_modules/.vite/apps/ds-docs',
   server: {
     port: 3000,

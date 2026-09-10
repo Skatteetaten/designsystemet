@@ -13,9 +13,9 @@ export default function PanelAlignedWithContainersStateExample(): JSX.Element {
           {'Panel med innhold som er justert med teksten på siden'}
         </Heading>
         <Paragraph hasSpacing>
-          {'Denne teksten bruker bredden --semantic-responsive-article. Det er'}
-          {'meningen at teksten her skal starte på same linje som teksten inni'}
-          {'panelet.'}
+          {
+            'Denne teksten bruker bredden --semantic-responsive-article. Det er meningen at teksten her skal starte på same linje som teksten inni panelet.'
+          }
         </Paragraph>
       </div>
 
@@ -29,8 +29,9 @@ export default function PanelAlignedWithContainersStateExample(): JSX.Element {
 
       <div className={styles.articleContainer}>
         <Paragraph>
-          {'Denne teksten bruker ogsa --semantic-responsive-article for a vise'}
-          {'samme venstre- og hoyrejustering som innholdet rundt panelet.'}
+          {
+            'Denne teksten bruker også --semantic-responsive-article for å vise samme venstre- og høyrejustering som innholdet rundt panelet.'
+          }
         </Paragraph>
       </div>
     </div>

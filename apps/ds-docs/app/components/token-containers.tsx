@@ -6,6 +6,7 @@ import containersJson from '@skatteetaten/ds-core-designtokens/designtokens/cont
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { CopyButton } from './copy-button';
+import { PublicImage } from './public-image';
 
 import styles from './token-containers.module.scss';
 
@@ -133,7 +134,11 @@ export const ContainerTokensOverview = (): JSX.Element => {
             <Card.Header
               rightContent={
                 imagePath ? (
-                  <img src={imagePath} alt={''} className={styles.icon} />
+                  <PublicImage
+                    src={imagePath}
+                    alt={''}
+                    className={styles.icon}
+                  />
                 ) : undefined
               }
             >

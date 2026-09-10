@@ -6,6 +6,7 @@ import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { CopyButton } from './copy-button';
+import { PublicImage } from './public-image';
 
 import styles from './token-palette.module.scss';
 
@@ -38,7 +39,11 @@ export const TokenCardList = ({
           {description && <Paragraph>{description}</Paragraph>}
         </div>
         {icon ? (
-          <img src={`/images/${icon}.svg`} alt={''} className={styles.icon} />
+          <PublicImage
+            src={`/images/${icon}.svg`}
+            alt={''}
+            className={styles.icon}
+          />
         ) : (
           <IconButton
             ariaExpanded={isOpen}
