@@ -22,7 +22,9 @@ export const TokenTable = ({
         <Table.HeaderCell scope={'col'} alignment={'right'}>
           {'Verdi'}
         </Table.HeaderCell>
-        <Table.HeaderCell scope={'col'}>{''}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'} as={'td'}>
+          {''}
+        </Table.HeaderCell>
       </Table.Row>
     </Table.Header>
     <Table.Body>
