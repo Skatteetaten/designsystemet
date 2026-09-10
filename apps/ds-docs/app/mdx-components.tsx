@@ -29,6 +29,10 @@ interface WordInfoTermMdxProps {
   wordInfoKey: string;
 }
 
+interface MdxComponentOptions {
+  forWordInfo?: boolean;
+}
+
 const getWordInfoPath = (wordInfoKey: string): string => {
   const candidates = [`${wordInfoKey}.mdx`, `${wordInfoKey}.md`];
 
@@ -65,7 +69,7 @@ const WordInfoTerm = ({
       <WordInfo.Trigger>{children}</WordInfo.Trigger>
       <WordInfo.Content>
         {wordInfoContentLoader.useContent(wordInfoPath, {
-          components: getMdxComponents(),
+          components: getMdxComponents({ forWordInfo: true }),
         })}
       </WordInfo.Content>
     </WordInfo>
@@ -132,8 +136,15 @@ const components = {
   WordInfoTerm,
 };
 
-export function getMdxComponents(): MDXComponents {
+export function getMdxComponents(
+  options: MdxComponentOptions = {}
+): MDXComponents {
   return {
     ...components,
+    ...(options.forWordInfo && {
+      p: ({ children }: { children?: ReactNode }): JSX.Element => (
+        <span>{children}</span>
+      ),
+    }),
   };
 }
