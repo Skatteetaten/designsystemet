@@ -2,7 +2,6 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
 
 const meta = {
@@ -16,20 +15,10 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: {
-      table: { disable: true },
-      control: { disable: true },
-    },
+    children: { table: { disable: true }, control: { disable: true } },
     hasSpacing: { table: { disable: true } },
-    color: {
-      table: { disable: true },
-      options: [undefined, ...linkColorArr],
-      control: 'inline-radio',
-    },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
+    color: { table: { disable: true }, control: 'inline-radio' },
+    variant: { table: { disable: true }, control: 'inline-radio' },
   },
   tags: ['test'],
   parameters: {

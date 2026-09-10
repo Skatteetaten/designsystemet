@@ -14,7 +14,9 @@
     "**/*stats.html",
     "/.nx/cache",
     "/.nx/workspace-data",
-    ".nx/self-healing"
+    ".nx/self-healing",
+    "**/*.scss.d.ts",
+    "**/*.mdx"
   ],
   "jsdoc": false,
   "jsxSingleQuote": false,

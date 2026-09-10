@@ -168,6 +168,11 @@ const ScreenReaderText = [
   { title: 'Visible', value: 'visible' },
 ];
 
+const Font = [
+  { title: 'Inter', value: 'inter' },
+  { title: 'Systemfont', value: 'system' },
+];
+
 const clearStyles = (element: HTMLElement): void => {
   for (const className of Object.values(Spacing)) {
     element.classList.remove(className.value);
@@ -201,6 +206,17 @@ const ScreenReaderTextUpdater: Decorator = (Story, context) => {
   return <Story />;
 };
 
+const FontUpdater: Decorator = (Story, context) => {
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.setAttribute('data-font', context.globals.font);
+    return (): void => {
+      root.removeAttribute('data-font');
+    };
+  }, [context.globals.font]);
+  return <Story />;
+};
+
 const globalTypes = {
   locale: {
     name: 'Locale',
@@ -231,6 +247,16 @@ const globalTypes = {
       items: ScreenReaderText,
     },
   },
+  font: {
+    name: 'Font',
+    description: 'Bytt mellom Inter og designsystemets systemfont-stack',
+    defaultValue: Font[0].value,
+    toolbar: {
+      title: 'Font',
+      icon: 'bold',
+      items: Font,
+    },
+  },
 } satisfies Preview['globalTypes'];
 
 const preview = {
@@ -241,6 +267,7 @@ const preview = {
     mockDate,
     SpacingUpdater,
     ScreenReaderTextUpdater,
+    FontUpdater,
   ],
   parameters,
   globalTypes,

@@ -7,6 +7,7 @@ import type { Root } from 'fumadocs-core/page-tree';
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
 import { useRouterLinkClick } from './router-link';
+import { getPublicUrl } from '../../lib/public-url';
 
 import styles from './breadcrumbs.module.scss';
 
@@ -31,7 +32,7 @@ const RouterBreadcrumbsLink = ({
   const handleClick = useRouterLinkClick(href);
 
   return (
-    <Breadcrumbs.Link href={href} onClick={handleClick}>
+    <Breadcrumbs.Link href={getPublicUrl(href)} onClick={handleClick}>
       {children}
     </Breadcrumbs.Link>
   );

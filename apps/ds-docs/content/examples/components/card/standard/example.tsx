@@ -12,12 +12,8 @@ export default function CardPreviewStateExample(): JSX.Element {
         <Heading as={'h3'}>{'Tittel på kortet'}</Heading>
       </Card.Header>
       <Card.Content>
-        {'Alle som har laget en nettside, trengt litt fylltekst eller bare'}
         {
-          'surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt'
-        }
-        {
-          'av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.'
+          'Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.'
         }
       </Card.Content>
       <Card.Actions>

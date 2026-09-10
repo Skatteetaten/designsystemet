@@ -3,7 +3,6 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { linkColorArr } from '@skatteetaten/ds-core-utils';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

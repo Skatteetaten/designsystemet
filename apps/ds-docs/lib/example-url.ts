@@ -1,10 +1,13 @@
+import { getPublicUrl } from './public-url';
+
 export const getExampleUrl = (
   examplePath: string,
-  isEmbedded = false
+  isEmbedded = false,
+  baseUrl = import.meta.env.BASE_URL
 ): string => {
   const searchParams = new URLSearchParams({ path: examplePath });
 
-  return `/example.html?${searchParams}${isEmbedded ? '#embedded' : ''}`;
+  return `${getPublicUrl('/example.html', baseUrl)}?${searchParams}${isEmbedded ? '#embedded' : ''}`;
 };
 
 export const getExamplePathFromSearch = (search: string): string | null => {

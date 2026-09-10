@@ -57,7 +57,7 @@ export const Default: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        'ds_overlays:topbannerexternalusermenu.InboxCountMessage',
         { count: args.notificationCount }
       )}`,
     });
@@ -120,7 +120,7 @@ export const WithOneNotification: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.OneNotificationMessage'
+        'ds_overlays:topbannerexternalusermenu.OneInboxMessage'
       )}`,
     });
 
@@ -145,7 +145,7 @@ export const WithMoreThan99Notifications: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        'ds_overlays:topbannerexternalusermenu.InboxCountMessage',
         { count: args.notificationCount }
       )}`,
     });
@@ -168,7 +168,7 @@ export const SwitchUser: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        'ds_overlays:topbannerexternalusermenu.InboxCountMessage',
         { count: args.notificationCount }
       )}`,
     });
