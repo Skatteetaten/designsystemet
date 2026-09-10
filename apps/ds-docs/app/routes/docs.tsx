@@ -10,6 +10,7 @@ import { useRootLoaderData } from '../root';
 import type { Route } from './+types/docs';
 import { getParentTitle } from './docs.utils';
 import { LanguageAlert } from '../components/language-alert';
+import { PublicImage } from '../components/public-image';
 
 import styles from './docs.module.scss';
 
@@ -75,7 +76,7 @@ const docsContentLoader =
                   {frontmatter.title}
                 </Heading>
                 {frontmatter.icon && (
-                  <img
+                  <PublicImage
                     src={frontmatter.icon}
                     className={styles.mdxIcon}
                     alt={''}

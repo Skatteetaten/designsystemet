@@ -16,6 +16,7 @@ import {
 } from 'fumadocs-core/source/client';
 
 import '@skatteetaten/ds-core-designtokens/index.css';
+import { getPublicUrl } from '../lib/public-url';
 import type { Route } from './+types/root';
 
 export interface RootLoaderData {
@@ -24,18 +25,18 @@ export interface RootLoaderData {
 
 export const meta: MetaFunction = () => [
   {
-    title: 'Loom',
+    title: 'Designsystemet',
   },
 ];
 
 export const links: LinksFunction = () => [
   {
     rel: 'icon',
-    href: '/favicon.ico',
+    href: getPublicUrl('/favicon.ico'),
   },
   {
     rel: 'icon',
-    href: '/favicon-white.ico',
+    href: getPublicUrl('/favicon-white.ico'),
     media: '(prefers-color-scheme: dark)',
   },
 ];

@@ -11,6 +11,7 @@ import {
   NavigationTile,
   NavigationTileProps,
 } from '@skatteetaten/ds-navigation';
+import { getPublicUrl } from '../../lib/public-url';
 
 // Behandle kun interne ruter på klienten. Eksterne lenker og rene anker (#foo) skal følge nettleserens standardoppførsel.
 const isInternalRoute = (href: string): boolean =>
@@ -50,10 +51,11 @@ export const RouterDsLink = ({
   children,
   ...rest
 }: RouterDsLinkProps): JSX.Element => {
-  const onClick = useRouterLinkClick(href ?? '');
+  const routeHref = href ?? '';
+  const onClick = useRouterLinkClick(routeHref);
 
   return (
-    <Link {...rest} href={href} onClick={onClick}>
+    <Link {...rest} href={getPublicUrl(routeHref)} onClick={onClick}>
       {children}
     </Link>
   );
@@ -72,7 +74,14 @@ export const RouterNavigationTile = ({
   href,
   ...rest
 }: RouterNavigationTileProps): JSX.Element => {
-  const onClick = useRouterLinkClick(href ?? '');
+  const routeHref = href ?? '';
+  const onClick = useRouterLinkClick(routeHref);
 
-  return <NavigationTile {...rest} href={href} onClick={onClick} />;
+  return (
+    <NavigationTile
+      {...rest}
+      href={getPublicUrl(routeHref)}
+      onClick={onClick}
+    />
+  );
 };

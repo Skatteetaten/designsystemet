@@ -17,7 +17,7 @@
         { "externalDependencies": ["@react-router/dev"] }
       ],
       "outputs": ["{workspaceRoot}/dist/ds-docs/build/client"],
-      "command": "react-router build",
+      "command": "react-router build && node scripts/create-github-pages-fallback.mjs",
       "options": {
         "cwd": "apps/ds-docs"
       }
