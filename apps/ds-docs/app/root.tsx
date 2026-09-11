@@ -52,7 +52,7 @@ export async function loader({}: Route.LoaderArgs): Promise<RootLoaderData> {
 
 export function Layout({ children }: { children: ReactNode }): JSX.Element {
   return (
-    <html lang={'en'}>
+    <html lang={'nb'}>
       <head>
         <meta charSet={'utf-8'} />
         <meta

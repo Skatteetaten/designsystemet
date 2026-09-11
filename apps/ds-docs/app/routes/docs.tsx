@@ -5,12 +5,11 @@ import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import browserCollections from '../../.source/browser';
+import { PublicImage } from '../components/public-image';
 import { getMdxComponents } from '../mdx-components';
 import { useRootLoaderData } from '../root';
 import type { Route } from './+types/docs';
 import { getParentTitle } from './docs.utils';
-import { LanguageAlert } from '../components/language-alert';
-import { PublicImage } from '../components/public-image';
 
 import styles from './docs.module.scss';
 
@@ -62,7 +61,6 @@ const docsContentLoader =
           className={`${styles.contentWrapper} ${showToc ? styles.contentWrapper_withToc : ''}`.trim()}
         >
           <div className={styles.headingContent}>
-            <LanguageAlert />
             <title>{frontmatter.title}</title>
             <meta name={'description'} content={frontmatter.description} />
             {frontmatter.title && (
