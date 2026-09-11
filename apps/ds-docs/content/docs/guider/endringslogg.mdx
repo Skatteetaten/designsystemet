@@ -6,22 +6,66 @@ description: Historikk over viktige endringer i designsystemet. Den nyeste versj
 import { Accordion } from '@skatteetaten/ds-collections';
 import styles from './endringslogg.module.scss';
 
-## Versjon 3.0.0 – 10. september 2026
+## Versjon 3.0.0 – 15. september 2026
 
-Dette er et fiktivt eksempel på hvordan endringer i en release dokumenteres. Innholdet oppdateres før lansering.
+En majorversjon med fokus på opprydding og forenkling av API-er, ny dokumentasjon med live-eksempler og flere forbedringer som gjør designsystemet mer konsistent og helhetlig.
+
+### Breaking changes
+
+#### Api-endringer
+- **RadioGroup**: `selectedValue` er fjernet. Bruk `value` i stedet. (Varslet i versjon 2.6.0.)
+- **TextField**: `thousandSeparator` er fjernet, og erstattes av `useFormattedInput`-funksjon.
+- **OpenClose, TextField, Select, DatePicker, SearchField og Combobox**: `variant` er fjernet. Standard skjemafelt har bare én størrelse, og unntakene SearchField og Combobox bruker nå `size` i stedet.
+- **Skjemakomponenter**: `showRequiredMark` er fjernet fra alle komponenter. (Varslet i versjon 2.3.0.)
+- **Table**: `variant` er fjernet. Bruk `size` i stedet.
+- **TopBannerLogo**: `mobileLogo` er fjernet. Prop-en var ikke i bruk.
+- **ds-cli**: Pakken publiseres ikke lenger som del av versjon 3. Siste versjon med codemods for migrering fra 1.x til 2.x er 2.10.
+
+### Endrede standardverdier
+- **RadioGroup og CheckboxGroup**: Standardverdien for spacing er endret fra `true` til `false`. Det legges heller ikke lenger til ekstra luft under siste element.
+- **Footer**: Standardverdien for openDefaultLinksInNewTab er endret fra `true` til `false`.
+- **OpenClose**: Standardverdien for keepMounted er endret til true for å være konsistent med Accordion.Item og Tabs.Panel.
+
+### Visuelle og strukturelle endringer
+- **LinkGroup**: Margen under siste element er fjernet.
+- **Accordion.Item**: `className` settes nå på ytterste element i stedet for på knapp-elementet.
+- **Link**: Komponenten bruker nå `display: inline-block`, og innebygd padding er fjernet for å gi høyde som samsvarer bedre med designspesifikasjonene.
+- **Fargeprops (color)**: Fargeverdier er harmonisert på tvers av flere komponenter, blant annet Link, LinkGroup og Accordion.
+
+### Statusendringer
+- **Combobox, useFormattedInput, RolePicker og RoleBanner** har ikke lenger beta-status og regnes nå som stabile.
+
+### Nye komponenter og funksjoner
+- **Icon**: Nye ikoner for Play og Pause uten sirkel.
+- **IconButton**: `xsmall` er fjernet. Størrelsesskalaen er justert for bedre samspill med øvrige knappestørrelser.
+- **Combobox**: Forbedret ytelse ved filtrering av store lister.
+- **TypeScript**: Støtte for TypeScript 6.0.
+- **TopBannerExternal.UserMenu**: Lenken til «Varsel» er erstattet med lenke til «Innboks».
 
 ### Feilrettinger og forbedringer
+#### Tilgjengelighet
+- **Combobox**: Meldinger for skjermlesere ved søk uten treff håndteres nå mer korrekt.
+- **StepList**: Justert autofokus slik at første steg ikke lenger får uønsket fokus.
+- **Table** (redigerbar rad): Forbedret skjermleserinstruks for redigerknapp plassert til venstre.
+- **FileUploader**: Feilmeldinger ved opplasting av flere filer leses nå korrekt opp når multiple er satt til false.
 
-- Button: Fiktivt eksempel: Knappene har fått oppdatert tastaturnavigasjon for bedre støtte ved bruk av tastatur.
-- Accordion: Fiktivt eksempel: Komponenten har fått forbedret håndtering av lange titler på små skjermer.
-- Skjemakomponenter: Fiktivt eksempel: Komponentene gir tydeligere tilbakemelding når et obligatorisk felt mangler en verdi.
-- Containere: Fiktivt eksempel: Containerne har fått justert responsiv oppførsel ved høy zoom.
+#### Layout og visuell kvalitet
+- **Table**: Rettet manglende padding i ekspandert innhold når ekspander-knappen er plassert til høyre.
+- **FileUploader**: Rettet inkonsistent luft avhengig av om det er lastet opp filer.
+- **DescriptionList**: Rettet inkonsistent bruk av margin og padding ved `hasSpacing`.
+- **SearchField**: Rettet hover-tilstand som kunne bli påvirket av nullstillingsstiler i konsumentapplikasjoner.
+- **Alert**: Fjerner unødvendig luft når komponenten ikke vises.
+- **Hjelpetekst**: Oppdatert kantlinje slik at den samsvarer bedre med Popover og Card.
+- **ScrollToTopButton**: Justert plassering utenfor Footer og responsiv container.
+
+#### Funksjonelle feilrettinger
+- **Formatter og TextField**: Rettet feil plassering av markør ved rask inntasting i formaterte felt, for eksempel beløpsfelt.
 
 ### Oppdatert dokumentasjon og eksempler
+- Ny migreringsguide for versjon 3.0 med oversikt over alle breaking changes.
+- Oppdatert dokumentasjon for Footer ved bruk i interne løsninger med venstrestilt footer og fritt innhold.
 
-- Designtokens: Fiktivt eksempel: Dokumentasjonen har fått et eksempel på bruk av et semantisk token for avstand mellom beslektede innholdsseksjoner.
-
-Se [migreringsguiden for versjon 3.0](/guider/migrering/versjon_3/).
+Se også [migreringsguiden for versjon 3.0](/guider/migrering/versjon_3/).
 
 <div className={styles.wrapper}>
 <Accordion iconPosition={'right'}>
