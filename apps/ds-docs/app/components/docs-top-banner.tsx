@@ -17,23 +17,23 @@ import { Navigation } from './navigation';
 
 const skatteKartetLinks = [
   {
-    href: 'https://www.skatteetaten.no/skattekartet/strategi',
+    href: 'https://www.skatteetaten.no/skattekartet/strategi/',
     text: 'Strategi og føringer',
   },
   {
-    href: 'https://www.skatteetaten.no/skattekartet/god-praksis',
-    text: 'God praksis',
+    href: 'https://www.skatteetaten.no/skattekartet/praksis/',
+    text: 'Vår praksis',
   },
   {
-    href: 'https://www.skatteetaten.no/skattekartet/innhold',
+    href: 'https://www.skatteetaten.no/skattekartet/innhold/',
     text: 'Mønstre og maler',
   },
   {
-    href: 'https://designsystemet.skatteetaten.no/',
+    href: 'https://skatteetaten.github.io/designsystemet/',
     text: 'Designsystemet',
   },
   {
-    href: 'https://www.skatteetaten.no/skattekartet/identitet',
+    href: 'https://www.skatteetaten.no/skattekartet/identitet/',
     text: 'Vår identitet',
   },
 ];
