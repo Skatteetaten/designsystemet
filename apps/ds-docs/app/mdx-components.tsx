@@ -8,13 +8,13 @@ import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 import browserCollections from '../.source/browser';
 import { Canvas } from './components/canvas';
 import { MdxCode, MdxPre } from './components/code-block';
+import { PublicImage } from './components/public-image';
 import {
   RouterDsLink,
   RouterDsLinkGroup,
   RouterNavigationTile,
 } from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
-import { PublicImage } from './components/public-image';
 
 interface CanvasMdxProps {
   children?: ReactNode;

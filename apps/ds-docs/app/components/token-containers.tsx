@@ -134,11 +134,7 @@ export const ContainerTokensOverview = (): JSX.Element => {
             <Card.Header
               rightContent={
                 imagePath ? (
-                  <PublicImage
-                    src={imagePath}
-                    alt={''}
-                    className={styles.icon}
-                  />
+                  <PublicImage src={imagePath} className={styles.icon} />
                 ) : undefined
               }
             >

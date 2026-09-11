@@ -6,5 +6,9 @@ export const PublicImage = ({
   src,
   ...rest
 }: ComponentProps<'img'>): JSX.Element => (
-  <img {...rest} src={src ? getPublicUrl(src) : undefined} />
+  <img
+    {...rest}
+    src={src ? getPublicUrl(src) : undefined}
+    alt={rest.alt ?? ''}
+  />
 );
