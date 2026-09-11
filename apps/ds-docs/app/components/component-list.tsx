@@ -168,6 +168,7 @@ const ComponentTile = ({ entry }: ComponentTileProps): JSX.Element => {
       <NavigationTile
         title={entry.titleWithBreaks}
         href={getPublicUrl(entry.url)}
+        titleAs={'h3'}
         lang={'nb'}
         description={
           entry.icon ? (

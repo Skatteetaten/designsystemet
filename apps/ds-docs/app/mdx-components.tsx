@@ -98,7 +98,7 @@ const components = {
     children?: ReactNode;
     id?: string;
   }): JSX.Element => (
-    <Heading as={'h3'} level={3} id={id} hasSpacing={false}>
+    <Heading as={'h3'} id={id} hasSpacing={false}>
       {children}
     </Heading>
   ),
@@ -109,7 +109,29 @@ const components = {
     children?: ReactNode;
     id?: string;
   }): JSX.Element => (
-    <Heading as={'h4'} level={4} id={id} hasSpacing={false}>
+    <Heading as={'h4'} id={id} hasSpacing={false}>
+      {children}
+    </Heading>
+  ),
+  h4: ({
+    children,
+    id,
+  }: {
+    children?: ReactNode;
+    id?: string;
+  }): JSX.Element => (
+    <Heading as={'h5'} id={id} hasSpacing={false}>
+      {children}
+    </Heading>
+  ),
+  h5: ({
+    children,
+    id,
+  }: {
+    children?: ReactNode;
+    id?: string;
+  }): JSX.Element => (
+    <Heading as={'h6'} id={id} hasSpacing={false}>
       {children}
     </Heading>
   ),
