@@ -1,7 +1,7 @@
 .iconList {
   display: grid;
   padding: 0;
-  margin: 0;
+  margin: var(--spacing-l) 0 0;
   font-size: var(--font-size-s);
   gap: var(--spacing-m);
   list-style: none;
@@ -25,5 +25,4 @@
   display: inline-flex;
   padding: var(--spacing-s);
   border: 1px solid var(--palette-graphite-10);
-  border-radius: var(--spacing-xs);
 }
