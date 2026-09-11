@@ -52,8 +52,7 @@ const countErrors = (childArray: ReactNode[]): number => {
 /**
  * ErrorSummary
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-errorsummary--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errorsummary/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/errorsummary)
  */
 export const ErrorSummary = ({
   ref,

@@ -13,8 +13,7 @@ export const getDefaultScrollToTopButtonText = (): string =>
 /**
  * ScrollToTopButton
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-scrolltotopbutton--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/scrolltotopbutton/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/scrolltotopbutton)
  */
 export const ScrollToTopButton = ({
   ref,

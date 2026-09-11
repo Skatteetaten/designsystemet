@@ -8,8 +8,7 @@ import { WordInfoTrigger } from './WordInfoTrigger/WordInfoTrigger';
 /**
  * WordInfo
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-wordinfo--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/wordinfo/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/wordinfo)
  */
 export const WordInfo = ((props: WordInfoProps): JSX.Element => {
   return <Popover {...props} />;

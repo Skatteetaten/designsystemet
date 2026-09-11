@@ -26,8 +26,7 @@ import { PopoverTrigger } from './PopoverTrigger/PopoverTrigger';
 /**
  * Popover
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-popover--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/popover/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/popover)
  */
 export const Popover = ((props: PopoverProps): JSX.Element => {
   const {

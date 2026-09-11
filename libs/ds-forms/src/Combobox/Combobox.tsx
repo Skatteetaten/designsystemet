@@ -33,8 +33,7 @@ import styles from './Combobox.module.scss';
 /**
  * Combobox
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-combobox--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/combobox/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/combobox)
  */
 const ComboboxContent = ({
   ref,

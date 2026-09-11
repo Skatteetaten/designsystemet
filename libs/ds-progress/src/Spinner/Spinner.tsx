@@ -9,8 +9,7 @@ import styles from './Spinner.module.scss';
 /**
  * Spinner
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-spinner--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/spinner/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/spinner)
  */
 export const Spinner = ({
   ref,

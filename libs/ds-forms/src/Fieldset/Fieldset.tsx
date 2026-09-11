@@ -8,8 +8,7 @@ import styles from './Fieldset.module.scss';
 /**
  * Fieldset
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fieldset--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fieldset/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/fieldset)
  */
 export const Fieldset = ({
   ref,

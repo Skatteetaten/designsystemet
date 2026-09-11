@@ -30,8 +30,7 @@ export const getDefaultDatePickerPlaceholder = (): string =>
 /**
  * DatePicker
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-datepicker--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/datepicker/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/datepicker)
  */
 export const DatePicker = ({
   ref,

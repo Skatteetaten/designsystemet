@@ -14,8 +14,7 @@ import styles from './CheckboxGroup.module.scss';
 /**
  * CheckboxGroup
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-checkboxgroup--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/checkboxgroup)
  */
 export const CheckboxGroup = ({
   ref,

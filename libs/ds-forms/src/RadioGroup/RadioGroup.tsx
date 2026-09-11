@@ -11,8 +11,7 @@ import styles from './RadioGroup.module.scss';
 /**
  * RadioGroup
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-radiogroup--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/radiogroup)
  */
 export const RadioGroup = ({
   ref,

@@ -39,8 +39,7 @@ import styles from './TopBannerExternal.module.scss';
 /**
  * TopBannerExternal
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-topbannerexternal--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/topbannerexternal)
  */
 export const TopBannerExternal = ({
   ref,
