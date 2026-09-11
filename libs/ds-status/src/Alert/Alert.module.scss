@@ -1,4 +1,9 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
+.srOnly {
+  @include styles.sr-only;
+}
 
 .alert {
   position: relative;

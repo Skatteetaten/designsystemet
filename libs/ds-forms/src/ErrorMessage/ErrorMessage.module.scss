@@ -1,3 +1,9 @@
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
+.srOnly {
+  @include styles.sr-only;
+}
+
 @keyframes errormessage {
   from {
     height: 0;

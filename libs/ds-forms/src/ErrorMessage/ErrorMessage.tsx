@@ -27,6 +27,7 @@ export const ErrorMessage = ({
       ref={ref}
       id={id}
       lang={lang}
+      className={showError ? '' : styles.srOnly}
       data-testid={dataTestId}
       aria-live={'assertive'}
       aria-atomic
