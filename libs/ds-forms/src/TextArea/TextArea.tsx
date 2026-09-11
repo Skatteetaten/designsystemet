@@ -18,8 +18,7 @@ import styles from './TextArea.module.scss';
 /**
  * TextArea
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-textarea--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textarea/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/textarea)
  */
 export const TextArea = ({
   ref,

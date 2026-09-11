@@ -29,8 +29,7 @@ import styles from './RolePicker.module.scss';
 /**
  * RolePicker
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-rolepicker--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolepicker/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/rolepicker)
  */
 export const RolePicker = ({
   ref,

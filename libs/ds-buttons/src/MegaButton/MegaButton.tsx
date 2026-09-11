@@ -12,8 +12,7 @@ import styles from './MegaButton.module.scss';
 /**
  * MegaButton
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-megabutton--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/megabutton/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/megabutton)
  */
 export const MegaButton = ({
   ref,

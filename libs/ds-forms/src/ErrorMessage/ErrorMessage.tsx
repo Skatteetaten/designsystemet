@@ -9,8 +9,7 @@ import styles from './ErrorMessage.module.scss';
 /**
  * ErrorMessage
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-errormessage--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/errormessage/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/errormessage)
  */
 export const ErrorMessage = ({
   ref,

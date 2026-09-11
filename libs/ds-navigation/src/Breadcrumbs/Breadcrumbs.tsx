@@ -11,8 +11,7 @@ import { BreadcrumbsList } from './BreadcrumbsList/BreadcrumbsList';
 /**
  * Breadcrumbs
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-breadcrumbs--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/breadcrumbs)
  */
 export const Breadcrumbs = ({
   ref,

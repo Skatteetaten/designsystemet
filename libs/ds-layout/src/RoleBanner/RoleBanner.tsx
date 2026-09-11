@@ -11,8 +11,7 @@ import styles from './RoleBanner.module.scss';
 /**
  * RoleBanner
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-rolebanner--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolebanner/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/rolebanner)
  */
 export const RoleBanner = ({
   ref,

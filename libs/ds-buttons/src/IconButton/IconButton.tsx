@@ -10,8 +10,7 @@ import styles from './IconButton.module.scss';
 /**
  * IconButton
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-iconbutton--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/iconbutton/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/iconbutton)
  */
 export const IconButton = ({
   ref,

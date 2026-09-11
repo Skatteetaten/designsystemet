@@ -36,8 +36,7 @@ export const getDefaultInProgressLabel = (): string =>
 /**
  * FileUploader
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fileuploader--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fileuploader/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/fileuploader)
  */
 export const FileUploader = ({
   ref,
