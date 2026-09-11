@@ -39,11 +39,7 @@ export const TokenCardList = ({
           {description && <Paragraph>{description}</Paragraph>}
         </div>
         {icon ? (
-          <PublicImage
-            src={`/images/${icon}.svg`}
-            alt={''}
-            className={styles.icon}
-          />
+          <PublicImage src={`/images/${icon}.svg`} className={styles.icon} />
         ) : (
           <IconButton
             ariaExpanded={isOpen}

@@ -79,8 +79,6 @@ const docsContentLoader =
                   <PublicImage
                     src={frontmatter.icon}
                     className={styles.mdxIcon}
-                    alt={''}
-                    aria-hidden
                   />
                 )}
               </div>

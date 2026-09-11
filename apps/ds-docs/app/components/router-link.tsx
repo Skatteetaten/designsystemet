@@ -11,6 +11,7 @@ import {
   NavigationTile,
   NavigationTileProps,
 } from '@skatteetaten/ds-navigation';
+
 import { getPublicUrl } from '../../lib/public-url';
 
 // Behandle kun interne ruter på klienten. Eksterne lenker og rene anker (#foo) skal følge nettleserens standardoppførsel.
