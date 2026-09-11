@@ -255,7 +255,7 @@ export const Navigation = ({
   filterPage = (): boolean => true,
   onNavigate,
 }: NavigationProps): JSX.Element => {
-  const { pathname } = useLocation();
+  const { key: locationKey, pathname } = useLocation();
   const [filterValue, setFilterValue] = useState('');
   const isFiltering = filterValue.trim().length > 0;
   const filteredPageTree = filterPageTree(
@@ -264,10 +264,13 @@ export const Navigation = ({
   );
   const handleNavigationClick = (event: MouseEvent<HTMLDivElement>): void => {
     if (event.target instanceof Element && event.target.closest('a')) {
-      setFilterValue('');
       onNavigate?.();
     }
   };
+
+  useEffect(() => {
+    setFilterValue('');
+  }, [locationKey]);
 
   return (
     <div className={styles.navCard} onClick={handleNavigationClick}>
