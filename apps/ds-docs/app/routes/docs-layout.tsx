@@ -21,6 +21,9 @@ export default function DocsLayout(): JSX.Element {
         <Outlet />
       </PageLayout>
       <Footer
+        accessibilityURL={
+          'https://uustatus.no/nb/erklaringer/publisert/3daf0fcb-305b-4df9-bb92-46baf73f373e'
+        }
         titleSecondColumn={'Trenger du hjelp?'}
         secondColumn={
           <>
