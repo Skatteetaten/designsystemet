@@ -64,7 +64,7 @@ export default function ModalSelectionExample(): JSX.Element {
       </InlineButton>
 
       <Modal ref={modalRef} title={'Velg region'} onClose={handleCloseModal}>
-        <CheckboxGroup legend={'Region'}>
+        <CheckboxGroup legend={'Region'} hasSpacing>
           {allRegions.map((region) => (
             <CheckboxGroup.Checkbox
               key={region}

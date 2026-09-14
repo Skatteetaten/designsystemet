@@ -301,7 +301,7 @@ export const WorkTask: Story = {
         <Heading as={'h2'} level={3} hasSpacing>
           {'Valg for saken'}
         </Heading>
-        <RadioGroup legend={'valg for saken'} hideLegend>
+        <RadioGroup legend={'valg for saken'} hasSpacing hideLegend>
           <RadioGroup.Radio>{'Mangler dokumentasjon'}</RadioGroup.Radio>
           <RadioGroup.Radio>{'Opprett nytt krav'}</RadioGroup.Radio>
           <RadioGroup.Radio>{'Godta krav'}</RadioGroup.Radio>

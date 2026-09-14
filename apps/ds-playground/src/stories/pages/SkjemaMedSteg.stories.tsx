@@ -229,6 +229,7 @@ export const SkjemaMedSteg = (): JSX.Element => {
                   legend={'Har du norsk adresse?'}
                   value={hasLocalAddress}
                   errorMessage={localAddressErrorMessage}
+                  hasSpacing
                   onBlur={setLocalAddressError}
                   onChange={(e): void => {
                     setLocalAddressErrorMessage('');

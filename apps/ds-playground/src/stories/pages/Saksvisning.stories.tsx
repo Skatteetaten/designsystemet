@@ -258,7 +258,7 @@ export const Saksvisning = (): JSX.Element => (
         <Heading as={'h2'} level={3} hasSpacing>
           {'Saksbehandling'}
         </Heading>
-        <RadioGroup legend={'Valg for arbeidsoppgaven'} value={4}>
+        <RadioGroup legend={'Valg for arbeidsoppgaven'} value={4} hasSpacing>
           <RadioGroup.Radio description={'Description of option'}>
             {'Radioknapp nummer en'}
           </RadioGroup.Radio>
