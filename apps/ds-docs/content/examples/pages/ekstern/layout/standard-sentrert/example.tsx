@@ -17,6 +17,8 @@ export default function StandardSentrertLayout(): JSX.Element {
   const [step2, setStep2] = useState<string | undefined>(undefined);
   const [hasStep2Error, setHasStep2Error] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [isConfirmed, setIsConfirmed] = useState(false);
+  const [hasConfirmError, setHasConfirmError] = useState(false);
   const onNext = (): void => {
     const nextStep = activeStep + 1;
     setActiveStep(nextStep);
@@ -156,7 +158,13 @@ export default function StandardSentrertLayout(): JSX.Element {
               title={'Oppsummering før resultat'}
               stepNumber={3}
               nextButtonText={'Send inn'}
-              onNext={(): void => setHasSubmitted(true)}
+              onNext={(): void => {
+                if (isConfirmed) {
+                  setHasSubmitted(true);
+                } else {
+                  setHasConfirmError(true);
+                }
+              }}
             >
               {activeStep === 3 ? (
                 <Card color={'ochre'} className={styles.marginTopS}>
@@ -168,7 +176,19 @@ export default function StandardSentrertLayout(): JSX.Element {
                       <List.Element>{'Du har forstått innholdet'}</List.Element>
                       <List.Element>{`Du vil se et ${step2 === 'ja' ? 'positivt' : 'nøytralt'} resultat`}</List.Element>
                     </List>
-                    <Checkbox>
+                    <Checkbox
+                      id={'confirmCheckbox'}
+                      checked={isConfirmed}
+                      errorMessage={
+                        hasConfirmError
+                          ? 'Du må bekrefte at opplysningene stemmer'
+                          : undefined
+                      }
+                      onChange={(e): void => {
+                        setHasConfirmError(false);
+                        setIsConfirmed(e.target.checked);
+                      }}
+                    >
                       {'Jeg bekrefter at opplysningene ovenfor stemmer'}
                     </Checkbox>
                   </Card.Content>
