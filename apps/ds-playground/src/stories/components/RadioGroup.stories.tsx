@@ -87,6 +87,7 @@ export const Examples: Story = {
           legend={'Type virksomhet'}
           value={type}
           required
+          hasSpacing
           onChange={(e): void => setType(e.target.value)}
         >
           <RadioGroup.Radio value={'foretak'}>

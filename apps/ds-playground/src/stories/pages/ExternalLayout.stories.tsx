@@ -134,6 +134,7 @@ export const StandardLayout = (): JSX.Element => {
                   errorMessage={
                     hasStep2Error ? 'Kryss av om du vil gå videre' : undefined
                   }
+                  hasSpacing
                   hideLegend
                   onChange={(e): void => {
                     setHasStep2Error(false);

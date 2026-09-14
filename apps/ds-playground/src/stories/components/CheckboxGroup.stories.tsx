@@ -99,7 +99,7 @@ export const Examples: Story = {
     };
     return (
       <>
-        <CheckboxGroup legend={'Velg det som gjelder deg'}>
+        <CheckboxGroup legend={'Velg det som gjelder deg'} hasSpacing>
           {options.map((option, index) => {
             return (
               <CheckboxGroup.Checkbox
