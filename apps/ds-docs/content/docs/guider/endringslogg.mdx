@@ -12,6 +12,9 @@ En majorversjon med fokus på opprydding og forenkling av API-er, ny dokumentasj
 
 ### Breaking changes
 
+#### Avhengigheter
+- Peer dependency for `i18next` krever nå `^25 || ^26` for å støtte TypeScript 6 og 7. `react-i18next` krever nå `^16 || ^17`.
+
 #### Api-endringer
 - **RadioGroup**: `selectedValue` er fjernet. Bruk `value` i stedet. (Varslet i versjon 2.6.0.)
 - **TextField**: `thousandSeparator` er fjernet, og erstattes av `useFormattedInput`-funksjon.
@@ -21,12 +24,12 @@ En majorversjon med fokus på opprydding og forenkling av API-er, ny dokumentasj
 - **TopBannerLogo**: `mobileLogo` er fjernet. Prop-en var ikke i bruk.
 - **ds-cli**: Pakken publiseres ikke lenger som del av versjon 3. Siste versjon med codemods for migrering fra 1.x til 2.x er 2.10.
 
-### Endrede standardverdier
+#### Endrede standardverdier
 - **RadioGroup og CheckboxGroup**: Standardverdien for spacing er endret fra `true` til `false`. Det legges heller ikke lenger til ekstra luft under siste element.
 - **Footer**: Standardverdien for openDefaultLinksInNewTab er endret fra `true` til `false`.
 - **OpenClose**: Standardverdien for keepMounted er endret til true for å være konsistent med Accordion.Item og Tabs.Panel.
 
-### Visuelle og strukturelle endringer
+#### Visuelle og strukturelle endringer
 - **LinkGroup**: Margen under siste element er fjernet.
 - **Accordion.Item**: `className` settes nå på ytterste element i stedet for på knapp-elementet.
 - **Link**: Komponenten bruker nå `display: inline-block`, og innebygd padding er fjernet for å gi høyde som samsvarer bedre med designspesifikasjonene.
@@ -39,7 +42,6 @@ En majorversjon med fokus på opprydding og forenkling av API-er, ny dokumentasj
 - **Icon**: Nye ikoner for Play og Pause uten sirkel.
 - **IconButton**: `xsmall` er fjernet. Størrelsesskalaen er justert for bedre samspill med øvrige knappestørrelser.
 - **Combobox**: Forbedret ytelse ved filtrering av store lister.
-- **TypeScript**: Støtte for TypeScript 6 og 7.
 - **TopBannerExternal.UserMenu**: Lenken til «Varsel» er erstattet med lenke til «Innboks».
 
 ### Feilrettinger og forbedringer
