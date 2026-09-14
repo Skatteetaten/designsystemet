@@ -13,31 +13,11 @@ import {
   CheckIcon,
   PrintSVGpath,
 } from '@skatteetaten/ds-icons';
-import { Person } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './Kvittering.module.css';
-import stylesAsString from './Kvittering.module.css?raw';
-import { includeStylesTransform } from '../../../.storybook/helpers';
-import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
+import styles from './kvittering.module.scss';
 
-export default {
-  title: 'Sidetyper/Ekstern/Kvittering',
-  decorators: [withPageLayout],
-  parameters: {
-    layout: 'fullscreen',
-    controls: {
-      disable: true,
-    },
-    docs: {
-      source: {
-        transform: includeStylesTransform(stylesAsString),
-      },
-    },
-  },
-};
-
-export const Kvittering = (): JSX.Element => {
+export default function Kvittering(): JSX.Element {
   const isMobile = !useMediaQuery('(min-width: 480px)');
   const panelHeadingRef = useRef<HTMLHeadingElement>(null);
 
@@ -45,7 +25,7 @@ export const Kvittering = (): JSX.Element => {
     panelHeadingRef.current?.focus();
   }, []);
 
-  const me: Person = {
+  const me = {
     name: 'Knuslete Foxtrot',
     personId: '12345678910',
     dateOfBirth: new Date('1984-02-13'),
@@ -122,4 +102,4 @@ export const Kvittering = (): JSX.Element => {
       </div>
     </main>
   );
-};
+}
