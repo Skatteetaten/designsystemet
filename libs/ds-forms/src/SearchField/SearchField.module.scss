@@ -8,7 +8,7 @@
 .topContainer {
   max-width: 25rem;
 
-  --clear-button-top: 0.3125rem;
+  --clear-button-top: 0.1875rem;
   --clear-button-right: var(--spacing-s);
   --search-result-padding: var(--spacing-xs) var(--spacing-s);
   --input-padding: var(--spacing-xs) var(--spacing-s);
@@ -19,7 +19,7 @@
     var(--spacing-s);
 
   &:where([data-size='large']) {
-    --clear-button-top: var(--spacing-s);
+    --clear-button-top: 0.4375rem;
     --input-padding: var(--spacing-s);
     --input-padding-with-value: var(--spacing-s)
       calc(2 * var(--spacing-s) + var(--size-large) + 2px) var(--spacing-s)
@@ -27,7 +27,7 @@
   }
 
   &:where([data-size='extraLarge']) {
-    --clear-button-top: var(--spacing-m);
+    --clear-button-top: 0.9375rem;
     --input-padding: var(--spacing-m);
     --input-padding-with-value: var(--spacing-m)
       calc(2 * var(--spacing-m) + var(--size-large) + 2px) var(--spacing-m)
