@@ -10,17 +10,16 @@ icon: /illustrations/checkboxgroup.svg
 
 - brukeren skal kunne velge mellom flere uavhengige valg
 - det er et gyldig alternativ for brukeren å ikke krysse av noe
-- du skal innhente bekreftelser som kan innebære flere valg samtidig
 
 ## Unngå CheckboxGroup når
 
-- brukeren kun skal ta ett valg — bruk [RadioGroup](/byggeklosser/komponenter/radiogroup) i stedet
+- brukeren kun skal ta ett valg blant flere. Bruk [RadioGroup](/byggeklosser/komponenter/radiogroup) i stedet.
 
 ## Hvorfor vi anbefaler dette
 
 - Grupperingen med ledetekst (`legend`-element) sørger for at skjermlesere forstår at valgene hører til samme spørsmål. Uten dette leses hvert enkelt valg opp uten kontekst.
-- Vertikal layout er standard for å gi bedre lesbarhet og forutsigbar skalering på tvers av skjermstørrelser — horisontal opplisting av mange valg fungerer ofte ikke så godt på små skjermer.
-- Å tillate null valg (ingen avhuking) er et bevisst valg: det er ikke alle som har noe å velge, og tvunget valg kan føre til feil data.
+- Vertikal visning er standard fordi den gir bedre lesbarhet og fungerer bedre på tvers av skjermstørrelser. Mange alternativer på én linje kan være vanskelig å lese, særlig på små skjermer.
+- Det skal være mulig å ikke velge noe. Ikke alle brukere har nødvendigvis et alternativ som passer, og tvungne valg kan føre til feil data.
 
 ## Varianter og når bør du bruke dem
 
@@ -32,7 +31,7 @@ icon: /illustrations/checkboxgroup.svg
 ### Interaksjon og tilstander
 
 - Alle valg er uavhengige av hverandre — avkrysning i én boks påvirker ikke de andre.
-- Komponentgruppen må alltid inneholde underkomponenter (children).
+- CheckboxGroup må alltid inneholde underkomponenter (children).
 
 ## Tekst
 

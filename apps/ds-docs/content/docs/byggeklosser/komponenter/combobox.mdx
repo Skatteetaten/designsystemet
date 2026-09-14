@@ -1,6 +1,6 @@
 ---
 title: Combobox
-description: Combobox lar brukeren velge ett eller flere alternativer fra en liste. Den kombinerer funksjonaliteten til en nedtrekksliste og et tekstfelt, slik at brukeren kan skrive for å filtrere valgene.
+description: Combobox lar brukeren velge ett eller flere alternativer fra en liste. Brukeren kan skrive i feltet for å filtrere valgene.
 icon: /illustrations/combobox.svg
 ---
 
@@ -8,21 +8,22 @@ icon: /illustrations/combobox.svg
 
 ## Bruk Combobox når
 
-- det er 15+ alternativer og begrenset plass
+- det er 15 eller flere alternativer og begrenset plass
 - brukeren skal kunne velge flere alternativer fra samme liste
 - det er nyttig at brukeren kan filtrere ved å skrive
 
 ## Unngå Combobox når
 
-- du har 15 alternativer eller færre
+- du har færre enn 15 alternativer. Bruk heller [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup).
 - brukeren trenger mer kontekst eller veiledning for å ta et valg
 - listen består av svært ulike kategorier — dette kan gjøre søket vanskelig
 
 ## Hvorfor vi anbefaler dette
 
-- Combobox kombinerer frihet til å skrive og strukturerte valg. Vi anbefaler den for store lister fordi nedtrekkslister med mange elementer er krevende å navigere, særlig med tastatur.
-- Multiselect med chips er begrenset fordi et høyt antall valgte elementer raskt gjør feltet uoversiktlig og vanskelig å redigere — maks-grensen bør kommuniseres i label.
-- Tallet på 15 alternativer er en [anbefaling fra NN Group](https://www.nngroup.com/articles/listbox-dropdown/), ikke en hard grense. For kortere lister er [RadioGroup](/byggeklosser/komponenter/radiogroup), [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) eller [Select](/byggeklosser/komponenter/select) enklere og mer forutsigbare. For lengre lister peker anbefalingen på en åpen liste der de fleste alternativene er synlige, eller et fritekstfelt med autofullfør når brukeren kjenner verdien. Combobox er vår løsning på dette behovet fordi brukeren både kan søke og bla seg frem. Se [Å velge blant flere](/eksempler/spørre-bruker-om/mange-valg) for en samlet oversikt.
+- Combobox gir brukeren mulighet til å både velge fra listen som vises og å skrive i feltet for å søke etter alternativer. Vi anbefaler den for lange lister, fordi det er enklere å søke etter et alternativ enn å bla gjennom mange valg. Det gjør løsningen raskere og enklere å bruke, også for dem som navigerer med tastatur.
+- Ved flervalg vises de valgte alternativene som chips. Dette kan gjøre feltet uoversiktlig. Oppgi derfor en maksgrense i label.
+- Tallet på 15 alternativer bygger på en [anbefaling fra NN Group](https://www.nngroup.com/articles/listbox-dropdown/), og er ment som en tommelfingerregel. For kortere lister er [RadioGroup](/byggeklosser/komponenter/radiogroup), [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) eller [Select](/byggeklosser/komponenter/select) enklere og mer forutsigbare.
+- Når listen blir lang, blir det vanskeligere å finne riktig alternativ. Med Combobox kan brukeren både søke etter alternativ og bla i listen. Se [Å velge blant flere](/eksempler/spørre-bruker-om/mange-valg) for en samlet oversikt.
 
 ## Varianter og når bør du bruke dem
 
