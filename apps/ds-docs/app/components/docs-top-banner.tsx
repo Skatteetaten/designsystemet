@@ -36,8 +36,8 @@ const skatteKartetLinks = [
     text: 'Designsystemet',
   },
   {
-    href: 'https://www.skatteetaten.no/skattekartet/identitet/',
-    text: 'Vår identitet',
+    href: 'https://www.skatteetaten.no/skattekartet/stilogtone/',
+    text: 'Stil og tone',
   },
 ];
 
