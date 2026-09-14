@@ -1,6 +1,6 @@
 import { JSX, useState, useId } from 'react';
 
-import { Link, LinkGroup } from '@skatteetaten/ds-buttons';
+import { Link } from '@skatteetaten/ds-buttons';
 import { StepList } from '@skatteetaten/ds-collections';
 import { Card, Panel } from '@skatteetaten/ds-content';
 import { Checkbox, ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
@@ -16,6 +16,7 @@ export default function StandardSentrertLayout(): JSX.Element {
   const [activeStep, setActiveStep] = useState(1);
   const [step2, setStep2] = useState<string | undefined>(undefined);
   const [hasStep2Error, setHasStep2Error] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
   const onNext = (): void => {
     const nextStep = activeStep + 1;
     setActiveStep(nextStep);
@@ -154,7 +155,8 @@ export default function StandardSentrertLayout(): JSX.Element {
               variant={activeStep === 3 ? 'active' : 'passive'}
               title={'Oppsummering før resultat'}
               stepNumber={3}
-              onNext={onNext}
+              nextButtonText={'Send inn'}
+              onNext={(): void => setHasSubmitted(true)}
             >
               {activeStep === 3 ? (
                 <Card color={'ochre'} className={styles.marginTopS}>
@@ -176,62 +178,12 @@ export default function StandardSentrertLayout(): JSX.Element {
               )}
             </StepList.Step>
           )}
-
-          {activeStep >= 4 && step2 === 'ja' && (
-            <StepList.Step
-              id={`${stepId}-4`}
-              title={'Positivt resultat'}
-              variant={'positiveResult'}
-              stepNumber={4}
-              introTitle={'Dette er en overskrift.'}
-              introTitleAs={'h4'}
-              introContent={
-                <Paragraph>
-                  {'Husk å sette riktig overskrifts-tag til overskriften.'}
-                </Paragraph>
-              }
-            >
-              <Paragraph hasSpacing>
-                {
-                  'Her ligger mer utfyllende informasjon om resultatet. I veiledere pleier vi å vise resultatet sammen med StepList. I skjemaer for privatpersoner og virksomheter sender vi brukeren til en egen kvitteringsside.'
-                }
-              </Paragraph>
-              <LinkGroup>
-                <LinkGroup.Link href={'#'}>
-                  {'Eksempel på kvittering'}
-                </LinkGroup.Link>
-                <LinkGroup.Link
-                  href={
-                    'https://www.skatteetaten.no/stilogtone/monster/skjemadesign/skjema-med-steplist/'
-                  }
-                  target={'_blank'}
-                >
-                  {'Skjema med StepList'}
-                </LinkGroup.Link>
-              </LinkGroup>
-              <Paragraph>
-                {
-                  'Resultatet er sentrert. Rammen har fått en maksbredde på --container-m, mens innholdet har en bredde på --semantic-responsive-article for å venstre- og høyrejustere teksten med resten av siden.'
-                }
-              </Paragraph>
-            </StepList.Step>
-          )}
-
-          {activeStep >= 4 && step2 === 'nei' && (
-            <StepList.Step
-              id={`${stepId}-4`}
-              title={'Nøytralt resultat'}
-              variant={'passive'}
-              stepNumber={4}
-            >
-              <Paragraph hasSpacing>
-                {
-                  'Her ligger informasjon om resultatet. Siden du valgte nei, er resultatet nøytralt.'
-                }
-              </Paragraph>
-            </StepList.Step>
-          )}
         </StepList>
+        {hasSubmitted && (
+          <Paragraph className={styles.article}>
+            {'Vis nå en egen side med kvittering'}
+          </Paragraph>
+        )}
       </main>
       <Footer />
     </>
