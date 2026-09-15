@@ -2,7 +2,7 @@
   "name": "@skatteetaten/ds-typography",
   "version": "3.0.0",
   "groupId": "no.skatteetaten.aurora",
-  "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
+  "homepage": "https://skatteetaten.github.io/designsystemet/",
   "license": "Apache-2.0",
   "type": "module",
   "repository": {
