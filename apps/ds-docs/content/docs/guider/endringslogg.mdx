@@ -16,6 +16,7 @@ En majorversjon med fokus på opprydding og forenkling av API-er, ny dokumentasj
 - Peer dependency for `i18next` krever nå `^25 || ^26` for å støtte TypeScript 6 og 7. `react-i18next` krever nå `^16 || ^17`.
 
 #### Api-endringer
+- **FileUploader**: `label` er nå obligatorisk.
 - **RadioGroup**: `selectedValue` er fjernet. Bruk `value` i stedet. (Varslet i versjon 2.6.0.)
 - **TextField**: `thousandSeparator` er fjernet, og erstattes av `useFormattedInput`-funksjon.
 - **OpenClose, TextField, Select, DatePicker, SearchField og Combobox**: `variant` er fjernet. Standard skjemafelt har bare én størrelse, og unntakene SearchField og Combobox bruker nå `size` i stedet.
