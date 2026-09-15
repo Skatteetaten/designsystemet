@@ -1,20 +1,35 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { Link } from '@skatteetaten/ds-buttons';
 import { OpenClose } from '@skatteetaten/ds-collections';
 import { ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
-import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
+import { Footer, TopBannerExternal, type User } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './feilside.module.scss';
 
+const loggedInUser: User = {
+  role: 'meg',
+  name: 'Ola Nordmann',
+};
+
 export default function InnloggetTemplate(): JSX.Element {
+  const [user, setUser] = useState<User | undefined>(loggedInUser);
+
   return (
     <>
       <TopBannerExternal
-        user={{ role: 'meg', name: 'Ola Nordmann' }}
-        onLogOutClick={() => undefined}
-      />
+        user={user}
+        onLogInClick={() => setUser(loggedInUser)}
+        onLogOutClick={() => setUser(undefined)}
+      >
+        {user && (
+          <TopBannerExternal.UserMenu
+            user={user}
+            onLogOutClick={() => setUser(undefined)}
+          />
+        )}
+      </TopBannerExternal>
       <main className={styles.mainContent}>
         <section className={styles.article}>
           <div>
