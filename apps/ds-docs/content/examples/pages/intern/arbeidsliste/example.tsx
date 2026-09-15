@@ -19,8 +19,6 @@ import { Tag } from '@skatteetaten/ds-status';
 import { SortState, Table } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { getPublicUrl } from '../../../../../lib/public-url';
-
 import styles from './arbeidsliste.module.scss';
 
 const sakstypeOptions = [
@@ -397,10 +395,9 @@ export default function ArbeidsListe(): JSX.Element {
                           <Table.DataCell>{item.sakstype}</Table.DataCell>
                           <Table.DataCell>
                             <Link
-                              href={getPublicUrl(
-                                '/eksempler/sidetyper/saksvisning'
-                              )}
-                              target={'_top'}
+                              href={
+                                '/designsystemet/example.html?path=pages%2Fintern%2Fsaksvisning'
+                              }
                             >
                               {item.arbeidsoppgave}
                             </Link>
@@ -529,10 +526,9 @@ export default function ArbeidsListe(): JSX.Element {
                       <Table.DataCell>{item.sakstype}</Table.DataCell>
                       <Table.DataCell>
                         <Link
-                          href={getPublicUrl(
-                            '/eksempler/sidetyper/saksvisning'
-                          )}
-                          target={'_top'}
+                          href={
+                            '/designsystemet/example.html?path=pages%2Fintern%2Fsaksvisning'
+                          }
                         >
                           {item.arbeidsoppgave}
                         </Link>
@@ -592,11 +588,9 @@ export default function ArbeidsListe(): JSX.Element {
                       <Table.DataCell>{item.sakstype}</Table.DataCell>
                       <Table.DataCell>
                         <Link
-                          href={'#'}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            // todo legg inn navigasjon til saksvisning
-                          }}
+                          href={
+                            '/designsystemet/example.html?path=pages%2Fintern%2Fsaksvisning'
+                          }
                         >
                           {item.arbeidsoppgave}
                         </Link>
