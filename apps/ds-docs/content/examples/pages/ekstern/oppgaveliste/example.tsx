@@ -10,6 +10,7 @@ import {
   SendSVGpath,
   WarningOutlineSVGpath,
 } from '@skatteetaten/ds-icons';
+import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 import { Tag, TagColor } from '@skatteetaten/ds-status';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -132,68 +133,77 @@ export default function Oppgaveliste(): JSX.Element {
   };
 
   return (
-    <main className={styles.mainExternal}>
-      <Breadcrumbs className={styles.marginTopM}>
-        <Breadcrumbs.List>
-          <Breadcrumbs.Item>
-            <Breadcrumbs.Link href={'#'}>{'Min side'}</Breadcrumbs.Link>
-          </Breadcrumbs.Item>
+    <>
+      <TopBannerExternal />
+      <main className={styles.mainExternal}>
+        <Breadcrumbs className={styles.marginTopM}>
+          <Breadcrumbs.List>
+            <Breadcrumbs.Item>
+              <Breadcrumbs.Link href={'#'}>{'Min side'}</Breadcrumbs.Link>
+            </Breadcrumbs.Item>
 
-          <Breadcrumbs.Item>
-            <Breadcrumbs.Link href={'#'}>{'Løsning'}</Breadcrumbs.Link>
-          </Breadcrumbs.Item>
+            <Breadcrumbs.Item>
+              <Breadcrumbs.Link href={'#'}>{'Løsning'}</Breadcrumbs.Link>
+            </Breadcrumbs.Item>
 
-          <Breadcrumbs.Item>
-            <Breadcrumbs.Link href={'#'}>
-              {'Rytmisk musikkutdanning'}
-            </Breadcrumbs.Link>
-          </Breadcrumbs.Item>
-        </Breadcrumbs.List>
-      </Breadcrumbs>
-      <div className={styles.article}>
-        <Heading as={'h1'} hasSpacing>
-          {'Innrapportering for rytmisk musikkutdanning'}
-        </Heading>
-        <DescriptionList hasSpacing>
-          <DescriptionList.Element term={'Virksomhetetns navn'}>
-            {'Høssing Funk Skole'}
-          </DescriptionList.Element>
-          <DescriptionList.Element term={'Organisasjonsnummer'}>
-            {'999 999 999'}
-          </DescriptionList.Element>
-          <DescriptionList.Element term={'Inntektsår'}>
-            {'2025'}
-          </DescriptionList.Element>
-        </DescriptionList>
-        <Heading as={'h2'} className={styles.heading} hasSpacing>
-          <span className={styles.headingIcon}>
-            <CheckIcon />
-          </span>
-          {'Sjekk før du starter'}
-        </Heading>
-        <ul className={styles.list}>{checkTasks.map(createTask)}</ul>
-        <Heading
-          as={'h2'}
-          className={`${styles.heading} ${styles.marginTopXl}`}
-          hasSpacing
-        >
-          <span className={styles.headingIcon}>
-            <EditIcon />
-          </span>
-          {'Forbered søknad'}
-        </Heading>
-        <ul className={styles.list}>{prepareTasks.map(createTask)}</ul>
-        <Button className={styles.sendInButton} svgPath={SendSVGpath}>
-          {'Se over og send inn'}
-        </Button>
-      </div>
-
-      <Panel variant={'filled'} color={'graphite'} padding={'m'}>
-        <div className={styles.buttonRow}>
-          <InlineButton>{'Lagre og fortsett senere'}</InlineButton>
-          <InlineButton>{'Avbryt og slett'}</InlineButton>
+            <Breadcrumbs.Item>
+              <Breadcrumbs.Link href={'#'}>
+                {'Rytmisk musikkutdanning'}
+              </Breadcrumbs.Link>
+            </Breadcrumbs.Item>
+          </Breadcrumbs.List>
+        </Breadcrumbs>
+        <div className={styles.article}>
+          <Heading as={'h1'} hasSpacing>
+            {'Innrapportering for rytmisk musikkutdanning'}
+          </Heading>
+          <DescriptionList hasSpacing>
+            <DescriptionList.Element term={'Virksomhetetns navn'}>
+              {'Høssing Funk Skole'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Organisasjonsnummer'}>
+              {'999 999 999'}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Inntektsår'}>
+              {'2025'}
+            </DescriptionList.Element>
+          </DescriptionList>
+          <Heading as={'h2'} className={styles.heading} hasSpacing>
+            <span className={styles.headingIcon}>
+              <CheckIcon />
+            </span>
+            {'Sjekk før du starter'}
+          </Heading>
+          <ul className={styles.list}>{checkTasks.map(createTask)}</ul>
+          <Heading
+            as={'h2'}
+            className={`${styles.heading} ${styles.marginTopXl}`}
+            hasSpacing
+          >
+            <span className={styles.headingIcon}>
+              <EditIcon />
+            </span>
+            {'Forbered søknad'}
+          </Heading>
+          <ul className={styles.list}>{prepareTasks.map(createTask)}</ul>
+          <Button className={styles.sendInButton} svgPath={SendSVGpath}>
+            {'Se over og send inn'}
+          </Button>
         </div>
-      </Panel>
-    </main>
+
+        <Panel
+          variant={'filled'}
+          color={'graphite'}
+          padding={'m'}
+          className={styles.panel}
+        >
+          <div className={styles.panelContent}>
+            <InlineButton>{'Lagre og fortsett senere'}</InlineButton>
+            <InlineButton>{'Avbryt og slett'}</InlineButton>
+          </div>
+        </Panel>
+      </main>
+      <Footer />
+    </>
   );
 }

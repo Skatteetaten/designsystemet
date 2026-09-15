@@ -52,7 +52,12 @@ export default function StandardSentrertLayout(): JSX.Element {
             {
               'Layouten er sentret. På større skjermer har man flere containerbredder til rådighet. På mobil er det normalt bare én. Denne teksten ligger i en container med bredden --semantic-responsive-article. Containerbredder er dokumentert på Designtokens-undersiden: '
             }
-            <Link href={'#'}>{'Containers'}</Link>
+            <Link
+              href={'/designsystemet/byggeklosser/designtokens/containere'}
+              target={'_top'} // Naviger ut av iframen og til hovedsiden
+            >
+              {'Containers'}
+            </Link>
             {'.'}
           </Paragraph>
         </div>

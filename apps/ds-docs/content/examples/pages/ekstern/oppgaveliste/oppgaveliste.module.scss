@@ -69,8 +69,12 @@
   list-style: none;
 }
 
-.buttonRow {
+.panel {
+  margin: auto;
+}
+
+.panelContent {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-m);
+  gap: var(--spacing-s) var(--spacing-l);
 }
