@@ -4,6 +4,7 @@ import { Button, InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { Card, DescriptionList } from '@skatteetaten/ds-content';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { ArrowBackSVGpath, PrintSVGpath } from '@skatteetaten/ds-icons';
+import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './deloppgave.module.scss';
@@ -15,91 +16,95 @@ export default function Deloppgave(): JSX.Element {
   const checkRef = useRef<HTMLInputElement>(null);
 
   return (
-    <main className={styles.mainExternal}>
-      <div className={styles.miniNav}>
-        <Link href={'#'} svgPath={ArrowBackSVGpath}>
-          {'Til Innrapportering for rytmisk musikkutdanning'}
-        </Link>
-        <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
-      </div>
-      <div className={styles.article}>
-        <Heading as={'h1'} hasSpacing>
-          {'Bekreft opplysninger om virksomheten.'}
-        </Heading>
-        <Paragraph className={styles.marginBottomXl}>
-          {
-            'Overanstrengelse formiddag utstår, besynderlighet hukommelse forrykke De ubehageligheter forretningsverdenen, arkskrift dødsfallet levetid den. Imellem vås veie, bestyrelse sengeliggende forstillelse tålte nyss. '
-          }
-        </Paragraph>
-        <Card color={'forest'}>
-          <Card.Content>
-            <Heading as={'h2'} level={3} hasSpacing>
-              {'Opplysninger om virksomheten'}
-            </Heading>
-            <DescriptionList>
-              <DescriptionList.Element term={'Navn'}>
-                {'McRonald Hansen'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Adresse'}>
-                {'Adresseveien 1'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Postnummer'}>
-                {'1314'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Poststed'}>
-                {'Kolbotn'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Rolle'}>
-                {'Styreeier'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Navn'}>
-                {'McRonald Hansen'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Adresse'}>
-                {'Adresseveien 1'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Postnummer'}>
-                {'1314'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Poststed'}>
-                {'Kolbotn'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Rolle'}>
-                {'Styreeier'}
-              </DescriptionList.Element>
-            </DescriptionList>
-          </Card.Content>
-        </Card>
-        <Checkbox
-          ref={checkRef}
-          checked={isChecked}
-          errorMessage={errorMessage}
-          className={styles.checkbox}
-          onChange={() => {
-            setIsChecked(!isChecked);
-            setErrorMessage('');
-          }}
-        >
-          {'Jeg bekrefter at opplysningene stemmer'}
-        </Checkbox>
-        <div className={styles.buttonRow}>
-          <Button
-            className={styles.marginRightM}
-            onClick={() => {
-              if (isChecked) {
-                window.location.href =
-                  '/designsystemet/example.html?path=pages%2Fekstern%2Foppgaveliste';
-              } else {
-                setErrorMessage('Du må bekrefte at opplysningene stemmer.');
-                checkRef.current?.focus();
-              }
+    <>
+      <TopBannerExternal />
+      <main className={styles.mainExternal}>
+        <div className={styles.miniNav}>
+          <Link href={'#'} svgPath={ArrowBackSVGpath}>
+            {'Til Innrapportering for rytmisk musikkutdanning'}
+          </Link>
+          <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
+        </div>
+        <div className={styles.article}>
+          <Heading as={'h1'} hasSpacing>
+            {'Bekreft opplysninger om virksomheten.'}
+          </Heading>
+          <Paragraph className={styles.marginBottomXl}>
+            {
+              'Overanstrengelse formiddag utstår, besynderlighet hukommelse forrykke De ubehageligheter forretningsverdenen, arkskrift dødsfallet levetid den. Imellem vås veie, bestyrelse sengeliggende forstillelse tålte nyss. '
+            }
+          </Paragraph>
+          <Card color={'forest'}>
+            <Card.Content>
+              <Heading as={'h2'} level={3} hasSpacing>
+                {'Opplysninger om virksomheten'}
+              </Heading>
+              <DescriptionList>
+                <DescriptionList.Element term={'Navn'}>
+                  {'McRonald Hansen'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Adresse'}>
+                  {'Adresseveien 1'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Postnummer'}>
+                  {'1314'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Poststed'}>
+                  {'Kolbotn'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Rolle'}>
+                  {'Styreeier'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Navn'}>
+                  {'McRonald Hansen'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Adresse'}>
+                  {'Adresseveien 1'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Postnummer'}>
+                  {'1314'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Poststed'}>
+                  {'Kolbotn'}
+                </DescriptionList.Element>
+                <DescriptionList.Element term={'Rolle'}>
+                  {'Styreeier'}
+                </DescriptionList.Element>
+              </DescriptionList>
+            </Card.Content>
+          </Card>
+          <Checkbox
+            ref={checkRef}
+            checked={isChecked}
+            errorMessage={errorMessage}
+            className={styles.checkbox}
+            onChange={() => {
+              setIsChecked(!isChecked);
+              setErrorMessage('');
             }}
           >
-            {'Lagre og gå til oppgaveliste'}
-          </Button>
-          <Button variant={'secondary'}>{'Avbryt'}</Button>
+            {'Jeg bekrefter at opplysningene stemmer'}
+          </Checkbox>
+          <div className={styles.buttonRow}>
+            <Button
+              className={styles.marginRightM}
+              onClick={() => {
+                if (isChecked) {
+                  window.location.href =
+                    '/designsystemet/example.html?path=pages%2Fekstern%2Foppgaveliste';
+                } else {
+                  setErrorMessage('Du må bekrefte at opplysningene stemmer.');
+                  checkRef.current?.focus();
+                }
+              }}
+            >
+              {'Lagre og gå til oppgaveliste'}
+            </Button>
+            <Button variant={'secondary'}>{'Avbryt'}</Button>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

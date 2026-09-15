@@ -13,6 +13,7 @@ import {
   CheckIcon,
   PrintSVGpath,
 } from '@skatteetaten/ds-icons';
+import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import styles from './kvittering.module.scss';
@@ -33,73 +34,77 @@ export default function Kvittering(): JSX.Element {
   };
 
   return (
-    <main className={styles.mainExternal}>
-      <div className={styles.miniNav}>
-        <Link href={'#'} svgPath={ArrowBackSVGpath}>
-          {'Til Min side'}
-        </Link>
-        <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
-      </div>
-      <div className={styles.article}>
-        <Heading as={'h1'} hasSpacing>
-          {'Skjematittel'}
-        </Heading>
-        <DescriptionList hasSpacing>
-          <DescriptionList.Element term={'Navn'}>
-            {'Knuslete Foxtrot'}
-          </DescriptionList.Element>
-          <DescriptionList.Element term={'Fødselsnummer'}>
-            {formatNationalIdentityNumber(me.personId)}
-          </DescriptionList.Element>
-        </DescriptionList>
-      </div>
-      <Panel
-        headingRef={panelHeadingRef}
-        className={styles.panel}
-        variant={'outline'}
-        color={'forest'}
-        title={'[Skjematittel] er sendt inn'}
-        titleAs={'h2'}
-        renderIcon={(): JSX.Element => (
-          <div className={styles.checkIconContainer}>
-            <CheckIcon size={'large'} className={styles.checkIcon} />
-          </div>
-        )}
-        canManuallySetTitleFocus
-      >
-        <Paragraph className={styles.marginTopM}>
-          {'Det kan ta inntil 4 uker før du får svar.'}
-        </Paragraph>
-        <Paragraph hasSpacing>
-          {'Du finner en kopi av skjemaet i innboksen din på Min side.'}
-        </Paragraph>
-        <Paragraph>{'Sendt inn: 03.07.2023 11:03'}</Paragraph>
-        <Paragraph hasSpacing>
-          {'Referansenummer: '}
-          <strong>{'IN-PG-1234567'}</strong>
-        </Paragraph>
-        <OpenClose title={'Se hva du har sendt inn'}>
-          <DescriptionList
-            descriptionDirection={isMobile ? 'vertical' : 'horizontal'}
-          >
-            <DescriptionList.Element term={'Innsender'}>
+    <>
+      <TopBannerExternal />
+      <main className={styles.mainExternal}>
+        <div className={styles.miniNav}>
+          <Link href={'#'} svgPath={ArrowBackSVGpath}>
+            {'Til Min side'}
+          </Link>
+          <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
+        </div>
+        <div className={styles.article}>
+          <Heading as={'h1'} hasSpacing>
+            {'Skjematittel'}
+          </Heading>
+          <DescriptionList hasSpacing>
+            <DescriptionList.Element term={'Navn'}>
               {'Knuslete Foxtrot'}
             </DescriptionList.Element>
-            <DescriptionList.Element term={'Adresse'}>
-              <span className={styles.preLine}>
-                {'Adresseveien 1\n1234 Lillevik'}
-              </span>
-            </DescriptionList.Element>
-            <DescriptionList.Element term={'Telefon'}>
-              {formatPhoneNumber('98765432')}
+            <DescriptionList.Element term={'Fødselsnummer'}>
+              {formatNationalIdentityNumber(me.personId)}
             </DescriptionList.Element>
           </DescriptionList>
-        </OpenClose>
-      </Panel>
-      <div className={styles.article}>
-        <Button className={styles.marginRightM}>{'Til Min side'}</Button>
-        <Button variant={'secondary'}>{'Logg ut'}</Button>
-      </div>
-    </main>
+        </div>
+        <Panel
+          headingRef={panelHeadingRef}
+          className={styles.panel}
+          variant={'outline'}
+          color={'forest'}
+          title={'[Skjematittel] er sendt inn'}
+          titleAs={'h2'}
+          renderIcon={(): JSX.Element => (
+            <div className={styles.checkIconContainer}>
+              <CheckIcon size={'large'} className={styles.checkIcon} />
+            </div>
+          )}
+          canManuallySetTitleFocus
+        >
+          <Paragraph className={styles.marginTopM}>
+            {'Det kan ta inntil 4 uker før du får svar.'}
+          </Paragraph>
+          <Paragraph hasSpacing>
+            {'Du finner en kopi av skjemaet i innboksen din på Min side.'}
+          </Paragraph>
+          <Paragraph>{'Sendt inn: 03.07.2023 11:03'}</Paragraph>
+          <Paragraph hasSpacing>
+            {'Referansenummer: '}
+            <strong>{'IN-PG-1234567'}</strong>
+          </Paragraph>
+          <OpenClose title={'Se hva du har sendt inn'}>
+            <DescriptionList
+              descriptionDirection={isMobile ? 'vertical' : 'horizontal'}
+            >
+              <DescriptionList.Element term={'Innsender'}>
+                {'Knuslete Foxtrot'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Adresse'}>
+                <span className={styles.preLine}>
+                  {'Adresseveien 1\n1234 Lillevik'}
+                </span>
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Telefon'}>
+                {formatPhoneNumber('98765432')}
+              </DescriptionList.Element>
+            </DescriptionList>
+          </OpenClose>
+        </Panel>
+        <div className={styles.article}>
+          <Button className={styles.marginRightM}>{'Til Min side'}</Button>
+          <Button variant={'secondary'}>{'Logg ut'}</Button>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }

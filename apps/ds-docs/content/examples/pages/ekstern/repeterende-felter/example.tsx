@@ -15,6 +15,7 @@ import {
   KronerIcon,
   PrintSVGpath,
 } from '@skatteetaten/ds-icons';
+import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -166,190 +167,194 @@ export default function RepeterendeFelter(): JSX.Element {
   };
 
   return (
-    <main className={styles.mainExternal} tabIndex={-1}>
-      <div className={styles.miniNav}>
-        <Link href={'#'} svgPath={ArrowBackSVGpath}>
-          {'Til Min side'}
-        </Link>
-        <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
-      </div>
-      <div className={styles.article}>
-        <Heading as={'h1'} hasSpacing>
-          {'Skjema eller oppgave'}
-        </Heading>
-        <DescriptionList className={styles.descriptionList} hasSpacing>
-          <DescriptionList.Element term={'Virksomhetens navn'}>
-            {hoppOgSprettBarnehage.name}
-          </DescriptionList.Element>
-          <DescriptionList.Element
-            term={isMobile ? 'Organisasjons-nummer' : 'Organisasjonsnummer'}
-          >
-            {formatOrganisationNumber(hoppOgSprettBarnehage.organizationNumber)}
-          </DescriptionList.Element>
-          <DescriptionList.Element term={'Inntektsår'}>
-            {'2023'}
-          </DescriptionList.Element>
-        </DescriptionList>
-      </div>
-      <div className={styles.article}>
-        <div ref={headingRef} tabIndex={-1}>
-          <Heading as={'h2'} hasSpacing>
-            {'Overskift/kategori'}
+    <>
+      <TopBannerExternal />
+      <main className={styles.mainExternal} tabIndex={-1}>
+        <div className={styles.miniNav}>
+          <Link href={'#'} svgPath={ArrowBackSVGpath}>
+            {'Til Min side'}
+          </Link>
+          <InlineButton svgPath={PrintSVGpath}>{'Skriv ut'}</InlineButton>
+        </div>
+        <div className={styles.article}>
+          <Heading as={'h1'} hasSpacing>
+            {'Skjema eller oppgave'}
           </Heading>
-        </div>
-        <ul className={styles.repeatingFields}>
-          {cards.length === 0 ? (
-            <li>
-              <Paragraph>{'Ingen personer i listen.'}</Paragraph>
-            </li>
-          ) : (
-            cards.map((card) => (
-              <li key={card.id}>
-                <Card key={card.id} spacing={'m'} color={'graphite'}>
-                  <Card.Header>
-                    <div
-                      data-card-id={card.id}
-                      className={styles.tabIndexNoOutline}
-                      tabIndex={-1}
-                    >
-                      <Heading as={'h3'} hasSpacing>
-                        {card.navn}
-                      </Heading>
-                    </div>
-                  </Card.Header>
-                  <Card.Content classNames={{ children: styles.cardContent }}>
-                    <DescriptionList
-                      descriptionDirection={
-                        isMobile ? 'vertical' : 'horizontal'
-                      }
-                      className={styles.descriptionList}
-                    >
-                      <DescriptionList.Element term={'Adresse'}>
-                        {card.adresse}
-                      </DescriptionList.Element>
-                      <DescriptionList.Element term={'Postnummer'}>
-                        {card.postnummer}
-                      </DescriptionList.Element>
-                      <DescriptionList.Element term={'Poststed'}>
-                        {card.poststed}
-                      </DescriptionList.Element>
-                      <DescriptionList.Element term={'Rolle'}>
-                        {card.rolle}
-                      </DescriptionList.Element>
-                    </DescriptionList>
-                  </Card.Content>
-                  <Card.Actions>
-                    <InlineButton
-                      svgPath={EditSVGpath}
-                      onClick={() => handleEdit(card)}
-                    >
-                      {'Rediger'}
-                    </InlineButton>
-                    <InlineButton
-                      svgPath={DeleteSVGpath}
-                      onClick={() => deleteCardAction(card.id)}
-                    >
-                      {'Slett'}
-                    </InlineButton>
-                  </Card.Actions>
-                </Card>
+          <DescriptionList className={styles.descriptionList} hasSpacing>
+            <DescriptionList.Element term={'Virksomhetens navn'}>
+              {hoppOgSprettBarnehage.name}
+            </DescriptionList.Element>
+            <DescriptionList.Element
+              term={isMobile ? 'Organisasjons-nummer' : 'Organisasjonsnummer'}
+            >
+              {formatOrganisationNumber(
+                hoppOgSprettBarnehage.organizationNumber
+              )}
+            </DescriptionList.Element>
+            <DescriptionList.Element term={'Inntektsår'}>
+              {'2023'}
+            </DescriptionList.Element>
+          </DescriptionList>
+          <div ref={headingRef} tabIndex={-1}>
+            <Heading as={'h2'} hasSpacing>
+              {'Overskift/kategori'}
+            </Heading>
+          </div>
+          <ul className={styles.repeatingFields}>
+            {cards.length === 0 ? (
+              <li>
+                <Paragraph>{'Ingen personer i listen.'}</Paragraph>
               </li>
-            ))
-          )}
-        </ul>
-        <Button svgPath={AddSVGpath} onClick={addCardAction}>
-          {'Legg til ny person'}
-        </Button>
-        <Modal
-          ref={editModalRef}
-          title={'Rediger person'}
-          className={styles.editModal}
-        >
-          {editCard && (
-            <form action={editAction}>
-              <TextField
-                ref={firstInputInEditModalRef}
-                label={'Navn'}
-                name={'navn'}
-                defaultValue={editCard.navn}
-                hasSpacing
-                required
-              />
-
-              <TextField
-                label={'Adresse'}
-                name={'adresse'}
-                defaultValue={editCard.adresse}
-                hasSpacing
-                required
-              />
-              <div className={styles.addressFields}>
+            ) : (
+              cards.map((card) => (
+                <li key={card.id}>
+                  <Card key={card.id} spacing={'m'} color={'graphite'}>
+                    <Card.Header>
+                      <div
+                        data-card-id={card.id}
+                        className={styles.tabIndexNoOutline}
+                        tabIndex={-1}
+                      >
+                        <Heading as={'h3'} hasSpacing>
+                          {card.navn}
+                        </Heading>
+                      </div>
+                    </Card.Header>
+                    <Card.Content classNames={{ children: styles.cardContent }}>
+                      <DescriptionList
+                        descriptionDirection={
+                          isMobile ? 'vertical' : 'horizontal'
+                        }
+                        className={styles.descriptionList}
+                      >
+                        <DescriptionList.Element term={'Adresse'}>
+                          {card.adresse}
+                        </DescriptionList.Element>
+                        <DescriptionList.Element term={'Postnummer'}>
+                          {card.postnummer}
+                        </DescriptionList.Element>
+                        <DescriptionList.Element term={'Poststed'}>
+                          {card.poststed}
+                        </DescriptionList.Element>
+                        <DescriptionList.Element term={'Rolle'}>
+                          {card.rolle}
+                        </DescriptionList.Element>
+                      </DescriptionList>
+                    </Card.Content>
+                    <Card.Actions>
+                      <InlineButton
+                        svgPath={EditSVGpath}
+                        onClick={() => handleEdit(card)}
+                      >
+                        {'Rediger'}
+                      </InlineButton>
+                      <InlineButton
+                        svgPath={DeleteSVGpath}
+                        onClick={() => deleteCardAction(card.id)}
+                      >
+                        {'Slett'}
+                      </InlineButton>
+                    </Card.Actions>
+                  </Card>
+                </li>
+              ))
+            )}
+          </ul>
+          <Button svgPath={AddSVGpath} onClick={addCardAction}>
+            {'Legg til ny person'}
+          </Button>
+          <Modal
+            ref={editModalRef}
+            title={'Rediger person'}
+            className={styles.editModal}
+          >
+            {editCard && (
+              <form action={editAction}>
                 <TextField
-                  label={'Postnummer'}
-                  className={styles.postalCode}
-                  name={'postnummer'}
-                  defaultValue={editCard.postnummer}
+                  ref={firstInputInEditModalRef}
+                  label={'Navn'}
+                  name={'navn'}
+                  defaultValue={editCard.navn}
                   hasSpacing
                   required
                 />
+
                 <TextField
-                  label={'Poststed'}
-                  value={editCard.poststed}
+                  label={'Adresse'}
+                  name={'adresse'}
+                  defaultValue={editCard.adresse}
                   hasSpacing
                   required
-                  readOnly
                 />
-              </div>
-              <TextField
-                label={'Rolle'}
-                name={'rolle'}
-                defaultValue={editCard.rolle}
-                hasSpacing
-                required
-              />
-              <div className={styles.buttonRow}>
-                <Button type={'submit'} hasSpinner={isEditPending}>
-                  {isEditPending ? 'Lagrer...' : 'Lagre'}
-                </Button>
-                <Button variant={'secondary'} onClick={handleCancelEdit}>
-                  {'Avbryt'}
-                </Button>
-              </div>
-            </form>
-          )}
-        </Modal>
-      </div>
-      <Panel
-        color={'forest'}
-        renderIcon={() => <KronerIcon size={'extraLarge'} />}
-        className={styles.panel}
-        hideGraphicMobile
-      >
-        <Heading as={'h3'} hasSpacing>
-          {'Foreløpig oppsummering'}
-        </Heading>
-        <DescriptionList>
-          <DescriptionList.Element term={'Antall personer'}>
-            {cards.length}
-          </DescriptionList.Element>
-        </DescriptionList>
-      </Panel>
-
-      <div className={`${styles.buttonRow} ${styles.article}`}>
-        <Button>{'Send inn'}</Button>
-        <Button variant={'secondary'}>{'Avbryt'}</Button>
-      </div>
-      <Panel
-        color={'graphite'}
-        variant={'filled'}
-        padding={'s'}
-        className={styles.panel}
-      >
-        <div className={styles.panelContent}>
-          <InlineButton>{'Lagre og fortsett senere'}</InlineButton>
-          <InlineButton>{'Avbryt og slett'}</InlineButton>
+                <div className={styles.addressFields}>
+                  <TextField
+                    label={'Postnummer'}
+                    className={styles.postalCode}
+                    name={'postnummer'}
+                    defaultValue={editCard.postnummer}
+                    hasSpacing
+                    required
+                  />
+                  <TextField
+                    label={'Poststed'}
+                    value={editCard.poststed}
+                    hasSpacing
+                    required
+                    readOnly
+                  />
+                </div>
+                <TextField
+                  label={'Rolle'}
+                  name={'rolle'}
+                  defaultValue={editCard.rolle}
+                  hasSpacing
+                  required
+                />
+                <div className={styles.buttonRow}>
+                  <Button type={'submit'} hasSpinner={isEditPending}>
+                    {isEditPending ? 'Lagrer...' : 'Lagre'}
+                  </Button>
+                  <Button variant={'secondary'} onClick={handleCancelEdit}>
+                    {'Avbryt'}
+                  </Button>
+                </div>
+              </form>
+            )}
+          </Modal>
         </div>
-      </Panel>
-    </main>
+        <Panel
+          color={'forest'}
+          renderIcon={() => <KronerIcon size={'extraLarge'} />}
+          className={styles.panel}
+          hideGraphicMobile
+        >
+          <Heading as={'h3'} hasSpacing>
+            {'Foreløpig oppsummering'}
+          </Heading>
+          <DescriptionList>
+            <DescriptionList.Element term={'Antall personer'}>
+              {cards.length}
+            </DescriptionList.Element>
+          </DescriptionList>
+        </Panel>
+
+        <div className={`${styles.buttonRow} ${styles.article}`}>
+          <Button>{'Send inn'}</Button>
+          <Button variant={'secondary'}>{'Avbryt'}</Button>
+        </div>
+        <Panel
+          color={'graphite'}
+          variant={'filled'}
+          padding={'s'}
+          className={styles.panel}
+        >
+          <div className={styles.panelContent}>
+            <InlineButton>{'Lagre og fortsett senere'}</InlineButton>
+            <InlineButton>{'Avbryt og slett'}</InlineButton>
+          </div>
+        </Panel>
+      </main>
+      <Footer />
+    </>
   );
 }
