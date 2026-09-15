@@ -1,6 +1,6 @@
 ---
 title: Alert
-description: Alert (varsel) brukes til å gi brukeren en aktuell statusbeskjed om en viktig hendelse eller konsekvenser av en handling. Formålet er å hjelpe brukeren med å løse oppgaven sin og gi trygghet slik at de opplever kontroll over situasjonen.
+description: Alert (varsel) brukes for informasjon det er ekstra viktig at brukeren ser og forstår. Komponenten er laget for å fange oppmerksomheten når noe krever handling eller ekstra oppmerksomhet.
 icon: /illustrations/alert.svg
 ---
 
@@ -15,13 +15,13 @@ icon: /illustrations/alert.svg
 
 ## Unngå Alert når
 
-- meldingen gjelder feil knyttet til enkeltfelt – bruk da ErrorMessage i stedet
-- du trenger en statisk informasjonsboks – bruk Panel i stedet
+- meldingen gjelder feil knyttet til enkeltfelt. Bruk ErrorMessage i stedet.
+- du trenger en statisk informasjonsboks. Bruk Panel i stedet.
 
 ## Hvorfor vi anbefaler dette
 
-- De fem variantene (suksess, nøytral, advarsel, feil, fare) har faste farger for at bruken skal være konsekvent på tvers av alle Skatteetatens løsninger. Når farger er konsistente, gjenkjenner brukeren alvorlighetsgrad intuitivt.
-- Vi skiller mellom [Alert](/byggeklosser/komponenter/alert) (hel side/seksjon), [ErrorMessage](/byggeklosser/komponenter/errormessage) (enkeltfelt) og [ErrorSummary](/byggeklosser/komponenter/errorsummary) (oppsummering) for å gi riktig informasjon på riktig sted — dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
+- De fem variantene har faste farger for å sikre konsekvent bruk på tvers av Skatteetatens løsninger. Det gjør det enklere for brukeren å gjenkjenne alvorlighetsgraden.
+- Vi skiller mellom [Alert](/byggeklosser/komponenter/alert) (hel side/seksjon), [ErrorMessage](/byggeklosser/komponenter/errormessage) (enkeltfelt) og [ErrorSummary](/byggeklosser/komponenter/errorsummary) (oppsummering) for å gi riktig informasjon på riktig sted. Dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
 - Innebygd `showAlert` brukes for å sikre at skjermlesere fanger opp endringen automatisk via `aria-live`.
 
 ## Varianter og når bør du bruke dem

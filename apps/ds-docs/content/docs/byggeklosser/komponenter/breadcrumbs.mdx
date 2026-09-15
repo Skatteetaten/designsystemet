@@ -1,6 +1,6 @@
 ---
 title: Breadcrumbs
-description: Breadcrumbs (brødsmulesti) viser brukeren hvor de befinner seg i nettstedets hierarki og gjør det enkelt å navigere tilbake til høyere nivåer i strukturen.
+description: Breadcrumbs hjelper brukeren med å forstå hvor de er i nettstedets struktur og finne veien tilbake til høyere nivåer.
 icon: /illustrations/breadcrumbs.svg
 ---
 
@@ -8,23 +8,21 @@ icon: /illustrations/breadcrumbs.svg
 
 ## Bruk Breadcrumbs når
 
-- du vil vise brukeren hvor de er i sidestrukturen
-- brukeren skal kunne hoppe tilbake til et høyere nivå
+- du vil vise brukeren hvor de er i nettstedets struktur
+- brukeren skal kunne gå tilbake til et høyere nivå
 
 ## Unngå Breadcrumbs når
 
-- navigasjonen er lineær i steg eller prosesser (bruk StepList)
-- løsningen kun har ett eller to nivåer — bruk i stedet en tilbakelenke
+- navigasjonen følger en lineær prosess med flere steg. Bruk i stedet StepList.
+- løsningen kun har ett eller to nivåer. Bruk i stedet en tilbakelenke.
 
 ## Hvorfor vi anbefaler dette
 
-- Brødsmulestien hjelper brukeren å forstå hvor i hierarkiet de befinner seg og navigere opp i strukturen. På dype sider reduserer dette frafall og forvirring.
-- Vi anbefaler ikke Breadcrumbs for korte stier (1–2 nivåer) fordi det gir liten navigasjonsverdi, men tar opp plass og legger til kognitivt innhold.
-- Breadcrumbs er navigasjon, ikke steg-oversikt — for steg-basert flyt brukes StepList, som kommuniserer fremdrift og har andre UU-krav.
+- Brødsmulestien hjelper brukeren å forstå hvor de er i sidestrukturen og å navigere til et høyere nivå. På sider med mange nivåer kan dette redusere forvirring og gjøre det enklere å finne frem.
+- Vi anbefaler ikke Breadcrumbs for korte stier med ett eller to nivåer. Da gir de liten navigasjonsverdi, samtidig som de tar plass og kan øke den kognitive belastningen.
+- Breadcrumbs er for navigasjon, ikke for å vise steg i en prosess. For steg-baserte flyter bruker du StepList, som viser fremdrift og har andre krav til universell utforming.
 
 ## Varianter og når bør du bruke dem
-
-**Ingen varianter**
 
 ### Plassering og justering
 
@@ -35,12 +33,12 @@ icon: /illustrations/breadcrumbs.svg
 
 ### Interaksjon og tilstander
 
-- Brukeren kan utvide forkortet sti via ekspander-ikon.
-- På mobil flyttes fokus til første brødsmule når full sti vises.
+- Brukeren kan vise hele den forkortede stien ved å trykke på ekspander-ikonet.
+- På mobil flyttes fokus til den første brødsmulen når hele stien vises.
 
 ## Tekst
 
-**Ingen egne språkføringer**
+Teksten bør samsvare med overskriftene eller navigasjonen på nettsiden, slik at det er lett å kjenne igjen nivåene.
 
 ## Tilgjengelighet (UU og WCAG)
 
