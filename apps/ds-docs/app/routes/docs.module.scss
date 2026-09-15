@@ -74,6 +74,10 @@
 
 .mdxIcon {
   width: 6rem;
+
+  @media (width >= #{breakpoints.$breakpoint-m}) and (width < #{breakpoints.$breakpoint-l}) {
+    display: none;
+  }
 }
 
 .errorPage {
