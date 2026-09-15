@@ -17,8 +17,6 @@ import { ArrowBackSVGpath, PrintSVGpath } from '@skatteetaten/ds-icons';
 import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import { getPublicUrl } from '../../../../../lib/public-url';
-
 import styles from './skjema-med-steg.module.scss';
 
 export default function SkjemaMedSteg(): JSX.Element {
@@ -165,9 +163,8 @@ export default function SkjemaMedSteg(): JSX.Element {
       return;
     }
 
-    window.top?.location.assign(
-      getPublicUrl('/eksempler/sidetyper/kvittering')
-    );
+    window.location.href =
+      '/designsystemet/example.html?path=pages%2Fekstern%2Fkvittering';
   };
 
   return (

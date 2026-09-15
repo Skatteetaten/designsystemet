@@ -1,14 +1,11 @@
 import { JSX, useRef, useState } from 'react';
 
 import { Button, InlineButton, Link } from '@skatteetaten/ds-buttons';
-import { Card } from '@skatteetaten/ds-content';
-import { DescriptionList } from '@skatteetaten/ds-content';
+import { Card, DescriptionList } from '@skatteetaten/ds-content';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { ArrowBackSVGpath, PrintSVGpath } from '@skatteetaten/ds-icons';
 import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-
-import { getPublicUrl } from '../../../../../lib/public-url';
 
 import styles from './deloppgave.module.scss';
 
@@ -93,9 +90,8 @@ export default function Deloppgave(): JSX.Element {
               className={styles.marginRightM}
               onClick={() => {
                 if (isChecked) {
-                  window.top?.location.assign(
-                    getPublicUrl('/eksempler/sidetyper/oppgaveliste')
-                  );
+                  window.location.href =
+                    '/designsystemet/example.html?path=pages%2Fekstern%2Foppgaveliste';
                 } else {
                   setErrorMessage('Du må bekrefte at opplysningene stemmer.');
                   checkRef.current?.focus();

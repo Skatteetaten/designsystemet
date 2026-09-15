@@ -15,8 +15,6 @@ import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 import { Tag, TagColor } from '@skatteetaten/ds-status';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getPublicUrl } from '../../../../../lib/public-url';
-
 import styles from './oppgaveliste.module.scss';
 
 enum Status {
@@ -112,8 +110,9 @@ export default function Oppgaveliste(): JSX.Element {
         <div className={styles.task}>
           <Link
             className={styles.taskLink}
-            href={getPublicUrl('/eksempler/sidetyper/deloppgave')}
-            target={'_top'}
+            href={
+              '/designsystemet/example.html?path=pages%2Fekstern%2Fdeloppgave'
+            }
           >
             {task.text}
           </Link>
