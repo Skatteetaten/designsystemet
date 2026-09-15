@@ -1,12 +1,11 @@
 import { JSX, useEffect, useState } from 'react';
 
 import { NavigationTile } from '@skatteetaten/ds-navigation';
-import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { PublicImage } from './public-image';
-import { useRouterLinkClick } from './router-link';
 import browserCollections from '../../.source/browser';
 import { getPublicUrl } from '../../lib/public-url';
+import { PublicImage } from './public-image';
+import { useRouterLinkClick } from './router-link';
 
 import styles from './component-list.module.scss';
 
@@ -139,20 +138,15 @@ export const ComponentList = (): JSX.Element => {
   }, []);
 
   return (
-    <>
-      <Paragraph variant={'ingress'} hasSpacing>
-        {'Komponentene kan brukes både til løsninger for publikum og interne.'}
-      </Paragraph>
-      <nav aria-label={'Liste over alle komponenter'}>
-        {entries ? (
-          <ul className={styles.list}>
-            {entries.map((entry) => (
-              <ComponentTile key={entry.url} entry={entry} />
-            ))}
-          </ul>
-        ) : null}
-      </nav>
-    </>
+    <nav aria-label={'Liste over alle komponenter'}>
+      {entries ? (
+        <ul className={styles.list}>
+          {entries.map((entry) => (
+            <ComponentTile key={entry.url} entry={entry} />
+          ))}
+        </ul>
+      ) : null}
+    </nav>
   );
 };
 
