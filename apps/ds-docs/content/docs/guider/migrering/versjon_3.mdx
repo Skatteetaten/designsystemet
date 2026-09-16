@@ -44,13 +44,69 @@ Vi fjerner størrelsen `large` fra `DatePicker`, `Select` og `TextField`. Prop `
 **Nå (for å beholde tidligere oppførsel):**
 
 ```tsx
-<TextField label={'Navn'} classNames={{ textbox: 'min-textfield' }} />
+<TextField label={'Navn'} classNames={{ textbox: 'textfield-large' }} />
 ```
 
 ```css
-.min-textfield {
+.textfield-large {
   padding: var(--spacing-s);
 }
+```
+
+### SearchField og Combobox: `variant` endret til `size`
+
+**Før:**
+
+```tsx
+<SearchField variant="large" />
+```
+
+**Nå:**
+
+```tsx
+<SearchField size="large" />
+```
+
+### OpenClose: `variant` fjernet — bruk `size`
+
+`variant`-propen på `OpenClose` er fjernet og erstattet med `size`. Det er også lagt til en ny størrelse `medium`.
+
+Mapping fra tidligere verdier:
+
+- `variant="compact"` → `size="small"`
+- `variant="standard"` → `size="large"`
+- (ny) `size="medium"` ligger mellom de to
+
+**Før:**
+
+```tsx
+<OpenClose title={'Mer info'} variant={'standard'}>{content}</OpenClose>
+<OpenClose title={'Mer info'} variant={'compact'}>{content}</OpenClose>
+```
+
+**Nå:**
+
+```tsx
+<OpenClose title={'Mer info'} size={'large'}>{content}</OpenClose>
+<OpenClose title={'Mer info'} size={'small'}>{content}</OpenClose>
+```
+
+### Table: `variant` fjernet — bruk `size`
+
+`variant`-propen på `Table` er fjernet og erstattet med `size`. Gyldige verdier er `extraSmall | small | medium | large`.
+
+**Før:**
+
+```tsx
+<Table caption={'…'} variant={'standard'}>{/* … */}</Table>
+<Table caption={'…'} variant={'compact'}>{/* … */}</Table>
+```
+
+**Nå:**
+
+```tsx
+<Table caption={'…'} size={'medium'}>{/* … */}</Table>
+<Table caption={'…'} size={'small'}>{/* … */}</Table>
 ```
 
 ### TextField: `thousandSeparator` fjernet
@@ -122,62 +178,6 @@ Propen `selectedValue` er omdøpt til `value` (for kontrollert state), i tråd m
   </RadioGroup.Radio>
   <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
 </RadioGroup>
-```
-
-### Table: `variant` fjernet — bruk `size`
-
-`variant`-propen på `Table` er fjernet og erstattet med `size`. Gyldige verdier er `extraSmall | small | medium | large`.
-
-**Før:**
-
-```tsx
-<Table caption={'…'} variant={'standard'}>{/* … */}</Table>
-<Table caption={'…'} variant={'compact'}>{/* … */}</Table>
-```
-
-**Nå:**
-
-```tsx
-<Table caption={'…'} size={'medium'}>{/* … */}</Table>
-<Table caption={'…'} size={'small'}>{/* … */}</Table>
-```
-
-### OpenClose: `variant` fjernet — bruk `size`
-
-`variant`-propen på `OpenClose` er fjernet og erstattet med `size`. Det er også lagt til en ny størrelse `medium`.
-
-Mapping fra tidligere verdier:
-
-- `variant="compact"` → `size="small"`
-- `variant="standard"` → `size="large"`
-- (ny) `size="medium"` ligger mellom de to
-
-**Før:**
-
-```tsx
-<OpenClose title={'Mer info'} variant={'standard'}>{content}</OpenClose>
-<OpenClose title={'Mer info'} variant={'compact'}>{content}</OpenClose>
-```
-
-**Nå:**
-
-```tsx
-<OpenClose title={'Mer info'} size={'large'}>{content}</OpenClose>
-<OpenClose title={'Mer info'} size={'small'}>{content}</OpenClose>
-```
-
-### SearchField og Combobox: `variant` endret til `size`
-
-**Før:**
-
-```tsx
-<SearchField variant="large" />
-```
-
-**Nå:**
-
-```tsx
-<SearchField size="large" />
 ```
 
 ### TopBannerExternal: `mobileLogo` fjernet
@@ -314,6 +314,30 @@ Default-verdien for `hasSpacing` er endret fra `true` til `false`. Sett propen e
 
 ```tsx
 <RadioGroup hasSpacing />
+```
+
+### StepList: `shouldAutoFocusWhenActive` har ny default-verdi
+
+Default-verdien for `shouldAutoFocusWhenActive` er endret fra `true` til `false`, slik at første steg ikke lenger får uønsket fokus. Når brukeren klikker på Neste-knappen, får neste steg nå automatisk fokus.
+
+**Før:**
+
+```tsx
+<StepList>
+  <StepList.Step shouldAutoFocusWhenActive={false} stepNumber={1} onNext={onNext}>...</StepList.Step>
+  <StepList.Step shouldAutoFocusWhenActive={true} stepNumber={2} onNext={onNext}>...</StepList.Step>
+  <StepList.Step shouldAutoFocusWhenActive={true} stepNumber={3} onNext={onNext}>...</StepList.Step>
+</StepList>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<StepList>
+  <StepList.Step stepNumber={1} onNext={onNext}>...</StepList.Step>
+  <StepList.Step stepNumber={2} onNext={onNext}>...</StepList.Step>
+  <StepList.Step stepNumber={3} onNext={onNext}>...</StepList.Step>
+</StepList>
 ```
 
 ## Oppdatering av styling og layout

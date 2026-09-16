@@ -19,54 +19,56 @@ En majorversjon med fokus på opprydding og forenkling av API-er, ny dokumentasj
 - **FileUploader**: `label` er nå obligatorisk.
 - **RadioGroup**: `selectedValue` er fjernet. Bruk `value` i stedet. (Varslet i versjon 2.6.0.)
 - **TextField**: `thousandSeparator` er fjernet, og erstattes av `useFormattedInput`-funksjon.
-- **OpenClose, TextField, Select, DatePicker, SearchField og Combobox**: `variant` er fjernet. Standard skjemafelt har bare én størrelse, og unntakene SearchField og Combobox bruker nå `size` i stedet.
+- **TextField, Select, DatePicker, SearchField og Combobox**: `variant` er fjernet. Standard skjemafelt har bare én størrelse, og unntakene SearchField og Combobox bruker nå `size` i stedet.
+- **OpenClose og Table**: `variant` er fjernet. Bruk `size` i stedet.
 - **Skjemakomponenter**: `showRequiredMark` er fjernet fra alle komponenter. (Varslet i versjon 2.3.0.)
-- **Table**: `variant` er fjernet. Bruk `size` i stedet.
+- **IconButton**: `xsmall` er fjernet. Størrelsesskalaen er justert for bedre samspill med øvrige knappestørrelser.
 - **TopBannerLogo**: `mobileLogo` er fjernet. Prop-en var ikke i bruk.
+- **Fargeprops (color)**: Fargeverdier er harmonisert på tvers av flere komponenter. **Accordion**: color `none` er endret til `white`. **Link og Linkgroup**: color `undefined` er endret til `interactive`. **Spinner**: color `blue` er endret til `interactive`.
 - **ds-cli**: Pakken publiseres ikke lenger som del av versjon 3. Siste versjon med codemods for migrering fra 1.x til 2.x er 2.10.
 
 #### Endrede standardverdier
 - **RadioGroup og CheckboxGroup**: Standardverdien for spacing er endret fra `true` til `false`. Det legges heller ikke lenger til ekstra luft under siste element.
 - **Footer**: Standardverdien for openDefaultLinksInNewTab er endret fra `true` til `false`.
 - **OpenClose**: Standardverdien for keepMounted er endret til true for å være konsistent med Accordion.Item og Tabs.Panel.
+- **StepList**: Standardverdien for shouldAutoFocusWhenActive en endret fra true til false, slik at første steg ikke lenger får uønsket fokus.
 
 #### Visuelle og strukturelle endringer
 - **LinkGroup**: Margen under siste element er fjernet.
 - **Accordion.Item**: `className` settes nå på ytterste element i stedet for på knapp-elementet.
 - **Link**: Komponenten bruker nå `display: inline-block`, og innebygd padding er fjernet for å gi høyde som samsvarer bedre med designspesifikasjonene.
-- **Fargeprops (color)**: Fargeverdier er harmonisert på tvers av flere komponenter, blant annet Link, LinkGroup og Accordion.
+- **Table**: Rettet manglende padding i ekspandert innhold når ekspander-knappen er plassert til høyre.
+- **ScrollToTopButton**: Justert plassering utenfor Footer og responsiv container.
 
 ### Statusendringer
 - **Combobox, useFormattedInput, RolePicker og RoleBanner** har ikke lenger beta-status og regnes nå som stabile.
 
 ### Nye komponenter og funksjoner
 - **Icon**: Nye ikoner for Play og Pause uten sirkel.
-- **IconButton**: `xsmall` er fjernet. Størrelsesskalaen er justert for bedre samspill med øvrige knappestørrelser.
 - **Combobox**: Forbedret ytelse ved filtrering av store lister.
-- **TopBannerExternal.UserMenu**: Lenken til «Varsel» er erstattet med lenke til «Innboks».
 
 ### Feilrettinger og forbedringer
 #### Tilgjengelighet
 - **Combobox**: Meldinger for skjermlesere ved søk uten treff håndteres nå mer korrekt.
-- **StepList**: Justert autofokus slik at første steg ikke lenger får uønsket fokus.
 - **Table** (redigerbar rad): Forbedret skjermleserinstruks for redigerknapp plassert til venstre.
-- **FileUploader**: Feilmeldinger ved opplasting av flere filer leses nå korrekt opp når multiple er satt til false.
+- **FileUploader**: Feilmeldinger ved opplasting av flere filer leses nå korrekt opp når multiple er satt til false. I tillegg er HTML-strukturen endret for å fjerne valideringsfeil.
+- **StepList**: Når brukeren klikker på «Neste», får neste steg automatisk fokus.
 
 #### Layout og visuell kvalitet
-- **Table**: Rettet manglende padding i ekspandert innhold når ekspander-knappen er plassert til høyre.
 - **FileUploader**: Rettet inkonsistent luft avhengig av om det er lastet opp filer.
-- **DescriptionList**: Rettet inkonsistent bruk av margin og padding ved `hasSpacing`.
+- **DescriptionList**: Rettet inkonsistent bruk av margin og padding ved `hasSpacing`, endret fra padding til margin.
 - **SearchField**: Rettet hover-tilstand som kunne bli påvirket av nullstillingsstiler i konsumentapplikasjoner.
 - **Alert**: Fjerner unødvendig luft når komponenten ikke vises.
-- **Hjelpetekst**: Oppdatert kantlinje slik at den samsvarer bedre med Popover og Card.
-- **ScrollToTopButton**: Justert plassering utenfor Footer og responsiv container.
+- **Hjelpetekst** til skjemakomponenter: Oppdatert kantlinje til hjelpeknappen slik at den samsvarer bedre med Popover og Card.
+- **TopBannerExternal.UserMenu**: Lenken til «Varsel» er erstattet med lenke til «Innboks».
 
 #### Funksjonelle feilrettinger
 - **Formatter og TextField**: Rettet feil plassering av markør ved rask inntasting i formaterte felt, for eksempel beløpsfelt.
 
 ### Oppdatert dokumentasjon og eksempler
 - Ny migreringsguide for versjon 3.0 med oversikt over alle breaking changes.
-- Oppdatert dokumentasjon for Footer ved bruk i interne løsninger med venstrestilt footer og fritt innhold.
+- Oppdatert dokumentasjon for **Footer** ved bruk i interne løsninger med venstrestilt footer og fritt innhold.
+- Oppdatert dokumentasjonen av hvordan **Alert** bruker aria-live, med tilhørende eksempler.
 
 Se også [migreringsguiden for versjon 3.0](/guider/migrering/versjon_3/).
 
