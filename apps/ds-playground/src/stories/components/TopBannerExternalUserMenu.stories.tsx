@@ -12,6 +12,7 @@ TopBannerExternal.UserMenu.displayName = 'TopBannerExternal.UserMenu';
 
 const meta = {
   component: TopBannerExternalUserMenu,
+  title: 'Komponenter/TopBannerExternal/UserMenu',
   argTypes: {
     // Props
     notificationCount: { table: { category: category.props } },

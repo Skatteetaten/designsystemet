@@ -12,6 +12,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Tag } from '@skatteetaten/ds-status';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -64,6 +65,12 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <div>
+        <Paragraph hasSpacing>
+          {
+            'Merk at hvis komponenten mottar tomme elementer i lista med children så vil den tegne opp tomrom. For å unngå dette kan man filtrere vekk tomme elementer før de sendes til komponenten.'
+          }
+        </Paragraph>
+
         <DescriptionList
           variant={'horizontal'}
           descriptionDirection={'vertical'}
@@ -152,7 +159,13 @@ export const ExampleWithFixedColumns: Story = {
   */
   render: (_args): JSX.Element => {
     return (
-      <div>
+      <>
+        <Paragraph hasSpacing>
+          {
+            'Bruk className og sett --description-list-columns til ønsket antall kolonner. Hvis du skal ha et fast antall kolonner må du selv påsse på at det er nok plass til å unngå horisontal scroll.'
+          }
+        </Paragraph>
+
         <DescriptionList
           variant={'horizontal'}
           descriptionDirection={'vertical'}
@@ -178,7 +191,7 @@ export const ExampleWithFixedColumns: Story = {
             {'30.12.2010'}
           </DescriptionList.Element>
         </DescriptionList>
-      </div>
+      </>
     );
   },
 } satisfies Story;
