@@ -1,13 +1,8 @@
-import { JSX } from 'react';
-
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { OpenClose } from '@skatteetaten/ds-collections';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
-import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: OpenClose,
@@ -31,107 +26,13 @@ const meta = {
     onClick: { ...htmlEventDescription },
   },
   args: {
-    children: loremIpsum,
-    title: 'OpenClose title',
+    children:
+      'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. Gevinster blir ikke skattlagt og det gis ikke fradrag for tap så lenge verdien holdes inne på kontoen. ',
+    title: 'Hva er aksjesparekonto',
   },
 } satisfies Meta<typeof OpenClose>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const exampleTitle = 'Hva er aksjesparekonto';
-const exampleContent =
-  'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. ' +
-  'Gevinster blir ikke skattlagt og det gis ikke fradrag for tap så lenge verdien holdes inne på kontoen. ';
-
-export const Standard: Story = {
-  args: {
-    children: exampleContent,
-    title: exampleTitle,
-  },
-  render: (args): JSX.Element => {
-    return <OpenClose {...args} />;
-  },
-} satisfies Story;
-
-export const HoyrestiltIkon: Story = {
-  name: 'Høyrestilt ikon',
-  render: (_args): JSX.Element => {
-    return (
-      <>
-        <Paragraph>
-          {
-            'Høyrestilt ikon kan gi et roligere visuelt inntrykk og bedre plassutnyttelse på mobil. Vestrejustert ikon kan samtidig være et bedre valg for universell utforming, siden ikonet kommer først i leserekkefølgen og blir synlig tidligere ved zoom.'
-          }
-        </Paragraph>
-        <OpenClose title={exampleTitle} iconPosition={'right'}>
-          {exampleContent}
-        </OpenClose>
-      </>
-    );
-  },
-} satisfies Story;
-HoyrestiltIkon.parameters = exampleParameters;
-
-export const Sizes: Story = {
-  name: 'Størrelser',
-  render: (_args): JSX.Element => {
-    return (
-      <>
-        <Paragraph hasSpacing>
-          {
-            'Prop "size" kan brukes for å spesifisere størrelsen på OpenClose-komponenten.'
-          }
-        </Paragraph>
-
-        <Heading as={'h3'} level={4}>
-          {'Small'}
-        </Heading>
-        <OpenClose title={exampleTitle} size={'small'}>
-          {exampleContent}
-        </OpenClose>
-
-        <Heading as={'h2'} level={4}>
-          {'Medium'}
-        </Heading>
-        <OpenClose title={exampleTitle} size={'medium'}>
-          {exampleContent}
-        </OpenClose>
-
-        <Heading as={'h2'} level={4}>
-          {'Large'}
-        </Heading>
-        <OpenClose title={exampleTitle} size={'large'}>
-          {exampleContent}
-        </OpenClose>
-      </>
-    );
-  },
-} satisfies Story;
-Sizes.parameters = exampleParameters;
-
-export const EksempelSelvvalgtHjelpetekst: Story = {
-  name: 'Eksempel - selvvalgt hjelpetekst',
-  render: (_args): JSX.Element => {
-    return (
-      <div className={'semantic-article'}>
-        <Heading as={'h1'} level={2}>
-          {'Navn på oppgave eller tema'}
-        </Heading>
-        <Paragraph variant={'ingress'}>
-          {
-            'Hjelpetekst som vi ønsker at brukeren skal lese før hen går videre, plasserer vi normalt synlig og rett etter overskriften. '
-          }
-        </Paragraph>
-        <OpenClose title={'Hjelpetekst som folk kan velge å åpne'}>
-          <Paragraph>
-            {
-              'Denne teksten kan brukere hente frem og lese hvis de har behov for det. Den kan også bli stående oppe som ekstra støtte for prosessen videre. Det er viktig at tittelen på OpenClose-komponenten tydelig kommuniserer hva slags informasjon man kan finne ved å åpne den. '
-            }
-          </Paragraph>
-        </OpenClose>
-      </div>
-    );
-  },
-} satisfies Story;
-EksempelSelvvalgtHjelpetekst.parameters = exampleParameters;
+export const Preview: Story = {} satisfies Story;

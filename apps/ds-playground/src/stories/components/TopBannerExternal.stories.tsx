@@ -34,7 +34,7 @@ import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 import { exampleParameters } from '../utils/stories.utils';
 
-import topBannerExternalExampleStyles from './TopBannerExternalExample.module.scss';
+import styles from './TopBannerExternalExample.module.scss';
 
 const meta = {
   component: TopBannerExternal,
@@ -290,7 +290,7 @@ export const ExampleWithRolePicker: Story = {
         <TopBannerExternal
           ref={topBannerRef}
           classNames={{
-            columns: topBannerExternalExampleStyles.columns,
+            columns: styles.columns,
           }}
           firstColumn={
             user ? (
@@ -298,19 +298,13 @@ export const ExampleWithRolePicker: Story = {
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
                     {user.role === 'meg' && (
-                      <FavoriteIcon
-                        className={topBannerExternalExampleStyles.marginRightS}
-                      />
+                      <FavoriteIcon className={styles.marginRightS} />
                     )}
                     {user.role === 'andre' && (
-                      <AccountMultipleIcon
-                        className={topBannerExternalExampleStyles.marginRightS}
-                      />
+                      <AccountMultipleIcon className={styles.marginRightS} />
                     )}
                     {user.role === 'virksomhet' && (
-                      <BriefcaseIcon
-                        className={topBannerExternalExampleStyles.marginRightS}
-                      />
+                      <BriefcaseIcon className={styles.marginRightS} />
                     )}
 
                     {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -318,15 +312,12 @@ export const ExampleWithRolePicker: Story = {
                   <Paragraph variant={'ingress'}>
                     {'Se, endre og send inn'}
                   </Paragraph>
-                  <ul className={topBannerExternalExampleStyles.linkWrapper}>
+                  <ul className={styles.linkWrapper}>
                     {(user.role === 'virksomhet'
                       ? virksomhetLinks
                       : loggedInLinks
                     ).map((link, index) => (
-                      <li
-                        key={index}
-                        className={topBannerExternalExampleStyles.marginBottomS}
-                      >
+                      <li key={index} className={styles.marginBottomS}>
                         <Link
                           href={link.href}
                           onClick={(e): void => {
@@ -343,21 +334,15 @@ export const ExampleWithRolePicker: Story = {
               </Card>
             ) : (
               <>
-                <Heading
-                  as={'h2'}
-                  level={3}
-                  className={topBannerExternalExampleStyles.flex}
-                >
+                <Heading as={'h2'} level={3} className={styles.flex}>
                   <PersonIcon
-                    className={topBannerExternalExampleStyles.marginRightS}
+                    className={styles.marginRightS}
                     size={'largePlus'}
                   />
 
                   {'Min side'}
                 </Heading>
-                <Paragraph
-                  className={topBannerExternalExampleStyles.marginBottomS}
-                >
+                <Paragraph className={styles.marginBottomS}>
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
                 <Button
@@ -374,16 +359,14 @@ export const ExampleWithRolePicker: Story = {
               <Heading as={'h2'} hasSpacing>
                 {'Alle temaer'}
               </Heading>
-              <div className={topBannerExternalExampleStyles.secondColumn}>
+              <div className={styles.secondColumn}>
                 <div>
                   <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.PERSON_FORSIDE}>
                       {'For personer'}
                     </a>
                   </Heading>
-                  <LinkGroup
-                    className={topBannerExternalExampleStyles.marginBottomXL}
-                  >
+                  <LinkGroup className={styles.marginBottomXL}>
                     {personlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -402,9 +385,7 @@ export const ExampleWithRolePicker: Story = {
                       {'For bedrifter og organisasjoner'}
                     </a>
                   </Heading>
-                  <LinkGroup
-                    className={topBannerExternalExampleStyles.marginBottomXL}
-                  >
+                  <LinkGroup className={styles.marginBottomXL}>
                     {virksomhetlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -429,7 +410,7 @@ export const ExampleWithRolePicker: Story = {
                   <Heading
                     as={'h3'}
                     level={4}
-                    className={topBannerExternalExampleStyles.marginBottomXL}
+                    className={styles.marginBottomXL}
                   >
                     <a href={LenkerUinnlogget.SAMARBEIDSPARTNERE}>
                       {'Samarbeidspartner'}
@@ -445,9 +426,7 @@ export const ExampleWithRolePicker: Story = {
           user={user}
           searchContent={
             <>
-              <Paragraph
-                className={topBannerExternalExampleStyles.marginBottomS}
-              >
+              <Paragraph className={styles.marginBottomS}>
                 {'Dette har andre søkt på:'}
               </Paragraph>
               <LinkGroup>
@@ -749,7 +728,7 @@ export const ExampleWithUserMenu: Story = {
         <TopBannerExternal
           ref={topBannerRef}
           classNames={{
-            columns: topBannerExternalExampleStyles.columns,
+            columns: styles.columns,
           }}
           firstColumn={
             user ? (
@@ -757,19 +736,13 @@ export const ExampleWithUserMenu: Story = {
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
                     {user.role === 'meg' && (
-                      <FavoriteIcon
-                        className={topBannerExternalExampleStyles.marginRightS}
-                      />
+                      <FavoriteIcon className={styles.marginRightS} />
                     )}
                     {user.role === 'andre' && (
-                      <AccountMultipleIcon
-                        className={topBannerExternalExampleStyles.marginRightS}
-                      />
+                      <AccountMultipleIcon className={styles.marginRightS} />
                     )}
                     {user.role === 'virksomhet' && (
-                      <BriefcaseIcon
-                        className={topBannerExternalExampleStyles.marginRightS}
-                      />
+                      <BriefcaseIcon className={styles.marginRightS} />
                     )}
 
                     {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -777,15 +750,12 @@ export const ExampleWithUserMenu: Story = {
                   <Paragraph variant={'ingress'}>
                     {'Se, endre og send inn'}
                   </Paragraph>
-                  <ul className={topBannerExternalExampleStyles.linkWrapper}>
+                  <ul className={styles.linkWrapper}>
                     {(user.role === 'virksomhet'
                       ? virksomhetLinks
                       : loggedInLinks
                     ).map((link, index) => (
-                      <li
-                        key={index}
-                        className={topBannerExternalExampleStyles.marginBottomS}
-                      >
+                      <li key={index} className={styles.marginBottomS}>
                         <Link
                           href={link.href}
                           onClick={(e): void => {
@@ -802,21 +772,15 @@ export const ExampleWithUserMenu: Story = {
               </Card>
             ) : (
               <>
-                <Heading
-                  as={'h2'}
-                  level={3}
-                  className={topBannerExternalExampleStyles.flex}
-                >
+                <Heading as={'h2'} level={3} className={styles.flex}>
                   <PersonIcon
-                    className={topBannerExternalExampleStyles.marginRightS}
+                    className={styles.marginRightS}
                     size={'largePlus'}
                   />
 
                   {'Min side'}
                 </Heading>
-                <Paragraph
-                  className={topBannerExternalExampleStyles.marginBottomS}
-                >
+                <Paragraph className={styles.marginBottomS}>
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
                 <Button
@@ -833,16 +797,14 @@ export const ExampleWithUserMenu: Story = {
               <Heading as={'h2'} hasSpacing>
                 {'Alle temaer'}
               </Heading>
-              <div className={topBannerExternalExampleStyles.secondColumn}>
+              <div className={styles.secondColumn}>
                 <div>
                   <Heading as={'h3'} hasSpacing>
                     <a href={LenkerUinnlogget.PERSON_FORSIDE}>
                       {'For personer'}
                     </a>
                   </Heading>
-                  <LinkGroup
-                    className={topBannerExternalExampleStyles.marginBottomXL}
-                  >
+                  <LinkGroup className={styles.marginBottomXL}>
                     {personlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -861,9 +823,7 @@ export const ExampleWithUserMenu: Story = {
                       {'For bedrifter og organisasjoner'}
                     </a>
                   </Heading>
-                  <LinkGroup
-                    className={topBannerExternalExampleStyles.marginBottomXL}
-                  >
+                  <LinkGroup className={styles.marginBottomXL}>
                     {virksomhetlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -888,7 +848,7 @@ export const ExampleWithUserMenu: Story = {
                   <Heading
                     as={'h3'}
                     level={4}
-                    className={topBannerExternalExampleStyles.marginBottomXL}
+                    className={styles.marginBottomXL}
                   >
                     <a href={LenkerUinnlogget.SAMARBEIDSPARTNERE}>
                       {'Samarbeidspartner'}
@@ -903,9 +863,7 @@ export const ExampleWithUserMenu: Story = {
           }
           searchContent={
             <>
-              <Paragraph
-                className={topBannerExternalExampleStyles.marginBottomS}
-              >
+              <Paragraph className={styles.marginBottomS}>
                 {'Dette har andre søkt på:'}
               </Paragraph>
               <LinkGroup>
@@ -967,6 +925,11 @@ export const ExampleWithUserMenu: Story = {
             modalRef.current?.close();
           }}
         />
+        <Paragraph>
+          {
+            'For å åpne eller lukke hovedmenyen kan man bruke ref.openMenu() og ref.closeMenu().'
+          }
+        </Paragraph>
       </>
     );
   },

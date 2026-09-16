@@ -7,6 +7,7 @@ import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 
 export default {
   component: WordInfo.Content,
+  title: 'Komponenter/WordInfo/Content',
   argTypes: {
     // Props
     children: {

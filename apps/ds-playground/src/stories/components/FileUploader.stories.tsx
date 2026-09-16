@@ -10,6 +10,7 @@ import {
   FileUploader,
   UploadedFile,
 } from '@skatteetaten/ds-forms';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   category,
@@ -172,6 +173,12 @@ export const SimpleCompleteExample: Story = {
 
     return (
       <>
+        <Paragraph hasSpacing>
+          {
+            'Et enkelt eksempel på single file upload, hvor man bruker useFileUploader for state håntering.'
+          }
+        </Paragraph>
+
         <Checkbox
           checked={shouldError}
           onChange={() => setShouldError(!shouldError)}
@@ -292,6 +299,17 @@ export const Examples: Story = {
 
     return (
       <>
+        <Paragraph hasSpacing>
+          {
+            'Dersom mockUpload er krysset av så vil det opprettes promises som har 50% sannsynlighet for å rejecte. Da får man sett både vellykket og feilet opplasting. Når mockUpload er slått av forsøker eksempelet å laste opp til http://localhost:9090/test'
+          }
+        </Paragraph>
+        <Paragraph hasSpacing>
+          {
+            'I eksemplet under brukes hooken useFileUploader til å styre tilstanden til komponenten. Alternativt kan man velge å styre tilstanden selv.'
+          }
+        </Paragraph>
+
         <Checkbox
           checked={shouldUploadFail}
           onChange={() => setShouldUploadFail(!shouldUploadFail)}

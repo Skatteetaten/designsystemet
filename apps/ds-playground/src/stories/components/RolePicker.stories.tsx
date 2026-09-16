@@ -1,9 +1,9 @@
-import { JSX, useRef, useState } from 'react';
+import { JSX, useRef, useState, MouseEvent } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { User } from '@skatteetaten/ds-layout';
+import { TopBannerExternal, User } from '@skatteetaten/ds-layout';
 import {
   Business,
   Entity,
@@ -13,11 +13,9 @@ import {
   OnEntitySelectHandler,
 } from '@skatteetaten/ds-overlays';
 
-import RolePickerWithAlertExample from './RolePickerWithAlertExample';
-import rolePickerWithAlertExample from './RolePickerWithAlertExample?raw';
-import RolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample';
-import rolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample?raw';
-import { category, htmlEventDescription } from '../../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import { Alert } from '@skatteetaten/ds-status';
+import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
 
 const me: Person = {
   name: 'Ola Nordmann',
@@ -237,7 +235,6 @@ export const WithExternalTopBanner: Story = {
     docs: {
       codePanel: true,
       source: {
-        code: rolePickerWithTopBannerExternalExample,
         type: 'auto',
         language: 'tsx',
       },
@@ -246,7 +243,57 @@ export const WithExternalTopBanner: Story = {
       exclude: /.*/,
     },
   },
-  render: (_args): JSX.Element => <RolePickerWithTopBannerExternalExample />,
+  render: (_args): JSX.Element => {
+    const modalRef = useRef<HTMLDialogElement>(null);
+    const [user, setUser] = useState<User>();
+
+    const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
+      const lang = e.currentTarget.lang;
+      dsI18n.changeLanguage(langToLocale[lang]);
+    };
+    return (
+      <>
+        <TopBannerExternal
+          user={user}
+          onLanguageClick={handleLanguageClick}
+          onLogInClick={
+            !user ? (): void => modalRef.current?.showModal() : undefined
+          }
+        >
+          {user && (
+            <TopBannerExternal.UserMenu
+              user={user}
+              notificationCount={1}
+              onLogOutClick={() => setUser(undefined)}
+              onSwitchUserClick={() => modalRef.current?.showModal()}
+            />
+          )}
+        </TopBannerExternal>
+        <RolePicker
+          ref={modalRef}
+          me={me}
+          businesses={businesses}
+          people={people}
+          onEntitySelect={async (entity) => {
+            let role: User['role'];
+            if (entity.name === me.name) {
+              role = 'meg';
+            } else if (entity.type === 'Organization') {
+              role = 'virksomhet';
+            } else {
+              role = 'andre';
+            }
+
+            setUser({
+              role: role,
+              name: entity.name,
+            });
+            modalRef.current?.close();
+          }}
+        />
+      </>
+    );
+  },
 } satisfies Story;
 
 export const WithAlert: Story = {
@@ -254,7 +301,6 @@ export const WithAlert: Story = {
     docs: {
       codePanel: true,
       source: {
-        code: rolePickerWithAlertExample,
         type: 'auto',
         language: 'tsx',
       },
@@ -263,5 +309,25 @@ export const WithAlert: Story = {
       exclude: /.*/,
     },
   },
-  render: (_args): JSX.Element => <RolePickerWithAlertExample />,
+  render: (_args): JSX.Element => {
+    const rolePickerRef = useRef<HTMLDialogElement>(null);
+    return (
+      <>
+        <Button
+          onClick={() => {
+            rolePickerRef.current?.showModal();
+          }}
+        >
+          {'Åpne representasjonsvelger'}
+        </Button>
+        <RolePicker ref={rolePickerRef} me={me} people={people}>
+          <Alert variant={'warning'} showAlert>
+            {
+              'Vi kan dessverre ikke vise alle tilgangene dine nå. Vi jobber med å løse feilen. Prøv igjen eller kom tilbake senere.'
+            }
+          </Alert>
+        </RolePicker>
+      </>
+    );
+  },
 } satisfies Story;

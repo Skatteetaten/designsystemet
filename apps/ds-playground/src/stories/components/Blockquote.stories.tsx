@@ -28,19 +28,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-export const Examples: Story = {
-  render: (_args): JSX.Element => {
-    return (
-      <Blockquote>
-        {
-          'Skatteetaten jobber målrettet sammen med andre samarbeidspartnere for at det skal være enkelt å gjøre rett og vanskelig å gjøre feil.'
-        }
-      </Blockquote>
-    );
-  },
-} satisfies Story;
-Examples.parameters = exampleParameters;
-
 export const ExampleWithInlineStyling: Story = {
   render: (_args): JSX.Element => {
     return (
