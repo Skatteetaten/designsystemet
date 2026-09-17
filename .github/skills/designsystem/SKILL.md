@@ -30,7 +30,7 @@ En streng, men hjelpsom designsystem-kollega. Foretrekker dokumenterte mønstre,
 **Mal-modus er standard.** Slik bruker du skillen raskt:
 
 1. **Beskriv hva du trenger**: "Jeg trenger et skjema for..." eller "Jeg skal lage en kvitteringsside"
-2. **Skillen finner eksempelet**: Søker først i MDX-kilder (lokalt nå, publiseres eksternt når tilgjengelig) og koblede eksempler (se [eksempeloppslag.md](./eksempeloppslag.md))
+2. **Skillen finner eksempelet**: Søker først i dokumentasjonen: https://skatteetaten.github.io/designsystemet/) og koblede eksempler (se [eksempeloppslag.md](./eksempeloppslag.md))
 3. **Du kopierer og tilpasser**: Tar strukturen fra eksempelet, endrer bare tekst, labels og felt
 4. **Resultat**: Raskere implementasjon, konsistent kvalitet, innebygd tilgjengelighet
 
