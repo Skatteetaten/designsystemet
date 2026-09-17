@@ -1,6 +1,6 @@
 ---
 name: designsystem
-description: 'Use when designing, building, reviewing, refactoring, or assessing UI in this repo with the Skatteetaten design system. Relevant for forms, pages, tables, navigation, alerts, accessibility, universal design, component choice, validation, interaction patterns, semantic design tokens, and template-first implementation from MDX docs and linked examples (local now, published externally when available), with Storybook as a secondary source.'
+description: 'Use when designing, building, reviewing, refactoring, or assessing UI in this repo with the Skatteetaten design system. Relevant for forms, pages, tables, navigation, alerts, accessibility, universal design, component choice, validation, interaction patterns, semantic design tokens, and template-first implementation from MDX docs and linked examples on GitHub master, with local source as fallback and Storybook as a secondary source.'
 argument-hint: 'Describe the feature or screen, target users, constraints, and preferred mode: quick, template (default), strict, or experiment.'
 ---
 
@@ -30,7 +30,7 @@ En streng, men hjelpsom designsystem-kollega. Foretrekker dokumenterte mønstre,
 **Mal-modus er standard.** Slik bruker du skillen raskt:
 
 1. **Beskriv hva du trenger**: "Jeg trenger et skjema for..." eller "Jeg skal lage en kvitteringsside"
-2. **Skillen finner eksempelet**: Søker først i dokumentasjonen: https://skatteetaten.github.io/designsystemet/) og koblede eksempler (se [eksempeloppslag.md](./eksempeloppslag.md))
+2. **Skillen finner eksempelet**: Søker først i dokumentasjonen på https://skatteetaten.github.io/designsystemet/ og leser koblet kildekode fra GitHub `master` (se [eksempeloppslag.md](./eksempeloppslag.md))
 3. **Du kopierer og tilpasser**: Tar strukturen fra eksempelet, endrer bare tekst, labels og felt
 4. **Resultat**: Raskere implementasjon, konsistent kvalitet, innebygd tilgjengelighet
 
@@ -72,9 +72,11 @@ Når skillen stopper, gir den alltid:
 
 **Obligatorisk stoppregel ved manglende primærkilder:**
 
-- Hvis MDX-kilder eller koblede eksempler ikke er tilgjengelige etter live-tilgangssjekk, skal skillen stoppe før kodeforslag.
+- Hvis MDX-kilder eller koblede eksempler ikke er tilgjengelige fra GitHub
+  `master` eller lokal `/@fs/`-fallback etter live-tilgangssjekk, skal skillen
+  stoppe før kodeforslag.
 - Skillen skal be brukeren velge eksplisitt mellom:
-  - starte/fikse lokal docs-tilgang først, eller
+  - fikse tilgangen til primærkildene først, eller
   - fortsette midlertidig med sekundærkilder + tydelig merket fallback.
 - Skillen skal ikke gå videre til implementasjon uten at brukeren har valgt en av disse to.
 
@@ -84,11 +86,15 @@ Bruk kildene ut fra hva du trenger å verifisere, ikke som en tung sjekkliste hv
 
 ### Primærkilder først (MDX, eksempler og tokens)
 
-Merk: Kildene er lokale i dag og kan bli publisert eksternt senere. Prioriteten endres ikke av hvor de hostes. Bruk samme rekkefølge uansett om kilden leses lokalt eller fra publisert URL.
+Les MDX og koblede eksempler fra
+`github.com/skatteetaten/designsystemet` på `master`. Bruk lokal Vite `/@fs/`
+bare som fallback eller når brukeren eksplisitt ber om upublisert lokal kode.
 
 Kildeprioritet for verifisering og eksempelkode:
 
-1. **MDX-kilder og koblede eksempler** via rå kildefiler (for eksempel Vite `/@fs/`) – primærkilde for API, mønster, eksempelkode og anbefalt sammensetting
+1. **MDX-kilder og koblede eksempler** via rå repository-filer fra GitHub
+   `master`, med lokal Vite `/@fs/` som fallback – primærkilde for API, mønster,
+   eksempelkode og anbefalt sammensetting
 2. **Semantiske tokens** i [semantic-tokens.md](./semantic-tokens.md) og tilhørende tokenkilder – primærkilde for tokenvalg og semantisk styling
 3. **Storybook** (inkludert API-tabeller via `read_page`) – sekundærkilde for orientering, validering og alternativer
 4. **Stil og tone / designsystemets nettsider** – sekundærkilde for mønsterforståelse og støttekontekst
@@ -100,7 +106,8 @@ Merk: `/examples/`- og `/_source/`-endepunkter returnerer HTML-404, ikke kildeko
 
 Detaljerte oppslag er flyttet til hjelpefiler for å holde denne filen kort og operativ:
 
-- [kildeoppslag.md](./kildeoppslag.md): `/@fs`-arbeidsflyt, lokal tilgangssjekk, URL-mønstre og fallback-regler
+- [kildeoppslag.md](./kildeoppslag.md): GitHub `master`-arbeidsflyt, lokal
+  `/@fs/`-fallback, tilgangssjekk og URL-mønstre
 - [eksempeloppslag.md](./eksempeloppslag.md): MDX-indeks, behovstype-tabell og sidetype-/eksempellenker
 - [stegvise-skjemaer.md](./stegvise-skjemaer.md): `StepList`-mønster, API-sjekker og dynamiske steg
 
@@ -127,7 +134,8 @@ Når du har funnet et dokumentert treff, skal du ikke stoppe ved at komponenten 
 
 Primærkilder:
 
-1. MDX-kilder (lokalt nå, publiseres eksternt når tilgjengelig) og koblede eksempler.
+1. MDX-kilder og koblede eksempler fra GitHub `master`, med lokal `/@fs/` som
+   fallback.
 2. Verifiserte tokenkilder, inkludert [semantic-tokens.md](./semantic-tokens.md)
 
 Sekundærkilder:
@@ -139,7 +147,10 @@ Sekundærkilder:
 
 ### Sidetyper og eksempelsider som startpunkt
 
-Når oppgaven gjelder en hel side, en hel flyt eller et større sideoppsett, start med MDX-kilder (lokalt nå, publiseres eksternt når tilgjengelig) og koblede eksempler. Bruk relevante sidetyper og eksempelsider i Storybook som sekundærkilde for orientering og alternativer.
+Når oppgaven gjelder en hel side, en hel flyt eller et større sideoppsett, start
+med MDX-kilder og koblede eksempler fra GitHub `master`. Bruk lokal `/@fs/` som
+fallback og relevante sidetyper og eksempelsider i Storybook som sekundærkilde
+for orientering og alternativer.
 
 Se [eksempeloppslag.md](./eksempeloppslag.md) for full liste over sidetyper og eksempelsider.
 
@@ -227,7 +238,8 @@ Mal-modus er standard med mindre brukeren ber om noe annet.
 
 I mal-modus skal du:
 
-- finne nærmeste dokumenterte eksempel i MDX-kilder og koblede eksempler (lokalt nå, publiseres eksternt når tilgjengelig)
+- finne nærmeste dokumenterte eksempel i MDX-kilder og koblede eksempler fra
+  GitHub `master`, med lokal `/@fs/` som fallback
 - kopiere struktur, komponentvalg og API-bruk fra eksempelet først
 - tilpasse kun det som trengs: tekst, labels, felter, validering, dataflyt og innhold
 - beholde layout, topp/bunn, containere og hovedstruktur i tråd med valgt sidetype
@@ -355,7 +367,9 @@ For rådgivende oppgaver, lever:
 ## Føringer
 
 - mal-modus er standard: bruk dokumentert eksempelkode som utgangspunkt før du lager lokale tilpasninger
-- ved side-nivå UI: start med MDX-kilder (lokalt nå, publiseres eksternt når tilgjengelig) og koblede eksempler; bruk Storybook som sekundærkilde for orientering og alternativer
+- ved side-nivå UI: start med MDX-kilder og koblede eksempler fra GitHub
+  `master`, med lokal `/@fs/` som fallback; bruk Storybook som sekundærkilde for
+  orientering og alternativer
 - når designsystemet har en dokumentert innholdskomponent, bruk den foran rå HTML med lokal styling
 - foretrekk `Heading` foran rå `h1`-`h6`, `Paragraph` foran rå `p`, `List` foran rå `ul`/`ol`, `Link` foran rå `a`, `Blockquote` foran rå `blockquote`, og `DescriptionList` foran rå `dl`/`dt`/`dd`
 - bruk kun rå HTML for disse innholdstypene hvis dokumentasjonen eksplisitt krever det eller komponenten ikke dekker behovet
