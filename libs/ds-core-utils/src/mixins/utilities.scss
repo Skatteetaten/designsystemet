@@ -1,0 +1,90 @@
+$spacing-values: 0, xxs, xs, s, s-plus, m, l, xl, xxl, mega;
+$spacing-properties: (
+  'm': margin,
+  'mt': margin-top,
+  'mb': margin-bottom,
+  'ml': margin-left,
+  'mr': margin-right,
+  'mx': (
+    margin-left,
+    margin-right,
+  ),
+  'my': (
+    margin-top,
+    margin-bottom,
+  ),
+  'p': padding,
+  'pt': padding-top,
+  'pb': padding-bottom,
+  'pl': padding-left,
+  'pr': padding-right,
+  'px': (
+    padding-left,
+    padding-right,
+  ),
+  'py': (
+    padding-top,
+    padding-bottom,
+  ),
+  'gap': gap,
+  'row-gap': row-gap,
+  'column-gap': column-gap,
+);
+
+@each $prefix, $properties in $spacing-properties {
+  @each $value in $spacing-values {
+    .#{$prefix}-#{$value} {
+      @each $property in $properties {
+        #{$property}: var(--spacing-#{$value});
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
