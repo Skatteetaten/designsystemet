@@ -107,12 +107,7 @@ const TemplateAllColors: StoryFn<typeof Card> = (args) => (
   <>
     {cardColorArr.map((color, index) => {
       return (
-        <Card
-          {...args}
-          key={`card_${index}`}
-          className={'bottomSpacingXL'}
-          color={color}
-        >
+        <Card {...args} key={`card_${index}`} className={'mb-xl'} color={color}>
           <Card.Content>{args.children}</Card.Content>
         </Card>
       );

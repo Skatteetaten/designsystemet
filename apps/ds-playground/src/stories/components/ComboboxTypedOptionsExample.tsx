@@ -76,7 +76,7 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
           'Combobox-varianter (single-, multi-select, samt controlled og uncontrolled).'}
       </Paragraph>
       <form onSubmit={handleSubmit}>
-        <div className={'flex gapXl'}>
+        <div className={'flex gap-xl'}>
           <div>
             <Combobox
               name={'selectedKommuner'}
@@ -100,12 +100,12 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
             <Button type={'submit'}>{'Send inn'}</Button>
 
             {isSubmitted && submissionMessage && (
-              <div className={'topSpacingS paddingXS'}>
+              <div className={'mt-s p-xs'}>
                 <strong>
                   {'✓ '}
                   {submissionMessage}
                 </strong>
-                <div className={'topSpacingXs'}>
+                <div className={'mt-xs'}>
                   {'Se konsollen for fullstendige innsendte data.'}
                 </div>
               </div>
@@ -113,7 +113,7 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
           </div>
 
           {selectedKommuneObjects.length > 0 && (
-            <div className={'flexGrow'}>
+            <div className={'width-100'}>
               <Heading as={'h3'} hasSpacing>
                 {'Valgte kommuner ('}
                 {selectedKommuneObjects.length}
@@ -122,7 +122,7 @@ export const ComboboxTypedOptionsExample = (): JSX.Element => {
               <List hasSpacing>
                 {selectedKommuneObjects.map((kommune) => (
                   <List.Element key={kommune.value}>
-                    <div className={'bottomSpacingXS'}>
+                    <div className={'mb-xs'}>
                       {kommune.label}
                       <br />
                       <span>{'Sammenslått: '}</span>

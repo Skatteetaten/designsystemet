@@ -344,14 +344,9 @@ export const WithEventHandlers = {
 
 const TemplateWithSpinner: StoryFn<typeof InlineButton> = (args) => (
   <>
-    <div className={'flex bottomSpacingXL'}>
-      <InlineButton {...args} hasSpinner={false} className={'marginRightM'} />
-      <InlineButton
-        {...args}
-        svgPath={AddOutlineSVGpath}
-        hasSpinner={false}
-        className={'marginRightM'}
-      />
+    <div className={'flex gap-m mb-xl'}>
+      <InlineButton {...args} hasSpinner={false} />
+      <InlineButton {...args} svgPath={AddOutlineSVGpath} hasSpinner={false} />
       <InlineButton
         {...args}
         svgPath={AddOutlineSVGpath}
@@ -359,13 +354,9 @@ const TemplateWithSpinner: StoryFn<typeof InlineButton> = (args) => (
         hasSpinner={false}
       />
     </div>
-    <div className={'flex'}>
-      <InlineButton {...args} className={'marginRightM'} />
-      <InlineButton
-        {...args}
-        svgPath={AddOutlineSVGpath}
-        className={'marginRightM'}
-      />
+    <div className={'flex gap-m'}>
+      <InlineButton {...args} />
+      <InlineButton {...args} svgPath={AddOutlineSVGpath} />
       <InlineButton
         {...args}
         svgPath={AddOutlineSVGpath}

@@ -66,7 +66,6 @@ export const Examples: Story = {
         {showSpinner && (
           <Spinner
             percentComplete={progress}
-            className={'bottomSpacingXL'}
             size={'large'}
             color={'interactive'}
             titlePosition={'right'}

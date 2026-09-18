@@ -355,49 +355,32 @@ export const WithEventHandlers = {
 } satisfies Story;
 
 const TemplateWithSpinner: StoryFn<typeof Button> = (args) => (
-  <>
-    <div className={'bottomSpacingXL'}>
-      <Button {...args} hasSpinner={false} className={'marginRightM'} />
-      <Button
-        {...args}
-        hasSpinner={false}
-        variant={'secondary'}
-        className={'marginRightM'}
-      />
-      <Button
-        {...args}
-        hasSpinner={false}
-        variant={'tertiary'}
-        className={'marginRightM'}
-      />
+  <div className={'flex flex-column gap-xl'}>
+    <div className={'flex gap-m'}>
+      <Button {...args} hasSpinner={false} />
+      <Button {...args} hasSpinner={false} variant={'secondary'} />
+      <Button {...args} hasSpinner={false} variant={'tertiary'} />
       <Button {...args} hasSpinner={false} variant={'danger'} />
     </div>
-    <div className={'bottomSpacingXL'}>
-      <Button {...args} className={'marginRightM'} />
-      <Button {...args} variant={'secondary'} className={'marginRightM'} />
-      <Button {...args} variant={'tertiary'} className={'marginRightM'} />
+    <div className={'flex gap-m'}>
+      <Button {...args} />
+      <Button {...args} variant={'secondary'} />
+      <Button {...args} variant={'tertiary'} />
       <Button {...args} variant={'danger'} />
     </div>
-    <div className={'bottomSpacingXL'}>
-      <Button
-        {...args}
-        svgPath={SendSVGpath}
-        hasSpinner={false}
-        className={'marginRightM'}
-      />
+    <div className={'flex gap-m'}>
+      <Button {...args} svgPath={SendSVGpath} hasSpinner={false} />
       <Button
         {...args}
         svgPath={SendSVGpath}
         hasSpinner={false}
         variant={'secondary'}
-        className={'marginRightM'}
       />
       <Button
         {...args}
         svgPath={SendSVGpath}
         hasSpinner={false}
         variant={'tertiary'}
-        className={'marginRightM'}
       />
       <Button
         {...args}
@@ -406,21 +389,13 @@ const TemplateWithSpinner: StoryFn<typeof Button> = (args) => (
         variant={'danger'}
       />
     </div>
-    <Button {...args} svgPath={SendSVGpath} className={'marginRightM'} />
-    <Button
-      {...args}
-      svgPath={SendSVGpath}
-      variant={'secondary'}
-      className={'marginRightM'}
-    />
-    <Button
-      {...args}
-      svgPath={SendSVGpath}
-      variant={'tertiary'}
-      className={'marginRightM'}
-    />
-    <Button {...args} svgPath={SendSVGpath} variant={'danger'} />
-  </>
+    <div className={'flex gap-m'}>
+      <Button {...args} svgPath={SendSVGpath} />
+      <Button {...args} svgPath={SendSVGpath} variant={'secondary'} />
+      <Button {...args} svgPath={SendSVGpath} variant={'tertiary'} />
+      <Button {...args} svgPath={SendSVGpath} variant={'danger'} />
+    </div>
+  </div>
 );
 
 export const WithSpinner = {

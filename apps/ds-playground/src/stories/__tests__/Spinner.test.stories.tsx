@@ -135,37 +135,17 @@ export const WithSizeAndPosition = {
   name: 'With Size, TitlePostition, Children (A1, A2, A4)',
   render: (args): JSX.Element => {
     return (
-      <>
-        <Spinner className={'bottomSpacingXL'} size={'small'} {...args} />
-        <Spinner className={'bottomSpacingXL'} size={'medium'} {...args} />
-        <Spinner className={'bottomSpacingXL'} size={'large'} {...args} />
-        <Spinner className={'bottomSpacingXL'} size={'extraLarge'} {...args} />
+      <div className={'flex flex-column gap-xl'}>
+        <Spinner size={'small'} {...args} />
+        <Spinner size={'medium'} {...args} />
+        <Spinner size={'large'} {...args} />
+        <Spinner size={'extraLarge'} {...args} />
 
-        <Spinner
-          className={'bottomSpacingXL'}
-          titlePosition={'right'}
-          size={'small'}
-          {...args}
-        />
-        <Spinner
-          className={'bottomSpacingXL'}
-          titlePosition={'right'}
-          size={'medium'}
-          {...args}
-        />
-        <Spinner
-          className={'bottomSpacingXL'}
-          titlePosition={'right'}
-          size={'large'}
-          {...args}
-        />
-        <Spinner
-          className={'bottomSpacingXL'}
-          titlePosition={'right'}
-          size={'extraLarge'}
-          {...args}
-        />
-      </>
+        <Spinner titlePosition={'right'} size={'small'} {...args} />
+        <Spinner titlePosition={'right'} size={'medium'} {...args} />
+        <Spinner titlePosition={'right'} size={'large'} {...args} />
+        <Spinner titlePosition={'right'} size={'extraLarge'} {...args} />
+      </div>
     );
   },
   args: {
@@ -191,7 +171,7 @@ export const WithColorsLightBackground = {
   render: (args): JSX.Element => {
     return (
       <>
-        <Spinner className={'bottomSpacingXL'} {...args}>
+        <Spinner className={'mb-xl'} {...args}>
           {'Henter innhold'}
         </Spinner>
         <Spinner color={'interactive'} {...args}>

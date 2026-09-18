@@ -60,7 +60,7 @@ export const Examples: Story = {
     ]);
 
     return (
-      <div className={'flex flexColumn gapXl'}>
+      <div className={'flex flex-column gap-xl'}>
         <div>
           <Heading level={5} as={'h2'} id={'kontorsted-heading'}>
             {'Kontorsted'}

@@ -47,7 +47,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultFirstColumn = (
-  <Paragraph className={'topSpacingL'}>
+  <Paragraph className={'pt-l'}>
     {'Legg inn en lang setning for å sjekke om kolonnebredden stemmer'}
   </Paragraph>
 );

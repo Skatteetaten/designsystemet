@@ -83,8 +83,8 @@ const TemplateModal: StoryFn<typeof Modal> = (args) => {
             'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
           }
         </Paragraph>
-        <div className={'flex'}>
-          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+        <div className={'flex flex-wrap gap-m'}>
+          <Button>{'Erstatt opplysninger'}</Button>
           <Button
             variant={'tertiary'}
             onClick={(): void => ref.current?.close()}
@@ -480,7 +480,7 @@ const TemplateModalWithStateChangeAndFocusedInput: StoryFn<typeof Modal> = (
             label={'Navn'}
           />
         ) : (
-          <Button className={'marginRightM'} onClick={() => setShowInput(true)}>
+          <Button onClick={() => setShowInput(true)}>
             {'Vis og fokuser inputfelt'}
           </Button>
         )}
@@ -506,10 +506,7 @@ const TemplateModalWithStateChange: StoryFn<typeof Modal> = (args) => {
             }
           </Paragraph>
         ) : (
-          <Button
-            className={'marginRightM'}
-            onClick={() => setShowMessage(true)}
-          >
+          <Button onClick={() => setShowMessage(true)}>
             {'Erstatt opplysninger'}
           </Button>
         )}
@@ -599,17 +596,14 @@ const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
             'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
           }
         </Paragraph>
-        <div className={'flex'}>
-          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+        <div className={'flex flex-wrap gap-m'}>
+          <Button>{'Erstatt opplysninger'}</Button>
           <Button variant={'tertiary'} onClick={onCloseOnClickHandler}>
             {'Avbryt'}
           </Button>
         </div>
       </Modal>
-      <Button
-        className={'marginRightM'}
-        onClick={() => ref.current?.showModal()}
-      >
+      <Button onClick={() => ref.current?.showModal()}>
         {'Åpne modal ref.current.showModal'}
       </Button>
     </>
@@ -698,10 +692,7 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
       </Modal>
-      <Button
-        className={'marginRightM'}
-        onClick={() => ref.current?.showModal()}
-      >
+      <Button onClick={() => ref.current?.showModal()}>
         {'Åpne med klikk'}
       </Button>
     </>
@@ -749,10 +740,7 @@ const TemplateWithAutoOpenAndCloseOnUserInput: StoryFn<typeof Modal> = (
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
         <Button onClick={() => ref.current?.close()}>{'Lukk modal'}</Button>
       </Modal>
-      <Button
-        className={'marginRightM'}
-        onClick={() => ref.current?.showModal()}
-      >
+      <Button onClick={() => ref.current?.showModal()}>
         {'Åpne med klikk'}
       </Button>
     </>
@@ -841,8 +829,8 @@ export const MinimumWidth = {
           {'Åpne modal'}
         </Button>
         <Modal {...args} ref={ref}>
-          <div className={'flex'}>
-            <Button className={'marginRightM'}>{'Ja'}</Button>
+          <div className={'flex gap-m'}>
+            <Button>{'Ja'}</Button>
             <Button
               variant={'tertiary'}
               onClick={(): void => ref.current?.close()}

@@ -1246,7 +1246,7 @@ export const AddRow: Story = {
 
       return (
         <div className={'editableContent'}>
-          <div className={'flex gapM bottomSpacingXL'}>
+          <div className={'flex gap-m mb-xl'}>
             <TextField
               label={'Fødselsnummer (11 siffer)'}
               value={personNumber}
@@ -1272,7 +1272,7 @@ export const AddRow: Story = {
           </div>
           <TextField
             label={'Beløp i kroner'}
-            className={'textField150 bottomSpacingXL'}
+            className={'textField150 mb-xl'}
             value={amount}
             errorMessage={amountError}
             onChange={(e) => {
@@ -1281,7 +1281,7 @@ export const AddRow: Story = {
             }}
             onBlur={() => handleBlur('amount', amount, setAmountError)}
           />
-          <div className={'flex gapS'}>
+          <div className={'flex gap-s'}>
             <Button onClick={handleSave}>{'Lagre'}</Button>
             <Button variant={'secondary'} onClick={onCancel}>
               {'Avbryt'}
@@ -1295,7 +1295,7 @@ export const AddRow: Story = {
       <>
         <Button
           ref={addPersonButtonRef}
-          className={'bottomSpacingL'}
+          className={'mb-l'}
           onClick={(): void => {
             setAddRow(true);
             setTimeout(() => addPersonRef.current?.focus(), 0);

@@ -32,7 +32,7 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
-      <div className={'flex gapXs'}>
+      <div className={'flex gap-xs'}>
         <Tag>{'Endret'}</Tag>
         <Tag color={'forest'} svgPath={CheckSVGpath}>
           {'Godkjent'}

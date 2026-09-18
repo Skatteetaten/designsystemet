@@ -161,7 +161,7 @@ export const Examples: Story = {
             onNext={onNext}
           >
             {activeStep === 4 ? (
-              <Card color={'ochre'} className={'topSpacingS'}>
+              <Card color={'ochre'} className={'mt-s'}>
                 <Card.Content>
                   <List>
                     <List.Element>

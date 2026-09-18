@@ -54,15 +54,9 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
-      <div className={'flex'}>
-        <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
-          {'Legg til'}
-        </InlineButton>
-        <InlineButton
-          className={'exampleSpacing'}
-          svgPath={CancelSVGpath}
-          iconPosition={'right'}
-        >
+      <div className={'flex gap-m'}>
+        <InlineButton svgPath={AddOutlineSVGpath}>{'Legg til'}</InlineButton>
+        <InlineButton svgPath={CancelSVGpath} iconPosition={'right'}>
           {'Fjern'}
         </InlineButton>
       </div>
