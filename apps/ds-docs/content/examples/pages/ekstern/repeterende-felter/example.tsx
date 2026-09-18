@@ -210,11 +210,7 @@ export default function RepeterendeFelter(): JSX.Element {
                 <li key={card.id}>
                   <Card key={card.id} spacing={'m'} color={'graphite'}>
                     <Card.Header>
-                      <div
-                        data-card-id={card.id}
-                        className={styles.tabIndexNoOutline}
-                        tabIndex={-1}
-                      >
+                      <div data-card-id={card.id} tabIndex={-1}>
                         <Heading as={'h3'} hasSpacing>
                           {card.navn}
                         </Heading>

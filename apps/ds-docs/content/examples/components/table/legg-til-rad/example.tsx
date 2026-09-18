@@ -11,6 +11,8 @@ import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import { SortState, Table } from '@skatteetaten/ds-table';
 
+import styles from './legg-til-rad.module.scss';
+
 type PersonFormData = {
   personNumber: string;
   lastName: string;
@@ -61,8 +63,8 @@ const EditablePersonForm = ({
   };
 
   return (
-    <div className={'editableContent'}>
-      <div className={'flex gapM bottomSpacingXL'}>
+    <>
+      <div className={styles.textFieldRow}>
         <TextField
           label={'Fødselsnummer (11 siffer)'}
           value={personNumber}
@@ -88,7 +90,7 @@ const EditablePersonForm = ({
       </div>
       <TextField
         label={'Beløp i kroner'}
-        className={'textField150 bottomSpacingXL'}
+        className={styles.belopTextField}
         value={amount}
         errorMessage={amountError}
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
@@ -97,13 +99,13 @@ const EditablePersonForm = ({
         }}
         onBlur={() => handleBlur('amount', amount, setAmountError)}
       />
-      <div className={'flex gapS'}>
+      <div className={styles.buttonRow}>
         <Button onClick={handleSave}>{'Lagre'}</Button>
         <Button variant={'secondary'} onClick={onCancel}>
           {'Avbryt'}
         </Button>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -183,7 +185,7 @@ export default function TableAddRowExample(): ReactElement {
     <>
       <Button
         ref={addPersonButtonRef}
-        className={'bottomSpacingL'}
+        className={styles.addButton}
         onClick={(): void => {
           setAddRow(true);
           setTimeout(() => addPersonRef.current?.focus(), 0);
@@ -247,11 +249,7 @@ export default function TableAddRowExample(): ReactElement {
               isNew
             >
               <Table.DataCell colSpan={4}>
-                <div
-                  ref={addPersonRef}
-                  tabIndex={-1}
-                  className={'tabIndexNoOutline'}
-                >
+                <div ref={addPersonRef} tabIndex={-1}>
                   {'Legg til person'}
                 </div>
               </Table.DataCell>

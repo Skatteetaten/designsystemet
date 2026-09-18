@@ -3,6 +3,8 @@ import { type ReactElement, useState } from 'react';
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { Table } from '@skatteetaten/ds-table';
 
+import styles from './velge-rader.module.scss';
+
 export default function TableSelectableRowsExample(): ReactElement {
   const items = [
     {
@@ -54,9 +56,9 @@ export default function TableSelectableRowsExample(): ReactElement {
     <Table caption={'avgiftsstatus'}>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell as={'td'}>
+          <Table.HeaderCell as={'td'} className={styles.verticalAlignMiddle}>
             <Checkbox
-              classNames={{ label: 'checkboxInTable' }}
+              className={styles.inputNoMargin}
               checked={isAllChecked}
               hideLabel
               onChange={() => {
@@ -79,9 +81,9 @@ export default function TableSelectableRowsExample(): ReactElement {
       <Table.Body>
         {items.map((item, index) => (
           <Table.Row key={item.id}>
-            <Table.DataCell>
+            <Table.DataCell className={styles.verticalAlignMiddle}>
               <Checkbox
-                classNames={{ label: 'checkboxInTable' }}
+                className={styles.inputNoMargin}
                 checked={
                   isAllChecked || checkedState.some((it) => it === index)
                 }
